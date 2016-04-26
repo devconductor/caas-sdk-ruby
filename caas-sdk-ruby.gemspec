@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.name        = "caas-sdk-ruby"
   s.version     = CaaS::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = [""]
-  s.email       = ["}"]
-  s.homepage    = ""
+  s.authors     = "Thiago Sampaio"
+  s.email       = "thiago.sampaio@conductor.com.br"
+  s.homepage    = "https://github.com/devconductor/pier-sdk-ruby"
   s.summary     = "CaaS - Conductor as a Service"
   s.description = "GestÃ£o de pagamento eletrÃ´nicos como serviÃ§o"
   s.license     = "Apache 2.0"
@@ -26,7 +26,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'autotest-fsevent', '~> 0.2', '>= 0.2.11'
 
   s.files         = `find *`.split("\n").uniq.sort.select{|f| !f.empty? }
-  s.test_files    = `find spec/*`.split("\n")
   s.executables   = []
   s.require_paths = ["lib"]
 

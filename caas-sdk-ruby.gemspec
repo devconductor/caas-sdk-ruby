@@ -3,13 +3,14 @@ $:.push File.expand_path("../lib", __FILE__)
 require "caas-sdk-ruby/version"
 
 Gem::Specification.new do |s|
+
   s.name        = "caas-sdk-ruby"
   s.version     = CaaS::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Swagger-Codegen"]
-  s.email       = ["contato@conductor.com.br"]
+  s.authors     = [""]
+  s.email       = ["}"]
   s.homepage    = ""
-  s.summary     = "CaaS - Conductor as a Service Ruby Gem"
+  s.summary     = "CaaS - Conductor as a Service"
   s.description = "GestÃ£o de pagamento eletrÃ´nicos como serviÃ§o"
   s.license     = "Apache 2.0"
 
@@ -28,4 +29,5 @@ Gem::Specification.new do |s|
   s.test_files    = `find spec/*`.split("\n")
   s.executables   = []
   s.require_paths = ["lib"]
+
 end

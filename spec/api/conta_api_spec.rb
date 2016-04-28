@@ -39,7 +39,6 @@ describe 'ContaApi' do
   # unit tests for buscar_conta_using_get
   # /contas/buscar
   # Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
-  # @param id_emissor ID do Emissor
   # @param [Hash] opts the optional parameters
   # @option opts [String] :nome Nome
   # @option opts [String] :cpf CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta)
@@ -59,7 +58,6 @@ describe 'ContaApi' do
   # unit tests for consultar_conta_using_get
   # /contas/{idConta}
   # Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
-  # @param id_emissor ID do Emissor
   # @param id_conta ID da Conta
   # @param [Hash] opts the optional parameters
   # @return [ContaResponse]

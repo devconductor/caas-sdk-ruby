@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **buscar_conta_using_get**
-> ConsultarContaResponse buscar_conta_using_get(id_emissor, opts)
+> ConsultarContaResponse buscar_conta_using_get(opts)
 
 /contas/buscar
 
@@ -29,8 +29,6 @@ end
 
 api_instance = Pier::ContaApi.new
 
-id_emissor = 56 # Integer | ID do Emissor
-
 opts = { 
   nome: "nome_example", # String | Nome
   cpf: "cpf_example", # String | CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta)
@@ -40,7 +38,7 @@ opts = {
 
 begin
   #/contas/buscar
-  result = api_instance.buscar_conta_using_get(id_emissor, opts)
+  result = api_instance.buscar_conta_using_get(opts)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling ContaApi->buscar_conta_using_get: #{e}"
@@ -51,7 +49,6 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_emissor** | **Integer**| ID do Emissor | 
  **nome** | **String**| Nome | [optional] 
  **cpf** | **String**| CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta) | [optional] 
  **numero_cartao** | **String**| N\u00C3\u00BAmero do cart\u00C3\u00A3o (opcional caso n\u00C3\u00A3o informa o cpf ou id da conta) | [optional] 
@@ -73,7 +70,7 @@ Name | Type | Description  | Notes
 
 
 # **consultar_conta_using_get**
-> ContaResponse consultar_conta_using_get(id_emissor, id_conta)
+> ContaResponse consultar_conta_using_get(id_conta)
 
 /contas/{idConta}
 
@@ -93,14 +90,12 @@ end
 
 api_instance = Pier::ContaApi.new
 
-id_emissor = 56 # Integer | ID do Emissor
-
 id_conta = 56 # Integer | ID da Conta
 
 
 begin
   #/contas/{idConta}
-  result = api_instance.consultar_conta_using_get(id_emissor, id_conta)
+  result = api_instance.consultar_conta_using_get(id_conta)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling ContaApi->consultar_conta_using_get: #{e}"
@@ -111,7 +106,6 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_emissor** | **Integer**| ID do Emissor | 
  **id_conta** | **Integer**| ID da Conta | 
 
 ### Return type

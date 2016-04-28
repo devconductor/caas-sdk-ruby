@@ -17,7 +17,7 @@ Terms of Service: http://dev.conductor.com.br/terms/
 require "uri"
 
 module Pier
-  class CartaoResponseApi
+  class CartaoApi
     attr_accessor :api_client
 
     def initialize(api_client = ApiClient.default)
@@ -26,43 +26,33 @@ module Pier
 
     # /contas/{idConta}/cartoes/{idCartao}/cancelar
     # Cancelar um determinado cart\u00C3\u00A3o
-    # @param id_emissor ID do Emissor
     # @param id_conta ID da Conta
     # @param id_cartao ID do Cart\u00C3\u00A3o que deseja cancelar
     # @param motivo Motivo do cancelamento
     # @param observacao Alguma observa\u00C3\u00A7\u00C3\u00A3o para o cancelamento
     # @param [Hash] opts the optional parameters
     # @return [CancelarCartaoResponse]
-    def cancelar_cartao_using_post(id_emissor, id_conta, id_cartao, motivo, observacao, opts = {})
-      data, _status_code, _headers = cancelar_cartao_using_post_with_http_info(id_emissor, id_conta, id_cartao, motivo, observacao, opts)
+    def cancelar_cartao_using_post(id_conta, id_cartao, motivo, observacao, opts = {})
+      data, _status_code, _headers = cancelar_cartao_using_post_with_http_info(id_conta, id_cartao, motivo, observacao, opts)
       return data
     end
 
     # /contas/{idConta}/cartoes/{idCartao}/cancelar
     # Cancelar um determinado cart\u00C3\u00A3o
-    # @param id_emissor ID do Emissor
     # @param id_conta ID da Conta
     # @param id_cartao ID do Cart\u00C3\u00A3o que deseja cancelar
     # @param motivo Motivo do cancelamento
     # @param observacao Alguma observa\u00C3\u00A7\u00C3\u00A3o para o cancelamento
     # @param [Hash] opts the optional parameters
     # @return [Array<(CancelarCartaoResponse, Fixnum, Hash)>] CancelarCartaoResponse data, response status code and response headers
-    def cancelar_cartao_using_post_with_http_info(id_emissor, id_conta, id_cartao, motivo, observacao, opts = {})
+    def cancelar_cartao_using_post_with_http_info(id_conta, id_cartao, motivo, observacao, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CartaoResponseApi.cancelar_cartao_using_post ..."
+        @api_client.config.logger.debug "Calling API: CartaoApi.cancelar_cartao_using_post ..."
       end
       
       
-      # verify the required parameter 'id_emissor' is set
-      fail ArgumentError, "Missing the required parameter 'id_emissor' when calling CartaoResponseApi.cancelar_cartao_using_post" if id_emissor.nil?
-      
-      
-      
-      
-      
-      
       # verify the required parameter 'id_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta' when calling CartaoResponseApi.cancelar_cartao_using_post" if id_conta.nil?
+      fail ArgumentError, "Missing the required parameter 'id_conta' when calling CartaoApi.cancelar_cartao_using_post" if id_conta.nil?
       
       
       
@@ -70,7 +60,7 @@ module Pier
       
       
       # verify the required parameter 'id_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoResponseApi.cancelar_cartao_using_post" if id_cartao.nil?
+      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoApi.cancelar_cartao_using_post" if id_cartao.nil?
       
       
       
@@ -78,7 +68,7 @@ module Pier
       
       
       # verify the required parameter 'motivo' is set
-      fail ArgumentError, "Missing the required parameter 'motivo' when calling CartaoResponseApi.cancelar_cartao_using_post" if motivo.nil?
+      fail ArgumentError, "Missing the required parameter 'motivo' when calling CartaoApi.cancelar_cartao_using_post" if motivo.nil?
       
       
       
@@ -86,7 +76,7 @@ module Pier
       
       
       # verify the required parameter 'observacao' is set
-      fail ArgumentError, "Missing the required parameter 'observacao' when calling CartaoResponseApi.cancelar_cartao_using_post" if observacao.nil?
+      fail ArgumentError, "Missing the required parameter 'observacao' when calling CartaoApi.cancelar_cartao_using_post" if observacao.nil?
       
       
       
@@ -110,7 +100,6 @@ module Pier
       # HTTP header 'Content-Type'
       local_header_content_type = ['application/json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-      header_params[:'idEmissor'] = id_emissor
 
       # form parameters
       form_params = {}
@@ -127,48 +116,38 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'CancelarCartaoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CartaoResponseApi#cancelar_cartao_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CartaoApi#cancelar_cartao_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # /contas/{idConta}/cartoes/{idCartao}
     # Consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o de uma conta
-    # @param id_emissor ID do Emissor
     # @param id_conta ID da Conta que pertence o cart\u00C3\u00A3o
     # @param id_cartao ID do Cart\u00C3\u00A3o que deseja consultar
     # @param [Hash] opts the optional parameters
     # @option opts [String] :numero_cartao N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional)
     # @return [ConsultarCartaoResponse]
-    def consultar_cartao_using_get(id_emissor, id_conta, id_cartao, opts = {})
-      data, _status_code, _headers = consultar_cartao_using_get_with_http_info(id_emissor, id_conta, id_cartao, opts)
+    def consultar_cartao_using_get(id_conta, id_cartao, opts = {})
+      data, _status_code, _headers = consultar_cartao_using_get_with_http_info(id_conta, id_cartao, opts)
       return data
     end
 
     # /contas/{idConta}/cartoes/{idCartao}
     # Consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o de uma conta
-    # @param id_emissor ID do Emissor
     # @param id_conta ID da Conta que pertence o cart\u00C3\u00A3o
     # @param id_cartao ID do Cart\u00C3\u00A3o que deseja consultar
     # @param [Hash] opts the optional parameters
     # @option opts [String] :numero_cartao N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional)
     # @return [Array<(ConsultarCartaoResponse, Fixnum, Hash)>] ConsultarCartaoResponse data, response status code and response headers
-    def consultar_cartao_using_get_with_http_info(id_emissor, id_conta, id_cartao, opts = {})
+    def consultar_cartao_using_get_with_http_info(id_conta, id_cartao, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CartaoResponseApi.consultar_cartao_using_get ..."
+        @api_client.config.logger.debug "Calling API: CartaoApi.consultar_cartao_using_get ..."
       end
       
       
-      # verify the required parameter 'id_emissor' is set
-      fail ArgumentError, "Missing the required parameter 'id_emissor' when calling CartaoResponseApi.consultar_cartao_using_get" if id_emissor.nil?
-      
-      
-      
-      
-      
-      
       # verify the required parameter 'id_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta' when calling CartaoResponseApi.consultar_cartao_using_get" if id_conta.nil?
+      fail ArgumentError, "Missing the required parameter 'id_conta' when calling CartaoApi.consultar_cartao_using_get" if id_conta.nil?
       
       
       
@@ -176,7 +155,7 @@ module Pier
       
       
       # verify the required parameter 'id_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoResponseApi.consultar_cartao_using_get" if id_cartao.nil?
+      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoApi.consultar_cartao_using_get" if id_cartao.nil?
       
       
       
@@ -204,7 +183,6 @@ module Pier
       # HTTP header 'Content-Type'
       local_header_content_type = ['application/json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-      header_params[:'idEmissor'] = id_emissor
       header_params[:'numeroCartao'] = opts[:'numero_cartao'] if opts[:'numero_cartao']
 
       # form parameters
@@ -222,44 +200,34 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'ConsultarCartaoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CartaoResponseApi#consultar_cartao_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CartaoApi#consultar_cartao_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # /contas/{idConta}/cartoes
     # Consultar todos os cart\u00C3\u00B5es de uma determinada conta
-    # @param id_emissor ID do Emissor
     # @param id_conta ID da Conta
     # @param [Hash] opts the optional parameters
     # @return [ConsultarCartaoResponse]
-    def consultar_cartoes_using_get(id_emissor, id_conta, opts = {})
-      data, _status_code, _headers = consultar_cartoes_using_get_with_http_info(id_emissor, id_conta, opts)
+    def consultar_cartoes_using_get(id_conta, opts = {})
+      data, _status_code, _headers = consultar_cartoes_using_get_with_http_info(id_conta, opts)
       return data
     end
 
     # /contas/{idConta}/cartoes
     # Consultar todos os cart\u00C3\u00B5es de uma determinada conta
-    # @param id_emissor ID do Emissor
     # @param id_conta ID da Conta
     # @param [Hash] opts the optional parameters
     # @return [Array<(ConsultarCartaoResponse, Fixnum, Hash)>] ConsultarCartaoResponse data, response status code and response headers
-    def consultar_cartoes_using_get_with_http_info(id_emissor, id_conta, opts = {})
+    def consultar_cartoes_using_get_with_http_info(id_conta, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CartaoResponseApi.consultar_cartoes_using_get ..."
+        @api_client.config.logger.debug "Calling API: CartaoApi.consultar_cartoes_using_get ..."
       end
       
       
-      # verify the required parameter 'id_emissor' is set
-      fail ArgumentError, "Missing the required parameter 'id_emissor' when calling CartaoResponseApi.consultar_cartoes_using_get" if id_emissor.nil?
-      
-      
-      
-      
-      
-      
       # verify the required parameter 'id_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta' when calling CartaoResponseApi.consultar_cartoes_using_get" if id_conta.nil?
+      fail ArgumentError, "Missing the required parameter 'id_conta' when calling CartaoApi.consultar_cartoes_using_get" if id_conta.nil?
       
       
       
@@ -281,7 +249,6 @@ module Pier
       # HTTP header 'Content-Type'
       local_header_content_type = ['application/json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-      header_params[:'idEmissor'] = id_emissor
 
       # form parameters
       form_params = {}
@@ -298,48 +265,38 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'ConsultarCartaoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CartaoResponseApi#consultar_cartoes_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CartaoApi#consultar_cartoes_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # /contas/{idConta}/cartoes/{idCartao}/faturas
     # Consulte os extratos/faturas do cart\u00C3\u00A3o de uma determinada conta
-    # @param id_emissor ID do Emissor
     # @param id_conta ID da Conta
     # @param id_cartao ID do Cart\u00C3\u00A3o que deseja consultar o extrato
     # @param data_vencimento Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es
     # @param [Hash] opts the optional parameters
     # @return [ConsultarExtratoContaResponse]
-    def consultar_extrato_faturas_using_get(id_emissor, id_conta, id_cartao, data_vencimento, opts = {})
-      data, _status_code, _headers = consultar_extrato_faturas_using_get_with_http_info(id_emissor, id_conta, id_cartao, data_vencimento, opts)
+    def consultar_extrato_faturas_using_get(id_conta, id_cartao, data_vencimento, opts = {})
+      data, _status_code, _headers = consultar_extrato_faturas_using_get_with_http_info(id_conta, id_cartao, data_vencimento, opts)
       return data
     end
 
     # /contas/{idConta}/cartoes/{idCartao}/faturas
     # Consulte os extratos/faturas do cart\u00C3\u00A3o de uma determinada conta
-    # @param id_emissor ID do Emissor
     # @param id_conta ID da Conta
     # @param id_cartao ID do Cart\u00C3\u00A3o que deseja consultar o extrato
     # @param data_vencimento Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es
     # @param [Hash] opts the optional parameters
     # @return [Array<(ConsultarExtratoContaResponse, Fixnum, Hash)>] ConsultarExtratoContaResponse data, response status code and response headers
-    def consultar_extrato_faturas_using_get_with_http_info(id_emissor, id_conta, id_cartao, data_vencimento, opts = {})
+    def consultar_extrato_faturas_using_get_with_http_info(id_conta, id_cartao, data_vencimento, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CartaoResponseApi.consultar_extrato_faturas_using_get ..."
+        @api_client.config.logger.debug "Calling API: CartaoApi.consultar_extrato_faturas_using_get ..."
       end
       
       
-      # verify the required parameter 'id_emissor' is set
-      fail ArgumentError, "Missing the required parameter 'id_emissor' when calling CartaoResponseApi.consultar_extrato_faturas_using_get" if id_emissor.nil?
-      
-      
-      
-      
-      
-      
       # verify the required parameter 'id_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta' when calling CartaoResponseApi.consultar_extrato_faturas_using_get" if id_conta.nil?
+      fail ArgumentError, "Missing the required parameter 'id_conta' when calling CartaoApi.consultar_extrato_faturas_using_get" if id_conta.nil?
       
       
       
@@ -347,7 +304,7 @@ module Pier
       
       
       # verify the required parameter 'id_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoResponseApi.consultar_extrato_faturas_using_get" if id_cartao.nil?
+      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoApi.consultar_extrato_faturas_using_get" if id_cartao.nil?
       
       
       
@@ -355,7 +312,7 @@ module Pier
       
       
       # verify the required parameter 'data_vencimento' is set
-      fail ArgumentError, "Missing the required parameter 'data_vencimento' when calling CartaoResponseApi.consultar_extrato_faturas_using_get" if data_vencimento.nil?
+      fail ArgumentError, "Missing the required parameter 'data_vencimento' when calling CartaoApi.consultar_extrato_faturas_using_get" if data_vencimento.nil?
       
       
       
@@ -378,7 +335,6 @@ module Pier
       # HTTP header 'Content-Type'
       local_header_content_type = ['application/json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-      header_params[:'idEmissor'] = id_emissor
 
       # form parameters
       form_params = {}
@@ -395,46 +351,36 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'ConsultarExtratoContaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CartaoResponseApi#consultar_extrato_faturas_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CartaoApi#consultar_extrato_faturas_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # /contas/{idConta}/cartoes/{idCartao}/limites
     # Consulte os limites de um determinado cart\u00C3\u00A3o
-    # @param id_emissor ID do Emissor
     # @param id_conta ID da Conta
     # @param id_cartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite
     # @param [Hash] opts the optional parameters
     # @return [ConsultarSaldoLimitesResponse]
-    def consultar_saldos_limites_using_get(id_emissor, id_conta, id_cartao, opts = {})
-      data, _status_code, _headers = consultar_saldos_limites_using_get_with_http_info(id_emissor, id_conta, id_cartao, opts)
+    def consultar_saldos_limites_using_get(id_conta, id_cartao, opts = {})
+      data, _status_code, _headers = consultar_saldos_limites_using_get_with_http_info(id_conta, id_cartao, opts)
       return data
     end
 
     # /contas/{idConta}/cartoes/{idCartao}/limites
     # Consulte os limites de um determinado cart\u00C3\u00A3o
-    # @param id_emissor ID do Emissor
     # @param id_conta ID da Conta
     # @param id_cartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite
     # @param [Hash] opts the optional parameters
     # @return [Array<(ConsultarSaldoLimitesResponse, Fixnum, Hash)>] ConsultarSaldoLimitesResponse data, response status code and response headers
-    def consultar_saldos_limites_using_get_with_http_info(id_emissor, id_conta, id_cartao, opts = {})
+    def consultar_saldos_limites_using_get_with_http_info(id_conta, id_cartao, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CartaoResponseApi.consultar_saldos_limites_using_get ..."
+        @api_client.config.logger.debug "Calling API: CartaoApi.consultar_saldos_limites_using_get ..."
       end
       
       
-      # verify the required parameter 'id_emissor' is set
-      fail ArgumentError, "Missing the required parameter 'id_emissor' when calling CartaoResponseApi.consultar_saldos_limites_using_get" if id_emissor.nil?
-      
-      
-      
-      
-      
-      
       # verify the required parameter 'id_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta' when calling CartaoResponseApi.consultar_saldos_limites_using_get" if id_conta.nil?
+      fail ArgumentError, "Missing the required parameter 'id_conta' when calling CartaoApi.consultar_saldos_limites_using_get" if id_conta.nil?
       
       
       
@@ -442,7 +388,7 @@ module Pier
       
       
       # verify the required parameter 'id_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoResponseApi.consultar_saldos_limites_using_get" if id_cartao.nil?
+      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoApi.consultar_saldos_limites_using_get" if id_cartao.nil?
       
       
       
@@ -464,7 +410,6 @@ module Pier
       # HTTP header 'Content-Type'
       local_header_content_type = ['application/json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-      header_params[:'idEmissor'] = id_emissor
 
       # form parameters
       form_params = {}
@@ -481,48 +426,38 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'ConsultarSaldoLimitesResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CartaoResponseApi#consultar_saldos_limites_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CartaoApi#consultar_saldos_limites_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # /contas/{idConta}/cartoes/{idCartao}/desbloquear
     # Desbloquear cart\u00C3\u00A3o de uma determinada conta
-    # @param id_emissor ID do Emissor
     # @param id_conta ID da Conta
     # @param id_cartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite
     # @param codigo_segurancao C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o
     # @param [Hash] opts the optional parameters
     # @return [DesbloquearCartaoResponse]
-    def desbloquear_cartao_using_post(id_emissor, id_conta, id_cartao, codigo_segurancao, opts = {})
-      data, _status_code, _headers = desbloquear_cartao_using_post_with_http_info(id_emissor, id_conta, id_cartao, codigo_segurancao, opts)
+    def desbloquear_cartao_using_post(id_conta, id_cartao, codigo_segurancao, opts = {})
+      data, _status_code, _headers = desbloquear_cartao_using_post_with_http_info(id_conta, id_cartao, codigo_segurancao, opts)
       return data
     end
 
     # /contas/{idConta}/cartoes/{idCartao}/desbloquear
     # Desbloquear cart\u00C3\u00A3o de uma determinada conta
-    # @param id_emissor ID do Emissor
     # @param id_conta ID da Conta
     # @param id_cartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite
     # @param codigo_segurancao C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o
     # @param [Hash] opts the optional parameters
     # @return [Array<(DesbloquearCartaoResponse, Fixnum, Hash)>] DesbloquearCartaoResponse data, response status code and response headers
-    def desbloquear_cartao_using_post_with_http_info(id_emissor, id_conta, id_cartao, codigo_segurancao, opts = {})
+    def desbloquear_cartao_using_post_with_http_info(id_conta, id_cartao, codigo_segurancao, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CartaoResponseApi.desbloquear_cartao_using_post ..."
+        @api_client.config.logger.debug "Calling API: CartaoApi.desbloquear_cartao_using_post ..."
       end
       
       
-      # verify the required parameter 'id_emissor' is set
-      fail ArgumentError, "Missing the required parameter 'id_emissor' when calling CartaoResponseApi.desbloquear_cartao_using_post" if id_emissor.nil?
-      
-      
-      
-      
-      
-      
       # verify the required parameter 'id_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta' when calling CartaoResponseApi.desbloquear_cartao_using_post" if id_conta.nil?
+      fail ArgumentError, "Missing the required parameter 'id_conta' when calling CartaoApi.desbloquear_cartao_using_post" if id_conta.nil?
       
       
       
@@ -530,7 +465,7 @@ module Pier
       
       
       # verify the required parameter 'id_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoResponseApi.desbloquear_cartao_using_post" if id_cartao.nil?
+      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoApi.desbloquear_cartao_using_post" if id_cartao.nil?
       
       
       
@@ -538,7 +473,7 @@ module Pier
       
       
       # verify the required parameter 'codigo_segurancao' is set
-      fail ArgumentError, "Missing the required parameter 'codigo_segurancao' when calling CartaoResponseApi.desbloquear_cartao_using_post" if codigo_segurancao.nil?
+      fail ArgumentError, "Missing the required parameter 'codigo_segurancao' when calling CartaoApi.desbloquear_cartao_using_post" if codigo_segurancao.nil?
       
       
       
@@ -560,7 +495,6 @@ module Pier
       # HTTP header 'Content-Type'
       local_header_content_type = ['application/json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-      header_params[:'idEmissor'] = id_emissor
       header_params[:'codigoSegurancao'] = codigo_segurancao
 
       # form parameters
@@ -578,7 +512,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'DesbloquearCartaoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CartaoResponseApi#desbloquear_cartao_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CartaoApi#desbloquear_cartao_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

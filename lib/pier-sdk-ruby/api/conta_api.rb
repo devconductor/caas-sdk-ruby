@@ -26,39 +26,29 @@ module Pier
 
     # /contas/buscar
     # Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
-    # @param id_emissor ID do Emissor
     # @param [Hash] opts the optional parameters
     # @option opts [String] :nome Nome
     # @option opts [String] :cpf CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta)
     # @option opts [String] :numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o (opcional caso n\u00C3\u00A3o informa o cpf ou id da conta)
     # @option opts [Integer] :id_conta ID da Conta (opcional caso n\u00C3\u00A3o informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou cpf)
     # @return [ConsultarContaResponse]
-    def buscar_conta_using_get(id_emissor, opts = {})
-      data, _status_code, _headers = buscar_conta_using_get_with_http_info(id_emissor, opts)
+    def buscar_conta_using_get(opts = {})
+      data, _status_code, _headers = buscar_conta_using_get_with_http_info(opts)
       return data
     end
 
     # /contas/buscar
     # Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
-    # @param id_emissor ID do Emissor
     # @param [Hash] opts the optional parameters
     # @option opts [String] :nome Nome
     # @option opts [String] :cpf CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta)
     # @option opts [String] :numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o (opcional caso n\u00C3\u00A3o informa o cpf ou id da conta)
     # @option opts [Integer] :id_conta ID da Conta (opcional caso n\u00C3\u00A3o informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou cpf)
     # @return [Array<(ConsultarContaResponse, Fixnum, Hash)>] ConsultarContaResponse data, response status code and response headers
-    def buscar_conta_using_get_with_http_info(id_emissor, opts = {})
+    def buscar_conta_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContaApi.buscar_conta_using_get ..."
       end
-      
-      
-      # verify the required parameter 'id_emissor' is set
-      fail ArgumentError, "Missing the required parameter 'id_emissor' when calling ContaApi.buscar_conta_using_get" if id_emissor.nil?
-      
-      
-      
-      
       
       
       
@@ -104,7 +94,6 @@ module Pier
       # HTTP header 'Content-Type'
       local_header_content_type = ['application/json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-      header_params[:'idEmissor'] = id_emissor
 
       # form parameters
       form_params = {}
@@ -128,33 +117,23 @@ module Pier
 
     # /contas/{idConta}
     # Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
-    # @param id_emissor ID do Emissor
     # @param id_conta ID da Conta
     # @param [Hash] opts the optional parameters
     # @return [ContaResponse]
-    def consultar_conta_using_get(id_emissor, id_conta, opts = {})
-      data, _status_code, _headers = consultar_conta_using_get_with_http_info(id_emissor, id_conta, opts)
+    def consultar_conta_using_get(id_conta, opts = {})
+      data, _status_code, _headers = consultar_conta_using_get_with_http_info(id_conta, opts)
       return data
     end
 
     # /contas/{idConta}
     # Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
-    # @param id_emissor ID do Emissor
     # @param id_conta ID da Conta
     # @param [Hash] opts the optional parameters
     # @return [Array<(ContaResponse, Fixnum, Hash)>] ContaResponse data, response status code and response headers
-    def consultar_conta_using_get_with_http_info(id_emissor, id_conta, opts = {})
+    def consultar_conta_using_get_with_http_info(id_conta, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContaApi.consultar_conta_using_get ..."
       end
-      
-      
-      # verify the required parameter 'id_emissor' is set
-      fail ArgumentError, "Missing the required parameter 'id_emissor' when calling ContaApi.consultar_conta_using_get" if id_emissor.nil?
-      
-      
-      
-      
       
       
       # verify the required parameter 'id_conta' is set
@@ -180,7 +159,6 @@ module Pier
       # HTTP header 'Content-Type'
       local_header_content_type = ['application/json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-      header_params[:'idEmissor'] = id_emissor
 
       # form parameters
       form_params = {}

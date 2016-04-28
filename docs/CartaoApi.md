@@ -1,19 +1,19 @@
-# Pier::CartaoResponseApi
+# Pier::CartaoApi
 
 All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancelar_cartao_using_post**](CartaoResponseApi.md#cancelar_cartao_using_post) | **POST** /api/v1/contas/{idConta}/cartoes/{idCartao}/cancelar | /contas/{idConta}/cartoes/{idCartao}/cancelar
-[**consultar_cartao_using_get**](CartaoResponseApi.md#consultar_cartao_using_get) | **GET** /api/v1/contas/{idConta}/cartoes/{idCartao} | /contas/{idConta}/cartoes/{idCartao}
-[**consultar_cartoes_using_get**](CartaoResponseApi.md#consultar_cartoes_using_get) | **GET** /api/v1/contas/{idConta}/cartoes | /contas/{idConta}/cartoes
-[**consultar_extrato_faturas_using_get**](CartaoResponseApi.md#consultar_extrato_faturas_using_get) | **GET** /api/v1/contas/{idConta}/cartoes/{idCartao}/faturas | /contas/{idConta}/cartoes/{idCartao}/faturas
-[**consultar_saldos_limites_using_get**](CartaoResponseApi.md#consultar_saldos_limites_using_get) | **GET** /api/v1/contas/{idConta}/cartoes/{idCartao}/limites | /contas/{idConta}/cartoes/{idCartao}/limites
-[**desbloquear_cartao_using_post**](CartaoResponseApi.md#desbloquear_cartao_using_post) | **POST** /api/v1/contas/{idConta}/cartoes/{idCartao}/desbloquear | /contas/{idConta}/cartoes/{idCartao}/desbloquear
+[**cancelar_cartao_using_post**](CartaoApi.md#cancelar_cartao_using_post) | **POST** /api/v1/contas/{idConta}/cartoes/{idCartao}/cancelar | /contas/{idConta}/cartoes/{idCartao}/cancelar
+[**consultar_cartao_using_get**](CartaoApi.md#consultar_cartao_using_get) | **GET** /api/v1/contas/{idConta}/cartoes/{idCartao} | /contas/{idConta}/cartoes/{idCartao}
+[**consultar_cartoes_using_get**](CartaoApi.md#consultar_cartoes_using_get) | **GET** /api/v1/contas/{idConta}/cartoes | /contas/{idConta}/cartoes
+[**consultar_extrato_faturas_using_get**](CartaoApi.md#consultar_extrato_faturas_using_get) | **GET** /api/v1/contas/{idConta}/cartoes/{idCartao}/faturas | /contas/{idConta}/cartoes/{idCartao}/faturas
+[**consultar_saldos_limites_using_get**](CartaoApi.md#consultar_saldos_limites_using_get) | **GET** /api/v1/contas/{idConta}/cartoes/{idCartao}/limites | /contas/{idConta}/cartoes/{idCartao}/limites
+[**desbloquear_cartao_using_post**](CartaoApi.md#desbloquear_cartao_using_post) | **POST** /api/v1/contas/{idConta}/cartoes/{idCartao}/desbloquear | /contas/{idConta}/cartoes/{idCartao}/desbloquear
 
 
 # **cancelar_cartao_using_post**
-> CancelarCartaoResponse cancelar_cartao_using_post(id_emissor, id_conta, id_cartao, motivo, observacao)
+> CancelarCartaoResponse cancelar_cartao_using_post(id_conta, id_cartao, motivo, observacao)
 
 /contas/{idConta}/cartoes/{idCartao}/cancelar
 
@@ -31,9 +31,7 @@ Pier.configure do |config|
   #config.api_key_prefix['access_token'] = 'BEARER'
 end
 
-api_instance = Pier::CartaoResponseApi.new
-
-id_emissor = 56 # Integer | ID do Emissor
+api_instance = Pier::CartaoApi.new
 
 id_conta = 56 # Integer | ID da Conta
 
@@ -46,10 +44,10 @@ observacao = "observacao_example" # String | Alguma observa\u00C3\u00A7\u00C3\u0
 
 begin
   #/contas/{idConta}/cartoes/{idCartao}/cancelar
-  result = api_instance.cancelar_cartao_using_post(id_emissor, id_conta, id_cartao, motivo, observacao)
+  result = api_instance.cancelar_cartao_using_post(id_conta, id_cartao, motivo, observacao)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CartaoResponseApi->cancelar_cartao_using_post: #{e}"
+  puts "Exception when calling CartaoApi->cancelar_cartao_using_post: #{e}"
 end
 ```
 
@@ -57,7 +55,6 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_emissor** | **Integer**| ID do Emissor | 
  **id_conta** | **Integer**| ID da Conta | 
  **id_cartao** | **Integer**| ID do Cart\u00C3\u00A3o que deseja cancelar | 
  **motivo** | **Integer**| Motivo do cancelamento | 
@@ -79,7 +76,7 @@ Name | Type | Description  | Notes
 
 
 # **consultar_cartao_using_get**
-> ConsultarCartaoResponse consultar_cartao_using_get(id_emissor, id_conta, id_cartao, opts)
+> ConsultarCartaoResponse consultar_cartao_using_get(id_conta, id_cartao, opts)
 
 /contas/{idConta}/cartoes/{idCartao}
 
@@ -97,9 +94,7 @@ Pier.configure do |config|
   #config.api_key_prefix['access_token'] = 'BEARER'
 end
 
-api_instance = Pier::CartaoResponseApi.new
-
-id_emissor = 56 # Integer | ID do Emissor
+api_instance = Pier::CartaoApi.new
 
 id_conta = 56 # Integer | ID da Conta que pertence o cart\u00C3\u00A3o
 
@@ -111,10 +106,10 @@ opts = {
 
 begin
   #/contas/{idConta}/cartoes/{idCartao}
-  result = api_instance.consultar_cartao_using_get(id_emissor, id_conta, id_cartao, opts)
+  result = api_instance.consultar_cartao_using_get(id_conta, id_cartao, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CartaoResponseApi->consultar_cartao_using_get: #{e}"
+  puts "Exception when calling CartaoApi->consultar_cartao_using_get: #{e}"
 end
 ```
 
@@ -122,7 +117,6 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_emissor** | **Integer**| ID do Emissor | 
  **id_conta** | **Integer**| ID da Conta que pertence o cart\u00C3\u00A3o | 
  **id_cartao** | **Integer**| ID do Cart\u00C3\u00A3o que deseja consultar | 
  **numero_cartao** | **String**| N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional) | [optional] 
@@ -143,7 +137,7 @@ Name | Type | Description  | Notes
 
 
 # **consultar_cartoes_using_get**
-> ConsultarCartaoResponse consultar_cartoes_using_get(id_emissor, id_conta)
+> ConsultarCartaoResponse consultar_cartoes_using_get(id_conta)
 
 /contas/{idConta}/cartoes
 
@@ -161,19 +155,17 @@ Pier.configure do |config|
   #config.api_key_prefix['access_token'] = 'BEARER'
 end
 
-api_instance = Pier::CartaoResponseApi.new
-
-id_emissor = 56 # Integer | ID do Emissor
+api_instance = Pier::CartaoApi.new
 
 id_conta = 56 # Integer | ID da Conta
 
 
 begin
   #/contas/{idConta}/cartoes
-  result = api_instance.consultar_cartoes_using_get(id_emissor, id_conta)
+  result = api_instance.consultar_cartoes_using_get(id_conta)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CartaoResponseApi->consultar_cartoes_using_get: #{e}"
+  puts "Exception when calling CartaoApi->consultar_cartoes_using_get: #{e}"
 end
 ```
 
@@ -181,7 +173,6 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_emissor** | **Integer**| ID do Emissor | 
  **id_conta** | **Integer**| ID da Conta | 
 
 ### Return type
@@ -200,7 +191,7 @@ Name | Type | Description  | Notes
 
 
 # **consultar_extrato_faturas_using_get**
-> ConsultarExtratoContaResponse consultar_extrato_faturas_using_get(id_emissor, id_conta, id_cartao, data_vencimento)
+> ConsultarExtratoContaResponse consultar_extrato_faturas_using_get(id_conta, id_cartao, data_vencimento)
 
 /contas/{idConta}/cartoes/{idCartao}/faturas
 
@@ -218,9 +209,7 @@ Pier.configure do |config|
   #config.api_key_prefix['access_token'] = 'BEARER'
 end
 
-api_instance = Pier::CartaoResponseApi.new
-
-id_emissor = 56 # Integer | ID do Emissor
+api_instance = Pier::CartaoApi.new
 
 id_conta = 56 # Integer | ID da Conta
 
@@ -231,10 +220,10 @@ data_vencimento = "data_vencimento_example" # String | Data limite para o vencim
 
 begin
   #/contas/{idConta}/cartoes/{idCartao}/faturas
-  result = api_instance.consultar_extrato_faturas_using_get(id_emissor, id_conta, id_cartao, data_vencimento)
+  result = api_instance.consultar_extrato_faturas_using_get(id_conta, id_cartao, data_vencimento)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CartaoResponseApi->consultar_extrato_faturas_using_get: #{e}"
+  puts "Exception when calling CartaoApi->consultar_extrato_faturas_using_get: #{e}"
 end
 ```
 
@@ -242,7 +231,6 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_emissor** | **Integer**| ID do Emissor | 
  **id_conta** | **Integer**| ID da Conta | 
  **id_cartao** | **Integer**| ID do Cart\u00C3\u00A3o que deseja consultar o extrato | 
  **data_vencimento** | **String**| Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es | 
@@ -263,7 +251,7 @@ Name | Type | Description  | Notes
 
 
 # **consultar_saldos_limites_using_get**
-> ConsultarSaldoLimitesResponse consultar_saldos_limites_using_get(id_emissor, id_conta, id_cartao)
+> ConsultarSaldoLimitesResponse consultar_saldos_limites_using_get(id_conta, id_cartao)
 
 /contas/{idConta}/cartoes/{idCartao}/limites
 
@@ -281,9 +269,7 @@ Pier.configure do |config|
   #config.api_key_prefix['access_token'] = 'BEARER'
 end
 
-api_instance = Pier::CartaoResponseApi.new
-
-id_emissor = 56 # Integer | ID do Emissor
+api_instance = Pier::CartaoApi.new
 
 id_conta = 56 # Integer | ID da Conta
 
@@ -292,10 +278,10 @@ id_cartao = 56 # Integer | ID do Cart\u00C3\u00A3o que deseja consultar o saldo/
 
 begin
   #/contas/{idConta}/cartoes/{idCartao}/limites
-  result = api_instance.consultar_saldos_limites_using_get(id_emissor, id_conta, id_cartao)
+  result = api_instance.consultar_saldos_limites_using_get(id_conta, id_cartao)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CartaoResponseApi->consultar_saldos_limites_using_get: #{e}"
+  puts "Exception when calling CartaoApi->consultar_saldos_limites_using_get: #{e}"
 end
 ```
 
@@ -303,7 +289,6 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_emissor** | **Integer**| ID do Emissor | 
  **id_conta** | **Integer**| ID da Conta | 
  **id_cartao** | **Integer**| ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite | 
 
@@ -323,7 +308,7 @@ Name | Type | Description  | Notes
 
 
 # **desbloquear_cartao_using_post**
-> DesbloquearCartaoResponse desbloquear_cartao_using_post(id_emissor, id_conta, id_cartao, codigo_segurancao)
+> DesbloquearCartaoResponse desbloquear_cartao_using_post(id_conta, id_cartao, codigo_segurancao)
 
 /contas/{idConta}/cartoes/{idCartao}/desbloquear
 
@@ -341,9 +326,7 @@ Pier.configure do |config|
   #config.api_key_prefix['access_token'] = 'BEARER'
 end
 
-api_instance = Pier::CartaoResponseApi.new
-
-id_emissor = 56 # Integer | ID do Emissor
+api_instance = Pier::CartaoApi.new
 
 id_conta = 56 # Integer | ID da Conta
 
@@ -354,10 +337,10 @@ codigo_segurancao = "codigo_segurancao_example" # String | C\u00C3\u00B3digo seg
 
 begin
   #/contas/{idConta}/cartoes/{idCartao}/desbloquear
-  result = api_instance.desbloquear_cartao_using_post(id_emissor, id_conta, id_cartao, codigo_segurancao)
+  result = api_instance.desbloquear_cartao_using_post(id_conta, id_cartao, codigo_segurancao)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CartaoResponseApi->desbloquear_cartao_using_post: #{e}"
+  puts "Exception when calling CartaoApi->desbloquear_cartao_using_post: #{e}"
 end
 ```
 
@@ -365,7 +348,6 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_emissor** | **Integer**| ID do Emissor | 
  **id_conta** | **Integer**| ID da Conta | 
  **id_cartao** | **Integer**| ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite | 
  **codigo_segurancao** | **String**| C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o | 

@@ -21,6 +21,9 @@ require 'pier-sdk-ruby/version'
 require 'pier-sdk-ruby/configuration'
 
 # Models
+require 'pier-sdk-ruby/models/auth_token'
+require 'pier-sdk-ruby/models/body'
+require 'pier-sdk-ruby/models/body_access_token'
 require 'pier-sdk-ruby/models/cancelar_cartao_response'
 require 'pier-sdk-ruby/models/cartao_response'
 require 'pier-sdk-ruby/models/consultar_cartao_response'
@@ -31,13 +34,15 @@ require 'pier-sdk-ruby/models/consultar_saldo_limites_response'
 require 'pier-sdk-ruby/models/conta_cartao_response'
 require 'pier-sdk-ruby/models/conta_response'
 require 'pier-sdk-ruby/models/desbloquear_cartao_response'
+require 'pier-sdk-ruby/models/extra_info'
 require 'pier-sdk-ruby/models/extrato_response'
 require 'pier-sdk-ruby/models/pessoa_fisica_response'
 require 'pier-sdk-ruby/models/saldo_limite_response'
 
 # APIs
-require 'pier-sdk-ruby/api/cartao_response_api'
+require 'pier-sdk-ruby/api/cartao_api'
 require 'pier-sdk-ruby/api/conta_api'
+require 'pier-sdk-ruby/api/token_api'
 
 module Pier
   class << self

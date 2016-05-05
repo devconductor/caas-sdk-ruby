@@ -3,6 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**body** | [**Body**](Body.md) |  | [optional] 
+**auth_token** | [**AuthToken**](AuthToken.md) |  | [optional] 
+**action** | **String** |  | [optional] 
+**user** | **String** |  | [optional] 
 
 

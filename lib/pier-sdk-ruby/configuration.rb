@@ -164,6 +164,13 @@ module Pier
             key: 'access_token',
             value: api_key_with_prefix('access_token')
           },
+        'client_id' =>
+          {
+            type: 'api_key',
+            in: 'header',
+            key: 'client_id',
+            value: api_key_with_prefix('client_id')
+          },
       }
     end
   end

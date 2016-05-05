@@ -18,13 +18,21 @@ require 'date'
 
 module Pier
   class BodyAccessToken
-    attr_accessor :body
+    attr_accessor :auth_token
+
+    attr_accessor :action
+
+    attr_accessor :user
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'body' => :'body'
+        :'auth_token' => :'AuthToken',
+        
+        :'action' => :'action',
+        
+        :'user' => :'user'
         
       }
     end
@@ -33,7 +41,11 @@ module Pier
     def self.swagger_types
       {
         
-        :'body' => :'Body'
+        :'auth_token' => :'AuthToken',
+        
+        :'action' => :'String',
+        
+        :'user' => :'String'
         
       }
     end
@@ -47,10 +59,28 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'body']
+      if attributes[:'AuthToken']
         
         
-        self.body = attributes[:'body']
+        self.auth_token = attributes[:'AuthToken']
+        
+      
+      end
+
+      
+      if attributes[:'action']
+        
+        
+        self.action = attributes[:'action']
+        
+      
+      end
+
+      
+      if attributes[:'user']
+        
+        
+        self.user = attributes[:'user']
         
       
       end
@@ -75,8 +105,40 @@ module Pier
       
       
       
+      
+      
+      allowed_values = ["CREATED", "UPDATED", "DELETED"]
+      if @action && !allowed_values.include?(@action)
+        return false
+      end
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] action Object to be assigned
+    def action=(action)
+      allowed_values = ["CREATED", "UPDATED", "DELETED"]
+      if action && !allowed_values.include?(action)
+        fail ArgumentError, "invalid value for 'action', must be one of #{allowed_values}."
+      end
+      @action = action
+    end
+
+    
+    
     
     
     
@@ -88,7 +150,9 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          body == o.body
+          auth_token == o.auth_token &&
+          action == o.action &&
+          user == o.user
     end
 
     # @see the `==` method
@@ -100,7 +164,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [body].hash
+      [auth_token, action, user].hash
     end
 
     # Builds the object from hash

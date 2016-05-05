@@ -52,4 +52,20 @@ describe 'TokenApi' do
     end
   end
 
+  # unit tests for validar_using_post
+  # /tokens/validar
+  # 
+  # @param body_access_token bodyAccessToken
+  # @param [Hash] opts the optional parameters
+  # @return [Object]
+  describe 'validar_using_post test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
 end

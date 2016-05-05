@@ -22,7 +22,6 @@ require 'pier-sdk-ruby/configuration'
 
 # Models
 require 'pier-sdk-ruby/models/auth_token'
-require 'pier-sdk-ruby/models/body'
 require 'pier-sdk-ruby/models/body_access_token'
 require 'pier-sdk-ruby/models/cancelar_cartao_response'
 require 'pier-sdk-ruby/models/cartao_response'

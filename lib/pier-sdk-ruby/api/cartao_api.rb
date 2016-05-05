@@ -83,7 +83,7 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/v1/contas/{idConta}/cartoes/{idCartao}/cancelar".sub('{format}','json').sub('{' + 'idConta' + '}', id_conta.to_s).sub('{' + 'idCartao' + '}', id_cartao.to_s)
+      local_var_path = "/v1/contas/{idConta}/cartoes/{idCartao}/cancelar".sub('{format}','json').sub('{' + 'idConta' + '}', id_conta.to_s).sub('{' + 'idCartao' + '}', id_cartao.to_s)
 
       # query parameters
       query_params = {}
@@ -168,7 +168,7 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/v1/contas/{idConta}/cartoes/{idCartao}".sub('{format}','json').sub('{' + 'idConta' + '}', id_conta.to_s).sub('{' + 'idCartao' + '}', id_cartao.to_s)
+      local_var_path = "/v1/contas/{idConta}/cartoes/{idCartao}".sub('{format}','json').sub('{' + 'idConta' + '}', id_conta.to_s).sub('{' + 'idCartao' + '}', id_cartao.to_s)
 
       # query parameters
       query_params = {}
@@ -234,7 +234,7 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/v1/contas/{idConta}/cartoes".sub('{format}','json').sub('{' + 'idConta' + '}', id_conta.to_s)
+      local_var_path = "/v1/contas/{idConta}/cartoes".sub('{format}','json').sub('{' + 'idConta' + '}', id_conta.to_s)
 
       # query parameters
       query_params = {}
@@ -319,7 +319,7 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/v1/contas/{idConta}/cartoes/{idCartao}/faturas".sub('{format}','json').sub('{' + 'idConta' + '}', id_conta.to_s).sub('{' + 'idCartao' + '}', id_cartao.to_s)
+      local_var_path = "/v1/contas/{idConta}/cartoes/{idCartao}/faturas".sub('{format}','json').sub('{' + 'idConta' + '}', id_conta.to_s).sub('{' + 'idCartao' + '}', id_cartao.to_s)
 
       # query parameters
       query_params = {}
@@ -395,7 +395,7 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/v1/contas/{idConta}/cartoes/{idCartao}/limites".sub('{format}','json').sub('{' + 'idConta' + '}', id_conta.to_s).sub('{' + 'idCartao' + '}', id_cartao.to_s)
+      local_var_path = "/v1/contas/{idConta}/cartoes/{idCartao}/limites".sub('{format}','json').sub('{' + 'idConta' + '}', id_conta.to_s).sub('{' + 'idCartao' + '}', id_cartao.to_s)
 
       # query parameters
       query_params = {}
@@ -480,7 +480,7 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/v1/contas/{idConta}/cartoes/{idCartao}/desbloquear".sub('{format}','json').sub('{' + 'idConta' + '}', id_conta.to_s).sub('{' + 'idCartao' + '}', id_cartao.to_s)
+      local_var_path = "/v1/contas/{idConta}/cartoes/{idCartao}/desbloquear".sub('{format}','json').sub('{' + 'idConta' + '}', id_conta.to_s).sub('{' + 'idCartao' + '}', id_cartao.to_s)
 
       # query parameters
       query_params = {}

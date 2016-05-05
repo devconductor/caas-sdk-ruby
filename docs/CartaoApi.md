@@ -4,12 +4,12 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancelar_cartao_using_post**](CartaoApi.md#cancelar_cartao_using_post) | **POST** /api/v1/contas/{idConta}/cartoes/{idCartao}/cancelar | /contas/{idConta}/cartoes/{idCartao}/cancelar
-[**consultar_cartao_using_get**](CartaoApi.md#consultar_cartao_using_get) | **GET** /api/v1/contas/{idConta}/cartoes/{idCartao} | /contas/{idConta}/cartoes/{idCartao}
-[**consultar_cartoes_using_get**](CartaoApi.md#consultar_cartoes_using_get) | **GET** /api/v1/contas/{idConta}/cartoes | /contas/{idConta}/cartoes
-[**consultar_extrato_faturas_using_get**](CartaoApi.md#consultar_extrato_faturas_using_get) | **GET** /api/v1/contas/{idConta}/cartoes/{idCartao}/faturas | /contas/{idConta}/cartoes/{idCartao}/faturas
-[**consultar_saldos_limites_using_get**](CartaoApi.md#consultar_saldos_limites_using_get) | **GET** /api/v1/contas/{idConta}/cartoes/{idCartao}/limites | /contas/{idConta}/cartoes/{idCartao}/limites
-[**desbloquear_cartao_using_post**](CartaoApi.md#desbloquear_cartao_using_post) | **POST** /api/v1/contas/{idConta}/cartoes/{idCartao}/desbloquear | /contas/{idConta}/cartoes/{idCartao}/desbloquear
+[**cancelar_cartao_using_post**](CartaoApi.md#cancelar_cartao_using_post) | **POST** /v1/contas/{idConta}/cartoes/{idCartao}/cancelar | /contas/{idConta}/cartoes/{idCartao}/cancelar
+[**consultar_cartao_using_get**](CartaoApi.md#consultar_cartao_using_get) | **GET** /v1/contas/{idConta}/cartoes/{idCartao} | /contas/{idConta}/cartoes/{idCartao}
+[**consultar_cartoes_using_get**](CartaoApi.md#consultar_cartoes_using_get) | **GET** /v1/contas/{idConta}/cartoes | /contas/{idConta}/cartoes
+[**consultar_extrato_faturas_using_get**](CartaoApi.md#consultar_extrato_faturas_using_get) | **GET** /v1/contas/{idConta}/cartoes/{idCartao}/faturas | /contas/{idConta}/cartoes/{idCartao}/faturas
+[**consultar_saldos_limites_using_get**](CartaoApi.md#consultar_saldos_limites_using_get) | **GET** /v1/contas/{idConta}/cartoes/{idCartao}/limites | /contas/{idConta}/cartoes/{idCartao}/limites
+[**desbloquear_cartao_using_post**](CartaoApi.md#desbloquear_cartao_using_post) | **POST** /v1/contas/{idConta}/cartoes/{idCartao}/desbloquear | /contas/{idConta}/cartoes/{idCartao}/desbloquear
 
 
 # **cancelar_cartao_using_post**

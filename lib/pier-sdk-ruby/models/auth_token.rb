@@ -149,7 +149,7 @@ module Pier
       
       
       
-      allowed_values = ["ACTIVE", "REVOKE", "DELETED"]
+      allowed_values = ["ACTIVE", "REVOKED", "DELETED"]
       if @status && !allowed_values.include?(@status)
         return false
       end
@@ -183,7 +183,7 @@ module Pier
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] status Object to be assigned
     def status=(status)
-      allowed_values = ["ACTIVE", "REVOKE", "DELETED"]
+      allowed_values = ["ACTIVE", "REVOKED", "DELETED"]
       if status && !allowed_values.include?(status)
         fail ArgumentError, "invalid value for 'status', must be one of #{allowed_values}."
       end

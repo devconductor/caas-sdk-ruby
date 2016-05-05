@@ -4,8 +4,8 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**buscar_conta_using_get**](ContaApi.md#buscar_conta_using_get) | **GET** /api/v1/contas/buscar | /contas/buscar
-[**consultar_conta_using_get**](ContaApi.md#consultar_conta_using_get) | **GET** /api/v1/contas/{idConta} | /contas/{idConta}
+[**buscar_conta_using_get**](ContaApi.md#buscar_conta_using_get) | **GET** /v1/contas/buscar | /contas/buscar
+[**consultar_conta_using_get**](ContaApi.md#consultar_conta_using_get) | **GET** /v1/contas/{idConta} | /contas/{idConta}
 
 
 # **buscar_conta_using_get**

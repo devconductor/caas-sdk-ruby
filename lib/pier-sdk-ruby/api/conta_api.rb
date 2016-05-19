@@ -179,5 +179,146 @@ module Pier
       end
       return data, status_code, headers
     end
+
+    # /contas/{idConta}/faturas
+    # Consulte os extratos/faturas de uma determinada conta
+    # @param id_conta ID da Conta
+    # @param data_vencimento Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es
+    # @param [Hash] opts the optional parameters
+    # @return [ConsultarExtratoContaResponse]
+    def consultar_extrato_faturas_using_get(id_conta, data_vencimento, opts = {})
+      data, _status_code, _headers = consultar_extrato_faturas_using_get_with_http_info(id_conta, data_vencimento, opts)
+      return data
+    end
+
+    # /contas/{idConta}/faturas
+    # Consulte os extratos/faturas de uma determinada conta
+    # @param id_conta ID da Conta
+    # @param data_vencimento Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ConsultarExtratoContaResponse, Fixnum, Hash)>] ConsultarExtratoContaResponse data, response status code and response headers
+    def consultar_extrato_faturas_using_get_with_http_info(id_conta, data_vencimento, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ContaApi.consultar_extrato_faturas_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'id_conta' is set
+      fail ArgumentError, "Missing the required parameter 'id_conta' when calling ContaApi.consultar_extrato_faturas_using_get" if id_conta.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'data_vencimento' is set
+      fail ArgumentError, "Missing the required parameter 'data_vencimento' when calling ContaApi.consultar_extrato_faturas_using_get" if data_vencimento.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/v1/contas/{idConta}/faturas".sub('{format}','json').sub('{' + 'idConta' + '}', id_conta.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'dataVencimento'] = data_vencimento
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ConsultarExtratoContaResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ContaApi#consultar_extrato_faturas_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # /contas/{idConta}/limites
+    # Consulte os limites de uma determinada conta
+    # @param id_conta ID da Conta
+    # @param [Hash] opts the optional parameters
+    # @return [ConsultarSaldoLimitesResponse]
+    def consultar_saldos_limites_using_get(id_conta, opts = {})
+      data, _status_code, _headers = consultar_saldos_limites_using_get_with_http_info(id_conta, opts)
+      return data
+    end
+
+    # /contas/{idConta}/limites
+    # Consulte os limites de uma determinada conta
+    # @param id_conta ID da Conta
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ConsultarSaldoLimitesResponse, Fixnum, Hash)>] ConsultarSaldoLimitesResponse data, response status code and response headers
+    def consultar_saldos_limites_using_get_with_http_info(id_conta, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ContaApi.consultar_saldos_limites_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'id_conta' is set
+      fail ArgumentError, "Missing the required parameter 'id_conta' when calling ContaApi.consultar_saldos_limites_using_get" if id_conta.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/v1/contas/{idConta}/limites".sub('{format}','json').sub('{' + 'idConta' + '}', id_conta.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ConsultarSaldoLimitesResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ContaApi#consultar_saldos_limites_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
   end
 end

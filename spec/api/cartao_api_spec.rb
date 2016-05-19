@@ -36,16 +36,16 @@ describe 'CartaoApi' do
     end
   end
 
-  # unit tests for cancelar_cartao_using_post
-  # /contas/{idConta}/cartoes/{idCartao}/cancelar
-  # Cancelar um determinado cart\u00C3\u00A3o
+  # unit tests for bloquear_cartao_using_post
+  # /contas/{idConta}/cartoes/{idCartao}/bloquear
+  # Bloquear um determinado cart\u00C3\u00A3o
   # @param id_conta ID da Conta
   # @param id_cartao ID do Cart\u00C3\u00A3o que deseja cancelar
-  # @param motivo Motivo do cancelamento
-  # @param observacao Alguma observa\u00C3\u00A7\u00C3\u00A3o para o cancelamento
+  # @param motivo Motivo do bloqueio
   # @param [Hash] opts the optional parameters
+  # @option opts [String] :observacao Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio
   # @return [CancelarCartaoResponse]
-  describe 'cancelar_cartao_using_post test' do
+  describe 'bloquear_cartao_using_post test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -89,48 +89,13 @@ describe 'CartaoApi' do
     end
   end
 
-  # unit tests for consultar_extrato_faturas_using_get
-  # /contas/{idConta}/cartoes/{idCartao}/faturas
-  # Consulte os extratos/faturas do cart\u00C3\u00A3o de uma determinada conta
-  # @param id_conta ID da Conta
-  # @param id_cartao ID do Cart\u00C3\u00A3o que deseja consultar o extrato
-  # @param data_vencimento Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es
-  # @param [Hash] opts the optional parameters
-  # @return [ConsultarExtratoContaResponse]
-  describe 'consultar_extrato_faturas_using_get test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-  # unit tests for consultar_saldos_limites_using_get
-  # /contas/{idConta}/cartoes/{idCartao}/limites
-  # Consulte os limites de um determinado cart\u00C3\u00A3o
-  # @param id_conta ID da Conta
-  # @param id_cartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite
-  # @param [Hash] opts the optional parameters
-  # @return [ConsultarSaldoLimitesResponse]
-  describe 'consultar_saldos_limites_using_get test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
   # unit tests for desbloquear_cartao_using_post
   # /contas/{idConta}/cartoes/{idCartao}/desbloquear
   # Desbloquear cart\u00C3\u00A3o de uma determinada conta
   # @param id_conta ID da Conta
   # @param id_cartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite
-  # @param codigo_segurancao C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o
   # @param [Hash] opts the optional parameters
+  # @option opts [String] :codigo_segurancao C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o
   # @return [DesbloquearCartaoResponse]
   describe 'desbloquear_cartao_using_post test' do
     it "should work" do

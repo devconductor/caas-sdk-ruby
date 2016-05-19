@@ -71,4 +71,37 @@ describe 'ContaApi' do
     end
   end
 
+  # unit tests for consultar_extrato_faturas_using_get
+  # /contas/{idConta}/faturas
+  # Consulte os extratos/faturas de uma determinada conta
+  # @param id_conta ID da Conta
+  # @param data_vencimento Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es
+  # @param [Hash] opts the optional parameters
+  # @return [ConsultarExtratoContaResponse]
+  describe 'consultar_extrato_faturas_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+  # unit tests for consultar_saldos_limites_using_get
+  # /contas/{idConta}/limites
+  # Consulte os limites de uma determinada conta
+  # @param id_conta ID da Conta
+  # @param [Hash] opts the optional parameters
+  # @return [ConsultarSaldoLimitesResponse]
+  describe 'consultar_saldos_limites_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
 end

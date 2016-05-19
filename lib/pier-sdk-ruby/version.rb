@@ -15,5 +15,5 @@ Terms of Service: http://dev.conductor.com.br/terms/
 =end
 
 module Pier
-  VERSION = "0.0.1"
+  VERSION = "1.0.0"
 end

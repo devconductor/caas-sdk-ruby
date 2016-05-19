@@ -24,35 +24,35 @@ module Pier
       @api_client = api_client
     end
 
-    # /contas/{idConta}/cartoes/{idCartao}/cancelar
-    # Cancelar um determinado cart\u00C3\u00A3o
+    # /contas/{idConta}/cartoes/{idCartao}/bloquear
+    # Bloquear um determinado cart\u00C3\u00A3o
     # @param id_conta ID da Conta
     # @param id_cartao ID do Cart\u00C3\u00A3o que deseja cancelar
-    # @param motivo Motivo do cancelamento
-    # @param observacao Alguma observa\u00C3\u00A7\u00C3\u00A3o para o cancelamento
+    # @param motivo Motivo do bloqueio
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :observacao Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio
     # @return [CancelarCartaoResponse]
-    def cancelar_cartao_using_post(id_conta, id_cartao, motivo, observacao, opts = {})
-      data, _status_code, _headers = cancelar_cartao_using_post_with_http_info(id_conta, id_cartao, motivo, observacao, opts)
+    def bloquear_cartao_using_post(id_conta, id_cartao, motivo, opts = {})
+      data, _status_code, _headers = bloquear_cartao_using_post_with_http_info(id_conta, id_cartao, motivo, opts)
       return data
     end
 
-    # /contas/{idConta}/cartoes/{idCartao}/cancelar
-    # Cancelar um determinado cart\u00C3\u00A3o
+    # /contas/{idConta}/cartoes/{idCartao}/bloquear
+    # Bloquear um determinado cart\u00C3\u00A3o
     # @param id_conta ID da Conta
     # @param id_cartao ID do Cart\u00C3\u00A3o que deseja cancelar
-    # @param motivo Motivo do cancelamento
-    # @param observacao Alguma observa\u00C3\u00A7\u00C3\u00A3o para o cancelamento
+    # @param motivo Motivo do bloqueio
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :observacao Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio
     # @return [Array<(CancelarCartaoResponse, Fixnum, Hash)>] CancelarCartaoResponse data, response status code and response headers
-    def cancelar_cartao_using_post_with_http_info(id_conta, id_cartao, motivo, observacao, opts = {})
+    def bloquear_cartao_using_post_with_http_info(id_conta, id_cartao, motivo, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CartaoApi.cancelar_cartao_using_post ..."
+        @api_client.config.logger.debug "Calling API: CartaoApi.bloquear_cartao_using_post ..."
       end
       
       
       # verify the required parameter 'id_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta' when calling CartaoApi.cancelar_cartao_using_post" if id_conta.nil?
+      fail ArgumentError, "Missing the required parameter 'id_conta' when calling CartaoApi.bloquear_cartao_using_post" if id_conta.nil?
       
       
       
@@ -60,7 +60,7 @@ module Pier
       
       
       # verify the required parameter 'id_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoApi.cancelar_cartao_using_post" if id_cartao.nil?
+      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoApi.bloquear_cartao_using_post" if id_cartao.nil?
       
       
       
@@ -68,27 +68,25 @@ module Pier
       
       
       # verify the required parameter 'motivo' is set
-      fail ArgumentError, "Missing the required parameter 'motivo' when calling CartaoApi.cancelar_cartao_using_post" if motivo.nil?
+      fail ArgumentError, "Missing the required parameter 'motivo' when calling CartaoApi.bloquear_cartao_using_post" if motivo.nil?
       
       
       
       
       
       
-      # verify the required parameter 'observacao' is set
-      fail ArgumentError, "Missing the required parameter 'observacao' when calling CartaoApi.cancelar_cartao_using_post" if observacao.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/v1/contas/{idConta}/cartoes/{idCartao}/cancelar".sub('{format}','json').sub('{' + 'idConta' + '}', id_conta.to_s).sub('{' + 'idCartao' + '}', id_cartao.to_s)
+      local_var_path = "/v1/contas/{idConta}/cartoes/{idCartao}/bloquear".sub('{format}','json').sub('{' + 'idConta' + '}', id_conta.to_s).sub('{' + 'idCartao' + '}', id_cartao.to_s)
 
       # query parameters
       query_params = {}
       query_params[:'motivo'] = motivo
-      query_params[:'observacao'] = observacao
+      query_params[:'observacao'] = opts[:'observacao'] if opts[:'observacao']
 
       # header parameters
       header_params = {}
@@ -116,7 +114,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'CancelarCartaoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CartaoApi#cancelar_cartao_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CartaoApi#bloquear_cartao_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -270,176 +268,15 @@ module Pier
       return data, status_code, headers
     end
 
-    # /contas/{idConta}/cartoes/{idCartao}/faturas
-    # Consulte os extratos/faturas do cart\u00C3\u00A3o de uma determinada conta
-    # @param id_conta ID da Conta
-    # @param id_cartao ID do Cart\u00C3\u00A3o que deseja consultar o extrato
-    # @param data_vencimento Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es
-    # @param [Hash] opts the optional parameters
-    # @return [ConsultarExtratoContaResponse]
-    def consultar_extrato_faturas_using_get(id_conta, id_cartao, data_vencimento, opts = {})
-      data, _status_code, _headers = consultar_extrato_faturas_using_get_with_http_info(id_conta, id_cartao, data_vencimento, opts)
-      return data
-    end
-
-    # /contas/{idConta}/cartoes/{idCartao}/faturas
-    # Consulte os extratos/faturas do cart\u00C3\u00A3o de uma determinada conta
-    # @param id_conta ID da Conta
-    # @param id_cartao ID do Cart\u00C3\u00A3o que deseja consultar o extrato
-    # @param data_vencimento Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(ConsultarExtratoContaResponse, Fixnum, Hash)>] ConsultarExtratoContaResponse data, response status code and response headers
-    def consultar_extrato_faturas_using_get_with_http_info(id_conta, id_cartao, data_vencimento, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CartaoApi.consultar_extrato_faturas_using_get ..."
-      end
-      
-      
-      # verify the required parameter 'id_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta' when calling CartaoApi.consultar_extrato_faturas_using_get" if id_conta.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'id_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoApi.consultar_extrato_faturas_using_get" if id_cartao.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'data_vencimento' is set
-      fail ArgumentError, "Missing the required parameter 'data_vencimento' when calling CartaoApi.consultar_extrato_faturas_using_get" if data_vencimento.nil?
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/v1/contas/{idConta}/cartoes/{idCartao}/faturas".sub('{format}','json').sub('{' + 'idConta' + '}', id_conta.to_s).sub('{' + 'idCartao' + '}', id_cartao.to_s)
-
-      # query parameters
-      query_params = {}
-      query_params[:'dataVencimento'] = data_vencimento
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = ['access_token']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'ConsultarExtratoContaResponse')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CartaoApi#consultar_extrato_faturas_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # /contas/{idConta}/cartoes/{idCartao}/limites
-    # Consulte os limites de um determinado cart\u00C3\u00A3o
-    # @param id_conta ID da Conta
-    # @param id_cartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite
-    # @param [Hash] opts the optional parameters
-    # @return [ConsultarSaldoLimitesResponse]
-    def consultar_saldos_limites_using_get(id_conta, id_cartao, opts = {})
-      data, _status_code, _headers = consultar_saldos_limites_using_get_with_http_info(id_conta, id_cartao, opts)
-      return data
-    end
-
-    # /contas/{idConta}/cartoes/{idCartao}/limites
-    # Consulte os limites de um determinado cart\u00C3\u00A3o
-    # @param id_conta ID da Conta
-    # @param id_cartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(ConsultarSaldoLimitesResponse, Fixnum, Hash)>] ConsultarSaldoLimitesResponse data, response status code and response headers
-    def consultar_saldos_limites_using_get_with_http_info(id_conta, id_cartao, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CartaoApi.consultar_saldos_limites_using_get ..."
-      end
-      
-      
-      # verify the required parameter 'id_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta' when calling CartaoApi.consultar_saldos_limites_using_get" if id_conta.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'id_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoApi.consultar_saldos_limites_using_get" if id_cartao.nil?
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/v1/contas/{idConta}/cartoes/{idCartao}/limites".sub('{format}','json').sub('{' + 'idConta' + '}', id_conta.to_s).sub('{' + 'idCartao' + '}', id_cartao.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = ['access_token']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'ConsultarSaldoLimitesResponse')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CartaoApi#consultar_saldos_limites_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
     # /contas/{idConta}/cartoes/{idCartao}/desbloquear
     # Desbloquear cart\u00C3\u00A3o de uma determinada conta
     # @param id_conta ID da Conta
     # @param id_cartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite
-    # @param codigo_segurancao C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :codigo_segurancao C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o
     # @return [DesbloquearCartaoResponse]
-    def desbloquear_cartao_using_post(id_conta, id_cartao, codigo_segurancao, opts = {})
-      data, _status_code, _headers = desbloquear_cartao_using_post_with_http_info(id_conta, id_cartao, codigo_segurancao, opts)
+    def desbloquear_cartao_using_post(id_conta, id_cartao, opts = {})
+      data, _status_code, _headers = desbloquear_cartao_using_post_with_http_info(id_conta, id_cartao, opts)
       return data
     end
 
@@ -447,10 +284,10 @@ module Pier
     # Desbloquear cart\u00C3\u00A3o de uma determinada conta
     # @param id_conta ID da Conta
     # @param id_cartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite
-    # @param codigo_segurancao C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :codigo_segurancao C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o
     # @return [Array<(DesbloquearCartaoResponse, Fixnum, Hash)>] DesbloquearCartaoResponse data, response status code and response headers
-    def desbloquear_cartao_using_post_with_http_info(id_conta, id_cartao, codigo_segurancao, opts = {})
+    def desbloquear_cartao_using_post_with_http_info(id_conta, id_cartao, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CartaoApi.desbloquear_cartao_using_post ..."
       end
@@ -472,8 +309,6 @@ module Pier
       
       
       
-      # verify the required parameter 'codigo_segurancao' is set
-      fail ArgumentError, "Missing the required parameter 'codigo_segurancao' when calling CartaoApi.desbloquear_cartao_using_post" if codigo_segurancao.nil?
       
       
       
@@ -495,7 +330,7 @@ module Pier
       # HTTP header 'Content-Type'
       local_header_content_type = ['application/json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-      header_params[:'codigoSegurancao'] = codigo_segurancao
+      header_params[:'codigoSegurancao'] = opts[:'codigo_segurancao'] if opts[:'codigo_segurancao']
 
       # form parameters
       form_params = {}

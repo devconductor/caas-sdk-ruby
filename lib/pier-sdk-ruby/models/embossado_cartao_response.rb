@@ -17,54 +17,26 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  class ConsultarContaCartaoResponse
-    attr_accessor :data_validade
+  class EmbossadoCartaoResponse
+    attr_accessor :codigo_retorno
 
-    attr_accessor :descricao_estagio
-
-    attr_accessor :descricao_status
-
-    attr_accessor :estagio
-
-    attr_accessor :flag_cancelamento
+    attr_accessor :descricao_retorno
 
     attr_accessor :id_cartao
 
-    attr_accessor :numero_cartao
-
-    attr_accessor :portador
-
-    attr_accessor :portador_id
-
-    attr_accessor :status
-
-    attr_accessor :status_data
+    attr_accessor :id_conta
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'data_validade' => :'dataValidade',
+        :'codigo_retorno' => :'codigoRetorno',
         
-        :'descricao_estagio' => :'descricaoEstagio',
-        
-        :'descricao_status' => :'descricaoStatus',
-        
-        :'estagio' => :'estagio',
-        
-        :'flag_cancelamento' => :'flagCancelamento',
+        :'descricao_retorno' => :'descricaoRetorno',
         
         :'id_cartao' => :'idCartao',
         
-        :'numero_cartao' => :'numeroCartao',
-        
-        :'portador' => :'portador',
-        
-        :'portador_id' => :'portadorId',
-        
-        :'status' => :'status',
-        
-        :'status_data' => :'statusData'
+        :'id_conta' => :'idConta'
         
       }
     end
@@ -73,27 +45,13 @@ module Pier
     def self.swagger_types
       {
         
-        :'data_validade' => :'String',
+        :'codigo_retorno' => :'Integer',
         
-        :'descricao_estagio' => :'String',
-        
-        :'descricao_status' => :'String',
-        
-        :'estagio' => :'Integer',
-        
-        :'flag_cancelamento' => :'BOOLEAN',
+        :'descricao_retorno' => :'String',
         
         :'id_cartao' => :'Integer',
         
-        :'numero_cartao' => :'String',
-        
-        :'portador' => :'String',
-        
-        :'portador_id' => :'Integer',
-        
-        :'status' => :'Integer',
-        
-        :'status_data' => :'DateTime'
+        :'id_conta' => :'Integer'
         
       }
     end
@@ -107,46 +65,19 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'dataValidade']
+      if attributes[:'codigoRetorno']
         
         
-        self.data_validade = attributes[:'dataValidade']
-        
-      
-      end
-
-      
-      if attributes[:'descricaoEstagio']
-        
-        
-        self.descricao_estagio = attributes[:'descricaoEstagio']
+        self.codigo_retorno = attributes[:'codigoRetorno']
         
       
       end
 
       
-      if attributes[:'descricaoStatus']
+      if attributes[:'descricaoRetorno']
         
         
-        self.descricao_status = attributes[:'descricaoStatus']
-        
-      
-      end
-
-      
-      if attributes[:'estagio']
-        
-        
-        self.estagio = attributes[:'estagio']
-        
-      
-      end
-
-      
-      if attributes[:'flagCancelamento']
-        
-        
-        self.flag_cancelamento = attributes[:'flagCancelamento']
+        self.descricao_retorno = attributes[:'descricaoRetorno']
         
       
       end
@@ -161,46 +92,10 @@ module Pier
       end
 
       
-      if attributes[:'numeroCartao']
+      if attributes[:'idConta']
         
         
-        self.numero_cartao = attributes[:'numeroCartao']
-        
-      
-      end
-
-      
-      if attributes[:'portador']
-        
-        
-        self.portador = attributes[:'portador']
-        
-      
-      end
-
-      
-      if attributes[:'portadorId']
-        
-        
-        self.portador_id = attributes[:'portadorId']
-        
-      
-      end
-
-      
-      if attributes[:'status']
-        
-        
-        self.status = attributes[:'status']
-        
-      
-      end
-
-      
-      if attributes[:'statusData']
-        
-        
-        self.status_data = attributes[:'statusData']
+        self.id_conta = attributes[:'idConta']
         
       
       end
@@ -237,71 +132,8 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -328,17 +160,10 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          data_validade == o.data_validade &&
-          descricao_estagio == o.descricao_estagio &&
-          descricao_status == o.descricao_status &&
-          estagio == o.estagio &&
-          flag_cancelamento == o.flag_cancelamento &&
+          codigo_retorno == o.codigo_retorno &&
+          descricao_retorno == o.descricao_retorno &&
           id_cartao == o.id_cartao &&
-          numero_cartao == o.numero_cartao &&
-          portador == o.portador &&
-          portador_id == o.portador_id &&
-          status == o.status &&
-          status_data == o.status_data
+          id_conta == o.id_conta
     end
 
     # @see the `==` method
@@ -350,7 +175,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [data_validade, descricao_estagio, descricao_status, estagio, flag_cancelamento, id_cartao, numero_cartao, portador, portador_id, status, status_data].hash
+      [codigo_retorno, descricao_retorno, id_cartao, id_conta].hash
     end
 
     # Builds the object from hash

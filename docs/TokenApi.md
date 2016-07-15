@@ -4,8 +4,8 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**callback_using_post**](TokenApi.md#callback_using_post) | **POST** /v1/tokens/callback | /tokens/callback
-[**validar_using_post**](TokenApi.md#validar_using_post) | **POST** /v1/tokens/validar | /tokens/validar
+[**callback_using_post**](TokenApi.md#callback_using_post) | **POST** /v1.1/tokens/callback | /tokens/callback
+[**validar_using_post**](TokenApi.md#validar_using_post) | **POST** /v1.1/tokens/validar | /tokens/validar
 
 
 # **callback_using_post**

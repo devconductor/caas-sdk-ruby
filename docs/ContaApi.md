@@ -4,16 +4,16 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**buscar_conta_using_get**](ContaApi.md#buscar_conta_using_get) | **GET** /v1/contas/buscar | /contas/buscar
-[**consultar_conta_using_get**](ContaApi.md#consultar_conta_using_get) | **GET** /v1/contas/{idConta} | /contas/{idConta}
-[**consultar_extrato_faturas_using_get**](ContaApi.md#consultar_extrato_faturas_using_get) | **GET** /v1/contas/{idConta}/faturas | /contas/{idConta}/faturas
-[**consultar_saldos_limites_using_get**](ContaApi.md#consultar_saldos_limites_using_get) | **GET** /v1/contas/{idConta}/limites | /contas/{idConta}/limites
+[**buscar_conta_using_get**](ContaApi.md#buscar_conta_using_get) | **GET** /v1.1/contas/buscar | Buscar contas
+[**consultar_conta_using_get**](ContaApi.md#consultar_conta_using_get) | **GET** /v1.1/contas/{idConta} | Retorna uma conta
+[**consultar_extrato_faturas_using_get**](ContaApi.md#consultar_extrato_faturas_using_get) | **GET** /v1.1/contas/{idConta}/faturas | Retorna os extratos
+[**consultar_saldos_limites_using_get**](ContaApi.md#consultar_saldos_limites_using_get) | **GET** /v1.1/contas/{idConta}/limites | Retorna o limite
 
 
 # **buscar_conta_using_get**
 > ConsultarContaResponse buscar_conta_using_get(opts)
 
-/contas/buscar
+Buscar contas
 
 Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
 
@@ -39,7 +39,7 @@ opts = {
 }
 
 begin
-  #/contas/buscar
+  #Buscar contas
   result = api_instance.buscar_conta_using_get(opts)
   p result
 rescue Pier::ApiError => e
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 # **consultar_conta_using_get**
 > ContaResponse consultar_conta_using_get(id_conta)
 
-/contas/{idConta}
+Retorna uma conta
 
 Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
 
@@ -96,7 +96,7 @@ id_conta = 56 # Integer | ID da Conta
 
 
 begin
-  #/contas/{idConta}
+  #Retorna uma conta
   result = api_instance.consultar_conta_using_get(id_conta)
   p result
 rescue Pier::ApiError => e
@@ -128,9 +128,9 @@ Name | Type | Description  | Notes
 # **consultar_extrato_faturas_using_get**
 > ConsultarExtratoContaResponse consultar_extrato_faturas_using_get(id_conta, data_vencimento)
 
-/contas/{idConta}/faturas
+Retorna os extratos
 
-Consulte os extratos/faturas de uma determinada conta
+Consulte os extratos de uma determinada conta
 
 ### Example
 ```ruby
@@ -152,7 +152,7 @@ data_vencimento = "data_vencimento_example" # String | Data limite para o vencim
 
 
 begin
-  #/contas/{idConta}/faturas
+  #Retorna os extratos
   result = api_instance.consultar_extrato_faturas_using_get(id_conta, data_vencimento)
   p result
 rescue Pier::ApiError => e
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 # **consultar_saldos_limites_using_get**
 > ConsultarSaldoLimitesResponse consultar_saldos_limites_using_get(id_conta)
 
-/contas/{idConta}/limites
+Retorna o limite
 
 Consulte os limites de uma determinada conta
 
@@ -207,7 +207,7 @@ id_conta = 56 # Integer | ID da Conta
 
 
 begin
-  #/contas/{idConta}/limites
+  #Retorna o limite
   result = api_instance.consultar_saldos_limites_using_get(id_conta)
   p result
 rescue Pier::ApiError => e

@@ -75,7 +75,7 @@ module Pier
       
       
       # resource path
-      local_var_path = "/v1.1/contas/buscar".sub('{format}','json')
+      local_var_path = "/api/contas/buscar".sub('{format}','json')
 
       # query parameters
       query_params = {}
@@ -144,7 +144,7 @@ module Pier
       
       
       # resource path
-      local_var_path = "/v1.1/contas/{idConta}".sub('{format}','json').sub('{' + 'idConta' + '}', id_conta.to_s)
+      local_var_path = "/api/contas/{idConta}".sub('{format}','json').sub('{' + 'idConta' + '}', id_conta.to_s)
 
       # query parameters
       query_params = {}
@@ -219,7 +219,7 @@ module Pier
       
       
       # resource path
-      local_var_path = "/v1.1/contas/{idConta}/faturas".sub('{format}','json').sub('{' + 'idConta' + '}', id_conta.to_s)
+      local_var_path = "/api/contas/{idConta}/faturas".sub('{format}','json').sub('{' + 'idConta' + '}', id_conta.to_s)
 
       # query parameters
       query_params = {}
@@ -285,7 +285,7 @@ module Pier
       
       
       # resource path
-      local_var_path = "/v1.1/contas/{idConta}/limites".sub('{format}','json').sub('{' + 'idConta' + '}', id_conta.to_s)
+      local_var_path = "/api/contas/{idConta}/limites".sub('{format}','json').sub('{' + 'idConta' + '}', id_conta.to_s)
 
       # query parameters
       query_params = {}

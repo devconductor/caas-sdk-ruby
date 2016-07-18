@@ -53,7 +53,7 @@ module Pier
       
       
       # resource path
-      local_var_path = "/v1.1/tokens/callback".sub('{format}','json')
+      local_var_path = "/api/tokens/callback".sub('{format}','json')
 
       # query parameters
       query_params = {}
@@ -118,7 +118,7 @@ module Pier
       
       
       # resource path
-      local_var_path = "/v1.1/tokens/validar".sub('{format}','json')
+      local_var_path = "/api/tokens/validar".sub('{format}','json')
 
       # query parameters
       query_params = {}

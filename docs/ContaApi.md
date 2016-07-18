@@ -4,10 +4,10 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**buscar_conta_using_get**](ContaApi.md#buscar_conta_using_get) | **GET** /v1.1/contas/buscar | Buscar contas
-[**consultar_conta_using_get**](ContaApi.md#consultar_conta_using_get) | **GET** /v1.1/contas/{idConta} | Retorna uma conta
-[**consultar_extrato_faturas_using_get**](ContaApi.md#consultar_extrato_faturas_using_get) | **GET** /v1.1/contas/{idConta}/faturas | Retorna os extratos
-[**consultar_saldos_limites_using_get**](ContaApi.md#consultar_saldos_limites_using_get) | **GET** /v1.1/contas/{idConta}/limites | Retorna o limite
+[**buscar_conta_using_get**](ContaApi.md#buscar_conta_using_get) | **GET** /api/contas/buscar | Buscar contas
+[**consultar_conta_using_get**](ContaApi.md#consultar_conta_using_get) | **GET** /api/contas/{idConta} | Retorna uma conta
+[**consultar_extrato_faturas_using_get**](ContaApi.md#consultar_extrato_faturas_using_get) | **GET** /api/contas/{idConta}/faturas | Retorna os extratos
+[**consultar_saldos_limites_using_get**](ContaApi.md#consultar_saldos_limites_using_get) | **GET** /api/contas/{idConta}/limites | Retorna o limite
 
 
 # **buscar_conta_using_get**

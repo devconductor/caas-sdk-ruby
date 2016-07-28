@@ -54,6 +54,8 @@ module Pier
 
     attr_accessor :id_produto
 
+    attr_accessor :nome_plastico
+
     attr_accessor :numero_cartao
 
     attr_accessor :numero_cartao_real
@@ -101,6 +103,8 @@ module Pier
         :'id_pessoa_fisica' => :'idPessoaFisica',
         
         :'id_produto' => :'idProduto',
+        
+        :'nome_plastico' => :'nomePlastico',
         
         :'numero_cartao' => :'numeroCartao',
         
@@ -152,6 +156,8 @@ module Pier
         :'id_pessoa_fisica' => :'Integer',
         
         :'id_produto' => :'Integer',
+        
+        :'nome_plastico' => :'String',
         
         :'numero_cartao' => :'String',
         
@@ -335,6 +341,15 @@ module Pier
       end
 
       
+      if attributes[:'nomePlastico']
+        
+        
+        self.nome_plastico = attributes[:'nomePlastico']
+        
+      
+      end
+
+      
       if attributes[:'numeroCartao']
         
         
@@ -474,8 +489,17 @@ module Pier
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -610,6 +634,7 @@ module Pier
           id_log == o.id_log &&
           id_pessoa_fisica == o.id_pessoa_fisica &&
           id_produto == o.id_produto &&
+          nome_plastico == o.nome_plastico &&
           numero_cartao == o.numero_cartao &&
           numero_cartao_real == o.numero_cartao_real &&
           status_cartao == o.status_cartao &&
@@ -625,7 +650,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [bin, cod_retorno, codigo_desbloqueio, criptografia_hsm, data_emissao, data_validade, data_vencimento_padrao, descricao_retorno, estagio_cartao, estagio_data, flag_reversao, flag_senha, id_cartao, id_conta, id_emissor, id_log, id_pessoa_fisica, id_produto, numero_cartao, numero_cartao_real, status_cartao, status_data].hash
+      [bin, cod_retorno, codigo_desbloqueio, criptografia_hsm, data_emissao, data_validade, data_vencimento_padrao, descricao_retorno, estagio_cartao, estagio_data, flag_reversao, flag_senha, id_cartao, id_conta, id_emissor, id_log, id_pessoa_fisica, id_produto, nome_plastico, numero_cartao, numero_cartao_real, status_cartao, status_data].hash
     end
 
     # Builds the object from hash

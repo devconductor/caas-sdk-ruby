@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **id_log** | **String** |  | [optional] 
 **id_pessoa_fisica** | **Integer** |  | [optional] 
 **id_produto** | **Integer** |  | [optional] 
+**nome_plastico** | **String** |  | [optional] 
 **numero_cartao** | **String** |  | [optional] 
 **numero_cartao_real** | **String** |  | [optional] 
 **status_cartao** | **Integer** |  | [optional] 

@@ -40,6 +40,7 @@ require 'pier-sdk-ruby/models/pessoa_fisica_response'
 require 'pier-sdk-ruby/models/saldo_limite_response'
 
 # APIs
+require 'pier-sdk-ruby/api/base_api'
 require 'pier-sdk-ruby/api/cartao_api'
 require 'pier-sdk-ruby/api/conta_api'
 require 'pier-sdk-ruby/api/token_api'

@@ -5,9 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cnpj_loja** | **String** |  | [optional] 
 **cpf** | **String** |  | [optional] 
-**data_cadastro_conta** | **String** |  | [optional] 
-**data_emissao_identidade** | **String** |  | [optional] 
-**data_nascimento** | **String** |  | [optional] 
+**data_cadastro_conta** | **DateTime** |  | [optional] 
+**data_emissao_identidade** | **DateTime** |  | [optional] 
+**data_nascimento** | **DateTime** |  | [optional] 
 **ddd_celular** | **String** |  | [optional] 
 **id_conta** | **Integer** |  | [optional] 
 **nome** | **String** |  | [optional] 

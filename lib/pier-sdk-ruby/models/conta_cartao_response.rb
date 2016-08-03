@@ -89,11 +89,11 @@ module Pier
         
         :'cpf' => :'String',
         
-        :'data_cadastro_conta' => :'String',
+        :'data_cadastro_conta' => :'DateTime',
         
-        :'data_emissao_identidade' => :'String',
+        :'data_emissao_identidade' => :'DateTime',
         
-        :'data_nascimento' => :'String',
+        :'data_nascimento' => :'DateTime',
         
         :'ddd_celular' => :'String',
         

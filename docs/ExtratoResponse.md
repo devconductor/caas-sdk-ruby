@@ -33,3 +33,4 @@ Name | Type | Description | Notes
 **valor_dolar** | **Float** |  | [optional] 
 
 
+

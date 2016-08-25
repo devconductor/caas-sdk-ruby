@@ -157,6 +157,8 @@ module Pier
     # Returns Auth Settings hash for api client.
     def auth_settings
       {
+
+
         'access_token' =>
           {
             type: 'api_key',
@@ -164,6 +166,11 @@ module Pier
             key: 'access_token',
             value: api_key_with_prefix('access_token')
           },
+
+
+
+
+
         'client_id' =>
           {
             type: 'api_key',
@@ -171,6 +178,10 @@ module Pier
             key: 'client_id',
             value: api_key_with_prefix('client_id')
           },
+
+
+
+
       }
     end
   end

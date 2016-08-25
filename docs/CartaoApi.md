@@ -11,6 +11,8 @@ Method | HTTP request | Description
 [**embossado_cartao_using_put**](CartaoApi.md#embossado_cartao_using_put) | **PUT** /api/contas/{idConta}/cartoes/{idCartao}/embossado | Embossado
 
 
+
+
 # **bloquear_cartao_using_post**
 > CancelarCartaoResponse bloquear_cartao_using_post(id_conta, id_cartao, motivo, opts)
 
@@ -22,6 +24,7 @@ Bloquear um determinado cart\u00C3\u00A3o
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
+
 # setup authorization 
 Pier.configure do |config|
   # Configure API key authorization: access_token
@@ -29,6 +32,7 @@ Pier.configure do |config|
   # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
   #config.api_key_prefix['access_token'] = 'BEARER'
 end
+
 
 api_instance = Pier::CartaoApi.new
 
@@ -60,6 +64,7 @@ Name | Type | Description  | Notes
  **motivo** | **Integer**| Motivo do bloqueio | 
  **observacao** | **String**| Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio | [optional] 
 
+
 ### Return type
 
 [**CancelarCartaoResponse**](CancelarCartaoResponse.md)
@@ -75,6 +80,7 @@ Name | Type | Description  | Notes
 
 
 
+
 # **consultar_cartao_using_get**
 > ConsultarCartaoResponse consultar_cartao_using_get(id_conta, id_cartao, opts)
 
@@ -86,6 +92,7 @@ Consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
+
 # setup authorization 
 Pier.configure do |config|
   # Configure API key authorization: access_token
@@ -93,6 +100,7 @@ Pier.configure do |config|
   # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
   #config.api_key_prefix['access_token'] = 'BEARER'
 end
+
 
 api_instance = Pier::CartaoApi.new
 
@@ -121,6 +129,7 @@ Name | Type | Description  | Notes
  **id_cartao** | **Integer**| ID do Cart\u00C3\u00A3o que deseja consultar | 
  **numero_cartao** | **String**| N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional) | [optional] 
 
+
 ### Return type
 
 [**ConsultarCartaoResponse**](ConsultarCartaoResponse.md)
@@ -136,6 +145,7 @@ Name | Type | Description  | Notes
 
 
 
+
 # **consultar_cartoes_using_get**
 > ConsultarCartaoResponse consultar_cartoes_using_get(id_conta)
 
@@ -147,6 +157,7 @@ Consultar todos os cart\u00C3\u00B5es de uma determinada conta
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
+
 # setup authorization 
 Pier.configure do |config|
   # Configure API key authorization: access_token
@@ -154,6 +165,7 @@ Pier.configure do |config|
   # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
   #config.api_key_prefix['access_token'] = 'BEARER'
 end
+
 
 api_instance = Pier::CartaoApi.new
 
@@ -175,6 +187,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_conta** | **Integer**| ID da Conta | 
 
+
 ### Return type
 
 [**ConsultarCartaoResponse**](ConsultarCartaoResponse.md)
@@ -190,6 +203,7 @@ Name | Type | Description  | Notes
 
 
 
+
 # **desbloquear_cartao_using_post**
 > DesbloquearCartaoResponse desbloquear_cartao_using_post(id_conta, id_cartao, opts)
 
@@ -201,6 +215,7 @@ Desbloquear cart\u00C3\u00A3o de uma determinada conta
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
+
 # setup authorization 
 Pier.configure do |config|
   # Configure API key authorization: access_token
@@ -208,6 +223,7 @@ Pier.configure do |config|
   # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
   #config.api_key_prefix['access_token'] = 'BEARER'
 end
+
 
 api_instance = Pier::CartaoApi.new
 
@@ -236,6 +252,7 @@ Name | Type | Description  | Notes
  **id_cartao** | **Integer**| ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite | 
  **codigo_segurancao** | **String**| C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o | [optional] 
 
+
 ### Return type
 
 [**DesbloquearCartaoResponse**](DesbloquearCartaoResponse.md)
@@ -251,6 +268,7 @@ Name | Type | Description  | Notes
 
 
 
+
 # **embossado_cartao_using_put**
 > EmbossadoCartaoResponse embossado_cartao_using_put(id_conta, id_cartao)
 
@@ -262,6 +280,7 @@ N\u00C3\u00B3s informe caso tenha embossado algum cart\u00C3\u00A3o.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
+
 # setup authorization 
 Pier.configure do |config|
   # Configure API key authorization: access_token
@@ -269,6 +288,7 @@ Pier.configure do |config|
   # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
   #config.api_key_prefix['access_token'] = 'BEARER'
 end
+
 
 api_instance = Pier::CartaoApi.new
 
@@ -293,6 +313,7 @@ Name | Type | Description  | Notes
  **id_conta** | **Integer**| ID da Conta | 
  **id_cartao** | **Integer**| ID do Cart\u00C3\u00A3o que deseja cancelar | 
 
+
 ### Return type
 
 [**EmbossadoCartaoResponse**](EmbossadoCartaoResponse.md)
@@ -305,6 +326,8 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+
 
 
 

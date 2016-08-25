@@ -37,3 +37,4 @@ Name | Type | Description | Notes
 **vencimento_real_anterior** | **String** |  | [optional] 
 
 
+

@@ -21,3 +21,4 @@ Name | Type | Description | Notes
 **valor_minimo_extrato** | **Float** |  | [optional] 
 
 
+

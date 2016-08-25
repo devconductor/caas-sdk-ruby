@@ -7,6 +7,8 @@ Method | HTTP request | Description
 [**clear_using_get**](BaseApi.md#clear_using_get) | **GET** /api/bases/clear | /bases/clear
 
 
+
+
 # **clear_using_get**
 > BodyAccessToken clear_using_get
 
@@ -16,6 +18,7 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
+
 # setup authorization 
 Pier.configure do |config|
   # Configure API key authorization: access_token
@@ -23,6 +26,7 @@ Pier.configure do |config|
   # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
   #config.api_key_prefix['access_token'] = 'BEARER'
 end
+
 
 api_instance = Pier::BaseApi.new
 
@@ -38,6 +42,7 @@ end
 ### Parameters
 This endpoint does not need any parameter.
 
+
 ### Return type
 
 [**BodyAccessToken**](BodyAccessToken.md)
@@ -50,6 +55,8 @@ This endpoint does not need any parameter.
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+
 
 
 

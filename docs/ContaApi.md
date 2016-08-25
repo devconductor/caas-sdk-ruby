@@ -10,6 +10,8 @@ Method | HTTP request | Description
 [**consultar_saldos_limites_using_get**](ContaApi.md#consultar_saldos_limites_using_get) | **GET** /api/contas/{idConta}/limites | Retorna o limite
 
 
+
+
 # **buscar_conta_using_get**
 > ConsultarContaResponse buscar_conta_using_get(opts)
 
@@ -21,6 +23,7 @@ Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
+
 # setup authorization 
 Pier.configure do |config|
   # Configure API key authorization: access_token
@@ -28,6 +31,7 @@ Pier.configure do |config|
   # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
   #config.api_key_prefix['access_token'] = 'BEARER'
 end
+
 
 api_instance = Pier::ContaApi.new
 
@@ -56,6 +60,7 @@ Name | Type | Description  | Notes
  **numero_cartao** | **String**| N\u00C3\u00BAmero do cart\u00C3\u00A3o (opcional caso n\u00C3\u00A3o informa o cpf ou id da conta) | [optional] 
  **id_conta** | **Integer**| ID da Conta (opcional caso n\u00C3\u00A3o informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou cpf) | [optional] 
 
+
 ### Return type
 
 [**ConsultarContaResponse**](ConsultarContaResponse.md)
@@ -71,6 +76,7 @@ Name | Type | Description  | Notes
 
 
 
+
 # **consultar_conta_using_get**
 > ContaResponse consultar_conta_using_get(id_conta)
 
@@ -82,6 +88,7 @@ Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
+
 # setup authorization 
 Pier.configure do |config|
   # Configure API key authorization: access_token
@@ -89,6 +96,7 @@ Pier.configure do |config|
   # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
   #config.api_key_prefix['access_token'] = 'BEARER'
 end
+
 
 api_instance = Pier::ContaApi.new
 
@@ -110,6 +118,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_conta** | **Integer**| ID da Conta | 
 
+
 ### Return type
 
 [**ContaResponse**](ContaResponse.md)
@@ -125,6 +134,7 @@ Name | Type | Description  | Notes
 
 
 
+
 # **consultar_extrato_faturas_using_get**
 > ConsultarExtratoContaResponse consultar_extrato_faturas_using_get(id_conta, data_vencimento)
 
@@ -136,6 +146,7 @@ Consulte os extratos de uma determinada conta
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
+
 # setup authorization 
 Pier.configure do |config|
   # Configure API key authorization: access_token
@@ -143,6 +154,7 @@ Pier.configure do |config|
   # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
   #config.api_key_prefix['access_token'] = 'BEARER'
 end
+
 
 api_instance = Pier::ContaApi.new
 
@@ -167,6 +179,7 @@ Name | Type | Description  | Notes
  **id_conta** | **Integer**| ID da Conta | 
  **data_vencimento** | **String**| Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es | 
 
+
 ### Return type
 
 [**ConsultarExtratoContaResponse**](ConsultarExtratoContaResponse.md)
@@ -182,6 +195,7 @@ Name | Type | Description  | Notes
 
 
 
+
 # **consultar_saldos_limites_using_get**
 > ConsultarSaldoLimitesResponse consultar_saldos_limites_using_get(id_conta)
 
@@ -193,6 +207,7 @@ Consulte os limites de uma determinada conta
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
+
 # setup authorization 
 Pier.configure do |config|
   # Configure API key authorization: access_token
@@ -200,6 +215,7 @@ Pier.configure do |config|
   # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
   #config.api_key_prefix['access_token'] = 'BEARER'
 end
+
 
 api_instance = Pier::ContaApi.new
 
@@ -221,6 +237,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_conta** | **Integer**| ID da Conta | 
 
+
 ### Return type
 
 [**ConsultarSaldoLimitesResponse**](ConsultarSaldoLimitesResponse.md)
@@ -233,6 +250,8 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+
 
 
 

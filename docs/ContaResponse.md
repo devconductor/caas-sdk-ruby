@@ -39,3 +39,4 @@ Name | Type | Description | Notes
 **vinculo_origem_usuario** | **BOOLEAN** |  | [optional] 
 
 
+

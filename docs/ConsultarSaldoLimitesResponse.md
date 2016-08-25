@@ -21,3 +21,4 @@ Name | Type | Description | Notes
 **solicitacao_pendente** | **BOOLEAN** |  | [optional] 
 
 
+

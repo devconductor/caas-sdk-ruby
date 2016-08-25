@@ -8,6 +8,8 @@ Method | HTTP request | Description
 [**validar_using_post**](TokenApi.md#validar_using_post) | **POST** /api/tokens/validar | /tokens/validar
 
 
+
+
 # **callback_using_post**
 > BodyAccessToken callback_using_post(body_access_token)
 
@@ -17,6 +19,7 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
+
 # setup authorization 
 Pier.configure do |config|
   # Configure API key authorization: access_token
@@ -24,6 +27,7 @@ Pier.configure do |config|
   # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
   #config.api_key_prefix['access_token'] = 'BEARER'
 end
+
 
 api_instance = Pier::TokenApi.new
 
@@ -45,6 +49,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body_access_token** | [**BodyAccessToken**](BodyAccessToken.md)| bodyAccessToken | 
 
+
 ### Return type
 
 [**BodyAccessToken**](BodyAccessToken.md)
@@ -60,6 +65,7 @@ Name | Type | Description  | Notes
 
 
 
+
 # **validar_using_post**
 > Object validar_using_post(body_access_token)
 
@@ -69,6 +75,7 @@ Name | Type | Description  | Notes
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
+
 # setup authorization 
 Pier.configure do |config|
   # Configure API key authorization: access_token
@@ -76,6 +83,7 @@ Pier.configure do |config|
   # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
   #config.api_key_prefix['access_token'] = 'BEARER'
 end
+
 
 api_instance = Pier::TokenApi.new
 
@@ -97,6 +105,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body_access_token** | [**BodyAccessToken**](BodyAccessToken.md)| bodyAccessToken | 
 
+
 ### Return type
 
 **Object**
@@ -109,6 +118,8 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+
 
 
 

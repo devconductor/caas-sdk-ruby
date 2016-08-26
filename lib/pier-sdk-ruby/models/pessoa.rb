@@ -23,17 +23,47 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Lista de Status Cart\u00C3\u00B5es
-  class ListaDeStatusCartes
-    # Lista de status cart\u00C3\u00B5es
-    attr_accessor :status_cartoes
+  # Pessoa
+  class Pessoa
+    # N\u00C3\u00BAmero do CNPJ, quando PJ.
+    attr_accessor :cnpj
+
+    # N\u00C3\u00BAmero do CPF, quando PF.
+    attr_accessor :cpf
+
+    # Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+    attr_accessor :data_nascimento
+
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+    attr_accessor :id
+
+    # Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+    attr_accessor :nome
+
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+    attr_accessor :sexo
+
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
+    attr_accessor :tipo
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'status_cartoes' => :'statusCartoes'
+        :'cnpj' => :'cnpj',
+        
+        :'cpf' => :'cpf',
+        
+        :'data_nascimento' => :'dataNascimento',
+        
+        :'id' => :'id',
+        
+        :'nome' => :'nome',
+        
+        :'sexo' => :'sexo',
+        
+        :'tipo' => :'tipo'
         
       }
     end
@@ -42,7 +72,19 @@ module Pier
     def self.swagger_types
       {
         
-        :'status_cartoes' => :'Array<StatusCarto>'
+        :'cnpj' => :'String',
+        
+        :'cpf' => :'String',
+        
+        :'data_nascimento' => :'DateTime',
+        
+        :'id' => :'Integer',
+        
+        :'nome' => :'String',
+        
+        :'sexo' => :'String',
+        
+        :'tipo' => :'String'
         
       }
     end
@@ -56,12 +98,64 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'statusCartoes']
+      if attributes[:'cnpj']
         
-        if (value = attributes[:'statusCartoes']).is_a?(Array)
-          self.status_cartoes = value
-        end
         
+        self.cnpj = attributes[:'cnpj']
+        
+      
+      end
+
+      
+      if attributes[:'cpf']
+        
+        
+        self.cpf = attributes[:'cpf']
+        
+      
+      end
+
+      
+      if attributes[:'dataNascimento']
+        
+        
+        self.data_nascimento = attributes[:'dataNascimento']
+        
+      
+      end
+
+      
+      if attributes[:'id']
+        
+        
+        self.id = attributes[:'id']
+        
+      
+      end
+
+      
+      if attributes[:'nome']
+        
+        
+        self.nome = attributes[:'nome']
+        
+      
+      end
+
+      
+      if attributes[:'sexo']
+        
+        
+        self.sexo = attributes[:'sexo']
+        
+      
+      end
+
+      
+      if attributes[:'tipo']
+        
+        
+        self.tipo = attributes[:'tipo']
         
       
       end
@@ -86,8 +180,77 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if @id.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @nome.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if @tipo.nil?
+        return false
+      end
+
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -99,7 +262,13 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          status_cartoes == o.status_cartoes
+          cnpj == o.cnpj &&
+          cpf == o.cpf &&
+          data_nascimento == o.data_nascimento &&
+          id == o.id &&
+          nome == o.nome &&
+          sexo == o.sexo &&
+          tipo == o.tipo
     end
 
     # @see the `==` method
@@ -111,7 +280,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [status_cartoes].hash
+      [cnpj, cpf, data_nascimento, id, nome, sexo, tipo].hash
     end
 
     # Builds the object from hash

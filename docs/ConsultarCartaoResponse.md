@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cartoes** | [**Array&lt;CartaoResponse&gt;**](CartaoResponse.md) |  | [optional] 
+**cartoes** | [**Array&lt;CartaoResponseOld&gt;**](CartaoResponseOld.md) |  | [optional] 
 **codigo_retorno** | **Integer** |  | [optional] 
 **descricao_retorno** | **String** |  | [optional] 
 

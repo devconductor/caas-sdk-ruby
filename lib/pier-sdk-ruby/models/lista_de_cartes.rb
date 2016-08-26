@@ -23,17 +23,17 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Lista de Status Cart\u00C3\u00B5es
-  class ListaDeStatusCartes
-    # Lista de status cart\u00C3\u00B5es
-    attr_accessor :status_cartoes
+  # Lista de Cart\u00C3\u00B5es
+  class ListaDeCartes
+    # Lista de cart\u00C3\u00B5es
+    attr_accessor :cartoes
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'status_cartoes' => :'statusCartoes'
+        :'cartoes' => :'cartoes'
         
       }
     end
@@ -42,7 +42,7 @@ module Pier
     def self.swagger_types
       {
         
-        :'status_cartoes' => :'Array<StatusCarto>'
+        :'cartoes' => :'Array<CartaoResponse>'
         
       }
     end
@@ -56,10 +56,10 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'statusCartoes']
+      if attributes[:'cartoes']
         
-        if (value = attributes[:'statusCartoes']).is_a?(Array)
-          self.status_cartoes = value
+        if (value = attributes[:'cartoes']).is_a?(Array)
+          self.cartoes = value
         end
         
         
@@ -99,7 +99,7 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          status_cartoes == o.status_cartoes
+          cartoes == o.cartoes
     end
 
     # @see the `==` method
@@ -111,7 +111,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [status_cartoes].hash
+      [cartoes].hash
     end
 
     # Builds the object from hash

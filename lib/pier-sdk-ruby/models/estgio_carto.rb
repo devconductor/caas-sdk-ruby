@@ -25,35 +25,20 @@ require 'date'
 module Pier
   # Representa\u00C3\u00A7\u00C3\u00A3o do recurso Est\u00C3\u00A1gio Cart\u00C3\u00A3o
   class EstgioCarto
-    # Indica que Cart\u00C3\u00B5es com este idStatusCartao devem ter a sua conta Cancelada, sendo: (0 = N\u00C3\u00A3o Cancelar) e  (1 = Cancelar Conta).
-    attr_accessor :cancela_conta
-
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
+    # Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
     attr_accessor :id
 
-    # Indica qual o idStatusCartao que deve ser atribu\u00C3\u00ADdo a um idCartao quando ele for desbloqueado.
-    attr_accessor :id_status_destino_desbloqueio
-
-    # Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.
+    # Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
     attr_accessor :nome
-
-    # Indica que Cart\u00C3\u00B5es com este idStatusCartao podem ser Desbloqueados, sendo: (0 = N\u00C3\u00A3o Permitido) e  (1 = Permitido).
-    attr_accessor :permite_desbloqueio
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'cancela_conta' => :'cancelaConta',
-        
         :'id' => :'id',
         
-        :'id_status_destino_desbloqueio' => :'idStatusDestinoDesbloqueio',
-        
-        :'nome' => :'nome',
-        
-        :'permite_desbloqueio' => :'permiteDesbloqueio'
+        :'nome' => :'nome'
         
       }
     end
@@ -62,15 +47,9 @@ module Pier
     def self.swagger_types
       {
         
-        :'cancela_conta' => :'String',
-        
         :'id' => :'Integer',
         
-        :'id_status_destino_desbloqueio' => :'Integer',
-        
-        :'nome' => :'String',
-        
-        :'permite_desbloqueio' => :'String'
+        :'nome' => :'String'
         
       }
     end
@@ -84,15 +63,6 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'cancelaConta']
-        
-        
-        self.cancela_conta = attributes[:'cancelaConta']
-        
-      
-      end
-
-      
       if attributes[:'id']
         
         
@@ -102,28 +72,10 @@ module Pier
       end
 
       
-      if attributes[:'idStatusDestinoDesbloqueio']
-        
-        
-        self.id_status_destino_desbloqueio = attributes[:'idStatusDestinoDesbloqueio']
-        
-      
-      end
-
-      
       if attributes[:'nome']
         
         
         self.nome = attributes[:'nome']
-        
-      
-      end
-
-      
-      if attributes[:'permiteDesbloqueio']
-        
-        
-        self.permite_desbloqueio = attributes[:'permiteDesbloqueio']
         
       
       end
@@ -145,25 +97,7 @@ module Pier
     def valid?
       
       
-      if @cancela_conta.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
       if @id.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @id_status_destino_desbloqueio.nil?
         return false
       end
 
@@ -180,32 +114,8 @@ module Pier
       
       
       
-      
-      if @permite_desbloqueio.nil?
-        return false
-      end
-
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -222,11 +132,8 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          cancela_conta == o.cancela_conta &&
           id == o.id &&
-          id_status_destino_desbloqueio == o.id_status_destino_desbloqueio &&
-          nome == o.nome &&
-          permite_desbloqueio == o.permite_desbloqueio
+          nome == o.nome
     end
 
     # @see the `==` method
@@ -238,7 +145,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [cancela_conta, id, id_status_destino_desbloqueio, nome, permite_desbloqueio].hash
+      [id, nome].hash
     end
 
     # Builds the object from hash

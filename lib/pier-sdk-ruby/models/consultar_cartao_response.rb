@@ -48,7 +48,7 @@ module Pier
     def self.swagger_types
       {
         
-        :'cartoes' => :'Array<CartaoResponse>',
+        :'cartoes' => :'Array<CartaoResponseOld>',
         
         :'codigo_retorno' => :'Integer',
         

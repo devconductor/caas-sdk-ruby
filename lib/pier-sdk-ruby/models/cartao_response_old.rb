@@ -23,91 +23,103 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  class CartaoResponse
-    # Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
-    attr_accessor :arquivo_impressao
+  class CartaoResponseOld
+    attr_accessor :bin
 
-    # Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
+    attr_accessor :cod_retorno
+
     attr_accessor :codigo_desbloqueio
 
-    # Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-    attr_accessor :data_estagio_cartao
+    attr_accessor :criptografia_hsm
 
-    # Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-    attr_accessor :data_geracao
+    attr_accessor :data_emissao
 
-    # Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
-    attr_accessor :data_impressao
-
-    # Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-    attr_accessor :data_status_cartao
-
-    # Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
     attr_accessor :data_validade
 
-    # Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
-    attr_accessor :flag_impressao_origem_comercial
+    attr_accessor :data_vencimento_padrao
 
-    # Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
-    attr_accessor :flag_provisorio
+    attr_accessor :descricao_retorno
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-    attr_accessor :id
+    attr_accessor :estagio_cartao
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
+    attr_accessor :estagio_data
+
+    attr_accessor :flag_reversao
+
+    attr_accessor :flag_senha
+
+    attr_accessor :id_cartao
+
     attr_accessor :id_conta
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-    attr_accessor :id_estagio_cartao
+    attr_accessor :id_emissor
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)
-    attr_accessor :id_pessoa
+    attr_accessor :id_log
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
-    attr_accessor :id_status_cartao
+    attr_accessor :id_pessoa_fisica
 
-    # Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
+    attr_accessor :id_produto
+
+    attr_accessor :nome_plastico
+
     attr_accessor :numero_cartao
 
-    # Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
-    attr_accessor :portador
+    attr_accessor :numero_cartao_real
+
+    attr_accessor :status_cartao
+
+    attr_accessor :status_data
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'arquivo_impressao' => :'arquivoImpressao',
+        :'bin' => :'bin',
+        
+        :'cod_retorno' => :'codRetorno',
         
         :'codigo_desbloqueio' => :'codigoDesbloqueio',
         
-        :'data_estagio_cartao' => :'dataEstagioCartao',
+        :'criptografia_hsm' => :'criptografiaHSM',
         
-        :'data_geracao' => :'dataGeracao',
-        
-        :'data_impressao' => :'dataImpressao',
-        
-        :'data_status_cartao' => :'dataStatusCartao',
+        :'data_emissao' => :'dataEmissao',
         
         :'data_validade' => :'dataValidade',
         
-        :'flag_impressao_origem_comercial' => :'flagImpressaoOrigemComercial',
+        :'data_vencimento_padrao' => :'dataVencimentoPadrao',
         
-        :'flag_provisorio' => :'flagProvisorio',
+        :'descricao_retorno' => :'descricaoRetorno',
         
-        :'id' => :'id',
+        :'estagio_cartao' => :'estagioCartao',
+        
+        :'estagio_data' => :'estagioData',
+        
+        :'flag_reversao' => :'flagReversao',
+        
+        :'flag_senha' => :'flagSenha',
+        
+        :'id_cartao' => :'idCartao',
         
         :'id_conta' => :'idConta',
         
-        :'id_estagio_cartao' => :'idEstagioCartao',
+        :'id_emissor' => :'idEmissor',
         
-        :'id_pessoa' => :'idPessoa',
+        :'id_log' => :'idLog',
         
-        :'id_status_cartao' => :'idStatusCartao',
+        :'id_pessoa_fisica' => :'idPessoaFisica',
+        
+        :'id_produto' => :'idProduto',
+        
+        :'nome_plastico' => :'nomePlastico',
         
         :'numero_cartao' => :'numeroCartao',
         
-        :'portador' => :'portador'
+        :'numero_cartao_real' => :'numeroCartaoReal',
+        
+        :'status_cartao' => :'statusCartao',
+        
+        :'status_data' => :'statusData'
         
       }
     end
@@ -116,37 +128,51 @@ module Pier
     def self.swagger_types
       {
         
-        :'arquivo_impressao' => :'String',
+        :'bin' => :'Integer',
+        
+        :'cod_retorno' => :'Integer',
         
         :'codigo_desbloqueio' => :'String',
         
-        :'data_estagio_cartao' => :'LocalDateTime',
+        :'criptografia_hsm' => :'String',
         
-        :'data_geracao' => :'LocalDateTime',
+        :'data_emissao' => :'DateTime',
         
-        :'data_impressao' => :'LocalDateTime',
+        :'data_validade' => :'DateTime',
         
-        :'data_status_cartao' => :'LocalDateTime',
+        :'data_vencimento_padrao' => :'String',
         
-        :'data_validade' => :'LocalDateTime',
+        :'descricao_retorno' => :'String',
         
-        :'flag_impressao_origem_comercial' => :'Integer',
+        :'estagio_cartao' => :'Integer',
         
-        :'flag_provisorio' => :'Integer',
+        :'estagio_data' => :'DateTime',
         
-        :'id' => :'Integer',
+        :'flag_reversao' => :'BOOLEAN',
+        
+        :'flag_senha' => :'BOOLEAN',
+        
+        :'id_cartao' => :'Integer',
         
         :'id_conta' => :'Integer',
         
-        :'id_estagio_cartao' => :'Integer',
+        :'id_emissor' => :'Integer',
         
-        :'id_pessoa' => :'Integer',
+        :'id_log' => :'String',
         
-        :'id_status_cartao' => :'Integer',
+        :'id_pessoa_fisica' => :'Integer',
+        
+        :'id_produto' => :'Integer',
+        
+        :'nome_plastico' => :'String',
         
         :'numero_cartao' => :'String',
         
-        :'portador' => :'Integer'
+        :'numero_cartao_real' => :'String',
+        
+        :'status_cartao' => :'Integer',
+        
+        :'status_data' => :'DateTime'
         
       }
     end
@@ -160,10 +186,19 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'arquivoImpressao']
+      if attributes[:'bin']
         
         
-        self.arquivo_impressao = attributes[:'arquivoImpressao']
+        self.bin = attributes[:'bin']
+        
+      
+      end
+
+      
+      if attributes[:'codRetorno']
+        
+        
+        self.cod_retorno = attributes[:'codRetorno']
         
       
       end
@@ -178,37 +213,19 @@ module Pier
       end
 
       
-      if attributes[:'dataEstagioCartao']
+      if attributes[:'criptografiaHSM']
         
         
-        self.data_estagio_cartao = attributes[:'dataEstagioCartao']
-        
-      
-      end
-
-      
-      if attributes[:'dataGeracao']
-        
-        
-        self.data_geracao = attributes[:'dataGeracao']
+        self.criptografia_hsm = attributes[:'criptografiaHSM']
         
       
       end
 
       
-      if attributes[:'dataImpressao']
+      if attributes[:'dataEmissao']
         
         
-        self.data_impressao = attributes[:'dataImpressao']
-        
-      
-      end
-
-      
-      if attributes[:'dataStatusCartao']
-        
-        
-        self.data_status_cartao = attributes[:'dataStatusCartao']
+        self.data_emissao = attributes[:'dataEmissao']
         
       
       end
@@ -223,28 +240,64 @@ module Pier
       end
 
       
-      if attributes[:'flagImpressaoOrigemComercial']
+      if attributes[:'dataVencimentoPadrao']
         
         
-        self.flag_impressao_origem_comercial = attributes[:'flagImpressaoOrigemComercial']
-        
-      
-      end
-
-      
-      if attributes[:'flagProvisorio']
-        
-        
-        self.flag_provisorio = attributes[:'flagProvisorio']
+        self.data_vencimento_padrao = attributes[:'dataVencimentoPadrao']
         
       
       end
 
       
-      if attributes[:'id']
+      if attributes[:'descricaoRetorno']
         
         
-        self.id = attributes[:'id']
+        self.descricao_retorno = attributes[:'descricaoRetorno']
+        
+      
+      end
+
+      
+      if attributes[:'estagioCartao']
+        
+        
+        self.estagio_cartao = attributes[:'estagioCartao']
+        
+      
+      end
+
+      
+      if attributes[:'estagioData']
+        
+        
+        self.estagio_data = attributes[:'estagioData']
+        
+      
+      end
+
+      
+      if attributes[:'flagReversao']
+        
+        
+        self.flag_reversao = attributes[:'flagReversao']
+        
+      
+      end
+
+      
+      if attributes[:'flagSenha']
+        
+        
+        self.flag_senha = attributes[:'flagSenha']
+        
+      
+      end
+
+      
+      if attributes[:'idCartao']
+        
+        
+        self.id_cartao = attributes[:'idCartao']
         
       
       end
@@ -259,28 +312,46 @@ module Pier
       end
 
       
-      if attributes[:'idEstagioCartao']
+      if attributes[:'idEmissor']
         
         
-        self.id_estagio_cartao = attributes[:'idEstagioCartao']
-        
-      
-      end
-
-      
-      if attributes[:'idPessoa']
-        
-        
-        self.id_pessoa = attributes[:'idPessoa']
+        self.id_emissor = attributes[:'idEmissor']
         
       
       end
 
       
-      if attributes[:'idStatusCartao']
+      if attributes[:'idLog']
         
         
-        self.id_status_cartao = attributes[:'idStatusCartao']
+        self.id_log = attributes[:'idLog']
+        
+      
+      end
+
+      
+      if attributes[:'idPessoaFisica']
+        
+        
+        self.id_pessoa_fisica = attributes[:'idPessoaFisica']
+        
+      
+      end
+
+      
+      if attributes[:'idProduto']
+        
+        
+        self.id_produto = attributes[:'idProduto']
+        
+      
+      end
+
+      
+      if attributes[:'nomePlastico']
+        
+        
+        self.nome_plastico = attributes[:'nomePlastico']
         
       
       end
@@ -295,10 +366,28 @@ module Pier
       end
 
       
-      if attributes[:'portador']
+      if attributes[:'numeroCartaoReal']
         
         
-        self.portador = attributes[:'portador']
+        self.numero_cartao_real = attributes[:'numeroCartaoReal']
+        
+      
+      end
+
+      
+      if attributes[:'statusCartao']
+        
+        
+        self.status_cartao = attributes[:'statusCartao']
+        
+      
+      end
+
+      
+      if attributes[:'statusData']
+        
+        
+        self.status_data = attributes[:'statusData']
         
       
       end
@@ -320,151 +409,134 @@ module Pier
     def valid?
       
       
-      if @arquivo_impressao.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @codigo_desbloqueio.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @data_estagio_cartao.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @data_geracao.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @data_impressao.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @data_status_cartao.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @data_validade.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @flag_impressao_origem_comercial.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @flag_provisorio.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @id.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @id_conta.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @id_estagio_cartao.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @id_pessoa.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @id_status_cartao.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @numero_cartao.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @portador.nil?
-        return false
-      end
-
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
       
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -551,22 +623,29 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          arquivo_impressao == o.arquivo_impressao &&
+          bin == o.bin &&
+          cod_retorno == o.cod_retorno &&
           codigo_desbloqueio == o.codigo_desbloqueio &&
-          data_estagio_cartao == o.data_estagio_cartao &&
-          data_geracao == o.data_geracao &&
-          data_impressao == o.data_impressao &&
-          data_status_cartao == o.data_status_cartao &&
+          criptografia_hsm == o.criptografia_hsm &&
+          data_emissao == o.data_emissao &&
           data_validade == o.data_validade &&
-          flag_impressao_origem_comercial == o.flag_impressao_origem_comercial &&
-          flag_provisorio == o.flag_provisorio &&
-          id == o.id &&
+          data_vencimento_padrao == o.data_vencimento_padrao &&
+          descricao_retorno == o.descricao_retorno &&
+          estagio_cartao == o.estagio_cartao &&
+          estagio_data == o.estagio_data &&
+          flag_reversao == o.flag_reversao &&
+          flag_senha == o.flag_senha &&
+          id_cartao == o.id_cartao &&
           id_conta == o.id_conta &&
-          id_estagio_cartao == o.id_estagio_cartao &&
-          id_pessoa == o.id_pessoa &&
-          id_status_cartao == o.id_status_cartao &&
+          id_emissor == o.id_emissor &&
+          id_log == o.id_log &&
+          id_pessoa_fisica == o.id_pessoa_fisica &&
+          id_produto == o.id_produto &&
+          nome_plastico == o.nome_plastico &&
           numero_cartao == o.numero_cartao &&
-          portador == o.portador
+          numero_cartao_real == o.numero_cartao_real &&
+          status_cartao == o.status_cartao &&
+          status_data == o.status_data
     end
 
     # @see the `==` method
@@ -578,7 +657,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [arquivo_impressao, codigo_desbloqueio, data_estagio_cartao, data_geracao, data_impressao, data_status_cartao, data_validade, flag_impressao_origem_comercial, flag_provisorio, id, id_conta, id_estagio_cartao, id_pessoa, id_status_cartao, numero_cartao, portador].hash
+      [bin, cod_retorno, codigo_desbloqueio, criptografia_hsm, data_emissao, data_validade, data_vencimento_padrao, descricao_retorno, estagio_cartao, estagio_data, flag_reversao, flag_senha, id_cartao, id_conta, id_emissor, id_log, id_pessoa_fisica, id_produto, nome_plastico, numero_cartao, numero_cartao_real, status_cartao, status_data].hash
     end
 
     # Builds the object from hash

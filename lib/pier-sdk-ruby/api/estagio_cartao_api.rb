@@ -24,7 +24,7 @@ require "uri"
 
 module Pier
 
-  class ProdutoApi
+  class EstagioCartaoApi
     attr_accessor :api_client
 
     def initialize(api_client = ApiClient.default)
@@ -32,36 +32,36 @@ module Pier
     end
 
 
-    # Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
-    # Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
-    # @param id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
+    # Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o 
+    # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).  
+    # @param id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
-    # @return [OrigemComercial]
-    def consultar_produto_using_get(id_produto, opts = {})
-      data, _status_code, _headers = consultar_produto_using_get_with_http_info(id_produto, opts)
+    # @return [EstagioCartao]
+    def consultar_estagio_cartao_using_get(id_estagio_cartao, opts = {})
+      data, _status_code, _headers = consultar_estagio_cartao_using_get_with_http_info(id_estagio_cartao, opts)
       return data
     end
 
-    # Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
-    # Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
-    # @param id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
+    # Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o 
+    # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).  
+    # @param id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
-    # @return [Array<(OrigemComercial, Fixnum, Hash)>] OrigemComercial data, response status code and response headers
-    def consultar_produto_using_get_with_http_info(id_produto, opts = {})
+    # @return [Array<(EstagioCartao, Fixnum, Hash)>] EstagioCartao data, response status code and response headers
+    def consultar_estagio_cartao_using_get_with_http_info(id_estagio_cartao, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ProdutoApi.consultar_produto_using_get ..."
+        @api_client.config.logger.debug "Calling API: EstagioCartaoApi.consultar_estagio_cartao_using_get ..."
       end
       
       
-      # verify the required parameter 'id_produto' is set
-      fail ArgumentError, "Missing the required parameter 'id_produto' when calling ProdutoApi.consultar_produto_using_get" if id_produto.nil?
+      # verify the required parameter 'id_estagio_cartao' is set
+      fail ArgumentError, "Missing the required parameter 'id_estagio_cartao' when calling EstagioCartaoApi.consultar_estagio_cartao_using_get" if id_estagio_cartao.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/produtos/{id_origem_comercial}".sub('{format}','json').sub('{' + 'id_produto' + '}', id_produto.to_s)
+      local_var_path = "/api/estagios-cartoes/{id_estagio_cartao}".sub('{format}','json').sub('{' + 'id_estagio_cartao' + '}', id_estagio_cartao.to_s)
 
       # query parameters
       query_params = {}
@@ -90,47 +90,39 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'OrigemComercial')
+        :return_type => 'EstagioCartao')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ProdutoApi#consultar_produto_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstagioCartaoApi#consultar_estagio_cartao_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
 
-    # Lista os Produtos do Emissor
-    # Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor. 
+    # Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
+    # Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
-    # @option opts [String] :nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto
-    # @option opts [String] :status Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
+    # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
+    # @option opts [String] :nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @return [ListaProdutos]
-    def listar_produtos_using_get(opts = {})
-      data, _status_code, _headers = listar_produtos_using_get_with_http_info(opts)
+    # @return [ListaEstagiosCartoes]
+    def listar_estagios_cartoes_using_get(opts = {})
+      data, _status_code, _headers = listar_estagios_cartoes_using_get_with_http_info(opts)
       return data
     end
 
-    # Lista os Produtos do Emissor
-    # Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor. 
+    # Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
+    # Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
-    # @option opts [String] :nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto
-    # @option opts [String] :status Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
+    # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
+    # @option opts [String] :nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @return [Array<(ListaProdutos, Fixnum, Hash)>] ListaProdutos data, response status code and response headers
-    def listar_produtos_using_get_with_http_info(opts = {})
+    # @return [Array<(ListaEstagiosCartoes, Fixnum, Hash)>] ListaEstagiosCartoes data, response status code and response headers
+    def listar_estagios_cartoes_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ProdutoApi.listar_produtos_using_get ..."
+        @api_client.config.logger.debug "Calling API: EstagioCartaoApi.listar_estagios_cartoes_using_get ..."
       end
-      
-      
-      
-      
-      
-      
       
       
       
@@ -157,13 +149,12 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/produtos".sub('{format}','json')
+      local_var_path = "/api/estagios-cartoes".sub('{format}','json')
 
       # query parameters
       query_params = {}
-      query_params[:'id_produto'] = opts[:'id_produto'] if opts[:'id_produto']
+      query_params[:'id'] = opts[:'id'] if opts[:'id']
       query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
-      query_params[:'status'] = opts[:'status'] if opts[:'status']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
 
@@ -191,9 +182,9 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'ListaProdutos')
+        :return_type => 'ListaEstagiosCartoes')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ProdutoApi#listar_produtos_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstagioCartaoApi#listar_estagios_cartoes_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

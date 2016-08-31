@@ -69,7 +69,7 @@ describe 'OrigemComercialApi' do
   # @option opts [String] :status Status da Origem Comercial
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  # @return [ListaDeOrigensComerciais]
+  # @return [ListaOrigensComerciais]
   describe 'listar_origens_comerciais_using_get test' do
     it "should work" do
       # assertion here

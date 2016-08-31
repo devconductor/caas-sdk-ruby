@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 
 # **listar_produtos_using_get**
-> ListaDePessoas listar_produtos_using_get(opts)
+> ListaProdutos listar_produtos_using_get(opts)
 
 Lista os Produtos do Emissor
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListaDePessoas**](ListaDePessoas.md)
+[**ListaProdutos**](ListaProdutos.md)
 
 ### Authorization
 

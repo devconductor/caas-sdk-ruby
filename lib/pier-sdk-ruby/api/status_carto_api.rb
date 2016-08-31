@@ -36,7 +36,7 @@ module Pier
     # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).  
     # @param id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
-    # @return [StatusCarto]
+    # @return [StatusCartao]
     def consultar_status_cartao_using_get(id_status_cartao, opts = {})
       data, _status_code, _headers = consultar_status_cartao_using_get_with_http_info(id_status_cartao, opts)
       return data
@@ -46,7 +46,7 @@ module Pier
     # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).  
     # @param id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
-    # @return [Array<(StatusCarto, Fixnum, Hash)>] StatusCarto data, response status code and response headers
+    # @return [Array<(StatusCartao, Fixnum, Hash)>] StatusCartao data, response status code and response headers
     def consultar_status_cartao_using_get_with_http_info(id_status_cartao, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: StatusCartoApi.consultar_status_cartao_using_get ..."
@@ -90,7 +90,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'StatusCarto')
+        :return_type => 'StatusCartao')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: StatusCartoApi#consultar_status_cartao_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -117,7 +117,7 @@ module Pier
     # @option opts [Integer] :flag_excecao_bandeira Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @return [ListaDeStatusCartes]
+    # @return [ListaStatusCartoes]
     def listar_status_cartoes_using_get(opts = {})
       data, _status_code, _headers = listar_status_cartoes_using_get_with_http_info(opts)
       return data
@@ -142,7 +142,7 @@ module Pier
     # @option opts [Integer] :flag_excecao_bandeira Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @return [Array<(ListaDeStatusCartes, Fixnum, Hash)>] ListaDeStatusCartes data, response status code and response headers
+    # @return [Array<(ListaStatusCartoes, Fixnum, Hash)>] ListaStatusCartoes data, response status code and response headers
     def listar_status_cartoes_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: StatusCartoApi.listar_status_cartoes_using_get ..."
@@ -290,7 +290,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'ListaDeStatusCartes')
+        :return_type => 'ListaStatusCartoes')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: StatusCartoApi#listar_status_cartoes_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

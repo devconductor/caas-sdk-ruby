@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **consultar_status_cartao_using_get**
-> StatusCarto consultar_status_cartao_using_get(id_status_cartao)
+> StatusCartao consultar_status_cartao_using_get(id_status_cartao)
 
 Apresenta os dados de um determinado Status Cart\u00C3\u00A3o 
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StatusCarto**](StatusCarto.md)
+[**StatusCartao**](StatusCartao.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 
 # **listar_status_cartoes_using_get**
-> ListaDeStatusCartes listar_status_cartoes_using_get(opts)
+> ListaStatusCartoes listar_status_cartoes_using_get(opts)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o 
 
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListaDeStatusCartes**](ListaDeStatusCartes.md)
+[**ListaStatusCartoes**](ListaStatusCartoes.md)
 
 ### Authorization
 

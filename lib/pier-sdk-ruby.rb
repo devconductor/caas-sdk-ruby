@@ -38,10 +38,10 @@ require 'pier-sdk-ruby/models/body_access_token'
 require 'pier-sdk-ruby/models/cancelar_cartao_response'
 
 
+require 'pier-sdk-ruby/models/cartao'
+
+
 require 'pier-sdk-ruby/models/cartao_response_old'
-
-
-require 'pier-sdk-ruby/models/carto'
 
 
 require 'pier-sdk-ruby/models/consultar_cartao_response'
@@ -71,7 +71,7 @@ require 'pier-sdk-ruby/models/desbloquear_cartao_response'
 require 'pier-sdk-ruby/models/embossado_cartao_response'
 
 
-require 'pier-sdk-ruby/models/estgio_carto'
+require 'pier-sdk-ruby/models/estagio_cartao'
 
 
 require 'pier-sdk-ruby/models/extra_info'
@@ -80,34 +80,34 @@ require 'pier-sdk-ruby/models/extra_info'
 require 'pier-sdk-ruby/models/extrato_response'
 
 
-require 'pier-sdk-ruby/models/lista_de_cartes'
+require 'pier-sdk-ruby/models/lista_cartoes'
 
 
-require 'pier-sdk-ruby/models/lista_de_estgios_cartes'
+require 'pier-sdk-ruby/models/lista_estagios_cartoes'
 
 
-require 'pier-sdk-ruby/models/lista_de_origens_comerciais'
+require 'pier-sdk-ruby/models/lista_origens_comerciais'
 
 
-require 'pier-sdk-ruby/models/lista_de_pessoas'
+require 'pier-sdk-ruby/models/lista_produtos'
 
 
-require 'pier-sdk-ruby/models/lista_de_status_cartes'
+require 'pier-sdk-ruby/models/lista_status_cartoes'
 
 
 require 'pier-sdk-ruby/models/origem_comercial'
 
 
-require 'pier-sdk-ruby/models/pessoa'
-
-
 require 'pier-sdk-ruby/models/pessoa_fisica_response'
+
+
+require 'pier-sdk-ruby/models/produto'
 
 
 require 'pier-sdk-ruby/models/saldo_limite_response'
 
 
-require 'pier-sdk-ruby/models/status_carto'
+require 'pier-sdk-ruby/models/status_cartao'
 
 
 # APIs
@@ -117,11 +117,11 @@ require 'pier-sdk-ruby/api/base_api'
 
 require 'pier-sdk-ruby/api/cartao_api'
 
-require 'pier-sdk-ruby/api/carto_api'
+require 'pier-sdk-ruby/api/cartao_old_api'
 
 require 'pier-sdk-ruby/api/conta_api'
 
-require 'pier-sdk-ruby/api/estgio_carto_api'
+require 'pier-sdk-ruby/api/estagio_cartao_api'
 
 require 'pier-sdk-ruby/api/origem_comercial_api'
 

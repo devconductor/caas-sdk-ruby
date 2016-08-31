@@ -73,7 +73,7 @@ describe 'PessoaApi' do
   # @option opts [String] :cnpj2 N\u00C3\u00BAmero do CNPJ, quando PJ.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  # @return [ListaDeOrigensComerciais]
+  # @return [ListaOrigensComerciais]
   describe 'listar_using_get1 test' do
     it "should work" do
       # assertion here

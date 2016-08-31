@@ -110,7 +110,7 @@ module Pier
     # @option opts [String] :cnpj2 N\u00C3\u00BAmero do CNPJ, quando PJ.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @return [ListaDeOrigensComerciais]
+    # @return [ListaOrigensComerciais]
     def listar_using_get1(opts = {})
       data, _status_code, _headers = listar_using_get1_with_http_info(opts)
       return data
@@ -128,7 +128,7 @@ module Pier
     # @option opts [String] :cnpj2 N\u00C3\u00BAmero do CNPJ, quando PJ.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @return [Array<(ListaDeOrigensComerciais, Fixnum, Hash)>] ListaDeOrigensComerciais data, response status code and response headers
+    # @return [Array<(ListaOrigensComerciais, Fixnum, Hash)>] ListaOrigensComerciais data, response status code and response headers
     def listar_using_get1_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: PessoaApi.listar_using_get1 ..."
@@ -227,7 +227,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'ListaDeOrigensComerciais')
+        :return_type => 'ListaOrigensComerciais')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: PessoaApi#listar_using_get1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

@@ -68,7 +68,7 @@ describe 'EstagioCartaoApi' do
   # @option opts [String] :nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  # @return [ListaEstagiosCartoes]
+  # @return [PageEstagiosCartoes]
   describe 'listar_estagios_cartoes_using_get test' do
     it "should work" do
       # assertion here

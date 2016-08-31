@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 
 # **listar_estagios_cartoes_using_get**
-> ListaEstagiosCartoes listar_estagios_cartoes_using_get(opts)
+> PageEstagiosCartoes listar_estagios_cartoes_using_get(opts)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
 
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListaEstagiosCartoes**](ListaEstagiosCartoes.md)
+[**PageEstagiosCartoes**](PageEstagiosCartoes.md)
 
 ### Authorization
 

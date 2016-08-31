@@ -23,17 +23,23 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Lista de Est\u00C3\u00A1gios Cart\u00C3\u00B5es
-  class ListaEstagiosCartoes
-    # Lista de est\u00C3\u00A1gios cart\u00C3\u00B5es
-    attr_accessor :estagios_cartoes
+  class PageImplOfEstagioCartao
+    attr_accessor :last
+
+    attr_accessor :total_elements
+
+    attr_accessor :total_pages
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'estagios_cartoes' => :'estagiosCartoes'
+        :'last' => :'last',
+        
+        :'total_elements' => :'totalElements',
+        
+        :'total_pages' => :'totalPages'
         
       }
     end
@@ -42,7 +48,11 @@ module Pier
     def self.swagger_types
       {
         
-        :'estagios_cartoes' => :'Array<EstagioCartao>'
+        :'last' => :'BOOLEAN',
+        
+        :'total_elements' => :'Integer',
+        
+        :'total_pages' => :'Integer'
         
       }
     end
@@ -56,12 +66,28 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'estagiosCartoes']
+      if attributes[:'last']
         
-        if (value = attributes[:'estagiosCartoes']).is_a?(Array)
-          self.estagios_cartoes = value
-        end
         
+        self.last = attributes[:'last']
+        
+      
+      end
+
+      
+      if attributes[:'totalElements']
+        
+        
+        self.total_elements = attributes[:'totalElements']
+        
+      
+      end
+
+      
+      if attributes[:'totalPages']
+        
+        
+        self.total_pages = attributes[:'totalPages']
         
       
       end
@@ -86,8 +112,26 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -99,7 +143,9 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          estagios_cartoes == o.estagios_cartoes
+          last == o.last &&
+          total_elements == o.total_elements &&
+          total_pages == o.total_pages
     end
 
     # @see the `==` method
@@ -111,7 +157,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [estagios_cartoes].hash
+      [last, total_elements, total_pages].hash
     end
 
     # Builds the object from hash

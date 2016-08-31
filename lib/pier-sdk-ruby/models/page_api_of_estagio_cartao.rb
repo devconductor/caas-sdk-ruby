@@ -23,8 +23,30 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  class PageImplOfEstagioCartao
+  class PageApiOfEstagioCartao
+    attr_accessor :content
+
+    attr_accessor :first
+
+    attr_accessor :first_page
+
+    attr_accessor :has_content
+
+    attr_accessor :has_next_page
+
+    attr_accessor :has_previous_page
+
     attr_accessor :last
+
+    attr_accessor :next_page
+
+    attr_accessor :number
+
+    attr_accessor :number_of_elements
+
+    attr_accessor :previous_page
+
+    attr_accessor :size
 
     attr_accessor :total_elements
 
@@ -35,7 +57,29 @@ module Pier
     def self.attribute_map
       {
         
+        :'content' => :'content',
+        
+        :'first' => :'first',
+        
+        :'first_page' => :'firstPage',
+        
+        :'has_content' => :'hasContent',
+        
+        :'has_next_page' => :'hasNextPage',
+        
+        :'has_previous_page' => :'hasPreviousPage',
+        
         :'last' => :'last',
+        
+        :'next_page' => :'nextPage',
+        
+        :'number' => :'number',
+        
+        :'number_of_elements' => :'numberOfElements',
+        
+        :'previous_page' => :'previousPage',
+        
+        :'size' => :'size',
         
         :'total_elements' => :'totalElements',
         
@@ -48,7 +92,29 @@ module Pier
     def self.swagger_types
       {
         
+        :'content' => :'Array<EstagioCartao>',
+        
+        :'first' => :'BOOLEAN',
+        
+        :'first_page' => :'BOOLEAN',
+        
+        :'has_content' => :'BOOLEAN',
+        
+        :'has_next_page' => :'BOOLEAN',
+        
+        :'has_previous_page' => :'BOOLEAN',
+        
         :'last' => :'BOOLEAN',
+        
+        :'next_page' => :'Integer',
+        
+        :'number' => :'Integer',
+        
+        :'number_of_elements' => :'Integer',
+        
+        :'previous_page' => :'Integer',
+        
+        :'size' => :'Integer',
         
         :'total_elements' => :'Integer',
         
@@ -66,10 +132,111 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
+      if attributes[:'content']
+        
+        if (value = attributes[:'content']).is_a?(Array)
+          self.content = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes[:'first']
+        
+        
+        self.first = attributes[:'first']
+        
+      
+      end
+
+      
+      if attributes[:'firstPage']
+        
+        
+        self.first_page = attributes[:'firstPage']
+        
+      
+      end
+
+      
+      if attributes[:'hasContent']
+        
+        
+        self.has_content = attributes[:'hasContent']
+        
+      
+      end
+
+      
+      if attributes[:'hasNextPage']
+        
+        
+        self.has_next_page = attributes[:'hasNextPage']
+        
+      
+      end
+
+      
+      if attributes[:'hasPreviousPage']
+        
+        
+        self.has_previous_page = attributes[:'hasPreviousPage']
+        
+      
+      end
+
+      
       if attributes[:'last']
         
         
         self.last = attributes[:'last']
+        
+      
+      end
+
+      
+      if attributes[:'nextPage']
+        
+        
+        self.next_page = attributes[:'nextPage']
+        
+      
+      end
+
+      
+      if attributes[:'number']
+        
+        
+        self.number = attributes[:'number']
+        
+      
+      end
+
+      
+      if attributes[:'numberOfElements']
+        
+        
+        self.number_of_elements = attributes[:'numberOfElements']
+        
+      
+      end
+
+      
+      if attributes[:'previousPage']
+        
+        
+        self.previous_page = attributes[:'previousPage']
+        
+      
+      end
+
+      
+      if attributes[:'size']
+        
+        
+        self.size = attributes[:'size']
         
       
       end
@@ -120,8 +287,107 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -143,7 +409,18 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          content == o.content &&
+          first == o.first &&
+          first_page == o.first_page &&
+          has_content == o.has_content &&
+          has_next_page == o.has_next_page &&
+          has_previous_page == o.has_previous_page &&
           last == o.last &&
+          next_page == o.next_page &&
+          number == o.number &&
+          number_of_elements == o.number_of_elements &&
+          previous_page == o.previous_page &&
+          size == o.size &&
           total_elements == o.total_elements &&
           total_pages == o.total_pages
     end
@@ -157,7 +434,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [last, total_elements, total_pages].hash
+      [content, first, first_page, has_content, has_next_page, has_previous_page, last, next_page, number, number_of_elements, previous_page, size, total_elements, total_pages].hash
     end
 
     # Builds the object from hash

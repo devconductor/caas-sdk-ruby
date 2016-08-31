@@ -41,7 +41,7 @@ module Pier
     def self.swagger_types
       {
         
-        :'estagio_cartoes' => :'PageImplOfEstagioCartao'
+        :'estagio_cartoes' => :'PageApiOfEstagioCartao'
         
       }
     end

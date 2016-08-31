@@ -129,7 +129,7 @@ require 'pier-sdk-ruby/api/pessoa_api'
 
 require 'pier-sdk-ruby/api/produto_api'
 
-require 'pier-sdk-ruby/api/status_carto_api'
+require 'pier-sdk-ruby/api/status_cartao_api'
 
 require 'pier-sdk-ruby/api/token_api'
 

@@ -24,7 +24,7 @@ require "uri"
 
 module Pier
 
-  class StatusCartoApi
+  class StatusCartaoApi
     attr_accessor :api_client
 
     def initialize(api_client = ApiClient.default)
@@ -49,12 +49,12 @@ module Pier
     # @return [Array<(StatusCartao, Fixnum, Hash)>] StatusCartao data, response status code and response headers
     def consultar_status_cartao_using_get_with_http_info(id_status_cartao, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: StatusCartoApi.consultar_status_cartao_using_get ..."
+        @api_client.config.logger.debug "Calling API: StatusCartaoApi.consultar_status_cartao_using_get ..."
       end
       
       
       # verify the required parameter 'id_status_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_status_cartao' when calling StatusCartoApi.consultar_status_cartao_using_get" if id_status_cartao.nil?
+      fail ArgumentError, "Missing the required parameter 'id_status_cartao' when calling StatusCartaoApi.consultar_status_cartao_using_get" if id_status_cartao.nil?
       
       
       
@@ -92,7 +92,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'StatusCartao')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: StatusCartoApi#consultar_status_cartao_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: StatusCartaoApi#consultar_status_cartao_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -145,7 +145,7 @@ module Pier
     # @return [Array<(ListaStatusCartoes, Fixnum, Hash)>] ListaStatusCartoes data, response status code and response headers
     def listar_status_cartoes_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: StatusCartoApi.listar_status_cartoes_using_get ..."
+        @api_client.config.logger.debug "Calling API: StatusCartaoApi.listar_status_cartoes_using_get ..."
       end
       
       
@@ -292,7 +292,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'ListaStatusCartoes')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: StatusCartoApi#listar_status_cartoes_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: StatusCartaoApi#listar_status_cartoes_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

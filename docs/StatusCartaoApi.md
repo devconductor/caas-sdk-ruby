@@ -1,11 +1,11 @@
-# Pier::StatusCartoApi
+# Pier::StatusCartaoApi
 
 All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_status_cartao_using_get**](StatusCartoApi.md#consultar_status_cartao_using_get) | **GET** /api/status-cartoes/{id_status_cartao} | Apresenta os dados de um determinado Status Cart\u00C3\u00A3o 
-[**listar_status_cartoes_using_get**](StatusCartoApi.md#listar_status_cartoes_using_get) | **GET** /api/status-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o 
+[**consultar_status_cartao_using_get**](StatusCartaoApi.md#consultar_status_cartao_using_get) | **GET** /api/status-cartoes/{id_status_cartao} | Apresenta os dados de um determinado Status Cart\u00C3\u00A3o 
+[**listar_status_cartoes_using_get**](StatusCartaoApi.md#listar_status_cartoes_using_get) | **GET** /api/status-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o 
 
 
 
@@ -31,7 +31,7 @@ Pier.configure do |config|
 end
 
 
-api_instance = Pier::StatusCartoApi.new
+api_instance = Pier::StatusCartaoApi.new
 
 id_status_cartao = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
 
@@ -41,7 +41,7 @@ begin
   result = api_instance.consultar_status_cartao_using_get(id_status_cartao)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling StatusCartoApi->consultar_status_cartao_using_get: #{e}"
+  puts "Exception when calling StatusCartaoApi->consultar_status_cartao_using_get: #{e}"
 end
 ```
 
@@ -89,7 +89,7 @@ Pier.configure do |config|
 end
 
 
-api_instance = Pier::StatusCartoApi.new
+api_instance = Pier::StatusCartaoApi.new
 
 opts = { 
   id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
@@ -115,7 +115,7 @@ begin
   result = api_instance.listar_status_cartoes_using_get(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling StatusCartoApi->listar_status_cartoes_using_get: #{e}"
+  puts "Exception when calling StatusCartaoApi->listar_status_cartoes_using_get: #{e}"
 end
 ```
 

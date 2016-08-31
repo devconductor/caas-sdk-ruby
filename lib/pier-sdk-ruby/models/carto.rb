@@ -23,7 +23,8 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  class CartaoResponse
+  # Objeto Cart\u00C3\u00A3o
+  class Carto
     # Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
     attr_accessor :arquivo_impressao
 
@@ -63,8 +64,14 @@ module Pier
     # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)
     attr_accessor :id_pessoa
 
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
+    attr_accessor :id_produto
+
     # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
     attr_accessor :id_status_cartao
+
+    # Apresenta o nome impresso no cart\u00C3\u00A3o.
+    attr_accessor :nome_impresso
 
     # Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
     attr_accessor :numero_cartao
@@ -103,7 +110,11 @@ module Pier
         
         :'id_pessoa' => :'idPessoa',
         
+        :'id_produto' => :'idProduto',
+        
         :'id_status_cartao' => :'idStatusCartao',
+        
+        :'nome_impresso' => :'nomeImpresso',
         
         :'numero_cartao' => :'numeroCartao',
         
@@ -120,15 +131,15 @@ module Pier
         
         :'codigo_desbloqueio' => :'String',
         
-        :'data_estagio_cartao' => :'LocalDateTime',
+        :'data_estagio_cartao' => :'DateTime',
         
-        :'data_geracao' => :'LocalDateTime',
+        :'data_geracao' => :'DateTime',
         
-        :'data_impressao' => :'LocalDateTime',
+        :'data_impressao' => :'DateTime',
         
-        :'data_status_cartao' => :'LocalDateTime',
+        :'data_status_cartao' => :'DateTime',
         
-        :'data_validade' => :'LocalDateTime',
+        :'data_validade' => :'DateTime',
         
         :'flag_impressao_origem_comercial' => :'Integer',
         
@@ -142,7 +153,11 @@ module Pier
         
         :'id_pessoa' => :'Integer',
         
+        :'id_produto' => :'Integer',
+        
         :'id_status_cartao' => :'Integer',
+        
+        :'nome_impresso' => :'String',
         
         :'numero_cartao' => :'String',
         
@@ -277,10 +292,28 @@ module Pier
       end
 
       
+      if attributes[:'idProduto']
+        
+        
+        self.id_produto = attributes[:'idProduto']
+        
+      
+      end
+
+      
       if attributes[:'idStatusCartao']
         
         
         self.id_status_cartao = attributes[:'idStatusCartao']
+        
+      
+      end
+
+      
+      if attributes[:'nomeImpresso']
+        
+        
+        self.nome_impresso = attributes[:'nomeImpresso']
         
       
       end
@@ -320,151 +353,89 @@ module Pier
     def valid?
       
       
-      if @arquivo_impressao.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @codigo_desbloqueio.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @data_estagio_cartao.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @data_geracao.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @data_impressao.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @data_status_cartao.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @data_validade.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @flag_impressao_origem_comercial.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @flag_provisorio.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @id.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @id_conta.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @id_estagio_cartao.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @id_pessoa.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @id_status_cartao.nil?
-        return false
-      end
-
       
       
-      
-      
-      
-      if @numero_cartao.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @portador.nil?
-        return false
-      end
-
       
       
       
       
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -564,7 +535,9 @@ module Pier
           id_conta == o.id_conta &&
           id_estagio_cartao == o.id_estagio_cartao &&
           id_pessoa == o.id_pessoa &&
+          id_produto == o.id_produto &&
           id_status_cartao == o.id_status_cartao &&
+          nome_impresso == o.nome_impresso &&
           numero_cartao == o.numero_cartao &&
           portador == o.portador
     end
@@ -578,7 +551,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [arquivo_impressao, codigo_desbloqueio, data_estagio_cartao, data_geracao, data_impressao, data_status_cartao, data_validade, flag_impressao_origem_comercial, flag_provisorio, id, id_conta, id_estagio_cartao, id_pessoa, id_status_cartao, numero_cartao, portador].hash
+      [arquivo_impressao, codigo_desbloqueio, data_estagio_cartao, data_geracao, data_impressao, data_status_cartao, data_validade, flag_impressao_origem_comercial, flag_provisorio, id, id_conta, id_estagio_cartao, id_pessoa, id_produto, id_status_cartao, nome_impresso, numero_cartao, portador].hash
     end
 
     # Builds the object from hash

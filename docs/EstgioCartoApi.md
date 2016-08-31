@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 
 # **listar_estagios_cartoes_using_get**
-> ListaDeEstgiosCartes listar_estagios_cartoes_using_get(opts)
+> ListaDeEstgiosCartes listar_estagios_cartoes_using_get(id, nome, opts)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
 
@@ -91,16 +91,18 @@ end
 
 api_instance = Pier::EstgioCartoApi.new
 
+id = 789 # Integer | Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
+
+nome = "nome_example" # String | Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
+
 opts = { 
-  id_estagio_cartao: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
-  nome: "nome_example", # String | Nome atribu\u00C3\u00ADdo ao Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 }
 
 begin
   #Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
-  result = api_instance.listar_estagios_cartoes_using_get(opts)
+  result = api_instance.listar_estagios_cartoes_using_get(id, nome, opts)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling EstgioCartoApi->listar_estagios_cartoes_using_get: #{e}"
@@ -111,8 +113,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_estagio_cartao** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). | [optional] 
- **nome** | **String**| Nome atribu\u00C3\u00ADdo ao Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o. | [optional] 
+ **id** | **Integer**| Id do est\u00C3\u00A1gio cart\u00C3\u00A3o | 
+ **nome** | **String**| Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o | 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 

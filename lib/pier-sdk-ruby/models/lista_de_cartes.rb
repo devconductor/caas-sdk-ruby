@@ -42,7 +42,7 @@ module Pier
     def self.swagger_types
       {
         
-        :'cartoes' => :'Array<CartaoResponse>'
+        :'cartoes' => :'Array<Carto>'
         
       }
     end

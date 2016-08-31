@@ -63,9 +63,9 @@ describe 'EstgioCartoApi' do
   # unit tests for listar_estagios_cartoes_using_get
   # Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
   # Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
+  # @param id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
+  # @param nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
-  # @option opts [String] :nome Nome atribu\u00C3\u00ADdo ao Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   # @return [ListaDeEstgiosCartes]

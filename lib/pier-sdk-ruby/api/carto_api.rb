@@ -101,18 +101,20 @@ module Pier
     # Lista os Cart\u00C3\u00B5es gerados pelo Emissor
     # Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @option opts [Integer] :id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
     # @option opts [Integer] :id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @option opts [Integer] :id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
-    # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id).
-    # @option opts [Integer] :portador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
+    # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)
+    # @option opts [Integer] :id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
+    # @option opts [Integer] :portador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando &#39;1&#39;, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
     # @option opts [String] :numero_cartao Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
-    # @option opts [String] :data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-    # @option opts [String] :data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-    # @option opts [String] :data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-    # @option opts [String] :data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato AAAA-MM, quando houver.
-    # @option opts [String] :data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
+    # @option opts [String] :nome_impresso Apresenta o nome impresso no cart\u00C3\u00A3o.
+    # @option opts [Date] :data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+    # @option opts [Date] :data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+    # @option opts [Date] :data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+    # @option opts [String] :data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
+    # @option opts [Date] :data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
     # @option opts [String] :arquivo_impressao Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
     # @option opts [Integer] :flag_impressao_origem_comercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
     # @option opts [Integer] :flag_provisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
@@ -128,18 +130,20 @@ module Pier
     # Lista os Cart\u00C3\u00B5es gerados pelo Emissor
     # Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @option opts [Integer] :id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
     # @option opts [Integer] :id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @option opts [Integer] :id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
-    # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id).
-    # @option opts [Integer] :portador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
+    # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)
+    # @option opts [Integer] :id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
+    # @option opts [Integer] :portador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando &#39;1&#39;, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
     # @option opts [String] :numero_cartao Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
-    # @option opts [String] :data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-    # @option opts [String] :data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-    # @option opts [String] :data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-    # @option opts [String] :data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato AAAA-MM, quando houver.
-    # @option opts [String] :data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
+    # @option opts [String] :nome_impresso Apresenta o nome impresso no cart\u00C3\u00A3o.
+    # @option opts [Date] :data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+    # @option opts [Date] :data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+    # @option opts [Date] :data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+    # @option opts [String] :data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
+    # @option opts [Date] :data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
     # @option opts [String] :arquivo_impressao Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
     # @option opts [Integer] :flag_impressao_origem_comercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
     # @option opts [Integer] :flag_provisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
@@ -260,27 +264,41 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/cartoes".sub('{format}','json')
 
       # query parameters
       query_params = {}
-      query_params[:'id_cartao'] = opts[:'id_cartao'] if opts[:'id_cartao']
-      query_params[:'id_status_cartao'] = opts[:'id_status_cartao'] if opts[:'id_status_cartao']
-      query_params[:'id_estagio_cartao'] = opts[:'id_estagio_cartao'] if opts[:'id_estagio_cartao']
-      query_params[:'id_conta'] = opts[:'id_conta'] if opts[:'id_conta']
-      query_params[:'id_pessoa'] = opts[:'id_pessoa'] if opts[:'id_pessoa']
+      query_params[:'id'] = opts[:'id'] if opts[:'id']
+      query_params[:'idStatusCartao'] = opts[:'id_status_cartao'] if opts[:'id_status_cartao']
+      query_params[:'idEstagioCartao'] = opts[:'id_estagio_cartao'] if opts[:'id_estagio_cartao']
+      query_params[:'idConta'] = opts[:'id_conta'] if opts[:'id_conta']
+      query_params[:'idPessoa'] = opts[:'id_pessoa'] if opts[:'id_pessoa']
+      query_params[:'idProduto'] = opts[:'id_produto'] if opts[:'id_produto']
       query_params[:'portador'] = opts[:'portador'] if opts[:'portador']
-      query_params[:'numero_cartao'] = opts[:'numero_cartao'] if opts[:'numero_cartao']
-      query_params[:'data_geracao'] = opts[:'data_geracao'] if opts[:'data_geracao']
-      query_params[:'data_status_cartao'] = opts[:'data_status_cartao'] if opts[:'data_status_cartao']
-      query_params[:'data_estagio_cartao'] = opts[:'data_estagio_cartao'] if opts[:'data_estagio_cartao']
-      query_params[:'data_validade'] = opts[:'data_validade'] if opts[:'data_validade']
-      query_params[:'data_impressao'] = opts[:'data_impressao'] if opts[:'data_impressao']
-      query_params[:'arquivo_impressao'] = opts[:'arquivo_impressao'] if opts[:'arquivo_impressao']
-      query_params[:'flag_impressao_origem_comercial'] = opts[:'flag_impressao_origem_comercial'] if opts[:'flag_impressao_origem_comercial']
-      query_params[:'flag_provisorio'] = opts[:'flag_provisorio'] if opts[:'flag_provisorio']
-      query_params[:'codigo_desbloqueio'] = opts[:'codigo_desbloqueio'] if opts[:'codigo_desbloqueio']
+      query_params[:'numeroCartao'] = opts[:'numero_cartao'] if opts[:'numero_cartao']
+      query_params[:'nomeImpresso'] = opts[:'nome_impresso'] if opts[:'nome_impresso']
+      query_params[:'dataGeracao'] = opts[:'data_geracao'] if opts[:'data_geracao']
+      query_params[:'dataStatusCartao'] = opts[:'data_status_cartao'] if opts[:'data_status_cartao']
+      query_params[:'dataEstagioCartao'] = opts[:'data_estagio_cartao'] if opts[:'data_estagio_cartao']
+      query_params[:'dataValidade'] = opts[:'data_validade'] if opts[:'data_validade']
+      query_params[:'dataImpressao'] = opts[:'data_impressao'] if opts[:'data_impressao']
+      query_params[:'arquivoImpressao'] = opts[:'arquivo_impressao'] if opts[:'arquivo_impressao']
+      query_params[:'flagImpressaoOrigemComercial'] = opts[:'flag_impressao_origem_comercial'] if opts[:'flag_impressao_origem_comercial']
+      query_params[:'flagProvisorio'] = opts[:'flag_provisorio'] if opts[:'flag_provisorio']
+      query_params[:'codigoDesbloqueio'] = opts[:'codigo_desbloqueio'] if opts[:'codigo_desbloqueio']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
 

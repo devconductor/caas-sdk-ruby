@@ -65,28 +65,6 @@ describe 'StatusCarto' do
   end
 
 
-  describe 'test attribute "flag_cadastro_senha"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "flag_cancela_cartao"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
   describe 'test attribute "flag_cancela_conta"' do
     it 'should work' do
        # assertion here
@@ -98,7 +76,7 @@ describe 'StatusCarto' do
   end
 
 
-  describe 'test attribute "flag_cobra_tarifa"' do
+  describe 'test attribute "flag_cancela_no_desbloqueio"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -109,7 +87,7 @@ describe 'StatusCarto' do
   end
 
 
-  describe 'test attribute "flag_desbloqueio"' do
+  describe 'test attribute "flag_cobra_tarifa"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -165,28 +143,6 @@ describe 'StatusCarto' do
 
 
   describe 'test attribute "flag_reemite_cartao"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "flag_reversao_cancelamento"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "flag_reversao_desbloqueio"' do
     it 'should work' do
        # assertion here
        # should be_a()

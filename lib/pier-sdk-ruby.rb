@@ -38,13 +38,10 @@ require 'pier-sdk-ruby/models/body_access_token'
 require 'pier-sdk-ruby/models/cancelar_cartao_response'
 
 
-require 'pier-sdk-ruby/models/cartao_response'
-
-
 require 'pier-sdk-ruby/models/cartao_response_old'
 
 
-require 'pier-sdk-ruby/models/chronology'
+require 'pier-sdk-ruby/models/carto'
 
 
 require 'pier-sdk-ruby/models/consultar_cartao_response'

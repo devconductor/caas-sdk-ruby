@@ -95,9 +95,6 @@ require 'pier-sdk-ruby/models/lista_status_cartoes'
 require 'pier-sdk-ruby/models/origem_comercial'
 
 
-require 'pier-sdk-ruby/models/page_api_of_estagio_cartao'
-
-
 require 'pier-sdk-ruby/models/page_estagios_cartoes'
 
 

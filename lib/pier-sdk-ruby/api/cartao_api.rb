@@ -36,7 +36,7 @@ module Pier
     # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
     # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
-    # @return [OrigemComercial]
+    # @return [Cartao]
     def consultar_using_get(id_cartao, opts = {})
       data, _status_code, _headers = consultar_using_get_with_http_info(id_cartao, opts)
       return data
@@ -46,7 +46,7 @@ module Pier
     # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
     # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
-    # @return [Array<(OrigemComercial, Fixnum, Hash)>] OrigemComercial data, response status code and response headers
+    # @return [Array<(Cartao, Fixnum, Hash)>] Cartao data, response status code and response headers
     def consultar_using_get_with_http_info(id_cartao, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CartaoApi.consultar_using_get ..."
@@ -90,9 +90,75 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'OrigemComercial')
+        :return_type => 'Cartao')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CartaoApi#consultar_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
+    # Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param [Hash] opts the optional parameters
+    # @return [Cartao]
+    def debloquear_using_get(id_cartao, opts = {})
+      data, _status_code, _headers = debloquear_using_get_with_http_info(id_cartao, opts)
+      return data
+    end
+
+    # Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
+    # Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Cartao, Fixnum, Hash)>] Cartao data, response status code and response headers
+    def debloquear_using_get_with_http_info(id_cartao, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CartaoApi.debloquear_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'id_cartao' is set
+      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoApi.debloquear_using_get" if id_cartao.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/cartoes/{id_cartao}/desbloqueio".sub('{format}','json').sub('{' + 'id_cartao' + '}', id_cartao.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Cartao')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CartaoApi#debloquear_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -121,7 +187,7 @@ module Pier
     # @option opts [String] :codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @return [ListaCartoes]
+    # @return [PageCartoes]
     def listar_using_get(opts = {})
       data, _status_code, _headers = listar_using_get_with_http_info(opts)
       return data
@@ -150,7 +216,7 @@ module Pier
     # @option opts [String] :codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @return [Array<(ListaCartoes, Fixnum, Hash)>] ListaCartoes data, response status code and response headers
+    # @return [Array<(PageCartoes, Fixnum, Hash)>] PageCartoes data, response status code and response headers
     def listar_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CartaoApi.listar_using_get ..."
@@ -326,7 +392,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'ListaCartoes')
+        :return_type => 'PageCartoes')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CartaoApi#listar_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

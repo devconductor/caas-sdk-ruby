@@ -23,7 +23,7 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Page de Est\u00C3\u00A1gios Cart\u00C3\u00B5es
+  # Lista de Est\u00C3\u00A1gios Cart\u00C3\u00B5es
   class PageEstagiosCartoes
     attr_accessor :content
 

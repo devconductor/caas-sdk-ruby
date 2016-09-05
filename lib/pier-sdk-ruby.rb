@@ -80,22 +80,28 @@ require 'pier-sdk-ruby/models/extra_info'
 require 'pier-sdk-ruby/models/extrato_response'
 
 
-require 'pier-sdk-ruby/models/lista_cartoes'
-
-
-require 'pier-sdk-ruby/models/lista_origens_comerciais'
-
-
 require 'pier-sdk-ruby/models/lista_produtos'
-
-
-require 'pier-sdk-ruby/models/lista_status_cartoes'
 
 
 require 'pier-sdk-ruby/models/origem_comercial'
 
 
+require 'pier-sdk-ruby/models/page_cartoes'
+
+
 require 'pier-sdk-ruby/models/page_estagios_cartoes'
+
+
+require 'pier-sdk-ruby/models/page_origens_comerciais'
+
+
+require 'pier-sdk-ruby/models/page_pessoas'
+
+
+require 'pier-sdk-ruby/models/page_status_cartoes'
+
+
+require 'pier-sdk-ruby/models/pessoa'
 
 
 require 'pier-sdk-ruby/models/pessoa_fisica_response'

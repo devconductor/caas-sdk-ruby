@@ -23,8 +23,8 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Lista de Produtos
-  class ListaProdutos
+  # Lista de Status Cart\u00C3\u00B5es
+  class PageStatusCartoes
     attr_accessor :content
 
     attr_accessor :first
@@ -93,7 +93,7 @@ module Pier
     def self.swagger_types
       {
         
-        :'content' => :'Array<Produto>',
+        :'content' => :'Array<StatusCartao>',
         
         :'first' => :'BOOLEAN',
         

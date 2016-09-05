@@ -106,7 +106,7 @@ module Pier
     # @option opts [String] :status Status da Origem Comercial
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @return [ListaOrigensComerciais]
+    # @return [PageOrigensComerciais]
     def listar_origens_comerciais_using_get(opts = {})
       data, _status_code, _headers = listar_origens_comerciais_using_get_with_http_info(opts)
       return data
@@ -120,7 +120,7 @@ module Pier
     # @option opts [String] :status Status da Origem Comercial
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @return [Array<(ListaOrigensComerciais, Fixnum, Hash)>] ListaOrigensComerciais data, response status code and response headers
+    # @return [Array<(PageOrigensComerciais, Fixnum, Hash)>] PageOrigensComerciais data, response status code and response headers
     def listar_origens_comerciais_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OrigemComercialApi.listar_origens_comerciais_using_get ..."
@@ -191,7 +191,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'ListaOrigensComerciais')
+        :return_type => 'PageOrigensComerciais')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OrigemComercialApi#listar_origens_comerciais_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

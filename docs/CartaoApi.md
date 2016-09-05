@@ -5,13 +5,14 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultar_using_get**](CartaoApi.md#consultar_using_get) | **GET** /api/cartoes/{id_cartao} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
+[**debloquear_using_get**](CartaoApi.md#debloquear_using_get) | **GET** /api/cartoes/{id_cartao}/desbloqueio | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 [**listar_using_get**](CartaoApi.md#listar_using_get) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 
 
 
 
 # **consultar_using_get**
-> OrigemComercial consultar_using_get(id_cartao)
+> Cartao consultar_using_get(id_cartao)
 
 Apresenta os dados de um determinado Cart\u00C3\u00A3o
 
@@ -54,7 +55,65 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrigemComercial**](OrigemComercial.md)
+[**Cartao**](Cartao.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **debloquear_using_get**
+> Cartao debloquear_using_get(id_cartao)
+
+Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
+
+Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::CartaoApi.new
+
+id_cartao = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+
+
+begin
+  #Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
+  result = api_instance.debloquear_using_get(id_cartao)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CartaoApi->debloquear_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_cartao** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
+
+
+### Return type
+
+[**Cartao**](Cartao.md)
 
 ### Authorization
 
@@ -69,7 +128,7 @@ Name | Type | Description  | Notes
 
 
 # **listar_using_get**
-> ListaCartoes listar_using_get(opts)
+> PageCartoes listar_using_get(opts)
 
 Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 
@@ -151,7 +210,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListaCartoes**](ListaCartoes.md)
+[**PageCartoes**](PageCartoes.md)
 
 ### Authorization
 

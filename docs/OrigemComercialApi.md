@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 
 # **listar_origens_comerciais_using_get**
-> ListaOrigensComerciais listar_origens_comerciais_using_get(opts)
+> PageOrigensComerciais listar_origens_comerciais_using_get(opts)
 
 Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais 
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListaOrigensComerciais**](ListaOrigensComerciais.md)
+[**PageOrigensComerciais**](PageOrigensComerciais.md)
 
 ### Authorization
 

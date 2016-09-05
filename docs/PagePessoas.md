@@ -1,9 +1,9 @@
-# Pier::ListaProdutos
+# Pier::PagePessoas
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**Array&lt;Produto&gt;**](Produto.md) |  | [optional] 
+**content** | [**Array&lt;Pessoa&gt;**](Pessoa.md) |  | [optional] 
 **first** | **BOOLEAN** |  | [optional] 
 **first_page** | **BOOLEAN** |  | [optional] 
 **has_content** | **BOOLEAN** |  | [optional] 

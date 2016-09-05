@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 
 # **listar_using_get1**
-> ListaOrigensComerciais listar_using_get1(opts)
+> PagePessoas listar_using_get1(opts)
 
 Lista as Pessoas cadastradas no Emissor
 
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListaOrigensComerciais**](ListaOrigensComerciais.md)
+[**PagePessoas**](PagePessoas.md)
 
 ### Authorization
 

@@ -101,13 +101,13 @@ module Pier
     # Lista as Pessoas cadastradas no Emissor
     # Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
     # @option opts [String] :nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
     # @option opts [String] :tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
     # @option opts [String] :cpf N\u00C3\u00BAmero do CPF, quando PF.
     # @option opts [String] :cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
-    # @option opts [DateTime] :data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
-    # @option opts [String] :cnpj2 N\u00C3\u00BAmero do CNPJ, quando PJ.
+    # @option opts [Date] :data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+    # @option opts [String] :sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [PagePessoas]
@@ -119,13 +119,13 @@ module Pier
     # Lista as Pessoas cadastradas no Emissor
     # Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
     # @option opts [String] :nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
     # @option opts [String] :tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
     # @option opts [String] :cpf N\u00C3\u00BAmero do CPF, quando PF.
     # @option opts [String] :cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
-    # @option opts [DateTime] :data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
-    # @option opts [String] :cnpj2 N\u00C3\u00BAmero do CNPJ, quando PJ.
+    # @option opts [Date] :data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+    # @option opts [String] :sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Array<(PagePessoas, Fixnum, Hash)>] PagePessoas data, response status code and response headers
@@ -193,13 +193,13 @@ module Pier
 
       # query parameters
       query_params = {}
-      query_params[:'id_pessoa'] = opts[:'id_pessoa'] if opts[:'id_pessoa']
+      query_params[:'id'] = opts[:'id'] if opts[:'id']
       query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
       query_params[:'tipo'] = opts[:'tipo'] if opts[:'tipo']
       query_params[:'cpf'] = opts[:'cpf'] if opts[:'cpf']
       query_params[:'cnpj'] = opts[:'cnpj'] if opts[:'cnpj']
-      query_params[:'data_nascimento'] = opts[:'data_nascimento'] if opts[:'data_nascimento']
-      query_params[:'cnpj'] = opts[:'cnpj2'] if opts[:'cnpj2']
+      query_params[:'dataNascimento'] = opts[:'data_nascimento'] if opts[:'data_nascimento']
+      query_params[:'sexo'] = opts[:'sexo'] if opts[:'sexo']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
 

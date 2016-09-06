@@ -101,9 +101,9 @@ module Pier
     # Lista os Produtos do Emissor
     # Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor. 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
-    # @option opts [String] :nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto
-    # @option opts [String] :status Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
+    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+    # @option opts [String] :nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
+    # @option opts [String] :status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [ListaProdutos]
@@ -115,9 +115,9 @@ module Pier
     # Lista os Produtos do Emissor
     # Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor. 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
-    # @option opts [String] :nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto
-    # @option opts [String] :status Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
+    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+    # @option opts [String] :nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
+    # @option opts [String] :status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Array<(ListaProdutos, Fixnum, Hash)>] ListaProdutos data, response status code and response headers
@@ -161,7 +161,7 @@ module Pier
 
       # query parameters
       query_params = {}
-      query_params[:'id_produto'] = opts[:'id_produto'] if opts[:'id_produto']
+      query_params[:'id'] = opts[:'id'] if opts[:'id']
       query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
       query_params[:'status'] = opts[:'status'] if opts[:'status']
       query_params[:'page'] = opts[:'page'] if opts[:'page']

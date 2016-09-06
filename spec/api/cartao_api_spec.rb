@@ -43,6 +43,23 @@ describe 'CartaoApi' do
   end
 
 
+  # unit tests for consultar_limite_using_get
+  # Apresenta os limites do Portador do Cart\u00C3\u00A3o
+  # Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+  # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+  # @param [Hash] opts the optional parameters
+  # @return [LimiteDisponibilidade]
+  describe 'consultar_limite_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
   # unit tests for consultar_using_get
   # Apresenta os dados de um determinado Cart\u00C3\u00A3o
   # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
@@ -93,7 +110,7 @@ describe 'CartaoApi' do
   # @option opts [Date] :data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
   # @option opts [Date] :data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
   # @option opts [Date] :data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-  # @option opts [String] :data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
+  # @option opts [String] :data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato aaaa-MM, quando houver.
   # @option opts [Date] :data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
   # @option opts [String] :arquivo_impressao Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
   # @option opts [Integer] :flag_impressao_origem_comercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.

@@ -64,13 +64,13 @@ describe 'PessoaApi' do
   # Lista as Pessoas cadastradas no Emissor
   # Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+  # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
   # @option opts [String] :nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
   # @option opts [String] :tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
   # @option opts [String] :cpf N\u00C3\u00BAmero do CPF, quando PF.
   # @option opts [String] :cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
-  # @option opts [DateTime] :data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
-  # @option opts [String] :cnpj2 N\u00C3\u00BAmero do CNPJ, quando PJ.
+  # @option opts [Date] :data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+  # @option opts [String] :sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   # @return [PagePessoas]

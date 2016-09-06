@@ -32,6 +32,72 @@ module Pier
     end
 
 
+    # Apresenta os limites do Portador do Cart\u00C3\u00A3o
+    # Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param [Hash] opts the optional parameters
+    # @return [LimiteDisponibilidade]
+    def consultar_limite_using_get(id_cartao, opts = {})
+      data, _status_code, _headers = consultar_limite_using_get_with_http_info(id_cartao, opts)
+      return data
+    end
+
+    # Apresenta os limites do Portador do Cart\u00C3\u00A3o
+    # Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(LimiteDisponibilidade, Fixnum, Hash)>] LimiteDisponibilidade data, response status code and response headers
+    def consultar_limite_using_get_with_http_info(id_cartao, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CartaoApi.consultar_limite_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'id_cartao' is set
+      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoApi.consultar_limite_using_get" if id_cartao.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/cartoes/{id_cartao}/limites".sub('{format}','json').sub('{' + 'id_cartao' + '}', id_cartao.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'LimiteDisponibilidade')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CartaoApi#consultar_limite_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Apresenta os dados de um determinado Cart\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
     # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
@@ -179,7 +245,7 @@ module Pier
     # @option opts [Date] :data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
     # @option opts [Date] :data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
     # @option opts [Date] :data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-    # @option opts [String] :data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
+    # @option opts [String] :data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato aaaa-MM, quando houver.
     # @option opts [Date] :data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
     # @option opts [String] :arquivo_impressao Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
     # @option opts [Integer] :flag_impressao_origem_comercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
@@ -208,7 +274,7 @@ module Pier
     # @option opts [Date] :data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
     # @option opts [Date] :data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
     # @option opts [Date] :data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-    # @option opts [String] :data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
+    # @option opts [String] :data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato aaaa-MM, quando houver.
     # @option opts [Date] :data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
     # @option opts [String] :arquivo_impressao Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
     # @option opts [Integer] :flag_impressao_origem_comercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.

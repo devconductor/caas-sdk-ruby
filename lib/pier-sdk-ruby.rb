@@ -80,6 +80,9 @@ require 'pier-sdk-ruby/models/extra_info'
 require 'pier-sdk-ruby/models/extrato_response'
 
 
+require 'pier-sdk-ruby/models/limite_disponibilidade'
+
+
 require 'pier-sdk-ruby/models/lista_produtos'
 
 

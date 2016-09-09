@@ -4,18 +4,18 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_produto_using_get**](ProdutoApi.md#consultar_produto_using_get) | **GET** /api/produtos/{id_origem_comercial} | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+[**consultar_produto_using_get**](ProdutoApi.md#consultar_produto_using_get) | **GET** /api/produtos/{id_produto} | Apresenta os dados de um determinado Produto.
 [**listar_produtos_using_get**](ProdutoApi.md#listar_produtos_using_get) | **GET** /api/produtos | Lista os Produtos do Emissor
 
 
 
 
 # **consultar_produto_using_get**
-> OrigemComercial consultar_produto_using_get(id_produto)
+> Produto consultar_produto_using_get(id_produto)
 
-Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+Apresenta os dados de um determinado Produto.
 
-Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
 
 ### Example
 ```ruby
@@ -37,7 +37,7 @@ id_produto = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u
 
 
 begin
-  #Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+  #Apresenta os dados de um determinado Produto.
   result = api_instance.consultar_produto_using_get(id_produto)
   p result
 rescue Pier::ApiError => e
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrigemComercial**](OrigemComercial.md)
+[**Produto**](Produto.md)
 
 ### Authorization
 
@@ -94,7 +94,7 @@ api_instance = Pier::ProdutoApi.new
 opts = { 
   id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
   nome: "nome_example", # String | Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
-  status: "status_example", # String | Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
+  status: 56, # Integer | Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 }
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). | [optional] 
  **nome** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. | [optional] 
- **status** | **String**| Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). | [optional] 
+ **status** | **Integer**| Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 

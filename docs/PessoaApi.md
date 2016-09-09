@@ -4,18 +4,18 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_using_get1**](PessoaApi.md#consultar_using_get1) | **GET** /api/pessoas/{id_origem_comercial} | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+[**consultar_using_get1**](PessoaApi.md#consultar_using_get1) | **GET** /api/pessoas/{id_pessoa} | Apresenta os dados de uma determinada Pessoa.
 [**listar_using_get1**](PessoaApi.md#listar_using_get1) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
 
 
 
 
 # **consultar_using_get1**
-> OrigemComercial consultar_using_get1(id_origem_comercial)
+> Pessoa consultar_using_get1(id_pessoa)
 
-Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+Apresenta os dados de uma determinada Pessoa.
 
-Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
 
 ### Example
 ```ruby
@@ -33,12 +33,12 @@ end
 
 api_instance = Pier::PessoaApi.new
 
-id_origem_comercial = 789 # Integer | ID da Origem Comercial
+id_pessoa = 789 # Integer | ID da Origem Comercial
 
 
 begin
-  #Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
-  result = api_instance.consultar_using_get1(id_origem_comercial)
+  #Apresenta os dados de uma determinada Pessoa.
+  result = api_instance.consultar_using_get1(id_pessoa)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling PessoaApi->consultar_using_get1: #{e}"
@@ -49,12 +49,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_origem_comercial** | **Integer**| ID da Origem Comercial | 
+ **id_pessoa** | **Integer**| ID da Origem Comercial | 
 
 
 ### Return type
 
-[**OrigemComercial**](OrigemComercial.md)
+[**Pessoa**](Pessoa.md)
 
 ### Authorization
 

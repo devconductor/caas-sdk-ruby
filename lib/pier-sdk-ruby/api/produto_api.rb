@@ -32,21 +32,21 @@ module Pier
     end
 
 
-    # Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
-    # Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+    # Apresenta os dados de um determinado Produto.
+    # Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
     # @param id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
     # @param [Hash] opts the optional parameters
-    # @return [OrigemComercial]
+    # @return [Produto]
     def consultar_produto_using_get(id_produto, opts = {})
       data, _status_code, _headers = consultar_produto_using_get_with_http_info(id_produto, opts)
       return data
     end
 
-    # Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
-    # Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+    # Apresenta os dados de um determinado Produto.
+    # Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
     # @param id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
     # @param [Hash] opts the optional parameters
-    # @return [Array<(OrigemComercial, Fixnum, Hash)>] OrigemComercial data, response status code and response headers
+    # @return [Array<(Produto, Fixnum, Hash)>] Produto data, response status code and response headers
     def consultar_produto_using_get_with_http_info(id_produto, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ProdutoApi.consultar_produto_using_get ..."
@@ -61,7 +61,7 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/produtos/{id_origem_comercial}".sub('{format}','json').sub('{' + 'id_produto' + '}', id_produto.to_s)
+      local_var_path = "/api/produtos/{id_produto}".sub('{format}','json').sub('{' + 'id_produto' + '}', id_produto.to_s)
 
       # query parameters
       query_params = {}
@@ -90,7 +90,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'OrigemComercial')
+        :return_type => 'Produto')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ProdutoApi#consultar_produto_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -103,7 +103,7 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
     # @option opts [String] :nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
-    # @option opts [String] :status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
+    # @option opts [Integer] :status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [ListaProdutos]
@@ -117,7 +117,7 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
     # @option opts [String] :nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
-    # @option opts [String] :status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
+    # @option opts [Integer] :status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Array<(ListaProdutos, Fixnum, Hash)>] ListaProdutos data, response status code and response headers

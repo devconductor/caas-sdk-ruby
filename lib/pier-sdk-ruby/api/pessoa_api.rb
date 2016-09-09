@@ -32,36 +32,36 @@ module Pier
     end
 
 
-    # Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
-    # Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
-    # @param id_origem_comercial ID da Origem Comercial
+    # Apresenta os dados de uma determinada Pessoa.
+    # Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
+    # @param id_pessoa ID da Origem Comercial
     # @param [Hash] opts the optional parameters
-    # @return [OrigemComercial]
-    def consultar_using_get1(id_origem_comercial, opts = {})
-      data, _status_code, _headers = consultar_using_get1_with_http_info(id_origem_comercial, opts)
+    # @return [Pessoa]
+    def consultar_using_get1(id_pessoa, opts = {})
+      data, _status_code, _headers = consultar_using_get1_with_http_info(id_pessoa, opts)
       return data
     end
 
-    # Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
-    # Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
-    # @param id_origem_comercial ID da Origem Comercial
+    # Apresenta os dados de uma determinada Pessoa.
+    # Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
+    # @param id_pessoa ID da Origem Comercial
     # @param [Hash] opts the optional parameters
-    # @return [Array<(OrigemComercial, Fixnum, Hash)>] OrigemComercial data, response status code and response headers
-    def consultar_using_get1_with_http_info(id_origem_comercial, opts = {})
+    # @return [Array<(Pessoa, Fixnum, Hash)>] Pessoa data, response status code and response headers
+    def consultar_using_get1_with_http_info(id_pessoa, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: PessoaApi.consultar_using_get1 ..."
       end
       
       
-      # verify the required parameter 'id_origem_comercial' is set
-      fail ArgumentError, "Missing the required parameter 'id_origem_comercial' when calling PessoaApi.consultar_using_get1" if id_origem_comercial.nil?
+      # verify the required parameter 'id_pessoa' is set
+      fail ArgumentError, "Missing the required parameter 'id_pessoa' when calling PessoaApi.consultar_using_get1" if id_pessoa.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/pessoas/{id_origem_comercial}".sub('{format}','json').sub('{' + 'id_origem_comercial' + '}', id_origem_comercial.to_s)
+      local_var_path = "/api/pessoas/{id_pessoa}".sub('{format}','json').sub('{' + 'id_pessoa' + '}', id_pessoa.to_s)
 
       # query parameters
       query_params = {}
@@ -90,7 +90,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'OrigemComercial')
+        :return_type => 'Pessoa')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: PessoaApi#consultar_using_get1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

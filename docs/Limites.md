@@ -1,4 +1,4 @@
-# Pier::LimiteDisponibilidade
+# Pier::Limites
 
 ## Properties
 Name | Type | Description | Notes
@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **limite_consignado** | **Float** |  | 
 **limite_externo** | **Float** |  | 
 **limite_extra** | **Float** |  | 
-**limite_global** | **Float** | Campo que  | 
+**limite_global** | **Float** |  | 
 **limite_internacional_compra** | **Float** |  | 
 **limite_internacional_parcelado** | **Float** |  | 
 **limite_internacional_parcelas** | **Float** |  | 

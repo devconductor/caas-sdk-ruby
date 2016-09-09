@@ -80,7 +80,7 @@ require 'pier-sdk-ruby/models/extra_info'
 require 'pier-sdk-ruby/models/extrato_response'
 
 
-require 'pier-sdk-ruby/models/limite_disponibilidade'
+require 'pier-sdk-ruby/models/limites'
 
 
 require 'pier-sdk-ruby/models/lista_produtos'
@@ -110,10 +110,16 @@ require 'pier-sdk-ruby/models/pessoa'
 require 'pier-sdk-ruby/models/pessoa_fisica_response'
 
 
+require 'pier-sdk-ruby/models/portador'
+
+
 require 'pier-sdk-ruby/models/produto'
 
 
 require 'pier-sdk-ruby/models/saldo_limite_response'
+
+
+require 'pier-sdk-ruby/models/saldos'
 
 
 require 'pier-sdk-ruby/models/status_cartao'

@@ -23,27 +23,56 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Produto
-  class Produto
+  # Portador
+  class Portador
+    # Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
+    attr_accessor :data_cadastro_portador
+
+    # Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
+    attr_accessor :data_cancelamento_portador
+
+    # Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
+    attr_accessor :flag_ativo
+
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+    attr_accessor :id_conta
+
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
+    attr_accessor :id_parentesco
+
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+    attr_accessor :id_pessoa
+
     # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
-    attr_accessor :id
+    attr_accessor :id_produto
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
-    attr_accessor :nome
+    # Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
+    attr_accessor :nome_impresso
 
-    # Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
-    attr_accessor :status
+    attr_accessor :tipo_portador
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id' => :'id',
+        :'data_cadastro_portador' => :'dataCadastroPortador',
         
-        :'nome' => :'nome',
+        :'data_cancelamento_portador' => :'dataCancelamentoPortador',
         
-        :'status' => :'status'
+        :'flag_ativo' => :'flagAtivo',
+        
+        :'id_conta' => :'idConta',
+        
+        :'id_parentesco' => :'idParentesco',
+        
+        :'id_pessoa' => :'idPessoa',
+        
+        :'id_produto' => :'idProduto',
+        
+        :'nome_impresso' => :'nomeImpresso',
+        
+        :'tipo_portador' => :'tipoPortador'
         
       }
     end
@@ -52,11 +81,23 @@ module Pier
     def self.swagger_types
       {
         
-        :'id' => :'Integer',
+        :'data_cadastro_portador' => :'DateTime',
         
-        :'nome' => :'String',
+        :'data_cancelamento_portador' => :'DateTime',
         
-        :'status' => :'Integer'
+        :'flag_ativo' => :'Integer',
+        
+        :'id_conta' => :'Integer',
+        
+        :'id_parentesco' => :'Integer',
+        
+        :'id_pessoa' => :'Integer',
+        
+        :'id_produto' => :'Integer',
+        
+        :'nome_impresso' => :'String',
+        
+        :'tipo_portador' => :'String'
         
       }
     end
@@ -70,28 +111,82 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'id']
+      if attributes[:'dataCadastroPortador']
         
         
-        self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes[:'nome']
-        
-        
-        self.nome = attributes[:'nome']
+        self.data_cadastro_portador = attributes[:'dataCadastroPortador']
         
       
       end
 
       
-      if attributes[:'status']
+      if attributes[:'dataCancelamentoPortador']
         
         
-        self.status = attributes[:'status']
+        self.data_cancelamento_portador = attributes[:'dataCancelamentoPortador']
+        
+      
+      end
+
+      
+      if attributes[:'flagAtivo']
+        
+        
+        self.flag_ativo = attributes[:'flagAtivo']
+        
+      
+      end
+
+      
+      if attributes[:'idConta']
+        
+        
+        self.id_conta = attributes[:'idConta']
+        
+      
+      end
+
+      
+      if attributes[:'idParentesco']
+        
+        
+        self.id_parentesco = attributes[:'idParentesco']
+        
+      
+      end
+
+      
+      if attributes[:'idPessoa']
+        
+        
+        self.id_pessoa = attributes[:'idPessoa']
+        
+      
+      end
+
+      
+      if attributes[:'idProduto']
+        
+        
+        self.id_produto = attributes[:'idProduto']
+        
+      
+      end
+
+      
+      if attributes[:'nomeImpresso']
+        
+        
+        self.nome_impresso = attributes[:'nomeImpresso']
+        
+      
+      end
+
+      
+      if attributes[:'tipoPortador']
+        
+        
+        self.tipo_portador = attributes[:'tipoPortador']
         
       
       end
@@ -113,34 +208,73 @@ module Pier
     def valid?
       
       
-      if @id.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @nome.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @status.nil?
-        return false
-      end
-
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
       
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -162,9 +296,15 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          nome == o.nome &&
-          status == o.status
+          data_cadastro_portador == o.data_cadastro_portador &&
+          data_cancelamento_portador == o.data_cancelamento_portador &&
+          flag_ativo == o.flag_ativo &&
+          id_conta == o.id_conta &&
+          id_parentesco == o.id_parentesco &&
+          id_pessoa == o.id_pessoa &&
+          id_produto == o.id_produto &&
+          nome_impresso == o.nome_impresso &&
+          tipo_portador == o.tipo_portador
     end
 
     # @see the `==` method
@@ -176,7 +316,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, nome, status].hash
+      [data_cadastro_portador, data_cancelamento_portador, flag_ativo, id_conta, id_parentesco, id_pessoa, id_produto, nome_impresso, tipo_portador].hash
     end
 
     # Builds the object from hash

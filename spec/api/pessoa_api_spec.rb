@@ -44,11 +44,11 @@ describe 'PessoaApi' do
 
 
   # unit tests for consultar_using_get1
-  # Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
-  # Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
-  # @param id_origem_comercial ID da Origem Comercial
+  # Apresenta os dados de uma determinada Pessoa.
+  # Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
+  # @param id_pessoa ID da Origem Comercial
   # @param [Hash] opts the optional parameters
-  # @return [OrigemComercial]
+  # @return [Pessoa]
   describe 'consultar_using_get1 test' do
     it "should work" do
       # assertion here

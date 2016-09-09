@@ -23,41 +23,33 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # LimiteDisponibilidade
-  class LimiteDisponibilidade
+  # Saldos
+  class Saldos
     # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Limite Disponibilidade (id).
     attr_accessor :id
 
-    attr_accessor :limite_compra
+    attr_accessor :saldo_disponivel_compra
 
-    attr_accessor :limite_consignado
+    attr_accessor :saldo_disponivel_compra_internacional
 
-    attr_accessor :limite_externo
+    attr_accessor :saldo_disponivel_externo
 
-    attr_accessor :limite_extra
+    attr_accessor :saldo_disponivel_extra
 
     # Campo que 
-    attr_accessor :limite_global
+    attr_accessor :saldo_disponivel_global
 
-    attr_accessor :limite_internacional_compra
+    attr_accessor :saldo_disponivel_mensal
 
-    attr_accessor :limite_internacional_parcelado
+    attr_accessor :saldo_disponivel_parcelado
 
-    attr_accessor :limite_internacional_parcelas
+    attr_accessor :saldo_disponivel_parcelas
 
-    attr_accessor :limite_internacional_saque_global
+    attr_accessor :saldo_disponivel_saque
 
-    attr_accessor :limite_internacional_saque_periodo
+    attr_accessor :saldo_disponivel_saque_internacional
 
-    attr_accessor :limite_mensal
-
-    attr_accessor :limite_parcelado
-
-    attr_accessor :limite_parcelas
-
-    attr_accessor :limite_saque_global
-
-    attr_accessor :limite_saque_periodo
+    attr_accessor :saldo_pontos_fidelidade
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -66,35 +58,27 @@ module Pier
         
         :'id' => :'id',
         
-        :'limite_compra' => :'limiteCompra',
+        :'saldo_disponivel_compra' => :'saldoDisponivelCompra',
         
-        :'limite_consignado' => :'limiteConsignado',
+        :'saldo_disponivel_compra_internacional' => :'saldoDisponivelCompraInternacional',
         
-        :'limite_externo' => :'limiteExterno',
+        :'saldo_disponivel_externo' => :'saldoDisponivelExterno',
         
-        :'limite_extra' => :'limiteExtra',
+        :'saldo_disponivel_extra' => :'saldoDisponivelExtra',
         
-        :'limite_global' => :'limiteGlobal',
+        :'saldo_disponivel_global' => :'saldoDisponivelGlobal',
         
-        :'limite_internacional_compra' => :'limiteInternacionalCompra',
+        :'saldo_disponivel_mensal' => :'saldoDisponivelMensal',
         
-        :'limite_internacional_parcelado' => :'limiteInternacionalParcelado',
+        :'saldo_disponivel_parcelado' => :'saldoDisponivelParcelado',
         
-        :'limite_internacional_parcelas' => :'limiteInternacionalParcelas',
+        :'saldo_disponivel_parcelas' => :'saldoDisponivelParcelas',
         
-        :'limite_internacional_saque_global' => :'limiteInternacionalSaqueGlobal',
+        :'saldo_disponivel_saque' => :'saldoDisponivelSaque',
         
-        :'limite_internacional_saque_periodo' => :'limiteInternacionalSaquePeriodo',
+        :'saldo_disponivel_saque_internacional' => :'saldoDisponivelSaqueInternacional',
         
-        :'limite_mensal' => :'limiteMensal',
-        
-        :'limite_parcelado' => :'limiteParcelado',
-        
-        :'limite_parcelas' => :'limiteParcelas',
-        
-        :'limite_saque_global' => :'limiteSaqueGlobal',
-        
-        :'limite_saque_periodo' => :'limiteSaquePeriodo'
+        :'saldo_pontos_fidelidade' => :'saldoPontosFidelidade'
         
       }
     end
@@ -105,35 +89,27 @@ module Pier
         
         :'id' => :'Integer',
         
-        :'limite_compra' => :'Float',
+        :'saldo_disponivel_compra' => :'Float',
         
-        :'limite_consignado' => :'Float',
+        :'saldo_disponivel_compra_internacional' => :'Float',
         
-        :'limite_externo' => :'Float',
+        :'saldo_disponivel_externo' => :'Float',
         
-        :'limite_extra' => :'Float',
+        :'saldo_disponivel_extra' => :'Float',
         
-        :'limite_global' => :'Float',
+        :'saldo_disponivel_global' => :'Float',
         
-        :'limite_internacional_compra' => :'Float',
+        :'saldo_disponivel_mensal' => :'Float',
         
-        :'limite_internacional_parcelado' => :'Float',
+        :'saldo_disponivel_parcelado' => :'Float',
         
-        :'limite_internacional_parcelas' => :'Float',
+        :'saldo_disponivel_parcelas' => :'Float',
         
-        :'limite_internacional_saque_global' => :'Float',
+        :'saldo_disponivel_saque' => :'Float',
         
-        :'limite_internacional_saque_periodo' => :'Float',
+        :'saldo_disponivel_saque_internacional' => :'Float',
         
-        :'limite_mensal' => :'Float',
-        
-        :'limite_parcelado' => :'Float',
-        
-        :'limite_parcelas' => :'Float',
-        
-        :'limite_saque_global' => :'Float',
-        
-        :'limite_saque_periodo' => :'Float'
+        :'saldo_pontos_fidelidade' => :'Float'
         
       }
     end
@@ -156,136 +132,100 @@ module Pier
       end
 
       
-      if attributes[:'limiteCompra']
+      if attributes[:'saldoDisponivelCompra']
         
         
-        self.limite_compra = attributes[:'limiteCompra']
-        
-      
-      end
-
-      
-      if attributes[:'limiteConsignado']
-        
-        
-        self.limite_consignado = attributes[:'limiteConsignado']
+        self.saldo_disponivel_compra = attributes[:'saldoDisponivelCompra']
         
       
       end
 
       
-      if attributes[:'limiteExterno']
+      if attributes[:'saldoDisponivelCompraInternacional']
         
         
-        self.limite_externo = attributes[:'limiteExterno']
-        
-      
-      end
-
-      
-      if attributes[:'limiteExtra']
-        
-        
-        self.limite_extra = attributes[:'limiteExtra']
+        self.saldo_disponivel_compra_internacional = attributes[:'saldoDisponivelCompraInternacional']
         
       
       end
 
       
-      if attributes[:'limiteGlobal']
+      if attributes[:'saldoDisponivelExterno']
         
         
-        self.limite_global = attributes[:'limiteGlobal']
-        
-      
-      end
-
-      
-      if attributes[:'limiteInternacionalCompra']
-        
-        
-        self.limite_internacional_compra = attributes[:'limiteInternacionalCompra']
+        self.saldo_disponivel_externo = attributes[:'saldoDisponivelExterno']
         
       
       end
 
       
-      if attributes[:'limiteInternacionalParcelado']
+      if attributes[:'saldoDisponivelExtra']
         
         
-        self.limite_internacional_parcelado = attributes[:'limiteInternacionalParcelado']
-        
-      
-      end
-
-      
-      if attributes[:'limiteInternacionalParcelas']
-        
-        
-        self.limite_internacional_parcelas = attributes[:'limiteInternacionalParcelas']
+        self.saldo_disponivel_extra = attributes[:'saldoDisponivelExtra']
         
       
       end
 
       
-      if attributes[:'limiteInternacionalSaqueGlobal']
+      if attributes[:'saldoDisponivelGlobal']
         
         
-        self.limite_internacional_saque_global = attributes[:'limiteInternacionalSaqueGlobal']
-        
-      
-      end
-
-      
-      if attributes[:'limiteInternacionalSaquePeriodo']
-        
-        
-        self.limite_internacional_saque_periodo = attributes[:'limiteInternacionalSaquePeriodo']
+        self.saldo_disponivel_global = attributes[:'saldoDisponivelGlobal']
         
       
       end
 
       
-      if attributes[:'limiteMensal']
+      if attributes[:'saldoDisponivelMensal']
         
         
-        self.limite_mensal = attributes[:'limiteMensal']
-        
-      
-      end
-
-      
-      if attributes[:'limiteParcelado']
-        
-        
-        self.limite_parcelado = attributes[:'limiteParcelado']
+        self.saldo_disponivel_mensal = attributes[:'saldoDisponivelMensal']
         
       
       end
 
       
-      if attributes[:'limiteParcelas']
+      if attributes[:'saldoDisponivelParcelado']
         
         
-        self.limite_parcelas = attributes[:'limiteParcelas']
-        
-      
-      end
-
-      
-      if attributes[:'limiteSaqueGlobal']
-        
-        
-        self.limite_saque_global = attributes[:'limiteSaqueGlobal']
+        self.saldo_disponivel_parcelado = attributes[:'saldoDisponivelParcelado']
         
       
       end
 
       
-      if attributes[:'limiteSaquePeriodo']
+      if attributes[:'saldoDisponivelParcelas']
         
         
-        self.limite_saque_periodo = attributes[:'limiteSaquePeriodo']
+        self.saldo_disponivel_parcelas = attributes[:'saldoDisponivelParcelas']
+        
+      
+      end
+
+      
+      if attributes[:'saldoDisponivelSaque']
+        
+        
+        self.saldo_disponivel_saque = attributes[:'saldoDisponivelSaque']
+        
+      
+      end
+
+      
+      if attributes[:'saldoDisponivelSaqueInternacional']
+        
+        
+        self.saldo_disponivel_saque_internacional = attributes[:'saldoDisponivelSaqueInternacional']
+        
+      
+      end
+
+      
+      if attributes[:'saldoPontosFidelidade']
+        
+        
+        self.saldo_pontos_fidelidade = attributes[:'saldoPontosFidelidade']
         
       
       end
@@ -316,7 +256,7 @@ module Pier
       
       
       
-      if @limite_compra.nil?
+      if @saldo_disponivel_compra.nil?
         return false
       end
 
@@ -325,7 +265,7 @@ module Pier
       
       
       
-      if @limite_consignado.nil?
+      if @saldo_disponivel_compra_internacional.nil?
         return false
       end
 
@@ -334,7 +274,7 @@ module Pier
       
       
       
-      if @limite_externo.nil?
+      if @saldo_disponivel_externo.nil?
         return false
       end
 
@@ -343,7 +283,7 @@ module Pier
       
       
       
-      if @limite_extra.nil?
+      if @saldo_disponivel_extra.nil?
         return false
       end
 
@@ -352,7 +292,7 @@ module Pier
       
       
       
-      if @limite_global.nil?
+      if @saldo_disponivel_global.nil?
         return false
       end
 
@@ -361,7 +301,7 @@ module Pier
       
       
       
-      if @limite_internacional_compra.nil?
+      if @saldo_disponivel_mensal.nil?
         return false
       end
 
@@ -370,7 +310,7 @@ module Pier
       
       
       
-      if @limite_internacional_parcelado.nil?
+      if @saldo_disponivel_parcelado.nil?
         return false
       end
 
@@ -379,7 +319,7 @@ module Pier
       
       
       
-      if @limite_internacional_parcelas.nil?
+      if @saldo_disponivel_parcelas.nil?
         return false
       end
 
@@ -388,7 +328,7 @@ module Pier
       
       
       
-      if @limite_internacional_saque_global.nil?
+      if @saldo_disponivel_saque.nil?
         return false
       end
 
@@ -397,7 +337,7 @@ module Pier
       
       
       
-      if @limite_internacional_saque_periodo.nil?
+      if @saldo_disponivel_saque_internacional.nil?
         return false
       end
 
@@ -406,43 +346,7 @@ module Pier
       
       
       
-      if @limite_mensal.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @limite_parcelado.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @limite_parcelas.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @limite_saque_global.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @limite_saque_periodo.nil?
+      if @saldo_pontos_fidelidade.nil?
         return false
       end
 
@@ -452,26 +356,6 @@ module Pier
       
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -539,21 +423,17 @@ module Pier
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          limite_compra == o.limite_compra &&
-          limite_consignado == o.limite_consignado &&
-          limite_externo == o.limite_externo &&
-          limite_extra == o.limite_extra &&
-          limite_global == o.limite_global &&
-          limite_internacional_compra == o.limite_internacional_compra &&
-          limite_internacional_parcelado == o.limite_internacional_parcelado &&
-          limite_internacional_parcelas == o.limite_internacional_parcelas &&
-          limite_internacional_saque_global == o.limite_internacional_saque_global &&
-          limite_internacional_saque_periodo == o.limite_internacional_saque_periodo &&
-          limite_mensal == o.limite_mensal &&
-          limite_parcelado == o.limite_parcelado &&
-          limite_parcelas == o.limite_parcelas &&
-          limite_saque_global == o.limite_saque_global &&
-          limite_saque_periodo == o.limite_saque_periodo
+          saldo_disponivel_compra == o.saldo_disponivel_compra &&
+          saldo_disponivel_compra_internacional == o.saldo_disponivel_compra_internacional &&
+          saldo_disponivel_externo == o.saldo_disponivel_externo &&
+          saldo_disponivel_extra == o.saldo_disponivel_extra &&
+          saldo_disponivel_global == o.saldo_disponivel_global &&
+          saldo_disponivel_mensal == o.saldo_disponivel_mensal &&
+          saldo_disponivel_parcelado == o.saldo_disponivel_parcelado &&
+          saldo_disponivel_parcelas == o.saldo_disponivel_parcelas &&
+          saldo_disponivel_saque == o.saldo_disponivel_saque &&
+          saldo_disponivel_saque_internacional == o.saldo_disponivel_saque_internacional &&
+          saldo_pontos_fidelidade == o.saldo_pontos_fidelidade
     end
 
     # @see the `==` method
@@ -565,7 +445,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, limite_compra, limite_consignado, limite_externo, limite_extra, limite_global, limite_internacional_compra, limite_internacional_parcelado, limite_internacional_parcelas, limite_internacional_saque_global, limite_internacional_saque_periodo, limite_mensal, limite_parcelado, limite_parcelas, limite_saque_global, limite_saque_periodo].hash
+      [id, saldo_disponivel_compra, saldo_disponivel_compra_internacional, saldo_disponivel_externo, saldo_disponivel_extra, saldo_disponivel_global, saldo_disponivel_mensal, saldo_disponivel_parcelado, saldo_disponivel_parcelas, saldo_disponivel_saque, saldo_disponivel_saque_internacional, saldo_pontos_fidelidade].hash
     end
 
     # Builds the object from hash

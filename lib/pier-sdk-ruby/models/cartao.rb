@@ -77,7 +77,7 @@ module Pier
     attr_accessor :numero_cartao
 
     # Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
-    attr_accessor :portador
+    attr_accessor :tipo_portador
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -118,7 +118,7 @@ module Pier
         
         :'numero_cartao' => :'numeroCartao',
         
-        :'portador' => :'portador'
+        :'tipo_portador' => :'tipoPortador'
         
       }
     end
@@ -161,7 +161,7 @@ module Pier
         
         :'numero_cartao' => :'String',
         
-        :'portador' => :'Integer'
+        :'tipo_portador' => :'String'
         
       }
     end
@@ -328,10 +328,10 @@ module Pier
       end
 
       
-      if attributes[:'portador']
+      if attributes[:'tipoPortador']
         
         
-        self.portador = attributes[:'portador']
+        self.tipo_portador = attributes[:'tipoPortador']
         
       
       end
@@ -539,7 +539,7 @@ module Pier
           id_status_cartao == o.id_status_cartao &&
           nome_impresso == o.nome_impresso &&
           numero_cartao == o.numero_cartao &&
-          portador == o.portador
+          tipo_portador == o.tipo_portador
     end
 
     # @see the `==` method
@@ -551,7 +551,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [arquivo_impressao, codigo_desbloqueio, data_estagio_cartao, data_geracao, data_impressao, data_status_cartao, data_validade, flag_impressao_origem_comercial, flag_provisorio, id, id_conta, id_estagio_cartao, id_pessoa, id_produto, id_status_cartao, nome_impresso, numero_cartao, portador].hash
+      [arquivo_impressao, codigo_desbloqueio, data_estagio_cartao, data_geracao, data_impressao, data_status_cartao, data_validade, flag_impressao_origem_comercial, flag_provisorio, id, id_conta, id_estagio_cartao, id_pessoa, id_produto, id_status_cartao, nome_impresso, numero_cartao, tipo_portador].hash
     end
 
     # Builds the object from hash

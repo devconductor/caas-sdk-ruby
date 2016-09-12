@@ -94,7 +94,7 @@ api_instance = Pier::OrigemComercialApi.new
 opts = { 
   id: 789, # Integer | Id da origem comercial
   nome: "nome_example", # String | Nome da origem comercial
-  status: "status_example", # String | Status da origem comercial
+  status: 56, # Integer | Status da origem comercial
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 }
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| Id da origem comercial | [optional] 
  **nome** | **String**| Nome da origem comercial | [optional] 
- **status** | **String**| Status da origem comercial | [optional] 
+ **status** | **Integer**| Status da origem comercial | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 

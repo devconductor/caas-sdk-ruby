@@ -103,7 +103,7 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :id Id da origem comercial
     # @option opts [String] :nome Nome da origem comercial
-    # @option opts [String] :status Status da origem comercial
+    # @option opts [Integer] :status Status da origem comercial
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [PageOrigensComerciais]
@@ -117,7 +117,7 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :id Id da origem comercial
     # @option opts [String] :nome Nome da origem comercial
-    # @option opts [String] :status Status da origem comercial
+    # @option opts [Integer] :status Status da origem comercial
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Array<(PageOrigensComerciais, Fixnum, Hash)>] PageOrigensComerciais data, response status code and response headers

@@ -56,7 +56,7 @@ module Pier
         
         :'nome' => :'String',
         
-        :'status' => :'String'
+        :'status' => :'Integer'
         
       }
     end

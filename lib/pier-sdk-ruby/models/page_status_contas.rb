@@ -23,62 +23,68 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Saldos
-  class Saldos
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Limite Disponibilidade (id).
-    attr_accessor :id
+  # Lista de Status Contas
+  class PageStatusContas
+    attr_accessor :content
 
-    attr_accessor :saldo_disponivel_compra
+    attr_accessor :first
 
-    attr_accessor :saldo_disponivel_compra_internacional
+    attr_accessor :first_page
 
-    attr_accessor :saldo_disponivel_externo
+    attr_accessor :has_content
 
-    attr_accessor :saldo_disponivel_extra
+    attr_accessor :has_next_page
 
-    # Campo que 
-    attr_accessor :saldo_disponivel_global
+    attr_accessor :has_previous_page
 
-    attr_accessor :saldo_disponivel_mensal
+    attr_accessor :last
 
-    attr_accessor :saldo_disponivel_parcelado
+    attr_accessor :next_page
 
-    attr_accessor :saldo_disponivel_parcelas
+    attr_accessor :number
 
-    attr_accessor :saldo_disponivel_saque
+    attr_accessor :number_of_elements
 
-    attr_accessor :saldo_disponivel_saque_internacional
+    attr_accessor :previous_page
 
-    attr_accessor :saldo_pontos_fidelidade
+    attr_accessor :size
+
+    attr_accessor :total_elements
+
+    attr_accessor :total_pages
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id' => :'id',
+        :'content' => :'content',
         
-        :'saldo_disponivel_compra' => :'saldoDisponivelCompra',
+        :'first' => :'first',
         
-        :'saldo_disponivel_compra_internacional' => :'saldoDisponivelCompraInternacional',
+        :'first_page' => :'firstPage',
         
-        :'saldo_disponivel_externo' => :'saldoDisponivelExterno',
+        :'has_content' => :'hasContent',
         
-        :'saldo_disponivel_extra' => :'saldoDisponivelExtra',
+        :'has_next_page' => :'hasNextPage',
         
-        :'saldo_disponivel_global' => :'saldoDisponivelGlobal',
+        :'has_previous_page' => :'hasPreviousPage',
         
-        :'saldo_disponivel_mensal' => :'saldoDisponivelMensal',
+        :'last' => :'last',
         
-        :'saldo_disponivel_parcelado' => :'saldoDisponivelParcelado',
+        :'next_page' => :'nextPage',
         
-        :'saldo_disponivel_parcelas' => :'saldoDisponivelParcelas',
+        :'number' => :'number',
         
-        :'saldo_disponivel_saque' => :'saldoDisponivelSaque',
+        :'number_of_elements' => :'numberOfElements',
         
-        :'saldo_disponivel_saque_internacional' => :'saldoDisponivelSaqueInternacional',
+        :'previous_page' => :'previousPage',
         
-        :'saldo_pontos_fidelidade' => :'saldoPontosFidelidade'
+        :'size' => :'size',
+        
+        :'total_elements' => :'totalElements',
+        
+        :'total_pages' => :'totalPages'
         
       }
     end
@@ -87,29 +93,33 @@ module Pier
     def self.swagger_types
       {
         
-        :'id' => :'Integer',
+        :'content' => :'Array<StatusConta>',
         
-        :'saldo_disponivel_compra' => :'Float',
+        :'first' => :'BOOLEAN',
         
-        :'saldo_disponivel_compra_internacional' => :'Float',
+        :'first_page' => :'BOOLEAN',
         
-        :'saldo_disponivel_externo' => :'Float',
+        :'has_content' => :'BOOLEAN',
         
-        :'saldo_disponivel_extra' => :'Float',
+        :'has_next_page' => :'BOOLEAN',
         
-        :'saldo_disponivel_global' => :'Float',
+        :'has_previous_page' => :'BOOLEAN',
         
-        :'saldo_disponivel_mensal' => :'Float',
+        :'last' => :'BOOLEAN',
         
-        :'saldo_disponivel_parcelado' => :'Float',
+        :'next_page' => :'Integer',
         
-        :'saldo_disponivel_parcelas' => :'Float',
+        :'number' => :'Integer',
         
-        :'saldo_disponivel_saque' => :'Float',
+        :'number_of_elements' => :'Integer',
         
-        :'saldo_disponivel_saque_internacional' => :'Float',
+        :'previous_page' => :'Integer',
         
-        :'saldo_pontos_fidelidade' => :'Float'
+        :'size' => :'Integer',
+        
+        :'total_elements' => :'Integer',
+        
+        :'total_pages' => :'Integer'
         
       }
     end
@@ -123,109 +133,129 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'id']
+      if attributes[:'content']
         
+        if (value = attributes[:'content']).is_a?(Array)
+          self.content = value
+        end
         
-        self.id = attributes[:'id']
         
       
       end
 
       
-      if attributes[:'saldoDisponivelCompra']
+      if attributes[:'first']
         
         
-        self.saldo_disponivel_compra = attributes[:'saldoDisponivelCompra']
-        
-      
-      end
-
-      
-      if attributes[:'saldoDisponivelCompraInternacional']
-        
-        
-        self.saldo_disponivel_compra_internacional = attributes[:'saldoDisponivelCompraInternacional']
+        self.first = attributes[:'first']
         
       
       end
 
       
-      if attributes[:'saldoDisponivelExterno']
+      if attributes[:'firstPage']
         
         
-        self.saldo_disponivel_externo = attributes[:'saldoDisponivelExterno']
-        
-      
-      end
-
-      
-      if attributes[:'saldoDisponivelExtra']
-        
-        
-        self.saldo_disponivel_extra = attributes[:'saldoDisponivelExtra']
+        self.first_page = attributes[:'firstPage']
         
       
       end
 
       
-      if attributes[:'saldoDisponivelGlobal']
+      if attributes[:'hasContent']
         
         
-        self.saldo_disponivel_global = attributes[:'saldoDisponivelGlobal']
-        
-      
-      end
-
-      
-      if attributes[:'saldoDisponivelMensal']
-        
-        
-        self.saldo_disponivel_mensal = attributes[:'saldoDisponivelMensal']
+        self.has_content = attributes[:'hasContent']
         
       
       end
 
       
-      if attributes[:'saldoDisponivelParcelado']
+      if attributes[:'hasNextPage']
         
         
-        self.saldo_disponivel_parcelado = attributes[:'saldoDisponivelParcelado']
-        
-      
-      end
-
-      
-      if attributes[:'saldoDisponivelParcelas']
-        
-        
-        self.saldo_disponivel_parcelas = attributes[:'saldoDisponivelParcelas']
+        self.has_next_page = attributes[:'hasNextPage']
         
       
       end
 
       
-      if attributes[:'saldoDisponivelSaque']
+      if attributes[:'hasPreviousPage']
         
         
-        self.saldo_disponivel_saque = attributes[:'saldoDisponivelSaque']
-        
-      
-      end
-
-      
-      if attributes[:'saldoDisponivelSaqueInternacional']
-        
-        
-        self.saldo_disponivel_saque_internacional = attributes[:'saldoDisponivelSaqueInternacional']
+        self.has_previous_page = attributes[:'hasPreviousPage']
         
       
       end
 
       
-      if attributes[:'saldoPontosFidelidade']
+      if attributes[:'last']
         
         
-        self.saldo_pontos_fidelidade = attributes[:'saldoPontosFidelidade']
+        self.last = attributes[:'last']
+        
+      
+      end
+
+      
+      if attributes[:'nextPage']
+        
+        
+        self.next_page = attributes[:'nextPage']
+        
+      
+      end
+
+      
+      if attributes[:'number']
+        
+        
+        self.number = attributes[:'number']
+        
+      
+      end
+
+      
+      if attributes[:'numberOfElements']
+        
+        
+        self.number_of_elements = attributes[:'numberOfElements']
+        
+      
+      end
+
+      
+      if attributes[:'previousPage']
+        
+        
+        self.previous_page = attributes[:'previousPage']
+        
+      
+      end
+
+      
+      if attributes[:'size']
+        
+        
+        self.size = attributes[:'size']
+        
+      
+      end
+
+      
+      if attributes[:'totalElements']
+        
+        
+        self.total_elements = attributes[:'totalElements']
+        
+      
+      end
+
+      
+      if attributes[:'totalPages']
+        
+        
+        self.total_pages = attributes[:'totalPages']
         
       
       end
@@ -247,115 +277,73 @@ module Pier
     def valid?
       
       
-      if @id.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @saldo_disponivel_compra.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @saldo_disponivel_compra_internacional.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @saldo_disponivel_externo.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @saldo_disponivel_extra.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @saldo_disponivel_global.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @saldo_disponivel_mensal.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @saldo_disponivel_parcelado.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @saldo_disponivel_parcelas.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @saldo_disponivel_saque.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @saldo_disponivel_saque_internacional.nil?
-        return false
-      end
-
       
-      
-      
-      
-      
-      if @saldo_pontos_fidelidade.nil?
-        return false
-      end
-
       
       
       
       
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -422,18 +410,20 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          saldo_disponivel_compra == o.saldo_disponivel_compra &&
-          saldo_disponivel_compra_internacional == o.saldo_disponivel_compra_internacional &&
-          saldo_disponivel_externo == o.saldo_disponivel_externo &&
-          saldo_disponivel_extra == o.saldo_disponivel_extra &&
-          saldo_disponivel_global == o.saldo_disponivel_global &&
-          saldo_disponivel_mensal == o.saldo_disponivel_mensal &&
-          saldo_disponivel_parcelado == o.saldo_disponivel_parcelado &&
-          saldo_disponivel_parcelas == o.saldo_disponivel_parcelas &&
-          saldo_disponivel_saque == o.saldo_disponivel_saque &&
-          saldo_disponivel_saque_internacional == o.saldo_disponivel_saque_internacional &&
-          saldo_pontos_fidelidade == o.saldo_pontos_fidelidade
+          content == o.content &&
+          first == o.first &&
+          first_page == o.first_page &&
+          has_content == o.has_content &&
+          has_next_page == o.has_next_page &&
+          has_previous_page == o.has_previous_page &&
+          last == o.last &&
+          next_page == o.next_page &&
+          number == o.number &&
+          number_of_elements == o.number_of_elements &&
+          previous_page == o.previous_page &&
+          size == o.size &&
+          total_elements == o.total_elements &&
+          total_pages == o.total_pages
     end
 
     # @see the `==` method
@@ -445,7 +435,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, saldo_disponivel_compra, saldo_disponivel_compra_internacional, saldo_disponivel_externo, saldo_disponivel_extra, saldo_disponivel_global, saldo_disponivel_mensal, saldo_disponivel_parcelado, saldo_disponivel_parcelas, saldo_disponivel_saque, saldo_disponivel_saque_internacional, saldo_pontos_fidelidade].hash
+      [content, first, first_page, has_content, has_next_page, has_previous_page, last, next_page, number, number_of_elements, previous_page, size, total_elements, total_pages].hash
     end
 
     # Builds the object from hash

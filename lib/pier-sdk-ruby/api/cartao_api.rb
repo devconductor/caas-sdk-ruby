@@ -36,9 +36,9 @@ module Pier
     # Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
-    # @return [Limites]
-    def consultar_limite_using_get(id_cartao, opts = {})
-      data, _status_code, _headers = consultar_limite_using_get_with_http_info(id_cartao, opts)
+    # @return [LimiteDisponibilidade]
+    def consultar_limite_disponibilidade_using_get(id_cartao, opts = {})
+      data, _status_code, _headers = consultar_limite_disponibilidade_using_get_with_http_info(id_cartao, opts)
       return data
     end
 
@@ -46,22 +46,22 @@ module Pier
     # Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Limites, Fixnum, Hash)>] Limites data, response status code and response headers
-    def consultar_limite_using_get_with_http_info(id_cartao, opts = {})
+    # @return [Array<(LimiteDisponibilidade, Fixnum, Hash)>] LimiteDisponibilidade data, response status code and response headers
+    def consultar_limite_disponibilidade_using_get_with_http_info(id_cartao, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CartaoApi.consultar_limite_using_get ..."
+        @api_client.config.logger.debug "Calling API: CartaoApi.consultar_limite_disponibilidade_using_get ..."
       end
       
       
       # verify the required parameter 'id_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoApi.consultar_limite_using_get" if id_cartao.nil?
+      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoApi.consultar_limite_disponibilidade_using_get" if id_cartao.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/cartoes/{id_cartao}/limites".sub('{format}','json').sub('{' + 'id_cartao' + '}', id_cartao.to_s)
+      local_var_path = "/api/cartoes/{id_cartao}/limites-disponibilidades".sub('{format}','json').sub('{' + 'id_cartao' + '}', id_cartao.to_s)
 
       # query parameters
       query_params = {}
@@ -90,9 +90,9 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Limites')
+        :return_type => 'LimiteDisponibilidade')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CartaoApi#consultar_limite_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CartaoApi#consultar_limite_disponibilidade_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -159,72 +159,6 @@ module Pier
         :return_type => 'Portador')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CartaoApi#consultar_portador_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-
-    # Apresenta os saldos dispon\u00C3\u00ADveis para o Portador do Cart\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo permite consultar os saldos dispon\u00C3\u00ADveis para uso pelo Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-    # @param [Hash] opts the optional parameters
-    # @return [Saldos]
-    def consultar_saldo_using_get(id_cartao, opts = {})
-      data, _status_code, _headers = consultar_saldo_using_get_with_http_info(id_cartao, opts)
-      return data
-    end
-
-    # Apresenta os saldos dispon\u00C3\u00ADveis para o Portador do Cart\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo permite consultar os saldos dispon\u00C3\u00ADveis para uso pelo Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(Saldos, Fixnum, Hash)>] Saldos data, response status code and response headers
-    def consultar_saldo_using_get_with_http_info(id_cartao, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CartaoApi.consultar_saldo_using_get ..."
-      end
-      
-      
-      # verify the required parameter 'id_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoApi.consultar_saldo_using_get" if id_cartao.nil?
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/cartoes/{id_cartao}/saldos-disponiveis".sub('{format}','json').sub('{' + 'id_cartao' + '}', id_cartao.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = ['access_token']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'Saldos')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CartaoApi#consultar_saldo_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -371,7 +305,7 @@ module Pier
     # @option opts [Integer] :id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
     # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)
     # @option opts [Integer] :id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
-    # @option opts [String] :tipo_portador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando &#39;1&#39;, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
+    # @option opts [String] :tipo_portador Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional).
     # @option opts [String] :numero_cartao Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
     # @option opts [String] :nome_impresso Apresenta o nome impresso no cart\u00C3\u00A3o.
     # @option opts [Date] :data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
@@ -400,7 +334,7 @@ module Pier
     # @option opts [Integer] :id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
     # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)
     # @option opts [Integer] :id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
-    # @option opts [String] :tipo_portador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando &#39;1&#39;, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
+    # @option opts [String] :tipo_portador Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional).
     # @option opts [String] :numero_cartao Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
     # @option opts [String] :nome_impresso Apresenta o nome impresso no cart\u00C3\u00A3o.
     # @option opts [Date] :data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.

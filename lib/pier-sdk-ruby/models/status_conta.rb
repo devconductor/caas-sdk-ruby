@@ -23,57 +23,32 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Portador
-  class Portador
-    # Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :data_cadastro_portador
+  # Status Conta
+  class StatusConta
+    # Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
+    attr_accessor :flag_altera_limite
 
-    # Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :data_cancelamento_portador
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
+    attr_accessor :id
 
-    # Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
-    attr_accessor :flag_ativo
+    # Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
+    attr_accessor :mensagem_consulta_negada
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
-    attr_accessor :id_conta
-
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
-    attr_accessor :id_parentesco
-
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
-    attr_accessor :id_pessoa
-
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
-    attr_accessor :id_produto
-
-    # Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
-    attr_accessor :nome_impresso
-
-    # Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
-    attr_accessor :tipo_portador
+    # Nome atribu\u00C3\u00ADdo ao Status da Conta.
+    attr_accessor :nome
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'data_cadastro_portador' => :'dataCadastroPortador',
+        :'flag_altera_limite' => :'flagAlteraLimite',
         
-        :'data_cancelamento_portador' => :'dataCancelamentoPortador',
+        :'id' => :'id',
         
-        :'flag_ativo' => :'flagAtivo',
+        :'mensagem_consulta_negada' => :'mensagemConsultaNegada',
         
-        :'id_conta' => :'idConta',
-        
-        :'id_parentesco' => :'idParentesco',
-        
-        :'id_pessoa' => :'idPessoa',
-        
-        :'id_produto' => :'idProduto',
-        
-        :'nome_impresso' => :'nomeImpresso',
-        
-        :'tipo_portador' => :'tipoPortador'
+        :'nome' => :'nome'
         
       }
     end
@@ -82,23 +57,13 @@ module Pier
     def self.swagger_types
       {
         
-        :'data_cadastro_portador' => :'DateTime',
+        :'flag_altera_limite' => :'Integer',
         
-        :'data_cancelamento_portador' => :'DateTime',
+        :'id' => :'Integer',
         
-        :'flag_ativo' => :'Integer',
+        :'mensagem_consulta_negada' => :'String',
         
-        :'id_conta' => :'Integer',
-        
-        :'id_parentesco' => :'Integer',
-        
-        :'id_pessoa' => :'Integer',
-        
-        :'id_produto' => :'Integer',
-        
-        :'nome_impresso' => :'String',
-        
-        :'tipo_portador' => :'String'
+        :'nome' => :'String'
         
       }
     end
@@ -112,82 +77,37 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'dataCadastroPortador']
+      if attributes[:'flagAlteraLimite']
         
         
-        self.data_cadastro_portador = attributes[:'dataCadastroPortador']
-        
-      
-      end
-
-      
-      if attributes[:'dataCancelamentoPortador']
-        
-        
-        self.data_cancelamento_portador = attributes[:'dataCancelamentoPortador']
+        self.flag_altera_limite = attributes[:'flagAlteraLimite']
         
       
       end
 
       
-      if attributes[:'flagAtivo']
+      if attributes[:'id']
         
         
-        self.flag_ativo = attributes[:'flagAtivo']
-        
-      
-      end
-
-      
-      if attributes[:'idConta']
-        
-        
-        self.id_conta = attributes[:'idConta']
+        self.id = attributes[:'id']
         
       
       end
 
       
-      if attributes[:'idParentesco']
+      if attributes[:'mensagemConsultaNegada']
         
         
-        self.id_parentesco = attributes[:'idParentesco']
-        
-      
-      end
-
-      
-      if attributes[:'idPessoa']
-        
-        
-        self.id_pessoa = attributes[:'idPessoa']
+        self.mensagem_consulta_negada = attributes[:'mensagemConsultaNegada']
         
       
       end
 
       
-      if attributes[:'idProduto']
+      if attributes[:'nome']
         
         
-        self.id_produto = attributes[:'idProduto']
-        
-      
-      end
-
-      
-      if attributes[:'nomeImpresso']
-        
-        
-        self.nome_impresso = attributes[:'nomeImpresso']
-        
-      
-      end
-
-      
-      if attributes[:'tipoPortador']
-        
-        
-        self.tipo_portador = attributes[:'tipoPortador']
+        self.nome = attributes[:'nome']
         
       
       end
@@ -209,6 +129,19 @@ module Pier
     def valid?
       
       
+      if @flag_altera_limite.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @id.nil?
+        return false
+      end
+
       
       
       
@@ -218,59 +151,16 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+      if @nome.nil?
+        return false
+      end
+
       
       
       
       
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -297,15 +187,10 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          data_cadastro_portador == o.data_cadastro_portador &&
-          data_cancelamento_portador == o.data_cancelamento_portador &&
-          flag_ativo == o.flag_ativo &&
-          id_conta == o.id_conta &&
-          id_parentesco == o.id_parentesco &&
-          id_pessoa == o.id_pessoa &&
-          id_produto == o.id_produto &&
-          nome_impresso == o.nome_impresso &&
-          tipo_portador == o.tipo_portador
+          flag_altera_limite == o.flag_altera_limite &&
+          id == o.id &&
+          mensagem_consulta_negada == o.mensagem_consulta_negada &&
+          nome == o.nome
     end
 
     # @see the `==` method
@@ -317,7 +202,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [data_cadastro_portador, data_cancelamento_portador, flag_ativo, id_conta, id_parentesco, id_pessoa, id_produto, nome_impresso, tipo_portador].hash
+      [flag_altera_limite, id, mensagem_consulta_negada, nome].hash
     end
 
     # Builds the object from hash

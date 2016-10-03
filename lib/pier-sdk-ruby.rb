@@ -107,6 +107,9 @@ require 'pier-sdk-ruby/models/page_status_cartoes'
 require 'pier-sdk-ruby/models/page_status_contas'
 
 
+require 'pier-sdk-ruby/models/page_status_impressao'
+
+
 require 'pier-sdk-ruby/models/pessoa'
 
 
@@ -126,6 +129,9 @@ require 'pier-sdk-ruby/models/status_cartao'
 
 
 require 'pier-sdk-ruby/models/status_conta'
+
+
+require 'pier-sdk-ruby/models/status_impressao'
 
 
 # APIs
@@ -150,6 +156,8 @@ require 'pier-sdk-ruby/api/produto_api'
 require 'pier-sdk-ruby/api/status_cartao_api'
 
 require 'pier-sdk-ruby/api/status_conta_api'
+
+require 'pier-sdk-ruby/api/status_impressao_api'
 
 require 'pier-sdk-ruby/api/token_api'
 

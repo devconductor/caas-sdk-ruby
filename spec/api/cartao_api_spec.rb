@@ -43,6 +43,24 @@ describe 'CartaoApi' do
   end
 
 
+  # unit tests for alterar_status_impressao_using_put
+  # Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o.
+  # 
+  # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+  # @param id_status_impressao Id .
+  # @param [Hash] opts the optional parameters
+  # @return [HistoricoImpressaoCartao]
+  describe 'alterar_status_impressao_using_put test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
   # unit tests for consultar_limite_disponibilidade_using_get
   # Apresenta os limites do Portador do Cart\u00C3\u00A3o
   # Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).

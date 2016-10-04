@@ -32,6 +32,82 @@ module Pier
     end
 
 
+    # Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o.
+    # 
+    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param id_status_impressao Id .
+    # @param [Hash] opts the optional parameters
+    # @return [HistoricoImpressaoCartao]
+    def alterar_status_impressao_using_put(id_cartao, id_status_impressao, opts = {})
+      data, _status_code, _headers = alterar_status_impressao_using_put_with_http_info(id_cartao, id_status_impressao, opts)
+      return data
+    end
+
+    # Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o.
+    # 
+    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param id_status_impressao Id .
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(HistoricoImpressaoCartao, Fixnum, Hash)>] HistoricoImpressaoCartao data, response status code and response headers
+    def alterar_status_impressao_using_put_with_http_info(id_cartao, id_status_impressao, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CartaoApi.alterar_status_impressao_using_put ..."
+      end
+      
+      
+      # verify the required parameter 'id_cartao' is set
+      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoApi.alterar_status_impressao_using_put" if id_cartao.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'id_status_impressao' is set
+      fail ArgumentError, "Missing the required parameter 'id_status_impressao' when calling CartaoApi.alterar_status_impressao_using_put" if id_status_impressao.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/cartoes/{id_cartao}/impressao/{id_status_impressao} ".sub('{format}','json').sub('{' + 'id_cartao' + '}', id_cartao.to_s).sub('{' + 'id_status_impressao' + '}', id_status_impressao.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'HistoricoImpressaoCartao')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CartaoApi#alterar_status_impressao_using_put\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Apresenta os limites do Portador do Cart\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).

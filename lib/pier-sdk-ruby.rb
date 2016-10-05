@@ -35,16 +35,7 @@ require 'pier-sdk-ruby/models/auth_token'
 require 'pier-sdk-ruby/models/body_access_token'
 
 
-require 'pier-sdk-ruby/models/cancelar_cartao_response'
-
-
 require 'pier-sdk-ruby/models/cartao'
-
-
-require 'pier-sdk-ruby/models/cartao_response_old'
-
-
-require 'pier-sdk-ruby/models/consultar_cartao_response'
 
 
 require 'pier-sdk-ruby/models/consultar_conta_cartao_response'
@@ -63,12 +54,6 @@ require 'pier-sdk-ruby/models/conta_cartao_response'
 
 
 require 'pier-sdk-ruby/models/conta_response'
-
-
-require 'pier-sdk-ruby/models/desbloquear_cartao_response'
-
-
-require 'pier-sdk-ruby/models/embossado_cartao_response'
 
 
 require 'pier-sdk-ruby/models/estagio_cartao'
@@ -143,8 +128,6 @@ require 'pier-sdk-ruby/models/status_impressao'
 require 'pier-sdk-ruby/api/base_api'
 
 require 'pier-sdk-ruby/api/cartao_api'
-
-require 'pier-sdk-ruby/api/cartao_old_api'
 
 require 'pier-sdk-ruby/api/conta_api'
 

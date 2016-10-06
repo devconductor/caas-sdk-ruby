@@ -38,31 +38,10 @@ require 'pier-sdk-ruby/models/body_access_token'
 require 'pier-sdk-ruby/models/cartao'
 
 
-require 'pier-sdk-ruby/models/consultar_conta_cartao_response'
-
-
-require 'pier-sdk-ruby/models/consultar_conta_response'
-
-
-require 'pier-sdk-ruby/models/consultar_extrato_conta_response'
-
-
-require 'pier-sdk-ruby/models/consultar_saldo_limites_response'
-
-
-require 'pier-sdk-ruby/models/conta_cartao_response'
-
-
-require 'pier-sdk-ruby/models/conta_response'
-
-
 require 'pier-sdk-ruby/models/estagio_cartao'
 
 
 require 'pier-sdk-ruby/models/extra_info'
-
-
-require 'pier-sdk-ruby/models/extrato_response'
 
 
 require 'pier-sdk-ruby/models/historico_impressao_cartao'
@@ -101,16 +80,10 @@ require 'pier-sdk-ruby/models/page_status_impressao'
 require 'pier-sdk-ruby/models/pessoa'
 
 
-require 'pier-sdk-ruby/models/pessoa_fisica_response'
-
-
 require 'pier-sdk-ruby/models/portador'
 
 
 require 'pier-sdk-ruby/models/produto'
-
-
-require 'pier-sdk-ruby/models/saldo_limite_response'
 
 
 require 'pier-sdk-ruby/models/status_cartao'
@@ -128,8 +101,6 @@ require 'pier-sdk-ruby/models/status_impressao'
 require 'pier-sdk-ruby/api/base_api'
 
 require 'pier-sdk-ruby/api/cartao_api'
-
-require 'pier-sdk-ruby/api/conta_api'
 
 require 'pier-sdk-ruby/api/estagio_cartao_api'
 

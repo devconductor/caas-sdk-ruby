@@ -4,8 +4,8 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**callback_using_post**](TokenApi.md#callback_using_post) | **POST** /api/tokens/callback | /tokens/callback
-[**validar_using_post**](TokenApi.md#validar_using_post) | **POST** /api/tokens/validar | /tokens/validar
+[**callback_using_post**](TokenApi.md#callback_using_post) | **POST** /api/tokens/callback | /api/tokens/callback
+[**validar_using_post**](TokenApi.md#validar_using_post) | **POST** /api/tokens/validar | /api/tokens/validar
 
 
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 # **callback_using_post**
 > BodyAccessToken callback_using_post(body_access_token)
 
-/tokens/callback
+/api/tokens/callback
 
 ### Example
 ```ruby
@@ -35,7 +35,7 @@ body_access_token = Pier::BodyAccessToken.new # BodyAccessToken | bodyAccessToke
 
 
 begin
-  #/tokens/callback
+  #/api/tokens/callback
   result = api_instance.callback_using_post(body_access_token)
   p result
 rescue Pier::ApiError => e
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 # **validar_using_post**
 > Object validar_using_post(body_access_token)
 
-/tokens/validar
+/api/tokens/validar
 
 ### Example
 ```ruby
@@ -91,7 +91,7 @@ body_access_token = Pier::BodyAccessToken.new # BodyAccessToken | bodyAccessToke
 
 
 begin
-  #/tokens/validar
+  #/api/tokens/validar
   result = api_instance.validar_using_post(body_access_token)
   p result
 rescue Pier::ApiError => e

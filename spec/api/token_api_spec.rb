@@ -44,7 +44,7 @@ describe 'TokenApi' do
 
 
   # unit tests for callback_using_post
-  # /tokens/callback
+  # /api/tokens/callback
   # 
   # @param body_access_token bodyAccessToken
   # @param [Hash] opts the optional parameters
@@ -61,7 +61,7 @@ describe 'TokenApi' do
 
 
   # unit tests for validar_using_post
-  # /tokens/validar
+  # /api/tokens/validar
   # 
   # @param body_access_token bodyAccessToken
   # @param [Hash] opts the optional parameters

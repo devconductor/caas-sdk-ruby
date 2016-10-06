@@ -44,7 +44,7 @@ describe 'BaseApi' do
 
 
   # unit tests for clear_using_get
-  # /bases/clear
+  # /api/bases/clear
   # 
   # @param [Hash] opts the optional parameters
   # @return [BodyAccessToken]

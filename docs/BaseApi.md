@@ -4,7 +4,7 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**clear_using_get**](BaseApi.md#clear_using_get) | **GET** /api/bases/clear | /bases/clear
+[**clear_using_get**](BaseApi.md#clear_using_get) | **GET** /api/bases/clear | /api/bases/clear
 
 
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 # **clear_using_get**
 > BodyAccessToken clear_using_get
 
-/bases/clear
+/api/bases/clear
 
 ### Example
 ```ruby
@@ -31,7 +31,7 @@ end
 api_instance = Pier::BaseApi.new
 
 begin
-  #/bases/clear
+  #/api/bases/clear
   result = api_instance.clear_using_get
   p result
 rescue Pier::ApiError => e

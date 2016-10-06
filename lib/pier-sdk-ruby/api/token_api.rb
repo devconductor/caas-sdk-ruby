@@ -32,7 +32,7 @@ module Pier
     end
 
 
-    # /tokens/callback
+    # /api/tokens/callback
     # 
     # @param body_access_token bodyAccessToken
     # @param [Hash] opts the optional parameters
@@ -42,7 +42,7 @@ module Pier
       return data
     end
 
-    # /tokens/callback
+    # /api/tokens/callback
     # 
     # @param body_access_token bodyAccessToken
     # @param [Hash] opts the optional parameters
@@ -98,7 +98,7 @@ module Pier
     end
 
 
-    # /tokens/validar
+    # /api/tokens/validar
     # 
     # @param body_access_token bodyAccessToken
     # @param [Hash] opts the optional parameters
@@ -108,7 +108,7 @@ module Pier
       return data
     end
 
-    # /tokens/validar
+    # /api/tokens/validar
     # 
     # @param body_access_token bodyAccessToken
     # @param [Hash] opts the optional parameters

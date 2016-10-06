@@ -32,7 +32,7 @@ module Pier
     end
 
 
-    # /bases/clear
+    # /api/bases/clear
     # 
     # @param [Hash] opts the optional parameters
     # @return [BodyAccessToken]
@@ -41,7 +41,7 @@ module Pier
       return data
     end
 
-    # /bases/clear
+    # /api/bases/clear
     # 
     # @param [Hash] opts the optional parameters
     # @return [Array<(BodyAccessToken, Fixnum, Hash)>] BodyAccessToken data, response status code and response headers

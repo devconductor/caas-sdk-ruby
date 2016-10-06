@@ -26,34 +26,13 @@ module Pier
   # Representa\u00C3\u00A7\u00C3\u00A3o do recurso Status Cart\u00C3\u00A3o
   class StatusCartao
     # Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta.
-    attr_accessor :flag_altera_status
-
-    # Quando ativa, indica que a senha cadastrada ser\u00C3\u00A1 exclu\u00C3\u00ADda no momento do Bloqueio do cart\u00C3\u00A3o com um idStatusCartao que possua essa caracter\u00C3\u00ADstica, sendo ent\u00C3\u00A3o necess\u00C3\u00A1rio o cadastro de uma nova senha.
-    attr_accessor :flag_cadastro_nova_senha
-
-    # Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, e tal cart\u00C3\u00A3o seja de um titular (portador = 1), ter\u00C3\u00A3o a conta a qual o cart\u00C3\u00A3o pertence cancelada.
-    attr_accessor :flag_cancela_conta
+    attr_accessor :flag_cancela_cartao
 
     # Quando ativa, indica que o cart\u00C3\u00A3o ativo que o portador possuir na mesma conta do cart\u00C3\u00A3o a ser desbloqueado, e que o status dele possua essa caracter\u00C3\u00ADstica, dever\u00C3\u00A1 ser cancelado quando um novo cart\u00C3\u00A3o for desbloqueado.
     attr_accessor :flag_cancela_no_desbloqueio
 
     # Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
     attr_accessor :flag_cobra_tarifa
-
-    # Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem receber transfer\u00C3\u00AAncias de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos oriundos de outros cart\u00C3\u00B5es.
-    attr_accessor :flag_destino_transferencia
-
-    # Quando ativa, indica que poder\u00C3\u00A1 ser criado um novo cart\u00C3\u00A3o provis\u00C3\u00B3rio para o portador.
-    attr_accessor :flag_emite_provisorio
-
-    # Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel.
-    attr_accessor :flag_excecao_bandeira
-
-    # Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos para outros cart\u00C3\u00B5es.
-    attr_accessor :flag_origem_transferencia
-
-    # Quando ativa, indica que cart\u00C3\u00B5es que tiverem este status atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o gerado para o portador, para a mesma conta, automaticamente.
-    attr_accessor :flag_reemite_cartao
 
     # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
     attr_accessor :id
@@ -72,25 +51,11 @@ module Pier
     def self.attribute_map
       {
         
-        :'flag_altera_status' => :'flagAlteraStatus',
-        
-        :'flag_cadastro_nova_senha' => :'flagCadastroNovaSenha',
-        
-        :'flag_cancela_conta' => :'flagCancelaConta',
+        :'flag_cancela_cartao' => :'flagCancelaCartao',
         
         :'flag_cancela_no_desbloqueio' => :'flagCancelaNoDesbloqueio',
         
         :'flag_cobra_tarifa' => :'flagCobraTarifa',
-        
-        :'flag_destino_transferencia' => :'flagDestinoTransferencia',
-        
-        :'flag_emite_provisorio' => :'flagEmiteProvisorio',
-        
-        :'flag_excecao_bandeira' => :'flagExcecaoBandeira',
-        
-        :'flag_origem_transferencia' => :'flagOrigemTransferencia',
-        
-        :'flag_reemite_cartao' => :'flagReemiteCartao',
         
         :'id' => :'id',
         
@@ -107,25 +72,11 @@ module Pier
     def self.swagger_types
       {
         
-        :'flag_altera_status' => :'Integer',
-        
-        :'flag_cadastro_nova_senha' => :'Integer',
-        
-        :'flag_cancela_conta' => :'Integer',
+        :'flag_cancela_cartao' => :'Integer',
         
         :'flag_cancela_no_desbloqueio' => :'Integer',
         
         :'flag_cobra_tarifa' => :'Integer',
-        
-        :'flag_destino_transferencia' => :'Integer',
-        
-        :'flag_emite_provisorio' => :'Integer',
-        
-        :'flag_excecao_bandeira' => :'Integer',
-        
-        :'flag_origem_transferencia' => :'Integer',
-        
-        :'flag_reemite_cartao' => :'Integer',
         
         :'id' => :'Integer',
         
@@ -147,28 +98,10 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'flagAlteraStatus']
+      if attributes[:'flagCancelaCartao']
         
         
-        self.flag_altera_status = attributes[:'flagAlteraStatus']
-        
-      
-      end
-
-      
-      if attributes[:'flagCadastroNovaSenha']
-        
-        
-        self.flag_cadastro_nova_senha = attributes[:'flagCadastroNovaSenha']
-        
-      
-      end
-
-      
-      if attributes[:'flagCancelaConta']
-        
-        
-        self.flag_cancela_conta = attributes[:'flagCancelaConta']
+        self.flag_cancela_cartao = attributes[:'flagCancelaCartao']
         
       
       end
@@ -187,51 +120,6 @@ module Pier
         
         
         self.flag_cobra_tarifa = attributes[:'flagCobraTarifa']
-        
-      
-      end
-
-      
-      if attributes[:'flagDestinoTransferencia']
-        
-        
-        self.flag_destino_transferencia = attributes[:'flagDestinoTransferencia']
-        
-      
-      end
-
-      
-      if attributes[:'flagEmiteProvisorio']
-        
-        
-        self.flag_emite_provisorio = attributes[:'flagEmiteProvisorio']
-        
-      
-      end
-
-      
-      if attributes[:'flagExcecaoBandeira']
-        
-        
-        self.flag_excecao_bandeira = attributes[:'flagExcecaoBandeira']
-        
-      
-      end
-
-      
-      if attributes[:'flagOrigemTransferencia']
-        
-        
-        self.flag_origem_transferencia = attributes[:'flagOrigemTransferencia']
-        
-      
-      end
-
-      
-      if attributes[:'flagReemiteCartao']
-        
-        
-        self.flag_reemite_cartao = attributes[:'flagReemiteCartao']
         
       
       end
@@ -289,25 +177,7 @@ module Pier
     def valid?
       
       
-      if @flag_altera_status.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @flag_cadastro_nova_senha.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @flag_cancela_conta.nil?
+      if @flag_cancela_cartao.nil?
         return false
       end
 
@@ -321,51 +191,6 @@ module Pier
       
       
       if @flag_cobra_tarifa.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @flag_destino_transferencia.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @flag_emite_provisorio.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @flag_excecao_bandeira.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @flag_origem_transferencia.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @flag_reemite_cartao.nil?
         return false
       end
 
@@ -447,56 +272,14 @@ module Pier
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared 
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          flag_altera_status == o.flag_altera_status &&
-          flag_cadastro_nova_senha == o.flag_cadastro_nova_senha &&
-          flag_cancela_conta == o.flag_cancela_conta &&
+          flag_cancela_cartao == o.flag_cancela_cartao &&
           flag_cancela_no_desbloqueio == o.flag_cancela_no_desbloqueio &&
           flag_cobra_tarifa == o.flag_cobra_tarifa &&
-          flag_destino_transferencia == o.flag_destino_transferencia &&
-          flag_emite_provisorio == o.flag_emite_provisorio &&
-          flag_excecao_bandeira == o.flag_excecao_bandeira &&
-          flag_origem_transferencia == o.flag_origem_transferencia &&
-          flag_reemite_cartao == o.flag_reemite_cartao &&
           id == o.id &&
           id_status_destino_conta == o.id_status_destino_conta &&
           id_status_destino_desbloqueio == o.id_status_destino_desbloqueio &&
@@ -512,7 +295,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [flag_altera_status, flag_cadastro_nova_senha, flag_cancela_conta, flag_cancela_no_desbloqueio, flag_cobra_tarifa, flag_destino_transferencia, flag_emite_provisorio, flag_excecao_bandeira, flag_origem_transferencia, flag_reemite_cartao, id, id_status_destino_conta, id_status_destino_desbloqueio, nome].hash
+      [flag_cancela_cartao, flag_cancela_no_desbloqueio, flag_cobra_tarifa, id, id_status_destino_conta, id_status_destino_desbloqueio, nome].hash
     end
 
     # Builds the object from hash

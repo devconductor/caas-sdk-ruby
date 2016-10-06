@@ -43,29 +43,7 @@ describe 'StatusCartao' do
     end
   end
 
-  describe 'test attribute "flag_altera_status"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "flag_cadastro_nova_senha"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "flag_cancela_conta"' do
+  describe 'test attribute "flag_cancela_cartao"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -88,61 +66,6 @@ describe 'StatusCartao' do
 
 
   describe 'test attribute "flag_cobra_tarifa"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "flag_destino_transferencia"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "flag_emite_provisorio"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "flag_excecao_bandeira"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "flag_origem_transferencia"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "flag_reemite_cartao"' do
     it 'should work' do
        # assertion here
        # should be_a()

@@ -44,7 +44,7 @@ describe 'ProdutoApi' do
 
 
   # unit tests for consultar_produto_using_get
-  # Apresenta os dados de um determinado Produto.
+  # Apresenta os dados de um determinado Produto
   # Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
   # @param [Hash] opts the optional parameters
@@ -62,7 +62,7 @@ describe 'ProdutoApi' do
 
   # unit tests for listar_produtos_using_get
   # Lista os Produtos do Emissor
-  # Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor. 
+  # Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
   # @option opts [String] :nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.

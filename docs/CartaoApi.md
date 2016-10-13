@@ -4,11 +4,11 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterar_status_impressao_using_put**](CartaoApi.md#alterar_status_impressao_using_put) | **PUT** /api/cartoes/{id_cartao}/impressao/{id_status_impressao}  | Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o.
+[**alterar_status_impressao_using_put**](CartaoApi.md#alterar_status_impressao_using_put) | **PUT** /api/cartoes/{id_cartao}/impressao/{id_status_impressao}  | Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
 [**consultar_limite_disponibilidade_using_get**](CartaoApi.md#consultar_limite_disponibilidade_using_get) | **GET** /api/cartoes/{id_cartao}/limites-disponibilidades | Apresenta os limites do Portador do Cart\u00C3\u00A3o
-[**consultar_portador_using_get**](CartaoApi.md#consultar_portador_using_get) | **GET** /api/cartoes/{id_cartao}/portadores | Apresenta os dados do Portador do Cart\u00C3\u00A3o 
+[**consultar_portador_using_get**](CartaoApi.md#consultar_portador_using_get) | **GET** /api/cartoes/{id_cartao}/portadores | Apresenta os dados do Portador do Cart\u00C3\u00A3o
 [**consultar_using_get**](CartaoApi.md#consultar_using_get) | **GET** /api/cartoes/{id_cartao} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
-[**debloquear_using_get**](CartaoApi.md#debloquear_using_get) | **GET** /api/cartoes/{id_cartao}/desbloqueio | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
+[**desbloquear_using_put**](CartaoApi.md#desbloquear_using_put) | **PUT** /api/cartoes/{id_cartao}/desbloqueio | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 [**listar_using_get**](CartaoApi.md#listar_using_get) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 
 
@@ -17,7 +17,9 @@ Method | HTTP request | Description
 # **alterar_status_impressao_using_put**
 > HistoricoImpressaoCartao alterar_status_impressao_using_put(id_cartao, id_status_impressao)
 
-Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o.
+Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
+
+Este m\u00C3\u00A9todo permite que uma Aplica\u00C3\u00A7\u00C3\u00A3o que realize a impress\u00C3\u00A3o de cart\u00C3\u00B5es possa indicar que um determinado idCartao fora impresso ou est\u00C3\u00A1 em processo de impress\u00C3\u00A3o. Para isso, basta informar o respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00C3\u00ADdo a ele. Por padr\u00C3\u00A3o, cart\u00C3\u00B5es provis\u00C3\u00B3rios ou que j\u00C3\u00A1 tenham sido inclu\u00C3\u00ADdos em um arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica ter\u00C3\u00A3o esta requisi\u00C3\u00A7\u00C3\u00A3o negada, se utilizada.
 
 ### Example
 ```ruby
@@ -41,7 +43,7 @@ id_status_impressao = 789 # Integer | Id .
 
 
 begin
-  #Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o.
+  #Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
   result = api_instance.alterar_status_impressao_using_put(id_cartao, id_status_impressao)
   p result
 rescue Pier::ApiError => e
@@ -134,7 +136,7 @@ Name | Type | Description  | Notes
 # **consultar_portador_using_get**
 > Portador consultar_portador_using_get(id_cartao)
 
-Apresenta os dados do Portador do Cart\u00C3\u00A3o 
+Apresenta os dados do Portador do Cart\u00C3\u00A3o
 
 Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es do Portador de um determinado Cart\u00C3\u00A3o a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
 
@@ -158,7 +160,7 @@ id_cartao = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u0
 
 
 begin
-  #Apresenta os dados do Portador do Cart\u00C3\u00A3o 
+  #Apresenta os dados do Portador do Cart\u00C3\u00A3o
   result = api_instance.consultar_portador_using_get(id_cartao)
   p result
 rescue Pier::ApiError => e
@@ -247,8 +249,8 @@ Name | Type | Description  | Notes
 
 
 
-# **debloquear_using_get**
-> Cartao debloquear_using_get(id_cartao)
+# **desbloquear_using_put**
+> Cartao desbloquear_using_put(id_cartao)
 
 Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 
@@ -275,10 +277,10 @@ id_cartao = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u0
 
 begin
   #Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
-  result = api_instance.debloquear_using_get(id_cartao)
+  result = api_instance.desbloquear_using_put(id_cartao)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CartaoApi->debloquear_using_get: #{e}"
+  puts "Exception when calling CartaoApi->desbloquear_using_put: #{e}"
 end
 ```
 

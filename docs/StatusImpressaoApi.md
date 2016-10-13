@@ -4,8 +4,8 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_using_get3**](StatusImpressaoApi.md#consultar_using_get3) | **GET** /api/status-impressoes/{id_status_impressao} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o 
-[**listar_using_get3**](StatusImpressaoApi.md#listar_using_get3) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o 
+[**consultar_using_get3**](StatusImpressaoApi.md#consultar_using_get3) | **GET** /api/status-impressoes/{id_status_impressao} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
+[**listar_using_get3**](StatusImpressaoApi.md#listar_using_get3) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
 
 
@@ -13,9 +13,9 @@ Method | HTTP request | Description
 # **consultar_using_get3**
 > StatusImpressao consultar_using_get3(id_status_impressao)
 
-Apresenta os dados de um determinado Status Impress\u00C3\u00A3o 
+Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 
-Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).  
+Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
 
 ### Example
 ```ruby
@@ -37,7 +37,7 @@ id_status_impressao = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A
 
 
 begin
-  #Apresenta os dados de um determinado Status Impress\u00C3\u00A3o 
+  #Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
   result = api_instance.consultar_using_get3(id_status_impressao)
   p result
 rescue Pier::ApiError => e
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 # **listar_using_get3**
 > PageStatusImpressao listar_using_get3(opts)
 
-Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o 
+Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
 Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
 
@@ -99,7 +99,7 @@ opts = {
 }
 
 begin
-  #Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o 
+  #Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
   result = api_instance.listar_using_get3(opts)
   p result
 rescue Pier::ApiError => e

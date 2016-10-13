@@ -98,7 +98,7 @@ module Pier
     end
 
 
-    # Lista os Status Contas cadastrados para o Emissor 
+    # Lista os Status Contas cadastrados para o Emissor
     # Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
@@ -113,7 +113,7 @@ module Pier
       return data
     end
 
-    # Lista os Status Contas cadastrados para o Emissor 
+    # Lista os Status Contas cadastrados para o Emissor
     # Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).

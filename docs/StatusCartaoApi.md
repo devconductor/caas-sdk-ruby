@@ -4,8 +4,8 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_status_cartao_using_get**](StatusCartaoApi.md#consultar_status_cartao_using_get) | **GET** /api/status-cartoes/{id_status_cartao} | Apresenta os dados de um determinado Status Cart\u00C3\u00A3o 
-[**listar_status_cartoes_using_get**](StatusCartaoApi.md#listar_status_cartoes_using_get) | **GET** /api/status-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o 
+[**consultar_status_cartao_using_get**](StatusCartaoApi.md#consultar_status_cartao_using_get) | **GET** /api/status-cartoes/{id_status_cartao} | Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
+[**listar_status_cartoes_using_get**](StatusCartaoApi.md#listar_status_cartoes_using_get) | **GET** /api/status-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
 
 
 
@@ -13,9 +13,9 @@ Method | HTTP request | Description
 # **consultar_status_cartao_using_get**
 > StatusCartao consultar_status_cartao_using_get(id_status_cartao)
 
-Apresenta os dados de um determinado Status Cart\u00C3\u00A3o 
+Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
 
-Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).  
+Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
 
 ### Example
 ```ruby
@@ -37,7 +37,7 @@ id_status_cartao = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u
 
 
 begin
-  #Apresenta os dados de um determinado Status Cart\u00C3\u00A3o 
+  #Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
   result = api_instance.consultar_status_cartao_using_get(id_status_cartao)
   p result
 rescue Pier::ApiError => e
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 # **listar_status_cartoes_using_get**
 > PageStatusCartoes listar_status_cartoes_using_get(opts)
 
-Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o 
+Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
 
 Este m\u00C3\u00A9todo permite que sejam listadas as possibilidades de Status que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
 
@@ -104,7 +104,7 @@ opts = {
 }
 
 begin
-  #Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o 
+  #Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
   result = api_instance.listar_status_cartoes_using_get(opts)
   p result
 rescue Pier::ApiError => e

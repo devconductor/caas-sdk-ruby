@@ -44,8 +44,8 @@ describe 'EstagioCartaoApi' do
 
 
   # unit tests for consultar_estagio_cartao_using_get
-  # Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o 
-  # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).  
+  # Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
+  # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
   # @param [Hash] opts the optional parameters
   # @return [EstagioCartao]
@@ -61,7 +61,7 @@ describe 'EstagioCartaoApi' do
 
 
   # unit tests for listar_estagios_cartoes_using_get
-  # Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
+  # Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
   # Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o

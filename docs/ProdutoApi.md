@@ -4,7 +4,7 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_produto_using_get**](ProdutoApi.md#consultar_produto_using_get) | **GET** /api/produtos/{id_produto} | Apresenta os dados de um determinado Produto.
+[**consultar_produto_using_get**](ProdutoApi.md#consultar_produto_using_get) | **GET** /api/produtos/{id_produto} | Apresenta os dados de um determinado Produto
 [**listar_produtos_using_get**](ProdutoApi.md#listar_produtos_using_get) | **GET** /api/produtos | Lista os Produtos do Emissor
 
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 # **consultar_produto_using_get**
 > Produto consultar_produto_using_get(id_produto)
 
-Apresenta os dados de um determinado Produto.
+Apresenta os dados de um determinado Produto
 
 Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
 
@@ -37,7 +37,7 @@ id_produto = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u
 
 
 begin
-  #Apresenta os dados de um determinado Produto.
+  #Apresenta os dados de um determinado Produto
   result = api_instance.consultar_produto_using_get(id_produto)
   p result
 rescue Pier::ApiError => e
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 
 Lista os Produtos do Emissor
 
-Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor. 
+Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
 
 ### Example
 ```ruby

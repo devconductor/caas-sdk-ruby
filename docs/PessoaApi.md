@@ -4,7 +4,7 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_using_get1**](PessoaApi.md#consultar_using_get1) | **GET** /api/pessoas/{id_pessoa} | Apresenta os dados de uma determinada Pessoa.
+[**consultar_using_get1**](PessoaApi.md#consultar_using_get1) | **GET** /api/pessoas/{id_pessoa} | Apresenta os dados de uma determinada Pessoa
 [**listar_using_get1**](PessoaApi.md#listar_using_get1) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
 
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 # **consultar_using_get1**
 > Pessoa consultar_using_get1(id_pessoa)
 
-Apresenta os dados de uma determinada Pessoa.
+Apresenta os dados de uma determinada Pessoa
 
 Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
 
@@ -37,7 +37,7 @@ id_pessoa = 789 # Integer | ID da Origem Comercial
 
 
 begin
-  #Apresenta os dados de uma determinada Pessoa.
+  #Apresenta os dados de uma determinada Pessoa
   result = api_instance.consultar_using_get1(id_pessoa)
   p result
 rescue Pier::ApiError => e

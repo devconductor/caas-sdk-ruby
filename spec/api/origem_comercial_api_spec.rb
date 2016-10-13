@@ -44,8 +44,8 @@ describe 'OrigemComercialApi' do
 
 
   # unit tests for consultar_origem_comercial_using_get
-  # Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
-  # Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+  # Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
+  # Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id_origem_comercial ID da Origem Comercial
   # @param [Hash] opts the optional parameters
   # @return [OrigemComercial]
@@ -61,7 +61,7 @@ describe 'OrigemComercialApi' do
 
 
   # unit tests for listar_origens_comerciais_using_get
-  # Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais 
+  # Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
   # Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :id Id da origem comercial

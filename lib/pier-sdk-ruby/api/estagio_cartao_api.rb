@@ -37,8 +37,8 @@ module Pier
     # @param id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [EstagioCartao]
-    def consultar_estagio_cartao_using_get(id_estagio_cartao, opts = {})
-      data, _status_code, _headers = consultar_estagio_cartao_using_get_with_http_info(id_estagio_cartao, opts)
+    def consultar_estagio_cartao_using_get1(id_estagio_cartao, opts = {})
+      data, _status_code, _headers = consultar_estagio_cartao_using_get1_with_http_info(id_estagio_cartao, opts)
       return data
     end
 
@@ -47,14 +47,14 @@ module Pier
     # @param id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(EstagioCartao, Fixnum, Hash)>] EstagioCartao data, response status code and response headers
-    def consultar_estagio_cartao_using_get_with_http_info(id_estagio_cartao, opts = {})
+    def consultar_estagio_cartao_using_get1_with_http_info(id_estagio_cartao, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstagioCartaoApi.consultar_estagio_cartao_using_get ..."
+        @api_client.config.logger.debug "Calling API: EstagioCartaoApi.consultar_estagio_cartao_using_get1 ..."
       end
       
       
       # verify the required parameter 'id_estagio_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_estagio_cartao' when calling EstagioCartaoApi.consultar_estagio_cartao_using_get" if id_estagio_cartao.nil?
+      fail ArgumentError, "Missing the required parameter 'id_estagio_cartao' when calling EstagioCartaoApi.consultar_estagio_cartao_using_get1" if id_estagio_cartao.nil?
       
       
       
@@ -92,7 +92,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'EstagioCartao')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstagioCartaoApi#consultar_estagio_cartao_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstagioCartaoApi#consultar_estagio_cartao_using_get1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

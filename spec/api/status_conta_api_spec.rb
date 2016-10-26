@@ -60,7 +60,7 @@ describe 'StatusContaApi' do
   end
 
 
-  # unit tests for listar_using_get2
+  # unit tests for listar_using_get3
   # Lista os Status Contas cadastrados para o Emissor
   # Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -71,7 +71,7 @@ describe 'StatusContaApi' do
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   # @return [PageStatusContas]
-  describe 'listar_using_get2 test' do
+  describe 'listar_using_get3 test' do
     it "should work" do
       # assertion here
       # should be_a()

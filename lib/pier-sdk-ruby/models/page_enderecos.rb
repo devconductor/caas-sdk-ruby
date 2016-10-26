@@ -23,8 +23,8 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Lista de Status Impress\u00C3\u00A3o
-  class PageStatusImpressao
+  # Lista de Endere\u00C3\u00A7os
+  class PageEnderecos
     attr_accessor :content
 
     attr_accessor :first
@@ -93,7 +93,7 @@ module Pier
     def self.swagger_types
       {
         
-        :'content' => :'Array<StatusImpressao>',
+        :'content' => :'Array<Endereco>',
         
         :'first' => :'BOOLEAN',
         

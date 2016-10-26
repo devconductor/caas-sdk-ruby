@@ -38,6 +38,9 @@ require 'pier-sdk-ruby/models/body_access_token'
 require 'pier-sdk-ruby/models/cartao'
 
 
+require 'pier-sdk-ruby/models/endereco'
+
+
 require 'pier-sdk-ruby/models/estagio_cartao'
 
 
@@ -57,6 +60,9 @@ require 'pier-sdk-ruby/models/origem_comercial'
 
 
 require 'pier-sdk-ruby/models/page_cartoes'
+
+
+require 'pier-sdk-ruby/models/page_enderecos'
 
 
 require 'pier-sdk-ruby/models/page_estagios_cartoes'
@@ -101,6 +107,8 @@ require 'pier-sdk-ruby/models/status_impressao'
 require 'pier-sdk-ruby/api/base_api'
 
 require 'pier-sdk-ruby/api/cartao_api'
+
+require 'pier-sdk-ruby/api/endereco_api'
 
 require 'pier-sdk-ruby/api/estagio_cartao_api'
 

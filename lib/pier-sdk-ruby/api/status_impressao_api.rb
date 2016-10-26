@@ -106,8 +106,8 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [PageStatusImpressao]
-    def listar_using_get3(opts = {})
-      data, _status_code, _headers = listar_using_get3_with_http_info(opts)
+    def listar_using_get4(opts = {})
+      data, _status_code, _headers = listar_using_get4_with_http_info(opts)
       return data
     end
 
@@ -119,9 +119,9 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Array<(PageStatusImpressao, Fixnum, Hash)>] PageStatusImpressao data, response status code and response headers
-    def listar_using_get3_with_http_info(opts = {})
+    def listar_using_get4_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: StatusImpressaoApi.listar_using_get3 ..."
+        @api_client.config.logger.debug "Calling API: StatusImpressaoApi.listar_using_get4 ..."
       end
       
       
@@ -184,7 +184,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageStatusImpressao')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: StatusImpressaoApi#listar_using_get3\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: StatusImpressaoApi#listar_using_get4\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

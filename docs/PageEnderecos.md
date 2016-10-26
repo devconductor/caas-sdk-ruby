@@ -1,9 +1,9 @@
-# Pier::PageStatusImpressao
+# Pier::PageEnderecos
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**Array&lt;StatusImpressao&gt;**](StatusImpressao.md) |  | [optional] 
+**content** | [**Array&lt;Endereco&gt;**](Endereco.md) |  | [optional] 
 **first** | **BOOLEAN** |  | [optional] 
 **first_page** | **BOOLEAN** |  | [optional] 
 **has_content** | **BOOLEAN** |  | [optional] 

@@ -23,68 +23,82 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Lista de Status Impress\u00C3\u00A3o
-  class PageStatusImpressao
-    attr_accessor :content
+  # Objeto Endere\u00C3\u00A7o
+  class Endereco
+    # Apresenta nome do bairro
+    attr_accessor :bairro
 
-    attr_accessor :first
+    # Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
+    attr_accessor :cep
 
-    attr_accessor :first_page
+    # Apresenta nome da cidade
+    attr_accessor :cidade
 
-    attr_accessor :has_content
+    # Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
+    attr_accessor :complemento
 
-    attr_accessor :has_next_page
+    # Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
+    attr_accessor :data_inclusao
 
-    attr_accessor :has_previous_page
+    # Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
+    attr_accessor :data_ultima_atualizacao
 
-    attr_accessor :last
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
+    attr_accessor :id
 
-    attr_accessor :next_page
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
+    attr_accessor :id_pessoa
 
-    attr_accessor :number
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
+    attr_accessor :id_tipo_endereco
 
-    attr_accessor :number_of_elements
+    # Apresenta o nome do Logradouro
+    attr_accessor :logradouro
 
-    attr_accessor :previous_page
+    # Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+    attr_accessor :numero
 
-    attr_accessor :size
+    # Apresenta nome do Pais
+    attr_accessor :pais
 
-    attr_accessor :total_elements
+    # Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
+    attr_accessor :ponto_referencia
 
-    attr_accessor :total_pages
+    # Apresenta sigla da Unidade Federativa
+    attr_accessor :uf
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'content' => :'content',
+        :'bairro' => :'bairro',
         
-        :'first' => :'first',
+        :'cep' => :'cep',
         
-        :'first_page' => :'firstPage',
+        :'cidade' => :'cidade',
         
-        :'has_content' => :'hasContent',
+        :'complemento' => :'complemento',
         
-        :'has_next_page' => :'hasNextPage',
+        :'data_inclusao' => :'dataInclusao',
         
-        :'has_previous_page' => :'hasPreviousPage',
+        :'data_ultima_atualizacao' => :'dataUltimaAtualizacao',
         
-        :'last' => :'last',
+        :'id' => :'id',
         
-        :'next_page' => :'nextPage',
+        :'id_pessoa' => :'idPessoa',
         
-        :'number' => :'number',
+        :'id_tipo_endereco' => :'idTipoEndereco',
         
-        :'number_of_elements' => :'numberOfElements',
+        :'logradouro' => :'logradouro',
         
-        :'previous_page' => :'previousPage',
+        :'numero' => :'numero',
         
-        :'size' => :'size',
+        :'pais' => :'pais',
         
-        :'total_elements' => :'totalElements',
+        :'ponto_referencia' => :'pontoReferencia',
         
-        :'total_pages' => :'totalPages'
+        :'uf' => :'uf'
         
       }
     end
@@ -93,33 +107,33 @@ module Pier
     def self.swagger_types
       {
         
-        :'content' => :'Array<StatusImpressao>',
+        :'bairro' => :'String',
         
-        :'first' => :'BOOLEAN',
+        :'cep' => :'String',
         
-        :'first_page' => :'BOOLEAN',
+        :'cidade' => :'String',
         
-        :'has_content' => :'BOOLEAN',
+        :'complemento' => :'String',
         
-        :'has_next_page' => :'BOOLEAN',
+        :'data_inclusao' => :'DateTime',
         
-        :'has_previous_page' => :'BOOLEAN',
+        :'data_ultima_atualizacao' => :'DateTime',
         
-        :'last' => :'BOOLEAN',
+        :'id' => :'Integer',
         
-        :'next_page' => :'Integer',
+        :'id_pessoa' => :'Integer',
         
-        :'number' => :'Integer',
+        :'id_tipo_endereco' => :'Integer',
         
-        :'number_of_elements' => :'Integer',
+        :'logradouro' => :'String',
         
-        :'previous_page' => :'Integer',
+        :'numero' => :'String',
         
-        :'size' => :'Integer',
+        :'pais' => :'String',
         
-        :'total_elements' => :'Integer',
+        :'ponto_referencia' => :'String',
         
-        :'total_pages' => :'Integer'
+        :'uf' => :'String'
         
       }
     end
@@ -133,129 +147,127 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'content']
+      if attributes[:'bairro']
         
-        if (value = attributes[:'content']).is_a?(Array)
-          self.content = value
-        end
         
+        self.bairro = attributes[:'bairro']
         
       
       end
 
       
-      if attributes[:'first']
+      if attributes[:'cep']
         
         
-        self.first = attributes[:'first']
-        
-      
-      end
-
-      
-      if attributes[:'firstPage']
-        
-        
-        self.first_page = attributes[:'firstPage']
+        self.cep = attributes[:'cep']
         
       
       end
 
       
-      if attributes[:'hasContent']
+      if attributes[:'cidade']
         
         
-        self.has_content = attributes[:'hasContent']
-        
-      
-      end
-
-      
-      if attributes[:'hasNextPage']
-        
-        
-        self.has_next_page = attributes[:'hasNextPage']
+        self.cidade = attributes[:'cidade']
         
       
       end
 
       
-      if attributes[:'hasPreviousPage']
+      if attributes[:'complemento']
         
         
-        self.has_previous_page = attributes[:'hasPreviousPage']
-        
-      
-      end
-
-      
-      if attributes[:'last']
-        
-        
-        self.last = attributes[:'last']
+        self.complemento = attributes[:'complemento']
         
       
       end
 
       
-      if attributes[:'nextPage']
+      if attributes[:'dataInclusao']
         
         
-        self.next_page = attributes[:'nextPage']
-        
-      
-      end
-
-      
-      if attributes[:'number']
-        
-        
-        self.number = attributes[:'number']
+        self.data_inclusao = attributes[:'dataInclusao']
         
       
       end
 
       
-      if attributes[:'numberOfElements']
+      if attributes[:'dataUltimaAtualizacao']
         
         
-        self.number_of_elements = attributes[:'numberOfElements']
-        
-      
-      end
-
-      
-      if attributes[:'previousPage']
-        
-        
-        self.previous_page = attributes[:'previousPage']
+        self.data_ultima_atualizacao = attributes[:'dataUltimaAtualizacao']
         
       
       end
 
       
-      if attributes[:'size']
+      if attributes[:'id']
         
         
-        self.size = attributes[:'size']
-        
-      
-      end
-
-      
-      if attributes[:'totalElements']
-        
-        
-        self.total_elements = attributes[:'totalElements']
+        self.id = attributes[:'id']
         
       
       end
 
       
-      if attributes[:'totalPages']
+      if attributes[:'idPessoa']
         
         
-        self.total_pages = attributes[:'totalPages']
+        self.id_pessoa = attributes[:'idPessoa']
+        
+      
+      end
+
+      
+      if attributes[:'idTipoEndereco']
+        
+        
+        self.id_tipo_endereco = attributes[:'idTipoEndereco']
+        
+      
+      end
+
+      
+      if attributes[:'logradouro']
+        
+        
+        self.logradouro = attributes[:'logradouro']
+        
+      
+      end
+
+      
+      if attributes[:'numero']
+        
+        
+        self.numero = attributes[:'numero']
+        
+      
+      end
+
+      
+      if attributes[:'pais']
+        
+        
+        self.pais = attributes[:'pais']
+        
+      
+      end
+
+      
+      if attributes[:'pontoReferencia']
+        
+        
+        self.ponto_referencia = attributes[:'pontoReferencia']
+        
+      
+      end
+
+      
+      if attributes[:'uf']
+        
+        
+        self.uf = attributes[:'uf']
         
       
       end
@@ -410,20 +422,20 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          content == o.content &&
-          first == o.first &&
-          first_page == o.first_page &&
-          has_content == o.has_content &&
-          has_next_page == o.has_next_page &&
-          has_previous_page == o.has_previous_page &&
-          last == o.last &&
-          next_page == o.next_page &&
-          number == o.number &&
-          number_of_elements == o.number_of_elements &&
-          previous_page == o.previous_page &&
-          size == o.size &&
-          total_elements == o.total_elements &&
-          total_pages == o.total_pages
+          bairro == o.bairro &&
+          cep == o.cep &&
+          cidade == o.cidade &&
+          complemento == o.complemento &&
+          data_inclusao == o.data_inclusao &&
+          data_ultima_atualizacao == o.data_ultima_atualizacao &&
+          id == o.id &&
+          id_pessoa == o.id_pessoa &&
+          id_tipo_endereco == o.id_tipo_endereco &&
+          logradouro == o.logradouro &&
+          numero == o.numero &&
+          pais == o.pais &&
+          ponto_referencia == o.ponto_referencia &&
+          uf == o.uf
     end
 
     # @see the `==` method
@@ -435,7 +447,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [content, first, first_page, has_content, has_next_page, has_previous_page, last, next_page, number, number_of_elements, previous_page, size, total_elements, total_pages].hash
+      [bairro, cep, cidade, complemento, data_inclusao, data_ultima_atualizacao, id, id_pessoa, id_tipo_endereco, logradouro, numero, pais, ponto_referencia, uf].hash
     end
 
     # Builds the object from hash

@@ -60,7 +60,7 @@ describe 'StatusImpressaoApi' do
   end
 
 
-  # unit tests for listar_using_get3
+  # unit tests for listar_using_get4
   # Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
   # Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
   # @param [Hash] opts the optional parameters
@@ -69,7 +69,7 @@ describe 'StatusImpressaoApi' do
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   # @return [PageStatusImpressao]
-  describe 'listar_using_get3 test' do
+  describe 'listar_using_get4 test' do
     it "should work" do
       # assertion here
       # should be_a()

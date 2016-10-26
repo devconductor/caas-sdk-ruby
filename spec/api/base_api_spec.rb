@@ -44,7 +44,7 @@ describe 'BaseApi' do
 
 
   # unit tests for clear_using_get
-  # /api/bases/clear
+  # Limpar mapa de bases
   # 
   # @param [Hash] opts the optional parameters
   # @return [BodyAccessToken]

@@ -5,7 +5,7 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultar_using_get1**](PessoaApi.md#consultar_using_get1) | **GET** /api/pessoas/{id_pessoa} | Apresenta os dados de uma determinada Pessoa
-[**listar_using_get1**](PessoaApi.md#listar_using_get1) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
+[**listar_using_get2**](PessoaApi.md#listar_using_get2) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
 
 
 
@@ -68,8 +68,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get1**
-> PagePessoas listar_using_get1(opts)
+# **listar_using_get2**
+> PagePessoas listar_using_get2(opts)
 
 Lista as Pessoas cadastradas no Emissor
 
@@ -105,10 +105,10 @@ opts = {
 
 begin
   #Lista as Pessoas cadastradas no Emissor
-  result = api_instance.listar_using_get1(opts)
+  result = api_instance.listar_using_get2(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling PessoaApi->listar_using_get1: #{e}"
+  puts "Exception when calling PessoaApi->listar_using_get2: #{e}"
 end
 ```
 

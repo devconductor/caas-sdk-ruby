@@ -32,15 +32,15 @@ module Pier
     end
 
 
-    # Realiza o cadastro de um novo Endere\u00C3\u00A7o
-    # Este m\u00C3\u00A9todo permite que seja cadastrado um novo Endere\u00C3\u00A7o na base de dados do Emissor.
+    # Atualiza os dados de um determinado Endere\u00C3\u00A7o
+    # Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um ou mais registros ligados a um determinado Endere\u00C3\u00A7o.
     # @param id id
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
     # @option opts [Integer] :id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
-    # @option opts [String] :cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
+    # @option opts [String] :cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;
     # @option opts [String] :logradouro Apresenta o nome do Logradouro
-    # @option opts [String] :numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+    # @option opts [Integer] :numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
     # @option opts [String] :complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
     # @option opts [String] :ponto_referencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
     # @option opts [String] :bairro Apresenta nome do bairro
@@ -53,15 +53,15 @@ module Pier
       return data
     end
 
-    # Realiza o cadastro de um novo Endere\u00C3\u00A7o
-    # Este m\u00C3\u00A9todo permite que seja cadastrado um novo Endere\u00C3\u00A7o na base de dados do Emissor.
+    # Atualiza os dados de um determinado Endere\u00C3\u00A7o
+    # Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um ou mais registros ligados a um determinado Endere\u00C3\u00A7o.
     # @param id id
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
     # @option opts [Integer] :id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
-    # @option opts [String] :cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
+    # @option opts [String] :cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;
     # @option opts [String] :logradouro Apresenta o nome do Logradouro
-    # @option opts [String] :numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+    # @option opts [Integer] :numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
     # @option opts [String] :complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
     # @option opts [String] :ponto_referencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
     # @option opts [String] :bairro Apresenta nome do bairro
@@ -203,8 +203,8 @@ module Pier
     # @param id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
     # @param [Hash] opts the optional parameters
     # @return [Endereco]
-    def consultar_estagio_cartao_using_get(id_endereco, opts = {})
-      data, _status_code, _headers = consultar_estagio_cartao_using_get_with_http_info(id_endereco, opts)
+    def consultar_using_get2(id_endereco, opts = {})
+      data, _status_code, _headers = consultar_using_get2_with_http_info(id_endereco, opts)
       return data
     end
 
@@ -213,14 +213,14 @@ module Pier
     # @param id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(Endereco, Fixnum, Hash)>] Endereco data, response status code and response headers
-    def consultar_estagio_cartao_using_get_with_http_info(id_endereco, opts = {})
+    def consultar_using_get2_with_http_info(id_endereco, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EnderecoApi.consultar_estagio_cartao_using_get ..."
+        @api_client.config.logger.debug "Calling API: EnderecoApi.consultar_using_get2 ..."
       end
       
       
       # verify the required parameter 'id_endereco' is set
-      fail ArgumentError, "Missing the required parameter 'id_endereco' when calling EnderecoApi.consultar_estagio_cartao_using_get" if id_endereco.nil?
+      fail ArgumentError, "Missing the required parameter 'id_endereco' when calling EnderecoApi.consultar_using_get2" if id_endereco.nil?
       
       
       
@@ -258,7 +258,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'Endereco')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EnderecoApi#consultar_estagio_cartao_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EnderecoApi#consultar_using_get2\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -272,7 +272,7 @@ module Pier
     # @option opts [Integer] :id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
     # @option opts [String] :cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
     # @option opts [String] :logradouro Apresenta o nome do Logradouro
-    # @option opts [String] :numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+    # @option opts [Integer] :numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
     # @option opts [String] :complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
     # @option opts [String] :ponto_referencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
     # @option opts [String] :bairro Apresenta nome do bairro
@@ -284,8 +284,8 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [PageEnderecos]
-    def listar_using_get1(opts = {})
-      data, _status_code, _headers = listar_using_get1_with_http_info(opts)
+    def listar_using_get2(opts = {})
+      data, _status_code, _headers = listar_using_get2_with_http_info(opts)
       return data
     end
 
@@ -297,7 +297,7 @@ module Pier
     # @option opts [Integer] :id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
     # @option opts [String] :cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
     # @option opts [String] :logradouro Apresenta o nome do Logradouro
-    # @option opts [String] :numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+    # @option opts [Integer] :numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
     # @option opts [String] :complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
     # @option opts [String] :ponto_referencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
     # @option opts [String] :bairro Apresenta nome do bairro
@@ -309,9 +309,9 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Array<(PageEnderecos, Fixnum, Hash)>] PageEnderecos data, response status code and response headers
-    def listar_using_get1_with_http_info(opts = {})
+    def listar_using_get2_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EnderecoApi.listar_using_get1 ..."
+        @api_client.config.logger.debug "Calling API: EnderecoApi.listar_using_get2 ..."
       end
       
       
@@ -458,7 +458,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageEnderecos')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EnderecoApi#listar_using_get1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EnderecoApi#listar_using_get2\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -469,9 +469,9 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
     # @option opts [Integer] :id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
-    # @option opts [String] :cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
+    # @option opts [String] :cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;
     # @option opts [String] :logradouro Apresenta o nome do Logradouro
-    # @option opts [String] :numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+    # @option opts [Integer] :numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
     # @option opts [String] :complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
     # @option opts [String] :ponto_referencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
     # @option opts [String] :bairro Apresenta nome do bairro
@@ -489,9 +489,9 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
     # @option opts [Integer] :id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
-    # @option opts [String] :cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
+    # @option opts [String] :cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;
     # @option opts [String] :logradouro Apresenta o nome do Logradouro
-    # @option opts [String] :numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+    # @option opts [Integer] :numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
     # @option opts [String] :complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
     # @option opts [String] :ponto_referencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
     # @option opts [String] :bairro Apresenta nome do bairro

@@ -4,14 +4,14 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_estagio_cartao_using_get1**](EstagioCartaoApi.md#consultar_estagio_cartao_using_get1) | **GET** /api/estagios-cartoes/{id_estagio_cartao} | Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
+[**consultar_estagio_cartao_using_get**](EstagioCartaoApi.md#consultar_estagio_cartao_using_get) | **GET** /api/estagios-cartoes/{id_estagio_cartao} | Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
 [**listar_estagios_cartoes_using_get**](EstagioCartaoApi.md#listar_estagios_cartoes_using_get) | **GET** /api/estagios-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
 
 
 
 
-# **consultar_estagio_cartao_using_get1**
-> EstagioCartao consultar_estagio_cartao_using_get1(id_estagio_cartao)
+# **consultar_estagio_cartao_using_get**
+> EstagioCartao consultar_estagio_cartao_using_get(id_estagio_cartao)
 
 Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
 
@@ -38,10 +38,10 @@ id_estagio_cartao = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\
 
 begin
   #Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
-  result = api_instance.consultar_estagio_cartao_using_get1(id_estagio_cartao)
+  result = api_instance.consultar_estagio_cartao_using_get(id_estagio_cartao)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstagioCartaoApi->consultar_estagio_cartao_using_get1: #{e}"
+  puts "Exception when calling EstagioCartaoApi->consultar_estagio_cartao_using_get: #{e}"
 end
 ```
 

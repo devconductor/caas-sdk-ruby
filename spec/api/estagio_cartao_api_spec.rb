@@ -43,13 +43,13 @@ describe 'EstagioCartaoApi' do
   end
 
 
-  # unit tests for consultar_estagio_cartao_using_get1
+  # unit tests for consultar_estagio_cartao_using_get
   # Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
   # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
   # @param [Hash] opts the optional parameters
   # @return [EstagioCartao]
-  describe 'consultar_estagio_cartao_using_get1 test' do
+  describe 'consultar_estagio_cartao_using_get test' do
     it "should work" do
       # assertion here
       # should be_a()

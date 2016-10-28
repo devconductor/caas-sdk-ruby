@@ -43,13 +43,13 @@ describe 'StatusImpressaoApi' do
   end
 
 
-  # unit tests for consultar_using_get3
+  # unit tests for consultar_using_get5
   # Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
   # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
   # @param [Hash] opts the optional parameters
   # @return [StatusImpressao]
-  describe 'consultar_using_get3 test' do
+  describe 'consultar_using_get5 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -60,7 +60,7 @@ describe 'StatusImpressaoApi' do
   end
 
 
-  # unit tests for listar_using_get4
+  # unit tests for listar_using_get5
   # Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
   # Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
   # @param [Hash] opts the optional parameters
@@ -69,7 +69,7 @@ describe 'StatusImpressaoApi' do
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   # @return [PageStatusImpressao]
-  describe 'listar_using_get4 test' do
+  describe 'listar_using_get5 test' do
     it "should work" do
       # assertion here
       # should be_a()

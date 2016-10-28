@@ -38,6 +38,9 @@ require 'pier-sdk-ruby/models/body_access_token'
 require 'pier-sdk-ruby/models/cartao'
 
 
+require 'pier-sdk-ruby/models/conta'
+
+
 require 'pier-sdk-ruby/models/endereco'
 
 
@@ -107,6 +110,8 @@ require 'pier-sdk-ruby/models/status_impressao'
 require 'pier-sdk-ruby/api/base_api'
 
 require 'pier-sdk-ruby/api/cartao_api'
+
+require 'pier-sdk-ruby/api/conta_api'
 
 require 'pier-sdk-ruby/api/endereco_api'
 

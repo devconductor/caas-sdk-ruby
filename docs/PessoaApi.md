@@ -4,14 +4,14 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_using_get1**](PessoaApi.md#consultar_using_get1) | **GET** /api/pessoas/{id_pessoa} | Apresenta os dados de uma determinada Pessoa
-[**listar_using_get2**](PessoaApi.md#listar_using_get2) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
+[**consultar_using_get3**](PessoaApi.md#consultar_using_get3) | **GET** /api/pessoas/{id_pessoa} | Apresenta os dados de uma determinada Pessoa
+[**listar_using_get3**](PessoaApi.md#listar_using_get3) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
 
 
 
 
-# **consultar_using_get1**
-> Pessoa consultar_using_get1(id_pessoa)
+# **consultar_using_get3**
+> Pessoa consultar_using_get3(id_pessoa)
 
 Apresenta os dados de uma determinada Pessoa
 
@@ -38,10 +38,10 @@ id_pessoa = 789 # Integer | ID da Origem Comercial
 
 begin
   #Apresenta os dados de uma determinada Pessoa
-  result = api_instance.consultar_using_get1(id_pessoa)
+  result = api_instance.consultar_using_get3(id_pessoa)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling PessoaApi->consultar_using_get1: #{e}"
+  puts "Exception when calling PessoaApi->consultar_using_get3: #{e}"
 end
 ```
 
@@ -68,8 +68,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get2**
-> PagePessoas listar_using_get2(opts)
+# **listar_using_get3**
+> PagePessoas listar_using_get3(opts)
 
 Lista as Pessoas cadastradas no Emissor
 
@@ -105,10 +105,10 @@ opts = {
 
 begin
   #Lista as Pessoas cadastradas no Emissor
-  result = api_instance.listar_using_get2(opts)
+  result = api_instance.listar_using_get3(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling PessoaApi->listar_using_get2: #{e}"
+  puts "Exception when calling PessoaApi->listar_using_get3: #{e}"
 end
 ```
 

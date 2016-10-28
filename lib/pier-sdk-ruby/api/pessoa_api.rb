@@ -37,8 +37,8 @@ module Pier
     # @param id_pessoa ID da Origem Comercial
     # @param [Hash] opts the optional parameters
     # @return [Pessoa]
-    def consultar_using_get1(id_pessoa, opts = {})
-      data, _status_code, _headers = consultar_using_get1_with_http_info(id_pessoa, opts)
+    def consultar_using_get3(id_pessoa, opts = {})
+      data, _status_code, _headers = consultar_using_get3_with_http_info(id_pessoa, opts)
       return data
     end
 
@@ -47,14 +47,14 @@ module Pier
     # @param id_pessoa ID da Origem Comercial
     # @param [Hash] opts the optional parameters
     # @return [Array<(Pessoa, Fixnum, Hash)>] Pessoa data, response status code and response headers
-    def consultar_using_get1_with_http_info(id_pessoa, opts = {})
+    def consultar_using_get3_with_http_info(id_pessoa, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PessoaApi.consultar_using_get1 ..."
+        @api_client.config.logger.debug "Calling API: PessoaApi.consultar_using_get3 ..."
       end
       
       
       # verify the required parameter 'id_pessoa' is set
-      fail ArgumentError, "Missing the required parameter 'id_pessoa' when calling PessoaApi.consultar_using_get1" if id_pessoa.nil?
+      fail ArgumentError, "Missing the required parameter 'id_pessoa' when calling PessoaApi.consultar_using_get3" if id_pessoa.nil?
       
       
       
@@ -92,7 +92,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'Pessoa')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PessoaApi#consultar_using_get1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: PessoaApi#consultar_using_get3\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -111,8 +111,8 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [PagePessoas]
-    def listar_using_get2(opts = {})
-      data, _status_code, _headers = listar_using_get2_with_http_info(opts)
+    def listar_using_get3(opts = {})
+      data, _status_code, _headers = listar_using_get3_with_http_info(opts)
       return data
     end
 
@@ -129,9 +129,9 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Array<(PagePessoas, Fixnum, Hash)>] PagePessoas data, response status code and response headers
-    def listar_using_get2_with_http_info(opts = {})
+    def listar_using_get3_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PessoaApi.listar_using_get2 ..."
+        @api_client.config.logger.debug "Calling API: PessoaApi.listar_using_get3 ..."
       end
       
       
@@ -229,7 +229,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PagePessoas')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PessoaApi#listar_using_get2\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: PessoaApi#listar_using_get3\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

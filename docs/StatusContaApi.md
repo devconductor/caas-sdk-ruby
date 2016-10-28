@@ -4,14 +4,14 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_using_get2**](StatusContaApi.md#consultar_using_get2) | **GET** /api/status-contas/{id_status_conta} | Apresenta os dados de um determinado Status Conta
-[**listar_using_get3**](StatusContaApi.md#listar_using_get3) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
+[**consultar_using_get4**](StatusContaApi.md#consultar_using_get4) | **GET** /api/status-contas/{id_status_conta} | Apresenta os dados de um determinado Status Conta
+[**listar_using_get4**](StatusContaApi.md#listar_using_get4) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
 
 
 
 
-# **consultar_using_get2**
-> StatusConta consultar_using_get2(id_status_conta)
+# **consultar_using_get4**
+> StatusConta consultar_using_get4(id_status_conta)
 
 Apresenta os dados de um determinado Status Conta
 
@@ -38,10 +38,10 @@ id_status_conta = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u0
 
 begin
   #Apresenta os dados de um determinado Status Conta
-  result = api_instance.consultar_using_get2(id_status_conta)
+  result = api_instance.consultar_using_get4(id_status_conta)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling StatusContaApi->consultar_using_get2: #{e}"
+  puts "Exception when calling StatusContaApi->consultar_using_get4: #{e}"
 end
 ```
 
@@ -68,8 +68,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get3**
-> PageStatusContas listar_using_get3(opts)
+# **listar_using_get4**
+> PageStatusContas listar_using_get4(opts)
 
 Lista os Status Contas cadastrados para o Emissor
 
@@ -102,10 +102,10 @@ opts = {
 
 begin
   #Lista os Status Contas cadastrados para o Emissor
-  result = api_instance.listar_using_get3(opts)
+  result = api_instance.listar_using_get4(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling StatusContaApi->listar_using_get3: #{e}"
+  puts "Exception when calling StatusContaApi->listar_using_get4: #{e}"
 end
 ```
 

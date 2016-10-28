@@ -44,15 +44,15 @@ describe 'EnderecoApi' do
 
 
   # unit tests for alterar_using_put
-  # Realiza o cadastro de um novo Endere\u00C3\u00A7o
-  # Este m\u00C3\u00A9todo permite que seja cadastrado um novo Endere\u00C3\u00A7o na base de dados do Emissor.
+  # Atualiza os dados de um determinado Endere\u00C3\u00A7o
+  # Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um ou mais registros ligados a um determinado Endere\u00C3\u00A7o.
   # @param id id
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
   # @option opts [Integer] :id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
-  # @option opts [String] :cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
+  # @option opts [String] :cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;
   # @option opts [String] :logradouro Apresenta o nome do Logradouro
-  # @option opts [String] :numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+  # @option opts [Integer] :numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
   # @option opts [String] :complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
   # @option opts [String] :ponto_referencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
   # @option opts [String] :bairro Apresenta nome do bairro
@@ -71,13 +71,13 @@ describe 'EnderecoApi' do
   end
 
 
-  # unit tests for consultar_estagio_cartao_using_get
+  # unit tests for consultar_using_get2
   # Apresenta os dados de um determinado Endere\u00C3\u00A7o
   # Este m\u00C3\u00A9todo permite consultar um determinado Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
   # @param [Hash] opts the optional parameters
   # @return [Endereco]
-  describe 'consultar_estagio_cartao_using_get test' do
+  describe 'consultar_using_get2 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -88,7 +88,7 @@ describe 'EnderecoApi' do
   end
 
 
-  # unit tests for listar_using_get1
+  # unit tests for listar_using_get2
   # Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
   # Este m\u00C3\u00A9todo permite que sejam listados os Endere\u00C3\u00A7os existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -97,7 +97,7 @@ describe 'EnderecoApi' do
   # @option opts [Integer] :id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
   # @option opts [String] :cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
   # @option opts [String] :logradouro Apresenta o nome do Logradouro
-  # @option opts [String] :numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+  # @option opts [Integer] :numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
   # @option opts [String] :complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
   # @option opts [String] :ponto_referencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
   # @option opts [String] :bairro Apresenta nome do bairro
@@ -109,7 +109,7 @@ describe 'EnderecoApi' do
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   # @return [PageEnderecos]
-  describe 'listar_using_get1 test' do
+  describe 'listar_using_get2 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -126,9 +126,9 @@ describe 'EnderecoApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
   # @option opts [Integer] :id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
-  # @option opts [String] :cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
+  # @option opts [String] :cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;
   # @option opts [String] :logradouro Apresenta o nome do Logradouro
-  # @option opts [String] :numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+  # @option opts [Integer] :numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
   # @option opts [String] :complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
   # @option opts [String] :ponto_referencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
   # @option opts [String] :bairro Apresenta nome do bairro

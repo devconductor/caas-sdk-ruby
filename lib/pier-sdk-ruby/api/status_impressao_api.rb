@@ -37,8 +37,8 @@ module Pier
     # @param id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [StatusImpressao]
-    def consultar_using_get3(id_status_impressao, opts = {})
-      data, _status_code, _headers = consultar_using_get3_with_http_info(id_status_impressao, opts)
+    def consultar_using_get5(id_status_impressao, opts = {})
+      data, _status_code, _headers = consultar_using_get5_with_http_info(id_status_impressao, opts)
       return data
     end
 
@@ -47,14 +47,14 @@ module Pier
     # @param id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(StatusImpressao, Fixnum, Hash)>] StatusImpressao data, response status code and response headers
-    def consultar_using_get3_with_http_info(id_status_impressao, opts = {})
+    def consultar_using_get5_with_http_info(id_status_impressao, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: StatusImpressaoApi.consultar_using_get3 ..."
+        @api_client.config.logger.debug "Calling API: StatusImpressaoApi.consultar_using_get5 ..."
       end
       
       
       # verify the required parameter 'id_status_impressao' is set
-      fail ArgumentError, "Missing the required parameter 'id_status_impressao' when calling StatusImpressaoApi.consultar_using_get3" if id_status_impressao.nil?
+      fail ArgumentError, "Missing the required parameter 'id_status_impressao' when calling StatusImpressaoApi.consultar_using_get5" if id_status_impressao.nil?
       
       
       
@@ -92,7 +92,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'StatusImpressao')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: StatusImpressaoApi#consultar_using_get3\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: StatusImpressaoApi#consultar_using_get5\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -106,8 +106,8 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [PageStatusImpressao]
-    def listar_using_get4(opts = {})
-      data, _status_code, _headers = listar_using_get4_with_http_info(opts)
+    def listar_using_get5(opts = {})
+      data, _status_code, _headers = listar_using_get5_with_http_info(opts)
       return data
     end
 
@@ -119,9 +119,9 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Array<(PageStatusImpressao, Fixnum, Hash)>] PageStatusImpressao data, response status code and response headers
-    def listar_using_get4_with_http_info(opts = {})
+    def listar_using_get5_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: StatusImpressaoApi.listar_using_get4 ..."
+        @api_client.config.logger.debug "Calling API: StatusImpressaoApi.listar_using_get5 ..."
       end
       
       
@@ -184,7 +184,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageStatusImpressao')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: StatusImpressaoApi#listar_using_get4\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: StatusImpressaoApi#listar_using_get5\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

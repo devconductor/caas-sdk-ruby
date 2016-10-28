@@ -28,7 +28,7 @@ module Pier
     # Apresenta nome do bairro
     attr_accessor :bairro
 
-    # Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
+    # Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
     attr_accessor :cep
 
     # Apresenta nome da cidade
@@ -127,7 +127,7 @@ module Pier
         
         :'logradouro' => :'String',
         
-        :'numero' => :'String',
+        :'numero' => :'Integer',
         
         :'pais' => :'String',
         

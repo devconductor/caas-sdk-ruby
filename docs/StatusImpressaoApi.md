@@ -5,7 +5,7 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultar_using_get5**](StatusImpressaoApi.md#consultar_using_get5) | **GET** /api/status-impressoes/{id_status_impressao} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
-[**listar_using_get5**](StatusImpressaoApi.md#listar_using_get5) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+[**listar_using_get6**](StatusImpressaoApi.md#listar_using_get6) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
 
 
@@ -68,8 +68,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get5**
-> PageStatusImpressao listar_using_get5(opts)
+# **listar_using_get6**
+> PageStatusImpressao listar_using_get6(opts)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
@@ -100,10 +100,10 @@ opts = {
 
 begin
   #Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
-  result = api_instance.listar_using_get5(opts)
+  result = api_instance.listar_using_get6(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling StatusImpressaoApi->listar_using_get5: #{e}"
+  puts "Exception when calling StatusImpressaoApi->listar_using_get6: #{e}"
 end
 ```
 

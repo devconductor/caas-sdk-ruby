@@ -5,7 +5,7 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultar_using_get4**](StatusContaApi.md#consultar_using_get4) | **GET** /api/status-contas/{id_status_conta} | Apresenta os dados de um determinado Status Conta
-[**listar_using_get4**](StatusContaApi.md#listar_using_get4) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
+[**listar_using_get5**](StatusContaApi.md#listar_using_get5) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
 
 
 
@@ -68,8 +68,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get4**
-> PageStatusContas listar_using_get4(opts)
+# **listar_using_get5**
+> PageStatusContas listar_using_get5(opts)
 
 Lista os Status Contas cadastrados para o Emissor
 
@@ -102,10 +102,10 @@ opts = {
 
 begin
   #Lista os Status Contas cadastrados para o Emissor
-  result = api_instance.listar_using_get4(opts)
+  result = api_instance.listar_using_get5(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling StatusContaApi->listar_using_get4: #{e}"
+  puts "Exception when calling StatusContaApi->listar_using_get5: #{e}"
 end
 ```
 

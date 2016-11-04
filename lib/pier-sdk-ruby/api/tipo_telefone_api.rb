@@ -24,7 +24,7 @@ require "uri"
 
 module Pier
 
-  class StatusImpressaoApi
+  class TipoTelefoneApi
     attr_accessor :api_client
 
     def initialize(api_client = ApiClient.default)
@@ -32,36 +32,36 @@ module Pier
     end
 
 
-    # Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # Apresenta os dados de um determinado Tipo de Telefone
+    # Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+    # @param id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
     # @param [Hash] opts the optional parameters
-    # @return [StatusImpressao]
-    def consultar_using_get5(id_status_impressao, opts = {})
-      data, _status_code, _headers = consultar_using_get5_with_http_info(id_status_impressao, opts)
+    # @return [TipoTelefone]
+    def consultar_using_get8(id_tipo_telefone, opts = {})
+      data, _status_code, _headers = consultar_using_get8_with_http_info(id_tipo_telefone, opts)
       return data
     end
 
-    # Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # Apresenta os dados de um determinado Tipo de Telefone
+    # Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+    # @param id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
     # @param [Hash] opts the optional parameters
-    # @return [Array<(StatusImpressao, Fixnum, Hash)>] StatusImpressao data, response status code and response headers
-    def consultar_using_get5_with_http_info(id_status_impressao, opts = {})
+    # @return [Array<(TipoTelefone, Fixnum, Hash)>] TipoTelefone data, response status code and response headers
+    def consultar_using_get8_with_http_info(id_tipo_telefone, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: StatusImpressaoApi.consultar_using_get5 ..."
+        @api_client.config.logger.debug "Calling API: TipoTelefoneApi.consultar_using_get8 ..."
       end
       
       
-      # verify the required parameter 'id_status_impressao' is set
-      fail ArgumentError, "Missing the required parameter 'id_status_impressao' when calling StatusImpressaoApi.consultar_using_get5" if id_status_impressao.nil?
+      # verify the required parameter 'id_tipo_telefone' is set
+      fail ArgumentError, "Missing the required parameter 'id_tipo_telefone' when calling TipoTelefoneApi.consultar_using_get8" if id_tipo_telefone.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/status-impressoes/{id_status_impressao}".sub('{format}','json').sub('{' + 'id_status_impressao' + '}', id_status_impressao.to_s)
+      local_var_path = "/api/tipos-telefones/{id_tipo_telefone}".sub('{format}','json').sub('{' + 'id_tipo_telefone' + '}', id_tipo_telefone.to_s)
 
       # query parameters
       query_params = {}
@@ -90,38 +90,38 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'StatusImpressao')
+        :return_type => 'TipoTelefone')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: StatusImpressaoApi#consultar_using_get5\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: TipoTelefoneApi#consultar_using_get8\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
 
-    # Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
+    # Lista os Tipos de Telefones
+    # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
-    # @option opts [String] :nome Nome do status impress\u00C3\u00A3o
+    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+    # @option opts [String] :nome Nome do Tipo do Telefone
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @return [PageStatusImpressao]
-    def listar_using_get6(opts = {})
-      data, _status_code, _headers = listar_using_get6_with_http_info(opts)
+    # @return [PageTipoTelefones]
+    def listar_using_get9(opts = {})
+      data, _status_code, _headers = listar_using_get9_with_http_info(opts)
       return data
     end
 
-    # Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
+    # Lista os Tipos de Telefones
+    # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
-    # @option opts [String] :nome Nome do status impress\u00C3\u00A3o
+    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+    # @option opts [String] :nome Nome do Tipo do Telefone
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @return [Array<(PageStatusImpressao, Fixnum, Hash)>] PageStatusImpressao data, response status code and response headers
-    def listar_using_get6_with_http_info(opts = {})
+    # @return [Array<(PageTipoTelefones, Fixnum, Hash)>] PageTipoTelefones data, response status code and response headers
+    def listar_using_get9_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: StatusImpressaoApi.listar_using_get6 ..."
+        @api_client.config.logger.debug "Calling API: TipoTelefoneApi.listar_using_get9 ..."
       end
       
       
@@ -149,7 +149,7 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/status-impressoes".sub('{format}','json')
+      local_var_path = "/api/tipos-telefones".sub('{format}','json')
 
       # query parameters
       query_params = {}
@@ -182,9 +182,9 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PageStatusImpressao')
+        :return_type => 'PageTipoTelefones')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: StatusImpressaoApi#listar_using_get6\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: TipoTelefoneApi#listar_using_get9\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

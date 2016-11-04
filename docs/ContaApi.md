@@ -4,8 +4,70 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**alterar_vencimento_using_put**](ContaApi.md#alterar_vencimento_using_put) | **PUT** /api/contas/{id_conta}/alterar-vencimento | Alterar vencimento
 [**consultar_using_get1**](ContaApi.md#consultar_using_get1) | **GET** /api/contas/{id_conta} | Apresenta dados de uma determinada conta
-[**listar_using_get1**](ContaApi.md#listar_using_get1) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor.
+[**listar_using_get1**](ContaApi.md#listar_using_get1) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
+
+
+
+
+# **alterar_vencimento_using_put**
+> Conta alterar_vencimento_using_put(id_conta, novo_dia_vencimento)
+
+Alterar vencimento
+
+Esse recurso permite alterar o vencimento de uma conta especifica.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::ContaApi.new
+
+id_conta = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+novo_dia_vencimento = 56 # Integer | Novo dia de vencimento.
+
+
+begin
+  #Alterar vencimento
+  result = api_instance.alterar_vencimento_using_put(id_conta, novo_dia_vencimento)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ContaApi->alterar_vencimento_using_put: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_conta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **novo_dia_vencimento** | **Integer**| Novo dia de vencimento. | 
+
+
+### Return type
+
+[**Conta**](Conta.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
@@ -71,9 +133,9 @@ Name | Type | Description  | Notes
 # **listar_using_get1**
 > Conta listar_using_get1(opts)
 
-Lista contas existentes na base de dados do Emissor.
+Lista contas existentes na base de dados do Emissor
 
-Este m\u00C3\u00A9todo permite listar contas existentes na base de dados do Emissor.
+Este recurso permite listar contas existentes na base de dados do Emissor.
 
 ### Example
 ```ruby
@@ -101,12 +163,13 @@ opts = {
   melhor_dia_compra: 56, # Integer | Apresenta o melhor dia de compra.
   data_status_conta: Date.parse("2013-10-20"), # Date | Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
   data_cadastro: Date.parse("2013-10-20"), # Date | Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+  data_ultima_alteracao_vencimento: Date.parse("2013-10-20"), # Date | Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 }
 
 begin
-  #Lista contas existentes na base de dados do Emissor.
+  #Lista contas existentes na base de dados do Emissor
   result = api_instance.listar_using_get1(opts)
   p result
 rescue Pier::ApiError => e
@@ -127,6 +190,7 @@ Name | Type | Description  | Notes
  **melhor_dia_compra** | **Integer**| Apresenta o melhor dia de compra. | [optional] 
  **data_status_conta** | **Date**| Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. | [optional] 
  **data_cadastro** | **Date**| Apresenta a data em que o cart\u00C3\u00A3o foi gerado. | [optional] 
+ **data_ultima_alteracao_vencimento** | **Date**| Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 

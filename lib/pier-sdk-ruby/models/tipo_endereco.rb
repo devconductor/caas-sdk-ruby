@@ -23,62 +23,22 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto conta
-  class Conta
-    # Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-    attr_accessor :data_cadastro
-
-    # Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
-    attr_accessor :data_status_conta
-
-    # Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
-    attr_accessor :data_ultima_alteracao_vencimento
-
-    # Apresenta o dia de vencimento.
-    attr_accessor :dia_vencimento
-
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+  # Representa\u00C3\u00A7\u00C3\u00A3o do recurso Tipo Endere\u00C3\u00A7o
+  class TipoEndereco
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
     attr_accessor :id
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
-    attr_accessor :id_origem_comercial
-
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
-    attr_accessor :id_pessoa
-
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
-    attr_accessor :id_produto
-
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
-    attr_accessor :id_status_conta
-
-    # Apresenta o melhor dia de compra.
-    attr_accessor :melhor_dia_compra
+    # Nome do Tipo do Endere\u00C3\u00A7o
+    attr_accessor :nome
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'data_cadastro' => :'dataCadastro',
-        
-        :'data_status_conta' => :'dataStatusConta',
-        
-        :'data_ultima_alteracao_vencimento' => :'dataUltimaAlteracaoVencimento',
-        
-        :'dia_vencimento' => :'diaVencimento',
-        
         :'id' => :'id',
         
-        :'id_origem_comercial' => :'idOrigemComercial',
-        
-        :'id_pessoa' => :'idPessoa',
-        
-        :'id_produto' => :'idProduto',
-        
-        :'id_status_conta' => :'idStatusConta',
-        
-        :'melhor_dia_compra' => :'melhorDiaCompra'
+        :'nome' => :'nome'
         
       }
     end
@@ -87,25 +47,9 @@ module Pier
     def self.swagger_types
       {
         
-        :'data_cadastro' => :'DateTime',
-        
-        :'data_status_conta' => :'DateTime',
-        
-        :'data_ultima_alteracao_vencimento' => :'DateTime',
-        
-        :'dia_vencimento' => :'Integer',
-        
         :'id' => :'Integer',
         
-        :'id_origem_comercial' => :'Integer',
-        
-        :'id_pessoa' => :'Integer',
-        
-        :'id_produto' => :'Integer',
-        
-        :'id_status_conta' => :'Integer',
-        
-        :'melhor_dia_compra' => :'Integer'
+        :'nome' => :'String'
         
       }
     end
@@ -119,42 +63,6 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'dataCadastro']
-        
-        
-        self.data_cadastro = attributes[:'dataCadastro']
-        
-      
-      end
-
-      
-      if attributes[:'dataStatusConta']
-        
-        
-        self.data_status_conta = attributes[:'dataStatusConta']
-        
-      
-      end
-
-      
-      if attributes[:'dataUltimaAlteracaoVencimento']
-        
-        
-        self.data_ultima_alteracao_vencimento = attributes[:'dataUltimaAlteracaoVencimento']
-        
-      
-      end
-
-      
-      if attributes[:'diaVencimento']
-        
-        
-        self.dia_vencimento = attributes[:'diaVencimento']
-        
-      
-      end
-
-      
       if attributes[:'id']
         
         
@@ -164,46 +72,10 @@ module Pier
       end
 
       
-      if attributes[:'idOrigemComercial']
+      if attributes[:'nome']
         
         
-        self.id_origem_comercial = attributes[:'idOrigemComercial']
-        
-      
-      end
-
-      
-      if attributes[:'idPessoa']
-        
-        
-        self.id_pessoa = attributes[:'idPessoa']
-        
-      
-      end
-
-      
-      if attributes[:'idProduto']
-        
-        
-        self.id_produto = attributes[:'idProduto']
-        
-      
-      end
-
-      
-      if attributes[:'idStatusConta']
-        
-        
-        self.id_status_conta = attributes[:'idStatusConta']
-        
-      
-      end
-
-      
-      if attributes[:'melhorDiaCompra']
-        
-        
-        self.melhor_dia_compra = attributes[:'melhorDiaCompra']
+        self.nome = attributes[:'nome']
         
       
       end
@@ -232,80 +104,8 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -322,16 +122,8 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          data_cadastro == o.data_cadastro &&
-          data_status_conta == o.data_status_conta &&
-          data_ultima_alteracao_vencimento == o.data_ultima_alteracao_vencimento &&
-          dia_vencimento == o.dia_vencimento &&
           id == o.id &&
-          id_origem_comercial == o.id_origem_comercial &&
-          id_pessoa == o.id_pessoa &&
-          id_produto == o.id_produto &&
-          id_status_conta == o.id_status_conta &&
-          melhor_dia_compra == o.melhor_dia_compra
+          nome == o.nome
     end
 
     # @see the `==` method
@@ -343,7 +135,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [data_cadastro, data_status_conta, data_ultima_alteracao_vencimento, dia_vencimento, id, id_origem_comercial, id_pessoa, id_produto, id_status_conta, melhor_dia_compra].hash
+      [id, nome].hash
     end
 
     # Builds the object from hash

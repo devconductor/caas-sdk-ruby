@@ -32,6 +32,83 @@ module Pier
     end
 
 
+    # Alterar vencimento
+    # Esse recurso permite alterar o vencimento de uma conta especifica.
+    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param novo_dia_vencimento Novo dia de vencimento.
+    # @param [Hash] opts the optional parameters
+    # @return [Conta]
+    def alterar_vencimento_using_put(id_conta, novo_dia_vencimento, opts = {})
+      data, _status_code, _headers = alterar_vencimento_using_put_with_http_info(id_conta, novo_dia_vencimento, opts)
+      return data
+    end
+
+    # Alterar vencimento
+    # Esse recurso permite alterar o vencimento de uma conta especifica.
+    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param novo_dia_vencimento Novo dia de vencimento.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Conta, Fixnum, Hash)>] Conta data, response status code and response headers
+    def alterar_vencimento_using_put_with_http_info(id_conta, novo_dia_vencimento, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ContaApi.alterar_vencimento_using_put ..."
+      end
+      
+      
+      # verify the required parameter 'id_conta' is set
+      fail ArgumentError, "Missing the required parameter 'id_conta' when calling ContaApi.alterar_vencimento_using_put" if id_conta.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'novo_dia_vencimento' is set
+      fail ArgumentError, "Missing the required parameter 'novo_dia_vencimento' when calling ContaApi.alterar_vencimento_using_put" if novo_dia_vencimento.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id_conta}/alterar-vencimento".sub('{format}','json').sub('{' + 'id_conta' + '}', id_conta.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'novo_dia_vencimento'] = novo_dia_vencimento
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Conta')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ContaApi#alterar_vencimento_using_put\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Apresenta dados de uma determinada conta
     # Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
     # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
@@ -98,8 +175,8 @@ module Pier
     end
 
 
-    # Lista contas existentes na base de dados do Emissor.
-    # Este m\u00C3\u00A9todo permite listar contas existentes na base de dados do Emissor.
+    # Lista contas existentes na base de dados do Emissor
+    # Este recurso permite listar contas existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
     # @option opts [Integer] :id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
@@ -110,6 +187,7 @@ module Pier
     # @option opts [Integer] :melhor_dia_compra Apresenta o melhor dia de compra.
     # @option opts [Date] :data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
     # @option opts [Date] :data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+    # @option opts [Date] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Conta]
@@ -118,8 +196,8 @@ module Pier
       return data
     end
 
-    # Lista contas existentes na base de dados do Emissor.
-    # Este m\u00C3\u00A9todo permite listar contas existentes na base de dados do Emissor.
+    # Lista contas existentes na base de dados do Emissor
+    # Este recurso permite listar contas existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
     # @option opts [Integer] :id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
@@ -130,6 +208,7 @@ module Pier
     # @option opts [Integer] :melhor_dia_compra Apresenta o melhor dia de compra.
     # @option opts [Date] :data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
     # @option opts [Date] :data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+    # @option opts [Date] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Array<(Conta, Fixnum, Hash)>] Conta data, response status code and response headers
@@ -137,6 +216,12 @@ module Pier
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get1 ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -218,6 +303,7 @@ module Pier
       query_params[:'melhorDiaCompra'] = opts[:'melhor_dia_compra'] if opts[:'melhor_dia_compra']
       query_params[:'dataStatusConta'] = opts[:'data_status_conta'] if opts[:'data_status_conta']
       query_params[:'dataCadastro'] = opts[:'data_cadastro'] if opts[:'data_cadastro']
+      query_params[:'dataUltimaAlteracaoVencimento'] = opts[:'data_ultima_alteracao_vencimento'] if opts[:'data_ultima_alteracao_vencimento']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
 

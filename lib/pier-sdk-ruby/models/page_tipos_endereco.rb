@@ -23,62 +23,68 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto conta
-  class Conta
-    # Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-    attr_accessor :data_cadastro
+  # Lista de Tipos Endere\u00C3\u00A7o
+  class PageTiposEndereco
+    attr_accessor :content
 
-    # Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
-    attr_accessor :data_status_conta
+    attr_accessor :first
 
-    # Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
-    attr_accessor :data_ultima_alteracao_vencimento
+    attr_accessor :first_page
 
-    # Apresenta o dia de vencimento.
-    attr_accessor :dia_vencimento
+    attr_accessor :has_content
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
-    attr_accessor :id
+    attr_accessor :has_next_page
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
-    attr_accessor :id_origem_comercial
+    attr_accessor :has_previous_page
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
-    attr_accessor :id_pessoa
+    attr_accessor :last
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
-    attr_accessor :id_produto
+    attr_accessor :next_page
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
-    attr_accessor :id_status_conta
+    attr_accessor :number
 
-    # Apresenta o melhor dia de compra.
-    attr_accessor :melhor_dia_compra
+    attr_accessor :number_of_elements
+
+    attr_accessor :previous_page
+
+    attr_accessor :size
+
+    attr_accessor :total_elements
+
+    attr_accessor :total_pages
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'data_cadastro' => :'dataCadastro',
+        :'content' => :'content',
         
-        :'data_status_conta' => :'dataStatusConta',
+        :'first' => :'first',
         
-        :'data_ultima_alteracao_vencimento' => :'dataUltimaAlteracaoVencimento',
+        :'first_page' => :'firstPage',
         
-        :'dia_vencimento' => :'diaVencimento',
+        :'has_content' => :'hasContent',
         
-        :'id' => :'id',
+        :'has_next_page' => :'hasNextPage',
         
-        :'id_origem_comercial' => :'idOrigemComercial',
+        :'has_previous_page' => :'hasPreviousPage',
         
-        :'id_pessoa' => :'idPessoa',
+        :'last' => :'last',
         
-        :'id_produto' => :'idProduto',
+        :'next_page' => :'nextPage',
         
-        :'id_status_conta' => :'idStatusConta',
+        :'number' => :'number',
         
-        :'melhor_dia_compra' => :'melhorDiaCompra'
+        :'number_of_elements' => :'numberOfElements',
+        
+        :'previous_page' => :'previousPage',
+        
+        :'size' => :'size',
+        
+        :'total_elements' => :'totalElements',
+        
+        :'total_pages' => :'totalPages'
         
       }
     end
@@ -87,25 +93,33 @@ module Pier
     def self.swagger_types
       {
         
-        :'data_cadastro' => :'DateTime',
+        :'content' => :'Array<TipoEndereco>',
         
-        :'data_status_conta' => :'DateTime',
+        :'first' => :'BOOLEAN',
         
-        :'data_ultima_alteracao_vencimento' => :'DateTime',
+        :'first_page' => :'BOOLEAN',
         
-        :'dia_vencimento' => :'Integer',
+        :'has_content' => :'BOOLEAN',
         
-        :'id' => :'Integer',
+        :'has_next_page' => :'BOOLEAN',
         
-        :'id_origem_comercial' => :'Integer',
+        :'has_previous_page' => :'BOOLEAN',
         
-        :'id_pessoa' => :'Integer',
+        :'last' => :'BOOLEAN',
         
-        :'id_produto' => :'Integer',
+        :'next_page' => :'Integer',
         
-        :'id_status_conta' => :'Integer',
+        :'number' => :'Integer',
         
-        :'melhor_dia_compra' => :'Integer'
+        :'number_of_elements' => :'Integer',
+        
+        :'previous_page' => :'Integer',
+        
+        :'size' => :'Integer',
+        
+        :'total_elements' => :'Integer',
+        
+        :'total_pages' => :'Integer'
         
       }
     end
@@ -119,91 +133,129 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'dataCadastro']
+      if attributes[:'content']
         
+        if (value = attributes[:'content']).is_a?(Array)
+          self.content = value
+        end
         
-        self.data_cadastro = attributes[:'dataCadastro']
         
       
       end
 
       
-      if attributes[:'dataStatusConta']
+      if attributes[:'first']
         
         
-        self.data_status_conta = attributes[:'dataStatusConta']
-        
-      
-      end
-
-      
-      if attributes[:'dataUltimaAlteracaoVencimento']
-        
-        
-        self.data_ultima_alteracao_vencimento = attributes[:'dataUltimaAlteracaoVencimento']
+        self.first = attributes[:'first']
         
       
       end
 
       
-      if attributes[:'diaVencimento']
+      if attributes[:'firstPage']
         
         
-        self.dia_vencimento = attributes[:'diaVencimento']
-        
-      
-      end
-
-      
-      if attributes[:'id']
-        
-        
-        self.id = attributes[:'id']
+        self.first_page = attributes[:'firstPage']
         
       
       end
 
       
-      if attributes[:'idOrigemComercial']
+      if attributes[:'hasContent']
         
         
-        self.id_origem_comercial = attributes[:'idOrigemComercial']
-        
-      
-      end
-
-      
-      if attributes[:'idPessoa']
-        
-        
-        self.id_pessoa = attributes[:'idPessoa']
+        self.has_content = attributes[:'hasContent']
         
       
       end
 
       
-      if attributes[:'idProduto']
+      if attributes[:'hasNextPage']
         
         
-        self.id_produto = attributes[:'idProduto']
-        
-      
-      end
-
-      
-      if attributes[:'idStatusConta']
-        
-        
-        self.id_status_conta = attributes[:'idStatusConta']
+        self.has_next_page = attributes[:'hasNextPage']
         
       
       end
 
       
-      if attributes[:'melhorDiaCompra']
+      if attributes[:'hasPreviousPage']
         
         
-        self.melhor_dia_compra = attributes[:'melhorDiaCompra']
+        self.has_previous_page = attributes[:'hasPreviousPage']
+        
+      
+      end
+
+      
+      if attributes[:'last']
+        
+        
+        self.last = attributes[:'last']
+        
+      
+      end
+
+      
+      if attributes[:'nextPage']
+        
+        
+        self.next_page = attributes[:'nextPage']
+        
+      
+      end
+
+      
+      if attributes[:'number']
+        
+        
+        self.number = attributes[:'number']
+        
+      
+      end
+
+      
+      if attributes[:'numberOfElements']
+        
+        
+        self.number_of_elements = attributes[:'numberOfElements']
+        
+      
+      end
+
+      
+      if attributes[:'previousPage']
+        
+        
+        self.previous_page = attributes[:'previousPage']
+        
+      
+      end
+
+      
+      if attributes[:'size']
+        
+        
+        self.size = attributes[:'size']
+        
+      
+      end
+
+      
+      if attributes[:'totalElements']
+        
+        
+        self.total_elements = attributes[:'totalElements']
+        
+      
+      end
+
+      
+      if attributes[:'totalPages']
+        
+        
+        self.total_pages = attributes[:'totalPages']
         
       
       end
@@ -264,8 +316,44 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -322,16 +410,20 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          data_cadastro == o.data_cadastro &&
-          data_status_conta == o.data_status_conta &&
-          data_ultima_alteracao_vencimento == o.data_ultima_alteracao_vencimento &&
-          dia_vencimento == o.dia_vencimento &&
-          id == o.id &&
-          id_origem_comercial == o.id_origem_comercial &&
-          id_pessoa == o.id_pessoa &&
-          id_produto == o.id_produto &&
-          id_status_conta == o.id_status_conta &&
-          melhor_dia_compra == o.melhor_dia_compra
+          content == o.content &&
+          first == o.first &&
+          first_page == o.first_page &&
+          has_content == o.has_content &&
+          has_next_page == o.has_next_page &&
+          has_previous_page == o.has_previous_page &&
+          last == o.last &&
+          next_page == o.next_page &&
+          number == o.number &&
+          number_of_elements == o.number_of_elements &&
+          previous_page == o.previous_page &&
+          size == o.size &&
+          total_elements == o.total_elements &&
+          total_pages == o.total_pages
     end
 
     # @see the `==` method
@@ -343,7 +435,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [data_cadastro, data_status_conta, data_ultima_alteracao_vencimento, dia_vencimento, id, id_origem_comercial, id_pessoa, id_produto, id_status_conta, melhor_dia_compra].hash
+      [content, first, first_page, has_content, has_next_page, has_previous_page, last, next_page, number, number_of_elements, previous_page, size, total_elements, total_pages].hash
     end
 
     # Builds the object from hash

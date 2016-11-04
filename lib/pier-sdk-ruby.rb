@@ -77,6 +77,9 @@ require 'pier-sdk-ruby/models/page_origens_comerciais'
 require 'pier-sdk-ruby/models/page_pessoas'
 
 
+require 'pier-sdk-ruby/models/page_portador'
+
+
 require 'pier-sdk-ruby/models/page_status_cartoes'
 
 
@@ -84,6 +87,15 @@ require 'pier-sdk-ruby/models/page_status_contas'
 
 
 require 'pier-sdk-ruby/models/page_status_impressao'
+
+
+require 'pier-sdk-ruby/models/page_telefones'
+
+
+require 'pier-sdk-ruby/models/page_tipo_telefones'
+
+
+require 'pier-sdk-ruby/models/page_tipos_endereco'
 
 
 require 'pier-sdk-ruby/models/pessoa'
@@ -104,6 +116,15 @@ require 'pier-sdk-ruby/models/status_conta'
 require 'pier-sdk-ruby/models/status_impressao'
 
 
+require 'pier-sdk-ruby/models/telefone'
+
+
+require 'pier-sdk-ruby/models/tipo_endereco'
+
+
+require 'pier-sdk-ruby/models/tipo_telefone'
+
+
 # APIs
 
 
@@ -121,6 +142,8 @@ require 'pier-sdk-ruby/api/origem_comercial_api'
 
 require 'pier-sdk-ruby/api/pessoa_api'
 
+require 'pier-sdk-ruby/api/portador_api'
+
 require 'pier-sdk-ruby/api/produto_api'
 
 require 'pier-sdk-ruby/api/status_cartao_api'
@@ -128,6 +151,12 @@ require 'pier-sdk-ruby/api/status_cartao_api'
 require 'pier-sdk-ruby/api/status_conta_api'
 
 require 'pier-sdk-ruby/api/status_impressao_api'
+
+require 'pier-sdk-ruby/api/telefone_api'
+
+require 'pier-sdk-ruby/api/tipo_endereco_api'
+
+require 'pier-sdk-ruby/api/tipo_telefone_api'
 
 require 'pier-sdk-ruby/api/token_api'
 

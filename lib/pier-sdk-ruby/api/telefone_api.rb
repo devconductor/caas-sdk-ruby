@@ -244,8 +244,8 @@ module Pier
     # @option opts [String] :telefone N\u00C3\u00BAmero do telefone.
     # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
     # @return [Telefone]
-    def salvar_using_post1(opts = {})
-      data, _status_code, _headers = salvar_using_post1_with_http_info(opts)
+    def salvar_using_post2(opts = {})
+      data, _status_code, _headers = salvar_using_post2_with_http_info(opts)
       return data
     end
 
@@ -258,9 +258,9 @@ module Pier
     # @option opts [String] :telefone N\u00C3\u00BAmero do telefone.
     # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
     # @return [Array<(Telefone, Fixnum, Hash)>] Telefone data, response status code and response headers
-    def salvar_using_post1_with_http_info(opts = {})
+    def salvar_using_post2_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: TelefoneApi.salvar_using_post1 ..."
+        @api_client.config.logger.debug "Calling API: TelefoneApi.salvar_using_post2 ..."
       end
       
       
@@ -330,7 +330,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'Telefone')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: TelefoneApi#salvar_using_post1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: TelefoneApi#salvar_using_post2\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

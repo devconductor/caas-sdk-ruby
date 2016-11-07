@@ -85,7 +85,7 @@ describe 'TelefoneApi' do
   end
 
 
-  # unit tests for salvar_using_post1
+  # unit tests for salvar_using_post2
   # Realiza o cadastro de um novo Telefone
   # Este m\u00C3\u00A9todo permite que seja cadastrado um novo Telefone na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -95,7 +95,7 @@ describe 'TelefoneApi' do
   # @option opts [String] :telefone N\u00C3\u00BAmero do telefone.
   # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
   # @return [Telefone]
-  describe 'salvar_using_post1 test' do
+  describe 'salvar_using_post2 test' do
     it "should work" do
       # assertion here
       # should be_a()

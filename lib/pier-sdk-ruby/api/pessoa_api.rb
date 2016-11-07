@@ -32,9 +32,134 @@ module Pier
     end
 
 
+    # Atualiza os dados de uma determinada Pessoa
+    # Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um registro de determinada Pessoa.
+    # @param id ID da Pessoa
+    # @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
+    # @param tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :cpf N\u00C3\u00BAmero do CPF, quando PF.
+    # @option opts [String] :cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
+    # @option opts [Date] :data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+    # @option opts [String] :sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
+    # @return [Pessoa]
+    def alterar_using_put1(id, nome, tipo, opts = {})
+      data, _status_code, _headers = alterar_using_put1_with_http_info(id, nome, tipo, opts)
+      return data
+    end
+
+    # Atualiza os dados de uma determinada Pessoa
+    # Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um registro de determinada Pessoa.
+    # @param id ID da Pessoa
+    # @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
+    # @param tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :cpf N\u00C3\u00BAmero do CPF, quando PF.
+    # @option opts [String] :cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
+    # @option opts [Date] :data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+    # @option opts [String] :sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
+    # @return [Array<(Pessoa, Fixnum, Hash)>] Pessoa data, response status code and response headers
+    def alterar_using_put1_with_http_info(id, nome, tipo, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: PessoaApi.alterar_using_put1 ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling PessoaApi.alterar_using_put1" if id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'nome' is set
+      fail ArgumentError, "Missing the required parameter 'nome' when calling PessoaApi.alterar_using_put1" if nome.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'tipo' is set
+      fail ArgumentError, "Missing the required parameter 'tipo' when calling PessoaApi.alterar_using_put1" if tipo.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/pessoas".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'id'] = id
+      query_params[:'nome'] = nome
+      query_params[:'tipo'] = tipo
+      query_params[:'cpf'] = opts[:'cpf'] if opts[:'cpf']
+      query_params[:'cnpj'] = opts[:'cnpj'] if opts[:'cnpj']
+      query_params[:'dataNascimento'] = opts[:'data_nascimento'] if opts[:'data_nascimento']
+      query_params[:'sexo'] = opts[:'sexo'] if opts[:'sexo']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Pessoa')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PessoaApi#alterar_using_put1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Apresenta os dados de uma determinada Pessoa
     # Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
-    # @param id_pessoa ID da Origem Comercial
+    # @param id_pessoa ID da Pessoa
     # @param [Hash] opts the optional parameters
     # @return [Pessoa]
     def consultar_using_get3(id_pessoa, opts = {})
@@ -44,7 +169,7 @@ module Pier
 
     # Apresenta os dados de uma determinada Pessoa
     # Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
-    # @param id_pessoa ID da Origem Comercial
+    # @param id_pessoa ID da Pessoa
     # @param [Hash] opts the optional parameters
     # @return [Array<(Pessoa, Fixnum, Hash)>] Pessoa data, response status code and response headers
     def consultar_using_get3_with_http_info(id_pessoa, opts = {})
@@ -230,6 +355,120 @@ module Pier
         :return_type => 'PagePessoas')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: PessoaApi#listar_using_get3\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Realiza o cadastro de um nova Pessoa
+    # Este m\u00C3\u00A9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor.
+    # @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
+    # @param tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :cpf N\u00C3\u00BAmero do CPF, quando PF.
+    # @option opts [String] :cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
+    # @option opts [Date] :data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+    # @option opts [String] :sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
+    # @return [Pessoa]
+    def salvar_using_post1(nome, tipo, opts = {})
+      data, _status_code, _headers = salvar_using_post1_with_http_info(nome, tipo, opts)
+      return data
+    end
+
+    # Realiza o cadastro de um nova Pessoa
+    # Este m\u00C3\u00A9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor.
+    # @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
+    # @param tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :cpf N\u00C3\u00BAmero do CPF, quando PF.
+    # @option opts [String] :cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
+    # @option opts [Date] :data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+    # @option opts [String] :sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
+    # @return [Array<(Pessoa, Fixnum, Hash)>] Pessoa data, response status code and response headers
+    def salvar_using_post1_with_http_info(nome, tipo, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: PessoaApi.salvar_using_post1 ..."
+      end
+      
+      
+      # verify the required parameter 'nome' is set
+      fail ArgumentError, "Missing the required parameter 'nome' when calling PessoaApi.salvar_using_post1" if nome.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'tipo' is set
+      fail ArgumentError, "Missing the required parameter 'tipo' when calling PessoaApi.salvar_using_post1" if tipo.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/pessoas".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'nome'] = nome
+      query_params[:'tipo'] = tipo
+      query_params[:'cpf'] = opts[:'cpf'] if opts[:'cpf']
+      query_params[:'cnpj'] = opts[:'cnpj'] if opts[:'cnpj']
+      query_params[:'dataNascimento'] = opts[:'data_nascimento'] if opts[:'data_nascimento']
+      query_params[:'sexo'] = opts[:'sexo'] if opts[:'sexo']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Pessoa')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PessoaApi#salvar_using_post1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

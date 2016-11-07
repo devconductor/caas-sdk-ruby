@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultar_using_get6**](TelefoneApi.md#consultar_using_get6) | **GET** /api/telefones/{id_telefone} | Apresenta os dados de um determinado Telefone
 [**listar_using_get7**](TelefoneApi.md#listar_using_get7) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
-[**salvar_using_post1**](TelefoneApi.md#salvar_using_post1) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
+[**salvar_using_post2**](TelefoneApi.md#salvar_using_post2) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
 
 
 
@@ -144,8 +144,8 @@ Name | Type | Description  | Notes
 
 
 
-# **salvar_using_post1**
-> Telefone salvar_using_post1(opts)
+# **salvar_using_post2**
+> Telefone salvar_using_post2(opts)
 
 Realiza o cadastro de um novo Telefone
 
@@ -177,10 +177,10 @@ opts = {
 
 begin
   #Realiza o cadastro de um novo Telefone
-  result = api_instance.salvar_using_post1(opts)
+  result = api_instance.salvar_using_post2(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling TelefoneApi->salvar_using_post1: #{e}"
+  puts "Exception when calling TelefoneApi->salvar_using_post2: #{e}"
 end
 ```
 

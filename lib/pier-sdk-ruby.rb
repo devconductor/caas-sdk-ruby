@@ -38,6 +38,9 @@ require 'pier-sdk-ruby/models/body_access_token'
 require 'pier-sdk-ruby/models/cartao'
 
 
+require 'pier-sdk-ruby/models/cartao_impressao'
+
+
 require 'pier-sdk-ruby/models/conta'
 
 

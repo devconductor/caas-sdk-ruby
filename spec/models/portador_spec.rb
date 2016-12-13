@@ -87,6 +87,17 @@ describe 'Portador' do
   end
 
 
+  describe 'test attribute "id_imagem"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
   describe 'test attribute "id_parentesco"' do
     it 'should work' do
        # assertion here

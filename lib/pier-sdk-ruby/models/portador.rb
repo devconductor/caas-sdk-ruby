@@ -37,6 +37,9 @@ module Pier
     # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
     attr_accessor :id_conta
 
+    # Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.
+    attr_accessor :id_imagem
+
     # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
     attr_accessor :id_parentesco
 
@@ -68,6 +71,8 @@ module Pier
         
         :'id_conta' => :'idConta',
         
+        :'id_imagem' => :'idImagem',
+        
         :'id_parentesco' => :'idParentesco',
         
         :'id_pessoa' => :'idPessoa',
@@ -94,6 +99,8 @@ module Pier
         :'flag_ativo' => :'Integer',
         
         :'id_conta' => :'Integer',
+        
+        :'id_imagem' => :'Integer',
         
         :'id_parentesco' => :'Integer',
         
@@ -150,6 +157,15 @@ module Pier
         
         
         self.id_conta = attributes[:'idConta']
+        
+      
+      end
+
+      
+      if attributes[:'idImagem']
+        
+        
+        self.id_imagem = attributes[:'idImagem']
         
       
       end
@@ -264,8 +280,17 @@ module Pier
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -326,6 +351,7 @@ module Pier
           data_cancelamento_portador == o.data_cancelamento_portador &&
           flag_ativo == o.flag_ativo &&
           id_conta == o.id_conta &&
+          id_imagem == o.id_imagem &&
           id_parentesco == o.id_parentesco &&
           id_pessoa == o.id_pessoa &&
           id_produto == o.id_produto &&
@@ -343,7 +369,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [data_cadastro_portador, data_cancelamento_portador, flag_ativo, id_conta, id_parentesco, id_pessoa, id_produto, id_tipo_cartao, nome_impresso, tipo_portador].hash
+      [data_cadastro_portador, data_cancelamento_portador, flag_ativo, id_conta, id_imagem, id_parentesco, id_pessoa, id_produto, id_tipo_cartao, nome_impresso, tipo_portador].hash
     end
 
     # Builds the object from hash

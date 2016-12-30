@@ -101,6 +101,9 @@ require 'pier-sdk-ruby/models/page_tipo_telefones'
 require 'pier-sdk-ruby/models/page_tipos_endereco'
 
 
+require 'pier-sdk-ruby/models/page_web_hooks'
+
+
 require 'pier-sdk-ruby/models/pessoa'
 
 
@@ -126,6 +129,9 @@ require 'pier-sdk-ruby/models/tipo_endereco'
 
 
 require 'pier-sdk-ruby/models/tipo_telefone'
+
+
+require 'pier-sdk-ruby/models/web_hook'
 
 
 # APIs
@@ -162,6 +168,8 @@ require 'pier-sdk-ruby/api/tipo_endereco_api'
 require 'pier-sdk-ruby/api/tipo_telefone_api'
 
 require 'pier-sdk-ruby/api/token_api'
+
+require 'pier-sdk-ruby/api/webhooks_api'
 
 
 

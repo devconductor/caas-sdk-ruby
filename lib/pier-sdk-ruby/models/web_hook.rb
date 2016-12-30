@@ -23,62 +23,32 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Portador
-  class Portador
-    # Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :data_cadastro_portador
+  # Representa\u00C3\u00A7\u00C3\u00A3o do recurso WebHook
+  class WebHook
+    # Evento a ser chamado pelo WebHook
+    attr_accessor :evento
 
-    # Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :data_cancelamento_portador
+    # Id do WebHook
+    attr_accessor :id
 
-    # Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
-    attr_accessor :flag_ativo
+    # M\u00C3\u00A9todo que a ser chamado pelo WebHook
+    attr_accessor :metodo
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
-    attr_accessor :id_conta
-
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
-    attr_accessor :id_parentesco
-
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
-    attr_accessor :id_pessoa
-
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
-    attr_accessor :id_produto
-
-    # Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
-    attr_accessor :id_tipo_cartao
-
-    # Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
-    attr_accessor :nome_impresso
-
-    # Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
-    attr_accessor :tipo_portador
+    # URL que a ser consumida pelo WebHook
+    attr_accessor :url
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'data_cadastro_portador' => :'dataCadastroPortador',
+        :'evento' => :'evento',
         
-        :'data_cancelamento_portador' => :'dataCancelamentoPortador',
+        :'id' => :'id',
         
-        :'flag_ativo' => :'flagAtivo',
+        :'metodo' => :'metodo',
         
-        :'id_conta' => :'idConta',
-        
-        :'id_parentesco' => :'idParentesco',
-        
-        :'id_pessoa' => :'idPessoa',
-        
-        :'id_produto' => :'idProduto',
-        
-        :'id_tipo_cartao' => :'idTipoCartao',
-        
-        :'nome_impresso' => :'nomeImpresso',
-        
-        :'tipo_portador' => :'tipoPortador'
+        :'url' => :'url'
         
       }
     end
@@ -87,25 +57,13 @@ module Pier
     def self.swagger_types
       {
         
-        :'data_cadastro_portador' => :'DateTime',
+        :'evento' => :'String',
         
-        :'data_cancelamento_portador' => :'DateTime',
+        :'id' => :'Integer',
         
-        :'flag_ativo' => :'Integer',
+        :'metodo' => :'String',
         
-        :'id_conta' => :'Integer',
-        
-        :'id_parentesco' => :'Integer',
-        
-        :'id_pessoa' => :'Integer',
-        
-        :'id_produto' => :'Integer',
-        
-        :'id_tipo_cartao' => :'Integer',
-        
-        :'nome_impresso' => :'String',
-        
-        :'tipo_portador' => :'String'
+        :'url' => :'String'
         
       }
     end
@@ -119,91 +77,37 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'dataCadastroPortador']
+      if attributes[:'evento']
         
         
-        self.data_cadastro_portador = attributes[:'dataCadastroPortador']
-        
-      
-      end
-
-      
-      if attributes[:'dataCancelamentoPortador']
-        
-        
-        self.data_cancelamento_portador = attributes[:'dataCancelamentoPortador']
+        self.evento = attributes[:'evento']
         
       
       end
 
       
-      if attributes[:'flagAtivo']
+      if attributes[:'id']
         
         
-        self.flag_ativo = attributes[:'flagAtivo']
-        
-      
-      end
-
-      
-      if attributes[:'idConta']
-        
-        
-        self.id_conta = attributes[:'idConta']
+        self.id = attributes[:'id']
         
       
       end
 
       
-      if attributes[:'idParentesco']
+      if attributes[:'metodo']
         
         
-        self.id_parentesco = attributes[:'idParentesco']
-        
-      
-      end
-
-      
-      if attributes[:'idPessoa']
-        
-        
-        self.id_pessoa = attributes[:'idPessoa']
+        self.metodo = attributes[:'metodo']
         
       
       end
 
       
-      if attributes[:'idProduto']
+      if attributes[:'url']
         
         
-        self.id_produto = attributes[:'idProduto']
-        
-      
-      end
-
-      
-      if attributes[:'idTipoCartao']
-        
-        
-        self.id_tipo_cartao = attributes[:'idTipoCartao']
-        
-      
-      end
-
-      
-      if attributes[:'nomeImpresso']
-        
-        
-        self.nome_impresso = attributes[:'nomeImpresso']
-        
-      
-      end
-
-      
-      if attributes[:'tipoPortador']
-        
-        
-        self.tipo_portador = attributes[:'tipoPortador']
+        self.url = attributes[:'url']
         
       
       end
@@ -225,45 +129,63 @@ module Pier
     def valid?
       
       
+      if @evento.nil?
+        return false
+      end
+
+      
+      
+      allowed_values = ["RISCO_FRAUDE", "OUTROS"]
+      if @evento && !allowed_values.include?(@evento)
+        return false
+      end
+      
+      
+      
+      
+      if @id.nil?
+        return false
+      end
+
       
       
       
       
       
+      if @metodo.nil?
+        return false
+      end
+
+      
+      
+      allowed_values = ["GET", "POST", "PUT", "DELETE"]
+      if @metodo && !allowed_values.include?(@metodo)
+        return false
+      end
       
       
       
       
+      if @url.nil?
+        return false
+      end
+
       
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+    end
+
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] evento Object to be assigned
+    def evento=(evento)
+      allowed_values = ["RISCO_FRAUDE", "OUTROS"]
+      if evento && !allowed_values.include?(evento)
+        fail ArgumentError, "invalid value for 'evento', must be one of #{allowed_values}."
+      end
+      @evento = evento
     end
 
     
@@ -275,40 +197,16 @@ module Pier
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] metodo Object to be assigned
+    def metodo=(metodo)
+      allowed_values = ["GET", "POST", "PUT", "DELETE"]
+      if metodo && !allowed_values.include?(metodo)
+        fail ArgumentError, "invalid value for 'metodo', must be one of #{allowed_values}."
+      end
+      @metodo = metodo
+    end
+
     
     
     
@@ -322,16 +220,10 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          data_cadastro_portador == o.data_cadastro_portador &&
-          data_cancelamento_portador == o.data_cancelamento_portador &&
-          flag_ativo == o.flag_ativo &&
-          id_conta == o.id_conta &&
-          id_parentesco == o.id_parentesco &&
-          id_pessoa == o.id_pessoa &&
-          id_produto == o.id_produto &&
-          id_tipo_cartao == o.id_tipo_cartao &&
-          nome_impresso == o.nome_impresso &&
-          tipo_portador == o.tipo_portador
+          evento == o.evento &&
+          id == o.id &&
+          metodo == o.metodo &&
+          url == o.url
     end
 
     # @see the `==` method
@@ -343,7 +235,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [data_cadastro_portador, data_cancelamento_portador, flag_ativo, id_conta, id_parentesco, id_pessoa, id_produto, id_tipo_cartao, nome_impresso, tipo_portador].hash
+      [evento, id, metodo, url].hash
     end
 
     # Builds the object from hash

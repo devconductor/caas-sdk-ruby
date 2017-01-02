@@ -40,8 +40,8 @@ module Pier
     # @param url URL que a ser consumida pelo WebHook
     # @param [Hash] opts the optional parameters
     # @return [WebHook]
-    def alterar_using_put2(id, evento, metodo, url, opts = {})
-      data, _status_code, _headers = alterar_using_put2_with_http_info(id, evento, metodo, url, opts)
+    def alterar_using_put3(id, evento, metodo, url, opts = {})
+      data, _status_code, _headers = alterar_using_put3_with_http_info(id, evento, metodo, url, opts)
       return data
     end
 
@@ -53,14 +53,14 @@ module Pier
     # @param url URL que a ser consumida pelo WebHook
     # @param [Hash] opts the optional parameters
     # @return [Array<(WebHook, Fixnum, Hash)>] WebHook data, response status code and response headers
-    def alterar_using_put2_with_http_info(id, evento, metodo, url, opts = {})
+    def alterar_using_put3_with_http_info(id, evento, metodo, url, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WebhooksApi.alterar_using_put2 ..."
+        @api_client.config.logger.debug "Calling API: WebhooksApi.alterar_using_put3 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling WebhooksApi.alterar_using_put2" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling WebhooksApi.alterar_using_put3" if id.nil?
       
       
       
@@ -68,7 +68,7 @@ module Pier
       
       
       # verify the required parameter 'evento' is set
-      fail ArgumentError, "Missing the required parameter 'evento' when calling WebhooksApi.alterar_using_put2" if evento.nil?
+      fail ArgumentError, "Missing the required parameter 'evento' when calling WebhooksApi.alterar_using_put3" if evento.nil?
       
       
       
@@ -76,7 +76,7 @@ module Pier
       
       
       # verify the required parameter 'metodo' is set
-      fail ArgumentError, "Missing the required parameter 'metodo' when calling WebhooksApi.alterar_using_put2" if metodo.nil?
+      fail ArgumentError, "Missing the required parameter 'metodo' when calling WebhooksApi.alterar_using_put3" if metodo.nil?
       
       
       
@@ -84,7 +84,7 @@ module Pier
       
       
       # verify the required parameter 'url' is set
-      fail ArgumentError, "Missing the required parameter 'url' when calling WebhooksApi.alterar_using_put2" if url.nil?
+      fail ArgumentError, "Missing the required parameter 'url' when calling WebhooksApi.alterar_using_put3" if url.nil?
       
       
       
@@ -126,7 +126,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'WebHook')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WebhooksApi#alterar_using_put2\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: WebhooksApi#alterar_using_put3\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

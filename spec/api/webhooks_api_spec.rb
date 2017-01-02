@@ -43,7 +43,7 @@ describe 'WebhooksApi' do
   end
 
 
-  # unit tests for alterar_using_put2
+  # unit tests for alterar_using_put3
   # Alterar Webhook
   # Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
   # @param id C\u00C3\u00B3digo identificador do Webhook
@@ -52,7 +52,7 @@ describe 'WebhooksApi' do
   # @param url URL que a ser consumida pelo WebHook
   # @param [Hash] opts the optional parameters
   # @return [WebHook]
-  describe 'alterar_using_put2 test' do
+  describe 'alterar_using_put3 test' do
     it "should work" do
       # assertion here
       # should be_a()

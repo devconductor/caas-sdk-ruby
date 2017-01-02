@@ -4,7 +4,7 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterar_using_put2**](WebhooksApi.md#alterar_using_put2) | **PUT** /api/webhooks | Alterar Webhook
+[**alterar_using_put3**](WebhooksApi.md#alterar_using_put3) | **PUT** /api/webhooks | Alterar Webhook
 [**consultar_using_get9**](WebhooksApi.md#consultar_using_get9) | **GET** /api/webhooks/{id} | Consultar Webhook
 [**listar_using_get10**](WebhooksApi.md#listar_using_get10) | **GET** /api/webhooks | Lista os Webhooks
 [**salvar_using_post3**](WebhooksApi.md#salvar_using_post3) | **POST** /api/webhooks | Salvar Webhook
@@ -12,8 +12,8 @@ Method | HTTP request | Description
 
 
 
-# **alterar_using_put2**
-> WebHook alterar_using_put2(id, evento, metodo, url)
+# **alterar_using_put3**
+> WebHook alterar_using_put3(id, evento, metodo, url)
 
 Alterar Webhook
 
@@ -46,10 +46,10 @@ url = "url_example" # String | URL que a ser consumida pelo WebHook
 
 begin
   #Alterar Webhook
-  result = api_instance.alterar_using_put2(id, evento, metodo, url)
+  result = api_instance.alterar_using_put3(id, evento, metodo, url)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling WebhooksApi->alterar_using_put2: #{e}"
+  puts "Exception when calling WebhooksApi->alterar_using_put3: #{e}"
 end
 ```
 

@@ -5,7 +5,7 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_using_put2**](WebhooksApi.md#alterar_using_put2) | **PUT** /api/webhooks | Alterar Webhook
-[**consultar_using_get9**](WebhooksApi.md#consultar_using_get9) | **GET** /api/webhooks/{id_webhook} | Consultar Webhook
+[**consultar_using_get9**](WebhooksApi.md#consultar_using_get9) | **GET** /api/webhooks/{id} | Consultar Webhook
 [**listar_using_get10**](WebhooksApi.md#listar_using_get10) | **GET** /api/webhooks | Lista os Webhooks
 [**salvar_using_post3**](WebhooksApi.md#salvar_using_post3) | **POST** /api/webhooks | Salvar Webhook
 
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 
 # **consultar_using_get9**
-> WebHook consultar_using_get9(id_webhook)
+> WebHook consultar_using_get9(id)
 
 Consultar Webhook
 
@@ -102,12 +102,12 @@ end
 
 api_instance = Pier::WebhooksApi.new
 
-id_webhook = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
 
 
 begin
   #Consultar Webhook
-  result = api_instance.consultar_using_get9(id_webhook)
+  result = api_instance.consultar_using_get9(id)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling WebhooksApi->consultar_using_get9: #{e}"
@@ -118,7 +118,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_webhook** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id). | 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id). | 
 
 
 ### Return type

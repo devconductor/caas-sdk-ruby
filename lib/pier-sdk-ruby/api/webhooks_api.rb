@@ -134,34 +134,34 @@ module Pier
 
     # Consultar Webhook
     # Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
-    # @param id_webhook C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
     # @param [Hash] opts the optional parameters
     # @return [WebHook]
-    def consultar_using_get9(id_webhook, opts = {})
-      data, _status_code, _headers = consultar_using_get9_with_http_info(id_webhook, opts)
+    def consultar_using_get9(id, opts = {})
+      data, _status_code, _headers = consultar_using_get9_with_http_info(id, opts)
       return data
     end
 
     # Consultar Webhook
     # Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
-    # @param id_webhook C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(WebHook, Fixnum, Hash)>] WebHook data, response status code and response headers
-    def consultar_using_get9_with_http_info(id_webhook, opts = {})
+    def consultar_using_get9_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: WebhooksApi.consultar_using_get9 ..."
       end
       
       
-      # verify the required parameter 'id_webhook' is set
-      fail ArgumentError, "Missing the required parameter 'id_webhook' when calling WebhooksApi.consultar_using_get9" if id_webhook.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling WebhooksApi.consultar_using_get9" if id.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/webhooks/{id_webhook}".sub('{format}','json').sub('{' + 'id_webhook' + '}', id_webhook.to_s)
+      local_var_path = "/api/webhooks/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}

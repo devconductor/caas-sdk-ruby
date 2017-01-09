@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**consultar_using_get**](CartaoApi.md#consultar_using_get) | **GET** /api/cartoes/{id_cartao} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
 [**desbloquear_using_put**](CartaoApi.md#desbloquear_using_put) | **PUT** /api/cartoes/{id_cartao}/desbloqueio | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 [**listar_using_get**](CartaoApi.md#listar_using_get) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
-[**validar_cartao_chip_bandeirado_using_get**](CartaoApi.md#validar_cartao_chip_bandeirado_using_get) | **GET** /api/cartoes/bandeirados/validar/chip | Permite validar um Cart\u00C3\u00A3o Bandeirado a partir do chip
+[**validar_cartao_chip_bandeirado_using_get**](CartaoApi.md#validar_cartao_chip_bandeirado_using_get) | **GET** /api/cartoes/bandeirados/validar/chip | Permite validar um Cart\u00C3\u00A3o Mastercard a partir do chip
 [**validar_cartao_digitado_bandeirado_using_get**](CartaoApi.md#validar_cartao_digitado_bandeirado_using_get) | **GET** /api/cartoes/bandeirados/validar/digitado | Permite validar um Cart\u00C3\u00A3o bandeirado a partir dos dados Impressos
 [**validar_cartao_digitado_nao_bandeirado_using_get**](CartaoApi.md#validar_cartao_digitado_nao_bandeirado_using_get) | **GET** /api/cartoes/nao-bandeirados/validar/digitado | Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
 [**validar_cartao_tarja_bandeirado_using_get**](CartaoApi.md#validar_cartao_tarja_bandeirado_using_get) | **GET** /api/cartoes/bandeirados/validar/tarja | Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
 
-Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha, a sua escolha
+Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
 
 ### Example
 ```ruby
@@ -601,9 +601,9 @@ Name | Type | Description  | Notes
 # **validar_cartao_chip_bandeirado_using_get**
 > ValidaCartao validar_cartao_chip_bandeirado_using_get(numero_cartao, criptograma)
 
-Permite validar um Cart\u00C3\u00A3o Bandeirado a partir do chip
+Permite validar um Cart\u00C3\u00A3o Mastercard a partir do chip
 
-Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele.
+Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o criptograma gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o Mastercard a fim de verificar a sua autenticidade.
 
 ### Example
 ```ruby
@@ -627,7 +627,7 @@ criptograma = "criptograma_example" # String | Criptograma do cart\u00C3\u00A3o 
 
 
 begin
-  #Permite validar um Cart\u00C3\u00A3o Bandeirado a partir do chip
+  #Permite validar um Cart\u00C3\u00A3o Mastercard a partir do chip
   result = api_instance.validar_cartao_chip_bandeirado_using_get(numero_cartao, criptograma)
   p result
 rescue Pier::ApiError => e
@@ -798,7 +798,7 @@ Name | Type | Description  | Notes
 
 Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
 
-Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele.
+Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo.
 
 ### Example
 ```ruby

@@ -61,6 +61,24 @@ describe 'CartaoApi' do
   end
 
 
+  # unit tests for atribuir_pessoa_using_put
+  # Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa.
+  # Esta m\u00C3\u00A9todo tem como permite que um cart\u00C3\u00A3o de cr\u00C3\u00A9dito impresso de forma avulsa e an\u00C3\u00B4nimo seja atribu\u00C3\u00ADdo a uma pessoa para que esta passe a ser a portadora titular deste cart\u00C3\u00A3o.
+  # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
+  # @param id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).
+  # @param [Hash] opts the optional parameters
+  # @return [Cartao]
+  describe 'atribuir_pessoa_using_put test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
   # unit tests for bloquear_using_put
   # Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
   # Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio (tempor\u00C3\u00A1rio) ou do cancelamento (definitivo) de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
@@ -70,6 +88,24 @@ describe 'CartaoApi' do
   # @param [Hash] opts the optional parameters
   # @return [Cartao]
   describe 'bloquear_using_put test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for cadastrar_alterar_senha_using_put
+  # Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+  # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha, a sua escolha
+  # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+  # @param senha Senha para ser cadastrada ou alterada.
+  # @param [Hash] opts the optional parameters
+  # @return [String]
+  describe 'cadastrar_alterar_senha_using_put test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -174,6 +210,101 @@ describe 'CartaoApi' do
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   # @return [PageCartoes]
   describe 'listar_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for validar_cartao_chip_bandeirado_using_get
+  # Permite validar um Cart\u00C3\u00A3o Bandeirado a partir do chip
+  # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele.
+  # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+  # @param criptograma Criptograma do cart\u00C3\u00A3o no formato de55
+  # @param [Hash] opts the optional parameters
+  # @return [ValidaCartao]
+  describe 'validar_cartao_chip_bandeirado_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for validar_cartao_digitado_bandeirado_using_get
+  # Permite validar um Cart\u00C3\u00A3o bandeirado a partir dos dados Impressos
+  # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele.
+  # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+  # @param nome_portador Nome do portador do cart\u00C3\u00A3o
+  # @param data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
+  # @param codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
+  # @param [Hash] opts the optional parameters
+  # @return [ValidaCartao]
+  describe 'validar_cartao_digitado_bandeirado_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for validar_cartao_digitado_nao_bandeirado_using_get
+  # Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
+  # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele.
+  # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+  # @param nome_portador Nome do portador do cart\u00C3\u00A3o
+  # @param data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
+  # @param codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
+  # @param [Hash] opts the optional parameters
+  # @return [ValidaCartao]
+  describe 'validar_cartao_digitado_nao_bandeirado_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for validar_cartao_tarja_bandeirado_using_get
+  # Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
+  # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele.
+  # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+  # @param trilha1 Trilha 1 do cart\u00C3\u00A3o a ser validado
+  # @param trilha2 Trilha 2 do cart\u00C3\u00A3o a ser validado
+  # @param [Hash] opts the optional parameters
+  # @return [ValidaCartao]
+  describe 'validar_cartao_tarja_bandeirado_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for validar_senha_using_post
+  # Permite validar a senha de um Cart\u00C3\u00A3o
+  # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00C3\u00A3o est\u00C3\u00A1 correta.
+  # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+  # @param senha Senha para ser validada.
+  # @param [Hash] opts the optional parameters
+  # @return [String]
+  describe 'validar_senha_using_post test' do
     it "should work" do
       # assertion here
       # should be_a()

@@ -5,12 +5,19 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_status_impressao_using_put**](CartaoApi.md#alterar_status_impressao_using_put) | **PUT** /api/cartoes/{id_cartao}/impressao/{id_status_impressao}  | Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
+[**atribuir_pessoa_using_put**](CartaoApi.md#atribuir_pessoa_using_put) | **PUT** /api/cartoes/{id_cartao}/atribuir-pessoa | Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa.
 [**bloquear_using_put**](CartaoApi.md#bloquear_using_put) | **PUT** /api/cartoes/{id_cartao}/bloqueio | Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
+[**cadastrar_alterar_senha_using_put**](CartaoApi.md#cadastrar_alterar_senha_using_put) | **PUT** /api/cartoes/{id_cartao}/alterar-senha | Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
 [**consultar_limite_disponibilidade_using_get**](CartaoApi.md#consultar_limite_disponibilidade_using_get) | **GET** /api/cartoes/{id_cartao}/limites-disponibilidades | Apresenta os limites do Portador do Cart\u00C3\u00A3o
 [**consultar_portador_using_get**](CartaoApi.md#consultar_portador_using_get) | **GET** /api/cartoes/{id_cartao}/portadores | Apresenta os dados do Portador do Cart\u00C3\u00A3o
 [**consultar_using_get**](CartaoApi.md#consultar_using_get) | **GET** /api/cartoes/{id_cartao} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
 [**desbloquear_using_put**](CartaoApi.md#desbloquear_using_put) | **PUT** /api/cartoes/{id_cartao}/desbloqueio | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 [**listar_using_get**](CartaoApi.md#listar_using_get) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
+[**validar_cartao_chip_bandeirado_using_get**](CartaoApi.md#validar_cartao_chip_bandeirado_using_get) | **GET** /api/cartoes/bandeirados/validar/chip | Permite validar um Cart\u00C3\u00A3o Bandeirado a partir do chip
+[**validar_cartao_digitado_bandeirado_using_get**](CartaoApi.md#validar_cartao_digitado_bandeirado_using_get) | **GET** /api/cartoes/bandeirados/validar/digitado | Permite validar um Cart\u00C3\u00A3o bandeirado a partir dos dados Impressos
+[**validar_cartao_digitado_nao_bandeirado_using_get**](CartaoApi.md#validar_cartao_digitado_nao_bandeirado_using_get) | **GET** /api/cartoes/nao-bandeirados/validar/digitado | Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
+[**validar_cartao_tarja_bandeirado_using_get**](CartaoApi.md#validar_cartao_tarja_bandeirado_using_get) | **GET** /api/cartoes/bandeirados/validar/tarja | Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
+[**validar_senha_using_post**](CartaoApi.md#validar_senha_using_post) | **POST** /api/cartoes/{id_cartao}/validar-senha | Permite validar a senha de um Cart\u00C3\u00A3o
 
 
 
@@ -76,6 +83,67 @@ Name | Type | Description  | Notes
 
 
 
+# **atribuir_pessoa_using_put**
+> Cartao atribuir_pessoa_using_put(id_cartao, id_pessoa)
+
+Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa.
+
+Esta m\u00C3\u00A9todo tem como permite que um cart\u00C3\u00A3o de cr\u00C3\u00A9dito impresso de forma avulsa e an\u00C3\u00B4nimo seja atribu\u00C3\u00ADdo a uma pessoa para que esta passe a ser a portadora titular deste cart\u00C3\u00A3o.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::CartaoApi.new
+
+id_cartao = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
+
+id_pessoa = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).
+
+
+begin
+  #Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa.
+  result = api_instance.atribuir_pessoa_using_put(id_cartao, id_pessoa)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CartaoApi->atribuir_pessoa_using_put: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_cartao** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) | 
+ **id_pessoa** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id). | 
+
+
+### Return type
+
+[**Cartao**](Cartao.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
 # **bloquear_using_put**
 > Cartao bloquear_using_put(id_cartao, id_status, observacao)
 
@@ -127,6 +195,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Cartao**](Cartao.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **cadastrar_alterar_senha_using_put**
+> String cadastrar_alterar_senha_using_put(id_cartao, senha)
+
+Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+
+Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha, a sua escolha
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::CartaoApi.new
+
+id_cartao = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+
+senha = "senha_example" # String | Senha para ser cadastrada ou alterada.
+
+
+begin
+  #Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+  result = api_instance.cadastrar_alterar_senha_using_put(id_cartao, senha)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CartaoApi->cadastrar_alterar_senha_using_put: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_cartao** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
+ **senha** | **String**| Senha para ser cadastrada ou alterada. | 
+
+
+### Return type
+
+**String**
 
 ### Authorization
 
@@ -456,6 +585,326 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PageCartoes**](PageCartoes.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **validar_cartao_chip_bandeirado_using_get**
+> ValidaCartao validar_cartao_chip_bandeirado_using_get(numero_cartao, criptograma)
+
+Permite validar um Cart\u00C3\u00A3o Bandeirado a partir do chip
+
+Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::CartaoApi.new
+
+numero_cartao = "numero_cartao_example" # String | N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+
+criptograma = "criptograma_example" # String | Criptograma do cart\u00C3\u00A3o no formato de55
+
+
+begin
+  #Permite validar um Cart\u00C3\u00A3o Bandeirado a partir do chip
+  result = api_instance.validar_cartao_chip_bandeirado_using_get(numero_cartao, criptograma)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CartaoApi->validar_cartao_chip_bandeirado_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **numero_cartao** | **String**| N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. | 
+ **criptograma** | **String**| Criptograma do cart\u00C3\u00A3o no formato de55 | 
+
+
+### Return type
+
+[**ValidaCartao**](ValidaCartao.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **validar_cartao_digitado_bandeirado_using_get**
+> ValidaCartao validar_cartao_digitado_bandeirado_using_get(numero_cartao, nome_portador, data_validade, codigo_seguranca)
+
+Permite validar um Cart\u00C3\u00A3o bandeirado a partir dos dados Impressos
+
+Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::CartaoApi.new
+
+numero_cartao = "numero_cartao_example" # String | N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+
+nome_portador = "nome_portador_example" # String | Nome do portador do cart\u00C3\u00A3o
+
+data_validade = "data_validade_example" # String | Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
+
+codigo_seguranca = "codigo_seguranca_example" # String | C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
+
+
+begin
+  #Permite validar um Cart\u00C3\u00A3o bandeirado a partir dos dados Impressos
+  result = api_instance.validar_cartao_digitado_bandeirado_using_get(numero_cartao, nome_portador, data_validade, codigo_seguranca)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CartaoApi->validar_cartao_digitado_bandeirado_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **numero_cartao** | **String**| N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. | 
+ **nome_portador** | **String**| Nome do portador do cart\u00C3\u00A3o | 
+ **data_validade** | **String**| Data de validade do cart\u00C3\u00A3o no formato yyyy-MM | 
+ **codigo_seguranca** | **String**| C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros | 
+
+
+### Return type
+
+[**ValidaCartao**](ValidaCartao.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **validar_cartao_digitado_nao_bandeirado_using_get**
+> ValidaCartao validar_cartao_digitado_nao_bandeirado_using_get(numero_cartao, nome_portador, data_validade, codigo_seguranca)
+
+Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
+
+Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::CartaoApi.new
+
+numero_cartao = "numero_cartao_example" # String | N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+
+nome_portador = "nome_portador_example" # String | Nome do portador do cart\u00C3\u00A3o
+
+data_validade = "data_validade_example" # String | Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
+
+codigo_seguranca = "codigo_seguranca_example" # String | C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
+
+
+begin
+  #Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
+  result = api_instance.validar_cartao_digitado_nao_bandeirado_using_get(numero_cartao, nome_portador, data_validade, codigo_seguranca)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CartaoApi->validar_cartao_digitado_nao_bandeirado_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **numero_cartao** | **String**| N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. | 
+ **nome_portador** | **String**| Nome do portador do cart\u00C3\u00A3o | 
+ **data_validade** | **String**| Data de validade do cart\u00C3\u00A3o no formato yyyy-MM | 
+ **codigo_seguranca** | **String**| C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros | 
+
+
+### Return type
+
+[**ValidaCartao**](ValidaCartao.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **validar_cartao_tarja_bandeirado_using_get**
+> ValidaCartao validar_cartao_tarja_bandeirado_using_get(numero_cartao, trilha1, trilha2)
+
+Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
+
+Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::CartaoApi.new
+
+numero_cartao = "numero_cartao_example" # String | N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+
+trilha1 = "trilha1_example" # String | Trilha 1 do cart\u00C3\u00A3o a ser validado
+
+trilha2 = "trilha2_example" # String | Trilha 2 do cart\u00C3\u00A3o a ser validado
+
+
+begin
+  #Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
+  result = api_instance.validar_cartao_tarja_bandeirado_using_get(numero_cartao, trilha1, trilha2)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CartaoApi->validar_cartao_tarja_bandeirado_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **numero_cartao** | **String**| N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. | 
+ **trilha1** | **String**| Trilha 1 do cart\u00C3\u00A3o a ser validado | 
+ **trilha2** | **String**| Trilha 2 do cart\u00C3\u00A3o a ser validado | 
+
+
+### Return type
+
+[**ValidaCartao**](ValidaCartao.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **validar_senha_using_post**
+> String validar_senha_using_post(id_cartao, senha)
+
+Permite validar a senha de um Cart\u00C3\u00A3o
+
+Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00C3\u00A3o est\u00C3\u00A1 correta.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::CartaoApi.new
+
+id_cartao = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+
+senha = "senha_example" # String | Senha para ser validada.
+
+
+begin
+  #Permite validar a senha de um Cart\u00C3\u00A3o
+  result = api_instance.validar_senha_using_post(id_cartao, senha)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CartaoApi->validar_senha_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_cartao** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
+ **senha** | **String**| Senha para ser validada. | 
+
+
+### Return type
+
+**String**
 
 ### Authorization
 

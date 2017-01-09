@@ -131,6 +131,9 @@ require 'pier-sdk-ruby/models/tipo_endereco'
 require 'pier-sdk-ruby/models/tipo_telefone'
 
 
+require 'pier-sdk-ruby/models/valida_cartao'
+
+
 require 'pier-sdk-ruby/models/web_hook'
 
 

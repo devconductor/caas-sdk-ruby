@@ -37,9 +37,9 @@ api_instance = Pier::WebhooksApi.new
 
 id = 789 # Integer | C\u00C3\u00B3digo identificador do Webhook
 
-evento = nil # Object | Evento a ser chamado pelo WebHook
+evento = "evento_example" # String | Evento a ser chamado pelo WebHook
 
-metodo = nil # Object | M\u00C3\u00A9todo que a ser chamado pelo WebHook
+metodo = "metodo_example" # String | M\u00C3\u00A9todo que a ser chamado pelo WebHook
 
 url = "url_example" # String | URL que a ser consumida pelo WebHook
 
@@ -58,8 +58,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo identificador do Webhook | 
- **evento** | [**Object**](.md)| Evento a ser chamado pelo WebHook | 
- **metodo** | [**Object**](.md)| M\u00C3\u00A9todo que a ser chamado pelo WebHook | 
+ **evento** | **String**| Evento a ser chamado pelo WebHook | 
+ **metodo** | **String**| M\u00C3\u00A9todo que a ser chamado pelo WebHook | 
  **url** | **String**| URL que a ser consumida pelo WebHook | 
 
 
@@ -161,12 +161,12 @@ end
 api_instance = Pier::WebhooksApi.new
 
 opts = { 
-  id: 789, # Integer | Id do WebHook
-  evento: nil, # Object | Evento a ser chamado pelo WebHook
-  metodo: nil, # Object | M\u00C3\u00A9todo que a ser chamado pelo WebHook
-  url: "url_example", # String | URL que a ser consumida pelo WebHook
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  id: 789, # Integer | Id do WebHook
+  evento: "evento_example", # String | Evento a ser chamado pelo WebHook
+  metodo: "metodo_example", # String | M\u00C3\u00A9todo que a ser chamado pelo WebHook
+  url: "url_example" # String | URL que a ser consumida pelo WebHook
 }
 
 begin
@@ -182,12 +182,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| Id do WebHook | [optional] 
- **evento** | [**Object**](.md)| Evento a ser chamado pelo WebHook | [optional] 
- **metodo** | [**Object**](.md)| M\u00C3\u00A9todo que a ser chamado pelo WebHook | [optional] 
- **url** | **String**| URL que a ser consumida pelo WebHook | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **id** | **Integer**| Id do WebHook | [optional] 
+ **evento** | **String**| Evento a ser chamado pelo WebHook | [optional] 
+ **metodo** | **String**| M\u00C3\u00A9todo que a ser chamado pelo WebHook | [optional] 
+ **url** | **String**| URL que a ser consumida pelo WebHook | [optional] 
 
 
 ### Return type
@@ -229,9 +229,9 @@ end
 
 api_instance = Pier::WebhooksApi.new
 
-evento = nil # Object | Evento a ser chamado pelo WebHook
+evento = "evento_example" # String | Evento a ser chamado pelo WebHook
 
-metodo = nil # Object | M\u00C3\u00A9todo que a ser chamado pelo WebHook
+metodo = "metodo_example" # String | M\u00C3\u00A9todo que a ser chamado pelo WebHook
 
 url = "url_example" # String | URL que a ser consumida pelo WebHook
 
@@ -249,8 +249,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **evento** | [**Object**](.md)| Evento a ser chamado pelo WebHook | 
- **metodo** | [**Object**](.md)| M\u00C3\u00A9todo que a ser chamado pelo WebHook | 
+ **evento** | **String**| Evento a ser chamado pelo WebHook | 
+ **metodo** | **String**| M\u00C3\u00A9todo que a ser chamado pelo WebHook | 
  **url** | **String**| URL que a ser consumida pelo WebHook | 
 
 

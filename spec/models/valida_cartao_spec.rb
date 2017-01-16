@@ -43,17 +43,6 @@ describe 'ValidaCartao' do
     end
   end
 
-  describe 'test attribute "criptograma_resposta"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
   describe 'test attribute "status_cartao"' do
     it 'should work' do
        # assertion here
@@ -66,6 +55,17 @@ describe 'ValidaCartao' do
 
 
   describe 'test attribute "status_conta"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "criptograma_resposta"' do
     it 'should work' do
        # assertion here
        # should be_a()

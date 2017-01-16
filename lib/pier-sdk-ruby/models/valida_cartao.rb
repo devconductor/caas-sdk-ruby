@@ -25,25 +25,25 @@ require 'date'
 module Pier
   # Objeto de resposta para a valida\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
   class ValidaCartao
-    # Criptograma de resposta
-    attr_accessor :criptograma_resposta
-
     # Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
     attr_accessor :status_cartao
 
     # Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
     attr_accessor :status_conta
 
+    # Criptograma de resposta
+    attr_accessor :criptograma_resposta
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'criptograma_resposta' => :'criptogramaResposta',
-        
         :'status_cartao' => :'statusCartao',
         
-        :'status_conta' => :'statusConta'
+        :'status_conta' => :'statusConta',
+        
+        :'criptograma_resposta' => :'criptogramaResposta'
         
       }
     end
@@ -52,11 +52,11 @@ module Pier
     def self.swagger_types
       {
         
-        :'criptograma_resposta' => :'String',
-        
         :'status_cartao' => :'String',
         
-        :'status_conta' => :'String'
+        :'status_conta' => :'String',
+        
+        :'criptograma_resposta' => :'String'
         
       }
     end
@@ -68,15 +68,6 @@ module Pier
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
-
-      
-      if attributes[:'criptogramaResposta']
-        
-        
-        self.criptograma_resposta = attributes[:'criptogramaResposta']
-        
-      
-      end
 
       
       if attributes[:'statusCartao']
@@ -92,6 +83,15 @@ module Pier
         
         
         self.status_conta = attributes[:'statusConta']
+        
+      
+      end
+
+      
+      if attributes[:'criptogramaResposta']
+        
+        
+        self.criptograma_resposta = attributes[:'criptogramaResposta']
         
       
       end
@@ -147,9 +147,9 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          criptograma_resposta == o.criptograma_resposta &&
           status_cartao == o.status_cartao &&
-          status_conta == o.status_conta
+          status_conta == o.status_conta &&
+          criptograma_resposta == o.criptograma_resposta
     end
 
     # @see the `==` method
@@ -161,7 +161,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [criptograma_resposta, status_cartao, status_conta].hash
+      [status_cartao, status_conta, criptograma_resposta].hash
     end
 
     # Builds the object from hash

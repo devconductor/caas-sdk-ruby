@@ -34,7 +34,7 @@ module Pier
 
     # Alterar limite
     # Esse recurso permite realizar a altera\u00C3\u00A7\u00C3\u00A3o dos Limites de uma determinada Conta.
-    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param limite_global Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
     # @param limite_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
     # @param limite_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
@@ -49,14 +49,14 @@ module Pier
     # @param limite_internacional_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
     # @param [Hash] opts the optional parameters
     # @return [Conta]
-    def alterar_limite_using_put(id_conta, limite_global, limite_compra, limite_parcelado, limite_parcelas, limite_saque_global, limite_saque_periodo, limite_consignado, limite_internacional_compra, limite_internacional_parcelado, limite_internacional_parcelas, limite_internacional_saque_global, limite_internacional_saque_periodo, opts = {})
-      data, _status_code, _headers = alterar_limite_using_put_with_http_info(id_conta, limite_global, limite_compra, limite_parcelado, limite_parcelas, limite_saque_global, limite_saque_periodo, limite_consignado, limite_internacional_compra, limite_internacional_parcelado, limite_internacional_parcelas, limite_internacional_saque_global, limite_internacional_saque_periodo, opts)
+    def alterar_limite_using_put(id, limite_global, limite_compra, limite_parcelado, limite_parcelas, limite_saque_global, limite_saque_periodo, limite_consignado, limite_internacional_compra, limite_internacional_parcelado, limite_internacional_parcelas, limite_internacional_saque_global, limite_internacional_saque_periodo, opts = {})
+      data, _status_code, _headers = alterar_limite_using_put_with_http_info(id, limite_global, limite_compra, limite_parcelado, limite_parcelas, limite_saque_global, limite_saque_periodo, limite_consignado, limite_internacional_compra, limite_internacional_parcelado, limite_internacional_parcelas, limite_internacional_saque_global, limite_internacional_saque_periodo, opts)
       return data
     end
 
     # Alterar limite
     # Esse recurso permite realizar a altera\u00C3\u00A7\u00C3\u00A3o dos Limites de uma determinada Conta.
-    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param limite_global Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
     # @param limite_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
     # @param limite_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
@@ -71,14 +71,14 @@ module Pier
     # @param limite_internacional_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Conta, Fixnum, Hash)>] Conta data, response status code and response headers
-    def alterar_limite_using_put_with_http_info(id_conta, limite_global, limite_compra, limite_parcelado, limite_parcelas, limite_saque_global, limite_saque_periodo, limite_consignado, limite_internacional_compra, limite_internacional_parcelado, limite_internacional_parcelas, limite_internacional_saque_global, limite_internacional_saque_periodo, opts = {})
+    def alterar_limite_using_put_with_http_info(id, limite_global, limite_compra, limite_parcelado, limite_parcelas, limite_saque_global, limite_saque_periodo, limite_consignado, limite_internacional_compra, limite_internacional_parcelado, limite_internacional_parcelas, limite_internacional_saque_global, limite_internacional_saque_periodo, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContaApi.alterar_limite_using_put ..."
       end
       
       
-      # verify the required parameter 'id_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta' when calling ContaApi.alterar_limite_using_put" if id_conta.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.alterar_limite_using_put" if id.nil?
       
       
       
@@ -181,7 +181,7 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/contas/{id_conta}/alterar-limites".sub('{format}','json').sub('{' + 'id_conta' + '}', id_conta.to_s)
+      local_var_path = "/api/contas/{id}/alterar-limites".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -232,29 +232,29 @@ module Pier
 
     # Alterar vencimento
     # Esse recurso permite alterar o vencimento de uma conta especifica.
-    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param novo_dia_vencimento Novo dia de vencimento.
     # @param [Hash] opts the optional parameters
     # @return [Conta]
-    def alterar_vencimento_using_put(id_conta, novo_dia_vencimento, opts = {})
-      data, _status_code, _headers = alterar_vencimento_using_put_with_http_info(id_conta, novo_dia_vencimento, opts)
+    def alterar_vencimento_using_put(id, novo_dia_vencimento, opts = {})
+      data, _status_code, _headers = alterar_vencimento_using_put_with_http_info(id, novo_dia_vencimento, opts)
       return data
     end
 
     # Alterar vencimento
     # Esse recurso permite alterar o vencimento de uma conta especifica.
-    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param novo_dia_vencimento Novo dia de vencimento.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Conta, Fixnum, Hash)>] Conta data, response status code and response headers
-    def alterar_vencimento_using_put_with_http_info(id_conta, novo_dia_vencimento, opts = {})
+    def alterar_vencimento_using_put_with_http_info(id, novo_dia_vencimento, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContaApi.alterar_vencimento_using_put ..."
       end
       
       
-      # verify the required parameter 'id_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta' when calling ContaApi.alterar_vencimento_using_put" if id_conta.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.alterar_vencimento_using_put" if id.nil?
       
       
       
@@ -269,7 +269,7 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/contas/{id_conta}/alterar-vencimento".sub('{format}','json').sub('{' + 'id_conta' + '}', id_conta.to_s)
+      local_var_path = "/api/contas/{id}/alterar-vencimento".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -307,36 +307,102 @@ module Pier
     end
 
 
-    # Apresenta dados de uma determinada conta
-    # Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Apresenta os limites da conta
+    # Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
-    # @return [Conta]
-    def consultar_using_get1(id_conta, opts = {})
-      data, _status_code, _headers = consultar_using_get1_with_http_info(id_conta, opts)
+    # @return [LimiteDisponibilidade]
+    def consultar_limite_disponibilidade_using_get1(id, opts = {})
+      data, _status_code, _headers = consultar_limite_disponibilidade_using_get1_with_http_info(id, opts)
       return data
     end
 
-    # Apresenta dados de uma determinada conta
-    # Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Apresenta os limites da conta
+    # Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Conta, Fixnum, Hash)>] Conta data, response status code and response headers
-    def consultar_using_get1_with_http_info(id_conta, opts = {})
+    # @return [Array<(LimiteDisponibilidade, Fixnum, Hash)>] LimiteDisponibilidade data, response status code and response headers
+    def consultar_limite_disponibilidade_using_get1_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.consultar_using_get1 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.consultar_limite_disponibilidade_using_get1 ..."
       end
       
       
-      # verify the required parameter 'id_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta' when calling ContaApi.consultar_using_get1" if id_conta.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_limite_disponibilidade_using_get1" if id.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/contas/{id_conta}".sub('{format}','json').sub('{' + 'id_conta' + '}', id_conta.to_s)
+      local_var_path = "/api/contas/{id}/limites-disponibilidades".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'LimiteDisponibilidade')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ContaApi#consultar_limite_disponibilidade_using_get1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Apresenta dados de uma determinada conta
+    # Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param [Hash] opts the optional parameters
+    # @return [Conta]
+    def consultar_using_get1(id, opts = {})
+      data, _status_code, _headers = consultar_using_get1_with_http_info(id, opts)
+      return data
+    end
+
+    # Apresenta dados de uma determinada conta
+    # Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Conta, Fixnum, Hash)>] Conta data, response status code and response headers
+    def consultar_using_get1_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ContaApi.consultar_using_get1 ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_using_get1" if id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -375,29 +441,29 @@ module Pier
 
     # Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
     # 
-    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
     # @param [Hash] opts the optional parameters
     # @return [CartaoImpressao]
-    def gerar_cartao_using_post(id_conta, id_pessoa, opts = {})
-      data, _status_code, _headers = gerar_cartao_using_post_with_http_info(id_conta, id_pessoa, opts)
+    def gerar_cartao_using_post(id, id_pessoa, opts = {})
+      data, _status_code, _headers = gerar_cartao_using_post_with_http_info(id, id_pessoa, opts)
       return data
     end
 
     # Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
     # 
-    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(CartaoImpressao, Fixnum, Hash)>] CartaoImpressao data, response status code and response headers
-    def gerar_cartao_using_post_with_http_info(id_conta, id_pessoa, opts = {})
+    def gerar_cartao_using_post_with_http_info(id, id_pessoa, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContaApi.gerar_cartao_using_post ..."
       end
       
       
-      # verify the required parameter 'id_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta' when calling ContaApi.gerar_cartao_using_post" if id_conta.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.gerar_cartao_using_post" if id.nil?
       
       
       
@@ -412,7 +478,7 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/contas/{id_conta}/pessoas/{id_pessoa}/gerar-cartao".sub('{format}','json').sub('{' + 'id_conta' + '}', id_conta.to_s).sub('{' + 'id_pessoa' + '}', id_pessoa.to_s)
+      local_var_path = "/api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao".sub('{format}','json').sub('{' + 'id' + '}', id.to_s).sub('{' + 'id_pessoa' + '}', id_pessoa.to_s)
 
       # query parameters
       query_params = {}
@@ -452,6 +518,8 @@ module Pier
     # Lista contas existentes na base de dados do Emissor
     # Este recurso permite listar contas existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Integer] :id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
     # @option opts [Integer] :id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
     # @option opts [Integer] :id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
@@ -462,8 +530,6 @@ module Pier
     # @option opts [Date] :data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
     # @option opts [Date] :data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
     # @option opts [Date] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Conta]
     def listar_using_get1(opts = {})
       data, _status_code, _headers = listar_using_get1_with_http_info(opts)
@@ -473,6 +539,8 @@ module Pier
     # Lista contas existentes na base de dados do Emissor
     # Este recurso permite listar contas existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Integer] :id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
     # @option opts [Integer] :id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
     # @option opts [Integer] :id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
@@ -483,8 +551,6 @@ module Pier
     # @option opts [Date] :data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
     # @option opts [Date] :data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
     # @option opts [Date] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Array<(Conta, Fixnum, Hash)>] Conta data, response status code and response headers
     def listar_using_get1_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -568,6 +634,8 @@ module Pier
 
       # query parameters
       query_params = {}
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'id'] = opts[:'id'] if opts[:'id']
       query_params[:'idProduto'] = opts[:'id_produto'] if opts[:'id_produto']
       query_params[:'idOrigemComercial'] = opts[:'id_origem_comercial'] if opts[:'id_origem_comercial']
@@ -578,8 +646,6 @@ module Pier
       query_params[:'dataStatusConta'] = opts[:'data_status_conta'] if opts[:'data_status_conta']
       query_params[:'dataCadastro'] = opts[:'data_cadastro'] if opts[:'data_cadastro']
       query_params[:'dataUltimaAlteracaoVencimento'] = opts[:'data_ultima_alteracao_vencimento'] if opts[:'data_ultima_alteracao_vencimento']
-      query_params[:'page'] = opts[:'page'] if opts[:'page']
-      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
 
       # header parameters
       header_params = {}

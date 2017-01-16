@@ -7,20 +7,20 @@ Method | HTTP request | Description
 [**alterar_using_put**](CadastrosGeraisApi.md#alterar_using_put) | **PUT** /api/enderecos | Atualiza os dados de um determinado Endere\u00C3\u00A7o
 [**alterar_using_put1**](CadastrosGeraisApi.md#alterar_using_put1) | **PUT** /api/pessoas | Atualiza os dados de uma determinada Pessoa
 [**alterar_using_put2**](CadastrosGeraisApi.md#alterar_using_put2) | **PUT** /api/telefones | Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
-[**consultar_origem_comercial_using_get**](CadastrosGeraisApi.md#consultar_origem_comercial_using_get) | **GET** /api/origens-comerciais/{id_origem_comercial} | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
-[**consultar_produto_using_get**](CadastrosGeraisApi.md#consultar_produto_using_get) | **GET** /api/produtos/{id_produto} | Apresenta os dados de um determinado Produto
-[**consultar_using_get2**](CadastrosGeraisApi.md#consultar_using_get2) | **GET** /api/enderecos/{id_endereco} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
-[**consultar_using_get3**](CadastrosGeraisApi.md#consultar_using_get3) | **GET** /api/pessoas/{id_pessoa} | Apresenta os dados de uma determinada Pessoa
-[**consultar_using_get6**](CadastrosGeraisApi.md#consultar_using_get6) | **GET** /api/telefones/{id_telefone} | Apresenta os dados de um determinado Telefone
-[**consultar_using_get7**](CadastrosGeraisApi.md#consultar_using_get7) | **GET** /api/tipos-endereco/{id_tipo_endereco} | Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
-[**consultar_using_get8**](CadastrosGeraisApi.md#consultar_using_get8) | **GET** /api/tipos-telefones/{id_tipo_telefone} | Apresenta os dados de um determinado Tipo de Telefone
+[**consultar_origem_comercial_using_get**](CadastrosGeraisApi.md#consultar_origem_comercial_using_get) | **GET** /api/origens-comerciais/{id} | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
+[**consultar_produto_using_get**](CadastrosGeraisApi.md#consultar_produto_using_get) | **GET** /api/produtos/{id} | Apresenta os dados de um determinado Produto
+[**consultar_using_get2**](CadastrosGeraisApi.md#consultar_using_get2) | **GET** /api/enderecos/{id} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
+[**consultar_using_get3**](CadastrosGeraisApi.md#consultar_using_get3) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
+[**consultar_using_get6**](CadastrosGeraisApi.md#consultar_using_get6) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
+[**consultar_using_get7**](CadastrosGeraisApi.md#consultar_using_get7) | **GET** /api/tipos-enderecos/{id} | Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
+[**consultar_using_get8**](CadastrosGeraisApi.md#consultar_using_get8) | **GET** /api/tipos-telefones/{id} | Apresenta os dados de um determinado Tipo de Telefone
 [**listar_origens_comerciais_using_get**](CadastrosGeraisApi.md#listar_origens_comerciais_using_get) | **GET** /api/origens-comerciais | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
 [**listar_produtos_using_get**](CadastrosGeraisApi.md#listar_produtos_using_get) | **GET** /api/produtos | Lista os Produtos do Emissor
 [**listar_using_get2**](CadastrosGeraisApi.md#listar_using_get2) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
 [**listar_using_get3**](CadastrosGeraisApi.md#listar_using_get3) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
 [**listar_using_get4**](CadastrosGeraisApi.md#listar_using_get4) | **GET** /api/portadores | Lista os Portadores existentes
 [**listar_using_get7**](CadastrosGeraisApi.md#listar_using_get7) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
-[**listar_using_get8**](CadastrosGeraisApi.md#listar_using_get8) | **GET** /api/tipos-endereco | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+[**listar_using_get8**](CadastrosGeraisApi.md#listar_using_get8) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
 [**listar_using_get9**](CadastrosGeraisApi.md#listar_using_get9) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
 [**salvar_using_post**](CadastrosGeraisApi.md#salvar_using_post) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
 [**salvar_using_post1**](CadastrosGeraisApi.md#salvar_using_post1) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 
 
 # **consultar_origem_comercial_using_get**
-> OrigemComercial consultar_origem_comercial_using_get(id_origem_comercial)
+> OrigemComercial consultar_origem_comercial_using_get(id)
 
 Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
 
@@ -276,12 +276,12 @@ end
 
 api_instance = Pier::CadastrosGeraisApi.new
 
-id_origem_comercial = 789 # Integer | ID da Origem Comercial
+id = 789 # Integer | ID da Origem Comercial
 
 
 begin
   #Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
-  result = api_instance.consultar_origem_comercial_using_get(id_origem_comercial)
+  result = api_instance.consultar_origem_comercial_using_get(id)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling CadastrosGeraisApi->consultar_origem_comercial_using_get: #{e}"
@@ -292,7 +292,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_origem_comercial** | **Integer**| ID da Origem Comercial | 
+ **id** | **Integer**| ID da Origem Comercial | 
 
 
 ### Return type
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 
 
 # **consultar_produto_using_get**
-> Produto consultar_produto_using_get(id_produto)
+> Produto consultar_produto_using_get(id)
 
 Apresenta os dados de um determinado Produto
 
@@ -334,12 +334,12 @@ end
 
 api_instance = Pier::CadastrosGeraisApi.new
 
-id_produto = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
 
 
 begin
   #Apresenta os dados de um determinado Produto
-  result = api_instance.consultar_produto_using_get(id_produto)
+  result = api_instance.consultar_produto_using_get(id)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling CadastrosGeraisApi->consultar_produto_using_get: #{e}"
@@ -350,7 +350,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_produto** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id) | 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id) | 
 
 
 ### Return type
@@ -370,7 +370,7 @@ Name | Type | Description  | Notes
 
 
 # **consultar_using_get2**
-> Endereco consultar_using_get2(id_endereco)
+> Endereco consultar_using_get2(id)
 
 Apresenta os dados de um determinado Endere\u00C3\u00A7o
 
@@ -392,12 +392,12 @@ end
 
 api_instance = Pier::CadastrosGeraisApi.new
 
-id_endereco = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
 
 
 begin
   #Apresenta os dados de um determinado Endere\u00C3\u00A7o
-  result = api_instance.consultar_using_get2(id_endereco)
+  result = api_instance.consultar_using_get2(id)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling CadastrosGeraisApi->consultar_using_get2: #{e}"
@@ -408,7 +408,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_endereco** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). | 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). | 
 
 
 ### Return type
@@ -428,7 +428,7 @@ Name | Type | Description  | Notes
 
 
 # **consultar_using_get3**
-> Pessoa consultar_using_get3(id_pessoa)
+> Pessoa consultar_using_get3(id)
 
 Apresenta os dados de uma determinada Pessoa
 
@@ -450,12 +450,12 @@ end
 
 api_instance = Pier::CadastrosGeraisApi.new
 
-id_pessoa = 789 # Integer | ID da Pessoa
+id = 789 # Integer | ID da Pessoa
 
 
 begin
   #Apresenta os dados de uma determinada Pessoa
-  result = api_instance.consultar_using_get3(id_pessoa)
+  result = api_instance.consultar_using_get3(id)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling CadastrosGeraisApi->consultar_using_get3: #{e}"
@@ -466,7 +466,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_pessoa** | **Integer**| ID da Pessoa | 
+ **id** | **Integer**| ID da Pessoa | 
 
 
 ### Return type
@@ -486,7 +486,7 @@ Name | Type | Description  | Notes
 
 
 # **consultar_using_get6**
-> Telefone consultar_using_get6(id_telefone)
+> Telefone consultar_using_get6(id)
 
 Apresenta os dados de um determinado Telefone
 
@@ -508,12 +508,12 @@ end
 
 api_instance = Pier::CadastrosGeraisApi.new
 
-id_telefone = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
 
 
 begin
   #Apresenta os dados de um determinado Telefone
-  result = api_instance.consultar_using_get6(id_telefone)
+  result = api_instance.consultar_using_get6(id)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling CadastrosGeraisApi->consultar_using_get6: #{e}"
@@ -524,7 +524,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_telefone** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id). | 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id). | 
 
 
 ### Return type
@@ -544,7 +544,7 @@ Name | Type | Description  | Notes
 
 
 # **consultar_using_get7**
-> TipoEndereco consultar_using_get7(id_tipo_endereco)
+> TipoEndereco consultar_using_get7(id)
 
 Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
 
@@ -566,12 +566,12 @@ end
 
 api_instance = Pier::CadastrosGeraisApi.new
 
-id_tipo_endereco = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
 
 
 begin
   #Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
-  result = api_instance.consultar_using_get7(id_tipo_endereco)
+  result = api_instance.consultar_using_get7(id)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling CadastrosGeraisApi->consultar_using_get7: #{e}"
@@ -582,7 +582,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_tipo_endereco** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id) | 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id) | 
 
 
 ### Return type
@@ -602,7 +602,7 @@ Name | Type | Description  | Notes
 
 
 # **consultar_using_get8**
-> TipoTelefone consultar_using_get8(id_tipo_telefone)
+> TipoTelefone consultar_using_get8(id)
 
 Apresenta os dados de um determinado Tipo de Telefone
 
@@ -624,12 +624,12 @@ end
 
 api_instance = Pier::CadastrosGeraisApi.new
 
-id_tipo_telefone = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
 
 
 begin
   #Apresenta os dados de um determinado Tipo de Telefone
-  result = api_instance.consultar_using_get8(id_tipo_telefone)
+  result = api_instance.consultar_using_get8(id)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling CadastrosGeraisApi->consultar_using_get8: #{e}"
@@ -640,7 +640,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_tipo_telefone** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id) | 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id) | 
 
 
 ### Return type
@@ -683,11 +683,11 @@ end
 api_instance = Pier::CadastrosGeraisApi.new
 
 opts = { 
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   id: 789, # Integer | Id da origem comercial
   nome: "nome_example", # String | Nome da origem comercial
-  status: 56, # Integer | Status da origem comercial
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  status: 56 # Integer | Status da origem comercial
 }
 
 begin
@@ -703,11 +703,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
  **id** | **Integer**| Id da origem comercial | [optional] 
  **nome** | **String**| Nome da origem comercial | [optional] 
  **status** | **Integer**| Status da origem comercial | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 
 
 ### Return type
@@ -750,11 +750,11 @@ end
 api_instance = Pier::CadastrosGeraisApi.new
 
 opts = { 
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
   nome: "nome_example", # String | Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
-  status: 56, # Integer | Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  status: 56 # Integer | Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
 }
 
 begin
@@ -770,11 +770,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). | [optional] 
  **nome** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. | [optional] 
  **status** | **Integer**| Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 
 
 ### Return type
@@ -817,6 +817,8 @@ end
 api_instance = Pier::CadastrosGeraisApi.new
 
 opts = { 
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
   id_pessoa: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
   id_tipo_endereco: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
@@ -830,9 +832,7 @@ opts = {
   uf: "uf_example", # String | Apresenta sigla da Unidade Federativa
   pais: "pais_example", # String | Apresenta nome do Pais
   data_inclusao: Date.parse("2013-10-20"), # Date | Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
-  data_ultima_atualizacao: Date.parse("2013-10-20"), # Date | Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  data_ultima_atualizacao: Date.parse("2013-10-20") # Date | Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
 }
 
 begin
@@ -848,6 +848,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). | [optional] 
  **id_pessoa** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id) | [optional] 
  **id_tipo_endereco** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) | [optional] 
@@ -862,8 +864,6 @@ Name | Type | Description  | Notes
  **pais** | **String**| Apresenta nome do Pais | [optional] 
  **data_inclusao** | **Date**| Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o | [optional] 
  **data_ultima_atualizacao** | **Date**| Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 
 
 ### Return type
@@ -906,15 +906,15 @@ end
 api_instance = Pier::CadastrosGeraisApi.new
 
 opts = { 
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
   nome: "nome_example", # String | Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
   tipo: "tipo_example", # String | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
   cpf: "cpf_example", # String | N\u00C3\u00BAmero do CPF, quando PF.
   cnpj: "cnpj_example", # String | N\u00C3\u00BAmero do CNPJ, quando PJ.
   data_nascimento: Date.parse("2013-10-20"), # Date | Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
-  sexo: "sexo_example", # String | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  sexo: "sexo_example" # String | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
 }
 
 begin
@@ -930,6 +930,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id). | [optional] 
  **nome** | **String**| Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. | [optional] 
  **tipo** | **String**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica). | [optional] 
@@ -937,8 +939,6 @@ Name | Type | Description  | Notes
  **cnpj** | **String**| N\u00C3\u00BAmero do CNPJ, quando PJ. | [optional] 
  **data_nascimento** | **Date**| Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. | [optional] 
  **sexo** | **String**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 
 
 ### Return type
@@ -981,6 +981,8 @@ end
 api_instance = Pier::CadastrosGeraisApi.new
 
 opts = { 
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   id_conta: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
   id_produto: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
   id_pessoa: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
@@ -991,9 +993,7 @@ opts = {
   id_tipo_cartao: 789, # Integer | Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
   flag_ativo: 56, # Integer | Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
   data_cadastro_portador: Date.parse("2013-10-20"), # Date | Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-  data_cancelamento_portador: Date.parse("2013-10-20"), # Date | Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  data_cancelamento_portador: Date.parse("2013-10-20") # Date | Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
 }
 
 begin
@@ -1009,6 +1009,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
  **id_conta** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). | [optional] 
  **id_produto** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). | [optional] 
  **id_pessoa** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id). | [optional] 
@@ -1020,8 +1022,6 @@ Name | Type | Description  | Notes
  **flag_ativo** | **Integer**| Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o. | [optional] 
  **data_cadastro_portador** | **Date**| Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o. | [optional] 
  **data_cancelamento_portador** | **Date**| Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 
 
 ### Return type
@@ -1064,15 +1064,15 @@ end
 api_instance = Pier::CadastrosGeraisApi.new
 
 opts = { 
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
   id_tipo_telefone: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
   id_pessoa: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence.
   ddd: "ddd_example", # String | C\u00C3\u00B3digo DDD do telefone (id).
   telefone: "telefone_example", # String | N\u00C3\u00BAmero do telefone.
   ramal: "ramal_example", # String | N\u00C3\u00BAmero do ramal.
-  status: 56, # Integer | Apresenta o Status do Telefone, onde: '0': Inativo e '1': Ativo
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  status: 56 # Integer | Apresenta o Status do Telefone, onde: '0': Inativo e '1': Ativo
 }
 
 begin
@@ -1088,6 +1088,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id). | [optional] 
  **id_tipo_telefone** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). | [optional] 
  **id_pessoa** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence. | [optional] 
@@ -1095,8 +1097,6 @@ Name | Type | Description  | Notes
  **telefone** | **String**| N\u00C3\u00BAmero do telefone. | [optional] 
  **ramal** | **String**| N\u00C3\u00BAmero do ramal. | [optional] 
  **status** | **Integer**| Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 
 
 ### Return type
@@ -1139,10 +1139,10 @@ end
 api_instance = Pier::CadastrosGeraisApi.new
 
 opts = { 
-  id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
-  nome: "nome_example", # String | Nome do Tipo do Endere\u00C3\u00A7o
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+  nome: "nome_example" # String | Nome do Tipo do Endere\u00C3\u00A7o
 }
 
 begin
@@ -1158,10 +1158,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id) | [optional] 
- **nome** | **String**| Nome do Tipo do Endere\u00C3\u00A7o | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id) | [optional] 
+ **nome** | **String**| Nome do Tipo do Endere\u00C3\u00A7o | [optional] 
 
 
 ### Return type
@@ -1204,10 +1204,10 @@ end
 api_instance = Pier::CadastrosGeraisApi.new
 
 opts = { 
-  id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
-  nome: "nome_example", # String | Nome do Tipo do Telefone
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+  nome: "nome_example" # String | Nome do Tipo do Telefone
 }
 
 begin
@@ -1223,10 +1223,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). | [optional] 
- **nome** | **String**| Nome do Tipo do Telefone | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). | [optional] 
+ **nome** | **String**| Nome do Tipo do Telefone | [optional] 
 
 
 ### Return type

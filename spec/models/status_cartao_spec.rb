@@ -43,6 +43,28 @@ describe 'StatusCartao' do
     end
   end
 
+  describe 'test attribute "id"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "nome"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
   describe 'test attribute "flag_cancela_cartao"' do
     it 'should work' do
        # assertion here
@@ -65,18 +87,7 @@ describe 'StatusCartao' do
   end
 
 
-  describe 'test attribute "flag_cobra_tarifa"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "id"' do
+  describe 'test attribute "id_status_destino_desbloqueio"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -98,18 +109,7 @@ describe 'StatusCartao' do
   end
 
 
-  describe 'test attribute "id_status_destino_desbloqueio"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "nome"' do
+  describe 'test attribute "flag_cobra_tarifa"' do
     it 'should work' do
        # assertion here
        # should be_a()

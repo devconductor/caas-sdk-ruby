@@ -43,17 +43,6 @@ describe 'HistoricoImpressaoCartao' do
     end
   end
 
-  describe 'test attribute "data_historico"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
   describe 'test attribute "id"' do
     it 'should work' do
        # assertion here
@@ -88,6 +77,17 @@ describe 'HistoricoImpressaoCartao' do
 
 
   describe 'test attribute "mensagem_historico"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "data_historico"' do
     it 'should work' do
        # assertion here
        # should be_a()

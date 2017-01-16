@@ -34,47 +34,46 @@ module Pier
 
     # Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite que uma Aplica\u00C3\u00A7\u00C3\u00A3o que realize a impress\u00C3\u00A3o de cart\u00C3\u00B5es possa indicar que um determinado idCartao fora impresso ou est\u00C3\u00A1 em processo de impress\u00C3\u00A3o. Para isso, basta informar o respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00C3\u00ADdo a ele. Por padr\u00C3\u00A3o, cart\u00C3\u00B5es provis\u00C3\u00B3rios ou que j\u00C3\u00A1 tenham sido inclu\u00C3\u00ADdos em um arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica ter\u00C3\u00A3o esta requisi\u00C3\u00A7\u00C3\u00A3o negada, se utilizada.
-    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-    # @param id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).
     # @return [HistoricoImpressaoCartao]
-    def alterar_status_impressao_using_put(id_cartao, id_status_impressao, opts = {})
-      data, _status_code, _headers = alterar_status_impressao_using_put_with_http_info(id_cartao, id_status_impressao, opts)
+    def alterar_status_impressao_using_put(id, opts = {})
+      data, _status_code, _headers = alterar_status_impressao_using_put_with_http_info(id, opts)
       return data
     end
 
     # Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite que uma Aplica\u00C3\u00A7\u00C3\u00A3o que realize a impress\u00C3\u00A3o de cart\u00C3\u00B5es possa indicar que um determinado idCartao fora impresso ou est\u00C3\u00A1 em processo de impress\u00C3\u00A3o. Para isso, basta informar o respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00C3\u00ADdo a ele. Por padr\u00C3\u00A3o, cart\u00C3\u00B5es provis\u00C3\u00B3rios ou que j\u00C3\u00A1 tenham sido inclu\u00C3\u00ADdos em um arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica ter\u00C3\u00A3o esta requisi\u00C3\u00A7\u00C3\u00A3o negada, se utilizada.
-    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-    # @param id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).
     # @return [Array<(HistoricoImpressaoCartao, Fixnum, Hash)>] HistoricoImpressaoCartao data, response status code and response headers
-    def alterar_status_impressao_using_put_with_http_info(id_cartao, id_status_impressao, opts = {})
+    def alterar_status_impressao_using_put_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CartaoApi.alterar_status_impressao_using_put ..."
       end
       
       
-      # verify the required parameter 'id_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoApi.alterar_status_impressao_using_put" if id_cartao.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CartaoApi.alterar_status_impressao_using_put" if id.nil?
       
       
       
       
       
       
-      # verify the required parameter 'id_status_impressao' is set
-      fail ArgumentError, "Missing the required parameter 'id_status_impressao' when calling CartaoApi.alterar_status_impressao_using_put" if id_status_impressao.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/cartoes/{id_cartao}/impressao/{id_status_impressao} ".sub('{format}','json').sub('{' + 'id_cartao' + '}', id_cartao.to_s).sub('{' + 'id_status_impressao' + '}', id_status_impressao.to_s)
+      local_var_path = "/api/cartoes/{id}/alterar-status-impressao".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
+      query_params[:'id_status_impressao'] = opts[:'id_status_impressao'] if opts[:'id_status_impressao']
 
       # header parameters
       header_params = {}
@@ -108,31 +107,31 @@ module Pier
     end
 
 
-    # Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa.
-    # Esta m\u00C3\u00A9todo tem como permite que um cart\u00C3\u00A3o de cr\u00C3\u00A9dito impresso de forma avulsa e an\u00C3\u00B4nimo seja atribu\u00C3\u00ADdo a uma pessoa para que esta passe a ser a portadora titular deste cart\u00C3\u00A3o.
-    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
+    # Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
+    # Esta m\u00C3\u00A9todo permite que um cart\u00C3\u00A3o pr\u00C3\u00A9-pago impresso de forma avulsa e an\u00C3\u00B4nimo seja atribu\u00C3\u00ADdo a uma pessoa para que esta passe a ser a portadora titular dele.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
     # @param id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).
     # @param [Hash] opts the optional parameters
     # @return [Cartao]
-    def atribuir_pessoa_using_put(id_cartao, id_pessoa, opts = {})
-      data, _status_code, _headers = atribuir_pessoa_using_put_with_http_info(id_cartao, id_pessoa, opts)
+    def atribuir_pessoa_using_put(id, id_pessoa, opts = {})
+      data, _status_code, _headers = atribuir_pessoa_using_put_with_http_info(id, id_pessoa, opts)
       return data
     end
 
-    # Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa.
-    # Esta m\u00C3\u00A9todo tem como permite que um cart\u00C3\u00A3o de cr\u00C3\u00A9dito impresso de forma avulsa e an\u00C3\u00B4nimo seja atribu\u00C3\u00ADdo a uma pessoa para que esta passe a ser a portadora titular deste cart\u00C3\u00A3o.
-    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
+    # Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
+    # Esta m\u00C3\u00A9todo permite que um cart\u00C3\u00A3o pr\u00C3\u00A9-pago impresso de forma avulsa e an\u00C3\u00B4nimo seja atribu\u00C3\u00ADdo a uma pessoa para que esta passe a ser a portadora titular dele.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
     # @param id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(Cartao, Fixnum, Hash)>] Cartao data, response status code and response headers
-    def atribuir_pessoa_using_put_with_http_info(id_cartao, id_pessoa, opts = {})
+    def atribuir_pessoa_using_put_with_http_info(id, id_pessoa, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CartaoApi.atribuir_pessoa_using_put ..."
       end
       
       
-      # verify the required parameter 'id_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoApi.atribuir_pessoa_using_put" if id_cartao.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CartaoApi.atribuir_pessoa_using_put" if id.nil?
       
       
       
@@ -147,7 +146,7 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/cartoes/{id_cartao}/atribuir-pessoa".sub('{format}','json').sub('{' + 'id_cartao' + '}', id_cartao.to_s)
+      local_var_path = "/api/cartoes/{id}/atribuir-pessoa".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -187,31 +186,31 @@ module Pier
 
     # Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio (tempor\u00C3\u00A1rio) ou do cancelamento (definitivo) de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
-    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.
     # @param observacao Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.
     # @param [Hash] opts the optional parameters
     # @return [Cartao]
-    def bloquear_using_put(id_cartao, id_status, observacao, opts = {})
-      data, _status_code, _headers = bloquear_using_put_with_http_info(id_cartao, id_status, observacao, opts)
+    def bloquear_using_put(id, id_status, observacao, opts = {})
+      data, _status_code, _headers = bloquear_using_put_with_http_info(id, id_status, observacao, opts)
       return data
     end
 
     # Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio (tempor\u00C3\u00A1rio) ou do cancelamento (definitivo) de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
-    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.
     # @param observacao Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Cartao, Fixnum, Hash)>] Cartao data, response status code and response headers
-    def bloquear_using_put_with_http_info(id_cartao, id_status, observacao, opts = {})
+    def bloquear_using_put_with_http_info(id, id_status, observacao, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CartaoApi.bloquear_using_put ..."
       end
       
       
-      # verify the required parameter 'id_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoApi.bloquear_using_put" if id_cartao.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CartaoApi.bloquear_using_put" if id.nil?
       
       
       
@@ -234,7 +233,7 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/cartoes/{id_cartao}/bloqueio".sub('{format}','json').sub('{' + 'id_cartao' + '}', id_cartao.to_s)
+      local_var_path = "/api/cartoes/{id}/bloquear".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -275,29 +274,29 @@ module Pier
 
     # Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
     # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
-    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param senha Senha para ser cadastrada ou alterada.
     # @param [Hash] opts the optional parameters
     # @return [String]
-    def cadastrar_alterar_senha_using_put(id_cartao, senha, opts = {})
-      data, _status_code, _headers = cadastrar_alterar_senha_using_put_with_http_info(id_cartao, senha, opts)
+    def cadastrar_alterar_senha_using_put(id, senha, opts = {})
+      data, _status_code, _headers = cadastrar_alterar_senha_using_put_with_http_info(id, senha, opts)
       return data
     end
 
     # Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
     # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
-    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param senha Senha para ser cadastrada ou alterada.
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
-    def cadastrar_alterar_senha_using_put_with_http_info(id_cartao, senha, opts = {})
+    def cadastrar_alterar_senha_using_put_with_http_info(id, senha, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CartaoApi.cadastrar_alterar_senha_using_put ..."
       end
       
       
-      # verify the required parameter 'id_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoApi.cadastrar_alterar_senha_using_put" if id_cartao.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CartaoApi.cadastrar_alterar_senha_using_put" if id.nil?
       
       
       
@@ -312,11 +311,11 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/cartoes/{id_cartao}/alterar-senha".sub('{format}','json')
+      local_var_path = "/api/cartoes/{id}/alterar-senha".sub('{format}','json')
 
       # query parameters
       query_params = {}
-      query_params[:'id_cartao'] = id_cartao
+      query_params[:'id'] = id
 
       # header parameters
       header_params = {}
@@ -353,34 +352,34 @@ module Pier
 
     # Apresenta os limites do Portador do Cart\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [LimiteDisponibilidade]
-    def consultar_limite_disponibilidade_using_get(id_cartao, opts = {})
-      data, _status_code, _headers = consultar_limite_disponibilidade_using_get_with_http_info(id_cartao, opts)
+    def consultar_limite_disponibilidade_using_get(id, opts = {})
+      data, _status_code, _headers = consultar_limite_disponibilidade_using_get_with_http_info(id, opts)
       return data
     end
 
     # Apresenta os limites do Portador do Cart\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(LimiteDisponibilidade, Fixnum, Hash)>] LimiteDisponibilidade data, response status code and response headers
-    def consultar_limite_disponibilidade_using_get_with_http_info(id_cartao, opts = {})
+    def consultar_limite_disponibilidade_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CartaoApi.consultar_limite_disponibilidade_using_get ..."
       end
       
       
-      # verify the required parameter 'id_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoApi.consultar_limite_disponibilidade_using_get" if id_cartao.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CartaoApi.consultar_limite_disponibilidade_using_get" if id.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/cartoes/{id_cartao}/limites-disponibilidades".sub('{format}','json').sub('{' + 'id_cartao' + '}', id_cartao.to_s)
+      local_var_path = "/api/cartoes/{id}/limites-disponibilidades".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -419,34 +418,34 @@ module Pier
 
     # Apresenta os dados do Portador do Cart\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es do Portador de um determinado Cart\u00C3\u00A3o a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [Portador]
-    def consultar_portador_using_get(id_cartao, opts = {})
-      data, _status_code, _headers = consultar_portador_using_get_with_http_info(id_cartao, opts)
+    def consultar_portador_using_get(id, opts = {})
+      data, _status_code, _headers = consultar_portador_using_get_with_http_info(id, opts)
       return data
     end
 
     # Apresenta os dados do Portador do Cart\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es do Portador de um determinado Cart\u00C3\u00A3o a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(Portador, Fixnum, Hash)>] Portador data, response status code and response headers
-    def consultar_portador_using_get_with_http_info(id_cartao, opts = {})
+    def consultar_portador_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CartaoApi.consultar_portador_using_get ..."
       end
       
       
-      # verify the required parameter 'id_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoApi.consultar_portador_using_get" if id_cartao.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CartaoApi.consultar_portador_using_get" if id.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/cartoes/{id_cartao}/portadores".sub('{format}','json').sub('{' + 'id_cartao' + '}', id_cartao.to_s)
+      local_var_path = "/api/cartoes/{id}/portadores".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -485,34 +484,34 @@ module Pier
 
     # Apresenta os dados de um determinado Cart\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [Cartao]
-    def consultar_using_get(id_cartao, opts = {})
-      data, _status_code, _headers = consultar_using_get_with_http_info(id_cartao, opts)
+    def consultar_using_get(id, opts = {})
+      data, _status_code, _headers = consultar_using_get_with_http_info(id, opts)
       return data
     end
 
     # Apresenta os dados de um determinado Cart\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(Cartao, Fixnum, Hash)>] Cartao data, response status code and response headers
-    def consultar_using_get_with_http_info(id_cartao, opts = {})
+    def consultar_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CartaoApi.consultar_using_get ..."
       end
       
       
-      # verify the required parameter 'id_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoApi.consultar_using_get" if id_cartao.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CartaoApi.consultar_using_get" if id.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/cartoes/{id_cartao}".sub('{format}','json').sub('{' + 'id_cartao' + '}', id_cartao.to_s)
+      local_var_path = "/api/cartoes/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -551,34 +550,34 @@ module Pier
 
     # Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [Cartao]
-    def desbloquear_using_put(id_cartao, opts = {})
-      data, _status_code, _headers = desbloquear_using_put_with_http_info(id_cartao, opts)
+    def desbloquear_using_put(id, opts = {})
+      data, _status_code, _headers = desbloquear_using_put_with_http_info(id, opts)
       return data
     end
 
     # Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(Cartao, Fixnum, Hash)>] Cartao data, response status code and response headers
-    def desbloquear_using_put_with_http_info(id_cartao, opts = {})
+    def desbloquear_using_put_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CartaoApi.desbloquear_using_put ..."
       end
       
       
-      # verify the required parameter 'id_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoApi.desbloquear_using_put" if id_cartao.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CartaoApi.desbloquear_using_put" if id.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/cartoes/{id_cartao}/desbloqueio".sub('{format}','json').sub('{' + 'id_cartao' + '}', id_cartao.to_s)
+      local_var_path = "/api/cartoes/{id}/desbloquear".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -615,9 +614,175 @@ module Pier
     end
 
 
+    # Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+    # Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais (id).
+    # @option opts [Integer] :id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id).
+    # @option opts [Integer] :id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+    # @option opts [Integer] :id_tipo_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id).
+    # @option opts [Integer] :id_imagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id).
+    # @option opts [Integer] :id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
+    # @option opts [Integer] :quantidade_cartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
+    # @option opts [DateTime] :data_cadastro_lote Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
+    # @option opts [String] :usuario_cadastro Nome do Usu\u00C3\u00A1rio que criou o Lote.
+    # @option opts [Integer] :flag_processado Indica o Status de Processamento do Lote.
+    # @return [PageCartoes]
+    def listar_lotes_cartoes_pre_pagos_using_get(opts = {})
+      data, _status_code, _headers = listar_lotes_cartoes_pre_pagos_using_get_with_http_info(opts)
+      return data
+    end
+
+    # Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+    # Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais (id).
+    # @option opts [Integer] :id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id).
+    # @option opts [Integer] :id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+    # @option opts [Integer] :id_tipo_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id).
+    # @option opts [Integer] :id_imagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id).
+    # @option opts [Integer] :id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
+    # @option opts [Integer] :quantidade_cartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
+    # @option opts [DateTime] :data_cadastro_lote Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
+    # @option opts [String] :usuario_cadastro Nome do Usu\u00C3\u00A1rio que criou o Lote.
+    # @option opts [Integer] :flag_processado Indica o Status de Processamento do Lote.
+    # @return [Array<(PageCartoes, Fixnum, Hash)>] PageCartoes data, response status code and response headers
+    def listar_lotes_cartoes_pre_pagos_using_get_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CartaoApi.listar_lotes_cartoes_pre_pagos_using_get ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/cartoes/pre-pagos/lotes".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'id'] = opts[:'id'] if opts[:'id']
+      query_params[:'idOrigemComercial'] = opts[:'id_origem_comercial'] if opts[:'id_origem_comercial']
+      query_params[:'idProduto'] = opts[:'id_produto'] if opts[:'id_produto']
+      query_params[:'idTipoCartao'] = opts[:'id_tipo_cartao'] if opts[:'id_tipo_cartao']
+      query_params[:'idImagem'] = opts[:'id_imagem'] if opts[:'id_imagem']
+      query_params[:'idEndereco'] = opts[:'id_endereco'] if opts[:'id_endereco']
+      query_params[:'quantidadeCartoes'] = opts[:'quantidade_cartoes'] if opts[:'quantidade_cartoes']
+      query_params[:'dataCadastroLote'] = opts[:'data_cadastro_lote'] if opts[:'data_cadastro_lote']
+      query_params[:'usuarioCadastro'] = opts[:'usuario_cadastro'] if opts[:'usuario_cadastro']
+      query_params[:'flagProcessado'] = opts[:'flag_processado'] if opts[:'flag_processado']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageCartoes')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CartaoApi#listar_lotes_cartoes_pre_pagos_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Lista os Cart\u00C3\u00B5es gerados pelo Emissor
     # Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @option opts [Integer] :id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
     # @option opts [Integer] :id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
@@ -636,8 +801,6 @@ module Pier
     # @option opts [Integer] :flag_impressao_origem_comercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
     # @option opts [Integer] :flag_provisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
     # @option opts [String] :codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [PageCartoes]
     def listar_using_get(opts = {})
       data, _status_code, _headers = listar_using_get_with_http_info(opts)
@@ -647,6 +810,8 @@ module Pier
     # Lista os Cart\u00C3\u00B5es gerados pelo Emissor
     # Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @option opts [Integer] :id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
     # @option opts [Integer] :id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
@@ -665,8 +830,6 @@ module Pier
     # @option opts [Integer] :flag_impressao_origem_comercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
     # @option opts [Integer] :flag_provisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
     # @option opts [String] :codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Array<(PageCartoes, Fixnum, Hash)>] PageCartoes data, response status code and response headers
     def listar_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -798,6 +961,8 @@ module Pier
 
       # query parameters
       query_params = {}
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'id'] = opts[:'id'] if opts[:'id']
       query_params[:'idStatusCartao'] = opts[:'id_status_cartao'] if opts[:'id_status_cartao']
       query_params[:'idEstagioCartao'] = opts[:'id_estagio_cartao'] if opts[:'id_estagio_cartao']
@@ -816,8 +981,6 @@ module Pier
       query_params[:'flagImpressaoOrigemComercial'] = opts[:'flag_impressao_origem_comercial'] if opts[:'flag_impressao_origem_comercial']
       query_params[:'flagProvisorio'] = opts[:'flag_provisorio'] if opts[:'flag_provisorio']
       query_params[:'codigoDesbloqueio'] = opts[:'codigo_desbloqueio'] if opts[:'codigo_desbloqueio']
-      query_params[:'page'] = opts[:'page'] if opts[:'page']
-      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
 
       # header parameters
       header_params = {}
@@ -851,8 +1014,8 @@ module Pier
     end
 
 
-    # Permite validar um Cart\u00C3\u00A3o Mastercard a partir do chip
-    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o criptograma gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o Mastercard a fim de verificar a sua autenticidade.
+    # Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do chip
+    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o criptograma gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
     # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
     # @param criptograma Criptograma do cart\u00C3\u00A3o no formato de55
     # @param [Hash] opts the optional parameters
@@ -862,8 +1025,8 @@ module Pier
       return data
     end
 
-    # Permite validar um Cart\u00C3\u00A3o Mastercard a partir do chip
-    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o criptograma gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o Mastercard a fim de verificar a sua autenticidade.
+    # Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do chip
+    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o criptograma gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
     # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
     # @param criptograma Criptograma do cart\u00C3\u00A3o no formato de55
     # @param [Hash] opts the optional parameters
@@ -890,11 +1053,11 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/cartoes/bandeirados/validar/chip".sub('{format}','json')
+      local_var_path = "/api/cartoes/bandeirados/validar-chip".sub('{format}','json')
 
       # query parameters
       query_params = {}
-      query_params[:'numeroCartao'] = numero_cartao
+      query_params[:'numero_cartao'] = numero_cartao
       query_params[:'criptograma'] = criptograma
 
       # header parameters
@@ -930,7 +1093,7 @@ module Pier
 
 
     # Permite validar um Cart\u00C3\u00A3o bandeirado a partir dos dados Impressos
-    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele.
+    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
     # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
     # @param nome_portador Nome do portador do cart\u00C3\u00A3o
     # @param data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
@@ -943,7 +1106,7 @@ module Pier
     end
 
     # Permite validar um Cart\u00C3\u00A3o bandeirado a partir dos dados Impressos
-    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele.
+    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
     # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
     # @param nome_portador Nome do portador do cart\u00C3\u00A3o
     # @param data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
@@ -988,14 +1151,14 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/cartoes/bandeirados/validar/digitado".sub('{format}','json')
+      local_var_path = "/api/cartoes/bandeirados/validar-digitado".sub('{format}','json')
 
       # query parameters
       query_params = {}
-      query_params[:'numeroCartao'] = numero_cartao
-      query_params[:'nomePortador'] = nome_portador
-      query_params[:'dataValidade'] = data_validade
-      query_params[:'codigoSeguranca'] = codigo_seguranca
+      query_params[:'numero_cartao'] = numero_cartao
+      query_params[:'nome_portador'] = nome_portador
+      query_params[:'data_validade'] = data_validade
+      query_params[:'codigo_seguranca'] = codigo_seguranca
 
       # header parameters
       header_params = {}
@@ -1030,7 +1193,7 @@ module Pier
 
 
     # Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
-    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele.
+    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
     # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
     # @param nome_portador Nome do portador do cart\u00C3\u00A3o
     # @param data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
@@ -1043,7 +1206,7 @@ module Pier
     end
 
     # Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
-    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele.
+    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
     # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
     # @param nome_portador Nome do portador do cart\u00C3\u00A3o
     # @param data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
@@ -1088,14 +1251,14 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/cartoes/nao-bandeirados/validar/digitado".sub('{format}','json')
+      local_var_path = "/api/cartoes/nao-bandeirados/validar-digitado".sub('{format}','json')
 
       # query parameters
       query_params = {}
-      query_params[:'numeroCartao'] = numero_cartao
-      query_params[:'nomePortador'] = nome_portador
-      query_params[:'dataValidade'] = data_validade
-      query_params[:'codigoSeguranca'] = codigo_seguranca
+      query_params[:'numero_cartao'] = numero_cartao
+      query_params[:'nome_portador'] = nome_portador
+      query_params[:'data_validade'] = data_validade
+      query_params[:'codigo_seguranca'] = codigo_seguranca
 
       # header parameters
       header_params = {}
@@ -1130,7 +1293,7 @@ module Pier
 
 
     # Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
-    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo.
+    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
     # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
     # @param trilha1 Trilha 1 do cart\u00C3\u00A3o a ser validado
     # @param trilha2 Trilha 2 do cart\u00C3\u00A3o a ser validado
@@ -1142,7 +1305,7 @@ module Pier
     end
 
     # Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
-    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo.
+    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
     # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
     # @param trilha1 Trilha 1 do cart\u00C3\u00A3o a ser validado
     # @param trilha2 Trilha 2 do cart\u00C3\u00A3o a ser validado
@@ -1178,11 +1341,11 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/cartoes/bandeirados/validar/tarja".sub('{format}','json')
+      local_var_path = "/api/cartoes/bandeirados/validar-tarja".sub('{format}','json')
 
       # query parameters
       query_params = {}
-      query_params[:'numeroCartao'] = numero_cartao
+      query_params[:'numero_cartao'] = numero_cartao
       query_params[:'trilha1'] = trilha1
       query_params[:'trilha2'] = trilha2
 
@@ -1220,29 +1383,29 @@ module Pier
 
     # Permite validar a senha de um Cart\u00C3\u00A3o
     # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00C3\u00A3o est\u00C3\u00A1 correta.
-    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param senha Senha para ser validada.
     # @param [Hash] opts the optional parameters
     # @return [String]
-    def validar_senha_using_post(id_cartao, senha, opts = {})
-      data, _status_code, _headers = validar_senha_using_post_with_http_info(id_cartao, senha, opts)
+    def validar_senha_using_get(id, senha, opts = {})
+      data, _status_code, _headers = validar_senha_using_get_with_http_info(id, senha, opts)
       return data
     end
 
     # Permite validar a senha de um Cart\u00C3\u00A3o
     # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00C3\u00A3o est\u00C3\u00A1 correta.
-    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param senha Senha para ser validada.
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
-    def validar_senha_using_post_with_http_info(id_cartao, senha, opts = {})
+    def validar_senha_using_get_with_http_info(id, senha, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CartaoApi.validar_senha_using_post ..."
+        @api_client.config.logger.debug "Calling API: CartaoApi.validar_senha_using_get ..."
       end
       
       
-      # verify the required parameter 'id_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoApi.validar_senha_using_post" if id_cartao.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CartaoApi.validar_senha_using_get" if id.nil?
       
       
       
@@ -1250,18 +1413,18 @@ module Pier
       
       
       # verify the required parameter 'senha' is set
-      fail ArgumentError, "Missing the required parameter 'senha' when calling CartaoApi.validar_senha_using_post" if senha.nil?
+      fail ArgumentError, "Missing the required parameter 'senha' when calling CartaoApi.validar_senha_using_get" if senha.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/cartoes/{id_cartao}/validar-senha".sub('{format}','json')
+      local_var_path = "/api/cartoes/{id}/validar-senha".sub('{format}','json')
 
       # query parameters
       query_params = {}
-      query_params[:'id_cartao'] = id_cartao
+      query_params[:'id'] = id
 
       # header parameters
       header_params = {}
@@ -1282,7 +1445,7 @@ module Pier
       post_body = nil
       
       auth_names = ['access_token']
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1290,7 +1453,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'String')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CartaoApi#validar_senha_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CartaoApi#validar_senha_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

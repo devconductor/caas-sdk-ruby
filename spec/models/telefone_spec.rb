@@ -43,7 +43,7 @@ describe 'Telefone' do
     end
   end
 
-  describe 'test attribute "ddd"' do
+  describe 'test attribute "id"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -54,7 +54,7 @@ describe 'Telefone' do
   end
 
 
-  describe 'test attribute "id"' do
+  describe 'test attribute "id_tipo_telefone"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -76,7 +76,18 @@ describe 'Telefone' do
   end
 
 
-  describe 'test attribute "id_tipo_telefone"' do
+  describe 'test attribute "ddd"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "telefone"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -99,17 +110,6 @@ describe 'Telefone' do
 
 
   describe 'test attribute "status"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "telefone"' do
     it 'should work' do
        # assertion here
        # should be_a()

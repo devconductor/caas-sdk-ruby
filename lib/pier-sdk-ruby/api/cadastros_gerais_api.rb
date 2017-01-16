@@ -428,34 +428,34 @@ module Pier
 
     # Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
     # Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_origem_comercial ID da Origem Comercial
+    # @param id ID da Origem Comercial
     # @param [Hash] opts the optional parameters
     # @return [OrigemComercial]
-    def consultar_origem_comercial_using_get(id_origem_comercial, opts = {})
-      data, _status_code, _headers = consultar_origem_comercial_using_get_with_http_info(id_origem_comercial, opts)
+    def consultar_origem_comercial_using_get(id, opts = {})
+      data, _status_code, _headers = consultar_origem_comercial_using_get_with_http_info(id, opts)
       return data
     end
 
     # Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
     # Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_origem_comercial ID da Origem Comercial
+    # @param id ID da Origem Comercial
     # @param [Hash] opts the optional parameters
     # @return [Array<(OrigemComercial, Fixnum, Hash)>] OrigemComercial data, response status code and response headers
-    def consultar_origem_comercial_using_get_with_http_info(id_origem_comercial, opts = {})
+    def consultar_origem_comercial_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CadastrosGeraisApi.consultar_origem_comercial_using_get ..."
       end
       
       
-      # verify the required parameter 'id_origem_comercial' is set
-      fail ArgumentError, "Missing the required parameter 'id_origem_comercial' when calling CadastrosGeraisApi.consultar_origem_comercial_using_get" if id_origem_comercial.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastrosGeraisApi.consultar_origem_comercial_using_get" if id.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/origens-comerciais/{id_origem_comercial}".sub('{format}','json').sub('{' + 'id_origem_comercial' + '}', id_origem_comercial.to_s)
+      local_var_path = "/api/origens-comerciais/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -494,34 +494,34 @@ module Pier
 
     # Apresenta os dados de um determinado Produto
     # Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
     # @param [Hash] opts the optional parameters
     # @return [Produto]
-    def consultar_produto_using_get(id_produto, opts = {})
-      data, _status_code, _headers = consultar_produto_using_get_with_http_info(id_produto, opts)
+    def consultar_produto_using_get(id, opts = {})
+      data, _status_code, _headers = consultar_produto_using_get_with_http_info(id, opts)
       return data
     end
 
     # Apresenta os dados de um determinado Produto
     # Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
     # @param [Hash] opts the optional parameters
     # @return [Array<(Produto, Fixnum, Hash)>] Produto data, response status code and response headers
-    def consultar_produto_using_get_with_http_info(id_produto, opts = {})
+    def consultar_produto_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CadastrosGeraisApi.consultar_produto_using_get ..."
       end
       
       
-      # verify the required parameter 'id_produto' is set
-      fail ArgumentError, "Missing the required parameter 'id_produto' when calling CadastrosGeraisApi.consultar_produto_using_get" if id_produto.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastrosGeraisApi.consultar_produto_using_get" if id.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/produtos/{id_produto}".sub('{format}','json').sub('{' + 'id_produto' + '}', id_produto.to_s)
+      local_var_path = "/api/produtos/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -560,34 +560,34 @@ module Pier
 
     # Apresenta os dados de um determinado Endere\u00C3\u00A7o
     # Este m\u00C3\u00A9todo permite consultar um determinado Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
     # @param [Hash] opts the optional parameters
     # @return [Endereco]
-    def consultar_using_get2(id_endereco, opts = {})
-      data, _status_code, _headers = consultar_using_get2_with_http_info(id_endereco, opts)
+    def consultar_using_get2(id, opts = {})
+      data, _status_code, _headers = consultar_using_get2_with_http_info(id, opts)
       return data
     end
 
     # Apresenta os dados de um determinado Endere\u00C3\u00A7o
     # Este m\u00C3\u00A9todo permite consultar um determinado Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(Endereco, Fixnum, Hash)>] Endereco data, response status code and response headers
-    def consultar_using_get2_with_http_info(id_endereco, opts = {})
+    def consultar_using_get2_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CadastrosGeraisApi.consultar_using_get2 ..."
       end
       
       
-      # verify the required parameter 'id_endereco' is set
-      fail ArgumentError, "Missing the required parameter 'id_endereco' when calling CadastrosGeraisApi.consultar_using_get2" if id_endereco.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastrosGeraisApi.consultar_using_get2" if id.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/enderecos/{id_endereco}".sub('{format}','json').sub('{' + 'id_endereco' + '}', id_endereco.to_s)
+      local_var_path = "/api/enderecos/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -626,34 +626,34 @@ module Pier
 
     # Apresenta os dados de uma determinada Pessoa
     # Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
-    # @param id_pessoa ID da Pessoa
+    # @param id ID da Pessoa
     # @param [Hash] opts the optional parameters
     # @return [Pessoa]
-    def consultar_using_get3(id_pessoa, opts = {})
-      data, _status_code, _headers = consultar_using_get3_with_http_info(id_pessoa, opts)
+    def consultar_using_get3(id, opts = {})
+      data, _status_code, _headers = consultar_using_get3_with_http_info(id, opts)
       return data
     end
 
     # Apresenta os dados de uma determinada Pessoa
     # Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
-    # @param id_pessoa ID da Pessoa
+    # @param id ID da Pessoa
     # @param [Hash] opts the optional parameters
     # @return [Array<(Pessoa, Fixnum, Hash)>] Pessoa data, response status code and response headers
-    def consultar_using_get3_with_http_info(id_pessoa, opts = {})
+    def consultar_using_get3_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CadastrosGeraisApi.consultar_using_get3 ..."
       end
       
       
-      # verify the required parameter 'id_pessoa' is set
-      fail ArgumentError, "Missing the required parameter 'id_pessoa' when calling CadastrosGeraisApi.consultar_using_get3" if id_pessoa.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastrosGeraisApi.consultar_using_get3" if id.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/pessoas/{id_pessoa}".sub('{format}','json').sub('{' + 'id_pessoa' + '}', id_pessoa.to_s)
+      local_var_path = "/api/pessoas/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -692,34 +692,34 @@ module Pier
 
     # Apresenta os dados de um determinado Telefone
     # Este m\u00C3\u00A9todo permite consultar um determinado Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
     # @param [Hash] opts the optional parameters
     # @return [Telefone]
-    def consultar_using_get6(id_telefone, opts = {})
-      data, _status_code, _headers = consultar_using_get6_with_http_info(id_telefone, opts)
+    def consultar_using_get6(id, opts = {})
+      data, _status_code, _headers = consultar_using_get6_with_http_info(id, opts)
       return data
     end
 
     # Apresenta os dados de um determinado Telefone
     # Este m\u00C3\u00A9todo permite consultar um determinado Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(Telefone, Fixnum, Hash)>] Telefone data, response status code and response headers
-    def consultar_using_get6_with_http_info(id_telefone, opts = {})
+    def consultar_using_get6_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CadastrosGeraisApi.consultar_using_get6 ..."
       end
       
       
-      # verify the required parameter 'id_telefone' is set
-      fail ArgumentError, "Missing the required parameter 'id_telefone' when calling CadastrosGeraisApi.consultar_using_get6" if id_telefone.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastrosGeraisApi.consultar_using_get6" if id.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/telefones/{id_telefone}".sub('{format}','json').sub('{' + 'id_telefone' + '}', id_telefone.to_s)
+      local_var_path = "/api/telefones/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -758,34 +758,34 @@ module Pier
 
     # Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
     # Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
     # @param [Hash] opts the optional parameters
     # @return [TipoEndereco]
-    def consultar_using_get7(id_tipo_endereco, opts = {})
-      data, _status_code, _headers = consultar_using_get7_with_http_info(id_tipo_endereco, opts)
+    def consultar_using_get7(id, opts = {})
+      data, _status_code, _headers = consultar_using_get7_with_http_info(id, opts)
       return data
     end
 
     # Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
     # Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
     # @param [Hash] opts the optional parameters
     # @return [Array<(TipoEndereco, Fixnum, Hash)>] TipoEndereco data, response status code and response headers
-    def consultar_using_get7_with_http_info(id_tipo_endereco, opts = {})
+    def consultar_using_get7_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CadastrosGeraisApi.consultar_using_get7 ..."
       end
       
       
-      # verify the required parameter 'id_tipo_endereco' is set
-      fail ArgumentError, "Missing the required parameter 'id_tipo_endereco' when calling CadastrosGeraisApi.consultar_using_get7" if id_tipo_endereco.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastrosGeraisApi.consultar_using_get7" if id.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/tipos-endereco/{id_tipo_endereco}".sub('{format}','json').sub('{' + 'id_tipo_endereco' + '}', id_tipo_endereco.to_s)
+      local_var_path = "/api/tipos-enderecos/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -824,34 +824,34 @@ module Pier
 
     # Apresenta os dados de um determinado Tipo de Telefone
     # Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
     # @param [Hash] opts the optional parameters
     # @return [TipoTelefone]
-    def consultar_using_get8(id_tipo_telefone, opts = {})
-      data, _status_code, _headers = consultar_using_get8_with_http_info(id_tipo_telefone, opts)
+    def consultar_using_get8(id, opts = {})
+      data, _status_code, _headers = consultar_using_get8_with_http_info(id, opts)
       return data
     end
 
     # Apresenta os dados de um determinado Tipo de Telefone
     # Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
     # @param [Hash] opts the optional parameters
     # @return [Array<(TipoTelefone, Fixnum, Hash)>] TipoTelefone data, response status code and response headers
-    def consultar_using_get8_with_http_info(id_tipo_telefone, opts = {})
+    def consultar_using_get8_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CadastrosGeraisApi.consultar_using_get8 ..."
       end
       
       
-      # verify the required parameter 'id_tipo_telefone' is set
-      fail ArgumentError, "Missing the required parameter 'id_tipo_telefone' when calling CadastrosGeraisApi.consultar_using_get8" if id_tipo_telefone.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastrosGeraisApi.consultar_using_get8" if id.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/tipos-telefones/{id_tipo_telefone}".sub('{format}','json').sub('{' + 'id_tipo_telefone' + '}', id_tipo_telefone.to_s)
+      local_var_path = "/api/tipos-telefones/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -891,11 +891,11 @@ module Pier
     # Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
     # Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Integer] :id Id da origem comercial
     # @option opts [String] :nome Nome da origem comercial
     # @option opts [Integer] :status Status da origem comercial
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [PageOrigensComerciais]
     def listar_origens_comerciais_using_get(opts = {})
       data, _status_code, _headers = listar_origens_comerciais_using_get_with_http_info(opts)
@@ -905,11 +905,11 @@ module Pier
     # Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
     # Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Integer] :id Id da origem comercial
     # @option opts [String] :nome Nome da origem comercial
     # @option opts [Integer] :status Status da origem comercial
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Array<(PageOrigensComerciais, Fixnum, Hash)>] PageOrigensComerciais data, response status code and response headers
     def listar_origens_comerciais_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -951,11 +951,11 @@ module Pier
 
       # query parameters
       query_params = {}
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'id'] = opts[:'id'] if opts[:'id']
       query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
       query_params[:'status'] = opts[:'status'] if opts[:'status']
-      query_params[:'page'] = opts[:'page'] if opts[:'page']
-      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
 
       # header parameters
       header_params = {}
@@ -992,11 +992,11 @@ module Pier
     # Lista os Produtos do Emissor
     # Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
     # @option opts [String] :nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
     # @option opts [Integer] :status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [ListaProdutos]
     def listar_produtos_using_get(opts = {})
       data, _status_code, _headers = listar_produtos_using_get_with_http_info(opts)
@@ -1006,11 +1006,11 @@ module Pier
     # Lista os Produtos do Emissor
     # Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
     # @option opts [String] :nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
     # @option opts [Integer] :status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Array<(ListaProdutos, Fixnum, Hash)>] ListaProdutos data, response status code and response headers
     def listar_produtos_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1052,11 +1052,11 @@ module Pier
 
       # query parameters
       query_params = {}
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'id'] = opts[:'id'] if opts[:'id']
       query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
       query_params[:'status'] = opts[:'status'] if opts[:'status']
-      query_params[:'page'] = opts[:'page'] if opts[:'page']
-      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
 
       # header parameters
       header_params = {}
@@ -1093,6 +1093,8 @@ module Pier
     # Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
     # Este m\u00C3\u00A9todo permite que sejam listados os Endere\u00C3\u00A7os existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
     # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
     # @option opts [Integer] :id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
@@ -1107,8 +1109,6 @@ module Pier
     # @option opts [String] :pais Apresenta nome do Pais
     # @option opts [Date] :data_inclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
     # @option opts [Date] :data_ultima_atualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [PageEnderecos]
     def listar_using_get2(opts = {})
       data, _status_code, _headers = listar_using_get2_with_http_info(opts)
@@ -1118,6 +1118,8 @@ module Pier
     # Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
     # Este m\u00C3\u00A9todo permite que sejam listados os Endere\u00C3\u00A7os existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
     # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
     # @option opts [Integer] :id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
@@ -1132,8 +1134,6 @@ module Pier
     # @option opts [String] :pais Apresenta nome do Pais
     # @option opts [Date] :data_inclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
     # @option opts [Date] :data_ultima_atualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Array<(PageEnderecos, Fixnum, Hash)>] PageEnderecos data, response status code and response headers
     def listar_using_get2_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1241,6 +1241,8 @@ module Pier
 
       # query parameters
       query_params = {}
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'id'] = opts[:'id'] if opts[:'id']
       query_params[:'idPessoa'] = opts[:'id_pessoa'] if opts[:'id_pessoa']
       query_params[:'idTipoEndereco'] = opts[:'id_tipo_endereco'] if opts[:'id_tipo_endereco']
@@ -1255,8 +1257,6 @@ module Pier
       query_params[:'pais'] = opts[:'pais'] if opts[:'pais']
       query_params[:'dataInclusao'] = opts[:'data_inclusao'] if opts[:'data_inclusao']
       query_params[:'dataUltimaAtualizacao'] = opts[:'data_ultima_atualizacao'] if opts[:'data_ultima_atualizacao']
-      query_params[:'page'] = opts[:'page'] if opts[:'page']
-      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
 
       # header parameters
       header_params = {}
@@ -1293,6 +1293,8 @@ module Pier
     # Lista as Pessoas cadastradas no Emissor
     # Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
     # @option opts [String] :nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
     # @option opts [String] :tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
@@ -1300,8 +1302,6 @@ module Pier
     # @option opts [String] :cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
     # @option opts [Date] :data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
     # @option opts [String] :sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [PagePessoas]
     def listar_using_get3(opts = {})
       data, _status_code, _headers = listar_using_get3_with_http_info(opts)
@@ -1311,6 +1311,8 @@ module Pier
     # Lista as Pessoas cadastradas no Emissor
     # Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
     # @option opts [String] :nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
     # @option opts [String] :tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
@@ -1318,8 +1320,6 @@ module Pier
     # @option opts [String] :cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
     # @option opts [Date] :data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
     # @option opts [String] :sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Array<(PagePessoas, Fixnum, Hash)>] PagePessoas data, response status code and response headers
     def listar_using_get3_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1385,6 +1385,8 @@ module Pier
 
       # query parameters
       query_params = {}
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'id'] = opts[:'id'] if opts[:'id']
       query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
       query_params[:'tipo'] = opts[:'tipo'] if opts[:'tipo']
@@ -1392,8 +1394,6 @@ module Pier
       query_params[:'cnpj'] = opts[:'cnpj'] if opts[:'cnpj']
       query_params[:'dataNascimento'] = opts[:'data_nascimento'] if opts[:'data_nascimento']
       query_params[:'sexo'] = opts[:'sexo'] if opts[:'sexo']
-      query_params[:'page'] = opts[:'page'] if opts[:'page']
-      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
 
       # header parameters
       header_params = {}
@@ -1430,6 +1430,8 @@ module Pier
     # Lista os Portadores existentes
     # Este m\u00C3\u00A9todo permite que sejam listados os portadores cadastrados na base do emissor.
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Integer] :id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
     # @option opts [Integer] :id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
     # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
@@ -1441,8 +1443,6 @@ module Pier
     # @option opts [Integer] :flag_ativo Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
     # @option opts [Date] :data_cadastro_portador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
     # @option opts [Date] :data_cancelamento_portador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [PagePortador]
     def listar_using_get4(opts = {})
       data, _status_code, _headers = listar_using_get4_with_http_info(opts)
@@ -1452,6 +1452,8 @@ module Pier
     # Lista os Portadores existentes
     # Este m\u00C3\u00A9todo permite que sejam listados os portadores cadastrados na base do emissor.
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Integer] :id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
     # @option opts [Integer] :id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
     # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
@@ -1463,8 +1465,6 @@ module Pier
     # @option opts [Integer] :flag_ativo Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
     # @option opts [Date] :data_cadastro_portador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
     # @option opts [Date] :data_cancelamento_portador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Array<(PagePortador, Fixnum, Hash)>] PagePortador data, response status code and response headers
     def listar_using_get4_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1554,6 +1554,8 @@ module Pier
 
       # query parameters
       query_params = {}
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'idConta'] = opts[:'id_conta'] if opts[:'id_conta']
       query_params[:'idProduto'] = opts[:'id_produto'] if opts[:'id_produto']
       query_params[:'idPessoa'] = opts[:'id_pessoa'] if opts[:'id_pessoa']
@@ -1565,8 +1567,6 @@ module Pier
       query_params[:'flagAtivo'] = opts[:'flag_ativo'] if opts[:'flag_ativo']
       query_params[:'dataCadastroPortador'] = opts[:'data_cadastro_portador'] if opts[:'data_cadastro_portador']
       query_params[:'dataCancelamentoPortador'] = opts[:'data_cancelamento_portador'] if opts[:'data_cancelamento_portador']
-      query_params[:'page'] = opts[:'page'] if opts[:'page']
-      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
 
       # header parameters
       header_params = {}
@@ -1603,6 +1603,8 @@ module Pier
     # Lista os Telefones cadastrados no Emissor
     # Este m\u00C3\u00A9todo permite que sejam listados os Telefones existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
     # @option opts [Integer] :id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
     # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence.
@@ -1610,8 +1612,6 @@ module Pier
     # @option opts [String] :telefone N\u00C3\u00BAmero do telefone.
     # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
     # @option opts [Integer] :status Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [PageTelefones]
     def listar_using_get7(opts = {})
       data, _status_code, _headers = listar_using_get7_with_http_info(opts)
@@ -1621,6 +1621,8 @@ module Pier
     # Lista os Telefones cadastrados no Emissor
     # Este m\u00C3\u00A9todo permite que sejam listados os Telefones existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
     # @option opts [Integer] :id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
     # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence.
@@ -1628,8 +1630,6 @@ module Pier
     # @option opts [String] :telefone N\u00C3\u00BAmero do telefone.
     # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
     # @option opts [Integer] :status Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Array<(PageTelefones, Fixnum, Hash)>] PageTelefones data, response status code and response headers
     def listar_using_get7_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1695,6 +1695,8 @@ module Pier
 
       # query parameters
       query_params = {}
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'id'] = opts[:'id'] if opts[:'id']
       query_params[:'idTipoTelefone'] = opts[:'id_tipo_telefone'] if opts[:'id_tipo_telefone']
       query_params[:'idPessoa'] = opts[:'id_pessoa'] if opts[:'id_pessoa']
@@ -1702,8 +1704,6 @@ module Pier
       query_params[:'telefone'] = opts[:'telefone'] if opts[:'telefone']
       query_params[:'ramal'] = opts[:'ramal'] if opts[:'ramal']
       query_params[:'status'] = opts[:'status'] if opts[:'status']
-      query_params[:'page'] = opts[:'page'] if opts[:'page']
-      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
 
       # header parameters
       header_params = {}
@@ -1740,10 +1740,10 @@ module Pier
     # Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
     # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
-    # @option opts [String] :nome Nome do Tipo do Endere\u00C3\u00A7o
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+    # @option opts [String] :nome Nome do Tipo do Endere\u00C3\u00A7o
     # @return [PageTiposEndereco]
     def listar_using_get8(opts = {})
       data, _status_code, _headers = listar_using_get8_with_http_info(opts)
@@ -1753,10 +1753,10 @@ module Pier
     # Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
     # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
-    # @option opts [String] :nome Nome do Tipo do Endere\u00C3\u00A7o
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+    # @option opts [String] :nome Nome do Tipo do Endere\u00C3\u00A7o
     # @return [Array<(PageTiposEndereco, Fixnum, Hash)>] PageTiposEndereco data, response status code and response headers
     def listar_using_get8_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1788,14 +1788,14 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/tipos-endereco".sub('{format}','json')
+      local_var_path = "/api/tipos-enderecos".sub('{format}','json')
 
       # query parameters
       query_params = {}
-      query_params[:'id'] = opts[:'id'] if opts[:'id']
-      query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'id'] = opts[:'id'] if opts[:'id']
+      query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
 
       # header parameters
       header_params = {}
@@ -1832,10 +1832,10 @@ module Pier
     # Lista os Tipos de Telefones
     # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
-    # @option opts [String] :nome Nome do Tipo do Telefone
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+    # @option opts [String] :nome Nome do Tipo do Telefone
     # @return [PageTipoTelefones]
     def listar_using_get9(opts = {})
       data, _status_code, _headers = listar_using_get9_with_http_info(opts)
@@ -1845,10 +1845,10 @@ module Pier
     # Lista os Tipos de Telefones
     # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
-    # @option opts [String] :nome Nome do Tipo do Telefone
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+    # @option opts [String] :nome Nome do Tipo do Telefone
     # @return [Array<(PageTipoTelefones, Fixnum, Hash)>] PageTipoTelefones data, response status code and response headers
     def listar_using_get9_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1884,10 +1884,10 @@ module Pier
 
       # query parameters
       query_params = {}
-      query_params[:'id'] = opts[:'id'] if opts[:'id']
-      query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'id'] = opts[:'id'] if opts[:'id']
+      query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
 
       # header parameters
       header_params = {}

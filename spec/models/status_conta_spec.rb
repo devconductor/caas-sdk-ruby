@@ -43,17 +43,6 @@ describe 'StatusConta' do
     end
   end
 
-  describe 'test attribute "flag_altera_limite"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
   describe 'test attribute "id"' do
     it 'should work' do
        # assertion here
@@ -65,7 +54,7 @@ describe 'StatusConta' do
   end
 
 
-  describe 'test attribute "mensagem_consulta_negada"' do
+  describe 'test attribute "nome"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -76,7 +65,18 @@ describe 'StatusConta' do
   end
 
 
-  describe 'test attribute "nome"' do
+  describe 'test attribute "flag_altera_limite"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "mensagem_consulta_negada"' do
     it 'should work' do
        # assertion here
        # should be_a()

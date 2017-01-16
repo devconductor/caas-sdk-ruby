@@ -25,65 +25,65 @@ require 'date'
 module Pier
   # Portador
   class Portador
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+    attr_accessor :id_conta
+
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+    attr_accessor :id_produto
+
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+    attr_accessor :id_pessoa
+
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
+    attr_accessor :id_parentesco
+
+    # Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
+    attr_accessor :tipo_portador
+
+    # Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
+    attr_accessor :nome_impresso
+
+    # Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.
+    attr_accessor :id_imagem
+
+    # Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
+    attr_accessor :id_tipo_cartao
+
+    # Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
+    attr_accessor :flag_ativo
+
     # Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
     attr_accessor :data_cadastro_portador
 
     # Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
     attr_accessor :data_cancelamento_portador
 
-    # Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
-    attr_accessor :flag_ativo
-
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
-    attr_accessor :id_conta
-
-    # Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.
-    attr_accessor :id_imagem
-
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
-    attr_accessor :id_parentesco
-
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
-    attr_accessor :id_pessoa
-
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
-    attr_accessor :id_produto
-
-    # Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
-    attr_accessor :id_tipo_cartao
-
-    # Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
-    attr_accessor :nome_impresso
-
-    # Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
-    attr_accessor :tipo_portador
-
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'data_cadastro_portador' => :'dataCadastroPortador',
-        
-        :'data_cancelamento_portador' => :'dataCancelamentoPortador',
-        
-        :'flag_ativo' => :'flagAtivo',
-        
         :'id_conta' => :'idConta',
-        
-        :'id_imagem' => :'idImagem',
-        
-        :'id_parentesco' => :'idParentesco',
-        
-        :'id_pessoa' => :'idPessoa',
         
         :'id_produto' => :'idProduto',
         
-        :'id_tipo_cartao' => :'idTipoCartao',
+        :'id_pessoa' => :'idPessoa',
+        
+        :'id_parentesco' => :'idParentesco',
+        
+        :'tipo_portador' => :'tipoPortador',
         
         :'nome_impresso' => :'nomeImpresso',
         
-        :'tipo_portador' => :'tipoPortador'
+        :'id_imagem' => :'idImagem',
+        
+        :'id_tipo_cartao' => :'idTipoCartao',
+        
+        :'flag_ativo' => :'flagAtivo',
+        
+        :'data_cadastro_portador' => :'dataCadastroPortador',
+        
+        :'data_cancelamento_portador' => :'dataCancelamentoPortador'
         
       }
     end
@@ -92,27 +92,27 @@ module Pier
     def self.swagger_types
       {
         
-        :'data_cadastro_portador' => :'DateTime',
-        
-        :'data_cancelamento_portador' => :'DateTime',
-        
-        :'flag_ativo' => :'Integer',
-        
         :'id_conta' => :'Integer',
-        
-        :'id_imagem' => :'Integer',
-        
-        :'id_parentesco' => :'Integer',
-        
-        :'id_pessoa' => :'Integer',
         
         :'id_produto' => :'Integer',
         
-        :'id_tipo_cartao' => :'Integer',
+        :'id_pessoa' => :'Integer',
+        
+        :'id_parentesco' => :'Integer',
+        
+        :'tipo_portador' => :'String',
         
         :'nome_impresso' => :'String',
         
-        :'tipo_portador' => :'String'
+        :'id_imagem' => :'Integer',
+        
+        :'id_tipo_cartao' => :'Integer',
+        
+        :'flag_ativo' => :'Integer',
+        
+        :'data_cadastro_portador' => :'DateTime',
+        
+        :'data_cancelamento_portador' => :'DateTime'
         
       }
     end
@@ -124,6 +124,87 @@ module Pier
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      
+      if attributes[:'idConta']
+        
+        
+        self.id_conta = attributes[:'idConta']
+        
+      
+      end
+
+      
+      if attributes[:'idProduto']
+        
+        
+        self.id_produto = attributes[:'idProduto']
+        
+      
+      end
+
+      
+      if attributes[:'idPessoa']
+        
+        
+        self.id_pessoa = attributes[:'idPessoa']
+        
+      
+      end
+
+      
+      if attributes[:'idParentesco']
+        
+        
+        self.id_parentesco = attributes[:'idParentesco']
+        
+      
+      end
+
+      
+      if attributes[:'tipoPortador']
+        
+        
+        self.tipo_portador = attributes[:'tipoPortador']
+        
+      
+      end
+
+      
+      if attributes[:'nomeImpresso']
+        
+        
+        self.nome_impresso = attributes[:'nomeImpresso']
+        
+      
+      end
+
+      
+      if attributes[:'idImagem']
+        
+        
+        self.id_imagem = attributes[:'idImagem']
+        
+      
+      end
+
+      
+      if attributes[:'idTipoCartao']
+        
+        
+        self.id_tipo_cartao = attributes[:'idTipoCartao']
+        
+      
+      end
+
+      
+      if attributes[:'flagAtivo']
+        
+        
+        self.flag_ativo = attributes[:'flagAtivo']
+        
+      
+      end
 
       
       if attributes[:'dataCadastroPortador']
@@ -139,87 +220,6 @@ module Pier
         
         
         self.data_cancelamento_portador = attributes[:'dataCancelamentoPortador']
-        
-      
-      end
-
-      
-      if attributes[:'flagAtivo']
-        
-        
-        self.flag_ativo = attributes[:'flagAtivo']
-        
-      
-      end
-
-      
-      if attributes[:'idConta']
-        
-        
-        self.id_conta = attributes[:'idConta']
-        
-      
-      end
-
-      
-      if attributes[:'idImagem']
-        
-        
-        self.id_imagem = attributes[:'idImagem']
-        
-      
-      end
-
-      
-      if attributes[:'idParentesco']
-        
-        
-        self.id_parentesco = attributes[:'idParentesco']
-        
-      
-      end
-
-      
-      if attributes[:'idPessoa']
-        
-        
-        self.id_pessoa = attributes[:'idPessoa']
-        
-      
-      end
-
-      
-      if attributes[:'idProduto']
-        
-        
-        self.id_produto = attributes[:'idProduto']
-        
-      
-      end
-
-      
-      if attributes[:'idTipoCartao']
-        
-        
-        self.id_tipo_cartao = attributes[:'idTipoCartao']
-        
-      
-      end
-
-      
-      if attributes[:'nomeImpresso']
-        
-        
-        self.nome_impresso = attributes[:'nomeImpresso']
-        
-      
-      end
-
-      
-      if attributes[:'tipoPortador']
-        
-        
-        self.tipo_portador = attributes[:'tipoPortador']
         
       
       end
@@ -347,17 +347,17 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          data_cadastro_portador == o.data_cadastro_portador &&
-          data_cancelamento_portador == o.data_cancelamento_portador &&
-          flag_ativo == o.flag_ativo &&
           id_conta == o.id_conta &&
-          id_imagem == o.id_imagem &&
-          id_parentesco == o.id_parentesco &&
-          id_pessoa == o.id_pessoa &&
           id_produto == o.id_produto &&
-          id_tipo_cartao == o.id_tipo_cartao &&
+          id_pessoa == o.id_pessoa &&
+          id_parentesco == o.id_parentesco &&
+          tipo_portador == o.tipo_portador &&
           nome_impresso == o.nome_impresso &&
-          tipo_portador == o.tipo_portador
+          id_imagem == o.id_imagem &&
+          id_tipo_cartao == o.id_tipo_cartao &&
+          flag_ativo == o.flag_ativo &&
+          data_cadastro_portador == o.data_cadastro_portador &&
+          data_cancelamento_portador == o.data_cancelamento_portador
     end
 
     # @see the `==` method
@@ -369,7 +369,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [data_cadastro_portador, data_cancelamento_portador, flag_ativo, id_conta, id_imagem, id_parentesco, id_pessoa, id_produto, id_tipo_cartao, nome_impresso, tipo_portador].hash
+      [id_conta, id_produto, id_pessoa, id_parentesco, tipo_portador, nome_impresso, id_imagem, id_tipo_cartao, flag_ativo, data_cadastro_portador, data_cancelamento_portador].hash
     end
 
     # Builds the object from hash

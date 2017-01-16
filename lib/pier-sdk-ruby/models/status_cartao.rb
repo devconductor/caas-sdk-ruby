@@ -25,45 +25,45 @@ require 'date'
 module Pier
   # Representa\u00C3\u00A7\u00C3\u00A3o do recurso Status Cart\u00C3\u00A3o
   class StatusCartao
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
+    attr_accessor :id
+
+    # Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.
+    attr_accessor :nome
+
     # Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta.
     attr_accessor :flag_cancela_cartao
 
     # Quando ativa, indica que o cart\u00C3\u00A3o ativo que o portador possuir na mesma conta do cart\u00C3\u00A3o a ser desbloqueado, e que o status dele possua essa caracter\u00C3\u00ADstica, dever\u00C3\u00A1 ser cancelado quando um novo cart\u00C3\u00A3o for desbloqueado.
     attr_accessor :flag_cancela_no_desbloqueio
 
-    # Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
-    attr_accessor :flag_cobra_tarifa
-
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
-    attr_accessor :id
+    # Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
+    attr_accessor :id_status_destino_desbloqueio
 
     # Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.
     attr_accessor :id_status_destino_conta
 
-    # Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
-    attr_accessor :id_status_destino_desbloqueio
-
-    # Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.
-    attr_accessor :nome
+    # Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
+    attr_accessor :flag_cobra_tarifa
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
+        :'id' => :'id',
+        
+        :'nome' => :'nome',
+        
         :'flag_cancela_cartao' => :'flagCancelaCartao',
         
         :'flag_cancela_no_desbloqueio' => :'flagCancelaNoDesbloqueio',
         
-        :'flag_cobra_tarifa' => :'flagCobraTarifa',
-        
-        :'id' => :'id',
+        :'id_status_destino_desbloqueio' => :'idStatusDestinoDesbloqueio',
         
         :'id_status_destino_conta' => :'idStatusDestinoConta',
         
-        :'id_status_destino_desbloqueio' => :'idStatusDestinoDesbloqueio',
-        
-        :'nome' => :'nome'
+        :'flag_cobra_tarifa' => :'flagCobraTarifa'
         
       }
     end
@@ -72,19 +72,19 @@ module Pier
     def self.swagger_types
       {
         
+        :'id' => :'Integer',
+        
+        :'nome' => :'String',
+        
         :'flag_cancela_cartao' => :'Integer',
         
         :'flag_cancela_no_desbloqueio' => :'Integer',
         
-        :'flag_cobra_tarifa' => :'Integer',
-        
-        :'id' => :'Integer',
+        :'id_status_destino_desbloqueio' => :'Integer',
         
         :'id_status_destino_conta' => :'Integer',
         
-        :'id_status_destino_desbloqueio' => :'Integer',
-        
-        :'nome' => :'String'
+        :'flag_cobra_tarifa' => :'Integer'
         
       }
     end
@@ -96,6 +96,24 @@ module Pier
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      
+      if attributes[:'id']
+        
+        
+        self.id = attributes[:'id']
+        
+      
+      end
+
+      
+      if attributes[:'nome']
+        
+        
+        self.nome = attributes[:'nome']
+        
+      
+      end
 
       
       if attributes[:'flagCancelaCartao']
@@ -116,19 +134,10 @@ module Pier
       end
 
       
-      if attributes[:'flagCobraTarifa']
+      if attributes[:'idStatusDestinoDesbloqueio']
         
         
-        self.flag_cobra_tarifa = attributes[:'flagCobraTarifa']
-        
-      
-      end
-
-      
-      if attributes[:'id']
-        
-        
-        self.id = attributes[:'id']
+        self.id_status_destino_desbloqueio = attributes[:'idStatusDestinoDesbloqueio']
         
       
       end
@@ -143,19 +152,10 @@ module Pier
       end
 
       
-      if attributes[:'idStatusDestinoDesbloqueio']
+      if attributes[:'flagCobraTarifa']
         
         
-        self.id_status_destino_desbloqueio = attributes[:'idStatusDestinoDesbloqueio']
-        
-      
-      end
-
-      
-      if attributes[:'nome']
-        
-        
-        self.nome = attributes[:'nome']
+        self.flag_cobra_tarifa = attributes[:'flagCobraTarifa']
         
       
       end
@@ -177,6 +177,24 @@ module Pier
     def valid?
       
       
+      if @id.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @nome.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
       if @flag_cancela_cartao.nil?
         return false
       end
@@ -190,16 +208,7 @@ module Pier
       
       
       
-      if @flag_cobra_tarifa.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @id.nil?
+      if @id_status_destino_desbloqueio.nil?
         return false
       end
 
@@ -217,16 +226,7 @@ module Pier
       
       
       
-      if @id_status_destino_desbloqueio.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @nome.nil?
+      if @flag_cobra_tarifa.nil?
         return false
       end
 
@@ -277,13 +277,13 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          id == o.id &&
+          nome == o.nome &&
           flag_cancela_cartao == o.flag_cancela_cartao &&
           flag_cancela_no_desbloqueio == o.flag_cancela_no_desbloqueio &&
-          flag_cobra_tarifa == o.flag_cobra_tarifa &&
-          id == o.id &&
-          id_status_destino_conta == o.id_status_destino_conta &&
           id_status_destino_desbloqueio == o.id_status_destino_desbloqueio &&
-          nome == o.nome
+          id_status_destino_conta == o.id_status_destino_conta &&
+          flag_cobra_tarifa == o.flag_cobra_tarifa
     end
 
     # @see the `==` method
@@ -295,7 +295,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [flag_cancela_cartao, flag_cancela_no_desbloqueio, flag_cobra_tarifa, id, id_status_destino_conta, id_status_destino_desbloqueio, nome].hash
+      [id, nome, flag_cancela_cartao, flag_cancela_no_desbloqueio, id_status_destino_desbloqueio, id_status_destino_conta, flag_cobra_tarifa].hash
     end
 
     # Builds the object from hash

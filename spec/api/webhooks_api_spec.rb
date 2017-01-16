@@ -84,12 +84,12 @@ describe 'WebhooksApi' do
   # Lista os Webhooks
   # Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :id Id do WebHook
-  # @option opts [Object] :evento Evento a ser chamado pelo WebHook
-  # @option opts [Object] :metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
-  # @option opts [String] :url URL que a ser consumida pelo WebHook
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  # @option opts [Integer] :id Id do WebHook
+  # @option opts [String] :evento Evento a ser chamado pelo WebHook
+  # @option opts [String] :metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
+  # @option opts [String] :url URL que a ser consumida pelo WebHook
   # @return [PageWebHooks]
   describe 'listar_using_get10 test' do
     it "should work" do

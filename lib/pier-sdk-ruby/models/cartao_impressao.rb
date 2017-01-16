@@ -25,8 +25,26 @@ require 'date'
 module Pier
   # Objeto Cart\u00C3\u00A3o para Impresso
   class CartaoImpressao
-    # Apresenta o CPF do Portador do Cart\u00C3\u00A3o.
-    attr_accessor :cpf
+    # Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence.
+    attr_accessor :id_conta
+
+    # Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) portadora do cart\u00C3\u00A3o gerado.
+    attr_accessor :id_pessoa
+
+    # Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) que foi gerado.
+    attr_accessor :id_cartao
+
+    # Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Bandeira (id) a qual o Cart\u00C3\u00A3o pertence, quando bandeirado.
+    attr_accessor :id_bandeira
+
+    # Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id) atribu\u00C3\u00ADdo ao Cart\u00C3\u00A3o.
+    attr_accessor :id_tipo_cartao
+
+    # Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
+    attr_accessor :numero_cartao
+
+    # Apresenta o nome do Portador do Cart\u00C3\u00A3o.
+    attr_accessor :nome_plastico
 
     # Apresenta o n\u00C3\u00BAmero do CVV a ser impresso no Cart\u00C3\u00A3o
     attr_accessor :cvv2
@@ -37,47 +55,29 @@ module Pier
     # Apresenta a data de Validade do Cart\u00C3\u00A3o.
     attr_accessor :data_validade
 
-    # Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Bandeira (id) a qual o Cart\u00C3\u00A3o pertence, quando bandeirado.
-    attr_accessor :id_bandeira
-
-    # Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) que foi gerado.
-    attr_accessor :id_cartao
-
-    # Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence.
-    attr_accessor :id_conta
-
-    # Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) portadora do cart\u00C3\u00A3o gerado.
-    attr_accessor :id_pessoa
-
-    # Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id) atribu\u00C3\u00ADdo ao Cart\u00C3\u00A3o.
-    attr_accessor :id_tipo_cartao
-
-    # Apresenta o nome da Pessoa F\u00C3\u00ADsica ou Jur\u00C3\u00ADdica a ser impresso no cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
-    attr_accessor :nome_empregador
+    # Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00C3\u00A3o pertence.
+    attr_accessor :nome_origem_comercial
 
     # Apresenta o nome da Empresa (Pessoa Jur\u00C3\u00ADdica) titular do Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
     attr_accessor :nome_empresa
 
-    # Apresenta o nome da Pessoa F\u00C3\u00ADsica ou Jur\u00C3\u00ADdica que contratou servi\u00C3\u00A7os de benef\u00C3\u00ADcio para o portador do cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
-    attr_accessor :nome_empresa_beneficio
-
-    # Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00C3\u00A3o pertence.
-    attr_accessor :nome_origem_comercial
-
-    # Apresenta o nome do Portador do Cart\u00C3\u00A3o.
-    attr_accessor :nome_plastico
-
     # Apresenta o n\u00C3\u00BAmero da Ag\u00C3\u00AAncia a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
     attr_accessor :numero_agencia
-
-    # Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
-    attr_accessor :numero_cartao
 
     # Apresenta o n\u00C3\u00BAmero da Conta Corrente a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
     attr_accessor :numero_conta_corente
 
+    # Apresenta o nome da Pessoa F\u00C3\u00ADsica ou Jur\u00C3\u00ADdica que contratou servi\u00C3\u00A7os de benef\u00C3\u00ADcio para o portador do cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+    attr_accessor :nome_empresa_beneficio
+
+    # Apresenta o CPF do Portador do Cart\u00C3\u00A3o.
+    attr_accessor :cpf
+
     # Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
     attr_accessor :tipo_portador
+
+    # Apresenta o nome da Pessoa F\u00C3\u00ADsica ou Jur\u00C3\u00ADdica a ser impresso no cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+    attr_accessor :nome_empregador
 
     # Apresenta os dados da Trilha1, seguindo as regras de trilha do emissor.
     attr_accessor :trilha1
@@ -96,7 +96,19 @@ module Pier
     def self.attribute_map
       {
         
-        :'cpf' => :'cpf',
+        :'id_conta' => :'idConta',
+        
+        :'id_pessoa' => :'idPessoa',
+        
+        :'id_cartao' => :'idCartao',
+        
+        :'id_bandeira' => :'idBandeira',
+        
+        :'id_tipo_cartao' => :'idTipoCartao',
+        
+        :'numero_cartao' => :'numeroCartao',
+        
+        :'nome_plastico' => :'nomePlastico',
         
         :'cvv2' => :'cvv2',
         
@@ -104,33 +116,21 @@ module Pier
         
         :'data_validade' => :'dataValidade',
         
-        :'id_bandeira' => :'idBandeira',
-        
-        :'id_cartao' => :'idCartao',
-        
-        :'id_conta' => :'idConta',
-        
-        :'id_pessoa' => :'idPessoa',
-        
-        :'id_tipo_cartao' => :'idTipoCartao',
-        
-        :'nome_empregador' => :'nomeEmpregador',
+        :'nome_origem_comercial' => :'nomeOrigemComercial',
         
         :'nome_empresa' => :'nomeEmpresa',
         
-        :'nome_empresa_beneficio' => :'nomeEmpresaBeneficio',
-        
-        :'nome_origem_comercial' => :'nomeOrigemComercial',
-        
-        :'nome_plastico' => :'nomePlastico',
-        
         :'numero_agencia' => :'numeroAgencia',
-        
-        :'numero_cartao' => :'numeroCartao',
         
         :'numero_conta_corente' => :'numeroContaCorente',
         
+        :'nome_empresa_beneficio' => :'nomeEmpresaBeneficio',
+        
+        :'cpf' => :'cpf',
+        
         :'tipo_portador' => :'tipoPortador',
+        
+        :'nome_empregador' => :'nomeEmpregador',
         
         :'trilha1' => :'trilha1',
         
@@ -147,7 +147,19 @@ module Pier
     def self.swagger_types
       {
         
-        :'cpf' => :'String',
+        :'id_conta' => :'Integer',
+        
+        :'id_pessoa' => :'Integer',
+        
+        :'id_cartao' => :'Integer',
+        
+        :'id_bandeira' => :'Integer',
+        
+        :'id_tipo_cartao' => :'Integer',
+        
+        :'numero_cartao' => :'String',
+        
+        :'nome_plastico' => :'String',
         
         :'cvv2' => :'String',
         
@@ -155,33 +167,21 @@ module Pier
         
         :'data_validade' => :'DateTime',
         
-        :'id_bandeira' => :'Integer',
-        
-        :'id_cartao' => :'Integer',
-        
-        :'id_conta' => :'Integer',
-        
-        :'id_pessoa' => :'Integer',
-        
-        :'id_tipo_cartao' => :'Integer',
-        
-        :'nome_empregador' => :'String',
+        :'nome_origem_comercial' => :'String',
         
         :'nome_empresa' => :'String',
         
-        :'nome_empresa_beneficio' => :'String',
-        
-        :'nome_origem_comercial' => :'String',
-        
-        :'nome_plastico' => :'String',
-        
         :'numero_agencia' => :'Integer',
-        
-        :'numero_cartao' => :'String',
         
         :'numero_conta_corente' => :'String',
         
+        :'nome_empresa_beneficio' => :'String',
+        
+        :'cpf' => :'String',
+        
         :'tipo_portador' => :'String',
+        
+        :'nome_empregador' => :'String',
         
         :'trilha1' => :'String',
         
@@ -203,10 +203,64 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'cpf']
+      if attributes[:'idConta']
         
         
-        self.cpf = attributes[:'cpf']
+        self.id_conta = attributes[:'idConta']
+        
+      
+      end
+
+      
+      if attributes[:'idPessoa']
+        
+        
+        self.id_pessoa = attributes[:'idPessoa']
+        
+      
+      end
+
+      
+      if attributes[:'idCartao']
+        
+        
+        self.id_cartao = attributes[:'idCartao']
+        
+      
+      end
+
+      
+      if attributes[:'idBandeira']
+        
+        
+        self.id_bandeira = attributes[:'idBandeira']
+        
+      
+      end
+
+      
+      if attributes[:'idTipoCartao']
+        
+        
+        self.id_tipo_cartao = attributes[:'idTipoCartao']
+        
+      
+      end
+
+      
+      if attributes[:'numeroCartao']
+        
+        
+        self.numero_cartao = attributes[:'numeroCartao']
+        
+      
+      end
+
+      
+      if attributes[:'nomePlastico']
+        
+        
+        self.nome_plastico = attributes[:'nomePlastico']
         
       
       end
@@ -239,55 +293,10 @@ module Pier
       end
 
       
-      if attributes[:'idBandeira']
+      if attributes[:'nomeOrigemComercial']
         
         
-        self.id_bandeira = attributes[:'idBandeira']
-        
-      
-      end
-
-      
-      if attributes[:'idCartao']
-        
-        
-        self.id_cartao = attributes[:'idCartao']
-        
-      
-      end
-
-      
-      if attributes[:'idConta']
-        
-        
-        self.id_conta = attributes[:'idConta']
-        
-      
-      end
-
-      
-      if attributes[:'idPessoa']
-        
-        
-        self.id_pessoa = attributes[:'idPessoa']
-        
-      
-      end
-
-      
-      if attributes[:'idTipoCartao']
-        
-        
-        self.id_tipo_cartao = attributes[:'idTipoCartao']
-        
-      
-      end
-
-      
-      if attributes[:'nomeEmpregador']
-        
-        
-        self.nome_empregador = attributes[:'nomeEmpregador']
+        self.nome_origem_comercial = attributes[:'nomeOrigemComercial']
         
       
       end
@@ -302,46 +311,10 @@ module Pier
       end
 
       
-      if attributes[:'nomeEmpresaBeneficio']
-        
-        
-        self.nome_empresa_beneficio = attributes[:'nomeEmpresaBeneficio']
-        
-      
-      end
-
-      
-      if attributes[:'nomeOrigemComercial']
-        
-        
-        self.nome_origem_comercial = attributes[:'nomeOrigemComercial']
-        
-      
-      end
-
-      
-      if attributes[:'nomePlastico']
-        
-        
-        self.nome_plastico = attributes[:'nomePlastico']
-        
-      
-      end
-
-      
       if attributes[:'numeroAgencia']
         
         
         self.numero_agencia = attributes[:'numeroAgencia']
-        
-      
-      end
-
-      
-      if attributes[:'numeroCartao']
-        
-        
-        self.numero_cartao = attributes[:'numeroCartao']
         
       
       end
@@ -356,10 +329,37 @@ module Pier
       end
 
       
+      if attributes[:'nomeEmpresaBeneficio']
+        
+        
+        self.nome_empresa_beneficio = attributes[:'nomeEmpresaBeneficio']
+        
+      
+      end
+
+      
+      if attributes[:'cpf']
+        
+        
+        self.cpf = attributes[:'cpf']
+        
+      
+      end
+
+      
       if attributes[:'tipoPortador']
         
         
         self.tipo_portador = attributes[:'tipoPortador']
+        
+      
+      end
+
+      
+      if attributes[:'nomeEmpregador']
+        
+        
+        self.nome_empregador = attributes[:'nomeEmpregador']
         
       
       end
@@ -622,24 +622,24 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          cpf == o.cpf &&
+          id_conta == o.id_conta &&
+          id_pessoa == o.id_pessoa &&
+          id_cartao == o.id_cartao &&
+          id_bandeira == o.id_bandeira &&
+          id_tipo_cartao == o.id_tipo_cartao &&
+          numero_cartao == o.numero_cartao &&
+          nome_plastico == o.nome_plastico &&
           cvv2 == o.cvv2 &&
           data_geracao == o.data_geracao &&
           data_validade == o.data_validade &&
-          id_bandeira == o.id_bandeira &&
-          id_cartao == o.id_cartao &&
-          id_conta == o.id_conta &&
-          id_pessoa == o.id_pessoa &&
-          id_tipo_cartao == o.id_tipo_cartao &&
-          nome_empregador == o.nome_empregador &&
-          nome_empresa == o.nome_empresa &&
-          nome_empresa_beneficio == o.nome_empresa_beneficio &&
           nome_origem_comercial == o.nome_origem_comercial &&
-          nome_plastico == o.nome_plastico &&
+          nome_empresa == o.nome_empresa &&
           numero_agencia == o.numero_agencia &&
-          numero_cartao == o.numero_cartao &&
           numero_conta_corente == o.numero_conta_corente &&
+          nome_empresa_beneficio == o.nome_empresa_beneficio &&
+          cpf == o.cpf &&
           tipo_portador == o.tipo_portador &&
+          nome_empregador == o.nome_empregador &&
           trilha1 == o.trilha1 &&
           trilha2 == o.trilha2 &&
           trilha_cvv1 == o.trilha_cvv1 &&
@@ -655,7 +655,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [cpf, cvv2, data_geracao, data_validade, id_bandeira, id_cartao, id_conta, id_pessoa, id_tipo_cartao, nome_empregador, nome_empresa, nome_empresa_beneficio, nome_origem_comercial, nome_plastico, numero_agencia, numero_cartao, numero_conta_corente, tipo_portador, trilha1, trilha2, trilha_cvv1, trilha_cvv2].hash
+      [id_conta, id_pessoa, id_cartao, id_bandeira, id_tipo_cartao, numero_cartao, nome_plastico, cvv2, data_geracao, data_validade, nome_origem_comercial, nome_empresa, numero_agencia, numero_conta_corente, nome_empresa_beneficio, cpf, tipo_portador, nome_empregador, trilha1, trilha2, trilha_cvv1, trilha_cvv2].hash
     end
 
     # Builds the object from hash

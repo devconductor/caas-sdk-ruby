@@ -118,7 +118,7 @@ describe 'CadastrosGeraisApi' do
   # unit tests for consultar_origem_comercial_using_get
   # Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
   # Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id_origem_comercial ID da Origem Comercial
+  # @param id ID da Origem Comercial
   # @param [Hash] opts the optional parameters
   # @return [OrigemComercial]
   describe 'consultar_origem_comercial_using_get test' do
@@ -135,7 +135,7 @@ describe 'CadastrosGeraisApi' do
   # unit tests for consultar_produto_using_get
   # Apresenta os dados de um determinado Produto
   # Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
   # @param [Hash] opts the optional parameters
   # @return [Produto]
   describe 'consultar_produto_using_get test' do
@@ -152,7 +152,7 @@ describe 'CadastrosGeraisApi' do
   # unit tests for consultar_using_get2
   # Apresenta os dados de um determinado Endere\u00C3\u00A7o
   # Este m\u00C3\u00A9todo permite consultar um determinado Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
   # @param [Hash] opts the optional parameters
   # @return [Endereco]
   describe 'consultar_using_get2 test' do
@@ -169,7 +169,7 @@ describe 'CadastrosGeraisApi' do
   # unit tests for consultar_using_get3
   # Apresenta os dados de uma determinada Pessoa
   # Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
-  # @param id_pessoa ID da Pessoa
+  # @param id ID da Pessoa
   # @param [Hash] opts the optional parameters
   # @return [Pessoa]
   describe 'consultar_using_get3 test' do
@@ -186,7 +186,7 @@ describe 'CadastrosGeraisApi' do
   # unit tests for consultar_using_get6
   # Apresenta os dados de um determinado Telefone
   # Este m\u00C3\u00A9todo permite consultar um determinado Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
   # @param [Hash] opts the optional parameters
   # @return [Telefone]
   describe 'consultar_using_get6 test' do
@@ -203,7 +203,7 @@ describe 'CadastrosGeraisApi' do
   # unit tests for consultar_using_get7
   # Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
   # Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
   # @param [Hash] opts the optional parameters
   # @return [TipoEndereco]
   describe 'consultar_using_get7 test' do
@@ -220,7 +220,7 @@ describe 'CadastrosGeraisApi' do
   # unit tests for consultar_using_get8
   # Apresenta os dados de um determinado Tipo de Telefone
   # Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
   # @param [Hash] opts the optional parameters
   # @return [TipoTelefone]
   describe 'consultar_using_get8 test' do
@@ -238,11 +238,11 @@ describe 'CadastrosGeraisApi' do
   # Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
   # Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
   # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   # @option opts [Integer] :id Id da origem comercial
   # @option opts [String] :nome Nome da origem comercial
   # @option opts [Integer] :status Status da origem comercial
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   # @return [PageOrigensComerciais]
   describe 'listar_origens_comerciais_using_get test' do
     it "should work" do
@@ -259,11 +259,11 @@ describe 'CadastrosGeraisApi' do
   # Lista os Produtos do Emissor
   # Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
   # @option opts [String] :nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
   # @option opts [Integer] :status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   # @return [ListaProdutos]
   describe 'listar_produtos_using_get test' do
     it "should work" do
@@ -280,6 +280,8 @@ describe 'CadastrosGeraisApi' do
   # Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
   # Este m\u00C3\u00A9todo permite que sejam listados os Endere\u00C3\u00A7os existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
   # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
   # @option opts [Integer] :id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
@@ -294,8 +296,6 @@ describe 'CadastrosGeraisApi' do
   # @option opts [String] :pais Apresenta nome do Pais
   # @option opts [Date] :data_inclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
   # @option opts [Date] :data_ultima_atualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   # @return [PageEnderecos]
   describe 'listar_using_get2 test' do
     it "should work" do
@@ -312,6 +312,8 @@ describe 'CadastrosGeraisApi' do
   # Lista as Pessoas cadastradas no Emissor
   # Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
   # @option opts [String] :nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
   # @option opts [String] :tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
@@ -319,8 +321,6 @@ describe 'CadastrosGeraisApi' do
   # @option opts [String] :cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
   # @option opts [Date] :data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
   # @option opts [String] :sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   # @return [PagePessoas]
   describe 'listar_using_get3 test' do
     it "should work" do
@@ -337,6 +337,8 @@ describe 'CadastrosGeraisApi' do
   # Lista os Portadores existentes
   # Este m\u00C3\u00A9todo permite que sejam listados os portadores cadastrados na base do emissor.
   # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   # @option opts [Integer] :id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
   # @option opts [Integer] :id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
   # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
@@ -348,8 +350,6 @@ describe 'CadastrosGeraisApi' do
   # @option opts [Integer] :flag_ativo Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
   # @option opts [Date] :data_cadastro_portador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
   # @option opts [Date] :data_cancelamento_portador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   # @return [PagePortador]
   describe 'listar_using_get4 test' do
     it "should work" do
@@ -366,6 +366,8 @@ describe 'CadastrosGeraisApi' do
   # Lista os Telefones cadastrados no Emissor
   # Este m\u00C3\u00A9todo permite que sejam listados os Telefones existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
   # @option opts [Integer] :id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
   # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence.
@@ -373,8 +375,6 @@ describe 'CadastrosGeraisApi' do
   # @option opts [String] :telefone N\u00C3\u00BAmero do telefone.
   # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
   # @option opts [Integer] :status Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   # @return [PageTelefones]
   describe 'listar_using_get7 test' do
     it "should work" do
@@ -391,10 +391,10 @@ describe 'CadastrosGeraisApi' do
   # Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
   # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
-  # @option opts [String] :nome Nome do Tipo do Endere\u00C3\u00A7o
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+  # @option opts [String] :nome Nome do Tipo do Endere\u00C3\u00A7o
   # @return [PageTiposEndereco]
   describe 'listar_using_get8 test' do
     it "should work" do
@@ -411,10 +411,10 @@ describe 'CadastrosGeraisApi' do
   # Lista os Tipos de Telefones
   # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
-  # @option opts [String] :nome Nome do Tipo do Telefone
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+  # @option opts [String] :nome Nome do Tipo do Telefone
   # @return [PageTipoTelefones]
   describe 'listar_using_get9 test' do
     it "should work" do

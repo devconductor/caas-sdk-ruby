@@ -54,6 +54,17 @@ describe 'LimiteDisponibilidade' do
   end
 
 
+  describe 'test attribute "limite_global"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
   describe 'test attribute "limite_compra"' do
     it 'should work' do
        # assertion here
@@ -65,7 +76,7 @@ describe 'LimiteDisponibilidade' do
   end
 
 
-  describe 'test attribute "limite_consignado"' do
+  describe 'test attribute "limite_parcelado"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -76,7 +87,40 @@ describe 'LimiteDisponibilidade' do
   end
 
 
-  describe 'test attribute "limite_global"' do
+  describe 'test attribute "limite_parcelas"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "limite_saque_global"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "limite_saque_periodo"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "limite_consignado"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -142,40 +186,7 @@ describe 'LimiteDisponibilidade' do
   end
 
 
-  describe 'test attribute "limite_parcelado"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "limite_parcelas"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "limite_saque_global"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "limite_saque_periodo"' do
+  describe 'test attribute "saldo_disponivel_global"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -187,28 +198,6 @@ describe 'LimiteDisponibilidade' do
 
 
   describe 'test attribute "saldo_disponivel_compra"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "saldo_disponivel_compra_internacional"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "saldo_disponivel_global"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -252,7 +241,7 @@ describe 'LimiteDisponibilidade' do
   end
 
 
-  describe 'test attribute "saldo_disponivel_saque_internacional"' do
+  describe 'test attribute "saldo_pontos_fidelidade"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -263,7 +252,18 @@ describe 'LimiteDisponibilidade' do
   end
 
 
-  describe 'test attribute "saldo_pontos_fidelidade"' do
+  describe 'test attribute "saldo_disponivel_compra_internacional"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "saldo_disponivel_saque_internacional"' do
     it 'should work' do
        # assertion here
        # should be_a()

@@ -25,11 +25,11 @@ require 'date'
 module Pier
   # Representa\u00C3\u00A7\u00C3\u00A3o do recurso WebHook
   class WebHook
-    # Evento a ser chamado pelo WebHook
-    attr_accessor :evento
-
     # Id do WebHook
     attr_accessor :id
+
+    # Evento a ser chamado pelo WebHook
+    attr_accessor :evento
 
     # M\u00C3\u00A9todo que a ser chamado pelo WebHook
     attr_accessor :metodo
@@ -42,9 +42,9 @@ module Pier
     def self.attribute_map
       {
         
-        :'evento' => :'evento',
-        
         :'id' => :'id',
+        
+        :'evento' => :'evento',
         
         :'metodo' => :'metodo',
         
@@ -57,9 +57,9 @@ module Pier
     def self.swagger_types
       {
         
-        :'evento' => :'String',
-        
         :'id' => :'Integer',
+        
+        :'evento' => :'String',
         
         :'metodo' => :'String',
         
@@ -77,19 +77,19 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'evento']
+      if attributes[:'id']
         
         
-        self.evento = attributes[:'evento']
+        self.id = attributes[:'id']
         
       
       end
 
       
-      if attributes[:'id']
+      if attributes[:'evento']
         
         
-        self.id = attributes[:'id']
+        self.evento = attributes[:'evento']
         
       
       end
@@ -129,6 +129,15 @@ module Pier
     def valid?
       
       
+      if @id.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
       if @evento.nil?
         return false
       end
@@ -139,15 +148,6 @@ module Pier
       if @evento && !allowed_values.include?(@evento)
         return false
       end
-      
-      
-      
-      
-      if @id.nil?
-        return false
-      end
-
-      
       
       
       
@@ -178,6 +178,11 @@ module Pier
 
     
     
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] evento Object to be assigned
     def evento=(evento)
@@ -188,11 +193,6 @@ module Pier
       @evento = evento
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -220,8 +220,8 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          evento == o.evento &&
           id == o.id &&
+          evento == o.evento &&
           metodo == o.metodo &&
           url == o.url
     end
@@ -235,7 +235,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [evento, id, metodo, url].hash
+      [id, evento, metodo, url].hash
     end
 
     # Builds the object from hash

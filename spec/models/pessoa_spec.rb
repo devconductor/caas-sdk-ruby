@@ -43,39 +43,6 @@ describe 'Pessoa' do
     end
   end
 
-  describe 'test attribute "cnpj"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "cpf"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "data_nascimento"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
   describe 'test attribute "id"' do
     it 'should work' do
        # assertion here
@@ -98,7 +65,7 @@ describe 'Pessoa' do
   end
 
 
-  describe 'test attribute "sexo"' do
+  describe 'test attribute "tipo"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -109,7 +76,40 @@ describe 'Pessoa' do
   end
 
 
-  describe 'test attribute "tipo"' do
+  describe 'test attribute "cpf"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "cnpj"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "data_nascimento"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "sexo"' do
     it 'should work' do
        # assertion here
        # should be_a()

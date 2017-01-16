@@ -25,30 +25,30 @@ require 'date'
 module Pier
   # Status Conta
   class StatusConta
-    # Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
-    attr_accessor :flag_altera_limite
-
     # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
     attr_accessor :id
 
-    # Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
-    attr_accessor :mensagem_consulta_negada
-
     # Nome atribu\u00C3\u00ADdo ao Status da Conta.
     attr_accessor :nome
+
+    # Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
+    attr_accessor :flag_altera_limite
+
+    # Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
+    attr_accessor :mensagem_consulta_negada
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'flag_altera_limite' => :'flagAlteraLimite',
-        
         :'id' => :'id',
         
-        :'mensagem_consulta_negada' => :'mensagemConsultaNegada',
+        :'nome' => :'nome',
         
-        :'nome' => :'nome'
+        :'flag_altera_limite' => :'flagAlteraLimite',
+        
+        :'mensagem_consulta_negada' => :'mensagemConsultaNegada'
         
       }
     end
@@ -57,13 +57,13 @@ module Pier
     def self.swagger_types
       {
         
-        :'flag_altera_limite' => :'Integer',
-        
         :'id' => :'Integer',
         
-        :'mensagem_consulta_negada' => :'String',
+        :'nome' => :'String',
         
-        :'nome' => :'String'
+        :'flag_altera_limite' => :'Integer',
+        
+        :'mensagem_consulta_negada' => :'String'
         
       }
     end
@@ -77,15 +77,6 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'flagAlteraLimite']
-        
-        
-        self.flag_altera_limite = attributes[:'flagAlteraLimite']
-        
-      
-      end
-
-      
       if attributes[:'id']
         
         
@@ -95,19 +86,28 @@ module Pier
       end
 
       
-      if attributes[:'mensagemConsultaNegada']
+      if attributes[:'nome']
         
         
-        self.mensagem_consulta_negada = attributes[:'mensagemConsultaNegada']
+        self.nome = attributes[:'nome']
         
       
       end
 
       
-      if attributes[:'nome']
+      if attributes[:'flagAlteraLimite']
         
         
-        self.nome = attributes[:'nome']
+        self.flag_altera_limite = attributes[:'flagAlteraLimite']
+        
+      
+      end
+
+      
+      if attributes[:'mensagemConsultaNegada']
+        
+        
+        self.mensagem_consulta_negada = attributes[:'mensagemConsultaNegada']
         
       
       end
@@ -129,15 +129,6 @@ module Pier
     def valid?
       
       
-      if @flag_altera_limite.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
       if @id.nil?
         return false
       end
@@ -147,14 +138,23 @@ module Pier
       
       
       
-      
-      
-      
-      
       if @nome.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      if @flag_altera_limite.nil?
+        return false
+      end
+
+      
+      
+      
+      
       
       
       
@@ -187,10 +187,10 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          flag_altera_limite == o.flag_altera_limite &&
           id == o.id &&
-          mensagem_consulta_negada == o.mensagem_consulta_negada &&
-          nome == o.nome
+          nome == o.nome &&
+          flag_altera_limite == o.flag_altera_limite &&
+          mensagem_consulta_negada == o.mensagem_consulta_negada
     end
 
     # @see the `==` method
@@ -202,7 +202,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [flag_altera_limite, id, mensagem_consulta_negada, nome].hash
+      [id, nome, flag_altera_limite, mensagem_consulta_negada].hash
     end
 
     # Builds the object from hash

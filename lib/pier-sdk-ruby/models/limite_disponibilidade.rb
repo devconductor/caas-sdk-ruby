@@ -28,14 +28,26 @@ module Pier
     # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o de Limite e Disponibilidade (id).
     attr_accessor :id
 
+    # Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
+    attr_accessor :limite_global
+
     # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
     attr_accessor :limite_compra
 
+    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
+    attr_accessor :limite_parcelado
+
+    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.
+    attr_accessor :limite_parcelas
+
+    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
+    attr_accessor :limite_saque_global
+
+    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
+    attr_accessor :limite_saque_periodo
+
     # Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos.
     attr_accessor :limite_consignado
-
-    # Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
-    attr_accessor :limite_global
 
     # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais.
     attr_accessor :limite_internacional_compra
@@ -52,26 +64,11 @@ module Pier
     # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
     attr_accessor :limite_internacional_saque_periodo
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
-    attr_accessor :limite_parcelado
-
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.
-    attr_accessor :limite_parcelas
-
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
-    attr_accessor :limite_saque_global
-
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
-    attr_accessor :limite_saque_periodo
+    # Apresenta o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es.
+    attr_accessor :saldo_disponivel_global
 
     # Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.
     attr_accessor :saldo_disponivel_compra
-
-    # Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Compra Internacional.
-    attr_accessor :saldo_disponivel_compra_internacional
-
-    # Apresenta o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es.
-    attr_accessor :saldo_disponivel_global
 
     # Quando utilizado pelo emissor a modalidade limiteParcelado, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.
     attr_accessor :saldo_disponivel_parcelado
@@ -82,11 +79,14 @@ module Pier
     # Quando utilizado pelo emissor a modalidade limiteSaque, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
     attr_accessor :saldo_disponivel_saque
 
-    # Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
-    attr_accessor :saldo_disponivel_saque_internacional
-
     # Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00C3\u00A1 o saldo atual de pontos que o portador possui.
     attr_accessor :saldo_pontos_fidelidade
+
+    # Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Compra Internacional.
+    attr_accessor :saldo_disponivel_compra_internacional
+
+    # Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
+    attr_accessor :saldo_disponivel_saque_internacional
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -95,11 +95,19 @@ module Pier
         
         :'id' => :'id',
         
+        :'limite_global' => :'limiteGlobal',
+        
         :'limite_compra' => :'limiteCompra',
         
-        :'limite_consignado' => :'limiteConsignado',
+        :'limite_parcelado' => :'limiteParcelado',
         
-        :'limite_global' => :'limiteGlobal',
+        :'limite_parcelas' => :'limiteParcelas',
+        
+        :'limite_saque_global' => :'limiteSaqueGlobal',
+        
+        :'limite_saque_periodo' => :'limiteSaquePeriodo',
+        
+        :'limite_consignado' => :'limiteConsignado',
         
         :'limite_internacional_compra' => :'limiteInternacionalCompra',
         
@@ -111,19 +119,9 @@ module Pier
         
         :'limite_internacional_saque_periodo' => :'limiteInternacionalSaquePeriodo',
         
-        :'limite_parcelado' => :'limiteParcelado',
-        
-        :'limite_parcelas' => :'limiteParcelas',
-        
-        :'limite_saque_global' => :'limiteSaqueGlobal',
-        
-        :'limite_saque_periodo' => :'limiteSaquePeriodo',
+        :'saldo_disponivel_global' => :'saldoDisponivelGlobal',
         
         :'saldo_disponivel_compra' => :'saldoDisponivelCompra',
-        
-        :'saldo_disponivel_compra_internacional' => :'saldoDisponivelCompraInternacional',
-        
-        :'saldo_disponivel_global' => :'saldoDisponivelGlobal',
         
         :'saldo_disponivel_parcelado' => :'saldoDisponivelParcelado',
         
@@ -131,9 +129,11 @@ module Pier
         
         :'saldo_disponivel_saque' => :'saldoDisponivelSaque',
         
-        :'saldo_disponivel_saque_internacional' => :'saldoDisponivelSaqueInternacional',
+        :'saldo_pontos_fidelidade' => :'saldoPontosFidelidade',
         
-        :'saldo_pontos_fidelidade' => :'saldoPontosFidelidade'
+        :'saldo_disponivel_compra_internacional' => :'saldoDisponivelCompraInternacional',
+        
+        :'saldo_disponivel_saque_internacional' => :'saldoDisponivelSaqueInternacional'
         
       }
     end
@@ -144,11 +144,19 @@ module Pier
         
         :'id' => :'Integer',
         
+        :'limite_global' => :'Float',
+        
         :'limite_compra' => :'Float',
         
-        :'limite_consignado' => :'Float',
+        :'limite_parcelado' => :'Float',
         
-        :'limite_global' => :'Float',
+        :'limite_parcelas' => :'Float',
+        
+        :'limite_saque_global' => :'Float',
+        
+        :'limite_saque_periodo' => :'Float',
+        
+        :'limite_consignado' => :'Float',
         
         :'limite_internacional_compra' => :'Float',
         
@@ -160,19 +168,9 @@ module Pier
         
         :'limite_internacional_saque_periodo' => :'Float',
         
-        :'limite_parcelado' => :'Float',
-        
-        :'limite_parcelas' => :'Float',
-        
-        :'limite_saque_global' => :'Float',
-        
-        :'limite_saque_periodo' => :'Float',
+        :'saldo_disponivel_global' => :'Float',
         
         :'saldo_disponivel_compra' => :'Float',
-        
-        :'saldo_disponivel_compra_internacional' => :'Float',
-        
-        :'saldo_disponivel_global' => :'Float',
         
         :'saldo_disponivel_parcelado' => :'Float',
         
@@ -180,9 +178,11 @@ module Pier
         
         :'saldo_disponivel_saque' => :'Float',
         
-        :'saldo_disponivel_saque_internacional' => :'Float',
+        :'saldo_pontos_fidelidade' => :'Float',
         
-        :'saldo_pontos_fidelidade' => :'Float'
+        :'saldo_disponivel_compra_internacional' => :'Float',
+        
+        :'saldo_disponivel_saque_internacional' => :'Float'
         
       }
     end
@@ -205,6 +205,15 @@ module Pier
       end
 
       
+      if attributes[:'limiteGlobal']
+        
+        
+        self.limite_global = attributes[:'limiteGlobal']
+        
+      
+      end
+
+      
       if attributes[:'limiteCompra']
         
         
@@ -214,19 +223,46 @@ module Pier
       end
 
       
-      if attributes[:'limiteConsignado']
+      if attributes[:'limiteParcelado']
         
         
-        self.limite_consignado = attributes[:'limiteConsignado']
+        self.limite_parcelado = attributes[:'limiteParcelado']
         
       
       end
 
       
-      if attributes[:'limiteGlobal']
+      if attributes[:'limiteParcelas']
         
         
-        self.limite_global = attributes[:'limiteGlobal']
+        self.limite_parcelas = attributes[:'limiteParcelas']
+        
+      
+      end
+
+      
+      if attributes[:'limiteSaqueGlobal']
+        
+        
+        self.limite_saque_global = attributes[:'limiteSaqueGlobal']
+        
+      
+      end
+
+      
+      if attributes[:'limiteSaquePeriodo']
+        
+        
+        self.limite_saque_periodo = attributes[:'limiteSaquePeriodo']
+        
+      
+      end
+
+      
+      if attributes[:'limiteConsignado']
+        
+        
+        self.limite_consignado = attributes[:'limiteConsignado']
         
       
       end
@@ -277,37 +313,10 @@ module Pier
       end
 
       
-      if attributes[:'limiteParcelado']
+      if attributes[:'saldoDisponivelGlobal']
         
         
-        self.limite_parcelado = attributes[:'limiteParcelado']
-        
-      
-      end
-
-      
-      if attributes[:'limiteParcelas']
-        
-        
-        self.limite_parcelas = attributes[:'limiteParcelas']
-        
-      
-      end
-
-      
-      if attributes[:'limiteSaqueGlobal']
-        
-        
-        self.limite_saque_global = attributes[:'limiteSaqueGlobal']
-        
-      
-      end
-
-      
-      if attributes[:'limiteSaquePeriodo']
-        
-        
-        self.limite_saque_periodo = attributes[:'limiteSaquePeriodo']
+        self.saldo_disponivel_global = attributes[:'saldoDisponivelGlobal']
         
       
       end
@@ -317,24 +326,6 @@ module Pier
         
         
         self.saldo_disponivel_compra = attributes[:'saldoDisponivelCompra']
-        
-      
-      end
-
-      
-      if attributes[:'saldoDisponivelCompraInternacional']
-        
-        
-        self.saldo_disponivel_compra_internacional = attributes[:'saldoDisponivelCompraInternacional']
-        
-      
-      end
-
-      
-      if attributes[:'saldoDisponivelGlobal']
-        
-        
-        self.saldo_disponivel_global = attributes[:'saldoDisponivelGlobal']
         
       
       end
@@ -367,19 +358,28 @@ module Pier
       end
 
       
-      if attributes[:'saldoDisponivelSaqueInternacional']
+      if attributes[:'saldoPontosFidelidade']
         
         
-        self.saldo_disponivel_saque_internacional = attributes[:'saldoDisponivelSaqueInternacional']
+        self.saldo_pontos_fidelidade = attributes[:'saldoPontosFidelidade']
         
       
       end
 
       
-      if attributes[:'saldoPontosFidelidade']
+      if attributes[:'saldoDisponivelCompraInternacional']
         
         
-        self.saldo_pontos_fidelidade = attributes[:'saldoPontosFidelidade']
+        self.saldo_disponivel_compra_internacional = attributes[:'saldoDisponivelCompraInternacional']
+        
+      
+      end
+
+      
+      if attributes[:'saldoDisponivelSaqueInternacional']
+        
+        
+        self.saldo_disponivel_saque_internacional = attributes[:'saldoDisponivelSaqueInternacional']
         
       
       end
@@ -410,6 +410,15 @@ module Pier
       
       
       
+      if @limite_global.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
       if @limite_compra.nil?
         return false
       end
@@ -419,7 +428,7 @@ module Pier
       
       
       
-      if @limite_consignado.nil?
+      if @limite_parcelado.nil?
         return false
       end
 
@@ -428,7 +437,34 @@ module Pier
       
       
       
-      if @limite_global.nil?
+      if @limite_parcelas.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @limite_saque_global.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @limite_saque_periodo.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @limite_consignado.nil?
         return false
       end
 
@@ -482,34 +518,7 @@ module Pier
       
       
       
-      if @limite_parcelado.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @limite_parcelas.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @limite_saque_global.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @limite_saque_periodo.nil?
+      if @saldo_disponivel_global.nil?
         return false
       end
 
@@ -519,24 +528,6 @@ module Pier
       
       
       if @saldo_disponivel_compra.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @saldo_disponivel_compra_internacional.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @saldo_disponivel_global.nil?
         return false
       end
 
@@ -572,7 +563,7 @@ module Pier
       
       
       
-      if @saldo_disponivel_saque_internacional.nil?
+      if @saldo_pontos_fidelidade.nil?
         return false
       end
 
@@ -581,7 +572,16 @@ module Pier
       
       
       
-      if @saldo_pontos_fidelidade.nil?
+      if @saldo_disponivel_compra_internacional.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @saldo_disponivel_saque_internacional.nil?
         return false
       end
 
@@ -703,26 +703,26 @@ module Pier
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          limite_compra == o.limite_compra &&
-          limite_consignado == o.limite_consignado &&
           limite_global == o.limite_global &&
+          limite_compra == o.limite_compra &&
+          limite_parcelado == o.limite_parcelado &&
+          limite_parcelas == o.limite_parcelas &&
+          limite_saque_global == o.limite_saque_global &&
+          limite_saque_periodo == o.limite_saque_periodo &&
+          limite_consignado == o.limite_consignado &&
           limite_internacional_compra == o.limite_internacional_compra &&
           limite_internacional_parcelado == o.limite_internacional_parcelado &&
           limite_internacional_parcelas == o.limite_internacional_parcelas &&
           limite_internacional_saque_global == o.limite_internacional_saque_global &&
           limite_internacional_saque_periodo == o.limite_internacional_saque_periodo &&
-          limite_parcelado == o.limite_parcelado &&
-          limite_parcelas == o.limite_parcelas &&
-          limite_saque_global == o.limite_saque_global &&
-          limite_saque_periodo == o.limite_saque_periodo &&
-          saldo_disponivel_compra == o.saldo_disponivel_compra &&
-          saldo_disponivel_compra_internacional == o.saldo_disponivel_compra_internacional &&
           saldo_disponivel_global == o.saldo_disponivel_global &&
+          saldo_disponivel_compra == o.saldo_disponivel_compra &&
           saldo_disponivel_parcelado == o.saldo_disponivel_parcelado &&
           saldo_disponivel_parcelas == o.saldo_disponivel_parcelas &&
           saldo_disponivel_saque == o.saldo_disponivel_saque &&
-          saldo_disponivel_saque_internacional == o.saldo_disponivel_saque_internacional &&
-          saldo_pontos_fidelidade == o.saldo_pontos_fidelidade
+          saldo_pontos_fidelidade == o.saldo_pontos_fidelidade &&
+          saldo_disponivel_compra_internacional == o.saldo_disponivel_compra_internacional &&
+          saldo_disponivel_saque_internacional == o.saldo_disponivel_saque_internacional
     end
 
     # @see the `==` method
@@ -734,7 +734,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, limite_compra, limite_consignado, limite_global, limite_internacional_compra, limite_internacional_parcelado, limite_internacional_parcelas, limite_internacional_saque_global, limite_internacional_saque_periodo, limite_parcelado, limite_parcelas, limite_saque_global, limite_saque_periodo, saldo_disponivel_compra, saldo_disponivel_compra_internacional, saldo_disponivel_global, saldo_disponivel_parcelado, saldo_disponivel_parcelas, saldo_disponivel_saque, saldo_disponivel_saque_internacional, saldo_pontos_fidelidade].hash
+      [id, limite_global, limite_compra, limite_parcelado, limite_parcelas, limite_saque_global, limite_saque_periodo, limite_consignado, limite_internacional_compra, limite_internacional_parcelado, limite_internacional_parcelas, limite_internacional_saque_global, limite_internacional_saque_periodo, saldo_disponivel_global, saldo_disponivel_compra, saldo_disponivel_parcelado, saldo_disponivel_parcelas, saldo_disponivel_saque, saldo_pontos_fidelidade, saldo_disponivel_compra_internacional, saldo_disponivel_saque_internacional].hash
     end
 
     # Builds the object from hash

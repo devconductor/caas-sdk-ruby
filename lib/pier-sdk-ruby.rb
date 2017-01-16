@@ -113,6 +113,9 @@ require 'pier-sdk-ruby/models/portador'
 require 'pier-sdk-ruby/models/produto'
 
 
+require 'pier-sdk-ruby/models/sms'
+
+
 require 'pier-sdk-ruby/models/status_cartao'
 
 
@@ -147,6 +150,8 @@ require 'pier-sdk-ruby/api/cadastros_gerais_api'
 require 'pier-sdk-ruby/api/cartao_api'
 
 require 'pier-sdk-ruby/api/conta_api'
+
+require 'pier-sdk-ruby/api/notificacoes_api'
 
 require 'pier-sdk-ruby/api/status_parametros_api'
 

@@ -25,9 +25,6 @@ require 'date'
 module Pier
   # Hist\u00C3\u00B3rico Impress\u00C3\u00A3o Cart\u00C3\u00A3o
   class HistoricoImpressaoCartao
-    # Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.
-    attr_accessor :data_historico
-
     # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o Avulsa de Cart\u00C3\u00B5es (id).
     attr_accessor :id
 
@@ -40,12 +37,13 @@ module Pier
     # Apresenta uma mensagem que descreve a etapa do processo de impress\u00C3\u00A3o do cart\u00C3\u00A3o que fora realizado.
     attr_accessor :mensagem_historico
 
+    # Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.
+    attr_accessor :data_historico
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        
-        :'data_historico' => :'dataHistorico',
         
         :'id' => :'id',
         
@@ -53,7 +51,9 @@ module Pier
         
         :'id_status_impressao_cartao' => :'idStatusImpressaoCartao',
         
-        :'mensagem_historico' => :'mensagemHistorico'
+        :'mensagem_historico' => :'mensagemHistorico',
+        
+        :'data_historico' => :'dataHistorico'
         
       }
     end
@@ -62,15 +62,15 @@ module Pier
     def self.swagger_types
       {
         
-        :'data_historico' => :'DateTime',
-        
         :'id' => :'Integer',
         
         :'id_cartao' => :'Integer',
         
         :'id_status_impressao_cartao' => :'Integer',
         
-        :'mensagem_historico' => :'String'
+        :'mensagem_historico' => :'String',
+        
+        :'data_historico' => :'DateTime'
         
       }
     end
@@ -82,15 +82,6 @@ module Pier
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
-
-      
-      if attributes[:'dataHistorico']
-        
-        
-        self.data_historico = attributes[:'dataHistorico']
-        
-      
-      end
 
       
       if attributes[:'id']
@@ -129,6 +120,15 @@ module Pier
       end
 
       
+      if attributes[:'dataHistorico']
+        
+        
+        self.data_historico = attributes[:'dataHistorico']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -143,10 +143,6 @@ module Pier
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      
-      
-      
-      
       
       
       if @id.nil?
@@ -171,6 +167,10 @@ module Pier
         return false
       end
 
+      
+      
+      
+      
       
       
       
@@ -212,11 +212,11 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          data_historico == o.data_historico &&
           id == o.id &&
           id_cartao == o.id_cartao &&
           id_status_impressao_cartao == o.id_status_impressao_cartao &&
-          mensagem_historico == o.mensagem_historico
+          mensagem_historico == o.mensagem_historico &&
+          data_historico == o.data_historico
     end
 
     # @see the `==` method
@@ -228,7 +228,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [data_historico, id, id_cartao, id_status_impressao_cartao, mensagem_historico].hash
+      [id, id_cartao, id_status_impressao_cartao, mensagem_historico, data_historico].hash
     end
 
     # Builds the object from hash

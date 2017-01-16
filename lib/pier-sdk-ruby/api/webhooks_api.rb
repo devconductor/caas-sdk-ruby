@@ -70,6 +70,11 @@ module Pier
       # verify the required parameter 'evento' is set
       fail ArgumentError, "Missing the required parameter 'evento' when calling WebhooksApi.alterar_using_put3" if evento.nil?
       
+      # verify enum value
+      unless ['RISCO_FRAUDE', 'OUTROS'].include?(evento)
+        fail ArgumentError, "invalid value for 'evento', must be one of RISCO_FRAUDE, OUTROS"
+      end
+      
       
       
       
@@ -77,6 +82,11 @@ module Pier
       
       # verify the required parameter 'metodo' is set
       fail ArgumentError, "Missing the required parameter 'metodo' when calling WebhooksApi.alterar_using_put3" if metodo.nil?
+      
+      # verify enum value
+      unless ['GET', 'POST', 'PUT', 'DELETE'].include?(metodo)
+        fail ArgumentError, "invalid value for 'metodo', must be one of GET, POST, PUT, DELETE"
+      end
       
       
       
@@ -201,12 +211,12 @@ module Pier
     # Lista os Webhooks
     # Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id Id do WebHook
-    # @option opts [Object] :evento Evento a ser chamado pelo WebHook
-    # @option opts [Object] :metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
-    # @option opts [String] :url URL que a ser consumida pelo WebHook
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :id Id do WebHook
+    # @option opts [String] :evento Evento a ser chamado pelo WebHook
+    # @option opts [String] :metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
+    # @option opts [String] :url URL que a ser consumida pelo WebHook
     # @return [PageWebHooks]
     def listar_using_get10(opts = {})
       data, _status_code, _headers = listar_using_get10_with_http_info(opts)
@@ -216,12 +226,12 @@ module Pier
     # Lista os Webhooks
     # Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id Id do WebHook
-    # @option opts [Object] :evento Evento a ser chamado pelo WebHook
-    # @option opts [Object] :metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
-    # @option opts [String] :url URL que a ser consumida pelo WebHook
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :id Id do WebHook
+    # @option opts [String] :evento Evento a ser chamado pelo WebHook
+    # @option opts [String] :metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
+    # @option opts [String] :url URL que a ser consumida pelo WebHook
     # @return [Array<(PageWebHooks, Fixnum, Hash)>] PageWebHooks data, response status code and response headers
     def listar_using_get10_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -249,11 +259,19 @@ module Pier
       
       
       
+      if opts[:'evento'] && !['RISCO_FRAUDE', 'OUTROS'].include?(opts[:'evento'])
+        fail ArgumentError, 'invalid value for "evento", must be one of RISCO_FRAUDE, OUTROS'
+      end
       
       
       
       
       
+      
+      
+      if opts[:'metodo'] && !['GET', 'POST', 'PUT', 'DELETE'].include?(opts[:'metodo'])
+        fail ArgumentError, 'invalid value for "metodo", must be one of GET, POST, PUT, DELETE'
+      end
       
       
       
@@ -269,12 +287,12 @@ module Pier
 
       # query parameters
       query_params = {}
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'id'] = opts[:'id'] if opts[:'id']
       query_params[:'evento'] = opts[:'evento'] if opts[:'evento']
       query_params[:'metodo'] = opts[:'metodo'] if opts[:'metodo']
       query_params[:'url'] = opts[:'url'] if opts[:'url']
-      query_params[:'page'] = opts[:'page'] if opts[:'page']
-      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
 
       # header parameters
       header_params = {}
@@ -336,6 +354,11 @@ module Pier
       # verify the required parameter 'evento' is set
       fail ArgumentError, "Missing the required parameter 'evento' when calling WebhooksApi.salvar_using_post3" if evento.nil?
       
+      # verify enum value
+      unless ['RISCO_FRAUDE', 'OUTROS'].include?(evento)
+        fail ArgumentError, "invalid value for 'evento', must be one of RISCO_FRAUDE, OUTROS"
+      end
+      
       
       
       
@@ -343,6 +366,11 @@ module Pier
       
       # verify the required parameter 'metodo' is set
       fail ArgumentError, "Missing the required parameter 'metodo' when calling WebhooksApi.salvar_using_post3" if metodo.nil?
+      
+      # verify enum value
+      unless ['GET', 'POST', 'PUT', 'DELETE'].include?(metodo)
+        fail ArgumentError, "invalid value for 'metodo', must be one of GET, POST, PUT, DELETE"
+      end
       
       
       

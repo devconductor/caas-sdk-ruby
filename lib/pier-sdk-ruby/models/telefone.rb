@@ -25,17 +25,20 @@ require 'date'
 module Pier
   # ObjetoTelefone
   class Telefone
-    # C\u00C3\u00B3digo DDD do telefone (id).
-    attr_accessor :ddd
-
     # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
     attr_accessor :id
+
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+    attr_accessor :id_tipo_telefone
 
     # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence.
     attr_accessor :id_pessoa
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
-    attr_accessor :id_tipo_telefone
+    # C\u00C3\u00B3digo DDD do telefone (id).
+    attr_accessor :ddd
+
+    # N\u00C3\u00BAmero do telefone.
+    attr_accessor :telefone
 
     # N\u00C3\u00BAmero do ramal.
     attr_accessor :ramal
@@ -43,27 +46,24 @@ module Pier
     # Apresenta o Status do Telefone, onde: '0': Inativo e '1': Ativo
     attr_accessor :status
 
-    # N\u00C3\u00BAmero do telefone.
-    attr_accessor :telefone
-
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'ddd' => :'ddd',
-        
         :'id' => :'id',
-        
-        :'id_pessoa' => :'idPessoa',
         
         :'id_tipo_telefone' => :'idTipoTelefone',
         
+        :'id_pessoa' => :'idPessoa',
+        
+        :'ddd' => :'ddd',
+        
+        :'telefone' => :'telefone',
+        
         :'ramal' => :'ramal',
         
-        :'status' => :'status',
-        
-        :'telefone' => :'telefone'
+        :'status' => :'status'
         
       }
     end
@@ -72,19 +72,19 @@ module Pier
     def self.swagger_types
       {
         
-        :'ddd' => :'String',
-        
         :'id' => :'Integer',
-        
-        :'id_pessoa' => :'Integer',
         
         :'id_tipo_telefone' => :'Integer',
         
+        :'id_pessoa' => :'Integer',
+        
+        :'ddd' => :'String',
+        
+        :'telefone' => :'String',
+        
         :'ramal' => :'String',
         
-        :'status' => :'Integer',
-        
-        :'telefone' => :'String'
+        :'status' => :'Integer'
         
       }
     end
@@ -98,19 +98,19 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'ddd']
+      if attributes[:'id']
         
         
-        self.ddd = attributes[:'ddd']
+        self.id = attributes[:'id']
         
       
       end
 
       
-      if attributes[:'id']
+      if attributes[:'idTipoTelefone']
         
         
-        self.id = attributes[:'id']
+        self.id_tipo_telefone = attributes[:'idTipoTelefone']
         
       
       end
@@ -125,10 +125,19 @@ module Pier
       end
 
       
-      if attributes[:'idTipoTelefone']
+      if attributes[:'ddd']
         
         
-        self.id_tipo_telefone = attributes[:'idTipoTelefone']
+        self.ddd = attributes[:'ddd']
+        
+      
+      end
+
+      
+      if attributes[:'telefone']
+        
+        
+        self.telefone = attributes[:'telefone']
         
       
       end
@@ -147,15 +156,6 @@ module Pier
         
         
         self.status = attributes[:'status']
-        
-      
-      end
-
-      
-      if attributes[:'telefone']
-        
-        
-        self.telefone = attributes[:'telefone']
         
       
       end
@@ -247,13 +247,13 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          ddd == o.ddd &&
           id == o.id &&
-          id_pessoa == o.id_pessoa &&
           id_tipo_telefone == o.id_tipo_telefone &&
+          id_pessoa == o.id_pessoa &&
+          ddd == o.ddd &&
+          telefone == o.telefone &&
           ramal == o.ramal &&
-          status == o.status &&
-          telefone == o.telefone
+          status == o.status
     end
 
     # @see the `==` method
@@ -265,7 +265,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ddd, id, id_pessoa, id_tipo_telefone, ramal, status, telefone].hash
+      [id, id_tipo_telefone, id_pessoa, ddd, telefone, ramal, status].hash
     end
 
     # Builds the object from hash

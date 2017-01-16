@@ -25,24 +25,6 @@ require 'date'
 module Pier
   # Objeto Endere\u00C3\u00A7o
   class Endereco
-    # Apresenta nome do bairro
-    attr_accessor :bairro
-
-    # Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
-    attr_accessor :cep
-
-    # Apresenta nome da cidade
-    attr_accessor :cidade
-
-    # Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
-    attr_accessor :complemento
-
-    # Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
-    attr_accessor :data_inclusao
-
-    # Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
-    attr_accessor :data_ultima_atualizacao
-
     # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
     attr_accessor :id
 
@@ -52,37 +34,43 @@ module Pier
     # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
     attr_accessor :id_tipo_endereco
 
+    # Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
+    attr_accessor :cep
+
     # Apresenta o nome do Logradouro
     attr_accessor :logradouro
 
     # Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
     attr_accessor :numero
 
-    # Apresenta nome do Pais
-    attr_accessor :pais
+    # Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
+    attr_accessor :complemento
 
     # Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
     attr_accessor :ponto_referencia
 
+    # Apresenta nome do bairro
+    attr_accessor :bairro
+
+    # Apresenta nome da cidade
+    attr_accessor :cidade
+
     # Apresenta sigla da Unidade Federativa
     attr_accessor :uf
+
+    # Apresenta nome do Pais
+    attr_accessor :pais
+
+    # Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
+    attr_accessor :data_inclusao
+
+    # Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
+    attr_accessor :data_ultima_atualizacao
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        
-        :'bairro' => :'bairro',
-        
-        :'cep' => :'cep',
-        
-        :'cidade' => :'cidade',
-        
-        :'complemento' => :'complemento',
-        
-        :'data_inclusao' => :'dataInclusao',
-        
-        :'data_ultima_atualizacao' => :'dataUltimaAtualizacao',
         
         :'id' => :'id',
         
@@ -90,15 +78,27 @@ module Pier
         
         :'id_tipo_endereco' => :'idTipoEndereco',
         
+        :'cep' => :'cep',
+        
         :'logradouro' => :'logradouro',
         
         :'numero' => :'numero',
         
-        :'pais' => :'pais',
+        :'complemento' => :'complemento',
         
         :'ponto_referencia' => :'pontoReferencia',
         
-        :'uf' => :'uf'
+        :'bairro' => :'bairro',
+        
+        :'cidade' => :'cidade',
+        
+        :'uf' => :'uf',
+        
+        :'pais' => :'pais',
+        
+        :'data_inclusao' => :'dataInclusao',
+        
+        :'data_ultima_atualizacao' => :'dataUltimaAtualizacao'
         
       }
     end
@@ -107,33 +107,33 @@ module Pier
     def self.swagger_types
       {
         
-        :'bairro' => :'String',
-        
-        :'cep' => :'String',
-        
-        :'cidade' => :'String',
-        
-        :'complemento' => :'String',
-        
-        :'data_inclusao' => :'DateTime',
-        
-        :'data_ultima_atualizacao' => :'DateTime',
-        
         :'id' => :'Integer',
         
         :'id_pessoa' => :'Integer',
         
         :'id_tipo_endereco' => :'Integer',
         
+        :'cep' => :'String',
+        
         :'logradouro' => :'String',
         
         :'numero' => :'Integer',
         
-        :'pais' => :'String',
+        :'complemento' => :'String',
         
         :'ponto_referencia' => :'String',
         
-        :'uf' => :'String'
+        :'bairro' => :'String',
+        
+        :'cidade' => :'String',
+        
+        :'uf' => :'String',
+        
+        :'pais' => :'String',
+        
+        :'data_inclusao' => :'DateTime',
+        
+        :'data_ultima_atualizacao' => :'DateTime'
         
       }
     end
@@ -145,60 +145,6 @@ module Pier
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
-
-      
-      if attributes[:'bairro']
-        
-        
-        self.bairro = attributes[:'bairro']
-        
-      
-      end
-
-      
-      if attributes[:'cep']
-        
-        
-        self.cep = attributes[:'cep']
-        
-      
-      end
-
-      
-      if attributes[:'cidade']
-        
-        
-        self.cidade = attributes[:'cidade']
-        
-      
-      end
-
-      
-      if attributes[:'complemento']
-        
-        
-        self.complemento = attributes[:'complemento']
-        
-      
-      end
-
-      
-      if attributes[:'dataInclusao']
-        
-        
-        self.data_inclusao = attributes[:'dataInclusao']
-        
-      
-      end
-
-      
-      if attributes[:'dataUltimaAtualizacao']
-        
-        
-        self.data_ultima_atualizacao = attributes[:'dataUltimaAtualizacao']
-        
-      
-      end
 
       
       if attributes[:'id']
@@ -228,6 +174,15 @@ module Pier
       end
 
       
+      if attributes[:'cep']
+        
+        
+        self.cep = attributes[:'cep']
+        
+      
+      end
+
+      
       if attributes[:'logradouro']
         
         
@@ -246,10 +201,10 @@ module Pier
       end
 
       
-      if attributes[:'pais']
+      if attributes[:'complemento']
         
         
-        self.pais = attributes[:'pais']
+        self.complemento = attributes[:'complemento']
         
       
       end
@@ -264,10 +219,55 @@ module Pier
       end
 
       
+      if attributes[:'bairro']
+        
+        
+        self.bairro = attributes[:'bairro']
+        
+      
+      end
+
+      
+      if attributes[:'cidade']
+        
+        
+        self.cidade = attributes[:'cidade']
+        
+      
+      end
+
+      
       if attributes[:'uf']
         
         
         self.uf = attributes[:'uf']
+        
+      
+      end
+
+      
+      if attributes[:'pais']
+        
+        
+        self.pais = attributes[:'pais']
+        
+      
+      end
+
+      
+      if attributes[:'dataInclusao']
+        
+        
+        self.data_inclusao = attributes[:'dataInclusao']
+        
+      
+      end
+
+      
+      if attributes[:'dataUltimaAtualizacao']
+        
+        
+        self.data_ultima_atualizacao = attributes[:'dataUltimaAtualizacao']
         
       
       end
@@ -422,20 +422,20 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          bairro == o.bairro &&
-          cep == o.cep &&
-          cidade == o.cidade &&
-          complemento == o.complemento &&
-          data_inclusao == o.data_inclusao &&
-          data_ultima_atualizacao == o.data_ultima_atualizacao &&
           id == o.id &&
           id_pessoa == o.id_pessoa &&
           id_tipo_endereco == o.id_tipo_endereco &&
+          cep == o.cep &&
           logradouro == o.logradouro &&
           numero == o.numero &&
-          pais == o.pais &&
+          complemento == o.complemento &&
           ponto_referencia == o.ponto_referencia &&
-          uf == o.uf
+          bairro == o.bairro &&
+          cidade == o.cidade &&
+          uf == o.uf &&
+          pais == o.pais &&
+          data_inclusao == o.data_inclusao &&
+          data_ultima_atualizacao == o.data_ultima_atualizacao
     end
 
     # @see the `==` method
@@ -447,7 +447,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [bairro, cep, cidade, complemento, data_inclusao, data_ultima_atualizacao, id, id_pessoa, id_tipo_endereco, logradouro, numero, pais, ponto_referencia, uf].hash
+      [id, id_pessoa, id_tipo_endereco, cep, logradouro, numero, complemento, ponto_referencia, bairro, cidade, uf, pais, data_inclusao, data_ultima_atualizacao].hash
     end
 
     # Builds the object from hash

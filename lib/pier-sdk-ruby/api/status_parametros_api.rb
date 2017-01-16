@@ -34,34 +34,34 @@ module Pier
 
     # Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [EstagioCartao]
-    def consultar_estagio_cartao_using_get(id_estagio_cartao, opts = {})
-      data, _status_code, _headers = consultar_estagio_cartao_using_get_with_http_info(id_estagio_cartao, opts)
+    def consultar_estagio_cartao_using_get(id, opts = {})
+      data, _status_code, _headers = consultar_estagio_cartao_using_get_with_http_info(id, opts)
       return data
     end
 
     # Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(EstagioCartao, Fixnum, Hash)>] EstagioCartao data, response status code and response headers
-    def consultar_estagio_cartao_using_get_with_http_info(id_estagio_cartao, opts = {})
+    def consultar_estagio_cartao_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: StatusParametrosApi.consultar_estagio_cartao_using_get ..."
       end
       
       
-      # verify the required parameter 'id_estagio_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_estagio_cartao' when calling StatusParametrosApi.consultar_estagio_cartao_using_get" if id_estagio_cartao.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling StatusParametrosApi.consultar_estagio_cartao_using_get" if id.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/estagios-cartoes/{id_estagio_cartao}".sub('{format}','json').sub('{' + 'id_estagio_cartao' + '}', id_estagio_cartao.to_s)
+      local_var_path = "/api/estagios-cartoes/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -100,34 +100,34 @@ module Pier
 
     # Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [StatusCartao]
-    def consultar_status_cartao_using_get(id_status_cartao, opts = {})
-      data, _status_code, _headers = consultar_status_cartao_using_get_with_http_info(id_status_cartao, opts)
+    def consultar_status_cartao_using_get(id, opts = {})
+      data, _status_code, _headers = consultar_status_cartao_using_get_with_http_info(id, opts)
       return data
     end
 
     # Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(StatusCartao, Fixnum, Hash)>] StatusCartao data, response status code and response headers
-    def consultar_status_cartao_using_get_with_http_info(id_status_cartao, opts = {})
+    def consultar_status_cartao_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: StatusParametrosApi.consultar_status_cartao_using_get ..."
       end
       
       
-      # verify the required parameter 'id_status_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_status_cartao' when calling StatusParametrosApi.consultar_status_cartao_using_get" if id_status_cartao.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling StatusParametrosApi.consultar_status_cartao_using_get" if id.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/status-cartoes/{id_status_cartao}".sub('{format}','json').sub('{' + 'id_status_cartao' + '}', id_status_cartao.to_s)
+      local_var_path = "/api/status-cartoes/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -166,34 +166,34 @@ module Pier
 
     # Apresenta os dados de um determinado Status Conta
     # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_status_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
     # @param [Hash] opts the optional parameters
     # @return [StatusConta]
-    def consultar_using_get4(id_status_conta, opts = {})
-      data, _status_code, _headers = consultar_using_get4_with_http_info(id_status_conta, opts)
+    def consultar_using_get4(id, opts = {})
+      data, _status_code, _headers = consultar_using_get4_with_http_info(id, opts)
       return data
     end
 
     # Apresenta os dados de um determinado Status Conta
     # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_status_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(StatusConta, Fixnum, Hash)>] StatusConta data, response status code and response headers
-    def consultar_using_get4_with_http_info(id_status_conta, opts = {})
+    def consultar_using_get4_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: StatusParametrosApi.consultar_using_get4 ..."
       end
       
       
-      # verify the required parameter 'id_status_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_status_conta' when calling StatusParametrosApi.consultar_using_get4" if id_status_conta.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling StatusParametrosApi.consultar_using_get4" if id.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/status-contas/{id_status_conta}".sub('{format}','json').sub('{' + 'id_status_conta' + '}', id_status_conta.to_s)
+      local_var_path = "/api/status-contas/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -232,34 +232,34 @@ module Pier
 
     # Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [StatusImpressao]
-    def consultar_using_get5(id_status_impressao, opts = {})
-      data, _status_code, _headers = consultar_using_get5_with_http_info(id_status_impressao, opts)
+    def consultar_using_get5(id, opts = {})
+      data, _status_code, _headers = consultar_using_get5_with_http_info(id, opts)
       return data
     end
 
     # Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(StatusImpressao, Fixnum, Hash)>] StatusImpressao data, response status code and response headers
-    def consultar_using_get5_with_http_info(id_status_impressao, opts = {})
+    def consultar_using_get5_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: StatusParametrosApi.consultar_using_get5 ..."
       end
       
       
-      # verify the required parameter 'id_status_impressao' is set
-      fail ArgumentError, "Missing the required parameter 'id_status_impressao' when calling StatusParametrosApi.consultar_using_get5" if id_status_impressao.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling StatusParametrosApi.consultar_using_get5" if id.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/status-impressoes/{id_status_impressao}".sub('{format}','json').sub('{' + 'id_status_impressao' + '}', id_status_impressao.to_s)
+      local_var_path = "/api/status-impressoes/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -299,10 +299,10 @@ module Pier
     # Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
-    # @option opts [String] :nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
+    # @option opts [String] :nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
     # @return [PageEstagiosCartoes]
     def listar_estagios_cartoes_using_get(opts = {})
       data, _status_code, _headers = listar_estagios_cartoes_using_get_with_http_info(opts)
@@ -312,10 +312,10 @@ module Pier
     # Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
-    # @option opts [String] :nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
+    # @option opts [String] :nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
     # @return [Array<(PageEstagiosCartoes, Fixnum, Hash)>] PageEstagiosCartoes data, response status code and response headers
     def listar_estagios_cartoes_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -351,10 +351,10 @@ module Pier
 
       # query parameters
       query_params = {}
-      query_params[:'id'] = opts[:'id'] if opts[:'id']
-      query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'id'] = opts[:'id'] if opts[:'id']
+      query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
 
       # header parameters
       header_params = {}
@@ -391,6 +391,8 @@ module Pier
     # Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite que sejam listadas as possibilidades de Status que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
     # @option opts [String] :nome Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.
     # @option opts [Integer] :flag_cancela_cartao Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta.
@@ -398,8 +400,6 @@ module Pier
     # @option opts [Integer] :id_status_destino_desbloqueio Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
     # @option opts [Integer] :id_status_destino_conta Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.
     # @option opts [Integer] :flag_cobra_tarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [PageStatusCartoes]
     def listar_status_cartoes_using_get(opts = {})
       data, _status_code, _headers = listar_status_cartoes_using_get_with_http_info(opts)
@@ -409,6 +409,8 @@ module Pier
     # Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite que sejam listadas as possibilidades de Status que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
     # @option opts [String] :nome Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.
     # @option opts [Integer] :flag_cancela_cartao Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta.
@@ -416,8 +418,6 @@ module Pier
     # @option opts [Integer] :id_status_destino_desbloqueio Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
     # @option opts [Integer] :id_status_destino_conta Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.
     # @option opts [Integer] :flag_cobra_tarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Array<(PageStatusCartoes, Fixnum, Hash)>] PageStatusCartoes data, response status code and response headers
     def listar_status_cartoes_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -483,6 +483,8 @@ module Pier
 
       # query parameters
       query_params = {}
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'id'] = opts[:'id'] if opts[:'id']
       query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
       query_params[:'flagCancelaCartao'] = opts[:'flag_cancela_cartao'] if opts[:'flag_cancela_cartao']
@@ -490,8 +492,6 @@ module Pier
       query_params[:'idStatusDestinoDesbloqueio'] = opts[:'id_status_destino_desbloqueio'] if opts[:'id_status_destino_desbloqueio']
       query_params[:'idStatusDestinoConta'] = opts[:'id_status_destino_conta'] if opts[:'id_status_destino_conta']
       query_params[:'flagCobraTarifa'] = opts[:'flag_cobra_tarifa'] if opts[:'flag_cobra_tarifa']
-      query_params[:'page'] = opts[:'page'] if opts[:'page']
-      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
 
       # header parameters
       header_params = {}
@@ -528,12 +528,12 @@ module Pier
     # Lista os Status Contas cadastrados para o Emissor
     # Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
     # @option opts [String] :nome Nome atribu\u00C3\u00ADdo ao Status da Conta.
     # @option opts [Integer] :flag_altera_limite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
     # @option opts [String] :mensagem_consulta_negada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [PageStatusContas]
     def listar_using_get5(opts = {})
       data, _status_code, _headers = listar_using_get5_with_http_info(opts)
@@ -543,12 +543,12 @@ module Pier
     # Lista os Status Contas cadastrados para o Emissor
     # Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
     # @option opts [String] :nome Nome atribu\u00C3\u00ADdo ao Status da Conta.
     # @option opts [Integer] :flag_altera_limite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
     # @option opts [String] :mensagem_consulta_negada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Array<(PageStatusContas, Fixnum, Hash)>] PageStatusContas data, response status code and response headers
     def listar_using_get5_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -596,12 +596,12 @@ module Pier
 
       # query parameters
       query_params = {}
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'id'] = opts[:'id'] if opts[:'id']
       query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
       query_params[:'flagAlteraLimite'] = opts[:'flag_altera_limite'] if opts[:'flag_altera_limite']
       query_params[:'mensagemConsultaNegada'] = opts[:'mensagem_consulta_negada'] if opts[:'mensagem_consulta_negada']
-      query_params[:'page'] = opts[:'page'] if opts[:'page']
-      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
 
       # header parameters
       header_params = {}
@@ -638,10 +638,10 @@ module Pier
     # Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
-    # @option opts [String] :nome Nome do status impress\u00C3\u00A3o
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
+    # @option opts [String] :nome Nome do status impress\u00C3\u00A3o
     # @return [PageStatusImpressao]
     def listar_using_get6(opts = {})
       data, _status_code, _headers = listar_using_get6_with_http_info(opts)
@@ -651,10 +651,10 @@ module Pier
     # Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
-    # @option opts [String] :nome Nome do status impress\u00C3\u00A3o
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
+    # @option opts [String] :nome Nome do status impress\u00C3\u00A3o
     # @return [Array<(PageStatusImpressao, Fixnum, Hash)>] PageStatusImpressao data, response status code and response headers
     def listar_using_get6_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -690,10 +690,10 @@ module Pier
 
       # query parameters
       query_params = {}
-      query_params[:'id'] = opts[:'id'] if opts[:'id']
-      query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'id'] = opts[:'id'] if opts[:'id']
+      query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
 
       # header parameters
       header_params = {}

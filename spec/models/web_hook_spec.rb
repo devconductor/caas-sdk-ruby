@@ -43,7 +43,7 @@ describe 'WebHook' do
     end
   end
 
-  describe 'test attribute "evento"' do
+  describe 'test attribute "id"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -54,7 +54,7 @@ describe 'WebHook' do
   end
 
 
-  describe 'test attribute "id"' do
+  describe 'test attribute "evento"' do
     it 'should work' do
        # assertion here
        # should be_a()

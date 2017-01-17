@@ -24,7 +24,7 @@ Method | HTTP request | Description
 
 
 # **alterar_status_impressao_using_put**
-> HistoricoImpressaoCartao alterar_status_impressao_using_put(id, opts)
+> HistoricoImpressaoCartao alterar_status_impressao_using_put(id, id_status_impressao)
 
 Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
 
@@ -48,13 +48,12 @@ api_instance = Pier::CartaoApi.new
 
 id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
 
-opts = { 
-  id_status_impressao: 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).
-}
+id_status_impressao = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).
+
 
 begin
   #Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
-  result = api_instance.alterar_status_impressao_using_put(id, opts)
+  result = api_instance.alterar_status_impressao_using_put(id, id_status_impressao)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling CartaoApi->alterar_status_impressao_using_put: #{e}"
@@ -66,7 +65,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
- **id_status_impressao** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id). | [optional] 
+ **id_status_impressao** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id). | 
 
 
 ### Return type

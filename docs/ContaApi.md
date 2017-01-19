@@ -9,9 +9,9 @@ Method | HTTP request | Description
 [**consultar_limite_disponibilidade_using_get1**](ContaApi.md#consultar_limite_disponibilidade_using_get1) | **GET** /api/contas/{id}/limites-disponibilidades | Apresenta os limites da conta
 [**consultar_using_get1**](ContaApi.md#consultar_using_get1) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
 [**gerar_cartao_using_post**](ContaApi.md#gerar_cartao_using_post) | **POST** /api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
-[**listar_faturas_using_get**](ContaApi.md#listar_faturas_using_get) | **GET** /api/contas/{id_conta}/faturas | Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
+[**listar_faturas_using_get**](ContaApi.md#listar_faturas_using_get) | **GET** /api/contas/{id_conta}/faturas | Listar Faturas da Conta
 [**listar_using_get1**](ContaApi.md#listar_using_get1) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
-[**transacoes_using_post**](ContaApi.md#transacoes_using_post) | **POST** /api/contas/{id_conta}/transacoes | Permite listar todas as transa\u00C3\u00A7\u00C3\u00B5es da Conta
+[**transacoes_using_post**](ContaApi.md#transacoes_using_post) | **POST** /api/contas/{id_conta}/timeline | Permite listar uma linha do tempo com os eventos da conta
 
 
 
@@ -349,6 +349,8 @@ Name | Type | Description  | Notes
 # **listar_faturas_using_get**
 > Fatura listar_faturas_using_get(opts)
 
+Listar Faturas da Conta
+
 Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
 
 ### Example
@@ -375,7 +377,7 @@ opts = {
 }
 
 begin
-  #Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
+  #Listar Faturas da Conta
   result = api_instance.listar_faturas_using_get(opts)
   p result
 rescue Pier::ApiError => e
@@ -493,7 +495,9 @@ Name | Type | Description  | Notes
 # **transacoes_using_post**
 > PageTransacaoResponse transacoes_using_post(opts)
 
-Permite listar todas as transa\u00C3\u00A7\u00C3\u00B5es da Conta
+Permite listar uma linha do tempo com os eventos da conta
+
+Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
 
 ### Example
 ```ruby
@@ -518,7 +522,7 @@ opts = {
 }
 
 begin
-  #Permite listar todas as transa\u00C3\u00A7\u00C3\u00B5es da Conta
+  #Permite listar uma linha do tempo com os eventos da conta
   result = api_instance.transacoes_using_post(opts)
   p result
 rescue Pier::ApiError => e

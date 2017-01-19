@@ -23,22 +23,37 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Status Conta
-  class StatusConta
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
+  # Lote Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pagos
+  class LoteCartoesPrePagos
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos (id).
     attr_accessor :id
 
-    # Nome atribu\u00C3\u00ADdo ao Status da Conta.
-    attr_accessor :nome
+    # C\u00C3\u00B3digo identificador da origem comercial.
+    attr_accessor :id_origem_comercial
 
-    # Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
-    attr_accessor :flag_altera_limite
+    # C\u00C3\u00B3digo identificador do Produto.
+    attr_accessor :id_produto
 
-    # Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
-    attr_accessor :mensagem_consulta_negada
+    # C\u00C3\u00B3digo identificador do tipo do cart\u00C3\u00A3o.
+    attr_accessor :id_tipo_cartao
 
-    # Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
-    attr_accessor :flag_permite_nova_via_cartao
+    # C\u00C3\u00B3digo identificador da Imagem do cart\u00C3\u00A3o.
+    attr_accessor :id_imagem
+
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o.
+    attr_accessor :id_endereco
+
+    # N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
+    attr_accessor :quantidade_cartoes
+
+    # Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos.
+    attr_accessor :data_cadastro
+
+    # Nome do usu\u00C3\u00A1rio que criou o lote.
+    attr_accessor :usuario_cadastro
+
+    # Indica o status de processamento do lote.
+    attr_accessor :status_processamento
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -47,13 +62,23 @@ module Pier
         
         :'id' => :'id',
         
-        :'nome' => :'nome',
+        :'id_origem_comercial' => :'idOrigemComercial',
         
-        :'flag_altera_limite' => :'flagAlteraLimite',
+        :'id_produto' => :'idProduto',
         
-        :'mensagem_consulta_negada' => :'mensagemConsultaNegada',
+        :'id_tipo_cartao' => :'idTipoCartao',
         
-        :'flag_permite_nova_via_cartao' => :'flagPermiteNovaViaCartao'
+        :'id_imagem' => :'idImagem',
+        
+        :'id_endereco' => :'idEndereco',
+        
+        :'quantidade_cartoes' => :'quantidadeCartoes',
+        
+        :'data_cadastro' => :'dataCadastro',
+        
+        :'usuario_cadastro' => :'usuarioCadastro',
+        
+        :'status_processamento' => :'statusProcessamento'
         
       }
     end
@@ -64,13 +89,23 @@ module Pier
         
         :'id' => :'Integer',
         
-        :'nome' => :'String',
+        :'id_origem_comercial' => :'Integer',
         
-        :'flag_altera_limite' => :'Integer',
+        :'id_produto' => :'Integer',
         
-        :'mensagem_consulta_negada' => :'String',
+        :'id_tipo_cartao' => :'Integer',
         
-        :'flag_permite_nova_via_cartao' => :'Integer'
+        :'id_imagem' => :'Integer',
+        
+        :'id_endereco' => :'Integer',
+        
+        :'quantidade_cartoes' => :'Integer',
+        
+        :'data_cadastro' => :'DateTime',
+        
+        :'usuario_cadastro' => :'String',
+        
+        :'status_processamento' => :'Integer'
         
       }
     end
@@ -93,37 +128,82 @@ module Pier
       end
 
       
-      if attributes[:'nome']
+      if attributes[:'idOrigemComercial']
         
         
-        self.nome = attributes[:'nome']
-        
-      
-      end
-
-      
-      if attributes[:'flagAlteraLimite']
-        
-        
-        self.flag_altera_limite = attributes[:'flagAlteraLimite']
+        self.id_origem_comercial = attributes[:'idOrigemComercial']
         
       
       end
 
       
-      if attributes[:'mensagemConsultaNegada']
+      if attributes[:'idProduto']
         
         
-        self.mensagem_consulta_negada = attributes[:'mensagemConsultaNegada']
+        self.id_produto = attributes[:'idProduto']
         
       
       end
 
       
-      if attributes[:'flagPermiteNovaViaCartao']
+      if attributes[:'idTipoCartao']
         
         
-        self.flag_permite_nova_via_cartao = attributes[:'flagPermiteNovaViaCartao']
+        self.id_tipo_cartao = attributes[:'idTipoCartao']
+        
+      
+      end
+
+      
+      if attributes[:'idImagem']
+        
+        
+        self.id_imagem = attributes[:'idImagem']
+        
+      
+      end
+
+      
+      if attributes[:'idEndereco']
+        
+        
+        self.id_endereco = attributes[:'idEndereco']
+        
+      
+      end
+
+      
+      if attributes[:'quantidadeCartoes']
+        
+        
+        self.quantidade_cartoes = attributes[:'quantidadeCartoes']
+        
+      
+      end
+
+      
+      if attributes[:'dataCadastro']
+        
+        
+        self.data_cadastro = attributes[:'dataCadastro']
+        
+      
+      end
+
+      
+      if attributes[:'usuarioCadastro']
+        
+        
+        self.usuario_cadastro = attributes[:'usuarioCadastro']
+        
+      
+      end
+
+      
+      if attributes[:'statusProcessamento']
+        
+        
+        self.status_processamento = attributes[:'statusProcessamento']
         
       
       end
@@ -154,7 +234,7 @@ module Pier
       
       
       
-      if @nome.nil?
+      if @id_origem_comercial.nil?
         return false
       end
 
@@ -163,7 +243,7 @@ module Pier
       
       
       
-      if @flag_altera_limite.nil?
+      if @id_produto.nil?
         return false
       end
 
@@ -172,15 +252,95 @@ module Pier
       
       
       
+      if @id_tipo_cartao.nil?
+        return false
+      end
+
       
       
       
+      
+      
+      if @id_imagem.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @id_endereco.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @quantidade_cartoes.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @data_cadastro.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @usuario_cadastro.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @status_processamento.nil?
+        return false
+      end
+
       
       
       
       
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -213,10 +373,15 @@ module Pier
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          nome == o.nome &&
-          flag_altera_limite == o.flag_altera_limite &&
-          mensagem_consulta_negada == o.mensagem_consulta_negada &&
-          flag_permite_nova_via_cartao == o.flag_permite_nova_via_cartao
+          id_origem_comercial == o.id_origem_comercial &&
+          id_produto == o.id_produto &&
+          id_tipo_cartao == o.id_tipo_cartao &&
+          id_imagem == o.id_imagem &&
+          id_endereco == o.id_endereco &&
+          quantidade_cartoes == o.quantidade_cartoes &&
+          data_cadastro == o.data_cadastro &&
+          usuario_cadastro == o.usuario_cadastro &&
+          status_processamento == o.status_processamento
     end
 
     # @see the `==` method
@@ -228,7 +393,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, nome, flag_altera_limite, mensagem_consulta_negada, flag_permite_nova_via_cartao].hash
+      [id, id_origem_comercial, id_produto, id_tipo_cartao, id_imagem, id_endereco, quantidade_cartoes, data_cadastro, usuario_cadastro, status_processamento].hash
     end
 
     # Builds the object from hash

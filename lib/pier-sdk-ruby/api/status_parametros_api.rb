@@ -400,6 +400,7 @@ module Pier
     # @option opts [Integer] :id_status_destino_desbloqueio Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
     # @option opts [Integer] :id_status_destino_conta Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.
     # @option opts [Integer] :flag_cobra_tarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
+    # @option opts [Integer] :flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
     # @return [PageStatusCartoes]
     def listar_status_cartoes_using_get(opts = {})
       data, _status_code, _headers = listar_status_cartoes_using_get_with_http_info(opts)
@@ -418,11 +419,18 @@ module Pier
     # @option opts [Integer] :id_status_destino_desbloqueio Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
     # @option opts [Integer] :id_status_destino_conta Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.
     # @option opts [Integer] :flag_cobra_tarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
+    # @option opts [Integer] :flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
     # @return [Array<(PageStatusCartoes, Fixnum, Hash)>] PageStatusCartoes data, response status code and response headers
     def listar_status_cartoes_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: StatusParametrosApi.listar_status_cartoes_using_get ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -492,6 +500,7 @@ module Pier
       query_params[:'idStatusDestinoDesbloqueio'] = opts[:'id_status_destino_desbloqueio'] if opts[:'id_status_destino_desbloqueio']
       query_params[:'idStatusDestinoConta'] = opts[:'id_status_destino_conta'] if opts[:'id_status_destino_conta']
       query_params[:'flagCobraTarifa'] = opts[:'flag_cobra_tarifa'] if opts[:'flag_cobra_tarifa']
+      query_params[:'flagPermiteNovaViaCartao'] = opts[:'flag_permite_nova_via_cartao'] if opts[:'flag_permite_nova_via_cartao']
 
       # header parameters
       header_params = {}
@@ -534,6 +543,7 @@ module Pier
     # @option opts [String] :nome Nome atribu\u00C3\u00ADdo ao Status da Conta.
     # @option opts [Integer] :flag_altera_limite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
     # @option opts [String] :mensagem_consulta_negada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
+    # @option opts [Integer] :flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
     # @return [PageStatusContas]
     def listar_using_get5(opts = {})
       data, _status_code, _headers = listar_using_get5_with_http_info(opts)
@@ -549,11 +559,18 @@ module Pier
     # @option opts [String] :nome Nome atribu\u00C3\u00ADdo ao Status da Conta.
     # @option opts [Integer] :flag_altera_limite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
     # @option opts [String] :mensagem_consulta_negada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
+    # @option opts [Integer] :flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
     # @return [Array<(PageStatusContas, Fixnum, Hash)>] PageStatusContas data, response status code and response headers
     def listar_using_get5_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: StatusParametrosApi.listar_using_get5 ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -602,6 +619,7 @@ module Pier
       query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
       query_params[:'flagAlteraLimite'] = opts[:'flag_altera_limite'] if opts[:'flag_altera_limite']
       query_params[:'mensagemConsultaNegada'] = opts[:'mensagem_consulta_negada'] if opts[:'mensagem_consulta_negada']
+      query_params[:'flagPermiteNovaViaCartao'] = opts[:'flag_permite_nova_via_cartao'] if opts[:'flag_permite_nova_via_cartao']
 
       # header parameters
       header_params = {}

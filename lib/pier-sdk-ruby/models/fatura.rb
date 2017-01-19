@@ -23,37 +23,67 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Status Conta
-  class StatusConta
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
-    attr_accessor :id
+  # Objeto Fatura
+  class Fatura
+    # Data de Vencimento da Fatura.
+    attr_accessor :data_vencimento
 
-    # Nome atribu\u00C3\u00ADdo ao Status da Conta.
-    attr_accessor :nome
+    # Saldo da Fatura Anterior.
+    attr_accessor :saldo_fatura_anterior
 
-    # Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
-    attr_accessor :flag_altera_limite
+    # Saldo total da Multa lan\u00C3\u00A7ada na Fatura atual.
+    attr_accessor :saldo_multa
 
-    # Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
-    attr_accessor :mensagem_consulta_negada
+    # Saldo total das Compras lan\u00C3\u00A7adas na Fatura atual.
+    attr_accessor :saldo_compras
 
-    # Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
-    attr_accessor :flag_permite_nova_via_cartao
+    # Saldo total dos Pagamentos lan\u00C3\u00A7ados na Fatura atual.
+    attr_accessor :saldo_pagamentos
+
+    # Saldo total das Tarifas lan\u00C3\u00A7adas na Fatura atual.
+    attr_accessor :saldo_tarifas
+
+    # Saldo total dos D\u00C3\u00A9bitos lan\u00C3\u00A7ados na Fatura atual.
+    attr_accessor :saldo_debitos
+
+    # Saldo total dos Cr\u00C3\u00A9dito lan\u00C3\u00A7ados na Fatura atual.
+    attr_accessor :saldo_creditos
+
+    # Salto total devedor da Fatura atual.
+    attr_accessor :saldo_atual_final
+
+    # Valor m\u00C3\u00ADnimo para Pagamento da Fatura.
+    attr_accessor :valor_minimo_fatura
+
+    # Quando ativa, indica que fora emitida uma Fatura.
+    attr_accessor :flag_emite_fatura
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id' => :'id',
+        :'data_vencimento' => :'dataVencimento',
         
-        :'nome' => :'nome',
+        :'saldo_fatura_anterior' => :'saldoFaturaAnterior',
         
-        :'flag_altera_limite' => :'flagAlteraLimite',
+        :'saldo_multa' => :'saldoMulta',
         
-        :'mensagem_consulta_negada' => :'mensagemConsultaNegada',
+        :'saldo_compras' => :'saldoCompras',
         
-        :'flag_permite_nova_via_cartao' => :'flagPermiteNovaViaCartao'
+        :'saldo_pagamentos' => :'saldoPagamentos',
+        
+        :'saldo_tarifas' => :'saldoTarifas',
+        
+        :'saldo_debitos' => :'saldoDebitos',
+        
+        :'saldo_creditos' => :'saldoCreditos',
+        
+        :'saldo_atual_final' => :'saldoAtualFinal',
+        
+        :'valor_minimo_fatura' => :'valorMinimoFatura',
+        
+        :'flag_emite_fatura' => :'flagEmiteFatura'
         
       }
     end
@@ -62,15 +92,27 @@ module Pier
     def self.swagger_types
       {
         
-        :'id' => :'Integer',
+        :'data_vencimento' => :'Date',
         
-        :'nome' => :'String',
+        :'saldo_fatura_anterior' => :'Float',
         
-        :'flag_altera_limite' => :'Integer',
+        :'saldo_multa' => :'Float',
         
-        :'mensagem_consulta_negada' => :'String',
+        :'saldo_compras' => :'Float',
         
-        :'flag_permite_nova_via_cartao' => :'Integer'
+        :'saldo_pagamentos' => :'Float',
+        
+        :'saldo_tarifas' => :'Float',
+        
+        :'saldo_debitos' => :'Float',
+        
+        :'saldo_creditos' => :'Float',
+        
+        :'saldo_atual_final' => :'Float',
+        
+        :'valor_minimo_fatura' => :'Float',
+        
+        :'flag_emite_fatura' => :'Integer'
         
       }
     end
@@ -84,46 +126,100 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'id']
+      if attributes[:'dataVencimento']
         
         
-        self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes[:'nome']
-        
-        
-        self.nome = attributes[:'nome']
+        self.data_vencimento = attributes[:'dataVencimento']
         
       
       end
 
       
-      if attributes[:'flagAlteraLimite']
+      if attributes[:'saldoFaturaAnterior']
         
         
-        self.flag_altera_limite = attributes[:'flagAlteraLimite']
-        
-      
-      end
-
-      
-      if attributes[:'mensagemConsultaNegada']
-        
-        
-        self.mensagem_consulta_negada = attributes[:'mensagemConsultaNegada']
+        self.saldo_fatura_anterior = attributes[:'saldoFaturaAnterior']
         
       
       end
 
       
-      if attributes[:'flagPermiteNovaViaCartao']
+      if attributes[:'saldoMulta']
         
         
-        self.flag_permite_nova_via_cartao = attributes[:'flagPermiteNovaViaCartao']
+        self.saldo_multa = attributes[:'saldoMulta']
+        
+      
+      end
+
+      
+      if attributes[:'saldoCompras']
+        
+        
+        self.saldo_compras = attributes[:'saldoCompras']
+        
+      
+      end
+
+      
+      if attributes[:'saldoPagamentos']
+        
+        
+        self.saldo_pagamentos = attributes[:'saldoPagamentos']
+        
+      
+      end
+
+      
+      if attributes[:'saldoTarifas']
+        
+        
+        self.saldo_tarifas = attributes[:'saldoTarifas']
+        
+      
+      end
+
+      
+      if attributes[:'saldoDebitos']
+        
+        
+        self.saldo_debitos = attributes[:'saldoDebitos']
+        
+      
+      end
+
+      
+      if attributes[:'saldoCreditos']
+        
+        
+        self.saldo_creditos = attributes[:'saldoCreditos']
+        
+      
+      end
+
+      
+      if attributes[:'saldoAtualFinal']
+        
+        
+        self.saldo_atual_final = attributes[:'saldoAtualFinal']
+        
+      
+      end
+
+      
+      if attributes[:'valorMinimoFatura']
+        
+        
+        self.valor_minimo_fatura = attributes[:'valorMinimoFatura']
+        
+      
+      end
+
+      
+      if attributes[:'flagEmiteFatura']
+        
+        
+        self.flag_emite_fatura = attributes[:'flagEmiteFatura']
         
       
       end
@@ -145,28 +241,37 @@ module Pier
     def valid?
       
       
-      if @id.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @nome.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @flag_altera_limite.nil?
-        return false
-      end
-
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -181,6 +286,36 @@ module Pier
       
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -212,11 +347,17 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          nome == o.nome &&
-          flag_altera_limite == o.flag_altera_limite &&
-          mensagem_consulta_negada == o.mensagem_consulta_negada &&
-          flag_permite_nova_via_cartao == o.flag_permite_nova_via_cartao
+          data_vencimento == o.data_vencimento &&
+          saldo_fatura_anterior == o.saldo_fatura_anterior &&
+          saldo_multa == o.saldo_multa &&
+          saldo_compras == o.saldo_compras &&
+          saldo_pagamentos == o.saldo_pagamentos &&
+          saldo_tarifas == o.saldo_tarifas &&
+          saldo_debitos == o.saldo_debitos &&
+          saldo_creditos == o.saldo_creditos &&
+          saldo_atual_final == o.saldo_atual_final &&
+          valor_minimo_fatura == o.valor_minimo_fatura &&
+          flag_emite_fatura == o.flag_emite_fatura
     end
 
     # @see the `==` method
@@ -228,7 +369,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, nome, flag_altera_limite, mensagem_consulta_negada, flag_permite_nova_via_cartao].hash
+      [data_vencimento, saldo_fatura_anterior, saldo_multa, saldo_compras, saldo_pagamentos, saldo_tarifas, saldo_debitos, saldo_creditos, saldo_atual_final, valor_minimo_fatura, flag_emite_fatura].hash
     end
 
     # Builds the object from hash

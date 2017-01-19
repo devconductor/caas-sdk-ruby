@@ -46,6 +46,9 @@ module Pier
     # Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
     attr_accessor :flag_cobra_tarifa
 
+    # Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
+    attr_accessor :flag_permite_nova_via_cartao
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -63,7 +66,9 @@ module Pier
         
         :'id_status_destino_conta' => :'idStatusDestinoConta',
         
-        :'flag_cobra_tarifa' => :'flagCobraTarifa'
+        :'flag_cobra_tarifa' => :'flagCobraTarifa',
+        
+        :'flag_permite_nova_via_cartao' => :'flagPermiteNovaViaCartao'
         
       }
     end
@@ -84,7 +89,9 @@ module Pier
         
         :'id_status_destino_conta' => :'Integer',
         
-        :'flag_cobra_tarifa' => :'Integer'
+        :'flag_cobra_tarifa' => :'Integer',
+        
+        :'flag_permite_nova_via_cartao' => :'Integer'
         
       }
     end
@@ -156,6 +163,15 @@ module Pier
         
         
         self.flag_cobra_tarifa = attributes[:'flagCobraTarifa']
+        
+      
+      end
+
+      
+      if attributes[:'flagPermiteNovaViaCartao']
+        
+        
+        self.flag_permite_nova_via_cartao = attributes[:'flagPermiteNovaViaCartao']
         
       
       end
@@ -234,8 +250,17 @@ module Pier
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -283,7 +308,8 @@ module Pier
           flag_cancela_no_desbloqueio == o.flag_cancela_no_desbloqueio &&
           id_status_destino_desbloqueio == o.id_status_destino_desbloqueio &&
           id_status_destino_conta == o.id_status_destino_conta &&
-          flag_cobra_tarifa == o.flag_cobra_tarifa
+          flag_cobra_tarifa == o.flag_cobra_tarifa &&
+          flag_permite_nova_via_cartao == o.flag_permite_nova_via_cartao
     end
 
     # @see the `==` method
@@ -295,7 +321,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, nome, flag_cancela_cartao, flag_cancela_no_desbloqueio, id_status_destino_desbloqueio, id_status_destino_conta, flag_cobra_tarifa].hash
+      [id, nome, flag_cancela_cartao, flag_cancela_no_desbloqueio, id_status_destino_desbloqueio, id_status_destino_conta, flag_cobra_tarifa, flag_permite_nova_via_cartao].hash
     end
 
     # Builds the object from hash

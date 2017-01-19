@@ -23,37 +23,68 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Status Conta
-  class StatusConta
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
-    attr_accessor :id
+  # Lista de transa\u00C3\u00A7\u00C3\u00B5es de uma conta
+  class PageTransacaoResponse
+    attr_accessor :content
 
-    # Nome atribu\u00C3\u00ADdo ao Status da Conta.
-    attr_accessor :nome
+    attr_accessor :first
 
-    # Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
-    attr_accessor :flag_altera_limite
+    attr_accessor :first_page
 
-    # Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
-    attr_accessor :mensagem_consulta_negada
+    attr_accessor :has_content
 
-    # Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
-    attr_accessor :flag_permite_nova_via_cartao
+    attr_accessor :has_next_page
+
+    attr_accessor :has_previous_page
+
+    attr_accessor :last
+
+    attr_accessor :next_page
+
+    attr_accessor :number
+
+    attr_accessor :number_of_elements
+
+    attr_accessor :previous_page
+
+    attr_accessor :size
+
+    attr_accessor :total_elements
+
+    attr_accessor :total_pages
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id' => :'id',
+        :'content' => :'content',
         
-        :'nome' => :'nome',
+        :'first' => :'first',
         
-        :'flag_altera_limite' => :'flagAlteraLimite',
+        :'first_page' => :'firstPage',
         
-        :'mensagem_consulta_negada' => :'mensagemConsultaNegada',
+        :'has_content' => :'hasContent',
         
-        :'flag_permite_nova_via_cartao' => :'flagPermiteNovaViaCartao'
+        :'has_next_page' => :'hasNextPage',
+        
+        :'has_previous_page' => :'hasPreviousPage',
+        
+        :'last' => :'last',
+        
+        :'next_page' => :'nextPage',
+        
+        :'number' => :'number',
+        
+        :'number_of_elements' => :'numberOfElements',
+        
+        :'previous_page' => :'previousPage',
+        
+        :'size' => :'size',
+        
+        :'total_elements' => :'totalElements',
+        
+        :'total_pages' => :'totalPages'
         
       }
     end
@@ -62,15 +93,33 @@ module Pier
     def self.swagger_types
       {
         
-        :'id' => :'Integer',
+        :'content' => :'Array<TransacaoResponse>',
         
-        :'nome' => :'String',
+        :'first' => :'BOOLEAN',
         
-        :'flag_altera_limite' => :'Integer',
+        :'first_page' => :'BOOLEAN',
         
-        :'mensagem_consulta_negada' => :'String',
+        :'has_content' => :'BOOLEAN',
         
-        :'flag_permite_nova_via_cartao' => :'Integer'
+        :'has_next_page' => :'BOOLEAN',
+        
+        :'has_previous_page' => :'BOOLEAN',
+        
+        :'last' => :'BOOLEAN',
+        
+        :'next_page' => :'Integer',
+        
+        :'number' => :'Integer',
+        
+        :'number_of_elements' => :'Integer',
+        
+        :'previous_page' => :'Integer',
+        
+        :'size' => :'Integer',
+        
+        :'total_elements' => :'Integer',
+        
+        :'total_pages' => :'Integer'
         
       }
     end
@@ -84,46 +133,129 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'id']
+      if attributes[:'content']
         
+        if (value = attributes[:'content']).is_a?(Array)
+          self.content = value
+        end
         
-        self.id = attributes[:'id']
         
       
       end
 
       
-      if attributes[:'nome']
+      if attributes[:'first']
         
         
-        self.nome = attributes[:'nome']
-        
-      
-      end
-
-      
-      if attributes[:'flagAlteraLimite']
-        
-        
-        self.flag_altera_limite = attributes[:'flagAlteraLimite']
+        self.first = attributes[:'first']
         
       
       end
 
       
-      if attributes[:'mensagemConsultaNegada']
+      if attributes[:'firstPage']
         
         
-        self.mensagem_consulta_negada = attributes[:'mensagemConsultaNegada']
+        self.first_page = attributes[:'firstPage']
         
       
       end
 
       
-      if attributes[:'flagPermiteNovaViaCartao']
+      if attributes[:'hasContent']
         
         
-        self.flag_permite_nova_via_cartao = attributes[:'flagPermiteNovaViaCartao']
+        self.has_content = attributes[:'hasContent']
+        
+      
+      end
+
+      
+      if attributes[:'hasNextPage']
+        
+        
+        self.has_next_page = attributes[:'hasNextPage']
+        
+      
+      end
+
+      
+      if attributes[:'hasPreviousPage']
+        
+        
+        self.has_previous_page = attributes[:'hasPreviousPage']
+        
+      
+      end
+
+      
+      if attributes[:'last']
+        
+        
+        self.last = attributes[:'last']
+        
+      
+      end
+
+      
+      if attributes[:'nextPage']
+        
+        
+        self.next_page = attributes[:'nextPage']
+        
+      
+      end
+
+      
+      if attributes[:'number']
+        
+        
+        self.number = attributes[:'number']
+        
+      
+      end
+
+      
+      if attributes[:'numberOfElements']
+        
+        
+        self.number_of_elements = attributes[:'numberOfElements']
+        
+      
+      end
+
+      
+      if attributes[:'previousPage']
+        
+        
+        self.previous_page = attributes[:'previousPage']
+        
+      
+      end
+
+      
+      if attributes[:'size']
+        
+        
+        self.size = attributes[:'size']
+        
+      
+      end
+
+      
+      if attributes[:'totalElements']
+        
+        
+        self.total_elements = attributes[:'totalElements']
+        
+      
+      end
+
+      
+      if attributes[:'totalPages']
+        
+        
+        self.total_pages = attributes[:'totalPages']
         
       
       end
@@ -145,28 +277,49 @@ module Pier
     def valid?
       
       
-      if @id.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @nome.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @flag_altera_limite.nil?
-        return false
-      end
-
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -181,6 +334,51 @@ module Pier
       
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -212,11 +410,20 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          nome == o.nome &&
-          flag_altera_limite == o.flag_altera_limite &&
-          mensagem_consulta_negada == o.mensagem_consulta_negada &&
-          flag_permite_nova_via_cartao == o.flag_permite_nova_via_cartao
+          content == o.content &&
+          first == o.first &&
+          first_page == o.first_page &&
+          has_content == o.has_content &&
+          has_next_page == o.has_next_page &&
+          has_previous_page == o.has_previous_page &&
+          last == o.last &&
+          next_page == o.next_page &&
+          number == o.number &&
+          number_of_elements == o.number_of_elements &&
+          previous_page == o.previous_page &&
+          size == o.size &&
+          total_elements == o.total_elements &&
+          total_pages == o.total_pages
     end
 
     # @see the `==` method
@@ -228,7 +435,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, nome, flag_altera_limite, mensagem_consulta_negada, flag_permite_nova_via_cartao].hash
+      [content, first, first_page, has_content, has_next_page, has_previous_page, last, next_page, number, number_of_elements, previous_page, size, total_elements, total_pages].hash
     end
 
     # Builds the object from hash

@@ -87,5 +87,16 @@ describe 'StatusConta' do
   end
 
 
+  describe 'test attribute "flag_permite_nova_via_cartao"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
 end
 

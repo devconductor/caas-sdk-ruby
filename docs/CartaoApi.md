@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**consultar_using_get**](CartaoApi.md#consultar_using_get) | **GET** /api/cartoes/{id} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
 [**desbloquear_using_put**](CartaoApi.md#desbloquear_using_put) | **PUT** /api/cartoes/{id}/desbloquear | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 [**gerar_lotes_cartoes_pre_pagos_using_post**](CartaoApi.md#gerar_lotes_cartoes_pre_pagos_using_post) | **POST** /api/cartoes/pre-pagos/lotes | Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
-[**gerar_nova_via_using_post**](CartaoApi.md#gerar_nova_via_using_post) | **POST** /api/cartoes/{id_cartao}/gerar-nova-via | Gerar uma nova via de Cart\u00C3\u00A3o
+[**gerar_nova_via_using_post**](CartaoApi.md#gerar_nova_via_using_post) | **POST** /api/cartoes/{id}/gerar-nova-via | Gerar uma nova via de Cart\u00C3\u00A3o
 [**listar_lotes_cartoes_pre_pagos_using_get**](CartaoApi.md#listar_lotes_cartoes_pre_pagos_using_get) | **GET** /api/cartoes/pre-pagos/lotes | Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**listar_using_get**](CartaoApi.md#listar_using_get) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 [**validar_cartao_chip_bandeirado_using_get**](CartaoApi.md#validar_cartao_chip_bandeirado_using_get) | **GET** /api/cartoes/bandeirados/validar-chip | Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do chip
@@ -574,7 +574,7 @@ Name | Type | Description  | Notes
 
 
 # **gerar_nova_via_using_post**
-> Cartao gerar_nova_via_using_post(id_cartao)
+> Cartao gerar_nova_via_using_post(id)
 
 Gerar uma nova via de Cart\u00C3\u00A3o
 
@@ -596,12 +596,12 @@ end
 
 api_instance = Pier::CartaoApi.new
 
-id_cartao = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
 
 
 begin
   #Gerar uma nova via de Cart\u00C3\u00A3o
-  result = api_instance.gerar_nova_via_using_post(id_cartao)
+  result = api_instance.gerar_nova_via_using_post(id)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling CartaoApi->gerar_nova_via_using_post: #{e}"
@@ -612,7 +612,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_cartao** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) | 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) | 
 
 
 ### Return type

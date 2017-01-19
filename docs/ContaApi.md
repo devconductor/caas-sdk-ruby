@@ -9,9 +9,9 @@ Method | HTTP request | Description
 [**consultar_limite_disponibilidade_using_get1**](ContaApi.md#consultar_limite_disponibilidade_using_get1) | **GET** /api/contas/{id}/limites-disponibilidades | Apresenta os limites da conta
 [**consultar_using_get1**](ContaApi.md#consultar_using_get1) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
 [**gerar_cartao_using_post**](ContaApi.md#gerar_cartao_using_post) | **POST** /api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
-[**listar_faturas_using_get**](ContaApi.md#listar_faturas_using_get) | **GET** /api/contas/{id_conta}/faturas | Listar Faturas da Conta
+[**listar_faturas_using_get**](ContaApi.md#listar_faturas_using_get) | **GET** /api/contas/{id}/faturas | Listar Faturas da Conta
 [**listar_using_get1**](ContaApi.md#listar_using_get1) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
-[**transacoes_using_post**](ContaApi.md#transacoes_using_post) | **POST** /api/contas/{id_conta}/timeline | Permite listar uma linha do tempo com os eventos da conta
+[**transacoes_using_get**](ContaApi.md#transacoes_using_get) | **GET** /api/contas/{id}/timeline | Permite listar uma linha do tempo com os eventos da conta
 
 
 
@@ -347,7 +347,7 @@ Name | Type | Description  | Notes
 
 
 # **listar_faturas_using_get**
-> Fatura listar_faturas_using_get(opts)
+> Fatura listar_faturas_using_get(id, opts)
 
 Listar Faturas da Conta
 
@@ -369,16 +369,17 @@ end
 
 api_instance = Pier::ContaApi.new
 
+id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
 opts = { 
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  id: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
   data_vencimento: Date.parse("2013-10-20") # Date | Data de Vencimento da Fatura.
 }
 
 begin
   #Listar Faturas da Conta
-  result = api_instance.listar_faturas_using_get(opts)
+  result = api_instance.listar_faturas_using_get(id, opts)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling ContaApi->listar_faturas_using_get: #{e}"
@@ -389,9 +390,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). | [optional] 
  **data_vencimento** | **Date**| Data de Vencimento da Fatura. | [optional] 
 
 
@@ -492,8 +493,8 @@ Name | Type | Description  | Notes
 
 
 
-# **transacoes_using_post**
-> PageTransacaoResponse transacoes_using_post(opts)
+# **transacoes_using_get**
+> PageTransacaoResponse transacoes_using_get(opts)
 
 Permite listar uma linha do tempo com os eventos da conta
 
@@ -523,10 +524,10 @@ opts = {
 
 begin
   #Permite listar uma linha do tempo com os eventos da conta
-  result = api_instance.transacoes_using_post(opts)
+  result = api_instance.transacoes_using_get(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->transacoes_using_post: #{e}"
+  puts "Exception when calling ContaApi->transacoes_using_get: #{e}"
 end
 ```
 

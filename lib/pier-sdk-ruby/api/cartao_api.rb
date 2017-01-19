@@ -727,34 +727,34 @@ module Pier
 
     # Gerar uma nova via de Cart\u00C3\u00A3o
     # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00C3\u00A7\u00C3\u00A3o de uma nova via de Cart\u00C3\u00A3o que ser\u00C3\u00A1 encaminhando para impress\u00C3\u00A3o e postagem de acordo com os fluxos padr\u00C3\u00B5es j\u00C3\u00A1 definidos pelo emissor. Para isso, \u00C3\u00A9 preciso que o cliente j\u00C3\u00A1 possua um cart\u00C3\u00A3o gerado e informar o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o deste (idCartao) para que ele possa utilizar esta opera\u00C3\u00A7\u00C3\u00A3o. Assim, esta funcionalidade se aplica apenas para a gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es f\u00C3\u00ADsicos.
-    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
     # @param [Hash] opts the optional parameters
     # @return [Cartao]
-    def gerar_nova_via_using_post(id_cartao, opts = {})
-      data, _status_code, _headers = gerar_nova_via_using_post_with_http_info(id_cartao, opts)
+    def gerar_nova_via_using_post(id, opts = {})
+      data, _status_code, _headers = gerar_nova_via_using_post_with_http_info(id, opts)
       return data
     end
 
     # Gerar uma nova via de Cart\u00C3\u00A3o
     # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00C3\u00A7\u00C3\u00A3o de uma nova via de Cart\u00C3\u00A3o que ser\u00C3\u00A1 encaminhando para impress\u00C3\u00A3o e postagem de acordo com os fluxos padr\u00C3\u00B5es j\u00C3\u00A1 definidos pelo emissor. Para isso, \u00C3\u00A9 preciso que o cliente j\u00C3\u00A1 possua um cart\u00C3\u00A3o gerado e informar o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o deste (idCartao) para que ele possa utilizar esta opera\u00C3\u00A7\u00C3\u00A3o. Assim, esta funcionalidade se aplica apenas para a gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es f\u00C3\u00ADsicos.
-    # @param id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
     # @param [Hash] opts the optional parameters
     # @return [Array<(Cartao, Fixnum, Hash)>] Cartao data, response status code and response headers
-    def gerar_nova_via_using_post_with_http_info(id_cartao, opts = {})
+    def gerar_nova_via_using_post_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CartaoApi.gerar_nova_via_using_post ..."
       end
       
       
-      # verify the required parameter 'id_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CartaoApi.gerar_nova_via_using_post" if id_cartao.nil?
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CartaoApi.gerar_nova_via_using_post" if id.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/cartoes/{id_cartao}/gerar-nova-via".sub('{format}','json').sub('{' + 'id_cartao' + '}', id_cartao.to_s)
+      local_var_path = "/api/cartoes/{id}/gerar-nova-via".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}

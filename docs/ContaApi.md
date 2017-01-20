@@ -494,7 +494,7 @@ Name | Type | Description  | Notes
 
 
 # **transacoes_using_get**
-> PageTransacaoResponse transacoes_using_get(opts)
+> PageTransacaoResponse transacoes_using_get(id, opts)
 
 Permite listar uma linha do tempo com os eventos da conta
 
@@ -516,15 +516,16 @@ end
 
 api_instance = Pier::ContaApi.new
 
+id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
 opts = { 
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  id_conta: 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 }
 
 begin
   #Permite listar uma linha do tempo com os eventos da conta
-  result = api_instance.transacoes_using_get(opts)
+  result = api_instance.transacoes_using_get(id, opts)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling ContaApi->transacoes_using_get: #{e}"
@@ -535,9 +536,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **id_conta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | [optional] 
 
 
 ### Return type

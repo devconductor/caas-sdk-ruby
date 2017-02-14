@@ -150,13 +150,13 @@ describe 'CartaoApi' do
   end
 
 
-  # unit tests for consultar_using_get
+  # unit tests for consultar_using_get1
   # Apresenta os dados de um determinado Cart\u00C3\u00A3o
   # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
   # @param [Hash] opts the optional parameters
   # @return [Cartao]
-  describe 'consultar_using_get test' do
+  describe 'consultar_using_get1 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -251,7 +251,7 @@ describe 'CartaoApi' do
   end
 
 
-  # unit tests for listar_using_get
+  # unit tests for listar_using_get1
   # Lista os Cart\u00C3\u00B5es gerados pelo Emissor
   # Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
   # @param [Hash] opts the optional parameters
@@ -276,7 +276,7 @@ describe 'CartaoApi' do
   # @option opts [Integer] :flag_provisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
   # @option opts [String] :codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
   # @return [PageCartoes]
-  describe 'listar_using_get test' do
+  describe 'listar_using_get1 test' do
     it "should work" do
       # assertion here
       # should be_a()

@@ -23,62 +23,47 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Portador
-  class Portador
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
-    attr_accessor :id_conta
+  # Objeto Notifica\u00C3\u00A7\u00C3\u00A3o
+  class NotificacaoSMSBody
+    # N\u00C3\u00BAmero sequencial \u00C3\u00BAnico
+    attr_accessor :nsu
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
-    attr_accessor :id_produto
-
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+    # C\u00C3\u00B3digo identificado da pessoa
     attr_accessor :id_pessoa
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
-    attr_accessor :id_parentesco
+    # C\u00C3\u00B3digo identificador da conta
+    attr_accessor :id_conta
 
-    # Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
-    attr_accessor :tipo_portador
+    # Apresenta o celular a ser eviado o SMS no formato 5588999999999 ou 5588999999999.
+    attr_accessor :celular
 
-    # Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
-    attr_accessor :nome_impresso
+    # Apresenta o texto do SMS a ser enviado
+    attr_accessor :conteudo
 
-    # Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
-    attr_accessor :id_tipo_cartao
+    # Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
+    attr_accessor :data_agendamento
 
-    # Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
-    attr_accessor :flag_ativo
-
-    # Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :data_cadastro_portador
-
-    # Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :data_cancelamento_portador
+    # Apresenta o evento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+    attr_accessor :evento
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id_conta' => :'idConta',
-        
-        :'id_produto' => :'idProduto',
+        :'nsu' => :'nsu',
         
         :'id_pessoa' => :'idPessoa',
         
-        :'id_parentesco' => :'idParentesco',
+        :'id_conta' => :'idConta',
         
-        :'tipo_portador' => :'tipoPortador',
+        :'celular' => :'celular',
         
-        :'nome_impresso' => :'nomeImpresso',
+        :'conteudo' => :'conteudo',
         
-        :'id_tipo_cartao' => :'idTipoCartao',
+        :'data_agendamento' => :'dataAgendamento',
         
-        :'flag_ativo' => :'flagAtivo',
-        
-        :'data_cadastro_portador' => :'dataCadastroPortador',
-        
-        :'data_cancelamento_portador' => :'dataCancelamentoPortador'
+        :'evento' => :'evento'
         
       }
     end
@@ -87,25 +72,19 @@ module Pier
     def self.swagger_types
       {
         
-        :'id_conta' => :'Integer',
-        
-        :'id_produto' => :'Integer',
+        :'nsu' => :'Integer',
         
         :'id_pessoa' => :'Integer',
         
-        :'id_parentesco' => :'Integer',
+        :'id_conta' => :'Integer',
         
-        :'tipo_portador' => :'String',
+        :'celular' => :'String',
         
-        :'nome_impresso' => :'String',
+        :'conteudo' => :'String',
         
-        :'id_tipo_cartao' => :'Integer',
+        :'data_agendamento' => :'DateTime',
         
-        :'flag_ativo' => :'Integer',
-        
-        :'data_cadastro_portador' => :'DateTime',
-        
-        :'data_cancelamento_portador' => :'DateTime'
+        :'evento' => :'String'
         
       }
     end
@@ -119,19 +98,10 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'idConta']
+      if attributes[:'nsu']
         
         
-        self.id_conta = attributes[:'idConta']
-        
-      
-      end
-
-      
-      if attributes[:'idProduto']
-        
-        
-        self.id_produto = attributes[:'idProduto']
+        self.nsu = attributes[:'nsu']
         
       
       end
@@ -146,64 +116,46 @@ module Pier
       end
 
       
-      if attributes[:'idParentesco']
+      if attributes[:'idConta']
         
         
-        self.id_parentesco = attributes[:'idParentesco']
-        
-      
-      end
-
-      
-      if attributes[:'tipoPortador']
-        
-        
-        self.tipo_portador = attributes[:'tipoPortador']
+        self.id_conta = attributes[:'idConta']
         
       
       end
 
       
-      if attributes[:'nomeImpresso']
+      if attributes[:'celular']
         
         
-        self.nome_impresso = attributes[:'nomeImpresso']
-        
-      
-      end
-
-      
-      if attributes[:'idTipoCartao']
-        
-        
-        self.id_tipo_cartao = attributes[:'idTipoCartao']
+        self.celular = attributes[:'celular']
         
       
       end
 
       
-      if attributes[:'flagAtivo']
+      if attributes[:'conteudo']
         
         
-        self.flag_ativo = attributes[:'flagAtivo']
-        
-      
-      end
-
-      
-      if attributes[:'dataCadastroPortador']
-        
-        
-        self.data_cadastro_portador = attributes[:'dataCadastroPortador']
+        self.conteudo = attributes[:'conteudo']
         
       
       end
 
       
-      if attributes[:'dataCancelamentoPortador']
+      if attributes[:'dataAgendamento']
         
         
-        self.data_cancelamento_portador = attributes[:'dataCancelamentoPortador']
+        self.data_agendamento = attributes[:'dataAgendamento']
+        
+      
+      end
+
+      
+      if attributes[:'evento']
+        
+        
+        self.evento = attributes[:'evento']
         
       
       end
@@ -225,6 +177,46 @@ module Pier
     def valid?
       
       
+      if @nsu.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @id_pessoa.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @id_conta.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @celular.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @conteudo.nil?
+        return false
+      end
+
       
       
       
@@ -234,33 +226,16 @@ module Pier
       
       
       
+      if @evento.nil?
+        return false
+      end
+
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+      allowed_values = ["RISCO_FRAUDE", "OUTROS"]
+      if @evento && !allowed_values.include?(@evento)
+        return false
+      end
       
       
       
@@ -298,22 +273,16 @@ module Pier
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] evento Object to be assigned
+    def evento=(evento)
+      allowed_values = ["RISCO_FRAUDE", "OUTROS"]
+      if evento && !allowed_values.include?(evento)
+        fail ArgumentError, "invalid value for 'evento', must be one of #{allowed_values}."
+      end
+      @evento = evento
+    end
+
     
     
     
@@ -322,16 +291,13 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id_conta == o.id_conta &&
-          id_produto == o.id_produto &&
+          nsu == o.nsu &&
           id_pessoa == o.id_pessoa &&
-          id_parentesco == o.id_parentesco &&
-          tipo_portador == o.tipo_portador &&
-          nome_impresso == o.nome_impresso &&
-          id_tipo_cartao == o.id_tipo_cartao &&
-          flag_ativo == o.flag_ativo &&
-          data_cadastro_portador == o.data_cadastro_portador &&
-          data_cancelamento_portador == o.data_cancelamento_portador
+          id_conta == o.id_conta &&
+          celular == o.celular &&
+          conteudo == o.conteudo &&
+          data_agendamento == o.data_agendamento &&
+          evento == o.evento
     end
 
     # @see the `==` method
@@ -343,7 +309,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_conta, id_produto, id_pessoa, id_parentesco, tipo_portador, nome_impresso, id_tipo_cartao, flag_ativo, data_cadastro_portador, data_cancelamento_portador].hash
+      [nsu, id_pessoa, id_conta, celular, conteudo, data_agendamento, evento].hash
     end
 
     # Builds the object from hash

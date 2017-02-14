@@ -7,10 +7,10 @@ Method | HTTP request | Description
 [**alterar_limite_using_put**](ContaApi.md#alterar_limite_using_put) | **PUT** /api/contas/{id}/alterar-limites | Alterar limite
 [**alterar_vencimento_using_put**](ContaApi.md#alterar_vencimento_using_put) | **PUT** /api/contas/{id}/alterar-vencimento | Alterar vencimento
 [**consultar_limite_disponibilidade_using_get1**](ContaApi.md#consultar_limite_disponibilidade_using_get1) | **GET** /api/contas/{id}/limites-disponibilidades | Apresenta os limites da conta
-[**consultar_using_get1**](ContaApi.md#consultar_using_get1) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
+[**consultar_using_get2**](ContaApi.md#consultar_using_get2) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
 [**gerar_cartao_using_post**](ContaApi.md#gerar_cartao_using_post) | **POST** /api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
 [**listar_faturas_using_get**](ContaApi.md#listar_faturas_using_get) | **GET** /api/contas/{id}/faturas | Listar Faturas da Conta
-[**listar_using_get1**](ContaApi.md#listar_using_get1) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
+[**listar_using_get2**](ContaApi.md#listar_using_get2) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
 [**transacoes_using_get**](ContaApi.md#transacoes_using_get) | **GET** /api/contas/{id}/timeline | Permite listar uma linha do tempo com os eventos da conta
 
 
@@ -229,8 +229,8 @@ Name | Type | Description  | Notes
 
 
 
-# **consultar_using_get1**
-> Conta consultar_using_get1(id)
+# **consultar_using_get2**
+> Conta consultar_using_get2(id)
 
 Apresenta dados de uma determinada conta
 
@@ -257,10 +257,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da
 
 begin
   #Apresenta dados de uma determinada conta
-  result = api_instance.consultar_using_get1(id)
+  result = api_instance.consultar_using_get2(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->consultar_using_get1: #{e}"
+  puts "Exception when calling ContaApi->consultar_using_get2: #{e}"
 end
 ```
 
@@ -288,9 +288,11 @@ Name | Type | Description  | Notes
 
 
 # **gerar_cartao_using_post**
-> CartaoImpressao gerar_cartao_using_post(id, id_pessoa)
+> CartaoImpressao gerar_cartao_using_post(id, id_pessoa, opts)
 
 Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
+
+Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
 
 ### Example
 ```ruby
@@ -312,10 +314,13 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da
 
 id_pessoa = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
 
+opts = { 
+  id_tipo_plastico: 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id).
+}
 
 begin
   #Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
-  result = api_instance.gerar_cartao_using_post(id, id_pessoa)
+  result = api_instance.gerar_cartao_using_post(id, id_pessoa, opts)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling ContaApi->gerar_cartao_using_post: #{e}"
@@ -328,6 +333,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **id_pessoa** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). | 
+ **id_tipo_plastico** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). | [optional] 
 
 
 ### Return type
@@ -347,7 +353,7 @@ Name | Type | Description  | Notes
 
 
 # **listar_faturas_using_get**
-> Fatura listar_faturas_using_get(id, opts)
+> FaturaResponse listar_faturas_using_get(id, opts)
 
 Listar Faturas da Conta
 
@@ -398,7 +404,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Fatura**](Fatura.md)
+[**FaturaResponse**](FaturaResponse.md)
 
 ### Authorization
 
@@ -412,8 +418,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get1**
-> Conta listar_using_get1(opts)
+# **listar_using_get2**
+> Conta listar_using_get2(opts)
 
 Lista contas existentes na base de dados do Emissor
 
@@ -452,10 +458,10 @@ opts = {
 
 begin
   #Lista contas existentes na base de dados do Emissor
-  result = api_instance.listar_using_get1(opts)
+  result = api_instance.listar_using_get2(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->listar_using_get1: #{e}"
+  puts "Exception when calling ContaApi->listar_using_get2: #{e}"
 end
 ```
 

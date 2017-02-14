@@ -23,62 +23,37 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Portador
-  class Portador
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
-    attr_accessor :id_conta
+  # Objeto de resposta para historico de telefones
+  class HistoricoTelefone
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+    attr_accessor :id
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
-    attr_accessor :id_produto
+    # Apresenta o N\u00C3\u00BAmero do telefone.
+    attr_accessor :telefone
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
-    attr_accessor :id_pessoa
+    # Apresenta o id do tipo do telefone.
+    attr_accessor :id_tipo_telefone
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
-    attr_accessor :id_parentesco
+    # Apresenta a descri\u00C3\u00A7\u00C3\u00A3o do tipo do telefone.
+    attr_accessor :tipo_telefone
 
-    # Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
-    attr_accessor :tipo_portador
-
-    # Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
-    attr_accessor :nome_impresso
-
-    # Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
-    attr_accessor :id_tipo_cartao
-
-    # Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
-    attr_accessor :flag_ativo
-
-    # Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :data_cadastro_portador
-
-    # Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :data_cancelamento_portador
+    # Apresenta a data que o telefone fora alterado.
+    attr_accessor :data_modificacao
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id_conta' => :'idConta',
+        :'id' => :'id',
         
-        :'id_produto' => :'idProduto',
+        :'telefone' => :'telefone',
         
-        :'id_pessoa' => :'idPessoa',
+        :'id_tipo_telefone' => :'idTipoTelefone',
         
-        :'id_parentesco' => :'idParentesco',
+        :'tipo_telefone' => :'tipoTelefone',
         
-        :'tipo_portador' => :'tipoPortador',
-        
-        :'nome_impresso' => :'nomeImpresso',
-        
-        :'id_tipo_cartao' => :'idTipoCartao',
-        
-        :'flag_ativo' => :'flagAtivo',
-        
-        :'data_cadastro_portador' => :'dataCadastroPortador',
-        
-        :'data_cancelamento_portador' => :'dataCancelamentoPortador'
+        :'data_modificacao' => :'dataModificacao'
         
       }
     end
@@ -87,25 +62,15 @@ module Pier
     def self.swagger_types
       {
         
-        :'id_conta' => :'Integer',
+        :'id' => :'Integer',
         
-        :'id_produto' => :'Integer',
+        :'telefone' => :'String',
         
-        :'id_pessoa' => :'Integer',
+        :'id_tipo_telefone' => :'Integer',
         
-        :'id_parentesco' => :'Integer',
+        :'tipo_telefone' => :'String',
         
-        :'tipo_portador' => :'String',
-        
-        :'nome_impresso' => :'String',
-        
-        :'id_tipo_cartao' => :'Integer',
-        
-        :'flag_ativo' => :'Integer',
-        
-        :'data_cadastro_portador' => :'DateTime',
-        
-        :'data_cancelamento_portador' => :'DateTime'
+        :'data_modificacao' => :'DateTime'
         
       }
     end
@@ -119,91 +84,46 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'idConta']
+      if attributes[:'id']
         
         
-        self.id_conta = attributes[:'idConta']
-        
-      
-      end
-
-      
-      if attributes[:'idProduto']
-        
-        
-        self.id_produto = attributes[:'idProduto']
+        self.id = attributes[:'id']
         
       
       end
 
       
-      if attributes[:'idPessoa']
+      if attributes[:'telefone']
         
         
-        self.id_pessoa = attributes[:'idPessoa']
-        
-      
-      end
-
-      
-      if attributes[:'idParentesco']
-        
-        
-        self.id_parentesco = attributes[:'idParentesco']
+        self.telefone = attributes[:'telefone']
         
       
       end
 
       
-      if attributes[:'tipoPortador']
+      if attributes[:'idTipoTelefone']
         
         
-        self.tipo_portador = attributes[:'tipoPortador']
-        
-      
-      end
-
-      
-      if attributes[:'nomeImpresso']
-        
-        
-        self.nome_impresso = attributes[:'nomeImpresso']
+        self.id_tipo_telefone = attributes[:'idTipoTelefone']
         
       
       end
 
       
-      if attributes[:'idTipoCartao']
+      if attributes[:'tipoTelefone']
         
         
-        self.id_tipo_cartao = attributes[:'idTipoCartao']
-        
-      
-      end
-
-      
-      if attributes[:'flagAtivo']
-        
-        
-        self.flag_ativo = attributes[:'flagAtivo']
+        self.tipo_telefone = attributes[:'tipoTelefone']
         
       
       end
 
       
-      if attributes[:'dataCadastroPortador']
+      if attributes[:'dataModificacao']
         
         
-        self.data_cadastro_portador = attributes[:'dataCadastroPortador']
-        
-      
-      end
-
-      
-      if attributes[:'dataCancelamentoPortador']
-        
-        
-        self.data_cancelamento_portador = attributes[:'dataCancelamentoPortador']
+        self.data_modificacao = attributes[:'dataModificacao']
         
       
       end
@@ -244,53 +164,8 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -322,16 +197,11 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id_conta == o.id_conta &&
-          id_produto == o.id_produto &&
-          id_pessoa == o.id_pessoa &&
-          id_parentesco == o.id_parentesco &&
-          tipo_portador == o.tipo_portador &&
-          nome_impresso == o.nome_impresso &&
-          id_tipo_cartao == o.id_tipo_cartao &&
-          flag_ativo == o.flag_ativo &&
-          data_cadastro_portador == o.data_cadastro_portador &&
-          data_cancelamento_portador == o.data_cancelamento_portador
+          id == o.id &&
+          telefone == o.telefone &&
+          id_tipo_telefone == o.id_tipo_telefone &&
+          tipo_telefone == o.tipo_telefone &&
+          data_modificacao == o.data_modificacao
     end
 
     # @see the `==` method
@@ -343,7 +213,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_conta, id_produto, id_pessoa, id_parentesco, tipo_portador, nome_impresso, id_tipo_cartao, flag_ativo, data_cadastro_portador, data_cancelamento_portador].hash
+      [id, telefone, id_tipo_telefone, tipo_telefone, data_modificacao].hash
     end
 
     # Builds the object from hash

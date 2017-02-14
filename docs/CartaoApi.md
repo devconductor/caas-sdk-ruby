@@ -10,12 +10,12 @@ Method | HTTP request | Description
 [**cadastrar_alterar_senha_using_put**](CartaoApi.md#cadastrar_alterar_senha_using_put) | **PUT** /api/cartoes/{id}/alterar-senha | Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
 [**consultar_limite_disponibilidade_using_get**](CartaoApi.md#consultar_limite_disponibilidade_using_get) | **GET** /api/cartoes/{id}/limites-disponibilidades | Apresenta os limites do Portador do Cart\u00C3\u00A3o
 [**consultar_portador_using_get**](CartaoApi.md#consultar_portador_using_get) | **GET** /api/cartoes/{id}/portadores | Apresenta os dados do Portador do Cart\u00C3\u00A3o
-[**consultar_using_get**](CartaoApi.md#consultar_using_get) | **GET** /api/cartoes/{id} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
+[**consultar_using_get1**](CartaoApi.md#consultar_using_get1) | **GET** /api/cartoes/{id} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
 [**desbloquear_using_put**](CartaoApi.md#desbloquear_using_put) | **PUT** /api/cartoes/{id}/desbloquear | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 [**gerar_lotes_cartoes_pre_pagos_using_post**](CartaoApi.md#gerar_lotes_cartoes_pre_pagos_using_post) | **POST** /api/cartoes/pre-pagos/lotes | Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**gerar_nova_via_using_post**](CartaoApi.md#gerar_nova_via_using_post) | **POST** /api/cartoes/{id}/gerar-nova-via | Gerar uma nova via de Cart\u00C3\u00A3o
 [**listar_lotes_cartoes_pre_pagos_using_get**](CartaoApi.md#listar_lotes_cartoes_pre_pagos_using_get) | **GET** /api/cartoes/pre-pagos/lotes | Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
-[**listar_using_get**](CartaoApi.md#listar_using_get) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
+[**listar_using_get1**](CartaoApi.md#listar_using_get1) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 [**validar_cartao_chip_bandeirado_using_get**](CartaoApi.md#validar_cartao_chip_bandeirado_using_get) | **GET** /api/cartoes/bandeirados/validar-chip | Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do chip
 [**validar_cartao_digitado_bandeirado_using_get**](CartaoApi.md#validar_cartao_digitado_bandeirado_using_get) | **GET** /api/cartoes/bandeirados/validar-digitado | Permite validar um Cart\u00C3\u00A3o bandeirado a partir dos dados Impressos
 [**validar_cartao_digitado_nao_bandeirado_using_get**](CartaoApi.md#validar_cartao_digitado_nao_bandeirado_using_get) | **GET** /api/cartoes/nao-bandeirados/validar-digitado | Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
@@ -388,8 +388,8 @@ Name | Type | Description  | Notes
 
 
 
-# **consultar_using_get**
-> Cartao consultar_using_get(id)
+# **consultar_using_get1**
+> Cartao consultar_using_get1(id)
 
 Apresenta os dados de um determinado Cart\u00C3\u00A3o
 
@@ -416,10 +416,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Cart\u00C3\u00A3o
-  result = api_instance.consultar_using_get(id)
+  result = api_instance.consultar_using_get1(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CartaoApi->consultar_using_get: #{e}"
+  puts "Exception when calling CartaoApi->consultar_using_get1: #{e}"
 end
 ```
 
@@ -712,8 +712,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get**
-> PageCartoes listar_using_get(opts)
+# **listar_using_get1**
+> PageCartoes listar_using_get1(opts)
 
 Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 
@@ -760,10 +760,10 @@ opts = {
 
 begin
   #Lista os Cart\u00C3\u00B5es gerados pelo Emissor
-  result = api_instance.listar_using_get(opts)
+  result = api_instance.listar_using_get1(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CartaoApi->listar_using_get: #{e}"
+  puts "Exception when calling CartaoApi->listar_using_get1: #{e}"
 end
 ```
 

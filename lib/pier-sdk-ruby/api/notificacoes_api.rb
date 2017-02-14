@@ -34,35 +34,35 @@ module Pier
 
     # Atualizar SMS
     # Esse recurso permite atualizar o status do SMS do emissor
-    # @param seu_num Seu n\u00C3\u00BAmero
+    # @param nsu Seu n\u00C3\u00BAmero
     # @param status Status
     # @param data Data
     # @param texto_status TextoStatus
     # @param operadora Operadora
     # @param [Hash] opts the optional parameters
     # @return [SMS]
-    def atualizar_sms_using_put(seu_num, status, data, texto_status, operadora, opts = {})
-      data, _status_code, _headers = atualizar_sms_using_put_with_http_info(seu_num, status, data, texto_status, operadora, opts)
+    def atualizar_sms_using_post(nsu, status, data, texto_status, operadora, opts = {})
+      data, _status_code, _headers = atualizar_sms_using_post_with_http_info(nsu, status, data, texto_status, operadora, opts)
       return data
     end
 
     # Atualizar SMS
     # Esse recurso permite atualizar o status do SMS do emissor
-    # @param seu_num Seu n\u00C3\u00BAmero
+    # @param nsu Seu n\u00C3\u00BAmero
     # @param status Status
     # @param data Data
     # @param texto_status TextoStatus
     # @param operadora Operadora
     # @param [Hash] opts the optional parameters
     # @return [Array<(SMS, Fixnum, Hash)>] SMS data, response status code and response headers
-    def atualizar_sms_using_put_with_http_info(seu_num, status, data, texto_status, operadora, opts = {})
+    def atualizar_sms_using_post_with_http_info(nsu, status, data, texto_status, operadora, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: NotificacoesApi.atualizar_sms_using_put ..."
+        @api_client.config.logger.debug "Calling API: NotificacoesApi.atualizar_sms_using_post ..."
       end
       
       
-      # verify the required parameter 'seu_num' is set
-      fail ArgumentError, "Missing the required parameter 'seu_num' when calling NotificacoesApi.atualizar_sms_using_put" if seu_num.nil?
+      # verify the required parameter 'nsu' is set
+      fail ArgumentError, "Missing the required parameter 'nsu' when calling NotificacoesApi.atualizar_sms_using_post" if nsu.nil?
       
       
       
@@ -70,7 +70,7 @@ module Pier
       
       
       # verify the required parameter 'status' is set
-      fail ArgumentError, "Missing the required parameter 'status' when calling NotificacoesApi.atualizar_sms_using_put" if status.nil?
+      fail ArgumentError, "Missing the required parameter 'status' when calling NotificacoesApi.atualizar_sms_using_post" if status.nil?
       
       
       
@@ -78,7 +78,7 @@ module Pier
       
       
       # verify the required parameter 'data' is set
-      fail ArgumentError, "Missing the required parameter 'data' when calling NotificacoesApi.atualizar_sms_using_put" if data.nil?
+      fail ArgumentError, "Missing the required parameter 'data' when calling NotificacoesApi.atualizar_sms_using_post" if data.nil?
       
       
       
@@ -86,7 +86,7 @@ module Pier
       
       
       # verify the required parameter 'texto_status' is set
-      fail ArgumentError, "Missing the required parameter 'texto_status' when calling NotificacoesApi.atualizar_sms_using_put" if texto_status.nil?
+      fail ArgumentError, "Missing the required parameter 'texto_status' when calling NotificacoesApi.atualizar_sms_using_post" if texto_status.nil?
       
       
       
@@ -94,7 +94,7 @@ module Pier
       
       
       # verify the required parameter 'operadora' is set
-      fail ArgumentError, "Missing the required parameter 'operadora' when calling NotificacoesApi.atualizar_sms_using_put" if operadora.nil?
+      fail ArgumentError, "Missing the required parameter 'operadora' when calling NotificacoesApi.atualizar_sms_using_post" if operadora.nil?
       
       
       
@@ -105,11 +105,11 @@ module Pier
 
       # query parameters
       query_params = {}
-      query_params[:'SeuNum'] = seu_num
-      query_params[:'Status'] = status
-      query_params[:'Data'] = data
-      query_params[:'TextoStatus'] = texto_status
-      query_params[:'Operadora'] = operadora
+      query_params[:'nsu'] = nsu
+      query_params[:'status'] = status
+      query_params[:'data'] = data
+      query_params[:'texto_status'] = texto_status
+      query_params[:'operadora'] = operadora
 
       # header parameters
       header_params = {}
@@ -129,7 +129,7 @@ module Pier
       post_body = nil
       
       auth_names = ['access_token']
-      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -137,7 +137,321 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'SMS')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: NotificacoesApi#atualizar_sms_using_put\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: NotificacoesApi#atualizar_sms_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Limpar Acessos
+    # Esse recurso permite limpar a lista de emissores que possuem acesso a envio de SMS pela TWW.
+    # @param [Hash] opts the optional parameters
+    # @return [String]
+    def limpar_acesso_tww_using_get(opts = {})
+      data, _status_code, _headers = limpar_acesso_tww_using_get_with_http_info(opts)
+      return data
+    end
+
+    # Limpar Acessos
+    # Esse recurso permite limpar a lista de emissores que possuem acesso a envio de SMS pela TWW.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    def limpar_acesso_tww_using_get_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: NotificacoesApi.limpar_acesso_tww_using_get ..."
+      end
+      
+      # resource path
+      local_var_path = "/api/notificacoes/sms/limpar".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'String')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: NotificacoesApi#limpar_acesso_tww_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Listar Push
+    # Esse recurso permite listar os Pushes do emissor
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Date] :data_envio Apresenta a data e em que o registro foi enviado para o dispositivo.
+    # @option opts [String] :evento Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o
+    # @option opts [String] :status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+    # @option opts [String] :plataforma Plataforma de Push notifications.
+    # @option opts [String] :protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+    # @return [PagePush]
+    def listar_push_using_get(opts = {})
+      data, _status_code, _headers = listar_push_using_get_with_http_info(opts)
+      return data
+    end
+
+    # Listar Push
+    # Esse recurso permite listar os Pushes do emissor
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Date] :data_envio Apresenta a data e em que o registro foi enviado para o dispositivo.
+    # @option opts [String] :evento Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o
+    # @option opts [String] :status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+    # @option opts [String] :plataforma Plataforma de Push notifications.
+    # @option opts [String] :protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+    # @return [Array<(PagePush, Fixnum, Hash)>] PagePush data, response status code and response headers
+    def listar_push_using_get_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: NotificacoesApi.listar_push_using_get ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'evento'] && !['RISCO_FRAUDE', 'OUTROS'].include?(opts[:'evento'])
+        fail ArgumentError, 'invalid value for "evento", must be one of RISCO_FRAUDE, OUTROS'
+      end
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'status'] && !['PENDENTE', 'ENCAMINHADO', 'ENVIADO', 'RESPONDIDO', 'ERRO', 'ERRO_RESPOSTA'].include?(opts[:'status'])
+        fail ArgumentError, 'invalid value for "status", must be one of PENDENTE, ENCAMINHADO, ENVIADO, RESPONDIDO, ERRO, ERRO_RESPOSTA'
+      end
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'plataforma'] && !['APNS', 'FCM', 'GCM'].include?(opts[:'plataforma'])
+        fail ArgumentError, 'invalid value for "plataforma", must be one of APNS, FCM, GCM'
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/notificacoes/push".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'dataEnvio'] = opts[:'data_envio'] if opts[:'data_envio']
+      query_params[:'evento'] = opts[:'evento'] if opts[:'evento']
+      query_params[:'status'] = opts[:'status'] if opts[:'status']
+      query_params[:'plataforma'] = opts[:'plataforma'] if opts[:'plataforma']
+      query_params[:'protocolo'] = opts[:'protocolo'] if opts[:'protocolo']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PagePush')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: NotificacoesApi#listar_push_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Listar SMS
+    # Esse recurso permite listar os SMS do emissor
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [DateTime] :data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
+    # @option opts [String] :evento Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o
+    # @option opts [String] :status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+    # @option opts [String] :operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
+    # @option opts [String] :protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+    # @return [PageSMS]
+    def listar_sms_using_get(opts = {})
+      data, _status_code, _headers = listar_sms_using_get_with_http_info(opts)
+      return data
+    end
+
+    # Listar SMS
+    # Esse recurso permite listar os SMS do emissor
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [DateTime] :data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
+    # @option opts [String] :evento Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o
+    # @option opts [String] :status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+    # @option opts [String] :operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
+    # @option opts [String] :protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+    # @return [Array<(PageSMS, Fixnum, Hash)>] PageSMS data, response status code and response headers
+    def listar_sms_using_get_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: NotificacoesApi.listar_sms_using_get ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'evento'] && !['RISCO_FRAUDE', 'OUTROS'].include?(opts[:'evento'])
+        fail ArgumentError, 'invalid value for "evento", must be one of RISCO_FRAUDE, OUTROS'
+      end
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'status'] && !['PENDENTE', 'ENCAMINHADO', 'ENVIADO', 'RESPONDIDO', 'ERRO', 'ERRO_RESPOSTA'].include?(opts[:'status'])
+        fail ArgumentError, 'invalid value for "status", must be one of PENDENTE, ENCAMINHADO, ENVIADO, RESPONDIDO, ERRO, ERRO_RESPOSTA'
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/notificacoes/sms".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'dataInclusao'] = opts[:'data_inclusao'] if opts[:'data_inclusao']
+      query_params[:'evento'] = opts[:'evento'] if opts[:'evento']
+      query_params[:'status'] = opts[:'status'] if opts[:'status']
+      query_params[:'operadora'] = opts[:'operadora'] if opts[:'operadora']
+      query_params[:'protocolo'] = opts[:'protocolo'] if opts[:'protocolo']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageSMS')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: NotificacoesApi#listar_sms_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -145,31 +459,31 @@ module Pier
 
     # Responder SMS
     # Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
-    # @param seunum Seu n\u00C3\u00BAmero
+    # @param nsu Seu n\u00C3\u00BAmero
     # @param data Data
-    # @param texto_sms_mo TextoStatus
+    # @param resposta TextoStatus
     # @param [Hash] opts the optional parameters
     # @return [SMS]
-    def responder_sms_using_put(seunum, data, texto_sms_mo, opts = {})
-      data, _status_code, _headers = responder_sms_using_put_with_http_info(seunum, data, texto_sms_mo, opts)
+    def responder_sms_using_post(nsu, data, resposta, opts = {})
+      data, _status_code, _headers = responder_sms_using_post_with_http_info(nsu, data, resposta, opts)
       return data
     end
 
     # Responder SMS
     # Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
-    # @param seunum Seu n\u00C3\u00BAmero
+    # @param nsu Seu n\u00C3\u00BAmero
     # @param data Data
-    # @param texto_sms_mo TextoStatus
+    # @param resposta TextoStatus
     # @param [Hash] opts the optional parameters
     # @return [Array<(SMS, Fixnum, Hash)>] SMS data, response status code and response headers
-    def responder_sms_using_put_with_http_info(seunum, data, texto_sms_mo, opts = {})
+    def responder_sms_using_post_with_http_info(nsu, data, resposta, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: NotificacoesApi.responder_sms_using_put ..."
+        @api_client.config.logger.debug "Calling API: NotificacoesApi.responder_sms_using_post ..."
       end
       
       
-      # verify the required parameter 'seunum' is set
-      fail ArgumentError, "Missing the required parameter 'seunum' when calling NotificacoesApi.responder_sms_using_put" if seunum.nil?
+      # verify the required parameter 'nsu' is set
+      fail ArgumentError, "Missing the required parameter 'nsu' when calling NotificacoesApi.responder_sms_using_post" if nsu.nil?
       
       
       
@@ -177,15 +491,15 @@ module Pier
       
       
       # verify the required parameter 'data' is set
-      fail ArgumentError, "Missing the required parameter 'data' when calling NotificacoesApi.responder_sms_using_put" if data.nil?
+      fail ArgumentError, "Missing the required parameter 'data' when calling NotificacoesApi.responder_sms_using_post" if data.nil?
       
       
       
       
       
       
-      # verify the required parameter 'texto_sms_mo' is set
-      fail ArgumentError, "Missing the required parameter 'texto_sms_mo' when calling NotificacoesApi.responder_sms_using_put" if texto_sms_mo.nil?
+      # verify the required parameter 'resposta' is set
+      fail ArgumentError, "Missing the required parameter 'resposta' when calling NotificacoesApi.responder_sms_using_post" if resposta.nil?
       
       
       
@@ -196,9 +510,9 @@ module Pier
 
       # query parameters
       query_params = {}
-      query_params[:'Seunum'] = seunum
-      query_params[:'Data'] = data
-      query_params[:'TextoSmsMo'] = texto_sms_mo
+      query_params[:'nsu'] = nsu
+      query_params[:'data'] = data
+      query_params[:'resposta'] = resposta
 
       # header parameters
       header_params = {}
@@ -218,7 +532,7 @@ module Pier
       post_body = nil
       
       auth_names = ['access_token']
-      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -226,7 +540,271 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'SMS')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: NotificacoesApi#responder_sms_using_put\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: NotificacoesApi#responder_sms_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Enviar Push FCM
+    # Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma FCM (Firebase Cloud Messaging).
+    # @param push_persists pushPersists
+    # @param [Hash] opts the optional parameters
+    # @return [NotificacaoSMSResponse]
+    def salvar_push_fcm_using_post(push_persists, opts = {})
+      data, _status_code, _headers = salvar_push_fcm_using_post_with_http_info(push_persists, opts)
+      return data
+    end
+
+    # Enviar Push FCM
+    # Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma FCM (Firebase Cloud Messaging).
+    # @param push_persists pushPersists
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(NotificacaoSMSResponse, Fixnum, Hash)>] NotificacaoSMSResponse data, response status code and response headers
+    def salvar_push_fcm_using_post_with_http_info(push_persists, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: NotificacoesApi.salvar_push_fcm_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'push_persists' is set
+      fail ArgumentError, "Missing the required parameter 'push_persists' when calling NotificacoesApi.salvar_push_fcm_using_post" if push_persists.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/notificacoes/push/fcm".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(push_persists)
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'NotificacaoSMSResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: NotificacoesApi#salvar_push_fcm_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Enviar Push GCM
+    # Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma GCM (Google Cloud Messaging).
+    # @param push_persists pushPersists
+    # @param [Hash] opts the optional parameters
+    # @return [NotificacaoSMSResponse]
+    def salvar_push_gcm_using_post(push_persists, opts = {})
+      data, _status_code, _headers = salvar_push_gcm_using_post_with_http_info(push_persists, opts)
+      return data
+    end
+
+    # Enviar Push GCM
+    # Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma GCM (Google Cloud Messaging).
+    # @param push_persists pushPersists
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(NotificacaoSMSResponse, Fixnum, Hash)>] NotificacaoSMSResponse data, response status code and response headers
+    def salvar_push_gcm_using_post_with_http_info(push_persists, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: NotificacoesApi.salvar_push_gcm_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'push_persists' is set
+      fail ArgumentError, "Missing the required parameter 'push_persists' when calling NotificacoesApi.salvar_push_gcm_using_post" if push_persists.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/notificacoes/push/gcm".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(push_persists)
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'NotificacaoSMSResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: NotificacoesApi#salvar_push_gcm_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Enviar Push APNS
+    # Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma APNS (Apple Push Notification Service).
+    # @param push_persists pushPersists
+    # @param [Hash] opts the optional parameters
+    # @return [NotificacaoSMSResponse]
+    def salvar_push_using_post(push_persists, opts = {})
+      data, _status_code, _headers = salvar_push_using_post_with_http_info(push_persists, opts)
+      return data
+    end
+
+    # Enviar Push APNS
+    # Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma APNS (Apple Push Notification Service).
+    # @param push_persists pushPersists
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(NotificacaoSMSResponse, Fixnum, Hash)>] NotificacaoSMSResponse data, response status code and response headers
+    def salvar_push_using_post_with_http_info(push_persists, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: NotificacoesApi.salvar_push_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'push_persists' is set
+      fail ArgumentError, "Missing the required parameter 'push_persists' when calling NotificacoesApi.salvar_push_using_post" if push_persists.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/notificacoes/push/apns".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(push_persists)
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'NotificacaoSMSResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: NotificacoesApi#salvar_push_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Enviar SMS
+    # Esse recurso permite enviar uma lista de SMS.
+    # @param lista_sms listaSMS
+    # @param [Hash] opts the optional parameters
+    # @return [NotificacaoSMSResponse]
+    def salvar_sms_using_post(lista_sms, opts = {})
+      data, _status_code, _headers = salvar_sms_using_post_with_http_info(lista_sms, opts)
+      return data
+    end
+
+    # Enviar SMS
+    # Esse recurso permite enviar uma lista de SMS.
+    # @param lista_sms listaSMS
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(NotificacaoSMSResponse, Fixnum, Hash)>] NotificacaoSMSResponse data, response status code and response headers
+    def salvar_sms_using_post_with_http_info(lista_sms, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: NotificacoesApi.salvar_sms_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'lista_sms' is set
+      fail ArgumentError, "Missing the required parameter 'lista_sms' when calling NotificacoesApi.salvar_sms_using_post" if lista_sms.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/notificacoes/sms".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(lista_sms)
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'NotificacaoSMSResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: NotificacoesApi#salvar_sms_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -26,10 +26,25 @@ module Pier
   # Objeto de resposta para a valida\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
   class ValidaCartao
     # Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
+    attr_accessor :id_status_cartao
+
+    # Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
     attr_accessor :status_cartao
 
     # Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
+    attr_accessor :id_status_conta
+
+    # Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
     attr_accessor :status_conta
+
+    # C\u00C3\u00B3digo identificador da conta.
+    attr_accessor :id_conta
+
+    # N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+    attr_accessor :numero_agencia
+
+    # N\u00C3\u00BAmero da conta corrente.
+    attr_accessor :numero_conta_corrente
 
     # Criptograma de resposta
     attr_accessor :criptograma_resposta
@@ -39,9 +54,19 @@ module Pier
     def self.attribute_map
       {
         
+        :'id_status_cartao' => :'idStatusCartao',
+        
         :'status_cartao' => :'statusCartao',
         
+        :'id_status_conta' => :'idStatusConta',
+        
         :'status_conta' => :'statusConta',
+        
+        :'id_conta' => :'idConta',
+        
+        :'numero_agencia' => :'numeroAgencia',
+        
+        :'numero_conta_corrente' => :'numeroContaCorrente',
         
         :'criptograma_resposta' => :'criptogramaResposta'
         
@@ -52,9 +77,19 @@ module Pier
     def self.swagger_types
       {
         
+        :'id_status_cartao' => :'Integer',
+        
         :'status_cartao' => :'String',
         
+        :'id_status_conta' => :'Integer',
+        
         :'status_conta' => :'String',
+        
+        :'id_conta' => :'Integer',
+        
+        :'numero_agencia' => :'Integer',
+        
+        :'numero_conta_corrente' => :'String',
         
         :'criptograma_resposta' => :'String'
         
@@ -70,6 +105,15 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
+      if attributes[:'idStatusCartao']
+        
+        
+        self.id_status_cartao = attributes[:'idStatusCartao']
+        
+      
+      end
+
+      
       if attributes[:'statusCartao']
         
         
@@ -79,10 +123,46 @@ module Pier
       end
 
       
+      if attributes[:'idStatusConta']
+        
+        
+        self.id_status_conta = attributes[:'idStatusConta']
+        
+      
+      end
+
+      
       if attributes[:'statusConta']
         
         
         self.status_conta = attributes[:'statusConta']
+        
+      
+      end
+
+      
+      if attributes[:'idConta']
+        
+        
+        self.id_conta = attributes[:'idConta']
+        
+      
+      end
+
+      
+      if attributes[:'numeroAgencia']
+        
+        
+        self.numero_agencia = attributes[:'numeroAgencia']
+        
+      
+      end
+
+      
+      if attributes[:'numeroContaCorrente']
+        
+        
+        self.numero_conta_corrente = attributes[:'numeroContaCorrente']
         
       
       end
@@ -124,8 +204,53 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -147,8 +272,13 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          id_status_cartao == o.id_status_cartao &&
           status_cartao == o.status_cartao &&
+          id_status_conta == o.id_status_conta &&
           status_conta == o.status_conta &&
+          id_conta == o.id_conta &&
+          numero_agencia == o.numero_agencia &&
+          numero_conta_corrente == o.numero_conta_corrente &&
           criptograma_resposta == o.criptograma_resposta
     end
 
@@ -161,7 +291,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [status_cartao, status_conta, criptograma_resposta].hash
+      [id_status_cartao, status_cartao, id_status_conta, status_conta, id_conta, numero_agencia, numero_conta_corrente, criptograma_resposta].hash
     end
 
     # Builds the object from hash

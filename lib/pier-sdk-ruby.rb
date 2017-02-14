@@ -29,6 +29,9 @@ require 'pier-sdk-ruby/configuration'
 # Models
 
 
+require 'pier-sdk-ruby/models/atendimento_cliente'
+
+
 require 'pier-sdk-ruby/models/auth_token'
 
 
@@ -53,10 +56,13 @@ require 'pier-sdk-ruby/models/estagio_cartao'
 require 'pier-sdk-ruby/models/extra_info'
 
 
-require 'pier-sdk-ruby/models/fatura'
+require 'pier-sdk-ruby/models/fatura_response'
 
 
 require 'pier-sdk-ruby/models/historico_impressao_cartao'
+
+
+require 'pier-sdk-ruby/models/historico_telefone'
 
 
 require 'pier-sdk-ruby/models/limite_disponibilidade'
@@ -66,6 +72,15 @@ require 'pier-sdk-ruby/models/lista_produtos'
 
 
 require 'pier-sdk-ruby/models/lote_cartoes_pre_pagos'
+
+
+require 'pier-sdk-ruby/models/notificacao_push_response'
+
+
+require 'pier-sdk-ruby/models/notificacao_sms_body'
+
+
+require 'pier-sdk-ruby/models/notificacao_sms_response'
 
 
 require 'pier-sdk-ruby/models/origem_comercial'
@@ -87,6 +102,12 @@ require 'pier-sdk-ruby/models/page_pessoas'
 
 
 require 'pier-sdk-ruby/models/page_portador'
+
+
+require 'pier-sdk-ruby/models/page_push'
+
+
+require 'pier-sdk-ruby/models/page_sms'
 
 
 require 'pier-sdk-ruby/models/page_status_cartoes'
@@ -120,6 +141,12 @@ require 'pier-sdk-ruby/models/portador'
 
 
 require 'pier-sdk-ruby/models/produto'
+
+
+require 'pier-sdk-ruby/models/push_apns'
+
+
+require 'pier-sdk-ruby/models/push_fcm_e_gcm'
 
 
 require 'pier-sdk-ruby/models/sms'
@@ -162,6 +189,8 @@ require 'pier-sdk-ruby/api/cadastros_gerais_api'
 require 'pier-sdk-ruby/api/cartao_api'
 
 require 'pier-sdk-ruby/api/conta_api'
+
+require 'pier-sdk-ruby/api/fraudes_api'
 
 require 'pier-sdk-ruby/api/notificacoes_api'
 

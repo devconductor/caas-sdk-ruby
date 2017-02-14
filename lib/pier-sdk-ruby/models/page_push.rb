@@ -23,67 +23,68 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto Fatura
-  class Fatura
-    # Data de Vencimento da Fatura.
-    attr_accessor :data_vencimento
+  # Lista de Push
+  class PagePush
+    attr_accessor :content
 
-    # Saldo da Fatura Anterior.
-    attr_accessor :saldo_fatura_anterior
+    attr_accessor :first
 
-    # Saldo total da Multa lan\u00C3\u00A7ada na Fatura atual.
-    attr_accessor :saldo_multa
+    attr_accessor :first_page
 
-    # Saldo total das Compras lan\u00C3\u00A7adas na Fatura atual.
-    attr_accessor :saldo_compras
+    attr_accessor :has_content
 
-    # Saldo total dos Pagamentos lan\u00C3\u00A7ados na Fatura atual.
-    attr_accessor :saldo_pagamentos
+    attr_accessor :has_next_page
 
-    # Saldo total das Tarifas lan\u00C3\u00A7adas na Fatura atual.
-    attr_accessor :saldo_tarifas
+    attr_accessor :has_previous_page
 
-    # Saldo total dos D\u00C3\u00A9bitos lan\u00C3\u00A7ados na Fatura atual.
-    attr_accessor :saldo_debitos
+    attr_accessor :last
 
-    # Saldo total dos Cr\u00C3\u00A9dito lan\u00C3\u00A7ados na Fatura atual.
-    attr_accessor :saldo_creditos
+    attr_accessor :next_page
 
-    # Salto total devedor da Fatura atual.
-    attr_accessor :saldo_atual_final
+    attr_accessor :number
 
-    # Valor m\u00C3\u00ADnimo para Pagamento da Fatura.
-    attr_accessor :valor_minimo_fatura
+    attr_accessor :number_of_elements
 
-    # Quando ativa, indica que fora emitida uma Fatura.
-    attr_accessor :flag_emite_fatura
+    attr_accessor :previous_page
+
+    attr_accessor :size
+
+    attr_accessor :total_elements
+
+    attr_accessor :total_pages
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'data_vencimento' => :'dataVencimento',
+        :'content' => :'content',
         
-        :'saldo_fatura_anterior' => :'saldoFaturaAnterior',
+        :'first' => :'first',
         
-        :'saldo_multa' => :'saldoMulta',
+        :'first_page' => :'firstPage',
         
-        :'saldo_compras' => :'saldoCompras',
+        :'has_content' => :'hasContent',
         
-        :'saldo_pagamentos' => :'saldoPagamentos',
+        :'has_next_page' => :'hasNextPage',
         
-        :'saldo_tarifas' => :'saldoTarifas',
+        :'has_previous_page' => :'hasPreviousPage',
         
-        :'saldo_debitos' => :'saldoDebitos',
+        :'last' => :'last',
         
-        :'saldo_creditos' => :'saldoCreditos',
+        :'next_page' => :'nextPage',
         
-        :'saldo_atual_final' => :'saldoAtualFinal',
+        :'number' => :'number',
         
-        :'valor_minimo_fatura' => :'valorMinimoFatura',
+        :'number_of_elements' => :'numberOfElements',
         
-        :'flag_emite_fatura' => :'flagEmiteFatura'
+        :'previous_page' => :'previousPage',
+        
+        :'size' => :'size',
+        
+        :'total_elements' => :'totalElements',
+        
+        :'total_pages' => :'totalPages'
         
       }
     end
@@ -92,27 +93,33 @@ module Pier
     def self.swagger_types
       {
         
-        :'data_vencimento' => :'Date',
+        :'content' => :'Array<NotificacaoPushResponse>',
         
-        :'saldo_fatura_anterior' => :'Float',
+        :'first' => :'BOOLEAN',
         
-        :'saldo_multa' => :'Float',
+        :'first_page' => :'BOOLEAN',
         
-        :'saldo_compras' => :'Float',
+        :'has_content' => :'BOOLEAN',
         
-        :'saldo_pagamentos' => :'Float',
+        :'has_next_page' => :'BOOLEAN',
         
-        :'saldo_tarifas' => :'Float',
+        :'has_previous_page' => :'BOOLEAN',
         
-        :'saldo_debitos' => :'Float',
+        :'last' => :'BOOLEAN',
         
-        :'saldo_creditos' => :'Float',
+        :'next_page' => :'Integer',
         
-        :'saldo_atual_final' => :'Float',
+        :'number' => :'Integer',
         
-        :'valor_minimo_fatura' => :'Float',
+        :'number_of_elements' => :'Integer',
         
-        :'flag_emite_fatura' => :'Integer'
+        :'previous_page' => :'Integer',
+        
+        :'size' => :'Integer',
+        
+        :'total_elements' => :'Integer',
+        
+        :'total_pages' => :'Integer'
         
       }
     end
@@ -126,100 +133,129 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'dataVencimento']
+      if attributes[:'content']
         
+        if (value = attributes[:'content']).is_a?(Array)
+          self.content = value
+        end
         
-        self.data_vencimento = attributes[:'dataVencimento']
         
       
       end
 
       
-      if attributes[:'saldoFaturaAnterior']
+      if attributes[:'first']
         
         
-        self.saldo_fatura_anterior = attributes[:'saldoFaturaAnterior']
-        
-      
-      end
-
-      
-      if attributes[:'saldoMulta']
-        
-        
-        self.saldo_multa = attributes[:'saldoMulta']
+        self.first = attributes[:'first']
         
       
       end
 
       
-      if attributes[:'saldoCompras']
+      if attributes[:'firstPage']
         
         
-        self.saldo_compras = attributes[:'saldoCompras']
-        
-      
-      end
-
-      
-      if attributes[:'saldoPagamentos']
-        
-        
-        self.saldo_pagamentos = attributes[:'saldoPagamentos']
+        self.first_page = attributes[:'firstPage']
         
       
       end
 
       
-      if attributes[:'saldoTarifas']
+      if attributes[:'hasContent']
         
         
-        self.saldo_tarifas = attributes[:'saldoTarifas']
-        
-      
-      end
-
-      
-      if attributes[:'saldoDebitos']
-        
-        
-        self.saldo_debitos = attributes[:'saldoDebitos']
+        self.has_content = attributes[:'hasContent']
         
       
       end
 
       
-      if attributes[:'saldoCreditos']
+      if attributes[:'hasNextPage']
         
         
-        self.saldo_creditos = attributes[:'saldoCreditos']
-        
-      
-      end
-
-      
-      if attributes[:'saldoAtualFinal']
-        
-        
-        self.saldo_atual_final = attributes[:'saldoAtualFinal']
+        self.has_next_page = attributes[:'hasNextPage']
         
       
       end
 
       
-      if attributes[:'valorMinimoFatura']
+      if attributes[:'hasPreviousPage']
         
         
-        self.valor_minimo_fatura = attributes[:'valorMinimoFatura']
+        self.has_previous_page = attributes[:'hasPreviousPage']
         
       
       end
 
       
-      if attributes[:'flagEmiteFatura']
+      if attributes[:'last']
         
         
-        self.flag_emite_fatura = attributes[:'flagEmiteFatura']
+        self.last = attributes[:'last']
+        
+      
+      end
+
+      
+      if attributes[:'nextPage']
+        
+        
+        self.next_page = attributes[:'nextPage']
+        
+      
+      end
+
+      
+      if attributes[:'number']
+        
+        
+        self.number = attributes[:'number']
+        
+      
+      end
+
+      
+      if attributes[:'numberOfElements']
+        
+        
+        self.number_of_elements = attributes[:'numberOfElements']
+        
+      
+      end
+
+      
+      if attributes[:'previousPage']
+        
+        
+        self.previous_page = attributes[:'previousPage']
+        
+      
+      end
+
+      
+      if attributes[:'size']
+        
+        
+        self.size = attributes[:'size']
+        
+      
+      end
+
+      
+      if attributes[:'totalElements']
+        
+        
+        self.total_elements = attributes[:'totalElements']
+        
+      
+      end
+
+      
+      if attributes[:'totalPages']
+        
+        
+        self.total_pages = attributes[:'totalPages']
         
       
       end
@@ -284,8 +320,35 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -347,17 +410,20 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          data_vencimento == o.data_vencimento &&
-          saldo_fatura_anterior == o.saldo_fatura_anterior &&
-          saldo_multa == o.saldo_multa &&
-          saldo_compras == o.saldo_compras &&
-          saldo_pagamentos == o.saldo_pagamentos &&
-          saldo_tarifas == o.saldo_tarifas &&
-          saldo_debitos == o.saldo_debitos &&
-          saldo_creditos == o.saldo_creditos &&
-          saldo_atual_final == o.saldo_atual_final &&
-          valor_minimo_fatura == o.valor_minimo_fatura &&
-          flag_emite_fatura == o.flag_emite_fatura
+          content == o.content &&
+          first == o.first &&
+          first_page == o.first_page &&
+          has_content == o.has_content &&
+          has_next_page == o.has_next_page &&
+          has_previous_page == o.has_previous_page &&
+          last == o.last &&
+          next_page == o.next_page &&
+          number == o.number &&
+          number_of_elements == o.number_of_elements &&
+          previous_page == o.previous_page &&
+          size == o.size &&
+          total_elements == o.total_elements &&
+          total_pages == o.total_pages
     end
 
     # @see the `==` method
@@ -369,7 +435,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [data_vencimento, saldo_fatura_anterior, saldo_multa, saldo_compras, saldo_pagamentos, saldo_tarifas, saldo_debitos, saldo_creditos, saldo_atual_final, valor_minimo_fatura, flag_emite_fatura].hash
+      [content, first, first_page, has_content, has_next_page, has_previous_page, last, next_page, number, number_of_elements, previous_page, size, total_elements, total_pages].hash
     end
 
     # Builds the object from hash

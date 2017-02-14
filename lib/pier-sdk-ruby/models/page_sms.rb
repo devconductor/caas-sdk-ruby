@@ -23,62 +23,68 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Portador
-  class Portador
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
-    attr_accessor :id_conta
+  # Lista de SMS
+  class PageSMS
+    attr_accessor :content
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
-    attr_accessor :id_produto
+    attr_accessor :first
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
-    attr_accessor :id_pessoa
+    attr_accessor :first_page
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
-    attr_accessor :id_parentesco
+    attr_accessor :has_content
 
-    # Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
-    attr_accessor :tipo_portador
+    attr_accessor :has_next_page
 
-    # Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
-    attr_accessor :nome_impresso
+    attr_accessor :has_previous_page
 
-    # Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
-    attr_accessor :id_tipo_cartao
+    attr_accessor :last
 
-    # Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
-    attr_accessor :flag_ativo
+    attr_accessor :next_page
 
-    # Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :data_cadastro_portador
+    attr_accessor :number
 
-    # Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :data_cancelamento_portador
+    attr_accessor :number_of_elements
+
+    attr_accessor :previous_page
+
+    attr_accessor :size
+
+    attr_accessor :total_elements
+
+    attr_accessor :total_pages
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id_conta' => :'idConta',
+        :'content' => :'content',
         
-        :'id_produto' => :'idProduto',
+        :'first' => :'first',
         
-        :'id_pessoa' => :'idPessoa',
+        :'first_page' => :'firstPage',
         
-        :'id_parentesco' => :'idParentesco',
+        :'has_content' => :'hasContent',
         
-        :'tipo_portador' => :'tipoPortador',
+        :'has_next_page' => :'hasNextPage',
         
-        :'nome_impresso' => :'nomeImpresso',
+        :'has_previous_page' => :'hasPreviousPage',
         
-        :'id_tipo_cartao' => :'idTipoCartao',
+        :'last' => :'last',
         
-        :'flag_ativo' => :'flagAtivo',
+        :'next_page' => :'nextPage',
         
-        :'data_cadastro_portador' => :'dataCadastroPortador',
+        :'number' => :'number',
         
-        :'data_cancelamento_portador' => :'dataCancelamentoPortador'
+        :'number_of_elements' => :'numberOfElements',
+        
+        :'previous_page' => :'previousPage',
+        
+        :'size' => :'size',
+        
+        :'total_elements' => :'totalElements',
+        
+        :'total_pages' => :'totalPages'
         
       }
     end
@@ -87,25 +93,33 @@ module Pier
     def self.swagger_types
       {
         
-        :'id_conta' => :'Integer',
+        :'content' => :'Array<SMS>',
         
-        :'id_produto' => :'Integer',
+        :'first' => :'BOOLEAN',
         
-        :'id_pessoa' => :'Integer',
+        :'first_page' => :'BOOLEAN',
         
-        :'id_parentesco' => :'Integer',
+        :'has_content' => :'BOOLEAN',
         
-        :'tipo_portador' => :'String',
+        :'has_next_page' => :'BOOLEAN',
         
-        :'nome_impresso' => :'String',
+        :'has_previous_page' => :'BOOLEAN',
         
-        :'id_tipo_cartao' => :'Integer',
+        :'last' => :'BOOLEAN',
         
-        :'flag_ativo' => :'Integer',
+        :'next_page' => :'Integer',
         
-        :'data_cadastro_portador' => :'DateTime',
+        :'number' => :'Integer',
         
-        :'data_cancelamento_portador' => :'DateTime'
+        :'number_of_elements' => :'Integer',
+        
+        :'previous_page' => :'Integer',
+        
+        :'size' => :'Integer',
+        
+        :'total_elements' => :'Integer',
+        
+        :'total_pages' => :'Integer'
         
       }
     end
@@ -119,91 +133,129 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'idConta']
+      if attributes[:'content']
         
+        if (value = attributes[:'content']).is_a?(Array)
+          self.content = value
+        end
         
-        self.id_conta = attributes[:'idConta']
         
       
       end
 
       
-      if attributes[:'idProduto']
+      if attributes[:'first']
         
         
-        self.id_produto = attributes[:'idProduto']
-        
-      
-      end
-
-      
-      if attributes[:'idPessoa']
-        
-        
-        self.id_pessoa = attributes[:'idPessoa']
+        self.first = attributes[:'first']
         
       
       end
 
       
-      if attributes[:'idParentesco']
+      if attributes[:'firstPage']
         
         
-        self.id_parentesco = attributes[:'idParentesco']
-        
-      
-      end
-
-      
-      if attributes[:'tipoPortador']
-        
-        
-        self.tipo_portador = attributes[:'tipoPortador']
+        self.first_page = attributes[:'firstPage']
         
       
       end
 
       
-      if attributes[:'nomeImpresso']
+      if attributes[:'hasContent']
         
         
-        self.nome_impresso = attributes[:'nomeImpresso']
-        
-      
-      end
-
-      
-      if attributes[:'idTipoCartao']
-        
-        
-        self.id_tipo_cartao = attributes[:'idTipoCartao']
+        self.has_content = attributes[:'hasContent']
         
       
       end
 
       
-      if attributes[:'flagAtivo']
+      if attributes[:'hasNextPage']
         
         
-        self.flag_ativo = attributes[:'flagAtivo']
-        
-      
-      end
-
-      
-      if attributes[:'dataCadastroPortador']
-        
-        
-        self.data_cadastro_portador = attributes[:'dataCadastroPortador']
+        self.has_next_page = attributes[:'hasNextPage']
         
       
       end
 
       
-      if attributes[:'dataCancelamentoPortador']
+      if attributes[:'hasPreviousPage']
         
         
-        self.data_cancelamento_portador = attributes[:'dataCancelamentoPortador']
+        self.has_previous_page = attributes[:'hasPreviousPage']
+        
+      
+      end
+
+      
+      if attributes[:'last']
+        
+        
+        self.last = attributes[:'last']
+        
+      
+      end
+
+      
+      if attributes[:'nextPage']
+        
+        
+        self.next_page = attributes[:'nextPage']
+        
+      
+      end
+
+      
+      if attributes[:'number']
+        
+        
+        self.number = attributes[:'number']
+        
+      
+      end
+
+      
+      if attributes[:'numberOfElements']
+        
+        
+        self.number_of_elements = attributes[:'numberOfElements']
+        
+      
+      end
+
+      
+      if attributes[:'previousPage']
+        
+        
+        self.previous_page = attributes[:'previousPage']
+        
+      
+      end
+
+      
+      if attributes[:'size']
+        
+        
+        self.size = attributes[:'size']
+        
+      
+      end
+
+      
+      if attributes[:'totalElements']
+        
+        
+        self.total_elements = attributes[:'totalElements']
+        
+      
+      end
+
+      
+      if attributes[:'totalPages']
+        
+        
+        self.total_pages = attributes[:'totalPages']
         
       
       end
@@ -264,8 +316,44 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -322,16 +410,20 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id_conta == o.id_conta &&
-          id_produto == o.id_produto &&
-          id_pessoa == o.id_pessoa &&
-          id_parentesco == o.id_parentesco &&
-          tipo_portador == o.tipo_portador &&
-          nome_impresso == o.nome_impresso &&
-          id_tipo_cartao == o.id_tipo_cartao &&
-          flag_ativo == o.flag_ativo &&
-          data_cadastro_portador == o.data_cadastro_portador &&
-          data_cancelamento_portador == o.data_cancelamento_portador
+          content == o.content &&
+          first == o.first &&
+          first_page == o.first_page &&
+          has_content == o.has_content &&
+          has_next_page == o.has_next_page &&
+          has_previous_page == o.has_previous_page &&
+          last == o.last &&
+          next_page == o.next_page &&
+          number == o.number &&
+          number_of_elements == o.number_of_elements &&
+          previous_page == o.previous_page &&
+          size == o.size &&
+          total_elements == o.total_elements &&
+          total_pages == o.total_pages
     end
 
     # @see the `==` method
@@ -343,7 +435,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_conta, id_produto, id_pessoa, id_parentesco, tipo_portador, nome_impresso, id_tipo_cartao, flag_ativo, data_cadastro_portador, data_cancelamento_portador].hash
+      [content, first, first_page, has_content, has_next_page, has_previous_page, last, next_page, number, number_of_elements, previous_page, size, total_elements, total_pages].hash
     end
 
     # Builds the object from hash

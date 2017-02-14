@@ -23,62 +23,82 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Portador
-  class Portador
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+  # Fatura
+  class FaturaResponse
+    # C\u00C3\u00B3digo identificador da fatura.
+    attr_accessor :id
+
+    # C\u00C3\u00B3digo identificador da conta.
     attr_accessor :id_conta
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+    # C\u00C3\u00B3digo identificador do produto.
     attr_accessor :id_produto
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
-    attr_accessor :id_pessoa
+    # Data de vencimento da fatura.
+    attr_accessor :data_vencimento
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
-    attr_accessor :id_parentesco
+    # Saldo da fatura anterior.
+    attr_accessor :saldo_fatura_anterior
 
-    # Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
-    attr_accessor :tipo_portador
+    # Saldo total da Multa lan\u00C3\u00A7ada na Fatura atual.
+    attr_accessor :saldo_multa
 
-    # Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
-    attr_accessor :nome_impresso
+    # Saldo total das compras lan\u00C3\u00A7adas na fatura atual.
+    attr_accessor :saldo_compras
 
-    # Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
-    attr_accessor :id_tipo_cartao
+    # Saldo total dos pagamentos lan\u00C3\u00A7ados na fatura atual.
+    attr_accessor :saldo_pagamentos
 
-    # Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
-    attr_accessor :flag_ativo
+    # Saldo total das tarifas lan\u00C3\u00A7adas na fatura atual.
+    attr_accessor :saldo_tarifas
 
-    # Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :data_cadastro_portador
+    # Saldo total dos d\u00C3\u00A9bitos lan\u00C3\u00A7ados na fatura atual.
+    attr_accessor :saldo_debitos
 
-    # Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :data_cancelamento_portador
+    # Saldo total dos cr\u00C3\u00A9dito lan\u00C3\u00A7ados na fatura atual.
+    attr_accessor :saldo_creditos
+
+    # Salto total devedor da fatura atual.
+    attr_accessor :saldo_atual_final
+
+    # Valor m\u00C3\u00ADnimo para pagamento da fatura.
+    attr_accessor :valor_minimo_fatura
+
+    # Quando ativa, indica que fora emitida uma fatura.
+    attr_accessor :flag_emite_fatura
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
+        :'id' => :'id',
+        
         :'id_conta' => :'idConta',
         
         :'id_produto' => :'idProduto',
         
-        :'id_pessoa' => :'idPessoa',
+        :'data_vencimento' => :'dataVencimento',
         
-        :'id_parentesco' => :'idParentesco',
+        :'saldo_fatura_anterior' => :'saldoFaturaAnterior',
         
-        :'tipo_portador' => :'tipoPortador',
+        :'saldo_multa' => :'saldoMulta',
         
-        :'nome_impresso' => :'nomeImpresso',
+        :'saldo_compras' => :'saldoCompras',
         
-        :'id_tipo_cartao' => :'idTipoCartao',
+        :'saldo_pagamentos' => :'saldoPagamentos',
         
-        :'flag_ativo' => :'flagAtivo',
+        :'saldo_tarifas' => :'saldoTarifas',
         
-        :'data_cadastro_portador' => :'dataCadastroPortador',
+        :'saldo_debitos' => :'saldoDebitos',
         
-        :'data_cancelamento_portador' => :'dataCancelamentoPortador'
+        :'saldo_creditos' => :'saldoCreditos',
+        
+        :'saldo_atual_final' => :'saldoAtualFinal',
+        
+        :'valor_minimo_fatura' => :'valorMinimoFatura',
+        
+        :'flag_emite_fatura' => :'flagEmiteFatura'
         
       }
     end
@@ -87,25 +107,33 @@ module Pier
     def self.swagger_types
       {
         
+        :'id' => :'Integer',
+        
         :'id_conta' => :'Integer',
         
         :'id_produto' => :'Integer',
         
-        :'id_pessoa' => :'Integer',
+        :'data_vencimento' => :'DateTime',
         
-        :'id_parentesco' => :'Integer',
+        :'saldo_fatura_anterior' => :'Float',
         
-        :'tipo_portador' => :'String',
+        :'saldo_multa' => :'Float',
         
-        :'nome_impresso' => :'String',
+        :'saldo_compras' => :'Float',
         
-        :'id_tipo_cartao' => :'Integer',
+        :'saldo_pagamentos' => :'Float',
         
-        :'flag_ativo' => :'Integer',
+        :'saldo_tarifas' => :'Float',
         
-        :'data_cadastro_portador' => :'DateTime',
+        :'saldo_debitos' => :'Float',
         
-        :'data_cancelamento_portador' => :'DateTime'
+        :'saldo_creditos' => :'Float',
+        
+        :'saldo_atual_final' => :'Float',
+        
+        :'valor_minimo_fatura' => :'Float',
+        
+        :'flag_emite_fatura' => :'Integer'
         
       }
     end
@@ -117,6 +145,15 @@ module Pier
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      
+      if attributes[:'id']
+        
+        
+        self.id = attributes[:'id']
+        
+      
+      end
 
       
       if attributes[:'idConta']
@@ -137,73 +174,100 @@ module Pier
       end
 
       
-      if attributes[:'idPessoa']
+      if attributes[:'dataVencimento']
         
         
-        self.id_pessoa = attributes[:'idPessoa']
-        
-      
-      end
-
-      
-      if attributes[:'idParentesco']
-        
-        
-        self.id_parentesco = attributes[:'idParentesco']
+        self.data_vencimento = attributes[:'dataVencimento']
         
       
       end
 
       
-      if attributes[:'tipoPortador']
+      if attributes[:'saldoFaturaAnterior']
         
         
-        self.tipo_portador = attributes[:'tipoPortador']
-        
-      
-      end
-
-      
-      if attributes[:'nomeImpresso']
-        
-        
-        self.nome_impresso = attributes[:'nomeImpresso']
+        self.saldo_fatura_anterior = attributes[:'saldoFaturaAnterior']
         
       
       end
 
       
-      if attributes[:'idTipoCartao']
+      if attributes[:'saldoMulta']
         
         
-        self.id_tipo_cartao = attributes[:'idTipoCartao']
-        
-      
-      end
-
-      
-      if attributes[:'flagAtivo']
-        
-        
-        self.flag_ativo = attributes[:'flagAtivo']
+        self.saldo_multa = attributes[:'saldoMulta']
         
       
       end
 
       
-      if attributes[:'dataCadastroPortador']
+      if attributes[:'saldoCompras']
         
         
-        self.data_cadastro_portador = attributes[:'dataCadastroPortador']
+        self.saldo_compras = attributes[:'saldoCompras']
         
       
       end
 
       
-      if attributes[:'dataCancelamentoPortador']
+      if attributes[:'saldoPagamentos']
         
         
-        self.data_cancelamento_portador = attributes[:'dataCancelamentoPortador']
+        self.saldo_pagamentos = attributes[:'saldoPagamentos']
+        
+      
+      end
+
+      
+      if attributes[:'saldoTarifas']
+        
+        
+        self.saldo_tarifas = attributes[:'saldoTarifas']
+        
+      
+      end
+
+      
+      if attributes[:'saldoDebitos']
+        
+        
+        self.saldo_debitos = attributes[:'saldoDebitos']
+        
+      
+      end
+
+      
+      if attributes[:'saldoCreditos']
+        
+        
+        self.saldo_creditos = attributes[:'saldoCreditos']
+        
+      
+      end
+
+      
+      if attributes[:'saldoAtualFinal']
+        
+        
+        self.saldo_atual_final = attributes[:'saldoAtualFinal']
+        
+      
+      end
+
+      
+      if attributes[:'valorMinimoFatura']
+        
+        
+        self.valor_minimo_fatura = attributes[:'valorMinimoFatura']
+        
+      
+      end
+
+      
+      if attributes[:'flagEmiteFatura']
+        
+        
+        self.flag_emite_fatura = attributes[:'flagEmiteFatura']
         
       
       end
@@ -264,8 +328,44 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -322,16 +422,20 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          id == o.id &&
           id_conta == o.id_conta &&
           id_produto == o.id_produto &&
-          id_pessoa == o.id_pessoa &&
-          id_parentesco == o.id_parentesco &&
-          tipo_portador == o.tipo_portador &&
-          nome_impresso == o.nome_impresso &&
-          id_tipo_cartao == o.id_tipo_cartao &&
-          flag_ativo == o.flag_ativo &&
-          data_cadastro_portador == o.data_cadastro_portador &&
-          data_cancelamento_portador == o.data_cancelamento_portador
+          data_vencimento == o.data_vencimento &&
+          saldo_fatura_anterior == o.saldo_fatura_anterior &&
+          saldo_multa == o.saldo_multa &&
+          saldo_compras == o.saldo_compras &&
+          saldo_pagamentos == o.saldo_pagamentos &&
+          saldo_tarifas == o.saldo_tarifas &&
+          saldo_debitos == o.saldo_debitos &&
+          saldo_creditos == o.saldo_creditos &&
+          saldo_atual_final == o.saldo_atual_final &&
+          valor_minimo_fatura == o.valor_minimo_fatura &&
+          flag_emite_fatura == o.flag_emite_fatura
     end
 
     # @see the `==` method
@@ -343,7 +447,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_conta, id_produto, id_pessoa, id_parentesco, tipo_portador, nome_impresso, id_tipo_cartao, flag_ativo, data_cadastro_portador, data_cancelamento_portador].hash
+      [id, id_conta, id_produto, data_vencimento, saldo_fatura_anterior, saldo_multa, saldo_compras, saldo_pagamentos, saldo_tarifas, saldo_debitos, saldo_creditos, saldo_atual_final, valor_minimo_fatura, flag_emite_fatura].hash
     end
 
     # Builds the object from hash

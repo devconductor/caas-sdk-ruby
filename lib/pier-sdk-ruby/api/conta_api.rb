@@ -378,8 +378,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @return [Conta]
-    def consultar_using_get1(id, opts = {})
-      data, _status_code, _headers = consultar_using_get1_with_http_info(id, opts)
+    def consultar_using_get2(id, opts = {})
+      data, _status_code, _headers = consultar_using_get2_with_http_info(id, opts)
       return data
     end
 
@@ -388,14 +388,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(Conta, Fixnum, Hash)>] Conta data, response status code and response headers
-    def consultar_using_get1_with_http_info(id, opts = {})
+    def consultar_using_get2_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.consultar_using_get1 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.consultar_using_get2 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_using_get1" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_using_get2" if id.nil?
       
       
       
@@ -433,17 +433,18 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'Conta')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#consultar_using_get1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#consultar_using_get2\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
 
     # Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
-    # 
+    # Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :id_tipo_plastico C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id).
     # @return [CartaoImpressao]
     def gerar_cartao_using_post(id, id_pessoa, opts = {})
       data, _status_code, _headers = gerar_cartao_using_post_with_http_info(id, id_pessoa, opts)
@@ -451,10 +452,11 @@ module Pier
     end
 
     # Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
-    # 
+    # Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :id_tipo_plastico C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id).
     # @return [Array<(CartaoImpressao, Fixnum, Hash)>] CartaoImpressao data, response status code and response headers
     def gerar_cartao_using_post_with_http_info(id, id_pessoa, opts = {})
       if @api_client.config.debugging
@@ -477,11 +479,18 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao".sub('{format}','json').sub('{' + 'id' + '}', id.to_s).sub('{' + 'id_pessoa' + '}', id_pessoa.to_s)
 
       # query parameters
       query_params = {}
+      query_params[:'id_tipo_plastico'] = opts[:'id_tipo_plastico'] if opts[:'id_tipo_plastico']
 
       # header parameters
       header_params = {}
@@ -522,7 +531,7 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Date] :data_vencimento Data de Vencimento da Fatura.
-    # @return [Fatura]
+    # @return [FaturaResponse]
     def listar_faturas_using_get(id, opts = {})
       data, _status_code, _headers = listar_faturas_using_get_with_http_info(id, opts)
       return data
@@ -535,7 +544,7 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Date] :data_vencimento Data de Vencimento da Fatura.
-    # @return [Array<(Fatura, Fixnum, Hash)>] Fatura data, response status code and response headers
+    # @return [Array<(FaturaResponse, Fixnum, Hash)>] FaturaResponse data, response status code and response headers
     def listar_faturas_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContaApi.listar_faturas_using_get ..."
@@ -600,7 +609,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Fatura')
+        :return_type => 'FaturaResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ContaApi#listar_faturas_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -624,8 +633,8 @@ module Pier
     # @option opts [Date] :data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
     # @option opts [Date] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
     # @return [Conta]
-    def listar_using_get1(opts = {})
-      data, _status_code, _headers = listar_using_get1_with_http_info(opts)
+    def listar_using_get2(opts = {})
+      data, _status_code, _headers = listar_using_get2_with_http_info(opts)
       return data
     end
 
@@ -645,9 +654,9 @@ module Pier
     # @option opts [Date] :data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
     # @option opts [Date] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
     # @return [Array<(Conta, Fixnum, Hash)>] Conta data, response status code and response headers
-    def listar_using_get1_with_http_info(opts = {})
+    def listar_using_get2_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get1 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get2 ..."
       end
       
       
@@ -766,7 +775,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'Conta')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#listar_using_get1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#listar_using_get2\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

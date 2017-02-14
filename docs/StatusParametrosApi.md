@@ -6,12 +6,12 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultar_estagio_cartao_using_get**](StatusParametrosApi.md#consultar_estagio_cartao_using_get) | **GET** /api/estagios-cartoes/{id} | Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
 [**consultar_status_cartao_using_get**](StatusParametrosApi.md#consultar_status_cartao_using_get) | **GET** /api/status-cartoes/{id} | Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
-[**consultar_using_get4**](StatusParametrosApi.md#consultar_using_get4) | **GET** /api/status-contas/{id} | Apresenta os dados de um determinado Status Conta
-[**consultar_using_get5**](StatusParametrosApi.md#consultar_using_get5) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
+[**consultar_using_get5**](StatusParametrosApi.md#consultar_using_get5) | **GET** /api/status-contas/{id} | Apresenta os dados de um determinado Status Conta
+[**consultar_using_get6**](StatusParametrosApi.md#consultar_using_get6) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 [**listar_estagios_cartoes_using_get**](StatusParametrosApi.md#listar_estagios_cartoes_using_get) | **GET** /api/estagios-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
 [**listar_status_cartoes_using_get**](StatusParametrosApi.md#listar_status_cartoes_using_get) | **GET** /api/status-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
-[**listar_using_get5**](StatusParametrosApi.md#listar_using_get5) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
-[**listar_using_get6**](StatusParametrosApi.md#listar_using_get6) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+[**listar_using_get6**](StatusParametrosApi.md#listar_using_get6) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
+[**listar_using_get7**](StatusParametrosApi.md#listar_using_get7) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
 
 
@@ -132,8 +132,8 @@ Name | Type | Description  | Notes
 
 
 
-# **consultar_using_get4**
-> StatusConta consultar_using_get4(id)
+# **consultar_using_get5**
+> StatusConta consultar_using_get5(id)
 
 Apresenta os dados de um determinado Status Conta
 
@@ -160,10 +160,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Status Conta
-  result = api_instance.consultar_using_get4(id)
+  result = api_instance.consultar_using_get5(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling StatusParametrosApi->consultar_using_get4: #{e}"
+  puts "Exception when calling StatusParametrosApi->consultar_using_get5: #{e}"
 end
 ```
 
@@ -190,8 +190,8 @@ Name | Type | Description  | Notes
 
 
 
-# **consultar_using_get5**
-> StatusImpressao consultar_using_get5(id)
+# **consultar_using_get6**
+> StatusImpressao consultar_using_get6(id)
 
 Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 
@@ -218,10 +218,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
-  result = api_instance.consultar_using_get5(id)
+  result = api_instance.consultar_using_get6(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling StatusParametrosApi->consultar_using_get5: #{e}"
+  puts "Exception when calling StatusParametrosApi->consultar_using_get6: #{e}"
 end
 ```
 
@@ -390,8 +390,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get5**
-> PageStatusContas listar_using_get5(opts)
+# **listar_using_get6**
+> PageStatusContas listar_using_get6(opts)
 
 Lista os Status Contas cadastrados para o Emissor
 
@@ -425,10 +425,10 @@ opts = {
 
 begin
   #Lista os Status Contas cadastrados para o Emissor
-  result = api_instance.listar_using_get5(opts)
+  result = api_instance.listar_using_get6(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling StatusParametrosApi->listar_using_get5: #{e}"
+  puts "Exception when calling StatusParametrosApi->listar_using_get6: #{e}"
 end
 ```
 
@@ -461,8 +461,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get6**
-> PageStatusImpressao listar_using_get6(opts)
+# **listar_using_get7**
+> PageStatusImpressao listar_using_get7(opts)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
@@ -493,10 +493,10 @@ opts = {
 
 begin
   #Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
-  result = api_instance.listar_using_get6(opts)
+  result = api_instance.listar_using_get7(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling StatusParametrosApi->listar_using_get6: #{e}"
+  puts "Exception when calling StatusParametrosApi->listar_using_get7: #{e}"
 end
 ```
 

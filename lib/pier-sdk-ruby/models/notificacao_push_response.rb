@@ -23,62 +23,66 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Portador
-  class Portador
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
-    attr_accessor :id_conta
+  class NotificacaoPushResponse
+    # Apresenta a data e em que o registro foi enviado para o dispositivo.
+    attr_accessor :data_envio
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
-    attr_accessor :id_produto
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id).
+    attr_accessor :id_emissor
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+    # Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o
+    attr_accessor :evento
+
+    # Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+    attr_accessor :status
+
+    # C\u00C3\u00B3digo identificado da pessoa
     attr_accessor :id_pessoa
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
-    attr_accessor :id_parentesco
+    # C\u00C3\u00B3digo identificador da conta
+    attr_accessor :id_conta
 
-    # Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
-    attr_accessor :tipo_portador
+    # Token do dispositivo a qual foi destinado a notifica\u00C3\u00A7\u00C3\u00A3o (device_token)
+    attr_accessor :token_dispositivo
 
-    # Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
-    attr_accessor :nome_impresso
+    # T\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o enviada.
+    attr_accessor :titulo
 
-    # Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
-    attr_accessor :id_tipo_cartao
+    # Conte\u00C3\u00BAdo da notifica\u00C3\u00A7\u00C3\u00A3o enviada.
+    attr_accessor :conteudo
 
-    # Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
-    attr_accessor :flag_ativo
+    # Nome do Sistema Operacional a qual foi enviado o Push.
+    attr_accessor :plataforma
 
-    # Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :data_cadastro_portador
-
-    # Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :data_cancelamento_portador
+    # N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+    attr_accessor :protocolo
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id_conta' => :'idConta',
+        :'data_envio' => :'dataEnvio',
         
-        :'id_produto' => :'idProduto',
+        :'id_emissor' => :'idEmissor',
+        
+        :'evento' => :'evento',
+        
+        :'status' => :'status',
         
         :'id_pessoa' => :'idPessoa',
         
-        :'id_parentesco' => :'idParentesco',
+        :'id_conta' => :'idConta',
         
-        :'tipo_portador' => :'tipoPortador',
+        :'token_dispositivo' => :'tokenDispositivo',
         
-        :'nome_impresso' => :'nomeImpresso',
+        :'titulo' => :'titulo',
         
-        :'id_tipo_cartao' => :'idTipoCartao',
+        :'conteudo' => :'conteudo',
         
-        :'flag_ativo' => :'flagAtivo',
+        :'plataforma' => :'plataforma',
         
-        :'data_cadastro_portador' => :'dataCadastroPortador',
-        
-        :'data_cancelamento_portador' => :'dataCancelamentoPortador'
+        :'protocolo' => :'protocolo'
         
       }
     end
@@ -87,25 +91,27 @@ module Pier
     def self.swagger_types
       {
         
-        :'id_conta' => :'Integer',
+        :'data_envio' => :'DateTime',
         
-        :'id_produto' => :'Integer',
+        :'id_emissor' => :'Integer',
+        
+        :'evento' => :'String',
+        
+        :'status' => :'String',
         
         :'id_pessoa' => :'Integer',
         
-        :'id_parentesco' => :'Integer',
+        :'id_conta' => :'Integer',
         
-        :'tipo_portador' => :'String',
+        :'token_dispositivo' => :'String',
         
-        :'nome_impresso' => :'String',
+        :'titulo' => :'String',
         
-        :'id_tipo_cartao' => :'Integer',
+        :'conteudo' => :'String',
         
-        :'flag_ativo' => :'Integer',
+        :'plataforma' => :'String',
         
-        :'data_cadastro_portador' => :'DateTime',
-        
-        :'data_cancelamento_portador' => :'DateTime'
+        :'protocolo' => :'String'
         
       }
     end
@@ -119,19 +125,37 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'idConta']
+      if attributes[:'dataEnvio']
         
         
-        self.id_conta = attributes[:'idConta']
+        self.data_envio = attributes[:'dataEnvio']
         
       
       end
 
       
-      if attributes[:'idProduto']
+      if attributes[:'idEmissor']
         
         
-        self.id_produto = attributes[:'idProduto']
+        self.id_emissor = attributes[:'idEmissor']
+        
+      
+      end
+
+      
+      if attributes[:'evento']
+        
+        
+        self.evento = attributes[:'evento']
+        
+      
+      end
+
+      
+      if attributes[:'status']
+        
+        
+        self.status = attributes[:'status']
         
       
       end
@@ -146,64 +170,55 @@ module Pier
       end
 
       
-      if attributes[:'idParentesco']
+      if attributes[:'idConta']
         
         
-        self.id_parentesco = attributes[:'idParentesco']
-        
-      
-      end
-
-      
-      if attributes[:'tipoPortador']
-        
-        
-        self.tipo_portador = attributes[:'tipoPortador']
+        self.id_conta = attributes[:'idConta']
         
       
       end
 
       
-      if attributes[:'nomeImpresso']
+      if attributes[:'tokenDispositivo']
         
         
-        self.nome_impresso = attributes[:'nomeImpresso']
-        
-      
-      end
-
-      
-      if attributes[:'idTipoCartao']
-        
-        
-        self.id_tipo_cartao = attributes[:'idTipoCartao']
+        self.token_dispositivo = attributes[:'tokenDispositivo']
         
       
       end
 
       
-      if attributes[:'flagAtivo']
+      if attributes[:'titulo']
         
         
-        self.flag_ativo = attributes[:'flagAtivo']
-        
-      
-      end
-
-      
-      if attributes[:'dataCadastroPortador']
-        
-        
-        self.data_cadastro_portador = attributes[:'dataCadastroPortador']
+        self.titulo = attributes[:'titulo']
         
       
       end
 
       
-      if attributes[:'dataCancelamentoPortador']
+      if attributes[:'conteudo']
         
         
-        self.data_cancelamento_portador = attributes[:'dataCancelamentoPortador']
+        self.conteudo = attributes[:'conteudo']
+        
+      
+      end
+
+      
+      if attributes[:'plataforma']
+        
+        
+        self.plataforma = attributes[:'plataforma']
+        
+      
+      end
+
+      
+      if attributes[:'protocolo']
+        
+        
+        self.protocolo = attributes[:'protocolo']
         
       
       end
@@ -234,6 +249,73 @@ module Pier
       
       
       
+      allowed_values = ["RISCO_FRAUDE", "OUTROS"]
+      if @evento && !allowed_values.include?(@evento)
+        return false
+      end
+      
+      
+      
+      
+      
+      allowed_values = ["PENDENTE", "ENCAMINHADO", "ENVIADO", "RESPONDIDO", "ERRO", "ERRO_RESPOSTA"]
+      if @status && !allowed_values.include?(@status)
+        return false
+      end
+      
+      
+      
+      
+      if @id_pessoa.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @id_conta.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @token_dispositivo.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @titulo.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @conteudo.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      
+      allowed_values = ["APNS", "FCM", "GCM"]
+      if @plataforma && !allowed_values.include?(@plataforma)
+        return false
+      end
       
       
       
@@ -241,29 +323,42 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+    end
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] evento Object to be assigned
+    def evento=(evento)
+      allowed_values = ["RISCO_FRAUDE", "OUTROS"]
+      if evento && !allowed_values.include?(evento)
+        fail ArgumentError, "invalid value for 'evento', must be one of #{allowed_values}."
+      end
+      @evento = evento
+    end
+
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] status Object to be assigned
+    def status=(status)
+      allowed_values = ["PENDENTE", "ENCAMINHADO", "ENVIADO", "RESPONDIDO", "ERRO", "ERRO_RESPOSTA"]
+      if status && !allowed_values.include?(status)
+        fail ArgumentError, "invalid value for 'status', must be one of #{allowed_values}."
+      end
+      @status = status
     end
 
     
@@ -295,20 +390,16 @@ module Pier
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] plataforma Object to be assigned
+    def plataforma=(plataforma)
+      allowed_values = ["APNS", "FCM", "GCM"]
+      if plataforma && !allowed_values.include?(plataforma)
+        fail ArgumentError, "invalid value for 'plataforma', must be one of #{allowed_values}."
+      end
+      @plataforma = plataforma
+    end
+
     
     
     
@@ -322,16 +413,17 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id_conta == o.id_conta &&
-          id_produto == o.id_produto &&
+          data_envio == o.data_envio &&
+          id_emissor == o.id_emissor &&
+          evento == o.evento &&
+          status == o.status &&
           id_pessoa == o.id_pessoa &&
-          id_parentesco == o.id_parentesco &&
-          tipo_portador == o.tipo_portador &&
-          nome_impresso == o.nome_impresso &&
-          id_tipo_cartao == o.id_tipo_cartao &&
-          flag_ativo == o.flag_ativo &&
-          data_cadastro_portador == o.data_cadastro_portador &&
-          data_cancelamento_portador == o.data_cancelamento_portador
+          id_conta == o.id_conta &&
+          token_dispositivo == o.token_dispositivo &&
+          titulo == o.titulo &&
+          conteudo == o.conteudo &&
+          plataforma == o.plataforma &&
+          protocolo == o.protocolo
     end
 
     # @see the `==` method
@@ -343,7 +435,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_conta, id_produto, id_pessoa, id_parentesco, tipo_portador, nome_impresso, id_tipo_cartao, flag_ativo, data_cadastro_portador, data_cancelamento_portador].hash
+      [data_envio, id_emissor, evento, status, id_pessoa, id_conta, token_dispositivo, titulo, conteudo, plataforma, protocolo].hash
     end
 
     # Builds the object from hash

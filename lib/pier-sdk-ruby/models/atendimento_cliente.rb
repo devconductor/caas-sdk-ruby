@@ -23,62 +23,82 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Portador
-  class Portador
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+  # Objeto AtendimentoCliente
+  class AtendimentoCliente
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Atendimento (id)
+    attr_accessor :id_atendimento
+
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o Atendimento est\u00C3\u00A1 associado
     attr_accessor :id_conta
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
-    attr_accessor :id_produto
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
+    attr_accessor :id_tipo_atendimento
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
-    attr_accessor :id_pessoa
+    # Apresenta a descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento
+    attr_accessor :descricao_tipo_atendimento
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
-    attr_accessor :id_parentesco
+    # Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento.
+    attr_accessor :conteudo_atendimento
 
-    # Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
-    attr_accessor :tipo_portador
+    # Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
+    attr_accessor :detalhes_atendimento
 
-    # Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
-    attr_accessor :nome_impresso
+    # Apresenta o nome do Atendente que registrou o Atendimento.
+    attr_accessor :nome_atendente
 
-    # Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
-    attr_accessor :id_tipo_cartao
+    # Apresenta o nome do Sistema, Servidor, M\u00C3\u00B3dulo ou M\u00C3\u00A9todo REST que originou o registro do Atendimento.
+    attr_accessor :nome_sistema
 
-    # Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
-    attr_accessor :flag_ativo
+    # Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
+    attr_accessor :data_hora_inicio_atendimento
 
-    # Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :data_cadastro_portador
+    # Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
+    attr_accessor :data_hora_fim_atendimento
 
-    # Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :data_cancelamento_portador
+    # Apresenta a data em que o Atendimento foi realizado.
+    attr_accessor :data_atendimento
+
+    # Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data para processamento ou a data para retorno do Atendimento.
+    attr_accessor :data_agendamento
+
+    # Quando utilizado, apresenta a data em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.
+    attr_accessor :data_processamento
+
+    # Quando aplic\u00C3\u00A1vel, de acordo com o Indica se o Processamento da solicita\u00C3\u00A7\u00C3\u00A3o fora realizado.
+    attr_accessor :flag_processamento
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
+        :'id_atendimento' => :'idAtendimento',
+        
         :'id_conta' => :'idConta',
         
-        :'id_produto' => :'idProduto',
+        :'id_tipo_atendimento' => :'idTipoAtendimento',
         
-        :'id_pessoa' => :'idPessoa',
+        :'descricao_tipo_atendimento' => :'descricaoTipoAtendimento',
         
-        :'id_parentesco' => :'idParentesco',
+        :'conteudo_atendimento' => :'conteudoAtendimento',
         
-        :'tipo_portador' => :'tipoPortador',
+        :'detalhes_atendimento' => :'detalhesAtendimento',
         
-        :'nome_impresso' => :'nomeImpresso',
+        :'nome_atendente' => :'nomeAtendente',
         
-        :'id_tipo_cartao' => :'idTipoCartao',
+        :'nome_sistema' => :'nomeSistema',
         
-        :'flag_ativo' => :'flagAtivo',
+        :'data_hora_inicio_atendimento' => :'dataHoraInicioAtendimento',
         
-        :'data_cadastro_portador' => :'dataCadastroPortador',
+        :'data_hora_fim_atendimento' => :'dataHoraFimAtendimento',
         
-        :'data_cancelamento_portador' => :'dataCancelamentoPortador'
+        :'data_atendimento' => :'dataAtendimento',
+        
+        :'data_agendamento' => :'dataAgendamento',
+        
+        :'data_processamento' => :'dataProcessamento',
+        
+        :'flag_processamento' => :'flagProcessamento'
         
       }
     end
@@ -87,25 +107,33 @@ module Pier
     def self.swagger_types
       {
         
+        :'id_atendimento' => :'Integer',
+        
         :'id_conta' => :'Integer',
         
-        :'id_produto' => :'Integer',
+        :'id_tipo_atendimento' => :'Integer',
         
-        :'id_pessoa' => :'Integer',
+        :'descricao_tipo_atendimento' => :'String',
         
-        :'id_parentesco' => :'Integer',
+        :'conteudo_atendimento' => :'String',
         
-        :'tipo_portador' => :'String',
+        :'detalhes_atendimento' => :'String',
         
-        :'nome_impresso' => :'String',
+        :'nome_atendente' => :'String',
         
-        :'id_tipo_cartao' => :'Integer',
+        :'nome_sistema' => :'String',
         
-        :'flag_ativo' => :'Integer',
+        :'data_hora_inicio_atendimento' => :'DateTime',
         
-        :'data_cadastro_portador' => :'DateTime',
+        :'data_hora_fim_atendimento' => :'DateTime',
         
-        :'data_cancelamento_portador' => :'DateTime'
+        :'data_atendimento' => :'DateTime',
+        
+        :'data_agendamento' => :'DateTime',
+        
+        :'data_processamento' => :'DateTime',
+        
+        :'flag_processamento' => :'Integer'
         
       }
     end
@@ -119,6 +147,15 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
+      if attributes[:'idAtendimento']
+        
+        
+        self.id_atendimento = attributes[:'idAtendimento']
+        
+      
+      end
+
+      
       if attributes[:'idConta']
         
         
@@ -128,82 +165,109 @@ module Pier
       end
 
       
-      if attributes[:'idProduto']
+      if attributes[:'idTipoAtendimento']
         
         
-        self.id_produto = attributes[:'idProduto']
-        
-      
-      end
-
-      
-      if attributes[:'idPessoa']
-        
-        
-        self.id_pessoa = attributes[:'idPessoa']
+        self.id_tipo_atendimento = attributes[:'idTipoAtendimento']
         
       
       end
 
       
-      if attributes[:'idParentesco']
+      if attributes[:'descricaoTipoAtendimento']
         
         
-        self.id_parentesco = attributes[:'idParentesco']
-        
-      
-      end
-
-      
-      if attributes[:'tipoPortador']
-        
-        
-        self.tipo_portador = attributes[:'tipoPortador']
+        self.descricao_tipo_atendimento = attributes[:'descricaoTipoAtendimento']
         
       
       end
 
       
-      if attributes[:'nomeImpresso']
+      if attributes[:'conteudoAtendimento']
         
         
-        self.nome_impresso = attributes[:'nomeImpresso']
-        
-      
-      end
-
-      
-      if attributes[:'idTipoCartao']
-        
-        
-        self.id_tipo_cartao = attributes[:'idTipoCartao']
+        self.conteudo_atendimento = attributes[:'conteudoAtendimento']
         
       
       end
 
       
-      if attributes[:'flagAtivo']
+      if attributes[:'detalhesAtendimento']
         
         
-        self.flag_ativo = attributes[:'flagAtivo']
-        
-      
-      end
-
-      
-      if attributes[:'dataCadastroPortador']
-        
-        
-        self.data_cadastro_portador = attributes[:'dataCadastroPortador']
+        self.detalhes_atendimento = attributes[:'detalhesAtendimento']
         
       
       end
 
       
-      if attributes[:'dataCancelamentoPortador']
+      if attributes[:'nomeAtendente']
         
         
-        self.data_cancelamento_portador = attributes[:'dataCancelamentoPortador']
+        self.nome_atendente = attributes[:'nomeAtendente']
+        
+      
+      end
+
+      
+      if attributes[:'nomeSistema']
+        
+        
+        self.nome_sistema = attributes[:'nomeSistema']
+        
+      
+      end
+
+      
+      if attributes[:'dataHoraInicioAtendimento']
+        
+        
+        self.data_hora_inicio_atendimento = attributes[:'dataHoraInicioAtendimento']
+        
+      
+      end
+
+      
+      if attributes[:'dataHoraFimAtendimento']
+        
+        
+        self.data_hora_fim_atendimento = attributes[:'dataHoraFimAtendimento']
+        
+      
+      end
+
+      
+      if attributes[:'dataAtendimento']
+        
+        
+        self.data_atendimento = attributes[:'dataAtendimento']
+        
+      
+      end
+
+      
+      if attributes[:'dataAgendamento']
+        
+        
+        self.data_agendamento = attributes[:'dataAgendamento']
+        
+      
+      end
+
+      
+      if attributes[:'dataProcessamento']
+        
+        
+        self.data_processamento = attributes[:'dataProcessamento']
+        
+      
+      end
+
+      
+      if attributes[:'flagProcessamento']
+        
+        
+        self.flag_processamento = attributes[:'flagProcessamento']
         
       
       end
@@ -264,8 +328,44 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -322,16 +422,20 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          id_atendimento == o.id_atendimento &&
           id_conta == o.id_conta &&
-          id_produto == o.id_produto &&
-          id_pessoa == o.id_pessoa &&
-          id_parentesco == o.id_parentesco &&
-          tipo_portador == o.tipo_portador &&
-          nome_impresso == o.nome_impresso &&
-          id_tipo_cartao == o.id_tipo_cartao &&
-          flag_ativo == o.flag_ativo &&
-          data_cadastro_portador == o.data_cadastro_portador &&
-          data_cancelamento_portador == o.data_cancelamento_portador
+          id_tipo_atendimento == o.id_tipo_atendimento &&
+          descricao_tipo_atendimento == o.descricao_tipo_atendimento &&
+          conteudo_atendimento == o.conteudo_atendimento &&
+          detalhes_atendimento == o.detalhes_atendimento &&
+          nome_atendente == o.nome_atendente &&
+          nome_sistema == o.nome_sistema &&
+          data_hora_inicio_atendimento == o.data_hora_inicio_atendimento &&
+          data_hora_fim_atendimento == o.data_hora_fim_atendimento &&
+          data_atendimento == o.data_atendimento &&
+          data_agendamento == o.data_agendamento &&
+          data_processamento == o.data_processamento &&
+          flag_processamento == o.flag_processamento
     end
 
     # @see the `==` method
@@ -343,7 +447,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_conta, id_produto, id_pessoa, id_parentesco, tipo_portador, nome_impresso, id_tipo_cartao, flag_ativo, data_cadastro_portador, data_cancelamento_portador].hash
+      [id_atendimento, id_conta, id_tipo_atendimento, descricao_tipo_atendimento, conteudo_atendimento, detalhes_atendimento, nome_atendente, nome_sistema, data_hora_inicio_atendimento, data_hora_fim_atendimento, data_atendimento, data_agendamento, data_processamento, flag_processamento].hash
     end
 
     # Builds the object from hash

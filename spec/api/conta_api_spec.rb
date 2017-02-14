@@ -107,13 +107,13 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for consultar_using_get1
+  # unit tests for consultar_using_get2
   # Apresenta dados de uma determinada conta
   # Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
   # @param [Hash] opts the optional parameters
   # @return [Conta]
-  describe 'consultar_using_get1 test' do
+  describe 'consultar_using_get2 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -126,10 +126,11 @@ describe 'ContaApi' do
 
   # unit tests for gerar_cartao_using_post
   # Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
-  # 
+  # Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
   # @param id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
   # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :id_tipo_plastico C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id).
   # @return [CartaoImpressao]
   describe 'gerar_cartao_using_post test' do
     it "should work" do
@@ -150,7 +151,7 @@ describe 'ContaApi' do
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   # @option opts [Date] :data_vencimento Data de Vencimento da Fatura.
-  # @return [Fatura]
+  # @return [FaturaResponse]
   describe 'listar_faturas_using_get test' do
     it "should work" do
       # assertion here
@@ -162,7 +163,7 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for listar_using_get1
+  # unit tests for listar_using_get2
   # Lista contas existentes na base de dados do Emissor
   # Este recurso permite listar contas existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -179,7 +180,7 @@ describe 'ContaApi' do
   # @option opts [Date] :data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
   # @option opts [Date] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
   # @return [Conta]
-  describe 'listar_using_get1 test' do
+  describe 'listar_using_get2 test' do
     it "should work" do
       # assertion here
       # should be_a()

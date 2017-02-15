@@ -531,7 +531,7 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Date] :data_vencimento Data de Vencimento da Fatura.
-    # @return [FaturaResponse]
+    # @return [PageFaturas]
     def listar_faturas_using_get(id, opts = {})
       data, _status_code, _headers = listar_faturas_using_get_with_http_info(id, opts)
       return data
@@ -544,7 +544,7 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Date] :data_vencimento Data de Vencimento da Fatura.
-    # @return [Array<(FaturaResponse, Fixnum, Hash)>] FaturaResponse data, response status code and response headers
+    # @return [Array<(PageFaturas, Fixnum, Hash)>] PageFaturas data, response status code and response headers
     def listar_faturas_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContaApi.listar_faturas_using_get ..."
@@ -609,7 +609,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'FaturaResponse')
+        :return_type => 'PageFaturas')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ContaApi#listar_faturas_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

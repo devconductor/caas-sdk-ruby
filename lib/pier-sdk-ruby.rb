@@ -95,6 +95,9 @@ require 'pier-sdk-ruby/models/page_enderecos'
 require 'pier-sdk-ruby/models/page_estagios_cartoes'
 
 
+require 'pier-sdk-ruby/models/page_faturas'
+
+
 require 'pier-sdk-ruby/models/page_origens_comerciais'
 
 

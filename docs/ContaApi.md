@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 
 
 # **listar_faturas_using_get**
-> FaturaResponse listar_faturas_using_get(id, opts)
+> PageFaturas listar_faturas_using_get(id, opts)
 
 Listar Faturas da Conta
 
@@ -404,7 +404,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FaturaResponse**](FaturaResponse.md)
+[**PageFaturas**](PageFaturas.md)
 
 ### Authorization
 

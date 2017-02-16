@@ -4,10 +4,11 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**alterar_alterar_senha_using_put**](CartaoApi.md#alterar_alterar_senha_using_put) | **PUT** /api/cartoes/{id}/alterar-senha | Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
 [**alterar_status_impressao_using_put**](CartaoApi.md#alterar_status_impressao_using_put) | **PUT** /api/cartoes/{id}/alterar-status-impressao | Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
 [**atribuir_pessoa_using_put**](CartaoApi.md#atribuir_pessoa_using_put) | **PUT** /api/cartoes/{id}/atribuir-pessoa | Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
 [**bloquear_using_put**](CartaoApi.md#bloquear_using_put) | **PUT** /api/cartoes/{id}/bloquear | Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
-[**cadastrar_alterar_senha_using_put**](CartaoApi.md#cadastrar_alterar_senha_using_put) | **PUT** /api/cartoes/{id}/alterar-senha | Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+[**cadastrar_alterar_senha_using_post**](CartaoApi.md#cadastrar_alterar_senha_using_post) | **POST** /api/cartoes/{id}/cadastrar-senha | Realiza o cadastro da senha de um Cart\u00C3\u00A3o
 [**consultar_limite_disponibilidade_using_get**](CartaoApi.md#consultar_limite_disponibilidade_using_get) | **GET** /api/cartoes/{id}/limites-disponibilidades | Apresenta os limites do Portador do Cart\u00C3\u00A3o
 [**consultar_portador_using_get**](CartaoApi.md#consultar_portador_using_get) | **GET** /api/cartoes/{id}/portadores | Apresenta os dados do Portador do Cart\u00C3\u00A3o
 [**consultar_using_get1**](CartaoApi.md#consultar_using_get1) | **GET** /api/cartoes/{id} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
@@ -21,6 +22,67 @@ Method | HTTP request | Description
 [**validar_cartao_digitado_nao_bandeirado_using_get**](CartaoApi.md#validar_cartao_digitado_nao_bandeirado_using_get) | **GET** /api/cartoes/nao-bandeirados/validar-digitado | Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
 [**validar_cartao_tarja_bandeirado_using_get**](CartaoApi.md#validar_cartao_tarja_bandeirado_using_get) | **GET** /api/cartoes/bandeirados/validar-tarja | Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
 [**validar_senha_using_get**](CartaoApi.md#validar_senha_using_get) | **GET** /api/cartoes/{id}/validar-senha | Permite validar a senha de um Cart\u00C3\u00A3o
+
+
+
+
+# **alterar_alterar_senha_using_put**
+> String alterar_alterar_senha_using_put(id, senha)
+
+Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+
+Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::CartaoApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+
+senha = "senha_example" # String | Senha para ser cadastrada ou alterada.
+
+
+begin
+  #Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+  result = api_instance.alterar_alterar_senha_using_put(id, senha)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CartaoApi->alterar_alterar_senha_using_put: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
+ **senha** | **String**| Senha para ser cadastrada ou alterada. | 
+
+
+### Return type
+
+**String**
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
@@ -211,10 +273,10 @@ Name | Type | Description  | Notes
 
 
 
-# **cadastrar_alterar_senha_using_put**
-> String cadastrar_alterar_senha_using_put(id, senha)
+# **cadastrar_alterar_senha_using_post**
+> String cadastrar_alterar_senha_using_post(id, senha)
 
-Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+Realiza o cadastro da senha de um Cart\u00C3\u00A3o
 
 Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
 
@@ -240,11 +302,11 @@ senha = "senha_example" # String | Senha para ser cadastrada ou alterada.
 
 
 begin
-  #Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
-  result = api_instance.cadastrar_alterar_senha_using_put(id, senha)
+  #Realiza o cadastro da senha de um Cart\u00C3\u00A3o
+  result = api_instance.cadastrar_alterar_senha_using_post(id, senha)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CartaoApi->cadastrar_alterar_senha_using_put: #{e}"
+  puts "Exception when calling CartaoApi->cadastrar_alterar_senha_using_post: #{e}"
 end
 ```
 

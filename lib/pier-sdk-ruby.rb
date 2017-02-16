@@ -86,6 +86,9 @@ require 'pier-sdk-ruby/models/notificacao_sms_response'
 require 'pier-sdk-ruby/models/origem_comercial'
 
 
+require 'pier-sdk-ruby/models/page_atendimento_clientes'
+
+
 require 'pier-sdk-ruby/models/page_cartoes'
 
 
@@ -134,6 +137,9 @@ require 'pier-sdk-ruby/models/page_tipos_endereco'
 require 'pier-sdk-ruby/models/page_transacao_response'
 
 
+require 'pier-sdk-ruby/models/page_transferencias'
+
+
 require 'pier-sdk-ruby/models/page_web_hooks'
 
 
@@ -174,6 +180,9 @@ require 'pier-sdk-ruby/models/tipo_telefone'
 
 
 require 'pier-sdk-ruby/models/transacao_response'
+
+
+require 'pier-sdk-ruby/models/transferencia'
 
 
 require 'pier-sdk-ruby/models/valida_cartao'

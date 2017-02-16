@@ -25,6 +25,9 @@ require 'date'
 module Pier
   # Objeto SMS
   class SMS
+    # C\u00C3\u00B3digo Identificador.
+    attr_accessor :id
+
     # N\u00C3\u00BAmero sequencial \u00C3\u00BAnico.
     attr_accessor :nsu
 
@@ -37,6 +40,9 @@ module Pier
     # Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
     attr_accessor :status
 
+    # Descri\u00C3\u00A7\u00C3\u00A3o do status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+    attr_accessor :descricao_status
+
     # C\u00C3\u00B3digo identificado da pessoa
     attr_accessor :id_pessoa
 
@@ -46,8 +52,14 @@ module Pier
     # Apresenta o celular a ser eviado o SMS no formato 5588999999999 ou 5588999999999
     attr_accessor :celular
 
+    # Apresenta a operadora do celular a ser eviado o SMS
+    attr_accessor :operadora
+
     # Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado
     attr_accessor :conteudo
+
+    # Apresenta o texto da resposta da notifica\u00C3\u00A7\u00C3\u00A3o que foi enviada
+    attr_accessor :resposta
 
     # Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
     attr_accessor :data_agendamento
@@ -69,6 +81,8 @@ module Pier
     def self.attribute_map
       {
         
+        :'id' => :'id',
+        
         :'nsu' => :'nsu',
         
         :'id_emissor' => :'idEmissor',
@@ -77,13 +91,19 @@ module Pier
         
         :'status' => :'status',
         
+        :'descricao_status' => :'descricaoStatus',
+        
         :'id_pessoa' => :'idPessoa',
         
         :'id_conta' => :'idConta',
         
         :'celular' => :'celular',
         
+        :'operadora' => :'operadora',
+        
         :'conteudo' => :'conteudo',
+        
+        :'resposta' => :'resposta',
         
         :'data_agendamento' => :'dataAgendamento',
         
@@ -102,6 +122,8 @@ module Pier
     def self.swagger_types
       {
         
+        :'id' => :'Integer',
+        
         :'nsu' => :'Integer',
         
         :'id_emissor' => :'Integer',
@@ -110,13 +132,19 @@ module Pier
         
         :'status' => :'String',
         
+        :'descricao_status' => :'String',
+        
         :'id_pessoa' => :'Integer',
         
         :'id_conta' => :'Integer',
         
         :'celular' => :'String',
         
+        :'operadora' => :'String',
+        
         :'conteudo' => :'String',
+        
+        :'resposta' => :'String',
         
         :'data_agendamento' => :'DateTime',
         
@@ -138,6 +166,15 @@ module Pier
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      
+      if attributes[:'id']
+        
+        
+        self.id = attributes[:'id']
+        
+      
+      end
 
       
       if attributes[:'nsu']
@@ -176,6 +213,15 @@ module Pier
       end
 
       
+      if attributes[:'descricaoStatus']
+        
+        
+        self.descricao_status = attributes[:'descricaoStatus']
+        
+      
+      end
+
+      
       if attributes[:'idPessoa']
         
         
@@ -203,10 +249,28 @@ module Pier
       end
 
       
+      if attributes[:'operadora']
+        
+        
+        self.operadora = attributes[:'operadora']
+        
+      
+      end
+
+      
       if attributes[:'conteudo']
         
         
         self.conteudo = attributes[:'conteudo']
+        
+      
+      end
+
+      
+      if attributes[:'resposta']
+        
+        
+        self.resposta = attributes[:'resposta']
         
       
       end
@@ -282,6 +346,10 @@ module Pier
       
       
       
+      
+      
+      
+      
       allowed_values = ["RISCO_FRAUDE", "OUTROS"]
       if @evento && !allowed_values.include?(@evento)
         return false
@@ -300,6 +368,15 @@ module Pier
       if @status && !allowed_values.include?(@status)
         return false
       end
+      
+      
+      
+      
+      if @descricao_status.nil?
+        return false
+      end
+
+      
       
       
       
@@ -331,7 +408,25 @@ module Pier
       
       
       
+      if @operadora.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
       if @conteudo.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @resposta.nil?
         return false
       end
 
@@ -381,6 +476,11 @@ module Pier
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -465,19 +565,38 @@ module Pier
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared 
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          id == o.id &&
           nsu == o.nsu &&
           id_emissor == o.id_emissor &&
           evento == o.evento &&
           status == o.status &&
+          descricao_status == o.descricao_status &&
           id_pessoa == o.id_pessoa &&
           id_conta == o.id_conta &&
           celular == o.celular &&
+          operadora == o.operadora &&
           conteudo == o.conteudo &&
+          resposta == o.resposta &&
           data_agendamento == o.data_agendamento &&
           quantidade_tentativas_envio == o.quantidade_tentativas_envio &&
           data_inclusao == o.data_inclusao &&
@@ -494,7 +613,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [nsu, id_emissor, evento, status, id_pessoa, id_conta, celular, conteudo, data_agendamento, quantidade_tentativas_envio, data_inclusao, data_alteracao_status, protocolo].hash
+      [id, nsu, id_emissor, evento, status, descricao_status, id_pessoa, id_conta, celular, operadora, conteudo, resposta, data_agendamento, quantidade_tentativas_envio, data_inclusao, data_alteracao_status, protocolo].hash
     end
 
     # Builds the object from hash

@@ -46,30 +46,14 @@ describe 'NotificacoesApi' do
   # unit tests for atualizar_sms_using_post
   # Atualizar SMS
   # Esse recurso permite atualizar o status do SMS do emissor
-  # @param nsu Seu n\u00C3\u00BAmero
-  # @param status Status
-  # @param data Data
-  # @param texto_status TextoStatus
-  # @param operadora Operadora
   # @param [Hash] opts the optional parameters
+  # @option opts [String] :nsu Seu n\u00C3\u00BAmero
+  # @option opts [String] :status Status
+  # @option opts [String] :data Data
+  # @option opts [String] :texto_status TextoStatus
+  # @option opts [String] :operadora Operadora
   # @return [SMS]
   describe 'atualizar_sms_using_post test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for limpar_acesso_tww_using_get
-  # Limpar Acessos
-  # Esse recurso permite limpar a lista de emissores que possuem acesso a envio de SMS pela TWW.
-  # @param [Hash] opts the optional parameters
-  # @return [String]
-  describe 'limpar_acesso_tww_using_get test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -129,10 +113,10 @@ describe 'NotificacoesApi' do
   # unit tests for responder_sms_using_post
   # Responder SMS
   # Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
-  # @param nsu Seu n\u00C3\u00BAmero
-  # @param data Data
-  # @param resposta TextoStatus
   # @param [Hash] opts the optional parameters
+  # @option opts [String] :nsu Seu n\u00C3\u00BAmero
+  # @option opts [String] :data Data
+  # @option opts [String] :resposta TextoStatus
   # @return [SMS]
   describe 'responder_sms_using_post test' do
     it "should work" do

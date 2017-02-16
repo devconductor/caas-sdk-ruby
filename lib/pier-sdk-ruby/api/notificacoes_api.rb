@@ -34,67 +34,57 @@ module Pier
 
     # Atualizar SMS
     # Esse recurso permite atualizar o status do SMS do emissor
-    # @param nsu Seu n\u00C3\u00BAmero
-    # @param status Status
-    # @param data Data
-    # @param texto_status TextoStatus
-    # @param operadora Operadora
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :nsu Seu n\u00C3\u00BAmero
+    # @option opts [String] :status Status
+    # @option opts [String] :data Data
+    # @option opts [String] :texto_status TextoStatus
+    # @option opts [String] :operadora Operadora
     # @return [SMS]
-    def atualizar_sms_using_post(nsu, status, data, texto_status, operadora, opts = {})
-      data, _status_code, _headers = atualizar_sms_using_post_with_http_info(nsu, status, data, texto_status, operadora, opts)
+    def atualizar_sms_using_post(opts = {})
+      data, _status_code, _headers = atualizar_sms_using_post_with_http_info(opts)
       return data
     end
 
     # Atualizar SMS
     # Esse recurso permite atualizar o status do SMS do emissor
-    # @param nsu Seu n\u00C3\u00BAmero
-    # @param status Status
-    # @param data Data
-    # @param texto_status TextoStatus
-    # @param operadora Operadora
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :nsu Seu n\u00C3\u00BAmero
+    # @option opts [String] :status Status
+    # @option opts [String] :data Data
+    # @option opts [String] :texto_status TextoStatus
+    # @option opts [String] :operadora Operadora
     # @return [Array<(SMS, Fixnum, Hash)>] SMS data, response status code and response headers
-    def atualizar_sms_using_post_with_http_info(nsu, status, data, texto_status, operadora, opts = {})
+    def atualizar_sms_using_post_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: NotificacoesApi.atualizar_sms_using_post ..."
       end
       
       
-      # verify the required parameter 'nsu' is set
-      fail ArgumentError, "Missing the required parameter 'nsu' when calling NotificacoesApi.atualizar_sms_using_post" if nsu.nil?
       
       
       
       
       
       
-      # verify the required parameter 'status' is set
-      fail ArgumentError, "Missing the required parameter 'status' when calling NotificacoesApi.atualizar_sms_using_post" if status.nil?
       
       
       
       
       
       
-      # verify the required parameter 'data' is set
-      fail ArgumentError, "Missing the required parameter 'data' when calling NotificacoesApi.atualizar_sms_using_post" if data.nil?
       
       
       
       
       
       
-      # verify the required parameter 'texto_status' is set
-      fail ArgumentError, "Missing the required parameter 'texto_status' when calling NotificacoesApi.atualizar_sms_using_post" if texto_status.nil?
       
       
       
       
       
       
-      # verify the required parameter 'operadora' is set
-      fail ArgumentError, "Missing the required parameter 'operadora' when calling NotificacoesApi.atualizar_sms_using_post" if operadora.nil?
       
       
       
@@ -105,11 +95,11 @@ module Pier
 
       # query parameters
       query_params = {}
-      query_params[:'nsu'] = nsu
-      query_params[:'status'] = status
-      query_params[:'data'] = data
-      query_params[:'texto_status'] = texto_status
-      query_params[:'operadora'] = operadora
+      query_params[:'nsu'] = opts[:'nsu'] if opts[:'nsu']
+      query_params[:'status'] = opts[:'status'] if opts[:'status']
+      query_params[:'data'] = opts[:'data'] if opts[:'data']
+      query_params[:'texto_status'] = opts[:'texto_status'] if opts[:'texto_status']
+      query_params[:'operadora'] = opts[:'operadora'] if opts[:'operadora']
 
       # header parameters
       header_params = {}
@@ -138,62 +128,6 @@ module Pier
         :return_type => 'SMS')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: NotificacoesApi#atualizar_sms_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-
-    # Limpar Acessos
-    # Esse recurso permite limpar a lista de emissores que possuem acesso a envio de SMS pela TWW.
-    # @param [Hash] opts the optional parameters
-    # @return [String]
-    def limpar_acesso_tww_using_get(opts = {})
-      data, _status_code, _headers = limpar_acesso_tww_using_get_with_http_info(opts)
-      return data
-    end
-
-    # Limpar Acessos
-    # Esse recurso permite limpar a lista de emissores que possuem acesso a envio de SMS pela TWW.
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
-    def limpar_acesso_tww_using_get_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: NotificacoesApi.limpar_acesso_tww_using_get ..."
-      end
-      
-      # resource path
-      local_var_path = "/api/notificacoes/sms/limpar".sub('{format}','json')
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = ['access_token']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: NotificacoesApi#limpar_acesso_tww_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -459,47 +393,41 @@ module Pier
 
     # Responder SMS
     # Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
-    # @param nsu Seu n\u00C3\u00BAmero
-    # @param data Data
-    # @param resposta TextoStatus
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :nsu Seu n\u00C3\u00BAmero
+    # @option opts [String] :data Data
+    # @option opts [String] :resposta TextoStatus
     # @return [SMS]
-    def responder_sms_using_post(nsu, data, resposta, opts = {})
-      data, _status_code, _headers = responder_sms_using_post_with_http_info(nsu, data, resposta, opts)
+    def responder_sms_using_post(opts = {})
+      data, _status_code, _headers = responder_sms_using_post_with_http_info(opts)
       return data
     end
 
     # Responder SMS
     # Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
-    # @param nsu Seu n\u00C3\u00BAmero
-    # @param data Data
-    # @param resposta TextoStatus
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :nsu Seu n\u00C3\u00BAmero
+    # @option opts [String] :data Data
+    # @option opts [String] :resposta TextoStatus
     # @return [Array<(SMS, Fixnum, Hash)>] SMS data, response status code and response headers
-    def responder_sms_using_post_with_http_info(nsu, data, resposta, opts = {})
+    def responder_sms_using_post_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: NotificacoesApi.responder_sms_using_post ..."
       end
       
       
-      # verify the required parameter 'nsu' is set
-      fail ArgumentError, "Missing the required parameter 'nsu' when calling NotificacoesApi.responder_sms_using_post" if nsu.nil?
       
       
       
       
       
       
-      # verify the required parameter 'data' is set
-      fail ArgumentError, "Missing the required parameter 'data' when calling NotificacoesApi.responder_sms_using_post" if data.nil?
       
       
       
       
       
       
-      # verify the required parameter 'resposta' is set
-      fail ArgumentError, "Missing the required parameter 'resposta' when calling NotificacoesApi.responder_sms_using_post" if resposta.nil?
       
       
       
@@ -510,9 +438,9 @@ module Pier
 
       # query parameters
       query_params = {}
-      query_params[:'nsu'] = nsu
-      query_params[:'data'] = data
-      query_params[:'resposta'] = resposta
+      query_params[:'nsu'] = opts[:'nsu'] if opts[:'nsu']
+      query_params[:'data'] = opts[:'data'] if opts[:'data']
+      query_params[:'resposta'] = opts[:'resposta'] if opts[:'resposta']
 
       # header parameters
       header_params = {}

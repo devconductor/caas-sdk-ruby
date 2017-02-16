@@ -108,7 +108,7 @@ module Pier
     # @option opts [Integer] :id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
     # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
     # @option opts [DateTime] :data_atendimento Apresenta a data em que o Atendimento foi realizado.
-    # @return [AtendimentoCliente]
+    # @return [PageAtendimentoClientes]
     def listar_using_get(opts = {})
       data, _status_code, _headers = listar_using_get_with_http_info(opts)
       return data
@@ -124,7 +124,7 @@ module Pier
     # @option opts [Integer] :id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
     # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
     # @option opts [DateTime] :data_atendimento Apresenta a data em que o Atendimento foi realizado.
-    # @return [Array<(AtendimentoCliente, Fixnum, Hash)>] AtendimentoCliente data, response status code and response headers
+    # @return [Array<(PageAtendimentoClientes, Fixnum, Hash)>] PageAtendimentoClientes data, response status code and response headers
     def listar_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: FraudesApi.listar_using_get ..."
@@ -209,7 +209,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'AtendimentoCliente')
+        :return_type => 'PageAtendimentoClientes')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: FraudesApi#listar_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

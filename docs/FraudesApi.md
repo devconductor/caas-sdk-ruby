@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 
 # **listar_using_get**
-> AtendimentoCliente listar_using_get(opts)
+> PageAtendimentoClientes listar_using_get(opts)
 
 Lista todos os atendimentos
 
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AtendimentoCliente**](AtendimentoCliente.md)
+[**PageAtendimentoClientes**](PageAtendimentoClientes.md)
 
 ### Authorization
 

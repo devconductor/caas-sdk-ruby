@@ -32,6 +32,83 @@ module Pier
     end
 
 
+    # Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param senha Senha para ser cadastrada ou alterada.
+    # @param [Hash] opts the optional parameters
+    # @return [String]
+    def alterar_alterar_senha_using_put(id, senha, opts = {})
+      data, _status_code, _headers = alterar_alterar_senha_using_put_with_http_info(id, senha, opts)
+      return data
+    end
+
+    # Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param senha Senha para ser cadastrada ou alterada.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    def alterar_alterar_senha_using_put_with_http_info(id, senha, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CartaoApi.alterar_alterar_senha_using_put ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CartaoApi.alterar_alterar_senha_using_put" if id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'senha' is set
+      fail ArgumentError, "Missing the required parameter 'senha' when calling CartaoApi.alterar_alterar_senha_using_put" if senha.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/cartoes/{id}/alterar-senha".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+      header_params[:'senha'] = senha
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'String')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CartaoApi#alterar_alterar_senha_using_put\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite que uma Aplica\u00C3\u00A7\u00C3\u00A3o que realize a impress\u00C3\u00A3o de cart\u00C3\u00B5es possa indicar que um determinado idCartao fora impresso ou est\u00C3\u00A1 em processo de impress\u00C3\u00A3o. Para isso, basta informar o respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00C3\u00ADdo a ele. Por padr\u00C3\u00A3o, cart\u00C3\u00B5es provis\u00C3\u00B3rios ou que j\u00C3\u00A1 tenham sido inclu\u00C3\u00ADdos em um arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica ter\u00C3\u00A3o esta requisi\u00C3\u00A7\u00C3\u00A3o negada, se utilizada.
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
@@ -274,31 +351,31 @@ module Pier
     end
 
 
-    # Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+    # Realiza o cadastro da senha de um Cart\u00C3\u00A3o
     # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param senha Senha para ser cadastrada ou alterada.
     # @param [Hash] opts the optional parameters
     # @return [String]
-    def cadastrar_alterar_senha_using_put(id, senha, opts = {})
-      data, _status_code, _headers = cadastrar_alterar_senha_using_put_with_http_info(id, senha, opts)
+    def cadastrar_alterar_senha_using_post(id, senha, opts = {})
+      data, _status_code, _headers = cadastrar_alterar_senha_using_post_with_http_info(id, senha, opts)
       return data
     end
 
-    # Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+    # Realiza o cadastro da senha de um Cart\u00C3\u00A3o
     # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param senha Senha para ser cadastrada ou alterada.
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
-    def cadastrar_alterar_senha_using_put_with_http_info(id, senha, opts = {})
+    def cadastrar_alterar_senha_using_post_with_http_info(id, senha, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CartaoApi.cadastrar_alterar_senha_using_put ..."
+        @api_client.config.logger.debug "Calling API: CartaoApi.cadastrar_alterar_senha_using_post ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling CartaoApi.cadastrar_alterar_senha_using_put" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling CartaoApi.cadastrar_alterar_senha_using_post" if id.nil?
       
       
       
@@ -306,14 +383,14 @@ module Pier
       
       
       # verify the required parameter 'senha' is set
-      fail ArgumentError, "Missing the required parameter 'senha' when calling CartaoApi.cadastrar_alterar_senha_using_put" if senha.nil?
+      fail ArgumentError, "Missing the required parameter 'senha' when calling CartaoApi.cadastrar_alterar_senha_using_post" if senha.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/cartoes/{id}/alterar-senha".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+      local_var_path = "/api/cartoes/{id}/cadastrar-senha".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -337,7 +414,7 @@ module Pier
       post_body = nil
       
       auth_names = ['access_token']
-      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -345,7 +422,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'String')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CartaoApi#cadastrar_alterar_senha_using_put\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CartaoApi#cadastrar_alterar_senha_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

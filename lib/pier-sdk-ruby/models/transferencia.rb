@@ -23,43 +23,31 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto conta
-  class Conta
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+  # Objeto transferencia
+  class Transferencia
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).
     attr_accessor :id
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
-    attr_accessor :id_produto
+    # Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
+    attr_accessor :data_transferencia
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
-    attr_accessor :id_origem_comercial
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id).
+    attr_accessor :id_conta_origem
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
-    attr_accessor :id_pessoa
+    # Apresenta o nome completo da pessoa que realizou a Transfer\u00C3\u00AAncia.
+    attr_accessor :nome_pessoa_origem
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
-    attr_accessor :id_status_conta
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
+    attr_accessor :id_conta_destino
 
-    # Apresenta o dia de vencimento.
-    attr_accessor :dia_vencimento
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cliente Portador Cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).
+    attr_accessor :nome_pessoa_destino
 
-    # Apresenta o melhor dia de compra.
-    attr_accessor :melhor_dia_compra
+    # Valor estabelecido para ser transferido.
+    attr_accessor :valor_transferencia
 
-    # Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
-    attr_accessor :data_status_conta
-
-    # Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-    attr_accessor :data_cadastro
-
-    # Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
-    attr_accessor :data_ultima_alteracao_vencimento
-
-    # N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
-    attr_accessor :numero_agencia
-
-    # N\u00C3\u00BAmero da conta corrente.
-    attr_accessor :numero_conta_corrente
+    # Valor estabelecido da tarifa para a transfer\u00C3\u00AAncia.
+    attr_accessor :valor_tarifa
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -68,27 +56,19 @@ module Pier
         
         :'id' => :'id',
         
-        :'id_produto' => :'idProduto',
+        :'data_transferencia' => :'dataTransferencia',
         
-        :'id_origem_comercial' => :'idOrigemComercial',
+        :'id_conta_origem' => :'idContaOrigem',
         
-        :'id_pessoa' => :'idPessoa',
+        :'nome_pessoa_origem' => :'nomePessoaOrigem',
         
-        :'id_status_conta' => :'idStatusConta',
+        :'id_conta_destino' => :'idContaDestino',
         
-        :'dia_vencimento' => :'diaVencimento',
+        :'nome_pessoa_destino' => :'nomePessoaDestino',
         
-        :'melhor_dia_compra' => :'melhorDiaCompra',
+        :'valor_transferencia' => :'valorTransferencia',
         
-        :'data_status_conta' => :'dataStatusConta',
-        
-        :'data_cadastro' => :'dataCadastro',
-        
-        :'data_ultima_alteracao_vencimento' => :'dataUltimaAlteracaoVencimento',
-        
-        :'numero_agencia' => :'numeroAgencia',
-        
-        :'numero_conta_corrente' => :'numeroContaCorrente'
+        :'valor_tarifa' => :'valorTarifa'
         
       }
     end
@@ -99,27 +79,19 @@ module Pier
         
         :'id' => :'Integer',
         
-        :'id_produto' => :'Integer',
+        :'data_transferencia' => :'DateTime',
         
-        :'id_origem_comercial' => :'Integer',
+        :'id_conta_origem' => :'Integer',
         
-        :'id_pessoa' => :'Integer',
+        :'nome_pessoa_origem' => :'String',
         
-        :'id_status_conta' => :'Integer',
+        :'id_conta_destino' => :'Integer',
         
-        :'dia_vencimento' => :'Integer',
+        :'nome_pessoa_destino' => :'String',
         
-        :'melhor_dia_compra' => :'Integer',
+        :'valor_transferencia' => :'Float',
         
-        :'data_status_conta' => :'DateTime',
-        
-        :'data_cadastro' => :'DateTime',
-        
-        :'data_ultima_alteracao_vencimento' => :'DateTime',
-        
-        :'numero_agencia' => :'Integer',
-        
-        :'numero_conta_corrente' => :'String'
+        :'valor_tarifa' => :'Float'
         
       }
     end
@@ -142,100 +114,64 @@ module Pier
       end
 
       
-      if attributes[:'idProduto']
+      if attributes[:'dataTransferencia']
         
         
-        self.id_produto = attributes[:'idProduto']
-        
-      
-      end
-
-      
-      if attributes[:'idOrigemComercial']
-        
-        
-        self.id_origem_comercial = attributes[:'idOrigemComercial']
+        self.data_transferencia = attributes[:'dataTransferencia']
         
       
       end
 
       
-      if attributes[:'idPessoa']
+      if attributes[:'idContaOrigem']
         
         
-        self.id_pessoa = attributes[:'idPessoa']
-        
-      
-      end
-
-      
-      if attributes[:'idStatusConta']
-        
-        
-        self.id_status_conta = attributes[:'idStatusConta']
+        self.id_conta_origem = attributes[:'idContaOrigem']
         
       
       end
 
       
-      if attributes[:'diaVencimento']
+      if attributes[:'nomePessoaOrigem']
         
         
-        self.dia_vencimento = attributes[:'diaVencimento']
-        
-      
-      end
-
-      
-      if attributes[:'melhorDiaCompra']
-        
-        
-        self.melhor_dia_compra = attributes[:'melhorDiaCompra']
+        self.nome_pessoa_origem = attributes[:'nomePessoaOrigem']
         
       
       end
 
       
-      if attributes[:'dataStatusConta']
+      if attributes[:'idContaDestino']
         
         
-        self.data_status_conta = attributes[:'dataStatusConta']
-        
-      
-      end
-
-      
-      if attributes[:'dataCadastro']
-        
-        
-        self.data_cadastro = attributes[:'dataCadastro']
+        self.id_conta_destino = attributes[:'idContaDestino']
         
       
       end
 
       
-      if attributes[:'dataUltimaAlteracaoVencimento']
+      if attributes[:'nomePessoaDestino']
         
         
-        self.data_ultima_alteracao_vencimento = attributes[:'dataUltimaAlteracaoVencimento']
-        
-      
-      end
-
-      
-      if attributes[:'numeroAgencia']
-        
-        
-        self.numero_agencia = attributes[:'numeroAgencia']
+        self.nome_pessoa_destino = attributes[:'nomePessoaDestino']
         
       
       end
 
       
-      if attributes[:'numeroContaCorrente']
+      if attributes[:'valorTransferencia']
         
         
-        self.numero_conta_corrente = attributes[:'numeroContaCorrente']
+        self.valor_transferencia = attributes[:'valorTransferencia']
+        
+      
+      end
+
+      
+      if attributes[:'valorTarifa']
+        
+        
+        self.valor_tarifa = attributes[:'valorTarifa']
         
       
       end
@@ -288,44 +224,8 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -373,17 +273,13 @@ module Pier
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          id_produto == o.id_produto &&
-          id_origem_comercial == o.id_origem_comercial &&
-          id_pessoa == o.id_pessoa &&
-          id_status_conta == o.id_status_conta &&
-          dia_vencimento == o.dia_vencimento &&
-          melhor_dia_compra == o.melhor_dia_compra &&
-          data_status_conta == o.data_status_conta &&
-          data_cadastro == o.data_cadastro &&
-          data_ultima_alteracao_vencimento == o.data_ultima_alteracao_vencimento &&
-          numero_agencia == o.numero_agencia &&
-          numero_conta_corrente == o.numero_conta_corrente
+          data_transferencia == o.data_transferencia &&
+          id_conta_origem == o.id_conta_origem &&
+          nome_pessoa_origem == o.nome_pessoa_origem &&
+          id_conta_destino == o.id_conta_destino &&
+          nome_pessoa_destino == o.nome_pessoa_destino &&
+          valor_transferencia == o.valor_transferencia &&
+          valor_tarifa == o.valor_tarifa
     end
 
     # @see the `==` method
@@ -395,7 +291,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_produto, id_origem_comercial, id_pessoa, id_status_conta, dia_vencimento, melhor_dia_compra, data_status_conta, data_cadastro, data_ultima_alteracao_vencimento, numero_agencia, numero_conta_corrente].hash
+      [id, data_transferencia, id_conta_origem, nome_pessoa_origem, id_conta_destino, nome_pessoa_destino, valor_transferencia, valor_tarifa].hash
     end
 
     # Builds the object from hash

@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **data_status_conta** | **DateTime** | Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. | [optional] 
 **data_cadastro** | **DateTime** | Apresenta a data em que o cart\u00C3\u00A3o foi gerado. | [optional] 
 **data_ultima_alteracao_vencimento** | **DateTime** | Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. | [optional] 
+**numero_agencia** | **Integer** | N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
+**numero_conta_corrente** | **String** | N\u00C3\u00BAmero da conta corrente. | [optional] 
 
 
 

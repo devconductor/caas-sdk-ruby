@@ -71,7 +71,7 @@ describe 'FraudesApi' do
   # @option opts [Integer] :id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
   # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
   # @option opts [DateTime] :data_atendimento Apresenta a data em que o Atendimento foi realizado.
-  # @return [AtendimentoCliente]
+  # @return [PageAtendimentoClientes]
   describe 'listar_using_get test' do
     it "should work" do
       # assertion here

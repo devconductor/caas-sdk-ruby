@@ -14,7 +14,7 @@ Method | HTTP request | Description
 [**gerar_cartao_using_post**](ContaApi.md#gerar_cartao_using_post) | **POST** /api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
 [**listar_faturas_consignadas_using_get**](ContaApi.md#listar_faturas_consignadas_using_get) | **GET** /api/contas/{id}/faturas-consignadas | Listar Faturas consignadas da Conta
 [**listar_faturas_using_get**](ContaApi.md#listar_faturas_using_get) | **GET** /api/contas/{id}/faturas | Listar Faturas da Conta
-[**listar_using_get15**](ContaApi.md#listar_using_get15) | **GET** /api/contas/{id}/transferencias | Lista as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta
+[**listar_using_get15**](ContaApi.md#listar_using_get15) | **GET** /api/contas/{id}/transferencias | Lista as transfer\u00C3\u00AAncias realizadas pela conta
 [**listar_using_get3**](ContaApi.md#listar_using_get3) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
 [**transacoes_using_get**](ContaApi.md#transacoes_using_get) | **GET** /api/contas/{id}/timeline | Permite listar uma linha do tempo com os eventos da conta
 [**transferir_using_post**](ContaApi.md#transferir_using_post) | **POST** /api/contas/{id}/transferencias | Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
@@ -682,9 +682,9 @@ Name | Type | Description  | Notes
 # **listar_using_get15**
 > PageTransferencias listar_using_get15(id, opts)
 
-Lista as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta
+Lista as transfer\u00C3\u00AAncias realizadas pela conta
 
-Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta existentes na base do emissor.
+Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
 
 ### Example
 ```ruby
@@ -715,7 +715,7 @@ opts = {
 }
 
 begin
-  #Lista as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta
+  #Lista as transfer\u00C3\u00AAncias realizadas pela conta
   result = api_instance.listar_using_get15(id, opts)
   p result
 rescue Pier::ApiError => e

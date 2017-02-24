@@ -120,7 +120,7 @@ module Pier
     end
 
 
-    # Alterar os usu\u00C3\u00A1rios cadastrados na base do PIER
+    # Alterar os usu\u00C3\u00A1rios cadastrados
     # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
     # @param update update
@@ -131,7 +131,7 @@ module Pier
       return data
     end
 
-    # Alterar os usu\u00C3\u00A1rios cadastrados na base do PIER
+    # Alterar os usu\u00C3\u00A1rios cadastrados
     # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
     # @param update update
@@ -262,7 +262,7 @@ module Pier
     end
 
 
-    # Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER
+    # Lista os Usu\u00C3\u00A1rios cadastrados
     # Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
@@ -278,7 +278,7 @@ module Pier
       return data
     end
 
-    # Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER
+    # Lista os Usu\u00C3\u00A1rios cadastrados
     # Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
@@ -451,8 +451,8 @@ module Pier
     end
 
 
-    # Cadastrar Usu\u00C3\u00A1rio na base do PIER
-    # Esse recurso permite cadastrar usu\u00C3\u00A1rios na base do PIER.
+    # Cadastrar Usu\u00C3\u00A1rio
+    # Esse recurso permite cadastrar usu\u00C3\u00A1rios.
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Usuario]
@@ -461,8 +461,8 @@ module Pier
       return data
     end
 
-    # Cadastrar Usu\u00C3\u00A1rio na base do PIER
-    # Esse recurso permite cadastrar usu\u00C3\u00A1rios na base do PIER.
+    # Cadastrar Usu\u00C3\u00A1rio
+    # Esse recurso permite cadastrar usu\u00C3\u00A1rios.
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(Usuario, Fixnum, Hash)>] Usuario data, response status code and response headers

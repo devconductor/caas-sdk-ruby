@@ -4,10 +4,10 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**adicionar_using_post**](FAQApi.md#adicionar_using_post) | **POST** /api/faqs | Adiciona uma nova FAQ para um determinado Emissor.
-[**alterar_using_put2**](FAQApi.md#alterar_using_put2) | **PUT** /api/faqs/{id} | Altera os par\u00C3\u00A2metros de uma FAQ existente.
-[**consultar_using_get5**](FAQApi.md#consultar_using_get5) | **GET** /api/faqs/{id} | Consulta os detalhes de uma determinada FAQ relacionada a um Emissor.
-[**listar_using_get5**](FAQApi.md#listar_using_get5) | **GET** /api/faqs | Lista todas as FAQs de um determinado emissor.
+[**adicionar_using_post**](FAQApi.md#adicionar_using_post) | **POST** /api/faqs | Adiciona uma nova FAQ
+[**alterar_using_put2**](FAQApi.md#alterar_using_put2) | **PUT** /api/faqs/{id} | Alterar FAQ
+[**consultar_using_get5**](FAQApi.md#consultar_using_get5) | **GET** /api/faqs/{id} | Consultar FAQ por id
+[**listar_using_get5**](FAQApi.md#listar_using_get5) | **GET** /api/faqs | Lista FAQs
 
 
 
@@ -15,7 +15,9 @@ Method | HTTP request | Description
 # **adicionar_using_post**
 > FAQ adicionar_using_post(pergunta, resposta, opts)
 
-Adiciona uma nova FAQ para um determinado Emissor.
+Adiciona uma nova FAQ
+
+Adiciona uma nova FAQ
 
 ### Example
 ```ruby
@@ -45,7 +47,7 @@ opts = {
 }
 
 begin
-  #Adiciona uma nova FAQ para um determinado Emissor.
+  #Adiciona uma nova FAQ
   result = api_instance.adicionar_using_post(pergunta, resposta, opts)
   p result
 rescue Pier::ApiError => e
@@ -84,7 +86,9 @@ Name | Type | Description  | Notes
 # **alterar_using_put2**
 > FAQ alterar_using_put2(id, pergunta, resposta, opts)
 
-Altera os par\u00C3\u00A2metros de uma FAQ existente.
+Alterar FAQ
+
+Alterar FAQ
 
 ### Example
 ```ruby
@@ -116,7 +120,7 @@ opts = {
 }
 
 begin
-  #Altera os par\u00C3\u00A2metros de uma FAQ existente.
+  #Alterar FAQ
   result = api_instance.alterar_using_put2(id, pergunta, resposta, opts)
   p result
 rescue Pier::ApiError => e
@@ -156,7 +160,9 @@ Name | Type | Description  | Notes
 # **consultar_using_get5**
 > FAQ consultar_using_get5(id)
 
-Consulta os detalhes de uma determinada FAQ relacionada a um Emissor.
+Consultar FAQ por id
+
+Consulta os detalhes de uma determinada FAQ
 
 ### Example
 ```ruby
@@ -178,7 +184,7 @@ id = 789 # Integer | Id
 
 
 begin
-  #Consulta os detalhes de uma determinada FAQ relacionada a um Emissor.
+  #Consultar FAQ por id
   result = api_instance.consultar_using_get5(id)
   p result
 rescue Pier::ApiError => e
@@ -212,7 +218,9 @@ Name | Type | Description  | Notes
 # **listar_using_get5**
 > PageFaqs listar_using_get5(opts)
 
-Lista todas as FAQs de um determinado emissor.
+Lista FAQs
+
+Lista todas as FAQs
 
 ### Example
 ```ruby
@@ -243,7 +251,7 @@ opts = {
 }
 
 begin
-  #Lista todas as FAQs de um determinado emissor.
+  #Lista FAQs
   result = api_instance.listar_using_get5(opts)
   p result
 rescue Pier::ApiError => e

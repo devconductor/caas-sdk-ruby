@@ -44,8 +44,8 @@ describe 'FAQApi' do
 
 
   # unit tests for adicionar_using_post
-  # Adiciona uma nova FAQ para um determinado Emissor.
-  # 
+  # Adiciona uma nova FAQ
+  # Adiciona uma nova FAQ
   # @param pergunta Conte\u00C3\u00BAdo da pergunta.
   # @param resposta Conte\u00C3\u00BAdo da resposta.
   # @param [Hash] opts the optional parameters
@@ -66,8 +66,8 @@ describe 'FAQApi' do
 
 
   # unit tests for alterar_using_put2
-  # Altera os par\u00C3\u00A2metros de uma FAQ existente.
-  # 
+  # Alterar FAQ
+  # Alterar FAQ
   # @param id Id
   # @param pergunta Conte\u00C3\u00BAdo da pergunta.
   # @param resposta Conte\u00C3\u00BAdo da resposta.
@@ -89,8 +89,8 @@ describe 'FAQApi' do
 
 
   # unit tests for consultar_using_get5
-  # Consulta os detalhes de uma determinada FAQ relacionada a um Emissor.
-  # 
+  # Consultar FAQ por id
+  # Consulta os detalhes de uma determinada FAQ
   # @param id Id
   # @param [Hash] opts the optional parameters
   # @return [FAQ]
@@ -106,8 +106,8 @@ describe 'FAQApi' do
 
 
   # unit tests for listar_using_get5
-  # Lista todas as FAQs de um determinado emissor.
-  # 
+  # Lista FAQs
+  # Lista todas as FAQs
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)

@@ -63,7 +63,7 @@ describe 'UsuariosApi' do
 
 
   # unit tests for alterar_using_put6
-  # Alterar os usu\u00C3\u00A1rios cadastrados na base do PIER
+  # Alterar os usu\u00C3\u00A1rios cadastrados
   # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
   # @param update update
@@ -98,7 +98,7 @@ describe 'UsuariosApi' do
 
 
   # unit tests for listar_using_get16
-  # Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER
+  # Lista os Usu\u00C3\u00A1rios cadastrados
   # Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
@@ -138,8 +138,8 @@ describe 'UsuariosApi' do
 
 
   # unit tests for salvar_using_post6
-  # Cadastrar Usu\u00C3\u00A1rio na base do PIER
-  # Esse recurso permite cadastrar usu\u00C3\u00A1rios na base do PIER.
+  # Cadastrar Usu\u00C3\u00A1rio
+  # Esse recurso permite cadastrar usu\u00C3\u00A1rios.
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [Usuario]

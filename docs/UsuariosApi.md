@@ -5,11 +5,11 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_senha_using_put**](UsuariosApi.md#alterar_senha_using_put) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio
-[**alterar_using_put6**](UsuariosApi.md#alterar_using_put6) | **PUT** /api/usuarios/{id} | Alterar os usu\u00C3\u00A1rios cadastrados na base do PIER
+[**alterar_using_put6**](UsuariosApi.md#alterar_using_put6) | **PUT** /api/usuarios/{id} | Alterar os usu\u00C3\u00A1rios cadastrados
 [**consultar_using_get16**](UsuariosApi.md#consultar_using_get16) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio
-[**listar_using_get16**](UsuariosApi.md#listar_using_get16) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER
+[**listar_using_get16**](UsuariosApi.md#listar_using_get16) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados
 [**recuperar_senha_using_post**](UsuariosApi.md#recuperar_senha_using_post) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio
-[**salvar_using_post6**](UsuariosApi.md#salvar_using_post6) | **POST** /api/usuarios | Cadastrar Usu\u00C3\u00A1rio na base do PIER
+[**salvar_using_post6**](UsuariosApi.md#salvar_using_post6) | **POST** /api/usuarios | Cadastrar Usu\u00C3\u00A1rio
 [**validar_senha_using_get1**](UsuariosApi.md#validar_senha_using_get1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio
 
 
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 # **alterar_using_put6**
 > Usuario alterar_using_put6(id, update)
 
-Alterar os usu\u00C3\u00A1rios cadastrados na base do PIER
+Alterar os usu\u00C3\u00A1rios cadastrados
 
 Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
 
@@ -108,7 +108,7 @@ update = Pier::Usuario.new # Usuario | update
 
 
 begin
-  #Alterar os usu\u00C3\u00A1rios cadastrados na base do PIER
+  #Alterar os usu\u00C3\u00A1rios cadastrados
   result = api_instance.alterar_using_put6(id, update)
   p result
 rescue Pier::ApiError => e
@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
 # **listar_using_get16**
 > PageUsuarios listar_using_get16(opts)
 
-Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER
+Lista os Usu\u00C3\u00A1rios cadastrados
 
 Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
 
@@ -232,7 +232,7 @@ opts = {
 }
 
 begin
-  #Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER
+  #Lista os Usu\u00C3\u00A1rios cadastrados
   result = api_instance.listar_using_get16(opts)
   p result
 rescue Pier::ApiError => e
@@ -330,9 +330,9 @@ Name | Type | Description  | Notes
 # **salvar_using_post6**
 > Usuario salvar_using_post6(persist)
 
-Cadastrar Usu\u00C3\u00A1rio na base do PIER
+Cadastrar Usu\u00C3\u00A1rio
 
-Esse recurso permite cadastrar usu\u00C3\u00A1rios na base do PIER.
+Esse recurso permite cadastrar usu\u00C3\u00A1rios.
 
 ### Example
 ```ruby
@@ -354,7 +354,7 @@ persist = Pier::Usuario.new # Usuario | persist
 
 
 begin
-  #Cadastrar Usu\u00C3\u00A1rio na base do PIER
+  #Cadastrar Usu\u00C3\u00A1rio
   result = api_instance.salvar_using_post6(persist)
   p result
 rescue Pier::ApiError => e

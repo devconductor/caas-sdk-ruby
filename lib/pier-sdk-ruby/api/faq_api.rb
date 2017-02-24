@@ -32,8 +32,8 @@ module Pier
     end
 
 
-    # Adiciona uma nova FAQ para um determinado Emissor.
-    # 
+    # Adiciona uma nova FAQ
+    # Adiciona uma nova FAQ
     # @param pergunta Conte\u00C3\u00BAdo da pergunta.
     # @param resposta Conte\u00C3\u00BAdo da resposta.
     # @param [Hash] opts the optional parameters
@@ -47,8 +47,8 @@ module Pier
       return data
     end
 
-    # Adiciona uma nova FAQ para um determinado Emissor.
-    # 
+    # Adiciona uma nova FAQ
+    # Adiciona uma nova FAQ
     # @param pergunta Conte\u00C3\u00BAdo da pergunta.
     # @param resposta Conte\u00C3\u00BAdo da resposta.
     # @param [Hash] opts the optional parameters
@@ -150,8 +150,8 @@ module Pier
     end
 
 
-    # Altera os par\u00C3\u00A2metros de uma FAQ existente.
-    # 
+    # Alterar FAQ
+    # Alterar FAQ
     # @param id Id
     # @param pergunta Conte\u00C3\u00BAdo da pergunta.
     # @param resposta Conte\u00C3\u00BAdo da resposta.
@@ -166,8 +166,8 @@ module Pier
       return data
     end
 
-    # Altera os par\u00C3\u00A2metros de uma FAQ existente.
-    # 
+    # Alterar FAQ
+    # Alterar FAQ
     # @param id Id
     # @param pergunta Conte\u00C3\u00BAdo da pergunta.
     # @param resposta Conte\u00C3\u00BAdo da resposta.
@@ -278,8 +278,8 @@ module Pier
     end
 
 
-    # Consulta os detalhes de uma determinada FAQ relacionada a um Emissor.
-    # 
+    # Consultar FAQ por id
+    # Consulta os detalhes de uma determinada FAQ
     # @param id Id
     # @param [Hash] opts the optional parameters
     # @return [FAQ]
@@ -288,8 +288,8 @@ module Pier
       return data
     end
 
-    # Consulta os detalhes de uma determinada FAQ relacionada a um Emissor.
-    # 
+    # Consultar FAQ por id
+    # Consulta os detalhes de uma determinada FAQ
     # @param id Id
     # @param [Hash] opts the optional parameters
     # @return [Array<(FAQ, Fixnum, Hash)>] FAQ data, response status code and response headers
@@ -344,8 +344,8 @@ module Pier
     end
 
 
-    # Lista todas as FAQs de um determinado emissor.
-    # 
+    # Lista FAQs
+    # Lista todas as FAQs
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
@@ -362,8 +362,8 @@ module Pier
       return data
     end
 
-    # Lista todas as FAQs de um determinado emissor.
-    # 
+    # Lista FAQs
+    # Lista todas as FAQs
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)

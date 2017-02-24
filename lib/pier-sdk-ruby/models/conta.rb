@@ -58,6 +58,9 @@ module Pier
     # N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
     attr_accessor :numero_agencia
 
+    # Apresenta o valor da renda comprovada
+    attr_accessor :valor_renda
+
     # N\u00C3\u00BAmero da conta corrente.
     attr_accessor :numero_conta_corrente
 
@@ -87,6 +90,8 @@ module Pier
         :'data_ultima_alteracao_vencimento' => :'dataUltimaAlteracaoVencimento',
         
         :'numero_agencia' => :'numeroAgencia',
+        
+        :'valor_renda' => :'valorRenda',
         
         :'numero_conta_corrente' => :'numeroContaCorrente'
         
@@ -118,6 +123,8 @@ module Pier
         :'data_ultima_alteracao_vencimento' => :'DateTime',
         
         :'numero_agencia' => :'Integer',
+        
+        :'valor_renda' => :'Float',
         
         :'numero_conta_corrente' => :'String'
         
@@ -232,6 +239,15 @@ module Pier
       end
 
       
+      if attributes[:'valorRenda']
+        
+        
+        self.valor_renda = attributes[:'valorRenda']
+        
+      
+      end
+
+      
       if attributes[:'numeroContaCorrente']
         
         
@@ -304,8 +320,17 @@ module Pier
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -383,6 +408,7 @@ module Pier
           data_cadastro == o.data_cadastro &&
           data_ultima_alteracao_vencimento == o.data_ultima_alteracao_vencimento &&
           numero_agencia == o.numero_agencia &&
+          valor_renda == o.valor_renda &&
           numero_conta_corrente == o.numero_conta_corrente
     end
 
@@ -395,7 +421,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_produto, id_origem_comercial, id_pessoa, id_status_conta, dia_vencimento, melhor_dia_compra, data_status_conta, data_cadastro, data_ultima_alteracao_vencimento, numero_agencia, numero_conta_corrente].hash
+      [id, id_produto, id_origem_comercial, id_pessoa, id_status_conta, dia_vencimento, melhor_dia_compra, data_status_conta, data_cadastro, data_ultima_alteracao_vencimento, numero_agencia, valor_renda, numero_conta_corrente].hash
     end
 
     # Builds the object from hash

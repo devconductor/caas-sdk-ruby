@@ -43,16 +43,15 @@ describe 'WebhooksApi' do
   end
 
 
-  # unit tests for alterar_using_put3
+  # unit tests for alterar_using_put7
   # Alterar Webhook
   # Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
   # @param id C\u00C3\u00B3digo identificador do Webhook
-  # @param evento Evento a ser chamado pelo WebHook
-  # @param metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
+  # @param tipo_evento TipoEvento a ser chamado pelo WebHook
   # @param url URL que a ser consumida pelo WebHook
   # @param [Hash] opts the optional parameters
   # @return [WebHook]
-  describe 'alterar_using_put3 test' do
+  describe 'alterar_using_put7 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -63,13 +62,13 @@ describe 'WebhooksApi' do
   end
 
 
-  # unit tests for consultar_using_get11
+  # unit tests for consultar_using_get17
   # Consultar Webhook
   # Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
   # @param [Hash] opts the optional parameters
   # @return [WebHook]
-  describe 'consultar_using_get11 test' do
+  describe 'consultar_using_get17 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -80,18 +79,18 @@ describe 'WebhooksApi' do
   end
 
 
-  # unit tests for listar_using_get12
+  # unit tests for listar_using_get17
   # Lista os Webhooks
   # Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   # @option opts [Integer] :id Id do WebHook
-  # @option opts [String] :evento Evento a ser chamado pelo WebHook
+  # @option opts [String] :tipo_evento TipoEvento a ser chamado pelo WebHook
   # @option opts [String] :metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
   # @option opts [String] :url URL que a ser consumida pelo WebHook
   # @return [PageWebHooks]
-  describe 'listar_using_get12 test' do
+  describe 'listar_using_get17 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -102,15 +101,14 @@ describe 'WebhooksApi' do
   end
 
 
-  # unit tests for salvar_using_post4
+  # unit tests for salvar_using_post7
   # Salvar Webhook
   # Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
-  # @param evento Evento a ser chamado pelo WebHook
-  # @param metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
+  # @param tipo_evento TipoEvento a ser chamado pelo WebHook
   # @param url URL que a ser consumida pelo WebHook
   # @param [Hash] opts the optional parameters
   # @return [WebHook]
-  describe 'salvar_using_post4 test' do
+  describe 'salvar_using_post7 test' do
     it "should work" do
       # assertion here
       # should be_a()

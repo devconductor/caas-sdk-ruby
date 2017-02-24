@@ -34,8 +34,8 @@ module Pier
     # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id).
     attr_accessor :id_emissor
 
-    # Evento de notifica\u00C3\u00A7\u00C3\u00A3o
-    attr_accessor :evento
+    # TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o
+    attr_accessor :tipo_evento
 
     # Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
     attr_accessor :status
@@ -87,7 +87,7 @@ module Pier
         
         :'id_emissor' => :'idEmissor',
         
-        :'evento' => :'evento',
+        :'tipo_evento' => :'tipoEvento',
         
         :'status' => :'status',
         
@@ -128,7 +128,7 @@ module Pier
         
         :'id_emissor' => :'Integer',
         
-        :'evento' => :'String',
+        :'tipo_evento' => :'String',
         
         :'status' => :'String',
         
@@ -195,10 +195,10 @@ module Pier
       end
 
       
-      if attributes[:'evento']
+      if attributes[:'tipoEvento']
         
         
-        self.evento = attributes[:'evento']
+        self.tipo_evento = attributes[:'tipoEvento']
         
       
       end
@@ -351,7 +351,7 @@ module Pier
       
       
       allowed_values = ["RISCO_FRAUDE", "OUTROS"]
-      if @evento && !allowed_values.include?(@evento)
+      if @tipo_evento && !allowed_values.include?(@tipo_evento)
         return false
       end
       
@@ -494,13 +494,13 @@ module Pier
     
     
     # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] evento Object to be assigned
-    def evento=(evento)
+    # @param [Object] tipo_evento Object to be assigned
+    def tipo_evento=(tipo_evento)
       allowed_values = ["RISCO_FRAUDE", "OUTROS"]
-      if evento && !allowed_values.include?(evento)
-        fail ArgumentError, "invalid value for 'evento', must be one of #{allowed_values}."
+      if tipo_evento && !allowed_values.include?(tipo_evento)
+        fail ArgumentError, "invalid value for 'tipo_evento', must be one of #{allowed_values}."
       end
-      @evento = evento
+      @tipo_evento = tipo_evento
     end
 
     
@@ -588,7 +588,7 @@ module Pier
           id == o.id &&
           nsu == o.nsu &&
           id_emissor == o.id_emissor &&
-          evento == o.evento &&
+          tipo_evento == o.tipo_evento &&
           status == o.status &&
           descricao_status == o.descricao_status &&
           id_pessoa == o.id_pessoa &&
@@ -613,7 +613,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, nsu, id_emissor, evento, status, descricao_status, id_pessoa, id_conta, celular, operadora, conteudo, resposta, data_agendamento, quantidade_tentativas_envio, data_inclusao, data_alteracao_status, protocolo].hash
+      [id, nsu, id_emissor, tipo_evento, status, descricao_status, id_pessoa, id_conta, celular, operadora, conteudo, resposta, data_agendamento, quantidade_tentativas_envio, data_inclusao, data_alteracao_status, protocolo].hash
     end
 
     # Builds the object from hash

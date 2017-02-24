@@ -4,16 +4,16 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterar_using_put3**](WebhooksApi.md#alterar_using_put3) | **PUT** /api/webhooks | Alterar Webhook
-[**consultar_using_get11**](WebhooksApi.md#consultar_using_get11) | **GET** /api/webhooks/{id} | Consultar Webhook
-[**listar_using_get12**](WebhooksApi.md#listar_using_get12) | **GET** /api/webhooks | Lista os Webhooks
-[**salvar_using_post4**](WebhooksApi.md#salvar_using_post4) | **POST** /api/webhooks | Salvar Webhook
+[**alterar_using_put7**](WebhooksApi.md#alterar_using_put7) | **PUT** /api/webhooks/{id} | Alterar Webhook
+[**consultar_using_get17**](WebhooksApi.md#consultar_using_get17) | **GET** /api/webhooks/{id} | Consultar Webhook
+[**listar_using_get17**](WebhooksApi.md#listar_using_get17) | **GET** /api/webhooks | Lista os Webhooks
+[**salvar_using_post7**](WebhooksApi.md#salvar_using_post7) | **POST** /api/webhooks | Salvar Webhook
 
 
 
 
-# **alterar_using_put3**
-> WebHook alterar_using_put3(id, evento, metodo, url)
+# **alterar_using_put7**
+> WebHook alterar_using_put7(id, tipo_evento, url)
 
 Alterar Webhook
 
@@ -37,19 +37,17 @@ api_instance = Pier::WebhooksApi.new
 
 id = 789 # Integer | C\u00C3\u00B3digo identificador do Webhook
 
-evento = "evento_example" # String | Evento a ser chamado pelo WebHook
-
-metodo = "metodo_example" # String | M\u00C3\u00A9todo que a ser chamado pelo WebHook
+tipo_evento = "tipo_evento_example" # String | TipoEvento a ser chamado pelo WebHook
 
 url = "url_example" # String | URL que a ser consumida pelo WebHook
 
 
 begin
   #Alterar Webhook
-  result = api_instance.alterar_using_put3(id, evento, metodo, url)
+  result = api_instance.alterar_using_put7(id, tipo_evento, url)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling WebhooksApi->alterar_using_put3: #{e}"
+  puts "Exception when calling WebhooksApi->alterar_using_put7: #{e}"
 end
 ```
 
@@ -58,8 +56,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo identificador do Webhook | 
- **evento** | **String**| Evento a ser chamado pelo WebHook | 
- **metodo** | **String**| M\u00C3\u00A9todo que a ser chamado pelo WebHook | 
+ **tipo_evento** | **String**| TipoEvento a ser chamado pelo WebHook | 
  **url** | **String**| URL que a ser consumida pelo WebHook | 
 
 
@@ -79,8 +76,8 @@ Name | Type | Description  | Notes
 
 
 
-# **consultar_using_get11**
-> WebHook consultar_using_get11(id)
+# **consultar_using_get17**
+> WebHook consultar_using_get17(id)
 
 Consultar Webhook
 
@@ -107,10 +104,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Consultar Webhook
-  result = api_instance.consultar_using_get11(id)
+  result = api_instance.consultar_using_get17(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling WebhooksApi->consultar_using_get11: #{e}"
+  puts "Exception when calling WebhooksApi->consultar_using_get17: #{e}"
 end
 ```
 
@@ -137,8 +134,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get12**
-> PageWebHooks listar_using_get12(opts)
+# **listar_using_get17**
+> PageWebHooks listar_using_get17(opts)
 
 Lista os Webhooks
 
@@ -164,17 +161,17 @@ opts = {
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   id: 789, # Integer | Id do WebHook
-  evento: "evento_example", # String | Evento a ser chamado pelo WebHook
+  tipo_evento: "tipo_evento_example", # String | TipoEvento a ser chamado pelo WebHook
   metodo: "metodo_example", # String | M\u00C3\u00A9todo que a ser chamado pelo WebHook
   url: "url_example" # String | URL que a ser consumida pelo WebHook
 }
 
 begin
   #Lista os Webhooks
-  result = api_instance.listar_using_get12(opts)
+  result = api_instance.listar_using_get17(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling WebhooksApi->listar_using_get12: #{e}"
+  puts "Exception when calling WebhooksApi->listar_using_get17: #{e}"
 end
 ```
 
@@ -185,7 +182,7 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
  **id** | **Integer**| Id do WebHook | [optional] 
- **evento** | **String**| Evento a ser chamado pelo WebHook | [optional] 
+ **tipo_evento** | **String**| TipoEvento a ser chamado pelo WebHook | [optional] 
  **metodo** | **String**| M\u00C3\u00A9todo que a ser chamado pelo WebHook | [optional] 
  **url** | **String**| URL que a ser consumida pelo WebHook | [optional] 
 
@@ -206,8 +203,8 @@ Name | Type | Description  | Notes
 
 
 
-# **salvar_using_post4**
-> WebHook salvar_using_post4(evento, metodo, url)
+# **salvar_using_post7**
+> WebHook salvar_using_post7(tipo_evento, url)
 
 Salvar Webhook
 
@@ -229,19 +226,17 @@ end
 
 api_instance = Pier::WebhooksApi.new
 
-evento = "evento_example" # String | Evento a ser chamado pelo WebHook
-
-metodo = "metodo_example" # String | M\u00C3\u00A9todo que a ser chamado pelo WebHook
+tipo_evento = "tipo_evento_example" # String | TipoEvento a ser chamado pelo WebHook
 
 url = "url_example" # String | URL que a ser consumida pelo WebHook
 
 
 begin
   #Salvar Webhook
-  result = api_instance.salvar_using_post4(evento, metodo, url)
+  result = api_instance.salvar_using_post7(tipo_evento, url)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling WebhooksApi->salvar_using_post4: #{e}"
+  puts "Exception when calling WebhooksApi->salvar_using_post7: #{e}"
 end
 ```
 
@@ -249,8 +244,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **evento** | **String**| Evento a ser chamado pelo WebHook | 
- **metodo** | **String**| M\u00C3\u00A9todo que a ser chamado pelo WebHook | 
+ **tipo_evento** | **String**| TipoEvento a ser chamado pelo WebHook | 
  **url** | **String**| URL que a ser consumida pelo WebHook | 
 
 

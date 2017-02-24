@@ -64,10 +64,6 @@ module Pier
 
     attr_accessor :tipo_estabelecimento
 
-    attr_accessor :latitude
-
-    attr_accessor :longetude
-
     attr_accessor :id_grupo_mcc
 
     attr_accessor :flag_solicitou_contestacao
@@ -110,10 +106,6 @@ module Pier
         :'flag_credito' => :'flagCredito',
         
         :'tipo_estabelecimento' => :'tipoEstabelecimento',
-        
-        :'latitude' => :'latitude',
-        
-        :'longetude' => :'longetude',
         
         :'id_grupo_mcc' => :'idGrupoMCC',
         
@@ -159,10 +151,6 @@ module Pier
         :'flag_credito' => :'Integer',
         
         :'tipo_estabelecimento' => :'String',
-        
-        :'latitude' => :'String',
-        
-        :'longetude' => :'String',
         
         :'id_grupo_mcc' => :'Integer',
         
@@ -333,24 +321,6 @@ module Pier
       end
 
       
-      if attributes[:'latitude']
-        
-        
-        self.latitude = attributes[:'latitude']
-        
-      
-      end
-
-      
-      if attributes[:'longetude']
-        
-        
-        self.longetude = attributes[:'longetude']
-        
-      
-      end
-
-      
       if attributes[:'idGrupoMCC']
         
         
@@ -460,26 +430,8 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -598,8 +550,6 @@ module Pier
           estabelecimento == o.estabelecimento &&
           flag_credito == o.flag_credito &&
           tipo_estabelecimento == o.tipo_estabelecimento &&
-          latitude == o.latitude &&
-          longetude == o.longetude &&
           id_grupo_mcc == o.id_grupo_mcc &&
           flag_solicitou_contestacao == o.flag_solicitou_contestacao
     end
@@ -613,7 +563,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ultima_parcela_lancada, id, id_conta, id_tipo_registro, ordem, id_transacao, descricao, status, descricao_status, valor, valor_dolar, quantidade_parcelas, valor_parcela, data_evento, estabelecimento, flag_credito, tipo_estabelecimento, latitude, longetude, id_grupo_mcc, flag_solicitou_contestacao].hash
+      [ultima_parcela_lancada, id, id_conta, id_tipo_registro, ordem, id_transacao, descricao, status, descricao_status, valor, valor_dolar, quantidade_parcelas, valor_parcela, data_evento, estabelecimento, flag_credito, tipo_estabelecimento, id_grupo_mcc, flag_solicitou_contestacao].hash
     end
 
     # Builds the object from hash

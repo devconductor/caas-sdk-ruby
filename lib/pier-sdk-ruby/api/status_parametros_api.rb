@@ -169,8 +169,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
     # @param [Hash] opts the optional parameters
     # @return [StatusConta]
-    def consultar_using_get5(id, opts = {})
-      data, _status_code, _headers = consultar_using_get5_with_http_info(id, opts)
+    def consultar_using_get8(id, opts = {})
+      data, _status_code, _headers = consultar_using_get8_with_http_info(id, opts)
       return data
     end
 
@@ -179,14 +179,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(StatusConta, Fixnum, Hash)>] StatusConta data, response status code and response headers
-    def consultar_using_get5_with_http_info(id, opts = {})
+    def consultar_using_get8_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: StatusParametrosApi.consultar_using_get5 ..."
+        @api_client.config.logger.debug "Calling API: StatusParametrosApi.consultar_using_get8 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling StatusParametrosApi.consultar_using_get5" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling StatusParametrosApi.consultar_using_get8" if id.nil?
       
       
       
@@ -224,7 +224,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'StatusConta')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: StatusParametrosApi#consultar_using_get5\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: StatusParametrosApi#consultar_using_get8\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -235,8 +235,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [StatusImpressao]
-    def consultar_using_get6(id, opts = {})
-      data, _status_code, _headers = consultar_using_get6_with_http_info(id, opts)
+    def consultar_using_get9(id, opts = {})
+      data, _status_code, _headers = consultar_using_get9_with_http_info(id, opts)
       return data
     end
 
@@ -245,14 +245,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(StatusImpressao, Fixnum, Hash)>] StatusImpressao data, response status code and response headers
-    def consultar_using_get6_with_http_info(id, opts = {})
+    def consultar_using_get9_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: StatusParametrosApi.consultar_using_get6 ..."
+        @api_client.config.logger.debug "Calling API: StatusParametrosApi.consultar_using_get9 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling StatusParametrosApi.consultar_using_get6" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling StatusParametrosApi.consultar_using_get9" if id.nil?
       
       
       
@@ -290,7 +290,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'StatusImpressao')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: StatusParametrosApi#consultar_using_get6\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: StatusParametrosApi#consultar_using_get9\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -534,6 +534,98 @@ module Pier
     end
 
 
+    # Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+    # Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
+    # @option opts [String] :nome Nome do status impress\u00C3\u00A3o
+    # @return [PageStatusImpressao]
+    def listar_using_get10(opts = {})
+      data, _status_code, _headers = listar_using_get10_with_http_info(opts)
+      return data
+    end
+
+    # Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+    # Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
+    # @option opts [String] :nome Nome do status impress\u00C3\u00A3o
+    # @return [Array<(PageStatusImpressao, Fixnum, Hash)>] PageStatusImpressao data, response status code and response headers
+    def listar_using_get10_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: StatusParametrosApi.listar_using_get10 ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/status-impressoes".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'id'] = opts[:'id'] if opts[:'id']
+      query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageStatusImpressao')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: StatusParametrosApi#listar_using_get10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Lista os Status Contas cadastrados para o Emissor
     # Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
@@ -545,8 +637,8 @@ module Pier
     # @option opts [String] :mensagem_consulta_negada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
     # @option opts [Integer] :flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
     # @return [PageStatusContas]
-    def listar_using_get6(opts = {})
-      data, _status_code, _headers = listar_using_get6_with_http_info(opts)
+    def listar_using_get9(opts = {})
+      data, _status_code, _headers = listar_using_get9_with_http_info(opts)
       return data
     end
 
@@ -561,9 +653,9 @@ module Pier
     # @option opts [String] :mensagem_consulta_negada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
     # @option opts [Integer] :flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
     # @return [Array<(PageStatusContas, Fixnum, Hash)>] PageStatusContas data, response status code and response headers
-    def listar_using_get6_with_http_info(opts = {})
+    def listar_using_get9_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: StatusParametrosApi.listar_using_get6 ..."
+        @api_client.config.logger.debug "Calling API: StatusParametrosApi.listar_using_get9 ..."
       end
       
       
@@ -647,99 +739,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageStatusContas')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: StatusParametrosApi#listar_using_get6\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-
-    # Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
-    # @option opts [String] :nome Nome do status impress\u00C3\u00A3o
-    # @return [PageStatusImpressao]
-    def listar_using_get7(opts = {})
-      data, _status_code, _headers = listar_using_get7_with_http_info(opts)
-      return data
-    end
-
-    # Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
-    # @option opts [String] :nome Nome do status impress\u00C3\u00A3o
-    # @return [Array<(PageStatusImpressao, Fixnum, Hash)>] PageStatusImpressao data, response status code and response headers
-    def listar_using_get7_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: StatusParametrosApi.listar_using_get7 ..."
-      end
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/status-impressoes".sub('{format}','json')
-
-      # query parameters
-      query_params = {}
-      query_params[:'page'] = opts[:'page'] if opts[:'page']
-      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
-      query_params[:'id'] = opts[:'id'] if opts[:'id']
-      query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = ['access_token']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'PageStatusImpressao')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: StatusParametrosApi#listar_using_get7\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: StatusParametrosApi#listar_using_get9\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

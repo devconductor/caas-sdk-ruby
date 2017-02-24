@@ -65,7 +65,7 @@ describe 'NotificacaoPushResponse' do
   end
 
 
-  describe 'test attribute "evento"' do
+  describe 'test attribute "tipo_evento"' do
     it 'should work' do
        # assertion here
        # should be_a()

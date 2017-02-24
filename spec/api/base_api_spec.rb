@@ -43,12 +43,108 @@ describe 'BaseApi' do
   end
 
 
+  # unit tests for alterar_using_put
+  # Alterar base
+  # Este recurso permite que seja modificado uma base j\u00C3\u00A1 cadastrada
+  # @param id C\u00C3\u00B3digo identificador da base
+  # @param servidor IP do servidor
+  # @param usuario Nome do usu\u00C3\u00A1rio
+  # @param senha Senha
+  # @param nome_base Nome da base
+  # @param senha_criptografada senha Criptografada
+  # @param domain Dom\u00C3\u00ADnio da base
+  # @param nome_base_controle_acesso Nome da base de controle acesso
+  # @param servidor_controle_acesso Servidor do controle de acesso
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :id_emissor C\u00C3\u00B3digo do identificador do emissor
+  # @return [Base]
+  describe 'alterar_using_put test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
   # unit tests for clear_using_get
   # Limpar mapa de bases
   # 
   # @param [Hash] opts the optional parameters
   # @return [BodyAccessToken]
   describe 'clear_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for consultar_using_get1
+  # Consultar base
+  # Este recurso permite que seja consultada uma base do emissor atrav\u00C3\u00A9s de um id especifico
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da base (id).
+  # @param [Hash] opts the optional parameters
+  # @return [Base]
+  describe 'consultar_using_get1 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for listar_using_get1
+  # Listar bases
+  # Este recurso permite que sejam listadas as bases existentes
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  # @option opts [Integer] :id C\u00C3\u00B3digo identificador da base
+  # @option opts [String] :servidor IP do servidor
+  # @option opts [String] :usuario Nome do usu\u00C3\u00A1rio
+  # @option opts [String] :senha Senha
+  # @option opts [String] :nome_base Nome da base
+  # @option opts [BOOLEAN] :senha_criptografada senha Criptografada
+  # @option opts [String] :domain Dom\u00C3\u00ADnio da base
+  # @option opts [String] :nome_base_controle_acesso Nome da base de controle acesso
+  # @option opts [Integer] :id_emissor C\u00C3\u00B3digo do identificador do emissor
+  # @option opts [String] :servidor_controle_acesso Servidor do controle de acesso
+  # @return [PageBases]
+  describe 'listar_using_get1 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for salvar_using_post1
+  # Salvar base
+  # Este recurso permite que seja adicionado uma nova base
+  # @param servidor IP do servidor
+  # @param usuario Nome do usu\u00C3\u00A1rio
+  # @param senha Senha
+  # @param nome_base Nome da base
+  # @param senha_criptografada senha Criptografada
+  # @param domain Dom\u00C3\u00ADnio da base
+  # @param nome_base_controle_acesso Nome da base de controle acesso
+  # @param servidor_controle_acesso Servidor do controle de acesso
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :id_emissor C\u00C3\u00B3digo do identificador do emissor
+  # @return [Base]
+  describe 'salvar_using_post1 test' do
     it "should work" do
       # assertion here
       # should be_a()

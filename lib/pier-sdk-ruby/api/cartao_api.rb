@@ -565,8 +565,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [Cartao]
-    def consultar_using_get1(id, opts = {})
-      data, _status_code, _headers = consultar_using_get1_with_http_info(id, opts)
+    def consultar_using_get2(id, opts = {})
+      data, _status_code, _headers = consultar_using_get2_with_http_info(id, opts)
       return data
     end
 
@@ -575,14 +575,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(Cartao, Fixnum, Hash)>] Cartao data, response status code and response headers
-    def consultar_using_get1_with_http_info(id, opts = {})
+    def consultar_using_get2_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CartaoApi.consultar_using_get1 ..."
+        @api_client.config.logger.debug "Calling API: CartaoApi.consultar_using_get2 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling CartaoApi.consultar_using_get1" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling CartaoApi.consultar_using_get2" if id.nil?
       
       
       
@@ -620,7 +620,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'Cartao')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CartaoApi#consultar_using_get1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CartaoApi#consultar_using_get2\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -880,7 +880,7 @@ module Pier
     # @option opts [Integer] :id_imagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id).
     # @option opts [Integer] :id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
     # @option opts [Integer] :quantidade_cartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
-    # @option opts [DateTime] :data_cadastro Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
+    # @option opts [Date] :data_cadastro Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
     # @option opts [String] :usuario_cadastro Nome do Usu\u00C3\u00A1rio que criou o Lote.
     # @option opts [Integer] :status_processamento Indica o Status de Processamento do Lote.
     # @return [PageCartoes]
@@ -901,7 +901,7 @@ module Pier
     # @option opts [Integer] :id_imagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id).
     # @option opts [Integer] :id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
     # @option opts [Integer] :quantidade_cartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
-    # @option opts [DateTime] :data_cadastro Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
+    # @option opts [Date] :data_cadastro Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
     # @option opts [String] :usuario_cadastro Nome do Usu\u00C3\u00A1rio que criou o Lote.
     # @option opts [Integer] :status_processamento Indica o Status de Processamento do Lote.
     # @return [Array<(PageCartoes, Fixnum, Hash)>] PageCartoes data, response status code and response headers
@@ -1056,8 +1056,8 @@ module Pier
     # @option opts [Integer] :flag_provisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
     # @option opts [String] :codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
     # @return [PageCartoes]
-    def listar_using_get1(opts = {})
-      data, _status_code, _headers = listar_using_get1_with_http_info(opts)
+    def listar_using_get2(opts = {})
+      data, _status_code, _headers = listar_using_get2_with_http_info(opts)
       return data
     end
 
@@ -1085,9 +1085,9 @@ module Pier
     # @option opts [Integer] :flag_provisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
     # @option opts [String] :codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
     # @return [Array<(PageCartoes, Fixnum, Hash)>] PageCartoes data, response status code and response headers
-    def listar_using_get1_with_http_info(opts = {})
+    def listar_using_get2_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CartaoApi.listar_using_get1 ..."
+        @api_client.config.logger.debug "Calling API: CartaoApi.listar_using_get2 ..."
       end
       
       
@@ -1262,7 +1262,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageCartoes')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CartaoApi#listar_using_get1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CartaoApi#listar_using_get2\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

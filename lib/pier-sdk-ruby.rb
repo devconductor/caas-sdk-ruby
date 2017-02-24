@@ -35,6 +35,9 @@ require 'pier-sdk-ruby/models/atendimento_cliente'
 require 'pier-sdk-ruby/models/auth_token'
 
 
+require 'pier-sdk-ruby/models/base'
+
+
 require 'pier-sdk-ruby/models/body_access_token'
 
 
@@ -47,6 +50,9 @@ require 'pier-sdk-ruby/models/cartao_impressao'
 require 'pier-sdk-ruby/models/conta'
 
 
+require 'pier-sdk-ruby/models/divida_cliente_response'
+
+
 require 'pier-sdk-ruby/models/endereco'
 
 
@@ -54,6 +60,9 @@ require 'pier-sdk-ruby/models/estagio_cartao'
 
 
 require 'pier-sdk-ruby/models/extra_info'
+
+
+require 'pier-sdk-ruby/models/faq'
 
 
 require 'pier-sdk-ruby/models/fatura_response'
@@ -89,6 +98,9 @@ require 'pier-sdk-ruby/models/origem_comercial'
 require 'pier-sdk-ruby/models/page_atendimento_clientes'
 
 
+require 'pier-sdk-ruby/models/page_bases'
+
+
 require 'pier-sdk-ruby/models/page_cartoes'
 
 
@@ -96,6 +108,9 @@ require 'pier-sdk-ruby/models/page_enderecos'
 
 
 require 'pier-sdk-ruby/models/page_estagios_cartoes'
+
+
+require 'pier-sdk-ruby/models/page_faqs'
 
 
 require 'pier-sdk-ruby/models/page_faturas'
@@ -128,6 +143,9 @@ require 'pier-sdk-ruby/models/page_status_impressao'
 require 'pier-sdk-ruby/models/page_telefones'
 
 
+require 'pier-sdk-ruby/models/page_tipo_boleto'
+
+
 require 'pier-sdk-ruby/models/page_tipo_telefones'
 
 
@@ -138,6 +156,9 @@ require 'pier-sdk-ruby/models/page_transacao_response'
 
 
 require 'pier-sdk-ruby/models/page_transferencias'
+
+
+require 'pier-sdk-ruby/models/page_usuarios'
 
 
 require 'pier-sdk-ruby/models/page_web_hooks'
@@ -156,6 +177,15 @@ require 'pier-sdk-ruby/models/push_apns'
 
 
 require 'pier-sdk-ruby/models/push_fcm_e_gcm'
+
+
+require 'pier-sdk-ruby/models/risco_fraude_detalhado_response'
+
+
+require 'pier-sdk-ruby/models/risco_fraude_response'
+
+
+require 'pier-sdk-ruby/models/risco_fraude_response_page'
 
 
 require 'pier-sdk-ruby/models/sms'
@@ -179,10 +209,16 @@ require 'pier-sdk-ruby/models/tipo_endereco'
 require 'pier-sdk-ruby/models/tipo_telefone'
 
 
+require 'pier-sdk-ruby/models/token'
+
+
 require 'pier-sdk-ruby/models/transacao_response'
 
 
 require 'pier-sdk-ruby/models/transferencia'
+
+
+require 'pier-sdk-ruby/models/usuario'
 
 
 require 'pier-sdk-ruby/models/valida_cartao'
@@ -202,13 +238,17 @@ require 'pier-sdk-ruby/api/cartao_api'
 
 require 'pier-sdk-ruby/api/conta_api'
 
-require 'pier-sdk-ruby/api/fraudes_api'
+require 'pier-sdk-ruby/api/faq_api'
 
 require 'pier-sdk-ruby/api/notificacoes_api'
+
+require 'pier-sdk-ruby/api/risco_fraude_api'
 
 require 'pier-sdk-ruby/api/status_parametros_api'
 
 require 'pier-sdk-ruby/api/token_api'
+
+require 'pier-sdk-ruby/api/usuarios_api'
 
 require 'pier-sdk-ruby/api/webhooks_api'
 

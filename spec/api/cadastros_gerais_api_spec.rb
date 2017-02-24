@@ -43,7 +43,7 @@ describe 'CadastrosGeraisApi' do
   end
 
 
-  # unit tests for alterar_using_put
+  # unit tests for alterar_using_put1
   # Atualiza os dados de um determinado Endere\u00C3\u00A7o
   # Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um ou mais registros ligados a um determinado Endere\u00C3\u00A7o.
   # @param id id
@@ -60,29 +60,6 @@ describe 'CadastrosGeraisApi' do
   # @option opts [String] :uf Apresenta sigla da Unidade Federativa
   # @option opts [String] :pais Apresenta nome do Pais
   # @return [Endereco]
-  describe 'alterar_using_put test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for alterar_using_put1
-  # Atualiza os dados de uma determinada Pessoa
-  # Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um registro de determinada Pessoa.
-  # @param id ID da Pessoa
-  # @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
-  # @param tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
-  # @param [Hash] opts the optional parameters
-  # @option opts [String] :cpf N\u00C3\u00BAmero do CPF, quando PF.
-  # @option opts [String] :cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
-  # @option opts [Date] :data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
-  # @option opts [String] :sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
-  # @return [Pessoa]
   describe 'alterar_using_put1 test' do
     it "should work" do
       # assertion here
@@ -94,7 +71,30 @@ describe 'CadastrosGeraisApi' do
   end
 
 
-  # unit tests for alterar_using_put2
+  # unit tests for alterar_using_put3
+  # Atualiza os dados de uma determinada Pessoa
+  # Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um registro de determinada Pessoa.
+  # @param id ID da Pessoa
+  # @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
+  # @param tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :cpf N\u00C3\u00BAmero do CPF, quando PF.
+  # @option opts [String] :cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
+  # @option opts [Date] :data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
+  # @option opts [String] :sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
+  # @return [Pessoa]
+  describe 'alterar_using_put3 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for alterar_using_put4
   # Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
   # Este m\u00C3\u00A9todo permite que seja alterado um determinado Telefone na base de dados do Emissor.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
@@ -104,7 +104,7 @@ describe 'CadastrosGeraisApi' do
   # @option opts [String] :telefone N\u00C3\u00BAmero do telefone.
   # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
   # @return [Telefone]
-  describe 'alterar_using_put2 test' do
+  describe 'alterar_using_put4 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -149,13 +149,68 @@ describe 'CadastrosGeraisApi' do
   end
 
 
-  # unit tests for consultar_using_get3
-  # Apresenta os dados de um determinado Endere\u00C3\u00A7o
-  # Este m\u00C3\u00A9todo permite consultar um determinado Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
+  # unit tests for consultar_using_get10
+  # Apresenta os dados de um determinado Telefone
+  # Este m\u00C3\u00A9todo permite consultar um determinado Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
   # @param [Hash] opts the optional parameters
-  # @return [Endereco]
-  describe 'consultar_using_get3 test' do
+  # @return [Telefone]
+  describe 'consultar_using_get10 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for consultar_using_get11
+  # Lista os tipos de boletos do emissor 
+  # Este recurso permite que sejam listados os tipos de boletos existentes na base de dados do emissor.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  # @option opts [Integer] :id C\u00C3\u00B3digo identificador do tipo de boleto.
+  # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto.
+  # @option opts [Integer] :banco C\u00C3\u00B3digo identificador do banco.
+  # @return [PageTipoBoleto]
+  describe 'consultar_using_get11 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for consultar_using_get12
+  # Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
+  # Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+  # @param [Hash] opts the optional parameters
+  # @return [TipoEndereco]
+  describe 'consultar_using_get12 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for consultar_using_get13
+  # Apresenta os dados de um determinado Tipo de Telefone
+  # Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
+  # @param [Hash] opts the optional parameters
+  # @return [TipoTelefone]
+  describe 'consultar_using_get13 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -167,11 +222,11 @@ describe 'CadastrosGeraisApi' do
 
 
   # unit tests for consultar_using_get4
-  # Apresenta os dados de uma determinada Pessoa
-  # Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
-  # @param id ID da Pessoa
+  # Apresenta os dados de um determinado Endere\u00C3\u00A7o
+  # Este m\u00C3\u00A9todo permite consultar um determinado Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
   # @param [Hash] opts the optional parameters
-  # @return [Pessoa]
+  # @return [Endereco]
   describe 'consultar_using_get4 test' do
     it "should work" do
       # assertion here
@@ -183,47 +238,13 @@ describe 'CadastrosGeraisApi' do
   end
 
 
-  # unit tests for consultar_using_get7
-  # Apresenta os dados de um determinado Telefone
-  # Este m\u00C3\u00A9todo permite consultar um determinado Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+  # unit tests for consultar_using_get6
+  # Apresenta os dados de uma determinada Pessoa
+  # Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
+  # @param id ID da Pessoa
   # @param [Hash] opts the optional parameters
-  # @return [Telefone]
-  describe 'consultar_using_get7 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for consultar_using_get8
-  # Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
-  # Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
-  # @param [Hash] opts the optional parameters
-  # @return [TipoEndereco]
-  describe 'consultar_using_get8 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for consultar_using_get9
-  # Apresenta os dados de um determinado Tipo de Telefone
-  # Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
-  # @param [Hash] opts the optional parameters
-  # @return [TipoTelefone]
-  describe 'consultar_using_get9 test' do
+  # @return [Pessoa]
+  describe 'consultar_using_get6 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -293,16 +314,21 @@ describe 'CadastrosGeraisApi' do
   end
 
 
-  # unit tests for listar_using_get10
-  # Lista os Tipos de Telefones
-  # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
+  # unit tests for listar_using_get11
+  # Lista os Telefones cadastrados no Emissor
+  # Este m\u00C3\u00A9todo permite que sejam listados os Telefones existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
-  # @option opts [String] :nome Nome do Tipo do Telefone
-  # @return [PageTipoTelefones]
-  describe 'listar_using_get10 test' do
+  # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+  # @option opts [Integer] :id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+  # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence.
+  # @option opts [String] :ddd C\u00C3\u00B3digo DDD do telefone (id).
+  # @option opts [String] :telefone N\u00C3\u00BAmero do telefone.
+  # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
+  # @option opts [Integer] :status Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo
+  # @return [PageTelefones]
+  describe 'listar_using_get11 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -313,7 +339,47 @@ describe 'CadastrosGeraisApi' do
   end
 
 
-  # unit tests for listar_using_get3
+  # unit tests for listar_using_get12
+  # Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+  # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+  # @option opts [String] :nome Nome do Tipo do Endere\u00C3\u00A7o
+  # @return [PageTiposEndereco]
+  describe 'listar_using_get12 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for listar_using_get13
+  # Lista os Tipos de Telefones
+  # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+  # @option opts [String] :nome Nome do Tipo do Telefone
+  # @return [PageTipoTelefones]
+  describe 'listar_using_get13 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for listar_using_get4
   # Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
   # Este m\u00C3\u00A9todo permite que sejam listados os Endere\u00C3\u00A7os existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -334,7 +400,7 @@ describe 'CadastrosGeraisApi' do
   # @option opts [Date] :data_inclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
   # @option opts [Date] :data_ultima_atualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
   # @return [PageEnderecos]
-  describe 'listar_using_get3 test' do
+  describe 'listar_using_get4 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -345,7 +411,7 @@ describe 'CadastrosGeraisApi' do
   end
 
 
-  # unit tests for listar_using_get4
+  # unit tests for listar_using_get6
   # Lista as Pessoas cadastradas no Emissor
   # Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -359,7 +425,7 @@ describe 'CadastrosGeraisApi' do
   # @option opts [Date] :data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
   # @option opts [String] :sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
   # @return [PagePessoas]
-  describe 'listar_using_get4 test' do
+  describe 'listar_using_get6 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -370,7 +436,7 @@ describe 'CadastrosGeraisApi' do
   end
 
 
-  # unit tests for listar_using_get5
+  # unit tests for listar_using_get7
   # Lista os Portadores existentes
   # Este m\u00C3\u00A9todo permite que sejam listados os portadores cadastrados na base do emissor.
   # @param [Hash] opts the optional parameters
@@ -387,7 +453,7 @@ describe 'CadastrosGeraisApi' do
   # @option opts [Date] :data_cadastro_portador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
   # @option opts [Date] :data_cancelamento_portador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
   # @return [PagePortador]
-  describe 'listar_using_get5 test' do
+  describe 'listar_using_get7 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -398,52 +464,7 @@ describe 'CadastrosGeraisApi' do
   end
 
 
-  # unit tests for listar_using_get8
-  # Lista os Telefones cadastrados no Emissor
-  # Este m\u00C3\u00A9todo permite que sejam listados os Telefones existentes na base de dados do Emissor.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
-  # @option opts [Integer] :id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
-  # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence.
-  # @option opts [String] :ddd C\u00C3\u00B3digo DDD do telefone (id).
-  # @option opts [String] :telefone N\u00C3\u00BAmero do telefone.
-  # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
-  # @option opts [Integer] :status Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo
-  # @return [PageTelefones]
-  describe 'listar_using_get8 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for listar_using_get9
-  # Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-  # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
-  # @option opts [String] :nome Nome do Tipo do Endere\u00C3\u00A7o
-  # @return [PageTiposEndereco]
-  describe 'listar_using_get9 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for salvar_using_post1
+  # unit tests for salvar_using_post2
   # Realiza o cadastro de um novo Endere\u00C3\u00A7o
   # Este m\u00C3\u00A9todo permite que seja cadastrado um novo Endere\u00C3\u00A7o na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -459,28 +480,6 @@ describe 'CadastrosGeraisApi' do
   # @option opts [String] :uf Apresenta sigla da Unidade Federativa
   # @option opts [String] :pais Apresenta nome do Pais
   # @return [Endereco]
-  describe 'salvar_using_post1 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for salvar_using_post2
-  # Realiza o cadastro de um nova Pessoa
-  # Este m\u00C3\u00A9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor.
-  # @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
-  # @param tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
-  # @param [Hash] opts the optional parameters
-  # @option opts [String] :cpf N\u00C3\u00BAmero do CPF, quando PF.
-  # @option opts [String] :cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
-  # @option opts [Date] :data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
-  # @option opts [String] :sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
-  # @return [Pessoa]
   describe 'salvar_using_post2 test' do
     it "should work" do
       # assertion here
@@ -493,6 +492,28 @@ describe 'CadastrosGeraisApi' do
 
 
   # unit tests for salvar_using_post3
+  # Realiza o cadastro de um nova Pessoa
+  # Este m\u00C3\u00A9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor.
+  # @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
+  # @param tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :cpf N\u00C3\u00BAmero do CPF, quando PF.
+  # @option opts [String] :cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
+  # @option opts [Date] :data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
+  # @option opts [String] :sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
+  # @return [Pessoa]
+  describe 'salvar_using_post3 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for salvar_using_post4
   # Realiza o cadastro de um novo Telefone
   # Este m\u00C3\u00A9todo permite que seja cadastrado um novo Telefone na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -502,7 +523,7 @@ describe 'CadastrosGeraisApi' do
   # @option opts [String] :telefone N\u00C3\u00BAmero do telefone.
   # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
   # @return [Telefone]
-  describe 'salvar_using_post3 test' do
+  describe 'salvar_using_post4 test' do
     it "should work" do
       # assertion here
       # should be_a()

@@ -43,8 +43,8 @@ module Pier
     # Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado.
     attr_accessor :conteudo
 
-    # Apresenta o evento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
-    attr_accessor :evento
+    # Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+    attr_accessor :tipo_evento
 
     # Apresenta o nome do icone a ser apresentado no push.
     attr_accessor :icone
@@ -72,7 +72,7 @@ module Pier
         
         :'conteudo' => :'conteudo',
         
-        :'evento' => :'evento',
+        :'tipo_evento' => :'tipoEvento',
         
         :'icone' => :'icone',
         
@@ -99,7 +99,7 @@ module Pier
         
         :'conteudo' => :'String',
         
-        :'evento' => :'String',
+        :'tipo_evento' => :'String',
         
         :'icone' => :'String',
         
@@ -173,10 +173,10 @@ module Pier
       end
 
       
-      if attributes[:'evento']
+      if attributes[:'tipoEvento']
         
         
-        self.evento = attributes[:'evento']
+        self.tipo_evento = attributes[:'tipoEvento']
         
       
       end
@@ -279,14 +279,14 @@ module Pier
       
       
       
-      if @evento.nil?
+      if @tipo_evento.nil?
         return false
       end
 
       
       
       allowed_values = ["RISCO_FRAUDE", "OUTROS"]
-      if @evento && !allowed_values.include?(@evento)
+      if @tipo_evento && !allowed_values.include?(@tipo_evento)
         return false
       end
       
@@ -339,13 +339,13 @@ module Pier
     
     
     # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] evento Object to be assigned
-    def evento=(evento)
+    # @param [Object] tipo_evento Object to be assigned
+    def tipo_evento=(tipo_evento)
       allowed_values = ["RISCO_FRAUDE", "OUTROS"]
-      if evento && !allowed_values.include?(evento)
-        fail ArgumentError, "invalid value for 'evento', must be one of #{allowed_values}."
+      if tipo_evento && !allowed_values.include?(tipo_evento)
+        fail ArgumentError, "invalid value for 'tipo_evento', must be one of #{allowed_values}."
       end
-      @evento = evento
+      @tipo_evento = tipo_evento
     end
 
     
@@ -377,7 +377,7 @@ module Pier
           token_servidor == o.token_servidor &&
           titulo == o.titulo &&
           conteudo == o.conteudo &&
-          evento == o.evento &&
+          tipo_evento == o.tipo_evento &&
           icone == o.icone &&
           som == o.som &&
           cor == o.cor
@@ -392,7 +392,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_pessoa, id_conta, token_dispositivo, token_servidor, titulo, conteudo, evento, icone, som, cor].hash
+      [id_pessoa, id_conta, token_dispositivo, token_servidor, titulo, conteudo, tipo_evento, icone, som, cor].hash
     end
 
     # Builds the object from hash

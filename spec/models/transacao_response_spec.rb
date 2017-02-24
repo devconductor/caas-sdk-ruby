@@ -230,28 +230,6 @@ describe 'TransacaoResponse' do
   end
 
 
-  describe 'test attribute "latitude"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "longetude"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
   describe 'test attribute "id_grupo_mcc"' do
     it 'should work' do
        # assertion here

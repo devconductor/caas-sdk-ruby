@@ -28,8 +28,8 @@ module Pier
     # Id do WebHook
     attr_accessor :id
 
-    # Evento a ser chamado pelo WebHook
-    attr_accessor :evento
+    # TipoEvento a ser chamado pelo WebHook
+    attr_accessor :tipo_evento
 
     # M\u00C3\u00A9todo que a ser chamado pelo WebHook
     attr_accessor :metodo
@@ -44,7 +44,7 @@ module Pier
         
         :'id' => :'id',
         
-        :'evento' => :'evento',
+        :'tipo_evento' => :'tipoEvento',
         
         :'metodo' => :'metodo',
         
@@ -59,7 +59,7 @@ module Pier
         
         :'id' => :'Integer',
         
-        :'evento' => :'String',
+        :'tipo_evento' => :'String',
         
         :'metodo' => :'String',
         
@@ -86,10 +86,10 @@ module Pier
       end
 
       
-      if attributes[:'evento']
+      if attributes[:'tipoEvento']
         
         
-        self.evento = attributes[:'evento']
+        self.tipo_evento = attributes[:'tipoEvento']
         
       
       end
@@ -138,14 +138,14 @@ module Pier
       
       
       
-      if @evento.nil?
+      if @tipo_evento.nil?
         return false
       end
 
       
       
       allowed_values = ["RISCO_FRAUDE", "OUTROS"]
-      if @evento && !allowed_values.include?(@evento)
+      if @tipo_evento && !allowed_values.include?(@tipo_evento)
         return false
       end
       
@@ -184,13 +184,13 @@ module Pier
     
     
     # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] evento Object to be assigned
-    def evento=(evento)
+    # @param [Object] tipo_evento Object to be assigned
+    def tipo_evento=(tipo_evento)
       allowed_values = ["RISCO_FRAUDE", "OUTROS"]
-      if evento && !allowed_values.include?(evento)
-        fail ArgumentError, "invalid value for 'evento', must be one of #{allowed_values}."
+      if tipo_evento && !allowed_values.include?(tipo_evento)
+        fail ArgumentError, "invalid value for 'tipo_evento', must be one of #{allowed_values}."
       end
-      @evento = evento
+      @tipo_evento = tipo_evento
     end
 
     
@@ -221,7 +221,7 @@ module Pier
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          evento == o.evento &&
+          tipo_evento == o.tipo_evento &&
           metodo == o.metodo &&
           url == o.url
     end
@@ -235,7 +235,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, evento, metodo, url].hash
+      [id, tipo_evento, metodo, url].hash
     end
 
     # Builds the object from hash

@@ -139,7 +139,7 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Date] :data_envio Apresenta a data e em que o registro foi enviado para o dispositivo.
-    # @option opts [String] :evento Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o
+    # @option opts [String] :tipo_evento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :plataforma Plataforma de Push notifications.
     # @option opts [String] :protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
@@ -155,7 +155,7 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Date] :data_envio Apresenta a data e em que o registro foi enviado para o dispositivo.
-    # @option opts [String] :evento Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o
+    # @option opts [String] :tipo_evento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :plataforma Plataforma de Push notifications.
     # @option opts [String] :protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
@@ -186,8 +186,8 @@ module Pier
       
       
       
-      if opts[:'evento'] && !['RISCO_FRAUDE', 'OUTROS'].include?(opts[:'evento'])
-        fail ArgumentError, 'invalid value for "evento", must be one of RISCO_FRAUDE, OUTROS'
+      if opts[:'tipo_evento'] && !['RISCO_FRAUDE', 'OUTROS'].include?(opts[:'tipo_evento'])
+        fail ArgumentError, 'invalid value for "tipo_evento", must be one of RISCO_FRAUDE, OUTROS'
       end
       
       
@@ -227,7 +227,7 @@ module Pier
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'dataEnvio'] = opts[:'data_envio'] if opts[:'data_envio']
-      query_params[:'evento'] = opts[:'evento'] if opts[:'evento']
+      query_params[:'tipoEvento'] = opts[:'tipo_evento'] if opts[:'tipo_evento']
       query_params[:'status'] = opts[:'status'] if opts[:'status']
       query_params[:'plataforma'] = opts[:'plataforma'] if opts[:'plataforma']
       query_params[:'protocolo'] = opts[:'protocolo'] if opts[:'protocolo']
@@ -270,7 +270,7 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [DateTime] :data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
-    # @option opts [String] :evento Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o
+    # @option opts [String] :tipo_evento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
     # @option opts [String] :protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
@@ -286,7 +286,7 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [DateTime] :data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
-    # @option opts [String] :evento Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o
+    # @option opts [String] :tipo_evento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
     # @option opts [String] :protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
@@ -317,8 +317,8 @@ module Pier
       
       
       
-      if opts[:'evento'] && !['RISCO_FRAUDE', 'OUTROS'].include?(opts[:'evento'])
-        fail ArgumentError, 'invalid value for "evento", must be one of RISCO_FRAUDE, OUTROS'
+      if opts[:'tipo_evento'] && !['RISCO_FRAUDE', 'OUTROS'].include?(opts[:'tipo_evento'])
+        fail ArgumentError, 'invalid value for "tipo_evento", must be one of RISCO_FRAUDE, OUTROS'
       end
       
       
@@ -354,7 +354,7 @@ module Pier
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'dataInclusao'] = opts[:'data_inclusao'] if opts[:'data_inclusao']
-      query_params[:'evento'] = opts[:'evento'] if opts[:'evento']
+      query_params[:'tipoEvento'] = opts[:'tipo_evento'] if opts[:'tipo_evento']
       query_params[:'status'] = opts[:'status'] if opts[:'status']
       query_params[:'operadora'] = opts[:'operadora'] if opts[:'operadora']
       query_params[:'protocolo'] = opts[:'protocolo'] if opts[:'protocolo']

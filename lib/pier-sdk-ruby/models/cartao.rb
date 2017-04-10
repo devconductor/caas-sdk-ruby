@@ -79,6 +79,9 @@ module Pier
     # Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
     attr_accessor :codigo_desbloqueio
 
+    # N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
+    attr_accessor :sequencial_cartao
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -118,7 +121,9 @@ module Pier
         
         :'flag_provisorio' => :'flagProvisorio',
         
-        :'codigo_desbloqueio' => :'codigoDesbloqueio'
+        :'codigo_desbloqueio' => :'codigoDesbloqueio',
+        
+        :'sequencial_cartao' => :'sequencialCartao'
         
       }
     end
@@ -161,7 +166,9 @@ module Pier
         
         :'flag_provisorio' => :'Integer',
         
-        :'codigo_desbloqueio' => :'String'
+        :'codigo_desbloqueio' => :'String',
+        
+        :'sequencial_cartao' => :'Integer'
         
       }
     end
@@ -337,6 +344,15 @@ module Pier
       end
 
       
+      if attributes[:'sequencialCartao']
+        
+        
+        self.sequencial_cartao = attributes[:'sequencialCartao']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -424,8 +440,17 @@ module Pier
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -539,7 +564,8 @@ module Pier
           arquivo_impressao == o.arquivo_impressao &&
           flag_impressao_origem_comercial == o.flag_impressao_origem_comercial &&
           flag_provisorio == o.flag_provisorio &&
-          codigo_desbloqueio == o.codigo_desbloqueio
+          codigo_desbloqueio == o.codigo_desbloqueio &&
+          sequencial_cartao == o.sequencial_cartao
     end
 
     # @see the `==` method
@@ -551,7 +577,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_status_cartao, id_estagio_cartao, id_conta, id_pessoa, id_produto, tipo_portador, numero_cartao, nome_impresso, data_geracao, data_status_cartao, data_estagio_cartao, data_validade, data_impressao, arquivo_impressao, flag_impressao_origem_comercial, flag_provisorio, codigo_desbloqueio].hash
+      [id, id_status_cartao, id_estagio_cartao, id_conta, id_pessoa, id_produto, tipo_portador, numero_cartao, nome_impresso, data_geracao, data_status_cartao, data_estagio_cartao, data_validade, data_impressao, arquivo_impressao, flag_impressao_origem_comercial, flag_provisorio, codigo_desbloqueio, sequencial_cartao].hash
     end
 
     # Builds the object from hash

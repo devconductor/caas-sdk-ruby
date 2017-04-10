@@ -1289,6 +1289,7 @@ module Pier
     # @option opts [Integer] :flag_impressao_origem_comercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
     # @option opts [Integer] :flag_provisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
     # @option opts [String] :codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
+    # @option opts [Integer] :sequencial_cartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
     # @return [PageCartoes]
     def listar_using_get2(opts = {})
       data, _status_code, _headers = listar_using_get2_with_http_info(opts)
@@ -1317,11 +1318,18 @@ module Pier
     # @option opts [Integer] :flag_impressao_origem_comercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
     # @option opts [Integer] :flag_provisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
     # @option opts [String] :codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
+    # @option opts [Integer] :sequencial_cartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
     # @return [Array<(PageCartoes, Fixnum, Hash)>] PageCartoes data, response status code and response headers
     def listar_using_get2_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CartaoApi.listar_using_get2 ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1461,6 +1469,7 @@ module Pier
       query_params[:'flagImpressaoOrigemComercial'] = opts[:'flag_impressao_origem_comercial'] if opts[:'flag_impressao_origem_comercial']
       query_params[:'flagProvisorio'] = opts[:'flag_provisorio'] if opts[:'flag_provisorio']
       query_params[:'codigoDesbloqueio'] = opts[:'codigo_desbloqueio'] if opts[:'codigo_desbloqueio']
+      query_params[:'sequencialCartao'] = opts[:'sequencial_cartao'] if opts[:'sequencial_cartao']
 
       # header parameters
       header_params = {}

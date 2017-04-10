@@ -5,10 +5,10 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultar_using_get**](RiscoFraudeApi.md#consultar_using_get) | **GET** /api/atendimento-clientes/{id} | Apresenta os dados de um determinado Atendimento
-[**consultar_using_get7**](RiscoFraudeApi.md#consultar_using_get7) | **GET** /api/riscos-fraudes/{id} | Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
+[**consultar_using_get10**](RiscoFraudeApi.md#consultar_using_get10) | **GET** /api/riscos-fraudes/{id} | Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
 [**informar_risco_fraude_using_post**](RiscoFraudeApi.md#informar_risco_fraude_using_post) | **POST** /api/riscos-fraudes | Receber Risco Fraude
 [**listar_using_get**](RiscoFraudeApi.md#listar_using_get) | **GET** /api/atendimento-clientes | Lista todos os atendimentos
-[**listar_using_get8**](RiscoFraudeApi.md#listar_using_get8) | **GET** /api/riscos-fraudes | Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
+[**listar_using_get11**](RiscoFraudeApi.md#listar_using_get11) | **GET** /api/riscos-fraudes | Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
 [**negar_using_get**](RiscoFraudeApi.md#negar_using_get) | **GET** /api/riscos-fraudes/{id}/negar | Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
 [**reconhecer_using_get**](RiscoFraudeApi.md#reconhecer_using_get) | **GET** /api/riscos-fraudes/{id}/reconhecer | Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
 [**salvar_using_post**](RiscoFraudeApi.md#salvar_using_post) | **POST** /api/atendimento-clientes | Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
@@ -74,8 +74,8 @@ Name | Type | Description  | Notes
 
 
 
-# **consultar_using_get7**
-> RiscoFraudeDetalhadoResponse consultar_using_get7(id)
+# **consultar_using_get10**
+> RiscoFraudeDetalhadoResponse consultar_using_get10(id)
 
 Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
 
@@ -102,10 +102,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
-  result = api_instance.consultar_using_get7(id)
+  result = api_instance.consultar_using_get10(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling RiscoFraudeApi->consultar_using_get7: #{e}"
+  puts "Exception when calling RiscoFraudeApi->consultar_using_get10: #{e}"
 end
 ```
 
@@ -216,7 +216,6 @@ api_instance = Pier::RiscoFraudeApi.new
 opts = { 
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  id_atendimento: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Atendimento (id)
   id_tipo_atendimento: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
   id_conta: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
   nome_atendente: "nome_atendente_example", # String | Apresenta o nome do Atendente que registrou o Atendimento.
@@ -238,7 +237,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **id_atendimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Atendimento (id) | [optional] 
  **id_tipo_atendimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id) | [optional] 
  **id_conta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). | [optional] 
  **nome_atendente** | **String**| Apresenta o nome do Atendente que registrou o Atendimento. | [optional] 
@@ -261,8 +259,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get8**
-> RiscoFraudeResponsePage listar_using_get8(id_conta, confirmacao_fraude, opts)
+# **listar_using_get11**
+> RiscoFraudeResponsePage listar_using_get11(id_conta, confirmacao_fraude, opts)
 
 Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
 
@@ -295,10 +293,10 @@ opts = {
 
 begin
   #Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
-  result = api_instance.listar_using_get8(id_conta, confirmacao_fraude, opts)
+  result = api_instance.listar_using_get11(id_conta, confirmacao_fraude, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling RiscoFraudeApi->listar_using_get8: #{e}"
+  puts "Exception when calling RiscoFraudeApi->listar_using_get11: #{e}"
 end
 ```
 
@@ -470,10 +468,11 @@ opts = {
   conteudo_atendimento: "conteudo_atendimento_example", # String | Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento.
   detalhes_atendimento: "detalhes_atendimento_example", # String | Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
   nome_atendente: "nome_atendente_example", # String | Apresenta o nome do Atendente que registrou o Atendimento.
-  data_atendimento: Date.parse("2013-10-20"), # Date | Apresenta a data em que o Atendimento foi realizado.
-  data_agendamento: Date.parse("2013-10-20"), # Date | Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data para processamento ou a data para retorno do Atendimento.
-  data_hora_inicio_atendimento: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
-  data_hora_fim_atendimento: DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
+  data_atendimento: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+  data_agendamento: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+  data_hora_inicio_atendimento: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+  data_hora_fim_atendimento: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+  flag_fila_fraude: 56 # Integer | Flag fila fraude
 }
 
 begin
@@ -493,10 +492,11 @@ Name | Type | Description  | Notes
  **conteudo_atendimento** | **String**| Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento. | [optional] 
  **detalhes_atendimento** | **String**| Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento. | [optional] 
  **nome_atendente** | **String**| Apresenta o nome do Atendente que registrou o Atendimento. | [optional] 
- **data_atendimento** | **Date**| Apresenta a data em que o Atendimento foi realizado. | [optional] 
- **data_agendamento** | **Date**| Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data para processamento ou a data para retorno do Atendimento. | [optional] 
- **data_hora_inicio_atendimento** | **DateTime**| Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos. | [optional] 
- **data_hora_fim_atendimento** | **DateTime**| Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos. | [optional] 
+ **data_atendimento** | **DateTime**| Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
+ **data_agendamento** | **DateTime**| Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
+ **data_hora_inicio_atendimento** | **DateTime**| Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
+ **data_hora_fim_atendimento** | **DateTime**| Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
+ **flag_fila_fraude** | **Integer**| Flag fila fraude | [optional] 
 
 
 ### Return type

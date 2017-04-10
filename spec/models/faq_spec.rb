@@ -43,7 +43,7 @@ describe 'FAQ' do
     end
   end
 
-  describe 'test attribute "id_faq"' do
+  describe 'test attribute "id"' do
     it 'should work' do
        # assertion here
        # should be_a()

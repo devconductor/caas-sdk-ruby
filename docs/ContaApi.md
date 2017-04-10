@@ -4,28 +4,115 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterar_limite_using_put**](ContaApi.md#alterar_limite_using_put) | **PUT** /api/contas/{id}/alterar-limites | Alterar limite
-[**alterar_vencimento_using_put**](ContaApi.md#alterar_vencimento_using_put) | **PUT** /api/contas/{id}/alterar-vencimento | Alterar vencimento
-[**consultar_divida_atualizada_cliente_using_get**](ContaApi.md#consultar_divida_atualizada_cliente_using_get) | **GET** /api/contas/{id}/divida | Consultar a d\u00C3\u00ADvida atualizada do cliente
-[**consultar_fatura_consignada_using_get**](ContaApi.md#consultar_fatura_consignada_using_get) | **GET** /api/contas/{id}/faturas-consignadas/{idHistorico} | Apresenta dados de uma determinada fatura consignada
+[**ajustar_conta_using_post**](ContaApi.md#ajustar_conta_using_post) | **POST** /api/contas/{id}/ajustes-financeiros | Lan\u00C3\u00A7a um ajuste para a conta do id informado
+[**alterar_limite_using_put**](ContaApi.md#alterar_limite_using_put) | **PUT** /api/contas/{id}/alterar-limites | Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
+[**alterar_vencimento_using_put**](ContaApi.md#alterar_vencimento_using_put) | **PUT** /api/contas/{id}/alterar-vencimento | Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
+[**ativar_envio_fatura_email_using_post**](ContaApi.md#ativar_envio_fatura_email_using_post) | **POST** /api/contas/{id}/ativar-fatura-email |  Ativa o servi\u00C3\u00A7o de envio de fatura por email
+[**consultar_boleto_emitido_using_get**](ContaApi.md#consultar_boleto_emitido_using_get) | **GET** /api/contas/{id}/faturas/consultar-ficha-compensacao | Consulta os dados de um determinado boleto da fatura
+[**consultar_divida_atualizada_cliente_using_get**](ContaApi.md#consultar_divida_atualizada_cliente_using_get) | **GET** /api/contas/{id}/recuperar-divida-atualizada | Consulta a d\u00C3\u00ADvida atualizada do cliente
+[**consultar_fatura_consignada_aberta_using_get**](ContaApi.md#consultar_fatura_consignada_aberta_using_get) | **GET** /api/contas/{id}/faturas-consignadas/consultar-fatura-aberta | Consultar a fatura consignadas abertas da conta
+[**consultar_fatura_consignada_using_get**](ContaApi.md#consultar_fatura_consignada_using_get) | **GET** /api/contas/{id}/faturas-consignadas/{id_fatura} | Apresenta dados de uma determinada fatura consignada
+[**consultar_fatura_using_get**](ContaApi.md#consultar_fatura_using_get) | **GET** /api/contas/{id}/faturas/{id_fatura} | Consultar Fatura da Conta
+[**consultar_lancamentos_futuros_fatura_using_get**](ContaApi.md#consultar_lancamentos_futuros_fatura_using_get) | **GET** /api/contas/{id}/faturas/{id_fatura}/lancamentos-futuros | Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
 [**consultar_limite_disponibilidade_using_get1**](ContaApi.md#consultar_limite_disponibilidade_using_get1) | **GET** /api/contas/{id}/limites-disponibilidades | Apresenta os limites da conta
-[**consultar_using_get15**](ContaApi.md#consultar_using_get15) | **GET** /api/contas/{id}/transferencias/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+[**consultar_using_get21**](ContaApi.md#consultar_using_get21) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 [**consultar_using_get3**](ContaApi.md#consultar_using_get3) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
+[**desativar_envio_fatura_email_using_post**](ContaApi.md#desativar_envio_fatura_email_using_post) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00C3\u00A7o de envio de fatura por email
+[**gerar_boleto_recarga_using_post**](ContaApi.md#gerar_boleto_recarga_using_post) | **POST** /api/contas/{id}/gerar-boleto-recarga | Gera um boleto de recarga
 [**gerar_cartao_using_post**](ContaApi.md#gerar_cartao_using_post) | **POST** /api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
-[**listar_faturas_consignadas_using_get**](ContaApi.md#listar_faturas_consignadas_using_get) | **GET** /api/contas/{id}/faturas-consignadas | Listar Faturas consignadas da Conta
-[**listar_faturas_using_get**](ContaApi.md#listar_faturas_using_get) | **GET** /api/contas/{id}/faturas | Listar Faturas da Conta
-[**listar_using_get15**](ContaApi.md#listar_using_get15) | **GET** /api/contas/{id}/transferencias | Lista as transfer\u00C3\u00AAncias realizadas pela conta
+[**listar_faturas_consignadas_using_get**](ContaApi.md#listar_faturas_consignadas_using_get) | **GET** /api/contas/{id}/faturas-consignadas | Lista as faturas consignadas da conta
+[**listar_faturas_using_get**](ContaApi.md#listar_faturas_using_get) | **GET** /api/contas/{id}/faturas | Lista as faturas da conta
+[**listar_historico_alteracoes_limites_using_get**](ContaApi.md#listar_historico_alteracoes_limites_using_get) | **GET** /api/contas/{id}/historicos-alteracoes-limites | Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
+[**listar_historico_assessoria_using_get**](ContaApi.md#listar_historico_assessoria_using_get) | **GET** /api/contas/{id}/historicos-assessorias-cobranca | Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
+[**listar_historico_atrasos_faturas_using_get**](ContaApi.md#listar_historico_atrasos_faturas_using_get) | **GET** /api/contas/{id}/historicos-faturas-atrasos | Lista o historico de atrasos das faturas
+[**listar_nao_processadas_using_get**](ContaApi.md#listar_nao_processadas_using_get) | **GET** /api/contas/{id}/transacoes/nao-processadas | Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
+[**listar_processadas_using_get**](ContaApi.md#listar_processadas_using_get) | **GET** /api/contas/{id}/transacoes/processadas | Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
+[**listar_using_get20**](ContaApi.md#listar_using_get20) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
 [**listar_using_get3**](ContaApi.md#listar_using_get3) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
+[**reativar_using_post**](ContaApi.md#reativar_using_post) | **POST** /api/contas/{id}/reativar | Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas que foram desativadas por inadimpl\u00C3\u00AAncia
 [**transacoes_using_get**](ContaApi.md#transacoes_using_get) | **GET** /api/contas/{id}/timeline | Permite listar uma linha do tempo com os eventos da conta
-[**transferir_using_post**](ContaApi.md#transferir_using_post) | **POST** /api/contas/{id}/transferencias | Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
+[**transferir_using_post1**](ContaApi.md#transferir_using_post1) | **POST** /api/contas/{id}/transferencias-creditos-cartoes | Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
+
+
+
+
+# **ajustar_conta_using_post**
+> AjusteResponse ajustar_conta_using_post(id, id_tipo_ajuste, data_ajuste, valor_ajuste, opts)
+
+Lan\u00C3\u00A7a um ajuste para a conta do id informado
+
+Este recurso insere um ajuste para a conta do id informado
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::ContaApi.new
+
+id = 789 # Integer | Id Conta
+
+id_tipo_ajuste = 789 # Integer | C\u00C3\u00B3digo identificador do tipo de ajuste.
+
+data_ajuste = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | Data do ajuste.
+
+valor_ajuste = 3.4 # Float | Valor do ajuste
+
+opts = { 
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+}
+
+begin
+  #Lan\u00C3\u00A7a um ajuste para a conta do id informado
+  result = api_instance.ajustar_conta_using_post(id, id_tipo_ajuste, data_ajuste, valor_ajuste, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ContaApi->ajustar_conta_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| Id Conta | 
+ **id_tipo_ajuste** | **Integer**| C\u00C3\u00B3digo identificador do tipo de ajuste. | 
+ **data_ajuste** | **DateTime**| Data do ajuste. | 
+ **valor_ajuste** | [**Float**](.md)| Valor do ajuste | 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+
+
+### Return type
+
+[**AjusteResponse**](AjusteResponse.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
 
 # **alterar_limite_using_put**
-> Conta alterar_limite_using_put(id, limite_global, limite_compra, limite_parcelado, limite_parcelas, limite_saque_global, limite_saque_periodo, limite_consignado, limite_internacional_compra, limite_internacional_parcelado, limite_internacional_parcelas, limite_internacional_saque_global, limite_internacional_saque_periodo)
+> LimiteDisponibilidade alterar_limite_using_put(id, limite_global, limite_compra, limite_parcelado, limite_parcelas, limite_saque_global, limite_saque_periodo, limite_consignado, limite_internacional_compra, limite_internacional_parcelado, limite_internacional_parcelas, limite_internacional_saque_global, limite_internacional_saque_periodo)
 
-Alterar limite
+Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
 
 Esse recurso permite realizar a altera\u00C3\u00A7\u00C3\u00A3o dos Limites de uma determinada Conta.
 
@@ -73,7 +160,7 @@ limite_internacional_saque_periodo = 3.4 # Float | Quando utilizado pelo emissor
 
 
 begin
-  #Alterar limite
+  #Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
   result = api_instance.alterar_limite_using_put(id, limite_global, limite_compra, limite_parcelado, limite_parcelas, limite_saque_global, limite_saque_periodo, limite_consignado, limite_internacional_compra, limite_internacional_parcelado, limite_internacional_parcelas, limite_internacional_saque_global, limite_internacional_saque_periodo)
   p result
 rescue Pier::ApiError => e
@@ -102,7 +189,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Conta**](Conta.md)
+[**LimiteDisponibilidade**](LimiteDisponibilidade.md)
 
 ### Authorization
 
@@ -119,7 +206,7 @@ Name | Type | Description  | Notes
 # **alterar_vencimento_using_put**
 > Conta alterar_vencimento_using_put(id, novo_dia_vencimento)
 
-Alterar vencimento
+Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
 
 Esse recurso permite alterar o vencimento de uma conta especifica.
 
@@ -145,7 +232,7 @@ novo_dia_vencimento = 56 # Integer | Novo dia de vencimento.
 
 
 begin
-  #Alterar vencimento
+  #Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
   result = api_instance.alterar_vencimento_using_put(id, novo_dia_vencimento)
   p result
 rescue Pier::ApiError => e
@@ -177,10 +264,126 @@ Name | Type | Description  | Notes
 
 
 
-# **consultar_divida_atualizada_cliente_using_get**
-> DividaClienteResponse consultar_divida_atualizada_cliente_using_get(opts)
+# **ativar_envio_fatura_email_using_post**
+> Object ativar_envio_fatura_email_using_post(id)
 
-Consultar a d\u00C3\u00ADvida atualizada do cliente
+ Ativa o servi\u00C3\u00A7o de envio de fatura por email
+
+Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::ContaApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+
+begin
+  # Ativa o servi\u00C3\u00A7o de envio de fatura por email
+  result = api_instance.ativar_envio_fatura_email_using_post(id)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ContaApi->ativar_envio_fatura_email_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **consultar_boleto_emitido_using_get**
+> BoletoDeFatura consultar_boleto_emitido_using_get(id)
+
+Consulta os dados de um determinado boleto da fatura
+
+Este recurso consulta um boleto da fatura
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::ContaApi.new
+
+id = 789 # Integer | Id Conta
+
+
+begin
+  #Consulta os dados de um determinado boleto da fatura
+  result = api_instance.consultar_boleto_emitido_using_get(id)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ContaApi->consultar_boleto_emitido_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| Id Conta | 
+
+
+### Return type
+
+[**BoletoDeFatura**](BoletoDeFatura.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **consultar_divida_atualizada_cliente_using_get**
+> DividaClienteResponse consultar_divida_atualizada_cliente_using_get(id, opts)
+
+Consulta a d\u00C3\u00ADvida atualizada do cliente
 
 Este recurso consulta a d\u00C3\u00ADvida atualizada do cliente
 
@@ -200,17 +403,18 @@ end
 
 api_instance = Pier::ContaApi.new
 
+id = 789 # Integer | Id Conta
+
 opts = { 
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  id_conta: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)
   data_vencimento: Date.parse("2013-10-20"), # Date | Data do vencimento
   id_escritorio_cobranca: 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a
 }
 
 begin
-  #Consultar a d\u00C3\u00ADvida atualizada do cliente
-  result = api_instance.consultar_divida_atualizada_cliente_using_get(opts)
+  #Consulta a d\u00C3\u00ADvida atualizada do cliente
+  result = api_instance.consultar_divida_atualizada_cliente_using_get(id, opts)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling ContaApi->consultar_divida_atualizada_cliente_using_get: #{e}"
@@ -221,9 +425,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| Id Conta | 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **id_conta** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id) | [optional] 
  **data_vencimento** | **Date**| Data do vencimento | [optional] 
  **id_escritorio_cobranca** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a | [optional] 
 
@@ -244,8 +448,69 @@ Name | Type | Description  | Notes
 
 
 
+# **consultar_fatura_consignada_aberta_using_get**
+> FaturaConsignadaResponse consultar_fatura_consignada_aberta_using_get(id, data_vencimento)
+
+Consultar a fatura consignadas abertas da conta
+
+Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar a fatura consignada em aberto
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::ContaApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+data_vencimento = Date.parse("2013-10-20") # Date | Data Vencimento.
+
+
+begin
+  #Consultar a fatura consignadas abertas da conta
+  result = api_instance.consultar_fatura_consignada_aberta_using_get(id, data_vencimento)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ContaApi->consultar_fatura_consignada_aberta_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **data_vencimento** | **Date**| Data Vencimento. | 
+
+
+### Return type
+
+[**FaturaConsignadaResponse**](FaturaConsignadaResponse.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
 # **consultar_fatura_consignada_using_get**
-> FaturaResponse consultar_fatura_consignada_using_get(id, id_historico)
+> FaturaConsignadaDetalheResponse consultar_fatura_consignada_using_get(id, id_fatura)
 
 Apresenta dados de uma determinada fatura consignada
 
@@ -269,12 +534,12 @@ api_instance = Pier::ContaApi.new
 
 id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
 
-id_historico = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da fatura (idHistorico).
+id_fatura = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da fatura (id_fatura).
 
 
 begin
   #Apresenta dados de uma determinada fatura consignada
-  result = api_instance.consultar_fatura_consignada_using_get(id, id_historico)
+  result = api_instance.consultar_fatura_consignada_using_get(id, id_fatura)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling ContaApi->consultar_fatura_consignada_using_get: #{e}"
@@ -286,12 +551,134 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **id_historico** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da fatura (idHistorico). | 
+ **id_fatura** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da fatura (id_fatura). | 
 
 
 ### Return type
 
-[**FaturaResponse**](FaturaResponse.md)
+[**FaturaConsignadaDetalheResponse**](FaturaConsignadaDetalheResponse.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **consultar_fatura_using_get**
+> DetalhesFaturaResponse consultar_fatura_using_get(id, id_fatura)
+
+Consultar Fatura da Conta
+
+Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar os detalhes de uma fatura vinculados a uma determinada conta.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::ContaApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+id_fatura = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da fatura (id_fatura).
+
+
+begin
+  #Consultar Fatura da Conta
+  result = api_instance.consultar_fatura_using_get(id, id_fatura)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ContaApi->consultar_fatura_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id_fatura** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da fatura (id_fatura). | 
+
+
+### Return type
+
+[**DetalhesFaturaResponse**](DetalhesFaturaResponse.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **consultar_lancamentos_futuros_fatura_using_get**
+> DetalhesFaturaResponse consultar_lancamentos_futuros_fatura_using_get(id, id_fatura)
+
+Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
+
+Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar os detalhes dos lan\u00C3\u00A7amentos futuros de uma fatura vinculados a uma determinada conta.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::ContaApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+id_fatura = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da fatura (id_fatura).
+
+
+begin
+  #Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
+  result = api_instance.consultar_lancamentos_futuros_fatura_using_get(id, id_fatura)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ContaApi->consultar_lancamentos_futuros_fatura_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id_fatura** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da fatura (id_fatura). | 
+
+
+### Return type
+
+[**DetalhesFaturaResponse**](DetalhesFaturaResponse.md)
 
 ### Authorization
 
@@ -328,7 +715,7 @@ end
 
 api_instance = Pier::ContaApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+id = 789 # Integer | Id Conta
 
 
 begin
@@ -344,7 +731,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
+ **id** | **Integer**| Id Conta | 
 
 
 ### Return type
@@ -363,8 +750,8 @@ Name | Type | Description  | Notes
 
 
 
-# **consultar_using_get15**
-> PageTransferencias consultar_using_get15(id, id_transferencia)
+# **consultar_using_get21**
+> PageTransferencias consultar_using_get21(id, id_transferencia)
 
 Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 
@@ -393,10 +780,10 @@ id_transferencia = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u
 
 begin
   #Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-  result = api_instance.consultar_using_get15(id, id_transferencia)
+  result = api_instance.consultar_using_get21(id, id_transferencia)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->consultar_using_get15: #{e}"
+  puts "Exception when calling ContaApi->consultar_using_get21: #{e}"
 end
 ```
 
@@ -482,6 +869,134 @@ Name | Type | Description  | Notes
 
 
 
+# **desativar_envio_fatura_email_using_post**
+> Object desativar_envio_fatura_email_using_post(id)
+
+Desativa o servi\u00C3\u00A7o de envio de fatura por email
+
+Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::ContaApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+
+begin
+  #Desativa o servi\u00C3\u00A7o de envio de fatura por email
+  result = api_instance.desativar_envio_fatura_email_using_post(id)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ContaApi->desativar_envio_fatura_email_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **gerar_boleto_recarga_using_post**
+> BoletoDeFatura gerar_boleto_recarga_using_post(id, valor, data_vencimento, opts)
+
+Gera um boleto de recarga
+
+Este recurso gera um boleto de recarga
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::ContaApi.new
+
+id = 789 # Integer | Id Conta
+
+valor = 3.4 # Float | 
+
+data_vencimento = Date.parse("2013-10-20") # Date | 
+
+opts = { 
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+}
+
+begin
+  #Gera um boleto de recarga
+  result = api_instance.gerar_boleto_recarga_using_post(id, valor, data_vencimento, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ContaApi->gerar_boleto_recarga_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| Id Conta | 
+ **valor** | [**Float**](.md)|  | 
+ **data_vencimento** | **Date**|  | 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+
+
+### Return type
+
+[**BoletoDeFatura**](BoletoDeFatura.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
 # **gerar_cartao_using_post**
 > CartaoImpressao gerar_cartao_using_post(id, id_pessoa, opts)
 
@@ -548,9 +1063,9 @@ Name | Type | Description  | Notes
 
 
 # **listar_faturas_consignadas_using_get**
-> PageFaturas listar_faturas_consignadas_using_get(id, opts)
+> PageFaturasConsignadas listar_faturas_consignadas_using_get(id, opts)
 
-Listar Faturas consignadas da Conta
+Lista as faturas consignadas da conta
 
 Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
 
@@ -575,11 +1090,11 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da
 opts = { 
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  data_vencimeno: Date.parse("2013-10-20") # Date | Apresenta a data de vencimento da fatura.
+  data_vencimento: Date.parse("2013-10-20") # Date | Apresenta a data de vencimento da fatura.
 }
 
 begin
-  #Listar Faturas consignadas da Conta
+  #Lista as faturas consignadas da conta
   result = api_instance.listar_faturas_consignadas_using_get(id, opts)
   p result
 rescue Pier::ApiError => e
@@ -594,12 +1109,12 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **data_vencimeno** | **Date**| Apresenta a data de vencimento da fatura. | [optional] 
+ **data_vencimento** | **Date**| Apresenta a data de vencimento da fatura. | [optional] 
 
 
 ### Return type
 
-[**PageFaturas**](PageFaturas.md)
+[**PageFaturasConsignadas**](PageFaturasConsignadas.md)
 
 ### Authorization
 
@@ -616,7 +1131,7 @@ Name | Type | Description  | Notes
 # **listar_faturas_using_get**
 > PageFaturas listar_faturas_using_get(id, opts)
 
-Listar Faturas da Conta
+Lista as faturas da conta
 
 Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
 
@@ -645,7 +1160,7 @@ opts = {
 }
 
 begin
-  #Listar Faturas da Conta
+  #Lista as faturas da conta
   result = api_instance.listar_faturas_using_get(id, opts)
   p result
 rescue Pier::ApiError => e
@@ -679,8 +1194,324 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get15**
-> PageTransferencias listar_using_get15(id, opts)
+# **listar_historico_alteracoes_limites_using_get**
+> PageHistoricoEventos listar_historico_alteracoes_limites_using_get(id, opts)
+
+Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
+
+Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::ContaApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+opts = { 
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+}
+
+begin
+  #Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
+  result = api_instance.listar_historico_alteracoes_limites_using_get(id, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ContaApi->listar_historico_alteracoes_limites_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+
+
+### Return type
+
+[**PageHistoricoEventos**](PageHistoricoEventos.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_historico_assessoria_using_get**
+> LinkPageHistoricoAssessoriaResponse listar_historico_assessoria_using_get(id, opts)
+
+Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
+
+Permite listar todos os registros de entrada e sa\u00C3\u00ADda da Conta em arquivos de integra\u00C3\u00A7\u00C3\u00A3o com empresas de assessorias de cobran\u00C3\u00A7a a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta).
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::ContaApi.new
+
+id = 789 # Integer | Id Conta
+
+opts = { 
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+}
+
+begin
+  #Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
+  result = api_instance.listar_historico_assessoria_using_get(id, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ContaApi->listar_historico_assessoria_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| Id Conta | 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+
+
+### Return type
+
+[**LinkPageHistoricoAssessoriaResponse**](LinkPageHistoricoAssessoriaResponse.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_historico_atrasos_faturas_using_get**
+> PageHistoricoAtraso listar_historico_atrasos_faturas_using_get(id)
+
+Lista o historico de atrasos das faturas
+
+Este recurso lista o hist\u00C3\u00B3rico do pagamento de faturas em atraso
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::ContaApi.new
+
+id = 789 # Integer | Id Conta
+
+
+begin
+  #Lista o historico de atrasos das faturas
+  result = api_instance.listar_historico_atrasos_faturas_using_get(id)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ContaApi->listar_historico_atrasos_faturas_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| Id Conta | 
+
+
+### Return type
+
+[**PageHistoricoAtraso**](PageHistoricoAtraso.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_nao_processadas_using_get**
+> PageTransacoesCorrentes listar_nao_processadas_using_get(id, opts)
+
+Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
+
+Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da Conta.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::ContaApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+opts = { 
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+}
+
+begin
+  #Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
+  result = api_instance.listar_nao_processadas_using_get(id, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ContaApi->listar_nao_processadas_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+
+
+### Return type
+
+[**PageTransacoesCorrentes**](PageTransacoesCorrentes.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_processadas_using_get**
+> PageTransacoesCorrentes listar_processadas_using_get(id, opts)
+
+Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
+
+Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es processadas da Conta.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::ContaApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+opts = { 
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  data_vencimento: Date.parse("2013-10-20") # Date | Data de vencimento do extrato no formato yyyy-MM-dd.
+}
+
+begin
+  #Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
+  result = api_instance.listar_processadas_using_get(id, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ContaApi->listar_processadas_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **data_vencimento** | **Date**| Data de vencimento do extrato no formato yyyy-MM-dd. | [optional] 
+
+
+### Return type
+
+[**PageTransacoesCorrentes**](PageTransacoesCorrentes.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_using_get20**
+> PageTransferencias listar_using_get20(id, opts)
 
 Lista as transfer\u00C3\u00AAncias realizadas pela conta
 
@@ -716,10 +1547,10 @@ opts = {
 
 begin
   #Lista as transfer\u00C3\u00AAncias realizadas pela conta
-  result = api_instance.listar_using_get15(id, opts)
+  result = api_instance.listar_using_get20(id, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->listar_using_get15: #{e}"
+  puts "Exception when calling ContaApi->listar_using_get20: #{e}"
 end
 ```
 
@@ -754,7 +1585,7 @@ Name | Type | Description  | Notes
 
 
 # **listar_using_get3**
-> Conta listar_using_get3(opts)
+> PageContas listar_using_get3(opts)
 
 Lista contas existentes na base de dados do Emissor
 
@@ -779,7 +1610,6 @@ api_instance = Pier::ContaApi.new
 opts = { 
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  id: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
   id_produto: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
   id_origem_comercial: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
   id_pessoa: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
@@ -806,7 +1636,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). | [optional] 
  **id_produto** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id). | [optional] 
  **id_origem_comercial** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta. | [optional] 
  **id_pessoa** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id). | [optional] 
@@ -820,7 +1649,65 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Conta**](Conta.md)
+[**PageContas**](PageContas.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **reativar_using_post**
+> Object reativar_using_post(id)
+
+Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas que foram desativadas por inadimpl\u00C3\u00AAncia
+
+Este recurso permite reativar contas que foram desativadas por inadimpl\u00C3\u00AAncia. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::ContaApi.new
+
+id = 789 # Integer | Id Conta
+
+
+begin
+  #Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas que foram desativadas por inadimpl\u00C3\u00AAncia
+  result = api_instance.reativar_using_post(id)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ContaApi->reativar_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| Id Conta | 
+
+
+### Return type
+
+**Object**
 
 ### Authorization
 
@@ -857,7 +1744,7 @@ end
 
 api_instance = Pier::ContaApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+id = 789 # Integer | Id Conta
 
 opts = { 
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
@@ -877,7 +1764,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **Integer**| Id Conta | 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 
@@ -898,8 +1785,8 @@ Name | Type | Description  | Notes
 
 
 
-# **transferir_using_post**
-> PageTransferencias transferir_using_post(id, id_conta_destino, valor_transferencia)
+# **transferir_using_post1**
+> PageTransferencias transferir_using_post1(id, id_conta_destino, valor_transferencia)
 
 Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
 
@@ -930,10 +1817,10 @@ valor_transferencia = 3.4 # Float | Valor da Transfer\u00C3\u00AAncia.
 
 begin
   #Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
-  result = api_instance.transferir_using_post(id, id_conta_destino, valor_transferencia)
+  result = api_instance.transferir_using_post1(id, id_conta_destino, valor_transferencia)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->transferir_using_post: #{e}"
+  puts "Exception when calling ContaApi->transferir_using_post1: #{e}"
 end
 ```
 

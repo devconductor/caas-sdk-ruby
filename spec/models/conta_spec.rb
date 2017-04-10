@@ -186,5 +186,16 @@ describe 'Conta' do
   end
 
 
+  describe 'test attribute "forma_envio_fatura"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
 end
 

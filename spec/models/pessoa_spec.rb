@@ -109,7 +109,51 @@ describe 'Pessoa' do
   end
 
 
+  describe 'test attribute "numero_identidade"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "orgao_expedidor_identidade"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
   describe 'test attribute "sexo"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "unidade_federativa_identidade"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "data_emissao_identidade"' do
     it 'should work' do
        # assertion here
        # should be_a()

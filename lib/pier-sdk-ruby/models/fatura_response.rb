@@ -25,29 +25,47 @@ require 'date'
 module Pier
   # Fatura
   class FaturaResponse
-    # C\u00C3\u00B3digo identificador do tipo de boleto.
+    # C\u00C3\u00B3digo identificador da fatura.
     attr_accessor :id
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto.
-    attr_accessor :descricao
+    # C\u00C3\u00B3digo identificador da conta.
+    attr_accessor :id_conta
 
-    # C\u00C3\u00B3digo identificador do banco.
-    attr_accessor :banco
+    # C\u00C3\u00B3digo identificador do produto.
+    attr_accessor :id_produto
 
-    # Faixa permitida para cria\u00C3\u00A7\u00C3\u00A3o do nosso n\u00C3\u00BAmero.
-    attr_accessor :faixa_nosso_numero
+    # Data de vencimento da fatura.
+    attr_accessor :data_vencimento
 
-    # N\u00C3\u00BAmero minimo para o nosso n\u00C3\u00BAmero.
-    attr_accessor :min_nosso_numero
+    # Saldo da fatura anterior.
+    attr_accessor :saldo_fatura_anterior
 
-    # N\u00C3\u00BAmero m\u00C3\u00A1ximo para o nosso n\u00C3\u00BAmero.
-    attr_accessor :max_nosso_numero
+    # Saldo total da Multa lan\u00C3\u00A7ada na Fatura atual.
+    attr_accessor :saldo_multa
 
-    # Tamanho do nosso n\u00C3\u00BAmero.
-    attr_accessor :tam_nosso_numero
+    # Saldo total das compras lan\u00C3\u00A7adas na fatura atual.
+    attr_accessor :saldo_compras
 
-    # \u00C3\u009Altimo nosso n\u00C3\u00BAmero utilizado.
-    attr_accessor :ultimo_nosso_numero
+    # Saldo total dos pagamentos lan\u00C3\u00A7ados na fatura atual.
+    attr_accessor :saldo_pagamentos
+
+    # Saldo total das tarifas lan\u00C3\u00A7adas na fatura atual.
+    attr_accessor :saldo_tarifas
+
+    # Saldo total dos d\u00C3\u00A9bitos lan\u00C3\u00A7ados na fatura atual.
+    attr_accessor :saldo_debitos
+
+    # Saldo total dos cr\u00C3\u00A9dito lan\u00C3\u00A7ados na fatura atual.
+    attr_accessor :saldo_creditos
+
+    # Salto total devedor da fatura atual.
+    attr_accessor :saldo_atual_final
+
+    # Valor m\u00C3\u00ADnimo para pagamento da fatura.
+    attr_accessor :valor_minimo_fatura
+
+    # Quando ativa, indica que fora emitida uma fatura.
+    attr_accessor :flag_emite_fatura
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -56,19 +74,31 @@ module Pier
         
         :'id' => :'id',
         
-        :'descricao' => :'descricao',
+        :'id_conta' => :'idConta',
         
-        :'banco' => :'banco',
+        :'id_produto' => :'idProduto',
         
-        :'faixa_nosso_numero' => :'faixaNossoNumero',
+        :'data_vencimento' => :'dataVencimento',
         
-        :'min_nosso_numero' => :'minNossoNumero',
+        :'saldo_fatura_anterior' => :'saldoFaturaAnterior',
         
-        :'max_nosso_numero' => :'maxNossoNumero',
+        :'saldo_multa' => :'saldoMulta',
         
-        :'tam_nosso_numero' => :'tamNossoNumero',
+        :'saldo_compras' => :'saldoCompras',
         
-        :'ultimo_nosso_numero' => :'ultimoNossoNumero'
+        :'saldo_pagamentos' => :'saldoPagamentos',
+        
+        :'saldo_tarifas' => :'saldoTarifas',
+        
+        :'saldo_debitos' => :'saldoDebitos',
+        
+        :'saldo_creditos' => :'saldoCreditos',
+        
+        :'saldo_atual_final' => :'saldoAtualFinal',
+        
+        :'valor_minimo_fatura' => :'valorMinimoFatura',
+        
+        :'flag_emite_fatura' => :'flagEmiteFatura'
         
       }
     end
@@ -79,19 +109,31 @@ module Pier
         
         :'id' => :'Integer',
         
-        :'descricao' => :'String',
+        :'id_conta' => :'Integer',
         
-        :'banco' => :'Integer',
+        :'id_produto' => :'Integer',
         
-        :'faixa_nosso_numero' => :'Integer',
+        :'data_vencimento' => :'DateTime',
         
-        :'min_nosso_numero' => :'Float',
+        :'saldo_fatura_anterior' => :'Float',
         
-        :'max_nosso_numero' => :'Float',
+        :'saldo_multa' => :'Float',
         
-        :'tam_nosso_numero' => :'Integer',
+        :'saldo_compras' => :'Float',
         
-        :'ultimo_nosso_numero' => :'Float'
+        :'saldo_pagamentos' => :'Float',
+        
+        :'saldo_tarifas' => :'Float',
+        
+        :'saldo_debitos' => :'Float',
+        
+        :'saldo_creditos' => :'Float',
+        
+        :'saldo_atual_final' => :'Float',
+        
+        :'valor_minimo_fatura' => :'Float',
+        
+        :'flag_emite_fatura' => :'Integer'
         
       }
     end
@@ -114,64 +156,118 @@ module Pier
       end
 
       
-      if attributes[:'descricao']
+      if attributes[:'idConta']
         
         
-        self.descricao = attributes[:'descricao']
-        
-      
-      end
-
-      
-      if attributes[:'banco']
-        
-        
-        self.banco = attributes[:'banco']
+        self.id_conta = attributes[:'idConta']
         
       
       end
 
       
-      if attributes[:'faixaNossoNumero']
+      if attributes[:'idProduto']
         
         
-        self.faixa_nosso_numero = attributes[:'faixaNossoNumero']
-        
-      
-      end
-
-      
-      if attributes[:'minNossoNumero']
-        
-        
-        self.min_nosso_numero = attributes[:'minNossoNumero']
+        self.id_produto = attributes[:'idProduto']
         
       
       end
 
       
-      if attributes[:'maxNossoNumero']
+      if attributes[:'dataVencimento']
         
         
-        self.max_nosso_numero = attributes[:'maxNossoNumero']
-        
-      
-      end
-
-      
-      if attributes[:'tamNossoNumero']
-        
-        
-        self.tam_nosso_numero = attributes[:'tamNossoNumero']
+        self.data_vencimento = attributes[:'dataVencimento']
         
       
       end
 
       
-      if attributes[:'ultimoNossoNumero']
+      if attributes[:'saldoFaturaAnterior']
         
         
-        self.ultimo_nosso_numero = attributes[:'ultimoNossoNumero']
+        self.saldo_fatura_anterior = attributes[:'saldoFaturaAnterior']
+        
+      
+      end
+
+      
+      if attributes[:'saldoMulta']
+        
+        
+        self.saldo_multa = attributes[:'saldoMulta']
+        
+      
+      end
+
+      
+      if attributes[:'saldoCompras']
+        
+        
+        self.saldo_compras = attributes[:'saldoCompras']
+        
+      
+      end
+
+      
+      if attributes[:'saldoPagamentos']
+        
+        
+        self.saldo_pagamentos = attributes[:'saldoPagamentos']
+        
+      
+      end
+
+      
+      if attributes[:'saldoTarifas']
+        
+        
+        self.saldo_tarifas = attributes[:'saldoTarifas']
+        
+      
+      end
+
+      
+      if attributes[:'saldoDebitos']
+        
+        
+        self.saldo_debitos = attributes[:'saldoDebitos']
+        
+      
+      end
+
+      
+      if attributes[:'saldoCreditos']
+        
+        
+        self.saldo_creditos = attributes[:'saldoCreditos']
+        
+      
+      end
+
+      
+      if attributes[:'saldoAtualFinal']
+        
+        
+        self.saldo_atual_final = attributes[:'saldoAtualFinal']
+        
+      
+      end
+
+      
+      if attributes[:'valorMinimoFatura']
+        
+        
+        self.valor_minimo_fatura = attributes[:'valorMinimoFatura']
+        
+      
+      end
+
+      
+      if attributes[:'flagEmiteFatura']
+        
+        
+        self.flag_emite_fatura = attributes[:'flagEmiteFatura']
         
       
       end
@@ -224,8 +320,62 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -273,13 +423,19 @@ module Pier
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          descricao == o.descricao &&
-          banco == o.banco &&
-          faixa_nosso_numero == o.faixa_nosso_numero &&
-          min_nosso_numero == o.min_nosso_numero &&
-          max_nosso_numero == o.max_nosso_numero &&
-          tam_nosso_numero == o.tam_nosso_numero &&
-          ultimo_nosso_numero == o.ultimo_nosso_numero
+          id_conta == o.id_conta &&
+          id_produto == o.id_produto &&
+          data_vencimento == o.data_vencimento &&
+          saldo_fatura_anterior == o.saldo_fatura_anterior &&
+          saldo_multa == o.saldo_multa &&
+          saldo_compras == o.saldo_compras &&
+          saldo_pagamentos == o.saldo_pagamentos &&
+          saldo_tarifas == o.saldo_tarifas &&
+          saldo_debitos == o.saldo_debitos &&
+          saldo_creditos == o.saldo_creditos &&
+          saldo_atual_final == o.saldo_atual_final &&
+          valor_minimo_fatura == o.valor_minimo_fatura &&
+          flag_emite_fatura == o.flag_emite_fatura
     end
 
     # @see the `==` method
@@ -291,7 +447,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, descricao, banco, faixa_nosso_numero, min_nosso_numero, max_nosso_numero, tam_nosso_numero, ultimo_nosso_numero].hash
+      [id, id_conta, id_produto, data_vencimento, saldo_fatura_anterior, saldo_multa, saldo_compras, saldo_pagamentos, saldo_tarifas, saldo_debitos, saldo_creditos, saldo_atual_final, valor_minimo_fatura, flag_emite_fatura].hash
     end
 
     # Builds the object from hash

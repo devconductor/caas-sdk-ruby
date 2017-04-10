@@ -26,7 +26,7 @@ module Pier
   # Objeto FAQ
   class FAQ
     # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
-    attr_accessor :id_faq
+    attr_accessor :id
 
     # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Emissor de qual a FAQ \u00C3\u00A9 relacionada (id).
     attr_accessor :id_emissor
@@ -54,7 +54,7 @@ module Pier
     def self.attribute_map
       {
         
-        :'id_faq' => :'idFaq',
+        :'id' => :'id',
         
         :'id_emissor' => :'idEmissor',
         
@@ -77,7 +77,7 @@ module Pier
     def self.swagger_types
       {
         
-        :'id_faq' => :'Integer',
+        :'id' => :'Integer',
         
         :'id_emissor' => :'Integer',
         
@@ -105,10 +105,10 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'idFaq']
+      if attributes[:'id']
         
         
-        self.id_faq = attributes[:'idFaq']
+        self.id = attributes[:'id']
         
       
       end
@@ -286,7 +286,7 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id_faq == o.id_faq &&
+          id == o.id &&
           id_emissor == o.id_emissor &&
           pergunta == o.pergunta &&
           resposta == o.resposta &&
@@ -305,7 +305,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_faq, id_emissor, pergunta, resposta, relevancia, plataforma, categoria, status].hash
+      [id, id_emissor, pergunta, resposta, relevancia, plataforma, categoria, status].hash
     end
 
     # Builds the object from hash

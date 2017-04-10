@@ -26,6 +26,10 @@ Name | Type | Description | Notes
 **origem_transacao** | **String** | Tipo de Terminal que originou a Transa\u00C3\u00A7\u00C3\u00A3o (POS, ATM, TEF, etc) | [optional] 
 **codigo_modo_entrada_terminal** | **String** | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do modo de origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o | [optional] 
 **descricao_modo_entrada_terminal** | **String** | Descri\u00C3\u00A7\u00C3\u00A3o do modo de origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o | [optional] 
+**cpf** | **String** | N\u00C3\u00BAmero do CPF da Pessoa portadora do Cart\u00C3\u00A3o, quando for do tipo Pessoa F\u00C3\u00ADsica | [optional] 
+**cnpj** | **String** | N\u00C3\u00BAmero do CNPJ da Pessoa portadora do Cart\u00C3\u00A3o, quanto for do tipo Pessoa Jur\u00C3\u00ADdica | [optional] 
+**email** | **String** | Endere\u00C3\u00A7o de email da Pessoa portadora do Cart\u00C3\u00A3o | [optional] 
+**tefefones** | [**Array&lt;Telefone&gt;**](Telefone.md) | Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o | [optional] 
 
 
 

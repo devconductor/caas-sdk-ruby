@@ -55,13 +55,13 @@ module Pier
     # Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
     attr_accessor :data_hora_fim_atendimento
 
-    # Apresenta a data em que o Atendimento foi realizado.
+    # Apresenta a data e hora em que o Atendimento foi realizado.
     attr_accessor :data_atendimento
 
-    # Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data para processamento ou a data para retorno do Atendimento.
+    # Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento.
     attr_accessor :data_agendamento
 
-    # Quando utilizado, apresenta a data em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.
+    # Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.
     attr_accessor :data_processamento
 
     # Quando aplic\u00C3\u00A1vel, de acordo com o Indica se o Processamento da solicita\u00C3\u00A7\u00C3\u00A3o fora realizado.

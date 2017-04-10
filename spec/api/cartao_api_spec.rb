@@ -151,6 +151,23 @@ describe 'CartaoApi' do
   end
 
 
+  # unit tests for consultar_lotes_cartoes_pre_pagos_using_get
+  # Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+  # Este m\u00C3\u00A9todo permite consultar os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor atrav\u00C3\u00A9s do id do lote.
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id)
+  # @param [Hash] opts the optional parameters
+  # @return [LoteCartoesPrePagos]
+  describe 'consultar_lotes_cartoes_pre_pagos_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
   # unit tests for consultar_portador_using_get
   # Apresenta os dados do Portador do Cart\u00C3\u00A3o
   # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es do Portador de um determinado Cart\u00C3\u00A3o a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
@@ -175,6 +192,25 @@ describe 'CartaoApi' do
   # @param [Hash] opts the optional parameters
   # @return [Cartao]
   describe 'consultar_using_get2 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for consultar_using_get20
+  # Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
+  # Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+  # @param id Id Cart\u00C3\u00A3o
+  # @param id_transferencia Id Transfer\u00C3\u00AAncia
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+  # @return [LinkTransferenciaBancariaResponse]
+  describe 'consultar_using_get20 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -247,7 +283,6 @@ describe 'CartaoApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais (id).
   # @option opts [Integer] :id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id).
   # @option opts [Integer] :id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
   # @option opts [Integer] :id_tipo_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id).
@@ -257,8 +292,28 @@ describe 'CartaoApi' do
   # @option opts [Date] :data_cadastro Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
   # @option opts [String] :usuario_cadastro Nome do Usu\u00C3\u00A1rio que criou o Lote.
   # @option opts [Integer] :status_processamento Indica o Status de Processamento do Lote.
-  # @return [PageCartoes]
+  # @return [PageLoteCartoesPrePagosResponse]
   describe 'listar_lotes_cartoes_pre_pagos_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for listar_using_get19
+  # Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+  # Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
+  # @param id Id Cart\u00C3\u00A3o
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  # @return [LinkPageTransferenciaBancariaResponse]
+  describe 'listar_using_get19 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -275,7 +330,6 @@ describe 'CartaoApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
   # @option opts [Integer] :id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
   # @option opts [Integer] :id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
   # @option opts [Integer] :id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
@@ -295,6 +349,37 @@ describe 'CartaoApi' do
   # @option opts [String] :codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
   # @return [PageCartoes]
   describe 'listar_using_get2 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for transferir_using_post
+  # Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria entre bancos / contas
+  # Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta de destino.
+  # @param id Id Cart\u00C3\u00A3o
+  # @param data_compra Data da transfer\u00C3\u00AAncia
+  # @param proximo_vencimento_padrao Dia do vencimento padr\u00C3\u00A3o da fatura
+  # @param proximo_vencimento_real Data do vencimento real da fatura
+  # @param valor_compra Valor da transfer\u00C3\u00AAncia
+  # @param nome_favorecido Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
+  # @param documento_favorecido N\u00C3\u00BAmero do CPF ou CNPJ.
+  # @param banco C\u00C3\u00B3digo do banco
+  # @param numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia
+  # @param numero_conta N\u00C3\u00BAmero da conta
+  # @param flag_conta_poupanca Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  # @option opts [String] :digito_agencia D\u00C3\u00ADgito da ag\u00C3\u00AAncia
+  # @option opts [String] :digito_conta D\u00C3\u00ADgito da conta
+  # @return [LinkTransferenciaBancariaResponse]
+  describe 'transferir_using_post test' do
     it "should work" do
       # assertion here
       # should be_a()

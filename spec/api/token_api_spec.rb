@@ -43,29 +43,6 @@ describe 'TokenApi' do
   end
 
 
-  # unit tests for alterar_using_put5
-  # Alterar token
-  # Este recurso permite que seja modificado um token j\u00C3\u00A1 cadastrado
-  # @param id C\u00C3\u00B3digo identificador do token
-  # @param [Hash] opts the optional parameters
-  # @option opts [String] :token Token
-  # @option opts [Integer] :base C\u00C3\u00B3digo identificador da base
-  # @option opts [String] :owner Owner do token
-  # @option opts [String] :status Status do token
-  # @option opts [String] :criado_por Descri\u00C3\u00A7\u00C3\u00A3o de quem criou o token
-  # @option opts [String] :alterado_por Descri\u00C3\u00A7\u00C3\u00A3o de quem alterou o token
-  # @return [Token]
-  describe 'alterar_using_put5 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
   # unit tests for callback_using_post
   # /api/tokens/callback
   # 
@@ -73,89 +50,6 @@ describe 'TokenApi' do
   # @param [Hash] opts the optional parameters
   # @return [BodyAccessToken]
   describe 'callback_using_post test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for consultar_using_get14
-  # Consultar token
-  # Este recurso permite que seja consultado um token do emissor atrav\u00C3\u00A9s de um id especifico
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do token (id).
-  # @param [Hash] opts the optional parameters
-  # @return [Token]
-  describe 'consultar_using_get14 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for listar_using_get14
-  # Listar tokens
-  # Este recurso permite que sejam listados os tokens existentes
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  # @option opts [Integer] :id C\u00C3\u00B3digo identificador do token
-  # @option opts [String] :token Token
-  # @option opts [Integer] :base C\u00C3\u00B3digo identificador da base
-  # @option opts [String] :owner Owner do token
-  # @option opts [String] :status Status do token
-  # @option opts [String] :criado_por Descri\u00C3\u00A7\u00C3\u00A3o de quem criou o token
-  # @option opts [DateTime] :data_criacao Data de cria\u00C3\u00A7\u00C3\u00A3o do token
-  # @option opts [String] :alterado_por Descri\u00C3\u00A7\u00C3\u00A3o de quem alterou o token
-  # @option opts [DateTime] :data_modificacao Data de modifica\u00C3\u00A7\u00C3\u00A3o do token
-  # @return [PageBases]
-  describe 'listar_using_get14 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for salvar_using_post5
-  # Salvar token
-  # Este recurso permite que seja adicionado um novo token
-  # @param [Hash] opts the optional parameters
-  # @option opts [String] :token Token
-  # @option opts [Integer] :base C\u00C3\u00B3digo identificador da base
-  # @option opts [String] :owner Owner do token
-  # @option opts [String] :status Status do token
-  # @option opts [String] :criado_por Descri\u00C3\u00A7\u00C3\u00A3o de quem criou o token
-  # @option opts [String] :alterado_por Descri\u00C3\u00A7\u00C3\u00A3o de quem alterou o token
-  # @return [Token]
-  describe 'salvar_using_post5 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for validar_using_post
-  # /api/tokens/validar
-  # 
-  # @param body_access_token bodyAccessToken
-  # @param [Hash] opts the optional parameters
-  # @return [Object]
-  describe 'validar_using_post test' do
     it "should work" do
       # assertion here
       # should be_a()

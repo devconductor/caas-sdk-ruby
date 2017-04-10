@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**Array&lt;Produto&gt;**](Produto.md) |  | [optional] 
+**content** | [**Array&lt;ProdutoResponse&gt;**](ProdutoResponse.md) |  | [optional] 
 **first** | **BOOLEAN** |  | [optional] 
 **first_page** | **BOOLEAN** |  | [optional] 
 **has_content** | **BOOLEAN** |  | [optional] 

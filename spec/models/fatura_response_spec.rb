@@ -54,7 +54,7 @@ describe 'FaturaResponse' do
   end
 
 
-  describe 'test attribute "descricao"' do
+  describe 'test attribute "id_conta"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -65,7 +65,7 @@ describe 'FaturaResponse' do
   end
 
 
-  describe 'test attribute "banco"' do
+  describe 'test attribute "id_produto"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -76,7 +76,7 @@ describe 'FaturaResponse' do
   end
 
 
-  describe 'test attribute "faixa_nosso_numero"' do
+  describe 'test attribute "data_vencimento"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -87,7 +87,7 @@ describe 'FaturaResponse' do
   end
 
 
-  describe 'test attribute "min_nosso_numero"' do
+  describe 'test attribute "saldo_fatura_anterior"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -98,7 +98,7 @@ describe 'FaturaResponse' do
   end
 
 
-  describe 'test attribute "max_nosso_numero"' do
+  describe 'test attribute "saldo_multa"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -109,7 +109,7 @@ describe 'FaturaResponse' do
   end
 
 
-  describe 'test attribute "tam_nosso_numero"' do
+  describe 'test attribute "saldo_compras"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -120,7 +120,73 @@ describe 'FaturaResponse' do
   end
 
 
-  describe 'test attribute "ultimo_nosso_numero"' do
+  describe 'test attribute "saldo_pagamentos"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "saldo_tarifas"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "saldo_debitos"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "saldo_creditos"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "saldo_atual_final"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "valor_minimo_fatura"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "flag_emite_fatura"' do
     it 'should work' do
        # assertion here
        # should be_a()

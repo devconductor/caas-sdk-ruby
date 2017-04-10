@@ -32,7 +32,124 @@ module Pier
     end
 
 
-    # Alterar limite
+    # Lan\u00C3\u00A7a um ajuste para a conta do id informado
+    # Este recurso insere um ajuste para a conta do id informado
+    # @param id Id Conta
+    # @param id_tipo_ajuste C\u00C3\u00B3digo identificador do tipo de ajuste.
+    # @param data_ajuste Data do ajuste.
+    # @param valor_ajuste Valor do ajuste
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @return [AjusteResponse]
+    def ajustar_conta_using_post(id, id_tipo_ajuste, data_ajuste, valor_ajuste, opts = {})
+      data, _status_code, _headers = ajustar_conta_using_post_with_http_info(id, id_tipo_ajuste, data_ajuste, valor_ajuste, opts)
+      return data
+    end
+
+    # Lan\u00C3\u00A7a um ajuste para a conta do id informado
+    # Este recurso insere um ajuste para a conta do id informado
+    # @param id Id Conta
+    # @param id_tipo_ajuste C\u00C3\u00B3digo identificador do tipo de ajuste.
+    # @param data_ajuste Data do ajuste.
+    # @param valor_ajuste Valor do ajuste
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @return [Array<(AjusteResponse, Fixnum, Hash)>] AjusteResponse data, response status code and response headers
+    def ajustar_conta_using_post_with_http_info(id, id_tipo_ajuste, data_ajuste, valor_ajuste, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ContaApi.ajustar_conta_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.ajustar_conta_using_post" if id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'id_tipo_ajuste' is set
+      fail ArgumentError, "Missing the required parameter 'id_tipo_ajuste' when calling ContaApi.ajustar_conta_using_post" if id_tipo_ajuste.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'data_ajuste' is set
+      fail ArgumentError, "Missing the required parameter 'data_ajuste' when calling ContaApi.ajustar_conta_using_post" if data_ajuste.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'valor_ajuste' is set
+      fail ArgumentError, "Missing the required parameter 'valor_ajuste' when calling ContaApi.ajustar_conta_using_post" if valor_ajuste.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/ajustes-financeiros".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'idTipoAjuste'] = id_tipo_ajuste
+      query_params[:'dataAjuste'] = data_ajuste
+      query_params[:'valorAjuste'] = valor_ajuste
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AjusteResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ContaApi#ajustar_conta_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
     # Esse recurso permite realizar a altera\u00C3\u00A7\u00C3\u00A3o dos Limites de uma determinada Conta.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param limite_global Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
@@ -48,13 +165,13 @@ module Pier
     # @param limite_internacional_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
     # @param limite_internacional_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
     # @param [Hash] opts the optional parameters
-    # @return [Conta]
+    # @return [LimiteDisponibilidade]
     def alterar_limite_using_put(id, limite_global, limite_compra, limite_parcelado, limite_parcelas, limite_saque_global, limite_saque_periodo, limite_consignado, limite_internacional_compra, limite_internacional_parcelado, limite_internacional_parcelas, limite_internacional_saque_global, limite_internacional_saque_periodo, opts = {})
       data, _status_code, _headers = alterar_limite_using_put_with_http_info(id, limite_global, limite_compra, limite_parcelado, limite_parcelas, limite_saque_global, limite_saque_periodo, limite_consignado, limite_internacional_compra, limite_internacional_parcelado, limite_internacional_parcelas, limite_internacional_saque_global, limite_internacional_saque_periodo, opts)
       return data
     end
 
-    # Alterar limite
+    # Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
     # Esse recurso permite realizar a altera\u00C3\u00A7\u00C3\u00A3o dos Limites de uma determinada Conta.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param limite_global Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
@@ -70,7 +187,7 @@ module Pier
     # @param limite_internacional_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
     # @param limite_internacional_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Conta, Fixnum, Hash)>] Conta data, response status code and response headers
+    # @return [Array<(LimiteDisponibilidade, Fixnum, Hash)>] LimiteDisponibilidade data, response status code and response headers
     def alterar_limite_using_put_with_http_info(id, limite_global, limite_compra, limite_parcelado, limite_parcelas, limite_saque_global, limite_saque_periodo, limite_consignado, limite_internacional_compra, limite_internacional_parcelado, limite_internacional_parcelas, limite_internacional_saque_global, limite_internacional_saque_periodo, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContaApi.alterar_limite_using_put ..."
@@ -222,7 +339,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Conta')
+        :return_type => 'LimiteDisponibilidade')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ContaApi#alterar_limite_using_put\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -230,7 +347,7 @@ module Pier
     end
 
 
-    # Alterar vencimento
+    # Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
     # Esse recurso permite alterar o vencimento de uma conta especifica.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param novo_dia_vencimento Novo dia de vencimento.
@@ -241,7 +358,7 @@ module Pier
       return data
     end
 
-    # Alterar vencimento
+    # Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
     # Esse recurso permite alterar o vencimento de uma conta especifica.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param novo_dia_vencimento Novo dia de vencimento.
@@ -307,35 +424,169 @@ module Pier
     end
 
 
-    # Consultar a d\u00C3\u00ADvida atualizada do cliente
-    # Este recurso consulta a d\u00C3\u00ADvida atualizada do cliente
+    #  Ativa o servi\u00C3\u00A7o de envio de fatura por email
+    # Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [Integer] :id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)
-    # @option opts [Date] :data_vencimento Data do vencimento
-    # @option opts [Integer] :id_escritorio_cobranca C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a
-    # @return [DividaClienteResponse]
-    def consultar_divida_atualizada_cliente_using_get(opts = {})
-      data, _status_code, _headers = consultar_divida_atualizada_cliente_using_get_with_http_info(opts)
+    # @return [Object]
+    def ativar_envio_fatura_email_using_post(id, opts = {})
+      data, _status_code, _headers = ativar_envio_fatura_email_using_post_with_http_info(id, opts)
       return data
     end
 
-    # Consultar a d\u00C3\u00ADvida atualizada do cliente
+    #  Ativa o servi\u00C3\u00A7o de envio de fatura por email
+    # Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
+    def ativar_envio_fatura_email_using_post_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ContaApi.ativar_envio_fatura_email_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.ativar_envio_fatura_email_using_post" if id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/ativar-fatura-email".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Object')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ContaApi#ativar_envio_fatura_email_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Consulta os dados de um determinado boleto da fatura
+    # Este recurso consulta um boleto da fatura
+    # @param id Id Conta
+    # @param [Hash] opts the optional parameters
+    # @return [BoletoDeFatura]
+    def consultar_boleto_emitido_using_get(id, opts = {})
+      data, _status_code, _headers = consultar_boleto_emitido_using_get_with_http_info(id, opts)
+      return data
+    end
+
+    # Consulta os dados de um determinado boleto da fatura
+    # Este recurso consulta um boleto da fatura
+    # @param id Id Conta
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(BoletoDeFatura, Fixnum, Hash)>] BoletoDeFatura data, response status code and response headers
+    def consultar_boleto_emitido_using_get_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ContaApi.consultar_boleto_emitido_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_boleto_emitido_using_get" if id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/faturas/consultar-ficha-compensacao".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'BoletoDeFatura')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ContaApi#consultar_boleto_emitido_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Consulta a d\u00C3\u00ADvida atualizada do cliente
     # Este recurso consulta a d\u00C3\u00ADvida atualizada do cliente
+    # @param id Id Conta
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [Integer] :id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)
+    # @option opts [Date] :data_vencimento Data do vencimento
+    # @option opts [Integer] :id_escritorio_cobranca C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a
+    # @return [DividaClienteResponse]
+    def consultar_divida_atualizada_cliente_using_get(id, opts = {})
+      data, _status_code, _headers = consultar_divida_atualizada_cliente_using_get_with_http_info(id, opts)
+      return data
+    end
+
+    # Consulta a d\u00C3\u00ADvida atualizada do cliente
+    # Este recurso consulta a d\u00C3\u00ADvida atualizada do cliente
+    # @param id Id Conta
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @option opts [Date] :data_vencimento Data do vencimento
     # @option opts [Integer] :id_escritorio_cobranca C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a
     # @return [Array<(DividaClienteResponse, Fixnum, Hash)>] DividaClienteResponse data, response status code and response headers
-    def consultar_divida_atualizada_cliente_using_get_with_http_info(opts = {})
+    def consultar_divida_atualizada_cliente_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContaApi.consultar_divida_atualizada_cliente_using_get ..."
       end
       
       
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_divida_atualizada_cliente_using_get" if id.nil?
       
       
       
@@ -366,13 +617,12 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/contas/{id}/divida".sub('{format}','json')
+      local_var_path = "/api/contas/{id}/recuperar-divida-atualizada".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
-      query_params[:'idConta'] = opts[:'id_conta'] if opts[:'id_conta']
       query_params[:'dataVencimento'] = opts[:'data_vencimento'] if opts[:'data_vencimento']
       query_params[:'idEscritorioCobranca'] = opts[:'id_escritorio_cobranca'] if opts[:'id_escritorio_cobranca']
 
@@ -408,24 +658,101 @@ module Pier
     end
 
 
+    # Consultar a fatura consignadas abertas da conta
+    # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar a fatura consignada em aberto
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param data_vencimento Data Vencimento.
+    # @param [Hash] opts the optional parameters
+    # @return [FaturaConsignadaResponse]
+    def consultar_fatura_consignada_aberta_using_get(id, data_vencimento, opts = {})
+      data, _status_code, _headers = consultar_fatura_consignada_aberta_using_get_with_http_info(id, data_vencimento, opts)
+      return data
+    end
+
+    # Consultar a fatura consignadas abertas da conta
+    # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar a fatura consignada em aberto
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param data_vencimento Data Vencimento.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(FaturaConsignadaResponse, Fixnum, Hash)>] FaturaConsignadaResponse data, response status code and response headers
+    def consultar_fatura_consignada_aberta_using_get_with_http_info(id, data_vencimento, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ContaApi.consultar_fatura_consignada_aberta_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_fatura_consignada_aberta_using_get" if id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'data_vencimento' is set
+      fail ArgumentError, "Missing the required parameter 'data_vencimento' when calling ContaApi.consultar_fatura_consignada_aberta_using_get" if data_vencimento.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/faturas-consignadas/consultar-fatura-aberta".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'dataVencimento'] = data_vencimento
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'FaturaConsignadaResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ContaApi#consultar_fatura_consignada_aberta_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Apresenta dados de uma determinada fatura consignada
     # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar uma fatura, atrav\u00C3\u00A9s do id da conta e o id da fatura.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param id_historico C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da fatura (idHistorico).
+    # @param id_fatura C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da fatura (id_fatura).
     # @param [Hash] opts the optional parameters
-    # @return [FaturaResponse]
-    def consultar_fatura_consignada_using_get(id, id_historico, opts = {})
-      data, _status_code, _headers = consultar_fatura_consignada_using_get_with_http_info(id, id_historico, opts)
+    # @return [FaturaConsignadaDetalheResponse]
+    def consultar_fatura_consignada_using_get(id, id_fatura, opts = {})
+      data, _status_code, _headers = consultar_fatura_consignada_using_get_with_http_info(id, id_fatura, opts)
       return data
     end
 
     # Apresenta dados de uma determinada fatura consignada
     # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar uma fatura, atrav\u00C3\u00A9s do id da conta e o id da fatura.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param id_historico C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da fatura (idHistorico).
+    # @param id_fatura C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da fatura (id_fatura).
     # @param [Hash] opts the optional parameters
-    # @return [Array<(FaturaResponse, Fixnum, Hash)>] FaturaResponse data, response status code and response headers
-    def consultar_fatura_consignada_using_get_with_http_info(id, id_historico, opts = {})
+    # @return [Array<(FaturaConsignadaDetalheResponse, Fixnum, Hash)>] FaturaConsignadaDetalheResponse data, response status code and response headers
+    def consultar_fatura_consignada_using_get_with_http_info(id, id_fatura, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContaApi.consultar_fatura_consignada_using_get ..."
       end
@@ -439,15 +766,15 @@ module Pier
       
       
       
-      # verify the required parameter 'id_historico' is set
-      fail ArgumentError, "Missing the required parameter 'id_historico' when calling ContaApi.consultar_fatura_consignada_using_get" if id_historico.nil?
+      # verify the required parameter 'id_fatura' is set
+      fail ArgumentError, "Missing the required parameter 'id_fatura' when calling ContaApi.consultar_fatura_consignada_using_get" if id_fatura.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/contas/{id}/faturas-consignadas/{idHistorico}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s).sub('{' + 'idHistorico' + '}', id_historico.to_s)
+      local_var_path = "/api/contas/{id}/faturas-consignadas/{id_fatura}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s).sub('{' + 'id_fatura' + '}', id_fatura.to_s)
 
       # query parameters
       query_params = {}
@@ -476,7 +803,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'FaturaResponse')
+        :return_type => 'FaturaConsignadaDetalheResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ContaApi#consultar_fatura_consignada_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -484,9 +811,161 @@ module Pier
     end
 
 
+    # Consultar Fatura da Conta
+    # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar os detalhes de uma fatura vinculados a uma determinada conta.
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param id_fatura C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da fatura (id_fatura).
+    # @param [Hash] opts the optional parameters
+    # @return [DetalhesFaturaResponse]
+    def consultar_fatura_using_get(id, id_fatura, opts = {})
+      data, _status_code, _headers = consultar_fatura_using_get_with_http_info(id, id_fatura, opts)
+      return data
+    end
+
+    # Consultar Fatura da Conta
+    # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar os detalhes de uma fatura vinculados a uma determinada conta.
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param id_fatura C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da fatura (id_fatura).
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(DetalhesFaturaResponse, Fixnum, Hash)>] DetalhesFaturaResponse data, response status code and response headers
+    def consultar_fatura_using_get_with_http_info(id, id_fatura, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ContaApi.consultar_fatura_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_fatura_using_get" if id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'id_fatura' is set
+      fail ArgumentError, "Missing the required parameter 'id_fatura' when calling ContaApi.consultar_fatura_using_get" if id_fatura.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/faturas/{id_fatura}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s).sub('{' + 'id_fatura' + '}', id_fatura.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DetalhesFaturaResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ContaApi#consultar_fatura_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
+    # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar os detalhes dos lan\u00C3\u00A7amentos futuros de uma fatura vinculados a uma determinada conta.
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param id_fatura C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da fatura (id_fatura).
+    # @param [Hash] opts the optional parameters
+    # @return [DetalhesFaturaResponse]
+    def consultar_lancamentos_futuros_fatura_using_get(id, id_fatura, opts = {})
+      data, _status_code, _headers = consultar_lancamentos_futuros_fatura_using_get_with_http_info(id, id_fatura, opts)
+      return data
+    end
+
+    # Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
+    # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar os detalhes dos lan\u00C3\u00A7amentos futuros de uma fatura vinculados a uma determinada conta.
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param id_fatura C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da fatura (id_fatura).
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(DetalhesFaturaResponse, Fixnum, Hash)>] DetalhesFaturaResponse data, response status code and response headers
+    def consultar_lancamentos_futuros_fatura_using_get_with_http_info(id, id_fatura, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ContaApi.consultar_lancamentos_futuros_fatura_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_lancamentos_futuros_fatura_using_get" if id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'id_fatura' is set
+      fail ArgumentError, "Missing the required parameter 'id_fatura' when calling ContaApi.consultar_lancamentos_futuros_fatura_using_get" if id_fatura.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/faturas/{id_fatura}/lancamentos-futuros".sub('{format}','json').sub('{' + 'id' + '}', id.to_s).sub('{' + 'id_fatura' + '}', id_fatura.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DetalhesFaturaResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ContaApi#consultar_lancamentos_futuros_fatura_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Apresenta os limites da conta
     # Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param id Id Conta
     # @param [Hash] opts the optional parameters
     # @return [LimiteDisponibilidade]
     def consultar_limite_disponibilidade_using_get1(id, opts = {})
@@ -496,7 +975,7 @@ module Pier
 
     # Apresenta os limites da conta
     # Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param id Id Conta
     # @param [Hash] opts the optional parameters
     # @return [Array<(LimiteDisponibilidade, Fixnum, Hash)>] LimiteDisponibilidade data, response status code and response headers
     def consultar_limite_disponibilidade_using_get1_with_http_info(id, opts = {})
@@ -556,8 +1035,8 @@ module Pier
     # @param id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
     # @param [Hash] opts the optional parameters
     # @return [PageTransferencias]
-    def consultar_using_get15(id, id_transferencia, opts = {})
-      data, _status_code, _headers = consultar_using_get15_with_http_info(id, id_transferencia, opts)
+    def consultar_using_get21(id, id_transferencia, opts = {})
+      data, _status_code, _headers = consultar_using_get21_with_http_info(id, id_transferencia, opts)
       return data
     end
 
@@ -567,14 +1046,14 @@ module Pier
     # @param id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
     # @param [Hash] opts the optional parameters
     # @return [Array<(PageTransferencias, Fixnum, Hash)>] PageTransferencias data, response status code and response headers
-    def consultar_using_get15_with_http_info(id, id_transferencia, opts = {})
+    def consultar_using_get21_with_http_info(id, id_transferencia, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.consultar_using_get15 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.consultar_using_get21 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_using_get15" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_using_get21" if id.nil?
       
       
       
@@ -582,14 +1061,14 @@ module Pier
       
       
       # verify the required parameter 'id_transferencia' is set
-      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling ContaApi.consultar_using_get15" if id_transferencia.nil?
+      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling ContaApi.consultar_using_get21" if id_transferencia.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/contas/{id}/transferencias/{id_transferencia}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s).sub('{' + 'id_transferencia' + '}', id_transferencia.to_s)
+      local_var_path = "/api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s).sub('{' + 'id_transferencia' + '}', id_transferencia.to_s)
 
       # query parameters
       query_params = {}
@@ -620,7 +1099,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTransferencias')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#consultar_using_get15\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#consultar_using_get21\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -687,6 +1166,178 @@ module Pier
         :return_type => 'Conta')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ContaApi#consultar_using_get3\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Desativa o servi\u00C3\u00A7o de envio de fatura por email
+    # Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param [Hash] opts the optional parameters
+    # @return [Object]
+    def desativar_envio_fatura_email_using_post(id, opts = {})
+      data, _status_code, _headers = desativar_envio_fatura_email_using_post_with_http_info(id, opts)
+      return data
+    end
+
+    # Desativa o servi\u00C3\u00A7o de envio de fatura por email
+    # Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
+    def desativar_envio_fatura_email_using_post_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ContaApi.desativar_envio_fatura_email_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.desativar_envio_fatura_email_using_post" if id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/desativar-fatura-email".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Object')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ContaApi#desativar_envio_fatura_email_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Gera um boleto de recarga
+    # Este recurso gera um boleto de recarga
+    # @param id Id Conta
+    # @param valor 
+    # @param data_vencimento 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @return [BoletoDeFatura]
+    def gerar_boleto_recarga_using_post(id, valor, data_vencimento, opts = {})
+      data, _status_code, _headers = gerar_boleto_recarga_using_post_with_http_info(id, valor, data_vencimento, opts)
+      return data
+    end
+
+    # Gera um boleto de recarga
+    # Este recurso gera um boleto de recarga
+    # @param id Id Conta
+    # @param valor 
+    # @param data_vencimento 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @return [Array<(BoletoDeFatura, Fixnum, Hash)>] BoletoDeFatura data, response status code and response headers
+    def gerar_boleto_recarga_using_post_with_http_info(id, valor, data_vencimento, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ContaApi.gerar_boleto_recarga_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.gerar_boleto_recarga_using_post" if id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'valor' is set
+      fail ArgumentError, "Missing the required parameter 'valor' when calling ContaApi.gerar_boleto_recarga_using_post" if valor.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'data_vencimento' is set
+      fail ArgumentError, "Missing the required parameter 'data_vencimento' when calling ContaApi.gerar_boleto_recarga_using_post" if data_vencimento.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/gerar-boleto-recarga".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'valor'] = valor
+      query_params[:'dataVencimento'] = data_vencimento
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'BoletoDeFatura')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ContaApi#gerar_boleto_recarga_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -777,27 +1428,27 @@ module Pier
     end
 
 
-    # Listar Faturas consignadas da Conta
+    # Lista as faturas consignadas da conta
     # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [Date] :data_vencimeno Apresenta a data de vencimento da fatura.
-    # @return [PageFaturas]
+    # @option opts [Date] :data_vencimento Apresenta a data de vencimento da fatura.
+    # @return [PageFaturasConsignadas]
     def listar_faturas_consignadas_using_get(id, opts = {})
       data, _status_code, _headers = listar_faturas_consignadas_using_get_with_http_info(id, opts)
       return data
     end
 
-    # Listar Faturas consignadas da Conta
+    # Lista as faturas consignadas da conta
     # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [Date] :data_vencimeno Apresenta a data de vencimento da fatura.
-    # @return [Array<(PageFaturas, Fixnum, Hash)>] PageFaturas data, response status code and response headers
+    # @option opts [Date] :data_vencimento Apresenta a data de vencimento da fatura.
+    # @return [Array<(PageFaturasConsignadas, Fixnum, Hash)>] PageFaturasConsignadas data, response status code and response headers
     def listar_faturas_consignadas_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContaApi.listar_faturas_consignadas_using_get ..."
@@ -836,7 +1487,7 @@ module Pier
       query_params = {}
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
-      query_params[:'dataVencimeno'] = opts[:'data_vencimeno'] if opts[:'data_vencimeno']
+      query_params[:'dataVencimento'] = opts[:'data_vencimento'] if opts[:'data_vencimento']
 
       # header parameters
       header_params = {}
@@ -862,7 +1513,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PageFaturas')
+        :return_type => 'PageFaturasConsignadas')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ContaApi#listar_faturas_consignadas_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -870,7 +1521,7 @@ module Pier
     end
 
 
-    # Listar Faturas da Conta
+    # Lista as faturas da conta
     # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
@@ -883,7 +1534,7 @@ module Pier
       return data
     end
 
-    # Listar Faturas da Conta
+    # Lista as faturas da conta
     # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
@@ -963,6 +1614,417 @@ module Pier
     end
 
 
+    # Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
+    # Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @return [PageHistoricoEventos]
+    def listar_historico_alteracoes_limites_using_get(id, opts = {})
+      data, _status_code, _headers = listar_historico_alteracoes_limites_using_get_with_http_info(id, opts)
+      return data
+    end
+
+    # Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
+    # Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @return [Array<(PageHistoricoEventos, Fixnum, Hash)>] PageHistoricoEventos data, response status code and response headers
+    def listar_historico_alteracoes_limites_using_get_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ContaApi.listar_historico_alteracoes_limites_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.listar_historico_alteracoes_limites_using_get" if id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/historicos-alteracoes-limites".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageHistoricoEventos')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ContaApi#listar_historico_alteracoes_limites_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
+    # Permite listar todos os registros de entrada e sa\u00C3\u00ADda da Conta em arquivos de integra\u00C3\u00A7\u00C3\u00A3o com empresas de assessorias de cobran\u00C3\u00A7a a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta).
+    # @param id Id Conta
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @return [LinkPageHistoricoAssessoriaResponse]
+    def listar_historico_assessoria_using_get(id, opts = {})
+      data, _status_code, _headers = listar_historico_assessoria_using_get_with_http_info(id, opts)
+      return data
+    end
+
+    # Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
+    # Permite listar todos os registros de entrada e sa\u00C3\u00ADda da Conta em arquivos de integra\u00C3\u00A7\u00C3\u00A3o com empresas de assessorias de cobran\u00C3\u00A7a a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta).
+    # @param id Id Conta
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @return [Array<(LinkPageHistoricoAssessoriaResponse, Fixnum, Hash)>] LinkPageHistoricoAssessoriaResponse data, response status code and response headers
+    def listar_historico_assessoria_using_get_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ContaApi.listar_historico_assessoria_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.listar_historico_assessoria_using_get" if id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/historicos-assessorias-cobranca".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'LinkPageHistoricoAssessoriaResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ContaApi#listar_historico_assessoria_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Lista o historico de atrasos das faturas
+    # Este recurso lista o hist\u00C3\u00B3rico do pagamento de faturas em atraso
+    # @param id Id Conta
+    # @param [Hash] opts the optional parameters
+    # @return [PageHistoricoAtraso]
+    def listar_historico_atrasos_faturas_using_get(id, opts = {})
+      data, _status_code, _headers = listar_historico_atrasos_faturas_using_get_with_http_info(id, opts)
+      return data
+    end
+
+    # Lista o historico de atrasos das faturas
+    # Este recurso lista o hist\u00C3\u00B3rico do pagamento de faturas em atraso
+    # @param id Id Conta
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(PageHistoricoAtraso, Fixnum, Hash)>] PageHistoricoAtraso data, response status code and response headers
+    def listar_historico_atrasos_faturas_using_get_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ContaApi.listar_historico_atrasos_faturas_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.listar_historico_atrasos_faturas_using_get" if id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/historicos-faturas-atrasos".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageHistoricoAtraso')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ContaApi#listar_historico_atrasos_faturas_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
+    # Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da Conta.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @return [PageTransacoesCorrentes]
+    def listar_nao_processadas_using_get(id, opts = {})
+      data, _status_code, _headers = listar_nao_processadas_using_get_with_http_info(id, opts)
+      return data
+    end
+
+    # Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
+    # Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da Conta.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @return [Array<(PageTransacoesCorrentes, Fixnum, Hash)>] PageTransacoesCorrentes data, response status code and response headers
+    def listar_nao_processadas_using_get_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ContaApi.listar_nao_processadas_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.listar_nao_processadas_using_get" if id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/transacoes/nao-processadas".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageTransacoesCorrentes')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ContaApi#listar_nao_processadas_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
+    # Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es processadas da Conta.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Date] :data_vencimento Data de vencimento do extrato no formato yyyy-MM-dd.
+    # @return [PageTransacoesCorrentes]
+    def listar_processadas_using_get(id, opts = {})
+      data, _status_code, _headers = listar_processadas_using_get_with_http_info(id, opts)
+      return data
+    end
+
+    # Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
+    # Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es processadas da Conta.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Date] :data_vencimento Data de vencimento do extrato no formato yyyy-MM-dd.
+    # @return [Array<(PageTransacoesCorrentes, Fixnum, Hash)>] PageTransacoesCorrentes data, response status code and response headers
+    def listar_processadas_using_get_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ContaApi.listar_processadas_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.listar_processadas_using_get" if id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/transacoes/processadas".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'dataVencimento'] = opts[:'data_vencimento'] if opts[:'data_vencimento']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageTransacoesCorrentes')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ContaApi#listar_processadas_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Lista as transfer\u00C3\u00AAncias realizadas pela conta
     # Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
@@ -975,8 +2037,8 @@ module Pier
     # @option opts [Float] :valor_transferencia Valor estabelecido para ser transferido.
     # @option opts [Date] :data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
     # @return [PageTransferencias]
-    def listar_using_get15(id, opts = {})
-      data, _status_code, _headers = listar_using_get15_with_http_info(id, opts)
+    def listar_using_get20(id, opts = {})
+      data, _status_code, _headers = listar_using_get20_with_http_info(id, opts)
       return data
     end
 
@@ -992,14 +2054,14 @@ module Pier
     # @option opts [Float] :valor_transferencia Valor estabelecido para ser transferido.
     # @option opts [Date] :data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
     # @return [Array<(PageTransferencias, Fixnum, Hash)>] PageTransferencias data, response status code and response headers
-    def listar_using_get15_with_http_info(id, opts = {})
+    def listar_using_get20_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get15 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get20 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.listar_using_get15" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.listar_using_get20" if id.nil?
       
       
       
@@ -1048,7 +2110,7 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/contas/{id}/transferencias".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+      local_var_path = "/api/contas/{id}/transferencias-creditos-cartoes".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -1086,7 +2148,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTransferencias')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#listar_using_get15\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#listar_using_get20\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1097,7 +2159,6 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [Integer] :id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
     # @option opts [Integer] :id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
     # @option opts [Integer] :id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
     # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
@@ -1107,7 +2168,7 @@ module Pier
     # @option opts [Date] :data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
     # @option opts [Date] :data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
     # @option opts [Date] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
-    # @return [Conta]
+    # @return [PageContas]
     def listar_using_get3(opts = {})
       data, _status_code, _headers = listar_using_get3_with_http_info(opts)
       return data
@@ -1118,7 +2179,6 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [Integer] :id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
     # @option opts [Integer] :id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
     # @option opts [Integer] :id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
     # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
@@ -1128,17 +2188,11 @@ module Pier
     # @option opts [Date] :data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
     # @option opts [Date] :data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
     # @option opts [Date] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
-    # @return [Array<(Conta, Fixnum, Hash)>] Conta data, response status code and response headers
+    # @return [Array<(PageContas, Fixnum, Hash)>] PageContas data, response status code and response headers
     def listar_using_get3_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get3 ..."
       end
-      
-      
-      
-      
-      
-      
       
       
       
@@ -1213,7 +2267,6 @@ module Pier
       query_params = {}
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
-      query_params[:'id'] = opts[:'id'] if opts[:'id']
       query_params[:'idProduto'] = opts[:'id_produto'] if opts[:'id_produto']
       query_params[:'idOrigemComercial'] = opts[:'id_origem_comercial'] if opts[:'id_origem_comercial']
       query_params[:'idPessoa'] = opts[:'id_pessoa'] if opts[:'id_pessoa']
@@ -1248,7 +2301,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Conta')
+        :return_type => 'PageContas')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ContaApi#listar_using_get3\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -1256,9 +2309,75 @@ module Pier
     end
 
 
+    # Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas que foram desativadas por inadimpl\u00C3\u00AAncia
+    # Este recurso permite reativar contas que foram desativadas por inadimpl\u00C3\u00AAncia. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+    # @param id Id Conta
+    # @param [Hash] opts the optional parameters
+    # @return [Object]
+    def reativar_using_post(id, opts = {})
+      data, _status_code, _headers = reativar_using_post_with_http_info(id, opts)
+      return data
+    end
+
+    # Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas que foram desativadas por inadimpl\u00C3\u00AAncia
+    # Este recurso permite reativar contas que foram desativadas por inadimpl\u00C3\u00AAncia. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+    # @param id Id Conta
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
+    def reativar_using_post_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ContaApi.reativar_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.reativar_using_post" if id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/reativar".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Object')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ContaApi#reativar_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Permite listar uma linha do tempo com os eventos da conta
     # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param id Id Conta
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
@@ -1270,7 +2389,7 @@ module Pier
 
     # Permite listar uma linha do tempo com os eventos da conta
     # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param id Id Conta
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
@@ -1347,8 +2466,8 @@ module Pier
     # @param valor_transferencia Valor da Transfer\u00C3\u00AAncia.
     # @param [Hash] opts the optional parameters
     # @return [PageTransferencias]
-    def transferir_using_post(id, id_conta_destino, valor_transferencia, opts = {})
-      data, _status_code, _headers = transferir_using_post_with_http_info(id, id_conta_destino, valor_transferencia, opts)
+    def transferir_using_post1(id, id_conta_destino, valor_transferencia, opts = {})
+      data, _status_code, _headers = transferir_using_post1_with_http_info(id, id_conta_destino, valor_transferencia, opts)
       return data
     end
 
@@ -1359,14 +2478,14 @@ module Pier
     # @param valor_transferencia Valor da Transfer\u00C3\u00AAncia.
     # @param [Hash] opts the optional parameters
     # @return [Array<(PageTransferencias, Fixnum, Hash)>] PageTransferencias data, response status code and response headers
-    def transferir_using_post_with_http_info(id, id_conta_destino, valor_transferencia, opts = {})
+    def transferir_using_post1_with_http_info(id, id_conta_destino, valor_transferencia, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.transferir_using_post ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.transferir_using_post1 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.transferir_using_post" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.transferir_using_post1" if id.nil?
       
       
       
@@ -1374,7 +2493,7 @@ module Pier
       
       
       # verify the required parameter 'id_conta_destino' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta_destino' when calling ContaApi.transferir_using_post" if id_conta_destino.nil?
+      fail ArgumentError, "Missing the required parameter 'id_conta_destino' when calling ContaApi.transferir_using_post1" if id_conta_destino.nil?
       
       
       
@@ -1382,14 +2501,14 @@ module Pier
       
       
       # verify the required parameter 'valor_transferencia' is set
-      fail ArgumentError, "Missing the required parameter 'valor_transferencia' when calling ContaApi.transferir_using_post" if valor_transferencia.nil?
+      fail ArgumentError, "Missing the required parameter 'valor_transferencia' when calling ContaApi.transferir_using_post1" if valor_transferencia.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/contas/{id}/transferencias".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+      local_var_path = "/api/contas/{id}/transferencias-creditos-cartoes".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -1422,7 +2541,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTransferencias')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#transferir_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#transferir_using_post1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

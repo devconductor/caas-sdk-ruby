@@ -43,8 +43,20 @@ module Pier
     # Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
     attr_accessor :data_nascimento
 
+    # N\u00C3\u00BAmero da Identidade
+    attr_accessor :numero_identidade
+
+    # Org\u00C3\u00A3o expedidor do RG.
+    attr_accessor :orgao_expedidor_identidade
+
     # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
     attr_accessor :sexo
+
+    # Sigla da Unidade Federativa de onde foi expedido a Identidade
+    attr_accessor :unidade_federativa_identidade
+
+    # Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
+    attr_accessor :data_emissao_identidade
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -63,7 +75,15 @@ module Pier
         
         :'data_nascimento' => :'dataNascimento',
         
-        :'sexo' => :'sexo'
+        :'numero_identidade' => :'numeroIdentidade',
+        
+        :'orgao_expedidor_identidade' => :'orgaoExpedidorIdentidade',
+        
+        :'sexo' => :'sexo',
+        
+        :'unidade_federativa_identidade' => :'unidadeFederativaIdentidade',
+        
+        :'data_emissao_identidade' => :'dataEmissaoIdentidade'
         
       }
     end
@@ -84,7 +104,15 @@ module Pier
         
         :'data_nascimento' => :'DateTime',
         
-        :'sexo' => :'String'
+        :'numero_identidade' => :'String',
+        
+        :'orgao_expedidor_identidade' => :'String',
+        
+        :'sexo' => :'String',
+        
+        :'unidade_federativa_identidade' => :'String',
+        
+        :'data_emissao_identidade' => :'Date'
         
       }
     end
@@ -152,10 +180,46 @@ module Pier
       end
 
       
+      if attributes[:'numeroIdentidade']
+        
+        
+        self.numero_identidade = attributes[:'numeroIdentidade']
+        
+      
+      end
+
+      
+      if attributes[:'orgaoExpedidorIdentidade']
+        
+        
+        self.orgao_expedidor_identidade = attributes[:'orgaoExpedidorIdentidade']
+        
+      
+      end
+
+      
       if attributes[:'sexo']
         
         
         self.sexo = attributes[:'sexo']
+        
+      
+      end
+
+      
+      if attributes[:'unidadeFederativaIdentidade']
+        
+        
+        self.unidade_federativa_identidade = attributes[:'unidadeFederativaIdentidade']
+        
+      
+      end
+
+      
+      if attributes[:'dataEmissaoIdentidade']
+        
+        
+        self.data_emissao_identidade = attributes[:'dataEmissaoIdentidade']
         
       
       end
@@ -219,8 +283,44 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -268,7 +368,11 @@ module Pier
           cpf == o.cpf &&
           cnpj == o.cnpj &&
           data_nascimento == o.data_nascimento &&
-          sexo == o.sexo
+          numero_identidade == o.numero_identidade &&
+          orgao_expedidor_identidade == o.orgao_expedidor_identidade &&
+          sexo == o.sexo &&
+          unidade_federativa_identidade == o.unidade_federativa_identidade &&
+          data_emissao_identidade == o.data_emissao_identidade
     end
 
     # @see the `==` method
@@ -280,7 +384,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, nome, tipo, cpf, cnpj, data_nascimento, sexo].hash
+      [id, nome, tipo, cpf, cnpj, data_nascimento, numero_identidade, orgao_expedidor_identidade, sexo, unidade_federativa_identidade, data_emissao_identidade].hash
     end
 
     # Builds the object from hash

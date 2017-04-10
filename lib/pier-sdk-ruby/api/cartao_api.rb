@@ -494,6 +494,72 @@ module Pier
     end
 
 
+    # Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+    # Este m\u00C3\u00A9todo permite consultar os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor atrav\u00C3\u00A9s do id do lote.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id)
+    # @param [Hash] opts the optional parameters
+    # @return [LoteCartoesPrePagos]
+    def consultar_lotes_cartoes_pre_pagos_using_get(id, opts = {})
+      data, _status_code, _headers = consultar_lotes_cartoes_pre_pagos_using_get_with_http_info(id, opts)
+      return data
+    end
+
+    # Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+    # Este m\u00C3\u00A9todo permite consultar os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor atrav\u00C3\u00A9s do id do lote.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id)
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(LoteCartoesPrePagos, Fixnum, Hash)>] LoteCartoesPrePagos data, response status code and response headers
+    def consultar_lotes_cartoes_pre_pagos_using_get_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CartaoApi.consultar_lotes_cartoes_pre_pagos_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CartaoApi.consultar_lotes_cartoes_pre_pagos_using_get" if id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/cartoes/lotes-cartoes-pre-pagos/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'LoteCartoesPrePagos')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CartaoApi#consultar_lotes_cartoes_pre_pagos_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Apresenta os dados do Portador do Cart\u00C3\u00A3o
     # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es do Portador de um determinado Cart\u00C3\u00A3o a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
@@ -621,6 +687,91 @@ module Pier
         :return_type => 'Cartao')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CartaoApi#consultar_using_get2\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
+    # Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+    # @param id Id Cart\u00C3\u00A3o
+    # @param id_transferencia Id Transfer\u00C3\u00AAncia
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+    # @return [LinkTransferenciaBancariaResponse]
+    def consultar_using_get20(id, id_transferencia, opts = {})
+      data, _status_code, _headers = consultar_using_get20_with_http_info(id, id_transferencia, opts)
+      return data
+    end
+
+    # Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
+    # Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+    # @param id Id Cart\u00C3\u00A3o
+    # @param id_transferencia Id Transfer\u00C3\u00AAncia
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+    # @return [Array<(LinkTransferenciaBancariaResponse, Fixnum, Hash)>] LinkTransferenciaBancariaResponse data, response status code and response headers
+    def consultar_using_get20_with_http_info(id, id_transferencia, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CartaoApi.consultar_using_get20 ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CartaoApi.consultar_using_get20" if id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'id_transferencia' is set
+      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling CartaoApi.consultar_using_get20" if id_transferencia.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/cartoes/{id}/transferencias-creditos-contas-bancarias/{id_transferencia}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s).sub('{' + 'id_transferencia' + '}', id_transferencia.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'id_conta_bancaria_destino'] = opts[:'id_conta_bancaria_destino'] if opts[:'id_conta_bancaria_destino']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'LinkTransferenciaBancariaResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CartaoApi#consultar_using_get20\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -759,7 +910,7 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/cartoes/pre-pagos/lotes".sub('{format}','json')
+      local_var_path = "/api/cartoes/lotes-cartoes-pre-pagos".sub('{format}','json')
 
       # query parameters
       query_params = {}
@@ -873,7 +1024,6 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais (id).
     # @option opts [Integer] :id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id).
     # @option opts [Integer] :id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
     # @option opts [Integer] :id_tipo_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id).
@@ -883,7 +1033,7 @@ module Pier
     # @option opts [Date] :data_cadastro Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
     # @option opts [String] :usuario_cadastro Nome do Usu\u00C3\u00A1rio que criou o Lote.
     # @option opts [Integer] :status_processamento Indica o Status de Processamento do Lote.
-    # @return [PageCartoes]
+    # @return [PageLoteCartoesPrePagosResponse]
     def listar_lotes_cartoes_pre_pagos_using_get(opts = {})
       data, _status_code, _headers = listar_lotes_cartoes_pre_pagos_using_get_with_http_info(opts)
       return data
@@ -894,7 +1044,6 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais (id).
     # @option opts [Integer] :id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id).
     # @option opts [Integer] :id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
     # @option opts [Integer] :id_tipo_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id).
@@ -904,7 +1053,7 @@ module Pier
     # @option opts [Date] :data_cadastro Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
     # @option opts [String] :usuario_cadastro Nome do Usu\u00C3\u00A1rio que criou o Lote.
     # @option opts [Integer] :status_processamento Indica o Status de Processamento do Lote.
-    # @return [Array<(PageCartoes, Fixnum, Hash)>] PageCartoes data, response status code and response headers
+    # @return [Array<(PageLoteCartoesPrePagosResponse, Fixnum, Hash)>] PageLoteCartoesPrePagosResponse data, response status code and response headers
     def listar_lotes_cartoes_pre_pagos_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CartaoApi.listar_lotes_cartoes_pre_pagos_using_get ..."
@@ -976,20 +1125,13 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
       # resource path
-      local_var_path = "/api/cartoes/pre-pagos/lotes".sub('{format}','json')
+      local_var_path = "/api/cartoes/lotes-cartoes-pre-pagos".sub('{format}','json')
 
       # query parameters
       query_params = {}
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
-      query_params[:'id'] = opts[:'id'] if opts[:'id']
       query_params[:'idOrigemComercial'] = opts[:'id_origem_comercial'] if opts[:'id_origem_comercial']
       query_params[:'idProduto'] = opts[:'id_produto'] if opts[:'id_produto']
       query_params[:'idTipoCartao'] = opts[:'id_tipo_cartao'] if opts[:'id_tipo_cartao']
@@ -1024,9 +1166,102 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PageCartoes')
+        :return_type => 'PageLoteCartoesPrePagosResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CartaoApi#listar_lotes_cartoes_pre_pagos_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+    # Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
+    # @param id Id Cart\u00C3\u00A3o
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @return [LinkPageTransferenciaBancariaResponse]
+    def listar_using_get19(id, opts = {})
+      data, _status_code, _headers = listar_using_get19_with_http_info(id, opts)
+      return data
+    end
+
+    # Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+    # Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
+    # @param id Id Cart\u00C3\u00A3o
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @return [Array<(LinkPageTransferenciaBancariaResponse, Fixnum, Hash)>] LinkPageTransferenciaBancariaResponse data, response status code and response headers
+    def listar_using_get19_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CartaoApi.listar_using_get19 ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CartaoApi.listar_using_get19" if id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/cartoes/{id}/transferencias-creditos-contas-bancarias".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'id_conta_bancaria_destino'] = opts[:'id_conta_bancaria_destino'] if opts[:'id_conta_bancaria_destino']
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'LinkPageTransferenciaBancariaResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CartaoApi#listar_using_get19\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1037,7 +1272,6 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @option opts [Integer] :id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
     # @option opts [Integer] :id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @option opts [Integer] :id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
@@ -1066,7 +1300,6 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @option opts [Integer] :id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
     # @option opts [Integer] :id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @option opts [Integer] :id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
@@ -1204,12 +1437,6 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
       # resource path
       local_var_path = "/api/cartoes".sub('{format}','json')
 
@@ -1217,7 +1444,6 @@ module Pier
       query_params = {}
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
-      query_params[:'id'] = opts[:'id'] if opts[:'id']
       query_params[:'idStatusCartao'] = opts[:'id_status_cartao'] if opts[:'id_status_cartao']
       query_params[:'idEstagioCartao'] = opts[:'id_estagio_cartao'] if opts[:'id_estagio_cartao']
       query_params[:'idConta'] = opts[:'id_conta'] if opts[:'id_conta']
@@ -1263,6 +1489,218 @@ module Pier
         :return_type => 'PageCartoes')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CartaoApi#listar_using_get2\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria entre bancos / contas
+    # Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta de destino.
+    # @param id Id Cart\u00C3\u00A3o
+    # @param data_compra Data da transfer\u00C3\u00AAncia
+    # @param proximo_vencimento_padrao Dia do vencimento padr\u00C3\u00A3o da fatura
+    # @param proximo_vencimento_real Data do vencimento real da fatura
+    # @param valor_compra Valor da transfer\u00C3\u00AAncia
+    # @param nome_favorecido Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
+    # @param documento_favorecido N\u00C3\u00BAmero do CPF ou CNPJ.
+    # @param banco C\u00C3\u00B3digo do banco
+    # @param numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia
+    # @param numero_conta N\u00C3\u00BAmero da conta
+    # @param flag_conta_poupanca Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [String] :digito_agencia D\u00C3\u00ADgito da ag\u00C3\u00AAncia
+    # @option opts [String] :digito_conta D\u00C3\u00ADgito da conta
+    # @return [LinkTransferenciaBancariaResponse]
+    def transferir_using_post(id, data_compra, proximo_vencimento_padrao, proximo_vencimento_real, valor_compra, nome_favorecido, documento_favorecido, banco, numero_agencia, numero_conta, flag_conta_poupanca, opts = {})
+      data, _status_code, _headers = transferir_using_post_with_http_info(id, data_compra, proximo_vencimento_padrao, proximo_vencimento_real, valor_compra, nome_favorecido, documento_favorecido, banco, numero_agencia, numero_conta, flag_conta_poupanca, opts)
+      return data
+    end
+
+    # Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria entre bancos / contas
+    # Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta de destino.
+    # @param id Id Cart\u00C3\u00A3o
+    # @param data_compra Data da transfer\u00C3\u00AAncia
+    # @param proximo_vencimento_padrao Dia do vencimento padr\u00C3\u00A3o da fatura
+    # @param proximo_vencimento_real Data do vencimento real da fatura
+    # @param valor_compra Valor da transfer\u00C3\u00AAncia
+    # @param nome_favorecido Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
+    # @param documento_favorecido N\u00C3\u00BAmero do CPF ou CNPJ.
+    # @param banco C\u00C3\u00B3digo do banco
+    # @param numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia
+    # @param numero_conta N\u00C3\u00BAmero da conta
+    # @param flag_conta_poupanca Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [String] :digito_agencia D\u00C3\u00ADgito da ag\u00C3\u00AAncia
+    # @option opts [String] :digito_conta D\u00C3\u00ADgito da conta
+    # @return [Array<(LinkTransferenciaBancariaResponse, Fixnum, Hash)>] LinkTransferenciaBancariaResponse data, response status code and response headers
+    def transferir_using_post_with_http_info(id, data_compra, proximo_vencimento_padrao, proximo_vencimento_real, valor_compra, nome_favorecido, documento_favorecido, banco, numero_agencia, numero_conta, flag_conta_poupanca, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CartaoApi.transferir_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CartaoApi.transferir_using_post" if id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'data_compra' is set
+      fail ArgumentError, "Missing the required parameter 'data_compra' when calling CartaoApi.transferir_using_post" if data_compra.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'proximo_vencimento_padrao' is set
+      fail ArgumentError, "Missing the required parameter 'proximo_vencimento_padrao' when calling CartaoApi.transferir_using_post" if proximo_vencimento_padrao.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'proximo_vencimento_real' is set
+      fail ArgumentError, "Missing the required parameter 'proximo_vencimento_real' when calling CartaoApi.transferir_using_post" if proximo_vencimento_real.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'valor_compra' is set
+      fail ArgumentError, "Missing the required parameter 'valor_compra' when calling CartaoApi.transferir_using_post" if valor_compra.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'nome_favorecido' is set
+      fail ArgumentError, "Missing the required parameter 'nome_favorecido' when calling CartaoApi.transferir_using_post" if nome_favorecido.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'documento_favorecido' is set
+      fail ArgumentError, "Missing the required parameter 'documento_favorecido' when calling CartaoApi.transferir_using_post" if documento_favorecido.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'banco' is set
+      fail ArgumentError, "Missing the required parameter 'banco' when calling CartaoApi.transferir_using_post" if banco.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'numero_agencia' is set
+      fail ArgumentError, "Missing the required parameter 'numero_agencia' when calling CartaoApi.transferir_using_post" if numero_agencia.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'numero_conta' is set
+      fail ArgumentError, "Missing the required parameter 'numero_conta' when calling CartaoApi.transferir_using_post" if numero_conta.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'flag_conta_poupanca' is set
+      fail ArgumentError, "Missing the required parameter 'flag_conta_poupanca' when calling CartaoApi.transferir_using_post" if flag_conta_poupanca.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/cartoes/{id}/transferencias-creditos-contas-bancarias".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'dataCompra'] = data_compra
+      query_params[:'proximoVencimentoPadrao'] = proximo_vencimento_padrao
+      query_params[:'proximoVencimentoReal'] = proximo_vencimento_real
+      query_params[:'valorCompra'] = valor_compra
+      query_params[:'nomeFavorecido'] = nome_favorecido
+      query_params[:'documentoFavorecido'] = documento_favorecido
+      query_params[:'banco'] = banco
+      query_params[:'numeroAgencia'] = numero_agencia
+      query_params[:'numeroConta'] = numero_conta
+      query_params[:'flagContaPoupanca'] = flag_conta_poupanca
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'digitoAgencia'] = opts[:'digito_agencia'] if opts[:'digito_agencia']
+      query_params[:'digitoConta'] = opts[:'digito_conta'] if opts[:'digito_conta']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['access_token']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'LinkTransferenciaBancariaResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CartaoApi#transferir_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

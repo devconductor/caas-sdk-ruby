@@ -6,12 +6,12 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultar_estagio_cartao_using_get**](StatusParametrosApi.md#consultar_estagio_cartao_using_get) | **GET** /api/estagios-cartoes/{id} | Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
 [**consultar_status_cartao_using_get**](StatusParametrosApi.md#consultar_status_cartao_using_get) | **GET** /api/status-cartoes/{id} | Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
-[**consultar_using_get8**](StatusParametrosApi.md#consultar_using_get8) | **GET** /api/status-contas/{id} | Apresenta os dados de um determinado Status Conta
-[**consultar_using_get9**](StatusParametrosApi.md#consultar_using_get9) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
+[**consultar_using_get11**](StatusParametrosApi.md#consultar_using_get11) | **GET** /api/status-contas/{id} | Apresenta os dados de um determinado Status Conta
+[**consultar_using_get12**](StatusParametrosApi.md#consultar_using_get12) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 [**listar_estagios_cartoes_using_get**](StatusParametrosApi.md#listar_estagios_cartoes_using_get) | **GET** /api/estagios-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
 [**listar_status_cartoes_using_get**](StatusParametrosApi.md#listar_status_cartoes_using_get) | **GET** /api/status-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
-[**listar_using_get10**](StatusParametrosApi.md#listar_using_get10) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
-[**listar_using_get9**](StatusParametrosApi.md#listar_using_get9) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
+[**listar_using_get12**](StatusParametrosApi.md#listar_using_get12) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
+[**listar_using_get13**](StatusParametrosApi.md#listar_using_get13) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
 
 
@@ -132,8 +132,8 @@ Name | Type | Description  | Notes
 
 
 
-# **consultar_using_get8**
-> StatusConta consultar_using_get8(id)
+# **consultar_using_get11**
+> StatusConta consultar_using_get11(id)
 
 Apresenta os dados de um determinado Status Conta
 
@@ -160,10 +160,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Status Conta
-  result = api_instance.consultar_using_get8(id)
+  result = api_instance.consultar_using_get11(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling StatusParametrosApi->consultar_using_get8: #{e}"
+  puts "Exception when calling StatusParametrosApi->consultar_using_get11: #{e}"
 end
 ```
 
@@ -190,8 +190,8 @@ Name | Type | Description  | Notes
 
 
 
-# **consultar_using_get9**
-> StatusImpressao consultar_using_get9(id)
+# **consultar_using_get12**
+> StatusImpressao consultar_using_get12(id)
 
 Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 
@@ -218,10 +218,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
-  result = api_instance.consultar_using_get9(id)
+  result = api_instance.consultar_using_get12(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling StatusParametrosApi->consultar_using_get9: #{e}"
+  puts "Exception when calling StatusParametrosApi->consultar_using_get12: #{e}"
 end
 ```
 
@@ -390,73 +390,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get10**
-> PageStatusImpressao listar_using_get10(opts)
-
-Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
-
-Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
-
-
-api_instance = Pier::StatusParametrosApi.new
-
-opts = { 
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  id: 789, # Integer | Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
-  nome: "nome_example" # String | Nome do status impress\u00C3\u00A3o
-}
-
-begin
-  #Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
-  result = api_instance.listar_using_get10(opts)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling StatusParametrosApi->listar_using_get10: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **id** | **Integer**| Id do est\u00C3\u00A1gio cart\u00C3\u00A3o | [optional] 
- **nome** | **String**| Nome do status impress\u00C3\u00A3o | [optional] 
-
-
-### Return type
-
-[**PageStatusImpressao**](PageStatusImpressao.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **listar_using_get9**
-> PageStatusContas listar_using_get9(opts)
+# **listar_using_get12**
+> PageStatusContas listar_using_get12(opts)
 
 Lista os Status Contas cadastrados para o Emissor
 
@@ -490,10 +425,10 @@ opts = {
 
 begin
   #Lista os Status Contas cadastrados para o Emissor
-  result = api_instance.listar_using_get9(opts)
+  result = api_instance.listar_using_get12(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling StatusParametrosApi->listar_using_get9: #{e}"
+  puts "Exception when calling StatusParametrosApi->listar_using_get12: #{e}"
 end
 ```
 
@@ -513,6 +448,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PageStatusContas**](PageStatusContas.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_using_get13**
+> PageStatusImpressao listar_using_get13(opts)
+
+Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+
+Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::StatusParametrosApi.new
+
+opts = { 
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  id: 789, # Integer | Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
+  nome: "nome_example" # String | Nome do status impress\u00C3\u00A3o
+}
+
+begin
+  #Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+  result = api_instance.listar_using_get13(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling StatusParametrosApi->listar_using_get13: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **id** | **Integer**| Id do est\u00C3\u00A1gio cart\u00C3\u00A3o | [optional] 
+ **nome** | **String**| Nome do status impress\u00C3\u00A3o | [optional] 
+
+
+### Return type
+
+[**PageStatusImpressao**](PageStatusImpressao.md)
 
 ### Authorization
 

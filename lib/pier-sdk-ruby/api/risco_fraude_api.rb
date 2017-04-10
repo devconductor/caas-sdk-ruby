@@ -103,8 +103,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
     # @param [Hash] opts the optional parameters
     # @return [RiscoFraudeDetalhadoResponse]
-    def consultar_using_get7(id, opts = {})
-      data, _status_code, _headers = consultar_using_get7_with_http_info(id, opts)
+    def consultar_using_get10(id, opts = {})
+      data, _status_code, _headers = consultar_using_get10_with_http_info(id, opts)
       return data
     end
 
@@ -113,14 +113,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
     # @param [Hash] opts the optional parameters
     # @return [Array<(RiscoFraudeDetalhadoResponse, Fixnum, Hash)>] RiscoFraudeDetalhadoResponse data, response status code and response headers
-    def consultar_using_get7_with_http_info(id, opts = {})
+    def consultar_using_get10_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.consultar_using_get7 ..."
+        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.consultar_using_get10 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling RiscoFraudeApi.consultar_using_get7" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling RiscoFraudeApi.consultar_using_get10" if id.nil?
       
       
       
@@ -158,7 +158,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'RiscoFraudeDetalhadoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: RiscoFraudeApi#consultar_using_get7\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: RiscoFraudeApi#consultar_using_get10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -235,7 +235,6 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [Integer] :id_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Atendimento (id)
     # @option opts [Integer] :id_tipo_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
     # @option opts [Integer] :id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
     # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
@@ -251,7 +250,6 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [Integer] :id_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Atendimento (id)
     # @option opts [Integer] :id_tipo_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
     # @option opts [Integer] :id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
     # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
@@ -298,12 +296,6 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
       # resource path
       local_var_path = "/api/atendimento-clientes".sub('{format}','json')
 
@@ -311,7 +303,6 @@ module Pier
       query_params = {}
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
-      query_params[:'idAtendimento'] = opts[:'id_atendimento'] if opts[:'id_atendimento']
       query_params[:'idTipoAtendimento'] = opts[:'id_tipo_atendimento'] if opts[:'id_tipo_atendimento']
       query_params[:'idConta'] = opts[:'id_conta'] if opts[:'id_conta']
       query_params[:'nomeAtendente'] = opts[:'nome_atendente'] if opts[:'nome_atendente']
@@ -357,8 +348,8 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [RiscoFraudeResponsePage]
-    def listar_using_get8(id_conta, confirmacao_fraude, opts = {})
-      data, _status_code, _headers = listar_using_get8_with_http_info(id_conta, confirmacao_fraude, opts)
+    def listar_using_get11(id_conta, confirmacao_fraude, opts = {})
+      data, _status_code, _headers = listar_using_get11_with_http_info(id_conta, confirmacao_fraude, opts)
       return data
     end
 
@@ -370,14 +361,14 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Array<(RiscoFraudeResponsePage, Fixnum, Hash)>] RiscoFraudeResponsePage data, response status code and response headers
-    def listar_using_get8_with_http_info(id_conta, confirmacao_fraude, opts = {})
+    def listar_using_get11_with_http_info(id_conta, confirmacao_fraude, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.listar_using_get8 ..."
+        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.listar_using_get11 ..."
       end
       
       
       # verify the required parameter 'id_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta' when calling RiscoFraudeApi.listar_using_get8" if id_conta.nil?
+      fail ArgumentError, "Missing the required parameter 'id_conta' when calling RiscoFraudeApi.listar_using_get11" if id_conta.nil?
       
       
       
@@ -385,7 +376,7 @@ module Pier
       
       
       # verify the required parameter 'confirmacao_fraude' is set
-      fail ArgumentError, "Missing the required parameter 'confirmacao_fraude' when calling RiscoFraudeApi.listar_using_get8" if confirmacao_fraude.nil?
+      fail ArgumentError, "Missing the required parameter 'confirmacao_fraude' when calling RiscoFraudeApi.listar_using_get11" if confirmacao_fraude.nil?
       
       # verify enum value
       unless ['NEGADA', 'CONFIRMADA', 'PENDENTE', 'TODAS'].include?(confirmacao_fraude)
@@ -444,7 +435,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'RiscoFraudeResponsePage')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: RiscoFraudeApi#listar_using_get8\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: RiscoFraudeApi#listar_using_get11\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -589,10 +580,11 @@ module Pier
     # @option opts [String] :conteudo_atendimento Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento.
     # @option opts [String] :detalhes_atendimento Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
     # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
-    # @option opts [Date] :data_atendimento Apresenta a data em que o Atendimento foi realizado.
-    # @option opts [Date] :data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data para processamento ou a data para retorno do Atendimento.
-    # @option opts [DateTime] :data_hora_inicio_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
-    # @option opts [DateTime] :data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
+    # @option opts [DateTime] :data_atendimento Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+    # @option opts [DateTime] :data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+    # @option opts [DateTime] :data_hora_inicio_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+    # @option opts [DateTime] :data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+    # @option opts [Integer] :flag_fila_fraude Flag fila fraude
     # @return [AtendimentoCliente]
     def salvar_using_post(opts = {})
       data, _status_code, _headers = salvar_using_post_with_http_info(opts)
@@ -606,15 +598,22 @@ module Pier
     # @option opts [String] :conteudo_atendimento Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento.
     # @option opts [String] :detalhes_atendimento Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
     # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
-    # @option opts [Date] :data_atendimento Apresenta a data em que o Atendimento foi realizado.
-    # @option opts [Date] :data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data para processamento ou a data para retorno do Atendimento.
-    # @option opts [DateTime] :data_hora_inicio_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
-    # @option opts [DateTime] :data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
+    # @option opts [DateTime] :data_atendimento Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+    # @option opts [DateTime] :data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+    # @option opts [DateTime] :data_hora_inicio_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+    # @option opts [DateTime] :data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+    # @option opts [Integer] :flag_fila_fraude Flag fila fraude
     # @return [Array<(AtendimentoCliente, Fixnum, Hash)>] AtendimentoCliente data, response status code and response headers
     def salvar_using_post_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RiscoFraudeApi.salvar_using_post ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -677,6 +676,7 @@ module Pier
       query_params[:'dataAgendamento'] = opts[:'data_agendamento'] if opts[:'data_agendamento']
       query_params[:'dataHoraInicioAtendimento'] = opts[:'data_hora_inicio_atendimento'] if opts[:'data_hora_inicio_atendimento']
       query_params[:'dataHoraFimAtendimento'] = opts[:'data_hora_fim_atendimento'] if opts[:'data_hora_fim_atendimento']
+      query_params[:'flagFilaFraude'] = opts[:'flag_fila_fraude'] if opts[:'flag_fila_fraude']
 
       # header parameters
       header_params = {}

@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**adicionar_using_post**](FAQApi.md#adicionar_using_post) | **POST** /api/faqs | Adiciona uma nova FAQ
 [**alterar_using_put2**](FAQApi.md#alterar_using_put2) | **PUT** /api/faqs/{id} | Alterar FAQ
-[**consultar_using_get5**](FAQApi.md#consultar_using_get5) | **GET** /api/faqs/{id} | Consultar FAQ por id
-[**listar_using_get5**](FAQApi.md#listar_using_get5) | **GET** /api/faqs | Lista FAQs
+[**consultar_using_get6**](FAQApi.md#consultar_using_get6) | **GET** /api/faqs/{id} | Consultar FAQ por id
+[**listar_using_get6**](FAQApi.md#listar_using_get6) | **GET** /api/faqs | Lista FAQs
 
 
 
@@ -157,8 +157,8 @@ Name | Type | Description  | Notes
 
 
 
-# **consultar_using_get5**
-> FAQ consultar_using_get5(id)
+# **consultar_using_get6**
+> FAQ consultar_using_get6(id)
 
 Consultar FAQ por id
 
@@ -185,10 +185,10 @@ id = 789 # Integer | Id
 
 begin
   #Consultar FAQ por id
-  result = api_instance.consultar_using_get5(id)
+  result = api_instance.consultar_using_get6(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling FAQApi->consultar_using_get5: #{e}"
+  puts "Exception when calling FAQApi->consultar_using_get6: #{e}"
 end
 ```
 
@@ -215,8 +215,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get5**
-> PageFaqs listar_using_get5(opts)
+# **listar_using_get6**
+> PageFaqs listar_using_get6(opts)
 
 Lista FAQs
 
@@ -252,10 +252,10 @@ opts = {
 
 begin
   #Lista FAQs
-  result = api_instance.listar_using_get5(opts)
+  result = api_instance.listar_using_get6(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling FAQApi->listar_using_get5: #{e}"
+  puts "Exception when calling FAQApi->listar_using_get6: #{e}"
 end
 ```
 

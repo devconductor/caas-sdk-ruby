@@ -44,7 +44,7 @@ module Pier
     attr_accessor :id_endereco
 
     # N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
-    attr_accessor :quantidade_cartoes
+    attr_accessor :quantidade
 
     # Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos.
     attr_accessor :data_cadastro
@@ -72,7 +72,7 @@ module Pier
         
         :'id_endereco' => :'idEndereco',
         
-        :'quantidade_cartoes' => :'quantidadeCartoes',
+        :'quantidade' => :'quantidade',
         
         :'data_cadastro' => :'dataCadastro',
         
@@ -99,7 +99,7 @@ module Pier
         
         :'id_endereco' => :'Integer',
         
-        :'quantidade_cartoes' => :'Integer',
+        :'quantidade' => :'Integer',
         
         :'data_cadastro' => :'DateTime',
         
@@ -173,10 +173,10 @@ module Pier
       end
 
       
-      if attributes[:'quantidadeCartoes']
+      if attributes[:'quantidade']
         
         
-        self.quantidade_cartoes = attributes[:'quantidadeCartoes']
+        self.quantidade = attributes[:'quantidade']
         
       
       end
@@ -279,7 +279,7 @@ module Pier
       
       
       
-      if @quantidade_cartoes.nil?
+      if @quantidade.nil?
         return false
       end
 
@@ -378,7 +378,7 @@ module Pier
           id_tipo_cartao == o.id_tipo_cartao &&
           id_imagem == o.id_imagem &&
           id_endereco == o.id_endereco &&
-          quantidade_cartoes == o.quantidade_cartoes &&
+          quantidade == o.quantidade &&
           data_cadastro == o.data_cadastro &&
           usuario_cadastro == o.usuario_cadastro &&
           status_processamento == o.status_processamento
@@ -393,7 +393,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_origem_comercial, id_produto, id_tipo_cartao, id_imagem, id_endereco, quantidade_cartoes, data_cadastro, usuario_cadastro, status_processamento].hash
+      [id, id_origem_comercial, id_produto, id_tipo_cartao, id_imagem, id_endereco, quantidade, data_cadastro, usuario_cadastro, status_processamento].hash
     end
 
     # Builds the object from hash

@@ -10,13 +10,17 @@ Method | HTTP request | Description
 [**bloquear_using_put**](CartaoApi.md#bloquear_using_put) | **PUT** /api/cartoes/{id}/bloquear | Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
 [**cadastrar_alterar_senha_using_post**](CartaoApi.md#cadastrar_alterar_senha_using_post) | **POST** /api/cartoes/{id}/cadastrar-senha | Realiza o cadastro da senha de um Cart\u00C3\u00A3o
 [**consultar_limite_disponibilidade_using_get**](CartaoApi.md#consultar_limite_disponibilidade_using_get) | **GET** /api/cartoes/{id}/limites-disponibilidades | Apresenta os limites do Portador do Cart\u00C3\u00A3o
+[**consultar_lotes_cartoes_pre_pagos_using_get**](CartaoApi.md#consultar_lotes_cartoes_pre_pagos_using_get) | **GET** /api/cartoes/lotes-cartoes-pre-pagos/{id} | Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**consultar_portador_using_get**](CartaoApi.md#consultar_portador_using_get) | **GET** /api/cartoes/{id}/portadores | Apresenta os dados do Portador do Cart\u00C3\u00A3o
 [**consultar_using_get2**](CartaoApi.md#consultar_using_get2) | **GET** /api/cartoes/{id} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
+[**consultar_using_get20**](CartaoApi.md#consultar_using_get20) | **GET** /api/cartoes/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
 [**desbloquear_using_put**](CartaoApi.md#desbloquear_using_put) | **PUT** /api/cartoes/{id}/desbloquear | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
-[**gerar_lotes_cartoes_pre_pagos_using_post**](CartaoApi.md#gerar_lotes_cartoes_pre_pagos_using_post) | **POST** /api/cartoes/pre-pagos/lotes | Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+[**gerar_lotes_cartoes_pre_pagos_using_post**](CartaoApi.md#gerar_lotes_cartoes_pre_pagos_using_post) | **POST** /api/cartoes/lotes-cartoes-pre-pagos | Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**gerar_nova_via_using_post**](CartaoApi.md#gerar_nova_via_using_post) | **POST** /api/cartoes/{id}/gerar-nova-via | Gerar uma nova via de Cart\u00C3\u00A3o
-[**listar_lotes_cartoes_pre_pagos_using_get**](CartaoApi.md#listar_lotes_cartoes_pre_pagos_using_get) | **GET** /api/cartoes/pre-pagos/lotes | Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+[**listar_lotes_cartoes_pre_pagos_using_get**](CartaoApi.md#listar_lotes_cartoes_pre_pagos_using_get) | **GET** /api/cartoes/lotes-cartoes-pre-pagos | Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+[**listar_using_get19**](CartaoApi.md#listar_using_get19) | **GET** /api/cartoes/{id}/transferencias-creditos-contas-bancarias | Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
 [**listar_using_get2**](CartaoApi.md#listar_using_get2) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
+[**transferir_using_post**](CartaoApi.md#transferir_using_post) | **POST** /api/cartoes/{id}/transferencias-creditos-contas-bancarias | Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria entre bancos / contas
 [**validar_cartao_chip_bandeirado_using_get**](CartaoApi.md#validar_cartao_chip_bandeirado_using_get) | **GET** /api/cartoes/bandeirados/validar-chip | Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do chip
 [**validar_cartao_digitado_bandeirado_using_get**](CartaoApi.md#validar_cartao_digitado_bandeirado_using_get) | **GET** /api/cartoes/bandeirados/validar-digitado | Permite validar um Cart\u00C3\u00A3o bandeirado a partir dos dados Impressos
 [**validar_cartao_digitado_nao_bandeirado_using_get**](CartaoApi.md#validar_cartao_digitado_nao_bandeirado_using_get) | **GET** /api/cartoes/nao-bandeirados/validar-digitado | Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
@@ -392,6 +396,64 @@ Name | Type | Description  | Notes
 
 
 
+# **consultar_lotes_cartoes_pre_pagos_using_get**
+> LoteCartoesPrePagos consultar_lotes_cartoes_pre_pagos_using_get(id)
+
+Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+
+Este m\u00C3\u00A9todo permite consultar os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor atrav\u00C3\u00A9s do id do lote.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::CartaoApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id)
+
+
+begin
+  #Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+  result = api_instance.consultar_lotes_cartoes_pre_pagos_using_get(id)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CartaoApi->consultar_lotes_cartoes_pre_pagos_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id) | 
+
+
+### Return type
+
+[**LoteCartoesPrePagos**](LoteCartoesPrePagos.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
 # **consultar_portador_using_get**
 > Portador consultar_portador_using_get(id)
 
@@ -495,6 +557,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Cartao**](Cartao.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **consultar_using_get20**
+> LinkTransferenciaBancariaResponse consultar_using_get20(id, id_transferencia, opts)
+
+Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
+
+Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::CartaoApi.new
+
+id = 789 # Integer | Id Cart\u00C3\u00A3o
+
+id_transferencia = 789 # Integer | Id Transfer\u00C3\u00AAncia
+
+opts = { 
+  id_conta_bancaria_destino: 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+}
+
+begin
+  #Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
+  result = api_instance.consultar_using_get20(id, id_transferencia, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CartaoApi->consultar_using_get20: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| Id Cart\u00C3\u00A3o | 
+ **id_transferencia** | **Integer**| Id Transfer\u00C3\u00AAncia | 
+ **id_conta_bancaria_destino** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) | [optional] 
+
+
+### Return type
+
+[**LinkTransferenciaBancariaResponse**](LinkTransferenciaBancariaResponse.md)
 
 ### Authorization
 
@@ -694,7 +821,7 @@ Name | Type | Description  | Notes
 
 
 # **listar_lotes_cartoes_pre_pagos_using_get**
-> PageCartoes listar_lotes_cartoes_pre_pagos_using_get(opts)
+> PageLoteCartoesPrePagosResponse listar_lotes_cartoes_pre_pagos_using_get(opts)
 
 Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 
@@ -719,7 +846,6 @@ api_instance = Pier::CartaoApi.new
 opts = { 
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais (id).
   id_origem_comercial: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id).
   id_produto: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
   id_tipo_cartao: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id).
@@ -746,7 +872,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais (id). | [optional] 
  **id_origem_comercial** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). | [optional] 
  **id_produto** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). | [optional] 
  **id_tipo_cartao** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id). | [optional] 
@@ -760,7 +885,73 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageCartoes**](PageCartoes.md)
+[**PageLoteCartoesPrePagosResponse**](PageLoteCartoesPrePagosResponse.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_using_get19**
+> LinkPageTransferenciaBancariaResponse listar_using_get19(id, opts)
+
+Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+
+Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::CartaoApi.new
+
+id = 789 # Integer | Id Cart\u00C3\u00A3o
+
+opts = { 
+  id_conta_bancaria_destino: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+}
+
+begin
+  #Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+  result = api_instance.listar_using_get19(id, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CartaoApi->listar_using_get19: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| Id Cart\u00C3\u00A3o | 
+ **id_conta_bancaria_destino** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+
+
+### Return type
+
+[**LinkPageTransferenciaBancariaResponse**](LinkPageTransferenciaBancariaResponse.md)
 
 ### Authorization
 
@@ -800,7 +991,6 @@ api_instance = Pier::CartaoApi.new
 opts = { 
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
   id_status_cartao: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
   id_estagio_cartao: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
   id_conta: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
@@ -835,7 +1025,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | [optional] 
  **id_status_cartao** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). | [optional] 
  **id_estagio_cartao** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | [optional] 
  **id_conta** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). | [optional] 
@@ -858,6 +1047,104 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PageCartoes**](PageCartoes.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **transferir_using_post**
+> LinkTransferenciaBancariaResponse transferir_using_post(id, data_compra, proximo_vencimento_padrao, proximo_vencimento_real, valor_compra, nome_favorecido, documento_favorecido, banco, numero_agencia, numero_conta, flag_conta_poupanca, opts)
+
+Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria entre bancos / contas
+
+Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta de destino.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+# setup authorization 
+Pier.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['access_token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
+  #config.api_key_prefix['access_token'] = 'BEARER'
+end
+
+
+api_instance = Pier::CartaoApi.new
+
+id = 789 # Integer | Id Cart\u00C3\u00A3o
+
+data_compra = Date.parse("2013-10-20") # Date | Data da transfer\u00C3\u00AAncia
+
+proximo_vencimento_padrao = Date.parse("2013-10-20") # Date | Dia do vencimento padr\u00C3\u00A3o da fatura
+
+proximo_vencimento_real = Date.parse("2013-10-20") # Date | Data do vencimento real da fatura
+
+valor_compra = 3.4 # Float | Valor da transfer\u00C3\u00AAncia
+
+nome_favorecido = "nome_favorecido_example" # String | Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+
+documento_favorecido = "documento_favorecido_example" # String | N\u00C3\u00BAmero do CPF ou CNPJ.
+
+banco = 789 # Integer | C\u00C3\u00B3digo do banco
+
+numero_agencia = "numero_agencia_example" # String | N\u00C3\u00BAmero da ag\u00C3\u00AAncia
+
+numero_conta = "numero_conta_example" # String | N\u00C3\u00BAmero da conta
+
+flag_conta_poupanca = 56 # Integer | Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
+
+opts = { 
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  digito_agencia: "digito_agencia_example", # String | D\u00C3\u00ADgito da ag\u00C3\u00AAncia
+  digito_conta: "digito_conta_example" # String | D\u00C3\u00ADgito da conta
+}
+
+begin
+  #Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria entre bancos / contas
+  result = api_instance.transferir_using_post(id, data_compra, proximo_vencimento_padrao, proximo_vencimento_real, valor_compra, nome_favorecido, documento_favorecido, banco, numero_agencia, numero_conta, flag_conta_poupanca, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CartaoApi->transferir_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| Id Cart\u00C3\u00A3o | 
+ **data_compra** | **Date**| Data da transfer\u00C3\u00AAncia | 
+ **proximo_vencimento_padrao** | **Date**| Dia do vencimento padr\u00C3\u00A3o da fatura | 
+ **proximo_vencimento_real** | **Date**| Data do vencimento real da fatura | 
+ **valor_compra** | [**Float**](.md)| Valor da transfer\u00C3\u00AAncia | 
+ **nome_favorecido** | **String**| Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. | 
+ **documento_favorecido** | **String**| N\u00C3\u00BAmero do CPF ou CNPJ. | 
+ **banco** | **Integer**| C\u00C3\u00B3digo do banco | 
+ **numero_agencia** | **String**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia | 
+ **numero_conta** | **String**| N\u00C3\u00BAmero da conta | 
+ **flag_conta_poupanca** | **Integer**| Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente) | 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **digito_agencia** | **String**| D\u00C3\u00ADgito da ag\u00C3\u00AAncia | [optional] 
+ **digito_conta** | **String**| D\u00C3\u00ADgito da conta | [optional] 
+
+
+### Return type
+
+[**LinkTransferenciaBancariaResponse**](LinkTransferenciaBancariaResponse.md)
 
 ### Authorization
 

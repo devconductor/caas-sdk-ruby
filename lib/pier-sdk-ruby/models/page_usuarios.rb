@@ -93,7 +93,7 @@ module Pier
     def self.swagger_types
       {
         
-        :'content' => :'Array<Usuario>',
+        :'content' => :'Array<UsuarioResponse>',
         
         :'first' => :'BOOLEAN',
         

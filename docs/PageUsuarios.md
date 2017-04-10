@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**Array&lt;Usuario&gt;**](Usuario.md) |  | [optional] 
+**content** | [**Array&lt;UsuarioResponse&gt;**](UsuarioResponse.md) |  | [optional] 
 **first** | **BOOLEAN** |  | [optional] 
 **first_page** | **BOOLEAN** |  | [optional] 
 **has_content** | **BOOLEAN** |  | [optional] 

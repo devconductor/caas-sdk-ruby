@@ -109,7 +109,7 @@ describe 'LoteCartoesPrePagos' do
   end
 
 
-  describe 'test attribute "quantidade_cartoes"' do
+  describe 'test attribute "quantidade"' do
     it 'should work' do
        # assertion here
        # should be_a()

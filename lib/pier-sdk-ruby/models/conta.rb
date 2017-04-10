@@ -64,6 +64,9 @@ module Pier
     # N\u00C3\u00BAmero da conta corrente.
     attr_accessor :numero_conta_corrente
 
+    # Forma de envio da fatura.
+    attr_accessor :forma_envio_fatura
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -93,7 +96,9 @@ module Pier
         
         :'valor_renda' => :'valorRenda',
         
-        :'numero_conta_corrente' => :'numeroContaCorrente'
+        :'numero_conta_corrente' => :'numeroContaCorrente',
+        
+        :'forma_envio_fatura' => :'formaEnvioFatura'
         
       }
     end
@@ -126,7 +131,9 @@ module Pier
         
         :'valor_renda' => :'Float',
         
-        :'numero_conta_corrente' => :'String'
+        :'numero_conta_corrente' => :'String',
+        
+        :'forma_envio_fatura' => :'String'
         
       }
     end
@@ -257,6 +264,15 @@ module Pier
       end
 
       
+      if attributes[:'formaEnvioFatura']
+        
+        
+        self.forma_envio_fatura = attributes[:'formaEnvioFatura']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -324,8 +340,17 @@ module Pier
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -409,7 +434,8 @@ module Pier
           data_ultima_alteracao_vencimento == o.data_ultima_alteracao_vencimento &&
           numero_agencia == o.numero_agencia &&
           valor_renda == o.valor_renda &&
-          numero_conta_corrente == o.numero_conta_corrente
+          numero_conta_corrente == o.numero_conta_corrente &&
+          forma_envio_fatura == o.forma_envio_fatura
     end
 
     # @see the `==` method
@@ -421,7 +447,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_produto, id_origem_comercial, id_pessoa, id_status_conta, dia_vencimento, melhor_dia_compra, data_status_conta, data_cadastro, data_ultima_alteracao_vencimento, numero_agencia, valor_renda, numero_conta_corrente].hash
+      [id, id_produto, id_origem_comercial, id_pessoa, id_status_conta, dia_vencimento, melhor_dia_compra, data_status_conta, data_cadastro, data_ultima_alteracao_vencimento, numero_agencia, valor_renda, numero_conta_corrente, forma_envio_fatura].hash
     end
 
     # Builds the object from hash

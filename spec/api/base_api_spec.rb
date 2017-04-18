@@ -43,12 +43,12 @@ describe 'BaseApi' do
   end
 
 
-  # unit tests for clear_using_post
+  # unit tests for limpar_using_post
   # Limpar mapa de bases
   # 
   # @param [Hash] opts the optional parameters
   # @return [BodyAccessToken]
-  describe 'clear_using_post test' do
+  describe 'limpar_using_post test' do
     it "should work" do
       # assertion here
       # should be_a()

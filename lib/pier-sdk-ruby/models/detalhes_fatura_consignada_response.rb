@@ -23,22 +23,22 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto DetalheOportunidade
-  class DetalheOportunidadePersist
-    # Nome do conte\u00C3\u00BAdo
-    attr_accessor :nome_campo
+  # Objeto contendo os detalhes de uma fatura consignada
+  class DetalhesFaturaConsignadaResponse
+    # Apresenta os detalhes da fatura
+    attr_accessor :fatura_consignada_response
 
-    # Conte\u00C3\u00BAdo do detalhe
-    attr_accessor :conteudo
+    # Apresenta as transa\u00C3\u00A7\u00C3\u00B5es relacionadas a fatura.
+    attr_accessor :transacoes
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'nome_campo' => :'nomeCampo',
+        :'fatura_consignada_response' => :'faturaConsignadaResponse',
         
-        :'conteudo' => :'conteudo'
+        :'transacoes' => :'transacoes'
         
       }
     end
@@ -47,9 +47,9 @@ module Pier
     def self.swagger_types
       {
         
-        :'nome_campo' => :'String',
+        :'fatura_consignada_response' => :'FaturaConsignadaResponse',
         
-        :'conteudo' => :'String'
+        :'transacoes' => :'Array<TransacoesCorrentes>'
         
       }
     end
@@ -63,19 +63,21 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'nomeCampo']
+      if attributes[:'faturaConsignadaResponse']
         
         
-        self.nome_campo = attributes[:'nomeCampo']
+        self.fatura_consignada_response = attributes[:'faturaConsignadaResponse']
         
       
       end
 
       
-      if attributes[:'conteudo']
+      if attributes[:'transacoes']
         
+        if (value = attributes[:'transacoes']).is_a?(Array)
+          self.transacoes = value
+        end
         
-        self.conteudo = attributes[:'conteudo']
         
       
       end
@@ -97,19 +99,9 @@ module Pier
     def valid?
       
       
-      if @nome_campo.nil?
-        return false
-      end
-
       
       
       
-      
-      
-      if @conteudo.nil?
-        return false
-      end
-
       
       
       
@@ -132,8 +124,8 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          nome_campo == o.nome_campo &&
-          conteudo == o.conteudo
+          fatura_consignada_response == o.fatura_consignada_response &&
+          transacoes == o.transacoes
     end
 
     # @see the `==` method
@@ -145,7 +137,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [nome_campo, conteudo].hash
+      [fatura_consignada_response, transacoes].hash
     end
 
     # Builds the object from hash

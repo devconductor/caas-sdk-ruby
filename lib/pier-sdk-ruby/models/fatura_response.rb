@@ -31,41 +31,77 @@ module Pier
     # C\u00C3\u00B3digo identificador da conta.
     attr_accessor :id_conta
 
-    # C\u00C3\u00B3digo identificador do produto.
-    attr_accessor :id_produto
+    # C\u00C3\u00B3digo identificador da conta a qual a fatura se refere.
+    attr_accessor :flag_emite_fatura
 
     # Data de vencimento da fatura.
-    attr_accessor :data_vencimento
+    attr_accessor :data_vencimento_fatura
 
-    # Saldo da fatura anterior.
-    attr_accessor :saldo_fatura_anterior
+    # Valor para pagamento total da fatura.
+    attr_accessor :valor_total_fatura
 
-    # Saldo total da Multa lan\u00C3\u00A7ada na Fatura atual.
-    attr_accessor :saldo_multa
-
-    # Saldo total das compras lan\u00C3\u00A7adas na fatura atual.
-    attr_accessor :saldo_compras
-
-    # Saldo total dos pagamentos lan\u00C3\u00A7ados na fatura atual.
-    attr_accessor :saldo_pagamentos
-
-    # Saldo total das tarifas lan\u00C3\u00A7adas na fatura atual.
-    attr_accessor :saldo_tarifas
-
-    # Saldo total dos d\u00C3\u00A9bitos lan\u00C3\u00A7ados na fatura atual.
-    attr_accessor :saldo_debitos
-
-    # Saldo total dos cr\u00C3\u00A9dito lan\u00C3\u00A7ados na fatura atual.
-    attr_accessor :saldo_creditos
-
-    # Salto total devedor da fatura atual.
-    attr_accessor :saldo_atual_final
+    # Valor total da fatura anterior.
+    attr_accessor :valor_fatura_anterior
 
     # Valor m\u00C3\u00ADnimo para pagamento da fatura.
-    attr_accessor :valor_minimo_fatura
+    attr_accessor :valor_pagamento_minimo
 
-    # Quando ativa, indica que fora emitida uma fatura.
-    attr_accessor :flag_emite_fatura
+    # Valor total das compras nacionais lan\u00C3\u00A7adas na fatura.
+    attr_accessor :total_compras_nacionais
+
+    # Valor total das compras internacionais lan\u00C3\u00A7adas na fatura.
+    attr_accessor :total_compras_internacionas
+
+    # Valor total dos saques nacionais lan\u00C3\u00A7ados na fatura.
+    attr_accessor :total_saques_nacionais
+
+    # Valor total dos saques internacionais lan\u00C3\u00A7ados na fatura.
+    attr_accessor :total_saques_internacionais
+
+    # Valor total dos d\u00C3\u00A9bitos nacionais lan\u00C3\u00A7ados na fatura.
+    attr_accessor :total_debitos_nacionais
+
+    # Valor total dos d\u00C3\u00A9bitos recorrentes lan\u00C3\u00A7ados na fatura.
+    attr_accessor :total_debitos_recorrentes
+
+    # Valor total dos d\u00C3\u00A9bitos internacionais lan\u00C3\u00A7ados na fatura.
+    attr_accessor :total_debitos_internacionais
+
+    # Valor total dos d\u00C3\u00A9bitos diversos nacionais lan\u00C3\u00A7ados na fatura.
+    attr_accessor :total_debitos_diversos_nacionais
+
+    # Valor total dos d\u00C3\u00A9bitos diversos opcionais lan\u00C3\u00A7ados na fatura.
+    attr_accessor :total_debitos_opcionais
+
+    # Valor total dos pagamentos lan\u00C3\u00A7ados na fatura.
+    attr_accessor :total_pagamentos
+
+    # Valor total dos cr\u00C3\u00A9ditos nacionais lan\u00C3\u00A7ados na fatura.
+    attr_accessor :total_creditos_nacionais
+
+    # Valor total dos ajustes lan\u00C3\u00A7ados na fatura.
+    attr_accessor :total_ajustes
+
+    # Valor total das tarifas lan\u00C3\u00A7adas na fatura.
+    attr_accessor :total_tarifas
+
+    # Valor total da multa lan\u00C3\u00A7ada na fatura.
+    attr_accessor :total_multa
+
+    # Valor total dos juros de mora lan\u00C3\u00A7ados na fatura.
+    attr_accessor :total_juros
+
+    # Valor percentual da taxa de juros rotativos.
+    attr_accessor :taxa_rotativo
+
+    # Valor percentual da taxa de saque.
+    attr_accessor :taxa_saque
+
+    # Valor m\u00C3\u00A1ximo percentual da taxa de encargos para o pr\u00C3\u00B3ximo per\u00C3\u00ADodo.
+    attr_accessor :taxa_maxima_proximo_periodo
+
+    # Apresenta a soma de todos os seguros cobrados na fatura do cliente.
+    attr_accessor :total_servicos
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -76,29 +112,53 @@ module Pier
         
         :'id_conta' => :'idConta',
         
-        :'id_produto' => :'idProduto',
+        :'flag_emite_fatura' => :'flagEmiteFatura',
         
-        :'data_vencimento' => :'dataVencimento',
+        :'data_vencimento_fatura' => :'dataVencimentoFatura',
         
-        :'saldo_fatura_anterior' => :'saldoFaturaAnterior',
+        :'valor_total_fatura' => :'valorTotalFatura',
         
-        :'saldo_multa' => :'saldoMulta',
+        :'valor_fatura_anterior' => :'valorFaturaAnterior',
         
-        :'saldo_compras' => :'saldoCompras',
+        :'valor_pagamento_minimo' => :'valorPagamentoMinimo',
         
-        :'saldo_pagamentos' => :'saldoPagamentos',
+        :'total_compras_nacionais' => :'totalComprasNacionais',
         
-        :'saldo_tarifas' => :'saldoTarifas',
+        :'total_compras_internacionas' => :'totalComprasInternacionas',
         
-        :'saldo_debitos' => :'saldoDebitos',
+        :'total_saques_nacionais' => :'totalSaquesNacionais',
         
-        :'saldo_creditos' => :'saldoCreditos',
+        :'total_saques_internacionais' => :'totalSaquesInternacionais',
         
-        :'saldo_atual_final' => :'saldoAtualFinal',
+        :'total_debitos_nacionais' => :'totalDebitosNacionais',
         
-        :'valor_minimo_fatura' => :'valorMinimoFatura',
+        :'total_debitos_recorrentes' => :'totalDebitosRecorrentes',
         
-        :'flag_emite_fatura' => :'flagEmiteFatura'
+        :'total_debitos_internacionais' => :'totalDebitosInternacionais',
+        
+        :'total_debitos_diversos_nacionais' => :'totalDebitosDiversosNacionais',
+        
+        :'total_debitos_opcionais' => :'totalDebitosOpcionais',
+        
+        :'total_pagamentos' => :'totalPagamentos',
+        
+        :'total_creditos_nacionais' => :'totalCreditosNacionais',
+        
+        :'total_ajustes' => :'totalAjustes',
+        
+        :'total_tarifas' => :'totalTarifas',
+        
+        :'total_multa' => :'totalMulta',
+        
+        :'total_juros' => :'totalJuros',
+        
+        :'taxa_rotativo' => :'taxaRotativo',
+        
+        :'taxa_saque' => :'taxaSaque',
+        
+        :'taxa_maxima_proximo_periodo' => :'taxaMaximaProximoPeriodo',
+        
+        :'total_servicos' => :'totalServicos'
         
       }
     end
@@ -111,29 +171,53 @@ module Pier
         
         :'id_conta' => :'Integer',
         
-        :'id_produto' => :'Integer',
+        :'flag_emite_fatura' => :'Integer',
         
-        :'data_vencimento' => :'DateTime',
+        :'data_vencimento_fatura' => :'String',
         
-        :'saldo_fatura_anterior' => :'Float',
+        :'valor_total_fatura' => :'Float',
         
-        :'saldo_multa' => :'Float',
+        :'valor_fatura_anterior' => :'Float',
         
-        :'saldo_compras' => :'Float',
+        :'valor_pagamento_minimo' => :'Float',
         
-        :'saldo_pagamentos' => :'Float',
+        :'total_compras_nacionais' => :'Float',
         
-        :'saldo_tarifas' => :'Float',
+        :'total_compras_internacionas' => :'Float',
         
-        :'saldo_debitos' => :'Float',
+        :'total_saques_nacionais' => :'Float',
         
-        :'saldo_creditos' => :'Float',
+        :'total_saques_internacionais' => :'Float',
         
-        :'saldo_atual_final' => :'Float',
+        :'total_debitos_nacionais' => :'Float',
         
-        :'valor_minimo_fatura' => :'Float',
+        :'total_debitos_recorrentes' => :'Float',
         
-        :'flag_emite_fatura' => :'Integer'
+        :'total_debitos_internacionais' => :'Float',
+        
+        :'total_debitos_diversos_nacionais' => :'Float',
+        
+        :'total_debitos_opcionais' => :'Float',
+        
+        :'total_pagamentos' => :'Float',
+        
+        :'total_creditos_nacionais' => :'Float',
+        
+        :'total_ajustes' => :'Float',
+        
+        :'total_tarifas' => :'Float',
+        
+        :'total_multa' => :'Float',
+        
+        :'total_juros' => :'Float',
+        
+        :'taxa_rotativo' => :'Float',
+        
+        :'taxa_saque' => :'Float',
+        
+        :'taxa_maxima_proximo_periodo' => :'Float',
+        
+        :'total_servicos' => :'Float'
         
       }
     end
@@ -165,109 +249,217 @@ module Pier
       end
 
       
-      if attributes[:'idProduto']
-        
-        
-        self.id_produto = attributes[:'idProduto']
-        
-      
-      end
-
-      
-      if attributes[:'dataVencimento']
-        
-        
-        self.data_vencimento = attributes[:'dataVencimento']
-        
-      
-      end
-
-      
-      if attributes[:'saldoFaturaAnterior']
-        
-        
-        self.saldo_fatura_anterior = attributes[:'saldoFaturaAnterior']
-        
-      
-      end
-
-      
-      if attributes[:'saldoMulta']
-        
-        
-        self.saldo_multa = attributes[:'saldoMulta']
-        
-      
-      end
-
-      
-      if attributes[:'saldoCompras']
-        
-        
-        self.saldo_compras = attributes[:'saldoCompras']
-        
-      
-      end
-
-      
-      if attributes[:'saldoPagamentos']
-        
-        
-        self.saldo_pagamentos = attributes[:'saldoPagamentos']
-        
-      
-      end
-
-      
-      if attributes[:'saldoTarifas']
-        
-        
-        self.saldo_tarifas = attributes[:'saldoTarifas']
-        
-      
-      end
-
-      
-      if attributes[:'saldoDebitos']
-        
-        
-        self.saldo_debitos = attributes[:'saldoDebitos']
-        
-      
-      end
-
-      
-      if attributes[:'saldoCreditos']
-        
-        
-        self.saldo_creditos = attributes[:'saldoCreditos']
-        
-      
-      end
-
-      
-      if attributes[:'saldoAtualFinal']
-        
-        
-        self.saldo_atual_final = attributes[:'saldoAtualFinal']
-        
-      
-      end
-
-      
-      if attributes[:'valorMinimoFatura']
-        
-        
-        self.valor_minimo_fatura = attributes[:'valorMinimoFatura']
-        
-      
-      end
-
-      
       if attributes[:'flagEmiteFatura']
         
         
         self.flag_emite_fatura = attributes[:'flagEmiteFatura']
+        
+      
+      end
+
+      
+      if attributes[:'dataVencimentoFatura']
+        
+        
+        self.data_vencimento_fatura = attributes[:'dataVencimentoFatura']
+        
+      
+      end
+
+      
+      if attributes[:'valorTotalFatura']
+        
+        
+        self.valor_total_fatura = attributes[:'valorTotalFatura']
+        
+      
+      end
+
+      
+      if attributes[:'valorFaturaAnterior']
+        
+        
+        self.valor_fatura_anterior = attributes[:'valorFaturaAnterior']
+        
+      
+      end
+
+      
+      if attributes[:'valorPagamentoMinimo']
+        
+        
+        self.valor_pagamento_minimo = attributes[:'valorPagamentoMinimo']
+        
+      
+      end
+
+      
+      if attributes[:'totalComprasNacionais']
+        
+        
+        self.total_compras_nacionais = attributes[:'totalComprasNacionais']
+        
+      
+      end
+
+      
+      if attributes[:'totalComprasInternacionas']
+        
+        
+        self.total_compras_internacionas = attributes[:'totalComprasInternacionas']
+        
+      
+      end
+
+      
+      if attributes[:'totalSaquesNacionais']
+        
+        
+        self.total_saques_nacionais = attributes[:'totalSaquesNacionais']
+        
+      
+      end
+
+      
+      if attributes[:'totalSaquesInternacionais']
+        
+        
+        self.total_saques_internacionais = attributes[:'totalSaquesInternacionais']
+        
+      
+      end
+
+      
+      if attributes[:'totalDebitosNacionais']
+        
+        
+        self.total_debitos_nacionais = attributes[:'totalDebitosNacionais']
+        
+      
+      end
+
+      
+      if attributes[:'totalDebitosRecorrentes']
+        
+        
+        self.total_debitos_recorrentes = attributes[:'totalDebitosRecorrentes']
+        
+      
+      end
+
+      
+      if attributes[:'totalDebitosInternacionais']
+        
+        
+        self.total_debitos_internacionais = attributes[:'totalDebitosInternacionais']
+        
+      
+      end
+
+      
+      if attributes[:'totalDebitosDiversosNacionais']
+        
+        
+        self.total_debitos_diversos_nacionais = attributes[:'totalDebitosDiversosNacionais']
+        
+      
+      end
+
+      
+      if attributes[:'totalDebitosOpcionais']
+        
+        
+        self.total_debitos_opcionais = attributes[:'totalDebitosOpcionais']
+        
+      
+      end
+
+      
+      if attributes[:'totalPagamentos']
+        
+        
+        self.total_pagamentos = attributes[:'totalPagamentos']
+        
+      
+      end
+
+      
+      if attributes[:'totalCreditosNacionais']
+        
+        
+        self.total_creditos_nacionais = attributes[:'totalCreditosNacionais']
+        
+      
+      end
+
+      
+      if attributes[:'totalAjustes']
+        
+        
+        self.total_ajustes = attributes[:'totalAjustes']
+        
+      
+      end
+
+      
+      if attributes[:'totalTarifas']
+        
+        
+        self.total_tarifas = attributes[:'totalTarifas']
+        
+      
+      end
+
+      
+      if attributes[:'totalMulta']
+        
+        
+        self.total_multa = attributes[:'totalMulta']
+        
+      
+      end
+
+      
+      if attributes[:'totalJuros']
+        
+        
+        self.total_juros = attributes[:'totalJuros']
+        
+      
+      end
+
+      
+      if attributes[:'taxaRotativo']
+        
+        
+        self.taxa_rotativo = attributes[:'taxaRotativo']
+        
+      
+      end
+
+      
+      if attributes[:'taxaSaque']
+        
+        
+        self.taxa_saque = attributes[:'taxaSaque']
+        
+      
+      end
+
+      
+      if attributes[:'taxaMaximaProximoPeriodo']
+        
+        
+        self.taxa_maxima_proximo_periodo = attributes[:'taxaMaximaProximoPeriodo']
+        
+      
+      end
+
+      
+      if attributes[:'totalServicos']
+        
+        
+        self.total_servicos = attributes[:'totalServicos']
         
       
       end
@@ -344,8 +536,121 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if @total_servicos.nil?
+        return false
+      end
+
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -424,18 +729,30 @@ module Pier
       self.class == o.class &&
           id == o.id &&
           id_conta == o.id_conta &&
-          id_produto == o.id_produto &&
-          data_vencimento == o.data_vencimento &&
-          saldo_fatura_anterior == o.saldo_fatura_anterior &&
-          saldo_multa == o.saldo_multa &&
-          saldo_compras == o.saldo_compras &&
-          saldo_pagamentos == o.saldo_pagamentos &&
-          saldo_tarifas == o.saldo_tarifas &&
-          saldo_debitos == o.saldo_debitos &&
-          saldo_creditos == o.saldo_creditos &&
-          saldo_atual_final == o.saldo_atual_final &&
-          valor_minimo_fatura == o.valor_minimo_fatura &&
-          flag_emite_fatura == o.flag_emite_fatura
+          flag_emite_fatura == o.flag_emite_fatura &&
+          data_vencimento_fatura == o.data_vencimento_fatura &&
+          valor_total_fatura == o.valor_total_fatura &&
+          valor_fatura_anterior == o.valor_fatura_anterior &&
+          valor_pagamento_minimo == o.valor_pagamento_minimo &&
+          total_compras_nacionais == o.total_compras_nacionais &&
+          total_compras_internacionas == o.total_compras_internacionas &&
+          total_saques_nacionais == o.total_saques_nacionais &&
+          total_saques_internacionais == o.total_saques_internacionais &&
+          total_debitos_nacionais == o.total_debitos_nacionais &&
+          total_debitos_recorrentes == o.total_debitos_recorrentes &&
+          total_debitos_internacionais == o.total_debitos_internacionais &&
+          total_debitos_diversos_nacionais == o.total_debitos_diversos_nacionais &&
+          total_debitos_opcionais == o.total_debitos_opcionais &&
+          total_pagamentos == o.total_pagamentos &&
+          total_creditos_nacionais == o.total_creditos_nacionais &&
+          total_ajustes == o.total_ajustes &&
+          total_tarifas == o.total_tarifas &&
+          total_multa == o.total_multa &&
+          total_juros == o.total_juros &&
+          taxa_rotativo == o.taxa_rotativo &&
+          taxa_saque == o.taxa_saque &&
+          taxa_maxima_proximo_periodo == o.taxa_maxima_proximo_periodo &&
+          total_servicos == o.total_servicos
     end
 
     # @see the `==` method
@@ -447,7 +764,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_conta, id_produto, data_vencimento, saldo_fatura_anterior, saldo_multa, saldo_compras, saldo_pagamentos, saldo_tarifas, saldo_debitos, saldo_creditos, saldo_atual_final, valor_minimo_fatura, flag_emite_fatura].hash
+      [id, id_conta, flag_emite_fatura, data_vencimento_fatura, valor_total_fatura, valor_fatura_anterior, valor_pagamento_minimo, total_compras_nacionais, total_compras_internacionas, total_saques_nacionais, total_saques_internacionais, total_debitos_nacionais, total_debitos_recorrentes, total_debitos_internacionais, total_debitos_diversos_nacionais, total_debitos_opcionais, total_pagamentos, total_creditos_nacionais, total_ajustes, total_tarifas, total_multa, total_juros, taxa_rotativo, taxa_saque, taxa_maxima_proximo_periodo, total_servicos].hash
     end
 
     # Builds the object from hash

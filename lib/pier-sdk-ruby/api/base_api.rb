@@ -36,8 +36,8 @@ module Pier
     # 
     # @param [Hash] opts the optional parameters
     # @return [BodyAccessToken]
-    def clear_using_post(opts = {})
-      data, _status_code, _headers = clear_using_post_with_http_info(opts)
+    def limpar_using_post(opts = {})
+      data, _status_code, _headers = limpar_using_post_with_http_info(opts)
       return data
     end
 
@@ -45,9 +45,9 @@ module Pier
     # 
     # @param [Hash] opts the optional parameters
     # @return [Array<(BodyAccessToken, Fixnum, Hash)>] BodyAccessToken data, response status code and response headers
-    def clear_using_post_with_http_info(opts = {})
+    def limpar_using_post_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: BaseApi.clear_using_post ..."
+        @api_client.config.logger.debug "Calling API: BaseApi.limpar_using_post ..."
       end
       
       # resource path
@@ -82,7 +82,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'BodyAccessToken')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: BaseApi#clear_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: BaseApi#limpar_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

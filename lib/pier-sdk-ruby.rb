@@ -71,6 +71,9 @@ require 'pier-sdk-ruby/models/detalhe_oportunidade_response'
 require 'pier-sdk-ruby/models/detalhe_oportunidade_update'
 
 
+require 'pier-sdk-ruby/models/detalhes_fatura_consignada_response'
+
+
 require 'pier-sdk-ruby/models/detalhes_fatura_response'
 
 

@@ -4,13 +4,13 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**clear_using_post**](BaseApi.md#clear_using_post) | **POST** /api/bases/limpar | Limpar mapa de bases
+[**limpar_using_post**](BaseApi.md#limpar_using_post) | **POST** /api/bases/limpar | Limpar mapa de bases
 
 
 
 
-# **clear_using_post**
-> BodyAccessToken clear_using_post
+# **limpar_using_post**
+> BodyAccessToken limpar_using_post
 
 Limpar mapa de bases
 
@@ -32,10 +32,10 @@ api_instance = Pier::BaseApi.new
 
 begin
   #Limpar mapa de bases
-  result = api_instance.clear_using_post
+  result = api_instance.limpar_using_post
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling BaseApi->clear_using_post: #{e}"
+  puts "Exception when calling BaseApi->limpar_using_post: #{e}"
 end
 ```
 

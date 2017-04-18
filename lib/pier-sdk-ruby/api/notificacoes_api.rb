@@ -196,8 +196,8 @@ module Pier
       
       
       
-      if opts[:'status'] && !['PENDENTE', 'ENCAMINHADO', 'ENVIADO', 'RESPONDIDO', 'ERRO', 'ERRO_RESPOSTA'].include?(opts[:'status'])
-        fail ArgumentError, 'invalid value for "status", must be one of PENDENTE, ENCAMINHADO, ENVIADO, RESPONDIDO, ERRO, ERRO_RESPOSTA'
+      if opts[:'status'] && !['PENDENTE', 'ENCAMINHADO', 'ENVIADO', 'RESPONDIDO', 'ERRO', 'ERRO_RESPOSTA', 'SUCESSO_RESPOSTA'].include?(opts[:'status'])
+        fail ArgumentError, 'invalid value for "status", must be one of PENDENTE, ENCAMINHADO, ENVIADO, RESPONDIDO, ERRO, ERRO_RESPOSTA, SUCESSO_RESPOSTA'
       end
       
       
@@ -327,8 +327,8 @@ module Pier
       
       
       
-      if opts[:'status'] && !['PENDENTE', 'ENCAMINHADO', 'ENVIADO', 'RESPONDIDO', 'ERRO', 'ERRO_RESPOSTA'].include?(opts[:'status'])
-        fail ArgumentError, 'invalid value for "status", must be one of PENDENTE, ENCAMINHADO, ENVIADO, RESPONDIDO, ERRO, ERRO_RESPOSTA'
+      if opts[:'status'] && !['PENDENTE', 'ENCAMINHADO', 'ENVIADO', 'RESPONDIDO', 'ERRO', 'ERRO_RESPOSTA', 'SUCESSO_RESPOSTA'].include?(opts[:'status'])
+        fail ArgumentError, 'invalid value for "status", must be one of PENDENTE, ENCAMINHADO, ENVIADO, RESPONDIDO, ERRO, ERRO_RESPOSTA, SUCESSO_RESPOSTA'
       end
       
       

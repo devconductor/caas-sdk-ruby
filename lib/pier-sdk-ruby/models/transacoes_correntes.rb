@@ -70,11 +70,11 @@ module Pier
     # Valor da Transa\u00C3\u00A7\u00C3\u00A3o em Real (BRL).
     attr_accessor :valor_brl
 
-    # Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).
-    attr_accessor :cotacao_usd
-
     # Valor da Transa\u00C3\u00A7\u00C3\u00A3o em D\u00C3\u00B3lar Americano (USD).
     attr_accessor :valor_usd
+
+    # Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).
+    attr_accessor :cotacao_usd
 
     # Data de Fechamento da Cota\u00C3\u00A7\u00C3\u00A3o do D\u00C3\u00B3lar Americano (USD).
     attr_accessor :data_cotacao_usd
@@ -162,9 +162,9 @@ module Pier
         
         :'valor_brl' => :'valorBRL',
         
-        :'cotacao_usd' => :'cotacaoUSD',
-        
         :'valor_usd' => :'valorUSD',
+        
+        :'cotacao_usd' => :'cotacaoUSD',
         
         :'data_cotacao_usd' => :'dataCotacaoUSD',
         
@@ -223,11 +223,11 @@ module Pier
         
         :'nome_portador' => :'String',
         
-        :'data_transacao_utc' => :'String',
+        :'data_transacao_utc' => :'DateTime',
         
         :'data_faturamento' => :'DateTime',
         
-        :'data_vencimento' => :'String',
+        :'data_vencimento' => :'Date',
         
         :'modo_entrada_transacao' => :'String',
         
@@ -237,9 +237,9 @@ module Pier
         
         :'valor_brl' => :'Float',
         
-        :'cotacao_usd' => :'Float',
-        
         :'valor_usd' => :'Float',
+        
+        :'cotacao_usd' => :'Float',
         
         :'data_cotacao_usd' => :'DateTime',
         
@@ -422,19 +422,19 @@ module Pier
       end
 
       
-      if attributes[:'cotacaoUSD']
+      if attributes[:'valorUSD']
         
         
-        self.cotacao_usd = attributes[:'cotacaoUSD']
+        self.valor_usd = attributes[:'valorUSD']
         
       
       end
 
       
-      if attributes[:'valorUSD']
+      if attributes[:'cotacaoUSD']
         
         
-        self.valor_usd = attributes[:'valorUSD']
+        self.cotacao_usd = attributes[:'cotacaoUSD']
         
       
       end
@@ -937,8 +937,8 @@ module Pier
           valor_taxa_embarque == o.valor_taxa_embarque &&
           valor_entrada == o.valor_entrada &&
           valor_brl == o.valor_brl &&
-          cotacao_usd == o.cotacao_usd &&
           valor_usd == o.valor_usd &&
+          cotacao_usd == o.cotacao_usd &&
           data_cotacao_usd == o.data_cotacao_usd &&
           codigo_moeda_origem == o.codigo_moeda_origem &&
           codigo_moeda_destino == o.codigo_moeda_destino &&
@@ -967,7 +967,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, tipo_transacao, status_transacao, id_evento, tipo_evento, id_conta, cartao_mascarado, nome_portador, data_transacao_utc, data_faturamento, data_vencimento, modo_entrada_transacao, valor_taxa_embarque, valor_entrada, valor_brl, cotacao_usd, valor_usd, data_cotacao_usd, codigo_moeda_origem, codigo_moeda_destino, codigo_autorizacao, codigo_referencia, codigo_terminal, codigo_mcc, id_estabelecimento, nome_estabelecimento, localidade_estabelecimento, plano_parcelamento, numero_parcela, detalhes_transacao, flag_credito, flag_faturado, flag_estorno, id_transacao_estorno].hash
+      [id, tipo_transacao, status_transacao, id_evento, tipo_evento, id_conta, cartao_mascarado, nome_portador, data_transacao_utc, data_faturamento, data_vencimento, modo_entrada_transacao, valor_taxa_embarque, valor_entrada, valor_brl, valor_usd, cotacao_usd, data_cotacao_usd, codigo_moeda_origem, codigo_moeda_destino, codigo_autorizacao, codigo_referencia, codigo_terminal, codigo_mcc, id_estabelecimento, nome_estabelecimento, localidade_estabelecimento, plano_parcelamento, numero_parcela, detalhes_transacao, flag_credito, flag_faturado, flag_estorno, id_transacao_estorno].hash
     end
 
     # Builds the object from hash

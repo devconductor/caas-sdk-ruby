@@ -208,7 +208,7 @@ describe 'TransacoesCorrentes' do
   end
 
 
-  describe 'test attribute "cotacao_usd"' do
+  describe 'test attribute "valor_usd"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -219,7 +219,7 @@ describe 'TransacoesCorrentes' do
   end
 
 
-  describe 'test attribute "valor_usd"' do
+  describe 'test attribute "cotacao_usd"' do
     it 'should work' do
        # assertion here
        # should be_a()

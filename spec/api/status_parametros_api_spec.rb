@@ -157,7 +157,7 @@ describe 'StatusParametrosApi' do
   end
 
 
-  # unit tests for listar_using_get12
+  # unit tests for listar_using_get15
   # Lista os Status Contas cadastrados para o Emissor
   # Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -169,7 +169,7 @@ describe 'StatusParametrosApi' do
   # @option opts [String] :mensagem_consulta_negada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
   # @option opts [Integer] :flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
   # @return [PageStatusContas]
-  describe 'listar_using_get12 test' do
+  describe 'listar_using_get15 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -180,7 +180,7 @@ describe 'StatusParametrosApi' do
   end
 
 
-  # unit tests for listar_using_get13
+  # unit tests for listar_using_get16
   # Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
   # Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
   # @param [Hash] opts the optional parameters
@@ -189,7 +189,7 @@ describe 'StatusParametrosApi' do
   # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
   # @option opts [String] :nome Nome do status impress\u00C3\u00A3o
   # @return [PageStatusImpressao]
-  describe 'listar_using_get13 test' do
+  describe 'listar_using_get16 test' do
     it "should work" do
       # assertion here
       # should be_a()

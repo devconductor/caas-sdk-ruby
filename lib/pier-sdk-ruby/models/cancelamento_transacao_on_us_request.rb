@@ -23,82 +23,72 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto conta
-  class Conta
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
-    attr_accessor :id
+  # Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Cancelamento de transa\u00C3\u00A7\u00C3\u00A3o
+  class CancelamentoTransacaoOnUsRequest
+    # N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
+    attr_accessor :nsu_origem
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
-    attr_accessor :id_produto
+    # C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
+    attr_accessor :codigo_processamento
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
-    attr_accessor :id_origem_comercial
+    # Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.
+    attr_accessor :valor_transacao
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
-    attr_accessor :id_pessoa
+    # N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o.
+    attr_accessor :numero_real_cartao
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
-    attr_accessor :id_status_conta
+    # Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM
+    attr_accessor :data_validade_cartao
 
-    # Apresenta o dia de vencimento.
-    attr_accessor :dia_vencimento
+    # N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).
+    attr_accessor :numero_estabelecimento
 
-    # Apresenta o melhor dia de compra.
-    attr_accessor :melhor_dia_compra
+    # Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+    attr_accessor :data_hora_terminal
 
-    # Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
-    attr_accessor :data_status_conta
+    # Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+    attr_accessor :terminal_requisitante
 
-    # Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-    attr_accessor :data_cadastro
+    # N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema a ser cancelada.
+    attr_accessor :nsu_origem_transacao_cancelada
 
-    # Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
-    attr_accessor :data_ultima_alteracao_vencimento
+    # Apresenta a data e hora local da transa\u00C3\u00A7\u00C3\u00A3o a ser cancelada yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+    attr_accessor :data_hora_transacao_cancelada
 
-    # N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
-    attr_accessor :numero_agencia
+    # C\u00C3\u00B3digo de Processamento da transa\u00C3\u00A7\u00C3\u00A3o cancelada.
+    attr_accessor :codigo_transacao_cancelada
 
-    # Apresenta o valor da renda comprovada
-    attr_accessor :valor_renda
-
-    # N\u00C3\u00BAmero da conta corrente.
-    attr_accessor :numero_conta_corrente
-
-    # Forma de envio da fatura.
-    attr_accessor :forma_envio_fatura
+    # N\u00C3\u00BAmero Sequencial \u00C3\u009Anico do HOST que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que autorizou.
+    attr_accessor :nsu_autorizacao_transacao_cancelada
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id' => :'id',
+        :'nsu_origem' => :'nsuOrigem',
         
-        :'id_produto' => :'idProduto',
+        :'codigo_processamento' => :'codigoProcessamento',
         
-        :'id_origem_comercial' => :'idOrigemComercial',
+        :'valor_transacao' => :'valorTransacao',
         
-        :'id_pessoa' => :'idPessoa',
+        :'numero_real_cartao' => :'numeroRealCartao',
         
-        :'id_status_conta' => :'idStatusConta',
+        :'data_validade_cartao' => :'dataValidadeCartao',
         
-        :'dia_vencimento' => :'diaVencimento',
+        :'numero_estabelecimento' => :'numeroEstabelecimento',
         
-        :'melhor_dia_compra' => :'melhorDiaCompra',
+        :'data_hora_terminal' => :'dataHoraTerminal',
         
-        :'data_status_conta' => :'dataStatusConta',
+        :'terminal_requisitante' => :'terminalRequisitante',
         
-        :'data_cadastro' => :'dataCadastro',
+        :'nsu_origem_transacao_cancelada' => :'nsuOrigemTransacaoCancelada',
         
-        :'data_ultima_alteracao_vencimento' => :'dataUltimaAlteracaoVencimento',
+        :'data_hora_transacao_cancelada' => :'dataHoraTransacaoCancelada',
         
-        :'numero_agencia' => :'numeroAgencia',
+        :'codigo_transacao_cancelada' => :'codigoTransacaoCancelada',
         
-        :'valor_renda' => :'valorRenda',
-        
-        :'numero_conta_corrente' => :'numeroContaCorrente',
-        
-        :'forma_envio_fatura' => :'formaEnvioFatura'
+        :'nsu_autorizacao_transacao_cancelada' => :'nsuAutorizacaoTransacaoCancelada'
         
       }
     end
@@ -107,33 +97,29 @@ module Pier
     def self.swagger_types
       {
         
-        :'id' => :'Integer',
+        :'nsu_origem' => :'String',
         
-        :'id_produto' => :'Integer',
+        :'codigo_processamento' => :'String',
         
-        :'id_origem_comercial' => :'Integer',
+        :'valor_transacao' => :'Float',
         
-        :'id_pessoa' => :'Integer',
+        :'numero_real_cartao' => :'String',
         
-        :'id_status_conta' => :'Integer',
+        :'data_validade_cartao' => :'String',
         
-        :'dia_vencimento' => :'Integer',
+        :'numero_estabelecimento' => :'Integer',
         
-        :'melhor_dia_compra' => :'Integer',
+        :'data_hora_terminal' => :'DateTime',
         
-        :'data_status_conta' => :'DateTime',
+        :'terminal_requisitante' => :'String',
         
-        :'data_cadastro' => :'DateTime',
+        :'nsu_origem_transacao_cancelada' => :'String',
         
-        :'data_ultima_alteracao_vencimento' => :'DateTime',
+        :'data_hora_transacao_cancelada' => :'DateTime',
         
-        :'numero_agencia' => :'Integer',
+        :'codigo_transacao_cancelada' => :'String',
         
-        :'valor_renda' => :'Float',
-        
-        :'numero_conta_corrente' => :'String',
-        
-        :'forma_envio_fatura' => :'String'
+        :'nsu_autorizacao_transacao_cancelada' => :'String'
         
       }
     end
@@ -147,127 +133,109 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'id']
+      if attributes[:'nsuOrigem']
         
         
-        self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes[:'idProduto']
-        
-        
-        self.id_produto = attributes[:'idProduto']
+        self.nsu_origem = attributes[:'nsuOrigem']
         
       
       end
 
       
-      if attributes[:'idOrigemComercial']
+      if attributes[:'codigoProcessamento']
         
         
-        self.id_origem_comercial = attributes[:'idOrigemComercial']
-        
-      
-      end
-
-      
-      if attributes[:'idPessoa']
-        
-        
-        self.id_pessoa = attributes[:'idPessoa']
+        self.codigo_processamento = attributes[:'codigoProcessamento']
         
       
       end
 
       
-      if attributes[:'idStatusConta']
+      if attributes[:'valorTransacao']
         
         
-        self.id_status_conta = attributes[:'idStatusConta']
-        
-      
-      end
-
-      
-      if attributes[:'diaVencimento']
-        
-        
-        self.dia_vencimento = attributes[:'diaVencimento']
+        self.valor_transacao = attributes[:'valorTransacao']
         
       
       end
 
       
-      if attributes[:'melhorDiaCompra']
+      if attributes[:'numeroRealCartao']
         
         
-        self.melhor_dia_compra = attributes[:'melhorDiaCompra']
-        
-      
-      end
-
-      
-      if attributes[:'dataStatusConta']
-        
-        
-        self.data_status_conta = attributes[:'dataStatusConta']
+        self.numero_real_cartao = attributes[:'numeroRealCartao']
         
       
       end
 
       
-      if attributes[:'dataCadastro']
+      if attributes[:'dataValidadeCartao']
         
         
-        self.data_cadastro = attributes[:'dataCadastro']
-        
-      
-      end
-
-      
-      if attributes[:'dataUltimaAlteracaoVencimento']
-        
-        
-        self.data_ultima_alteracao_vencimento = attributes[:'dataUltimaAlteracaoVencimento']
+        self.data_validade_cartao = attributes[:'dataValidadeCartao']
         
       
       end
 
       
-      if attributes[:'numeroAgencia']
+      if attributes[:'numeroEstabelecimento']
         
         
-        self.numero_agencia = attributes[:'numeroAgencia']
-        
-      
-      end
-
-      
-      if attributes[:'valorRenda']
-        
-        
-        self.valor_renda = attributes[:'valorRenda']
+        self.numero_estabelecimento = attributes[:'numeroEstabelecimento']
         
       
       end
 
       
-      if attributes[:'numeroContaCorrente']
+      if attributes[:'dataHoraTerminal']
         
         
-        self.numero_conta_corrente = attributes[:'numeroContaCorrente']
+        self.data_hora_terminal = attributes[:'dataHoraTerminal']
         
       
       end
 
       
-      if attributes[:'formaEnvioFatura']
+      if attributes[:'terminalRequisitante']
         
         
-        self.forma_envio_fatura = attributes[:'formaEnvioFatura']
+        self.terminal_requisitante = attributes[:'terminalRequisitante']
+        
+      
+      end
+
+      
+      if attributes[:'nsuOrigemTransacaoCancelada']
+        
+        
+        self.nsu_origem_transacao_cancelada = attributes[:'nsuOrigemTransacaoCancelada']
+        
+      
+      end
+
+      
+      if attributes[:'dataHoraTransacaoCancelada']
+        
+        
+        self.data_hora_transacao_cancelada = attributes[:'dataHoraTransacaoCancelada']
+        
+      
+      end
+
+      
+      if attributes[:'codigoTransacaoCancelada']
+        
+        
+        self.codigo_transacao_cancelada = attributes[:'codigoTransacaoCancelada']
+        
+      
+      end
+
+      
+      if attributes[:'nsuAutorizacaoTransacaoCancelada']
+        
+        
+        self.nsu_autorizacao_transacao_cancelada = attributes[:'nsuAutorizacaoTransacaoCancelada']
         
       
       end
@@ -336,26 +304,8 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -422,20 +372,18 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          id_produto == o.id_produto &&
-          id_origem_comercial == o.id_origem_comercial &&
-          id_pessoa == o.id_pessoa &&
-          id_status_conta == o.id_status_conta &&
-          dia_vencimento == o.dia_vencimento &&
-          melhor_dia_compra == o.melhor_dia_compra &&
-          data_status_conta == o.data_status_conta &&
-          data_cadastro == o.data_cadastro &&
-          data_ultima_alteracao_vencimento == o.data_ultima_alteracao_vencimento &&
-          numero_agencia == o.numero_agencia &&
-          valor_renda == o.valor_renda &&
-          numero_conta_corrente == o.numero_conta_corrente &&
-          forma_envio_fatura == o.forma_envio_fatura
+          nsu_origem == o.nsu_origem &&
+          codigo_processamento == o.codigo_processamento &&
+          valor_transacao == o.valor_transacao &&
+          numero_real_cartao == o.numero_real_cartao &&
+          data_validade_cartao == o.data_validade_cartao &&
+          numero_estabelecimento == o.numero_estabelecimento &&
+          data_hora_terminal == o.data_hora_terminal &&
+          terminal_requisitante == o.terminal_requisitante &&
+          nsu_origem_transacao_cancelada == o.nsu_origem_transacao_cancelada &&
+          data_hora_transacao_cancelada == o.data_hora_transacao_cancelada &&
+          codigo_transacao_cancelada == o.codigo_transacao_cancelada &&
+          nsu_autorizacao_transacao_cancelada == o.nsu_autorizacao_transacao_cancelada
     end
 
     # @see the `==` method
@@ -447,7 +395,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_produto, id_origem_comercial, id_pessoa, id_status_conta, dia_vencimento, melhor_dia_compra, data_status_conta, data_cadastro, data_ultima_alteracao_vencimento, numero_agencia, valor_renda, numero_conta_corrente, forma_envio_fatura].hash
+      [nsu_origem, codigo_processamento, valor_transacao, numero_real_cartao, data_validade_cartao, numero_estabelecimento, data_hora_terminal, terminal_requisitante, nsu_origem_transacao_cancelada, data_hora_transacao_cancelada, codigo_transacao_cancelada, nsu_autorizacao_transacao_cancelada].hash
     end
 
     # Builds the object from hash

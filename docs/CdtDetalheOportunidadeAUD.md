@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **rev_date** | **DateTime** |  | [optional] 
 **rev_oportunidade** | **Integer** |  | [optional] 
 **rev_type** | **Integer** |  | [optional] 
+**rev_user** | **String** |  | [optional] 
 
 
 

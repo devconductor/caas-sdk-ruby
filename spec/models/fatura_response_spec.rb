@@ -329,5 +329,27 @@ describe 'FaturaResponse' do
   end
 
 
+  describe 'test attribute "total_parcelado_nacionais"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "total_parcelado_internacionais"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
 end
 

@@ -1,17 +1,17 @@
 # Pier::RiscoFraudeApi
 
-All URIs are relative to *https://localhost/*
+All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultar_using_get**](RiscoFraudeApi.md#consultar_using_get) | **GET** /api/atendimento-clientes/{id} | Apresenta os dados de um determinado Atendimento
 [**consultar_using_get10**](RiscoFraudeApi.md#consultar_using_get10) | **GET** /api/riscos-fraudes/{id} | Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
 [**informar_risco_fraude_using_post**](RiscoFraudeApi.md#informar_risco_fraude_using_post) | **POST** /api/riscos-fraudes | Receber Risco Fraude
-[**listar_using_get**](RiscoFraudeApi.md#listar_using_get) | **GET** /api/atendimento-clientes | Lista todos os atendimentos
-[**listar_using_get11**](RiscoFraudeApi.md#listar_using_get11) | **GET** /api/riscos-fraudes | Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
-[**negar_using_get**](RiscoFraudeApi.md#negar_using_get) | **GET** /api/riscos-fraudes/{id}/negar | Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
-[**reconhecer_using_get**](RiscoFraudeApi.md#reconhecer_using_get) | **GET** /api/riscos-fraudes/{id}/reconhecer | Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
-[**salvar_using_post**](RiscoFraudeApi.md#salvar_using_post) | **POST** /api/atendimento-clientes | Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
+[**listar_using_get1**](RiscoFraudeApi.md#listar_using_get1) | **GET** /api/atendimento-clientes | Lista todos os atendimentos
+[**listar_using_get14**](RiscoFraudeApi.md#listar_using_get14) | **GET** /api/riscos-fraudes | Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
+[**negar_using_post**](RiscoFraudeApi.md#negar_using_post) | **POST** /api/riscos-fraudes/{id}/negar | Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
+[**reconhecer_using_post**](RiscoFraudeApi.md#reconhecer_using_post) | **POST** /api/riscos-fraudes/{id}/reconhecer | Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
+[**salvar_using_post1**](RiscoFraudeApi.md#salvar_using_post1) | **POST** /api/atendimento-clientes | Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
 
 
 
@@ -27,14 +27,6 @@ Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determin
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::RiscoFraudeApi.new
@@ -64,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -85,14 +77,6 @@ Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada com ris
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::RiscoFraudeApi.new
@@ -122,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -143,14 +127,6 @@ Receber risco fraude
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::RiscoFraudeApi.new
@@ -180,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -190,8 +166,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get**
-> PageAtendimentoClientes listar_using_get(opts)
+# **listar_using_get1**
+> PageAtendimentoClientes listar_using_get1(opts)
 
 Lista todos os atendimentos
 
@@ -201,14 +177,6 @@ Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimen
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::RiscoFraudeApi.new
@@ -224,10 +192,10 @@ opts = {
 
 begin
   #Lista todos os atendimentos
-  result = api_instance.listar_using_get(opts)
+  result = api_instance.listar_using_get1(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling RiscoFraudeApi->listar_using_get: #{e}"
+  puts "Exception when calling RiscoFraudeApi->listar_using_get1: #{e}"
 end
 ```
 
@@ -249,7 +217,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -259,8 +227,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get11**
-> RiscoFraudeResponsePage listar_using_get11(id_conta, confirmacao_fraude, opts)
+# **listar_using_get14**
+> RiscoFraudeResponsePage listar_using_get14(id_conta, confirmacao_fraude, opts)
 
 Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
 
@@ -270,14 +238,6 @@ Este recurso permite que sejam listados os riscos de fraudes existentes
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::RiscoFraudeApi.new
@@ -293,10 +253,10 @@ opts = {
 
 begin
   #Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
-  result = api_instance.listar_using_get11(id_conta, confirmacao_fraude, opts)
+  result = api_instance.listar_using_get14(id_conta, confirmacao_fraude, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling RiscoFraudeApi->listar_using_get11: #{e}"
+  puts "Exception when calling RiscoFraudeApi->listar_using_get14: #{e}"
 end
 ```
 
@@ -316,7 +276,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -326,8 +286,8 @@ Name | Type | Description  | Notes
 
 
 
-# **negar_using_get**
-> RiscoFraudeDetalhadoResponse negar_using_get(id)
+# **negar_using_post**
+> RiscoFraudeDetalhadoResponse negar_using_post(id)
 
 Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
 
@@ -338,14 +298,6 @@ Nega a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o class
 # load the gem
 require 'pier-sdk-ruby'
 
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
-
 
 api_instance = Pier::RiscoFraudeApi.new
 
@@ -354,10 +306,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
-  result = api_instance.negar_using_get(id)
+  result = api_instance.negar_using_post(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling RiscoFraudeApi->negar_using_get: #{e}"
+  puts "Exception when calling RiscoFraudeApi->negar_using_post: #{e}"
 end
 ```
 
@@ -374,7 +326,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -384,8 +336,8 @@ Name | Type | Description  | Notes
 
 
 
-# **reconhecer_using_get**
-> RiscoFraudeDetalhadoResponse reconhecer_using_get(id)
+# **reconhecer_using_post**
+> RiscoFraudeDetalhadoResponse reconhecer_using_post(id)
 
 Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
 
@@ -396,14 +348,6 @@ Confirma a autenticidade da transa\u00C3\u00A7\u00C3\u00A3o classificada com ris
 # load the gem
 require 'pier-sdk-ruby'
 
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
-
 
 api_instance = Pier::RiscoFraudeApi.new
 
@@ -412,10 +356,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
-  result = api_instance.reconhecer_using_get(id)
+  result = api_instance.reconhecer_using_post(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling RiscoFraudeApi->reconhecer_using_get: #{e}"
+  puts "Exception when calling RiscoFraudeApi->reconhecer_using_post: #{e}"
 end
 ```
 
@@ -432,7 +376,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -442,8 +386,8 @@ Name | Type | Description  | Notes
 
 
 
-# **salvar_using_post**
-> AtendimentoCliente salvar_using_post(opts)
+# **salvar_using_post1**
+> AtendimentoCliente salvar_using_post1(opts)
 
 Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
 
@@ -451,14 +395,6 @@ Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::RiscoFraudeApi.new
@@ -477,10 +413,10 @@ opts = {
 
 begin
   #Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
-  result = api_instance.salvar_using_post(opts)
+  result = api_instance.salvar_using_post1(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling RiscoFraudeApi->salvar_using_post: #{e}"
+  puts "Exception when calling RiscoFraudeApi->salvar_using_post1: #{e}"
 end
 ```
 
@@ -505,7 +441,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 

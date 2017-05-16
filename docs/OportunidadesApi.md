@@ -1,6 +1,6 @@
 # Pier::OportunidadesApi
 
-All URIs are relative to *https://localhost/*
+All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -14,11 +14,11 @@ Method | HTTP request | Description
 [**listar_auditorias_using_get**](OportunidadesApi.md#listar_auditorias_using_get) | **GET** /api/auditorias-oportunidades | Lista as auditorias das oportunidades
 [**listar_auditorias_using_get1**](OportunidadesApi.md#listar_auditorias_using_get1) | **GET** /api/auditorias-tipos-oportunidades | Lista as auditorias dos tipos oportunidades
 [**listar_status_using_get**](OportunidadesApi.md#listar_status_using_get) | **GET** /api/tipos-oportunidades/{id}/status | Lista os status do tipo oportunidades
-[**listar_using_get16**](OportunidadesApi.md#listar_using_get16) | **GET** /api/tipos-oportunidades | Lista os tipos oportunidades
-[**listar_using_get7**](OportunidadesApi.md#listar_using_get7) | **GET** /api/oportunidades | Lista as oportunidades
+[**listar_using_get19**](OportunidadesApi.md#listar_using_get19) | **GET** /api/tipos-oportunidades | Lista os tipos oportunidades
+[**listar_using_get9**](OportunidadesApi.md#listar_using_get9) | **GET** /api/oportunidades | Lista as oportunidades
 [**salvar_status_using_post**](OportunidadesApi.md#salvar_status_using_post) | **POST** /api/tipos-oportunidades/{id}/status | Cadastra status para o tipo oportunidade
-[**salvar_using_post3**](OportunidadesApi.md#salvar_using_post3) | **POST** /api/oportunidades | Cadastra as oportunidade
-[**salvar_using_post6**](OportunidadesApi.md#salvar_using_post6) | **POST** /api/tipos-oportunidades | Cadastra tipos oportunidades
+[**salvar_using_post10**](OportunidadesApi.md#salvar_using_post10) | **POST** /api/tipos-oportunidades | Cadastra tipos oportunidades
+[**salvar_using_post5**](OportunidadesApi.md#salvar_using_post5) | **POST** /api/oportunidades | Cadastra as oportunidade
 
 
 
@@ -34,14 +34,6 @@ Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o do status do ti
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::OportunidadesApi.new
@@ -77,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -98,14 +90,6 @@ Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das oportunidad
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::OportunidadesApi.new
@@ -138,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -159,14 +143,6 @@ Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos tipos oport
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::OportunidadesApi.new
@@ -199,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -220,14 +196,6 @@ Este recurso permite consultar dados de um determinado status do tipo oportunida
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::OportunidadesApi.new
@@ -260,7 +228,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -281,14 +249,6 @@ Este recurso permite consultar dados de um determinado tipo oportunidade a parti
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::OportunidadesApi.new
@@ -318,7 +278,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -339,14 +299,6 @@ Este recurso permite consultar dados de uma determinada oportunidade a partir de
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::OportunidadesApi.new
@@ -376,7 +328,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -398,14 +350,6 @@ Este recurso permite listar os status oportunidades.
 # load the gem
 require 'pier-sdk-ruby'
 
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
-
 
 api_instance = Pier::OportunidadesApi.new
 
@@ -416,8 +360,10 @@ opts = {
   rev_date: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
   id: 789, # Integer | C\u00C3\u00B3digo identificador do status oportunidade
   id_tipo_oportunidade: 789, # Integer | C\u00C3\u00B3digo identificador do tipo oportunidade
+  nome: "nome_example", # String | Nome do status oportunidade
   descricao: "descricao_example", # String | Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
-  flag_ativo: true # BOOLEAN | Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
+  flag_ativo: true, # BOOLEAN | Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
+  rev_user: DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | Usu\u00C3\u00A1rio da auditoria
 }
 
 begin
@@ -439,8 +385,10 @@ Name | Type | Description  | Notes
  **rev_date** | **DateTime**| Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades | [optional] 
  **id** | **Integer**| C\u00C3\u00B3digo identificador do status oportunidade | [optional] 
  **id_tipo_oportunidade** | **Integer**| C\u00C3\u00B3digo identificador do tipo oportunidade | [optional] 
+ **nome** | **String**| Nome do status oportunidade | [optional] 
  **descricao** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade | [optional] 
  **flag_ativo** | **BOOLEAN**| Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo | [optional] 
+ **rev_user** | **DateTime**| Usu\u00C3\u00A1rio da auditoria | [optional] 
 
 
 ### Return type
@@ -449,7 +397,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -471,14 +419,6 @@ Este recurso permite listar as auditorias das oportunidades.
 # load the gem
 require 'pier-sdk-ruby'
 
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
-
 
 api_instance = Pier::OportunidadesApi.new
 
@@ -493,7 +433,8 @@ opts = {
   datat_fim_vigencia: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Fim da vig\u00C3\u00AAncia da oportunidade
   flag_ativo: true, # BOOLEAN | Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
   rev_date: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Data da auditoria
-  rev_type: DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | Tipo da auditoria
+  rev_type: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Tipo da auditoria
+  rev_user: DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | Usu\u00C3\u00A1rio da auditoria
 }
 
 begin
@@ -520,6 +461,7 @@ Name | Type | Description  | Notes
  **flag_ativo** | **BOOLEAN**| Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa | [optional] 
  **rev_date** | **DateTime**| Data da auditoria | [optional] 
  **rev_type** | **DateTime**| Tipo da auditoria | [optional] 
+ **rev_user** | **DateTime**| Usu\u00C3\u00A1rio da auditoria | [optional] 
 
 
 ### Return type
@@ -528,7 +470,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -550,14 +492,6 @@ Este recurso permite listar os tipos oportunidades.
 # load the gem
 require 'pier-sdk-ruby'
 
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
-
 
 api_instance = Pier::OportunidadesApi.new
 
@@ -568,7 +502,8 @@ opts = {
   rev_date: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
   id: 789, # Integer | C\u00C3\u00B3digo identificador do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
   descricao: "descricao_example", # String | Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
-  flag_ativo: true # BOOLEAN | Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo
+  flag_ativo: true, # BOOLEAN | Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo
+  rev_user: DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | Usu\u00C3\u00A1rio da auditoria
 }
 
 begin
@@ -591,6 +526,7 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo identificador do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o | [optional] 
  **descricao** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o | [optional] 
  **flag_ativo** | **BOOLEAN**| Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo | [optional] 
+ **rev_user** | **DateTime**| Usu\u00C3\u00A1rio da auditoria | [optional] 
 
 
 ### Return type
@@ -599,7 +535,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -621,14 +557,6 @@ Este recurso permite listar os status do tipo oportunidades.
 # load the gem
 require 'pier-sdk-ruby'
 
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
-
 
 api_instance = Pier::OportunidadesApi.new
 
@@ -637,6 +565,7 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do
 opts = { 
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  nome: "nome_example", # String | Nome do status oportunidade
   descricao: "descricao_example", # String | Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
   flag_ativo: true # BOOLEAN | Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
 }
@@ -657,6 +586,7 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id). | 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **nome** | **String**| Nome do status oportunidade | [optional] 
  **descricao** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade | [optional] 
  **flag_ativo** | **BOOLEAN**| Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo | [optional] 
 
@@ -667,7 +597,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -677,8 +607,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get16**
-> PageTipoOprtunidades listar_using_get16(opts)
+# **listar_using_get19**
+> PageTipoOprtunidades listar_using_get19(opts)
 
 Lista os tipos oportunidades
 
@@ -688,14 +618,6 @@ Este recurso permite listar os tipos oportunidades.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::OportunidadesApi.new
@@ -709,10 +631,10 @@ opts = {
 
 begin
   #Lista os tipos oportunidades
-  result = api_instance.listar_using_get16(opts)
+  result = api_instance.listar_using_get19(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling OportunidadesApi->listar_using_get16: #{e}"
+  puts "Exception when calling OportunidadesApi->listar_using_get19: #{e}"
 end
 ```
 
@@ -732,7 +654,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -742,8 +664,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get7**
-> PageOprtunidadesResponse listar_using_get7(opts)
+# **listar_using_get9**
+> PageOprtunidadesResponse listar_using_get9(opts)
 
 Lista as oportunidades
 
@@ -753,14 +675,6 @@ Este recurso permite listar as oportunidades.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::OportunidadesApi.new
@@ -779,10 +693,10 @@ opts = {
 
 begin
   #Lista as oportunidades
-  result = api_instance.listar_using_get7(opts)
+  result = api_instance.listar_using_get9(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling OportunidadesApi->listar_using_get7: #{e}"
+  puts "Exception when calling OportunidadesApi->listar_using_get9: #{e}"
 end
 ```
 
@@ -807,7 +721,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -828,14 +742,6 @@ Esse recurso permite cadastrar status para o tipo oportunidade.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::OportunidadesApi.new
@@ -868,7 +774,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -878,66 +784,8 @@ Name | Type | Description  | Notes
 
 
 
-# **salvar_using_post3**
-> OportunidadeResponse salvar_using_post3(persist)
-
-Cadastra as oportunidade
-
-Esse recurso permite cadastrar oportunidades.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
-
-
-api_instance = Pier::OportunidadesApi.new
-
-persist = Pier::OportunidadePersist.new # OportunidadePersist | persist
-
-
-begin
-  #Cadastra as oportunidade
-  result = api_instance.salvar_using_post3(persist)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling OportunidadesApi->salvar_using_post3: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **persist** | [**OportunidadePersist**](OportunidadePersist.md)| persist | 
-
-
-### Return type
-
-[**OportunidadeResponse**](OportunidadeResponse.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **salvar_using_post6**
-> TipoOportunidadeResponse salvar_using_post6(persist)
+# **salvar_using_post10**
+> TipoOportunidadeResponse salvar_using_post10(persist)
 
 Cadastra tipos oportunidades
 
@@ -948,14 +796,6 @@ Esse recurso permite cadastrar tipos oportunidades.
 # load the gem
 require 'pier-sdk-ruby'
 
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
-
 
 api_instance = Pier::OportunidadesApi.new
 
@@ -964,10 +804,10 @@ persist = Pier::TipoOportunidade.new # TipoOportunidade | persist
 
 begin
   #Cadastra tipos oportunidades
-  result = api_instance.salvar_using_post6(persist)
+  result = api_instance.salvar_using_post10(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling OportunidadesApi->salvar_using_post6: #{e}"
+  puts "Exception when calling OportunidadesApi->salvar_using_post10: #{e}"
 end
 ```
 
@@ -984,7 +824,57 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **salvar_using_post5**
+> OportunidadeResponse salvar_using_post5(persist)
+
+Cadastra as oportunidade
+
+Esse recurso permite cadastrar oportunidades.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::OportunidadesApi.new
+
+persist = Pier::OportunidadePersist.new # OportunidadePersist | persist
+
+
+begin
+  #Cadastra as oportunidade
+  result = api_instance.salvar_using_post5(persist)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling OportunidadesApi->salvar_using_post5: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **persist** | [**OportunidadePersist**](OportunidadePersist.md)| persist | 
+
+
+### Return type
+
+[**OportunidadeResponse**](OportunidadeResponse.md)
+
+### Authorization
+
+No authorization required
 
 ### HTTP request headers
 

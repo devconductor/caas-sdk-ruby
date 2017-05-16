@@ -73,7 +73,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,

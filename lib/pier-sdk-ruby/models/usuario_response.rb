@@ -46,10 +46,10 @@ module Pier
     # Status do Usu\u00C3\u00A1rio
     attr_accessor :status
 
-    # Status do Usu\u00C3\u00A1rio
+    # Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
     attr_accessor :data_criacao
 
-    # Status do Usu\u00C3\u00A1rio
+    # Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
     attr_accessor :data_modificacao
 
     # N\u00C3\u00BAmero de tentativas de valida\u00C3\u00A7\u00C3\u00A3o incorretas

@@ -105,7 +105,7 @@ describe 'FAQApi' do
   end
 
 
-  # unit tests for listar_using_get6
+  # unit tests for listar_using_get8
   # Lista FAQs
   # Lista todas as FAQs
   # @param [Hash] opts the optional parameters
@@ -119,7 +119,7 @@ describe 'FAQApi' do
   # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
   # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
   # @return [PageFaqs]
-  describe 'listar_using_get6 test' do
+  describe 'listar_using_get8 test' do
     it "should work" do
       # assertion here
       # should be_a()

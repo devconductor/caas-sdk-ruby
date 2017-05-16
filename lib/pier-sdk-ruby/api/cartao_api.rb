@@ -94,7 +94,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -171,7 +171,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -225,7 +225,7 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/cartoes/{id}/atribuir-pessoa".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+      local_var_path = "/api/cartoes/{id}/atribuir-titular".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -248,7 +248,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -336,7 +336,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -413,7 +413,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -423,6 +423,72 @@ module Pier
         :return_type => 'String')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CartaoApi#cadastrar_alterar_senha_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Consultar Detalhes do Cart\u00C3\u00A3o
+    # Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
+    # @param id id
+    # @param [Hash] opts the optional parameters
+    # @return [TransacaoOnUsResponse]
+    def consultar_dados_cartao_using_get(id, opts = {})
+      data, _status_code, _headers = consultar_dados_cartao_using_get_with_http_info(id, opts)
+      return data
+    end
+
+    # Consultar Detalhes do Cart\u00C3\u00A3o
+    # Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
+    # @param id id
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(TransacaoOnUsResponse, Fixnum, Hash)>] TransacaoOnUsResponse data, response status code and response headers
+    def consultar_dados_cartao_using_get_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CartaoApi.consultar_dados_cartao_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CartaoApi.consultar_dados_cartao_using_get" if id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/cartoes/{id}/consultar-dados-reais".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TransacaoOnUsResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CartaoApi#consultar_dados_cartao_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -479,7 +545,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -545,7 +611,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -611,7 +677,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -677,7 +743,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -687,6 +753,72 @@ module Pier
         :return_type => 'Cartao')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CartaoApi#consultar_using_get2\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
+    # Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param [Hash] opts the optional parameters
+    # @return [Cartao]
+    def desbloquear_senha_incorreta_using_post(id, opts = {})
+      data, _status_code, _headers = desbloquear_senha_incorreta_using_post_with_http_info(id, opts)
+      return data
+    end
+
+    # Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
+    # Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Cartao, Fixnum, Hash)>] Cartao data, response status code and response headers
+    def desbloquear_senha_incorreta_using_post_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CartaoApi.desbloquear_senha_incorreta_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CartaoApi.desbloquear_senha_incorreta_using_post" if id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/cartoes/{id}/desbloquear-senha-incorreta".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Cartao')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CartaoApi#desbloquear_senha_incorreta_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -743,7 +875,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -853,7 +985,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -919,7 +1051,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1074,7 +1206,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1113,8 +1245,8 @@ module Pier
     # @option opts [String] :codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
     # @option opts [Integer] :sequencial_cartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
     # @return [PageCartoes]
-    def listar_using_get2(opts = {})
-      data, _status_code, _headers = listar_using_get2_with_http_info(opts)
+    def listar_using_get3(opts = {})
+      data, _status_code, _headers = listar_using_get3_with_http_info(opts)
       return data
     end
 
@@ -1142,9 +1274,9 @@ module Pier
     # @option opts [String] :codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
     # @option opts [Integer] :sequencial_cartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
     # @return [Array<(PageCartoes, Fixnum, Hash)>] PageCartoes data, response status code and response headers
-    def listar_using_get2_with_http_info(opts = {})
+    def listar_using_get3_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CartaoApi.listar_using_get2 ..."
+        @api_client.config.logger.debug "Calling API: CartaoApi.listar_using_get3 ..."
       end
       
       
@@ -1310,7 +1442,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1319,37 +1451,237 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageCartoes')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CartaoApi#listar_using_get2\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CartaoApi#listar_using_get3\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
 
-    # Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do chip
-    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o criptograma gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+    # Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
+    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
     # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-    # @param criptograma Criptograma do cart\u00C3\u00A3o no formato de55
+    # @param nome_portador Nome do portador do cart\u00C3\u00A3o
+    # @param data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
+    # @param codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
     # @param [Hash] opts the optional parameters
     # @return [ValidaCartao]
-    def validar_cartao_chip_bandeirado_using_get(numero_cartao, criptograma, opts = {})
-      data, _status_code, _headers = validar_cartao_chip_bandeirado_using_get_with_http_info(numero_cartao, criptograma, opts)
+    def validar_dados_impressos_bandeirado_using_get(numero_cartao, nome_portador, data_validade, codigo_seguranca, opts = {})
+      data, _status_code, _headers = validar_dados_impressos_bandeirado_using_get_with_http_info(numero_cartao, nome_portador, data_validade, codigo_seguranca, opts)
       return data
     end
 
-    # Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do chip
-    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o criptograma gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+    # Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
+    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
     # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-    # @param criptograma Criptograma do cart\u00C3\u00A3o no formato de55
+    # @param nome_portador Nome do portador do cart\u00C3\u00A3o
+    # @param data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
+    # @param codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
     # @param [Hash] opts the optional parameters
     # @return [Array<(ValidaCartao, Fixnum, Hash)>] ValidaCartao data, response status code and response headers
-    def validar_cartao_chip_bandeirado_using_get_with_http_info(numero_cartao, criptograma, opts = {})
+    def validar_dados_impressos_bandeirado_using_get_with_http_info(numero_cartao, nome_portador, data_validade, codigo_seguranca, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CartaoApi.validar_cartao_chip_bandeirado_using_get ..."
+        @api_client.config.logger.debug "Calling API: CartaoApi.validar_dados_impressos_bandeirado_using_get ..."
       end
       
       
       # verify the required parameter 'numero_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'numero_cartao' when calling CartaoApi.validar_cartao_chip_bandeirado_using_get" if numero_cartao.nil?
+      fail ArgumentError, "Missing the required parameter 'numero_cartao' when calling CartaoApi.validar_dados_impressos_bandeirado_using_get" if numero_cartao.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'nome_portador' is set
+      fail ArgumentError, "Missing the required parameter 'nome_portador' when calling CartaoApi.validar_dados_impressos_bandeirado_using_get" if nome_portador.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'data_validade' is set
+      fail ArgumentError, "Missing the required parameter 'data_validade' when calling CartaoApi.validar_dados_impressos_bandeirado_using_get" if data_validade.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'codigo_seguranca' is set
+      fail ArgumentError, "Missing the required parameter 'codigo_seguranca' when calling CartaoApi.validar_dados_impressos_bandeirado_using_get" if codigo_seguranca.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/cartoes/validar-dados-impressos-bandeirados".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'numero_cartao'] = numero_cartao
+      query_params[:'nome_portador'] = nome_portador
+      query_params[:'data_validade'] = data_validade
+      query_params[:'codigo_seguranca'] = codigo_seguranca
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ValidaCartao')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CartaoApi#validar_dados_impressos_bandeirado_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
+    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
+    # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+    # @param nome_portador Nome do portador do cart\u00C3\u00A3o
+    # @param data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
+    # @param codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
+    # @param [Hash] opts the optional parameters
+    # @return [ValidaCartao]
+    def validar_dados_impressos_nao_bandeirado_using_get(numero_cartao, nome_portador, data_validade, codigo_seguranca, opts = {})
+      data, _status_code, _headers = validar_dados_impressos_nao_bandeirado_using_get_with_http_info(numero_cartao, nome_portador, data_validade, codigo_seguranca, opts)
+      return data
+    end
+
+    # Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
+    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
+    # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+    # @param nome_portador Nome do portador do cart\u00C3\u00A3o
+    # @param data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
+    # @param codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ValidaCartao, Fixnum, Hash)>] ValidaCartao data, response status code and response headers
+    def validar_dados_impressos_nao_bandeirado_using_get_with_http_info(numero_cartao, nome_portador, data_validade, codigo_seguranca, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CartaoApi.validar_dados_impressos_nao_bandeirado_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'numero_cartao' is set
+      fail ArgumentError, "Missing the required parameter 'numero_cartao' when calling CartaoApi.validar_dados_impressos_nao_bandeirado_using_get" if numero_cartao.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'nome_portador' is set
+      fail ArgumentError, "Missing the required parameter 'nome_portador' when calling CartaoApi.validar_dados_impressos_nao_bandeirado_using_get" if nome_portador.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'data_validade' is set
+      fail ArgumentError, "Missing the required parameter 'data_validade' when calling CartaoApi.validar_dados_impressos_nao_bandeirado_using_get" if data_validade.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'codigo_seguranca' is set
+      fail ArgumentError, "Missing the required parameter 'codigo_seguranca' when calling CartaoApi.validar_dados_impressos_nao_bandeirado_using_get" if codigo_seguranca.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/cartoes/validar-dados-impressos-nao-bandeirados".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'numero_cartao'] = numero_cartao
+      query_params[:'nome_portador'] = nome_portador
+      query_params[:'data_validade'] = data_validade
+      query_params[:'codigo_seguranca'] = codigo_seguranca
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ValidaCartao')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CartaoApi#validar_dados_impressos_nao_bandeirado_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
+    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+    # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+    # @param criptograma Criptograma do cart\u00C3\u00A3o no formato de55
+    # @param [Hash] opts the optional parameters
+    # @return [ValidaCartao]
+    def validar_de55_cartao_mastercard_using_get(numero_cartao, criptograma, opts = {})
+      data, _status_code, _headers = validar_de55_cartao_mastercard_using_get_with_http_info(numero_cartao, criptograma, opts)
+      return data
+    end
+
+    # Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
+    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+    # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+    # @param criptograma Criptograma do cart\u00C3\u00A3o no formato de55
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ValidaCartao, Fixnum, Hash)>] ValidaCartao data, response status code and response headers
+    def validar_de55_cartao_mastercard_using_get_with_http_info(numero_cartao, criptograma, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CartaoApi.validar_de55_cartao_mastercard_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'numero_cartao' is set
+      fail ArgumentError, "Missing the required parameter 'numero_cartao' when calling CartaoApi.validar_de55_cartao_mastercard_using_get" if numero_cartao.nil?
       
       
       
@@ -1357,14 +1689,14 @@ module Pier
       
       
       # verify the required parameter 'criptograma' is set
-      fail ArgumentError, "Missing the required parameter 'criptograma' when calling CartaoApi.validar_cartao_chip_bandeirado_using_get" if criptograma.nil?
+      fail ArgumentError, "Missing the required parameter 'criptograma' when calling CartaoApi.validar_de55_cartao_mastercard_using_get" if criptograma.nil?
       
       
       
       
       
       # resource path
-      local_var_path = "/api/cartoes/bandeirados/validar-chip".sub('{format}','json')
+      local_var_path = "/api/cartoes/validar-de55-mastercard".sub('{format}','json')
 
       # query parameters
       query_params = {}
@@ -1388,7 +1720,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1397,296 +1729,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'ValidaCartao')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CartaoApi#validar_cartao_chip_bandeirado_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-
-    # Permite validar um Cart\u00C3\u00A3o bandeirado a partir dos dados Impressos
-    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
-    # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-    # @param nome_portador Nome do portador do cart\u00C3\u00A3o
-    # @param data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
-    # @param codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
-    # @param [Hash] opts the optional parameters
-    # @return [ValidaCartao]
-    def validar_cartao_digitado_bandeirado_using_get(numero_cartao, nome_portador, data_validade, codigo_seguranca, opts = {})
-      data, _status_code, _headers = validar_cartao_digitado_bandeirado_using_get_with_http_info(numero_cartao, nome_portador, data_validade, codigo_seguranca, opts)
-      return data
-    end
-
-    # Permite validar um Cart\u00C3\u00A3o bandeirado a partir dos dados Impressos
-    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
-    # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-    # @param nome_portador Nome do portador do cart\u00C3\u00A3o
-    # @param data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
-    # @param codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(ValidaCartao, Fixnum, Hash)>] ValidaCartao data, response status code and response headers
-    def validar_cartao_digitado_bandeirado_using_get_with_http_info(numero_cartao, nome_portador, data_validade, codigo_seguranca, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CartaoApi.validar_cartao_digitado_bandeirado_using_get ..."
-      end
-      
-      
-      # verify the required parameter 'numero_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'numero_cartao' when calling CartaoApi.validar_cartao_digitado_bandeirado_using_get" if numero_cartao.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'nome_portador' is set
-      fail ArgumentError, "Missing the required parameter 'nome_portador' when calling CartaoApi.validar_cartao_digitado_bandeirado_using_get" if nome_portador.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'data_validade' is set
-      fail ArgumentError, "Missing the required parameter 'data_validade' when calling CartaoApi.validar_cartao_digitado_bandeirado_using_get" if data_validade.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'codigo_seguranca' is set
-      fail ArgumentError, "Missing the required parameter 'codigo_seguranca' when calling CartaoApi.validar_cartao_digitado_bandeirado_using_get" if codigo_seguranca.nil?
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/cartoes/bandeirados/validar-digitado".sub('{format}','json')
-
-      # query parameters
-      query_params = {}
-      query_params[:'numero_cartao'] = numero_cartao
-      query_params[:'nome_portador'] = nome_portador
-      query_params[:'data_validade'] = data_validade
-      query_params[:'codigo_seguranca'] = codigo_seguranca
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = ['access_token']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'ValidaCartao')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CartaoApi#validar_cartao_digitado_bandeirado_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-
-    # Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
-    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
-    # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-    # @param nome_portador Nome do portador do cart\u00C3\u00A3o
-    # @param data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
-    # @param codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
-    # @param [Hash] opts the optional parameters
-    # @return [ValidaCartao]
-    def validar_cartao_digitado_nao_bandeirado_using_get(numero_cartao, nome_portador, data_validade, codigo_seguranca, opts = {})
-      data, _status_code, _headers = validar_cartao_digitado_nao_bandeirado_using_get_with_http_info(numero_cartao, nome_portador, data_validade, codigo_seguranca, opts)
-      return data
-    end
-
-    # Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
-    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
-    # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-    # @param nome_portador Nome do portador do cart\u00C3\u00A3o
-    # @param data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
-    # @param codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(ValidaCartao, Fixnum, Hash)>] ValidaCartao data, response status code and response headers
-    def validar_cartao_digitado_nao_bandeirado_using_get_with_http_info(numero_cartao, nome_portador, data_validade, codigo_seguranca, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CartaoApi.validar_cartao_digitado_nao_bandeirado_using_get ..."
-      end
-      
-      
-      # verify the required parameter 'numero_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'numero_cartao' when calling CartaoApi.validar_cartao_digitado_nao_bandeirado_using_get" if numero_cartao.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'nome_portador' is set
-      fail ArgumentError, "Missing the required parameter 'nome_portador' when calling CartaoApi.validar_cartao_digitado_nao_bandeirado_using_get" if nome_portador.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'data_validade' is set
-      fail ArgumentError, "Missing the required parameter 'data_validade' when calling CartaoApi.validar_cartao_digitado_nao_bandeirado_using_get" if data_validade.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'codigo_seguranca' is set
-      fail ArgumentError, "Missing the required parameter 'codigo_seguranca' when calling CartaoApi.validar_cartao_digitado_nao_bandeirado_using_get" if codigo_seguranca.nil?
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/cartoes/nao-bandeirados/validar-digitado".sub('{format}','json')
-
-      # query parameters
-      query_params = {}
-      query_params[:'numero_cartao'] = numero_cartao
-      query_params[:'nome_portador'] = nome_portador
-      query_params[:'data_validade'] = data_validade
-      query_params[:'codigo_seguranca'] = codigo_seguranca
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = ['access_token']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'ValidaCartao')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CartaoApi#validar_cartao_digitado_nao_bandeirado_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-
-    # Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
-    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
-    # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-    # @param trilha1 Trilha 1 do cart\u00C3\u00A3o a ser validado
-    # @param trilha2 Trilha 2 do cart\u00C3\u00A3o a ser validado
-    # @param [Hash] opts the optional parameters
-    # @return [ValidaCartao]
-    def validar_cartao_tarja_bandeirado_using_get(numero_cartao, trilha1, trilha2, opts = {})
-      data, _status_code, _headers = validar_cartao_tarja_bandeirado_using_get_with_http_info(numero_cartao, trilha1, trilha2, opts)
-      return data
-    end
-
-    # Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
-    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
-    # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-    # @param trilha1 Trilha 1 do cart\u00C3\u00A3o a ser validado
-    # @param trilha2 Trilha 2 do cart\u00C3\u00A3o a ser validado
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(ValidaCartao, Fixnum, Hash)>] ValidaCartao data, response status code and response headers
-    def validar_cartao_tarja_bandeirado_using_get_with_http_info(numero_cartao, trilha1, trilha2, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CartaoApi.validar_cartao_tarja_bandeirado_using_get ..."
-      end
-      
-      
-      # verify the required parameter 'numero_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'numero_cartao' when calling CartaoApi.validar_cartao_tarja_bandeirado_using_get" if numero_cartao.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'trilha1' is set
-      fail ArgumentError, "Missing the required parameter 'trilha1' when calling CartaoApi.validar_cartao_tarja_bandeirado_using_get" if trilha1.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'trilha2' is set
-      fail ArgumentError, "Missing the required parameter 'trilha2' when calling CartaoApi.validar_cartao_tarja_bandeirado_using_get" if trilha2.nil?
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/cartoes/bandeirados/validar-tarja".sub('{format}','json')
-
-      # query parameters
-      query_params = {}
-      query_params[:'numero_cartao'] = numero_cartao
-      query_params[:'trilha1'] = trilha1
-      query_params[:'trilha2'] = trilha2
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = ['access_token']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'ValidaCartao')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CartaoApi#validar_cartao_tarja_bandeirado_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CartaoApi#validar_de55_cartao_mastercard_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1697,7 +1740,7 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param senha Senha para ser validada.
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [ValidaSenhaCartao]
     def validar_senha_using_get(id, senha, opts = {})
       data, _status_code, _headers = validar_senha_using_get_with_http_info(id, senha, opts)
       return data
@@ -1708,7 +1751,7 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param senha Senha para ser validada.
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(ValidaSenhaCartao, Fixnum, Hash)>] ValidaSenhaCartao data, response status code and response headers
     def validar_senha_using_get_with_http_info(id, senha, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CartaoApi.validar_senha_using_get ..."
@@ -1754,16 +1797,105 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'String')
+        :return_type => 'ValidaSenhaCartao')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CartaoApi#validar_senha_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
+    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+    # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+    # @param trilha1 Trilha 1 do cart\u00C3\u00A3o a ser validado
+    # @param trilha2 Trilha 2 do cart\u00C3\u00A3o a ser validado
+    # @param [Hash] opts the optional parameters
+    # @return [ValidaCartao]
+    def validar_tarja_using_get(numero_cartao, trilha1, trilha2, opts = {})
+      data, _status_code, _headers = validar_tarja_using_get_with_http_info(numero_cartao, trilha1, trilha2, opts)
+      return data
+    end
+
+    # Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
+    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+    # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+    # @param trilha1 Trilha 1 do cart\u00C3\u00A3o a ser validado
+    # @param trilha2 Trilha 2 do cart\u00C3\u00A3o a ser validado
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ValidaCartao, Fixnum, Hash)>] ValidaCartao data, response status code and response headers
+    def validar_tarja_using_get_with_http_info(numero_cartao, trilha1, trilha2, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CartaoApi.validar_tarja_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'numero_cartao' is set
+      fail ArgumentError, "Missing the required parameter 'numero_cartao' when calling CartaoApi.validar_tarja_using_get" if numero_cartao.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'trilha1' is set
+      fail ArgumentError, "Missing the required parameter 'trilha1' when calling CartaoApi.validar_tarja_using_get" if trilha1.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'trilha2' is set
+      fail ArgumentError, "Missing the required parameter 'trilha2' when calling CartaoApi.validar_tarja_using_get" if trilha2.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/cartoes/validar-tarja".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'numero_cartao'] = numero_cartao
+      query_params[:'trilha1'] = trilha1
+      query_params[:'trilha2'] = trilha2
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ValidaCartao')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CartaoApi#validar_tarja_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -103,6 +103,12 @@ module Pier
     # Apresenta a soma de todos os seguros cobrados na fatura do cliente.
     attr_accessor :total_servicos
 
+    # Apresenta a soma de todos os valores parcelados + compras nacionais.
+    attr_accessor :total_parcelado_nacionais
+
+    # Apresenta a soma de todos os valores parcelados + compras internacionais.
+    attr_accessor :total_parcelado_internacionais
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -158,7 +164,11 @@ module Pier
         
         :'taxa_maxima_proximo_periodo' => :'taxaMaximaProximoPeriodo',
         
-        :'total_servicos' => :'totalServicos'
+        :'total_servicos' => :'totalServicos',
+        
+        :'total_parcelado_nacionais' => :'totalParceladoNacionais',
+        
+        :'total_parcelado_internacionais' => :'totalParceladoInternacionais'
         
       }
     end
@@ -217,7 +227,11 @@ module Pier
         
         :'taxa_maxima_proximo_periodo' => :'Float',
         
-        :'total_servicos' => :'Float'
+        :'total_servicos' => :'Float',
+        
+        :'total_parcelado_nacionais' => :'Float',
+        
+        :'total_parcelado_internacionais' => :'Float'
         
       }
     end
@@ -465,6 +479,24 @@ module Pier
       end
 
       
+      if attributes[:'totalParceladoNacionais']
+        
+        
+        self.total_parcelado_nacionais = attributes[:'totalParceladoNacionais']
+        
+      
+      end
+
+      
+      if attributes[:'totalParceladoInternacionais']
+        
+        
+        self.total_parcelado_internacionais = attributes[:'totalParceladoInternacionais']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -589,8 +621,36 @@ module Pier
       
       
       
+      
+      if @total_parcelado_nacionais.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @total_parcelado_internacionais.nil?
+        return false
+      end
+
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -752,7 +812,9 @@ module Pier
           taxa_rotativo == o.taxa_rotativo &&
           taxa_saque == o.taxa_saque &&
           taxa_maxima_proximo_periodo == o.taxa_maxima_proximo_periodo &&
-          total_servicos == o.total_servicos
+          total_servicos == o.total_servicos &&
+          total_parcelado_nacionais == o.total_parcelado_nacionais &&
+          total_parcelado_internacionais == o.total_parcelado_internacionais
     end
 
     # @see the `==` method
@@ -764,7 +826,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_conta, flag_emite_fatura, data_vencimento_fatura, valor_total_fatura, valor_fatura_anterior, valor_pagamento_minimo, total_compras_nacionais, total_compras_internacionas, total_saques_nacionais, total_saques_internacionais, total_debitos_nacionais, total_debitos_recorrentes, total_debitos_internacionais, total_debitos_diversos_nacionais, total_debitos_opcionais, total_pagamentos, total_creditos_nacionais, total_ajustes, total_tarifas, total_multa, total_juros, taxa_rotativo, taxa_saque, taxa_maxima_proximo_periodo, total_servicos].hash
+      [id, id_conta, flag_emite_fatura, data_vencimento_fatura, valor_total_fatura, valor_fatura_anterior, valor_pagamento_minimo, total_compras_nacionais, total_compras_internacionas, total_saques_nacionais, total_saques_internacionais, total_debitos_nacionais, total_debitos_recorrentes, total_debitos_internacionais, total_debitos_diversos_nacionais, total_debitos_opcionais, total_pagamentos, total_creditos_nacionais, total_ajustes, total_tarifas, total_multa, total_juros, taxa_rotativo, taxa_saque, taxa_maxima_proximo_periodo, total_servicos, total_parcelado_nacionais, total_parcelado_internacionais].hash
     end
 
     # Builds the object from hash

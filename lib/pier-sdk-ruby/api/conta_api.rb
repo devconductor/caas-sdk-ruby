@@ -39,8 +39,6 @@ module Pier
     # @param data_ajuste Data do ajuste.
     # @param valor_ajuste Valor do ajuste
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [AjusteResponse]
     def ajustar_conta_using_post(id, id_tipo_ajuste, data_ajuste, valor_ajuste, opts = {})
       data, _status_code, _headers = ajustar_conta_using_post_with_http_info(id, id_tipo_ajuste, data_ajuste, valor_ajuste, opts)
@@ -54,8 +52,6 @@ module Pier
     # @param data_ajuste Data do ajuste.
     # @param valor_ajuste Valor do ajuste
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Array<(AjusteResponse, Fixnum, Hash)>] AjusteResponse data, response status code and response headers
     def ajustar_conta_using_post_with_http_info(id, id_tipo_ajuste, data_ajuste, valor_ajuste, opts = {})
       if @api_client.config.debugging
@@ -94,18 +90,6 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
       # resource path
       local_var_path = "/api/contas/{id}/ajustes-financeiros".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
@@ -114,8 +98,6 @@ module Pier
       query_params[:'idTipoAjuste'] = id_tipo_ajuste
       query_params[:'dataAjuste'] = data_ajuste
       query_params[:'valorAjuste'] = valor_ajuste
-      query_params[:'page'] = opts[:'page'] if opts[:'page']
-      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
 
       # header parameters
       header_params = {}
@@ -134,7 +116,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -332,7 +314,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -347,12 +329,89 @@ module Pier
     end
 
 
+    # Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
+    # Esta m\u00C3\u00A9todo permite altera a pessoa de uma conta.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id)
+    # @param id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).
+    # @param [Hash] opts the optional parameters
+    # @return [ContaResponse]
+    def alterar_titular_using_post(id, id_pessoa, opts = {})
+      data, _status_code, _headers = alterar_titular_using_post_with_http_info(id, id_pessoa, opts)
+      return data
+    end
+
+    # Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
+    # Esta m\u00C3\u00A9todo permite altera a pessoa de uma conta.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id)
+    # @param id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ContaResponse, Fixnum, Hash)>] ContaResponse data, response status code and response headers
+    def alterar_titular_using_post_with_http_info(id, id_pessoa, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ContaApi.alterar_titular_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.alterar_titular_using_post" if id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'id_pessoa' is set
+      fail ArgumentError, "Missing the required parameter 'id_pessoa' when calling ContaApi.alterar_titular_using_post" if id_pessoa.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/alterar-titular".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'id_pessoa'] = id_pessoa
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ContaResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ContaApi#alterar_titular_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
     # Esse recurso permite alterar o vencimento de uma conta especifica.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param novo_dia_vencimento Novo dia de vencimento.
     # @param [Hash] opts the optional parameters
-    # @return [Conta]
+    # @return [ContaResponse]
     def alterar_vencimento_using_put(id, novo_dia_vencimento, opts = {})
       data, _status_code, _headers = alterar_vencimento_using_put_with_http_info(id, novo_dia_vencimento, opts)
       return data
@@ -363,7 +422,7 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param novo_dia_vencimento Novo dia de vencimento.
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Conta, Fixnum, Hash)>] Conta data, response status code and response headers
+    # @return [Array<(ContaResponse, Fixnum, Hash)>] ContaResponse data, response status code and response headers
     def alterar_vencimento_using_put_with_http_info(id, novo_dia_vencimento, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContaApi.alterar_vencimento_using_put ..."
@@ -409,14 +468,14 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Conta')
+        :return_type => 'ContaResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ContaApi#alterar_vencimento_using_put\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -475,7 +534,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -541,7 +600,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -643,7 +702,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -661,21 +720,21 @@ module Pier
     # Consultar a fatura consignadas abertas da conta
     # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar a fatura consignada em aberto
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param data_vencimento Data Vencimento.
     # @param [Hash] opts the optional parameters
+    # @option opts [Date] :data_vencimento Data Vencimento
     # @return [DetalhesFaturaConsignadaResponse]
-    def consultar_fatura_consignada_aberta_using_get(id, data_vencimento, opts = {})
-      data, _status_code, _headers = consultar_fatura_consignada_aberta_using_get_with_http_info(id, data_vencimento, opts)
+    def consultar_fatura_consignada_aberta_using_get(id, opts = {})
+      data, _status_code, _headers = consultar_fatura_consignada_aberta_using_get_with_http_info(id, opts)
       return data
     end
 
     # Consultar a fatura consignadas abertas da conta
     # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar a fatura consignada em aberto
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param data_vencimento Data Vencimento.
     # @param [Hash] opts the optional parameters
+    # @option opts [Date] :data_vencimento Data Vencimento
     # @return [Array<(DetalhesFaturaConsignadaResponse, Fixnum, Hash)>] DetalhesFaturaConsignadaResponse data, response status code and response headers
-    def consultar_fatura_consignada_aberta_using_get_with_http_info(id, data_vencimento, opts = {})
+    def consultar_fatura_consignada_aberta_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContaApi.consultar_fatura_consignada_aberta_using_get ..."
       end
@@ -689,8 +748,6 @@ module Pier
       
       
       
-      # verify the required parameter 'data_vencimento' is set
-      fail ArgumentError, "Missing the required parameter 'data_vencimento' when calling ContaApi.consultar_fatura_consignada_aberta_using_get" if data_vencimento.nil?
       
       
       
@@ -701,7 +758,7 @@ module Pier
 
       # query parameters
       query_params = {}
-      query_params[:'dataVencimento'] = data_vencimento
+      query_params[:'dataVencimento'] = opts[:'data_vencimento'] if opts[:'data_vencimento']
 
       # header parameters
       header_params = {}
@@ -720,7 +777,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -796,7 +853,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -873,7 +930,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -891,21 +948,21 @@ module Pier
     # Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
     # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar os detalhes dos lan\u00C3\u00A7amentos futuros de uma fatura vinculados a uma determinada conta.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param data_vencimento Data Vencimento.
     # @param [Hash] opts the optional parameters
+    # @option opts [Date] :data_vencimento Data Vencimento
     # @return [DetalhesFaturaResponse]
-    def consultar_lancamentos_futuros_fatura_using_get(id, data_vencimento, opts = {})
-      data, _status_code, _headers = consultar_lancamentos_futuros_fatura_using_get_with_http_info(id, data_vencimento, opts)
+    def consultar_lancamentos_futuros_fatura_using_get(id, opts = {})
+      data, _status_code, _headers = consultar_lancamentos_futuros_fatura_using_get_with_http_info(id, opts)
       return data
     end
 
     # Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
     # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar os detalhes dos lan\u00C3\u00A7amentos futuros de uma fatura vinculados a uma determinada conta.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param data_vencimento Data Vencimento.
     # @param [Hash] opts the optional parameters
+    # @option opts [Date] :data_vencimento Data Vencimento
     # @return [Array<(DetalhesFaturaResponse, Fixnum, Hash)>] DetalhesFaturaResponse data, response status code and response headers
-    def consultar_lancamentos_futuros_fatura_using_get_with_http_info(id, data_vencimento, opts = {})
+    def consultar_lancamentos_futuros_fatura_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContaApi.consultar_lancamentos_futuros_fatura_using_get ..."
       end
@@ -919,8 +976,6 @@ module Pier
       
       
       
-      # verify the required parameter 'data_vencimento' is set
-      fail ArgumentError, "Missing the required parameter 'data_vencimento' when calling ContaApi.consultar_lancamentos_futuros_fatura_using_get" if data_vencimento.nil?
       
       
       
@@ -931,7 +986,7 @@ module Pier
 
       # query parameters
       query_params = {}
-      query_params[:'dataVencimento'] = data_vencimento
+      query_params[:'dataVencimento'] = opts[:'data_vencimento'] if opts[:'data_vencimento']
 
       # header parameters
       header_params = {}
@@ -950,7 +1005,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1016,7 +1071,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1031,8 +1086,8 @@ module Pier
     end
 
 
-    # Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
-    # Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+    # Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+    # Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
     # @param id Id Conta
     # @param id_transferencia Id Transfer\u00C3\u00AAncia
     # @param [Hash] opts the optional parameters
@@ -1043,8 +1098,8 @@ module Pier
       return data
     end
 
-    # Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
-    # Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+    # Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+    # Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
     # @param id Id Conta
     # @param id_transferencia Id Transfer\u00C3\u00AAncia
     # @param [Hash] opts the optional parameters
@@ -1101,7 +1156,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1177,7 +1232,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1196,7 +1251,7 @@ module Pier
     # Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
-    # @return [Conta]
+    # @return [ContaDetalheResponse]
     def consultar_using_get3(id, opts = {})
       data, _status_code, _headers = consultar_using_get3_with_http_info(id, opts)
       return data
@@ -1206,7 +1261,7 @@ module Pier
     # Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Conta, Fixnum, Hash)>] Conta data, response status code and response headers
+    # @return [Array<(ContaDetalheResponse, Fixnum, Hash)>] ContaDetalheResponse data, response status code and response headers
     def consultar_using_get3_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContaApi.consultar_using_get3 ..."
@@ -1243,14 +1298,14 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Conta')
+        :return_type => 'ContaDetalheResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ContaApi#consultar_using_get3\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -1309,7 +1364,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1415,7 +1470,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1500,7 +1555,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1593,7 +1648,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1661,7 +1716,7 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/contas/{id}/listar-faturas".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+      local_var_path = "/api/contas/{id}/faturas".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -1686,7 +1741,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1770,7 +1825,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1854,7 +1909,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1920,7 +1975,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2004,7 +2059,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2097,7 +2152,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2120,8 +2175,8 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [LinkPageTransferenciaBancariaResponse]
-    def listar_using_get19(id, opts = {})
-      data, _status_code, _headers = listar_using_get19_with_http_info(id, opts)
+    def listar_using_get22(id, opts = {})
+      data, _status_code, _headers = listar_using_get22_with_http_info(id, opts)
       return data
     end
 
@@ -2133,14 +2188,14 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Array<(LinkPageTransferenciaBancariaResponse, Fixnum, Hash)>] LinkPageTransferenciaBancariaResponse data, response status code and response headers
-    def listar_using_get19_with_http_info(id, opts = {})
+    def listar_using_get22_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get19 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get22 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.listar_using_get19" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.listar_using_get22" if id.nil?
       
       
       
@@ -2190,7 +2245,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2199,7 +2254,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'LinkPageTransferenciaBancariaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#listar_using_get19\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#listar_using_get22\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2217,8 +2272,8 @@ module Pier
     # @option opts [Float] :valor_transferencia Valor estabelecido para ser transferido.
     # @option opts [Date] :data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
     # @return [PageTransferencias]
-    def listar_using_get20(id, opts = {})
-      data, _status_code, _headers = listar_using_get20_with_http_info(id, opts)
+    def listar_using_get23(id, opts = {})
+      data, _status_code, _headers = listar_using_get23_with_http_info(id, opts)
       return data
     end
 
@@ -2234,14 +2289,14 @@ module Pier
     # @option opts [Float] :valor_transferencia Valor estabelecido para ser transferido.
     # @option opts [Date] :data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
     # @return [Array<(PageTransferencias, Fixnum, Hash)>] PageTransferencias data, response status code and response headers
-    def listar_using_get20_with_http_info(id, opts = {})
+    def listar_using_get23_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get20 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get23 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.listar_using_get20" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.listar_using_get23" if id.nil?
       
       
       
@@ -2319,7 +2374,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2328,7 +2383,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTransferencias')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#listar_using_get20\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#listar_using_get23\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2349,8 +2404,8 @@ module Pier
     # @option opts [Date] :data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
     # @option opts [Date] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
     # @return [PageContas]
-    def listar_using_get3(opts = {})
-      data, _status_code, _headers = listar_using_get3_with_http_info(opts)
+    def listar_using_get4(opts = {})
+      data, _status_code, _headers = listar_using_get4_with_http_info(opts)
       return data
     end
 
@@ -2369,9 +2424,9 @@ module Pier
     # @option opts [Date] :data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
     # @option opts [Date] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
     # @return [Array<(PageContas, Fixnum, Hash)>] PageContas data, response status code and response headers
-    def listar_using_get3_with_http_info(opts = {})
+    def listar_using_get4_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get3 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get4 ..."
       end
       
       
@@ -2474,7 +2529,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2483,7 +2538,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageContas')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#listar_using_get3\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#listar_using_get4\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2540,7 +2595,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2624,7 +2679,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2639,50 +2694,24 @@ module Pier
     end
 
 
-    # Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria entre bancos / contas
-    # Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta de destino.
+    # Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
+    # Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
     # @param id Id Conta
-    # @param data_compra Data da transfer\u00C3\u00AAncia
-    # @param proximo_vencimento_padrao Dia do vencimento padr\u00C3\u00A3o da fatura
-    # @param proximo_vencimento_real Data do vencimento real da fatura
-    # @param valor_compra Valor da transfer\u00C3\u00AAncia
-    # @param nome_favorecido Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
-    # @param documento_favorecido N\u00C3\u00BAmero do CPF ou CNPJ.
-    # @param banco C\u00C3\u00B3digo do banco
-    # @param numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia
-    # @param numero_conta N\u00C3\u00BAmero da conta
-    # @param flag_conta_poupanca Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
+    # @param transferencia_bancaria_persist transferenciaBancariaPersist
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [String] :digito_agencia D\u00C3\u00ADgito da ag\u00C3\u00AAncia
-    # @option opts [String] :digito_conta D\u00C3\u00ADgito da conta
     # @return [LinkTransferenciaBancariaResponse]
-    def transferir_using_post(id, data_compra, proximo_vencimento_padrao, proximo_vencimento_real, valor_compra, nome_favorecido, documento_favorecido, banco, numero_agencia, numero_conta, flag_conta_poupanca, opts = {})
-      data, _status_code, _headers = transferir_using_post_with_http_info(id, data_compra, proximo_vencimento_padrao, proximo_vencimento_real, valor_compra, nome_favorecido, documento_favorecido, banco, numero_agencia, numero_conta, flag_conta_poupanca, opts)
+    def transferir_using_post(id, transferencia_bancaria_persist, opts = {})
+      data, _status_code, _headers = transferir_using_post_with_http_info(id, transferencia_bancaria_persist, opts)
       return data
     end
 
-    # Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria entre bancos / contas
-    # Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta de destino.
+    # Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
+    # Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
     # @param id Id Conta
-    # @param data_compra Data da transfer\u00C3\u00AAncia
-    # @param proximo_vencimento_padrao Dia do vencimento padr\u00C3\u00A3o da fatura
-    # @param proximo_vencimento_real Data do vencimento real da fatura
-    # @param valor_compra Valor da transfer\u00C3\u00AAncia
-    # @param nome_favorecido Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
-    # @param documento_favorecido N\u00C3\u00BAmero do CPF ou CNPJ.
-    # @param banco C\u00C3\u00B3digo do banco
-    # @param numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia
-    # @param numero_conta N\u00C3\u00BAmero da conta
-    # @param flag_conta_poupanca Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
+    # @param transferencia_bancaria_persist transferenciaBancariaPersist
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [String] :digito_agencia D\u00C3\u00ADgito da ag\u00C3\u00AAncia
-    # @option opts [String] :digito_conta D\u00C3\u00ADgito da conta
     # @return [Array<(LinkTransferenciaBancariaResponse, Fixnum, Hash)>] LinkTransferenciaBancariaResponse data, response status code and response headers
-    def transferir_using_post_with_http_info(id, data_compra, proximo_vencimento_padrao, proximo_vencimento_real, valor_compra, nome_favorecido, documento_favorecido, banco, numero_agencia, numero_conta, flag_conta_poupanca, opts = {})
+    def transferir_using_post_with_http_info(id, transferencia_bancaria_persist, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContaApi.transferir_using_post ..."
       end
@@ -2696,104 +2725,8 @@ module Pier
       
       
       
-      # verify the required parameter 'data_compra' is set
-      fail ArgumentError, "Missing the required parameter 'data_compra' when calling ContaApi.transferir_using_post" if data_compra.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'proximo_vencimento_padrao' is set
-      fail ArgumentError, "Missing the required parameter 'proximo_vencimento_padrao' when calling ContaApi.transferir_using_post" if proximo_vencimento_padrao.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'proximo_vencimento_real' is set
-      fail ArgumentError, "Missing the required parameter 'proximo_vencimento_real' when calling ContaApi.transferir_using_post" if proximo_vencimento_real.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'valor_compra' is set
-      fail ArgumentError, "Missing the required parameter 'valor_compra' when calling ContaApi.transferir_using_post" if valor_compra.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'nome_favorecido' is set
-      fail ArgumentError, "Missing the required parameter 'nome_favorecido' when calling ContaApi.transferir_using_post" if nome_favorecido.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'documento_favorecido' is set
-      fail ArgumentError, "Missing the required parameter 'documento_favorecido' when calling ContaApi.transferir_using_post" if documento_favorecido.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'banco' is set
-      fail ArgumentError, "Missing the required parameter 'banco' when calling ContaApi.transferir_using_post" if banco.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'numero_agencia' is set
-      fail ArgumentError, "Missing the required parameter 'numero_agencia' when calling ContaApi.transferir_using_post" if numero_agencia.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'numero_conta' is set
-      fail ArgumentError, "Missing the required parameter 'numero_conta' when calling ContaApi.transferir_using_post" if numero_conta.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'flag_conta_poupanca' is set
-      fail ArgumentError, "Missing the required parameter 'flag_conta_poupanca' when calling ContaApi.transferir_using_post" if flag_conta_poupanca.nil?
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+      # verify the required parameter 'transferencia_bancaria_persist' is set
+      fail ArgumentError, "Missing the required parameter 'transferencia_bancaria_persist' when calling ContaApi.transferir_using_post" if transferencia_bancaria_persist.nil?
       
       
       
@@ -2804,20 +2737,6 @@ module Pier
 
       # query parameters
       query_params = {}
-      query_params[:'dataCompra'] = data_compra
-      query_params[:'proximoVencimentoPadrao'] = proximo_vencimento_padrao
-      query_params[:'proximoVencimentoReal'] = proximo_vencimento_real
-      query_params[:'valorCompra'] = valor_compra
-      query_params[:'nomeFavorecido'] = nome_favorecido
-      query_params[:'documentoFavorecido'] = documento_favorecido
-      query_params[:'banco'] = banco
-      query_params[:'numeroAgencia'] = numero_agencia
-      query_params[:'numeroConta'] = numero_conta
-      query_params[:'flagContaPoupanca'] = flag_conta_poupanca
-      query_params[:'page'] = opts[:'page'] if opts[:'page']
-      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
-      query_params[:'digitoAgencia'] = opts[:'digito_agencia'] if opts[:'digito_agencia']
-      query_params[:'digitoConta'] = opts[:'digito_conta'] if opts[:'digito_conta']
 
       # header parameters
       header_params = {}
@@ -2834,9 +2753,9 @@ module Pier
       form_params = {}
 
       # http body (model)
-      post_body = nil
+      post_body = @api_client.object_to_http_body(transferencia_bancaria_persist)
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2853,7 +2772,7 @@ module Pier
 
     # Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
     # Este m\u00C3\u00A9todo permite que um portador de um cart\u00C3\u00A3o possa realizar auma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).
     # @param id_conta_destino C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).
     # @param valor_transferencia Valor da Transfer\u00C3\u00AAncia.
     # @param [Hash] opts the optional parameters
@@ -2865,7 +2784,7 @@ module Pier
 
     # Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
     # Este m\u00C3\u00A9todo permite que um portador de um cart\u00C3\u00A3o possa realizar auma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).
     # @param id_conta_destino C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).
     # @param valor_transferencia Valor da Transfer\u00C3\u00AAncia.
     # @param [Hash] opts the optional parameters
@@ -2924,7 +2843,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,

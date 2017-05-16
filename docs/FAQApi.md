@@ -1,13 +1,13 @@
 # Pier::FAQApi
 
-All URIs are relative to *https://localhost/*
+All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**adicionar_using_post**](FAQApi.md#adicionar_using_post) | **POST** /api/faqs | Adiciona uma nova FAQ
 [**alterar_using_put2**](FAQApi.md#alterar_using_put2) | **PUT** /api/faqs/{id} | Alterar FAQ
 [**consultar_using_get6**](FAQApi.md#consultar_using_get6) | **GET** /api/faqs/{id} | Consultar FAQ por id
-[**listar_using_get6**](FAQApi.md#listar_using_get6) | **GET** /api/faqs | Lista FAQs
+[**listar_using_get8**](FAQApi.md#listar_using_get8) | **GET** /api/faqs | Lista FAQs
 
 
 
@@ -23,14 +23,6 @@ Adiciona uma nova FAQ
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::FAQApi.new
@@ -73,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -94,14 +86,6 @@ Alterar FAQ
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::FAQApi.new
@@ -147,7 +131,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -168,14 +152,6 @@ Consulta os detalhes de uma determinada FAQ
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::FAQApi.new
@@ -205,7 +181,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -215,8 +191,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get6**
-> PageFaqs listar_using_get6(opts)
+# **listar_using_get8**
+> PageFaqs listar_using_get8(opts)
 
 Lista FAQs
 
@@ -226,14 +202,6 @@ Lista todas as FAQs
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::FAQApi.new
@@ -252,10 +220,10 @@ opts = {
 
 begin
   #Lista FAQs
-  result = api_instance.listar_using_get6(opts)
+  result = api_instance.listar_using_get8(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling FAQApi->listar_using_get6: #{e}"
+  puts "Exception when calling FAQApi->listar_using_get8: #{e}"
 end
 ```
 
@@ -280,7 +248,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 

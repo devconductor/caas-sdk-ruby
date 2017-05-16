@@ -40,6 +40,8 @@ module Pier
 
     attr_accessor :rev_type
 
+    attr_accessor :rev_user
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -59,7 +61,9 @@ module Pier
         
         :'rev_oportunidade' => :'revOportunidade',
         
-        :'rev_type' => :'revType'
+        :'rev_type' => :'revType',
+        
+        :'rev_user' => :'revUser'
         
       }
     end
@@ -82,7 +86,9 @@ module Pier
         
         :'rev_oportunidade' => :'Integer',
         
-        :'rev_type' => :'Integer'
+        :'rev_type' => :'Integer',
+        
+        :'rev_user' => :'String'
         
       }
     end
@@ -168,6 +174,15 @@ module Pier
       end
 
       
+      if attributes[:'revUser']
+        
+        
+        self.rev_user = attributes[:'revUser']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -215,8 +230,17 @@ module Pier
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -270,7 +294,8 @@ module Pier
           rev == o.rev &&
           rev_date == o.rev_date &&
           rev_oportunidade == o.rev_oportunidade &&
-          rev_type == o.rev_type
+          rev_type == o.rev_type &&
+          rev_user == o.rev_user
     end
 
     # @see the `==` method
@@ -282,7 +307,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [conteudo, id, id_oportunidade, nome_campo, rev, rev_date, rev_oportunidade, rev_type].hash
+      [conteudo, id, id_oportunidade, nome_campo, rev, rev_date, rev_oportunidade, rev_type, rev_user].hash
     end
 
     # Builds the object from hash

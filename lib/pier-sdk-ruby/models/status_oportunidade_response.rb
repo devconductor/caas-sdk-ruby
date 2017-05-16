@@ -31,6 +31,9 @@ module Pier
     # C\u00C3\u00B3digo identificador do TipoOportunidade
     attr_accessor :id_tipo_oportunidade
 
+    # Nome do status oportunidade
+    attr_accessor :nome
+
     # Descricao do StatusOportunidade
     attr_accessor :descricao
 
@@ -46,6 +49,8 @@ module Pier
         
         :'id_tipo_oportunidade' => :'idTipoOportunidade',
         
+        :'nome' => :'nome',
+        
         :'descricao' => :'descricao',
         
         :'flag_ativo' => :'flagAtivo'
@@ -60,6 +65,8 @@ module Pier
         :'id' => :'Integer',
         
         :'id_tipo_oportunidade' => :'Integer',
+        
+        :'nome' => :'String',
         
         :'descricao' => :'String',
         
@@ -90,6 +97,15 @@ module Pier
         
         
         self.id_tipo_oportunidade = attributes[:'idTipoOportunidade']
+        
+      
+      end
+
+      
+      if attributes[:'nome']
+        
+        
+        self.nome = attributes[:'nome']
         
       
       end
@@ -144,8 +160,17 @@ module Pier
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -174,6 +199,7 @@ module Pier
       self.class == o.class &&
           id == o.id &&
           id_tipo_oportunidade == o.id_tipo_oportunidade &&
+          nome == o.nome &&
           descricao == o.descricao &&
           flag_ativo == o.flag_ativo
     end
@@ -187,7 +213,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_tipo_oportunidade, descricao, flag_ativo].hash
+      [id, id_tipo_oportunidade, nome, descricao, flag_ativo].hash
     end
 
     # Builds the object from hash

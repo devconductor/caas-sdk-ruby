@@ -1,13 +1,13 @@
 # Pier::WebhooksApi
 
-All URIs are relative to *https://localhost/*
+All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_using_put10**](WebhooksApi.md#alterar_using_put10) | **PUT** /api/webhooks/{id} | Alterar Webhook
 [**consultar_using_get23**](WebhooksApi.md#consultar_using_get23) | **GET** /api/webhooks/{id} | Consultar Webhook
-[**listar_using_get22**](WebhooksApi.md#listar_using_get22) | **GET** /api/webhooks | Lista os Webhooks
-[**salvar_using_post9**](WebhooksApi.md#salvar_using_post9) | **POST** /api/webhooks | Salvar Webhook
+[**listar_using_get25**](WebhooksApi.md#listar_using_get25) | **GET** /api/webhooks | Lista os Webhooks
+[**salvar_using_post13**](WebhooksApi.md#salvar_using_post13) | **POST** /api/webhooks | Salvar Webhook
 
 
 
@@ -23,14 +23,6 @@ Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cad
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::WebhooksApi.new
@@ -66,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -87,14 +79,6 @@ Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::WebhooksApi.new
@@ -124,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -134,8 +118,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get22**
-> PageWebHooks listar_using_get22(opts)
+# **listar_using_get25**
+> PageWebHooks listar_using_get25(opts)
 
 Lista os Webhooks
 
@@ -145,14 +129,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::WebhooksApi.new
@@ -168,10 +144,10 @@ opts = {
 
 begin
   #Lista os Webhooks
-  result = api_instance.listar_using_get22(opts)
+  result = api_instance.listar_using_get25(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling WebhooksApi->listar_using_get22: #{e}"
+  puts "Exception when calling WebhooksApi->listar_using_get25: #{e}"
 end
 ```
 
@@ -193,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -203,8 +179,8 @@ Name | Type | Description  | Notes
 
 
 
-# **salvar_using_post9**
-> WebHook salvar_using_post9(tipo_evento, url)
+# **salvar_using_post13**
+> WebHook salvar_using_post13(tipo_evento, url)
 
 Salvar Webhook
 
@@ -214,14 +190,6 @@ Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::WebhooksApi.new
@@ -233,10 +201,10 @@ url = "url_example" # String | URL que a ser consumida pelo WebHook
 
 begin
   #Salvar Webhook
-  result = api_instance.salvar_using_post9(tipo_evento, url)
+  result = api_instance.salvar_using_post13(tipo_evento, url)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling WebhooksApi->salvar_using_post9: #{e}"
+  puts "Exception when calling WebhooksApi->salvar_using_post13: #{e}"
 end
 ```
 
@@ -254,7 +222,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 

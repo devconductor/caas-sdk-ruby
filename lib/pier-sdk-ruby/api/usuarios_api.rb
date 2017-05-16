@@ -105,7 +105,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -181,7 +181,7 @@ module Pier
       # http body (model)
       post_body = @api_client.object_to_http_body(update)
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -191,6 +191,72 @@ module Pier
         :return_type => 'UsuarioResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UsuariosApi#alterar_using_put9\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Ativa os usu\u00C3\u00A1rios cadastrados
+    # Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+    # @param [Hash] opts the optional parameters
+    # @return [UsuarioResponse]
+    def ativar_usuario_using_post(id, opts = {})
+      data, _status_code, _headers = ativar_usuario_using_post_with_http_info(id, opts)
+      return data
+    end
+
+    # Ativa os usu\u00C3\u00A1rios cadastrados
+    # Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(UsuarioResponse, Fixnum, Hash)>] UsuarioResponse data, response status code and response headers
+    def ativar_usuario_using_post_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: UsuariosApi.ativar_usuario_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling UsuariosApi.ativar_usuario_using_post" if id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/usuarios/{id}/ativar-usuario".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'UsuarioResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UsuariosApi#ativar_usuario_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -247,7 +313,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -257,6 +323,72 @@ module Pier
         :return_type => 'UsuarioResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UsuariosApi#consultar_using_get22\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Desativa os usu\u00C3\u00A1rios cadastrados
+    # Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+    # @param [Hash] opts the optional parameters
+    # @return [UsuarioResponse]
+    def desativar_usuario_using_post(id, opts = {})
+      data, _status_code, _headers = desativar_usuario_using_post_with_http_info(id, opts)
+      return data
+    end
+
+    # Desativa os usu\u00C3\u00A1rios cadastrados
+    # Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(UsuarioResponse, Fixnum, Hash)>] UsuarioResponse data, response status code and response headers
+    def desativar_usuario_using_post_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: UsuariosApi.desativar_usuario_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling UsuariosApi.desativar_usuario_using_post" if id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/usuarios/{id}/desativar-usuario".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'UsuarioResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UsuariosApi#desativar_usuario_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -272,8 +404,8 @@ module Pier
     # @option opts [String] :email Email do Usuario
     # @option opts [String] :status Status do Usuario
     # @return [PageUsuarios]
-    def listar_using_get21(opts = {})
-      data, _status_code, _headers = listar_using_get21_with_http_info(opts)
+    def listar_using_get24(opts = {})
+      data, _status_code, _headers = listar_using_get24_with_http_info(opts)
       return data
     end
 
@@ -287,9 +419,9 @@ module Pier
     # @option opts [String] :email Email do Usuario
     # @option opts [String] :status Status do Usuario
     # @return [Array<(PageUsuarios, Fixnum, Hash)>] PageUsuarios data, response status code and response headers
-    def listar_using_get21_with_http_info(opts = {})
+    def listar_using_get24_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: UsuariosApi.listar_using_get21 ..."
+        @api_client.config.logger.debug "Calling API: UsuariosApi.listar_using_get24 ..."
       end
       
       
@@ -361,7 +493,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -370,7 +502,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageUsuarios')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UsuariosApi#listar_using_get21\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UsuariosApi#listar_using_get24\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -427,7 +559,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -447,8 +579,8 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [UsuarioResponse]
-    def salvar_using_post8(persist, opts = {})
-      data, _status_code, _headers = salvar_using_post8_with_http_info(persist, opts)
+    def salvar_using_post12(persist, opts = {})
+      data, _status_code, _headers = salvar_using_post12_with_http_info(persist, opts)
       return data
     end
 
@@ -457,14 +589,14 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(UsuarioResponse, Fixnum, Hash)>] UsuarioResponse data, response status code and response headers
-    def salvar_using_post8_with_http_info(persist, opts = {})
+    def salvar_using_post12_with_http_info(persist, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: UsuariosApi.salvar_using_post8 ..."
+        @api_client.config.logger.debug "Calling API: UsuariosApi.salvar_using_post12 ..."
       end
       
       
       # verify the required parameter 'persist' is set
-      fail ArgumentError, "Missing the required parameter 'persist' when calling UsuariosApi.salvar_using_post8" if persist.nil?
+      fail ArgumentError, "Missing the required parameter 'persist' when calling UsuariosApi.salvar_using_post12" if persist.nil?
       
       
       
@@ -493,7 +625,7 @@ module Pier
       # http body (model)
       post_body = @api_client.object_to_http_body(persist)
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -502,7 +634,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'UsuarioResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UsuariosApi#salvar_using_post8\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UsuariosApi#salvar_using_post12\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -570,7 +702,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,

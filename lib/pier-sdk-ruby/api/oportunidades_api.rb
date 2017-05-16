@@ -103,7 +103,7 @@ module Pier
       # http body (model)
       post_body = @api_client.object_to_http_body(persist)
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -179,7 +179,7 @@ module Pier
       # http body (model)
       post_body = @api_client.object_to_http_body(update)
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -255,7 +255,7 @@ module Pier
       # http body (model)
       post_body = @api_client.object_to_http_body(persist)
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -331,7 +331,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -397,7 +397,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -463,7 +463,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -487,8 +487,10 @@ module Pier
     # @option opts [DateTime] :rev_date Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
     # @option opts [Integer] :id C\u00C3\u00B3digo identificador do status oportunidade
     # @option opts [Integer] :id_tipo_oportunidade C\u00C3\u00B3digo identificador do tipo oportunidade
+    # @option opts [String] :nome Nome do status oportunidade
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
+    # @option opts [DateTime] :rev_user Usu\u00C3\u00A1rio da auditoria
     # @return [PageStatusOprtunidadesAUD]
     def listar_auditorias_status_using_get(opts = {})
       data, _status_code, _headers = listar_auditorias_status_using_get_with_http_info(opts)
@@ -504,13 +506,27 @@ module Pier
     # @option opts [DateTime] :rev_date Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
     # @option opts [Integer] :id C\u00C3\u00B3digo identificador do status oportunidade
     # @option opts [Integer] :id_tipo_oportunidade C\u00C3\u00B3digo identificador do tipo oportunidade
+    # @option opts [String] :nome Nome do status oportunidade
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
+    # @option opts [DateTime] :rev_user Usu\u00C3\u00A1rio da auditoria
     # @return [Array<(PageStatusOprtunidadesAUD, Fixnum, Hash)>] PageStatusOprtunidadesAUD data, response status code and response headers
     def listar_auditorias_status_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OportunidadesApi.listar_auditorias_status_using_get ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -571,8 +587,10 @@ module Pier
       query_params[:'revDate'] = opts[:'rev_date'] if opts[:'rev_date']
       query_params[:'id'] = opts[:'id'] if opts[:'id']
       query_params[:'idTipoOportunidade'] = opts[:'id_tipo_oportunidade'] if opts[:'id_tipo_oportunidade']
+      query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
       query_params[:'descricao'] = opts[:'descricao'] if opts[:'descricao']
       query_params[:'flagAtivo'] = opts[:'flag_ativo'] if opts[:'flag_ativo']
+      query_params[:'revUser'] = opts[:'rev_user'] if opts[:'rev_user']
 
       # header parameters
       header_params = {}
@@ -591,7 +609,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -620,6 +638,7 @@ module Pier
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
     # @option opts [DateTime] :rev_date Data da auditoria
     # @option opts [DateTime] :rev_type Tipo da auditoria
+    # @option opts [DateTime] :rev_user Usu\u00C3\u00A1rio da auditoria
     # @return [PageOprtunidadeAUD]
     def listar_auditorias_using_get(opts = {})
       data, _status_code, _headers = listar_auditorias_using_get_with_http_info(opts)
@@ -640,11 +659,18 @@ module Pier
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
     # @option opts [DateTime] :rev_date Data da auditoria
     # @option opts [DateTime] :rev_type Tipo da auditoria
+    # @option opts [DateTime] :rev_user Usu\u00C3\u00A1rio da auditoria
     # @return [Array<(PageOprtunidadeAUD, Fixnum, Hash)>] PageOprtunidadeAUD data, response status code and response headers
     def listar_auditorias_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OportunidadesApi.listar_auditorias_using_get ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -728,6 +754,7 @@ module Pier
       query_params[:'flagAtivo'] = opts[:'flag_ativo'] if opts[:'flag_ativo']
       query_params[:'revDate'] = opts[:'rev_date'] if opts[:'rev_date']
       query_params[:'revType'] = opts[:'rev_type'] if opts[:'rev_type']
+      query_params[:'revUser'] = opts[:'rev_user'] if opts[:'rev_user']
 
       # header parameters
       header_params = {}
@@ -746,7 +773,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -771,6 +798,7 @@ module Pier
     # @option opts [Integer] :id C\u00C3\u00B3digo identificador do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
     # @option opts [BOOLEAN] :flag_ativo Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo
+    # @option opts [DateTime] :rev_user Usu\u00C3\u00A1rio da auditoria
     # @return [PageTipoOprtunidadesAUD]
     def listar_auditorias_using_get1(opts = {})
       data, _status_code, _headers = listar_auditorias_using_get1_with_http_info(opts)
@@ -787,11 +815,18 @@ module Pier
     # @option opts [Integer] :id C\u00C3\u00B3digo identificador do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
     # @option opts [BOOLEAN] :flag_ativo Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo
+    # @option opts [DateTime] :rev_user Usu\u00C3\u00A1rio da auditoria
     # @return [Array<(PageTipoOprtunidadesAUD, Fixnum, Hash)>] PageTipoOprtunidadesAUD data, response status code and response headers
     def listar_auditorias_using_get1_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OportunidadesApi.listar_auditorias_using_get1 ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -847,6 +882,7 @@ module Pier
       query_params[:'id'] = opts[:'id'] if opts[:'id']
       query_params[:'descricao'] = opts[:'descricao'] if opts[:'descricao']
       query_params[:'flagAtivo'] = opts[:'flag_ativo'] if opts[:'flag_ativo']
+      query_params[:'revUser'] = opts[:'rev_user'] if opts[:'rev_user']
 
       # header parameters
       header_params = {}
@@ -865,7 +901,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -886,6 +922,7 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [String] :nome Nome do status oportunidade
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
     # @return [PageStatusOprtunidades]
@@ -900,6 +937,7 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [String] :nome Nome do status oportunidade
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
     # @return [Array<(PageStatusOprtunidades, Fixnum, Hash)>] PageStatusOprtunidades data, response status code and response headers
@@ -940,6 +978,12 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/tipos-oportunidades/{id}/status".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
@@ -947,6 +991,7 @@ module Pier
       query_params = {}
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
       query_params[:'descricao'] = opts[:'descricao'] if opts[:'descricao']
       query_params[:'flagAtivo'] = opts[:'flag_ativo'] if opts[:'flag_ativo']
 
@@ -967,7 +1012,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -990,8 +1035,8 @@ module Pier
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
     # @return [PageTipoOprtunidades]
-    def listar_using_get16(opts = {})
-      data, _status_code, _headers = listar_using_get16_with_http_info(opts)
+    def listar_using_get19(opts = {})
+      data, _status_code, _headers = listar_using_get19_with_http_info(opts)
       return data
     end
 
@@ -1003,9 +1048,9 @@ module Pier
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
     # @return [Array<(PageTipoOprtunidades, Fixnum, Hash)>] PageTipoOprtunidades data, response status code and response headers
-    def listar_using_get16_with_http_info(opts = {})
+    def listar_using_get19_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadesApi.listar_using_get16 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadesApi.listar_using_get19 ..."
       end
       
       
@@ -1059,7 +1104,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1068,7 +1113,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTipoOprtunidades')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadesApi#listar_using_get16\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadesApi#listar_using_get19\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1087,8 +1132,8 @@ module Pier
     # @option opts [DateTime] :data_fim_vigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
     # @return [PageOprtunidadesResponse]
-    def listar_using_get7(opts = {})
-      data, _status_code, _headers = listar_using_get7_with_http_info(opts)
+    def listar_using_get9(opts = {})
+      data, _status_code, _headers = listar_using_get9_with_http_info(opts)
       return data
     end
 
@@ -1105,9 +1150,9 @@ module Pier
     # @option opts [DateTime] :data_fim_vigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
     # @return [Array<(PageOprtunidadesResponse, Fixnum, Hash)>] PageOprtunidadesResponse data, response status code and response headers
-    def listar_using_get7_with_http_info(opts = {})
+    def listar_using_get9_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadesApi.listar_using_get7 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadesApi.listar_using_get9 ..."
       end
       
       
@@ -1196,7 +1241,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1205,7 +1250,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageOprtunidadesResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadesApi#listar_using_get7\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadesApi#listar_using_get9\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1272,7 +1317,7 @@ module Pier
       # http body (model)
       post_body = @api_client.object_to_http_body(persist)
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1287,79 +1332,13 @@ module Pier
     end
 
 
-    # Cadastra as oportunidade
-    # Esse recurso permite cadastrar oportunidades.
-    # @param persist persist
-    # @param [Hash] opts the optional parameters
-    # @return [OportunidadeResponse]
-    def salvar_using_post3(persist, opts = {})
-      data, _status_code, _headers = salvar_using_post3_with_http_info(persist, opts)
-      return data
-    end
-
-    # Cadastra as oportunidade
-    # Esse recurso permite cadastrar oportunidades.
-    # @param persist persist
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(OportunidadeResponse, Fixnum, Hash)>] OportunidadeResponse data, response status code and response headers
-    def salvar_using_post3_with_http_info(persist, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadesApi.salvar_using_post3 ..."
-      end
-      
-      
-      # verify the required parameter 'persist' is set
-      fail ArgumentError, "Missing the required parameter 'persist' when calling OportunidadesApi.salvar_using_post3" if persist.nil?
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/oportunidades".sub('{format}','json')
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = @api_client.object_to_http_body(persist)
-      
-      auth_names = ['access_token']
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'OportunidadeResponse')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadesApi#salvar_using_post3\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-
     # Cadastra tipos oportunidades
     # Esse recurso permite cadastrar tipos oportunidades.
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [TipoOportunidadeResponse]
-    def salvar_using_post6(persist, opts = {})
-      data, _status_code, _headers = salvar_using_post6_with_http_info(persist, opts)
+    def salvar_using_post10(persist, opts = {})
+      data, _status_code, _headers = salvar_using_post10_with_http_info(persist, opts)
       return data
     end
 
@@ -1368,14 +1347,14 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(TipoOportunidadeResponse, Fixnum, Hash)>] TipoOportunidadeResponse data, response status code and response headers
-    def salvar_using_post6_with_http_info(persist, opts = {})
+    def salvar_using_post10_with_http_info(persist, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadesApi.salvar_using_post6 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadesApi.salvar_using_post10 ..."
       end
       
       
       # verify the required parameter 'persist' is set
-      fail ArgumentError, "Missing the required parameter 'persist' when calling OportunidadesApi.salvar_using_post6" if persist.nil?
+      fail ArgumentError, "Missing the required parameter 'persist' when calling OportunidadesApi.salvar_using_post10" if persist.nil?
       
       
       
@@ -1404,7 +1383,7 @@ module Pier
       # http body (model)
       post_body = @api_client.object_to_http_body(persist)
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1413,7 +1392,73 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TipoOportunidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadesApi#salvar_using_post6\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadesApi#salvar_using_post10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Cadastra as oportunidade
+    # Esse recurso permite cadastrar oportunidades.
+    # @param persist persist
+    # @param [Hash] opts the optional parameters
+    # @return [OportunidadeResponse]
+    def salvar_using_post5(persist, opts = {})
+      data, _status_code, _headers = salvar_using_post5_with_http_info(persist, opts)
+      return data
+    end
+
+    # Cadastra as oportunidade
+    # Esse recurso permite cadastrar oportunidades.
+    # @param persist persist
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(OportunidadeResponse, Fixnum, Hash)>] OportunidadeResponse data, response status code and response headers
+    def salvar_using_post5_with_http_info(persist, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OportunidadesApi.salvar_using_post5 ..."
+      end
+      
+      
+      # verify the required parameter 'persist' is set
+      fail ArgumentError, "Missing the required parameter 'persist' when calling OportunidadesApi.salvar_using_post5" if persist.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/oportunidades".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(persist)
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'OportunidadeResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OportunidadesApi#salvar_using_post5\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

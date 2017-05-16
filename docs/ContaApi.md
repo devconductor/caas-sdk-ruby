@@ -1,11 +1,12 @@
 # Pier::ContaApi
 
-All URIs are relative to *https://localhost/*
+All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ajustar_conta_using_post**](ContaApi.md#ajustar_conta_using_post) | **POST** /api/contas/{id}/ajustes-financeiros | Lan\u00C3\u00A7a um ajuste para a conta do id informado
 [**alterar_limite_using_put**](ContaApi.md#alterar_limite_using_put) | **PUT** /api/contas/{id}/alterar-limites | Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
+[**alterar_titular_using_post**](ContaApi.md#alterar_titular_using_post) | **POST** /api/contas/{id}/alterar-titular | Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
 [**alterar_vencimento_using_put**](ContaApi.md#alterar_vencimento_using_put) | **PUT** /api/contas/{id}/alterar-vencimento | Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
 [**ativar_envio_fatura_email_using_post**](ContaApi.md#ativar_envio_fatura_email_using_post) | **POST** /api/contas/{id}/ativar-fatura-email |  Ativa o servi\u00C3\u00A7o de envio de fatura por email
 [**consultar_boleto_emitido_using_get**](ContaApi.md#consultar_boleto_emitido_using_get) | **GET** /api/contas/{id}/consultar-dados-pagamento-fatura | Consulta os dados de um determinado boleto da fatura
@@ -15,32 +16,32 @@ Method | HTTP request | Description
 [**consultar_fatura_using_get**](ContaApi.md#consultar_fatura_using_get) | **GET** /api/contas/{id}/faturas/consultar-fechada | Consultar Fatura da Conta
 [**consultar_lancamentos_futuros_fatura_using_get**](ContaApi.md#consultar_lancamentos_futuros_fatura_using_get) | **GET** /api/contas/{id}/faturas/consultar-aberta | Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
 [**consultar_limite_disponibilidade_using_get1**](ContaApi.md#consultar_limite_disponibilidade_using_get1) | **GET** /api/contas/{id}/limites-disponibilidades | Apresenta os limites da conta
-[**consultar_using_get20**](ContaApi.md#consultar_using_get20) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
+[**consultar_using_get20**](ContaApi.md#consultar_using_get20) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
 [**consultar_using_get21**](ContaApi.md#consultar_using_get21) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 [**consultar_using_get3**](ContaApi.md#consultar_using_get3) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
 [**desativar_envio_fatura_email_using_post**](ContaApi.md#desativar_envio_fatura_email_using_post) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00C3\u00A7o de envio de fatura por email
 [**gerar_boleto_recarga_using_post**](ContaApi.md#gerar_boleto_recarga_using_post) | **POST** /api/contas/{id}/gerar-boleto-recarga | Gera um boleto de recarga
 [**gerar_cartao_using_post**](ContaApi.md#gerar_cartao_using_post) | **POST** /api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
 [**listar_faturas_consignadas_using_get**](ContaApi.md#listar_faturas_consignadas_using_get) | **GET** /api/contas/{id}/faturas-consignadas | Lista as faturas consignadas da conta
-[**listar_faturas_using_get**](ContaApi.md#listar_faturas_using_get) | **GET** /api/contas/{id}/listar-faturas | Lista as faturas da conta
+[**listar_faturas_using_get**](ContaApi.md#listar_faturas_using_get) | **GET** /api/contas/{id}/faturas | Lista as faturas da conta
 [**listar_historico_alteracoes_limites_using_get**](ContaApi.md#listar_historico_alteracoes_limites_using_get) | **GET** /api/contas/{id}/historicos-alteracoes-limites | Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
 [**listar_historico_assessoria_using_get**](ContaApi.md#listar_historico_assessoria_using_get) | **GET** /api/contas/{id}/historicos-assessorias-cobranca | Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
 [**listar_historico_atrasos_faturas_using_get**](ContaApi.md#listar_historico_atrasos_faturas_using_get) | **GET** /api/contas/{id}/historicos-faturas-atrasos | Lista o historico de atrasos das faturas
 [**listar_nao_processadas_using_get**](ContaApi.md#listar_nao_processadas_using_get) | **GET** /api/contas/{id}/transacoes/listar-nao-processadas | Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
 [**listar_processadas_using_get**](ContaApi.md#listar_processadas_using_get) | **GET** /api/contas/{id}/transacoes/listar-processadas | Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
-[**listar_using_get19**](ContaApi.md#listar_using_get19) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-[**listar_using_get20**](ContaApi.md#listar_using_get20) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
-[**listar_using_get3**](ContaApi.md#listar_using_get3) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
+[**listar_using_get22**](ContaApi.md#listar_using_get22) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+[**listar_using_get23**](ContaApi.md#listar_using_get23) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
+[**listar_using_get4**](ContaApi.md#listar_using_get4) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
 [**reativar_using_post**](ContaApi.md#reativar_using_post) | **POST** /api/contas/{id}/reativar | Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas que foram desativadas por inadimpl\u00C3\u00AAncia
 [**transacoes_using_get**](ContaApi.md#transacoes_using_get) | **GET** /api/contas/{id}/timeline | Permite listar uma linha do tempo com os eventos da conta
-[**transferir_using_post**](ContaApi.md#transferir_using_post) | **POST** /api/contas/{id}/transferencias-creditos-contas-bancarias | Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria entre bancos / contas
+[**transferir_using_post**](ContaApi.md#transferir_using_post) | **POST** /api/contas/{id}/transferencias-creditos-contas-bancarias | Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
 [**transferir_using_post1**](ContaApi.md#transferir_using_post1) | **POST** /api/contas/{id}/transferencias-creditos-cartoes | Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
 
 
 
 
 # **ajustar_conta_using_post**
-> AjusteResponse ajustar_conta_using_post(id, id_tipo_ajuste, data_ajuste, valor_ajuste, opts)
+> AjusteResponse ajustar_conta_using_post(id, id_tipo_ajuste, data_ajuste, valor_ajuste)
 
 Lan\u00C3\u00A7a um ajuste para a conta do id informado
 
@@ -50,14 +51,6 @@ Este recurso insere um ajuste para a conta do id informado
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -70,14 +63,10 @@ data_ajuste = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | Data do a
 
 valor_ajuste = 3.4 # Float | Valor do ajuste
 
-opts = { 
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-}
 
 begin
   #Lan\u00C3\u00A7a um ajuste para a conta do id informado
-  result = api_instance.ajustar_conta_using_post(id, id_tipo_ajuste, data_ajuste, valor_ajuste, opts)
+  result = api_instance.ajustar_conta_using_post(id, id_tipo_ajuste, data_ajuste, valor_ajuste)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling ContaApi->ajustar_conta_using_post: #{e}"
@@ -92,8 +81,6 @@ Name | Type | Description  | Notes
  **id_tipo_ajuste** | **Integer**| C\u00C3\u00B3digo identificador do tipo de ajuste. | 
  **data_ajuste** | **DateTime**| Data do ajuste. | 
  **valor_ajuste** | [**Float**](.md)| Valor do ajuste | 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 
 
 ### Return type
@@ -102,7 +89,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -123,14 +110,6 @@ Esse recurso permite realizar a altera\u00C3\u00A7\u00C3\u00A3o dos Limites de u
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -196,7 +175,60 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **alterar_titular_using_post**
+> ContaResponse alterar_titular_using_post(id, id_pessoa)
+
+Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
+
+Esta m\u00C3\u00A9todo permite altera a pessoa de uma conta.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::ContaApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id)
+
+id_pessoa = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).
+
+
+begin
+  #Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
+  result = api_instance.alterar_titular_using_post(id, id_pessoa)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ContaApi->alterar_titular_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) | 
+ **id_pessoa** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id). | 
+
+
+### Return type
+
+[**ContaResponse**](ContaResponse.md)
+
+### Authorization
+
+No authorization required
 
 ### HTTP request headers
 
@@ -207,7 +239,7 @@ Name | Type | Description  | Notes
 
 
 # **alterar_vencimento_using_put**
-> Conta alterar_vencimento_using_put(id, novo_dia_vencimento)
+> ContaResponse alterar_vencimento_using_put(id, novo_dia_vencimento)
 
 Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
 
@@ -217,14 +249,6 @@ Esse recurso permite alterar o vencimento de uma conta especifica.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -253,11 +277,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Conta**](Conta.md)
+[**ContaResponse**](ContaResponse.md)
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -278,14 +302,6 @@ Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -315,7 +331,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -336,14 +352,6 @@ Este recurso consulta um boleto da fatura
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -373,7 +381,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -394,14 +402,6 @@ Este recurso consulta a d\u00C3\u00ADvida atualizada do cliente
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -441,7 +441,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -452,7 +452,7 @@ Name | Type | Description  | Notes
 
 
 # **consultar_fatura_consignada_aberta_using_get**
-> DetalhesFaturaConsignadaResponse consultar_fatura_consignada_aberta_using_get(id, data_vencimento)
+> DetalhesFaturaConsignadaResponse consultar_fatura_consignada_aberta_using_get(id, opts)
 
 Consultar a fatura consignadas abertas da conta
 
@@ -463,25 +463,18 @@ Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portador
 # load the gem
 require 'pier-sdk-ruby'
 
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
-
 
 api_instance = Pier::ContaApi.new
 
 id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
 
-data_vencimento = Date.parse("2013-10-20") # Date | Data Vencimento.
-
+opts = { 
+  data_vencimento: Date.parse("2013-10-20") # Date | Data Vencimento
+}
 
 begin
   #Consultar a fatura consignadas abertas da conta
-  result = api_instance.consultar_fatura_consignada_aberta_using_get(id, data_vencimento)
+  result = api_instance.consultar_fatura_consignada_aberta_using_get(id, opts)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling ContaApi->consultar_fatura_consignada_aberta_using_get: #{e}"
@@ -493,7 +486,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **data_vencimento** | **Date**| Data Vencimento. | 
+ **data_vencimento** | **Date**| Data Vencimento | [optional] 
 
 
 ### Return type
@@ -502,7 +495,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -523,14 +516,6 @@ Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portador
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -563,7 +548,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -584,14 +569,6 @@ Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portador
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -624,7 +601,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -635,7 +612,7 @@ Name | Type | Description  | Notes
 
 
 # **consultar_lancamentos_futuros_fatura_using_get**
-> DetalhesFaturaResponse consultar_lancamentos_futuros_fatura_using_get(id, data_vencimento)
+> DetalhesFaturaResponse consultar_lancamentos_futuros_fatura_using_get(id, opts)
 
 Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
 
@@ -646,25 +623,18 @@ Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portador
 # load the gem
 require 'pier-sdk-ruby'
 
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
-
 
 api_instance = Pier::ContaApi.new
 
 id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
 
-data_vencimento = Date.parse("2013-10-20") # Date | Data Vencimento.
-
+opts = { 
+  data_vencimento: Date.parse("2013-10-20") # Date | Data Vencimento
+}
 
 begin
   #Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
-  result = api_instance.consultar_lancamentos_futuros_fatura_using_get(id, data_vencimento)
+  result = api_instance.consultar_lancamentos_futuros_fatura_using_get(id, opts)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling ContaApi->consultar_lancamentos_futuros_fatura_using_get: #{e}"
@@ -676,7 +646,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **data_vencimento** | **Date**| Data Vencimento. | 
+ **data_vencimento** | **Date**| Data Vencimento | [optional] 
 
 
 ### Return type
@@ -685,7 +655,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -706,14 +676,6 @@ Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determ
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -743,7 +705,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -756,22 +718,14 @@ Name | Type | Description  | Notes
 # **consultar_using_get20**
 > LinkTransferenciaBancariaResponse consultar_using_get20(id, id_transferencia, opts)
 
-Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
+Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
 
-Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
 
 ### Example
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -785,7 +739,7 @@ opts = {
 }
 
 begin
-  #Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
+  #Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
   result = api_instance.consultar_using_get20(id, id_transferencia, opts)
   p result
 rescue Pier::ApiError => e
@@ -808,7 +762,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -829,14 +783,6 @@ Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -869,7 +815,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -880,7 +826,7 @@ Name | Type | Description  | Notes
 
 
 # **consultar_using_get3**
-> Conta consultar_using_get3(id)
+> ContaDetalheResponse consultar_using_get3(id)
 
 Apresenta dados de uma determinada conta
 
@@ -890,14 +836,6 @@ Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -923,11 +861,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Conta**](Conta.md)
+[**ContaDetalheResponse**](ContaDetalheResponse.md)
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -948,14 +886,6 @@ Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -985,7 +915,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -1006,14 +936,6 @@ Este recurso gera um boleto de recarga
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -1055,7 +977,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -1076,14 +998,6 @@ Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determina
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -1120,7 +1034,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -1141,14 +1055,6 @@ Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portador
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -1186,7 +1092,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -1207,14 +1113,6 @@ Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portador
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -1252,7 +1150,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -1273,14 +1171,6 @@ Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -1316,7 +1206,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -1337,14 +1227,6 @@ Permite listar todos os registros de entrada e sa\u00C3\u00ADda da Conta em arqu
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -1380,7 +1262,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -1401,14 +1283,6 @@ Este recurso lista o hist\u00C3\u00B3rico do pagamento de faturas em atraso
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -1438,7 +1312,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -1459,14 +1333,6 @@ Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u0
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -1502,7 +1368,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -1523,14 +1389,6 @@ Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u0
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -1568,7 +1426,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -1578,8 +1436,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get19**
-> LinkPageTransferenciaBancariaResponse listar_using_get19(id, opts)
+# **listar_using_get22**
+> LinkPageTransferenciaBancariaResponse listar_using_get22(id, opts)
 
 Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
 
@@ -1589,14 +1447,6 @@ Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o p
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -1611,10 +1461,10 @@ opts = {
 
 begin
   #Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-  result = api_instance.listar_using_get19(id, opts)
+  result = api_instance.listar_using_get22(id, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->listar_using_get19: #{e}"
+  puts "Exception when calling ContaApi->listar_using_get22: #{e}"
 end
 ```
 
@@ -1634,7 +1484,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -1644,8 +1494,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get20**
-> PageTransferencias listar_using_get20(id, opts)
+# **listar_using_get23**
+> PageTransferencias listar_using_get23(id, opts)
 
 Lista as transfer\u00C3\u00AAncias realizadas pela conta
 
@@ -1655,14 +1505,6 @@ Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias r
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -1681,10 +1523,10 @@ opts = {
 
 begin
   #Lista as transfer\u00C3\u00AAncias realizadas pela conta
-  result = api_instance.listar_using_get20(id, opts)
+  result = api_instance.listar_using_get23(id, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->listar_using_get20: #{e}"
+  puts "Exception when calling ContaApi->listar_using_get23: #{e}"
 end
 ```
 
@@ -1708,7 +1550,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -1718,8 +1560,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get3**
-> PageContas listar_using_get3(opts)
+# **listar_using_get4**
+> PageContas listar_using_get4(opts)
 
 Lista contas existentes na base de dados do Emissor
 
@@ -1729,14 +1571,6 @@ Este recurso permite listar contas existentes na base de dados do Emissor.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -1757,10 +1591,10 @@ opts = {
 
 begin
   #Lista contas existentes na base de dados do Emissor
-  result = api_instance.listar_using_get3(opts)
+  result = api_instance.listar_using_get4(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->listar_using_get3: #{e}"
+  puts "Exception when calling ContaApi->listar_using_get4: #{e}"
 end
 ```
 
@@ -1787,7 +1621,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -1808,14 +1642,6 @@ Este recurso permite reativar contas que foram desativadas por inadimpl\u00C3\u0
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -1845,7 +1671,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -1866,14 +1692,6 @@ Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em fo
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::ContaApi.new
@@ -1909,7 +1727,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -1920,60 +1738,28 @@ Name | Type | Description  | Notes
 
 
 # **transferir_using_post**
-> LinkTransferenciaBancariaResponse transferir_using_post(id, data_compra, proximo_vencimento_padrao, proximo_vencimento_real, valor_compra, nome_favorecido, documento_favorecido, banco, numero_agencia, numero_conta, flag_conta_poupanca, opts)
+> LinkTransferenciaBancariaResponse transferir_using_post(id, transferencia_bancaria_persist)
 
-Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria entre bancos / contas
+Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
 
-Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta de destino.
+Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
 
 ### Example
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
 
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
-
 
 api_instance = Pier::ContaApi.new
 
 id = 789 # Integer | Id Conta
 
-data_compra = Date.parse("2013-10-20") # Date | Data da transfer\u00C3\u00AAncia
+transferencia_bancaria_persist = Pier::TransferenciaBancariaPersist.new # TransferenciaBancariaPersist | transferenciaBancariaPersist
 
-proximo_vencimento_padrao = Date.parse("2013-10-20") # Date | Dia do vencimento padr\u00C3\u00A3o da fatura
-
-proximo_vencimento_real = Date.parse("2013-10-20") # Date | Data do vencimento real da fatura
-
-valor_compra = 3.4 # Float | Valor da transfer\u00C3\u00AAncia
-
-nome_favorecido = "nome_favorecido_example" # String | Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
-
-documento_favorecido = "documento_favorecido_example" # String | N\u00C3\u00BAmero do CPF ou CNPJ.
-
-banco = 789 # Integer | C\u00C3\u00B3digo do banco
-
-numero_agencia = "numero_agencia_example" # String | N\u00C3\u00BAmero da ag\u00C3\u00AAncia
-
-numero_conta = "numero_conta_example" # String | N\u00C3\u00BAmero da conta
-
-flag_conta_poupanca = 56 # Integer | Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
-
-opts = { 
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  digito_agencia: "digito_agencia_example", # String | D\u00C3\u00ADgito da ag\u00C3\u00AAncia
-  digito_conta: "digito_conta_example" # String | D\u00C3\u00ADgito da conta
-}
 
 begin
-  #Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria entre bancos / contas
-  result = api_instance.transferir_using_post(id, data_compra, proximo_vencimento_padrao, proximo_vencimento_real, valor_compra, nome_favorecido, documento_favorecido, banco, numero_agencia, numero_conta, flag_conta_poupanca, opts)
+  #Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
+  result = api_instance.transferir_using_post(id, transferencia_bancaria_persist)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling ContaApi->transferir_using_post: #{e}"
@@ -1985,20 +1771,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| Id Conta | 
- **data_compra** | **Date**| Data da transfer\u00C3\u00AAncia | 
- **proximo_vencimento_padrao** | **Date**| Dia do vencimento padr\u00C3\u00A3o da fatura | 
- **proximo_vencimento_real** | **Date**| Data do vencimento real da fatura | 
- **valor_compra** | [**Float**](.md)| Valor da transfer\u00C3\u00AAncia | 
- **nome_favorecido** | **String**| Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. | 
- **documento_favorecido** | **String**| N\u00C3\u00BAmero do CPF ou CNPJ. | 
- **banco** | **Integer**| C\u00C3\u00B3digo do banco | 
- **numero_agencia** | **String**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia | 
- **numero_conta** | **String**| N\u00C3\u00BAmero da conta | 
- **flag_conta_poupanca** | **Integer**| Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente) | 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **digito_agencia** | **String**| D\u00C3\u00ADgito da ag\u00C3\u00AAncia | [optional] 
- **digito_conta** | **String**| D\u00C3\u00ADgito da conta | [optional] 
+ **transferencia_bancaria_persist** | [**TransferenciaBancariaPersist**](TransferenciaBancariaPersist.md)| transferenciaBancariaPersist | 
 
 
 ### Return type
@@ -2007,7 +1780,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -2029,18 +1802,10 @@ Este m\u00C3\u00A9todo permite que um portador de um cart\u00C3\u00A3o possa rea
 # load the gem
 require 'pier-sdk-ruby'
 
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
-
 
 api_instance = Pier::ContaApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).
 
 id_conta_destino = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).
 
@@ -2060,7 +1825,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id). | 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id). | 
  **id_conta_destino** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id). | 
  **valor_transferencia** | [**Float**](.md)| Valor da Transfer\u00C3\u00AAncia. | 
 
@@ -2071,7 +1836,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 

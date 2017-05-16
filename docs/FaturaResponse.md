@@ -29,6 +29,8 @@ Name | Type | Description | Notes
 **taxa_saque** | **Float** | Valor percentual da taxa de saque. | [optional] 
 **taxa_maxima_proximo_periodo** | **Float** | Valor m\u00C3\u00A1ximo percentual da taxa de encargos para o pr\u00C3\u00B3ximo per\u00C3\u00ADodo. | [optional] 
 **total_servicos** | **Float** | Apresenta a soma de todos os seguros cobrados na fatura do cliente. | 
+**total_parcelado_nacionais** | **Float** | Apresenta a soma de todos os valores parcelados + compras nacionais. | 
+**total_parcelado_internacionais** | **Float** | Apresenta a soma de todos os valores parcelados + compras internacionais. | 
 
 
 

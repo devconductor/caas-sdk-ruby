@@ -80,6 +80,23 @@ describe 'UsuariosApi' do
   end
 
 
+  # unit tests for ativar_usuario_using_post
+  # Ativa os usu\u00C3\u00A1rios cadastrados
+  # Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+  # @param [Hash] opts the optional parameters
+  # @return [UsuarioResponse]
+  describe 'ativar_usuario_using_post test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
   # unit tests for consultar_using_get22
   # Apresenta os dados de um determinado Usu\u00C3\u00A1rio
   # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
@@ -97,7 +114,24 @@ describe 'UsuariosApi' do
   end
 
 
-  # unit tests for listar_using_get21
+  # unit tests for desativar_usuario_using_post
+  # Desativa os usu\u00C3\u00A1rios cadastrados
+  # Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+  # @param [Hash] opts the optional parameters
+  # @return [UsuarioResponse]
+  describe 'desativar_usuario_using_post test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for listar_using_get24
   # Lista os Usu\u00C3\u00A1rios cadastrados
   # Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
   # @param [Hash] opts the optional parameters
@@ -108,7 +142,7 @@ describe 'UsuariosApi' do
   # @option opts [String] :email Email do Usuario
   # @option opts [String] :status Status do Usuario
   # @return [PageUsuarios]
-  describe 'listar_using_get21 test' do
+  describe 'listar_using_get24 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -136,13 +170,13 @@ describe 'UsuariosApi' do
   end
 
 
-  # unit tests for salvar_using_post8
+  # unit tests for salvar_using_post12
   # Cadastra Usu\u00C3\u00A1rio
   # Esse recurso permite cadastrar usu\u00C3\u00A1rios.
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [UsuarioResponse]
-  describe 'salvar_using_post8 test' do
+  describe 'salvar_using_post12 test' do
     it "should work" do
       # assertion here
       # should be_a()

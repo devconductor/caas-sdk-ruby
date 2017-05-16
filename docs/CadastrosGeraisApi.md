@@ -1,6 +1,6 @@
 # Pier::CadastrosGeraisApi
 
-All URIs are relative to *https://localhost/*
+All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,25 +19,28 @@ Method | HTTP request | Description
 [**consultar_using_get5**](CadastrosGeraisApi.md#consultar_using_get5) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
 [**consultar_using_get8**](CadastrosGeraisApi.md#consultar_using_get8) | **GET** /api/pessoas-detalhes/{id} | Apresenta os detalhes de uma determinada Pessoa
 [**consultar_using_get9**](CadastrosGeraisApi.md#consultar_using_get9) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
+[**listar_contas_por_pessoa_using_get**](CadastrosGeraisApi.md#listar_contas_por_pessoa_using_get) | **GET** /api/pessoas/listar-contas | Lista as contas da pessoa
 [**listar_estados_civis_using_get**](CadastrosGeraisApi.md#listar_estados_civis_using_get) | **GET** /api/estados-civis | Lista os Estados C\u00C3\u00ADvis
 [**listar_historico_telefones_using_get**](CadastrosGeraisApi.md#listar_historico_telefones_using_get) | **GET** /api/pessoas/{id}/historico-telefones | Listar altera\u00C3\u00A7\u00C3\u00B5es de telefones realizadas nos \u00C3\u00BAltimos 60 dias
+[**listar_nacionalidades_using_get**](CadastrosGeraisApi.md#listar_nacionalidades_using_get) | **GET** /api/nacionalidades | Lista nacionalidades
 [**listar_naturezas_ocupacoes_using_get**](CadastrosGeraisApi.md#listar_naturezas_ocupacoes_using_get) | **GET** /api/ocupacoes | Lista as Ocupa\u00C3\u00A7\u00C3\u00B5es
 [**listar_origens_comerciais_using_get**](CadastrosGeraisApi.md#listar_origens_comerciais_using_get) | **GET** /api/origens-comerciais | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
 [**listar_produtos_using_get**](CadastrosGeraisApi.md#listar_produtos_using_get) | **GET** /api/produtos | Lista os Produtos do Emissor
 [**listar_profissoes_using_get**](CadastrosGeraisApi.md#listar_profissoes_using_get) | **GET** /api/profissoes | Lista profiss\u00C3\u00B5es
-[**listar_using_get10**](CadastrosGeraisApi.md#listar_using_get10) | **GET** /api/portadores | Lista os Portadores existentes
-[**listar_using_get14**](CadastrosGeraisApi.md#listar_using_get14) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
-[**listar_using_get15**](CadastrosGeraisApi.md#listar_using_get15) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-[**listar_using_get17**](CadastrosGeraisApi.md#listar_using_get17) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
-[**listar_using_get4**](CadastrosGeraisApi.md#listar_using_get4) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
-[**listar_using_get5**](CadastrosGeraisApi.md#listar_using_get5) | **GET** /api/estabelecimentos | Lista Estabelecimentos
-[**listar_using_get8**](CadastrosGeraisApi.md#listar_using_get8) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
-[**listar_using_get9**](CadastrosGeraisApi.md#listar_using_get9) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
-[**salvar_pessoa_fisica_aprovada_using_post**](CadastrosGeraisApi.md#salvar_pessoa_fisica_aprovada_using_post) | **POST** /api/contas-pessoas/fisicas | Cadastro de Conta e Pessoa Fisica
-[**salvar_pessoa_juridica_aprovada_using_post**](CadastrosGeraisApi.md#salvar_pessoa_juridica_aprovada_using_post) | **POST** /api/contas-pessoas/juridicas | Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica
-[**salvar_using_post2**](CadastrosGeraisApi.md#salvar_using_post2) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
-[**salvar_using_post4**](CadastrosGeraisApi.md#salvar_using_post4) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
-[**salvar_using_post5**](CadastrosGeraisApi.md#salvar_using_post5) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
+[**listar_using_get10**](CadastrosGeraisApi.md#listar_using_get10) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
+[**listar_using_get11**](CadastrosGeraisApi.md#listar_using_get11) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
+[**listar_using_get13**](CadastrosGeraisApi.md#listar_using_get13) | **GET** /api/portadores | Lista os Portadores existentes
+[**listar_using_get17**](CadastrosGeraisApi.md#listar_using_get17) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
+[**listar_using_get18**](CadastrosGeraisApi.md#listar_using_get18) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+[**listar_using_get20**](CadastrosGeraisApi.md#listar_using_get20) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
+[**listar_using_get6**](CadastrosGeraisApi.md#listar_using_get6) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
+[**listar_using_get7**](CadastrosGeraisApi.md#listar_using_get7) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**salvar_pessoa_fisica_aprovada_using_post**](CadastrosGeraisApi.md#salvar_pessoa_fisica_aprovada_using_post) | **POST** /api/clientes-pessoas-fisicas | Cadastro de Conta e Pessoa Fisica
+[**salvar_pessoa_juridica_aprovada_using_post**](CadastrosGeraisApi.md#salvar_pessoa_juridica_aprovada_using_post) | **POST** /api/clientes-pessoas-juridicas | Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica
+[**salvar_using_post4**](CadastrosGeraisApi.md#salvar_using_post4) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
+[**salvar_using_post6**](CadastrosGeraisApi.md#salvar_using_post6) | **POST** /api/pessoas-detalhes | Salvar os detalhes de uma determinada Pessoa
+[**salvar_using_post7**](CadastrosGeraisApi.md#salvar_using_post7) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
+[**salvar_using_post9**](CadastrosGeraisApi.md#salvar_using_post9) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
 
 
 
@@ -53,14 +56,6 @@ Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um ou mais r
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -114,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -129,20 +124,12 @@ Name | Type | Description  | Notes
 
 Atualiza os detalhes de uma determinada Pessoa
 
-Este m\u00C3\u00A9todo permite que seja alterado na base do emissor od detalhes de uma determinada Pessoa.
+Este m\u00C3\u00A9todo permite que seja alterado na base do emissor os detalhes de uma determinada Pessoa.
 
 ### Example
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -192,7 +179,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -213,14 +200,6 @@ Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um registro 
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -274,7 +253,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -295,14 +274,6 @@ Este m\u00C3\u00A9todo permite que seja alterado um determinado Telefone na base
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -342,7 +313,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -363,14 +334,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinad
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -400,7 +363,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -421,14 +384,6 @@ Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu 
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -458,7 +413,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -479,14 +434,6 @@ Este m\u00C3\u00A9todo permite consultar um determinado Telefone a partir do seu
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -516,7 +463,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -537,14 +484,6 @@ Este recurso permite que sejam listados os tipos de ajustes existentes na base d
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -581,7 +520,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -602,14 +541,6 @@ Este recurso permite que sejam listados os tipos de boletos existentes na base d
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -648,7 +579,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -669,14 +600,6 @@ Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Endere\u00C3\u00
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -706,7 +629,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -727,14 +650,6 @@ Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a parti
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -764,7 +679,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -785,14 +700,6 @@ Este m\u00C3\u00A9todo permite consultar um determinado Endere\u00C3\u00A7o a pa
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -822,7 +729,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -843,14 +750,6 @@ Consulta os detalhes de um determinado estabelecimento
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -880,7 +779,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -901,14 +800,6 @@ Este m\u00C3\u00A9todo permite a consulta dos detalhes de uma Pessoa existentes 
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -938,7 +829,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -959,14 +850,6 @@ Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base 
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -996,7 +879,63 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_contas_por_pessoa_using_get**
+> PageContasDetalhe listar_contas_por_pessoa_using_get(numero_receita_federal, opts)
+
+Lista as contas da pessoa
+
+Permite listar as contas de um pessoa a partir do seu numero na receita federal.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::CadastrosGeraisApi.new
+
+numero_receita_federal = "numero_receita_federal_example" # String | Id Conta
+
+opts = { 
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+}
+
+begin
+  #Lista as contas da pessoa
+  result = api_instance.listar_contas_por_pessoa_using_get(numero_receita_federal, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CadastrosGeraisApi->listar_contas_por_pessoa_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **numero_receita_federal** | **String**| Id Conta | 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+
+
+### Return type
+
+[**PageContasDetalhe**](PageContasDetalhe.md)
+
+### Authorization
+
+No authorization required
 
 ### HTTP request headers
 
@@ -1017,14 +956,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os Estados C\u00C3\u00ADvis na
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -1057,7 +988,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -1078,14 +1009,6 @@ Este m\u00C3\u00A9todo permite verificar quais os telefones de um determinado qu
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -1115,7 +1038,60 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_nacionalidades_using_get**
+> PageCampoCodificadoDescricao listar_nacionalidades_using_get(opts)
+
+Lista nacionalidades
+
+Este m\u00C3\u00A9todo permite que sejam listados as nacionalidades na base de dados do Emissor.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::CadastrosGeraisApi.new
+
+opts = { 
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+}
+
+begin
+  #Lista nacionalidades
+  result = api_instance.listar_nacionalidades_using_get(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CadastrosGeraisApi->listar_nacionalidades_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+
+
+### Return type
+
+[**PageCampoCodificadoDescricao**](PageCampoCodificadoDescricao.md)
+
+### Authorization
+
+No authorization required
 
 ### HTTP request headers
 
@@ -1136,14 +1112,6 @@ Este m\u00C3\u00A9todo permite que sejam listados as naturezas de opera\u00C3\u0
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -1176,7 +1144,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -1197,14 +1165,6 @@ Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existent
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -1243,7 +1203,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -1264,14 +1224,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -1312,7 +1264,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -1333,14 +1285,6 @@ Este m\u00C3\u00A9todo permite que sejam listados as profiss\u00C3\u00B5es na ba
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -1373,7 +1317,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -1384,7 +1328,155 @@ Name | Type | Description  | Notes
 
 
 # **listar_using_get10**
-> PagePortador listar_using_get10(opts)
+> PessoaDetalheResponse listar_using_get10(opts)
+
+Lista os Detalhes das Pessoas cadastradas no Emissor
+
+Este m\u00C3\u00A9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::CadastrosGeraisApi.new
+
+opts = { 
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  id_pessoa: 789, # Integer | C\u00C3\u00B3digo identificador da pessoa
+  nome_mae: "nome_mae_example", # String | Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+  id_estado_civil: 789, # Integer | Id Estado civil da pessoa fisica
+  profissao: "profissao_example", # String | Profiss\u00C3\u00A3o da pessoa fisica
+  id_natureza_ocupacao: 789, # Integer | Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+  id_nacionalidade: 789, # Integer | Id Nacionalidade da pessoa fisica
+  numero_agencia: 56, # Integer | N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+  numero_conta_corrente: "numero_conta_corrente_example", # String | N\u00C3\u00BAmero da conta corrente.
+  email: "email_example", # String | Email da pessoa fisica
+  nome_empresa: "nome_empresa_example" # String | Nome que deve ser impresso no cart\u00C3\u00A3o
+}
+
+begin
+  #Lista os Detalhes das Pessoas cadastradas no Emissor
+  result = api_instance.listar_using_get10(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CadastrosGeraisApi->listar_using_get10: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **id_pessoa** | **Integer**| C\u00C3\u00B3digo identificador da pessoa | [optional] 
+ **nome_mae** | **String**| Apresenta o nome da m\u00C3\u00A3e da pessoa fisica | [optional] 
+ **id_estado_civil** | **Integer**| Id Estado civil da pessoa fisica | [optional] 
+ **profissao** | **String**| Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
+ **id_natureza_ocupacao** | **Integer**| Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
+ **id_nacionalidade** | **Integer**| Id Nacionalidade da pessoa fisica | [optional] 
+ **numero_agencia** | **Integer**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
+ **numero_conta_corrente** | **String**| N\u00C3\u00BAmero da conta corrente. | [optional] 
+ **email** | **String**| Email da pessoa fisica | [optional] 
+ **nome_empresa** | **String**| Nome que deve ser impresso no cart\u00C3\u00A3o | [optional] 
+
+
+### Return type
+
+[**PessoaDetalheResponse**](PessoaDetalheResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_using_get11**
+> PagePessoas listar_using_get11(opts)
+
+Lista as Pessoas cadastradas no Emissor
+
+Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::CadastrosGeraisApi.new
+
+opts = { 
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+  nome: "nome_example", # String | Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+  tipo: "tipo_example", # String | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
+  cpf: "cpf_example", # String | N\u00C3\u00BAmero do CPF, quando PF.
+  cnpj: "cnpj_example", # String | N\u00C3\u00BAmero do CNPJ, quando PJ.
+  data_nascimento: Date.parse("2013-10-20"), # Date | Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+  sexo: "sexo_example", # String | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+  numero_identidade: "numero_identidade_example", # String | N\u00C3\u00BAmero da Identidade
+  orgao_expedidor_identidade: "orgao_expedidor_identidade_example", # String | Org\u00C3\u00A3o expedidor do RG.
+  unidade_federativa_identidade: "unidade_federativa_identidade_example", # String | Sigla da Unidade Federativa de onde foi expedido a Identidade
+  data_emissao_identidade: Date.parse("2013-10-20") # Date | Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
+}
+
+begin
+  #Lista as Pessoas cadastradas no Emissor
+  result = api_instance.listar_using_get11(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CadastrosGeraisApi->listar_using_get11: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id). | [optional] 
+ **nome** | **String**| Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. | [optional] 
+ **tipo** | **String**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica). | [optional] 
+ **cpf** | **String**| N\u00C3\u00BAmero do CPF, quando PF. | [optional] 
+ **cnpj** | **String**| N\u00C3\u00BAmero do CNPJ, quando PJ. | [optional] 
+ **data_nascimento** | **Date**| Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. | [optional] 
+ **sexo** | **String**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). | [optional] 
+ **numero_identidade** | **String**| N\u00C3\u00BAmero da Identidade | [optional] 
+ **orgao_expedidor_identidade** | **String**| Org\u00C3\u00A3o expedidor do RG. | [optional] 
+ **unidade_federativa_identidade** | **String**| Sigla da Unidade Federativa de onde foi expedido a Identidade | [optional] 
+ **data_emissao_identidade** | **Date**| Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd | [optional] 
+
+
+### Return type
+
+[**PagePessoas**](PagePessoas.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_using_get13**
+> PagePortador listar_using_get13(opts)
 
 Lista os Portadores existentes
 
@@ -1394,14 +1486,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os portadores cadastrados na b
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -1423,10 +1507,10 @@ opts = {
 
 begin
   #Lista os Portadores existentes
-  result = api_instance.listar_using_get10(opts)
+  result = api_instance.listar_using_get13(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosGeraisApi->listar_using_get10: #{e}"
+  puts "Exception when calling CadastrosGeraisApi->listar_using_get13: #{e}"
 end
 ```
 
@@ -1454,7 +1538,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -1464,8 +1548,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get14**
-> PageTelefones listar_using_get14(opts)
+# **listar_using_get17**
+> PageTelefones listar_using_get17(opts)
 
 Lista os Telefones cadastrados no Emissor
 
@@ -1475,14 +1559,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os Telefones existentes na bas
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -1501,10 +1577,10 @@ opts = {
 
 begin
   #Lista os Telefones cadastrados no Emissor
-  result = api_instance.listar_using_get14(opts)
+  result = api_instance.listar_using_get17(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosGeraisApi->listar_using_get14: #{e}"
+  puts "Exception when calling CadastrosGeraisApi->listar_using_get17: #{e}"
 end
 ```
 
@@ -1529,7 +1605,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -1539,8 +1615,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get15**
-> PageTiposEndereco listar_using_get15(opts)
+# **listar_using_get18**
+> PageTiposEndereco listar_using_get18(opts)
 
 Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
 
@@ -1550,14 +1626,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -1571,10 +1639,10 @@ opts = {
 
 begin
   #Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-  result = api_instance.listar_using_get15(opts)
+  result = api_instance.listar_using_get18(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosGeraisApi->listar_using_get15: #{e}"
+  puts "Exception when calling CadastrosGeraisApi->listar_using_get18: #{e}"
 end
 ```
 
@@ -1594,7 +1662,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -1604,8 +1672,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get17**
-> PageTipoTelefones listar_using_get17(opts)
+# **listar_using_get20**
+> PageTipoTelefones listar_using_get20(opts)
 
 Lista os Tipos de Telefones
 
@@ -1615,14 +1683,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existent
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -1636,10 +1696,10 @@ opts = {
 
 begin
   #Lista os Tipos de Telefones
-  result = api_instance.listar_using_get17(opts)
+  result = api_instance.listar_using_get20(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosGeraisApi->listar_using_get17: #{e}"
+  puts "Exception when calling CadastrosGeraisApi->listar_using_get20: #{e}"
 end
 ```
 
@@ -1659,7 +1719,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -1669,8 +1729,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get4**
-> PageEnderecos listar_using_get4(opts)
+# **listar_using_get6**
+> PageEnderecos listar_using_get6(opts)
 
 Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
 
@@ -1680,14 +1740,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os Endere\u00C3\u00A7os existe
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -1713,10 +1765,10 @@ opts = {
 
 begin
   #Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
-  result = api_instance.listar_using_get4(opts)
+  result = api_instance.listar_using_get6(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosGeraisApi->listar_using_get4: #{e}"
+  puts "Exception when calling CadastrosGeraisApi->listar_using_get6: #{e}"
 end
 ```
 
@@ -1748,7 +1800,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -1758,8 +1810,8 @@ Name | Type | Description  | Notes
 
 
 
-# **listar_using_get5**
-> PageEstabelecimentos listar_using_get5(opts)
+# **listar_using_get7**
+> PageEstabelecimentos listar_using_get7(opts)
 
 Lista Estabelecimentos
 
@@ -1769,14 +1821,6 @@ Lista todas os Estabelecimentos
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -1807,10 +1851,10 @@ opts = {
 
 begin
   #Lista Estabelecimentos
-  result = api_instance.listar_using_get5(opts)
+  result = api_instance.listar_using_get7(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosGeraisApi->listar_using_get5: #{e}"
+  puts "Exception when calling CadastrosGeraisApi->listar_using_get7: #{e}"
 end
 ```
 
@@ -1847,171 +1891,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **listar_using_get8**
-> PessoaDetalheResponse listar_using_get8(opts)
-
-Lista os Detalhes das Pessoas cadastradas no Emissor
-
-Este m\u00C3\u00A9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
-
-
-api_instance = Pier::CadastrosGeraisApi.new
-
-opts = { 
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  id_pessoa: 789, # Integer | C\u00C3\u00B3digo identificador da pessoa
-  nome_mae: "nome_mae_example", # String | Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
-  id_estado_civil: 789, # Integer | Id Estado civil da pessoa fisica
-  profissao: "profissao_example", # String | Profiss\u00C3\u00A3o da pessoa fisica
-  id_natureza_ocupacao: 789, # Integer | Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
-  id_nacionalidade: 789, # Integer | Id Nacionalidade da pessoa fisica
-  numero_agencia: 56, # Integer | N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
-  numero_conta_corrente: "numero_conta_corrente_example", # String | N\u00C3\u00BAmero da conta corrente.
-  email: "email_example", # String | Email da pessoa fisica
-  nome_empresa: "nome_empresa_example" # String | Nome que deve ser impresso no cart\u00C3\u00A3o
-}
-
-begin
-  #Lista os Detalhes das Pessoas cadastradas no Emissor
-  result = api_instance.listar_using_get8(opts)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosGeraisApi->listar_using_get8: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **id_pessoa** | **Integer**| C\u00C3\u00B3digo identificador da pessoa | [optional] 
- **nome_mae** | **String**| Apresenta o nome da m\u00C3\u00A3e da pessoa fisica | [optional] 
- **id_estado_civil** | **Integer**| Id Estado civil da pessoa fisica | [optional] 
- **profissao** | **String**| Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
- **id_natureza_ocupacao** | **Integer**| Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
- **id_nacionalidade** | **Integer**| Id Nacionalidade da pessoa fisica | [optional] 
- **numero_agencia** | **Integer**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
- **numero_conta_corrente** | **String**| N\u00C3\u00BAmero da conta corrente. | [optional] 
- **email** | **String**| Email da pessoa fisica | [optional] 
- **nome_empresa** | **String**| Nome que deve ser impresso no cart\u00C3\u00A3o | [optional] 
-
-
-### Return type
-
-[**PessoaDetalheResponse**](PessoaDetalheResponse.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **listar_using_get9**
-> PagePessoas listar_using_get9(opts)
-
-Lista as Pessoas cadastradas no Emissor
-
-Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
-
-
-api_instance = Pier::CadastrosGeraisApi.new
-
-opts = { 
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
-  nome: "nome_example", # String | Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
-  tipo: "tipo_example", # String | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
-  cpf: "cpf_example", # String | N\u00C3\u00BAmero do CPF, quando PF.
-  cnpj: "cnpj_example", # String | N\u00C3\u00BAmero do CNPJ, quando PJ.
-  data_nascimento: Date.parse("2013-10-20"), # Date | Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
-  sexo: "sexo_example", # String | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
-  numero_identidade: "numero_identidade_example", # String | N\u00C3\u00BAmero da Identidade
-  orgao_expedidor_identidade: "orgao_expedidor_identidade_example", # String | Org\u00C3\u00A3o expedidor do RG.
-  unidade_federativa_identidade: "unidade_federativa_identidade_example", # String | Sigla da Unidade Federativa de onde foi expedido a Identidade
-  data_emissao_identidade: Date.parse("2013-10-20") # Date | Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
-}
-
-begin
-  #Lista as Pessoas cadastradas no Emissor
-  result = api_instance.listar_using_get9(opts)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosGeraisApi->listar_using_get9: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id). | [optional] 
- **nome** | **String**| Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. | [optional] 
- **tipo** | **String**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica). | [optional] 
- **cpf** | **String**| N\u00C3\u00BAmero do CPF, quando PF. | [optional] 
- **cnpj** | **String**| N\u00C3\u00BAmero do CNPJ, quando PJ. | [optional] 
- **data_nascimento** | **Date**| Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. | [optional] 
- **sexo** | **String**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). | [optional] 
- **numero_identidade** | **String**| N\u00C3\u00BAmero da Identidade | [optional] 
- **orgao_expedidor_identidade** | **String**| Org\u00C3\u00A3o expedidor do RG. | [optional] 
- **unidade_federativa_identidade** | **String**| Sigla da Unidade Federativa de onde foi expedido a Identidade | [optional] 
- **data_emissao_identidade** | **Date**| Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd | [optional] 
-
-
-### Return type
-
-[**PagePessoas**](PagePessoas.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -2032,14 +1912,6 @@ Permite realizar o cadastro de uma Conta para um cliente do tipo Pessoa F\u00C3\
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -2069,7 +1941,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -2090,14 +1962,6 @@ Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica Permite realizar o cadastro de um
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -2127,7 +1991,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -2137,8 +2001,8 @@ Name | Type | Description  | Notes
 
 
 
-# **salvar_using_post2**
-> Endereco salvar_using_post2(opts)
+# **salvar_using_post4**
+> Endereco salvar_using_post4(opts)
 
 Realiza o cadastro de um novo Endere\u00C3\u00A7o
 
@@ -2148,14 +2012,6 @@ Este m\u00C3\u00A9todo permite que seja cadastrado um novo Endere\u00C3\u00A7o n
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -2176,10 +2032,10 @@ opts = {
 
 begin
   #Realiza o cadastro de um novo Endere\u00C3\u00A7o
-  result = api_instance.salvar_using_post2(opts)
+  result = api_instance.salvar_using_post4(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosGeraisApi->salvar_using_post2: #{e}"
+  puts "Exception when calling CadastrosGeraisApi->salvar_using_post4: #{e}"
 end
 ```
 
@@ -2206,7 +2062,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -2216,8 +2072,77 @@ Name | Type | Description  | Notes
 
 
 
-# **salvar_using_post4**
-> Pessoa salvar_using_post4(nome, tipo, opts)
+# **salvar_using_post6**
+> PessoaDetalheResponse salvar_using_post6(opts)
+
+Salvar os detalhes de uma determinada Pessoa
+
+Este m\u00C3\u00A9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::CadastrosGeraisApi.new
+
+opts = { 
+  id_pessoa: 789, # Integer | Apresenta o c\u00C3\u00B3digo identificador da pessoa
+  nome_mae: "nome_mae_example", # String | Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+  id_estado_civil: 789, # Integer | Id Estado civil da pessoa fisica
+  profissao: "profissao_example", # String | Profiss\u00C3\u00A3o da pessoa fisica
+  id_natureza_ocupacao: 789, # Integer | Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+  id_nacionalidade: 789, # Integer | Id Nacionalidade da pessoa fisica
+  numero_agencia: 56, # Integer | N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+  numero_conta_corrente: "numero_conta_corrente_example", # String | N\u00C3\u00BAmero da conta corrente.
+  email: "email_example", # String | Email da pessoa fisica
+  nome_empresa: "nome_empresa_example" # String | Nome que deve ser impresso no cart\u00C3\u00A3o
+}
+
+begin
+  #Salvar os detalhes de uma determinada Pessoa
+  result = api_instance.salvar_using_post6(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CadastrosGeraisApi->salvar_using_post6: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_pessoa** | **Integer**| Apresenta o c\u00C3\u00B3digo identificador da pessoa | [optional] 
+ **nome_mae** | **String**| Apresenta o nome da m\u00C3\u00A3e da pessoa fisica | [optional] 
+ **id_estado_civil** | **Integer**| Id Estado civil da pessoa fisica | [optional] 
+ **profissao** | **String**| Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
+ **id_natureza_ocupacao** | **Integer**| Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
+ **id_nacionalidade** | **Integer**| Id Nacionalidade da pessoa fisica | [optional] 
+ **numero_agencia** | **Integer**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
+ **numero_conta_corrente** | **String**| N\u00C3\u00BAmero da conta corrente. | [optional] 
+ **email** | **String**| Email da pessoa fisica | [optional] 
+ **nome_empresa** | **String**| Nome que deve ser impresso no cart\u00C3\u00A3o | [optional] 
+
+
+### Return type
+
+[**PessoaDetalheResponse**](PessoaDetalheResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **salvar_using_post7**
+> Pessoa salvar_using_post7(nome, tipo, opts)
 
 Realiza o cadastro de um nova Pessoa
 
@@ -2227,14 +2152,6 @@ Este m\u00C3\u00A9todo permite que seja cadastrado uma nova Pessoa na base de da
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -2256,10 +2173,10 @@ opts = {
 
 begin
   #Realiza o cadastro de um nova Pessoa
-  result = api_instance.salvar_using_post4(nome, tipo, opts)
+  result = api_instance.salvar_using_post7(nome, tipo, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosGeraisApi->salvar_using_post4: #{e}"
+  puts "Exception when calling CadastrosGeraisApi->salvar_using_post7: #{e}"
 end
 ```
 
@@ -2285,7 +2202,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 
@@ -2295,8 +2212,8 @@ Name | Type | Description  | Notes
 
 
 
-# **salvar_using_post5**
-> Telefone salvar_using_post5(opts)
+# **salvar_using_post9**
+> Telefone salvar_using_post9(opts)
 
 Realiza o cadastro de um novo Telefone
 
@@ -2306,14 +2223,6 @@ Este m\u00C3\u00A9todo permite que seja cadastrado um novo Telefone na base de d
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
-# setup authorization 
-Pier.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['access_token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'BEARER' (defaults to nil)
-  #config.api_key_prefix['access_token'] = 'BEARER'
-end
 
 
 api_instance = Pier::CadastrosGeraisApi.new
@@ -2328,10 +2237,10 @@ opts = {
 
 begin
   #Realiza o cadastro de um novo Telefone
-  result = api_instance.salvar_using_post5(opts)
+  result = api_instance.salvar_using_post9(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosGeraisApi->salvar_using_post5: #{e}"
+  puts "Exception when calling CadastrosGeraisApi->salvar_using_post9: #{e}"
 end
 ```
 
@@ -2352,7 +2261,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP request headers
 

@@ -51,8 +51,6 @@ describe 'ContaApi' do
   # @param data_ajuste Data do ajuste.
   # @param valor_ajuste Valor do ajuste
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   # @return [AjusteResponse]
   describe 'ajustar_conta_using_post test' do
     it "should work" do
@@ -94,13 +92,31 @@ describe 'ContaApi' do
   end
 
 
+  # unit tests for alterar_titular_using_post
+  # Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
+  # Esta m\u00C3\u00A9todo permite altera a pessoa de uma conta.
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id)
+  # @param id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).
+  # @param [Hash] opts the optional parameters
+  # @return [ContaResponse]
+  describe 'alterar_titular_using_post test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
   # unit tests for alterar_vencimento_using_put
   # Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
   # Esse recurso permite alterar o vencimento de uma conta especifica.
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
   # @param novo_dia_vencimento Novo dia de vencimento.
   # @param [Hash] opts the optional parameters
-  # @return [Conta]
+  # @return [ContaResponse]
   describe 'alterar_vencimento_using_put test' do
     it "should work" do
       # assertion here
@@ -171,8 +187,8 @@ describe 'ContaApi' do
   # Consultar a fatura consignadas abertas da conta
   # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar a fatura consignada em aberto
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-  # @param data_vencimento Data Vencimento.
   # @param [Hash] opts the optional parameters
+  # @option opts [Date] :data_vencimento Data Vencimento
   # @return [DetalhesFaturaConsignadaResponse]
   describe 'consultar_fatura_consignada_aberta_using_get test' do
     it "should work" do
@@ -225,8 +241,8 @@ describe 'ContaApi' do
   # Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
   # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar os detalhes dos lan\u00C3\u00A7amentos futuros de uma fatura vinculados a uma determinada conta.
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-  # @param data_vencimento Data Vencimento.
   # @param [Hash] opts the optional parameters
+  # @option opts [Date] :data_vencimento Data Vencimento
   # @return [DetalhesFaturaResponse]
   describe 'consultar_lancamentos_futuros_fatura_using_get test' do
     it "should work" do
@@ -257,8 +273,8 @@ describe 'ContaApi' do
 
 
   # unit tests for consultar_using_get20
-  # Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
-  # Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+  # Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+  # Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
   # @param id Id Conta
   # @param id_transferencia Id Transfer\u00C3\u00AAncia
   # @param [Hash] opts the optional parameters
@@ -298,7 +314,7 @@ describe 'ContaApi' do
   # Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
   # @param [Hash] opts the optional parameters
-  # @return [Conta]
+  # @return [ContaDetalheResponse]
   describe 'consultar_using_get3 test' do
     it "should work" do
       # assertion here
@@ -501,7 +517,7 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for listar_using_get19
+  # unit tests for listar_using_get22
   # Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
   # Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
   # @param id Id Conta
@@ -510,7 +526,7 @@ describe 'ContaApi' do
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   # @return [LinkPageTransferenciaBancariaResponse]
-  describe 'listar_using_get19 test' do
+  describe 'listar_using_get22 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -521,7 +537,7 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for listar_using_get20
+  # unit tests for listar_using_get23
   # Lista as transfer\u00C3\u00AAncias realizadas pela conta
   # Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
@@ -534,7 +550,7 @@ describe 'ContaApi' do
   # @option opts [Float] :valor_transferencia Valor estabelecido para ser transferido.
   # @option opts [Date] :data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
   # @return [PageTransferencias]
-  describe 'listar_using_get20 test' do
+  describe 'listar_using_get23 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -545,7 +561,7 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for listar_using_get3
+  # unit tests for listar_using_get4
   # Lista contas existentes na base de dados do Emissor
   # Este recurso permite listar contas existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -561,7 +577,7 @@ describe 'ContaApi' do
   # @option opts [Date] :data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
   # @option opts [Date] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
   # @return [PageContas]
-  describe 'listar_using_get3 test' do
+  describe 'listar_using_get4 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -609,24 +625,11 @@ describe 'ContaApi' do
 
 
   # unit tests for transferir_using_post
-  # Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria entre bancos / contas
-  # Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta de destino.
+  # Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
+  # Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
   # @param id Id Conta
-  # @param data_compra Data da transfer\u00C3\u00AAncia
-  # @param proximo_vencimento_padrao Dia do vencimento padr\u00C3\u00A3o da fatura
-  # @param proximo_vencimento_real Data do vencimento real da fatura
-  # @param valor_compra Valor da transfer\u00C3\u00AAncia
-  # @param nome_favorecido Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
-  # @param documento_favorecido N\u00C3\u00BAmero do CPF ou CNPJ.
-  # @param banco C\u00C3\u00B3digo do banco
-  # @param numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia
-  # @param numero_conta N\u00C3\u00BAmero da conta
-  # @param flag_conta_poupanca Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
+  # @param transferencia_bancaria_persist transferenciaBancariaPersist
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  # @option opts [String] :digito_agencia D\u00C3\u00ADgito da ag\u00C3\u00AAncia
-  # @option opts [String] :digito_conta D\u00C3\u00ADgito da conta
   # @return [LinkTransferenciaBancariaResponse]
   describe 'transferir_using_post test' do
     it "should work" do
@@ -642,7 +645,7 @@ describe 'ContaApi' do
   # unit tests for transferir_using_post1
   # Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
   # Este m\u00C3\u00A9todo permite que um portador de um cart\u00C3\u00A3o possa realizar auma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).
   # @param id_conta_destino C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).
   # @param valor_transferencia Valor da Transfer\u00C3\u00AAncia.
   # @param [Hash] opts the optional parameters

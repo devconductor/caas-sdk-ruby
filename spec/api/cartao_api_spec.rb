@@ -134,6 +134,23 @@ describe 'CartaoApi' do
   end
 
 
+  # unit tests for consultar_dados_cartao_using_get
+  # Consultar Detalhes do Cart\u00C3\u00A3o
+  # Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
+  # @param id id
+  # @param [Hash] opts the optional parameters
+  # @return [TransacaoOnUsResponse]
+  describe 'consultar_dados_cartao_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
   # unit tests for consultar_limite_disponibilidade_using_get
   # Apresenta os limites do Portador do Cart\u00C3\u00A3o
   # Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
@@ -192,6 +209,23 @@ describe 'CartaoApi' do
   # @param [Hash] opts the optional parameters
   # @return [Cartao]
   describe 'consultar_using_get2 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for desbloquear_senha_incorreta_using_post
+  # Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
+  # Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+  # @param [Hash] opts the optional parameters
+  # @return [Cartao]
+  describe 'desbloquear_senha_incorreta_using_post test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -285,7 +319,7 @@ describe 'CartaoApi' do
   end
 
 
-  # unit tests for listar_using_get2
+  # unit tests for listar_using_get3
   # Lista os Cart\u00C3\u00B5es gerados pelo Emissor
   # Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
   # @param [Hash] opts the optional parameters
@@ -310,7 +344,7 @@ describe 'CartaoApi' do
   # @option opts [String] :codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
   # @option opts [Integer] :sequencial_cartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
   # @return [PageCartoes]
-  describe 'listar_using_get2 test' do
+  describe 'listar_using_get3 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -321,73 +355,54 @@ describe 'CartaoApi' do
   end
 
 
-  # unit tests for validar_cartao_chip_bandeirado_using_get
-  # Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do chip
-  # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o criptograma gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+  # unit tests for validar_dados_impressos_bandeirado_using_get
+  # Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
+  # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
+  # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+  # @param nome_portador Nome do portador do cart\u00C3\u00A3o
+  # @param data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
+  # @param codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
+  # @param [Hash] opts the optional parameters
+  # @return [ValidaCartao]
+  describe 'validar_dados_impressos_bandeirado_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for validar_dados_impressos_nao_bandeirado_using_get
+  # Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
+  # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
+  # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+  # @param nome_portador Nome do portador do cart\u00C3\u00A3o
+  # @param data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
+  # @param codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
+  # @param [Hash] opts the optional parameters
+  # @return [ValidaCartao]
+  describe 'validar_dados_impressos_nao_bandeirado_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for validar_de55_cartao_mastercard_using_get
+  # Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
+  # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
   # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
   # @param criptograma Criptograma do cart\u00C3\u00A3o no formato de55
   # @param [Hash] opts the optional parameters
   # @return [ValidaCartao]
-  describe 'validar_cartao_chip_bandeirado_using_get test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for validar_cartao_digitado_bandeirado_using_get
-  # Permite validar um Cart\u00C3\u00A3o bandeirado a partir dos dados Impressos
-  # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
-  # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-  # @param nome_portador Nome do portador do cart\u00C3\u00A3o
-  # @param data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
-  # @param codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
-  # @param [Hash] opts the optional parameters
-  # @return [ValidaCartao]
-  describe 'validar_cartao_digitado_bandeirado_using_get test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for validar_cartao_digitado_nao_bandeirado_using_get
-  # Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
-  # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
-  # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-  # @param nome_portador Nome do portador do cart\u00C3\u00A3o
-  # @param data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
-  # @param codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
-  # @param [Hash] opts the optional parameters
-  # @return [ValidaCartao]
-  describe 'validar_cartao_digitado_nao_bandeirado_using_get test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for validar_cartao_tarja_bandeirado_using_get
-  # Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
-  # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
-  # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-  # @param trilha1 Trilha 1 do cart\u00C3\u00A3o a ser validado
-  # @param trilha2 Trilha 2 do cart\u00C3\u00A3o a ser validado
-  # @param [Hash] opts the optional parameters
-  # @return [ValidaCartao]
-  describe 'validar_cartao_tarja_bandeirado_using_get test' do
+  describe 'validar_de55_cartao_mastercard_using_get test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -404,8 +419,27 @@ describe 'CartaoApi' do
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
   # @param senha Senha para ser validada.
   # @param [Hash] opts the optional parameters
-  # @return [String]
+  # @return [ValidaSenhaCartao]
   describe 'validar_senha_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for validar_tarja_using_get
+  # Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
+  # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+  # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+  # @param trilha1 Trilha 1 do cart\u00C3\u00A3o a ser validado
+  # @param trilha2 Trilha 2 do cart\u00C3\u00A3o a ser validado
+  # @param [Hash] opts the optional parameters
+  # @return [ValidaCartao]
+  describe 'validar_tarja_using_get test' do
     it "should work" do
       # assertion here
       # should be_a()

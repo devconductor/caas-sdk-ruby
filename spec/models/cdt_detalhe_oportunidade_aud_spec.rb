@@ -131,5 +131,16 @@ describe 'CdtDetalheOportunidadeAUD' do
   end
 
 
+  describe 'test attribute "rev_user"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
 end
 

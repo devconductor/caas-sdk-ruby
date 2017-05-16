@@ -23,93 +23,68 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o do recurso transacao
-  class TransacaoResponse
-    attr_accessor :ultima_parcela_lancada
+  # Lista detalhes contas
+  class PageContasDetalhe
+    attr_accessor :content
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transacao (id).
-    attr_accessor :id
+    attr_accessor :first
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    attr_accessor :id_conta
+    attr_accessor :first_page
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de transacao (id).
-    attr_accessor :id_tipo_registro
+    attr_accessor :has_content
 
-    # Representa\u00C3\u00A7\u00C3\u00A3o da ordena\u00C3\u00A7\u00C3\u00A3o da transacao (id).
-    attr_accessor :ordem
+    attr_accessor :has_next_page
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transacao (id).
-    attr_accessor :id_transacao
+    attr_accessor :has_previous_page
 
-    attr_accessor :descricao
+    attr_accessor :last
 
-    attr_accessor :status
+    attr_accessor :next_page
 
-    attr_accessor :descricao_status
+    attr_accessor :number
 
-    attr_accessor :valor
+    attr_accessor :number_of_elements
 
-    attr_accessor :valor_dolar
+    attr_accessor :previous_page
 
-    attr_accessor :quantidade_parcelas
+    attr_accessor :size
 
-    attr_accessor :valor_parcela
+    attr_accessor :total_elements
 
-    attr_accessor :data_evento
-
-    attr_accessor :estabelecimento
-
-    attr_accessor :flag_credito
-
-    attr_accessor :tipo_estabelecimento
-
-    attr_accessor :id_grupo_mcc
-
-    attr_accessor :flag_solicitou_contestacao
+    attr_accessor :total_pages
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'ultima_parcela_lancada' => :'ultimaParcelaLancada',
+        :'content' => :'content',
         
-        :'id' => :'id',
+        :'first' => :'first',
         
-        :'id_conta' => :'idConta',
+        :'first_page' => :'firstPage',
         
-        :'id_tipo_registro' => :'idTipoRegistro',
+        :'has_content' => :'hasContent',
         
-        :'ordem' => :'ordem',
+        :'has_next_page' => :'hasNextPage',
         
-        :'id_transacao' => :'idTransacao',
+        :'has_previous_page' => :'hasPreviousPage',
         
-        :'descricao' => :'descricao',
+        :'last' => :'last',
         
-        :'status' => :'status',
+        :'next_page' => :'nextPage',
         
-        :'descricao_status' => :'descricaoStatus',
+        :'number' => :'number',
         
-        :'valor' => :'valor',
+        :'number_of_elements' => :'numberOfElements',
         
-        :'valor_dolar' => :'valorDolar',
+        :'previous_page' => :'previousPage',
         
-        :'quantidade_parcelas' => :'quantidadeParcelas',
+        :'size' => :'size',
         
-        :'valor_parcela' => :'valorParcela',
+        :'total_elements' => :'totalElements',
         
-        :'data_evento' => :'dataEvento',
-        
-        :'estabelecimento' => :'estabelecimento',
-        
-        :'flag_credito' => :'flagCredito',
-        
-        :'tipo_estabelecimento' => :'tipoEstabelecimento',
-        
-        :'id_grupo_mcc' => :'idGrupoMCC',
-        
-        :'flag_solicitou_contestacao' => :'flagSolicitouContestacao'
+        :'total_pages' => :'totalPages'
         
       }
     end
@@ -118,43 +93,33 @@ module Pier
     def self.swagger_types
       {
         
-        :'ultima_parcela_lancada' => :'Integer',
+        :'content' => :'Array<ContaDetalheResponse>',
         
-        :'id' => :'Integer',
+        :'first' => :'BOOLEAN',
         
-        :'id_conta' => :'Integer',
+        :'first_page' => :'BOOLEAN',
         
-        :'id_tipo_registro' => :'Integer',
+        :'has_content' => :'BOOLEAN',
         
-        :'ordem' => :'Integer',
+        :'has_next_page' => :'BOOLEAN',
         
-        :'id_transacao' => :'Integer',
+        :'has_previous_page' => :'BOOLEAN',
         
-        :'descricao' => :'String',
+        :'last' => :'BOOLEAN',
         
-        :'status' => :'Integer',
+        :'next_page' => :'Integer',
         
-        :'descricao_status' => :'String',
+        :'number' => :'Integer',
         
-        :'valor' => :'Float',
+        :'number_of_elements' => :'Integer',
         
-        :'valor_dolar' => :'Float',
+        :'previous_page' => :'Integer',
         
-        :'quantidade_parcelas' => :'Integer',
+        :'size' => :'Integer',
         
-        :'valor_parcela' => :'Float',
+        :'total_elements' => :'Integer',
         
-        :'data_evento' => :'DateTime',
-        
-        :'estabelecimento' => :'String',
-        
-        :'flag_credito' => :'Integer',
-        
-        :'tipo_estabelecimento' => :'String',
-        
-        :'id_grupo_mcc' => :'Integer',
-        
-        :'flag_solicitou_contestacao' => :'Integer'
+        :'total_pages' => :'Integer'
         
       }
     end
@@ -168,172 +133,129 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'ultimaParcelaLancada']
+      if attributes[:'content']
         
+        if (value = attributes[:'content']).is_a?(Array)
+          self.content = value
+        end
         
-        self.ultima_parcela_lancada = attributes[:'ultimaParcelaLancada']
         
       
       end
 
       
-      if attributes[:'id']
+      if attributes[:'first']
         
         
-        self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes[:'idConta']
-        
-        
-        self.id_conta = attributes[:'idConta']
+        self.first = attributes[:'first']
         
       
       end
 
       
-      if attributes[:'idTipoRegistro']
+      if attributes[:'firstPage']
         
         
-        self.id_tipo_registro = attributes[:'idTipoRegistro']
-        
-      
-      end
-
-      
-      if attributes[:'ordem']
-        
-        
-        self.ordem = attributes[:'ordem']
+        self.first_page = attributes[:'firstPage']
         
       
       end
 
       
-      if attributes[:'idTransacao']
+      if attributes[:'hasContent']
         
         
-        self.id_transacao = attributes[:'idTransacao']
-        
-      
-      end
-
-      
-      if attributes[:'descricao']
-        
-        
-        self.descricao = attributes[:'descricao']
+        self.has_content = attributes[:'hasContent']
         
       
       end
 
       
-      if attributes[:'status']
+      if attributes[:'hasNextPage']
         
         
-        self.status = attributes[:'status']
-        
-      
-      end
-
-      
-      if attributes[:'descricaoStatus']
-        
-        
-        self.descricao_status = attributes[:'descricaoStatus']
+        self.has_next_page = attributes[:'hasNextPage']
         
       
       end
 
       
-      if attributes[:'valor']
+      if attributes[:'hasPreviousPage']
         
         
-        self.valor = attributes[:'valor']
-        
-      
-      end
-
-      
-      if attributes[:'valorDolar']
-        
-        
-        self.valor_dolar = attributes[:'valorDolar']
+        self.has_previous_page = attributes[:'hasPreviousPage']
         
       
       end
 
       
-      if attributes[:'quantidadeParcelas']
+      if attributes[:'last']
         
         
-        self.quantidade_parcelas = attributes[:'quantidadeParcelas']
-        
-      
-      end
-
-      
-      if attributes[:'valorParcela']
-        
-        
-        self.valor_parcela = attributes[:'valorParcela']
+        self.last = attributes[:'last']
         
       
       end
 
       
-      if attributes[:'dataEvento']
+      if attributes[:'nextPage']
         
         
-        self.data_evento = attributes[:'dataEvento']
-        
-      
-      end
-
-      
-      if attributes[:'estabelecimento']
-        
-        
-        self.estabelecimento = attributes[:'estabelecimento']
+        self.next_page = attributes[:'nextPage']
         
       
       end
 
       
-      if attributes[:'flagCredito']
+      if attributes[:'number']
         
         
-        self.flag_credito = attributes[:'flagCredito']
-        
-      
-      end
-
-      
-      if attributes[:'tipoEstabelecimento']
-        
-        
-        self.tipo_estabelecimento = attributes[:'tipoEstabelecimento']
+        self.number = attributes[:'number']
         
       
       end
 
       
-      if attributes[:'idGrupoMCC']
+      if attributes[:'numberOfElements']
         
         
-        self.id_grupo_mcc = attributes[:'idGrupoMCC']
+        self.number_of_elements = attributes[:'numberOfElements']
         
       
       end
 
       
-      if attributes[:'flagSolicitouContestacao']
+      if attributes[:'previousPage']
         
         
-        self.flag_solicitou_contestacao = attributes[:'flagSolicitouContestacao']
+        self.previous_page = attributes[:'previousPage']
+        
+      
+      end
+
+      
+      if attributes[:'size']
+        
+        
+        self.size = attributes[:'size']
+        
+      
+      end
+
+      
+      if attributes[:'totalElements']
+        
+        
+        self.total_elements = attributes[:'totalElements']
+        
+      
+      end
+
+      
+      if attributes[:'totalPages']
+        
+        
+        self.total_pages = attributes[:'totalPages']
         
       
       end
@@ -410,53 +332,8 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -533,25 +410,20 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          ultima_parcela_lancada == o.ultima_parcela_lancada &&
-          id == o.id &&
-          id_conta == o.id_conta &&
-          id_tipo_registro == o.id_tipo_registro &&
-          ordem == o.ordem &&
-          id_transacao == o.id_transacao &&
-          descricao == o.descricao &&
-          status == o.status &&
-          descricao_status == o.descricao_status &&
-          valor == o.valor &&
-          valor_dolar == o.valor_dolar &&
-          quantidade_parcelas == o.quantidade_parcelas &&
-          valor_parcela == o.valor_parcela &&
-          data_evento == o.data_evento &&
-          estabelecimento == o.estabelecimento &&
-          flag_credito == o.flag_credito &&
-          tipo_estabelecimento == o.tipo_estabelecimento &&
-          id_grupo_mcc == o.id_grupo_mcc &&
-          flag_solicitou_contestacao == o.flag_solicitou_contestacao
+          content == o.content &&
+          first == o.first &&
+          first_page == o.first_page &&
+          has_content == o.has_content &&
+          has_next_page == o.has_next_page &&
+          has_previous_page == o.has_previous_page &&
+          last == o.last &&
+          next_page == o.next_page &&
+          number == o.number &&
+          number_of_elements == o.number_of_elements &&
+          previous_page == o.previous_page &&
+          size == o.size &&
+          total_elements == o.total_elements &&
+          total_pages == o.total_pages
     end
 
     # @see the `==` method
@@ -563,7 +435,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ultima_parcela_lancada, id, id_conta, id_tipo_registro, ordem, id_transacao, descricao, status, descricao_status, valor, valor_dolar, quantidade_parcelas, valor_parcela, data_evento, estabelecimento, flag_credito, tipo_estabelecimento, id_grupo_mcc, flag_solicitou_contestacao].hash
+      [content, first, first_page, has_content, has_next_page, has_previous_page, last, next_page, number, number_of_elements, previous_page, size, total_elements, total_pages].hash
     end
 
     # Builds the object from hash

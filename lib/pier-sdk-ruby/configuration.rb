@@ -92,7 +92,7 @@ module Pier
     attr_accessor :force_ending_format
 
     def initialize
-      @scheme = 'https'
+      @scheme = 'http'
       @host = 'localhost'
       @base_path = '/'
       @api_key = {}
@@ -157,30 +157,6 @@ module Pier
     # Returns Auth Settings hash for api client.
     def auth_settings
       {
-
-
-        'access_token' =>
-          {
-            type: 'api_key',
-            in: 'header',
-            key: 'access_token',
-            value: api_key_with_prefix('access_token')
-          },
-
-
-
-
-
-        'client_id' =>
-          {
-            type: 'api_key',
-            in: 'header',
-            key: 'client_id',
-            value: api_key_with_prefix('client_id')
-          },
-
-
-
 
       }
     end

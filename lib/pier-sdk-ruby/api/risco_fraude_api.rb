@@ -83,7 +83,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -149,7 +149,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -215,7 +215,7 @@ module Pier
       # http body (model)
       post_body = @api_client.object_to_http_body(detalhado_responses)
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -240,8 +240,8 @@ module Pier
     # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
     # @option opts [Date] :data_atendimento Apresenta a data em que o Atendimento foi realizado.
     # @return [PageAtendimentoClientes]
-    def listar_using_get(opts = {})
-      data, _status_code, _headers = listar_using_get_with_http_info(opts)
+    def listar_using_get1(opts = {})
+      data, _status_code, _headers = listar_using_get1_with_http_info(opts)
       return data
     end
 
@@ -255,9 +255,9 @@ module Pier
     # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
     # @option opts [Date] :data_atendimento Apresenta a data em que o Atendimento foi realizado.
     # @return [Array<(PageAtendimentoClientes, Fixnum, Hash)>] PageAtendimentoClientes data, response status code and response headers
-    def listar_using_get_with_http_info(opts = {})
+    def listar_using_get1_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.listar_using_get ..."
+        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.listar_using_get1 ..."
       end
       
       
@@ -325,7 +325,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -334,7 +334,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageAtendimentoClientes')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: RiscoFraudeApi#listar_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: RiscoFraudeApi#listar_using_get1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -348,8 +348,8 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [RiscoFraudeResponsePage]
-    def listar_using_get11(id_conta, confirmacao_fraude, opts = {})
-      data, _status_code, _headers = listar_using_get11_with_http_info(id_conta, confirmacao_fraude, opts)
+    def listar_using_get14(id_conta, confirmacao_fraude, opts = {})
+      data, _status_code, _headers = listar_using_get14_with_http_info(id_conta, confirmacao_fraude, opts)
       return data
     end
 
@@ -361,14 +361,14 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Array<(RiscoFraudeResponsePage, Fixnum, Hash)>] RiscoFraudeResponsePage data, response status code and response headers
-    def listar_using_get11_with_http_info(id_conta, confirmacao_fraude, opts = {})
+    def listar_using_get14_with_http_info(id_conta, confirmacao_fraude, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.listar_using_get11 ..."
+        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.listar_using_get14 ..."
       end
       
       
       # verify the required parameter 'id_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta' when calling RiscoFraudeApi.listar_using_get11" if id_conta.nil?
+      fail ArgumentError, "Missing the required parameter 'id_conta' when calling RiscoFraudeApi.listar_using_get14" if id_conta.nil?
       
       
       
@@ -376,7 +376,7 @@ module Pier
       
       
       # verify the required parameter 'confirmacao_fraude' is set
-      fail ArgumentError, "Missing the required parameter 'confirmacao_fraude' when calling RiscoFraudeApi.listar_using_get11" if confirmacao_fraude.nil?
+      fail ArgumentError, "Missing the required parameter 'confirmacao_fraude' when calling RiscoFraudeApi.listar_using_get14" if confirmacao_fraude.nil?
       
       # verify enum value
       unless ['NEGADA', 'CONFIRMADA', 'PENDENTE', 'TODAS'].include?(confirmacao_fraude)
@@ -426,7 +426,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -435,7 +435,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'RiscoFraudeResponsePage')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: RiscoFraudeApi#listar_using_get11\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: RiscoFraudeApi#listar_using_get14\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -446,8 +446,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
     # @param [Hash] opts the optional parameters
     # @return [RiscoFraudeDetalhadoResponse]
-    def negar_using_get(id, opts = {})
-      data, _status_code, _headers = negar_using_get_with_http_info(id, opts)
+    def negar_using_post(id, opts = {})
+      data, _status_code, _headers = negar_using_post_with_http_info(id, opts)
       return data
     end
 
@@ -456,14 +456,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
     # @param [Hash] opts the optional parameters
     # @return [Array<(RiscoFraudeDetalhadoResponse, Fixnum, Hash)>] RiscoFraudeDetalhadoResponse data, response status code and response headers
-    def negar_using_get_with_http_info(id, opts = {})
+    def negar_using_post_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.negar_using_get ..."
+        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.negar_using_post ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling RiscoFraudeApi.negar_using_get" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling RiscoFraudeApi.negar_using_post" if id.nil?
       
       
       
@@ -492,8 +492,8 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -501,7 +501,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'RiscoFraudeDetalhadoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: RiscoFraudeApi#negar_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: RiscoFraudeApi#negar_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -512,8 +512,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
     # @param [Hash] opts the optional parameters
     # @return [RiscoFraudeDetalhadoResponse]
-    def reconhecer_using_get(id, opts = {})
-      data, _status_code, _headers = reconhecer_using_get_with_http_info(id, opts)
+    def reconhecer_using_post(id, opts = {})
+      data, _status_code, _headers = reconhecer_using_post_with_http_info(id, opts)
       return data
     end
 
@@ -522,14 +522,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
     # @param [Hash] opts the optional parameters
     # @return [Array<(RiscoFraudeDetalhadoResponse, Fixnum, Hash)>] RiscoFraudeDetalhadoResponse data, response status code and response headers
-    def reconhecer_using_get_with_http_info(id, opts = {})
+    def reconhecer_using_post_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.reconhecer_using_get ..."
+        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.reconhecer_using_post ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling RiscoFraudeApi.reconhecer_using_get" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling RiscoFraudeApi.reconhecer_using_post" if id.nil?
       
       
       
@@ -558,8 +558,8 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -567,7 +567,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'RiscoFraudeDetalhadoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: RiscoFraudeApi#reconhecer_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: RiscoFraudeApi#reconhecer_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -586,8 +586,8 @@ module Pier
     # @option opts [DateTime] :data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
     # @option opts [Integer] :flag_fila_fraude Flag fila fraude
     # @return [AtendimentoCliente]
-    def salvar_using_post(opts = {})
-      data, _status_code, _headers = salvar_using_post_with_http_info(opts)
+    def salvar_using_post1(opts = {})
+      data, _status_code, _headers = salvar_using_post1_with_http_info(opts)
       return data
     end
 
@@ -604,9 +604,9 @@ module Pier
     # @option opts [DateTime] :data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
     # @option opts [Integer] :flag_fila_fraude Flag fila fraude
     # @return [Array<(AtendimentoCliente, Fixnum, Hash)>] AtendimentoCliente data, response status code and response headers
-    def salvar_using_post_with_http_info(opts = {})
+    def salvar_using_post1_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.salvar_using_post ..."
+        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.salvar_using_post1 ..."
       end
       
       
@@ -695,7 +695,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -704,7 +704,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'AtendimentoCliente')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: RiscoFraudeApi#salvar_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: RiscoFraudeApi#salvar_using_post1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -118,7 +118,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -249,7 +249,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -274,6 +274,7 @@ module Pier
     # @option opts [String] :status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
     # @option opts [String] :protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+    # @option opts [Integer] :nsu Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o
     # @return [PageSMS]
     def listar_sms_using_get(opts = {})
       data, _status_code, _headers = listar_sms_using_get_with_http_info(opts)
@@ -290,6 +291,7 @@ module Pier
     # @option opts [String] :status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
     # @option opts [String] :protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+    # @option opts [Integer] :nsu Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o
     # @return [Array<(PageSMS, Fixnum, Hash)>] PageSMS data, response status code and response headers
     def listar_sms_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -346,6 +348,12 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/notificacoes/sms".sub('{format}','json')
 
@@ -358,6 +366,7 @@ module Pier
       query_params[:'status'] = opts[:'status'] if opts[:'status']
       query_params[:'operadora'] = opts[:'operadora'] if opts[:'operadora']
       query_params[:'protocolo'] = opts[:'protocolo'] if opts[:'protocolo']
+      query_params[:'nsu'] = opts[:'nsu'] if opts[:'nsu']
 
       # header parameters
       header_params = {}
@@ -376,7 +385,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -459,7 +468,7 @@ module Pier
       # http body (model)
       post_body = nil
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -525,7 +534,7 @@ module Pier
       # http body (model)
       post_body = @api_client.object_to_http_body(push_persists)
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -591,7 +600,7 @@ module Pier
       # http body (model)
       post_body = @api_client.object_to_http_body(push_persists)
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -657,7 +666,7 @@ module Pier
       # http body (model)
       post_body = @api_client.object_to_http_body(push_persists)
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -723,7 +732,7 @@ module Pier
       # http body (model)
       post_body = @api_client.object_to_http_body(lista_sms)
       
-      auth_names = ['access_token']
+      auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,

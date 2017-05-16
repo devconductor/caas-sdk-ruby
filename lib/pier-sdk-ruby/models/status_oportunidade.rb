@@ -25,6 +25,9 @@ require 'date'
 module Pier
   # Objeto StatusOportunidade
   class StatusOportunidade
+    # Nome do status oportunidade
+    attr_accessor :nome
+
     # Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
     attr_accessor :descricao
 
@@ -36,6 +39,8 @@ module Pier
     def self.attribute_map
       {
         
+        :'nome' => :'nome',
+        
         :'descricao' => :'descricao',
         
         :'flag_ativo' => :'flagAtivo'
@@ -46,6 +51,8 @@ module Pier
     # Attribute type mapping.
     def self.swagger_types
       {
+        
+        :'nome' => :'String',
         
         :'descricao' => :'String',
         
@@ -61,6 +68,15 @@ module Pier
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      
+      if attributes[:'nome']
+        
+        
+        self.nome = attributes[:'nome']
+        
+      
+      end
 
       
       if attributes[:'descricao']
@@ -97,6 +113,10 @@ module Pier
     def valid?
       
       
+      
+      
+      
+      
       if @descricao.nil?
         return false
       end
@@ -127,11 +147,17 @@ module Pier
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared 
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          nome == o.nome &&
           descricao == o.descricao &&
           flag_ativo == o.flag_ativo
     end
@@ -145,7 +171,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [descricao, flag_ativo].hash
+      [nome, descricao, flag_ativo].hash
     end
 
     # Builds the object from hash

@@ -98,6 +98,7 @@ describe 'NotificacoesApi' do
   # @option opts [String] :status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
   # @option opts [String] :operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
   # @option opts [String] :protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+  # @option opts [Integer] :nsu Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o
   # @return [PageSMS]
   describe 'listar_sms_using_get test' do
     it "should work" do

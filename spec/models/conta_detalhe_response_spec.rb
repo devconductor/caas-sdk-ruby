@@ -318,7 +318,7 @@ describe 'ContaDetalheResponse' do
   end
 
 
-  describe 'test attribute "data_inicio_atraso"' do
+  describe 'test attribute "dias_atraso"' do
     it 'should work' do
        # assertion here
        # should be_a()

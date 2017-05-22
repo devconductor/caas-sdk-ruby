@@ -298,7 +298,7 @@ No authorization required
 
 
 # **consultar_dados_cartao_using_get**
-> TransacaoOnUsResponse consultar_dados_cartao_using_get(id)
+> DadosCarto consultar_dados_cartao_using_get(id)
 
 Consultar Detalhes do Cart\u00C3\u00A3o
 
@@ -333,7 +333,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TransacaoOnUsResponse**](TransacaoOnUsResponse.md)
+[**DadosCarto**](DadosCarto.md)
 
 ### Authorization
 

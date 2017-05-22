@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 **limite_saque_global** | **Float** | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional. | 
 **saldo_disponivel_global** | **Float** | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais. | 
 **saldo_disponivel_saque** | **Float** | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento. | 
-**data_inicio_atraso** | **DateTime** | Apresenta a data da ultima cobran\u00C3\u00A7a. | [optional] 
+**dias_atraso** | **Integer** | Apresenta a quantidade de dias que a conta esta em atraso | [optional] 
 
 
 

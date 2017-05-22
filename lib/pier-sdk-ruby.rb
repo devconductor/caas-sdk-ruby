@@ -80,6 +80,9 @@ require 'pier-sdk-ruby/models/conta_detalhe_response'
 require 'pier-sdk-ruby/models/conta_response'
 
 
+require 'pier-sdk-ruby/models/dados_carto'
+
+
 require 'pier-sdk-ruby/models/desfazimento_transacao_on_u_request'
 
 

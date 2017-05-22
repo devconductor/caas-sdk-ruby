@@ -139,7 +139,7 @@ describe 'CartaoApi' do
   # Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
   # @param id id
   # @param [Hash] opts the optional parameters
-  # @return [TransacaoOnUsResponse]
+  # @return [DadosCarto]
   describe 'consultar_dados_cartao_using_get test' do
     it "should work" do
       # assertion here

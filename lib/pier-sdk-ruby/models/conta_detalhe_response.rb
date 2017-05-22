@@ -100,8 +100,8 @@ module Pier
     # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
     attr_accessor :saldo_disponivel_saque
 
-    # Apresenta a data da ultima cobran\u00C3\u00A7a.
-    attr_accessor :data_inicio_atraso
+    # Apresenta a quantidade de dias que a conta esta em atraso
+    attr_accessor :dias_atraso
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -158,7 +158,7 @@ module Pier
         
         :'saldo_disponivel_saque' => :'saldoDisponivelSaque',
         
-        :'data_inicio_atraso' => :'dataInicioAtraso'
+        :'dias_atraso' => :'diasAtraso'
         
       }
     end
@@ -217,7 +217,7 @@ module Pier
         
         :'saldo_disponivel_saque' => :'Float',
         
-        :'data_inicio_atraso' => :'DateTime'
+        :'dias_atraso' => :'Integer'
         
       }
     end
@@ -456,10 +456,10 @@ module Pier
       end
 
       
-      if attributes[:'dataInicioAtraso']
+      if attributes[:'diasAtraso']
         
         
-        self.data_inicio_atraso = attributes[:'dataInicioAtraso']
+        self.dias_atraso = attributes[:'diasAtraso']
         
       
       end
@@ -782,7 +782,7 @@ module Pier
           limite_saque_global == o.limite_saque_global &&
           saldo_disponivel_global == o.saldo_disponivel_global &&
           saldo_disponivel_saque == o.saldo_disponivel_saque &&
-          data_inicio_atraso == o.data_inicio_atraso
+          dias_atraso == o.dias_atraso
     end
 
     # @see the `==` method
@@ -794,7 +794,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_pessoa, nome, id_produto, id_origem_comercial, nome_origem_comercial, id_fantasia_basica, nome_fantasia_basica, id_status_conta, status_conta, dia_vencimento, melhor_dia_compra, data_status_conta, valor_renda, data_cadastro, data_ultima_alteracao_vencimento, data_hora_ultima_compra, numero_agencia, numero_conta_corrente, forma_envio_fatura, titular, limite_global, limite_saque_global, saldo_disponivel_global, saldo_disponivel_saque, data_inicio_atraso].hash
+      [id, id_pessoa, nome, id_produto, id_origem_comercial, nome_origem_comercial, id_fantasia_basica, nome_fantasia_basica, id_status_conta, status_conta, dia_vencimento, melhor_dia_compra, data_status_conta, valor_renda, data_cadastro, data_ultima_alteracao_vencimento, data_hora_ultima_compra, numero_agencia, numero_conta_corrente, forma_envio_fatura, titular, limite_global, limite_saque_global, saldo_disponivel_global, saldo_disponivel_saque, dias_atraso].hash
     end
 
     # Builds the object from hash

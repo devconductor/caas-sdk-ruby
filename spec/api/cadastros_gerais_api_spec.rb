@@ -342,7 +342,7 @@ describe 'CadastrosGeraisApi' do
   # unit tests for listar_contas_por_pessoa_using_get
   # Lista as contas da pessoa
   # Permite listar as contas de um pessoa a partir do seu numero na receita federal.
-  # @param numero_receita_federal Id Conta
+  # @param numero_receita_federal N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ)
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)

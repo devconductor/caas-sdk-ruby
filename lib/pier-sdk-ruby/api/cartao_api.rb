@@ -432,7 +432,7 @@ module Pier
     # Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
     # @param id id
     # @param [Hash] opts the optional parameters
-    # @return [TransacaoOnUsResponse]
+    # @return [DadosCarto]
     def consultar_dados_cartao_using_get(id, opts = {})
       data, _status_code, _headers = consultar_dados_cartao_using_get_with_http_info(id, opts)
       return data
@@ -442,7 +442,7 @@ module Pier
     # Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
     # @param id id
     # @param [Hash] opts the optional parameters
-    # @return [Array<(TransacaoOnUsResponse, Fixnum, Hash)>] TransacaoOnUsResponse data, response status code and response headers
+    # @return [Array<(DadosCarto, Fixnum, Hash)>] DadosCarto data, response status code and response headers
     def consultar_dados_cartao_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CartaoApi.consultar_dados_cartao_using_get ..."
@@ -486,7 +486,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'TransacaoOnUsResponse')
+        :return_type => 'DadosCarto')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CartaoApi#consultar_dados_cartao_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

@@ -904,7 +904,7 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::CadastrosGeraisApi.new
 
-numero_receita_federal = "numero_receita_federal_example" # String | Id Conta
+numero_receita_federal = "numero_receita_federal_example" # String | N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ)
 
 opts = { 
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
@@ -924,7 +924,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **numero_receita_federal** | **String**| Id Conta | 
+ **numero_receita_federal** | **String**| N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ) | 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 

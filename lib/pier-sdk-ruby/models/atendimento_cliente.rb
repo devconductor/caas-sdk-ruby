@@ -123,15 +123,15 @@ module Pier
         
         :'nome_sistema' => :'String',
         
-        :'data_hora_inicio_atendimento' => :'DateTime',
+        :'data_hora_inicio_atendimento' => :'String',
         
-        :'data_hora_fim_atendimento' => :'DateTime',
+        :'data_hora_fim_atendimento' => :'String',
         
-        :'data_atendimento' => :'DateTime',
+        :'data_atendimento' => :'String',
         
-        :'data_agendamento' => :'DateTime',
+        :'data_agendamento' => :'String',
         
-        :'data_processamento' => :'DateTime',
+        :'data_processamento' => :'String',
         
         :'flag_processamento' => :'Integer'
         

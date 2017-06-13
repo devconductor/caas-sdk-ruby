@@ -102,7 +102,7 @@ module Pier
         
         :'cnpj' => :'String',
         
-        :'data_nascimento' => :'DateTime',
+        :'data_nascimento' => :'String',
         
         :'numero_identidade' => :'String',
         
@@ -112,7 +112,7 @@ module Pier
         
         :'unidade_federativa_identidade' => :'String',
         
-        :'data_emissao_identidade' => :'Date'
+        :'data_emissao_identidade' => :'String'
         
       }
     end

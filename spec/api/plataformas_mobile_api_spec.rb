@@ -61,15 +61,15 @@ describe 'PlataformasMobileApi' do
   end
 
 
-  # unit tests for listar_using_get12
+  # unit tests for listar_using_get15
   # Lista as plataformas mobile cadastradas
   # Este m\u00C3\u00A9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [String] :nome Nome da Plataforma Mobile
   # @return [PagePlataformasMobile]
-  describe 'listar_using_get12 test' do
+  describe 'listar_using_get15 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -80,13 +80,13 @@ describe 'PlataformasMobileApi' do
   end
 
 
-  # unit tests for salvar_using_post8
+  # unit tests for salvar_using_post9
   # Cadastra Plataforma Mobile
   # Esse recurso permite cadastrar plataformas mobile.
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [PlataformaMobile]
-  describe 'salvar_using_post8 test' do
+  describe 'salvar_using_post9 test' do
     it "should work" do
       # assertion here
       # should be_a()

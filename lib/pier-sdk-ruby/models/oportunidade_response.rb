@@ -93,15 +93,15 @@ module Pier
         
         :'id_status_oportunidade' => :'Integer',
         
-        :'data_cadastro' => :'DateTime',
+        :'data_cadastro' => :'String',
         
-        :'data_atualizacao' => :'DateTime',
+        :'data_atualizacao' => :'String',
         
         :'numero_receita_federal' => :'String',
         
-        :'data_inicio_vigencia' => :'DateTime',
+        :'data_inicio_vigencia' => :'String',
         
-        :'data_fim_vigencia' => :'DateTime',
+        :'data_fim_vigencia' => :'String',
         
         :'flag_ativo' => :'BOOLEAN',
         

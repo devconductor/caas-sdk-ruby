@@ -188,7 +188,7 @@ module Pier
         
         :'id_transacao' => :'Integer',
         
-        :'data_transacao' => :'DateTime',
+        :'data_transacao' => :'String',
         
         :'valor_transacao' => :'Float',
         

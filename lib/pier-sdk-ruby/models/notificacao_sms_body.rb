@@ -82,7 +82,7 @@ module Pier
         
         :'conteudo' => :'String',
         
-        :'data_agendamento' => :'DateTime',
+        :'data_agendamento' => :'String',
         
         :'tipo_evento' => :'String'
         

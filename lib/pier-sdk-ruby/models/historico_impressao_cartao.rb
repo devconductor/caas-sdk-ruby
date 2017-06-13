@@ -70,7 +70,7 @@ module Pier
         
         :'mensagem_historico' => :'String',
         
-        :'data_historico' => :'DateTime'
+        :'data_historico' => :'String'
         
       }
     end

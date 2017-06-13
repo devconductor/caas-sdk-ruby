@@ -78,9 +78,9 @@ module Pier
         
         :'numero_receita_federal' => :'String',
         
-        :'data_inicio_vigencia' => :'DateTime',
+        :'data_inicio_vigencia' => :'String',
         
-        :'data_fim_vigencia' => :'DateTime',
+        :'data_fim_vigencia' => :'String',
         
         :'flag_ativo' => :'BOOLEAN',
         

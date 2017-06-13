@@ -5,13 +5,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **nome** | **String** | Apresenta o nome completo da pessoa fisica. | 
 **nome_mae** | **String** | Apresenta o nome da m\u00C3\u00A3e da pessoa fisica | [optional] 
-**data_nascimento** | **Date** | Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd. | [optional] 
+**data_nascimento** | **String** | Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd. | [optional] 
 **sexo** | **String** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino). | [optional] 
 **cpf** | **String** | N\u00C3\u00BAmero do Cadastro de Pessoa Fisica (CPF) | 
 **numero_identidade** | **String** | N\u00C3\u00BAmero da Identidade | [optional] 
 **orgao_expedidor_identidade** | **String** | Org\u00C3\u00A3o expedidor do RG. | [optional] 
 **unidade_federativa_identidade** | **String** | Sigla da Unidade Federativa de onde foi expedido a Identidade | [optional] 
-**data_emissao_identidade** | **Date** | Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd | [optional] 
+**data_emissao_identidade** | **String** | Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd | [optional] 
 **id_estado_civil** | **Integer** | Id Estado civil da pessoa fisica | [optional] 
 **profissao** | **String** | Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
 **id_natureza_ocupacao** | **Integer** | Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 

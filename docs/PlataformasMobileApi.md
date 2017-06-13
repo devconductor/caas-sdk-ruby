@@ -5,8 +5,8 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizar_using_put1**](PlataformasMobileApi.md#atualizar_using_put1) | **PUT** /api/plataformas-mobile/{id} | Atualiza Plataforma Mobile
-[**listar_using_get12**](PlataformasMobileApi.md#listar_using_get12) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
-[**salvar_using_post8**](PlataformasMobileApi.md#salvar_using_post8) | **POST** /api/plataformas-mobile | Cadastra Plataforma Mobile
+[**listar_using_get15**](PlataformasMobileApi.md#listar_using_get15) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
+[**salvar_using_post9**](PlataformasMobileApi.md#salvar_using_post9) | **POST** /api/plataformas-mobile | Cadastra Plataforma Mobile
 
 
 
@@ -64,8 +64,8 @@ No authorization required
 
 
 
-# **listar_using_get12**
-> PagePlataformasMobile listar_using_get12(opts)
+# **listar_using_get15**
+> PagePlataformasMobile listar_using_get15(opts)
 
 Lista as plataformas mobile cadastradas
 
@@ -81,16 +81,16 @@ api_instance = Pier::PlataformasMobileApi.new
 
 opts = { 
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   nome: "nome_example" # String | Nome da Plataforma Mobile
 }
 
 begin
   #Lista as plataformas mobile cadastradas
-  result = api_instance.listar_using_get12(opts)
+  result = api_instance.listar_using_get15(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling PlataformasMobileApi->listar_using_get12: #{e}"
+  puts "Exception when calling PlataformasMobileApi->listar_using_get15: #{e}"
 end
 ```
 
@@ -99,7 +99,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **nome** | **String**| Nome da Plataforma Mobile | [optional] 
 
 
@@ -119,8 +119,8 @@ No authorization required
 
 
 
-# **salvar_using_post8**
-> PlataformaMobile salvar_using_post8(persist)
+# **salvar_using_post9**
+> PlataformaMobile salvar_using_post9(persist)
 
 Cadastra Plataforma Mobile
 
@@ -139,10 +139,10 @@ persist = Pier::PlataformaMobilePersist.new # PlataformaMobilePersist | persist
 
 begin
   #Cadastra Plataforma Mobile
-  result = api_instance.salvar_using_post8(persist)
+  result = api_instance.salvar_using_post9(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling PlataformasMobileApi->salvar_using_post8: #{e}"
+  puts "Exception when calling PlataformasMobileApi->salvar_using_post9: #{e}"
 end
 ```
 

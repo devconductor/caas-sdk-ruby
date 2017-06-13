@@ -127,7 +127,7 @@ module Pier
         
         :'inscricao_estadual' => :'String',
         
-        :'data_abertura_empresa' => :'Date',
+        :'data_abertura_empresa' => :'String',
         
         :'id_origem_comercial' => :'Integer',
         

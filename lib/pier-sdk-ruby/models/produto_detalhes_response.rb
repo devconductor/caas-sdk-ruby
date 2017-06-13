@@ -40,6 +40,9 @@ module Pier
     # Descri\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica a qual o produto pertence.
     attr_accessor :fantasia_basica
 
+    # Par\u00C3\u00A2metro que indica se o produto est\u00C3\u00A1 habilitado para compras no exterior.
+    attr_accessor :uso_exterior
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -53,7 +56,9 @@ module Pier
         
         :'id_fantasia_basica' => :'idFantasiaBasica',
         
-        :'fantasia_basica' => :'fantasiaBasica'
+        :'fantasia_basica' => :'fantasiaBasica',
+        
+        :'uso_exterior' => :'usoExterior'
         
       }
     end
@@ -70,7 +75,9 @@ module Pier
         
         :'id_fantasia_basica' => :'Integer',
         
-        :'fantasia_basica' => :'String'
+        :'fantasia_basica' => :'String',
+        
+        :'uso_exterior' => :'BOOLEAN'
         
       }
     end
@@ -129,6 +136,15 @@ module Pier
       end
 
       
+      if attributes[:'usoExterior']
+        
+        
+        self.uso_exterior = attributes[:'usoExterior']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -179,8 +195,17 @@ module Pier
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -216,7 +241,8 @@ module Pier
           nome == o.nome &&
           status == o.status &&
           id_fantasia_basica == o.id_fantasia_basica &&
-          fantasia_basica == o.fantasia_basica
+          fantasia_basica == o.fantasia_basica &&
+          uso_exterior == o.uso_exterior
     end
 
     # @see the `==` method
@@ -228,7 +254,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, nome, status, id_fantasia_basica, fantasia_basica].hash
+      [id, nome, status, id_fantasia_basica, fantasia_basica, uso_exterior].hash
     end
 
     # Builds the object from hash

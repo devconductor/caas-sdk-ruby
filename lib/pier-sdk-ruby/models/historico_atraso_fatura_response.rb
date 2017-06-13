@@ -47,7 +47,7 @@ module Pier
     def self.swagger_types
       {
         
-        :'data_vencimento' => :'DateTime',
+        :'data_vencimento' => :'String',
         
         :'dias_pagamento_apos_vencimento' => :'Integer'
         

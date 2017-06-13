@@ -11,11 +11,11 @@ Name | Type | Description | Notes
 **detalhes_atendimento** | **String** | Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento. | [optional] 
 **nome_atendente** | **String** | Apresenta o nome do Atendente que registrou o Atendimento. | [optional] 
 **nome_sistema** | **String** | Apresenta o nome do Sistema, Servidor, M\u00C3\u00B3dulo ou M\u00C3\u00A9todo REST que originou o registro do Atendimento. | [optional] 
-**data_hora_inicio_atendimento** | **DateTime** | Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos. | [optional] 
-**data_hora_fim_atendimento** | **DateTime** | Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos. | [optional] 
-**data_atendimento** | **DateTime** | Apresenta a data e hora em que o Atendimento foi realizado. | [optional] 
-**data_agendamento** | **DateTime** | Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento. | [optional] 
-**data_processamento** | **DateTime** | Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada. | [optional] 
+**data_hora_inicio_atendimento** | **String** | Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos. | [optional] 
+**data_hora_fim_atendimento** | **String** | Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos. | [optional] 
+**data_atendimento** | **String** | Apresenta a data e hora em que o Atendimento foi realizado. | [optional] 
+**data_agendamento** | **String** | Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento. | [optional] 
+**data_processamento** | **String** | Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada. | [optional] 
 **flag_processamento** | **Integer** | Quando aplic\u00C3\u00A1vel, de acordo com o Indica se o Processamento da solicita\u00C3\u00A7\u00C3\u00A3o fora realizado. | [optional] 
 
 

@@ -82,7 +82,7 @@ module Pier
         
         :'rev' => :'Integer',
         
-        :'rev_date' => :'DateTime',
+        :'rev_date' => :'String',
         
         :'rev_oportunidade' => :'Integer',
         

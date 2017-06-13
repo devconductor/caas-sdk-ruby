@@ -28,9 +28,6 @@ module Pier
     # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
     attr_accessor :id
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Emissor de qual a FAQ \u00C3\u00A9 relacionada (id).
-    attr_accessor :id_emissor
-
     # Conte\u00C3\u00BAdo da pergunta.
     attr_accessor :pergunta
 
@@ -56,8 +53,6 @@ module Pier
         
         :'id' => :'id',
         
-        :'id_emissor' => :'idEmissor',
-        
         :'pergunta' => :'pergunta',
         
         :'resposta' => :'resposta',
@@ -78,8 +73,6 @@ module Pier
       {
         
         :'id' => :'Integer',
-        
-        :'id_emissor' => :'Integer',
         
         :'pergunta' => :'String',
         
@@ -109,15 +102,6 @@ module Pier
         
         
         self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes[:'idEmissor']
-        
-        
-        self.id_emissor = attributes[:'idEmissor']
         
       
       end
@@ -218,10 +202,6 @@ module Pier
       
       
       
-      
-      
-      
-      
       allowed_values = ["ATIVO", "INATIVO"]
       if @status && !allowed_values.include?(@status)
         return false
@@ -231,11 +211,6 @@ module Pier
       
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -287,7 +262,6 @@ module Pier
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          id_emissor == o.id_emissor &&
           pergunta == o.pergunta &&
           resposta == o.resposta &&
           relevancia == o.relevancia &&
@@ -305,7 +279,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_emissor, pergunta, resposta, relevancia, plataforma, categoria, status].hash
+      [id, pergunta, resposta, relevancia, plataforma, categoria, status].hash
     end
 
     # Builds the object from hash

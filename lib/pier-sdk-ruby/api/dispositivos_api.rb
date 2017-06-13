@@ -168,15 +168,15 @@ module Pier
     # Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :token Token do Dispositivo
     # @option opts [Integer] :id_usuario Identificador do Usu\u00C3\u00A1rio
     # @option opts [Integer] :id_aplicacao_mobile Identificador da aplica\u00C3\u00A7\u00C3\u00A3o
-    # @option opts [Date] :data_criacao Apresenta a data e em que o registro foi criado.
-    # @option opts [Date] :data_desativacao Apresenta a data e em que o registro foi desativado.
+    # @option opts [String] :data_criacao Apresenta a data e em que o registro foi criado.
+    # @option opts [String] :data_desativacao Apresenta a data e em que o registro foi desativado.
     # @return [PageDispositivos]
-    def listar_using_get5(opts = {})
-      data, _status_code, _headers = listar_using_get5_with_http_info(opts)
+    def listar_using_get7(opts = {})
+      data, _status_code, _headers = listar_using_get7_with_http_info(opts)
       return data
     end
 
@@ -184,16 +184,16 @@ module Pier
     # Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :token Token do Dispositivo
     # @option opts [Integer] :id_usuario Identificador do Usu\u00C3\u00A1rio
     # @option opts [Integer] :id_aplicacao_mobile Identificador da aplica\u00C3\u00A7\u00C3\u00A3o
-    # @option opts [Date] :data_criacao Apresenta a data e em que o registro foi criado.
-    # @option opts [Date] :data_desativacao Apresenta a data e em que o registro foi desativado.
+    # @option opts [String] :data_criacao Apresenta a data e em que o registro foi criado.
+    # @option opts [String] :data_desativacao Apresenta a data e em que o registro foi desativado.
     # @return [Array<(PageDispositivos, Fixnum, Hash)>] PageDispositivos data, response status code and response headers
-    def listar_using_get5_with_http_info(opts = {})
+    def listar_using_get7_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DispositivosApi.listar_using_get5 ..."
+        @api_client.config.logger.debug "Calling API: DispositivosApi.listar_using_get7 ..."
       end
       
       
@@ -277,7 +277,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageDispositivos')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DispositivosApi#listar_using_get5\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DispositivosApi#listar_using_get7\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

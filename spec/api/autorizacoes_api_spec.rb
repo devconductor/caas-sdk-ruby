@@ -43,8 +43,25 @@ describe 'AutorizacoesApi' do
   end
 
 
+  # unit tests for autorizar_using_post
+  # Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+  # Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+  # @param autorizacao_on_us_request autorizacaoOnUsRequest
+  # @param [Hash] opts the optional parameters
+  # @return [TransacaoOnUsResponse]
+  describe 'autorizar_using_post test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
   # unit tests for cancelar_using_post
-  # Cancela Transa\u00C3\u00A7\u00C3\u00A3o financeira
+  # Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
   # Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
   # @param cancelamento_request cancelamentoRequest
   # @param [Hash] opts the optional parameters
@@ -60,30 +77,12 @@ describe 'AutorizacoesApi' do
   end
 
 
-  # unit tests for desfazer_using_post
-  # Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
-  # Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
-  # @param autorizacao_on_us_request autorizacaoOnUsRequest
+  # unit tests for listar_codigos_processamento_autorizacao_using_get
+  # Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
+  # Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento para autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es financeiras.
   # @param [Hash] opts the optional parameters
-  # @return [TransacaoOnUsResponse]
-  describe 'desfazer_using_post test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for desfazer_using_post1
-  # Desfazimento de Transa\u00C3\u00A7\u00C3\u00A3o
-  # Este m\u00C3\u00A9todo permite que seja desfeita uma transa\u00C3\u00A7\u00C3\u00A3o.
-  # @param desfazimento_request desfazimentoRequest
-  # @param [Hash] opts the optional parameters
-  # @return [TransacaoOnUsResponse]
-  describe 'desfazer_using_post1 test' do
+  # @return [Array<Object>]
+  describe 'listar_codigos_processamento_autorizacao_using_get test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -95,8 +94,8 @@ describe 'AutorizacoesApi' do
 
 
   # unit tests for simular_using_post
-  # Simula Compra Parcelada
-  # Este m\u00C3\u00A9todo permite que seja simulada uma compra parcelada.
+  # Simula planos de pagamento
+  # Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
   # @param transacoes_request transacoesRequest
   # @param [Hash] opts the optional parameters
   # @return [TransacaoOnUsResponse]

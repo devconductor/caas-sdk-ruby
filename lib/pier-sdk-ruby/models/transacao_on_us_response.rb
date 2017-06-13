@@ -43,6 +43,9 @@ module Pier
     # Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o.
     attr_accessor :nome_portador_cartao
 
+    # Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+    attr_accessor :terminal_requisitante
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -58,7 +61,9 @@ module Pier
         
         :'numero_mascarado_cartao' => :'numeroMascaradoCartao',
         
-        :'nome_portador_cartao' => :'nomePortadorCartao'
+        :'nome_portador_cartao' => :'nomePortadorCartao',
+        
+        :'terminal_requisitante' => :'terminalRequisitante'
         
       }
     end
@@ -77,7 +82,9 @@ module Pier
         
         :'numero_mascarado_cartao' => :'String',
         
-        :'nome_portador_cartao' => :'String'
+        :'nome_portador_cartao' => :'String',
+        
+        :'terminal_requisitante' => :'String'
         
       }
     end
@@ -147,6 +154,15 @@ module Pier
       end
 
       
+      if attributes[:'terminalRequisitante']
+        
+        
+        self.terminal_requisitante = attributes[:'terminalRequisitante']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -186,8 +202,22 @@ module Pier
       
       
       
+      
+      if @terminal_requisitante.nil?
+        return false
+      end
+
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -229,7 +259,8 @@ module Pier
           plano_de_parcelamento == o.plano_de_parcelamento &&
           codigo_autorizacao == o.codigo_autorizacao &&
           numero_mascarado_cartao == o.numero_mascarado_cartao &&
-          nome_portador_cartao == o.nome_portador_cartao
+          nome_portador_cartao == o.nome_portador_cartao &&
+          terminal_requisitante == o.terminal_requisitante
     end
 
     # @see the `==` method
@@ -241,7 +272,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [nsu_origem, nsu_autorizacao, plano_de_parcelamento, codigo_autorizacao, numero_mascarado_cartao, nome_portador_cartao].hash
+      [nsu_origem, nsu_autorizacao, plano_de_parcelamento, codigo_autorizacao, numero_mascarado_cartao, nome_portador_cartao, terminal_requisitante].hash
     end
 
     # Builds the object from hash

@@ -191,15 +191,15 @@ module Pier
         
         :'melhor_dia_compra' => :'Integer',
         
-        :'data_status_conta' => :'DateTime',
+        :'data_status_conta' => :'String',
         
         :'valor_renda' => :'Float',
         
-        :'data_cadastro' => :'DateTime',
+        :'data_cadastro' => :'String',
         
-        :'data_ultima_alteracao_vencimento' => :'DateTime',
+        :'data_ultima_alteracao_vencimento' => :'String',
         
-        :'data_hora_ultima_compra' => :'DateTime',
+        :'data_hora_ultima_compra' => :'String',
         
         :'numero_agencia' => :'Integer',
         

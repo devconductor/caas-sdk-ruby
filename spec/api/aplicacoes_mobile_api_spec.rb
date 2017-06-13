@@ -66,10 +66,9 @@ describe 'AplicacoesMobileApi' do
   # Este m\u00C3\u00A9todo permite que sejam listadas as aplicacoes mobile existentes na base do PIER.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [String] :id Identificador da Aplicacao Mobile
   # @option opts [Integer] :id_plataforma_mobile Identificador da Plataforma Mobile
-  # @option opts [Integer] :id_emissor Identificador do Emissor
   # @return [PageAplicacoesMobile]
   describe 'listar_using_get test' do
     it "should work" do

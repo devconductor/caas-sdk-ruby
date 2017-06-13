@@ -97,11 +97,11 @@ module Pier
     def self.swagger_types
       {
         
-        :'data_compra' => :'Date',
+        :'data_compra' => :'String',
         
-        :'proximo_vencimento_padrao' => :'Date',
+        :'proximo_vencimento_padrao' => :'String',
         
-        :'proximo_vencimento_real' => :'Date',
+        :'proximo_vencimento_real' => :'String',
         
         :'valor_compra' => :'Float',
         

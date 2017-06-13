@@ -77,19 +77,19 @@ describe 'DispositivosApi' do
   end
 
 
-  # unit tests for listar_using_get5
+  # unit tests for listar_using_get7
   # Lista os dispositivos cadastrados
   # Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [String] :token Token do Dispositivo
   # @option opts [Integer] :id_usuario Identificador do Usu\u00C3\u00A1rio
   # @option opts [Integer] :id_aplicacao_mobile Identificador da aplica\u00C3\u00A7\u00C3\u00A3o
-  # @option opts [Date] :data_criacao Apresenta a data e em que o registro foi criado.
-  # @option opts [Date] :data_desativacao Apresenta a data e em que o registro foi desativado.
+  # @option opts [String] :data_criacao Apresenta a data e em que o registro foi criado.
+  # @option opts [String] :data_desativacao Apresenta a data e em que o registro foi desativado.
   # @return [PageDispositivos]
-  describe 'listar_using_get5 test' do
+  describe 'listar_using_get7 test' do
     it "should work" do
       # assertion here
       # should be_a()

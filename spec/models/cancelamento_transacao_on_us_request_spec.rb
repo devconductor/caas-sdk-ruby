@@ -43,6 +43,17 @@ describe 'CancelamentoTransacaoOnUsRequest' do
     end
   end
 
+  describe 'test attribute "nsu_autorizacao_transacao_cancelada"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
   describe 'test attribute "nsu_origem"' do
     it 'should work' do
        # assertion here
@@ -54,7 +65,29 @@ describe 'CancelamentoTransacaoOnUsRequest' do
   end
 
 
+  describe 'test attribute "nsu_origem_transacao_cancelada"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
   describe 'test attribute "codigo_processamento"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "data_hora_transacao_cancelada"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -121,50 +154,6 @@ describe 'CancelamentoTransacaoOnUsRequest' do
 
 
   describe 'test attribute "terminal_requisitante"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "nsu_origem_transacao_cancelada"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "data_hora_transacao_cancelada"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "codigo_transacao_cancelada"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "nsu_autorizacao_transacao_cancelada"' do
     it 'should work' do
        # assertion here
        # should be_a()

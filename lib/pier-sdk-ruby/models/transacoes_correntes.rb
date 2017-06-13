@@ -97,6 +97,12 @@ module Pier
     # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da categoria do Estabelecimento.
     attr_accessor :codigo_mcc
 
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.
+    attr_accessor :grupo_mcc
+
+    # Descri\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.
+    attr_accessor :grupo_descricao_mcc
+
     # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).
     attr_accessor :id_estabelecimento
 
@@ -180,6 +186,10 @@ module Pier
         
         :'codigo_mcc' => :'codigoMCC',
         
+        :'grupo_mcc' => :'grupoMCC',
+        
+        :'grupo_descricao_mcc' => :'grupoDescricaoMCC',
+        
         :'id_estabelecimento' => :'idEstabelecimento',
         
         :'nome_estabelecimento' => :'nomeEstabelecimento',
@@ -223,11 +233,11 @@ module Pier
         
         :'nome_portador' => :'String',
         
-        :'data_transacao_utc' => :'DateTime',
+        :'data_transacao_utc' => :'String',
         
-        :'data_faturamento' => :'DateTime',
+        :'data_faturamento' => :'String',
         
-        :'data_vencimento' => :'Date',
+        :'data_vencimento' => :'String',
         
         :'modo_entrada_transacao' => :'String',
         
@@ -241,7 +251,7 @@ module Pier
         
         :'cotacao_usd' => :'Float',
         
-        :'data_cotacao_usd' => :'DateTime',
+        :'data_cotacao_usd' => :'String',
         
         :'codigo_moeda_origem' => :'String',
         
@@ -254,6 +264,10 @@ module Pier
         :'codigo_terminal' => :'String',
         
         :'codigo_mcc' => :'Integer',
+        
+        :'grupo_mcc' => :'Integer',
+        
+        :'grupo_descricao_mcc' => :'String',
         
         :'id_estabelecimento' => :'Integer',
         
@@ -503,6 +517,24 @@ module Pier
       end
 
       
+      if attributes[:'grupoMCC']
+        
+        
+        self.grupo_mcc = attributes[:'grupoMCC']
+        
+      
+      end
+
+      
+      if attributes[:'grupoDescricaoMCC']
+        
+        
+        self.grupo_descricao_mcc = attributes[:'grupoDescricaoMCC']
+        
+      
+      end
+
+      
       if attributes[:'idEstabelecimento']
         
         
@@ -744,8 +776,26 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -946,6 +996,8 @@ module Pier
           codigo_referencia == o.codigo_referencia &&
           codigo_terminal == o.codigo_terminal &&
           codigo_mcc == o.codigo_mcc &&
+          grupo_mcc == o.grupo_mcc &&
+          grupo_descricao_mcc == o.grupo_descricao_mcc &&
           id_estabelecimento == o.id_estabelecimento &&
           nome_estabelecimento == o.nome_estabelecimento &&
           localidade_estabelecimento == o.localidade_estabelecimento &&
@@ -967,7 +1019,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, tipo_transacao, status_transacao, id_evento, tipo_evento, id_conta, cartao_mascarado, nome_portador, data_transacao_utc, data_faturamento, data_vencimento, modo_entrada_transacao, valor_taxa_embarque, valor_entrada, valor_brl, valor_usd, cotacao_usd, data_cotacao_usd, codigo_moeda_origem, codigo_moeda_destino, codigo_autorizacao, codigo_referencia, codigo_terminal, codigo_mcc, id_estabelecimento, nome_estabelecimento, localidade_estabelecimento, plano_parcelamento, numero_parcela, detalhes_transacao, flag_credito, flag_faturado, flag_estorno, id_transacao_estorno].hash
+      [id, tipo_transacao, status_transacao, id_evento, tipo_evento, id_conta, cartao_mascarado, nome_portador, data_transacao_utc, data_faturamento, data_vencimento, modo_entrada_transacao, valor_taxa_embarque, valor_entrada, valor_brl, valor_usd, cotacao_usd, data_cotacao_usd, codigo_moeda_origem, codigo_moeda_destino, codigo_autorizacao, codigo_referencia, codigo_terminal, codigo_mcc, grupo_mcc, grupo_descricao_mcc, id_estabelecimento, nome_estabelecimento, localidade_estabelecimento, plano_parcelamento, numero_parcela, detalhes_transacao, flag_credito, flag_faturado, flag_estorno, id_transacao_estorno].hash
     end
 
     # Builds the object from hash

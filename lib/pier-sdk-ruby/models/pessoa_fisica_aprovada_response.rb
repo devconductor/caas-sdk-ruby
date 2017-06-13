@@ -163,7 +163,7 @@ module Pier
         
         :'nome_mae' => :'String',
         
-        :'data_nascimento' => :'Date',
+        :'data_nascimento' => :'String',
         
         :'sexo' => :'String',
         
@@ -175,7 +175,7 @@ module Pier
         
         :'unidade_federativa_identidade' => :'String',
         
-        :'data_emissao_identidade' => :'Date',
+        :'data_emissao_identidade' => :'String',
         
         :'id_estado_civil' => :'Integer',
         

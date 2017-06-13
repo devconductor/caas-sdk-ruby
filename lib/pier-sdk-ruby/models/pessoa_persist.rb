@@ -104,9 +104,9 @@ module Pier
         
         :'cpf' => :'String',
         
-        :'data_emissao_identidade' => :'Date',
+        :'data_emissao_identidade' => :'String',
         
-        :'data_nascimento' => :'Date',
+        :'data_nascimento' => :'String',
         
         :'email' => :'String',
         

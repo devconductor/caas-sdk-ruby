@@ -131,9 +131,9 @@ module Pier
         
         :'pais' => :'String',
         
-        :'data_inclusao' => :'DateTime',
+        :'data_inclusao' => :'String',
         
-        :'data_ultima_atualizacao' => :'DateTime'
+        :'data_ultima_atualizacao' => :'String'
         
       }
     end

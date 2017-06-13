@@ -99,6 +99,7 @@ module Pier
     # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
     attr_accessor :id_conta_portador
 
+    # Atributo que representa o numero do estabelecimento.
     attr_accessor :numero_estabelecimento
 
 
@@ -173,7 +174,7 @@ module Pier
         
         :'codigo_autorizacao' => :'String',
         
-        :'data_autorizacao' => :'DateTime',
+        :'data_autorizacao' => :'String',
         
         :'origem' => :'String',
         
@@ -185,7 +186,7 @@ module Pier
         
         :'id_cartao' => :'Integer',
         
-        :'data_compra' => :'DateTime',
+        :'data_compra' => :'String',
         
         :'valor_compra' => :'Float',
         
@@ -195,7 +196,7 @@ module Pier
         
         :'id_estabelecimento' => :'Integer',
         
-        :'data_movimento' => :'DateTime',
+        :'data_movimento' => :'String',
         
         :'valor_contrato' => :'Float',
         
@@ -209,7 +210,7 @@ module Pier
         
         :'valor_entrada' => :'Float',
         
-        :'data_vencimento_real' => :'DateTime',
+        :'data_vencimento_real' => :'String',
         
         :'data_vencimento_padrao' => :'String',
         

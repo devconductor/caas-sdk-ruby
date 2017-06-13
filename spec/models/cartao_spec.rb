@@ -219,7 +219,7 @@ describe 'Cartao' do
   end
 
 
-  describe 'test attribute "flag_provisorio"' do
+  describe 'test attribute "flag_virtual"' do
     it 'should work' do
        # assertion here
        # should be_a()

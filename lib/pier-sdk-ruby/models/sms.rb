@@ -146,13 +146,13 @@ module Pier
         
         :'resposta' => :'String',
         
-        :'data_agendamento' => :'DateTime',
+        :'data_agendamento' => :'String',
         
         :'quantidade_tentativas_envio' => :'Integer',
         
-        :'data_inclusao' => :'DateTime',
+        :'data_inclusao' => :'String',
         
-        :'data_alteracao_status' => :'DateTime',
+        :'data_alteracao_status' => :'String',
         
         :'protocolo' => :'String'
         

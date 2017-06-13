@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ativar_using_post**](DispositivosApi.md#ativar_using_post) | **POST** /api/dispositivos/{id}/ativar-dispositivo | Ativa Dispositivo
 [**desativar_using_post**](DispositivosApi.md#desativar_using_post) | **POST** /api/dispositivos/{id}/desativar-dispositivo | Desativa Dispositivo
-[**listar_using_get5**](DispositivosApi.md#listar_using_get5) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
+[**listar_using_get7**](DispositivosApi.md#listar_using_get7) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
 [**salvar_using_post3**](DispositivosApi.md#salvar_using_post3) | **POST** /api/dispositivos | Cadastra Dispositivo
 
 
@@ -112,8 +112,8 @@ No authorization required
 
 
 
-# **listar_using_get5**
-> PageDispositivos listar_using_get5(opts)
+# **listar_using_get7**
+> PageDispositivos listar_using_get7(opts)
 
 Lista os dispositivos cadastrados
 
@@ -129,20 +129,20 @@ api_instance = Pier::DispositivosApi.new
 
 opts = { 
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   token: "token_example", # String | Token do Dispositivo
   id_usuario: 789, # Integer | Identificador do Usu\u00C3\u00A1rio
   id_aplicacao_mobile: 789, # Integer | Identificador da aplica\u00C3\u00A7\u00C3\u00A3o
-  data_criacao: Date.parse("2013-10-20"), # Date | Apresenta a data e em que o registro foi criado.
-  data_desativacao: Date.parse("2013-10-20") # Date | Apresenta a data e em que o registro foi desativado.
+  data_criacao: "data_criacao_example", # String | Apresenta a data e em que o registro foi criado.
+  data_desativacao: "data_desativacao_example" # String | Apresenta a data e em que o registro foi desativado.
 }
 
 begin
   #Lista os dispositivos cadastrados
-  result = api_instance.listar_using_get5(opts)
+  result = api_instance.listar_using_get7(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DispositivosApi->listar_using_get5: #{e}"
+  puts "Exception when calling DispositivosApi->listar_using_get7: #{e}"
 end
 ```
 
@@ -151,12 +151,12 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **token** | **String**| Token do Dispositivo | [optional] 
  **id_usuario** | **Integer**| Identificador do Usu\u00C3\u00A1rio | [optional] 
  **id_aplicacao_mobile** | **Integer**| Identificador da aplica\u00C3\u00A7\u00C3\u00A3o | [optional] 
- **data_criacao** | **Date**| Apresenta a data e em que o registro foi criado. | [optional] 
- **data_desativacao** | **Date**| Apresenta a data e em que o registro foi desativado. | [optional] 
+ **data_criacao** | **String**| Apresenta a data e em que o registro foi criado. | [optional] 
+ **data_desativacao** | **String**| Apresenta a data e em que o registro foi desativado. | [optional] 
 
 
 ### Return type

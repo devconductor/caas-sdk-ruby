@@ -54,7 +54,29 @@ describe 'AutorizacaoOnUsRequest' do
   end
 
 
+  describe 'test attribute "numero_parcelas"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
   describe 'test attribute "codigo_processamento"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "codigo_seguranca_cartao"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -121,28 +143,6 @@ describe 'AutorizacaoOnUsRequest' do
 
 
   describe 'test attribute "terminal_requisitante"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "numero_parcelas"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "codigo_seguranca_cartao"' do
     it 'should work' do
        # assertion here
        # should be_a()

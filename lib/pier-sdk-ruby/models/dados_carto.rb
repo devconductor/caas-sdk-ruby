@@ -25,6 +25,8 @@ require 'date'
 module Pier
   # Objeto Dados Cart\u00C3\u00A3o
   class DadosCarto
+    attr_accessor :flag_virtual
+
     # N\u00C3\u00BAmero do cart\u00C3\u00A3o.
     attr_accessor :numero_cartao
 
@@ -43,19 +45,30 @@ module Pier
     # Identificador da cart\u00C3\u00A3o do portador.
     attr_accessor :id_cartao
 
+    # Apresenta o n\u00C3\u00BAmero da Ag\u00C3\u00AAncia a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+    attr_accessor :numero_agencia
+
+    # Apresenta o n\u00C3\u00BAmero da Conta Corrente a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+    attr_accessor :numero_conta_corente
+
     # Status da conta do portador.
-    attr_accessor :status
+    attr_accessor :id_status_conta
 
     # Descri\u00C3\u00A7\u00C3\u00A3o do status da conta do portador.
-    attr_accessor :status_descricao
+    attr_accessor :status_conta
 
-    # Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio.
-    attr_accessor :flag_provisorio
+    # Status do cart\u00C3\u00A3o.
+    attr_accessor :id_status_cartao
+
+    # Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o.
+    attr_accessor :status_cartao
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
+        :'flag_virtual' => :'flagVirtual',
         
         :'numero_cartao' => :'numeroCartao',
         
@@ -69,11 +82,17 @@ module Pier
         
         :'id_cartao' => :'idCartao',
         
-        :'status' => :'status',
+        :'numero_agencia' => :'numeroAgencia',
         
-        :'status_descricao' => :'statusDescricao',
+        :'numero_conta_corente' => :'numeroContaCorente',
         
-        :'flag_provisorio' => :'flagProvisorio'
+        :'id_status_conta' => :'idStatusConta',
+        
+        :'status_conta' => :'statusConta',
+        
+        :'id_status_cartao' => :'idStatusCartao',
+        
+        :'status_cartao' => :'statusCartao'
         
       }
     end
@@ -82,9 +101,11 @@ module Pier
     def self.swagger_types
       {
         
+        :'flag_virtual' => :'Integer',
+        
         :'numero_cartao' => :'String',
         
-        :'data_validade' => :'DateTime',
+        :'data_validade' => :'String',
         
         :'cvv2' => :'String',
         
@@ -94,11 +115,17 @@ module Pier
         
         :'id_cartao' => :'Integer',
         
-        :'status' => :'Integer',
+        :'numero_agencia' => :'Integer',
         
-        :'status_descricao' => :'String',
+        :'numero_conta_corente' => :'String',
         
-        :'flag_provisorio' => :'Integer'
+        :'id_status_conta' => :'Integer',
+        
+        :'status_conta' => :'String',
+        
+        :'id_status_cartao' => :'Integer',
+        
+        :'status_cartao' => :'String'
         
       }
     end
@@ -110,6 +137,15 @@ module Pier
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      
+      if attributes[:'flagVirtual']
+        
+        
+        self.flag_virtual = attributes[:'flagVirtual']
+        
+      
+      end
 
       
       if attributes[:'numeroCartao']
@@ -166,28 +202,55 @@ module Pier
       end
 
       
-      if attributes[:'status']
+      if attributes[:'numeroAgencia']
         
         
-        self.status = attributes[:'status']
-        
-      
-      end
-
-      
-      if attributes[:'statusDescricao']
-        
-        
-        self.status_descricao = attributes[:'statusDescricao']
+        self.numero_agencia = attributes[:'numeroAgencia']
         
       
       end
 
       
-      if attributes[:'flagProvisorio']
+      if attributes[:'numeroContaCorente']
         
         
-        self.flag_provisorio = attributes[:'flagProvisorio']
+        self.numero_conta_corente = attributes[:'numeroContaCorente']
+        
+      
+      end
+
+      
+      if attributes[:'idStatusConta']
+        
+        
+        self.id_status_conta = attributes[:'idStatusConta']
+        
+      
+      end
+
+      
+      if attributes[:'statusConta']
+        
+        
+        self.status_conta = attributes[:'statusConta']
+        
+      
+      end
+
+      
+      if attributes[:'idStatusCartao']
+        
+        
+        self.id_status_cartao = attributes[:'idStatusCartao']
+        
+      
+      end
+
+      
+      if attributes[:'statusCartao']
+        
+        
+        self.status_cartao = attributes[:'statusCartao']
         
       
       end
@@ -244,8 +307,44 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -297,15 +396,19 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          flag_virtual == o.flag_virtual &&
           numero_cartao == o.numero_cartao &&
           data_validade == o.data_validade &&
           cvv2 == o.cvv2 &&
           nome_plastico == o.nome_plastico &&
           id_conta == o.id_conta &&
           id_cartao == o.id_cartao &&
-          status == o.status &&
-          status_descricao == o.status_descricao &&
-          flag_provisorio == o.flag_provisorio
+          numero_agencia == o.numero_agencia &&
+          numero_conta_corente == o.numero_conta_corente &&
+          id_status_conta == o.id_status_conta &&
+          status_conta == o.status_conta &&
+          id_status_cartao == o.id_status_cartao &&
+          status_cartao == o.status_cartao
     end
 
     # @see the `==` method
@@ -317,7 +420,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [numero_cartao, data_validade, cvv2, nome_plastico, id_conta, id_cartao, status, status_descricao, flag_provisorio].hash
+      [flag_virtual, numero_cartao, data_validade, cvv2, nome_plastico, id_conta, id_cartao, numero_agencia, numero_conta_corente, id_status_conta, status_conta, id_status_cartao, status_cartao].hash
     end
 
     # Builds the object from hash

@@ -7,11 +7,11 @@ Method | HTTP request | Description
 [**alterar_senha_using_put**](UsuariosApi.md#alterar_senha_using_put) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio
 [**alterar_using_put9**](UsuariosApi.md#alterar_using_put9) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados
 [**ativar_usuario_using_post**](UsuariosApi.md#ativar_usuario_using_post) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados
-[**consultar_using_get22**](UsuariosApi.md#consultar_using_get22) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio
+[**consultar_using_get25**](UsuariosApi.md#consultar_using_get25) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio
 [**desativar_usuario_using_post**](UsuariosApi.md#desativar_usuario_using_post) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados
-[**listar_using_get24**](UsuariosApi.md#listar_using_get24) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados
+[**listar_using_get29**](UsuariosApi.md#listar_using_get29) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados
 [**recuperar_senha_using_post**](UsuariosApi.md#recuperar_senha_using_post) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio
-[**salvar_using_post12**](UsuariosApi.md#salvar_using_post12) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio
+[**salvar_using_post13**](UsuariosApi.md#salvar_using_post13) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio
 [**validar_senha_using_get1**](UsuariosApi.md#validar_senha_using_get1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio
 
 
@@ -176,8 +176,8 @@ No authorization required
 
 
 
-# **consultar_using_get22**
-> UsuarioResponse consultar_using_get22(id)
+# **consultar_using_get25**
+> UsuarioResponse consultar_using_get25(id)
 
 Apresenta os dados de um determinado Usu\u00C3\u00A1rio
 
@@ -196,10 +196,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Usu\u00C3\u00A1rio
-  result = api_instance.consultar_using_get22(id)
+  result = api_instance.consultar_using_get25(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling UsuariosApi->consultar_using_get22: #{e}"
+  puts "Exception when calling UsuariosApi->consultar_using_get25: #{e}"
 end
 ```
 
@@ -276,8 +276,8 @@ No authorization required
 
 
 
-# **listar_using_get24**
-> PageUsuarios listar_using_get24(opts)
+# **listar_using_get29**
+> PageUsuarios listar_using_get29(opts)
 
 Lista os Usu\u00C3\u00A1rios cadastrados
 
@@ -293,7 +293,7 @@ api_instance = Pier::UsuariosApi.new
 
 opts = { 
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   nome: "nome_example", # String | Nome do Usuario
   cpf: "cpf_example", # String | CPF do Usuario
   email: "email_example", # String | Email do Usuario
@@ -302,10 +302,10 @@ opts = {
 
 begin
   #Lista os Usu\u00C3\u00A1rios cadastrados
-  result = api_instance.listar_using_get24(opts)
+  result = api_instance.listar_using_get29(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling UsuariosApi->listar_using_get24: #{e}"
+  puts "Exception when calling UsuariosApi->listar_using_get29: #{e}"
 end
 ```
 
@@ -314,7 +314,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **nome** | **String**| Nome do Usuario | [optional] 
  **cpf** | **String**| CPF do Usuario | [optional] 
  **email** | **String**| Email do Usuario | [optional] 
@@ -387,8 +387,8 @@ No authorization required
 
 
 
-# **salvar_using_post12**
-> UsuarioResponse salvar_using_post12(persist)
+# **salvar_using_post13**
+> UsuarioResponse salvar_using_post13(persist)
 
 Cadastra Usu\u00C3\u00A1rio
 
@@ -407,10 +407,10 @@ persist = Pier::UsuarioPersist.new # UsuarioPersist | persist
 
 begin
   #Cadastra Usu\u00C3\u00A1rio
-  result = api_instance.salvar_using_post12(persist)
+  result = api_instance.salvar_using_post13(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling UsuariosApi->salvar_using_post12: #{e}"
+  puts "Exception when calling UsuariosApi->salvar_using_post13: #{e}"
 end
 ```
 

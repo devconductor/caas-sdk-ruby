@@ -91,7 +91,7 @@ module Pier
     def self.swagger_types
       {
         
-        :'data_envio' => :'DateTime',
+        :'data_envio' => :'String',
         
         :'id_emissor' => :'Integer',
         

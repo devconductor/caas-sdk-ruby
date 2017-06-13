@@ -113,7 +113,7 @@ module Pier
         
         :'cpf' => :'String',
         
-        :'data_nascimento' => :'Date',
+        :'data_nascimento' => :'String',
         
         :'sexo' => :'String',
         
@@ -123,7 +123,7 @@ module Pier
         
         :'unidade_federativa_identidade' => :'String',
         
-        :'data_emissao_identidade' => :'Date',
+        :'data_emissao_identidade' => :'String',
         
         :'estado_civil' => :'String',
         

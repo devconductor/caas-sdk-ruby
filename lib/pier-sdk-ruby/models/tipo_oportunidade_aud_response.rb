@@ -71,7 +71,7 @@ module Pier
         
         :'rev_type' => :'Integer',
         
-        :'rev_date' => :'DateTime',
+        :'rev_date' => :'String',
         
         :'id' => :'Integer',
         

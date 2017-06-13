@@ -103,9 +103,9 @@ module Pier
         
         :'flag_ativo' => :'Integer',
         
-        :'data_cadastro_portador' => :'DateTime',
+        :'data_cadastro_portador' => :'String',
         
-        :'data_cancelamento_portador' => :'DateTime'
+        :'data_cancelamento_portador' => :'String'
         
       }
     end

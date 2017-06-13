@@ -70,7 +70,7 @@ module Pier
         
         :'tipo_telefone' => :'String',
         
-        :'data_modificacao' => :'DateTime'
+        :'data_modificacao' => :'String'
         
       }
     end

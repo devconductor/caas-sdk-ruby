@@ -60,13 +60,13 @@ describe 'RiscoFraudeApi' do
   end
 
 
-  # unit tests for consultar_using_get10
+  # unit tests for consultar_using_get12
   # Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
   # Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude.
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
   # @param [Hash] opts the optional parameters
   # @return [RiscoFraudeDetalhadoResponse]
-  describe 'consultar_using_get10 test' do
+  describe 'consultar_using_get12 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -99,11 +99,11 @@ describe 'RiscoFraudeApi' do
   # Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [Integer] :id_tipo_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
   # @option opts [Integer] :id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
   # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
-  # @option opts [Date] :data_atendimento Apresenta a data em que o Atendimento foi realizado.
+  # @option opts [String] :data_atendimento Apresenta a data em que o Atendimento foi realizado.
   # @return [PageAtendimentoClientes]
   describe 'listar_using_get1 test' do
     it "should work" do
@@ -116,16 +116,16 @@ describe 'RiscoFraudeApi' do
   end
 
 
-  # unit tests for listar_using_get14
+  # unit tests for listar_using_get18
   # Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
   # Este recurso permite que sejam listados os riscos de fraudes existentes
   # @param id_conta Id Conta
   # @param confirmacao_fraude Confirma\u00C3\u00A7\u00C3\u00A3o da fraude
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @return [RiscoFraudeResponsePage]
-  describe 'listar_using_get14 test' do
+  describe 'listar_using_get18 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -178,10 +178,10 @@ describe 'RiscoFraudeApi' do
   # @option opts [String] :conteudo_atendimento Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento.
   # @option opts [String] :detalhes_atendimento Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
   # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
-  # @option opts [DateTime] :data_atendimento Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
-  # @option opts [DateTime] :data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
-  # @option opts [DateTime] :data_hora_inicio_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
-  # @option opts [DateTime] :data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+  # @option opts [String] :data_atendimento Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+  # @option opts [String] :data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+  # @option opts [String] :data_hora_inicio_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+  # @option opts [String] :data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
   # @option opts [Integer] :flag_fila_fraude Flag fila fraude
   # @return [AtendimentoCliente]
   describe 'salvar_using_post1 test' do

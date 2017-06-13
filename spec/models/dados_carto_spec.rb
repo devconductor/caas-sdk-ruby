@@ -43,6 +43,17 @@ describe 'DadosCarto' do
     end
   end
 
+  describe 'test attribute "flag_virtual"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
   describe 'test attribute "numero_cartao"' do
     it 'should work' do
        # assertion here
@@ -109,7 +120,7 @@ describe 'DadosCarto' do
   end
 
 
-  describe 'test attribute "status"' do
+  describe 'test attribute "numero_agencia"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -120,7 +131,7 @@ describe 'DadosCarto' do
   end
 
 
-  describe 'test attribute "status_descricao"' do
+  describe 'test attribute "numero_conta_corente"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -131,7 +142,40 @@ describe 'DadosCarto' do
   end
 
 
-  describe 'test attribute "flag_provisorio"' do
+  describe 'test attribute "id_status_conta"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "status_conta"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "id_status_cartao"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "status_cartao"' do
     it 'should work' do
        # assertion here
        # should be_a()

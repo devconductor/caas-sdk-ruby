@@ -81,10 +81,9 @@ api_instance = Pier::AplicacoesMobileApi.new
 
 opts = { 
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   id: "id_example", # String | Identificador da Aplicacao Mobile
-  id_plataforma_mobile: 789, # Integer | Identificador da Plataforma Mobile
-  id_emissor: 789 # Integer | Identificador do Emissor
+  id_plataforma_mobile: 789 # Integer | Identificador da Plataforma Mobile
 }
 
 begin
@@ -101,10 +100,9 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **String**| Identificador da Aplicacao Mobile | [optional] 
  **id_plataforma_mobile** | **Integer**| Identificador da Plataforma Mobile | [optional] 
- **id_emissor** | **Integer**| Identificador do Emissor | [optional] 
 
 
 ### Return type

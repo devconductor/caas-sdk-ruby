@@ -73,8 +73,8 @@ module Pier
     # Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
     attr_accessor :flag_impressao_origem_comercial
 
-    # Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
-    attr_accessor :flag_provisorio
+    # Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual.
+    attr_accessor :flag_virtual
 
     # Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
     attr_accessor :codigo_desbloqueio
@@ -119,7 +119,7 @@ module Pier
         
         :'flag_impressao_origem_comercial' => :'flagImpressaoOrigemComercial',
         
-        :'flag_provisorio' => :'flagProvisorio',
+        :'flag_virtual' => :'flagVirtual',
         
         :'codigo_desbloqueio' => :'codigoDesbloqueio',
         
@@ -150,21 +150,21 @@ module Pier
         
         :'nome_impresso' => :'String',
         
-        :'data_geracao' => :'DateTime',
+        :'data_geracao' => :'String',
         
-        :'data_status_cartao' => :'DateTime',
+        :'data_status_cartao' => :'String',
         
-        :'data_estagio_cartao' => :'DateTime',
+        :'data_estagio_cartao' => :'String',
         
-        :'data_validade' => :'DateTime',
+        :'data_validade' => :'String',
         
-        :'data_impressao' => :'DateTime',
+        :'data_impressao' => :'String',
         
         :'arquivo_impressao' => :'String',
         
         :'flag_impressao_origem_comercial' => :'Integer',
         
-        :'flag_provisorio' => :'Integer',
+        :'flag_virtual' => :'Integer',
         
         :'codigo_desbloqueio' => :'String',
         
@@ -326,10 +326,10 @@ module Pier
       end
 
       
-      if attributes[:'flagProvisorio']
+      if attributes[:'flagVirtual']
         
         
-        self.flag_provisorio = attributes[:'flagProvisorio']
+        self.flag_virtual = attributes[:'flagVirtual']
         
       
       end
@@ -563,7 +563,7 @@ module Pier
           data_impressao == o.data_impressao &&
           arquivo_impressao == o.arquivo_impressao &&
           flag_impressao_origem_comercial == o.flag_impressao_origem_comercial &&
-          flag_provisorio == o.flag_provisorio &&
+          flag_virtual == o.flag_virtual &&
           codigo_desbloqueio == o.codigo_desbloqueio &&
           sequencial_cartao == o.sequencial_cartao
     end
@@ -577,7 +577,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_status_cartao, id_estagio_cartao, id_conta, id_pessoa, id_produto, tipo_portador, numero_cartao, nome_impresso, data_geracao, data_status_cartao, data_estagio_cartao, data_validade, data_impressao, arquivo_impressao, flag_impressao_origem_comercial, flag_provisorio, codigo_desbloqueio, sequencial_cartao].hash
+      [id, id_status_cartao, id_estagio_cartao, id_conta, id_pessoa, id_produto, tipo_portador, numero_cartao, nome_impresso, data_geracao, data_status_cartao, data_estagio_cartao, data_validade, data_impressao, arquivo_impressao, flag_impressao_origem_comercial, flag_virtual, codigo_desbloqueio, sequencial_cartao].hash
     end
 
     # Builds the object from hash

@@ -25,11 +25,20 @@ require 'date'
 module Pier
   # Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Cancelamento de transa\u00C3\u00A7\u00C3\u00A3o
   class CancelamentoTransacaoOnUsRequest
+    # N\u00C3\u00BAmero Sequencial \u00C3\u009Anico do HOST que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que autorizou.
+    attr_accessor :nsu_autorizacao_transacao_cancelada
+
     # N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
     attr_accessor :nsu_origem
 
+    # N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema a ser cancelada.
+    attr_accessor :nsu_origem_transacao_cancelada
+
     # C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
     attr_accessor :codigo_processamento
+
+    # Apresenta a data e hora local da transa\u00C3\u00A7\u00C3\u00A3o a ser cancelada yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+    attr_accessor :data_hora_transacao_cancelada
 
     # Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.
     attr_accessor :valor_transacao
@@ -49,26 +58,20 @@ module Pier
     # Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
     attr_accessor :terminal_requisitante
 
-    # N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema a ser cancelada.
-    attr_accessor :nsu_origem_transacao_cancelada
-
-    # Apresenta a data e hora local da transa\u00C3\u00A7\u00C3\u00A3o a ser cancelada yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
-    attr_accessor :data_hora_transacao_cancelada
-
-    # C\u00C3\u00B3digo de Processamento da transa\u00C3\u00A7\u00C3\u00A3o cancelada.
-    attr_accessor :codigo_transacao_cancelada
-
-    # N\u00C3\u00BAmero Sequencial \u00C3\u009Anico do HOST que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que autorizou.
-    attr_accessor :nsu_autorizacao_transacao_cancelada
-
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
+        :'nsu_autorizacao_transacao_cancelada' => :'nsuAutorizacaoTransacaoCancelada',
+        
         :'nsu_origem' => :'nsuOrigem',
         
+        :'nsu_origem_transacao_cancelada' => :'nsuOrigemTransacaoCancelada',
+        
         :'codigo_processamento' => :'codigoProcessamento',
+        
+        :'data_hora_transacao_cancelada' => :'dataHoraTransacaoCancelada',
         
         :'valor_transacao' => :'valorTransacao',
         
@@ -80,15 +83,7 @@ module Pier
         
         :'data_hora_terminal' => :'dataHoraTerminal',
         
-        :'terminal_requisitante' => :'terminalRequisitante',
-        
-        :'nsu_origem_transacao_cancelada' => :'nsuOrigemTransacaoCancelada',
-        
-        :'data_hora_transacao_cancelada' => :'dataHoraTransacaoCancelada',
-        
-        :'codigo_transacao_cancelada' => :'codigoTransacaoCancelada',
-        
-        :'nsu_autorizacao_transacao_cancelada' => :'nsuAutorizacaoTransacaoCancelada'
+        :'terminal_requisitante' => :'terminalRequisitante'
         
       }
     end
@@ -97,9 +92,15 @@ module Pier
     def self.swagger_types
       {
         
+        :'nsu_autorizacao_transacao_cancelada' => :'String',
+        
         :'nsu_origem' => :'String',
         
+        :'nsu_origem_transacao_cancelada' => :'String',
+        
         :'codigo_processamento' => :'String',
+        
+        :'data_hora_transacao_cancelada' => :'String',
         
         :'valor_transacao' => :'Float',
         
@@ -109,17 +110,9 @@ module Pier
         
         :'numero_estabelecimento' => :'Integer',
         
-        :'data_hora_terminal' => :'DateTime',
+        :'data_hora_terminal' => :'String',
         
-        :'terminal_requisitante' => :'String',
-        
-        :'nsu_origem_transacao_cancelada' => :'String',
-        
-        :'data_hora_transacao_cancelada' => :'DateTime',
-        
-        :'codigo_transacao_cancelada' => :'String',
-        
-        :'nsu_autorizacao_transacao_cancelada' => :'String'
+        :'terminal_requisitante' => :'String'
         
       }
     end
@@ -133,6 +126,15 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
+      if attributes[:'nsuAutorizacaoTransacaoCancelada']
+        
+        
+        self.nsu_autorizacao_transacao_cancelada = attributes[:'nsuAutorizacaoTransacaoCancelada']
+        
+      
+      end
+
+      
       if attributes[:'nsuOrigem']
         
         
@@ -142,10 +144,28 @@ module Pier
       end
 
       
+      if attributes[:'nsuOrigemTransacaoCancelada']
+        
+        
+        self.nsu_origem_transacao_cancelada = attributes[:'nsuOrigemTransacaoCancelada']
+        
+      
+      end
+
+      
       if attributes[:'codigoProcessamento']
         
         
         self.codigo_processamento = attributes[:'codigoProcessamento']
+        
+      
+      end
+
+      
+      if attributes[:'dataHoraTransacaoCancelada']
+        
+        
+        self.data_hora_transacao_cancelada = attributes[:'dataHoraTransacaoCancelada']
         
       
       end
@@ -205,42 +225,6 @@ module Pier
       end
 
       
-      if attributes[:'nsuOrigemTransacaoCancelada']
-        
-        
-        self.nsu_origem_transacao_cancelada = attributes[:'nsuOrigemTransacaoCancelada']
-        
-      
-      end
-
-      
-      if attributes[:'dataHoraTransacaoCancelada']
-        
-        
-        self.data_hora_transacao_cancelada = attributes[:'dataHoraTransacaoCancelada']
-        
-      
-      end
-
-      
-      if attributes[:'codigoTransacaoCancelada']
-        
-        
-        self.codigo_transacao_cancelada = attributes[:'codigoTransacaoCancelada']
-        
-      
-      end
-
-      
-      if attributes[:'nsuAutorizacaoTransacaoCancelada']
-        
-        
-        self.nsu_autorizacao_transacao_cancelada = attributes[:'nsuAutorizacaoTransacaoCancelada']
-        
-      
-      end
-
-      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -257,60 +241,106 @@ module Pier
     def valid?
       
       
+      if @nsu_autorizacao_transacao_cancelada.nil?
+        return false
+      end
+
       
       
       
       
       
+      if @nsu_origem.nil?
+        return false
+      end
+
       
       
       
       
       
+      if @nsu_origem_transacao_cancelada.nil?
+        return false
+      end
+
       
       
       
       
       
+      if @codigo_processamento.nil?
+        return false
+      end
+
       
       
       
       
       
+      if @data_hora_transacao_cancelada.nil?
+        return false
+      end
+
       
       
       
       
       
+      if @valor_transacao.nil?
+        return false
+      end
+
       
       
       
       
       
+      if @numero_real_cartao.nil?
+        return false
+      end
+
       
       
       
       
       
+      if @data_validade_cartao.nil?
+        return false
+      end
+
       
       
       
       
       
+      if @numero_estabelecimento.nil?
+        return false
+      end
+
       
       
       
+      
+      
+      if @data_hora_terminal.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @terminal_requisitante.nil?
+        return false
+      end
+
       
       
       
       
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -372,18 +402,17 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          nsu_autorizacao_transacao_cancelada == o.nsu_autorizacao_transacao_cancelada &&
           nsu_origem == o.nsu_origem &&
+          nsu_origem_transacao_cancelada == o.nsu_origem_transacao_cancelada &&
           codigo_processamento == o.codigo_processamento &&
+          data_hora_transacao_cancelada == o.data_hora_transacao_cancelada &&
           valor_transacao == o.valor_transacao &&
           numero_real_cartao == o.numero_real_cartao &&
           data_validade_cartao == o.data_validade_cartao &&
           numero_estabelecimento == o.numero_estabelecimento &&
           data_hora_terminal == o.data_hora_terminal &&
-          terminal_requisitante == o.terminal_requisitante &&
-          nsu_origem_transacao_cancelada == o.nsu_origem_transacao_cancelada &&
-          data_hora_transacao_cancelada == o.data_hora_transacao_cancelada &&
-          codigo_transacao_cancelada == o.codigo_transacao_cancelada &&
-          nsu_autorizacao_transacao_cancelada == o.nsu_autorizacao_transacao_cancelada
+          terminal_requisitante == o.terminal_requisitante
     end
 
     # @see the `==` method
@@ -395,7 +424,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [nsu_origem, codigo_processamento, valor_transacao, numero_real_cartao, data_validade_cartao, numero_estabelecimento, data_hora_terminal, terminal_requisitante, nsu_origem_transacao_cancelada, data_hora_transacao_cancelada, codigo_transacao_cancelada, nsu_autorizacao_transacao_cancelada].hash
+      [nsu_autorizacao_transacao_cancelada, nsu_origem, nsu_origem_transacao_cancelada, codigo_processamento, data_hora_transacao_cancelada, valor_transacao, numero_real_cartao, data_validade_cartao, numero_estabelecimento, data_hora_terminal, terminal_requisitante].hash
     end
 
     # Builds the object from hash

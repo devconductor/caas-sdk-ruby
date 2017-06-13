@@ -137,8 +137,8 @@ module Pier
     # Esse recurso permite listar os Pushes do emissor
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [Date] :data_envio Apresenta a data e em que o registro foi enviado para o dispositivo.
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [String] :data_envio Apresenta a data e em que o registro foi enviado para o dispositivo.
     # @option opts [String] :tipo_evento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :plataforma Plataforma de Push notifications.
@@ -153,8 +153,8 @@ module Pier
     # Esse recurso permite listar os Pushes do emissor
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [Date] :data_envio Apresenta a data e em que o registro foi enviado para o dispositivo.
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [String] :data_envio Apresenta a data e em que o registro foi enviado para o dispositivo.
     # @option opts [String] :tipo_evento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :plataforma Plataforma de Push notifications.
@@ -268,8 +268,8 @@ module Pier
     # Esse recurso permite listar os SMS do emissor
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [DateTime] :data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [String] :data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
     # @option opts [String] :tipo_evento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
@@ -285,8 +285,8 @@ module Pier
     # Esse recurso permite listar os SMS do emissor
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [DateTime] :data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [String] :data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
     # @option opts [String] :tipo_evento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.

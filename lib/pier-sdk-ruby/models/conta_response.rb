@@ -106,11 +106,11 @@ module Pier
         
         :'melhor_dia_compra' => :'Integer',
         
-        :'data_status_conta' => :'DateTime',
+        :'data_status_conta' => :'String',
         
-        :'data_cadastro' => :'DateTime',
+        :'data_cadastro' => :'String',
         
-        :'data_ultima_alteracao_vencimento' => :'DateTime',
+        :'data_ultima_alteracao_vencimento' => :'String',
         
         :'valor_renda' => :'Float'
         

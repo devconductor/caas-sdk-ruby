@@ -620,8 +620,8 @@ module Pier
     # @param id Id Conta
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [Date] :data_vencimento Data do vencimento
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [String] :data_vencimento Data do vencimento
     # @option opts [Integer] :id_escritorio_cobranca C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a
     # @return [DividaClienteResponse]
     def consultar_divida_atualizada_cliente_using_get(id, opts = {})
@@ -634,8 +634,8 @@ module Pier
     # @param id Id Conta
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [Date] :data_vencimento Data do vencimento
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [String] :data_vencimento Data do vencimento
     # @option opts [Integer] :id_escritorio_cobranca C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a
     # @return [Array<(DividaClienteResponse, Fixnum, Hash)>] DividaClienteResponse data, response status code and response headers
     def consultar_divida_atualizada_cliente_using_get_with_http_info(id, opts = {})
@@ -721,7 +721,7 @@ module Pier
     # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar a fatura consignada em aberto
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
-    # @option opts [Date] :data_vencimento Data Vencimento
+    # @option opts [String] :data_vencimento Data Vencimento
     # @return [DetalhesFaturaConsignadaResponse]
     def consultar_fatura_consignada_aberta_using_get(id, opts = {})
       data, _status_code, _headers = consultar_fatura_consignada_aberta_using_get_with_http_info(id, opts)
@@ -732,7 +732,7 @@ module Pier
     # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar a fatura consignada em aberto
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
-    # @option opts [Date] :data_vencimento Data Vencimento
+    # @option opts [String] :data_vencimento Data Vencimento
     # @return [Array<(DetalhesFaturaConsignadaResponse, Fixnum, Hash)>] DetalhesFaturaConsignadaResponse data, response status code and response headers
     def consultar_fatura_consignada_aberta_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
@@ -949,7 +949,7 @@ module Pier
     # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar os detalhes dos lan\u00C3\u00A7amentos futuros de uma fatura vinculados a uma determinada conta.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
-    # @option opts [Date] :data_vencimento Data Vencimento
+    # @option opts [String] :data_vencimento Data Vencimento
     # @return [DetalhesFaturaResponse]
     def consultar_lancamentos_futuros_fatura_using_get(id, opts = {})
       data, _status_code, _headers = consultar_lancamentos_futuros_fatura_using_get_with_http_info(id, opts)
@@ -960,7 +960,7 @@ module Pier
     # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar os detalhes dos lan\u00C3\u00A7amentos futuros de uma fatura vinculados a uma determinada conta.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
-    # @option opts [Date] :data_vencimento Data Vencimento
+    # @option opts [String] :data_vencimento Data Vencimento
     # @return [Array<(DetalhesFaturaResponse, Fixnum, Hash)>] DetalhesFaturaResponse data, response status code and response headers
     def consultar_lancamentos_futuros_fatura_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
@@ -1086,6 +1086,90 @@ module Pier
     end
 
 
+    # Permite consultar a partir do ID da conta as taxas e tarifas
+    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
+    # @param id ID da conta a ser consultada.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @return [PageTaxasRefinanciamento]
+    def consultar_taxas_tarifas_using_get(id, opts = {})
+      data, _status_code, _headers = consultar_taxas_tarifas_using_get_with_http_info(id, opts)
+      return data
+    end
+
+    # Permite consultar a partir do ID da conta as taxas e tarifas
+    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
+    # @param id ID da conta a ser consultada.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @return [Array<(PageTaxasRefinanciamento, Fixnum, Hash)>] PageTaxasRefinanciamento data, response status code and response headers
+    def consultar_taxas_tarifas_using_get_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ContaApi.consultar_taxas_tarifas_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_taxas_tarifas_using_get" if id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/consultar-taxas-tarifas".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageTaxasRefinanciamento')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ContaApi#consultar_taxas_tarifas_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
     # Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
     # @param id Id Conta
@@ -1093,8 +1177,8 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
     # @return [LinkTransferenciaBancariaResponse]
-    def consultar_using_get20(id, id_transferencia, opts = {})
-      data, _status_code, _headers = consultar_using_get20_with_http_info(id, id_transferencia, opts)
+    def consultar_using_get23(id, id_transferencia, opts = {})
+      data, _status_code, _headers = consultar_using_get23_with_http_info(id, id_transferencia, opts)
       return data
     end
 
@@ -1105,14 +1189,14 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
     # @return [Array<(LinkTransferenciaBancariaResponse, Fixnum, Hash)>] LinkTransferenciaBancariaResponse data, response status code and response headers
-    def consultar_using_get20_with_http_info(id, id_transferencia, opts = {})
+    def consultar_using_get23_with_http_info(id, id_transferencia, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.consultar_using_get20 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.consultar_using_get23 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_using_get20" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_using_get23" if id.nil?
       
       
       
@@ -1120,7 +1204,7 @@ module Pier
       
       
       # verify the required parameter 'id_transferencia' is set
-      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling ContaApi.consultar_using_get20" if id_transferencia.nil?
+      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling ContaApi.consultar_using_get23" if id_transferencia.nil?
       
       
       
@@ -1165,7 +1249,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'LinkTransferenciaBancariaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#consultar_using_get20\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#consultar_using_get23\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1177,8 +1261,8 @@ module Pier
     # @param id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
     # @param [Hash] opts the optional parameters
     # @return [PageTransferencias]
-    def consultar_using_get21(id, id_transferencia, opts = {})
-      data, _status_code, _headers = consultar_using_get21_with_http_info(id, id_transferencia, opts)
+    def consultar_using_get24(id, id_transferencia, opts = {})
+      data, _status_code, _headers = consultar_using_get24_with_http_info(id, id_transferencia, opts)
       return data
     end
 
@@ -1188,14 +1272,14 @@ module Pier
     # @param id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
     # @param [Hash] opts the optional parameters
     # @return [Array<(PageTransferencias, Fixnum, Hash)>] PageTransferencias data, response status code and response headers
-    def consultar_using_get21_with_http_info(id, id_transferencia, opts = {})
+    def consultar_using_get24_with_http_info(id, id_transferencia, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.consultar_using_get21 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.consultar_using_get24 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_using_get21" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_using_get24" if id.nil?
       
       
       
@@ -1203,7 +1287,7 @@ module Pier
       
       
       # verify the required parameter 'id_transferencia' is set
-      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling ContaApi.consultar_using_get21" if id_transferencia.nil?
+      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling ContaApi.consultar_using_get24" if id_transferencia.nil?
       
       
       
@@ -1241,7 +1325,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTransferencias')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#consultar_using_get21\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#consultar_using_get24\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1252,8 +1336,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @return [ContaDetalheResponse]
-    def consultar_using_get3(id, opts = {})
-      data, _status_code, _headers = consultar_using_get3_with_http_info(id, opts)
+    def consultar_using_get4(id, opts = {})
+      data, _status_code, _headers = consultar_using_get4_with_http_info(id, opts)
       return data
     end
 
@@ -1262,14 +1346,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(ContaDetalheResponse, Fixnum, Hash)>] ContaDetalheResponse data, response status code and response headers
-    def consultar_using_get3_with_http_info(id, opts = {})
+    def consultar_using_get4_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.consultar_using_get3 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.consultar_using_get4 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_using_get3" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_using_get4" if id.nil?
       
       
       
@@ -1307,7 +1391,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'ContaDetalheResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#consultar_using_get3\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#consultar_using_get4\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1382,11 +1466,9 @@ module Pier
     # Gera um boleto de recarga
     # Este recurso gera um boleto de recarga
     # @param id Id Conta
-    # @param valor 
-    # @param data_vencimento 
+    # @param valor Atributo que representa o valor do Boleto Emitido
+    # @param data_vencimento Atributo que representa a data de vencimento do boleto
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [BoletoDeFatura]
     def gerar_boleto_recarga_using_post(id, valor, data_vencimento, opts = {})
       data, _status_code, _headers = gerar_boleto_recarga_using_post_with_http_info(id, valor, data_vencimento, opts)
@@ -1396,11 +1478,9 @@ module Pier
     # Gera um boleto de recarga
     # Este recurso gera um boleto de recarga
     # @param id Id Conta
-    # @param valor 
-    # @param data_vencimento 
+    # @param valor Atributo que representa o valor do Boleto Emitido
+    # @param data_vencimento Atributo que representa a data de vencimento do boleto
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
     # @return [Array<(BoletoDeFatura, Fixnum, Hash)>] BoletoDeFatura data, response status code and response headers
     def gerar_boleto_recarga_using_post_with_http_info(id, valor, data_vencimento, opts = {})
       if @api_client.config.debugging
@@ -1431,18 +1511,6 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
       # resource path
       local_var_path = "/api/contas/{id}/gerar-boleto-recarga".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
@@ -1450,8 +1518,6 @@ module Pier
       query_params = {}
       query_params[:'valor'] = valor
       query_params[:'dataVencimento'] = data_vencimento
-      query_params[:'page'] = opts[:'page'] if opts[:'page']
-      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
 
       # header parameters
       header_params = {}
@@ -1570,13 +1636,90 @@ module Pier
     end
 
 
+    # Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
+    # Este recurso permite que seja gerado um Cart\u00C3\u00A3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es virtuaes atraves de um app.
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param data_validade Data de Validade
+    # @param [Hash] opts the optional parameters
+    # @return [CartaoImpressao]
+    def gerar_cartao_virtual_using_post(id, data_validade, opts = {})
+      data, _status_code, _headers = gerar_cartao_virtual_using_post_with_http_info(id, data_validade, opts)
+      return data
+    end
+
+    # Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
+    # Este recurso permite que seja gerado um Cart\u00C3\u00A3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es virtuaes atraves de um app.
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param data_validade Data de Validade
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(CartaoImpressao, Fixnum, Hash)>] CartaoImpressao data, response status code and response headers
+    def gerar_cartao_virtual_using_post_with_http_info(id, data_validade, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ContaApi.gerar_cartao_virtual_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.gerar_cartao_virtual_using_post" if id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'data_validade' is set
+      fail ArgumentError, "Missing the required parameter 'data_validade' when calling ContaApi.gerar_cartao_virtual_using_post" if data_validade.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/gerar-cartao-virtual".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'dataValidade'] = data_validade
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CartaoImpressao')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ContaApi#gerar_cartao_virtual_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Lista as faturas consignadas da conta
     # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [Date] :data_vencimento Apresenta a data de vencimento da fatura.
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [String] :data_vencimento Apresenta a data de vencimento da fatura.
     # @return [PageFaturasConsignadas]
     def listar_faturas_consignadas_using_get(id, opts = {})
       data, _status_code, _headers = listar_faturas_consignadas_using_get_with_http_info(id, opts)
@@ -1588,8 +1731,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [Date] :data_vencimento Apresenta a data de vencimento da fatura.
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [String] :data_vencimento Apresenta a data de vencimento da fatura.
     # @return [Array<(PageFaturasConsignadas, Fixnum, Hash)>] PageFaturasConsignadas data, response status code and response headers
     def listar_faturas_consignadas_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
@@ -1668,8 +1811,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [Date] :data_vencimento Data de Vencimento da Fatura.
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [String] :data_vencimento Data de Vencimento da Fatura.
     # @return [PageFaturas]
     def listar_faturas_using_get(id, opts = {})
       data, _status_code, _headers = listar_faturas_using_get_with_http_info(id, opts)
@@ -1681,8 +1824,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [Date] :data_vencimento Data de Vencimento da Fatura.
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [String] :data_vencimento Data de Vencimento da Fatura.
     # @return [Array<(PageFaturas, Fixnum, Hash)>] PageFaturas data, response status code and response headers
     def listar_faturas_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
@@ -1761,7 +1904,7 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [PageHistoricoEventos]
     def listar_historico_alteracoes_limites_using_get(id, opts = {})
       data, _status_code, _headers = listar_historico_alteracoes_limites_using_get_with_http_info(id, opts)
@@ -1773,7 +1916,7 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [Array<(PageHistoricoEventos, Fixnum, Hash)>] PageHistoricoEventos data, response status code and response headers
     def listar_historico_alteracoes_limites_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
@@ -1845,7 +1988,7 @@ module Pier
     # @param id Id Conta
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [LinkPageHistoricoAssessoriaResponse]
     def listar_historico_assessoria_using_get(id, opts = {})
       data, _status_code, _headers = listar_historico_assessoria_using_get_with_http_info(id, opts)
@@ -1857,7 +2000,7 @@ module Pier
     # @param id Id Conta
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [Array<(LinkPageHistoricoAssessoriaResponse, Fixnum, Hash)>] LinkPageHistoricoAssessoriaResponse data, response status code and response headers
     def listar_historico_assessoria_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
@@ -1995,7 +2138,9 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [String] :data_inicio Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida).
+    # @option opts [String] :data_fim Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida).
     # @return [PageTransacoesCorrentes]
     def listar_nao_processadas_using_get(id, opts = {})
       data, _status_code, _headers = listar_nao_processadas_using_get_with_http_info(id, opts)
@@ -2007,7 +2152,9 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [String] :data_inicio Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida).
+    # @option opts [String] :data_fim Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida).
     # @return [Array<(PageTransacoesCorrentes, Fixnum, Hash)>] PageTransacoesCorrentes data, response status code and response headers
     def listar_nao_processadas_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
@@ -2034,6 +2181,18 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/contas/{id}/transacoes/listar-nao-processadas".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
@@ -2041,6 +2200,8 @@ module Pier
       query_params = {}
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'dataInicio'] = opts[:'data_inicio'] if opts[:'data_inicio']
+      query_params[:'dataFim'] = opts[:'data_fim'] if opts[:'data_fim']
 
       # header parameters
       header_params = {}
@@ -2079,8 +2240,10 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [Date] :data_vencimento Data de vencimento do extrato no formato yyyy-MM-dd.
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [String] :data_vencimento Data de vencimento do extrato no formato yyyy-MM-dd.
+    # @option opts [String] :data_inicio Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado).
+    # @option opts [String] :data_fim Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado).
     # @return [PageTransacoesCorrentes]
     def listar_processadas_using_get(id, opts = {})
       data, _status_code, _headers = listar_processadas_using_get_with_http_info(id, opts)
@@ -2092,8 +2255,10 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [Date] :data_vencimento Data de vencimento do extrato no formato yyyy-MM-dd.
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [String] :data_vencimento Data de vencimento do extrato no formato yyyy-MM-dd.
+    # @option opts [String] :data_inicio Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado).
+    # @option opts [String] :data_fim Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado).
     # @return [Array<(PageTransacoesCorrentes, Fixnum, Hash)>] PageTransacoesCorrentes data, response status code and response headers
     def listar_processadas_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
@@ -2126,6 +2291,18 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/contas/{id}/transacoes/listar-processadas".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
@@ -2134,6 +2311,8 @@ module Pier
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'dataVencimento'] = opts[:'data_vencimento'] if opts[:'data_vencimento']
+      query_params[:'dataInicio'] = opts[:'data_inicio'] if opts[:'data_inicio']
+      query_params[:'dataFim'] = opts[:'data_fim'] if opts[:'data_fim']
 
       # header parameters
       header_params = {}
@@ -2173,10 +2352,10 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [LinkPageTransferenciaBancariaResponse]
-    def listar_using_get22(id, opts = {})
-      data, _status_code, _headers = listar_using_get22_with_http_info(id, opts)
+    def listar_using_get27(id, opts = {})
+      data, _status_code, _headers = listar_using_get27_with_http_info(id, opts)
       return data
     end
 
@@ -2186,16 +2365,16 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [Array<(LinkPageTransferenciaBancariaResponse, Fixnum, Hash)>] LinkPageTransferenciaBancariaResponse data, response status code and response headers
-    def listar_using_get22_with_http_info(id, opts = {})
+    def listar_using_get27_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get22 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get27 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.listar_using_get22" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.listar_using_get27" if id.nil?
       
       
       
@@ -2254,7 +2433,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'LinkPageTransferenciaBancariaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#listar_using_get22\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#listar_using_get27\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2265,15 +2444,15 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_transferencia C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).
     # @option opts [Integer] :id_conta_origem C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id).
     # @option opts [Integer] :id_conta_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
     # @option opts [Float] :valor_transferencia Valor estabelecido para ser transferido.
-    # @option opts [Date] :data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
+    # @option opts [String] :data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
     # @return [PageTransferencias]
-    def listar_using_get23(id, opts = {})
-      data, _status_code, _headers = listar_using_get23_with_http_info(id, opts)
+    def listar_using_get28(id, opts = {})
+      data, _status_code, _headers = listar_using_get28_with_http_info(id, opts)
       return data
     end
 
@@ -2282,21 +2461,21 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_transferencia C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).
     # @option opts [Integer] :id_conta_origem C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id).
     # @option opts [Integer] :id_conta_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
     # @option opts [Float] :valor_transferencia Valor estabelecido para ser transferido.
-    # @option opts [Date] :data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
+    # @option opts [String] :data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
     # @return [Array<(PageTransferencias, Fixnum, Hash)>] PageTransferencias data, response status code and response headers
-    def listar_using_get23_with_http_info(id, opts = {})
+    def listar_using_get28_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get23 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get28 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.listar_using_get23" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.listar_using_get28" if id.nil?
       
       
       
@@ -2383,7 +2562,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTransferencias')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#listar_using_get23\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#listar_using_get28\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2393,19 +2572,19 @@ module Pier
     # Este recurso permite listar contas existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
     # @option opts [Integer] :id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
     # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
     # @option opts [Integer] :id_status_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
     # @option opts [Integer] :dia_vencimento Apresenta o dia de vencimento.
     # @option opts [Integer] :melhor_dia_compra Apresenta o melhor dia de compra.
-    # @option opts [Date] :data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
-    # @option opts [Date] :data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-    # @option opts [Date] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+    # @option opts [String] :data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
+    # @option opts [String] :data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+    # @option opts [String] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
     # @return [PageContas]
-    def listar_using_get4(opts = {})
-      data, _status_code, _headers = listar_using_get4_with_http_info(opts)
+    def listar_using_get6(opts = {})
+      data, _status_code, _headers = listar_using_get6_with_http_info(opts)
       return data
     end
 
@@ -2413,20 +2592,20 @@ module Pier
     # Este recurso permite listar contas existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
     # @option opts [Integer] :id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
     # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
     # @option opts [Integer] :id_status_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
     # @option opts [Integer] :dia_vencimento Apresenta o dia de vencimento.
     # @option opts [Integer] :melhor_dia_compra Apresenta o melhor dia de compra.
-    # @option opts [Date] :data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
-    # @option opts [Date] :data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-    # @option opts [Date] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+    # @option opts [String] :data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
+    # @option opts [String] :data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+    # @option opts [String] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
     # @return [Array<(PageContas, Fixnum, Hash)>] PageContas data, response status code and response headers
-    def listar_using_get4_with_http_info(opts = {})
+    def listar_using_get6_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get4 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get6 ..."
       end
       
       
@@ -2538,7 +2717,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageContas')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#listar_using_get4\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#listar_using_get6\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2615,7 +2794,7 @@ module Pier
     # @param id Id Conta
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [PageTransacaoResponse]
     def transacoes_using_get(id, opts = {})
       data, _status_code, _headers = transacoes_using_get_with_http_info(id, opts)
@@ -2627,7 +2806,7 @@ module Pier
     # @param id Id Conta
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [Array<(PageTransacaoResponse, Fixnum, Hash)>] PageTransacaoResponse data, response status code and response headers
     def transacoes_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging

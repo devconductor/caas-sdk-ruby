@@ -101,7 +101,7 @@ module Pier
         
         :'quantidade' => :'Integer',
         
-        :'data_cadastro' => :'DateTime',
+        :'data_cadastro' => :'String',
         
         :'usuario_cadastro' => :'String',
         

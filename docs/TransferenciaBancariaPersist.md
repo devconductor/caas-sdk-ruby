@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data_compra** | **Date** | Data da transfer\u00C3\u00AAncia | 
-**proximo_vencimento_padrao** | **Date** | Dia do vencimento padr\u00C3\u00A3o da fatura | 
-**proximo_vencimento_real** | **Date** | Data do vencimento real da fatura | 
+**data_compra** | **String** | Data da transfer\u00C3\u00AAncia | 
+**proximo_vencimento_padrao** | **String** | Dia do vencimento padr\u00C3\u00A3o da fatura | 
+**proximo_vencimento_real** | **String** | Data do vencimento real da fatura | 
 **valor_compra** | **Float** | Valor da transfer\u00C3\u00AAncia | 
 **nome_favorecido** | **String** | Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. | 
 **documento_favorecido** | **String** | N\u00C3\u00BAmero do CPF ou CNPJ. | 

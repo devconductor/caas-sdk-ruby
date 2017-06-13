@@ -351,8 +351,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
     # @param [Hash] opts the optional parameters
     # @return [TipoOportunidadeResponse]
-    def consultar_using_get17(id, opts = {})
-      data, _status_code, _headers = consultar_using_get17_with_http_info(id, opts)
+    def consultar_using_get20(id, opts = {})
+      data, _status_code, _headers = consultar_using_get20_with_http_info(id, opts)
       return data
     end
 
@@ -361,14 +361,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(TipoOportunidadeResponse, Fixnum, Hash)>] TipoOportunidadeResponse data, response status code and response headers
-    def consultar_using_get17_with_http_info(id, opts = {})
+    def consultar_using_get20_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadesApi.consultar_using_get17 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadesApi.consultar_using_get20 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling OportunidadesApi.consultar_using_get17" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling OportunidadesApi.consultar_using_get20" if id.nil?
       
       
       
@@ -406,7 +406,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TipoOportunidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadesApi#consultar_using_get17\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadesApi#consultar_using_get20\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -417,8 +417,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
     # @param [Hash] opts the optional parameters
     # @return [OportunidadeResponse]
-    def consultar_using_get7(id, opts = {})
-      data, _status_code, _headers = consultar_using_get7_with_http_info(id, opts)
+    def consultar_using_get8(id, opts = {})
+      data, _status_code, _headers = consultar_using_get8_with_http_info(id, opts)
       return data
     end
 
@@ -427,14 +427,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(OportunidadeResponse, Fixnum, Hash)>] OportunidadeResponse data, response status code and response headers
-    def consultar_using_get7_with_http_info(id, opts = {})
+    def consultar_using_get8_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadesApi.consultar_using_get7 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadesApi.consultar_using_get8 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling OportunidadesApi.consultar_using_get7" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling OportunidadesApi.consultar_using_get8" if id.nil?
       
       
       
@@ -472,7 +472,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'OportunidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadesApi#consultar_using_get7\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadesApi#consultar_using_get8\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -482,15 +482,15 @@ module Pier
     # Este recurso permite listar os status oportunidades.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :rev_type C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
-    # @option opts [DateTime] :rev_date Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
+    # @option opts [String] :rev_date Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
     # @option opts [Integer] :id C\u00C3\u00B3digo identificador do status oportunidade
     # @option opts [Integer] :id_tipo_oportunidade C\u00C3\u00B3digo identificador do tipo oportunidade
     # @option opts [String] :nome Nome do status oportunidade
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
-    # @option opts [DateTime] :rev_user Usu\u00C3\u00A1rio da auditoria
+    # @option opts [String] :rev_user Usu\u00C3\u00A1rio da auditoria
     # @return [PageStatusOprtunidadesAUD]
     def listar_auditorias_status_using_get(opts = {})
       data, _status_code, _headers = listar_auditorias_status_using_get_with_http_info(opts)
@@ -501,15 +501,15 @@ module Pier
     # Este recurso permite listar os status oportunidades.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :rev_type C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
-    # @option opts [DateTime] :rev_date Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
+    # @option opts [String] :rev_date Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
     # @option opts [Integer] :id C\u00C3\u00B3digo identificador do status oportunidade
     # @option opts [Integer] :id_tipo_oportunidade C\u00C3\u00B3digo identificador do tipo oportunidade
     # @option opts [String] :nome Nome do status oportunidade
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
-    # @option opts [DateTime] :rev_user Usu\u00C3\u00A1rio da auditoria
+    # @option opts [String] :rev_user Usu\u00C3\u00A1rio da auditoria
     # @return [Array<(PageStatusOprtunidadesAUD, Fixnum, Hash)>] PageStatusOprtunidadesAUD data, response status code and response headers
     def listar_auditorias_status_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -628,17 +628,17 @@ module Pier
     # Este recurso permite listar as auditorias das oportunidades.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_status_oportunidade C\u00C3\u00B3digo identificador do status oportunidade
-    # @option opts [DateTime] :data_cadastro Data do cadastro da oportunidade
-    # @option opts [DateTime] :data_atualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
+    # @option opts [String] :data_cadastro Data do cadastro da oportunidade
+    # @option opts [String] :data_atualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
     # @option opts [String] :numero_receita_federal N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
-    # @option opts [DateTime] :data_inicio_vigencia In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
-    # @option opts [DateTime] :datat_fim_vigencia Fim da vig\u00C3\u00AAncia da oportunidade
+    # @option opts [String] :data_inicio_vigencia In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
+    # @option opts [String] :datat_fim_vigencia Fim da vig\u00C3\u00AAncia da oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
-    # @option opts [DateTime] :rev_date Data da auditoria
-    # @option opts [DateTime] :rev_type Tipo da auditoria
-    # @option opts [DateTime] :rev_user Usu\u00C3\u00A1rio da auditoria
+    # @option opts [String] :rev_date Data da auditoria
+    # @option opts [String] :rev_type Tipo da auditoria
+    # @option opts [String] :rev_user Usu\u00C3\u00A1rio da auditoria
     # @return [PageOprtunidadeAUD]
     def listar_auditorias_using_get(opts = {})
       data, _status_code, _headers = listar_auditorias_using_get_with_http_info(opts)
@@ -649,17 +649,17 @@ module Pier
     # Este recurso permite listar as auditorias das oportunidades.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_status_oportunidade C\u00C3\u00B3digo identificador do status oportunidade
-    # @option opts [DateTime] :data_cadastro Data do cadastro da oportunidade
-    # @option opts [DateTime] :data_atualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
+    # @option opts [String] :data_cadastro Data do cadastro da oportunidade
+    # @option opts [String] :data_atualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
     # @option opts [String] :numero_receita_federal N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
-    # @option opts [DateTime] :data_inicio_vigencia In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
-    # @option opts [DateTime] :datat_fim_vigencia Fim da vig\u00C3\u00AAncia da oportunidade
+    # @option opts [String] :data_inicio_vigencia In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
+    # @option opts [String] :datat_fim_vigencia Fim da vig\u00C3\u00AAncia da oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
-    # @option opts [DateTime] :rev_date Data da auditoria
-    # @option opts [DateTime] :rev_type Tipo da auditoria
-    # @option opts [DateTime] :rev_user Usu\u00C3\u00A1rio da auditoria
+    # @option opts [String] :rev_date Data da auditoria
+    # @option opts [String] :rev_type Tipo da auditoria
+    # @option opts [String] :rev_user Usu\u00C3\u00A1rio da auditoria
     # @return [Array<(PageOprtunidadeAUD, Fixnum, Hash)>] PageOprtunidadeAUD data, response status code and response headers
     def listar_auditorias_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -792,13 +792,13 @@ module Pier
     # Este recurso permite listar os tipos oportunidades.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :rev_type C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
-    # @option opts [DateTime] :rev_date Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
+    # @option opts [String] :rev_date Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
     # @option opts [Integer] :id C\u00C3\u00B3digo identificador do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
     # @option opts [BOOLEAN] :flag_ativo Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo
-    # @option opts [DateTime] :rev_user Usu\u00C3\u00A1rio da auditoria
+    # @option opts [String] :rev_user Usu\u00C3\u00A1rio da auditoria
     # @return [PageTipoOprtunidadesAUD]
     def listar_auditorias_using_get1(opts = {})
       data, _status_code, _headers = listar_auditorias_using_get1_with_http_info(opts)
@@ -809,13 +809,13 @@ module Pier
     # Este recurso permite listar os tipos oportunidades.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :rev_type C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
-    # @option opts [DateTime] :rev_date Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
+    # @option opts [String] :rev_date Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
     # @option opts [Integer] :id C\u00C3\u00B3digo identificador do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
     # @option opts [BOOLEAN] :flag_ativo Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo
-    # @option opts [DateTime] :rev_user Usu\u00C3\u00A1rio da auditoria
+    # @option opts [String] :rev_user Usu\u00C3\u00A1rio da auditoria
     # @return [Array<(PageTipoOprtunidadesAUD, Fixnum, Hash)>] PageTipoOprtunidadesAUD data, response status code and response headers
     def listar_auditorias_using_get1_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -921,7 +921,7 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :nome Nome do status oportunidade
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
@@ -936,7 +936,7 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :nome Nome do status oportunidade
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
@@ -1027,113 +1027,21 @@ module Pier
     end
 
 
-    # Lista os tipos oportunidades
-    # Este recurso permite listar os tipos oportunidades.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
-    # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
-    # @return [PageTipoOprtunidades]
-    def listar_using_get19(opts = {})
-      data, _status_code, _headers = listar_using_get19_with_http_info(opts)
-      return data
-    end
-
-    # Lista os tipos oportunidades
-    # Este recurso permite listar os tipos oportunidades.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-    # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
-    # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
-    # @return [Array<(PageTipoOprtunidades, Fixnum, Hash)>] PageTipoOprtunidades data, response status code and response headers
-    def listar_using_get19_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadesApi.listar_using_get19 ..."
-      end
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/tipos-oportunidades".sub('{format}','json')
-
-      # query parameters
-      query_params = {}
-      query_params[:'page'] = opts[:'page'] if opts[:'page']
-      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
-      query_params[:'descricao'] = opts[:'descricao'] if opts[:'descricao']
-      query_params[:'flagAtivo'] = opts[:'flag_ativo'] if opts[:'flag_ativo']
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'PageTipoOprtunidades')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadesApi#listar_using_get19\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-
     # Lista as oportunidades
     # Este recurso permite listar as oportunidades.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_status_oportunidade C\u00C3\u00B3digo identificador do status oportunidade
-    # @option opts [DateTime] :data_cadastro Data do cadastro da oportunidade
-    # @option opts [DateTime] :data_atualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
+    # @option opts [String] :data_cadastro Data do cadastro da oportunidade
+    # @option opts [String] :data_atualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
     # @option opts [String] :numero_receita_federal N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
-    # @option opts [DateTime] :data_inicio_vigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
-    # @option opts [DateTime] :data_fim_vigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
+    # @option opts [String] :data_inicio_vigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
+    # @option opts [String] :data_fim_vigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
     # @return [PageOprtunidadesResponse]
-    def listar_using_get9(opts = {})
-      data, _status_code, _headers = listar_using_get9_with_http_info(opts)
+    def listar_using_get12(opts = {})
+      data, _status_code, _headers = listar_using_get12_with_http_info(opts)
       return data
     end
 
@@ -1141,18 +1049,18 @@ module Pier
     # Este recurso permite listar as oportunidades.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_status_oportunidade C\u00C3\u00B3digo identificador do status oportunidade
-    # @option opts [DateTime] :data_cadastro Data do cadastro da oportunidade
-    # @option opts [DateTime] :data_atualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
+    # @option opts [String] :data_cadastro Data do cadastro da oportunidade
+    # @option opts [String] :data_atualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
     # @option opts [String] :numero_receita_federal N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
-    # @option opts [DateTime] :data_inicio_vigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
-    # @option opts [DateTime] :data_fim_vigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
+    # @option opts [String] :data_inicio_vigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
+    # @option opts [String] :data_fim_vigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
     # @return [Array<(PageOprtunidadesResponse, Fixnum, Hash)>] PageOprtunidadesResponse data, response status code and response headers
-    def listar_using_get9_with_http_info(opts = {})
+    def listar_using_get12_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadesApi.listar_using_get9 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadesApi.listar_using_get12 ..."
       end
       
       
@@ -1250,7 +1158,99 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageOprtunidadesResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadesApi#listar_using_get9\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadesApi#listar_using_get12\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Lista os tipos oportunidades
+    # Este recurso permite listar os tipos oportunidades.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
+    # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
+    # @return [PageTipoOprtunidades]
+    def listar_using_get24(opts = {})
+      data, _status_code, _headers = listar_using_get24_with_http_info(opts)
+      return data
+    end
+
+    # Lista os tipos oportunidades
+    # Este recurso permite listar os tipos oportunidades.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
+    # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
+    # @return [Array<(PageTipoOprtunidades, Fixnum, Hash)>] PageTipoOprtunidades data, response status code and response headers
+    def listar_using_get24_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OportunidadesApi.listar_using_get24 ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/tipos-oportunidades".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'descricao'] = opts[:'descricao'] if opts[:'descricao']
+      query_params[:'flagAtivo'] = opts[:'flag_ativo'] if opts[:'flag_ativo']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageTipoOprtunidades')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OportunidadesApi#listar_using_get24\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1337,8 +1337,8 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [TipoOportunidadeResponse]
-    def salvar_using_post10(persist, opts = {})
-      data, _status_code, _headers = salvar_using_post10_with_http_info(persist, opts)
+    def salvar_using_post11(persist, opts = {})
+      data, _status_code, _headers = salvar_using_post11_with_http_info(persist, opts)
       return data
     end
 
@@ -1347,14 +1347,14 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(TipoOportunidadeResponse, Fixnum, Hash)>] TipoOportunidadeResponse data, response status code and response headers
-    def salvar_using_post10_with_http_info(persist, opts = {})
+    def salvar_using_post11_with_http_info(persist, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadesApi.salvar_using_post10 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadesApi.salvar_using_post11 ..."
       end
       
       
       # verify the required parameter 'persist' is set
-      fail ArgumentError, "Missing the required parameter 'persist' when calling OportunidadesApi.salvar_using_post10" if persist.nil?
+      fail ArgumentError, "Missing the required parameter 'persist' when calling OportunidadesApi.salvar_using_post11" if persist.nil?
       
       
       
@@ -1392,7 +1392,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TipoOportunidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadesApi#salvar_using_post10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadesApi#salvar_using_post11\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1403,8 +1403,8 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [OportunidadeResponse]
-    def salvar_using_post5(persist, opts = {})
-      data, _status_code, _headers = salvar_using_post5_with_http_info(persist, opts)
+    def salvar_using_post6(persist, opts = {})
+      data, _status_code, _headers = salvar_using_post6_with_http_info(persist, opts)
       return data
     end
 
@@ -1413,14 +1413,14 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(OportunidadeResponse, Fixnum, Hash)>] OportunidadeResponse data, response status code and response headers
-    def salvar_using_post5_with_http_info(persist, opts = {})
+    def salvar_using_post6_with_http_info(persist, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadesApi.salvar_using_post5 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadesApi.salvar_using_post6 ..."
       end
       
       
       # verify the required parameter 'persist' is set
-      fail ArgumentError, "Missing the required parameter 'persist' when calling OportunidadesApi.salvar_using_post5" if persist.nil?
+      fail ArgumentError, "Missing the required parameter 'persist' when calling OportunidadesApi.salvar_using_post6" if persist.nil?
       
       
       
@@ -1458,7 +1458,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'OportunidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadesApi#salvar_using_post5\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadesApi#salvar_using_post6\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -28,7 +28,7 @@ module Pier
     # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
     attr_accessor :id
 
-    # N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor, com dois d\u00C3\u00ADgitos.
+    # N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.
     attr_accessor :numero_estabelecimento
 
     # Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal.
@@ -170,7 +170,7 @@ module Pier
         
         :'pais' => :'String',
         
-        :'data_cadastramento' => :'DateTime',
+        :'data_cadastramento' => :'String',
         
         :'obs' => :'String',
         

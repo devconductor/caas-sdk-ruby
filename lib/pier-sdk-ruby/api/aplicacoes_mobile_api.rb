@@ -112,10 +112,9 @@ module Pier
     # Este m\u00C3\u00A9todo permite que sejam listadas as aplicacoes mobile existentes na base do PIER.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :id Identificador da Aplicacao Mobile
     # @option opts [Integer] :id_plataforma_mobile Identificador da Plataforma Mobile
-    # @option opts [Integer] :id_emissor Identificador do Emissor
     # @return [PageAplicacoesMobile]
     def listar_using_get(opts = {})
       data, _status_code, _headers = listar_using_get_with_http_info(opts)
@@ -126,21 +125,14 @@ module Pier
     # Este m\u00C3\u00A9todo permite que sejam listadas as aplicacoes mobile existentes na base do PIER.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :id Identificador da Aplicacao Mobile
     # @option opts [Integer] :id_plataforma_mobile Identificador da Plataforma Mobile
-    # @option opts [Integer] :id_emissor Identificador do Emissor
     # @return [Array<(PageAplicacoesMobile, Fixnum, Hash)>] PageAplicacoesMobile data, response status code and response headers
     def listar_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AplicacoesMobileApi.listar_using_get ..."
       end
-      
-      
-      
-      
-      
-      
       
       
       
@@ -175,7 +167,6 @@ module Pier
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'id'] = opts[:'id'] if opts[:'id']
       query_params[:'idPlataformaMobile'] = opts[:'id_plataforma_mobile'] if opts[:'id_plataforma_mobile']
-      query_params[:'idEmissor'] = opts[:'id_emissor'] if opts[:'id_emissor']
 
       # header parameters
       header_params = {}

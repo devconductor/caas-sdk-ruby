@@ -32,7 +32,73 @@ module Pier
     end
 
 
-    # Cancela Transa\u00C3\u00A7\u00C3\u00A3o financeira
+    # Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+    # Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+    # @param autorizacao_on_us_request autorizacaoOnUsRequest
+    # @param [Hash] opts the optional parameters
+    # @return [TransacaoOnUsResponse]
+    def autorizar_using_post(autorizacao_on_us_request, opts = {})
+      data, _status_code, _headers = autorizar_using_post_with_http_info(autorizacao_on_us_request, opts)
+      return data
+    end
+
+    # Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+    # Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+    # @param autorizacao_on_us_request autorizacaoOnUsRequest
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(TransacaoOnUsResponse, Fixnum, Hash)>] TransacaoOnUsResponse data, response status code and response headers
+    def autorizar_using_post_with_http_info(autorizacao_on_us_request, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AutorizacoesApi.autorizar_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'autorizacao_on_us_request' is set
+      fail ArgumentError, "Missing the required parameter 'autorizacao_on_us_request' when calling AutorizacoesApi.autorizar_using_post" if autorizacao_on_us_request.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/autorizar-transacao".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(autorizacao_on_us_request)
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TransacaoOnUsResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AutorizacoesApi#autorizar_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
     # Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
     # @param cancelamento_request cancelamentoRequest
     # @param [Hash] opts the optional parameters
@@ -42,7 +108,7 @@ module Pier
       return data
     end
 
-    # Cancela Transa\u00C3\u00A7\u00C3\u00A3o financeira
+    # Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
     # Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
     # @param cancelamento_request cancelamentoRequest
     # @param [Hash] opts the optional parameters
@@ -98,36 +164,26 @@ module Pier
     end
 
 
-    # Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
-    # Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
-    # @param autorizacao_on_us_request autorizacaoOnUsRequest
+    # Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
+    # Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento para autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es financeiras.
     # @param [Hash] opts the optional parameters
-    # @return [TransacaoOnUsResponse]
-    def desfazer_using_post(autorizacao_on_us_request, opts = {})
-      data, _status_code, _headers = desfazer_using_post_with_http_info(autorizacao_on_us_request, opts)
+    # @return [Array<Object>]
+    def listar_codigos_processamento_autorizacao_using_get(opts = {})
+      data, _status_code, _headers = listar_codigos_processamento_autorizacao_using_get_with_http_info(opts)
       return data
     end
 
-    # Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
-    # Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
-    # @param autorizacao_on_us_request autorizacaoOnUsRequest
+    # Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
+    # Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento para autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es financeiras.
     # @param [Hash] opts the optional parameters
-    # @return [Array<(TransacaoOnUsResponse, Fixnum, Hash)>] TransacaoOnUsResponse data, response status code and response headers
-    def desfazer_using_post_with_http_info(autorizacao_on_us_request, opts = {})
+    # @return [Array<(Array<Object>, Fixnum, Hash)>] Array<Object> data, response status code and response headers
+    def listar_codigos_processamento_autorizacao_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: AutorizacoesApi.desfazer_using_post ..."
+        @api_client.config.logger.debug "Calling API: AutorizacoesApi.listar_codigos_processamento_autorizacao_using_get ..."
       end
       
-      
-      # verify the required parameter 'autorizacao_on_us_request' is set
-      fail ArgumentError, "Missing the required parameter 'autorizacao_on_us_request' when calling AutorizacoesApi.desfazer_using_post" if autorizacao_on_us_request.nil?
-      
-      
-      
-      
-      
       # resource path
-      local_var_path = "/api/autorizar-transacao".sub('{format}','json')
+      local_var_path = "/api/consultar-codigos-processamento-autorizacao".sub('{format}','json')
 
       # query parameters
       query_params = {}
@@ -147,91 +203,25 @@ module Pier
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(autorizacao_on_us_request)
+      post_body = nil
       
       auth_names = []
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'TransacaoOnUsResponse')
+        :return_type => 'Array<Object>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AutorizacoesApi#desfazer_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: AutorizacoesApi#listar_codigos_processamento_autorizacao_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
 
-    # Desfazimento de Transa\u00C3\u00A7\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo permite que seja desfeita uma transa\u00C3\u00A7\u00C3\u00A3o.
-    # @param desfazimento_request desfazimentoRequest
-    # @param [Hash] opts the optional parameters
-    # @return [TransacaoOnUsResponse]
-    def desfazer_using_post1(desfazimento_request, opts = {})
-      data, _status_code, _headers = desfazer_using_post1_with_http_info(desfazimento_request, opts)
-      return data
-    end
-
-    # Desfazimento de Transa\u00C3\u00A7\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo permite que seja desfeita uma transa\u00C3\u00A7\u00C3\u00A3o.
-    # @param desfazimento_request desfazimentoRequest
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(TransacaoOnUsResponse, Fixnum, Hash)>] TransacaoOnUsResponse data, response status code and response headers
-    def desfazer_using_post1_with_http_info(desfazimento_request, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: AutorizacoesApi.desfazer_using_post1 ..."
-      end
-      
-      
-      # verify the required parameter 'desfazimento_request' is set
-      fail ArgumentError, "Missing the required parameter 'desfazimento_request' when calling AutorizacoesApi.desfazer_using_post1" if desfazimento_request.nil?
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/desfazer-transacao".sub('{format}','json')
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = @api_client.object_to_http_body(desfazimento_request)
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'TransacaoOnUsResponse')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AutorizacoesApi#desfazer_using_post1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-
-    # Simula Compra Parcelada
-    # Este m\u00C3\u00A9todo permite que seja simulada uma compra parcelada.
+    # Simula planos de pagamento
+    # Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
     # @param transacoes_request transacoesRequest
     # @param [Hash] opts the optional parameters
     # @return [TransacaoOnUsResponse]
@@ -240,8 +230,8 @@ module Pier
       return data
     end
 
-    # Simula Compra Parcelada
-    # Este m\u00C3\u00A9todo permite que seja simulada uma compra parcelada.
+    # Simula planos de pagamento
+    # Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
     # @param transacoes_request transacoesRequest
     # @param [Hash] opts the optional parameters
     # @return [Array<(TransacaoOnUsResponse, Fixnum, Hash)>] TransacaoOnUsResponse data, response status code and response headers

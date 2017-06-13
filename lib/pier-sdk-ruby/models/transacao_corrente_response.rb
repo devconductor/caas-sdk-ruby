@@ -27,7 +27,7 @@ module Pier
   class TransacaoCorrenteResponse
     attr_accessor :ultima_parcela_lancada
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transacao (id).
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da timeline (idTimeline).
     attr_accessor :id
 
     # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
@@ -42,30 +42,43 @@ module Pier
     # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transacao (id).
     attr_accessor :id_transacao
 
+    # Atributo que representa a descri\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
     attr_accessor :descricao
 
+    # Atributo que representa o c\u00C3\u00B3digo identificador do status da transa\u00C3\u00A7\u00C3\u00A3o.
     attr_accessor :status
 
+    # Atributo que representa a descri\u00C3\u00A7\u00C3\u00A3o do status da transa\u00C3\u00A7\u00C3\u00A3o.
     attr_accessor :descricao_status
 
+    # Atributo que representa o valor da transa\u00C3\u00A7\u00C3\u00A3o.
     attr_accessor :valor
 
+    # Atributo que representa o valor em D\u00C3\u00B3lar da transa\u00C3\u00A7\u00C3\u00A3o.
     attr_accessor :valor_dolar
 
+    # Atributo que representa a quantidade de parcelas da transa\u00C3\u00A7\u00C3\u00A3o.
     attr_accessor :quantidade_parcelas
 
+    # Atributo que representa o valor da parcela da transa\u00C3\u00A7\u00C3\u00A3o.
     attr_accessor :valor_parcela
 
+    # Atributo que representa a data de envio da transa\u00C3\u00A7\u00C3\u00A3o.
     attr_accessor :data_evento
 
+    # Atributo que representa o estabelecimento da transa\u00C3\u00A7\u00C3\u00A3o.
     attr_accessor :estabelecimento
 
+    # Atributo que identifica se a transa\u00C3\u00A7\u00C3\u00A3o \u00C3\u00A9 um cr\u00C3\u00A9dito ou d\u00C3\u00A9bito.
     attr_accessor :flag_credito
 
+    # Atributo que representa o tipo de estabelecimento da transa\u00C3\u00A7\u00C3\u00A3o.
     attr_accessor :tipo_estabelecimento
 
+    # Atributo que representa o grupo MCC da transa\u00C3\u00A7\u00C3\u00A3o.
     attr_accessor :id_grupo_mcc
 
+    # Atributo que identifica se o portador solicitou contesta\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
     attr_accessor :flag_solicitou_contestacao
 
 
@@ -144,7 +157,7 @@ module Pier
         
         :'valor_parcela' => :'Float',
         
-        :'data_evento' => :'DateTime',
+        :'data_evento' => :'String',
         
         :'estabelecimento' => :'String',
         

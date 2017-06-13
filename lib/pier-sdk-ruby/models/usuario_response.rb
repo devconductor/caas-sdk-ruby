@@ -101,9 +101,9 @@ module Pier
         
         :'status' => :'String',
         
-        :'data_criacao' => :'DateTime',
+        :'data_criacao' => :'String',
         
-        :'data_modificacao' => :'DateTime',
+        :'data_modificacao' => :'String',
         
         :'tentativas_incorretas' => :'Integer'
         

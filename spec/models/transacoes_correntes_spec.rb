@@ -307,6 +307,28 @@ describe 'TransacoesCorrentes' do
   end
 
 
+  describe 'test attribute "grupo_mcc"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "grupo_descricao_mcc"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
   describe 'test attribute "id_estabelecimento"' do
     it 'should work' do
        # assertion here

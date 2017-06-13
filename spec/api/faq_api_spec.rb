@@ -88,13 +88,13 @@ describe 'FAQApi' do
   end
 
 
-  # unit tests for consultar_using_get6
+  # unit tests for consultar_using_get7
   # Consultar FAQ por id
   # Consulta os detalhes de uma determinada FAQ
   # @param id Id
   # @param [Hash] opts the optional parameters
   # @return [FAQ]
-  describe 'consultar_using_get6 test' do
+  describe 'consultar_using_get7 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -105,12 +105,12 @@ describe 'FAQApi' do
   end
 
 
-  # unit tests for listar_using_get8
+  # unit tests for listar_using_get10
   # Lista FAQs
   # Lista todas as FAQs
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [Integer] :id_faq C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
   # @option opts [String] :pergunta Conte\u00C3\u00BAdo da pergunta.
   # @option opts [String] :resposta Conte\u00C3\u00BAdo da resposta.
@@ -119,7 +119,7 @@ describe 'FAQApi' do
   # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
   # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
   # @return [PageFaqs]
-  describe 'listar_using_get8 test' do
+  describe 'listar_using_get10 test' do
     it "should work" do
       # assertion here
       # should be_a()

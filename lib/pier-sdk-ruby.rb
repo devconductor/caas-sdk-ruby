@@ -32,6 +32,15 @@ require 'pier-sdk-ruby/configuration'
 require 'pier-sdk-ruby/models/ajuste_response'
 
 
+require 'pier-sdk-ruby/models/antecipacao_response'
+
+
+require 'pier-sdk-ruby/models/antecipacao_simulada_detalhes_response'
+
+
+require 'pier-sdk-ruby/models/antecipacao_simulada_response'
+
+
 require 'pier-sdk-ruby/models/aplicacao_mobile'
 
 
@@ -48,6 +57,9 @@ require 'pier-sdk-ruby/models/auth_token'
 
 
 require 'pier-sdk-ruby/models/autorizacao_on_us_request'
+
+
+require 'pier-sdk-ruby/models/banco'
 
 
 require 'pier-sdk-ruby/models/base'
@@ -68,10 +80,16 @@ require 'pier-sdk-ruby/models/cancelamento_transacao_on_us_request'
 require 'pier-sdk-ruby/models/cartao'
 
 
+require 'pier-sdk-ruby/models/cartao_detalhado'
+
+
 require 'pier-sdk-ruby/models/cartao_impressao'
 
 
 require 'pier-sdk-ruby/models/cdt_detalhe_oportunidade_aud'
+
+
+require 'pier-sdk-ruby/models/compra_response'
 
 
 require 'pier-sdk-ruby/models/conta_detalhe_response'
@@ -152,6 +170,9 @@ require 'pier-sdk-ruby/models/historico_impressao_cartao'
 require 'pier-sdk-ruby/models/historico_telefone'
 
 
+require 'pier-sdk-ruby/models/job'
+
+
 require 'pier-sdk-ruby/models/limite_disponibilidade'
 
 
@@ -206,6 +227,9 @@ require 'pier-sdk-ruby/models/page_aplicacoes_mobile'
 require 'pier-sdk-ruby/models/page_atendimento_clientes'
 
 
+require 'pier-sdk-ruby/models/page_bancos'
+
+
 require 'pier-sdk-ruby/models/page_bases'
 
 
@@ -213,6 +237,9 @@ require 'pier-sdk-ruby/models/page_campo_codificado_descricao'
 
 
 require 'pier-sdk-ruby/models/page_cartoes'
+
+
+require 'pier-sdk-ruby/models/page_compras'
 
 
 require 'pier-sdk-ruby/models/page_contas'
@@ -248,6 +275,9 @@ require 'pier-sdk-ruby/models/page_historico_atraso'
 require 'pier-sdk-ruby/models/page_historico_eventos'
 
 
+require 'pier-sdk-ruby/models/page_job'
+
+
 require 'pier-sdk-ruby/models/page_lote_cartoes_pre_pagos_response'
 
 
@@ -258,6 +288,9 @@ require 'pier-sdk-ruby/models/page_oprtunidades_response'
 
 
 require 'pier-sdk-ruby/models/page_origens_comerciais'
+
+
+require 'pier-sdk-ruby/models/page_pais_response'
 
 
 require 'pier-sdk-ruby/models/page_pessoas'
@@ -290,7 +323,13 @@ require 'pier-sdk-ruby/models/page_status_oprtunidades'
 require 'pier-sdk-ruby/models/page_status_oprtunidades_aud'
 
 
+require 'pier-sdk-ruby/models/page_taxas_refinanciamento'
+
+
 require 'pier-sdk-ruby/models/page_telefones'
+
+
+require 'pier-sdk-ruby/models/page_terminal'
 
 
 require 'pier-sdk-ruby/models/page_tipo_ajuste'
@@ -324,6 +363,12 @@ require 'pier-sdk-ruby/models/page_usuarios'
 
 
 require 'pier-sdk-ruby/models/page_web_hooks'
+
+
+require 'pier-sdk-ruby/models/pais_response'
+
+
+require 'pier-sdk-ruby/models/parametro_produto_response'
 
 
 require 'pier-sdk-ruby/models/pessoa'
@@ -404,6 +449,12 @@ require 'pier-sdk-ruby/models/status_oportunidade_aud_response'
 require 'pier-sdk-ruby/models/status_oportunidade_response'
 
 
+require 'pier-sdk-ruby/models/taxa_antecipacao_request'
+
+
+require 'pier-sdk-ruby/models/taxas_refinanciamento'
+
+
 require 'pier-sdk-ruby/models/telefone'
 
 
@@ -411,6 +462,9 @@ require 'pier-sdk-ruby/models/telefone_pessoa_aprovada_persist'
 
 
 require 'pier-sdk-ruby/models/telefone_pessoa_aprovada_response'
+
+
+require 'pier-sdk-ruby/models/terminal'
 
 
 require 'pier-sdk-ruby/models/tipo_ajuste_response'
@@ -483,15 +537,23 @@ require 'pier-sdk-ruby/api/cadastros_gerais_api'
 
 require 'pier-sdk-ruby/api/cartao_api'
 
+require 'pier-sdk-ruby/api/compra_api'
+
 require 'pier-sdk-ruby/api/conta_api'
 
 require 'pier-sdk-ruby/api/dispositivos_api'
 
+require 'pier-sdk-ruby/api/estabelecimentos_api'
+
 require 'pier-sdk-ruby/api/faq_api'
+
+require 'pier-sdk-ruby/api/jobs_api'
 
 require 'pier-sdk-ruby/api/notificacoes_api'
 
 require 'pier-sdk-ruby/api/oportunidades_api'
+
+require 'pier-sdk-ruby/api/permissao_paises_api'
 
 require 'pier-sdk-ruby/api/plataformas_mobile_api'
 

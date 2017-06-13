@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_using_put10**](WebhooksApi.md#alterar_using_put10) | **PUT** /api/webhooks/{id} | Alterar Webhook
-[**consultar_using_get23**](WebhooksApi.md#consultar_using_get23) | **GET** /api/webhooks/{id} | Consultar Webhook
-[**listar_using_get25**](WebhooksApi.md#listar_using_get25) | **GET** /api/webhooks | Lista os Webhooks
-[**salvar_using_post13**](WebhooksApi.md#salvar_using_post13) | **POST** /api/webhooks | Salvar Webhook
+[**consultar_using_get26**](WebhooksApi.md#consultar_using_get26) | **GET** /api/webhooks/{id} | Consultar Webhook
+[**listar_using_get30**](WebhooksApi.md#listar_using_get30) | **GET** /api/webhooks | Lista os Webhooks
+[**salvar_using_post14**](WebhooksApi.md#salvar_using_post14) | **POST** /api/webhooks | Salvar Webhook
 
 
 
@@ -68,8 +68,8 @@ No authorization required
 
 
 
-# **consultar_using_get23**
-> WebHook consultar_using_get23(id)
+# **consultar_using_get26**
+> WebHook consultar_using_get26(id)
 
 Consultar Webhook
 
@@ -88,10 +88,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Consultar Webhook
-  result = api_instance.consultar_using_get23(id)
+  result = api_instance.consultar_using_get26(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling WebhooksApi->consultar_using_get23: #{e}"
+  puts "Exception when calling WebhooksApi->consultar_using_get26: #{e}"
 end
 ```
 
@@ -118,8 +118,8 @@ No authorization required
 
 
 
-# **listar_using_get25**
-> PageWebHooks listar_using_get25(opts)
+# **listar_using_get30**
+> PageWebHooks listar_using_get30(opts)
 
 Lista os Webhooks
 
@@ -135,7 +135,7 @@ api_instance = Pier::WebhooksApi.new
 
 opts = { 
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   id: 789, # Integer | Id do WebHook
   tipo_evento: "tipo_evento_example", # String | TipoEvento a ser chamado pelo WebHook
   metodo: "metodo_example", # String | M\u00C3\u00A9todo que a ser chamado pelo WebHook
@@ -144,10 +144,10 @@ opts = {
 
 begin
   #Lista os Webhooks
-  result = api_instance.listar_using_get25(opts)
+  result = api_instance.listar_using_get30(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling WebhooksApi->listar_using_get25: #{e}"
+  puts "Exception when calling WebhooksApi->listar_using_get30: #{e}"
 end
 ```
 
@@ -156,7 +156,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **Integer**| Id do WebHook | [optional] 
  **tipo_evento** | **String**| TipoEvento a ser chamado pelo WebHook | [optional] 
  **metodo** | **String**| M\u00C3\u00A9todo que a ser chamado pelo WebHook | [optional] 
@@ -179,8 +179,8 @@ No authorization required
 
 
 
-# **salvar_using_post13**
-> WebHook salvar_using_post13(tipo_evento, url)
+# **salvar_using_post14**
+> WebHook salvar_using_post14(tipo_evento, url)
 
 Salvar Webhook
 
@@ -201,10 +201,10 @@ url = "url_example" # String | URL que a ser consumida pelo WebHook
 
 begin
   #Salvar Webhook
-  result = api_instance.salvar_using_post13(tipo_evento, url)
+  result = api_instance.salvar_using_post14(tipo_evento, url)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling WebhooksApi->salvar_using_post13: #{e}"
+  puts "Exception when calling WebhooksApi->salvar_using_post14: #{e}"
 end
 ```
 

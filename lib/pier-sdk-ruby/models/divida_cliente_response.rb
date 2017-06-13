@@ -124,11 +124,11 @@ module Pier
         
         :'id' => :'Integer',
         
-        :'data_vencimento_fatura_atraso' => :'Date',
+        :'data_vencimento_fatura_atraso' => :'String',
         
         :'quantidade_dias_atraso' => :'Integer',
         
-        :'data_vencimento_acordo' => :'Date',
+        :'data_vencimento_acordo' => :'String',
         
         :'quantidade_dias_atraso_corrigido' => :'Integer',
         

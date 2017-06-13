@@ -34,6 +34,7 @@ module Pier
     # Data do vencimento
     attr_accessor :data_vencimento
 
+    # Valor do Boleto.
     attr_accessor :valor_boleto
 
     # N\u00C3\u00BAmero do documento \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco para identifica\u00C3\u00A7\u00C3\u00A3o do cliente
@@ -42,7 +43,7 @@ module Pier
     # Benefici\u00C3\u00A1rio \u00C3\u00A9 a pessoa/empresa que gera o boleto
     attr_accessor :nome_beneficiario
 
-    # Ag\u00C3\u00AAncia
+    # Ag\u00C3\u00AAncia.
     attr_accessor :agencia
 
     # C\u00C3\u00B3digo do benefici\u00C3\u00A1rio
@@ -84,6 +85,7 @@ module Pier
     # Pagador \u00C3\u00A9 a pessoa/empresa que deve pagar o boleto
     attr_accessor :nome_pagador
 
+    # Documento do Beneficiario.
     attr_accessor :documento_beneficiario
 
     # Documento do pagador (CPF ou CNPJ)
@@ -180,11 +182,11 @@ module Pier
     def self.swagger_types
       {
         
-        :'data_processamento' => :'DateTime',
+        :'data_processamento' => :'String',
         
-        :'data_documento' => :'DateTime',
+        :'data_documento' => :'String',
         
-        :'data_vencimento' => :'Date',
+        :'data_vencimento' => :'String',
         
         :'valor_boleto' => :'Float',
         

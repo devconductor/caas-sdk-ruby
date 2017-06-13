@@ -89,7 +89,7 @@ module Pier
         
         :'numero_estabelecimento' => :'Integer',
         
-        :'data_hora_terminal' => :'DateTime',
+        :'data_hora_terminal' => :'String',
         
         :'terminal_requisitante' => :'String'
         
@@ -193,33 +193,73 @@ module Pier
     def valid?
       
       
+      if @nsu_origem.nil?
+        return false
+      end
+
       
       
       
       
       
+      if @codigo_processamento.nil?
+        return false
+      end
+
       
       
       
       
       
+      if @valor_transacao.nil?
+        return false
+      end
+
       
       
       
       
       
+      if @numero_real_cartao.nil?
+        return false
+      end
+
       
       
       
       
       
+      if @data_validade_cartao.nil?
+        return false
+      end
+
       
       
       
       
       
+      if @numero_estabelecimento.nil?
+        return false
+      end
+
       
       
+      
+      
+      
+      if @data_hora_terminal.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @terminal_requisitante.nil?
+        return false
+      end
+
       
       
       

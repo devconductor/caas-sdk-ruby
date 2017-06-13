@@ -28,9 +28,6 @@ module Pier
     # Apresenta o identificador da plataforma.
     attr_accessor :id_plataforma_mobile
 
-    # Apresenta o identificador do emissor.
-    attr_accessor :id_emissor
-
     # Apresenta o token da aplicacao.
     attr_accessor :token
 
@@ -56,8 +53,6 @@ module Pier
         
         :'id_plataforma_mobile' => :'idPlataformaMobile',
         
-        :'id_emissor' => :'idEmissor',
-        
         :'token' => :'token',
         
         :'cor' => :'cor',
@@ -78,8 +73,6 @@ module Pier
       {
         
         :'id_plataforma_mobile' => :'Integer',
-        
-        :'id_emissor' => :'Integer',
         
         :'token' => :'String',
         
@@ -109,15 +102,6 @@ module Pier
         
         
         self.id_plataforma_mobile = attributes[:'idPlataformaMobile']
-        
-      
-      end
-
-      
-      if attributes[:'idEmissor']
-        
-        
-        self.id_emissor = attributes[:'idEmissor']
         
       
       end
@@ -220,17 +204,8 @@ module Pier
       
       
       
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -273,7 +248,6 @@ module Pier
       return true if self.equal?(o)
       self.class == o.class &&
           id_plataforma_mobile == o.id_plataforma_mobile &&
-          id_emissor == o.id_emissor &&
           token == o.token &&
           cor == o.cor &&
           som == o.som &&
@@ -291,7 +265,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_plataforma_mobile, id_emissor, token, cor, som, icone, certificado_base64, senha].hash
+      [id_plataforma_mobile, token, cor, som, icone, certificado_base64, senha].hash
     end
 
     # Builds the object from hash

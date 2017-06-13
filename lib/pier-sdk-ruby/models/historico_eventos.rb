@@ -64,7 +64,7 @@ module Pier
         
         :'id_historico' => :'Integer',
         
-        :'data_historico' => :'DateTime',
+        :'data_historico' => :'String',
         
         :'tipo_historico' => :'String',
         

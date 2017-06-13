@@ -15,8 +15,8 @@ Name | Type | Description | Notes
 **cidade** | **String** | Apresenta nome da cidade | [optional] 
 **uf** | **String** | Apresenta sigla da Unidade Federativa | [optional] 
 **pais** | **String** | Apresenta nome do Pais | [optional] 
-**data_inclusao** | **DateTime** | Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o | [optional] 
-**data_ultima_atualizacao** | **DateTime** | Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao | [optional] 
+**data_inclusao** | **String** | Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o | [optional] 
+**data_ultima_atualizacao** | **String** | Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao | [optional] 
 
 
 

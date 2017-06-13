@@ -79,7 +79,7 @@ module Pier
         
         :'id' => :'Integer',
         
-        :'data_transferencia' => :'DateTime',
+        :'data_transferencia' => :'String',
         
         :'id_conta_origem' => :'Integer',
         

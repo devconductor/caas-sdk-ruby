@@ -97,13 +97,13 @@ describe 'UsuariosApi' do
   end
 
 
-  # unit tests for consultar_using_get22
+  # unit tests for consultar_using_get25
   # Apresenta os dados de um determinado Usu\u00C3\u00A1rio
   # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
   # @param [Hash] opts the optional parameters
   # @return [UsuarioResponse]
-  describe 'consultar_using_get22 test' do
+  describe 'consultar_using_get25 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -131,18 +131,18 @@ describe 'UsuariosApi' do
   end
 
 
-  # unit tests for listar_using_get24
+  # unit tests for listar_using_get29
   # Lista os Usu\u00C3\u00A1rios cadastrados
   # Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [String] :nome Nome do Usuario
   # @option opts [String] :cpf CPF do Usuario
   # @option opts [String] :email Email do Usuario
   # @option opts [String] :status Status do Usuario
   # @return [PageUsuarios]
-  describe 'listar_using_get24 test' do
+  describe 'listar_using_get29 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -170,13 +170,13 @@ describe 'UsuariosApi' do
   end
 
 
-  # unit tests for salvar_using_post12
+  # unit tests for salvar_using_post13
   # Cadastra Usu\u00C3\u00A1rio
   # Esse recurso permite cadastrar usu\u00C3\u00A1rios.
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [UsuarioResponse]
-  describe 'salvar_using_post12 test' do
+  describe 'salvar_using_post13 test' do
     it "should work" do
       # assertion here
       # should be_a()

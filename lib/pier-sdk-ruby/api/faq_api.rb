@@ -41,7 +41,7 @@ module Pier
     # @option opts [String] :plataforma Plataforma em que a FAQ se encaixa.
     # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
     # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
-    # @return [FAQ]
+    # @return [FaqResponse]
     def adicionar_using_post(pergunta, resposta, opts = {})
       data, _status_code, _headers = adicionar_using_post_with_http_info(pergunta, resposta, opts)
       return data
@@ -56,7 +56,7 @@ module Pier
     # @option opts [String] :plataforma Plataforma em que a FAQ se encaixa.
     # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
     # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
-    # @return [Array<(FAQ, Fixnum, Hash)>] FAQ data, response status code and response headers
+    # @return [Array<(FaqResponse, Fixnum, Hash)>] FaqResponse data, response status code and response headers
     def adicionar_using_post_with_http_info(pergunta, resposta, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: FAQApi.adicionar_using_post ..."
@@ -142,7 +142,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'FAQ')
+        :return_type => 'FaqResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: FAQApi#adicionar_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -160,7 +160,7 @@ module Pier
     # @option opts [String] :plataforma Plataforma em que a FAQ se encaixa.
     # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
     # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
-    # @return [FAQ]
+    # @return [FaqResponse]
     def alterar_using_put2(id, pergunta, resposta, opts = {})
       data, _status_code, _headers = alterar_using_put2_with_http_info(id, pergunta, resposta, opts)
       return data
@@ -176,7 +176,7 @@ module Pier
     # @option opts [String] :plataforma Plataforma em que a FAQ se encaixa.
     # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
     # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
-    # @return [Array<(FAQ, Fixnum, Hash)>] FAQ data, response status code and response headers
+    # @return [Array<(FaqResponse, Fixnum, Hash)>] FaqResponse data, response status code and response headers
     def alterar_using_put2_with_http_info(id, pergunta, resposta, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: FAQApi.alterar_using_put2 ..."
@@ -270,7 +270,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'FAQ')
+        :return_type => 'FaqResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: FAQApi#alterar_using_put2\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -282,7 +282,7 @@ module Pier
     # Consulta os detalhes de uma determinada FAQ
     # @param id Id
     # @param [Hash] opts the optional parameters
-    # @return [FAQ]
+    # @return [FaqResponse]
     def consultar_using_get7(id, opts = {})
       data, _status_code, _headers = consultar_using_get7_with_http_info(id, opts)
       return data
@@ -292,7 +292,7 @@ module Pier
     # Consulta os detalhes de uma determinada FAQ
     # @param id Id
     # @param [Hash] opts the optional parameters
-    # @return [Array<(FAQ, Fixnum, Hash)>] FAQ data, response status code and response headers
+    # @return [Array<(FaqResponse, Fixnum, Hash)>] FaqResponse data, response status code and response headers
     def consultar_using_get7_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: FAQApi.consultar_using_get7 ..."
@@ -336,7 +336,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'FAQ')
+        :return_type => 'FaqResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: FAQApi#consultar_using_get7\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -356,9 +356,9 @@ module Pier
     # @option opts [String] :plataforma Plataforma em que a FAQ se encaixa.
     # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
     # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
-    # @return [PageFaqs]
-    def listar_using_get10(opts = {})
-      data, _status_code, _headers = listar_using_get10_with_http_info(opts)
+    # @return [PageFaqResponse]
+    def listar_using_get11(opts = {})
+      data, _status_code, _headers = listar_using_get11_with_http_info(opts)
       return data
     end
 
@@ -374,10 +374,10 @@ module Pier
     # @option opts [String] :plataforma Plataforma em que a FAQ se encaixa.
     # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
     # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
-    # @return [Array<(PageFaqs, Fixnum, Hash)>] PageFaqs data, response status code and response headers
-    def listar_using_get10_with_http_info(opts = {})
+    # @return [Array<(PageFaqResponse, Fixnum, Hash)>] PageFaqResponse data, response status code and response headers
+    def listar_using_get11_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: FAQApi.listar_using_get10 ..."
+        @api_client.config.logger.debug "Calling API: FAQApi.listar_using_get11 ..."
       end
       
       
@@ -477,9 +477,9 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PageFaqs')
+        :return_type => 'PageFaqResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: FAQApi#listar_using_get10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: FAQApi#listar_using_get11\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

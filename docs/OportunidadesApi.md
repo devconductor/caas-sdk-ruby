@@ -14,8 +14,8 @@ Method | HTTP request | Description
 [**listar_auditorias_using_get**](OportunidadesApi.md#listar_auditorias_using_get) | **GET** /api/auditorias-oportunidades | Lista as auditorias das oportunidades
 [**listar_auditorias_using_get1**](OportunidadesApi.md#listar_auditorias_using_get1) | **GET** /api/auditorias-tipos-oportunidades | Lista as auditorias dos tipos oportunidades
 [**listar_status_using_get**](OportunidadesApi.md#listar_status_using_get) | **GET** /api/tipos-oportunidades/{id}/status | Lista os status do tipo oportunidades
-[**listar_using_get12**](OportunidadesApi.md#listar_using_get12) | **GET** /api/oportunidades | Lista as oportunidades
-[**listar_using_get24**](OportunidadesApi.md#listar_using_get24) | **GET** /api/tipos-oportunidades | Lista os tipos oportunidades
+[**listar_using_get13**](OportunidadesApi.md#listar_using_get13) | **GET** /api/oportunidades | Lista as oportunidades
+[**listar_using_get25**](OportunidadesApi.md#listar_using_get25) | **GET** /api/tipos-oportunidades | Lista os tipos oportunidades
 [**salvar_status_using_post**](OportunidadesApi.md#salvar_status_using_post) | **POST** /api/tipos-oportunidades/{id}/status | Cadastra status para o tipo oportunidade
 [**salvar_using_post11**](OportunidadesApi.md#salvar_using_post11) | **POST** /api/tipos-oportunidades | Cadastra tipos oportunidades
 [**salvar_using_post6**](OportunidadesApi.md#salvar_using_post6) | **POST** /api/oportunidades | Cadastra as oportunidade
@@ -339,7 +339,7 @@ No authorization required
 
 
 # **listar_auditorias_status_using_get**
-> PageStatusOprtunidadesAUD listar_auditorias_status_using_get(opts)
+> PageStatusOportunidadeAUDResponse listar_auditorias_status_using_get(opts)
 
 Lista as auditorias dos status oportunidades
 
@@ -393,7 +393,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageStatusOprtunidadesAUD**](PageStatusOprtunidadesAUD.md)
+[**PageStatusOportunidadeAUDResponse**](PageStatusOportunidadeAUDResponse.md)
 
 ### Authorization
 
@@ -408,7 +408,7 @@ No authorization required
 
 
 # **listar_auditorias_using_get**
-> PageOprtunidadeAUD listar_auditorias_using_get(opts)
+> PageOportunidadeAUDResponse listar_auditorias_using_get(opts)
 
 Lista as auditorias das oportunidades
 
@@ -466,7 +466,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageOprtunidadeAUD**](PageOprtunidadeAUD.md)
+[**PageOportunidadeAUDResponse**](PageOportunidadeAUDResponse.md)
 
 ### Authorization
 
@@ -481,7 +481,7 @@ No authorization required
 
 
 # **listar_auditorias_using_get1**
-> PageTipoOprtunidadesAUD listar_auditorias_using_get1(opts)
+> PageTipoOportunidadeAUDResponse listar_auditorias_using_get1(opts)
 
 Lista as auditorias dos tipos oportunidades
 
@@ -531,7 +531,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageTipoOprtunidadesAUD**](PageTipoOprtunidadesAUD.md)
+[**PageTipoOportunidadeAUDResponse**](PageTipoOportunidadeAUDResponse.md)
 
 ### Authorization
 
@@ -546,7 +546,7 @@ No authorization required
 
 
 # **listar_status_using_get**
-> PageStatusOprtunidades listar_status_using_get(id, opts)
+> PageStatusOportunidadeResponse listar_status_using_get(id, opts)
 
 Lista os status do tipo oportunidades
 
@@ -593,7 +593,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageStatusOprtunidades**](PageStatusOprtunidades.md)
+[**PageStatusOportunidadeResponse**](PageStatusOportunidadeResponse.md)
 
 ### Authorization
 
@@ -607,8 +607,8 @@ No authorization required
 
 
 
-# **listar_using_get12**
-> PageOprtunidadesResponse listar_using_get12(opts)
+# **listar_using_get13**
+> PageOportunidadeResponse listar_using_get13(opts)
 
 Lista as oportunidades
 
@@ -636,10 +636,10 @@ opts = {
 
 begin
   #Lista as oportunidades
-  result = api_instance.listar_using_get12(opts)
+  result = api_instance.listar_using_get13(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling OportunidadesApi->listar_using_get12: #{e}"
+  puts "Exception when calling OportunidadesApi->listar_using_get13: #{e}"
 end
 ```
 
@@ -660,7 +660,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageOprtunidadesResponse**](PageOprtunidadesResponse.md)
+[**PageOportunidadeResponse**](PageOportunidadeResponse.md)
 
 ### Authorization
 
@@ -674,8 +674,8 @@ No authorization required
 
 
 
-# **listar_using_get24**
-> PageTipoOprtunidades listar_using_get24(opts)
+# **listar_using_get25**
+> PageTipoOportunidadeResponse listar_using_get25(opts)
 
 Lista os tipos oportunidades
 
@@ -698,10 +698,10 @@ opts = {
 
 begin
   #Lista os tipos oportunidades
-  result = api_instance.listar_using_get24(opts)
+  result = api_instance.listar_using_get25(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling OportunidadesApi->listar_using_get24: #{e}"
+  puts "Exception when calling OportunidadesApi->listar_using_get25: #{e}"
 end
 ```
 
@@ -717,7 +717,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageTipoOprtunidades**](PageTipoOprtunidades.md)
+[**PageTipoOportunidadeResponse**](PageTipoOportunidadeResponse.md)
 
 ### Authorization
 

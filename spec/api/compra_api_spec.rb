@@ -47,8 +47,8 @@ describe 'CompraApi' do
   # Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
   # Metodo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o.
   # @param id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.
-  # @param quantidade_parcelas Quantidade de parcelas para serem antecipadas (quantidadeParcelas).
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
+  # @param quantidade_parcelas Quantidade de parcelas para serem antecipadas.
   # @param [Hash] opts the optional parameters
   # @return [AntecipacaoResponse]
   describe 'efetivar_antecipacao_using_post test' do
@@ -62,7 +62,7 @@ describe 'CompraApi' do
   end
 
 
-  # unit tests for listar_using_get5
+  # unit tests for listar_using_get6
   # Listar compras
   # Lista as compras de uma conta.
   # @param id_conta C\u00C3\u00B3digo identificador da conta da Compra.
@@ -72,9 +72,9 @@ describe 'CompraApi' do
   # @option opts [Integer] :id_compra C\u00C3\u00B3digo identificador da Compra.
   # @option opts [BOOLEAN] :parcelada Indica se a compra \u00C3\u00A9 parcelada.
   # @option opts [BOOLEAN] :juros Indica se a compra \u00C3\u00A9 com ou sem juros.
-  # @option opts [String] :tipo_transacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
-  # @return [PageCompras]
-  describe 'listar_using_get5 test' do
+  # @option opts [String] :tipo_origem_transacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
+  # @return [PageCompraResponse]
+  describe 'listar_using_get6 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -87,9 +87,9 @@ describe 'CompraApi' do
 
   # unit tests for simular_antecipacao_using_get
   # Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
-  # Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de uma compra, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
-  # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.
+  # Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
+  # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
   # @param [Hash] opts the optional parameters
   # @return [AntecipacaoSimuladaResponse]
   describe 'simular_antecipacao_using_get test' do

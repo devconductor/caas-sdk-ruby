@@ -49,7 +49,7 @@ module Pier
         
         :'fatura' => :'FaturaResponse',
         
-        :'transacoes' => :'Array<TransacoesCorrentes>'
+        :'transacoes' => :'Array<TransacoesCorrentesResponse>'
         
       }
     end

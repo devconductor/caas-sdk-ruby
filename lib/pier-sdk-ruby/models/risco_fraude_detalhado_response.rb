@@ -224,7 +224,7 @@ module Pier
         
         :'email' => :'String',
         
-        :'tefefones' => :'Array<Telefone>'
+        :'tefefones' => :'Array<TelefoneResponse>'
         
       }
     end

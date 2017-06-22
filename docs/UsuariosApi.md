@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**ativar_usuario_using_post**](UsuariosApi.md#ativar_usuario_using_post) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados
 [**consultar_using_get25**](UsuariosApi.md#consultar_using_get25) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio
 [**desativar_usuario_using_post**](UsuariosApi.md#desativar_usuario_using_post) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados
-[**listar_using_get29**](UsuariosApi.md#listar_using_get29) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados
+[**listar_using_get30**](UsuariosApi.md#listar_using_get30) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados
 [**recuperar_senha_using_post**](UsuariosApi.md#recuperar_senha_using_post) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio
 [**salvar_using_post13**](UsuariosApi.md#salvar_using_post13) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio
 [**validar_senha_using_get1**](UsuariosApi.md#validar_senha_using_get1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio
@@ -276,8 +276,8 @@ No authorization required
 
 
 
-# **listar_using_get29**
-> PageUsuarios listar_using_get29(opts)
+# **listar_using_get30**
+> PageUsuarioResponse listar_using_get30(opts)
 
 Lista os Usu\u00C3\u00A1rios cadastrados
 
@@ -302,10 +302,10 @@ opts = {
 
 begin
   #Lista os Usu\u00C3\u00A1rios cadastrados
-  result = api_instance.listar_using_get29(opts)
+  result = api_instance.listar_using_get30(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling UsuariosApi->listar_using_get29: #{e}"
+  puts "Exception when calling UsuariosApi->listar_using_get30: #{e}"
 end
 ```
 
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageUsuarios**](PageUsuarios.md)
+[**PageUsuarioResponse**](PageUsuarioResponse.md)
 
 ### Authorization
 

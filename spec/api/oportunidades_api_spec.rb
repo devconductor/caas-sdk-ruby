@@ -164,7 +164,7 @@ describe 'OportunidadesApi' do
   # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
   # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
   # @option opts [String] :rev_user Usu\u00C3\u00A1rio da auditoria
-  # @return [PageStatusOprtunidadesAUD]
+  # @return [PageStatusOportunidadeAUDResponse]
   describe 'listar_auditorias_status_using_get test' do
     it "should work" do
       # assertion here
@@ -192,7 +192,7 @@ describe 'OportunidadesApi' do
   # @option opts [String] :rev_date Data da auditoria
   # @option opts [String] :rev_type Tipo da auditoria
   # @option opts [String] :rev_user Usu\u00C3\u00A1rio da auditoria
-  # @return [PageOprtunidadeAUD]
+  # @return [PageOportunidadeAUDResponse]
   describe 'listar_auditorias_using_get test' do
     it "should work" do
       # assertion here
@@ -216,7 +216,7 @@ describe 'OportunidadesApi' do
   # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
   # @option opts [BOOLEAN] :flag_ativo Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo
   # @option opts [String] :rev_user Usu\u00C3\u00A1rio da auditoria
-  # @return [PageTipoOprtunidadesAUD]
+  # @return [PageTipoOportunidadeAUDResponse]
   describe 'listar_auditorias_using_get1 test' do
     it "should work" do
       # assertion here
@@ -238,7 +238,7 @@ describe 'OportunidadesApi' do
   # @option opts [String] :nome Nome do status oportunidade
   # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
   # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
-  # @return [PageStatusOprtunidades]
+  # @return [PageStatusOportunidadeResponse]
   describe 'listar_status_using_get test' do
     it "should work" do
       # assertion here
@@ -250,7 +250,7 @@ describe 'OportunidadesApi' do
   end
 
 
-  # unit tests for listar_using_get12
+  # unit tests for listar_using_get13
   # Lista as oportunidades
   # Este recurso permite listar as oportunidades.
   # @param [Hash] opts the optional parameters
@@ -263,8 +263,8 @@ describe 'OportunidadesApi' do
   # @option opts [String] :data_inicio_vigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
   # @option opts [String] :data_fim_vigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
   # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
-  # @return [PageOprtunidadesResponse]
-  describe 'listar_using_get12 test' do
+  # @return [PageOportunidadeResponse]
+  describe 'listar_using_get13 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -275,7 +275,7 @@ describe 'OportunidadesApi' do
   end
 
 
-  # unit tests for listar_using_get24
+  # unit tests for listar_using_get25
   # Lista os tipos oportunidades
   # Este recurso permite listar os tipos oportunidades.
   # @param [Hash] opts the optional parameters
@@ -283,8 +283,8 @@ describe 'OportunidadesApi' do
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
   # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
-  # @return [PageTipoOprtunidades]
-  describe 'listar_using_get24 test' do
+  # @return [PageTipoOportunidadeResponse]
+  describe 'listar_using_get25 test' do
     it "should work" do
       # assertion here
       # should be_a()

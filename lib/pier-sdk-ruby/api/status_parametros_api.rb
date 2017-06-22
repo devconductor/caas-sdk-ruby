@@ -36,7 +36,7 @@ module Pier
     # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
-    # @return [EstagioCartao]
+    # @return [EstagioCartaoResponse]
     def consultar_estagio_cartao_using_get(id, opts = {})
       data, _status_code, _headers = consultar_estagio_cartao_using_get_with_http_info(id, opts)
       return data
@@ -46,7 +46,7 @@ module Pier
     # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
-    # @return [Array<(EstagioCartao, Fixnum, Hash)>] EstagioCartao data, response status code and response headers
+    # @return [Array<(EstagioCartaoResponse, Fixnum, Hash)>] EstagioCartaoResponse data, response status code and response headers
     def consultar_estagio_cartao_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: StatusParametrosApi.consultar_estagio_cartao_using_get ..."
@@ -90,7 +90,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'EstagioCartao')
+        :return_type => 'EstagioCartaoResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: StatusParametrosApi#consultar_estagio_cartao_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -102,7 +102,7 @@ module Pier
     # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
-    # @return [StatusCartao]
+    # @return [StatusCartaoResponse]
     def consultar_status_cartao_using_get(id, opts = {})
       data, _status_code, _headers = consultar_status_cartao_using_get_with_http_info(id, opts)
       return data
@@ -112,7 +112,7 @@ module Pier
     # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
-    # @return [Array<(StatusCartao, Fixnum, Hash)>] StatusCartao data, response status code and response headers
+    # @return [Array<(StatusCartaoResponse, Fixnum, Hash)>] StatusCartaoResponse data, response status code and response headers
     def consultar_status_cartao_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: StatusParametrosApi.consultar_status_cartao_using_get ..."
@@ -156,7 +156,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'StatusCartao')
+        :return_type => 'StatusCartaoResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: StatusParametrosApi#consultar_status_cartao_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -168,7 +168,7 @@ module Pier
     # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
     # @param [Hash] opts the optional parameters
-    # @return [StatusConta]
+    # @return [StatusContaResponse]
     def consultar_using_get13(id, opts = {})
       data, _status_code, _headers = consultar_using_get13_with_http_info(id, opts)
       return data
@@ -178,7 +178,7 @@ module Pier
     # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
     # @param [Hash] opts the optional parameters
-    # @return [Array<(StatusConta, Fixnum, Hash)>] StatusConta data, response status code and response headers
+    # @return [Array<(StatusContaResponse, Fixnum, Hash)>] StatusContaResponse data, response status code and response headers
     def consultar_using_get13_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: StatusParametrosApi.consultar_using_get13 ..."
@@ -222,7 +222,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'StatusConta')
+        :return_type => 'StatusContaResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: StatusParametrosApi#consultar_using_get13\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -234,7 +234,7 @@ module Pier
     # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
-    # @return [StatusImpressao]
+    # @return [StatusImpressaoResponse]
     def consultar_using_get14(id, opts = {})
       data, _status_code, _headers = consultar_using_get14_with_http_info(id, opts)
       return data
@@ -244,7 +244,7 @@ module Pier
     # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
-    # @return [Array<(StatusImpressao, Fixnum, Hash)>] StatusImpressao data, response status code and response headers
+    # @return [Array<(StatusImpressaoResponse, Fixnum, Hash)>] StatusImpressaoResponse data, response status code and response headers
     def consultar_using_get14_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: StatusParametrosApi.consultar_using_get14 ..."
@@ -288,7 +288,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'StatusImpressao')
+        :return_type => 'StatusImpressaoResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: StatusParametrosApi#consultar_using_get14\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -303,7 +303,7 @@ module Pier
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
     # @option opts [String] :nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
-    # @return [PageEstagiosCartoes]
+    # @return [PageEstagioCartaoResponse]
     def listar_estagios_cartoes_using_get(opts = {})
       data, _status_code, _headers = listar_estagios_cartoes_using_get_with_http_info(opts)
       return data
@@ -316,7 +316,7 @@ module Pier
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
     # @option opts [String] :nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
-    # @return [Array<(PageEstagiosCartoes, Fixnum, Hash)>] PageEstagiosCartoes data, response status code and response headers
+    # @return [Array<(PageEstagioCartaoResponse, Fixnum, Hash)>] PageEstagioCartaoResponse data, response status code and response headers
     def listar_estagios_cartoes_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: StatusParametrosApi.listar_estagios_cartoes_using_get ..."
@@ -380,7 +380,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PageEstagiosCartoes')
+        :return_type => 'PageEstagioCartaoResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: StatusParametrosApi#listar_estagios_cartoes_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -401,7 +401,8 @@ module Pier
     # @option opts [Integer] :id_status_destino_conta Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.
     # @option opts [Integer] :flag_cobra_tarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
     # @option opts [Integer] :flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
-    # @return [PageStatusCartoes]
+    # @option opts [Integer] :flag_permite_desbloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo.
+    # @return [PageStatusCartaoResponse]
     def listar_status_cartoes_using_get(opts = {})
       data, _status_code, _headers = listar_status_cartoes_using_get_with_http_info(opts)
       return data
@@ -420,11 +421,18 @@ module Pier
     # @option opts [Integer] :id_status_destino_conta Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.
     # @option opts [Integer] :flag_cobra_tarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
     # @option opts [Integer] :flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
-    # @return [Array<(PageStatusCartoes, Fixnum, Hash)>] PageStatusCartoes data, response status code and response headers
+    # @option opts [Integer] :flag_permite_desbloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo.
+    # @return [Array<(PageStatusCartaoResponse, Fixnum, Hash)>] PageStatusCartaoResponse data, response status code and response headers
     def listar_status_cartoes_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: StatusParametrosApi.listar_status_cartoes_using_get ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -501,6 +509,7 @@ module Pier
       query_params[:'idStatusDestinoConta'] = opts[:'id_status_destino_conta'] if opts[:'id_status_destino_conta']
       query_params[:'flagCobraTarifa'] = opts[:'flag_cobra_tarifa'] if opts[:'flag_cobra_tarifa']
       query_params[:'flagPermiteNovaViaCartao'] = opts[:'flag_permite_nova_via_cartao'] if opts[:'flag_permite_nova_via_cartao']
+      query_params[:'flagPermiteDesbloqueio'] = opts[:'flag_permite_desbloqueio'] if opts[:'flag_permite_desbloqueio']
 
       # header parameters
       header_params = {}
@@ -526,7 +535,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PageStatusCartoes')
+        :return_type => 'PageStatusCartaoResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: StatusParametrosApi#listar_status_cartoes_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -544,9 +553,11 @@ module Pier
     # @option opts [Integer] :flag_altera_limite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
     # @option opts [String] :mensagem_consulta_negada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
     # @option opts [Integer] :flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
-    # @return [PageStatusContas]
-    def listar_using_get19(opts = {})
-      data, _status_code, _headers = listar_using_get19_with_http_info(opts)
+    # @option opts [Integer] :flag_faz_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo.
+    # @option opts [Integer] :flag_recebe_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo.
+    # @return [PageStatusContaResponse]
+    def listar_using_get20(opts = {})
+      data, _status_code, _headers = listar_using_get20_with_http_info(opts)
       return data
     end
 
@@ -560,11 +571,25 @@ module Pier
     # @option opts [Integer] :flag_altera_limite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
     # @option opts [String] :mensagem_consulta_negada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
     # @option opts [Integer] :flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
-    # @return [Array<(PageStatusContas, Fixnum, Hash)>] PageStatusContas data, response status code and response headers
-    def listar_using_get19_with_http_info(opts = {})
+    # @option opts [Integer] :flag_faz_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo.
+    # @option opts [Integer] :flag_recebe_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo.
+    # @return [Array<(PageStatusContaResponse, Fixnum, Hash)>] PageStatusContaResponse data, response status code and response headers
+    def listar_using_get20_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: StatusParametrosApi.listar_using_get19 ..."
+        @api_client.config.logger.debug "Calling API: StatusParametrosApi.listar_using_get20 ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -620,6 +645,8 @@ module Pier
       query_params[:'flagAlteraLimite'] = opts[:'flag_altera_limite'] if opts[:'flag_altera_limite']
       query_params[:'mensagemConsultaNegada'] = opts[:'mensagem_consulta_negada'] if opts[:'mensagem_consulta_negada']
       query_params[:'flagPermiteNovaViaCartao'] = opts[:'flag_permite_nova_via_cartao'] if opts[:'flag_permite_nova_via_cartao']
+      query_params[:'flagFazTransferencia'] = opts[:'flag_faz_transferencia'] if opts[:'flag_faz_transferencia']
+      query_params[:'flagRecebeTransferencia'] = opts[:'flag_recebe_transferencia'] if opts[:'flag_recebe_transferencia']
 
       # header parameters
       header_params = {}
@@ -645,9 +672,9 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PageStatusContas')
+        :return_type => 'PageStatusContaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: StatusParametrosApi#listar_using_get19\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: StatusParametrosApi#listar_using_get20\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -660,9 +687,9 @@ module Pier
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
     # @option opts [String] :nome Nome do status impress\u00C3\u00A3o
-    # @return [PageStatusImpressao]
-    def listar_using_get20(opts = {})
-      data, _status_code, _headers = listar_using_get20_with_http_info(opts)
+    # @return [PageStatusImpressaoResponse]
+    def listar_using_get21(opts = {})
+      data, _status_code, _headers = listar_using_get21_with_http_info(opts)
       return data
     end
 
@@ -673,10 +700,10 @@ module Pier
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
     # @option opts [String] :nome Nome do status impress\u00C3\u00A3o
-    # @return [Array<(PageStatusImpressao, Fixnum, Hash)>] PageStatusImpressao data, response status code and response headers
-    def listar_using_get20_with_http_info(opts = {})
+    # @return [Array<(PageStatusImpressaoResponse, Fixnum, Hash)>] PageStatusImpressaoResponse data, response status code and response headers
+    def listar_using_get21_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: StatusParametrosApi.listar_using_get20 ..."
+        @api_client.config.logger.debug "Calling API: StatusParametrosApi.listar_using_get21 ..."
       end
       
       
@@ -737,9 +764,9 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PageStatusImpressao')
+        :return_type => 'PageStatusImpressaoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: StatusParametrosApi#listar_using_get20\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: StatusParametrosApi#listar_using_get21\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

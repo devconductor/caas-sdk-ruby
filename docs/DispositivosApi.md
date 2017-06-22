@@ -6,14 +6,14 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ativar_using_post**](DispositivosApi.md#ativar_using_post) | **POST** /api/dispositivos/{id}/ativar-dispositivo | Ativa Dispositivo
 [**desativar_using_post**](DispositivosApi.md#desativar_using_post) | **POST** /api/dispositivos/{id}/desativar-dispositivo | Desativa Dispositivo
-[**listar_using_get7**](DispositivosApi.md#listar_using_get7) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
+[**listar_using_get8**](DispositivosApi.md#listar_using_get8) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
 [**salvar_using_post3**](DispositivosApi.md#salvar_using_post3) | **POST** /api/dispositivos | Cadastra Dispositivo
 
 
 
 
 # **ativar_using_post**
-> Dispositivo ativar_using_post(id)
+> DispositivoResponse ativar_using_post(id)
 
 Ativa Dispositivo
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Dispositivo**](Dispositivo.md)
+[**DispositivoResponse**](DispositivoResponse.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ No authorization required
 
 
 # **desativar_using_post**
-> Dispositivo desativar_using_post(id)
+> DispositivoResponse desativar_using_post(id)
 
 Desativa Dispositivo
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Dispositivo**](Dispositivo.md)
+[**DispositivoResponse**](DispositivoResponse.md)
 
 ### Authorization
 
@@ -112,8 +112,8 @@ No authorization required
 
 
 
-# **listar_using_get7**
-> PageDispositivos listar_using_get7(opts)
+# **listar_using_get8**
+> PageDispositivoResponse listar_using_get8(opts)
 
 Lista os dispositivos cadastrados
 
@@ -139,10 +139,10 @@ opts = {
 
 begin
   #Lista os dispositivos cadastrados
-  result = api_instance.listar_using_get7(opts)
+  result = api_instance.listar_using_get8(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DispositivosApi->listar_using_get7: #{e}"
+  puts "Exception when calling DispositivosApi->listar_using_get8: #{e}"
 end
 ```
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageDispositivos**](PageDispositivos.md)
+[**PageDispositivoResponse**](PageDispositivoResponse.md)
 
 ### Authorization
 
@@ -176,7 +176,7 @@ No authorization required
 
 
 # **salvar_using_post3**
-> Dispositivo salvar_using_post3(persist)
+> DispositivoResponse salvar_using_post3(persist)
 
 Cadastra Dispositivo
 
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Dispositivo**](Dispositivo.md)
+[**DispositivoResponse**](DispositivoResponse.md)
 
 ### Authorization
 

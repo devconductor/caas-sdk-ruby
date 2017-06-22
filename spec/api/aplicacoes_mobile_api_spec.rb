@@ -49,7 +49,7 @@ describe 'AplicacoesMobileApi' do
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Aplicacao (id).
   # @param update update
   # @param [Hash] opts the optional parameters
-  # @return [AplicacaoMobile]
+  # @return [AplicacaoMobileResponse]
   describe 'atualizar_using_put test' do
     it "should work" do
       # assertion here
@@ -69,7 +69,7 @@ describe 'AplicacoesMobileApi' do
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [String] :id Identificador da Aplicacao Mobile
   # @option opts [Integer] :id_plataforma_mobile Identificador da Plataforma Mobile
-  # @return [PageAplicacoesMobile]
+  # @return [PageAplicacaoMobileResponse]
   describe 'listar_using_get test' do
     it "should work" do
       # assertion here
@@ -86,7 +86,7 @@ describe 'AplicacoesMobileApi' do
   # Esse recurso permite cadastrar aplicacoes mobile.
   # @param persist persist
   # @param [Hash] opts the optional parameters
-  # @return [AplicacaoMobile]
+  # @return [AplicacaoMobileResponse]
   describe 'salvar_using_post test' do
     it "should work" do
       # assertion here

@@ -36,7 +36,7 @@ module Pier
     # Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
     # @param [Hash] opts the optional parameters
-    # @return [Terminal]
+    # @return [TerminalResponse]
     def consultar_using_get16(id, opts = {})
       data, _status_code, _headers = consultar_using_get16_with_http_info(id, opts)
       return data
@@ -46,7 +46,7 @@ module Pier
     # Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Terminal, Fixnum, Hash)>] Terminal data, response status code and response headers
+    # @return [Array<(TerminalResponse, Fixnum, Hash)>] TerminalResponse data, response status code and response headers
     def consultar_using_get16_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: EstabelecimentosApi.consultar_using_get16 ..."
@@ -90,7 +90,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Terminal')
+        :return_type => 'TerminalResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: EstabelecimentosApi#consultar_using_get16\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -102,7 +102,7 @@ module Pier
     # Consulta os detalhes de um determinado estabelecimento
     # @param id Id
     # @param [Hash] opts the optional parameters
-    # @return [Estabelecimento]
+    # @return [EstabelecimentoResponse]
     def consultar_using_get6(id, opts = {})
       data, _status_code, _headers = consultar_using_get6_with_http_info(id, opts)
       return data
@@ -112,7 +112,7 @@ module Pier
     # Consulta os detalhes de um determinado estabelecimento
     # @param id Id
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Estabelecimento, Fixnum, Hash)>] Estabelecimento data, response status code and response headers
+    # @return [Array<(EstabelecimentoResponse, Fixnum, Hash)>] EstabelecimentoResponse data, response status code and response headers
     def consultar_using_get6_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: EstabelecimentosApi.consultar_using_get6 ..."
@@ -156,7 +156,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Estabelecimento')
+        :return_type => 'EstabelecimentoResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: EstabelecimentosApi#consultar_using_get6\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -164,116 +164,6 @@ module Pier
     end
 
 
-    # Lista os Terminais cadastrados no Emissor
-    # Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
-    # @option opts [String] :terminal C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
-    # @option opts [Integer] :numero_estabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
-    # @option opts [Integer] :id_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
-    # @return [PageTerminal]
-    def listar_using_get22(opts = {})
-      data, _status_code, _headers = listar_using_get22_with_http_info(opts)
-      return data
-    end
-
-    # Lista os Terminais cadastrados no Emissor
-    # Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
-    # @option opts [String] :terminal C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
-    # @option opts [Integer] :numero_estabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
-    # @option opts [Integer] :id_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
-    # @return [Array<(PageTerminal, Fixnum, Hash)>] PageTerminal data, response status code and response headers
-    def listar_using_get22_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentosApi.listar_using_get22 ..."
-      end
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/terminais".sub('{format}','json')
-
-      # query parameters
-      query_params = {}
-      query_params[:'page'] = opts[:'page'] if opts[:'page']
-      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
-      query_params[:'id'] = opts[:'id'] if opts[:'id']
-      query_params[:'terminal'] = opts[:'terminal'] if opts[:'terminal']
-      query_params[:'numeroEstabelecimento'] = opts[:'numero_estabelecimento'] if opts[:'numero_estabelecimento']
-      query_params[:'idEstabelecimento'] = opts[:'id_estabelecimento'] if opts[:'id_estabelecimento']
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'PageTerminal')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentosApi#listar_using_get22\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-
     # Lista Estabelecimentos
     # Lista todas os Estabelecimentos
     # @param [Hash] opts the optional parameters
@@ -298,9 +188,9 @@ module Pier
     # @option opts [Integer] :flag_arquivo_secr_fazenda Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.
     # @option opts [Integer] :flag_cartao_digitado Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.
     # @option opts [Integer] :inativo Indica se o estabelecimento est\u00C3\u00A1 inativo.
-    # @return [PageEstabelecimentos]
-    def listar_using_get9(opts = {})
-      data, _status_code, _headers = listar_using_get9_with_http_info(opts)
+    # @return [PageEstabelecimentoResponse]
+    def listar_using_get10(opts = {})
+      data, _status_code, _headers = listar_using_get10_with_http_info(opts)
       return data
     end
 
@@ -328,10 +218,10 @@ module Pier
     # @option opts [Integer] :flag_arquivo_secr_fazenda Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.
     # @option opts [Integer] :flag_cartao_digitado Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.
     # @option opts [Integer] :inativo Indica se o estabelecimento est\u00C3\u00A1 inativo.
-    # @return [Array<(PageEstabelecimentos, Fixnum, Hash)>] PageEstabelecimentos data, response status code and response headers
-    def listar_using_get9_with_http_info(opts = {})
+    # @return [Array<(PageEstabelecimentoResponse, Fixnum, Hash)>] PageEstabelecimentoResponse data, response status code and response headers
+    def listar_using_get10_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentosApi.listar_using_get9 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentosApi.listar_using_get10 ..."
       end
       
       
@@ -511,9 +401,119 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PageEstabelecimentos')
+        :return_type => 'PageEstabelecimentoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentosApi#listar_using_get9\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentosApi#listar_using_get10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Lista os Terminais cadastrados no Emissor
+    # Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+    # @option opts [String] :terminal C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
+    # @option opts [Integer] :numero_estabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
+    # @option opts [Integer] :id_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
+    # @return [PageTerminalResponse]
+    def listar_using_get23(opts = {})
+      data, _status_code, _headers = listar_using_get23_with_http_info(opts)
+      return data
+    end
+
+    # Lista os Terminais cadastrados no Emissor
+    # Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+    # @option opts [String] :terminal C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
+    # @option opts [Integer] :numero_estabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
+    # @option opts [Integer] :id_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
+    # @return [Array<(PageTerminalResponse, Fixnum, Hash)>] PageTerminalResponse data, response status code and response headers
+    def listar_using_get23_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: EstabelecimentosApi.listar_using_get23 ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/terminais".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'id'] = opts[:'id'] if opts[:'id']
+      query_params[:'terminal'] = opts[:'terminal'] if opts[:'terminal']
+      query_params[:'numeroEstabelecimento'] = opts[:'numero_estabelecimento'] if opts[:'numero_estabelecimento']
+      query_params[:'idEstabelecimento'] = opts[:'id_estabelecimento'] if opts[:'id_estabelecimento']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageTerminalResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: EstabelecimentosApi#listar_using_get23\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

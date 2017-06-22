@@ -6,14 +6,14 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultar_using_get16**](EstabelecimentosApi.md#consultar_using_get16) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
 [**consultar_using_get6**](EstabelecimentosApi.md#consultar_using_get6) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
-[**listar_using_get22**](EstabelecimentosApi.md#listar_using_get22) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
-[**listar_using_get9**](EstabelecimentosApi.md#listar_using_get9) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**listar_using_get10**](EstabelecimentosApi.md#listar_using_get10) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**listar_using_get23**](EstabelecimentosApi.md#listar_using_get23) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
 
 
 
 
 # **consultar_using_get16**
-> Terminal consultar_using_get16(id)
+> TerminalResponse consultar_using_get16(id)
 
 Apresenta os dados de um determinado Terminal
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Terminal**](Terminal.md)
+[**TerminalResponse**](TerminalResponse.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ No authorization required
 
 
 # **consultar_using_get6**
-> Estabelecimento consultar_using_get6(id)
+> EstabelecimentoResponse consultar_using_get6(id)
 
 Consultar estabelecimento por id
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Estabelecimento**](Estabelecimento.md)
+[**EstabelecimentoResponse**](EstabelecimentoResponse.md)
 
 ### Authorization
 
@@ -112,69 +112,8 @@ No authorization required
 
 
 
-# **listar_using_get22**
-> PageTerminal listar_using_get22(opts)
-
-Lista os Terminais cadastrados no Emissor
-
-Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::EstabelecimentosApi.new
-
-opts = { 
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
-  terminal: "terminal_example", # String | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
-  numero_estabelecimento: 789, # Integer | N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
-  id_estabelecimento: 789 # Integer | N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
-}
-
-begin
-  #Lista os Terminais cadastrados no Emissor
-  result = api_instance.listar_using_get22(opts)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentosApi->listar_using_get22: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). | [optional] 
- **terminal** | **String**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal. | [optional] 
- **numero_estabelecimento** | **Integer**| N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence. | [optional] 
- **id_estabelecimento** | **Integer**| N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence. | [optional] 
-
-
-### Return type
-
-[**PageTerminal**](PageTerminal.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **listar_using_get9**
-> PageEstabelecimentos listar_using_get9(opts)
+# **listar_using_get10**
+> PageEstabelecimentoResponse listar_using_get10(opts)
 
 Lista Estabelecimentos
 
@@ -214,10 +153,10 @@ opts = {
 
 begin
   #Lista Estabelecimentos
-  result = api_instance.listar_using_get9(opts)
+  result = api_instance.listar_using_get10(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentosApi->listar_using_get9: #{e}"
+  puts "Exception when calling EstabelecimentosApi->listar_using_get10: #{e}"
 end
 ```
 
@@ -250,7 +189,68 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageEstabelecimentos**](PageEstabelecimentos.md)
+[**PageEstabelecimentoResponse**](PageEstabelecimentoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_using_get23**
+> PageTerminalResponse listar_using_get23(opts)
+
+Lista os Terminais cadastrados no Emissor
+
+Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::EstabelecimentosApi.new
+
+opts = { 
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+  terminal: "terminal_example", # String | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
+  numero_estabelecimento: 789, # Integer | N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
+  id_estabelecimento: 789 # Integer | N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
+}
+
+begin
+  #Lista os Terminais cadastrados no Emissor
+  result = api_instance.listar_using_get23(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling EstabelecimentosApi->listar_using_get23: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). | [optional] 
+ **terminal** | **String**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal. | [optional] 
+ **numero_estabelecimento** | **Integer**| N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence. | [optional] 
+ **id_estabelecimento** | **Integer**| N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence. | [optional] 
+
+
+### Return type
+
+[**PageTerminalResponse**](PageTerminalResponse.md)
 
 ### Authorization
 

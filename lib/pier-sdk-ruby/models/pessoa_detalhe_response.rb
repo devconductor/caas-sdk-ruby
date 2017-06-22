@@ -25,36 +25,8 @@ require 'date'
 module Pier
   # PessoaDetalheResponse
   class PessoaDetalheResponse
-    attr_accessor :content
-
-    attr_accessor :first
-
-    attr_accessor :first_page
-
-    attr_accessor :has_content
-
-    attr_accessor :has_next_page
-
-    attr_accessor :has_previous_page
-
     # C\u00C3\u00B3digo identificador da pessoa
     attr_accessor :id_pessoa
-
-    attr_accessor :last
-
-    attr_accessor :next_page
-
-    attr_accessor :number
-
-    attr_accessor :number_of_elements
-
-    attr_accessor :previous_page
-
-    attr_accessor :size
-
-    attr_accessor :total_elements
-
-    attr_accessor :total_pages
 
     # Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
     attr_accessor :nome_mae
@@ -88,35 +60,7 @@ module Pier
     def self.attribute_map
       {
         
-        :'content' => :'content',
-        
-        :'first' => :'first',
-        
-        :'first_page' => :'firstPage',
-        
-        :'has_content' => :'hasContent',
-        
-        :'has_next_page' => :'hasNextPage',
-        
-        :'has_previous_page' => :'hasPreviousPage',
-        
         :'id_pessoa' => :'idPessoa',
-        
-        :'last' => :'last',
-        
-        :'next_page' => :'nextPage',
-        
-        :'number' => :'number',
-        
-        :'number_of_elements' => :'numberOfElements',
-        
-        :'previous_page' => :'previousPage',
-        
-        :'size' => :'size',
-        
-        :'total_elements' => :'totalElements',
-        
-        :'total_pages' => :'totalPages',
         
         :'nome_mae' => :'nomeMae',
         
@@ -143,35 +87,7 @@ module Pier
     def self.swagger_types
       {
         
-        :'content' => :'Array<PessoaDetalheResponse>',
-        
-        :'first' => :'BOOLEAN',
-        
-        :'first_page' => :'BOOLEAN',
-        
-        :'has_content' => :'BOOLEAN',
-        
-        :'has_next_page' => :'BOOLEAN',
-        
-        :'has_previous_page' => :'BOOLEAN',
-        
         :'id_pessoa' => :'Integer',
-        
-        :'last' => :'BOOLEAN',
-        
-        :'next_page' => :'Integer',
-        
-        :'number' => :'Integer',
-        
-        :'number_of_elements' => :'Integer',
-        
-        :'previous_page' => :'Integer',
-        
-        :'size' => :'Integer',
-        
-        :'total_elements' => :'Integer',
-        
-        :'total_pages' => :'Integer',
         
         :'nome_mae' => :'String',
         
@@ -203,138 +119,10 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'content']
-        
-        if (value = attributes[:'content']).is_a?(Array)
-          self.content = value
-        end
-        
-        
-      
-      end
-
-      
-      if attributes[:'first']
-        
-        
-        self.first = attributes[:'first']
-        
-      
-      end
-
-      
-      if attributes[:'firstPage']
-        
-        
-        self.first_page = attributes[:'firstPage']
-        
-      
-      end
-
-      
-      if attributes[:'hasContent']
-        
-        
-        self.has_content = attributes[:'hasContent']
-        
-      
-      end
-
-      
-      if attributes[:'hasNextPage']
-        
-        
-        self.has_next_page = attributes[:'hasNextPage']
-        
-      
-      end
-
-      
-      if attributes[:'hasPreviousPage']
-        
-        
-        self.has_previous_page = attributes[:'hasPreviousPage']
-        
-      
-      end
-
-      
       if attributes[:'idPessoa']
         
         
         self.id_pessoa = attributes[:'idPessoa']
-        
-      
-      end
-
-      
-      if attributes[:'last']
-        
-        
-        self.last = attributes[:'last']
-        
-      
-      end
-
-      
-      if attributes[:'nextPage']
-        
-        
-        self.next_page = attributes[:'nextPage']
-        
-      
-      end
-
-      
-      if attributes[:'number']
-        
-        
-        self.number = attributes[:'number']
-        
-      
-      end
-
-      
-      if attributes[:'numberOfElements']
-        
-        
-        self.number_of_elements = attributes[:'numberOfElements']
-        
-      
-      end
-
-      
-      if attributes[:'previousPage']
-        
-        
-        self.previous_page = attributes[:'previousPage']
-        
-      
-      end
-
-      
-      if attributes[:'size']
-        
-        
-        self.size = attributes[:'size']
-        
-      
-      end
-
-      
-      if attributes[:'totalElements']
-        
-        
-        self.total_elements = attributes[:'totalElements']
-        
-      
-      end
-
-      
-      if attributes[:'totalPages']
-        
-        
-        self.total_pages = attributes[:'totalPages']
         
       
       end
@@ -476,134 +264,8 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -660,21 +322,7 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          content == o.content &&
-          first == o.first &&
-          first_page == o.first_page &&
-          has_content == o.has_content &&
-          has_next_page == o.has_next_page &&
-          has_previous_page == o.has_previous_page &&
           id_pessoa == o.id_pessoa &&
-          last == o.last &&
-          next_page == o.next_page &&
-          number == o.number &&
-          number_of_elements == o.number_of_elements &&
-          previous_page == o.previous_page &&
-          size == o.size &&
-          total_elements == o.total_elements &&
-          total_pages == o.total_pages &&
           nome_mae == o.nome_mae &&
           id_estado_civil == o.id_estado_civil &&
           profissao == o.profissao &&
@@ -695,7 +343,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [content, first, first_page, has_content, has_next_page, has_previous_page, id_pessoa, last, next_page, number, number_of_elements, previous_page, size, total_elements, total_pages, nome_mae, id_estado_civil, profissao, id_natureza_ocupacao, id_nacionalidade, numero_agencia, numero_conta_corrente, email, nome_empresa].hash
+      [id_pessoa, nome_mae, id_estado_civil, profissao, id_natureza_ocupacao, id_nacionalidade, numero_agencia, numero_conta_corrente, email, nome_empresa].hash
     end
 
     # Builds the object from hash

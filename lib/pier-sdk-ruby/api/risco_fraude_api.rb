@@ -32,72 +32,6 @@ module Pier
     end
 
 
-    # Apresenta os dados de um determinado Atendimento
-    # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Atendimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (idAtendimento).
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do atendimento cliente (id).
-    # @param [Hash] opts the optional parameters
-    # @return [AtendimentoCliente]
-    def consultar_using_get(id, opts = {})
-      data, _status_code, _headers = consultar_using_get_with_http_info(id, opts)
-      return data
-    end
-
-    # Apresenta os dados de um determinado Atendimento
-    # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Atendimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (idAtendimento).
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do atendimento cliente (id).
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(AtendimentoCliente, Fixnum, Hash)>] AtendimentoCliente data, response status code and response headers
-    def consultar_using_get_with_http_info(id, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.consultar_using_get ..."
-      end
-      
-      
-      # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling RiscoFraudeApi.consultar_using_get" if id.nil?
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/atendimento-clientes/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'AtendimentoCliente')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: RiscoFraudeApi#consultar_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-
     # Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
     # Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
@@ -164,182 +98,6 @@ module Pier
     end
 
 
-    # Receber Risco Fraude
-    # Receber risco fraude
-    # @param detalhado_responses detalhadoResponses
-    # @param [Hash] opts the optional parameters
-    # @return [String]
-    def informar_risco_fraude_using_post(detalhado_responses, opts = {})
-      data, _status_code, _headers = informar_risco_fraude_using_post_with_http_info(detalhado_responses, opts)
-      return data
-    end
-
-    # Receber Risco Fraude
-    # Receber risco fraude
-    # @param detalhado_responses detalhadoResponses
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
-    def informar_risco_fraude_using_post_with_http_info(detalhado_responses, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.informar_risco_fraude_using_post ..."
-      end
-      
-      
-      # verify the required parameter 'detalhado_responses' is set
-      fail ArgumentError, "Missing the required parameter 'detalhado_responses' when calling RiscoFraudeApi.informar_risco_fraude_using_post" if detalhado_responses.nil?
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/riscos-fraudes".sub('{format}','json')
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = @api_client.object_to_http_body(detalhado_responses)
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: RiscoFraudeApi#informar_risco_fraude_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-
-    # Lista todos os atendimentos
-    # Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_tipo_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
-    # @option opts [Integer] :id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
-    # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
-    # @option opts [String] :data_atendimento Apresenta a data em que o Atendimento foi realizado.
-    # @return [PageAtendimentoClientes]
-    def listar_using_get1(opts = {})
-      data, _status_code, _headers = listar_using_get1_with_http_info(opts)
-      return data
-    end
-
-    # Lista todos os atendimentos
-    # Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_tipo_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
-    # @option opts [Integer] :id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
-    # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
-    # @option opts [String] :data_atendimento Apresenta a data em que o Atendimento foi realizado.
-    # @return [Array<(PageAtendimentoClientes, Fixnum, Hash)>] PageAtendimentoClientes data, response status code and response headers
-    def listar_using_get1_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.listar_using_get1 ..."
-      end
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/atendimento-clientes".sub('{format}','json')
-
-      # query parameters
-      query_params = {}
-      query_params[:'page'] = opts[:'page'] if opts[:'page']
-      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
-      query_params[:'idTipoAtendimento'] = opts[:'id_tipo_atendimento'] if opts[:'id_tipo_atendimento']
-      query_params[:'idConta'] = opts[:'id_conta'] if opts[:'id_conta']
-      query_params[:'nomeAtendente'] = opts[:'nome_atendente'] if opts[:'nome_atendente']
-      query_params[:'dataAtendimento'] = opts[:'data_atendimento'] if opts[:'data_atendimento']
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'PageAtendimentoClientes')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: RiscoFraudeApi#listar_using_get1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-
     # Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
     # Este recurso permite que sejam listados os riscos de fraudes existentes
     # @param id_conta Id Conta
@@ -348,8 +106,8 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [RiscoFraudeResponsePage]
-    def listar_using_get18(id_conta, confirmacao_fraude, opts = {})
-      data, _status_code, _headers = listar_using_get18_with_http_info(id_conta, confirmacao_fraude, opts)
+    def listar_using_get19(id_conta, confirmacao_fraude, opts = {})
+      data, _status_code, _headers = listar_using_get19_with_http_info(id_conta, confirmacao_fraude, opts)
       return data
     end
 
@@ -361,14 +119,14 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [Array<(RiscoFraudeResponsePage, Fixnum, Hash)>] RiscoFraudeResponsePage data, response status code and response headers
-    def listar_using_get18_with_http_info(id_conta, confirmacao_fraude, opts = {})
+    def listar_using_get19_with_http_info(id_conta, confirmacao_fraude, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.listar_using_get18 ..."
+        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.listar_using_get19 ..."
       end
       
       
       # verify the required parameter 'id_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta' when calling RiscoFraudeApi.listar_using_get18" if id_conta.nil?
+      fail ArgumentError, "Missing the required parameter 'id_conta' when calling RiscoFraudeApi.listar_using_get19" if id_conta.nil?
       
       
       
@@ -376,7 +134,7 @@ module Pier
       
       
       # verify the required parameter 'confirmacao_fraude' is set
-      fail ArgumentError, "Missing the required parameter 'confirmacao_fraude' when calling RiscoFraudeApi.listar_using_get18" if confirmacao_fraude.nil?
+      fail ArgumentError, "Missing the required parameter 'confirmacao_fraude' when calling RiscoFraudeApi.listar_using_get19" if confirmacao_fraude.nil?
       
       # verify enum value
       unless ['NEGADA', 'CONFIRMADA', 'PENDENTE', 'TODAS'].include?(confirmacao_fraude)
@@ -435,7 +193,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'RiscoFraudeResponsePage')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: RiscoFraudeApi#listar_using_get18\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: RiscoFraudeApi#listar_using_get19\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -568,143 +326,6 @@ module Pier
         :return_type => 'RiscoFraudeDetalhadoResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RiscoFraudeApi#reconhecer_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-
-    # Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
-    # 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o Atendimento est\u00C3\u00A1 associado
-    # @option opts [String] :conteudo_atendimento Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento.
-    # @option opts [String] :detalhes_atendimento Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
-    # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
-    # @option opts [String] :data_atendimento Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
-    # @option opts [String] :data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
-    # @option opts [String] :data_hora_inicio_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
-    # @option opts [String] :data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
-    # @option opts [Integer] :flag_fila_fraude Flag fila fraude
-    # @return [AtendimentoCliente]
-    def salvar_using_post1(opts = {})
-      data, _status_code, _headers = salvar_using_post1_with_http_info(opts)
-      return data
-    end
-
-    # Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
-    # 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o Atendimento est\u00C3\u00A1 associado
-    # @option opts [String] :conteudo_atendimento Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento.
-    # @option opts [String] :detalhes_atendimento Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
-    # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
-    # @option opts [String] :data_atendimento Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
-    # @option opts [String] :data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
-    # @option opts [String] :data_hora_inicio_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
-    # @option opts [String] :data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
-    # @option opts [Integer] :flag_fila_fraude Flag fila fraude
-    # @return [Array<(AtendimentoCliente, Fixnum, Hash)>] AtendimentoCliente data, response status code and response headers
-    def salvar_using_post1_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.salvar_using_post1 ..."
-      end
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/atendimento-clientes".sub('{format}','json')
-
-      # query parameters
-      query_params = {}
-      query_params[:'idConta'] = opts[:'id_conta'] if opts[:'id_conta']
-      query_params[:'conteudoAtendimento'] = opts[:'conteudo_atendimento'] if opts[:'conteudo_atendimento']
-      query_params[:'detalhesAtendimento'] = opts[:'detalhes_atendimento'] if opts[:'detalhes_atendimento']
-      query_params[:'nomeAtendente'] = opts[:'nome_atendente'] if opts[:'nome_atendente']
-      query_params[:'dataAtendimento'] = opts[:'data_atendimento'] if opts[:'data_atendimento']
-      query_params[:'dataAgendamento'] = opts[:'data_agendamento'] if opts[:'data_agendamento']
-      query_params[:'dataHoraInicioAtendimento'] = opts[:'data_hora_inicio_atendimento'] if opts[:'data_hora_inicio_atendimento']
-      query_params[:'dataHoraFimAtendimento'] = opts[:'data_hora_fim_atendimento'] if opts[:'data_hora_fim_atendimento']
-      query_params[:'flagFilaFraude'] = opts[:'flag_fila_fraude'] if opts[:'flag_fila_fraude']
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'AtendimentoCliente')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: RiscoFraudeApi#salvar_using_post1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -52,7 +52,7 @@ describe 'NotificacoesApi' do
   # @option opts [String] :data Data
   # @option opts [String] :texto_status TextoStatus
   # @option opts [String] :operadora Operadora
-  # @return [SMS]
+  # @return [NotificacaoSMSResponse]
   describe 'atualizar_sms_using_post test' do
     it "should work" do
       # assertion here
@@ -75,7 +75,7 @@ describe 'NotificacoesApi' do
   # @option opts [String] :status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
   # @option opts [String] :plataforma Plataforma de Push notifications.
   # @option opts [String] :protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
-  # @return [PagePush]
+  # @return [PagePushResponse]
   describe 'listar_push_using_get test' do
     it "should work" do
       # assertion here
@@ -99,7 +99,7 @@ describe 'NotificacoesApi' do
   # @option opts [String] :operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
   # @option opts [String] :protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
   # @option opts [Integer] :nsu Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o
-  # @return [PageSMS]
+  # @return [PageSMSResponse]
   describe 'listar_sms_using_get test' do
     it "should work" do
       # assertion here
@@ -118,7 +118,7 @@ describe 'NotificacoesApi' do
   # @option opts [String] :nsu Seu n\u00C3\u00BAmero
   # @option opts [String] :data Data
   # @option opts [String] :resposta TextoStatus
-  # @return [SMS]
+  # @return [NotificacaoSMSResponse]
   describe 'responder_sms_using_post test' do
     it "should work" do
       # assertion here
@@ -135,7 +135,7 @@ describe 'NotificacoesApi' do
   # Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma FCM (Firebase Cloud Messaging).
   # @param push_persists pushPersists
   # @param [Hash] opts the optional parameters
-  # @return [NotificacaoSMSResponse]
+  # @return [NotificacaoResponse]
   describe 'salvar_push_fcm_using_post test' do
     it "should work" do
       # assertion here
@@ -152,7 +152,7 @@ describe 'NotificacoesApi' do
   # Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma GCM (Google Cloud Messaging).
   # @param push_persists pushPersists
   # @param [Hash] opts the optional parameters
-  # @return [NotificacaoSMSResponse]
+  # @return [NotificacaoResponse]
   describe 'salvar_push_gcm_using_post test' do
     it "should work" do
       # assertion here
@@ -169,7 +169,7 @@ describe 'NotificacoesApi' do
   # Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma APNS (Apple Push Notification Service).
   # @param push_persists pushPersists
   # @param [Hash] opts the optional parameters
-  # @return [NotificacaoSMSResponse]
+  # @return [NotificacaoResponse]
   describe 'salvar_push_using_post test' do
     it "should work" do
       # assertion here
@@ -186,7 +186,7 @@ describe 'NotificacoesApi' do
   # Esse recurso permite enviar uma lista de SMS.
   # @param lista_sms listaSMS
   # @param [Hash] opts the optional parameters
-  # @return [NotificacaoSMSResponse]
+  # @return [NotificacaoResponse]
   describe 'salvar_sms_using_post test' do
     it "should work" do
       # assertion here

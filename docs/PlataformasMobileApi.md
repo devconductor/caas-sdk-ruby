@@ -5,14 +5,14 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizar_using_put1**](PlataformasMobileApi.md#atualizar_using_put1) | **PUT** /api/plataformas-mobile/{id} | Atualiza Plataforma Mobile
-[**listar_using_get15**](PlataformasMobileApi.md#listar_using_get15) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
+[**listar_using_get16**](PlataformasMobileApi.md#listar_using_get16) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
 [**salvar_using_post9**](PlataformasMobileApi.md#salvar_using_post9) | **POST** /api/plataformas-mobile | Cadastra Plataforma Mobile
 
 
 
 
 # **atualizar_using_put1**
-> PlataformaMobile atualizar_using_put1(id, update)
+> PlataformaMobileResponse atualizar_using_put1(id, update)
 
 Atualiza Plataforma Mobile
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PlataformaMobile**](PlataformaMobile.md)
+[**PlataformaMobileResponse**](PlataformaMobileResponse.md)
 
 ### Authorization
 
@@ -64,8 +64,8 @@ No authorization required
 
 
 
-# **listar_using_get15**
-> PagePlataformasMobile listar_using_get15(opts)
+# **listar_using_get16**
+> PagePlataformaMobileResponse listar_using_get16(opts)
 
 Lista as plataformas mobile cadastradas
 
@@ -87,10 +87,10 @@ opts = {
 
 begin
   #Lista as plataformas mobile cadastradas
-  result = api_instance.listar_using_get15(opts)
+  result = api_instance.listar_using_get16(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling PlataformasMobileApi->listar_using_get15: #{e}"
+  puts "Exception when calling PlataformasMobileApi->listar_using_get16: #{e}"
 end
 ```
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PagePlataformasMobile**](PagePlataformasMobile.md)
+[**PagePlataformaMobileResponse**](PagePlataformaMobileResponse.md)
 
 ### Authorization
 
@@ -120,7 +120,7 @@ No authorization required
 
 
 # **salvar_using_post9**
-> PlataformaMobile salvar_using_post9(persist)
+> PlataformaMobileResponse salvar_using_post9(persist)
 
 Cadastra Plataforma Mobile
 
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PlataformaMobile**](PlataformaMobile.md)
+[**PlataformaMobileResponse**](PlataformaMobileResponse.md)
 
 ### Authorization
 

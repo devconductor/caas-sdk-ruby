@@ -57,7 +57,7 @@ module Pier
     attr_accessor :nome_estabelecimento
 
     # Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.
-    attr_accessor :tipo_transacao
+    attr_accessor :tipo_origem_transacao
 
     # Cidade onde a compra foi realizada.
     attr_accessor :cidade
@@ -119,7 +119,7 @@ module Pier
         
         :'nome_estabelecimento' => :'nomeEstabelecimento',
         
-        :'tipo_transacao' => :'tipoTransacao',
+        :'tipo_origem_transacao' => :'tipoOrigemTransacao',
         
         :'cidade' => :'cidade',
         
@@ -172,7 +172,7 @@ module Pier
         
         :'nome_estabelecimento' => :'String',
         
-        :'tipo_transacao' => :'String',
+        :'tipo_origem_transacao' => :'String',
         
         :'cidade' => :'String',
         
@@ -307,10 +307,10 @@ module Pier
       end
 
       
-      if attributes[:'tipoTransacao']
+      if attributes[:'tipoOrigemTransacao']
         
         
-        self.tipo_transacao = attributes[:'tipoTransacao']
+        self.tipo_origem_transacao = attributes[:'tipoOrigemTransacao']
         
       
       end
@@ -656,7 +656,7 @@ module Pier
           numero_parcelas == o.numero_parcelas &&
           numero_parcelas_antecipaveis == o.numero_parcelas_antecipaveis &&
           nome_estabelecimento == o.nome_estabelecimento &&
-          tipo_transacao == o.tipo_transacao &&
+          tipo_origem_transacao == o.tipo_origem_transacao &&
           cidade == o.cidade &&
           pais == o.pais &&
           latitude == o.latitude &&
@@ -679,7 +679,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [mcc, uf, id_compra, status, data_compra, valor_total_compra, valor_parcela, primeira_parcela, numero_parcelas, numero_parcelas_antecipaveis, nome_estabelecimento, tipo_transacao, cidade, pais, latitude, longitude, id_grupo_mcc, descricao_grupo_mcc, id_conta, id_produto, descricao_produto, cartao, nome_portador_cartao].hash
+      [mcc, uf, id_compra, status, data_compra, valor_total_compra, valor_parcela, primeira_parcela, numero_parcelas, numero_parcelas_antecipaveis, nome_estabelecimento, tipo_origem_transacao, cidade, pais, latitude, longitude, id_grupo_mcc, descricao_grupo_mcc, id_conta, id_produto, descricao_produto, cartao, nome_portador_cartao].hash
     end
 
     # Builds the object from hash

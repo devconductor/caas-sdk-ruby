@@ -40,7 +40,7 @@ module Pier
     # @option opts [String] :data Data
     # @option opts [String] :texto_status TextoStatus
     # @option opts [String] :operadora Operadora
-    # @return [SMS]
+    # @return [NotificacaoSMSResponse]
     def atualizar_sms_using_post(opts = {})
       data, _status_code, _headers = atualizar_sms_using_post_with_http_info(opts)
       return data
@@ -54,7 +54,7 @@ module Pier
     # @option opts [String] :data Data
     # @option opts [String] :texto_status TextoStatus
     # @option opts [String] :operadora Operadora
-    # @return [Array<(SMS, Fixnum, Hash)>] SMS data, response status code and response headers
+    # @return [Array<(NotificacaoSMSResponse, Fixnum, Hash)>] NotificacaoSMSResponse data, response status code and response headers
     def atualizar_sms_using_post_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: NotificacoesApi.atualizar_sms_using_post ..."
@@ -125,7 +125,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'SMS')
+        :return_type => 'NotificacaoSMSResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: NotificacoesApi#atualizar_sms_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -143,7 +143,7 @@ module Pier
     # @option opts [String] :status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :plataforma Plataforma de Push notifications.
     # @option opts [String] :protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
-    # @return [PagePush]
+    # @return [PagePushResponse]
     def listar_push_using_get(opts = {})
       data, _status_code, _headers = listar_push_using_get_with_http_info(opts)
       return data
@@ -159,7 +159,7 @@ module Pier
     # @option opts [String] :status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :plataforma Plataforma de Push notifications.
     # @option opts [String] :protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
-    # @return [Array<(PagePush, Fixnum, Hash)>] PagePush data, response status code and response headers
+    # @return [Array<(PagePushResponse, Fixnum, Hash)>] PagePushResponse data, response status code and response headers
     def listar_push_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: NotificacoesApi.listar_push_using_get ..."
@@ -256,7 +256,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PagePush')
+        :return_type => 'PagePushResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: NotificacoesApi#listar_push_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -275,7 +275,7 @@ module Pier
     # @option opts [String] :operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
     # @option opts [String] :protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
     # @option opts [Integer] :nsu Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o
-    # @return [PageSMS]
+    # @return [PageSMSResponse]
     def listar_sms_using_get(opts = {})
       data, _status_code, _headers = listar_sms_using_get_with_http_info(opts)
       return data
@@ -292,7 +292,7 @@ module Pier
     # @option opts [String] :operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
     # @option opts [String] :protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
     # @option opts [Integer] :nsu Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o
-    # @return [Array<(PageSMS, Fixnum, Hash)>] PageSMS data, response status code and response headers
+    # @return [Array<(PageSMSResponse, Fixnum, Hash)>] PageSMSResponse data, response status code and response headers
     def listar_sms_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: NotificacoesApi.listar_sms_using_get ..."
@@ -392,7 +392,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PageSMS')
+        :return_type => 'PageSMSResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: NotificacoesApi#listar_sms_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -406,7 +406,7 @@ module Pier
     # @option opts [String] :nsu Seu n\u00C3\u00BAmero
     # @option opts [String] :data Data
     # @option opts [String] :resposta TextoStatus
-    # @return [SMS]
+    # @return [NotificacaoSMSResponse]
     def responder_sms_using_post(opts = {})
       data, _status_code, _headers = responder_sms_using_post_with_http_info(opts)
       return data
@@ -418,7 +418,7 @@ module Pier
     # @option opts [String] :nsu Seu n\u00C3\u00BAmero
     # @option opts [String] :data Data
     # @option opts [String] :resposta TextoStatus
-    # @return [Array<(SMS, Fixnum, Hash)>] SMS data, response status code and response headers
+    # @return [Array<(NotificacaoSMSResponse, Fixnum, Hash)>] NotificacaoSMSResponse data, response status code and response headers
     def responder_sms_using_post_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: NotificacoesApi.responder_sms_using_post ..."
@@ -475,7 +475,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'SMS')
+        :return_type => 'NotificacaoSMSResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: NotificacoesApi#responder_sms_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -487,7 +487,7 @@ module Pier
     # Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma FCM (Firebase Cloud Messaging).
     # @param push_persists pushPersists
     # @param [Hash] opts the optional parameters
-    # @return [NotificacaoSMSResponse]
+    # @return [NotificacaoResponse]
     def salvar_push_fcm_using_post(push_persists, opts = {})
       data, _status_code, _headers = salvar_push_fcm_using_post_with_http_info(push_persists, opts)
       return data
@@ -497,7 +497,7 @@ module Pier
     # Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma FCM (Firebase Cloud Messaging).
     # @param push_persists pushPersists
     # @param [Hash] opts the optional parameters
-    # @return [Array<(NotificacaoSMSResponse, Fixnum, Hash)>] NotificacaoSMSResponse data, response status code and response headers
+    # @return [Array<(NotificacaoResponse, Fixnum, Hash)>] NotificacaoResponse data, response status code and response headers
     def salvar_push_fcm_using_post_with_http_info(push_persists, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: NotificacoesApi.salvar_push_fcm_using_post ..."
@@ -541,7 +541,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'NotificacaoSMSResponse')
+        :return_type => 'NotificacaoResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: NotificacoesApi#salvar_push_fcm_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -553,7 +553,7 @@ module Pier
     # Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma GCM (Google Cloud Messaging).
     # @param push_persists pushPersists
     # @param [Hash] opts the optional parameters
-    # @return [NotificacaoSMSResponse]
+    # @return [NotificacaoResponse]
     def salvar_push_gcm_using_post(push_persists, opts = {})
       data, _status_code, _headers = salvar_push_gcm_using_post_with_http_info(push_persists, opts)
       return data
@@ -563,7 +563,7 @@ module Pier
     # Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma GCM (Google Cloud Messaging).
     # @param push_persists pushPersists
     # @param [Hash] opts the optional parameters
-    # @return [Array<(NotificacaoSMSResponse, Fixnum, Hash)>] NotificacaoSMSResponse data, response status code and response headers
+    # @return [Array<(NotificacaoResponse, Fixnum, Hash)>] NotificacaoResponse data, response status code and response headers
     def salvar_push_gcm_using_post_with_http_info(push_persists, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: NotificacoesApi.salvar_push_gcm_using_post ..."
@@ -607,7 +607,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'NotificacaoSMSResponse')
+        :return_type => 'NotificacaoResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: NotificacoesApi#salvar_push_gcm_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -619,7 +619,7 @@ module Pier
     # Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma APNS (Apple Push Notification Service).
     # @param push_persists pushPersists
     # @param [Hash] opts the optional parameters
-    # @return [NotificacaoSMSResponse]
+    # @return [NotificacaoResponse]
     def salvar_push_using_post(push_persists, opts = {})
       data, _status_code, _headers = salvar_push_using_post_with_http_info(push_persists, opts)
       return data
@@ -629,7 +629,7 @@ module Pier
     # Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma APNS (Apple Push Notification Service).
     # @param push_persists pushPersists
     # @param [Hash] opts the optional parameters
-    # @return [Array<(NotificacaoSMSResponse, Fixnum, Hash)>] NotificacaoSMSResponse data, response status code and response headers
+    # @return [Array<(NotificacaoResponse, Fixnum, Hash)>] NotificacaoResponse data, response status code and response headers
     def salvar_push_using_post_with_http_info(push_persists, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: NotificacoesApi.salvar_push_using_post ..."
@@ -673,7 +673,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'NotificacaoSMSResponse')
+        :return_type => 'NotificacaoResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: NotificacoesApi#salvar_push_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -685,7 +685,7 @@ module Pier
     # Esse recurso permite enviar uma lista de SMS.
     # @param lista_sms listaSMS
     # @param [Hash] opts the optional parameters
-    # @return [NotificacaoSMSResponse]
+    # @return [NotificacaoResponse]
     def salvar_sms_using_post(lista_sms, opts = {})
       data, _status_code, _headers = salvar_sms_using_post_with_http_info(lista_sms, opts)
       return data
@@ -695,7 +695,7 @@ module Pier
     # Esse recurso permite enviar uma lista de SMS.
     # @param lista_sms listaSMS
     # @param [Hash] opts the optional parameters
-    # @return [Array<(NotificacaoSMSResponse, Fixnum, Hash)>] NotificacaoSMSResponse data, response status code and response headers
+    # @return [Array<(NotificacaoResponse, Fixnum, Hash)>] NotificacaoResponse data, response status code and response headers
     def salvar_sms_using_post_with_http_info(lista_sms, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: NotificacoesApi.salvar_sms_using_post ..."
@@ -739,7 +739,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'NotificacaoSMSResponse')
+        :return_type => 'NotificacaoResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: NotificacoesApi#salvar_sms_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

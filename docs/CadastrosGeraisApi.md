@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**configurar_taxa_antecipacao_using_post**](CadastrosGeraisApi.md#configurar_taxa_antecipacao_using_post) | **POST** /api/produtos/{id}/configurar-taxa-antecipacao | Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
 [**consultar_origem_comercial_using_get**](CadastrosGeraisApi.md#consultar_origem_comercial_using_get) | **GET** /api/origens-comerciais/{id} | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
 [**consultar_taxa_antecipacao_using_get**](CadastrosGeraisApi.md#consultar_taxa_antecipacao_using_get) | **GET** /api/produtos/{id}/consultar-taxa-antecipacao | Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+[**consultar_using_get**](CadastrosGeraisApi.md#consultar_using_get) | **GET** /api/atendimento-clientes/{id} | Apresenta os dados de um determinado Atendimento
 [**consultar_using_get1**](CadastrosGeraisApi.md#consultar_using_get1) | **GET** /api/bancos/{id} | Apresenta os dados de um determinado Banco
 [**consultar_using_get10**](CadastrosGeraisApi.md#consultar_using_get10) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
 [**consultar_using_get11**](CadastrosGeraisApi.md#consultar_using_get11) | **GET** /api/produtos/{id} | Apresenta os dados de um determinado Produto
@@ -30,17 +31,19 @@ Method | HTTP request | Description
 [**listar_naturezas_ocupacoes_using_get**](CadastrosGeraisApi.md#listar_naturezas_ocupacoes_using_get) | **GET** /api/ocupacoes | Lista as Ocupa\u00C3\u00A7\u00C3\u00B5es
 [**listar_origens_comerciais_using_get**](CadastrosGeraisApi.md#listar_origens_comerciais_using_get) | **GET** /api/origens-comerciais | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
 [**listar_profissoes_using_get**](CadastrosGeraisApi.md#listar_profissoes_using_get) | **GET** /api/profissoes | Lista profiss\u00C3\u00B5es
-[**listar_using_get13**](CadastrosGeraisApi.md#listar_using_get13) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
-[**listar_using_get14**](CadastrosGeraisApi.md#listar_using_get14) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
-[**listar_using_get16**](CadastrosGeraisApi.md#listar_using_get16) | **GET** /api/portadores | Lista os Portadores existentes
-[**listar_using_get17**](CadastrosGeraisApi.md#listar_using_get17) | **GET** /api/produtos | Lista os Produtos do Emissor
+[**listar_using_get1**](CadastrosGeraisApi.md#listar_using_get1) | **GET** /api/atendimento-clientes | Lista todos os atendimentos
+[**listar_using_get14**](CadastrosGeraisApi.md#listar_using_get14) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
+[**listar_using_get15**](CadastrosGeraisApi.md#listar_using_get15) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
+[**listar_using_get17**](CadastrosGeraisApi.md#listar_using_get17) | **GET** /api/portadores | Lista os Portadores existentes
+[**listar_using_get18**](CadastrosGeraisApi.md#listar_using_get18) | **GET** /api/produtos | Lista os Produtos do Emissor
 [**listar_using_get2**](CadastrosGeraisApi.md#listar_using_get2) | **GET** /api/bancos | Lista os Bancos cadastrados para o Emissor
-[**listar_using_get21**](CadastrosGeraisApi.md#listar_using_get21) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
-[**listar_using_get23**](CadastrosGeraisApi.md#listar_using_get23) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-[**listar_using_get25**](CadastrosGeraisApi.md#listar_using_get25) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
-[**listar_using_get8**](CadastrosGeraisApi.md#listar_using_get8) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
+[**listar_using_get22**](CadastrosGeraisApi.md#listar_using_get22) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
+[**listar_using_get24**](CadastrosGeraisApi.md#listar_using_get24) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+[**listar_using_get26**](CadastrosGeraisApi.md#listar_using_get26) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
+[**listar_using_get9**](CadastrosGeraisApi.md#listar_using_get9) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
 [**salvar_pessoa_fisica_aprovada_using_post**](CadastrosGeraisApi.md#salvar_pessoa_fisica_aprovada_using_post) | **POST** /api/clientes-pessoas-fisicas | Cadastro de Conta e Pessoa Fisica
 [**salvar_pessoa_juridica_aprovada_using_post**](CadastrosGeraisApi.md#salvar_pessoa_juridica_aprovada_using_post) | **POST** /api/clientes-pessoas-juridicas | Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica
+[**salvar_using_post1**](CadastrosGeraisApi.md#salvar_using_post1) | **POST** /api/atendimento-clientes | Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
 [**salvar_using_post10**](CadastrosGeraisApi.md#salvar_using_post10) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
 [**salvar_using_post4**](CadastrosGeraisApi.md#salvar_using_post4) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
 [**salvar_using_post7**](CadastrosGeraisApi.md#salvar_using_post7) | **POST** /api/pessoas-detalhes | Salvar os detalhes de uma determinada Pessoa
@@ -50,7 +53,7 @@ Method | HTTP request | Description
 
 
 # **alterar_using_put1**
-> Endereco alterar_using_put1(id, opts)
+> EnderecoResponse alterar_using_put1(id, opts)
 
 Atualiza os dados de um determinado Endere\u00C3\u00A7o
 
@@ -109,7 +112,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Endereco**](Endereco.md)
+[**EnderecoResponse**](EnderecoResponse.md)
 
 ### Authorization
 
@@ -194,7 +197,7 @@ No authorization required
 
 
 # **alterar_using_put5**
-> Pessoa alterar_using_put5(id, nome, tipo, opts)
+> PessoaResponse alterar_using_put5(id, nome, tipo, opts)
 
 Atualiza os dados de uma determinada Pessoa
 
@@ -253,7 +256,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Pessoa**](Pessoa.md)
+[**PessoaResponse**](PessoaResponse.md)
 
 ### Authorization
 
@@ -268,7 +271,7 @@ No authorization required
 
 
 # **alterar_using_put6**
-> Telefone alterar_using_put6(id, opts)
+> TelefoneResponse alterar_using_put6(id, opts)
 
 Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
 
@@ -313,7 +316,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Telefone**](Telefone.md)
+[**TelefoneResponse**](TelefoneResponse.md)
 
 ### Authorization
 
@@ -431,7 +434,7 @@ No authorization required
 
 
 # **consultar_origem_comercial_using_get**
-> OrigemComercial consultar_origem_comercial_using_get(id)
+> OrigemComercialResponse consultar_origem_comercial_using_get(id)
 
 Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
 
@@ -466,7 +469,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrigemComercial**](OrigemComercial.md)
+[**OrigemComercialResponse**](OrigemComercialResponse.md)
 
 ### Authorization
 
@@ -533,8 +536,58 @@ No authorization required
 
 
 
+# **consultar_using_get**
+> AtendimentoClienteResponse consultar_using_get(id)
+
+Apresenta os dados de um determinado Atendimento
+
+Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Atendimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (idAtendimento).
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::CadastrosGeraisApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do atendimento cliente (id).
+
+
+begin
+  #Apresenta os dados de um determinado Atendimento
+  result = api_instance.consultar_using_get(id)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CadastrosGeraisApi->consultar_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do atendimento cliente (id). | 
+
+
+### Return type
+
+[**AtendimentoClienteResponse**](AtendimentoClienteResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
 # **consultar_using_get1**
-> Banco consultar_using_get1(id)
+> BancoResponse consultar_using_get1(id)
 
 Apresenta os dados de um determinado Banco
 
@@ -569,7 +622,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Banco**](Banco.md)
+[**BancoResponse**](BancoResponse.md)
 
 ### Authorization
 
@@ -584,7 +637,7 @@ No authorization required
 
 
 # **consultar_using_get10**
-> Pessoa consultar_using_get10(id)
+> PessoaResponse consultar_using_get10(id)
 
 Apresenta os dados de uma determinada Pessoa
 
@@ -619,7 +672,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Pessoa**](Pessoa.md)
+[**PessoaResponse**](PessoaResponse.md)
 
 ### Authorization
 
@@ -684,7 +737,7 @@ No authorization required
 
 
 # **consultar_using_get15**
-> Telefone consultar_using_get15(id)
+> TelefoneResponse consultar_using_get15(id)
 
 Apresenta os dados de um determinado Telefone
 
@@ -719,7 +772,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Telefone**](Telefone.md)
+[**TelefoneResponse**](TelefoneResponse.md)
 
 ### Authorization
 
@@ -734,7 +787,7 @@ No authorization required
 
 
 # **consultar_using_get17**
-> PageTipoAjuste consultar_using_get17(opts)
+> PageTipoAjusteResponse consultar_using_get17(opts)
 
 Lista os tipos de ajustes do emissor 
 
@@ -776,7 +829,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageTipoAjuste**](PageTipoAjuste.md)
+[**PageTipoAjusteResponse**](PageTipoAjusteResponse.md)
 
 ### Authorization
 
@@ -791,7 +844,7 @@ No authorization required
 
 
 # **consultar_using_get18**
-> PageTipoBoleto consultar_using_get18(opts)
+> PageTipoBoletoResponse consultar_using_get18(opts)
 
 Lista os tipos de boletos do emissor 
 
@@ -835,7 +888,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageTipoBoleto**](PageTipoBoleto.md)
+[**PageTipoBoletoResponse**](PageTipoBoletoResponse.md)
 
 ### Authorization
 
@@ -850,7 +903,7 @@ No authorization required
 
 
 # **consultar_using_get19**
-> TipoEndereco consultar_using_get19(id)
+> TipoEnderecoResponse consultar_using_get19(id)
 
 Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
 
@@ -885,7 +938,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TipoEndereco**](TipoEndereco.md)
+[**TipoEnderecoResponse**](TipoEnderecoResponse.md)
 
 ### Authorization
 
@@ -900,7 +953,7 @@ No authorization required
 
 
 # **consultar_using_get21**
-> TipoTelefone consultar_using_get21(id)
+> TipoTelefoneResponse consultar_using_get21(id)
 
 Apresenta os dados de um determinado Tipo de Telefone
 
@@ -935,7 +988,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TipoTelefone**](TipoTelefone.md)
+[**TipoTelefoneResponse**](TipoTelefoneResponse.md)
 
 ### Authorization
 
@@ -950,7 +1003,7 @@ No authorization required
 
 
 # **consultar_using_get5**
-> Endereco consultar_using_get5(id)
+> EnderecoResponse consultar_using_get5(id)
 
 Apresenta os dados de um determinado Endere\u00C3\u00A7o
 
@@ -985,7 +1038,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Endereco**](Endereco.md)
+[**EnderecoResponse**](EnderecoResponse.md)
 
 ### Authorization
 
@@ -1100,7 +1153,7 @@ No authorization required
 
 
 # **listar_contas_por_pessoa_using_get**
-> PageContasDetalhe listar_contas_por_pessoa_using_get(numero_receita_federal, opts)
+> PageContaDetalheResponse listar_contas_por_pessoa_using_get(numero_receita_federal, opts)
 
 Lista as contas da pessoa
 
@@ -1141,7 +1194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageContasDetalhe**](PageContasDetalhe.md)
+[**PageContaDetalheResponse**](PageContaDetalheResponse.md)
 
 ### Authorization
 
@@ -1156,7 +1209,7 @@ No authorization required
 
 
 # **listar_estados_civis_using_get**
-> PageCampoCodificadoDescricao listar_estados_civis_using_get(opts)
+> PageCampoCodificadoDescricaoResponse listar_estados_civis_using_get(opts)
 
 Lista os Estados C\u00C3\u00ADvis
 
@@ -1194,7 +1247,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageCampoCodificadoDescricao**](PageCampoCodificadoDescricao.md)
+[**PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
 
 ### Authorization
 
@@ -1209,7 +1262,7 @@ No authorization required
 
 
 # **listar_historico_telefones_using_get**
-> HistoricoTelefone listar_historico_telefones_using_get(id)
+> HistoricoTelefoneResponse listar_historico_telefones_using_get(id)
 
 Listar altera\u00C3\u00A7\u00C3\u00B5es de telefones realizadas nos \u00C3\u00BAltimos 60 dias
 
@@ -1244,7 +1297,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HistoricoTelefone**](HistoricoTelefone.md)
+[**HistoricoTelefoneResponse**](HistoricoTelefoneResponse.md)
 
 ### Authorization
 
@@ -1259,7 +1312,7 @@ No authorization required
 
 
 # **listar_nacionalidades_using_get**
-> PageCampoCodificadoDescricao listar_nacionalidades_using_get(opts)
+> PageCampoCodificadoDescricaoResponse listar_nacionalidades_using_get(opts)
 
 Lista nacionalidades
 
@@ -1297,7 +1350,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageCampoCodificadoDescricao**](PageCampoCodificadoDescricao.md)
+[**PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
 
 ### Authorization
 
@@ -1312,7 +1365,7 @@ No authorization required
 
 
 # **listar_naturezas_ocupacoes_using_get**
-> PageCampoCodificadoDescricao listar_naturezas_ocupacoes_using_get(opts)
+> PageCampoCodificadoDescricaoResponse listar_naturezas_ocupacoes_using_get(opts)
 
 Lista as Ocupa\u00C3\u00A7\u00C3\u00B5es
 
@@ -1350,7 +1403,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageCampoCodificadoDescricao**](PageCampoCodificadoDescricao.md)
+[**PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
 
 ### Authorization
 
@@ -1365,7 +1418,7 @@ No authorization required
 
 
 # **listar_origens_comerciais_using_get**
-> PageOrigensComerciais listar_origens_comerciais_using_get(opts)
+> PageOrigemComercialResponse listar_origens_comerciais_using_get(opts)
 
 Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
 
@@ -1409,7 +1462,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageOrigensComerciais**](PageOrigensComerciais.md)
+[**PageOrigemComercialResponse**](PageOrigemComercialResponse.md)
 
 ### Authorization
 
@@ -1424,7 +1477,7 @@ No authorization required
 
 
 # **listar_profissoes_using_get**
-> PageCampoCodificadoDescricao listar_profissoes_using_get(opts)
+> PageCampoCodificadoDescricaoResponse listar_profissoes_using_get(opts)
 
 Lista profiss\u00C3\u00B5es
 
@@ -1462,7 +1515,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageCampoCodificadoDescricao**](PageCampoCodificadoDescricao.md)
+[**PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
 
 ### Authorization
 
@@ -1476,8 +1529,69 @@ No authorization required
 
 
 
-# **listar_using_get13**
-> PessoaDetalheResponse listar_using_get13(opts)
+# **listar_using_get1**
+> PageAtendimentoClienteResponse listar_using_get1(opts)
+
+Lista todos os atendimentos
+
+Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::CadastrosGeraisApi.new
+
+opts = { 
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  id_tipo_atendimento: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
+  id_conta: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+  nome_atendente: "nome_atendente_example", # String | Apresenta o nome do Atendente que registrou o Atendimento.
+  data_atendimento: "data_atendimento_example" # String | Apresenta a data em que o Atendimento foi realizado.
+}
+
+begin
+  #Lista todos os atendimentos
+  result = api_instance.listar_using_get1(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CadastrosGeraisApi->listar_using_get1: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id_tipo_atendimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id) | [optional] 
+ **id_conta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). | [optional] 
+ **nome_atendente** | **String**| Apresenta o nome do Atendente que registrou o Atendimento. | [optional] 
+ **data_atendimento** | **String**| Apresenta a data em que o Atendimento foi realizado. | [optional] 
+
+
+### Return type
+
+[**PageAtendimentoClienteResponse**](PageAtendimentoClienteResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_using_get14**
+> PagePessoaDetalheResponse listar_using_get14(opts)
 
 Lista os Detalhes das Pessoas cadastradas no Emissor
 
@@ -1508,10 +1622,10 @@ opts = {
 
 begin
   #Lista os Detalhes das Pessoas cadastradas no Emissor
-  result = api_instance.listar_using_get13(opts)
+  result = api_instance.listar_using_get14(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosGeraisApi->listar_using_get13: #{e}"
+  puts "Exception when calling CadastrosGeraisApi->listar_using_get14: #{e}"
 end
 ```
 
@@ -1535,7 +1649,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PessoaDetalheResponse**](PessoaDetalheResponse.md)
+[**PagePessoaDetalheResponse**](PagePessoaDetalheResponse.md)
 
 ### Authorization
 
@@ -1549,8 +1663,8 @@ No authorization required
 
 
 
-# **listar_using_get14**
-> PagePessoas listar_using_get14(opts)
+# **listar_using_get15**
+> PagePessoaResponse listar_using_get15(opts)
 
 Lista as Pessoas cadastradas no Emissor
 
@@ -1582,10 +1696,10 @@ opts = {
 
 begin
   #Lista as Pessoas cadastradas no Emissor
-  result = api_instance.listar_using_get14(opts)
+  result = api_instance.listar_using_get15(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosGeraisApi->listar_using_get14: #{e}"
+  puts "Exception when calling CadastrosGeraisApi->listar_using_get15: #{e}"
 end
 ```
 
@@ -1610,7 +1724,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PagePessoas**](PagePessoas.md)
+[**PagePessoaResponse**](PagePessoaResponse.md)
 
 ### Authorization
 
@@ -1624,8 +1738,8 @@ No authorization required
 
 
 
-# **listar_using_get16**
-> PagePortador listar_using_get16(opts)
+# **listar_using_get17**
+> PagePortadorResponse listar_using_get17(opts)
 
 Lista os Portadores existentes
 
@@ -1656,10 +1770,10 @@ opts = {
 
 begin
   #Lista os Portadores existentes
-  result = api_instance.listar_using_get16(opts)
+  result = api_instance.listar_using_get17(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosGeraisApi->listar_using_get16: #{e}"
+  puts "Exception when calling CadastrosGeraisApi->listar_using_get17: #{e}"
 end
 ```
 
@@ -1683,7 +1797,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PagePortador**](PagePortador.md)
+[**PagePortadorResponse**](PagePortadorResponse.md)
 
 ### Authorization
 
@@ -1697,8 +1811,8 @@ No authorization required
 
 
 
-# **listar_using_get17**
-> ListaProdutos listar_using_get17(opts)
+# **listar_using_get18**
+> PageProdutoResponse listar_using_get18(opts)
 
 Lista os Produtos do Emissor
 
@@ -1722,10 +1836,10 @@ opts = {
 
 begin
   #Lista os Produtos do Emissor
-  result = api_instance.listar_using_get17(opts)
+  result = api_instance.listar_using_get18(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosGeraisApi->listar_using_get17: #{e}"
+  puts "Exception when calling CadastrosGeraisApi->listar_using_get18: #{e}"
 end
 ```
 
@@ -1742,7 +1856,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListaProdutos**](ListaProdutos.md)
+[**PageProdutoResponse**](PageProdutoResponse.md)
 
 ### Authorization
 
@@ -1757,7 +1871,7 @@ No authorization required
 
 
 # **listar_using_get2**
-> PageBancos listar_using_get2(opts)
+> PageBancoResponse listar_using_get2(opts)
 
 Lista os Bancos cadastrados para o Emissor
 
@@ -1795,7 +1909,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageBancos**](PageBancos.md)
+[**PageBancoResponse**](PageBancoResponse.md)
 
 ### Authorization
 
@@ -1809,8 +1923,8 @@ No authorization required
 
 
 
-# **listar_using_get21**
-> PageTelefones listar_using_get21(opts)
+# **listar_using_get22**
+> PageTelefoneResponse listar_using_get22(opts)
 
 Lista os Telefones cadastrados no Emissor
 
@@ -1838,10 +1952,10 @@ opts = {
 
 begin
   #Lista os Telefones cadastrados no Emissor
-  result = api_instance.listar_using_get21(opts)
+  result = api_instance.listar_using_get22(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosGeraisApi->listar_using_get21: #{e}"
+  puts "Exception when calling CadastrosGeraisApi->listar_using_get22: #{e}"
 end
 ```
 
@@ -1862,7 +1976,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageTelefones**](PageTelefones.md)
+[**PageTelefoneResponse**](PageTelefoneResponse.md)
 
 ### Authorization
 
@@ -1876,8 +1990,8 @@ No authorization required
 
 
 
-# **listar_using_get23**
-> PageTiposEndereco listar_using_get23(opts)
+# **listar_using_get24**
+> PageTipoEnderecoResponse listar_using_get24(opts)
 
 Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
 
@@ -1900,10 +2014,10 @@ opts = {
 
 begin
   #Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-  result = api_instance.listar_using_get23(opts)
+  result = api_instance.listar_using_get24(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosGeraisApi->listar_using_get23: #{e}"
+  puts "Exception when calling CadastrosGeraisApi->listar_using_get24: #{e}"
 end
 ```
 
@@ -1919,7 +2033,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageTiposEndereco**](PageTiposEndereco.md)
+[**PageTipoEnderecoResponse**](PageTipoEnderecoResponse.md)
 
 ### Authorization
 
@@ -1933,8 +2047,8 @@ No authorization required
 
 
 
-# **listar_using_get25**
-> PageTipoTelefones listar_using_get25(opts)
+# **listar_using_get26**
+> PageTipoTelefoneResponse listar_using_get26(opts)
 
 Lista os Tipos de Telefones
 
@@ -1957,10 +2071,10 @@ opts = {
 
 begin
   #Lista os Tipos de Telefones
-  result = api_instance.listar_using_get25(opts)
+  result = api_instance.listar_using_get26(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosGeraisApi->listar_using_get25: #{e}"
+  puts "Exception when calling CadastrosGeraisApi->listar_using_get26: #{e}"
 end
 ```
 
@@ -1976,7 +2090,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageTipoTelefones**](PageTipoTelefones.md)
+[**PageTipoTelefoneResponse**](PageTipoTelefoneResponse.md)
 
 ### Authorization
 
@@ -1990,8 +2104,8 @@ No authorization required
 
 
 
-# **listar_using_get8**
-> PageEnderecos listar_using_get8(opts)
+# **listar_using_get9**
+> PageEnderecoResponse listar_using_get9(opts)
 
 Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
 
@@ -2026,10 +2140,10 @@ opts = {
 
 begin
   #Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
-  result = api_instance.listar_using_get8(opts)
+  result = api_instance.listar_using_get9(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosGeraisApi->listar_using_get8: #{e}"
+  puts "Exception when calling CadastrosGeraisApi->listar_using_get9: #{e}"
 end
 ```
 
@@ -2057,7 +2171,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageEnderecos**](PageEnderecos.md)
+[**PageEnderecoResponse**](PageEnderecoResponse.md)
 
 ### Authorization
 
@@ -2171,8 +2285,73 @@ No authorization required
 
 
 
+# **salvar_using_post1**
+> AtendimentoClienteResponse salvar_using_post1(opts)
+
+Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::CadastrosGeraisApi.new
+
+opts = { 
+  id_conta: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o Atendimento est\u00C3\u00A1 associado
+  conteudo_atendimento: "conteudo_atendimento_example", # String | Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento.
+  detalhes_atendimento: "detalhes_atendimento_example", # String | Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
+  nome_atendente: "nome_atendente_example", # String | Apresenta o nome do Atendente que registrou o Atendimento.
+  data_atendimento: "data_atendimento_example", # String | Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+  data_agendamento: "data_agendamento_example", # String | Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+  data_hora_inicio_atendimento: "data_hora_inicio_atendimento_example", # String | Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+  data_hora_fim_atendimento: "data_hora_fim_atendimento_example", # String | Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+  flag_fila_fraude: 56 # Integer | Flag fila fraude
+}
+
+begin
+  #Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
+  result = api_instance.salvar_using_post1(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CadastrosGeraisApi->salvar_using_post1: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_conta** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o Atendimento est\u00C3\u00A1 associado | [optional] 
+ **conteudo_atendimento** | **String**| Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento. | [optional] 
+ **detalhes_atendimento** | **String**| Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento. | [optional] 
+ **nome_atendente** | **String**| Apresenta o nome do Atendente que registrou o Atendimento. | [optional] 
+ **data_atendimento** | **String**| Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
+ **data_agendamento** | **String**| Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
+ **data_hora_inicio_atendimento** | **String**| Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
+ **data_hora_fim_atendimento** | **String**| Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
+ **flag_fila_fraude** | **Integer**| Flag fila fraude | [optional] 
+
+
+### Return type
+
+[**AtendimentoClienteResponse**](AtendimentoClienteResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
 # **salvar_using_post10**
-> Telefone salvar_using_post10(opts)
+> TelefoneResponse salvar_using_post10(opts)
 
 Realiza o cadastro de um novo Telefone
 
@@ -2216,7 +2395,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Telefone**](Telefone.md)
+[**TelefoneResponse**](TelefoneResponse.md)
 
 ### Authorization
 
@@ -2231,7 +2410,7 @@ No authorization required
 
 
 # **salvar_using_post4**
-> Endereco salvar_using_post4(opts)
+> EnderecoResponse salvar_using_post4(opts)
 
 Realiza o cadastro de um novo Endere\u00C3\u00A7o
 
@@ -2287,7 +2466,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Endereco**](Endereco.md)
+[**EnderecoResponse**](EnderecoResponse.md)
 
 ### Authorization
 
@@ -2371,7 +2550,7 @@ No authorization required
 
 
 # **salvar_using_post8**
-> Pessoa salvar_using_post8(nome, tipo, opts)
+> PessoaResponse salvar_using_post8(nome, tipo, opts)
 
 Realiza o cadastro de um nova Pessoa
 
@@ -2427,7 +2606,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Pessoa**](Pessoa.md)
+[**PessoaResponse**](PessoaResponse.md)
 
 ### Authorization
 

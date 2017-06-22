@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **atualizar_using_put**
-> AplicacaoMobile atualizar_using_put(id, update)
+> AplicacaoMobileResponse atualizar_using_put(id, update)
 
 Atualiza Aplicacao Mobile
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AplicacaoMobile**](AplicacaoMobile.md)
+[**AplicacaoMobileResponse**](AplicacaoMobileResponse.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ No authorization required
 
 
 # **listar_using_get**
-> PageAplicacoesMobile listar_using_get(opts)
+> PageAplicacaoMobileResponse listar_using_get(opts)
 
 Lista os aplicacoes mobile cadastradas
 
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageAplicacoesMobile**](PageAplicacoesMobile.md)
+[**PageAplicacaoMobileResponse**](PageAplicacaoMobileResponse.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ No authorization required
 
 
 # **salvar_using_post**
-> AplicacaoMobile salvar_using_post(persist)
+> AplicacaoMobileResponse salvar_using_post(persist)
 
 Cadastra Aplicacao Mobile
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AplicacaoMobile**](AplicacaoMobile.md)
+[**AplicacaoMobileResponse**](AplicacaoMobileResponse.md)
 
 ### Authorization
 

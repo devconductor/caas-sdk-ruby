@@ -37,7 +37,7 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Aplicacao (id).
     # @param update update
     # @param [Hash] opts the optional parameters
-    # @return [AplicacaoMobile]
+    # @return [AplicacaoMobileResponse]
     def atualizar_using_put(id, update, opts = {})
       data, _status_code, _headers = atualizar_using_put_with_http_info(id, update, opts)
       return data
@@ -48,7 +48,7 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Aplicacao (id).
     # @param update update
     # @param [Hash] opts the optional parameters
-    # @return [Array<(AplicacaoMobile, Fixnum, Hash)>] AplicacaoMobile data, response status code and response headers
+    # @return [Array<(AplicacaoMobileResponse, Fixnum, Hash)>] AplicacaoMobileResponse data, response status code and response headers
     def atualizar_using_put_with_http_info(id, update, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AplicacoesMobileApi.atualizar_using_put ..."
@@ -100,7 +100,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'AplicacaoMobile')
+        :return_type => 'AplicacaoMobileResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: AplicacoesMobileApi#atualizar_using_put\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -115,7 +115,7 @@ module Pier
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :id Identificador da Aplicacao Mobile
     # @option opts [Integer] :id_plataforma_mobile Identificador da Plataforma Mobile
-    # @return [PageAplicacoesMobile]
+    # @return [PageAplicacaoMobileResponse]
     def listar_using_get(opts = {})
       data, _status_code, _headers = listar_using_get_with_http_info(opts)
       return data
@@ -128,7 +128,7 @@ module Pier
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :id Identificador da Aplicacao Mobile
     # @option opts [Integer] :id_plataforma_mobile Identificador da Plataforma Mobile
-    # @return [Array<(PageAplicacoesMobile, Fixnum, Hash)>] PageAplicacoesMobile data, response status code and response headers
+    # @return [Array<(PageAplicacaoMobileResponse, Fixnum, Hash)>] PageAplicacaoMobileResponse data, response status code and response headers
     def listar_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AplicacoesMobileApi.listar_using_get ..."
@@ -192,7 +192,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PageAplicacoesMobile')
+        :return_type => 'PageAplicacaoMobileResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: AplicacoesMobileApi#listar_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -204,7 +204,7 @@ module Pier
     # Esse recurso permite cadastrar aplicacoes mobile.
     # @param persist persist
     # @param [Hash] opts the optional parameters
-    # @return [AplicacaoMobile]
+    # @return [AplicacaoMobileResponse]
     def salvar_using_post(persist, opts = {})
       data, _status_code, _headers = salvar_using_post_with_http_info(persist, opts)
       return data
@@ -214,7 +214,7 @@ module Pier
     # Esse recurso permite cadastrar aplicacoes mobile.
     # @param persist persist
     # @param [Hash] opts the optional parameters
-    # @return [Array<(AplicacaoMobile, Fixnum, Hash)>] AplicacaoMobile data, response status code and response headers
+    # @return [Array<(AplicacaoMobileResponse, Fixnum, Hash)>] AplicacaoMobileResponse data, response status code and response headers
     def salvar_using_post_with_http_info(persist, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AplicacoesMobileApi.salvar_using_post ..."
@@ -258,7 +258,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'AplicacaoMobile')
+        :return_type => 'AplicacaoMobileResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: AplicacoesMobileApi#salvar_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

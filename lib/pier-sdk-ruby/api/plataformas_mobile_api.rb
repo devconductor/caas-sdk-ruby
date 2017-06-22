@@ -37,7 +37,7 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
     # @param update update
     # @param [Hash] opts the optional parameters
-    # @return [PlataformaMobile]
+    # @return [PlataformaMobileResponse]
     def atualizar_using_put1(id, update, opts = {})
       data, _status_code, _headers = atualizar_using_put1_with_http_info(id, update, opts)
       return data
@@ -48,7 +48,7 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
     # @param update update
     # @param [Hash] opts the optional parameters
-    # @return [Array<(PlataformaMobile, Fixnum, Hash)>] PlataformaMobile data, response status code and response headers
+    # @return [Array<(PlataformaMobileResponse, Fixnum, Hash)>] PlataformaMobileResponse data, response status code and response headers
     def atualizar_using_put1_with_http_info(id, update, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: PlataformasMobileApi.atualizar_using_put1 ..."
@@ -100,7 +100,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PlataformaMobile')
+        :return_type => 'PlataformaMobileResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: PlataformasMobileApi#atualizar_using_put1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -114,9 +114,9 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :nome Nome da Plataforma Mobile
-    # @return [PagePlataformasMobile]
-    def listar_using_get15(opts = {})
-      data, _status_code, _headers = listar_using_get15_with_http_info(opts)
+    # @return [PagePlataformaMobileResponse]
+    def listar_using_get16(opts = {})
+      data, _status_code, _headers = listar_using_get16_with_http_info(opts)
       return data
     end
 
@@ -126,10 +126,10 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :nome Nome da Plataforma Mobile
-    # @return [Array<(PagePlataformasMobile, Fixnum, Hash)>] PagePlataformasMobile data, response status code and response headers
-    def listar_using_get15_with_http_info(opts = {})
+    # @return [Array<(PagePlataformaMobileResponse, Fixnum, Hash)>] PagePlataformaMobileResponse data, response status code and response headers
+    def listar_using_get16_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PlataformasMobileApi.listar_using_get15 ..."
+        @api_client.config.logger.debug "Calling API: PlataformasMobileApi.listar_using_get16 ..."
       end
       
       
@@ -183,9 +183,9 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PagePlataformasMobile')
+        :return_type => 'PagePlataformaMobileResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PlataformasMobileApi#listar_using_get15\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: PlataformasMobileApi#listar_using_get16\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -195,7 +195,7 @@ module Pier
     # Esse recurso permite cadastrar plataformas mobile.
     # @param persist persist
     # @param [Hash] opts the optional parameters
-    # @return [PlataformaMobile]
+    # @return [PlataformaMobileResponse]
     def salvar_using_post9(persist, opts = {})
       data, _status_code, _headers = salvar_using_post9_with_http_info(persist, opts)
       return data
@@ -205,7 +205,7 @@ module Pier
     # Esse recurso permite cadastrar plataformas mobile.
     # @param persist persist
     # @param [Hash] opts the optional parameters
-    # @return [Array<(PlataformaMobile, Fixnum, Hash)>] PlataformaMobile data, response status code and response headers
+    # @return [Array<(PlataformaMobileResponse, Fixnum, Hash)>] PlataformaMobileResponse data, response status code and response headers
     def salvar_using_post9_with_http_info(persist, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: PlataformasMobileApi.salvar_using_post9 ..."
@@ -249,7 +249,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PlataformaMobile')
+        :return_type => 'PlataformaMobileResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: PlataformasMobileApi#salvar_using_post9\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

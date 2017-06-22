@@ -35,8 +35,8 @@ module Pier
     # Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
     # Metodo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o.
     # @param id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.
-    # @param quantidade_parcelas Quantidade de parcelas para serem antecipadas (quantidadeParcelas).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
+    # @param quantidade_parcelas Quantidade de parcelas para serem antecipadas.
     # @param [Hash] opts the optional parameters
     # @return [AntecipacaoResponse]
     def efetivar_antecipacao_using_post(id_conta, id, quantidade_parcelas, opts = {})
@@ -47,8 +47,8 @@ module Pier
     # Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
     # Metodo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o.
     # @param id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.
-    # @param quantidade_parcelas Quantidade de parcelas para serem antecipadas (quantidadeParcelas).
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
+    # @param quantidade_parcelas Quantidade de parcelas para serem antecipadas.
     # @param [Hash] opts the optional parameters
     # @return [Array<(AntecipacaoResponse, Fixnum, Hash)>] AntecipacaoResponse data, response status code and response headers
     def efetivar_antecipacao_using_post_with_http_info(id_conta, id, quantidade_parcelas, opts = {})
@@ -129,10 +129,10 @@ module Pier
     # @option opts [Integer] :id_compra C\u00C3\u00B3digo identificador da Compra.
     # @option opts [BOOLEAN] :parcelada Indica se a compra \u00C3\u00A9 parcelada.
     # @option opts [BOOLEAN] :juros Indica se a compra \u00C3\u00A9 com ou sem juros.
-    # @option opts [String] :tipo_transacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
-    # @return [PageCompras]
-    def listar_using_get5(id_conta, opts = {})
-      data, _status_code, _headers = listar_using_get5_with_http_info(id_conta, opts)
+    # @option opts [String] :tipo_origem_transacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
+    # @return [PageCompraResponse]
+    def listar_using_get6(id_conta, opts = {})
+      data, _status_code, _headers = listar_using_get6_with_http_info(id_conta, opts)
       return data
     end
 
@@ -145,16 +145,16 @@ module Pier
     # @option opts [Integer] :id_compra C\u00C3\u00B3digo identificador da Compra.
     # @option opts [BOOLEAN] :parcelada Indica se a compra \u00C3\u00A9 parcelada.
     # @option opts [BOOLEAN] :juros Indica se a compra \u00C3\u00A9 com ou sem juros.
-    # @option opts [String] :tipo_transacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
-    # @return [Array<(PageCompras, Fixnum, Hash)>] PageCompras data, response status code and response headers
-    def listar_using_get5_with_http_info(id_conta, opts = {})
+    # @option opts [String] :tipo_origem_transacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
+    # @return [Array<(PageCompraResponse, Fixnum, Hash)>] PageCompraResponse data, response status code and response headers
+    def listar_using_get6_with_http_info(id_conta, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CompraApi.listar_using_get5 ..."
+        @api_client.config.logger.debug "Calling API: CompraApi.listar_using_get6 ..."
       end
       
       
       # verify the required parameter 'id_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta' when calling CompraApi.listar_using_get5" if id_conta.nil?
+      fail ArgumentError, "Missing the required parameter 'id_conta' when calling CompraApi.listar_using_get6" if id_conta.nil?
       
       
       
@@ -193,8 +193,8 @@ module Pier
       
       
       
-      if opts[:'tipo_transacao'] && !['ON_US', 'OFF_US'].include?(opts[:'tipo_transacao'])
-        fail ArgumentError, 'invalid value for "tipo_transacao", must be one of ON_US, OFF_US'
+      if opts[:'tipo_origem_transacao'] && !['ON_US', 'OFF_US'].include?(opts[:'tipo_origem_transacao'])
+        fail ArgumentError, 'invalid value for "tipo_origem_transacao", must be one of ON_US, OFF_US'
       end
       
       
@@ -211,7 +211,7 @@ module Pier
       query_params[:'idCompra'] = opts[:'id_compra'] if opts[:'id_compra']
       query_params[:'parcelada'] = opts[:'parcelada'] if opts[:'parcelada']
       query_params[:'juros'] = opts[:'juros'] if opts[:'juros']
-      query_params[:'tipoTransacao'] = opts[:'tipo_transacao'] if opts[:'tipo_transacao']
+      query_params[:'tipoOrigemTransacao'] = opts[:'tipo_origem_transacao'] if opts[:'tipo_origem_transacao']
 
       # header parameters
       header_params = {}
@@ -237,18 +237,18 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PageCompras')
+        :return_type => 'PageCompraResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CompraApi#listar_using_get5\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CompraApi#listar_using_get6\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
 
     # Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
-    # Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de uma compra, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
-    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.
+    # Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
+    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
     # @param [Hash] opts the optional parameters
     # @return [AntecipacaoSimuladaResponse]
     def simular_antecipacao_using_get(id_conta, id, opts = {})
@@ -257,9 +257,9 @@ module Pier
     end
 
     # Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
-    # Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de uma compra, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
-    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.
+    # Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
+    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
     # @param [Hash] opts the optional parameters
     # @return [Array<(AntecipacaoSimuladaResponse, Fixnum, Hash)>] AntecipacaoSimuladaResponse data, response status code and response headers
     def simular_antecipacao_using_get_with_http_info(id_conta, id, opts = {})

@@ -6,14 +6,14 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_using_put10**](WebhooksApi.md#alterar_using_put10) | **PUT** /api/webhooks/{id} | Alterar Webhook
 [**consultar_using_get26**](WebhooksApi.md#consultar_using_get26) | **GET** /api/webhooks/{id} | Consultar Webhook
-[**listar_using_get30**](WebhooksApi.md#listar_using_get30) | **GET** /api/webhooks | Lista os Webhooks
+[**listar_using_get31**](WebhooksApi.md#listar_using_get31) | **GET** /api/webhooks | Lista os Webhooks
 [**salvar_using_post14**](WebhooksApi.md#salvar_using_post14) | **POST** /api/webhooks | Salvar Webhook
 
 
 
 
 # **alterar_using_put10**
-> WebHook alterar_using_put10(id, tipo_evento, url)
+> WebHookResponse alterar_using_put10(id, tipo_evento, url)
 
 Alterar Webhook
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WebHook**](WebHook.md)
+[**WebHookResponse**](WebHookResponse.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ No authorization required
 
 
 # **consultar_using_get26**
-> WebHook consultar_using_get26(id)
+> WebHookResponse consultar_using_get26(id)
 
 Consultar Webhook
 
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WebHook**](WebHook.md)
+[**WebHookResponse**](WebHookResponse.md)
 
 ### Authorization
 
@@ -118,8 +118,8 @@ No authorization required
 
 
 
-# **listar_using_get30**
-> PageWebHooks listar_using_get30(opts)
+# **listar_using_get31**
+> PageWebHookResponse listar_using_get31(opts)
 
 Lista os Webhooks
 
@@ -144,10 +144,10 @@ opts = {
 
 begin
   #Lista os Webhooks
-  result = api_instance.listar_using_get30(opts)
+  result = api_instance.listar_using_get31(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling WebhooksApi->listar_using_get30: #{e}"
+  puts "Exception when calling WebhooksApi->listar_using_get31: #{e}"
 end
 ```
 
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageWebHooks**](PageWebHooks.md)
+[**PageWebHookResponse**](PageWebHookResponse.md)
 
 ### Authorization
 
@@ -180,7 +180,7 @@ No authorization required
 
 
 # **salvar_using_post14**
-> WebHook salvar_using_post14(tipo_evento, url)
+> WebHookResponse salvar_using_post14(tipo_evento, url)
 
 Salvar Webhook
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WebHook**](WebHook.md)
+[**WebHookResponse**](WebHookResponse.md)
 
 ### Authorization
 

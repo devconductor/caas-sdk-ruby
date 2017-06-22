@@ -48,7 +48,7 @@ describe 'JobsApi' do
   # Este recurso adiciona o job ao agendador de tarefas.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
   # @param [Hash] opts the optional parameters
-  # @return [Job]
+  # @return [JobResponse]
   describe 'ativar_job_using_post test' do
     it "should work" do
       # assertion here
@@ -68,7 +68,7 @@ describe 'JobsApi' do
   # @param cron Cron do Job.
   # @param groovy groovy
   # @param [Hash] opts the optional parameters
-  # @return [Job]
+  # @return [JobResponse]
   describe 'atualizar_using_put test' do
     it "should work" do
       # assertion here
@@ -85,7 +85,7 @@ describe 'JobsApi' do
   # Este recurso retira o job do agendador de tarefas.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
   # @param [Hash] opts the optional parameters
-  # @return [Job]
+  # @return [JobResponse]
   describe 'desativar_job_using_post test' do
     it "should work" do
       # assertion here
@@ -97,7 +97,7 @@ describe 'JobsApi' do
   end
 
 
-  # unit tests for listar_using_get11
+  # unit tests for listar_using_get12
   # Listar Jobs
   # Este recurso permite que sejam listados os jobs existentes na base do PIER.
   # @param [Hash] opts the optional parameters
@@ -107,8 +107,8 @@ describe 'JobsApi' do
   # @option opts [String] :status Status do Job
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @return [PageJob]
-  describe 'listar_using_get11 test' do
+  # @return [PageJobResponse]
+  describe 'listar_using_get12 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -126,7 +126,7 @@ describe 'JobsApi' do
   # @param cron Cron do Job.
   # @param groovy groovy
   # @param [Hash] opts the optional parameters
-  # @return [Job]
+  # @return [JobResponse]
   describe 'salvar_using_post5 test' do
     it "should work" do
       # assertion here

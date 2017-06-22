@@ -48,7 +48,7 @@ describe 'StatusParametrosApi' do
   # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
   # @param [Hash] opts the optional parameters
-  # @return [EstagioCartao]
+  # @return [EstagioCartaoResponse]
   describe 'consultar_estagio_cartao_using_get test' do
     it "should work" do
       # assertion here
@@ -65,7 +65,7 @@ describe 'StatusParametrosApi' do
   # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
   # @param [Hash] opts the optional parameters
-  # @return [StatusCartao]
+  # @return [StatusCartaoResponse]
   describe 'consultar_status_cartao_using_get test' do
     it "should work" do
       # assertion here
@@ -82,7 +82,7 @@ describe 'StatusParametrosApi' do
   # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
   # @param [Hash] opts the optional parameters
-  # @return [StatusConta]
+  # @return [StatusContaResponse]
   describe 'consultar_using_get13 test' do
     it "should work" do
       # assertion here
@@ -99,7 +99,7 @@ describe 'StatusParametrosApi' do
   # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
   # @param [Hash] opts the optional parameters
-  # @return [StatusImpressao]
+  # @return [StatusImpressaoResponse]
   describe 'consultar_using_get14 test' do
     it "should work" do
       # assertion here
@@ -119,7 +119,7 @@ describe 'StatusParametrosApi' do
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
   # @option opts [String] :nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
-  # @return [PageEstagiosCartoes]
+  # @return [PageEstagioCartaoResponse]
   describe 'listar_estagios_cartoes_using_get test' do
     it "should work" do
       # assertion here
@@ -145,7 +145,8 @@ describe 'StatusParametrosApi' do
   # @option opts [Integer] :id_status_destino_conta Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.
   # @option opts [Integer] :flag_cobra_tarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
   # @option opts [Integer] :flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
-  # @return [PageStatusCartoes]
+  # @option opts [Integer] :flag_permite_desbloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo.
+  # @return [PageStatusCartaoResponse]
   describe 'listar_status_cartoes_using_get test' do
     it "should work" do
       # assertion here
@@ -157,7 +158,7 @@ describe 'StatusParametrosApi' do
   end
 
 
-  # unit tests for listar_using_get19
+  # unit tests for listar_using_get20
   # Lista os Status Contas cadastrados para o Emissor
   # Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -168,8 +169,10 @@ describe 'StatusParametrosApi' do
   # @option opts [Integer] :flag_altera_limite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
   # @option opts [String] :mensagem_consulta_negada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
   # @option opts [Integer] :flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
-  # @return [PageStatusContas]
-  describe 'listar_using_get19 test' do
+  # @option opts [Integer] :flag_faz_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo.
+  # @option opts [Integer] :flag_recebe_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo.
+  # @return [PageStatusContaResponse]
+  describe 'listar_using_get20 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -180,7 +183,7 @@ describe 'StatusParametrosApi' do
   end
 
 
-  # unit tests for listar_using_get20
+  # unit tests for listar_using_get21
   # Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
   # Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
   # @param [Hash] opts the optional parameters
@@ -188,8 +191,8 @@ describe 'StatusParametrosApi' do
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
   # @option opts [String] :nome Nome do status impress\u00C3\u00A3o
-  # @return [PageStatusImpressao]
-  describe 'listar_using_get20 test' do
+  # @return [PageStatusImpressaoResponse]
+  describe 'listar_using_get21 test' do
     it "should work" do
       # assertion here
       # should be_a()

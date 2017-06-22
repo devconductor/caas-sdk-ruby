@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **atualizar_sms_using_post**
-> SMS atualizar_sms_using_post(opts)
+> NotificacaoSMSResponse atualizar_sms_using_post(opts)
 
 Atualizar SMS
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SMS**](SMS.md)
+[**NotificacaoSMSResponse**](NotificacaoSMSResponse.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ No authorization required
 
 
 # **listar_push_using_get**
-> PagePush listar_push_using_get(opts)
+> PagePushResponse listar_push_using_get(opts)
 
 Listar Push
 
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PagePush**](PagePush.md)
+[**PagePushResponse**](PagePushResponse.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ No authorization required
 
 
 # **listar_sms_using_get**
-> PageSMS listar_sms_using_get(opts)
+> PageSMSResponse listar_sms_using_get(opts)
 
 Listar SMS
 
@@ -189,7 +189,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageSMS**](PageSMS.md)
+[**PageSMSResponse**](PageSMSResponse.md)
 
 ### Authorization
 
@@ -204,7 +204,7 @@ No authorization required
 
 
 # **responder_sms_using_post**
-> SMS responder_sms_using_post(opts)
+> NotificacaoSMSResponse responder_sms_using_post(opts)
 
 Responder SMS
 
@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SMS**](SMS.md)
+[**NotificacaoSMSResponse**](NotificacaoSMSResponse.md)
 
 ### Authorization
 
@@ -259,7 +259,7 @@ No authorization required
 
 
 # **salvar_push_fcm_using_post**
-> NotificacaoSMSResponse salvar_push_fcm_using_post(push_persists)
+> NotificacaoResponse salvar_push_fcm_using_post(push_persists)
 
 Enviar Push FCM
 
@@ -294,7 +294,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NotificacaoSMSResponse**](NotificacaoSMSResponse.md)
+[**NotificacaoResponse**](NotificacaoResponse.md)
 
 ### Authorization
 
@@ -309,7 +309,7 @@ No authorization required
 
 
 # **salvar_push_gcm_using_post**
-> NotificacaoSMSResponse salvar_push_gcm_using_post(push_persists)
+> NotificacaoResponse salvar_push_gcm_using_post(push_persists)
 
 Enviar Push GCM
 
@@ -344,7 +344,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NotificacaoSMSResponse**](NotificacaoSMSResponse.md)
+[**NotificacaoResponse**](NotificacaoResponse.md)
 
 ### Authorization
 
@@ -359,7 +359,7 @@ No authorization required
 
 
 # **salvar_push_using_post**
-> NotificacaoSMSResponse salvar_push_using_post(push_persists)
+> NotificacaoResponse salvar_push_using_post(push_persists)
 
 Enviar Push APNS
 
@@ -394,7 +394,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NotificacaoSMSResponse**](NotificacaoSMSResponse.md)
+[**NotificacaoResponse**](NotificacaoResponse.md)
 
 ### Authorization
 
@@ -409,7 +409,7 @@ No authorization required
 
 
 # **salvar_sms_using_post**
-> NotificacaoSMSResponse salvar_sms_using_post(lista_sms)
+> NotificacaoResponse salvar_sms_using_post(lista_sms)
 
 Enviar SMS
 
@@ -444,7 +444,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NotificacaoSMSResponse**](NotificacaoSMSResponse.md)
+[**NotificacaoResponse**](NotificacaoResponse.md)
 
 ### Authorization
 

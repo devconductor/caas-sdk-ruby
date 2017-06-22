@@ -67,7 +67,7 @@ describe 'CartaoApi' do
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
   # @param id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).
   # @param [Hash] opts the optional parameters
-  # @return [HistoricoImpressaoCartao]
+  # @return [HistoricoImpressaoCartaoResponse]
   describe 'alterar_status_impressao_using_put test' do
     it "should work" do
       # assertion here
@@ -85,7 +85,7 @@ describe 'CartaoApi' do
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
   # @param id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).
   # @param [Hash] opts the optional parameters
-  # @return [Cartao]
+  # @return [CartaoResponse]
   describe 'atribuir_pessoa_using_put test' do
     it "should work" do
       # assertion here
@@ -104,7 +104,7 @@ describe 'CartaoApi' do
   # @param id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.
   # @param observacao Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.
   # @param [Hash] opts the optional parameters
-  # @return [Cartao]
+  # @return [CartaoResponse]
   describe 'bloquear_using_put test' do
     it "should work" do
       # assertion here
@@ -139,7 +139,7 @@ describe 'CartaoApi' do
   # Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
   # @param id id
   # @param [Hash] opts the optional parameters
-  # @return [DadosCarto]
+  # @return [DadosCartaoResponse]
   describe 'consultar_dados_reais_cartao_using_get test' do
     it "should work" do
       # assertion here
@@ -156,7 +156,7 @@ describe 'CartaoApi' do
   # Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
   # @param [Hash] opts the optional parameters
-  # @return [LimiteDisponibilidade]
+  # @return [LimiteDisponibilidadeResponse]
   describe 'consultar_limite_disponibilidade_using_get test' do
     it "should work" do
       # assertion here
@@ -173,7 +173,7 @@ describe 'CartaoApi' do
   # Este m\u00C3\u00A9todo permite consultar os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor atrav\u00C3\u00A9s do id do lote.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id)
   # @param [Hash] opts the optional parameters
-  # @return [LoteCartoesPrePagos]
+  # @return [LoteCartoesPrePagosResponse]
   describe 'consultar_lotes_cartoes_pre_pagos_using_get test' do
     it "should work" do
       # assertion here
@@ -190,7 +190,7 @@ describe 'CartaoApi' do
   # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es do Portador de um determinado Cart\u00C3\u00A3o a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
   # @param [Hash] opts the optional parameters
-  # @return [Portador]
+  # @return [PortadorResponse]
   describe 'consultar_portador_using_get test' do
     it "should work" do
       # assertion here
@@ -207,7 +207,7 @@ describe 'CartaoApi' do
   # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
   # @param [Hash] opts the optional parameters
-  # @return [CartaoDetalhado]
+  # @return [CartaoDetalheResponse]
   describe 'consultar_using_get3 test' do
     it "should work" do
       # assertion here
@@ -224,7 +224,7 @@ describe 'CartaoApi' do
   # Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
   # @param [Hash] opts the optional parameters
-  # @return [Cartao]
+  # @return [CartaoResponse]
   describe 'desbloquear_senha_incorreta_using_post test' do
     it "should work" do
       # assertion here
@@ -241,7 +241,7 @@ describe 'CartaoApi' do
   # Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
   # @param [Hash] opts the optional parameters
-  # @return [Cartao]
+  # @return [CartaoResponse]
   describe 'desbloquear_using_put test' do
     it "should work" do
       # assertion here
@@ -263,7 +263,7 @@ describe 'CartaoApi' do
   # @option opts [Integer] :id_imagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id).
   # @option opts [Integer] :id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
   # @option opts [Integer] :quantidade_cartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
-  # @return [LoteCartoesPrePagos]
+  # @return [LoteCartoesPrePagosResponse]
   describe 'gerar_lotes_cartoes_pre_pagos_using_post test' do
     it "should work" do
       # assertion here
@@ -280,7 +280,7 @@ describe 'CartaoApi' do
   # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00C3\u00A7\u00C3\u00A3o de uma nova via de Cart\u00C3\u00A3o que ser\u00C3\u00A1 encaminhando para impress\u00C3\u00A3o e postagem de acordo com os fluxos padr\u00C3\u00B5es j\u00C3\u00A1 definidos pelo emissor. Para isso, \u00C3\u00A9 preciso que o cliente j\u00C3\u00A1 possua um cart\u00C3\u00A3o gerado e informar o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o deste (idCartao) para que ele possa utilizar esta opera\u00C3\u00A7\u00C3\u00A3o. Assim, esta funcionalidade se aplica apenas para a gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es f\u00C3\u00ADsicos.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
   # @param [Hash] opts the optional parameters
-  # @return [Cartao]
+  # @return [CartaoResponse]
   describe 'gerar_nova_via_using_post test' do
     it "should work" do
       # assertion here
@@ -319,7 +319,7 @@ describe 'CartaoApi' do
   end
 
 
-  # unit tests for listar_using_get4
+  # unit tests for listar_using_get5
   # Lista os Cart\u00C3\u00B5es gerados pelo Emissor
   # Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
   # @param [Hash] opts the optional parameters
@@ -343,8 +343,8 @@ describe 'CartaoApi' do
   # @option opts [Integer] :flag_provisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
   # @option opts [String] :codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
   # @option opts [Integer] :sequencial_cartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
-  # @return [PageCartoes]
-  describe 'listar_using_get4 test' do
+  # @return [PageCartaoResponse]
+  describe 'listar_using_get5 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -363,7 +363,7 @@ describe 'CartaoApi' do
   # @param data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
   # @param codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
   # @param [Hash] opts the optional parameters
-  # @return [ValidaCartao]
+  # @return [ValidaCartaoResponse]
   describe 'validar_dados_impressos_bandeirado_using_get test' do
     it "should work" do
       # assertion here
@@ -383,7 +383,7 @@ describe 'CartaoApi' do
   # @param data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
   # @param codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
   # @param [Hash] opts the optional parameters
-  # @return [ValidaCartao]
+  # @return [ValidaCartaoResponse]
   describe 'validar_dados_impressos_nao_bandeirado_using_get test' do
     it "should work" do
       # assertion here
@@ -401,7 +401,7 @@ describe 'CartaoApi' do
   # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
   # @param criptograma Criptograma do cart\u00C3\u00A3o no formato de55
   # @param [Hash] opts the optional parameters
-  # @return [ValidaCartao]
+  # @return [ValidaCartaoResponse]
   describe 'validar_de55_cartao_mastercard_using_get test' do
     it "should work" do
       # assertion here
@@ -419,7 +419,7 @@ describe 'CartaoApi' do
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
   # @param senha Senha para ser validada.
   # @param [Hash] opts the optional parameters
-  # @return [ValidaSenhaCartao]
+  # @return [ValidaSenhaCartaoResponse]
   describe 'validar_senha_using_get test' do
     it "should work" do
       # assertion here
@@ -438,7 +438,7 @@ describe 'CartaoApi' do
   # @param trilha1 Trilha 1 do cart\u00C3\u00A3o a ser validado
   # @param trilha2 Trilha 2 do cart\u00C3\u00A3o a ser validado
   # @param [Hash] opts the optional parameters
-  # @return [ValidaCartao]
+  # @return [ValidaCartaoResponse]
   describe 'validar_tarja_using_get test' do
     it "should work" do
       # assertion here

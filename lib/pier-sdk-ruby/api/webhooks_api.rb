@@ -38,7 +38,7 @@ module Pier
     # @param tipo_evento TipoEvento a ser chamado pelo WebHook
     # @param url URL que a ser consumida pelo WebHook
     # @param [Hash] opts the optional parameters
-    # @return [WebHook]
+    # @return [WebHookResponse]
     def alterar_using_put10(id, tipo_evento, url, opts = {})
       data, _status_code, _headers = alterar_using_put10_with_http_info(id, tipo_evento, url, opts)
       return data
@@ -50,7 +50,7 @@ module Pier
     # @param tipo_evento TipoEvento a ser chamado pelo WebHook
     # @param url URL que a ser consumida pelo WebHook
     # @param [Hash] opts the optional parameters
-    # @return [Array<(WebHook, Fixnum, Hash)>] WebHook data, response status code and response headers
+    # @return [Array<(WebHookResponse, Fixnum, Hash)>] WebHookResponse data, response status code and response headers
     def alterar_using_put10_with_http_info(id, tipo_evento, url, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: WebhooksApi.alterar_using_put10 ..."
@@ -117,7 +117,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'WebHook')
+        :return_type => 'WebHookResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: WebhooksApi#alterar_using_put10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -129,7 +129,7 @@ module Pier
     # Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
     # @param [Hash] opts the optional parameters
-    # @return [WebHook]
+    # @return [WebHookResponse]
     def consultar_using_get26(id, opts = {})
       data, _status_code, _headers = consultar_using_get26_with_http_info(id, opts)
       return data
@@ -139,7 +139,7 @@ module Pier
     # Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
     # @param [Hash] opts the optional parameters
-    # @return [Array<(WebHook, Fixnum, Hash)>] WebHook data, response status code and response headers
+    # @return [Array<(WebHookResponse, Fixnum, Hash)>] WebHookResponse data, response status code and response headers
     def consultar_using_get26_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: WebhooksApi.consultar_using_get26 ..."
@@ -183,7 +183,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'WebHook')
+        :return_type => 'WebHookResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: WebhooksApi#consultar_using_get26\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -200,9 +200,9 @@ module Pier
     # @option opts [String] :tipo_evento TipoEvento a ser chamado pelo WebHook
     # @option opts [String] :metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
     # @option opts [String] :url URL que a ser consumida pelo WebHook
-    # @return [PageWebHooks]
-    def listar_using_get30(opts = {})
-      data, _status_code, _headers = listar_using_get30_with_http_info(opts)
+    # @return [PageWebHookResponse]
+    def listar_using_get31(opts = {})
+      data, _status_code, _headers = listar_using_get31_with_http_info(opts)
       return data
     end
 
@@ -215,10 +215,10 @@ module Pier
     # @option opts [String] :tipo_evento TipoEvento a ser chamado pelo WebHook
     # @option opts [String] :metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
     # @option opts [String] :url URL que a ser consumida pelo WebHook
-    # @return [Array<(PageWebHooks, Fixnum, Hash)>] PageWebHooks data, response status code and response headers
-    def listar_using_get30_with_http_info(opts = {})
+    # @return [Array<(PageWebHookResponse, Fixnum, Hash)>] PageWebHookResponse data, response status code and response headers
+    def listar_using_get31_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WebhooksApi.listar_using_get30 ..."
+        @api_client.config.logger.debug "Calling API: WebhooksApi.listar_using_get31 ..."
       end
       
       
@@ -301,9 +301,9 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PageWebHooks')
+        :return_type => 'PageWebHookResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WebhooksApi#listar_using_get30\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: WebhooksApi#listar_using_get31\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -314,7 +314,7 @@ module Pier
     # @param tipo_evento TipoEvento a ser chamado pelo WebHook
     # @param url URL que a ser consumida pelo WebHook
     # @param [Hash] opts the optional parameters
-    # @return [WebHook]
+    # @return [WebHookResponse]
     def salvar_using_post14(tipo_evento, url, opts = {})
       data, _status_code, _headers = salvar_using_post14_with_http_info(tipo_evento, url, opts)
       return data
@@ -325,7 +325,7 @@ module Pier
     # @param tipo_evento TipoEvento a ser chamado pelo WebHook
     # @param url URL que a ser consumida pelo WebHook
     # @param [Hash] opts the optional parameters
-    # @return [Array<(WebHook, Fixnum, Hash)>] WebHook data, response status code and response headers
+    # @return [Array<(WebHookResponse, Fixnum, Hash)>] WebHookResponse data, response status code and response headers
     def salvar_using_post14_with_http_info(tipo_evento, url, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: WebhooksApi.salvar_using_post14 ..."
@@ -384,7 +384,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'WebHook')
+        :return_type => 'WebHookResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: WebhooksApi#salvar_using_post14\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

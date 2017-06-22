@@ -7,14 +7,14 @@ Method | HTTP request | Description
 [**ativar_job_using_post**](JobsApi.md#ativar_job_using_post) | **POST** /api/jobs/{id}/ativar-job | Ativar Job
 [**atualizar_using_put**](JobsApi.md#atualizar_using_put) | **PUT** /api/jobs/{id} | Atualizar Job
 [**desativar_job_using_post**](JobsApi.md#desativar_job_using_post) | **POST** /api/jobs/{id}/desativar-job | Desativar Job
-[**listar_using_get11**](JobsApi.md#listar_using_get11) | **GET** /api/jobs | Listar Jobs
+[**listar_using_get12**](JobsApi.md#listar_using_get12) | **GET** /api/jobs | Listar Jobs
 [**salvar_using_post5**](JobsApi.md#salvar_using_post5) | **POST** /api/jobs | Cadastrar Job
 
 
 
 
 # **ativar_job_using_post**
-> Job ativar_job_using_post(id)
+> JobResponse ativar_job_using_post(id)
 
 Ativar Job
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Job**](Job.md)
+[**JobResponse**](JobResponse.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ No authorization required
 
 
 # **atualizar_using_put**
-> Job atualizar_using_put(id, descricao, cron, groovy)
+> JobResponse atualizar_using_put(id, descricao, cron, groovy)
 
 Atualizar Job
 
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Job**](Job.md)
+[**JobResponse**](JobResponse.md)
 
 ### Authorization
 
@@ -123,7 +123,7 @@ No authorization required
 
 
 # **desativar_job_using_post**
-> Job desativar_job_using_post(id)
+> JobResponse desativar_job_using_post(id)
 
 Desativar Job
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Job**](Job.md)
+[**JobResponse**](JobResponse.md)
 
 ### Authorization
 
@@ -172,8 +172,8 @@ No authorization required
 
 
 
-# **listar_using_get11**
-> PageJob listar_using_get11(opts)
+# **listar_using_get12**
+> PageJobResponse listar_using_get12(opts)
 
 Listar Jobs
 
@@ -198,10 +198,10 @@ opts = {
 
 begin
   #Listar Jobs
-  result = api_instance.listar_using_get11(opts)
+  result = api_instance.listar_using_get12(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling JobsApi->listar_using_get11: #{e}"
+  puts "Exception when calling JobsApi->listar_using_get12: #{e}"
 end
 ```
 
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageJob**](PageJob.md)
+[**PageJobResponse**](PageJobResponse.md)
 
 ### Authorization
 
@@ -234,7 +234,7 @@ No authorization required
 
 
 # **salvar_using_post5**
-> Job salvar_using_post5(descricao, cron, groovy)
+> JobResponse salvar_using_post5(descricao, cron, groovy)
 
 Cadastrar Job
 
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Job**](Job.md)
+[**JobResponse**](JobResponse.md)
 
 ### Authorization
 

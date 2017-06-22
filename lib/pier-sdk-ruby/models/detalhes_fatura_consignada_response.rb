@@ -49,7 +49,7 @@ module Pier
         
         :'fatura_consignada_response' => :'FaturaConsignadaResponse',
         
-        :'transacoes' => :'Array<TransacoesCorrentes>'
+        :'transacoes' => :'Array<TransacoesCorrentesResponse>'
         
       }
     end

@@ -53,7 +53,7 @@ describe 'FAQApi' do
   # @option opts [String] :plataforma Plataforma em que a FAQ se encaixa.
   # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
   # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
-  # @return [FAQ]
+  # @return [FaqResponse]
   describe 'adicionar_using_post test' do
     it "should work" do
       # assertion here
@@ -76,7 +76,7 @@ describe 'FAQApi' do
   # @option opts [String] :plataforma Plataforma em que a FAQ se encaixa.
   # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
   # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
-  # @return [FAQ]
+  # @return [FaqResponse]
   describe 'alterar_using_put2 test' do
     it "should work" do
       # assertion here
@@ -93,7 +93,7 @@ describe 'FAQApi' do
   # Consulta os detalhes de uma determinada FAQ
   # @param id Id
   # @param [Hash] opts the optional parameters
-  # @return [FAQ]
+  # @return [FaqResponse]
   describe 'consultar_using_get7 test' do
     it "should work" do
       # assertion here
@@ -105,7 +105,7 @@ describe 'FAQApi' do
   end
 
 
-  # unit tests for listar_using_get10
+  # unit tests for listar_using_get11
   # Lista FAQs
   # Lista todas as FAQs
   # @param [Hash] opts the optional parameters
@@ -118,8 +118,8 @@ describe 'FAQApi' do
   # @option opts [String] :plataforma Plataforma em que a FAQ se encaixa.
   # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
   # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
-  # @return [PageFaqs]
-  describe 'listar_using_get10 test' do
+  # @return [PageFaqResponse]
+  describe 'listar_using_get11 test' do
     it "should work" do
       # assertion here
       # should be_a()

@@ -164,7 +164,7 @@ describe 'CompraResponse' do
   end
 
 
-  describe 'test attribute "tipo_transacao"' do
+  describe 'test attribute "tipo_origem_transacao"' do
     it 'should work' do
        # assertion here
        # should be_a()

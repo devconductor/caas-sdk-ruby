@@ -29,7 +29,7 @@ Name | Type | Description | Notes
 **cpf** | **String** | N\u00C3\u00BAmero do CPF da Pessoa portadora do Cart\u00C3\u00A3o, quando for do tipo Pessoa F\u00C3\u00ADsica | [optional] 
 **cnpj** | **String** | N\u00C3\u00BAmero do CNPJ da Pessoa portadora do Cart\u00C3\u00A3o, quanto for do tipo Pessoa Jur\u00C3\u00ADdica | [optional] 
 **email** | **String** | Endere\u00C3\u00A7o de email da Pessoa portadora do Cart\u00C3\u00A3o | [optional] 
-**tefefones** | [**Array&lt;Telefone&gt;**](Telefone.md) | Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o | [optional] 
+**tefefones** | [**Array&lt;TelefoneResponse&gt;**](TelefoneResponse.md) | Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o | [optional] 
 
 
 

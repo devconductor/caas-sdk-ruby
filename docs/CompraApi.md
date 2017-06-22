@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**efetivar_antecipacao_using_post**](CompraApi.md#efetivar_antecipacao_using_post) | **POST** /api/compras/{id}/efetivar-antecipacao | Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
-[**listar_using_get5**](CompraApi.md#listar_using_get5) | **GET** /api/compras | Listar compras
+[**listar_using_get6**](CompraApi.md#listar_using_get6) | **GET** /api/compras | Listar compras
 [**simular_antecipacao_using_get**](CompraApi.md#simular_antecipacao_using_get) | **GET** /api/compras/{id}/simular-antecipacao | Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
 
 
@@ -28,9 +28,9 @@ api_instance = Pier::CompraApi.new
 
 id_conta = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
 
-quantidade_parcelas = 789 # Integer | Quantidade de parcelas para serem antecipadas (quantidadeParcelas).
+quantidade_parcelas = 789 # Integer | Quantidade de parcelas para serem antecipadas.
 
 
 begin
@@ -47,8 +47,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_conta** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta. | 
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra. | 
- **quantidade_parcelas** | **Integer**| Quantidade de parcelas para serem antecipadas (quantidadeParcelas). | 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento. | 
+ **quantidade_parcelas** | **Integer**| Quantidade de parcelas para serem antecipadas. | 
 
 
 ### Return type
@@ -67,8 +67,8 @@ No authorization required
 
 
 
-# **listar_using_get5**
-> PageCompras listar_using_get5(id_conta, opts)
+# **listar_using_get6**
+> PageCompraResponse listar_using_get6(id_conta, opts)
 
 Listar compras
 
@@ -90,15 +90,15 @@ opts = {
   id_compra: 789, # Integer | C\u00C3\u00B3digo identificador da Compra.
   parcelada: true, # BOOLEAN | Indica se a compra \u00C3\u00A9 parcelada.
   juros: true, # BOOLEAN | Indica se a compra \u00C3\u00A9 com ou sem juros.
-  tipo_transacao: "tipo_transacao_example" # String | Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
+  tipo_origem_transacao: "tipo_origem_transacao_example" # String | Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
 }
 
 begin
   #Listar compras
-  result = api_instance.listar_using_get5(id_conta, opts)
+  result = api_instance.listar_using_get6(id_conta, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CompraApi->listar_using_get5: #{e}"
+  puts "Exception when calling CompraApi->listar_using_get6: #{e}"
 end
 ```
 
@@ -112,12 +112,12 @@ Name | Type | Description  | Notes
  **id_compra** | **Integer**| C\u00C3\u00B3digo identificador da Compra. | [optional] 
  **parcelada** | **BOOLEAN**| Indica se a compra \u00C3\u00A9 parcelada. | [optional] 
  **juros** | **BOOLEAN**| Indica se a compra \u00C3\u00A9 com ou sem juros. | [optional] 
- **tipo_transacao** | **String**| Indica se a compra \u00C3\u00A9 ON-US ou OFF-US | [optional] 
+ **tipo_origem_transacao** | **String**| Indica se a compra \u00C3\u00A9 ON-US ou OFF-US | [optional] 
 
 
 ### Return type
 
-[**PageCompras**](PageCompras.md)
+[**PageCompraResponse**](PageCompraResponse.md)
 
 ### Authorization
 
@@ -136,7 +136,7 @@ No authorization required
 
 Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
 
-Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de uma compra, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
+Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
 
 ### Example
 ```ruby
@@ -146,9 +146,9 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::CompraApi.new
 
-id_conta = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+id_conta = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
 
 
 begin
@@ -164,8 +164,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_conta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra. | 
+ **id_conta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta. | 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento. | 
 
 
 ### Return type

@@ -23,22 +23,97 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto Notifica\u00C3\u00A7\u00C3\u00A3o SMS
+  # Objeto SMS
   class NotificacaoSMSResponse
+    # C\u00C3\u00B3digo Identificador.
+    attr_accessor :id
+
+    # N\u00C3\u00BAmero sequencial \u00C3\u00BAnico.
+    attr_accessor :nsu
+
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id).
+    attr_accessor :id_emissor
+
+    # TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o
+    attr_accessor :tipo_evento
+
+    # Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+    attr_accessor :status
+
+    # Descri\u00C3\u00A7\u00C3\u00A3o do status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+    attr_accessor :descricao_status
+
+    # C\u00C3\u00B3digo identificado da pessoa
+    attr_accessor :id_pessoa
+
+    # C\u00C3\u00B3digo identificador da conta
+    attr_accessor :id_conta
+
+    # Apresenta o celular a ser eviado o SMS no formato 5588999999999 ou 5588999999999
+    attr_accessor :celular
+
+    # Apresenta a operadora do celular a ser eviado o SMS
+    attr_accessor :operadora
+
+    # Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado
+    attr_accessor :conteudo
+
+    # Apresenta o texto da resposta da notifica\u00C3\u00A7\u00C3\u00A3o que foi enviada
+    attr_accessor :resposta
+
+    # Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
+    attr_accessor :data_agendamento
+
+    # Quantidade de tentativas e envio da notifica\u00C3\u00A7\u00C3\u00A3o
+    attr_accessor :quantidade_tentativas_envio
+
+    # Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
+    attr_accessor :data_inclusao
+
+    # Apresenta a data e em que o Stattjus do registro foi modificado
+    attr_accessor :data_alteracao_status
+
     # N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
     attr_accessor :protocolo
-
-    # Mensagem de resposta da solicita\u00C3\u00A7\u00C3\u00B5es de envio
-    attr_accessor :mensagem
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'protocolo' => :'protocolo',
+        :'id' => :'id',
         
-        :'mensagem' => :'mensagem'
+        :'nsu' => :'nsu',
+        
+        :'id_emissor' => :'idEmissor',
+        
+        :'tipo_evento' => :'tipoEvento',
+        
+        :'status' => :'status',
+        
+        :'descricao_status' => :'descricaoStatus',
+        
+        :'id_pessoa' => :'idPessoa',
+        
+        :'id_conta' => :'idConta',
+        
+        :'celular' => :'celular',
+        
+        :'operadora' => :'operadora',
+        
+        :'conteudo' => :'conteudo',
+        
+        :'resposta' => :'resposta',
+        
+        :'data_agendamento' => :'dataAgendamento',
+        
+        :'quantidade_tentativas_envio' => :'quantidadeTentativasEnvio',
+        
+        :'data_inclusao' => :'dataInclusao',
+        
+        :'data_alteracao_status' => :'dataAlteracaoStatus',
+        
+        :'protocolo' => :'protocolo'
         
       }
     end
@@ -47,9 +122,39 @@ module Pier
     def self.swagger_types
       {
         
-        :'protocolo' => :'String',
+        :'id' => :'Integer',
         
-        :'mensagem' => :'String'
+        :'nsu' => :'Integer',
+        
+        :'id_emissor' => :'Integer',
+        
+        :'tipo_evento' => :'String',
+        
+        :'status' => :'String',
+        
+        :'descricao_status' => :'String',
+        
+        :'id_pessoa' => :'Integer',
+        
+        :'id_conta' => :'Integer',
+        
+        :'celular' => :'String',
+        
+        :'operadora' => :'String',
+        
+        :'conteudo' => :'String',
+        
+        :'resposta' => :'String',
+        
+        :'data_agendamento' => :'String',
+        
+        :'quantidade_tentativas_envio' => :'Integer',
+        
+        :'data_inclusao' => :'String',
+        
+        :'data_alteracao_status' => :'String',
+        
+        :'protocolo' => :'String'
         
       }
     end
@@ -63,19 +168,154 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'protocolo']
+      if attributes[:'id']
         
         
-        self.protocolo = attributes[:'protocolo']
+        self.id = attributes[:'id']
         
       
       end
 
       
-      if attributes[:'mensagem']
+      if attributes[:'nsu']
         
         
-        self.mensagem = attributes[:'mensagem']
+        self.nsu = attributes[:'nsu']
+        
+      
+      end
+
+      
+      if attributes[:'idEmissor']
+        
+        
+        self.id_emissor = attributes[:'idEmissor']
+        
+      
+      end
+
+      
+      if attributes[:'tipoEvento']
+        
+        
+        self.tipo_evento = attributes[:'tipoEvento']
+        
+      
+      end
+
+      
+      if attributes[:'status']
+        
+        
+        self.status = attributes[:'status']
+        
+      
+      end
+
+      
+      if attributes[:'descricaoStatus']
+        
+        
+        self.descricao_status = attributes[:'descricaoStatus']
+        
+      
+      end
+
+      
+      if attributes[:'idPessoa']
+        
+        
+        self.id_pessoa = attributes[:'idPessoa']
+        
+      
+      end
+
+      
+      if attributes[:'idConta']
+        
+        
+        self.id_conta = attributes[:'idConta']
+        
+      
+      end
+
+      
+      if attributes[:'celular']
+        
+        
+        self.celular = attributes[:'celular']
+        
+      
+      end
+
+      
+      if attributes[:'operadora']
+        
+        
+        self.operadora = attributes[:'operadora']
+        
+      
+      end
+
+      
+      if attributes[:'conteudo']
+        
+        
+        self.conteudo = attributes[:'conteudo']
+        
+      
+      end
+
+      
+      if attributes[:'resposta']
+        
+        
+        self.resposta = attributes[:'resposta']
+        
+      
+      end
+
+      
+      if attributes[:'dataAgendamento']
+        
+        
+        self.data_agendamento = attributes[:'dataAgendamento']
+        
+      
+      end
+
+      
+      if attributes[:'quantidadeTentativasEnvio']
+        
+        
+        self.quantidade_tentativas_envio = attributes[:'quantidadeTentativasEnvio']
+        
+      
+      end
+
+      
+      if attributes[:'dataInclusao']
+        
+        
+        self.data_inclusao = attributes[:'dataInclusao']
+        
+      
+      end
+
+      
+      if attributes[:'dataAlteracaoStatus']
+        
+        
+        self.data_alteracao_status = attributes[:'dataAlteracaoStatus']
+        
+      
+      end
+
+      
+      if attributes[:'protocolo']
+        
+        
+        self.protocolo = attributes[:'protocolo']
         
       
       end
@@ -104,8 +344,231 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      allowed_values = ["RISCO_FRAUDE", "OUTROS"]
+      if @tipo_evento && !allowed_values.include?(@tipo_evento)
+        return false
+      end
+      
+      
+      
+      
+      if @status.nil?
+        return false
+      end
+
+      
+      
+      allowed_values = ["PENDENTE", "ENCAMINHADO", "ENVIADO", "RESPONDIDO", "ERRO", "ERRO_RESPOSTA", "SUCESSO_RESPOSTA"]
+      if @status && !allowed_values.include?(@status)
+        return false
+      end
+      
+      
+      
+      
+      if @descricao_status.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @id_pessoa.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @id_conta.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @celular.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @operadora.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @conteudo.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @resposta.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @data_agendamento.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @quantidade_tentativas_envio.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @data_inclusao.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @data_alteracao_status.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] tipo_evento Object to be assigned
+    def tipo_evento=(tipo_evento)
+      allowed_values = ["RISCO_FRAUDE", "OUTROS"]
+      if tipo_evento && !allowed_values.include?(tipo_evento)
+        fail ArgumentError, "invalid value for 'tipo_evento', must be one of #{allowed_values}."
+      end
+      @tipo_evento = tipo_evento
+    end
+
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] status Object to be assigned
+    def status=(status)
+      allowed_values = ["PENDENTE", "ENCAMINHADO", "ENVIADO", "RESPONDIDO", "ERRO", "ERRO_RESPOSTA", "SUCESSO_RESPOSTA"]
+      if status && !allowed_values.include?(status)
+        fail ArgumentError, "invalid value for 'status', must be one of #{allowed_values}."
+      end
+      @status = status
+    end
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -122,8 +585,23 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          protocolo == o.protocolo &&
-          mensagem == o.mensagem
+          id == o.id &&
+          nsu == o.nsu &&
+          id_emissor == o.id_emissor &&
+          tipo_evento == o.tipo_evento &&
+          status == o.status &&
+          descricao_status == o.descricao_status &&
+          id_pessoa == o.id_pessoa &&
+          id_conta == o.id_conta &&
+          celular == o.celular &&
+          operadora == o.operadora &&
+          conteudo == o.conteudo &&
+          resposta == o.resposta &&
+          data_agendamento == o.data_agendamento &&
+          quantidade_tentativas_envio == o.quantidade_tentativas_envio &&
+          data_inclusao == o.data_inclusao &&
+          data_alteracao_status == o.data_alteracao_status &&
+          protocolo == o.protocolo
     end
 
     # @see the `==` method
@@ -135,7 +613,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [protocolo, mensagem].hash
+      [id, nsu, id_emissor, tipo_evento, status, descricao_status, id_pessoa, id_conta, celular, operadora, conteudo, resposta, data_agendamento, quantidade_tentativas_envio, data_inclusao, data_alteracao_status, protocolo].hash
     end
 
     # Builds the object from hash

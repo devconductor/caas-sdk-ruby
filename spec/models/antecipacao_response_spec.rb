@@ -98,7 +98,40 @@ describe 'AntecipacaoResponse' do
   end
 
 
-  describe 'test attribute "valor_parcelas"' do
+  describe 'test attribute "valor_parcela"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "valor_desconto_total"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "valor_total_com_desconto"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "taxa_desconto"' do
     it 'should work' do
        # assertion here
        # should be_a()

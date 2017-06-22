@@ -23,11 +23,8 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Antecipacao Simulada
+  # Representa\u00C3\u00A7\u00C3\u00A3o da resposta dos detalhes do recurso Antecipacao Simulada
   class AntecipacaoSimuladaDetalhesResponse
-    # C\u00C3\u00B3digo identificador do detalhe da simula\u00C3\u00A7\u00C3\u00A3o de antecipa\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :id_simulacao_detalhe
-
     # Quantidade de parcelas do plano de parcelamento simulado.
     attr_accessor :quantidade_parcelas
 
@@ -45,8 +42,6 @@ module Pier
     def self.attribute_map
       {
         
-        :'id_simulacao_detalhe' => :'idSimulacaoDetalhe',
-        
         :'quantidade_parcelas' => :'quantidadeParcelas',
         
         :'valor_parcelas' => :'valorParcelas',
@@ -61,8 +56,6 @@ module Pier
     # Attribute type mapping.
     def self.swagger_types
       {
-        
-        :'id_simulacao_detalhe' => :'Integer',
         
         :'quantidade_parcelas' => :'Integer',
         
@@ -82,15 +75,6 @@ module Pier
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
-
-      
-      if attributes[:'idSimulacaoDetalhe']
-        
-        
-        self.id_simulacao_detalhe = attributes[:'idSimulacaoDetalhe']
-        
-      
-      end
 
       
       if attributes[:'quantidadeParcelas']
@@ -160,17 +144,8 @@ module Pier
       
       
       
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -197,7 +172,6 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id_simulacao_detalhe == o.id_simulacao_detalhe &&
           quantidade_parcelas == o.quantidade_parcelas &&
           valor_parcelas == o.valor_parcelas &&
           valor_desconto == o.valor_desconto &&
@@ -213,7 +187,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_simulacao_detalhe, quantidade_parcelas, valor_parcelas, valor_desconto, valor_parcelas_desconto].hash
+      [quantidade_parcelas, valor_parcelas, valor_desconto, valor_parcelas_desconto].hash
     end
 
     # Builds the object from hash

@@ -29,7 +29,7 @@ module Pier
     attr_accessor :id_produto
 
     # Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON_US ou OFF_US).
-    attr_accessor :tipo_transacao
+    attr_accessor :tipo_origem_transacao
 
     # Descri\u00C3\u00A7\u00C3\u00A3o do Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
     attr_accessor :descricao
@@ -47,7 +47,7 @@ module Pier
         
         :'id_produto' => :'idProduto',
         
-        :'tipo_transacao' => :'tipoTransacao',
+        :'tipo_origem_transacao' => :'tipoOrigemTransacao',
         
         :'descricao' => :'descricao',
         
@@ -64,7 +64,7 @@ module Pier
         
         :'id_produto' => :'Integer',
         
-        :'tipo_transacao' => :'String',
+        :'tipo_origem_transacao' => :'String',
         
         :'descricao' => :'String',
         
@@ -93,10 +93,10 @@ module Pier
       end
 
       
-      if attributes[:'tipoTransacao']
+      if attributes[:'tipoOrigemTransacao']
         
         
-        self.tipo_transacao = attributes[:'tipoTransacao']
+        self.tipo_origem_transacao = attributes[:'tipoOrigemTransacao']
         
       
       end
@@ -154,14 +154,14 @@ module Pier
       
       
       
-      if @tipo_transacao.nil?
+      if @tipo_origem_transacao.nil?
         return false
       end
 
       
       
       allowed_values = ["ON_US", "OFF_US"]
-      if @tipo_transacao && !allowed_values.include?(@tipo_transacao)
+      if @tipo_origem_transacao && !allowed_values.include?(@tipo_origem_transacao)
         return false
       end
       
@@ -204,13 +204,13 @@ module Pier
     
     
     # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] tipo_transacao Object to be assigned
-    def tipo_transacao=(tipo_transacao)
+    # @param [Object] tipo_origem_transacao Object to be assigned
+    def tipo_origem_transacao=(tipo_origem_transacao)
       allowed_values = ["ON_US", "OFF_US"]
-      if tipo_transacao && !allowed_values.include?(tipo_transacao)
-        fail ArgumentError, "invalid value for 'tipo_transacao', must be one of #{allowed_values}."
+      if tipo_origem_transacao && !allowed_values.include?(tipo_origem_transacao)
+        fail ArgumentError, "invalid value for 'tipo_origem_transacao', must be one of #{allowed_values}."
       end
-      @tipo_transacao = tipo_transacao
+      @tipo_origem_transacao = tipo_origem_transacao
     end
 
     
@@ -237,7 +237,7 @@ module Pier
       return true if self.equal?(o)
       self.class == o.class &&
           id_produto == o.id_produto &&
-          tipo_transacao == o.tipo_transacao &&
+          tipo_origem_transacao == o.tipo_origem_transacao &&
           descricao == o.descricao &&
           valor_parametro == o.valor_parametro &&
           data_validade == o.data_validade
@@ -252,7 +252,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_produto, tipo_transacao, descricao, valor_parametro, data_validade].hash
+      [id_produto, tipo_origem_transacao, descricao, valor_parametro, data_validade].hash
     end
 
     # Builds the object from hash

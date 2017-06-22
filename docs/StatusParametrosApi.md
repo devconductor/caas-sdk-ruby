@@ -10,14 +10,14 @@ Method | HTTP request | Description
 [**consultar_using_get14**](StatusParametrosApi.md#consultar_using_get14) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 [**listar_estagios_cartoes_using_get**](StatusParametrosApi.md#listar_estagios_cartoes_using_get) | **GET** /api/estagios-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
 [**listar_status_cartoes_using_get**](StatusParametrosApi.md#listar_status_cartoes_using_get) | **GET** /api/status-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
-[**listar_using_get19**](StatusParametrosApi.md#listar_using_get19) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
-[**listar_using_get20**](StatusParametrosApi.md#listar_using_get20) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+[**listar_using_get20**](StatusParametrosApi.md#listar_using_get20) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
+[**listar_using_get21**](StatusParametrosApi.md#listar_using_get21) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
 
 
 
 # **consultar_estagio_cartao_using_get**
-> EstagioCartao consultar_estagio_cartao_using_get(id)
+> EstagioCartaoResponse consultar_estagio_cartao_using_get(id)
 
 Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EstagioCartao**](EstagioCartao.md)
+[**EstagioCartaoResponse**](EstagioCartaoResponse.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ No authorization required
 
 
 # **consultar_status_cartao_using_get**
-> StatusCartao consultar_status_cartao_using_get(id)
+> StatusCartaoResponse consultar_status_cartao_using_get(id)
 
 Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
 
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StatusCartao**](StatusCartao.md)
+[**StatusCartaoResponse**](StatusCartaoResponse.md)
 
 ### Authorization
 
@@ -117,7 +117,7 @@ No authorization required
 
 
 # **consultar_using_get13**
-> StatusConta consultar_using_get13(id)
+> StatusContaResponse consultar_using_get13(id)
 
 Apresenta os dados de um determinado Status Conta
 
@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StatusConta**](StatusConta.md)
+[**StatusContaResponse**](StatusContaResponse.md)
 
 ### Authorization
 
@@ -167,7 +167,7 @@ No authorization required
 
 
 # **consultar_using_get14**
-> StatusImpressao consultar_using_get14(id)
+> StatusImpressaoResponse consultar_using_get14(id)
 
 Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 
@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StatusImpressao**](StatusImpressao.md)
+[**StatusImpressaoResponse**](StatusImpressaoResponse.md)
 
 ### Authorization
 
@@ -217,7 +217,7 @@ No authorization required
 
 
 # **listar_estagios_cartoes_using_get**
-> PageEstagiosCartoes listar_estagios_cartoes_using_get(opts)
+> PageEstagioCartaoResponse listar_estagios_cartoes_using_get(opts)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
 
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageEstagiosCartoes**](PageEstagiosCartoes.md)
+[**PageEstagioCartaoResponse**](PageEstagioCartaoResponse.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ No authorization required
 
 
 # **listar_status_cartoes_using_get**
-> PageStatusCartoes listar_status_cartoes_using_get(opts)
+> PageStatusCartaoResponse listar_status_cartoes_using_get(opts)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
 
@@ -298,7 +298,8 @@ opts = {
   id_status_destino_desbloqueio: 789, # Integer | Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
   id_status_destino_conta: 789, # Integer | Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.
   flag_cobra_tarifa: 56, # Integer | Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
-  flag_permite_nova_via_cartao: 56 # Integer | Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
+  flag_permite_nova_via_cartao: 56, # Integer | Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
+  flag_permite_desbloqueio: 56 # Integer | Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo.
 }
 
 begin
@@ -324,11 +325,12 @@ Name | Type | Description  | Notes
  **id_status_destino_conta** | **Integer**| Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica. | [optional] 
  **flag_cobra_tarifa** | **Integer**| Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. | [optional] 
  **flag_permite_nova_via_cartao** | **Integer**| Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo. | [optional] 
+ **flag_permite_desbloqueio** | **Integer**| Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo. | [optional] 
 
 
 ### Return type
 
-[**PageStatusCartoes**](PageStatusCartoes.md)
+[**PageStatusCartaoResponse**](PageStatusCartaoResponse.md)
 
 ### Authorization
 
@@ -342,8 +344,8 @@ No authorization required
 
 
 
-# **listar_using_get19**
-> PageStatusContas listar_using_get19(opts)
+# **listar_using_get20**
+> PageStatusContaResponse listar_using_get20(opts)
 
 Lista os Status Contas cadastrados para o Emissor
 
@@ -364,15 +366,17 @@ opts = {
   nome: "nome_example", # String | Nome atribu\u00C3\u00ADdo ao Status da Conta.
   flag_altera_limite: 56, # Integer | Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
   mensagem_consulta_negada: "mensagem_consulta_negada_example", # String | Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
-  flag_permite_nova_via_cartao: 56 # Integer | Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+  flag_permite_nova_via_cartao: 56, # Integer | Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+  flag_faz_transferencia: 56, # Integer | Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo.
+  flag_recebe_transferencia: 56 # Integer | Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo.
 }
 
 begin
   #Lista os Status Contas cadastrados para o Emissor
-  result = api_instance.listar_using_get19(opts)
+  result = api_instance.listar_using_get20(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling StatusParametrosApi->listar_using_get19: #{e}"
+  puts "Exception when calling StatusParametrosApi->listar_using_get20: #{e}"
 end
 ```
 
@@ -387,11 +391,13 @@ Name | Type | Description  | Notes
  **flag_altera_limite** | **Integer**| Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. | [optional] 
  **mensagem_consulta_negada** | **String**| Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. | [optional] 
  **flag_permite_nova_via_cartao** | **Integer**| Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. | [optional] 
+ **flag_faz_transferencia** | **Integer**| Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo. | [optional] 
+ **flag_recebe_transferencia** | **Integer**| Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo. | [optional] 
 
 
 ### Return type
 
-[**PageStatusContas**](PageStatusContas.md)
+[**PageStatusContaResponse**](PageStatusContaResponse.md)
 
 ### Authorization
 
@@ -405,8 +411,8 @@ No authorization required
 
 
 
-# **listar_using_get20**
-> PageStatusImpressao listar_using_get20(opts)
+# **listar_using_get21**
+> PageStatusImpressaoResponse listar_using_get21(opts)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
@@ -429,10 +435,10 @@ opts = {
 
 begin
   #Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
-  result = api_instance.listar_using_get20(opts)
+  result = api_instance.listar_using_get21(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling StatusParametrosApi->listar_using_get20: #{e}"
+  puts "Exception when calling StatusParametrosApi->listar_using_get21: #{e}"
 end
 ```
 
@@ -448,7 +454,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageStatusImpressao**](PageStatusImpressao.md)
+[**PageStatusImpressaoResponse**](PageStatusImpressaoResponse.md)
 
 ### Authorization
 

@@ -33,14 +33,23 @@ module Pier
     # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da compra
     attr_accessor :id_compra
 
-    # Apresenta o numero total de parcelas da comprae
+    # Apresenta o numero total de parcelas da compra
     attr_accessor :quantidade_parcelas_total
 
     # Apresenta o numero de parcelas antecipadas
     attr_accessor :quantidade_parcelas_antecipadas
 
-    # Apresenta o valor das parcelas efetivadas
-    attr_accessor :valor_parcelas
+    # Apresenta o valor de cada parcela antecipadas
+    attr_accessor :valor_parcela
+
+    # Apresenta o valor total do desconto
+    attr_accessor :valor_desconto_total
+
+    # Apresenta o valor total com desconto
+    attr_accessor :valor_total_com_desconto
+
+    # Apresenta a taxa de desconto
+    attr_accessor :taxa_desconto
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -57,7 +66,13 @@ module Pier
         
         :'quantidade_parcelas_antecipadas' => :'quantidadeParcelasAntecipadas',
         
-        :'valor_parcelas' => :'valorParcelas'
+        :'valor_parcela' => :'valorParcela',
+        
+        :'valor_desconto_total' => :'valorDescontoTotal',
+        
+        :'valor_total_com_desconto' => :'valorTotalComDesconto',
+        
+        :'taxa_desconto' => :'taxaDesconto'
         
       }
     end
@@ -76,7 +91,13 @@ module Pier
         
         :'quantidade_parcelas_antecipadas' => :'Integer',
         
-        :'valor_parcelas' => :'Float'
+        :'valor_parcela' => :'Float',
+        
+        :'valor_desconto_total' => :'Float',
+        
+        :'valor_total_com_desconto' => :'Float',
+        
+        :'taxa_desconto' => :'Float'
         
       }
     end
@@ -135,10 +156,37 @@ module Pier
       end
 
       
-      if attributes[:'valorParcelas']
+      if attributes[:'valorParcela']
         
         
-        self.valor_parcelas = attributes[:'valorParcelas']
+        self.valor_parcela = attributes[:'valorParcela']
+        
+      
+      end
+
+      
+      if attributes[:'valorDescontoTotal']
+        
+        
+        self.valor_desconto_total = attributes[:'valorDescontoTotal']
+        
+      
+      end
+
+      
+      if attributes[:'valorTotalComDesconto']
+        
+        
+        self.valor_total_com_desconto = attributes[:'valorTotalComDesconto']
+        
+      
+      end
+
+      
+      if attributes[:'taxaDesconto']
+        
+        
+        self.taxa_desconto = attributes[:'taxaDesconto']
         
       
       end
@@ -183,8 +231,35 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -226,7 +301,10 @@ module Pier
           id_compra == o.id_compra &&
           quantidade_parcelas_total == o.quantidade_parcelas_total &&
           quantidade_parcelas_antecipadas == o.quantidade_parcelas_antecipadas &&
-          valor_parcelas == o.valor_parcelas
+          valor_parcela == o.valor_parcela &&
+          valor_desconto_total == o.valor_desconto_total &&
+          valor_total_com_desconto == o.valor_total_com_desconto &&
+          taxa_desconto == o.taxa_desconto
     end
 
     # @see the `==` method
@@ -238,7 +316,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_conta, id_compra, quantidade_parcelas_total, quantidade_parcelas_antecipadas, valor_parcelas].hash
+      [id, id_conta, id_compra, quantidade_parcelas_total, quantidade_parcelas_antecipadas, valor_parcela, valor_desconto_total, valor_total_com_desconto, taxa_desconto].hash
     end
 
     # Builds the object from hash

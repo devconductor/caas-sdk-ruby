@@ -403,9 +403,9 @@ module Pier
     # @option opts [String] :cpf CPF do Usuario
     # @option opts [String] :email Email do Usuario
     # @option opts [String] :status Status do Usuario
-    # @return [PageUsuarios]
-    def listar_using_get29(opts = {})
-      data, _status_code, _headers = listar_using_get29_with_http_info(opts)
+    # @return [PageUsuarioResponse]
+    def listar_using_get30(opts = {})
+      data, _status_code, _headers = listar_using_get30_with_http_info(opts)
       return data
     end
 
@@ -418,10 +418,10 @@ module Pier
     # @option opts [String] :cpf CPF do Usuario
     # @option opts [String] :email Email do Usuario
     # @option opts [String] :status Status do Usuario
-    # @return [Array<(PageUsuarios, Fixnum, Hash)>] PageUsuarios data, response status code and response headers
-    def listar_using_get29_with_http_info(opts = {})
+    # @return [Array<(PageUsuarioResponse, Fixnum, Hash)>] PageUsuarioResponse data, response status code and response headers
+    def listar_using_get30_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: UsuariosApi.listar_using_get29 ..."
+        @api_client.config.logger.debug "Calling API: UsuariosApi.listar_using_get30 ..."
       end
       
       
@@ -500,9 +500,9 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PageUsuarios')
+        :return_type => 'PageUsuarioResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UsuariosApi#listar_using_get29\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UsuariosApi#listar_using_get30\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

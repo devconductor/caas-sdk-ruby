@@ -7,13 +7,13 @@ Method | HTTP request | Description
 [**adicionar_using_post**](FAQApi.md#adicionar_using_post) | **POST** /api/faqs | Adiciona uma nova FAQ
 [**alterar_using_put2**](FAQApi.md#alterar_using_put2) | **PUT** /api/faqs/{id} | Alterar FAQ
 [**consultar_using_get7**](FAQApi.md#consultar_using_get7) | **GET** /api/faqs/{id} | Consultar FAQ por id
-[**listar_using_get10**](FAQApi.md#listar_using_get10) | **GET** /api/faqs | Lista FAQs
+[**listar_using_get11**](FAQApi.md#listar_using_get11) | **GET** /api/faqs | Lista FAQs
 
 
 
 
 # **adicionar_using_post**
-> FAQ adicionar_using_post(pergunta, resposta, opts)
+> FaqResponse adicionar_using_post(pergunta, resposta, opts)
 
 Adiciona uma nova FAQ
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FAQ**](FAQ.md)
+[**FaqResponse**](FaqResponse.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ No authorization required
 
 
 # **alterar_using_put2**
-> FAQ alterar_using_put2(id, pergunta, resposta, opts)
+> FaqResponse alterar_using_put2(id, pergunta, resposta, opts)
 
 Alterar FAQ
 
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FAQ**](FAQ.md)
+[**FaqResponse**](FaqResponse.md)
 
 ### Authorization
 
@@ -142,7 +142,7 @@ No authorization required
 
 
 # **consultar_using_get7**
-> FAQ consultar_using_get7(id)
+> FaqResponse consultar_using_get7(id)
 
 Consultar FAQ por id
 
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FAQ**](FAQ.md)
+[**FaqResponse**](FaqResponse.md)
 
 ### Authorization
 
@@ -191,8 +191,8 @@ No authorization required
 
 
 
-# **listar_using_get10**
-> PageFaqs listar_using_get10(opts)
+# **listar_using_get11**
+> PageFaqResponse listar_using_get11(opts)
 
 Lista FAQs
 
@@ -220,10 +220,10 @@ opts = {
 
 begin
   #Lista FAQs
-  result = api_instance.listar_using_get10(opts)
+  result = api_instance.listar_using_get11(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling FAQApi->listar_using_get10: #{e}"
+  puts "Exception when calling FAQApi->listar_using_get11: #{e}"
 end
 ```
 
@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageFaqs**](PageFaqs.md)
+[**PageFaqResponse**](PageFaqResponse.md)
 
 ### Authorization
 

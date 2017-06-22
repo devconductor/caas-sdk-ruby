@@ -43,18 +43,7 @@ describe 'AntecipacaoSimuladaResponse' do
     end
   end
 
-  describe 'test attribute "id_simulacao"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "id_compra"' do
+  describe 'test attribute "id_antecipacao_simulada"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -76,7 +65,62 @@ describe 'AntecipacaoSimuladaResponse' do
   end
 
 
+  describe 'test attribute "id_evento_externo"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "id_tipo_transacao"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "qtde_parcelas_antecipaveis"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "valor_parcela"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
   describe 'test attribute "data_hora_simulacao"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "taxa_antecipacao_ano"' do
     it 'should work' do
        # assertion here
        # should be_a()

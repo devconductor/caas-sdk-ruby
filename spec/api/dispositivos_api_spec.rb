@@ -48,7 +48,7 @@ describe 'DispositivosApi' do
   # Esse recurso permite ativar dispositivo.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
   # @param [Hash] opts the optional parameters
-  # @return [Dispositivo]
+  # @return [DispositivoResponse]
   describe 'ativar_using_post test' do
     it "should work" do
       # assertion here
@@ -65,7 +65,7 @@ describe 'DispositivosApi' do
   # Esse recurso permite desativar dispositivo.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
   # @param [Hash] opts the optional parameters
-  # @return [Dispositivo]
+  # @return [DispositivoResponse]
   describe 'desativar_using_post test' do
     it "should work" do
       # assertion here
@@ -77,7 +77,7 @@ describe 'DispositivosApi' do
   end
 
 
-  # unit tests for listar_using_get7
+  # unit tests for listar_using_get8
   # Lista os dispositivos cadastrados
   # Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
   # @param [Hash] opts the optional parameters
@@ -88,8 +88,8 @@ describe 'DispositivosApi' do
   # @option opts [Integer] :id_aplicacao_mobile Identificador da aplica\u00C3\u00A7\u00C3\u00A3o
   # @option opts [String] :data_criacao Apresenta a data e em que o registro foi criado.
   # @option opts [String] :data_desativacao Apresenta a data e em que o registro foi desativado.
-  # @return [PageDispositivos]
-  describe 'listar_using_get7 test' do
+  # @return [PageDispositivoResponse]
+  describe 'listar_using_get8 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -105,7 +105,7 @@ describe 'DispositivosApi' do
   # Esse recurso permite cadastrar dispositivos.
   # @param persist persist
   # @param [Hash] opts the optional parameters
-  # @return [Dispositivo]
+  # @return [DispositivoResponse]
   describe 'salvar_using_post3 test' do
     it "should work" do
       # assertion here

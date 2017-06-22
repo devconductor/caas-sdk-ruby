@@ -26,16 +26,28 @@ module Pier
   # Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Antecipacao Simulada
   class AntecipacaoSimuladaResponse
     # C\u00C3\u00B3digo identificador da simula\u00C3\u00A7\u00C3\u00A3o de antecipa\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :id_simulacao
-
-    # C\u00C3\u00B3digo identificador da compra.
-    attr_accessor :id_compra
+    attr_accessor :id_antecipacao_simulada
 
     # C\u00C3\u00B3digo identificador da conta.
     attr_accessor :id_conta
 
+    # C\u00C3\u00B3digo identificador do evento.
+    attr_accessor :id_evento_externo
+
+    # C\u00C3\u00B3digo identificador do tipo do evento.
+    attr_accessor :id_tipo_transacao
+
+    # Quantidade de parcelas antecip\u00C3\u00A1veis.
+    attr_accessor :qtde_parcelas_antecipaveis
+
+    # Valor da parcela.
+    attr_accessor :valor_parcela
+
     # Data e hora em que a simula\u00C3\u00A7\u00C3\u00A3o foi feita.
     attr_accessor :data_hora_simulacao
+
+    # Taxa de antecipa\u00C3\u00A7\u00C3\u00A3o aplicada (ao ano).
+    attr_accessor :taxa_antecipacao_ano
 
     # Detalhes da simula\u00C3\u00A7\u00C3\u00A3o.
     attr_accessor :detalhes
@@ -45,13 +57,21 @@ module Pier
     def self.attribute_map
       {
         
-        :'id_simulacao' => :'idSimulacao',
-        
-        :'id_compra' => :'idCompra',
+        :'id_antecipacao_simulada' => :'idAntecipacaoSimulada',
         
         :'id_conta' => :'idConta',
         
+        :'id_evento_externo' => :'idEventoExterno',
+        
+        :'id_tipo_transacao' => :'idTipoTransacao',
+        
+        :'qtde_parcelas_antecipaveis' => :'qtdeParcelasAntecipaveis',
+        
+        :'valor_parcela' => :'valorParcela',
+        
         :'data_hora_simulacao' => :'dataHoraSimulacao',
+        
+        :'taxa_antecipacao_ano' => :'taxaAntecipacaoAno',
         
         :'detalhes' => :'detalhes'
         
@@ -62,13 +82,21 @@ module Pier
     def self.swagger_types
       {
         
-        :'id_simulacao' => :'Integer',
-        
-        :'id_compra' => :'Integer',
+        :'id_antecipacao_simulada' => :'Integer',
         
         :'id_conta' => :'Integer',
         
+        :'id_evento_externo' => :'Integer',
+        
+        :'id_tipo_transacao' => :'Integer',
+        
+        :'qtde_parcelas_antecipaveis' => :'Integer',
+        
+        :'valor_parcela' => :'Float',
+        
         :'data_hora_simulacao' => :'String',
+        
+        :'taxa_antecipacao_ano' => :'Float',
         
         :'detalhes' => :'Array<AntecipacaoSimuladaDetalhesResponse>'
         
@@ -84,19 +112,10 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'idSimulacao']
+      if attributes[:'idAntecipacaoSimulada']
         
         
-        self.id_simulacao = attributes[:'idSimulacao']
-        
-      
-      end
-
-      
-      if attributes[:'idCompra']
-        
-        
-        self.id_compra = attributes[:'idCompra']
+        self.id_antecipacao_simulada = attributes[:'idAntecipacaoSimulada']
         
       
       end
@@ -111,10 +130,55 @@ module Pier
       end
 
       
+      if attributes[:'idEventoExterno']
+        
+        
+        self.id_evento_externo = attributes[:'idEventoExterno']
+        
+      
+      end
+
+      
+      if attributes[:'idTipoTransacao']
+        
+        
+        self.id_tipo_transacao = attributes[:'idTipoTransacao']
+        
+      
+      end
+
+      
+      if attributes[:'qtdeParcelasAntecipaveis']
+        
+        
+        self.qtde_parcelas_antecipaveis = attributes[:'qtdeParcelasAntecipaveis']
+        
+      
+      end
+
+      
+      if attributes[:'valorParcela']
+        
+        
+        self.valor_parcela = attributes[:'valorParcela']
+        
+      
+      end
+
+      
       if attributes[:'dataHoraSimulacao']
         
         
         self.data_hora_simulacao = attributes[:'dataHoraSimulacao']
+        
+      
+      end
+
+      
+      if attributes[:'taxaAntecipacaoAno']
+        
+        
+        self.taxa_antecipacao_ano = attributes[:'taxaAntecipacaoAno']
         
       
       end
@@ -166,8 +230,44 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -199,10 +299,14 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id_simulacao == o.id_simulacao &&
-          id_compra == o.id_compra &&
+          id_antecipacao_simulada == o.id_antecipacao_simulada &&
           id_conta == o.id_conta &&
+          id_evento_externo == o.id_evento_externo &&
+          id_tipo_transacao == o.id_tipo_transacao &&
+          qtde_parcelas_antecipaveis == o.qtde_parcelas_antecipaveis &&
+          valor_parcela == o.valor_parcela &&
           data_hora_simulacao == o.data_hora_simulacao &&
+          taxa_antecipacao_ano == o.taxa_antecipacao_ano &&
           detalhes == o.detalhes
     end
 
@@ -215,7 +319,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_simulacao, id_compra, id_conta, data_hora_simulacao, detalhes].hash
+      [id_antecipacao_simulada, id_conta, id_evento_externo, id_tipo_transacao, qtde_parcelas_antecipaveis, valor_parcela, data_hora_simulacao, taxa_antecipacao_ano, detalhes].hash
     end
 
     # Builds the object from hash

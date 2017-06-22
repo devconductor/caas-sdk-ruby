@@ -36,7 +36,7 @@ module Pier
     # Este recurso adiciona o job ao agendador de tarefas.
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
     # @param [Hash] opts the optional parameters
-    # @return [Job]
+    # @return [JobResponse]
     def ativar_job_using_post(id, opts = {})
       data, _status_code, _headers = ativar_job_using_post_with_http_info(id, opts)
       return data
@@ -46,7 +46,7 @@ module Pier
     # Este recurso adiciona o job ao agendador de tarefas.
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Job, Fixnum, Hash)>] Job data, response status code and response headers
+    # @return [Array<(JobResponse, Fixnum, Hash)>] JobResponse data, response status code and response headers
     def ativar_job_using_post_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: JobsApi.ativar_job_using_post ..."
@@ -90,7 +90,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Job')
+        :return_type => 'JobResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: JobsApi#ativar_job_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -105,7 +105,7 @@ module Pier
     # @param cron Cron do Job.
     # @param groovy groovy
     # @param [Hash] opts the optional parameters
-    # @return [Job]
+    # @return [JobResponse]
     def atualizar_using_put(id, descricao, cron, groovy, opts = {})
       data, _status_code, _headers = atualizar_using_put_with_http_info(id, descricao, cron, groovy, opts)
       return data
@@ -118,7 +118,7 @@ module Pier
     # @param cron Cron do Job.
     # @param groovy groovy
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Job, Fixnum, Hash)>] Job data, response status code and response headers
+    # @return [Array<(JobResponse, Fixnum, Hash)>] JobResponse data, response status code and response headers
     def atualizar_using_put_with_http_info(id, descricao, cron, groovy, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: JobsApi.atualizar_using_put ..."
@@ -188,7 +188,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Job')
+        :return_type => 'JobResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: JobsApi#atualizar_using_put\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -200,7 +200,7 @@ module Pier
     # Este recurso retira o job do agendador de tarefas.
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
     # @param [Hash] opts the optional parameters
-    # @return [Job]
+    # @return [JobResponse]
     def desativar_job_using_post(id, opts = {})
       data, _status_code, _headers = desativar_job_using_post_with_http_info(id, opts)
       return data
@@ -210,7 +210,7 @@ module Pier
     # Este recurso retira o job do agendador de tarefas.
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Job, Fixnum, Hash)>] Job data, response status code and response headers
+    # @return [Array<(JobResponse, Fixnum, Hash)>] JobResponse data, response status code and response headers
     def desativar_job_using_post_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: JobsApi.desativar_job_using_post ..."
@@ -254,7 +254,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Job')
+        :return_type => 'JobResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: JobsApi#desativar_job_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -271,9 +271,9 @@ module Pier
     # @option opts [String] :status Status do Job
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @return [PageJob]
-    def listar_using_get11(opts = {})
-      data, _status_code, _headers = listar_using_get11_with_http_info(opts)
+    # @return [PageJobResponse]
+    def listar_using_get12(opts = {})
+      data, _status_code, _headers = listar_using_get12_with_http_info(opts)
       return data
     end
 
@@ -286,10 +286,10 @@ module Pier
     # @option opts [String] :status Status do Job
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @return [Array<(PageJob, Fixnum, Hash)>] PageJob data, response status code and response headers
-    def listar_using_get11_with_http_info(opts = {})
+    # @return [Array<(PageJobResponse, Fixnum, Hash)>] PageJobResponse data, response status code and response headers
+    def listar_using_get12_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: JobsApi.listar_using_get11 ..."
+        @api_client.config.logger.debug "Calling API: JobsApi.listar_using_get12 ..."
       end
       
       
@@ -368,9 +368,9 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PageJob')
+        :return_type => 'PageJobResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: JobsApi#listar_using_get11\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: JobsApi#listar_using_get12\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -382,7 +382,7 @@ module Pier
     # @param cron Cron do Job.
     # @param groovy groovy
     # @param [Hash] opts the optional parameters
-    # @return [Job]
+    # @return [JobResponse]
     def salvar_using_post5(descricao, cron, groovy, opts = {})
       data, _status_code, _headers = salvar_using_post5_with_http_info(descricao, cron, groovy, opts)
       return data
@@ -394,7 +394,7 @@ module Pier
     # @param cron Cron do Job.
     # @param groovy groovy
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Job, Fixnum, Hash)>] Job data, response status code and response headers
+    # @return [Array<(JobResponse, Fixnum, Hash)>] JobResponse data, response status code and response headers
     def salvar_using_post5_with_http_info(descricao, cron, groovy, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: JobsApi.salvar_using_post5 ..."
@@ -456,7 +456,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Job')
+        :return_type => 'JobResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: JobsApi#salvar_using_post5\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **numero_parcelas** | **Integer** | N\u00C3\u00BAmero de parcelas da compra. | [optional] 
 **numero_parcelas_antecipaveis** | **Integer** | N\u00C3\u00BAmero de parcelas antecip\u00C3\u00A1veis da compra. | [optional] 
 **nome_estabelecimento** | **String** | Nome do estabelecimento da compra. | [optional] 
-**tipo_transacao** | **String** | Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra. | [optional] 
+**tipo_origem_transacao** | **String** | Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra. | [optional] 
 **cidade** | **String** | Cidade onde a compra foi realizada. | [optional] 
 **pais** | **String** | Pa\u00C3\u00ADs onde a compra foi realizada. | [optional] 
 **latitude** | **String** | Coordenada latitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra. | [optional] 

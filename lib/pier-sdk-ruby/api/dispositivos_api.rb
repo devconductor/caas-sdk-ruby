@@ -36,7 +36,7 @@ module Pier
     # Esse recurso permite ativar dispositivo.
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
     # @param [Hash] opts the optional parameters
-    # @return [Dispositivo]
+    # @return [DispositivoResponse]
     def ativar_using_post(id, opts = {})
       data, _status_code, _headers = ativar_using_post_with_http_info(id, opts)
       return data
@@ -46,7 +46,7 @@ module Pier
     # Esse recurso permite ativar dispositivo.
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Dispositivo, Fixnum, Hash)>] Dispositivo data, response status code and response headers
+    # @return [Array<(DispositivoResponse, Fixnum, Hash)>] DispositivoResponse data, response status code and response headers
     def ativar_using_post_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: DispositivosApi.ativar_using_post ..."
@@ -90,7 +90,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Dispositivo')
+        :return_type => 'DispositivoResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: DispositivosApi#ativar_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -102,7 +102,7 @@ module Pier
     # Esse recurso permite desativar dispositivo.
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
     # @param [Hash] opts the optional parameters
-    # @return [Dispositivo]
+    # @return [DispositivoResponse]
     def desativar_using_post(id, opts = {})
       data, _status_code, _headers = desativar_using_post_with_http_info(id, opts)
       return data
@@ -112,7 +112,7 @@ module Pier
     # Esse recurso permite desativar dispositivo.
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Dispositivo, Fixnum, Hash)>] Dispositivo data, response status code and response headers
+    # @return [Array<(DispositivoResponse, Fixnum, Hash)>] DispositivoResponse data, response status code and response headers
     def desativar_using_post_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: DispositivosApi.desativar_using_post ..."
@@ -156,7 +156,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Dispositivo')
+        :return_type => 'DispositivoResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: DispositivosApi#desativar_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -174,9 +174,9 @@ module Pier
     # @option opts [Integer] :id_aplicacao_mobile Identificador da aplica\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :data_criacao Apresenta a data e em que o registro foi criado.
     # @option opts [String] :data_desativacao Apresenta a data e em que o registro foi desativado.
-    # @return [PageDispositivos]
-    def listar_using_get7(opts = {})
-      data, _status_code, _headers = listar_using_get7_with_http_info(opts)
+    # @return [PageDispositivoResponse]
+    def listar_using_get8(opts = {})
+      data, _status_code, _headers = listar_using_get8_with_http_info(opts)
       return data
     end
 
@@ -190,10 +190,10 @@ module Pier
     # @option opts [Integer] :id_aplicacao_mobile Identificador da aplica\u00C3\u00A7\u00C3\u00A3o
     # @option opts [String] :data_criacao Apresenta a data e em que o registro foi criado.
     # @option opts [String] :data_desativacao Apresenta a data e em que o registro foi desativado.
-    # @return [Array<(PageDispositivos, Fixnum, Hash)>] PageDispositivos data, response status code and response headers
-    def listar_using_get7_with_http_info(opts = {})
+    # @return [Array<(PageDispositivoResponse, Fixnum, Hash)>] PageDispositivoResponse data, response status code and response headers
+    def listar_using_get8_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DispositivosApi.listar_using_get7 ..."
+        @api_client.config.logger.debug "Calling API: DispositivosApi.listar_using_get8 ..."
       end
       
       
@@ -275,9 +275,9 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PageDispositivos')
+        :return_type => 'PageDispositivoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DispositivosApi#listar_using_get7\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DispositivosApi#listar_using_get8\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -287,7 +287,7 @@ module Pier
     # Esse recurso permite cadastrar dispositivos.
     # @param persist persist
     # @param [Hash] opts the optional parameters
-    # @return [Dispositivo]
+    # @return [DispositivoResponse]
     def salvar_using_post3(persist, opts = {})
       data, _status_code, _headers = salvar_using_post3_with_http_info(persist, opts)
       return data
@@ -297,7 +297,7 @@ module Pier
     # Esse recurso permite cadastrar dispositivos.
     # @param persist persist
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Dispositivo, Fixnum, Hash)>] Dispositivo data, response status code and response headers
+    # @return [Array<(DispositivoResponse, Fixnum, Hash)>] DispositivoResponse data, response status code and response headers
     def salvar_using_post3_with_http_info(persist, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: DispositivosApi.salvar_using_post3 ..."
@@ -341,7 +341,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Dispositivo')
+        :return_type => 'DispositivoResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: DispositivosApi#salvar_using_post3\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

@@ -43,23 +43,6 @@ describe 'RiscoFraudeApi' do
   end
 
 
-  # unit tests for consultar_using_get
-  # Apresenta os dados de um determinado Atendimento
-  # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Atendimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (idAtendimento).
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do atendimento cliente (id).
-  # @param [Hash] opts the optional parameters
-  # @return [AtendimentoCliente]
-  describe 'consultar_using_get test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
   # unit tests for consultar_using_get12
   # Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
   # Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude.
@@ -77,46 +60,7 @@ describe 'RiscoFraudeApi' do
   end
 
 
-  # unit tests for informar_risco_fraude_using_post
-  # Receber Risco Fraude
-  # Receber risco fraude
-  # @param detalhado_responses detalhadoResponses
-  # @param [Hash] opts the optional parameters
-  # @return [String]
-  describe 'informar_risco_fraude_using_post test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for listar_using_get1
-  # Lista todos os atendimentos
-  # Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id_tipo_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
-  # @option opts [Integer] :id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
-  # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
-  # @option opts [String] :data_atendimento Apresenta a data em que o Atendimento foi realizado.
-  # @return [PageAtendimentoClientes]
-  describe 'listar_using_get1 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for listar_using_get18
+  # unit tests for listar_using_get19
   # Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
   # Este recurso permite que sejam listados os riscos de fraudes existentes
   # @param id_conta Id Conta
@@ -125,7 +69,7 @@ describe 'RiscoFraudeApi' do
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @return [RiscoFraudeResponsePage]
-  describe 'listar_using_get18 test' do
+  describe 'listar_using_get19 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -160,31 +104,6 @@ describe 'RiscoFraudeApi' do
   # @param [Hash] opts the optional parameters
   # @return [RiscoFraudeDetalhadoResponse]
   describe 'reconhecer_using_post test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for salvar_using_post1
-  # Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
-  # 
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o Atendimento est\u00C3\u00A1 associado
-  # @option opts [String] :conteudo_atendimento Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento.
-  # @option opts [String] :detalhes_atendimento Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
-  # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
-  # @option opts [String] :data_atendimento Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
-  # @option opts [String] :data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
-  # @option opts [String] :data_hora_inicio_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
-  # @option opts [String] :data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
-  # @option opts [Integer] :flag_fila_fraude Flag fila fraude
-  # @return [AtendimentoCliente]
-  describe 'salvar_using_post1 test' do
     it "should work" do
       # assertion here
       # should be_a()

@@ -48,7 +48,7 @@ describe 'EstabelecimentosApi' do
   # Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
   # @param [Hash] opts the optional parameters
-  # @return [Terminal]
+  # @return [TerminalResponse]
   describe 'consultar_using_get16 test' do
     it "should work" do
       # assertion here
@@ -65,7 +65,7 @@ describe 'EstabelecimentosApi' do
   # Consulta os detalhes de um determinado estabelecimento
   # @param id Id
   # @param [Hash] opts the optional parameters
-  # @return [Estabelecimento]
+  # @return [EstabelecimentoResponse]
   describe 'consultar_using_get6 test' do
     it "should work" do
       # assertion here
@@ -77,29 +77,7 @@ describe 'EstabelecimentosApi' do
   end
 
 
-  # unit tests for listar_using_get22
-  # Lista os Terminais cadastrados no Emissor
-  # Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
-  # @option opts [String] :terminal C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
-  # @option opts [Integer] :numero_estabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
-  # @option opts [Integer] :id_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
-  # @return [PageTerminal]
-  describe 'listar_using_get22 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for listar_using_get9
+  # unit tests for listar_using_get10
   # Lista Estabelecimentos
   # Lista todas os Estabelecimentos
   # @param [Hash] opts the optional parameters
@@ -124,8 +102,30 @@ describe 'EstabelecimentosApi' do
   # @option opts [Integer] :flag_arquivo_secr_fazenda Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.
   # @option opts [Integer] :flag_cartao_digitado Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.
   # @option opts [Integer] :inativo Indica se o estabelecimento est\u00C3\u00A1 inativo.
-  # @return [PageEstabelecimentos]
-  describe 'listar_using_get9 test' do
+  # @return [PageEstabelecimentoResponse]
+  describe 'listar_using_get10 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for listar_using_get23
+  # Lista os Terminais cadastrados no Emissor
+  # Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+  # @option opts [String] :terminal C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
+  # @option opts [Integer] :numero_estabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
+  # @option opts [Integer] :id_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
+  # @return [PageTerminalResponse]
+  describe 'listar_using_get23 test' do
     it "should work" do
       # assertion here
       # should be_a()

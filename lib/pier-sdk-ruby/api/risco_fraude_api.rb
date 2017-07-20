@@ -33,28 +33,28 @@ module Pier
 
 
     # Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
-    # Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude.
+    # Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
     # @param [Hash] opts the optional parameters
     # @return [RiscoFraudeDetalhadoResponse]
-    def consultar_using_get12(id, opts = {})
-      data, _status_code, _headers = consultar_using_get12_with_http_info(id, opts)
+    def consultar_using_get13(id, opts = {})
+      data, _status_code, _headers = consultar_using_get13_with_http_info(id, opts)
       return data
     end
 
     # Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
-    # Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude.
+    # Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
     # @param [Hash] opts the optional parameters
     # @return [Array<(RiscoFraudeDetalhadoResponse, Fixnum, Hash)>] RiscoFraudeDetalhadoResponse data, response status code and response headers
-    def consultar_using_get12_with_http_info(id, opts = {})
+    def consultar_using_get13_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.consultar_using_get12 ..."
+        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.consultar_using_get13 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling RiscoFraudeApi.consultar_using_get12" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling RiscoFraudeApi.consultar_using_get13" if id.nil?
       
       
       
@@ -92,58 +92,33 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'RiscoFraudeDetalhadoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: RiscoFraudeApi#consultar_using_get12\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: RiscoFraudeApi#consultar_using_get13\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
 
-    # Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
-    # Este recurso permite que sejam listados os riscos de fraudes existentes
-    # @param id_conta Id Conta
-    # @param confirmacao_fraude Confirma\u00C3\u00A7\u00C3\u00A3o da fraude
+    # Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude
+    # Este recurso permite que sejam listados os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude, cadastrados para um emissor
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @return [RiscoFraudeResponsePage]
-    def listar_using_get19(id_conta, confirmacao_fraude, opts = {})
-      data, _status_code, _headers = listar_using_get19_with_http_info(id_conta, confirmacao_fraude, opts)
+    # @return [TipoResolucaoResponse]
+    def listar_tipos_resolucao_using_get(opts = {})
+      data, _status_code, _headers = listar_tipos_resolucao_using_get_with_http_info(opts)
       return data
     end
 
-    # Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
-    # Este recurso permite que sejam listados os riscos de fraudes existentes
-    # @param id_conta Id Conta
-    # @param confirmacao_fraude Confirma\u00C3\u00A7\u00C3\u00A3o da fraude
+    # Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude
+    # Este recurso permite que sejam listados os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude, cadastrados para um emissor
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @return [Array<(RiscoFraudeResponsePage, Fixnum, Hash)>] RiscoFraudeResponsePage data, response status code and response headers
-    def listar_using_get19_with_http_info(id_conta, confirmacao_fraude, opts = {})
+    # @return [Array<(TipoResolucaoResponse, Fixnum, Hash)>] TipoResolucaoResponse data, response status code and response headers
+    def listar_tipos_resolucao_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.listar_using_get19 ..."
+        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.listar_tipos_resolucao_using_get ..."
       end
-      
-      
-      # verify the required parameter 'id_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta' when calling RiscoFraudeApi.listar_using_get19" if id_conta.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'confirmacao_fraude' is set
-      fail ArgumentError, "Missing the required parameter 'confirmacao_fraude' when calling RiscoFraudeApi.listar_using_get19" if confirmacao_fraude.nil?
-      
-      # verify enum value
-      unless ['NEGADA', 'CONFIRMADA', 'PENDENTE', 'TODAS'].include?(confirmacao_fraude)
-        fail ArgumentError, "invalid value for 'confirmacao_fraude', must be one of NEGADA, CONFIRMADA, PENDENTE, TODAS"
-      end
-      
-      
-      
-      
       
       
       
@@ -158,12 +133,10 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/riscos-fraudes".sub('{format}','json')
+      local_var_path = "/api/tipos-resolucao".sub('{format}','json')
 
       # query parameters
       query_params = {}
-      query_params[:'id_conta'] = id_conta
-      query_params[:'confirmacao_fraude'] = confirmacao_fraude
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
 
@@ -191,141 +164,9 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'RiscoFraudeResponsePage')
+        :return_type => 'TipoResolucaoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: RiscoFraudeApi#listar_using_get19\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-
-    # Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
-    # Nega a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
-    # @param [Hash] opts the optional parameters
-    # @return [RiscoFraudeDetalhadoResponse]
-    def negar_using_post(id, opts = {})
-      data, _status_code, _headers = negar_using_post_with_http_info(id, opts)
-      return data
-    end
-
-    # Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
-    # Nega a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(RiscoFraudeDetalhadoResponse, Fixnum, Hash)>] RiscoFraudeDetalhadoResponse data, response status code and response headers
-    def negar_using_post_with_http_info(id, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.negar_using_post ..."
-      end
-      
-      
-      # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling RiscoFraudeApi.negar_using_post" if id.nil?
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/riscos-fraudes/{id}/negar".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'RiscoFraudeDetalhadoResponse')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: RiscoFraudeApi#negar_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-
-    # Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
-    # Confirma a autenticidade da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
-    # @param [Hash] opts the optional parameters
-    # @return [RiscoFraudeDetalhadoResponse]
-    def reconhecer_using_post(id, opts = {})
-      data, _status_code, _headers = reconhecer_using_post_with_http_info(id, opts)
-      return data
-    end
-
-    # Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
-    # Confirma a autenticidade da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(RiscoFraudeDetalhadoResponse, Fixnum, Hash)>] RiscoFraudeDetalhadoResponse data, response status code and response headers
-    def reconhecer_using_post_with_http_info(id, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.reconhecer_using_post ..."
-      end
-      
-      
-      # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling RiscoFraudeApi.reconhecer_using_post" if id.nil?
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/riscos-fraudes/{id}/reconhecer".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'RiscoFraudeDetalhadoResponse')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: RiscoFraudeApi#reconhecer_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: RiscoFraudeApi#listar_tipos_resolucao_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

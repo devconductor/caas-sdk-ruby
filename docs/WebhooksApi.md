@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_using_put10**](WebhooksApi.md#alterar_using_put10) | **PUT** /api/webhooks/{id} | Alterar Webhook
-[**consultar_using_get26**](WebhooksApi.md#consultar_using_get26) | **GET** /api/webhooks/{id} | Consultar Webhook
+[**consultar_using_get27**](WebhooksApi.md#consultar_using_get27) | **GET** /api/webhooks/{id} | Consultar Webhook
 [**listar_using_get31**](WebhooksApi.md#listar_using_get31) | **GET** /api/webhooks | Lista os Webhooks
-[**salvar_using_post14**](WebhooksApi.md#salvar_using_post14) | **POST** /api/webhooks | Salvar Webhook
+[**salvar_using_post16**](WebhooksApi.md#salvar_using_post16) | **POST** /api/webhooks | Salvar Webhook
 
 
 
@@ -68,8 +68,8 @@ No authorization required
 
 
 
-# **consultar_using_get26**
-> WebHookResponse consultar_using_get26(id)
+# **consultar_using_get27**
+> WebHookResponse consultar_using_get27(id)
 
 Consultar Webhook
 
@@ -88,10 +88,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Consultar Webhook
-  result = api_instance.consultar_using_get26(id)
+  result = api_instance.consultar_using_get27(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling WebhooksApi->consultar_using_get26: #{e}"
+  puts "Exception when calling WebhooksApi->consultar_using_get27: #{e}"
 end
 ```
 
@@ -179,8 +179,8 @@ No authorization required
 
 
 
-# **salvar_using_post14**
-> WebHookResponse salvar_using_post14(tipo_evento, url)
+# **salvar_using_post16**
+> WebHookResponse salvar_using_post16(tipo_evento, url)
 
 Salvar Webhook
 
@@ -201,10 +201,10 @@ url = "url_example" # String | URL que a ser consumida pelo WebHook
 
 begin
   #Salvar Webhook
-  result = api_instance.salvar_using_post14(tipo_evento, url)
+  result = api_instance.salvar_using_post16(tipo_evento, url)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling WebhooksApi->salvar_using_post14: #{e}"
+  puts "Exception when calling WebhooksApi->salvar_using_post16: #{e}"
 end
 ```
 

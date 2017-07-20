@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**autorizar_using_post**](AutorizacoesApi.md#autorizar_using_post) | **POST** /api/autorizar-transacao | Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
-[**cancelar_using_post**](AutorizacoesApi.md#cancelar_using_post) | **POST** /api/cancelar-transacao | Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
+[**cancelar_using_post2**](AutorizacoesApi.md#cancelar_using_post2) | **POST** /api/cancelar-transacao | Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
 [**listar_codigos_processamento_autorizacao_using_get**](AutorizacoesApi.md#listar_codigos_processamento_autorizacao_using_get) | **GET** /api/consultar-codigos-processamento-autorizacao | Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
-[**simular_using_post**](AutorizacoesApi.md#simular_using_post) | **POST** /api/simular-transacao | Simula planos de pagamento
+[**simular_using_post**](AutorizacoesApi.md#simular_using_post) | **POST** /api/simular-transacao | Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
 
 
 
@@ -62,8 +62,8 @@ No authorization required
 
 
 
-# **cancelar_using_post**
-> TransacaoOnUsResponse cancelar_using_post(cancelamento_request)
+# **cancelar_using_post2**
+> TransacaoOnUsResponse cancelar_using_post2(cancelamento_request)
 
 Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
 
@@ -82,10 +82,10 @@ cancelamento_request = Pier::CancelamentoTransacaoOnUsRequest.new # Cancelamento
 
 begin
   #Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
-  result = api_instance.cancelar_using_post(cancelamento_request)
+  result = api_instance.cancelar_using_post2(cancelamento_request)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling AutorizacoesApi->cancelar_using_post: #{e}"
+  puts "Exception when calling AutorizacoesApi->cancelar_using_post2: #{e}"
 end
 ```
 
@@ -159,9 +159,9 @@ No authorization required
 # **simular_using_post**
 > TransacaoOnUsResponse simular_using_post(transacoes_request)
 
-Simula planos de pagamento
+Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
 
-Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
+Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
 
 ### Example
 ```ruby
@@ -175,7 +175,7 @@ transacoes_request = Pier::TransacaoOnUsRequest.new # TransacaoOnUsRequest | tra
 
 
 begin
-  #Simula planos de pagamento
+  #Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
   result = api_instance.simular_using_post(transacoes_request)
   p result
 rescue Pier::ApiError => e

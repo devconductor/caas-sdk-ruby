@@ -60,13 +60,13 @@ describe 'AutorizacoesApi' do
   end
 
 
-  # unit tests for cancelar_using_post
+  # unit tests for cancelar_using_post2
   # Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
   # Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
   # @param cancelamento_request cancelamentoRequest
   # @param [Hash] opts the optional parameters
   # @return [TransacaoOnUsResponse]
-  describe 'cancelar_using_post test' do
+  describe 'cancelar_using_post2 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -94,8 +94,8 @@ describe 'AutorizacoesApi' do
 
 
   # unit tests for simular_using_post
-  # Simula planos de pagamento
-  # Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
+  # Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
+  # Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
   # @param transacoes_request transacoesRequest
   # @param [Hash] opts the optional parameters
   # @return [TransacaoOnUsResponse]

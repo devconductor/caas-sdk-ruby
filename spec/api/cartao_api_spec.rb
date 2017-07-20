@@ -97,7 +97,7 @@ describe 'CartaoApi' do
   end
 
 
-  # unit tests for bloquear_using_put
+  # unit tests for bloquear_using_post
   # Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
   # Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio (tempor\u00C3\u00A1rio) ou do cancelamento (definitivo) de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
@@ -105,7 +105,7 @@ describe 'CartaoApi' do
   # @param observacao Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.
   # @param [Hash] opts the optional parameters
   # @return [CartaoResponse]
-  describe 'bloquear_using_put test' do
+  describe 'bloquear_using_post test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -124,6 +124,25 @@ describe 'CartaoApi' do
   # @param [Hash] opts the optional parameters
   # @return [String]
   describe 'cadastrar_alterar_senha_using_post test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for cancelar_using_post
+  # Realiza o cancelamento de um determinado Cart\u00C3\u00A3o
+  # Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o cancelamento de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+  # @param id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.
+  # @param observacao Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o cancelamento.
+  # @param [Hash] opts the optional parameters
+  # @return [CartaoResponse]
+  describe 'cancelar_using_post test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -202,13 +221,13 @@ describe 'CartaoApi' do
   end
 
 
-  # unit tests for consultar_using_get3
+  # unit tests for consultar_using_get4
   # Apresenta os dados de um determinado Cart\u00C3\u00A3o
   # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
   # @param [Hash] opts the optional parameters
   # @return [CartaoDetalheResponse]
-  describe 'consultar_using_get3 test' do
+  describe 'consultar_using_get4 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -236,13 +255,13 @@ describe 'CartaoApi' do
   end
 
 
-  # unit tests for desbloquear_using_put
+  # unit tests for desbloquear_using_post
   # Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
   # Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
   # @param [Hash] opts the optional parameters
   # @return [CartaoResponse]
-  describe 'desbloquear_using_put test' do
+  describe 'desbloquear_using_post test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -345,6 +364,23 @@ describe 'CartaoApi' do
   # @option opts [Integer] :sequencial_cartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
   # @return [PageCartaoResponse]
   describe 'listar_using_get5 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for reativar_using_post
+  # Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o
+  # Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o da reativa\u00C3\u00A7\u00C3\u00A3o de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+  # @param [Hash] opts the optional parameters
+  # @return [CartaoResponse]
+  describe 'reativar_using_post test' do
     it "should work" do
       # assertion here
       # should be_a()

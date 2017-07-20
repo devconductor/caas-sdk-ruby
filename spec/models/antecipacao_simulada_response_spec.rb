@@ -65,7 +65,7 @@ describe 'AntecipacaoSimuladaResponse' do
   end
 
 
-  describe 'test attribute "id_evento_externo"' do
+  describe 'test attribute "id_compra"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -87,7 +87,7 @@ describe 'AntecipacaoSimuladaResponse' do
   end
 
 
-  describe 'test attribute "qtde_parcelas_antecipaveis"' do
+  describe 'test attribute "quantidade_parcelas_antecipaveis"' do
     it 'should work' do
        # assertion here
        # should be_a()

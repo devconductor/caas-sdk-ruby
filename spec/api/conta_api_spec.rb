@@ -79,6 +79,7 @@ describe 'ContaApi' do
   # @param limite_internacional_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
   # @param limite_internacional_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
   # @param limite_internacional_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
+  # @param limite_maximo Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.
   # @param [Hash] opts the optional parameters
   # @return [LimiteDisponibilidadeResponse]
   describe 'alterar_limite_using_put test' do
@@ -128,6 +129,30 @@ describe 'ContaApi' do
   end
 
 
+  # unit tests for ativar_anuidade_using_post
+  # Atribuir Anuidade
+  # Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+  # @param id_anuidade Identificador da anuidade
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [String] :ddd DDD do celular
+  # @option opts [String] :celular N\u00C3\u00BAmero do celular
+  # @option opts [Integer] :id_operadora Identificador da operadora do celular
+  # @option opts [Integer] :id_origem_comercial Identificador da origem comercial
+  # @return [Object]
+  describe 'ativar_anuidade_using_post test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
   # unit tests for ativar_envio_fatura_email_using_post
   #  Ativa o servi\u00C3\u00A7o de envio de fatura por email
   # Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
@@ -135,6 +160,42 @@ describe 'ContaApi' do
   # @param [Hash] opts the optional parameters
   # @return [Object]
   describe 'ativar_envio_fatura_email_using_post test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for bloquear_using_post1
+  # Realiza o bloqueio de uma determinada Conta
+  # Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+  # @param id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.
+  # @param [Hash] opts the optional parameters
+  # @return [ContaResponse]
+  describe 'bloquear_using_post1 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for cancelar_using_post1
+  # Realiza o cancelamento de uma determinada Conta
+  # Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+  # @param id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.
+  # @param [Hash] opts the optional parameters
+  # @return [ContaResponse]
+  describe 'cancelar_using_post1 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -291,7 +352,7 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for consultar_using_get23
+  # unit tests for consultar_using_get24
   # Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
   # Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
   # @param id Id Conta
@@ -299,24 +360,6 @@ describe 'ContaApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
   # @return [TransferenciaBancariaResponse]
-  describe 'consultar_using_get23 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for consultar_using_get24
-  # Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-  # Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-  # @param id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
-  # @param [Hash] opts the optional parameters
-  # @return [PageTransferenciaResponse]
   describe 'consultar_using_get24 test' do
     it "should work" do
       # assertion here
@@ -328,13 +371,31 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for consultar_using_get4
+  # unit tests for consultar_using_get25
+  # Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+  # Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+  # @param id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
+  # @param [Hash] opts the optional parameters
+  # @return [PageTransferenciaResponse]
+  describe 'consultar_using_get25 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for consultar_using_get5
   # Apresenta dados de uma determinada conta
   # Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
   # @param [Hash] opts the optional parameters
   # @return [ContaDetalheResponse]
-  describe 'consultar_using_get4 test' do
+  describe 'consultar_using_get5 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -627,13 +688,13 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for reativar_using_post
+  # unit tests for reativar_using_post1
   # Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
   # Este recurso permite reativar contas. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
   # @param id Id Conta
   # @param [Hash] opts the optional parameters
   # @return [Object]
-  describe 'reativar_using_post test' do
+  describe 'reativar_using_post1 test' do
     it "should work" do
       # assertion here
       # should be_a()

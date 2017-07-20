@@ -62,13 +62,13 @@ describe 'WebhooksApi' do
   end
 
 
-  # unit tests for consultar_using_get26
+  # unit tests for consultar_using_get27
   # Consultar Webhook
   # Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
   # @param [Hash] opts the optional parameters
   # @return [WebHookResponse]
-  describe 'consultar_using_get26 test' do
+  describe 'consultar_using_get27 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -101,14 +101,14 @@ describe 'WebhooksApi' do
   end
 
 
-  # unit tests for salvar_using_post14
+  # unit tests for salvar_using_post16
   # Salvar Webhook
   # Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
   # @param tipo_evento TipoEvento a ser chamado pelo WebHook
   # @param url URL que a ser consumida pelo WebHook
   # @param [Hash] opts the optional parameters
   # @return [WebHookResponse]
-  describe 'salvar_using_post14 test' do
+  describe 'salvar_using_post16 test' do
     it "should work" do
       # assertion here
       # should be_a()

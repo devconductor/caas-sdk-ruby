@@ -52,6 +52,15 @@ module Pier
     # Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo.
     attr_accessor :flag_permite_desbloqueio
 
+    # Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo.
+    attr_accessor :flag_cancelamento
+
+    # Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o bloqueio, sendo: 0: Inativo e 1: Ativo.
+    attr_accessor :flag_permite_bloqueio
+
+    # Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+    attr_accessor :flag_reativar
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -73,7 +82,13 @@ module Pier
         
         :'flag_permite_nova_via_cartao' => :'flagPermiteNovaViaCartao',
         
-        :'flag_permite_desbloqueio' => :'flagPermiteDesbloqueio'
+        :'flag_permite_desbloqueio' => :'flagPermiteDesbloqueio',
+        
+        :'flag_cancelamento' => :'flagCancelamento',
+        
+        :'flag_permite_bloqueio' => :'flagPermiteBloqueio',
+        
+        :'flag_reativar' => :'flagReativar'
         
       }
     end
@@ -98,7 +113,13 @@ module Pier
         
         :'flag_permite_nova_via_cartao' => :'Integer',
         
-        :'flag_permite_desbloqueio' => :'Integer'
+        :'flag_permite_desbloqueio' => :'Integer',
+        
+        :'flag_cancelamento' => :'Integer',
+        
+        :'flag_permite_bloqueio' => :'Integer',
+        
+        :'flag_reativar' => :'Integer'
         
       }
     end
@@ -193,6 +214,33 @@ module Pier
       end
 
       
+      if attributes[:'flagCancelamento']
+        
+        
+        self.flag_cancelamento = attributes[:'flagCancelamento']
+        
+      
+      end
+
+      
+      if attributes[:'flagPermiteBloqueio']
+        
+        
+        self.flag_permite_bloqueio = attributes[:'flagPermiteBloqueio']
+        
+      
+      end
+
+      
+      if attributes[:'flagReativar']
+        
+        
+        self.flag_reativar = attributes[:'flagReativar']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -274,8 +322,35 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -335,7 +410,10 @@ module Pier
           id_status_destino_conta == o.id_status_destino_conta &&
           flag_cobra_tarifa == o.flag_cobra_tarifa &&
           flag_permite_nova_via_cartao == o.flag_permite_nova_via_cartao &&
-          flag_permite_desbloqueio == o.flag_permite_desbloqueio
+          flag_permite_desbloqueio == o.flag_permite_desbloqueio &&
+          flag_cancelamento == o.flag_cancelamento &&
+          flag_permite_bloqueio == o.flag_permite_bloqueio &&
+          flag_reativar == o.flag_reativar
     end
 
     # @see the `==` method
@@ -347,7 +425,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, nome, flag_cancela_cartao, flag_cancela_no_desbloqueio, id_status_destino_desbloqueio, id_status_destino_conta, flag_cobra_tarifa, flag_permite_nova_via_cartao, flag_permite_desbloqueio].hash
+      [id, nome, flag_cancela_cartao, flag_cancela_no_desbloqueio, id_status_destino_desbloqueio, id_status_destino_conta, flag_cobra_tarifa, flag_permite_nova_via_cartao, flag_permite_desbloqueio, flag_cancelamento, flag_permite_bloqueio, flag_reativar].hash
     end
 
     # Builds the object from hash

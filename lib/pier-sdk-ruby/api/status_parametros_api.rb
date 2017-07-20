@@ -169,8 +169,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
     # @param [Hash] opts the optional parameters
     # @return [StatusContaResponse]
-    def consultar_using_get13(id, opts = {})
-      data, _status_code, _headers = consultar_using_get13_with_http_info(id, opts)
+    def consultar_using_get14(id, opts = {})
+      data, _status_code, _headers = consultar_using_get14_with_http_info(id, opts)
       return data
     end
 
@@ -179,14 +179,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(StatusContaResponse, Fixnum, Hash)>] StatusContaResponse data, response status code and response headers
-    def consultar_using_get13_with_http_info(id, opts = {})
+    def consultar_using_get14_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: StatusParametrosApi.consultar_using_get13 ..."
+        @api_client.config.logger.debug "Calling API: StatusParametrosApi.consultar_using_get14 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling StatusParametrosApi.consultar_using_get13" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling StatusParametrosApi.consultar_using_get14" if id.nil?
       
       
       
@@ -224,7 +224,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'StatusContaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: StatusParametrosApi#consultar_using_get13\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: StatusParametrosApi#consultar_using_get14\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -235,8 +235,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [StatusImpressaoResponse]
-    def consultar_using_get14(id, opts = {})
-      data, _status_code, _headers = consultar_using_get14_with_http_info(id, opts)
+    def consultar_using_get15(id, opts = {})
+      data, _status_code, _headers = consultar_using_get15_with_http_info(id, opts)
       return data
     end
 
@@ -245,14 +245,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(StatusImpressaoResponse, Fixnum, Hash)>] StatusImpressaoResponse data, response status code and response headers
-    def consultar_using_get14_with_http_info(id, opts = {})
+    def consultar_using_get15_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: StatusParametrosApi.consultar_using_get14 ..."
+        @api_client.config.logger.debug "Calling API: StatusParametrosApi.consultar_using_get15 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling StatusParametrosApi.consultar_using_get14" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling StatusParametrosApi.consultar_using_get15" if id.nil?
       
       
       
@@ -290,7 +290,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'StatusImpressaoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: StatusParametrosApi#consultar_using_get14\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: StatusParametrosApi#consultar_using_get15\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -402,6 +402,9 @@ module Pier
     # @option opts [Integer] :flag_cobra_tarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
     # @option opts [Integer] :flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
     # @option opts [Integer] :flag_permite_desbloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo.
+    # @option opts [Integer] :flag_cancelamento Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo.
+    # @option opts [Integer] :flag_permite_bloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o Bloqueio, sendo: 0: Inativo e 1: Ativo.
+    # @option opts [Integer] :flag_reativar Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
     # @return [PageStatusCartaoResponse]
     def listar_status_cartoes_using_get(opts = {})
       data, _status_code, _headers = listar_status_cartoes_using_get_with_http_info(opts)
@@ -422,11 +425,32 @@ module Pier
     # @option opts [Integer] :flag_cobra_tarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
     # @option opts [Integer] :flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
     # @option opts [Integer] :flag_permite_desbloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo.
+    # @option opts [Integer] :flag_cancelamento Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo.
+    # @option opts [Integer] :flag_permite_bloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o Bloqueio, sendo: 0: Inativo e 1: Ativo.
+    # @option opts [Integer] :flag_reativar Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
     # @return [Array<(PageStatusCartaoResponse, Fixnum, Hash)>] PageStatusCartaoResponse data, response status code and response headers
     def listar_status_cartoes_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: StatusParametrosApi.listar_status_cartoes_using_get ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -510,6 +534,9 @@ module Pier
       query_params[:'flagCobraTarifa'] = opts[:'flag_cobra_tarifa'] if opts[:'flag_cobra_tarifa']
       query_params[:'flagPermiteNovaViaCartao'] = opts[:'flag_permite_nova_via_cartao'] if opts[:'flag_permite_nova_via_cartao']
       query_params[:'flagPermiteDesbloqueio'] = opts[:'flag_permite_desbloqueio'] if opts[:'flag_permite_desbloqueio']
+      query_params[:'flagCancelamento'] = opts[:'flag_cancelamento'] if opts[:'flag_cancelamento']
+      query_params[:'flagPermiteBloqueio'] = opts[:'flag_permite_bloqueio'] if opts[:'flag_permite_bloqueio']
+      query_params[:'flagReativar'] = opts[:'flag_reativar'] if opts[:'flag_reativar']
 
       # header parameters
       header_params = {}
@@ -555,6 +582,9 @@ module Pier
     # @option opts [Integer] :flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
     # @option opts [Integer] :flag_faz_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo.
     # @option opts [Integer] :flag_recebe_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo.
+    # @option opts [Integer] :flag_permite_bloqueio Par\u00C3\u00A2metro que define se o Status da conta permite receber bloqueio, sendo: 0: Inativo e 1: Ativo.
+    # @option opts [Integer] :flag_permite_desbloqueio Par\u00C3\u00A2metro que define se o Status da conta permite receber desbloqueio, sendo: 0: Inativo e 1: Ativo.
+    # @option opts [Integer] :flag_cancela_conta Par\u00C3\u00A2metro que define se o Status da conta permite receber cancelamento, sendo: 0: Inativo e 1: Ativo.
     # @return [PageStatusContaResponse]
     def listar_using_get20(opts = {})
       data, _status_code, _headers = listar_using_get20_with_http_info(opts)
@@ -573,11 +603,32 @@ module Pier
     # @option opts [Integer] :flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
     # @option opts [Integer] :flag_faz_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo.
     # @option opts [Integer] :flag_recebe_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo.
+    # @option opts [Integer] :flag_permite_bloqueio Par\u00C3\u00A2metro que define se o Status da conta permite receber bloqueio, sendo: 0: Inativo e 1: Ativo.
+    # @option opts [Integer] :flag_permite_desbloqueio Par\u00C3\u00A2metro que define se o Status da conta permite receber desbloqueio, sendo: 0: Inativo e 1: Ativo.
+    # @option opts [Integer] :flag_cancela_conta Par\u00C3\u00A2metro que define se o Status da conta permite receber cancelamento, sendo: 0: Inativo e 1: Ativo.
     # @return [Array<(PageStatusContaResponse, Fixnum, Hash)>] PageStatusContaResponse data, response status code and response headers
     def listar_using_get20_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: StatusParametrosApi.listar_using_get20 ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -647,6 +698,9 @@ module Pier
       query_params[:'flagPermiteNovaViaCartao'] = opts[:'flag_permite_nova_via_cartao'] if opts[:'flag_permite_nova_via_cartao']
       query_params[:'flagFazTransferencia'] = opts[:'flag_faz_transferencia'] if opts[:'flag_faz_transferencia']
       query_params[:'flagRecebeTransferencia'] = opts[:'flag_recebe_transferencia'] if opts[:'flag_recebe_transferencia']
+      query_params[:'flagPermiteBloqueio'] = opts[:'flag_permite_bloqueio'] if opts[:'flag_permite_bloqueio']
+      query_params[:'flagPermiteDesbloqueio'] = opts[:'flag_permite_desbloqueio'] if opts[:'flag_permite_desbloqueio']
+      query_params[:'flagCancelaConta'] = opts[:'flag_cancela_conta'] if opts[:'flag_cancela_conta']
 
       # header parameters
       header_params = {}

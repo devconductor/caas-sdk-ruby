@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_using_get16**](EstabelecimentosApi.md#consultar_using_get16) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
-[**consultar_using_get6**](EstabelecimentosApi.md#consultar_using_get6) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
+[**consultar_using_get17**](EstabelecimentosApi.md#consultar_using_get17) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
+[**consultar_using_get7**](EstabelecimentosApi.md#consultar_using_get7) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
 [**listar_using_get10**](EstabelecimentosApi.md#listar_using_get10) | **GET** /api/estabelecimentos | Lista Estabelecimentos
 [**listar_using_get23**](EstabelecimentosApi.md#listar_using_get23) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
 
 
 
 
-# **consultar_using_get16**
-> TerminalResponse consultar_using_get16(id)
+# **consultar_using_get17**
+> TerminalResponse consultar_using_get17(id)
 
 Apresenta os dados de um determinado Terminal
 
@@ -32,10 +32,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Terminal
-  result = api_instance.consultar_using_get16(id)
+  result = api_instance.consultar_using_get17(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentosApi->consultar_using_get16: #{e}"
+  puts "Exception when calling EstabelecimentosApi->consultar_using_get17: #{e}"
 end
 ```
 
@@ -62,8 +62,8 @@ No authorization required
 
 
 
-# **consultar_using_get6**
-> EstabelecimentoResponse consultar_using_get6(id)
+# **consultar_using_get7**
+> EstabelecimentoResponse consultar_using_get7(id)
 
 Consultar estabelecimento por id
 
@@ -82,10 +82,10 @@ id = 789 # Integer | Id
 
 begin
   #Consultar estabelecimento por id
-  result = api_instance.consultar_using_get6(id)
+  result = api_instance.consultar_using_get7(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentosApi->consultar_using_get6: #{e}"
+  puts "Exception when calling EstabelecimentosApi->consultar_using_get7: #{e}"
 end
 ```
 

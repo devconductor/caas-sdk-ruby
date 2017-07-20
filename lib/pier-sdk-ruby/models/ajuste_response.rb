@@ -27,12 +27,32 @@ module Pier
     # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id)
     attr_accessor :id_ajuste
 
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do ajuste
+    attr_accessor :id_tipo_ajuste
+
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta)
+    attr_accessor :id_conta
+
+    # Data do ajuste
+    attr_accessor :data_ajuste
+
+    # Valor do ajuste
+    attr_accessor :valor
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id_ajuste' => :'idAjuste'
+        :'id_ajuste' => :'idAjuste',
+        
+        :'id_tipo_ajuste' => :'idTipoAjuste',
+        
+        :'id_conta' => :'idConta',
+        
+        :'data_ajuste' => :'dataAjuste',
+        
+        :'valor' => :'valor'
         
       }
     end
@@ -41,7 +61,15 @@ module Pier
     def self.swagger_types
       {
         
-        :'id_ajuste' => :'Integer'
+        :'id_ajuste' => :'Integer',
+        
+        :'id_tipo_ajuste' => :'Integer',
+        
+        :'id_conta' => :'Integer',
+        
+        :'data_ajuste' => :'String',
+        
+        :'valor' => :'Float'
         
       }
     end
@@ -59,6 +87,42 @@ module Pier
         
         
         self.id_ajuste = attributes[:'idAjuste']
+        
+      
+      end
+
+      
+      if attributes[:'idTipoAjuste']
+        
+        
+        self.id_tipo_ajuste = attributes[:'idTipoAjuste']
+        
+      
+      end
+
+      
+      if attributes[:'idConta']
+        
+        
+        self.id_conta = attributes[:'idConta']
+        
+      
+      end
+
+      
+      if attributes[:'dataAjuste']
+        
+        
+        self.data_ajuste = attributes[:'dataAjuste']
+        
+      
+      end
+
+      
+      if attributes[:'valor']
+        
+        
+        self.valor = attributes[:'valor']
         
       
       end
@@ -83,8 +147,44 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -96,7 +196,11 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id_ajuste == o.id_ajuste
+          id_ajuste == o.id_ajuste &&
+          id_tipo_ajuste == o.id_tipo_ajuste &&
+          id_conta == o.id_conta &&
+          data_ajuste == o.data_ajuste &&
+          valor == o.valor
     end
 
     # @see the `==` method
@@ -108,7 +212,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_ajuste].hash
+      [id_ajuste, id_tipo_ajuste, id_conta, data_ajuste, valor].hash
     end
 
     # Builds the object from hash

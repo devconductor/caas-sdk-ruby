@@ -44,7 +44,7 @@ describe 'UsuariosApi' do
 
 
   # unit tests for alterar_senha_using_put
-  # Alterar senha do usu\u00C3\u00A1rio
+  # Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
   # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
   # @param senha_atual Senha Atual
@@ -63,7 +63,7 @@ describe 'UsuariosApi' do
 
 
   # unit tests for alterar_using_put9
-  # Altera os usu\u00C3\u00A1rios cadastrados
+  # Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
   # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
   # @param update update
@@ -81,7 +81,7 @@ describe 'UsuariosApi' do
 
 
   # unit tests for ativar_usuario_using_post
-  # Ativa os usu\u00C3\u00A1rios cadastrados
+  # Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
   # Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
   # @param [Hash] opts the optional parameters
@@ -97,13 +97,13 @@ describe 'UsuariosApi' do
   end
 
 
-  # unit tests for consultar_using_get25
-  # Apresenta os dados de um determinado Usu\u00C3\u00A1rio
+  # unit tests for consultar_using_get26
+  # Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
   # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
   # @param [Hash] opts the optional parameters
   # @return [UsuarioResponse]
-  describe 'consultar_using_get25 test' do
+  describe 'consultar_using_get26 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -115,7 +115,7 @@ describe 'UsuariosApi' do
 
 
   # unit tests for desativar_usuario_using_post
-  # Desativa os usu\u00C3\u00A1rios cadastrados
+  # Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
   # Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
   # @param [Hash] opts the optional parameters
@@ -132,7 +132,7 @@ describe 'UsuariosApi' do
 
 
   # unit tests for listar_using_get30
-  # Lista os Usu\u00C3\u00A1rios cadastrados
+  # Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
   # Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
@@ -154,7 +154,7 @@ describe 'UsuariosApi' do
 
 
   # unit tests for recuperar_senha_using_post
-  # Recuperar senha do usu\u00C3\u00A1rio
+  # Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
   # Esse recurso permite recuperar a senha do usu\u00C3\u00A1rio.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
   # @param [Hash] opts the optional parameters
@@ -170,13 +170,13 @@ describe 'UsuariosApi' do
   end
 
 
-  # unit tests for salvar_using_post13
-  # Cadastra Usu\u00C3\u00A1rio
+  # unit tests for salvar_using_post15
+  # Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
   # Esse recurso permite cadastrar usu\u00C3\u00A1rios.
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [UsuarioResponse]
-  describe 'salvar_using_post13 test' do
+  describe 'salvar_using_post15 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -188,7 +188,7 @@ describe 'UsuariosApi' do
 
 
   # unit tests for validar_senha_using_get1
-  # Validar a senha do usu\u00C3\u00A1rio
+  # Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
   # Este m\u00C3\u00A9todo permite validar a senha do usu\u00C3\u00A1rio).
   # @param senha Senha do usu\u00C3\u00A1rio
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).

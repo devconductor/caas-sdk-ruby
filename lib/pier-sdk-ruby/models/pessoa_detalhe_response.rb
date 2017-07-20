@@ -35,7 +35,7 @@ module Pier
     attr_accessor :id_estado_civil
 
     # Profiss\u00C3\u00A3o da pessoa fisica
-    attr_accessor :profissao
+    attr_accessor :id_profissao
 
     # Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
     attr_accessor :id_natureza_ocupacao
@@ -66,7 +66,7 @@ module Pier
         
         :'id_estado_civil' => :'idEstadoCivil',
         
-        :'profissao' => :'profissao',
+        :'id_profissao' => :'idProfissao',
         
         :'id_natureza_ocupacao' => :'idNaturezaOcupacao',
         
@@ -93,7 +93,7 @@ module Pier
         
         :'id_estado_civil' => :'Integer',
         
-        :'profissao' => :'String',
+        :'id_profissao' => :'Integer',
         
         :'id_natureza_ocupacao' => :'Integer',
         
@@ -146,10 +146,10 @@ module Pier
       end
 
       
-      if attributes[:'profissao']
+      if attributes[:'idProfissao']
         
         
-        self.profissao = attributes[:'profissao']
+        self.id_profissao = attributes[:'idProfissao']
         
       
       end
@@ -325,7 +325,7 @@ module Pier
           id_pessoa == o.id_pessoa &&
           nome_mae == o.nome_mae &&
           id_estado_civil == o.id_estado_civil &&
-          profissao == o.profissao &&
+          id_profissao == o.id_profissao &&
           id_natureza_ocupacao == o.id_natureza_ocupacao &&
           id_nacionalidade == o.id_nacionalidade &&
           numero_agencia == o.numero_agencia &&
@@ -343,7 +343,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_pessoa, nome_mae, id_estado_civil, profissao, id_natureza_ocupacao, id_nacionalidade, numero_agencia, numero_conta_corrente, email, nome_empresa].hash
+      [id_pessoa, nome_mae, id_estado_civil, id_profissao, id_natureza_ocupacao, id_nacionalidade, numero_agencia, numero_conta_corrente, email, nome_empresa].hash
     end
 
     # Builds the object from hash

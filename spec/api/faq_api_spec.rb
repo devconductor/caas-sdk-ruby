@@ -88,13 +88,13 @@ describe 'FAQApi' do
   end
 
 
-  # unit tests for consultar_using_get7
+  # unit tests for consultar_using_get8
   # Consultar FAQ por id
   # Consulta os detalhes de uma determinada FAQ
   # @param id Id
   # @param [Hash] opts the optional parameters
   # @return [FaqResponse]
-  describe 'consultar_using_get7 test' do
+  describe 'consultar_using_get8 test' do
     it "should work" do
       # assertion here
       # should be_a()

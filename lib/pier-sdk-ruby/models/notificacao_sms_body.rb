@@ -232,7 +232,7 @@ module Pier
 
       
       
-      allowed_values = ["RISCO_FRAUDE", "OUTROS"]
+      allowed_values = ["RISCO_FRAUDE", "TOKEN_SMS", "OUTROS"]
       if @tipo_evento && !allowed_values.include?(@tipo_evento)
         return false
       end
@@ -276,7 +276,7 @@ module Pier
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] tipo_evento Object to be assigned
     def tipo_evento=(tipo_evento)
-      allowed_values = ["RISCO_FRAUDE", "OUTROS"]
+      allowed_values = ["RISCO_FRAUDE", "TOKEN_SMS", "OUTROS"]
       if tipo_evento && !allowed_values.include?(tipo_evento)
         fail ArgumentError, "invalid value for 'tipo_evento', must be one of #{allowed_values}."
       end

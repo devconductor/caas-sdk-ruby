@@ -116,13 +116,13 @@ describe 'OportunidadesApi' do
   end
 
 
-  # unit tests for consultar_using_get20
+  # unit tests for consultar_using_get21
   # Apresenta dados de um determinado tipo oportunidade
   # Este recurso permite consultar dados de um determinado tipo oportunidade a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
   # @param [Hash] opts the optional parameters
   # @return [TipoOportunidadeResponse]
-  describe 'consultar_using_get20 test' do
+  describe 'consultar_using_get21 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -133,13 +133,13 @@ describe 'OportunidadesApi' do
   end
 
 
-  # unit tests for consultar_using_get8
+  # unit tests for consultar_using_get9
   # Apresenta dados de uma determinada oportunidade
   # Este recurso permite consultar dados de uma determinada oportunidade a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
   # @param [Hash] opts the optional parameters
   # @return [OportunidadeResponse]
-  describe 'consultar_using_get8 test' do
+  describe 'consultar_using_get9 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -253,6 +253,7 @@ describe 'OportunidadesApi' do
   # unit tests for listar_using_get13
   # Lista as oportunidades
   # Este recurso permite listar as oportunidades.
+  # @param data_inicio_vigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
@@ -260,7 +261,6 @@ describe 'OportunidadesApi' do
   # @option opts [String] :data_cadastro Data do cadastro da oportunidade
   # @option opts [String] :data_atualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
   # @option opts [String] :numero_receita_federal N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
-  # @option opts [String] :data_inicio_vigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
   # @option opts [String] :data_fim_vigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
   # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
   # @return [PageOportunidadeResponse]
@@ -313,13 +313,13 @@ describe 'OportunidadesApi' do
   end
 
 
-  # unit tests for salvar_using_post11
+  # unit tests for salvar_using_post13
   # Cadastra tipos oportunidades
   # Esse recurso permite cadastrar tipos oportunidades.
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [TipoOportunidadeResponse]
-  describe 'salvar_using_post11 test' do
+  describe 'salvar_using_post13 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -330,13 +330,13 @@ describe 'OportunidadesApi' do
   end
 
 
-  # unit tests for salvar_using_post6
-  # Cadastra as oportunidade
+  # unit tests for salvar_using_post8
+  # Cadastra as oportunidades
   # Esse recurso permite cadastrar oportunidades.
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [OportunidadeResponse]
-  describe 'salvar_using_post6 test' do
+  describe 'salvar_using_post8 test' do
     it "should work" do
       # assertion here
       # should be_a()

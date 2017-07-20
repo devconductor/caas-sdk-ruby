@@ -1,9 +1,9 @@
-# Pier::RiscoFraudeResponsePage
+# Pier::PageConfiguracaoEmailResponse
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**Array&lt;RiscoFraudeResponse&gt;**](RiscoFraudeResponse.md) |  | [optional] 
+**content** | [**Array&lt;ConfiguracaoEmailResponse&gt;**](ConfiguracaoEmailResponse.md) |  | [optional] 
 **first** | **BOOLEAN** |  | [optional] 
 **first_page** | **BOOLEAN** |  | [optional] 
 **has_content** | **BOOLEAN** |  | [optional] 

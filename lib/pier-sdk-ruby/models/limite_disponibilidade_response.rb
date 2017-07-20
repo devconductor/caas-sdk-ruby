@@ -28,64 +28,67 @@ module Pier
     # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o de Limite e Disponibilidade (id).
     attr_accessor :id
 
-    # Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
+    # Valor do limite de cr\u00C3\u00A9dito.
     attr_accessor :limite_global
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
+    # Valor do limite de cr\u00C3\u00A9dito para uso exclusivo em compras nacionais.
     attr_accessor :limite_compra
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
+    # Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
     attr_accessor :limite_parcelado
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.
+    # Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras que forem realizadas nesta modalidade.
     attr_accessor :limite_parcelas
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
+    # Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
     attr_accessor :limite_saque_global
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
+    # Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
     attr_accessor :limite_saque_periodo
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos.
+    # Valor da margem de cr\u00C3\u00A9dito para consigna\u00C3\u00A7\u00C3\u00B5es (desconto em folha).
     attr_accessor :limite_consignado
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais.
+    # Valor do limite de cr\u00C3\u00A9dito para uso exclusivo em compras internacionais.
     attr_accessor :limite_internacional_compra
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas.
+    # Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es internacionais de compras parceladas.
     attr_accessor :limite_internacional_parcelado
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
+    # Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
     attr_accessor :limite_internacional_parcelas
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
+    # Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional.
     attr_accessor :limite_internacional_saque_global
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
+    # Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional dentro de cada ciclo de faturamento.
     attr_accessor :limite_internacional_saque_periodo
 
-    # Apresenta o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es.
+    # Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.
+    attr_accessor :limite_maximo
+
+    # Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es.
     attr_accessor :saldo_disponivel_global
 
-    # Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.
+    # Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra nacional.
     attr_accessor :saldo_disponivel_compra
 
-    # Quando utilizado pelo emissor a modalidade limiteParcelado, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.
+    # Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra nacional parcelada.
     attr_accessor :saldo_disponivel_parcelado
 
-    # Quando utilizado pelo emissor a modalidade limiteParcelas, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.
+    # Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.
     attr_accessor :saldo_disponivel_parcelas
 
-    # Quando utilizado pelo emissor a modalidade limiteSaque, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
+    # Valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
     attr_accessor :saldo_disponivel_saque
 
-    # Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00C3\u00A1 o saldo atual de pontos que o portador possui.
+    # Saldo atual de pontos do programa de fidelidade.
     attr_accessor :saldo_pontos_fidelidade
 
-    # Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Compra Internacional.
+    # Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra internacional.
     attr_accessor :saldo_disponivel_compra_internacional
 
-    # Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
+    # Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional.
     attr_accessor :saldo_disponivel_saque_internacional
 
 
@@ -118,6 +121,8 @@ module Pier
         :'limite_internacional_saque_global' => :'limiteInternacionalSaqueGlobal',
         
         :'limite_internacional_saque_periodo' => :'limiteInternacionalSaquePeriodo',
+        
+        :'limite_maximo' => :'limiteMaximo',
         
         :'saldo_disponivel_global' => :'saldoDisponivelGlobal',
         
@@ -167,6 +172,8 @@ module Pier
         :'limite_internacional_saque_global' => :'Float',
         
         :'limite_internacional_saque_periodo' => :'Float',
+        
+        :'limite_maximo' => :'Float',
         
         :'saldo_disponivel_global' => :'Float',
         
@@ -308,6 +315,15 @@ module Pier
         
         
         self.limite_internacional_saque_periodo = attributes[:'limiteInternacionalSaquePeriodo']
+        
+      
+      end
+
+      
+      if attributes[:'limiteMaximo']
+        
+        
+        self.limite_maximo = attributes[:'limiteMaximo']
         
       
       end
@@ -518,6 +534,15 @@ module Pier
       
       
       
+      if @limite_maximo.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
       if @saldo_disponivel_global.nil?
         return false
       end
@@ -697,6 +722,11 @@ module Pier
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared 
     def ==(o)
@@ -715,6 +745,7 @@ module Pier
           limite_internacional_parcelas == o.limite_internacional_parcelas &&
           limite_internacional_saque_global == o.limite_internacional_saque_global &&
           limite_internacional_saque_periodo == o.limite_internacional_saque_periodo &&
+          limite_maximo == o.limite_maximo &&
           saldo_disponivel_global == o.saldo_disponivel_global &&
           saldo_disponivel_compra == o.saldo_disponivel_compra &&
           saldo_disponivel_parcelado == o.saldo_disponivel_parcelado &&
@@ -734,7 +765,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, limite_global, limite_compra, limite_parcelado, limite_parcelas, limite_saque_global, limite_saque_periodo, limite_consignado, limite_internacional_compra, limite_internacional_parcelado, limite_internacional_parcelas, limite_internacional_saque_global, limite_internacional_saque_periodo, saldo_disponivel_global, saldo_disponivel_compra, saldo_disponivel_parcelado, saldo_disponivel_parcelas, saldo_disponivel_saque, saldo_pontos_fidelidade, saldo_disponivel_compra_internacional, saldo_disponivel_saque_internacional].hash
+      [id, limite_global, limite_compra, limite_parcelado, limite_parcelas, limite_saque_global, limite_saque_periodo, limite_consignado, limite_internacional_compra, limite_internacional_parcelado, limite_internacional_parcelas, limite_internacional_saque_global, limite_internacional_saque_periodo, limite_maximo, saldo_disponivel_global, saldo_disponivel_compra, saldo_disponivel_parcelado, saldo_disponivel_parcelas, saldo_disponivel_saque, saldo_pontos_fidelidade, saldo_disponivel_compra_internacional, saldo_disponivel_saque_internacional].hash
     end
 
     # Builds the object from hash

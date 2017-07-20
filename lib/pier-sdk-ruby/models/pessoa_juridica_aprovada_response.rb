@@ -25,7 +25,7 @@ require 'date'
 module Pier
   # PessoaJuridicaAprovadaPersist
   class PessoaJuridicaAprovadaResponse
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica (id)
     attr_accessor :id
 
     # Apresenta o nome completo da raz\u00C3\u00A3o social (nome empresarial)'.
@@ -63,6 +63,15 @@ module Pier
 
     # Nome que deve ser impresso no cart\u00C3\u00A3o
     attr_accessor :nome_impresso
+
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada
+    attr_accessor :id_conta
+
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta
+    attr_accessor :id_proposta
+
+    # Indica o canal pelo qual o cadastro do cliente foi realizado
+    attr_accessor :canal_entrada
 
     # Apresenta os telefones da empresa
     attr_accessor :telefones
@@ -104,6 +113,12 @@ module Pier
         
         :'nome_impresso' => :'nomeImpresso',
         
+        :'id_conta' => :'idConta',
+        
+        :'id_proposta' => :'idProposta',
+        
+        :'canal_entrada' => :'canalEntrada',
+        
         :'telefones' => :'telefones',
         
         :'enderecos' => :'enderecos',
@@ -142,6 +157,12 @@ module Pier
         :'dia_vencimento' => :'Integer',
         
         :'nome_impresso' => :'String',
+        
+        :'id_conta' => :'Integer',
+        
+        :'id_proposta' => :'Integer',
+        
+        :'canal_entrada' => :'String',
         
         :'telefones' => :'Array<TelefonePessoaAprovadaResponse>',
         
@@ -278,6 +299,33 @@ module Pier
       end
 
       
+      if attributes[:'idConta']
+        
+        
+        self.id_conta = attributes[:'idConta']
+        
+      
+      end
+
+      
+      if attributes[:'idProposta']
+        
+        
+        self.id_proposta = attributes[:'idProposta']
+        
+      
+      end
+
+      
+      if attributes[:'canalEntrada']
+        
+        
+        self.canal_entrada = attributes[:'canalEntrada']
+        
+      
+      end
+
+      
       if attributes[:'telefones']
         
         if (value = attributes[:'telefones']).is_a?(Array)
@@ -390,8 +438,35 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -491,6 +566,9 @@ module Pier
           email == o.email &&
           dia_vencimento == o.dia_vencimento &&
           nome_impresso == o.nome_impresso &&
+          id_conta == o.id_conta &&
+          id_proposta == o.id_proposta &&
+          canal_entrada == o.canal_entrada &&
           telefones == o.telefones &&
           enderecos == o.enderecos &&
           socios == o.socios
@@ -505,7 +583,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, razao_social, nome_fantasia, cnpj, inscricao_estadual, data_abertura_empresa, id_origem_comercial, id_produto, numero_agencia, numero_conta_corrente, email, dia_vencimento, nome_impresso, telefones, enderecos, socios].hash
+      [id, razao_social, nome_fantasia, cnpj, inscricao_estadual, data_abertura_empresa, id_origem_comercial, id_produto, numero_agencia, numero_conta_corrente, email, dia_vencimento, nome_impresso, id_conta, id_proposta, canal_entrada, telefones, enderecos, socios].hash
     end
 
     # Builds the object from hash

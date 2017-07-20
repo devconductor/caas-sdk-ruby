@@ -175,6 +175,28 @@ describe 'PessoaJuridicaAprovadaPersist' do
   end
 
 
+  describe 'test attribute "valor_renda"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "canal_entrada"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
   describe 'test attribute "telefones"' do
     it 'should work' do
        # assertion here

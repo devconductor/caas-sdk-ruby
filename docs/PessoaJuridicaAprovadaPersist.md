@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **email** | **String** | Email da empresa | [optional] 
 **dia_vencimento** | **Integer** | Dia vencimento | 
 **nome_impresso** | **String** | Nome que deve ser impresso no cart\u00C3\u00A3o | [optional] 
+**valor_renda** | **Float** | Apresenta o valor da renda compravada | [optional] 
+**canal_entrada** | **String** | Indica o canal pelo qual o cadastro do cliente foi realizado | [optional] 
 **telefones** | [**Array&lt;TelefonePessoaAprovadaPersist&gt;**](TelefonePessoaAprovadaPersist.md) | Apresenta os telefones da empresa | [optional] 
 **enderecos** | [**Array&lt;EnderecoAprovadoPersist&gt;**](EnderecoAprovadoPersist.md) | Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros | 
 **socios** | [**Array&lt;PessoaPersist&gt;**](PessoaPersist.md) | Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista | [optional] 

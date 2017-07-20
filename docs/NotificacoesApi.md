@@ -4,14 +4,141 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**alterar_configuracao_using_put**](NotificacoesApi.md#alterar_configuracao_using_put) | **PUT** /api/configuracoes-email/{id} | Altera configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+[**alterar_template_notificacao_using_put**](NotificacoesApi.md#alterar_template_notificacao_using_put) | **PUT** /api/templates-notificacoes/{id} | Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
 [**atualizar_sms_using_post**](NotificacoesApi.md#atualizar_sms_using_post) | **POST** /api/notificacoes/sms/atualizar-status | Atualizar SMS
+[**consultar_configuracao_using_get**](NotificacoesApi.md#consultar_configuracao_using_get) | **GET** /api/configuracoes-email/{id} | Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail
+[**consultar_template_notificacao_using_get**](NotificacoesApi.md#consultar_template_notificacao_using_get) | **GET** /api/templates-notificacoes/{id} | Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
+[**gerar_token_using_post**](NotificacoesApi.md#gerar_token_using_post) | **POST** /api/notificacoes-sms/gerar-codigo-seguranca | Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
+[**listar_configuracao_using_get**](NotificacoesApi.md#listar_configuracao_using_get) | **GET** /api/configuracoes-email | Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
 [**listar_push_using_get**](NotificacoesApi.md#listar_push_using_get) | **GET** /api/notificacoes/push | Listar Push
 [**listar_sms_using_get**](NotificacoesApi.md#listar_sms_using_get) | **GET** /api/notificacoes/sms | Listar SMS
+[**listar_template_notificacao_using_get**](NotificacoesApi.md#listar_template_notificacao_using_get) | **GET** /api/templates-notificacoes | Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
+[**listar_tipos_layouts_using_get**](NotificacoesApi.md#listar_tipos_layouts_using_get) | **GET** /api/tipos-layouts | Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
 [**responder_sms_using_post**](NotificacoesApi.md#responder_sms_using_post) | **POST** /api/notificacoes/sms/responder | Responder SMS
+[**salvar_configuracao_using_post**](NotificacoesApi.md#salvar_configuracao_using_post) | **POST** /api/configuracoes-email | Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
 [**salvar_push_fcm_using_post**](NotificacoesApi.md#salvar_push_fcm_using_post) | **POST** /api/notificacoes/push/fcm | Enviar Push FCM
 [**salvar_push_gcm_using_post**](NotificacoesApi.md#salvar_push_gcm_using_post) | **POST** /api/notificacoes/push/gcm | Enviar Push GCM
 [**salvar_push_using_post**](NotificacoesApi.md#salvar_push_using_post) | **POST** /api/notificacoes/push/apns | Enviar Push APNS
 [**salvar_sms_using_post**](NotificacoesApi.md#salvar_sms_using_post) | **POST** /api/notificacoes/sms | Enviar SMS
+[**salvar_template_notificacao_using_post**](NotificacoesApi.md#salvar_template_notificacao_using_post) | **POST** /api/templates-notificacoes | Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
+[**validar_token_using_post**](NotificacoesApi.md#validar_token_using_post) | **POST** /api/notificacoes-sms/validar-codigo-seguranca | Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
+
+
+
+
+# **alterar_configuracao_using_put**
+> ConfiguracaoEmailResponse alterar_configuracao_using_put(id, persist)
+
+Altera configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+
+Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::NotificacoesApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+
+persist = Pier::ConfiguracaoEmailPersist.new # ConfiguracaoEmailPersist | persist
+
+
+begin
+  #Altera configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+  result = api_instance.alterar_configuracao_using_put(id, persist)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling NotificacoesApi->alterar_configuracao_using_put: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. | 
+ **persist** | [**ConfiguracaoEmailPersist**](ConfiguracaoEmailPersist.md)| persist | 
+
+
+### Return type
+
+[**ConfiguracaoEmailResponse**](ConfiguracaoEmailResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **alterar_template_notificacao_using_put**
+> TemplateNotificacaoResponse alterar_template_notificacao_using_put(id, conteudo, opts)
+
+Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
+
+Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de templates notifica\u00C3\u00A7\u00C3\u00B5es.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::NotificacoesApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.
+
+conteudo = "conteudo_example" # String | Template HTML
+
+opts = { 
+  id_configuracao_email: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
+  tipo_layout: "tipo_layout_example", # String | Tipo do layout.
+  tipo_notificacao: "tipo_notificacao_example", # String | Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+  assunto: "assunto_example" # String | Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
+}
+
+begin
+  #Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
+  result = api_instance.alterar_template_notificacao_using_put(id, conteudo, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling NotificacoesApi->alterar_template_notificacao_using_put: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail. | 
+ **conteudo** | **String**| Template HTML | 
+ **id_configuracao_email** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. | [optional] 
+ **tipo_layout** | **String**| Tipo do layout. | [optional] 
+ **tipo_notificacao** | **String**| Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. | [optional] 
+ **assunto** | **String**| Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. | [optional] 
+
+
+### Return type
+
+[**TemplateNotificacaoResponse**](TemplateNotificacaoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: text/plain
+ - **Accept**: application/json
 
 
 
@@ -62,6 +189,209 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**NotificacaoSMSResponse**](NotificacaoSMSResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **consultar_configuracao_using_get**
+> ConfiguracaoEmailResponse consultar_configuracao_using_get(id)
+
+Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail
+
+Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::NotificacoesApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+
+
+begin
+  #Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail
+  result = api_instance.consultar_configuracao_using_get(id)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling NotificacoesApi->consultar_configuracao_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. | 
+
+
+### Return type
+
+[**ConfiguracaoEmailResponse**](ConfiguracaoEmailResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **consultar_template_notificacao_using_get**
+> TemplateNotificacaoResponse consultar_template_notificacao_using_get(id)
+
+Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
+
+Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::NotificacoesApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.
+
+
+begin
+  #Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
+  result = api_instance.consultar_template_notificacao_using_get(id)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling NotificacoesApi->consultar_template_notificacao_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail. | 
+
+
+### Return type
+
+[**TemplateNotificacaoResponse**](TemplateNotificacaoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **gerar_token_using_post**
+> String gerar_token_using_post(persist)
+
+Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
+
+Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::NotificacoesApi.new
+
+persist = Pier::CodigoSegurancaSMSPersist.new # CodigoSegurancaSMSPersist | persist
+
+
+begin
+  #Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
+  result = api_instance.gerar_token_using_post(persist)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling NotificacoesApi->gerar_token_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **persist** | [**CodigoSegurancaSMSPersist**](CodigoSegurancaSMSPersist.md)| persist | 
+
+
+### Return type
+
+**String**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_configuracao_using_get**
+> PageConfiguracaoEmailResponse listar_configuracao_using_get(opts)
+
+Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
+
+Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::NotificacoesApi.new
+
+opts = { 
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+}
+
+begin
+  #Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
+  result = api_instance.listar_configuracao_using_get(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling NotificacoesApi->listar_configuracao_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+
+
+### Return type
+
+[**PageConfiguracaoEmailResponse**](PageConfiguracaoEmailResponse.md)
 
 ### Authorization
 
@@ -203,6 +533,103 @@ No authorization required
 
 
 
+# **listar_template_notificacao_using_get**
+> PageTemplateNotificacaoResponse listar_template_notificacao_using_get(opts)
+
+Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
+
+Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::NotificacoesApi.new
+
+opts = { 
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+}
+
+begin
+  #Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
+  result = api_instance.listar_template_notificacao_using_get(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling NotificacoesApi->listar_template_notificacao_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+
+
+### Return type
+
+[**PageTemplateNotificacaoResponse**](PageTemplateNotificacaoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_tipos_layouts_using_get**
+> Array&lt;Object&gt; listar_tipos_layouts_using_get
+
+Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
+
+Esse recurso permite listar os tipos de templates dispon\u00C3\u00ADveis os par\u00C3\u00A2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::NotificacoesApi.new
+
+begin
+  #Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
+  result = api_instance.listar_tipos_layouts_using_get
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling NotificacoesApi->listar_tipos_layouts_using_get: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+
+### Return type
+
+**Array&lt;Object&gt;**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
 # **responder_sms_using_post**
 > NotificacaoSMSResponse responder_sms_using_post(opts)
 
@@ -245,6 +672,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**NotificacaoSMSResponse**](NotificacaoSMSResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **salvar_configuracao_using_post**
+> ConfiguracaoEmailResponse salvar_configuracao_using_post(persist)
+
+Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+
+Esse recurso salvar configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::NotificacoesApi.new
+
+persist = Pier::ConfiguracaoEmailPersist.new # ConfiguracaoEmailPersist | persist
+
+
+begin
+  #Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+  result = api_instance.salvar_configuracao_using_post(persist)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling NotificacoesApi->salvar_configuracao_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **persist** | [**ConfiguracaoEmailPersist**](ConfiguracaoEmailPersist.md)| persist | 
+
+
+### Return type
+
+[**ConfiguracaoEmailResponse**](ConfiguracaoEmailResponse.md)
 
 ### Authorization
 
@@ -445,6 +922,116 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**NotificacaoResponse**](NotificacaoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **salvar_template_notificacao_using_post**
+> TemplateNotificacaoResponse salvar_template_notificacao_using_post(conteudo, opts)
+
+Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
+
+Esse recurso salvar template notifica\u00C3\u00A7\u00C3\u00B5e.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::NotificacoesApi.new
+
+conteudo = "conteudo_example" # String | Template HTML
+
+opts = { 
+  id_configuracao_email: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
+  tipo_layout: "tipo_layout_example", # String | Tipo do layout.
+  tipo_notificacao: "tipo_notificacao_example", # String | Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+  assunto: "assunto_example" # String | Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
+}
+
+begin
+  #Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
+  result = api_instance.salvar_template_notificacao_using_post(conteudo, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling NotificacoesApi->salvar_template_notificacao_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conteudo** | **String**| Template HTML | 
+ **id_configuracao_email** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. | [optional] 
+ **tipo_layout** | **String**| Tipo do layout. | [optional] 
+ **tipo_notificacao** | **String**| Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. | [optional] 
+ **assunto** | **String**| Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. | [optional] 
+
+
+### Return type
+
+[**TemplateNotificacaoResponse**](TemplateNotificacaoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: text/plain
+ - **Accept**: application/json
+
+
+
+
+# **validar_token_using_post**
+> String validar_token_using_post(request)
+
+Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
+
+Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::NotificacoesApi.new
+
+request = Pier::CodigoSegurancaSMSRequest.new # CodigoSegurancaSMSRequest | request
+
+
+begin
+  #Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
+  result = api_instance.validar_token_using_post(request)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling NotificacoesApi->validar_token_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**CodigoSegurancaSMSRequest**](CodigoSegurancaSMSRequest.md)| request | 
+
+
+### Return type
+
+**String**
 
 ### Authorization
 

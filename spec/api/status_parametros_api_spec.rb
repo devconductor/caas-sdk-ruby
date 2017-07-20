@@ -77,13 +77,13 @@ describe 'StatusParametrosApi' do
   end
 
 
-  # unit tests for consultar_using_get13
+  # unit tests for consultar_using_get14
   # Apresenta os dados de um determinado Status Conta
   # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
   # @param [Hash] opts the optional parameters
   # @return [StatusContaResponse]
-  describe 'consultar_using_get13 test' do
+  describe 'consultar_using_get14 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -94,13 +94,13 @@ describe 'StatusParametrosApi' do
   end
 
 
-  # unit tests for consultar_using_get14
+  # unit tests for consultar_using_get15
   # Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
   # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
   # @param [Hash] opts the optional parameters
   # @return [StatusImpressaoResponse]
-  describe 'consultar_using_get14 test' do
+  describe 'consultar_using_get15 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -146,6 +146,9 @@ describe 'StatusParametrosApi' do
   # @option opts [Integer] :flag_cobra_tarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
   # @option opts [Integer] :flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
   # @option opts [Integer] :flag_permite_desbloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo.
+  # @option opts [Integer] :flag_cancelamento Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo.
+  # @option opts [Integer] :flag_permite_bloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o Bloqueio, sendo: 0: Inativo e 1: Ativo.
+  # @option opts [Integer] :flag_reativar Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
   # @return [PageStatusCartaoResponse]
   describe 'listar_status_cartoes_using_get test' do
     it "should work" do
@@ -171,6 +174,9 @@ describe 'StatusParametrosApi' do
   # @option opts [Integer] :flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
   # @option opts [Integer] :flag_faz_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo.
   # @option opts [Integer] :flag_recebe_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo.
+  # @option opts [Integer] :flag_permite_bloqueio Par\u00C3\u00A2metro que define se o Status da conta permite receber bloqueio, sendo: 0: Inativo e 1: Ativo.
+  # @option opts [Integer] :flag_permite_desbloqueio Par\u00C3\u00A2metro que define se o Status da conta permite receber desbloqueio, sendo: 0: Inativo e 1: Ativo.
+  # @option opts [Integer] :flag_cancela_conta Par\u00C3\u00A2metro que define se o Status da conta permite receber cancelamento, sendo: 0: Inativo e 1: Ativo.
   # @return [PageStatusContaResponse]
   describe 'listar_using_get20 test' do
     it "should work" do

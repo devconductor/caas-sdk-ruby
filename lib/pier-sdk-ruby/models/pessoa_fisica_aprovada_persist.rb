@@ -56,7 +56,7 @@ module Pier
     attr_accessor :id_estado_civil
 
     # Profiss\u00C3\u00A3o da pessoa fisica
-    attr_accessor :profissao
+    attr_accessor :id_profissao
 
     # Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
     attr_accessor :id_natureza_ocupacao
@@ -87,6 +87,12 @@ module Pier
 
     # Nome que deve ser impresso no cart\u00C3\u00A3o
     attr_accessor :nome_empresa
+
+    # Apresenta o valor da renda compravada
+    attr_accessor :valor_renda
+
+    # Indica o canal pelo qual o cadastro do cliente foi realizado
+    attr_accessor :canal_entrada
 
     # Apresenta os telefones da empresa
     attr_accessor :telefones
@@ -119,7 +125,7 @@ module Pier
         
         :'id_estado_civil' => :'idEstadoCivil',
         
-        :'profissao' => :'profissao',
+        :'id_profissao' => :'idProfissao',
         
         :'id_natureza_ocupacao' => :'idNaturezaOcupacao',
         
@@ -140,6 +146,10 @@ module Pier
         :'nome_impresso' => :'nomeImpresso',
         
         :'nome_empresa' => :'nomeEmpresa',
+        
+        :'valor_renda' => :'valorRenda',
+        
+        :'canal_entrada' => :'canalEntrada',
         
         :'telefones' => :'telefones',
         
@@ -172,7 +182,7 @@ module Pier
         
         :'id_estado_civil' => :'Integer',
         
-        :'profissao' => :'String',
+        :'id_profissao' => :'Integer',
         
         :'id_natureza_ocupacao' => :'Integer',
         
@@ -193,6 +203,10 @@ module Pier
         :'nome_impresso' => :'String',
         
         :'nome_empresa' => :'String',
+        
+        :'valor_renda' => :'Float',
+        
+        :'canal_entrada' => :'String',
         
         :'telefones' => :'Array<TelefonePessoaAprovadaPersist>',
         
@@ -300,10 +314,10 @@ module Pier
       end
 
       
-      if attributes[:'profissao']
+      if attributes[:'idProfissao']
         
         
-        self.profissao = attributes[:'profissao']
+        self.id_profissao = attributes[:'idProfissao']
         
       
       end
@@ -394,6 +408,24 @@ module Pier
         
         
         self.nome_empresa = attributes[:'nomeEmpresa']
+        
+      
+      end
+
+      
+      if attributes[:'valorRenda']
+        
+        
+        self.valor_renda = attributes[:'valorRenda']
+        
+      
+      end
+
+      
+      if attributes[:'canalEntrada']
+        
+        
+        self.canal_entrada = attributes[:'canalEntrada']
         
       
       end
@@ -550,6 +582,14 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
       if @enderecos.nil?
         return false
       end
@@ -560,6 +600,16 @@ module Pier
       
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -691,7 +741,7 @@ module Pier
           unidade_federativa_identidade == o.unidade_federativa_identidade &&
           data_emissao_identidade == o.data_emissao_identidade &&
           id_estado_civil == o.id_estado_civil &&
-          profissao == o.profissao &&
+          id_profissao == o.id_profissao &&
           id_natureza_ocupacao == o.id_natureza_ocupacao &&
           id_nacionalidade == o.id_nacionalidade &&
           id_origem_comercial == o.id_origem_comercial &&
@@ -702,6 +752,8 @@ module Pier
           dia_vencimento == o.dia_vencimento &&
           nome_impresso == o.nome_impresso &&
           nome_empresa == o.nome_empresa &&
+          valor_renda == o.valor_renda &&
+          canal_entrada == o.canal_entrada &&
           telefones == o.telefones &&
           enderecos == o.enderecos
     end
@@ -715,7 +767,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [nome, nome_mae, data_nascimento, sexo, cpf, numero_identidade, orgao_expedidor_identidade, unidade_federativa_identidade, data_emissao_identidade, id_estado_civil, profissao, id_natureza_ocupacao, id_nacionalidade, id_origem_comercial, id_produto, numero_agencia, numero_conta_corrente, email, dia_vencimento, nome_impresso, nome_empresa, telefones, enderecos].hash
+      [nome, nome_mae, data_nascimento, sexo, cpf, numero_identidade, orgao_expedidor_identidade, unidade_federativa_identidade, data_emissao_identidade, id_estado_civil, id_profissao, id_natureza_ocupacao, id_nacionalidade, id_origem_comercial, id_produto, numero_agencia, numero_conta_corrente, email, dia_vencimento, nome_impresso, nome_empresa, valor_renda, canal_entrada, telefones, enderecos].hash
     end
 
     # Builds the object from hash

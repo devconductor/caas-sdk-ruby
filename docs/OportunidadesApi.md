@@ -8,8 +8,8 @@ Method | HTTP request | Description
 [**alterar_using_put3**](OportunidadesApi.md#alterar_using_put3) | **PUT** /api/oportunidades/{id} | Altera as oportunidades
 [**alterar_using_put7**](OportunidadesApi.md#alterar_using_put7) | **PUT** /api/tipos-oportunidades/{id} | Altera os tipos oportunidades
 [**consultar_status_using_get**](OportunidadesApi.md#consultar_status_using_get) | **GET** /api/tipos-oportunidades/{id}/status/{idStatus} | Apresenta dados de um determinado status do tipo oportunidade
-[**consultar_using_get20**](OportunidadesApi.md#consultar_using_get20) | **GET** /api/tipos-oportunidades/{id} | Apresenta dados de um determinado tipo oportunidade
-[**consultar_using_get8**](OportunidadesApi.md#consultar_using_get8) | **GET** /api/oportunidades/{id} | Apresenta dados de uma determinada oportunidade
+[**consultar_using_get21**](OportunidadesApi.md#consultar_using_get21) | **GET** /api/tipos-oportunidades/{id} | Apresenta dados de um determinado tipo oportunidade
+[**consultar_using_get9**](OportunidadesApi.md#consultar_using_get9) | **GET** /api/oportunidades/{id} | Apresenta dados de uma determinada oportunidade
 [**listar_auditorias_status_using_get**](OportunidadesApi.md#listar_auditorias_status_using_get) | **GET** /api/auditorias-status-oportunidades | Lista as auditorias dos status oportunidades
 [**listar_auditorias_using_get**](OportunidadesApi.md#listar_auditorias_using_get) | **GET** /api/auditorias-oportunidades | Lista as auditorias das oportunidades
 [**listar_auditorias_using_get1**](OportunidadesApi.md#listar_auditorias_using_get1) | **GET** /api/auditorias-tipos-oportunidades | Lista as auditorias dos tipos oportunidades
@@ -17,8 +17,8 @@ Method | HTTP request | Description
 [**listar_using_get13**](OportunidadesApi.md#listar_using_get13) | **GET** /api/oportunidades | Lista as oportunidades
 [**listar_using_get25**](OportunidadesApi.md#listar_using_get25) | **GET** /api/tipos-oportunidades | Lista os tipos oportunidades
 [**salvar_status_using_post**](OportunidadesApi.md#salvar_status_using_post) | **POST** /api/tipos-oportunidades/{id}/status | Cadastra status para o tipo oportunidade
-[**salvar_using_post11**](OportunidadesApi.md#salvar_using_post11) | **POST** /api/tipos-oportunidades | Cadastra tipos oportunidades
-[**salvar_using_post6**](OportunidadesApi.md#salvar_using_post6) | **POST** /api/oportunidades | Cadastra as oportunidade
+[**salvar_using_post13**](OportunidadesApi.md#salvar_using_post13) | **POST** /api/tipos-oportunidades | Cadastra tipos oportunidades
+[**salvar_using_post8**](OportunidadesApi.md#salvar_using_post8) | **POST** /api/oportunidades | Cadastra as oportunidades
 
 
 
@@ -238,8 +238,8 @@ No authorization required
 
 
 
-# **consultar_using_get20**
-> TipoOportunidadeResponse consultar_using_get20(id)
+# **consultar_using_get21**
+> TipoOportunidadeResponse consultar_using_get21(id)
 
 Apresenta dados de um determinado tipo oportunidade
 
@@ -258,10 +258,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta dados de um determinado tipo oportunidade
-  result = api_instance.consultar_using_get20(id)
+  result = api_instance.consultar_using_get21(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling OportunidadesApi->consultar_using_get20: #{e}"
+  puts "Exception when calling OportunidadesApi->consultar_using_get21: #{e}"
 end
 ```
 
@@ -288,8 +288,8 @@ No authorization required
 
 
 
-# **consultar_using_get8**
-> OportunidadeResponse consultar_using_get8(id)
+# **consultar_using_get9**
+> OportunidadeResponse consultar_using_get9(id)
 
 Apresenta dados de uma determinada oportunidade
 
@@ -308,10 +308,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da
 
 begin
   #Apresenta dados de uma determinada oportunidade
-  result = api_instance.consultar_using_get8(id)
+  result = api_instance.consultar_using_get9(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling OportunidadesApi->consultar_using_get8: #{e}"
+  puts "Exception when calling OportunidadesApi->consultar_using_get9: #{e}"
 end
 ```
 
@@ -608,7 +608,7 @@ No authorization required
 
 
 # **listar_using_get13**
-> PageOportunidadeResponse listar_using_get13(opts)
+> PageOportunidadeResponse listar_using_get13(data_inicio_vigencia, opts)
 
 Lista as oportunidades
 
@@ -622,6 +622,8 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::OportunidadesApi.new
 
+data_inicio_vigencia = "data_inicio_vigencia_example" # String | Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
+
 opts = { 
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
@@ -629,14 +631,13 @@ opts = {
   data_cadastro: "data_cadastro_example", # String | Data do cadastro da oportunidade
   data_atualizacao: "data_atualizacao_example", # String | Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
   numero_receita_federal: "numero_receita_federal_example", # String | N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
-  data_inicio_vigencia: "data_inicio_vigencia_example", # String | Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
   data_fim_vigencia: "data_fim_vigencia_example", # String | Data do fim da vig\u00C3\u00AAncia da oportunidade
   flag_ativo: true # BOOLEAN | Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
 }
 
 begin
   #Lista as oportunidades
-  result = api_instance.listar_using_get13(opts)
+  result = api_instance.listar_using_get13(data_inicio_vigencia, opts)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling OportunidadesApi->listar_using_get13: #{e}"
@@ -647,13 +648,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **data_inicio_vigencia** | **String**| Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade | 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id_status_oportunidade** | **Integer**| C\u00C3\u00B3digo identificador do status oportunidade | [optional] 
  **data_cadastro** | **String**| Data do cadastro da oportunidade | [optional] 
  **data_atualizacao** | **String**| Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade | [optional] 
  **numero_receita_federal** | **String**| N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade | [optional] 
- **data_inicio_vigencia** | **String**| Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade | [optional] 
  **data_fim_vigencia** | **String**| Data do fim da vig\u00C3\u00AAncia da oportunidade | [optional] 
  **flag_ativo** | **BOOLEAN**| Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa | [optional] 
 
@@ -784,8 +785,8 @@ No authorization required
 
 
 
-# **salvar_using_post11**
-> TipoOportunidadeResponse salvar_using_post11(persist)
+# **salvar_using_post13**
+> TipoOportunidadeResponse salvar_using_post13(persist)
 
 Cadastra tipos oportunidades
 
@@ -804,10 +805,10 @@ persist = Pier::TipoOportunidade.new # TipoOportunidade | persist
 
 begin
   #Cadastra tipos oportunidades
-  result = api_instance.salvar_using_post11(persist)
+  result = api_instance.salvar_using_post13(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling OportunidadesApi->salvar_using_post11: #{e}"
+  puts "Exception when calling OportunidadesApi->salvar_using_post13: #{e}"
 end
 ```
 
@@ -834,10 +835,10 @@ No authorization required
 
 
 
-# **salvar_using_post6**
-> OportunidadeResponse salvar_using_post6(persist)
+# **salvar_using_post8**
+> OportunidadeResponse salvar_using_post8(persist)
 
-Cadastra as oportunidade
+Cadastra as oportunidades
 
 Esse recurso permite cadastrar oportunidades.
 
@@ -853,11 +854,11 @@ persist = Pier::OportunidadePersist.new # OportunidadePersist | persist
 
 
 begin
-  #Cadastra as oportunidade
-  result = api_instance.salvar_using_post6(persist)
+  #Cadastra as oportunidades
+  result = api_instance.salvar_using_post8(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling OportunidadesApi->salvar_using_post6: #{e}"
+  puts "Exception when calling OportunidadesApi->salvar_using_post8: #{e}"
 end
 ```
 

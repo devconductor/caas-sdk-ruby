@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **detalhes** | [**Array&lt;CdtDetalheOportunidadeAUD&gt;**](CdtDetalheOportunidadeAUD.md) | Lista de detalhes da oportunidade | [optional] 
 **rev_date** | **String** | Data da auditoria | [optional] 
 **rev_type** | **Integer** | Tipo da auditoria | [optional] 
+**rev** | **Integer** | Identificador da auditoria | [optional] 
 
 
 

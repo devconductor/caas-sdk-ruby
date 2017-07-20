@@ -32,6 +32,202 @@ module Pier
     end
 
 
+    # Altera configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+    # Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+    # @param persist persist
+    # @param [Hash] opts the optional parameters
+    # @return [ConfiguracaoEmailResponse]
+    def alterar_configuracao_using_put(id, persist, opts = {})
+      data, _status_code, _headers = alterar_configuracao_using_put_with_http_info(id, persist, opts)
+      return data
+    end
+
+    # Altera configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+    # Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+    # @param persist persist
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ConfiguracaoEmailResponse, Fixnum, Hash)>] ConfiguracaoEmailResponse data, response status code and response headers
+    def alterar_configuracao_using_put_with_http_info(id, persist, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: NotificacoesApi.alterar_configuracao_using_put ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling NotificacoesApi.alterar_configuracao_using_put" if id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'persist' is set
+      fail ArgumentError, "Missing the required parameter 'persist' when calling NotificacoesApi.alterar_configuracao_using_put" if persist.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/configuracoes-email/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(persist)
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ConfiguracaoEmailResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: NotificacoesApi#alterar_configuracao_using_put\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
+    # Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de templates notifica\u00C3\u00A7\u00C3\u00B5es.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.
+    # @param conteudo Template HTML
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :id_configuracao_email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
+    # @option opts [String] :tipo_layout Tipo do layout.
+    # @option opts [String] :tipo_notificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+    # @option opts [String] :assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
+    # @return [TemplateNotificacaoResponse]
+    def alterar_template_notificacao_using_put(id, conteudo, opts = {})
+      data, _status_code, _headers = alterar_template_notificacao_using_put_with_http_info(id, conteudo, opts)
+      return data
+    end
+
+    # Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
+    # Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de templates notifica\u00C3\u00A7\u00C3\u00B5es.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.
+    # @param conteudo Template HTML
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :id_configuracao_email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
+    # @option opts [String] :tipo_layout Tipo do layout.
+    # @option opts [String] :tipo_notificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+    # @option opts [String] :assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
+    # @return [Array<(TemplateNotificacaoResponse, Fixnum, Hash)>] TemplateNotificacaoResponse data, response status code and response headers
+    def alterar_template_notificacao_using_put_with_http_info(id, conteudo, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: NotificacoesApi.alterar_template_notificacao_using_put ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling NotificacoesApi.alterar_template_notificacao_using_put" if id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'conteudo' is set
+      fail ArgumentError, "Missing the required parameter 'conteudo' when calling NotificacoesApi.alterar_template_notificacao_using_put" if conteudo.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'tipo_layout'] && !['RECUPERAR_SENHA', 'VALIDAR_DISPOSITIVO'].include?(opts[:'tipo_layout'])
+        fail ArgumentError, 'invalid value for "tipo_layout", must be one of RECUPERAR_SENHA, VALIDAR_DISPOSITIVO'
+      end
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'tipo_notificacao'] && !['SMS', 'PUSH_APNS', 'PUSH_FCM', 'PUSH_GCM', 'EMAIL'].include?(opts[:'tipo_notificacao'])
+        fail ArgumentError, 'invalid value for "tipo_notificacao", must be one of SMS, PUSH_APNS, PUSH_FCM, PUSH_GCM, EMAIL'
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/templates-notificacoes/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'idConfiguracaoEmail'] = opts[:'id_configuracao_email'] if opts[:'id_configuracao_email']
+      query_params[:'tipoLayout'] = opts[:'tipo_layout'] if opts[:'tipo_layout']
+      query_params[:'tipoNotificacao'] = opts[:'tipo_notificacao'] if opts[:'tipo_notificacao']
+      query_params[:'assunto'] = opts[:'assunto'] if opts[:'assunto']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['text/plain']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(conteudo)
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TemplateNotificacaoResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: NotificacoesApi#alterar_template_notificacao_using_put\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Atualizar SMS
     # Esse recurso permite atualizar o status do SMS do emissor
     # @param [Hash] opts the optional parameters
@@ -133,6 +329,278 @@ module Pier
     end
 
 
+    # Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail
+    # Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+    # @param [Hash] opts the optional parameters
+    # @return [ConfiguracaoEmailResponse]
+    def consultar_configuracao_using_get(id, opts = {})
+      data, _status_code, _headers = consultar_configuracao_using_get_with_http_info(id, opts)
+      return data
+    end
+
+    # Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail
+    # Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ConfiguracaoEmailResponse, Fixnum, Hash)>] ConfiguracaoEmailResponse data, response status code and response headers
+    def consultar_configuracao_using_get_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: NotificacoesApi.consultar_configuracao_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling NotificacoesApi.consultar_configuracao_using_get" if id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/configuracoes-email/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ConfiguracaoEmailResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: NotificacoesApi#consultar_configuracao_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
+    # Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.
+    # @param [Hash] opts the optional parameters
+    # @return [TemplateNotificacaoResponse]
+    def consultar_template_notificacao_using_get(id, opts = {})
+      data, _status_code, _headers = consultar_template_notificacao_using_get_with_http_info(id, opts)
+      return data
+    end
+
+    # Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
+    # Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(TemplateNotificacaoResponse, Fixnum, Hash)>] TemplateNotificacaoResponse data, response status code and response headers
+    def consultar_template_notificacao_using_get_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: NotificacoesApi.consultar_template_notificacao_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling NotificacoesApi.consultar_template_notificacao_using_get" if id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/templates-notificacoes/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TemplateNotificacaoResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: NotificacoesApi#consultar_template_notificacao_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
+    # Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+    # @param persist persist
+    # @param [Hash] opts the optional parameters
+    # @return [String]
+    def gerar_token_using_post(persist, opts = {})
+      data, _status_code, _headers = gerar_token_using_post_with_http_info(persist, opts)
+      return data
+    end
+
+    # Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
+    # Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+    # @param persist persist
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    def gerar_token_using_post_with_http_info(persist, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: NotificacoesApi.gerar_token_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'persist' is set
+      fail ArgumentError, "Missing the required parameter 'persist' when calling NotificacoesApi.gerar_token_using_post" if persist.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/notificacoes-sms/gerar-codigo-seguranca".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(persist)
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'String')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: NotificacoesApi#gerar_token_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
+    # Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @return [PageConfiguracaoEmailResponse]
+    def listar_configuracao_using_get(opts = {})
+      data, _status_code, _headers = listar_configuracao_using_get_with_http_info(opts)
+      return data
+    end
+
+    # Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
+    # Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @return [Array<(PageConfiguracaoEmailResponse, Fixnum, Hash)>] PageConfiguracaoEmailResponse data, response status code and response headers
+    def listar_configuracao_using_get_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: NotificacoesApi.listar_configuracao_using_get ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/configuracoes-email".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageConfiguracaoEmailResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: NotificacoesApi#listar_configuracao_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Listar Push
     # Esse recurso permite listar os Pushes do emissor
     # @param [Hash] opts the optional parameters
@@ -186,8 +654,8 @@ module Pier
       
       
       
-      if opts[:'tipo_evento'] && !['RISCO_FRAUDE', 'OUTROS'].include?(opts[:'tipo_evento'])
-        fail ArgumentError, 'invalid value for "tipo_evento", must be one of RISCO_FRAUDE, OUTROS'
+      if opts[:'tipo_evento'] && !['RISCO_FRAUDE', 'TOKEN_SMS', 'OUTROS'].include?(opts[:'tipo_evento'])
+        fail ArgumentError, 'invalid value for "tipo_evento", must be one of RISCO_FRAUDE, TOKEN_SMS, OUTROS'
       end
       
       
@@ -319,8 +787,8 @@ module Pier
       
       
       
-      if opts[:'tipo_evento'] && !['RISCO_FRAUDE', 'OUTROS'].include?(opts[:'tipo_evento'])
-        fail ArgumentError, 'invalid value for "tipo_evento", must be one of RISCO_FRAUDE, OUTROS'
+      if opts[:'tipo_evento'] && !['RISCO_FRAUDE', 'TOKEN_SMS', 'OUTROS'].include?(opts[:'tipo_evento'])
+        fail ArgumentError, 'invalid value for "tipo_evento", must be one of RISCO_FRAUDE, TOKEN_SMS, OUTROS'
       end
       
       
@@ -395,6 +863,136 @@ module Pier
         :return_type => 'PageSMSResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: NotificacoesApi#listar_sms_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
+    # Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @return [PageTemplateNotificacaoResponse]
+    def listar_template_notificacao_using_get(opts = {})
+      data, _status_code, _headers = listar_template_notificacao_using_get_with_http_info(opts)
+      return data
+    end
+
+    # Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
+    # Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @return [Array<(PageTemplateNotificacaoResponse, Fixnum, Hash)>] PageTemplateNotificacaoResponse data, response status code and response headers
+    def listar_template_notificacao_using_get_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: NotificacoesApi.listar_template_notificacao_using_get ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/templates-notificacoes".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageTemplateNotificacaoResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: NotificacoesApi#listar_template_notificacao_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
+    # Esse recurso permite listar os tipos de templates dispon\u00C3\u00ADveis os par\u00C3\u00A2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
+    # @param [Hash] opts the optional parameters
+    # @return [Array<Object>]
+    def listar_tipos_layouts_using_get(opts = {})
+      data, _status_code, _headers = listar_tipos_layouts_using_get_with_http_info(opts)
+      return data
+    end
+
+    # Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
+    # Esse recurso permite listar os tipos de templates dispon\u00C3\u00ADveis os par\u00C3\u00A2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<Object>, Fixnum, Hash)>] Array<Object> data, response status code and response headers
+    def listar_tipos_layouts_using_get_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: NotificacoesApi.listar_tipos_layouts_using_get ..."
+      end
+      
+      # resource path
+      local_var_path = "/api/tipos-layouts".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<Object>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: NotificacoesApi#listar_tipos_layouts_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -478,6 +1076,72 @@ module Pier
         :return_type => 'NotificacaoSMSResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: NotificacoesApi#responder_sms_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+    # Esse recurso salvar configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+    # @param persist persist
+    # @param [Hash] opts the optional parameters
+    # @return [ConfiguracaoEmailResponse]
+    def salvar_configuracao_using_post(persist, opts = {})
+      data, _status_code, _headers = salvar_configuracao_using_post_with_http_info(persist, opts)
+      return data
+    end
+
+    # Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+    # Esse recurso salvar configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+    # @param persist persist
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ConfiguracaoEmailResponse, Fixnum, Hash)>] ConfiguracaoEmailResponse data, response status code and response headers
+    def salvar_configuracao_using_post_with_http_info(persist, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: NotificacoesApi.salvar_configuracao_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'persist' is set
+      fail ArgumentError, "Missing the required parameter 'persist' when calling NotificacoesApi.salvar_configuracao_using_post" if persist.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/configuracoes-email".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(persist)
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ConfiguracaoEmailResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: NotificacoesApi#salvar_configuracao_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -742,6 +1406,182 @@ module Pier
         :return_type => 'NotificacaoResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: NotificacoesApi#salvar_sms_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
+    # Esse recurso salvar template notifica\u00C3\u00A7\u00C3\u00B5e.
+    # @param conteudo Template HTML
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :id_configuracao_email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
+    # @option opts [String] :tipo_layout Tipo do layout.
+    # @option opts [String] :tipo_notificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+    # @option opts [String] :assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
+    # @return [TemplateNotificacaoResponse]
+    def salvar_template_notificacao_using_post(conteudo, opts = {})
+      data, _status_code, _headers = salvar_template_notificacao_using_post_with_http_info(conteudo, opts)
+      return data
+    end
+
+    # Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
+    # Esse recurso salvar template notifica\u00C3\u00A7\u00C3\u00B5e.
+    # @param conteudo Template HTML
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :id_configuracao_email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
+    # @option opts [String] :tipo_layout Tipo do layout.
+    # @option opts [String] :tipo_notificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+    # @option opts [String] :assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
+    # @return [Array<(TemplateNotificacaoResponse, Fixnum, Hash)>] TemplateNotificacaoResponse data, response status code and response headers
+    def salvar_template_notificacao_using_post_with_http_info(conteudo, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: NotificacoesApi.salvar_template_notificacao_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'conteudo' is set
+      fail ArgumentError, "Missing the required parameter 'conteudo' when calling NotificacoesApi.salvar_template_notificacao_using_post" if conteudo.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'tipo_layout'] && !['RECUPERAR_SENHA', 'VALIDAR_DISPOSITIVO'].include?(opts[:'tipo_layout'])
+        fail ArgumentError, 'invalid value for "tipo_layout", must be one of RECUPERAR_SENHA, VALIDAR_DISPOSITIVO'
+      end
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'tipo_notificacao'] && !['SMS', 'PUSH_APNS', 'PUSH_FCM', 'PUSH_GCM', 'EMAIL'].include?(opts[:'tipo_notificacao'])
+        fail ArgumentError, 'invalid value for "tipo_notificacao", must be one of SMS, PUSH_APNS, PUSH_FCM, PUSH_GCM, EMAIL'
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/templates-notificacoes".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'idConfiguracaoEmail'] = opts[:'id_configuracao_email'] if opts[:'id_configuracao_email']
+      query_params[:'tipoLayout'] = opts[:'tipo_layout'] if opts[:'tipo_layout']
+      query_params[:'tipoNotificacao'] = opts[:'tipo_notificacao'] if opts[:'tipo_notificacao']
+      query_params[:'assunto'] = opts[:'assunto'] if opts[:'assunto']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['text/plain']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(conteudo)
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TemplateNotificacaoResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: NotificacoesApi#salvar_template_notificacao_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
+    # Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+    # @param request request
+    # @param [Hash] opts the optional parameters
+    # @return [String]
+    def validar_token_using_post(request, opts = {})
+      data, _status_code, _headers = validar_token_using_post_with_http_info(request, opts)
+      return data
+    end
+
+    # Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
+    # Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+    # @param request request
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    def validar_token_using_post_with_http_info(request, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: NotificacoesApi.validar_token_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'request' is set
+      fail ArgumentError, "Missing the required parameter 'request' when calling NotificacoesApi.validar_token_using_post" if request.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/notificacoes-sms/validar-codigo-seguranca".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(request)
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'String')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: NotificacoesApi#validar_token_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

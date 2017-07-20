@@ -153,7 +153,7 @@ describe 'PessoaFisicaAprovadaPersist' do
   end
 
 
-  describe 'test attribute "profissao"' do
+  describe 'test attribute "id_profissao"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -264,6 +264,28 @@ describe 'PessoaFisicaAprovadaPersist' do
 
 
   describe 'test attribute "nome_empresa"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "valor_renda"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "canal_entrada"' do
     it 'should work' do
        # assertion here
        # should be_a()

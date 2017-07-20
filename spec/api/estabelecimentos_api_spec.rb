@@ -43,13 +43,13 @@ describe 'EstabelecimentosApi' do
   end
 
 
-  # unit tests for consultar_using_get16
+  # unit tests for consultar_using_get17
   # Apresenta os dados de um determinado Terminal
   # Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
   # @param [Hash] opts the optional parameters
   # @return [TerminalResponse]
-  describe 'consultar_using_get16 test' do
+  describe 'consultar_using_get17 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -60,13 +60,13 @@ describe 'EstabelecimentosApi' do
   end
 
 
-  # unit tests for consultar_using_get6
+  # unit tests for consultar_using_get7
   # Consultar estabelecimento por id
   # Consulta os detalhes de um determinado estabelecimento
   # @param id Id
   # @param [Hash] opts the optional parameters
   # @return [EstabelecimentoResponse]
-  describe 'consultar_using_get6 test' do
+  describe 'consultar_using_get7 test' do
     it "should work" do
       # assertion here
       # should be_a()

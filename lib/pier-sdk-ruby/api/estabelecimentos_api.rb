@@ -37,8 +37,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
     # @param [Hash] opts the optional parameters
     # @return [TerminalResponse]
-    def consultar_using_get16(id, opts = {})
-      data, _status_code, _headers = consultar_using_get16_with_http_info(id, opts)
+    def consultar_using_get17(id, opts = {})
+      data, _status_code, _headers = consultar_using_get17_with_http_info(id, opts)
       return data
     end
 
@@ -47,14 +47,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(TerminalResponse, Fixnum, Hash)>] TerminalResponse data, response status code and response headers
-    def consultar_using_get16_with_http_info(id, opts = {})
+    def consultar_using_get17_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentosApi.consultar_using_get16 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentosApi.consultar_using_get17 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentosApi.consultar_using_get16" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentosApi.consultar_using_get17" if id.nil?
       
       
       
@@ -92,7 +92,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TerminalResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentosApi#consultar_using_get16\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentosApi#consultar_using_get17\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -103,8 +103,8 @@ module Pier
     # @param id Id
     # @param [Hash] opts the optional parameters
     # @return [EstabelecimentoResponse]
-    def consultar_using_get6(id, opts = {})
-      data, _status_code, _headers = consultar_using_get6_with_http_info(id, opts)
+    def consultar_using_get7(id, opts = {})
+      data, _status_code, _headers = consultar_using_get7_with_http_info(id, opts)
       return data
     end
 
@@ -113,14 +113,14 @@ module Pier
     # @param id Id
     # @param [Hash] opts the optional parameters
     # @return [Array<(EstabelecimentoResponse, Fixnum, Hash)>] EstabelecimentoResponse data, response status code and response headers
-    def consultar_using_get6_with_http_info(id, opts = {})
+    def consultar_using_get7_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentosApi.consultar_using_get6 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentosApi.consultar_using_get7 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentosApi.consultar_using_get6" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentosApi.consultar_using_get7" if id.nil?
       
       
       
@@ -158,7 +158,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'EstabelecimentoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentosApi#consultar_using_get6\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentosApi#consultar_using_get7\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

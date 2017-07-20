@@ -175,5 +175,16 @@ describe 'OportunidadeAUDResponse' do
   end
 
 
+  describe 'test attribute "rev"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
 end
 

@@ -100,13 +100,13 @@ describe 'DispositivosApi' do
   end
 
 
-  # unit tests for salvar_using_post3
+  # unit tests for salvar_using_post4
   # Cadastra Dispositivo
   # Esse recurso permite cadastrar dispositivos.
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [DispositivoResponse]
-  describe 'salvar_using_post3 test' do
+  describe 'salvar_using_post4 test' do
     it "should work" do
       # assertion here
       # should be_a()

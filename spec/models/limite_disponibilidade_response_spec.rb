@@ -186,6 +186,17 @@ describe 'LimiteDisponibilidadeResponse' do
   end
 
 
+  describe 'test attribute "limite_maximo"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
   describe 'test attribute "saldo_disponivel_global"' do
     it 'should work' do
        # assertion here

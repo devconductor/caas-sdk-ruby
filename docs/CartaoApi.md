@@ -7,19 +7,21 @@ Method | HTTP request | Description
 [**alterar_alterar_senha_using_put**](CartaoApi.md#alterar_alterar_senha_using_put) | **PUT** /api/cartoes/{id}/alterar-senha | Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
 [**alterar_status_impressao_using_put**](CartaoApi.md#alterar_status_impressao_using_put) | **PUT** /api/cartoes/{id}/alterar-status-impressao | Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
 [**atribuir_pessoa_using_put**](CartaoApi.md#atribuir_pessoa_using_put) | **PUT** /api/cartoes/{id}/atribuir-titular | Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
-[**bloquear_using_put**](CartaoApi.md#bloquear_using_put) | **PUT** /api/cartoes/{id}/bloquear | Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
+[**bloquear_using_post**](CartaoApi.md#bloquear_using_post) | **POST** /api/cartoes/{id}/bloquear | Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
 [**cadastrar_alterar_senha_using_post**](CartaoApi.md#cadastrar_alterar_senha_using_post) | **POST** /api/cartoes/{id}/cadastrar-senha | Realiza o cadastro da senha de um Cart\u00C3\u00A3o
+[**cancelar_using_post**](CartaoApi.md#cancelar_using_post) | **POST** /api/cartoes/{id}/cancelar | Realiza o cancelamento de um determinado Cart\u00C3\u00A3o
 [**consultar_dados_reais_cartao_using_get**](CartaoApi.md#consultar_dados_reais_cartao_using_get) | **GET** /api/cartoes/{id}/consultar-dados-reais | Consultar Detalhes do Cart\u00C3\u00A3o
 [**consultar_limite_disponibilidade_using_get**](CartaoApi.md#consultar_limite_disponibilidade_using_get) | **GET** /api/cartoes/{id}/limites-disponibilidades | Apresenta os limites do Portador do Cart\u00C3\u00A3o
 [**consultar_lotes_cartoes_pre_pagos_using_get**](CartaoApi.md#consultar_lotes_cartoes_pre_pagos_using_get) | **GET** /api/cartoes/lotes-cartoes-pre-pagos/{id} | Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**consultar_portador_using_get**](CartaoApi.md#consultar_portador_using_get) | **GET** /api/cartoes/{id}/portadores | Apresenta os dados do Portador do Cart\u00C3\u00A3o
-[**consultar_using_get3**](CartaoApi.md#consultar_using_get3) | **GET** /api/cartoes/{id} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
+[**consultar_using_get4**](CartaoApi.md#consultar_using_get4) | **GET** /api/cartoes/{id} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
 [**desbloquear_senha_incorreta_using_post**](CartaoApi.md#desbloquear_senha_incorreta_using_post) | **POST** /api/cartoes/{id}/desbloquear-senha-incorreta | Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
-[**desbloquear_using_put**](CartaoApi.md#desbloquear_using_put) | **PUT** /api/cartoes/{id}/desbloquear | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
+[**desbloquear_using_post**](CartaoApi.md#desbloquear_using_post) | **POST** /api/cartoes/{id}/desbloquear | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 [**gerar_lotes_cartoes_pre_pagos_using_post**](CartaoApi.md#gerar_lotes_cartoes_pre_pagos_using_post) | **POST** /api/cartoes/lotes-cartoes-pre-pagos | Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**gerar_nova_via_using_post**](CartaoApi.md#gerar_nova_via_using_post) | **POST** /api/cartoes/{id}/gerar-nova-via | Gerar uma nova via de Cart\u00C3\u00A3o
 [**listar_lotes_cartoes_pre_pagos_using_get**](CartaoApi.md#listar_lotes_cartoes_pre_pagos_using_get) | **GET** /api/cartoes/lotes-cartoes-pre-pagos | Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**listar_using_get5**](CartaoApi.md#listar_using_get5) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
+[**reativar_using_post**](CartaoApi.md#reativar_using_post) | **POST** /api/cartoes/{id}/reativar | Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o
 [**validar_dados_impressos_bandeirado_using_get**](CartaoApi.md#validar_dados_impressos_bandeirado_using_get) | **GET** /api/cartoes/validar-dados-impressos-bandeirados | Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
 [**validar_dados_impressos_nao_bandeirado_using_get**](CartaoApi.md#validar_dados_impressos_nao_bandeirado_using_get) | **GET** /api/cartoes/validar-dados-impressos-nao-bandeirados | Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
 [**validar_de55_cartao_mastercard_using_get**](CartaoApi.md#validar_de55_cartao_mastercard_using_get) | **GET** /api/cartoes/validar-de55-mastercard | Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
@@ -188,8 +190,8 @@ No authorization required
 
 
 
-# **bloquear_using_put**
-> CartaoResponse bloquear_using_put(id, id_status, observacao)
+# **bloquear_using_post**
+> CartaoResponse bloquear_using_post(id, id_status, observacao)
 
 Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
 
@@ -212,10 +214,10 @@ observacao = "observacao_example" # String | Texto informando uma observa\u00C3\
 
 begin
   #Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
-  result = api_instance.bloquear_using_put(id, id_status, observacao)
+  result = api_instance.bloquear_using_post(id, id_status, observacao)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CartaoApi->bloquear_using_put: #{e}"
+  puts "Exception when calling CartaoApi->bloquear_using_post: #{e}"
 end
 ```
 
@@ -284,6 +286,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 **String**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **cancelar_using_post**
+> CartaoResponse cancelar_using_post(id, id_status, observacao)
+
+Realiza o cancelamento de um determinado Cart\u00C3\u00A3o
+
+Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o cancelamento de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::CartaoApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+
+id_status = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.
+
+observacao = "observacao_example" # String | Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o cancelamento.
+
+
+begin
+  #Realiza o cancelamento de um determinado Cart\u00C3\u00A3o
+  result = api_instance.cancelar_using_post(id, id_status, observacao)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CartaoApi->cancelar_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
+ **id_status** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o. | 
+ **observacao** | **String**| Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o cancelamento. | 
+
+
+### Return type
+
+[**CartaoResponse**](CartaoResponse.md)
 
 ### Authorization
 
@@ -497,8 +555,8 @@ No authorization required
 
 
 
-# **consultar_using_get3**
-> CartaoDetalheResponse consultar_using_get3(id)
+# **consultar_using_get4**
+> CartaoDetalheResponse consultar_using_get4(id)
 
 Apresenta os dados de um determinado Cart\u00C3\u00A3o
 
@@ -517,10 +575,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Cart\u00C3\u00A3o
-  result = api_instance.consultar_using_get3(id)
+  result = api_instance.consultar_using_get4(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CartaoApi->consultar_using_get3: #{e}"
+  puts "Exception when calling CartaoApi->consultar_using_get4: #{e}"
 end
 ```
 
@@ -597,8 +655,8 @@ No authorization required
 
 
 
-# **desbloquear_using_put**
-> CartaoResponse desbloquear_using_put(id)
+# **desbloquear_using_post**
+> CartaoResponse desbloquear_using_post(id)
 
 Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 
@@ -617,10 +675,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
-  result = api_instance.desbloquear_using_put(id)
+  result = api_instance.desbloquear_using_post(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CartaoApi->desbloquear_using_put: #{e}"
+  puts "Exception when calling CartaoApi->desbloquear_using_post: #{e}"
 end
 ```
 
@@ -905,6 +963,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PageCartaoResponse**](PageCartaoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **reativar_using_post**
+> CartaoResponse reativar_using_post(id)
+
+Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o
+
+Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o da reativa\u00C3\u00A7\u00C3\u00A3o de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::CartaoApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+
+
+begin
+  #Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o
+  result = api_instance.reativar_using_post(id)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CartaoApi->reativar_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
+
+
+### Return type
+
+[**CartaoResponse**](CartaoResponse.md)
 
 ### Authorization
 

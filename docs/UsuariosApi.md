@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterar_senha_using_put**](UsuariosApi.md#alterar_senha_using_put) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio
-[**alterar_using_put9**](UsuariosApi.md#alterar_using_put9) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados
-[**ativar_usuario_using_post**](UsuariosApi.md#ativar_usuario_using_post) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados
-[**consultar_using_get25**](UsuariosApi.md#consultar_using_get25) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio
-[**desativar_usuario_using_post**](UsuariosApi.md#desativar_usuario_using_post) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados
-[**listar_using_get30**](UsuariosApi.md#listar_using_get30) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados
-[**recuperar_senha_using_post**](UsuariosApi.md#recuperar_senha_using_post) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio
-[**salvar_using_post13**](UsuariosApi.md#salvar_using_post13) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio
-[**validar_senha_using_get1**](UsuariosApi.md#validar_senha_using_get1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio
+[**alterar_senha_using_put**](UsuariosApi.md#alterar_senha_using_put) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+[**alterar_using_put9**](UsuariosApi.md#alterar_using_put9) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**ativar_usuario_using_post**](UsuariosApi.md#ativar_usuario_using_post) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**consultar_using_get26**](UsuariosApi.md#consultar_using_get26) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
+[**desativar_usuario_using_post**](UsuariosApi.md#desativar_usuario_using_post) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**listar_using_get30**](UsuariosApi.md#listar_using_get30) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**recuperar_senha_using_post**](UsuariosApi.md#recuperar_senha_using_post) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+[**salvar_using_post15**](UsuariosApi.md#salvar_using_post15) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
+[**validar_senha_using_get1**](UsuariosApi.md#validar_senha_using_get1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 
 
 
@@ -20,7 +20,7 @@ Method | HTTP request | Description
 # **alterar_senha_using_put**
 > String alterar_senha_using_put(id, senha_atual, senha_nova)
 
-Alterar senha do usu\u00C3\u00A1rio
+Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 
 Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
 
@@ -40,7 +40,7 @@ senha_nova = "senha_nova_example" # String | Senha Nova
 
 
 begin
-  #Alterar senha do usu\u00C3\u00A1rio
+  #Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
   result = api_instance.alterar_senha_using_put(id, senha_atual, senha_nova)
   p result
 rescue Pier::ApiError => e
@@ -76,7 +76,7 @@ No authorization required
 # **alterar_using_put9**
 > UsuarioResponse alterar_using_put9(id, update)
 
-Altera os usu\u00C3\u00A1rios cadastrados
+Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 
 Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
 
@@ -94,7 +94,7 @@ update = Pier::UsuarioUpdate.new # UsuarioUpdate | update
 
 
 begin
-  #Altera os usu\u00C3\u00A1rios cadastrados
+  #Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
   result = api_instance.alterar_using_put9(id, update)
   p result
 rescue Pier::ApiError => e
@@ -129,7 +129,7 @@ No authorization required
 # **ativar_usuario_using_post**
 > UsuarioResponse ativar_usuario_using_post(id)
 
-Ativa os usu\u00C3\u00A1rios cadastrados
+Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 
 Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
 
@@ -145,7 +145,7 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 
 begin
-  #Ativa os usu\u00C3\u00A1rios cadastrados
+  #Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
   result = api_instance.ativar_usuario_using_post(id)
   p result
 rescue Pier::ApiError => e
@@ -176,10 +176,10 @@ No authorization required
 
 
 
-# **consultar_using_get25**
-> UsuarioResponse consultar_using_get25(id)
+# **consultar_using_get26**
+> UsuarioResponse consultar_using_get26(id)
 
-Apresenta os dados de um determinado Usu\u00C3\u00A1rio
+Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
 
 Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
 
@@ -195,11 +195,11 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 
 begin
-  #Apresenta os dados de um determinado Usu\u00C3\u00A1rio
-  result = api_instance.consultar_using_get25(id)
+  #Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
+  result = api_instance.consultar_using_get26(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling UsuariosApi->consultar_using_get25: #{e}"
+  puts "Exception when calling UsuariosApi->consultar_using_get26: #{e}"
 end
 ```
 
@@ -229,7 +229,7 @@ No authorization required
 # **desativar_usuario_using_post**
 > UsuarioResponse desativar_usuario_using_post(id)
 
-Desativa os usu\u00C3\u00A1rios cadastrados
+Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 
 Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
 
@@ -245,7 +245,7 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 
 begin
-  #Desativa os usu\u00C3\u00A1rios cadastrados
+  #Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
   result = api_instance.desativar_usuario_using_post(id)
   p result
 rescue Pier::ApiError => e
@@ -279,7 +279,7 @@ No authorization required
 # **listar_using_get30**
 > PageUsuarioResponse listar_using_get30(opts)
 
-Lista os Usu\u00C3\u00A1rios cadastrados
+Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 
 Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
 
@@ -301,7 +301,7 @@ opts = {
 }
 
 begin
-  #Lista os Usu\u00C3\u00A1rios cadastrados
+  #Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
   result = api_instance.listar_using_get30(opts)
   p result
 rescue Pier::ApiError => e
@@ -340,7 +340,7 @@ No authorization required
 # **recuperar_senha_using_post**
 > String recuperar_senha_using_post(id)
 
-Recuperar senha do usu\u00C3\u00A1rio
+Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 
 Esse recurso permite recuperar a senha do usu\u00C3\u00A1rio.
 
@@ -356,7 +356,7 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 
 begin
-  #Recuperar senha do usu\u00C3\u00A1rio
+  #Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
   result = api_instance.recuperar_senha_using_post(id)
   p result
 rescue Pier::ApiError => e
@@ -387,10 +387,10 @@ No authorization required
 
 
 
-# **salvar_using_post13**
-> UsuarioResponse salvar_using_post13(persist)
+# **salvar_using_post15**
+> UsuarioResponse salvar_using_post15(persist)
 
-Cadastra Usu\u00C3\u00A1rio
+Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
 
 Esse recurso permite cadastrar usu\u00C3\u00A1rios.
 
@@ -406,11 +406,11 @@ persist = Pier::UsuarioPersist.new # UsuarioPersist | persist
 
 
 begin
-  #Cadastra Usu\u00C3\u00A1rio
-  result = api_instance.salvar_using_post13(persist)
+  #Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
+  result = api_instance.salvar_using_post15(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling UsuariosApi->salvar_using_post13: #{e}"
+  puts "Exception when calling UsuariosApi->salvar_using_post15: #{e}"
 end
 ```
 
@@ -440,7 +440,7 @@ No authorization required
 # **validar_senha_using_get1**
 > String validar_senha_using_get1(senha, id)
 
-Validar a senha do usu\u00C3\u00A1rio
+Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 
 Este m\u00C3\u00A9todo permite validar a senha do usu\u00C3\u00A1rio).
 
@@ -458,7 +458,7 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 
 begin
-  #Validar a senha do usu\u00C3\u00A1rio
+  #Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
   result = api_instance.validar_senha_using_get1(senha, id)
   p result
 rescue Pier::ApiError => e

@@ -61,6 +61,12 @@ module Pier
     # Nome que deve ser impresso no cart\u00C3\u00A3o
     attr_accessor :nome_impresso
 
+    # Apresenta o valor da renda compravada
+    attr_accessor :valor_renda
+
+    # Indica o canal pelo qual o cadastro do cliente foi realizado
+    attr_accessor :canal_entrada
+
     # Apresenta os telefones da empresa
     attr_accessor :telefones
 
@@ -99,6 +105,10 @@ module Pier
         
         :'nome_impresso' => :'nomeImpresso',
         
+        :'valor_renda' => :'valorRenda',
+        
+        :'canal_entrada' => :'canalEntrada',
+        
         :'telefones' => :'telefones',
         
         :'enderecos' => :'enderecos',
@@ -135,6 +145,10 @@ module Pier
         :'dia_vencimento' => :'Integer',
         
         :'nome_impresso' => :'String',
+        
+        :'valor_renda' => :'Float',
+        
+        :'canal_entrada' => :'String',
         
         :'telefones' => :'Array<TelefonePessoaAprovadaPersist>',
         
@@ -257,6 +271,24 @@ module Pier
         
         
         self.nome_impresso = attributes[:'nomeImpresso']
+        
+      
+      end
+
+      
+      if attributes[:'valorRenda']
+        
+        
+        self.valor_renda = attributes[:'valorRenda']
+        
+      
+      end
+
+      
+      if attributes[:'canalEntrada']
+        
+        
+        self.canal_entrada = attributes[:'canalEntrada']
         
       
       end
@@ -393,6 +425,14 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
       if @enderecos.nil?
         return false
       end
@@ -407,6 +447,16 @@ module Pier
       
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -500,6 +550,8 @@ module Pier
           email == o.email &&
           dia_vencimento == o.dia_vencimento &&
           nome_impresso == o.nome_impresso &&
+          valor_renda == o.valor_renda &&
+          canal_entrada == o.canal_entrada &&
           telefones == o.telefones &&
           enderecos == o.enderecos &&
           socios == o.socios
@@ -514,7 +566,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [razao_social, nome_fantasia, cnpj, inscricao_estadual, data_abertura_empresa, id_origem_comercial, id_produto, numero_agencia, numero_conta_corrente, email, dia_vencimento, nome_impresso, telefones, enderecos, socios].hash
+      [razao_social, nome_fantasia, cnpj, inscricao_estadual, data_abertura_empresa, id_origem_comercial, id_produto, numero_agencia, numero_conta_corrente, email, dia_vencimento, nome_impresso, valor_renda, canal_entrada, telefones, enderecos, socios].hash
     end
 
     # Builds the object from hash

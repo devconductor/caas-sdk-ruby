@@ -8,7 +8,10 @@ Method | HTTP request | Description
 [**alterar_limite_using_put**](ContaApi.md#alterar_limite_using_put) | **PUT** /api/contas/{id}/alterar-limites | Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
 [**alterar_titular_using_post**](ContaApi.md#alterar_titular_using_post) | **POST** /api/contas/{id}/alterar-titular | Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
 [**alterar_vencimento_using_put**](ContaApi.md#alterar_vencimento_using_put) | **PUT** /api/contas/{id}/alterar-vencimento | Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
+[**ativar_anuidade_using_post**](ContaApi.md#ativar_anuidade_using_post) | **POST** /api/contas/{id}/atribuir-anuidade | Atribuir Anuidade
 [**ativar_envio_fatura_email_using_post**](ContaApi.md#ativar_envio_fatura_email_using_post) | **POST** /api/contas/{id}/ativar-fatura-email |  Ativa o servi\u00C3\u00A7o de envio de fatura por email
+[**bloquear_using_post1**](ContaApi.md#bloquear_using_post1) | **POST** /api/contas/{id}/bloquear | Realiza o bloqueio de uma determinada Conta
+[**cancelar_using_post1**](ContaApi.md#cancelar_using_post1) | **POST** /api/contas/{id}/cancelar | Realiza o cancelamento de uma determinada Conta
 [**consultar_boleto_emitido_using_get**](ContaApi.md#consultar_boleto_emitido_using_get) | **GET** /api/contas/{id}/consultar-dados-pagamento-fatura | Consulta os dados de um determinado boleto da fatura
 [**consultar_divida_atualizada_cliente_using_get**](ContaApi.md#consultar_divida_atualizada_cliente_using_get) | **GET** /api/contas/{id}/recuperar-divida-atualizada | Consulta a d\u00C3\u00ADvida atualizada do cliente
 [**consultar_fatura_consignada_aberta_using_get**](ContaApi.md#consultar_fatura_consignada_aberta_using_get) | **GET** /api/contas/{id}/faturas-consignadas/consultar-aberta | Consultar a fatura consignadas abertas da conta
@@ -17,9 +20,9 @@ Method | HTTP request | Description
 [**consultar_lancamentos_futuros_fatura_using_get**](ContaApi.md#consultar_lancamentos_futuros_fatura_using_get) | **GET** /api/contas/{id}/faturas/consultar-aberta | Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
 [**consultar_limite_disponibilidade_using_get1**](ContaApi.md#consultar_limite_disponibilidade_using_get1) | **GET** /api/contas/{id}/limites-disponibilidades | Apresenta os limites da conta
 [**consultar_taxas_tarifas_using_get**](ContaApi.md#consultar_taxas_tarifas_using_get) | **GET** /api/contas/{id}/consultar-taxas-tarifas | Permite consultar a partir do ID da conta as taxas e tarifas
-[**consultar_using_get23**](ContaApi.md#consultar_using_get23) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-[**consultar_using_get24**](ContaApi.md#consultar_using_get24) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-[**consultar_using_get4**](ContaApi.md#consultar_using_get4) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
+[**consultar_using_get24**](ContaApi.md#consultar_using_get24) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+[**consultar_using_get25**](ContaApi.md#consultar_using_get25) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+[**consultar_using_get5**](ContaApi.md#consultar_using_get5) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
 [**desativar_envio_fatura_email_using_post**](ContaApi.md#desativar_envio_fatura_email_using_post) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00C3\u00A7o de envio de fatura por email
 [**gerar_boleto_recarga_using_post**](ContaApi.md#gerar_boleto_recarga_using_post) | **POST** /api/contas/{id}/gerar-boleto-recarga | Gera um boleto de recarga
 [**gerar_cartao_using_post**](ContaApi.md#gerar_cartao_using_post) | **POST** /api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
@@ -34,7 +37,7 @@ Method | HTTP request | Description
 [**listar_using_get28**](ContaApi.md#listar_using_get28) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
 [**listar_using_get29**](ContaApi.md#listar_using_get29) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
 [**listar_using_get7**](ContaApi.md#listar_using_get7) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
-[**reativar_using_post**](ContaApi.md#reativar_using_post) | **POST** /api/contas/{id}/reativar | Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
+[**reativar_using_post1**](ContaApi.md#reativar_using_post1) | **POST** /api/contas/{id}/reativar | Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
 [**transacoes_using_get**](ContaApi.md#transacoes_using_get) | **GET** /api/contas/{id}/timeline | Permite listar uma linha do tempo com os eventos da conta
 [**transferir_using_post**](ContaApi.md#transferir_using_post) | **POST** /api/contas/{id}/transferencias-creditos-contas-bancarias | Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
 [**transferir_using_post1**](ContaApi.md#transferir_using_post1) | **POST** /api/contas/{id}/transferencias-creditos-cartoes | Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
@@ -102,7 +105,7 @@ No authorization required
 
 
 # **alterar_limite_using_put**
-> LimiteDisponibilidadeResponse alterar_limite_using_put(id, limite_global, limite_compra, limite_parcelado, limite_parcelas, limite_saque_global, limite_saque_periodo, limite_consignado, limite_internacional_compra, limite_internacional_parcelado, limite_internacional_parcelas, limite_internacional_saque_global, limite_internacional_saque_periodo)
+> LimiteDisponibilidadeResponse alterar_limite_using_put(id, limite_global, limite_compra, limite_parcelado, limite_parcelas, limite_saque_global, limite_saque_periodo, limite_consignado, limite_internacional_compra, limite_internacional_parcelado, limite_internacional_parcelas, limite_internacional_saque_global, limite_internacional_saque_periodo, limite_maximo)
 
 Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
 
@@ -142,10 +145,12 @@ limite_internacional_saque_global = 3.4 # Float | Quando utilizado pelo emissor,
 
 limite_internacional_saque_periodo = 3.4 # Float | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
 
+limite_maximo = 3.4 # Float | Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.
+
 
 begin
   #Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
-  result = api_instance.alterar_limite_using_put(id, limite_global, limite_compra, limite_parcelado, limite_parcelas, limite_saque_global, limite_saque_periodo, limite_consignado, limite_internacional_compra, limite_internacional_parcelado, limite_internacional_parcelas, limite_internacional_saque_global, limite_internacional_saque_periodo)
+  result = api_instance.alterar_limite_using_put(id, limite_global, limite_compra, limite_parcelado, limite_parcelas, limite_saque_global, limite_saque_periodo, limite_consignado, limite_internacional_compra, limite_internacional_parcelado, limite_internacional_parcelas, limite_internacional_saque_global, limite_internacional_saque_periodo, limite_maximo)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling ContaApi->alterar_limite_using_put: #{e}"
@@ -169,6 +174,7 @@ Name | Type | Description  | Notes
  **limite_internacional_parcelas** | [**Float**](.md)| Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. | 
  **limite_internacional_saque_global** | [**Float**](.md)| Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional. | 
  **limite_internacional_saque_periodo** | [**Float**](.md)| Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento. | 
+ **limite_maximo** | [**Float**](.md)| Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es. | 
 
 
 ### Return type
@@ -293,6 +299,73 @@ No authorization required
 
 
 
+# **ativar_anuidade_using_post**
+> Object ativar_anuidade_using_post(id, id_anuidade, opts)
+
+Atribuir Anuidade
+
+Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::ContaApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+id_anuidade = 789 # Integer | Identificador da anuidade
+
+opts = { 
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  ddd: "ddd_example", # String | DDD do celular
+  celular: "celular_example", # String | N\u00C3\u00BAmero do celular
+  id_operadora: 789, # Integer | Identificador da operadora do celular
+  id_origem_comercial: 789 # Integer | Identificador da origem comercial
+}
+
+begin
+  #Atribuir Anuidade
+  result = api_instance.ativar_anuidade_using_post(id, id_anuidade, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ContaApi->ativar_anuidade_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id_anuidade** | **Integer**| Identificador da anuidade | 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **ddd** | **String**| DDD do celular | [optional] 
+ **celular** | **String**| N\u00C3\u00BAmero do celular | [optional] 
+ **id_operadora** | **Integer**| Identificador da operadora do celular | [optional] 
+ **id_origem_comercial** | **Integer**| Identificador da origem comercial | [optional] 
+
+
+### Return type
+
+**Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
 # **ativar_envio_fatura_email_using_post**
 > Object ativar_envio_fatura_email_using_post(id)
 
@@ -330,6 +403,112 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **bloquear_using_post1**
+> ContaResponse bloquear_using_post1(id, id_status)
+
+Realiza o bloqueio de uma determinada Conta
+
+Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::ContaApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+id_status = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.
+
+
+begin
+  #Realiza o bloqueio de uma determinada Conta
+  result = api_instance.bloquear_using_post1(id, id_status)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ContaApi->bloquear_using_post1: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id_status** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta. | 
+
+
+### Return type
+
+[**ContaResponse**](ContaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **cancelar_using_post1**
+> ContaResponse cancelar_using_post1(id, id_status)
+
+Realiza o cancelamento de uma determinada Conta
+
+Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::ContaApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+id_status = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.
+
+
+begin
+  #Realiza o cancelamento de uma determinada Conta
+  result = api_instance.cancelar_using_post1(id, id_status)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ContaApi->cancelar_using_post1: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id_status** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta. | 
+
+
+### Return type
+
+[**ContaResponse**](ContaResponse.md)
 
 ### Authorization
 
@@ -773,8 +952,8 @@ No authorization required
 
 
 
-# **consultar_using_get23**
-> TransferenciaBancariaResponse consultar_using_get23(id, id_transferencia, opts)
+# **consultar_using_get24**
+> TransferenciaBancariaResponse consultar_using_get24(id, id_transferencia, opts)
 
 Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
 
@@ -798,10 +977,10 @@ opts = {
 
 begin
   #Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-  result = api_instance.consultar_using_get23(id, id_transferencia, opts)
+  result = api_instance.consultar_using_get24(id, id_transferencia, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->consultar_using_get23: #{e}"
+  puts "Exception when calling ContaApi->consultar_using_get24: #{e}"
 end
 ```
 
@@ -830,8 +1009,8 @@ No authorization required
 
 
 
-# **consultar_using_get24**
-> PageTransferenciaResponse consultar_using_get24(id, id_transferencia)
+# **consultar_using_get25**
+> PageTransferenciaResponse consultar_using_get25(id, id_transferencia)
 
 Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 
@@ -852,10 +1031,10 @@ id_transferencia = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u
 
 begin
   #Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-  result = api_instance.consultar_using_get24(id, id_transferencia)
+  result = api_instance.consultar_using_get25(id, id_transferencia)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->consultar_using_get24: #{e}"
+  puts "Exception when calling ContaApi->consultar_using_get25: #{e}"
 end
 ```
 
@@ -883,8 +1062,8 @@ No authorization required
 
 
 
-# **consultar_using_get4**
-> ContaDetalheResponse consultar_using_get4(id)
+# **consultar_using_get5**
+> ContaDetalheResponse consultar_using_get5(id)
 
 Apresenta dados de uma determinada conta
 
@@ -903,10 +1082,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da
 
 begin
   #Apresenta dados de uma determinada conta
-  result = api_instance.consultar_using_get4(id)
+  result = api_instance.consultar_using_get5(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->consultar_using_get4: #{e}"
+  puts "Exception when calling ContaApi->consultar_using_get5: #{e}"
 end
 ```
 
@@ -1744,8 +1923,8 @@ No authorization required
 
 
 
-# **reativar_using_post**
-> Object reativar_using_post(id)
+# **reativar_using_post1**
+> Object reativar_using_post1(id)
 
 Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
 
@@ -1764,10 +1943,10 @@ id = 789 # Integer | Id Conta
 
 begin
   #Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
-  result = api_instance.reativar_using_post(id)
+  result = api_instance.reativar_using_post1(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->reativar_using_post: #{e}"
+  puts "Exception when calling ContaApi->reativar_using_post1: #{e}"
 end
 ```
 

@@ -313,8 +313,8 @@ module Pier
       
       
       
-      if opts[:'status'] && !['ATIVO', 'INATIVO'].include?(opts[:'status'])
-        fail ArgumentError, 'invalid value for "status", must be one of ATIVO, INATIVO'
+      if opts[:'status'] && !['INATIVO', 'ATIVO'].include?(opts[:'status'])
+        fail ArgumentError, 'invalid value for "status", must be one of INATIVO, ATIVO'
       end
       
       
@@ -383,8 +383,8 @@ module Pier
     # @param groovy groovy
     # @param [Hash] opts the optional parameters
     # @return [JobResponse]
-    def salvar_using_post5(descricao, cron, groovy, opts = {})
-      data, _status_code, _headers = salvar_using_post5_with_http_info(descricao, cron, groovy, opts)
+    def salvar_using_post7(descricao, cron, groovy, opts = {})
+      data, _status_code, _headers = salvar_using_post7_with_http_info(descricao, cron, groovy, opts)
       return data
     end
 
@@ -395,14 +395,14 @@ module Pier
     # @param groovy groovy
     # @param [Hash] opts the optional parameters
     # @return [Array<(JobResponse, Fixnum, Hash)>] JobResponse data, response status code and response headers
-    def salvar_using_post5_with_http_info(descricao, cron, groovy, opts = {})
+    def salvar_using_post7_with_http_info(descricao, cron, groovy, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: JobsApi.salvar_using_post5 ..."
+        @api_client.config.logger.debug "Calling API: JobsApi.salvar_using_post7 ..."
       end
       
       
       # verify the required parameter 'descricao' is set
-      fail ArgumentError, "Missing the required parameter 'descricao' when calling JobsApi.salvar_using_post5" if descricao.nil?
+      fail ArgumentError, "Missing the required parameter 'descricao' when calling JobsApi.salvar_using_post7" if descricao.nil?
       
       
       
@@ -410,7 +410,7 @@ module Pier
       
       
       # verify the required parameter 'cron' is set
-      fail ArgumentError, "Missing the required parameter 'cron' when calling JobsApi.salvar_using_post5" if cron.nil?
+      fail ArgumentError, "Missing the required parameter 'cron' when calling JobsApi.salvar_using_post7" if cron.nil?
       
       
       
@@ -418,7 +418,7 @@ module Pier
       
       
       # verify the required parameter 'groovy' is set
-      fail ArgumentError, "Missing the required parameter 'groovy' when calling JobsApi.salvar_using_post5" if groovy.nil?
+      fail ArgumentError, "Missing the required parameter 'groovy' when calling JobsApi.salvar_using_post7" if groovy.nil?
       
       
       
@@ -458,7 +458,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'JobResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: JobsApi#salvar_using_post5\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: JobsApi#salvar_using_post7\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

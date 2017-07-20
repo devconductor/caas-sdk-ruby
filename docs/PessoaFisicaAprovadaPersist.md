@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **unidade_federativa_identidade** | **String** | Sigla da Unidade Federativa de onde foi expedido a Identidade | [optional] 
 **data_emissao_identidade** | **String** | Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd | [optional] 
 **id_estado_civil** | **Integer** | Id Estado civil da pessoa fisica | [optional] 
-**profissao** | **String** | Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
+**id_profissao** | **Integer** | Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
 **id_natureza_ocupacao** | **Integer** | Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
 **id_nacionalidade** | **Integer** | Id Nacionalidade da pessoa fisica | [optional] 
 **id_origem_comercial** | **Integer** | Id da origem comercial | 
@@ -24,6 +24,8 @@ Name | Type | Description | Notes
 **dia_vencimento** | **Integer** | Dia vencimento | 
 **nome_impresso** | **String** | Nome que deve ser impresso no cart\u00C3\u00A3o | [optional] 
 **nome_empresa** | **String** | Nome que deve ser impresso no cart\u00C3\u00A3o | [optional] 
+**valor_renda** | **Float** | Apresenta o valor da renda compravada | [optional] 
+**canal_entrada** | **String** | Indica o canal pelo qual o cadastro do cliente foi realizado | [optional] 
 **telefones** | [**Array&lt;TelefonePessoaAprovadaPersist&gt;**](TelefonePessoaAprovadaPersist.md) | Apresenta os telefones da empresa | [optional] 
 **enderecos** | [**Array&lt;EnderecoAprovadoPersist&gt;**](EnderecoAprovadoPersist.md) | Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros | 
 

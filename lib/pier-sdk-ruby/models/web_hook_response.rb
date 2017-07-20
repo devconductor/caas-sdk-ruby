@@ -37,6 +37,9 @@ module Pier
     # URL que a ser consumida pelo WebHook
     attr_accessor :url
 
+    # Status do WebHook
+    attr_accessor :status
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -48,7 +51,9 @@ module Pier
         
         :'metodo' => :'metodo',
         
-        :'url' => :'url'
+        :'url' => :'url',
+        
+        :'status' => :'status'
         
       }
     end
@@ -63,7 +68,9 @@ module Pier
         
         :'metodo' => :'String',
         
-        :'url' => :'String'
+        :'url' => :'String',
+        
+        :'status' => :'String'
         
       }
     end
@@ -113,6 +120,15 @@ module Pier
       end
 
       
+      if attributes[:'status']
+        
+        
+        self.status = attributes[:'status']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -144,7 +160,7 @@ module Pier
 
       
       
-      allowed_values = ["RISCO_FRAUDE", "OUTROS"]
+      allowed_values = ["RISCO_FRAUDE", "TOKEN_SMS", "OUTROS"]
       if @tipo_evento && !allowed_values.include?(@tipo_evento)
         return false
       end
@@ -174,6 +190,20 @@ module Pier
       
       
       
+      
+      if @status.nil?
+        return false
+      end
+
+      
+      
+      allowed_values = ["INATIVO", "ATIVO"]
+      if @status && !allowed_values.include?(@status)
+        return false
+      end
+      
+      
+      
     end
 
     
@@ -186,7 +216,7 @@ module Pier
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] tipo_evento Object to be assigned
     def tipo_evento=(tipo_evento)
-      allowed_values = ["RISCO_FRAUDE", "OUTROS"]
+      allowed_values = ["RISCO_FRAUDE", "TOKEN_SMS", "OUTROS"]
       if tipo_evento && !allowed_values.include?(tipo_evento)
         fail ArgumentError, "invalid value for 'tipo_evento', must be one of #{allowed_values}."
       end
@@ -215,6 +245,20 @@ module Pier
     
     
     
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] status Object to be assigned
+    def status=(status)
+      allowed_values = ["INATIVO", "ATIVO"]
+      if status && !allowed_values.include?(status)
+        fail ArgumentError, "invalid value for 'status', must be one of #{allowed_values}."
+      end
+      @status = status
+    end
+
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared 
     def ==(o)
@@ -223,7 +267,8 @@ module Pier
           id == o.id &&
           tipo_evento == o.tipo_evento &&
           metodo == o.metodo &&
-          url == o.url
+          url == o.url &&
+          status == o.status
     end
 
     # @see the `==` method
@@ -235,7 +280,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, tipo_evento, metodo, url].hash
+      [id, tipo_evento, metodo, url, status].hash
     end
 
     # Builds the object from hash

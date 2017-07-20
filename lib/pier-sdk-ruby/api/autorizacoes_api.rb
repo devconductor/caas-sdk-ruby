@@ -103,8 +103,8 @@ module Pier
     # @param cancelamento_request cancelamentoRequest
     # @param [Hash] opts the optional parameters
     # @return [TransacaoOnUsResponse]
-    def cancelar_using_post(cancelamento_request, opts = {})
-      data, _status_code, _headers = cancelar_using_post_with_http_info(cancelamento_request, opts)
+    def cancelar_using_post2(cancelamento_request, opts = {})
+      data, _status_code, _headers = cancelar_using_post2_with_http_info(cancelamento_request, opts)
       return data
     end
 
@@ -113,14 +113,14 @@ module Pier
     # @param cancelamento_request cancelamentoRequest
     # @param [Hash] opts the optional parameters
     # @return [Array<(TransacaoOnUsResponse, Fixnum, Hash)>] TransacaoOnUsResponse data, response status code and response headers
-    def cancelar_using_post_with_http_info(cancelamento_request, opts = {})
+    def cancelar_using_post2_with_http_info(cancelamento_request, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: AutorizacoesApi.cancelar_using_post ..."
+        @api_client.config.logger.debug "Calling API: AutorizacoesApi.cancelar_using_post2 ..."
       end
       
       
       # verify the required parameter 'cancelamento_request' is set
-      fail ArgumentError, "Missing the required parameter 'cancelamento_request' when calling AutorizacoesApi.cancelar_using_post" if cancelamento_request.nil?
+      fail ArgumentError, "Missing the required parameter 'cancelamento_request' when calling AutorizacoesApi.cancelar_using_post2" if cancelamento_request.nil?
       
       
       
@@ -158,7 +158,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TransacaoOnUsResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AutorizacoesApi#cancelar_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: AutorizacoesApi#cancelar_using_post2\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -220,8 +220,8 @@ module Pier
     end
 
 
-    # Simula planos de pagamento
-    # Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
+    # Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
+    # Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
     # @param transacoes_request transacoesRequest
     # @param [Hash] opts the optional parameters
     # @return [TransacaoOnUsResponse]
@@ -230,8 +230,8 @@ module Pier
       return data
     end
 
-    # Simula planos de pagamento
-    # Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
+    # Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
+    # Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
     # @param transacoes_request transacoesRequest
     # @param [Hash] opts the optional parameters
     # @return [Array<(TransacaoOnUsResponse, Fixnum, Hash)>] TransacaoOnUsResponse data, response status code and response headers

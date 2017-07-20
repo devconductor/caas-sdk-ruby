@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**ativar_using_post**](DispositivosApi.md#ativar_using_post) | **POST** /api/dispositivos/{id}/ativar-dispositivo | Ativa Dispositivo
 [**desativar_using_post**](DispositivosApi.md#desativar_using_post) | **POST** /api/dispositivos/{id}/desativar-dispositivo | Desativa Dispositivo
 [**listar_using_get8**](DispositivosApi.md#listar_using_get8) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
-[**salvar_using_post3**](DispositivosApi.md#salvar_using_post3) | **POST** /api/dispositivos | Cadastra Dispositivo
+[**salvar_using_post4**](DispositivosApi.md#salvar_using_post4) | **POST** /api/dispositivos | Cadastra Dispositivo
 
 
 
@@ -175,8 +175,8 @@ No authorization required
 
 
 
-# **salvar_using_post3**
-> DispositivoResponse salvar_using_post3(persist)
+# **salvar_using_post4**
+> DispositivoResponse salvar_using_post4(persist)
 
 Cadastra Dispositivo
 
@@ -195,10 +195,10 @@ persist = Pier::DispositivoPersist.new # DispositivoPersist | persist
 
 begin
   #Cadastra Dispositivo
-  result = api_instance.salvar_using_post3(persist)
+  result = api_instance.salvar_using_post4(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DispositivosApi->salvar_using_post3: #{e}"
+  puts "Exception when calling DispositivosApi->salvar_using_post4: #{e}"
 end
 ```
 

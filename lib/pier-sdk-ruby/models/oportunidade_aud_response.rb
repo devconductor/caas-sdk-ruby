@@ -61,6 +61,9 @@ module Pier
     # Tipo da auditoria
     attr_accessor :rev_type
 
+    # Identificador da auditoria
+    attr_accessor :rev
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -88,7 +91,9 @@ module Pier
         
         :'rev_date' => :'revDate',
         
-        :'rev_type' => :'revType'
+        :'rev_type' => :'revType',
+        
+        :'rev' => :'rev'
         
       }
     end
@@ -119,7 +124,9 @@ module Pier
         
         :'rev_date' => :'String',
         
-        :'rev_type' => :'Integer'
+        :'rev_type' => :'Integer',
+        
+        :'rev' => :'Integer'
         
       }
     end
@@ -243,6 +250,15 @@ module Pier
       end
 
       
+      if attributes[:'rev']
+        
+        
+        self.rev = attributes[:'rev']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -306,8 +322,17 @@ module Pier
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -385,7 +410,8 @@ module Pier
           flag_ativo == o.flag_ativo &&
           detalhes == o.detalhes &&
           rev_date == o.rev_date &&
-          rev_type == o.rev_type
+          rev_type == o.rev_type &&
+          rev == o.rev
     end
 
     # @see the `==` method
@@ -397,7 +423,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_tipo_oportunidade, id_status_oportunidade, data_cadastro, data_atualizacao, numero_receita_federal, data_inicio_vigencia, data_fim_vigencia, flag_ativo, detalhes, rev_date, rev_type].hash
+      [id, id_tipo_oportunidade, id_status_oportunidade, data_cadastro, data_atualizacao, numero_receita_federal, data_inicio_vigencia, data_fim_vigencia, flag_ativo, detalhes, rev_date, rev_type, rev].hash
     end
 
     # Builds the object from hash

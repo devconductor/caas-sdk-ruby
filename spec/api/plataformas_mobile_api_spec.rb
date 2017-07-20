@@ -80,13 +80,13 @@ describe 'PlataformasMobileApi' do
   end
 
 
-  # unit tests for salvar_using_post9
+  # unit tests for salvar_using_post11
   # Cadastra Plataforma Mobile
   # Esse recurso permite cadastrar plataformas mobile.
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [PlataformaMobileResponse]
-  describe 'salvar_using_post9 test' do
+  describe 'salvar_using_post11 test' do
     it "should work" do
       # assertion here
       # should be_a()

@@ -119,7 +119,7 @@ describe 'JobsApi' do
   end
 
 
-  # unit tests for salvar_using_post5
+  # unit tests for salvar_using_post7
   # Cadastrar Job
   # Esse recurso permite cadastrar jobs.
   # @param descricao descricao.
@@ -127,7 +127,7 @@ describe 'JobsApi' do
   # @param groovy groovy
   # @param [Hash] opts the optional parameters
   # @return [JobResponse]
-  describe 'salvar_using_post5 test' do
+  describe 'salvar_using_post7 test' do
     it "should work" do
       # assertion here
       # should be_a()

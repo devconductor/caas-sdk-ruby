@@ -25,11 +25,32 @@ require 'date'
 module Pier
   # Origem Comercial
   class OrigemComercialResponse
-    # Id da origem comercial
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial
     attr_accessor :id
 
     # Nome da origem comercial
     attr_accessor :nome
+
+    # Descri\u00C3\u00A7\u00C3\u00A3o completa do nome da Origem Comercial
+    attr_accessor :descricao
+
+    # Lista de  ProdutosOrigem associados \u00C3\u00A0 Origem comercial
+    attr_accessor :produtos_origem
+
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
+    attr_accessor :id_estabelecimento
+
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo da Origem Comercial
+    attr_accessor :id_tipo_origem_comercial
+
+    # Nome do Tipo da Origem Comercial
+    attr_accessor :nome_tipo_origem_comercial
+
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Grupo a qual a Origem Comercial pertence
+    attr_accessor :id_grupo_origem_comercial
+
+    # Nome do Grupo a qual a Origem Comercial pertence
+    attr_accessor :nome_grupo_origem_comercial
 
     # Status da origem comercial
     attr_accessor :status
@@ -42,6 +63,20 @@ module Pier
         :'id' => :'id',
         
         :'nome' => :'nome',
+        
+        :'descricao' => :'descricao',
+        
+        :'produtos_origem' => :'produtosOrigem',
+        
+        :'id_estabelecimento' => :'idEstabelecimento',
+        
+        :'id_tipo_origem_comercial' => :'idTipoOrigemComercial',
+        
+        :'nome_tipo_origem_comercial' => :'nomeTipoOrigemComercial',
+        
+        :'id_grupo_origem_comercial' => :'idGrupoOrigemComercial',
+        
+        :'nome_grupo_origem_comercial' => :'nomeGrupoOrigemComercial',
         
         :'status' => :'status'
         
@@ -56,7 +91,21 @@ module Pier
         
         :'nome' => :'String',
         
-        :'status' => :'Integer'
+        :'descricao' => :'String',
+        
+        :'produtos_origem' => :'Array<ProdutoOrigemResponse>',
+        
+        :'id_estabelecimento' => :'Integer',
+        
+        :'id_tipo_origem_comercial' => :'Integer',
+        
+        :'nome_tipo_origem_comercial' => :'String',
+        
+        :'id_grupo_origem_comercial' => :'Integer',
+        
+        :'nome_grupo_origem_comercial' => :'String',
+        
+        :'status' => :'BOOLEAN'
         
       }
     end
@@ -83,6 +132,71 @@ module Pier
         
         
         self.nome = attributes[:'nome']
+        
+      
+      end
+
+      
+      if attributes[:'descricao']
+        
+        
+        self.descricao = attributes[:'descricao']
+        
+      
+      end
+
+      
+      if attributes[:'produtosOrigem']
+        
+        if (value = attributes[:'produtosOrigem']).is_a?(Array)
+          self.produtos_origem = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes[:'idEstabelecimento']
+        
+        
+        self.id_estabelecimento = attributes[:'idEstabelecimento']
+        
+      
+      end
+
+      
+      if attributes[:'idTipoOrigemComercial']
+        
+        
+        self.id_tipo_origem_comercial = attributes[:'idTipoOrigemComercial']
+        
+      
+      end
+
+      
+      if attributes[:'nomeTipoOrigemComercial']
+        
+        
+        self.nome_tipo_origem_comercial = attributes[:'nomeTipoOrigemComercial']
+        
+      
+      end
+
+      
+      if attributes[:'idGrupoOrigemComercial']
+        
+        
+        self.id_grupo_origem_comercial = attributes[:'idGrupoOrigemComercial']
+        
+      
+      end
+
+      
+      if attributes[:'nomeGrupoOrigemComercial']
+        
+        
+        self.nome_grupo_origem_comercial = attributes[:'nomeGrupoOrigemComercial']
         
       
       end
@@ -131,6 +245,69 @@ module Pier
       
       
       
+      if @descricao.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @produtos_origem.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @id_estabelecimento.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @id_tipo_origem_comercial.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @nome_tipo_origem_comercial.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @id_grupo_origem_comercial.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @nome_grupo_origem_comercial.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
       if @status.nil?
         return false
       end
@@ -157,6 +334,41 @@ module Pier
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared 
     def ==(o)
@@ -164,6 +376,13 @@ module Pier
       self.class == o.class &&
           id == o.id &&
           nome == o.nome &&
+          descricao == o.descricao &&
+          produtos_origem == o.produtos_origem &&
+          id_estabelecimento == o.id_estabelecimento &&
+          id_tipo_origem_comercial == o.id_tipo_origem_comercial &&
+          nome_tipo_origem_comercial == o.nome_tipo_origem_comercial &&
+          id_grupo_origem_comercial == o.id_grupo_origem_comercial &&
+          nome_grupo_origem_comercial == o.nome_grupo_origem_comercial &&
           status == o.status
     end
 
@@ -176,7 +395,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, nome, status].hash
+      [id, nome, descricao, produtos_origem, id_estabelecimento, id_tipo_origem_comercial, nome_tipo_origem_comercial, id_grupo_origem_comercial, nome_grupo_origem_comercial, status].hash
     end
 
     # Builds the object from hash

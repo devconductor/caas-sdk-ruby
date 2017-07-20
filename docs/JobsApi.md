@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**atualizar_using_put**](JobsApi.md#atualizar_using_put) | **PUT** /api/jobs/{id} | Atualizar Job
 [**desativar_job_using_post**](JobsApi.md#desativar_job_using_post) | **POST** /api/jobs/{id}/desativar-job | Desativar Job
 [**listar_using_get12**](JobsApi.md#listar_using_get12) | **GET** /api/jobs | Listar Jobs
-[**salvar_using_post5**](JobsApi.md#salvar_using_post5) | **POST** /api/jobs | Cadastrar Job
+[**salvar_using_post7**](JobsApi.md#salvar_using_post7) | **POST** /api/jobs | Cadastrar Job
 
 
 
@@ -233,8 +233,8 @@ No authorization required
 
 
 
-# **salvar_using_post5**
-> JobResponse salvar_using_post5(descricao, cron, groovy)
+# **salvar_using_post7**
+> JobResponse salvar_using_post7(descricao, cron, groovy)
 
 Cadastrar Job
 
@@ -257,10 +257,10 @@ groovy = "groovy_example" # String | groovy
 
 begin
   #Cadastrar Job
-  result = api_instance.salvar_using_post5(descricao, cron, groovy)
+  result = api_instance.salvar_using_post7(descricao, cron, groovy)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling JobsApi->salvar_using_post5: #{e}"
+  puts "Exception when calling JobsApi->salvar_using_post7: #{e}"
 end
 ```
 

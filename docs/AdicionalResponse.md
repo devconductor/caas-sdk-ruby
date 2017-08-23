@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **id_nacionalidade** | **Integer** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional | [optional] 
 **id_parentesco** | **Integer** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular | [optional] 
 **email** | **String** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular | [optional] 
+**flag_ativo** | **Integer** | Indica se o adicional est\u00C3\u00A1 ativo = 1 ou inativo = 0 | [optional] 
 **telefones** | [**Array&lt;TelefoneResponse&gt;**](TelefoneResponse.md) | Lista dos telefones do adicional | [optional] 
 
 

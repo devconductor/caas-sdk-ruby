@@ -7,8 +7,8 @@ Method | HTTP request | Description
 [**ativar_job_using_post**](JobsApi.md#ativar_job_using_post) | **POST** /api/jobs/{id}/ativar-job | Ativar Job
 [**atualizar_using_put**](JobsApi.md#atualizar_using_put) | **PUT** /api/jobs/{id} | Atualizar Job
 [**desativar_job_using_post**](JobsApi.md#desativar_job_using_post) | **POST** /api/jobs/{id}/desativar-job | Desativar Job
-[**listar_using_get12**](JobsApi.md#listar_using_get12) | **GET** /api/jobs | Listar Jobs
-[**salvar_using_post7**](JobsApi.md#salvar_using_post7) | **POST** /api/jobs | Cadastrar Job
+[**listar_using_get13**](JobsApi.md#listar_using_get13) | **GET** /api/jobs | Listar Jobs
+[**salvar_using_post8**](JobsApi.md#salvar_using_post8) | **POST** /api/jobs | Cadastrar Job
 
 
 
@@ -172,8 +172,8 @@ No authorization required
 
 
 
-# **listar_using_get12**
-> PageJobResponse listar_using_get12(opts)
+# **listar_using_get13**
+> PageJobResponse listar_using_get13(opts)
 
 Listar Jobs
 
@@ -198,10 +198,10 @@ opts = {
 
 begin
   #Listar Jobs
-  result = api_instance.listar_using_get12(opts)
+  result = api_instance.listar_using_get13(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling JobsApi->listar_using_get12: #{e}"
+  puts "Exception when calling JobsApi->listar_using_get13: #{e}"
 end
 ```
 
@@ -233,8 +233,8 @@ No authorization required
 
 
 
-# **salvar_using_post7**
-> JobResponse salvar_using_post7(descricao, cron, groovy)
+# **salvar_using_post8**
+> JobResponse salvar_using_post8(descricao, cron, groovy)
 
 Cadastrar Job
 
@@ -257,10 +257,10 @@ groovy = "groovy_example" # String | groovy
 
 begin
   #Cadastrar Job
-  result = api_instance.salvar_using_post7(descricao, cron, groovy)
+  result = api_instance.salvar_using_post8(descricao, cron, groovy)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling JobsApi->salvar_using_post7: #{e}"
+  puts "Exception when calling JobsApi->salvar_using_post8: #{e}"
 end
 ```
 

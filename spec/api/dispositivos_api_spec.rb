@@ -77,10 +77,11 @@ describe 'DispositivosApi' do
   end
 
 
-  # unit tests for listar_using_get8
+  # unit tests for listar_using_get9
   # Lista os dispositivos cadastrados
   # Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
   # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [String] :token Token do Dispositivo
@@ -89,7 +90,7 @@ describe 'DispositivosApi' do
   # @option opts [String] :data_criacao Apresenta a data e em que o registro foi criado.
   # @option opts [String] :data_desativacao Apresenta a data e em que o registro foi desativado.
   # @return [PageDispositivoResponse]
-  describe 'listar_using_get8 test' do
+  describe 'listar_using_get9 test' do
     it "should work" do
       # assertion here
       # should be_a()

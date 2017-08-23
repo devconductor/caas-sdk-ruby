@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**configurar_taxa_antecipacao_using_post**](AntecipacoesApi.md#configurar_taxa_antecipacao_using_post) | **POST** /api/produtos/{id}/configurar-taxa-antecipacao | Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
 [**consultar_taxa_antecipacao_using_get**](AntecipacoesApi.md#consultar_taxa_antecipacao_using_get) | **GET** /api/produtos/{id}/consultar-taxa-antecipacao | Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
 [**efetivar_antecipacao_using_post**](AntecipacoesApi.md#efetivar_antecipacao_using_post) | **POST** /api/compras-antecipaveis/{id}/efetivar-antecipacao | Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
-[**listar_using_get6**](AntecipacoesApi.md#listar_using_get6) | **GET** /api/compras-antecipaveis | Listar compras com parcelas antecip\u00C3\u00A1veis
+[**listar_using_get7**](AntecipacoesApi.md#listar_using_get7) | **GET** /api/compras-antecipaveis | Listar compras com parcelas antecip\u00C3\u00A1veis
 [**simular_antecipacao_using_get**](AntecipacoesApi.md#simular_antecipacao_using_get) | **GET** /api/compras-antecipaveis/{id}/simular-antecipacao | Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
 
 
@@ -175,8 +175,8 @@ No authorization required
 
 
 
-# **listar_using_get6**
-> PageCompraResponse listar_using_get6(id_conta, opts)
+# **listar_using_get7**
+> PageCompraResponse listar_using_get7(id_conta, opts)
 
 Listar compras com parcelas antecip\u00C3\u00A1veis
 
@@ -193,6 +193,7 @@ api_instance = Pier::AntecipacoesApi.new
 id_conta = 789 # Integer | C\u00C3\u00B3digo identificador da conta da Compra.
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   id_compra: 789, # Integer | C\u00C3\u00B3digo identificador da Compra.
@@ -203,10 +204,10 @@ opts = {
 
 begin
   #Listar compras com parcelas antecip\u00C3\u00A1veis
-  result = api_instance.listar_using_get6(id_conta, opts)
+  result = api_instance.listar_using_get7(id_conta, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling AntecipacoesApi->listar_using_get6: #{e}"
+  puts "Exception when calling AntecipacoesApi->listar_using_get7: #{e}"
 end
 ```
 
@@ -215,6 +216,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_conta** | **Integer**| C\u00C3\u00B3digo identificador da conta da Compra. | 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id_compra** | **Integer**| C\u00C3\u00B3digo identificador da Compra. | [optional] 

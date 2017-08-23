@@ -142,7 +142,7 @@ describe 'TransacoesCorrentesResponse' do
   end
 
 
-  describe 'test attribute "data_transacao_utc"' do
+  describe 'test attribute "data_transacao"' do
     it 'should work' do
        # assertion here
        # should be_a()

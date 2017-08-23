@@ -27,9 +27,6 @@ module Pier
   class TransacaoCorrenteResponse
     attr_accessor :ultima_parcela_lancada
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da timeline (idTimeline).
-    attr_accessor :id
-
     # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     attr_accessor :id_conta
 
@@ -88,8 +85,6 @@ module Pier
         
         :'ultima_parcela_lancada' => :'ultimaParcelaLancada',
         
-        :'id' => :'id',
-        
         :'id_conta' => :'idConta',
         
         :'id_tipo_registro' => :'idTipoRegistro',
@@ -132,8 +127,6 @@ module Pier
       {
         
         :'ultima_parcela_lancada' => :'Integer',
-        
-        :'id' => :'Integer',
         
         :'id_conta' => :'Integer',
         
@@ -185,15 +178,6 @@ module Pier
         
         
         self.ultima_parcela_lancada = attributes[:'ultimaParcelaLancada']
-        
-      
-      end
-
-      
-      if attributes[:'id']
-        
-        
-        self.id = attributes[:'id']
         
       
       end
@@ -439,17 +423,8 @@ module Pier
       
       
       
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -547,7 +522,6 @@ module Pier
       return true if self.equal?(o)
       self.class == o.class &&
           ultima_parcela_lancada == o.ultima_parcela_lancada &&
-          id == o.id &&
           id_conta == o.id_conta &&
           id_tipo_registro == o.id_tipo_registro &&
           ordem == o.ordem &&
@@ -576,7 +550,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ultima_parcela_lancada, id, id_conta, id_tipo_registro, ordem, id_transacao, descricao, status, descricao_status, valor, valor_dolar, quantidade_parcelas, valor_parcela, data_evento, estabelecimento, flag_credito, tipo_estabelecimento, id_grupo_mcc, flag_solicitou_contestacao].hash
+      [ultima_parcela_lancada, id_conta, id_tipo_registro, ordem, id_transacao, descricao, status, descricao_status, valor, valor_dolar, quantidade_parcelas, valor_parcela, data_evento, estabelecimento, flag_credito, tipo_estabelecimento, id_grupo_mcc, flag_solicitou_contestacao].hash
     end
 
     # Builds the object from hash

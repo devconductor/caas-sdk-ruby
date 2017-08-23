@@ -126,8 +126,8 @@ module Pier
     # @param update update
     # @param [Hash] opts the optional parameters
     # @return [UsuarioResponse]
-    def alterar_using_put9(id, update, opts = {})
-      data, _status_code, _headers = alterar_using_put9_with_http_info(id, update, opts)
+    def alterar_using_put10(id, update, opts = {})
+      data, _status_code, _headers = alterar_using_put10_with_http_info(id, update, opts)
       return data
     end
 
@@ -137,14 +137,14 @@ module Pier
     # @param update update
     # @param [Hash] opts the optional parameters
     # @return [Array<(UsuarioResponse, Fixnum, Hash)>] UsuarioResponse data, response status code and response headers
-    def alterar_using_put9_with_http_info(id, update, opts = {})
+    def alterar_using_put10_with_http_info(id, update, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: UsuariosApi.alterar_using_put9 ..."
+        @api_client.config.logger.debug "Calling API: UsuariosApi.alterar_using_put10 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling UsuariosApi.alterar_using_put9" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling UsuariosApi.alterar_using_put10" if id.nil?
       
       
       
@@ -152,7 +152,7 @@ module Pier
       
       
       # verify the required parameter 'update' is set
-      fail ArgumentError, "Missing the required parameter 'update' when calling UsuariosApi.alterar_using_put9" if update.nil?
+      fail ArgumentError, "Missing the required parameter 'update' when calling UsuariosApi.alterar_using_put10" if update.nil?
       
       
       
@@ -190,7 +190,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'UsuarioResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UsuariosApi#alterar_using_put9\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UsuariosApi#alterar_using_put10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -397,6 +397,7 @@ module Pier
     # Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
     # Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :nome Nome do Usuario
@@ -404,14 +405,15 @@ module Pier
     # @option opts [String] :email Email do Usuario
     # @option opts [String] :status Status do Usuario
     # @return [PageUsuarioResponse]
-    def listar_using_get30(opts = {})
-      data, _status_code, _headers = listar_using_get30_with_http_info(opts)
+    def listar_using_get32(opts = {})
+      data, _status_code, _headers = listar_using_get32_with_http_info(opts)
       return data
     end
 
     # Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
     # Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :nome Nome do Usuario
@@ -419,10 +421,16 @@ module Pier
     # @option opts [String] :email Email do Usuario
     # @option opts [String] :status Status do Usuario
     # @return [Array<(PageUsuarioResponse, Fixnum, Hash)>] PageUsuarioResponse data, response status code and response headers
-    def listar_using_get30_with_http_info(opts = {})
+    def listar_using_get32_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: UsuariosApi.listar_using_get30 ..."
+        @api_client.config.logger.debug "Calling API: UsuariosApi.listar_using_get32 ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -469,6 +477,7 @@ module Pier
 
       # query parameters
       query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
@@ -502,7 +511,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageUsuarioResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UsuariosApi#listar_using_get30\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UsuariosApi#listar_using_get32\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -579,8 +588,8 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [UsuarioResponse]
-    def salvar_using_post15(persist, opts = {})
-      data, _status_code, _headers = salvar_using_post15_with_http_info(persist, opts)
+    def salvar_using_post16(persist, opts = {})
+      data, _status_code, _headers = salvar_using_post16_with_http_info(persist, opts)
       return data
     end
 
@@ -589,14 +598,14 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(UsuarioResponse, Fixnum, Hash)>] UsuarioResponse data, response status code and response headers
-    def salvar_using_post15_with_http_info(persist, opts = {})
+    def salvar_using_post16_with_http_info(persist, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: UsuariosApi.salvar_using_post15 ..."
+        @api_client.config.logger.debug "Calling API: UsuariosApi.salvar_using_post16 ..."
       end
       
       
       # verify the required parameter 'persist' is set
-      fail ArgumentError, "Missing the required parameter 'persist' when calling UsuariosApi.salvar_using_post15" if persist.nil?
+      fail ArgumentError, "Missing the required parameter 'persist' when calling UsuariosApi.salvar_using_post16" if persist.nil?
       
       
       
@@ -634,7 +643,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'UsuarioResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UsuariosApi#salvar_using_post15\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UsuariosApi#salvar_using_post16\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

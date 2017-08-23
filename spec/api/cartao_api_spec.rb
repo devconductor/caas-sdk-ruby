@@ -311,10 +311,28 @@ describe 'CartaoApi' do
   end
 
 
+  # unit tests for lancar_tarifa_segunda_via_using_post
+  # Adiciona tarifa de ajuste da segunda via do cart\u00C3\u00A3o
+  # Esse recurso permite adicionar tar\u00C3\u00ADfa de ajuste pela emiss\u00C3\u00A3o da segunda via do cart\u00C3\u00A3o.
+  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+  # @param [Hash] opts the optional parameters
+  # @return [Object]
+  describe 'lancar_tarifa_segunda_via_using_post test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
   # unit tests for listar_lotes_cartoes_pre_pagos_using_get
   # Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
   # Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor.
   # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [Integer] :id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id).
@@ -338,10 +356,11 @@ describe 'CartaoApi' do
   end
 
 
-  # unit tests for listar_using_get5
+  # unit tests for listar_using_get6
   # Lista os Cart\u00C3\u00B5es gerados pelo Emissor
   # Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
   # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [Integer] :id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
@@ -363,7 +382,7 @@ describe 'CartaoApi' do
   # @option opts [String] :codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
   # @option opts [Integer] :sequencial_cartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
   # @return [PageCartaoResponse]
-  describe 'listar_using_get5 test' do
+  describe 'listar_using_get6 test' do
     it "should work" do
       # assertion here
       # should be_a()

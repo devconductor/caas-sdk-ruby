@@ -67,14 +67,26 @@ module Pier
     # Indica o canal pelo qual o cadastro do cliente foi realizado
     attr_accessor :canal_entrada
 
+    # Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+    attr_accessor :valor_pontuacao
+
     # Apresenta os telefones da empresa
     attr_accessor :telefones
 
     # Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros
     attr_accessor :enderecos
 
+    # Valor do Limite Global
+    attr_accessor :limite_global
+
     # Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
     attr_accessor :socios
+
+    # Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+    attr_accessor :limite_maximo
+
+    # Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+    attr_accessor :limite_parcelas
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -109,11 +121,19 @@ module Pier
         
         :'canal_entrada' => :'canalEntrada',
         
+        :'valor_pontuacao' => :'valorPontuacao',
+        
         :'telefones' => :'telefones',
         
         :'enderecos' => :'enderecos',
         
-        :'socios' => :'socios'
+        :'limite_global' => :'limiteGlobal',
+        
+        :'socios' => :'socios',
+        
+        :'limite_maximo' => :'limiteMaximo',
+        
+        :'limite_parcelas' => :'limiteParcelas'
         
       }
     end
@@ -150,11 +170,19 @@ module Pier
         
         :'canal_entrada' => :'String',
         
+        :'valor_pontuacao' => :'Integer',
+        
         :'telefones' => :'Array<TelefonePessoaAprovadaPersist>',
         
         :'enderecos' => :'Array<EnderecoAprovadoPersist>',
         
-        :'socios' => :'Array<PessoaPersist>'
+        :'limite_global' => :'Float',
+        
+        :'socios' => :'Array<PessoaPersist>',
+        
+        :'limite_maximo' => :'Float',
+        
+        :'limite_parcelas' => :'Float'
         
       }
     end
@@ -294,6 +322,15 @@ module Pier
       end
 
       
+      if attributes[:'valorPontuacao']
+        
+        
+        self.valor_pontuacao = attributes[:'valorPontuacao']
+        
+      
+      end
+
+      
       if attributes[:'telefones']
         
         if (value = attributes[:'telefones']).is_a?(Array)
@@ -316,12 +353,39 @@ module Pier
       end
 
       
+      if attributes[:'limiteGlobal']
+        
+        
+        self.limite_global = attributes[:'limiteGlobal']
+        
+      
+      end
+
+      
       if attributes[:'socios']
         
         if (value = attributes[:'socios']).is_a?(Array)
           self.socios = value
         end
         
+        
+      
+      end
+
+      
+      if attributes[:'limiteMaximo']
+        
+        
+        self.limite_maximo = attributes[:'limiteMaximo']
+        
+      
+      end
+
+      
+      if attributes[:'limiteParcelas']
+        
+        
+        self.limite_parcelas = attributes[:'limiteParcelas']
         
       
       end
@@ -433,7 +497,20 @@ module Pier
       
       
       
+      
+      
+      
+      
       if @enderecos.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @limite_global.nil?
         return false
       end
 
@@ -445,8 +522,46 @@ module Pier
       
       
       
+      
+      if @limite_maximo.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @limite_parcelas.nil?
+        return false
+      end
+
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -552,9 +667,13 @@ module Pier
           nome_impresso == o.nome_impresso &&
           valor_renda == o.valor_renda &&
           canal_entrada == o.canal_entrada &&
+          valor_pontuacao == o.valor_pontuacao &&
           telefones == o.telefones &&
           enderecos == o.enderecos &&
-          socios == o.socios
+          limite_global == o.limite_global &&
+          socios == o.socios &&
+          limite_maximo == o.limite_maximo &&
+          limite_parcelas == o.limite_parcelas
     end
 
     # @see the `==` method
@@ -566,7 +685,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [razao_social, nome_fantasia, cnpj, inscricao_estadual, data_abertura_empresa, id_origem_comercial, id_produto, numero_agencia, numero_conta_corrente, email, dia_vencimento, nome_impresso, valor_renda, canal_entrada, telefones, enderecos, socios].hash
+      [razao_social, nome_fantasia, cnpj, inscricao_estadual, data_abertura_empresa, id_origem_comercial, id_produto, numero_agencia, numero_conta_corrente, email, dia_vencimento, nome_impresso, valor_renda, canal_entrada, valor_pontuacao, telefones, enderecos, limite_global, socios, limite_maximo, limite_parcelas].hash
     end
 
     # Builds the object from hash

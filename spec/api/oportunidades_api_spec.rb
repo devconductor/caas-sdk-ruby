@@ -62,14 +62,14 @@ describe 'OportunidadesApi' do
   end
 
 
-  # unit tests for alterar_using_put3
+  # unit tests for alterar_using_put4
   # Altera as oportunidades
   # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das oportunidades.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
   # @param update update
   # @param [Hash] opts the optional parameters
   # @return [OportunidadeResponse]
-  describe 'alterar_using_put3 test' do
+  describe 'alterar_using_put4 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -80,14 +80,14 @@ describe 'OportunidadesApi' do
   end
 
 
-  # unit tests for alterar_using_put7
+  # unit tests for alterar_using_put8
   # Altera os tipos oportunidades
   # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos tipos oportunidades.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [TipoOportunidadeResponse]
-  describe 'alterar_using_put7 test' do
+  describe 'alterar_using_put8 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -154,6 +154,7 @@ describe 'OportunidadesApi' do
   # Lista as auditorias dos status oportunidades
   # Este recurso permite listar os status oportunidades.
   # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [Integer] :rev_type C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
@@ -180,6 +181,7 @@ describe 'OportunidadesApi' do
   # Lista as auditorias das oportunidades
   # Este recurso permite listar as auditorias das oportunidades.
   # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [Integer] :id_status_oportunidade C\u00C3\u00B3digo identificador do status oportunidade
@@ -208,6 +210,7 @@ describe 'OportunidadesApi' do
   # Lista as auditorias dos tipos oportunidades
   # Este recurso permite listar os tipos oportunidades.
   # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [Integer] :rev_type C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
@@ -233,6 +236,7 @@ describe 'OportunidadesApi' do
   # Este recurso permite listar os status do tipo oportunidades.
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
   # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [String] :nome Nome do status oportunidade
@@ -250,21 +254,22 @@ describe 'OportunidadesApi' do
   end
 
 
-  # unit tests for listar_using_get13
+  # unit tests for listar_using_get14
   # Lista as oportunidades
   # Este recurso permite listar as oportunidades.
-  # @param data_inicio_vigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
   # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [Integer] :id_status_oportunidade C\u00C3\u00B3digo identificador do status oportunidade
   # @option opts [String] :data_cadastro Data do cadastro da oportunidade
   # @option opts [String] :data_atualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
   # @option opts [String] :numero_receita_federal N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
+  # @option opts [String] :data_inicio_vigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
   # @option opts [String] :data_fim_vigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
   # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
   # @return [PageOportunidadeResponse]
-  describe 'listar_using_get13 test' do
+  describe 'listar_using_get14 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -275,16 +280,17 @@ describe 'OportunidadesApi' do
   end
 
 
-  # unit tests for listar_using_get25
+  # unit tests for listar_using_get27
   # Lista os tipos oportunidades
   # Este recurso permite listar os tipos oportunidades.
   # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
   # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
   # @return [PageTipoOportunidadeResponse]
-  describe 'listar_using_get25 test' do
+  describe 'listar_using_get27 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -313,13 +319,13 @@ describe 'OportunidadesApi' do
   end
 
 
-  # unit tests for salvar_using_post13
+  # unit tests for salvar_using_post14
   # Cadastra tipos oportunidades
   # Esse recurso permite cadastrar tipos oportunidades.
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [TipoOportunidadeResponse]
-  describe 'salvar_using_post13 test' do
+  describe 'salvar_using_post14 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -330,13 +336,13 @@ describe 'OportunidadesApi' do
   end
 
 
-  # unit tests for salvar_using_post8
+  # unit tests for salvar_using_post9
   # Cadastra as oportunidades
   # Esse recurso permite cadastrar oportunidades.
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [OportunidadeResponse]
-  describe 'salvar_using_post8 test' do
+  describe 'salvar_using_post9 test' do
     it "should work" do
       # assertion here
       # should be_a()

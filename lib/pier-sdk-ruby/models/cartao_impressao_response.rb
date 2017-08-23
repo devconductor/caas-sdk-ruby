@@ -93,6 +93,9 @@ module Pier
     # Apresenta os dados da TrilhaCVV02, seguindo as regras de trilha do emissor.
     attr_accessor :trilha_cvv2
 
+    # Apresenta o numero da hash do cart\u00C3\u00A3o 
+    attr_accessor :numero_cartao_hash
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -142,7 +145,9 @@ module Pier
         
         :'trilha_cvv1' => :'trilhaCVV1',
         
-        :'trilha_cvv2' => :'trilhaCVV2'
+        :'trilha_cvv2' => :'trilhaCVV2',
+        
+        :'numero_cartao_hash' => :'numeroCartaoHash'
         
       }
     end
@@ -195,7 +200,9 @@ module Pier
         
         :'trilha_cvv1' => :'String',
         
-        :'trilha_cvv2' => :'String'
+        :'trilha_cvv2' => :'String',
+        
+        :'numero_cartao_hash' => :'Integer'
         
       }
     end
@@ -416,6 +423,15 @@ module Pier
       end
 
       
+      if attributes[:'numeroCartaoHash']
+        
+        
+        self.numero_cartao_hash = attributes[:'numeroCartaoHash']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -523,8 +539,17 @@ module Pier
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -668,7 +693,8 @@ module Pier
           trilha1 == o.trilha1 &&
           trilha2 == o.trilha2 &&
           trilha_cvv1 == o.trilha_cvv1 &&
-          trilha_cvv2 == o.trilha_cvv2
+          trilha_cvv2 == o.trilha_cvv2 &&
+          numero_cartao_hash == o.numero_cartao_hash
     end
 
     # @see the `==` method
@@ -680,7 +706,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [flag_virtual, id_conta, id_pessoa, id_cartao, id_bandeira, id_tipo_cartao, numero_cartao, nome_plastico, cvv2, data_geracao, data_validade, nome_origem_comercial, nome_empresa, numero_agencia, numero_conta_corente, nome_empresa_beneficio, cpf, tipo_portador, nome_empregador, trilha1, trilha2, trilha_cvv1, trilha_cvv2].hash
+      [flag_virtual, id_conta, id_pessoa, id_cartao, id_bandeira, id_tipo_cartao, numero_cartao, nome_plastico, cvv2, data_geracao, data_validade, nome_origem_comercial, nome_empresa, numero_agencia, numero_conta_corente, nome_empresa_beneficio, cpf, tipo_portador, nome_empregador, trilha1, trilha2, trilha_cvv1, trilha_cvv2, numero_cartao_hash].hash
     end
 
     # Builds the object from hash

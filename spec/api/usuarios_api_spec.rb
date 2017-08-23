@@ -62,14 +62,14 @@ describe 'UsuariosApi' do
   end
 
 
-  # unit tests for alterar_using_put9
+  # unit tests for alterar_using_put10
   # Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
   # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
   # @param update update
   # @param [Hash] opts the optional parameters
   # @return [UsuarioResponse]
-  describe 'alterar_using_put9 test' do
+  describe 'alterar_using_put10 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -131,10 +131,11 @@ describe 'UsuariosApi' do
   end
 
 
-  # unit tests for listar_using_get30
+  # unit tests for listar_using_get32
   # Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
   # Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
   # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [String] :nome Nome do Usuario
@@ -142,7 +143,7 @@ describe 'UsuariosApi' do
   # @option opts [String] :email Email do Usuario
   # @option opts [String] :status Status do Usuario
   # @return [PageUsuarioResponse]
-  describe 'listar_using_get30 test' do
+  describe 'listar_using_get32 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -170,13 +171,13 @@ describe 'UsuariosApi' do
   end
 
 
-  # unit tests for salvar_using_post15
+  # unit tests for salvar_using_post16
   # Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
   # Esse recurso permite cadastrar usu\u00C3\u00A1rios.
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [UsuarioResponse]
-  describe 'salvar_using_post15 test' do
+  describe 'salvar_using_post16 test' do
     it "should work" do
       # assertion here
       # should be_a()

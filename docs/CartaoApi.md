@@ -19,8 +19,9 @@ Method | HTTP request | Description
 [**desbloquear_using_post**](CartaoApi.md#desbloquear_using_post) | **POST** /api/cartoes/{id}/desbloquear | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 [**gerar_lotes_cartoes_pre_pagos_using_post**](CartaoApi.md#gerar_lotes_cartoes_pre_pagos_using_post) | **POST** /api/cartoes/lotes-cartoes-pre-pagos | Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**gerar_nova_via_using_post**](CartaoApi.md#gerar_nova_via_using_post) | **POST** /api/cartoes/{id}/gerar-nova-via | Gerar uma nova via de Cart\u00C3\u00A3o
+[**lancar_tarifa_segunda_via_using_post**](CartaoApi.md#lancar_tarifa_segunda_via_using_post) | **POST** /api/cartoes/{id}/lancar-tarifa-reemissao | Adiciona tarifa de ajuste da segunda via do cart\u00C3\u00A3o
 [**listar_lotes_cartoes_pre_pagos_using_get**](CartaoApi.md#listar_lotes_cartoes_pre_pagos_using_get) | **GET** /api/cartoes/lotes-cartoes-pre-pagos | Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
-[**listar_using_get5**](CartaoApi.md#listar_using_get5) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
+[**listar_using_get6**](CartaoApi.md#listar_using_get6) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 [**reativar_using_post**](CartaoApi.md#reativar_using_post) | **POST** /api/cartoes/{id}/reativar | Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o
 [**validar_dados_impressos_bandeirado_using_get**](CartaoApi.md#validar_dados_impressos_bandeirado_using_get) | **GET** /api/cartoes/validar-dados-impressos-bandeirados | Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
 [**validar_dados_impressos_nao_bandeirado_using_get**](CartaoApi.md#validar_dados_impressos_nao_bandeirado_using_get) | **GET** /api/cartoes/validar-dados-impressos-nao-bandeirados | Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
@@ -816,6 +817,56 @@ No authorization required
 
 
 
+# **lancar_tarifa_segunda_via_using_post**
+> Object lancar_tarifa_segunda_via_using_post(id)
+
+Adiciona tarifa de ajuste da segunda via do cart\u00C3\u00A3o
+
+Esse recurso permite adicionar tar\u00C3\u00ADfa de ajuste pela emiss\u00C3\u00A3o da segunda via do cart\u00C3\u00A3o.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::CartaoApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+
+
+begin
+  #Adiciona tarifa de ajuste da segunda via do cart\u00C3\u00A3o
+  result = api_instance.lancar_tarifa_segunda_via_using_post(id)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CartaoApi->lancar_tarifa_segunda_via_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). | 
+
+
+### Return type
+
+**Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
 # **listar_lotes_cartoes_pre_pagos_using_get**
 > PageLoteCartoesPrePagosResponse listar_lotes_cartoes_pre_pagos_using_get(opts)
 
@@ -832,6 +883,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CartaoApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   id_origem_comercial: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id).
@@ -858,6 +910,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id_origem_comercial** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). | [optional] 
@@ -887,8 +940,8 @@ No authorization required
 
 
 
-# **listar_using_get5**
-> PageCartaoResponse listar_using_get5(opts)
+# **listar_using_get6**
+> PageCartaoResponse listar_using_get6(opts)
 
 Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 
@@ -903,6 +956,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CartaoApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   id_status_cartao: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
@@ -927,10 +981,10 @@ opts = {
 
 begin
   #Lista os Cart\u00C3\u00B5es gerados pelo Emissor
-  result = api_instance.listar_using_get5(opts)
+  result = api_instance.listar_using_get6(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CartaoApi->listar_using_get5: #{e}"
+  puts "Exception when calling CartaoApi->listar_using_get6: #{e}"
 end
 ```
 
@@ -938,6 +992,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id_status_cartao** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). | [optional] 

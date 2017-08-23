@@ -38,9 +38,10 @@ module Pier
     # @param tipo_evento TipoEvento a ser chamado pelo WebHook
     # @param url URL que a ser consumida pelo WebHook
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :status Status
     # @return [WebHookResponse]
-    def alterar_using_put10(id, tipo_evento, url, opts = {})
-      data, _status_code, _headers = alterar_using_put10_with_http_info(id, tipo_evento, url, opts)
+    def alterar_using_put11(id, tipo_evento, url, opts = {})
+      data, _status_code, _headers = alterar_using_put11_with_http_info(id, tipo_evento, url, opts)
       return data
     end
 
@@ -50,15 +51,16 @@ module Pier
     # @param tipo_evento TipoEvento a ser chamado pelo WebHook
     # @param url URL que a ser consumida pelo WebHook
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :status Status
     # @return [Array<(WebHookResponse, Fixnum, Hash)>] WebHookResponse data, response status code and response headers
-    def alterar_using_put10_with_http_info(id, tipo_evento, url, opts = {})
+    def alterar_using_put11_with_http_info(id, tipo_evento, url, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WebhooksApi.alterar_using_put10 ..."
+        @api_client.config.logger.debug "Calling API: WebhooksApi.alterar_using_put11 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling WebhooksApi.alterar_using_put10" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling WebhooksApi.alterar_using_put11" if id.nil?
       
       
       
@@ -66,11 +68,11 @@ module Pier
       
       
       # verify the required parameter 'tipo_evento' is set
-      fail ArgumentError, "Missing the required parameter 'tipo_evento' when calling WebhooksApi.alterar_using_put10" if tipo_evento.nil?
+      fail ArgumentError, "Missing the required parameter 'tipo_evento' when calling WebhooksApi.alterar_using_put11" if tipo_evento.nil?
       
       # verify enum value
-      unless ['RISCO_FRAUDE', 'TOKEN_SMS', 'OUTROS'].include?(tipo_evento)
-        fail ArgumentError, "invalid value for 'tipo_evento', must be one of RISCO_FRAUDE, TOKEN_SMS, OUTROS"
+      unless ['RISCO_FRAUDE', 'CODIGO_SEGURANCA', 'OUTROS'].include?(tipo_evento)
+        fail ArgumentError, "invalid value for 'tipo_evento', must be one of RISCO_FRAUDE, CODIGO_SEGURANCA, OUTROS"
       end
       
       
@@ -79,8 +81,18 @@ module Pier
       
       
       # verify the required parameter 'url' is set
-      fail ArgumentError, "Missing the required parameter 'url' when calling WebhooksApi.alterar_using_put10" if url.nil?
+      fail ArgumentError, "Missing the required parameter 'url' when calling WebhooksApi.alterar_using_put11" if url.nil?
       
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'status'] && !['INATIVO', 'ATIVO'].include?(opts[:'status'])
+        fail ArgumentError, 'invalid value for "status", must be one of INATIVO, ATIVO'
+      end
       
       
       
@@ -92,6 +104,7 @@ module Pier
       query_params = {}
       query_params[:'tipoEvento'] = tipo_evento
       query_params[:'url'] = url
+      query_params[:'status'] = opts[:'status'] if opts[:'status']
 
       # header parameters
       header_params = {}
@@ -119,7 +132,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'WebHookResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WebhooksApi#alterar_using_put10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: WebhooksApi#alterar_using_put11\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -194,6 +207,7 @@ module Pier
     # Lista os Webhooks
     # Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id Id do WebHook
@@ -201,14 +215,15 @@ module Pier
     # @option opts [String] :metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
     # @option opts [String] :url URL que a ser consumida pelo WebHook
     # @return [PageWebHookResponse]
-    def listar_using_get31(opts = {})
-      data, _status_code, _headers = listar_using_get31_with_http_info(opts)
+    def listar_using_get34(opts = {})
+      data, _status_code, _headers = listar_using_get34_with_http_info(opts)
       return data
     end
 
     # Lista os Webhooks
     # Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id Id do WebHook
@@ -216,9 +231,9 @@ module Pier
     # @option opts [String] :metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
     # @option opts [String] :url URL que a ser consumida pelo WebHook
     # @return [Array<(PageWebHookResponse, Fixnum, Hash)>] PageWebHookResponse data, response status code and response headers
-    def listar_using_get31_with_http_info(opts = {})
+    def listar_using_get34_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WebhooksApi.listar_using_get31 ..."
+        @api_client.config.logger.debug "Calling API: WebhooksApi.listar_using_get34 ..."
       end
       
       
@@ -242,8 +257,14 @@ module Pier
       
       
       
-      if opts[:'tipo_evento'] && !['RISCO_FRAUDE', 'TOKEN_SMS', 'OUTROS'].include?(opts[:'tipo_evento'])
-        fail ArgumentError, 'invalid value for "tipo_evento", must be one of RISCO_FRAUDE, TOKEN_SMS, OUTROS'
+      
+      
+      
+      
+      
+      
+      if opts[:'tipo_evento'] && !['RISCO_FRAUDE', 'CODIGO_SEGURANCA', 'OUTROS'].include?(opts[:'tipo_evento'])
+        fail ArgumentError, 'invalid value for "tipo_evento", must be one of RISCO_FRAUDE, CODIGO_SEGURANCA, OUTROS'
       end
       
       
@@ -270,6 +291,7 @@ module Pier
 
       # query parameters
       query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'id'] = opts[:'id'] if opts[:'id']
@@ -303,7 +325,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageWebHookResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WebhooksApi#listar_using_get31\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: WebhooksApi#listar_using_get34\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -315,8 +337,8 @@ module Pier
     # @param url URL que a ser consumida pelo WebHook
     # @param [Hash] opts the optional parameters
     # @return [WebHookResponse]
-    def salvar_using_post16(tipo_evento, url, opts = {})
-      data, _status_code, _headers = salvar_using_post16_with_http_info(tipo_evento, url, opts)
+    def salvar_using_post17(tipo_evento, url, opts = {})
+      data, _status_code, _headers = salvar_using_post17_with_http_info(tipo_evento, url, opts)
       return data
     end
 
@@ -326,18 +348,18 @@ module Pier
     # @param url URL que a ser consumida pelo WebHook
     # @param [Hash] opts the optional parameters
     # @return [Array<(WebHookResponse, Fixnum, Hash)>] WebHookResponse data, response status code and response headers
-    def salvar_using_post16_with_http_info(tipo_evento, url, opts = {})
+    def salvar_using_post17_with_http_info(tipo_evento, url, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WebhooksApi.salvar_using_post16 ..."
+        @api_client.config.logger.debug "Calling API: WebhooksApi.salvar_using_post17 ..."
       end
       
       
       # verify the required parameter 'tipo_evento' is set
-      fail ArgumentError, "Missing the required parameter 'tipo_evento' when calling WebhooksApi.salvar_using_post16" if tipo_evento.nil?
+      fail ArgumentError, "Missing the required parameter 'tipo_evento' when calling WebhooksApi.salvar_using_post17" if tipo_evento.nil?
       
       # verify enum value
-      unless ['RISCO_FRAUDE', 'TOKEN_SMS', 'OUTROS'].include?(tipo_evento)
-        fail ArgumentError, "invalid value for 'tipo_evento', must be one of RISCO_FRAUDE, TOKEN_SMS, OUTROS"
+      unless ['RISCO_FRAUDE', 'CODIGO_SEGURANCA', 'OUTROS'].include?(tipo_evento)
+        fail ArgumentError, "invalid value for 'tipo_evento', must be one of RISCO_FRAUDE, CODIGO_SEGURANCA, OUTROS"
       end
       
       
@@ -346,7 +368,7 @@ module Pier
       
       
       # verify the required parameter 'url' is set
-      fail ArgumentError, "Missing the required parameter 'url' when calling WebhooksApi.salvar_using_post16" if url.nil?
+      fail ArgumentError, "Missing the required parameter 'url' when calling WebhooksApi.salvar_using_post17" if url.nil?
       
       
       
@@ -386,7 +408,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'WebHookResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WebhooksApi#salvar_using_post16\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: WebhooksApi#salvar_using_post17\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -329,5 +329,16 @@ describe 'TransferenciaBancariaResponse' do
   end
 
 
+  describe 'test attribute "valor_taxa_saque"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
 end
 

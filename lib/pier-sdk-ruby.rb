@@ -35,6 +35,9 @@ require 'pier-sdk-ruby/models/adicional_persist'
 require 'pier-sdk-ruby/models/adicional_response'
 
 
+require 'pier-sdk-ruby/models/adicional_update'
+
+
 require 'pier-sdk-ruby/models/ajuste_response'
 
 
@@ -74,7 +77,7 @@ require 'pier-sdk-ruby/models/arquivo_response'
 require 'pier-sdk-ruby/models/atendimento_cliente_response'
 
 
-require 'pier-sdk-ruby/models/atribuir_assinatura_cliente_request'
+require 'pier-sdk-ruby/models/atribuir_assinatura_cliente_persist'
 
 
 require 'pier-sdk-ruby/models/auth_token'
@@ -131,7 +134,13 @@ require 'pier-sdk-ruby/models/configuracao_email_response'
 require 'pier-sdk-ruby/models/conta_detalhe_response'
 
 
+require 'pier-sdk-ruby/models/conta_historico_pagamento_response'
+
+
 require 'pier-sdk-ruby/models/conta_response'
+
+
+require 'pier-sdk-ruby/models/controle_vencimento_response'
 
 
 require 'pier-sdk-ruby/models/dados_cartao_response'
@@ -182,6 +191,9 @@ require 'pier-sdk-ruby/models/estagio_cartao_response'
 require 'pier-sdk-ruby/models/extra_info'
 
 
+require 'pier-sdk-ruby/models/fantasia_basica_response'
+
+
 require 'pier-sdk-ruby/models/faq_response'
 
 
@@ -207,6 +219,9 @@ require 'pier-sdk-ruby/models/historico_impressao_cartao_response'
 
 
 require 'pier-sdk-ruby/models/historico_telefone_response'
+
+
+require 'pier-sdk-ruby/models/integracao_emissor_persist'
 
 
 require 'pier-sdk-ruby/models/integracao_emissor_response'
@@ -284,7 +299,13 @@ require 'pier-sdk-ruby/models/page_configuracao_email_response'
 require 'pier-sdk-ruby/models/page_conta_detalhe_response'
 
 
+require 'pier-sdk-ruby/models/page_conta_historico_pagamento_response'
+
+
 require 'pier-sdk-ruby/models/page_conta_response'
+
+
+require 'pier-sdk-ruby/models/page_controle_vencimento_response'
 
 
 require 'pier-sdk-ruby/models/page_dispositivo_response'
@@ -297,6 +318,9 @@ require 'pier-sdk-ruby/models/page_estabelecimento_response'
 
 
 require 'pier-sdk-ruby/models/page_estagio_cartao_response'
+
+
+require 'pier-sdk-ruby/models/page_fantasia_basica_response'
 
 
 require 'pier-sdk-ruby/models/page_faq_response'
@@ -344,6 +368,9 @@ require 'pier-sdk-ruby/models/page_pessoa_detalhe_response'
 require 'pier-sdk-ruby/models/page_pessoa_response'
 
 
+require 'pier-sdk-ruby/models/page_plano_parcelamento_response'
+
+
 require 'pier-sdk-ruby/models/page_plataforma_mobile_response'
 
 
@@ -351,6 +378,9 @@ require 'pier-sdk-ruby/models/page_portador_response'
 
 
 require 'pier-sdk-ruby/models/page_produto_response'
+
+
+require 'pier-sdk-ruby/models/page_promotor_response'
 
 
 require 'pier-sdk-ruby/models/page_push_response'
@@ -452,6 +482,9 @@ require 'pier-sdk-ruby/models/pessoa_persist'
 require 'pier-sdk-ruby/models/pessoa_response'
 
 
+require 'pier-sdk-ruby/models/plano_parcelamento_response'
+
+
 require 'pier-sdk-ruby/models/plataforma_mobile_persist'
 
 
@@ -471,6 +504,9 @@ require 'pier-sdk-ruby/models/produto_origem_response'
 
 
 require 'pier-sdk-ruby/models/produto_response'
+
+
+require 'pier-sdk-ruby/models/promotor_response'
 
 
 require 'pier-sdk-ruby/models/push_apns'

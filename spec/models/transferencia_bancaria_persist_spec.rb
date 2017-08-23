@@ -43,39 +43,6 @@ describe 'TransferenciaBancariaPersist' do
     end
   end
 
-  describe 'test attribute "data_compra"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "proximo_vencimento_padrao"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "proximo_vencimento_real"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
   describe 'test attribute "valor_compra"' do
     it 'should work' do
        # assertion here
@@ -87,7 +54,7 @@ describe 'TransferenciaBancariaPersist' do
   end
 
 
-  describe 'test attribute "nome_favorecido"' do
+  describe 'test attribute "valor"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -165,6 +132,17 @@ describe 'TransferenciaBancariaPersist' do
 
 
   describe 'test attribute "flag_conta_poupanca"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "nome_favorecido"' do
     it 'should work' do
        # assertion here
        # should be_a()

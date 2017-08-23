@@ -23,17 +23,52 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto que representa a atribui\u00C3\u00A7\u00C3\u00A3o da assinatura do cliente
-  class AtribuirAssinaturaClienteRequest
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem
-    attr_accessor :id_imagem
+  # Objeto ContaHistoricoPagamentoResponse
+  class ContaHistoricoPagamentoResponse
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Pagamento
+    attr_accessor :id_pagamento
+
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento onde o Pagamento foi realizado, quando este for o local de pagamento.
+    attr_accessor :id_estabelecimento
+
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Institui\u00C3\u00A7\u00C3\u00A3o Banc\u00C3\u00A1ria onde o Pagamento foi realizado, quando este for o local de pagamento
+    attr_accessor :id_banco
+
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o
+    attr_accessor :id_cartao
+
+    # Valor do Pagamento
+    attr_accessor :valor_pagamento
+
+    # Data e Hora da realiza\u00C3\u00A7\u00C3\u00A3o do Pagamento. Quando feito em Institui\u00C3\u00A7\u00C3\u00A3o Banc\u00C3\u00A1ria, o hor\u00C3\u00A1rio do pagamento \u00C3\u00A9 exibido com valor zero
+    attr_accessor :data_hora_pagamento
+
+    # Data e Hora em que o registro do Pagamento foi cadastrado
+    attr_accessor :data_hora_entrada_pagamento
+
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Pagamento
+    attr_accessor :status
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id_imagem' => :'idImagem'
+        :'id_pagamento' => :'idPagamento',
+        
+        :'id_estabelecimento' => :'idEstabelecimento',
+        
+        :'id_banco' => :'idBanco',
+        
+        :'id_cartao' => :'idCartao',
+        
+        :'valor_pagamento' => :'valorPagamento',
+        
+        :'data_hora_pagamento' => :'dataHoraPagamento',
+        
+        :'data_hora_entrada_pagamento' => :'dataHoraEntradaPagamento',
+        
+        :'status' => :'status'
         
       }
     end
@@ -42,7 +77,21 @@ module Pier
     def self.swagger_types
       {
         
-        :'id_imagem' => :'Integer'
+        :'id_pagamento' => :'Integer',
+        
+        :'id_estabelecimento' => :'Integer',
+        
+        :'id_banco' => :'Integer',
+        
+        :'id_cartao' => :'Integer',
+        
+        :'valor_pagamento' => :'Float',
+        
+        :'data_hora_pagamento' => :'String',
+        
+        :'data_hora_entrada_pagamento' => :'String',
+        
+        :'status' => :'Integer'
         
       }
     end
@@ -56,10 +105,73 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'idImagem']
+      if attributes[:'idPagamento']
         
         
-        self.id_imagem = attributes[:'idImagem']
+        self.id_pagamento = attributes[:'idPagamento']
+        
+      
+      end
+
+      
+      if attributes[:'idEstabelecimento']
+        
+        
+        self.id_estabelecimento = attributes[:'idEstabelecimento']
+        
+      
+      end
+
+      
+      if attributes[:'idBanco']
+        
+        
+        self.id_banco = attributes[:'idBanco']
+        
+      
+      end
+
+      
+      if attributes[:'idCartao']
+        
+        
+        self.id_cartao = attributes[:'idCartao']
+        
+      
+      end
+
+      
+      if attributes[:'valorPagamento']
+        
+        
+        self.valor_pagamento = attributes[:'valorPagamento']
+        
+      
+      end
+
+      
+      if attributes[:'dataHoraPagamento']
+        
+        
+        self.data_hora_pagamento = attributes[:'dataHoraPagamento']
+        
+      
+      end
+
+      
+      if attributes[:'dataHoraEntradaPagamento']
+        
+        
+        self.data_hora_entrada_pagamento = attributes[:'dataHoraEntradaPagamento']
+        
+      
+      end
+
+      
+      if attributes[:'status']
+        
+        
+        self.status = attributes[:'status']
         
       
       end
@@ -84,8 +196,71 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -97,7 +272,14 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id_imagem == o.id_imagem
+          id_pagamento == o.id_pagamento &&
+          id_estabelecimento == o.id_estabelecimento &&
+          id_banco == o.id_banco &&
+          id_cartao == o.id_cartao &&
+          valor_pagamento == o.valor_pagamento &&
+          data_hora_pagamento == o.data_hora_pagamento &&
+          data_hora_entrada_pagamento == o.data_hora_entrada_pagamento &&
+          status == o.status
     end
 
     # @see the `==` method
@@ -109,7 +291,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_imagem].hash
+      [id_pagamento, id_estabelecimento, id_banco, id_cartao, valor_pagamento, data_hora_pagamento, data_hora_entrada_pagamento, status].hash
     end
 
     # Builds the object from hash

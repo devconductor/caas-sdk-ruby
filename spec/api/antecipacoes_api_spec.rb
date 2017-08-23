@@ -98,11 +98,12 @@ describe 'AntecipacoesApi' do
   end
 
 
-  # unit tests for listar_using_get6
+  # unit tests for listar_using_get7
   # Listar compras com parcelas antecip\u00C3\u00A1veis
   # Lista as compras antecip\u00C3\u00A1veis de uma conta.
   # @param id_conta C\u00C3\u00B3digo identificador da conta da Compra.
   # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [Integer] :id_compra C\u00C3\u00B3digo identificador da Compra.
@@ -110,7 +111,7 @@ describe 'AntecipacoesApi' do
   # @option opts [BOOLEAN] :juros Indica se a compra \u00C3\u00A9 com ou sem juros.
   # @option opts [String] :tipo_origem_transacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
   # @return [PageCompraResponse]
-  describe 'listar_using_get6 test' do
+  describe 'listar_using_get7 test' do
     it "should work" do
       # assertion here
       # should be_a()

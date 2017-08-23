@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ativar_using_post**](DispositivosApi.md#ativar_using_post) | **POST** /api/dispositivos/{id}/ativar-dispositivo | Ativa Dispositivo
 [**desativar_using_post**](DispositivosApi.md#desativar_using_post) | **POST** /api/dispositivos/{id}/desativar-dispositivo | Desativa Dispositivo
-[**listar_using_get8**](DispositivosApi.md#listar_using_get8) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
+[**listar_using_get9**](DispositivosApi.md#listar_using_get9) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
 [**salvar_using_post4**](DispositivosApi.md#salvar_using_post4) | **POST** /api/dispositivos | Cadastra Dispositivo
 
 
@@ -112,8 +112,8 @@ No authorization required
 
 
 
-# **listar_using_get8**
-> PageDispositivoResponse listar_using_get8(opts)
+# **listar_using_get9**
+> PageDispositivoResponse listar_using_get9(opts)
 
 Lista os dispositivos cadastrados
 
@@ -128,6 +128,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::DispositivosApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   token: "token_example", # String | Token do Dispositivo
@@ -139,10 +140,10 @@ opts = {
 
 begin
   #Lista os dispositivos cadastrados
-  result = api_instance.listar_using_get8(opts)
+  result = api_instance.listar_using_get9(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DispositivosApi->listar_using_get8: #{e}"
+  puts "Exception when calling DispositivosApi->listar_using_get9: #{e}"
 end
 ```
 
@@ -150,6 +151,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **token** | **String**| Token do Dispositivo | [optional] 

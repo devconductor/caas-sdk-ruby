@@ -157,6 +157,7 @@ module Pier
     # Lista os pa\u00C3\u00ADses
     # Este recurso permite listar os pa\u00C3\u00ADses.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :codigo C\u00C3\u00B3digo do pa\u00C3\u00ADs
@@ -173,6 +174,7 @@ module Pier
     # Lista os pa\u00C3\u00ADses
     # Este recurso permite listar os pa\u00C3\u00ADses.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :codigo C\u00C3\u00B3digo do pa\u00C3\u00ADs
@@ -185,6 +187,12 @@ module Pier
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: PermissaoPaisesApi.listar_paises_using_get ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -237,6 +245,7 @@ module Pier
 
       # query parameters
       query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'codigo'] = opts[:'codigo'] if opts[:'codigo']

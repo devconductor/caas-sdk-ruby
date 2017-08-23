@@ -252,11 +252,6 @@ module Pier
       
       
       
-      if @codigo_seguranca_cartao.nil?
-        return false
-      end
-
-      
       
       
       

@@ -282,6 +282,7 @@ module Pier
     # Lista as compras antecip\u00C3\u00A1veis de uma conta.
     # @param id_conta C\u00C3\u00B3digo identificador da conta da Compra.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_compra C\u00C3\u00B3digo identificador da Compra.
@@ -289,8 +290,8 @@ module Pier
     # @option opts [BOOLEAN] :juros Indica se a compra \u00C3\u00A9 com ou sem juros.
     # @option opts [String] :tipo_origem_transacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
     # @return [PageCompraResponse]
-    def listar_using_get6(id_conta, opts = {})
-      data, _status_code, _headers = listar_using_get6_with_http_info(id_conta, opts)
+    def listar_using_get7(id_conta, opts = {})
+      data, _status_code, _headers = listar_using_get7_with_http_info(id_conta, opts)
       return data
     end
 
@@ -298,6 +299,7 @@ module Pier
     # Lista as compras antecip\u00C3\u00A1veis de uma conta.
     # @param id_conta C\u00C3\u00B3digo identificador da conta da Compra.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_compra C\u00C3\u00B3digo identificador da Compra.
@@ -305,14 +307,20 @@ module Pier
     # @option opts [BOOLEAN] :juros Indica se a compra \u00C3\u00A9 com ou sem juros.
     # @option opts [String] :tipo_origem_transacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
     # @return [Array<(PageCompraResponse, Fixnum, Hash)>] PageCompraResponse data, response status code and response headers
-    def listar_using_get6_with_http_info(id_conta, opts = {})
+    def listar_using_get7_with_http_info(id_conta, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: AntecipacoesApi.listar_using_get6 ..."
+        @api_client.config.logger.debug "Calling API: AntecipacoesApi.listar_using_get7 ..."
       end
       
       
       # verify the required parameter 'id_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta' when calling AntecipacoesApi.listar_using_get6" if id_conta.nil?
+      fail ArgumentError, "Missing the required parameter 'id_conta' when calling AntecipacoesApi.listar_using_get7" if id_conta.nil?
+      
+      
+      
+      
+      
+      
       
       
       
@@ -364,6 +372,7 @@ module Pier
       # query parameters
       query_params = {}
       query_params[:'idConta'] = id_conta
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'idCompra'] = opts[:'id_compra'] if opts[:'id_compra']
@@ -397,7 +406,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageCompraResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AntecipacoesApi#listar_using_get6\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: AntecipacoesApi#listar_using_get7\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

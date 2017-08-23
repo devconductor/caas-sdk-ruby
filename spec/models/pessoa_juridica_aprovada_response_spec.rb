@@ -219,6 +219,17 @@ describe 'PessoaJuridicaAprovadaResponse' do
   end
 
 
+  describe 'test attribute "valor_pontuacao"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
   describe 'test attribute "telefones"' do
     it 'should work' do
        # assertion here
@@ -242,6 +253,39 @@ describe 'PessoaJuridicaAprovadaResponse' do
 
 
   describe 'test attribute "socios"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "limite_global"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "limite_maximo"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "limite_parcelas"' do
     it 'should work' do
        # assertion here
        # should be_a()

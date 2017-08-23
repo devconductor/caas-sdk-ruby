@@ -73,6 +73,9 @@ module Pier
     # Indica o canal pelo qual o cadastro do cliente foi realizado
     attr_accessor :canal_entrada
 
+    # Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+    attr_accessor :valor_pontuacao
+
     # Apresenta os telefones da empresa
     attr_accessor :telefones
 
@@ -81,6 +84,15 @@ module Pier
 
     # Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
     attr_accessor :socios
+
+    # Valor do Limite Global
+    attr_accessor :limite_global
+
+    # Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+    attr_accessor :limite_maximo
+
+    # Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+    attr_accessor :limite_parcelas
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -119,11 +131,19 @@ module Pier
         
         :'canal_entrada' => :'canalEntrada',
         
+        :'valor_pontuacao' => :'valorPontuacao',
+        
         :'telefones' => :'telefones',
         
         :'enderecos' => :'enderecos',
         
-        :'socios' => :'socios'
+        :'socios' => :'socios',
+        
+        :'limite_global' => :'limiteGlobal',
+        
+        :'limite_maximo' => :'limiteMaximo',
+        
+        :'limite_parcelas' => :'limiteParcelas'
         
       }
     end
@@ -164,11 +184,19 @@ module Pier
         
         :'canal_entrada' => :'String',
         
+        :'valor_pontuacao' => :'Integer',
+        
         :'telefones' => :'Array<TelefonePessoaAprovadaResponse>',
         
         :'enderecos' => :'Array<EnderecoAprovadoResponse>',
         
-        :'socios' => :'Array<SocioAprovadoResponse>'
+        :'socios' => :'Array<SocioAprovadoResponse>',
+        
+        :'limite_global' => :'Float',
+        
+        :'limite_maximo' => :'Float',
+        
+        :'limite_parcelas' => :'Float'
         
       }
     end
@@ -326,6 +354,15 @@ module Pier
       end
 
       
+      if attributes[:'valorPontuacao']
+        
+        
+        self.valor_pontuacao = attributes[:'valorPontuacao']
+        
+      
+      end
+
+      
       if attributes[:'telefones']
         
         if (value = attributes[:'telefones']).is_a?(Array)
@@ -354,6 +391,33 @@ module Pier
           self.socios = value
         end
         
+        
+      
+      end
+
+      
+      if attributes[:'limiteGlobal']
+        
+        
+        self.limite_global = attributes[:'limiteGlobal']
+        
+      
+      end
+
+      
+      if attributes[:'limiteMaximo']
+        
+        
+        self.limite_maximo = attributes[:'limiteMaximo']
+        
+      
+      end
+
+      
+      if attributes[:'limiteParcelas']
+        
+        
+        self.limite_parcelas = attributes[:'limiteParcelas']
         
       
       end
@@ -450,8 +514,59 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      if @limite_global.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @limite_maximo.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @limite_parcelas.nil?
+        return false
+      end
+
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -569,9 +684,13 @@ module Pier
           id_conta == o.id_conta &&
           id_proposta == o.id_proposta &&
           canal_entrada == o.canal_entrada &&
+          valor_pontuacao == o.valor_pontuacao &&
           telefones == o.telefones &&
           enderecos == o.enderecos &&
-          socios == o.socios
+          socios == o.socios &&
+          limite_global == o.limite_global &&
+          limite_maximo == o.limite_maximo &&
+          limite_parcelas == o.limite_parcelas
     end
 
     # @see the `==` method
@@ -583,7 +702,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, razao_social, nome_fantasia, cnpj, inscricao_estadual, data_abertura_empresa, id_origem_comercial, id_produto, numero_agencia, numero_conta_corrente, email, dia_vencimento, nome_impresso, id_conta, id_proposta, canal_entrada, telefones, enderecos, socios].hash
+      [id, razao_social, nome_fantasia, cnpj, inscricao_estadual, data_abertura_empresa, id_origem_comercial, id_produto, numero_agencia, numero_conta_corrente, email, dia_vencimento, nome_impresso, id_conta, id_proposta, canal_entrada, valor_pontuacao, telefones, enderecos, socios, limite_global, limite_maximo, limite_parcelas].hash
     end
 
     # Builds the object from hash

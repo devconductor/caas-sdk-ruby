@@ -31,35 +31,17 @@ module Pier
     # Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.
     attr_accessor :nome
 
-    # Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta.
-    attr_accessor :flag_cancela_cartao
-
-    # Quando ativa, indica que o cart\u00C3\u00A3o ativo que o portador possuir na mesma conta do cart\u00C3\u00A3o a ser desbloqueado, e que o status dele possua essa caracter\u00C3\u00ADstica, dever\u00C3\u00A1 ser cancelado quando um novo cart\u00C3\u00A3o for desbloqueado.
-    attr_accessor :flag_cancela_no_desbloqueio
-
-    # Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
-    attr_accessor :id_status_destino_desbloqueio
-
-    # Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.
-    attr_accessor :id_status_destino_conta
-
-    # Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
-    attr_accessor :flag_cobra_tarifa
-
-    # Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
-    attr_accessor :flag_permite_nova_via_cartao
-
-    # Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo.
-    attr_accessor :flag_permite_desbloqueio
-
-    # Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo.
-    attr_accessor :flag_cancelamento
-
-    # Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o bloqueio, sendo: 0: Inativo e 1: Ativo.
-    attr_accessor :flag_permite_bloqueio
+    # Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+    attr_accessor :permite_desbloquear
 
     # Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
-    attr_accessor :flag_reativar
+    attr_accessor :permite_atribuir_como_bloqueio
+
+    # Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+    attr_accessor :permite_atribuir_como_cancelamento
+
+    # Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+    attr_accessor :cobrar_tarifa_ao_emitir_nova_via
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -70,25 +52,13 @@ module Pier
         
         :'nome' => :'nome',
         
-        :'flag_cancela_cartao' => :'flagCancelaCartao',
+        :'permite_desbloquear' => :'permiteDesbloquear',
         
-        :'flag_cancela_no_desbloqueio' => :'flagCancelaNoDesbloqueio',
+        :'permite_atribuir_como_bloqueio' => :'permiteAtribuirComoBloqueio',
         
-        :'id_status_destino_desbloqueio' => :'idStatusDestinoDesbloqueio',
+        :'permite_atribuir_como_cancelamento' => :'permiteAtribuirComoCancelamento',
         
-        :'id_status_destino_conta' => :'idStatusDestinoConta',
-        
-        :'flag_cobra_tarifa' => :'flagCobraTarifa',
-        
-        :'flag_permite_nova_via_cartao' => :'flagPermiteNovaViaCartao',
-        
-        :'flag_permite_desbloqueio' => :'flagPermiteDesbloqueio',
-        
-        :'flag_cancelamento' => :'flagCancelamento',
-        
-        :'flag_permite_bloqueio' => :'flagPermiteBloqueio',
-        
-        :'flag_reativar' => :'flagReativar'
+        :'cobrar_tarifa_ao_emitir_nova_via' => :'cobrarTarifaAoEmitirNovaVia'
         
       }
     end
@@ -101,25 +71,13 @@ module Pier
         
         :'nome' => :'String',
         
-        :'flag_cancela_cartao' => :'Integer',
+        :'permite_desbloquear' => :'Integer',
         
-        :'flag_cancela_no_desbloqueio' => :'Integer',
+        :'permite_atribuir_como_bloqueio' => :'Integer',
         
-        :'id_status_destino_desbloqueio' => :'Integer',
+        :'permite_atribuir_como_cancelamento' => :'Integer',
         
-        :'id_status_destino_conta' => :'Integer',
-        
-        :'flag_cobra_tarifa' => :'Integer',
-        
-        :'flag_permite_nova_via_cartao' => :'Integer',
-        
-        :'flag_permite_desbloqueio' => :'Integer',
-        
-        :'flag_cancelamento' => :'Integer',
-        
-        :'flag_permite_bloqueio' => :'Integer',
-        
-        :'flag_reativar' => :'Integer'
+        :'cobrar_tarifa_ao_emitir_nova_via' => :'Integer'
         
       }
     end
@@ -151,91 +109,37 @@ module Pier
       end
 
       
-      if attributes[:'flagCancelaCartao']
+      if attributes[:'permiteDesbloquear']
         
         
-        self.flag_cancela_cartao = attributes[:'flagCancelaCartao']
-        
-      
-      end
-
-      
-      if attributes[:'flagCancelaNoDesbloqueio']
-        
-        
-        self.flag_cancela_no_desbloqueio = attributes[:'flagCancelaNoDesbloqueio']
+        self.permite_desbloquear = attributes[:'permiteDesbloquear']
         
       
       end
 
       
-      if attributes[:'idStatusDestinoDesbloqueio']
+      if attributes[:'permiteAtribuirComoBloqueio']
         
         
-        self.id_status_destino_desbloqueio = attributes[:'idStatusDestinoDesbloqueio']
-        
-      
-      end
-
-      
-      if attributes[:'idStatusDestinoConta']
-        
-        
-        self.id_status_destino_conta = attributes[:'idStatusDestinoConta']
+        self.permite_atribuir_como_bloqueio = attributes[:'permiteAtribuirComoBloqueio']
         
       
       end
 
       
-      if attributes[:'flagCobraTarifa']
+      if attributes[:'permiteAtribuirComoCancelamento']
         
         
-        self.flag_cobra_tarifa = attributes[:'flagCobraTarifa']
-        
-      
-      end
-
-      
-      if attributes[:'flagPermiteNovaViaCartao']
-        
-        
-        self.flag_permite_nova_via_cartao = attributes[:'flagPermiteNovaViaCartao']
+        self.permite_atribuir_como_cancelamento = attributes[:'permiteAtribuirComoCancelamento']
         
       
       end
 
       
-      if attributes[:'flagPermiteDesbloqueio']
+      if attributes[:'cobrarTarifaAoEmitirNovaVia']
         
         
-        self.flag_permite_desbloqueio = attributes[:'flagPermiteDesbloqueio']
-        
-      
-      end
-
-      
-      if attributes[:'flagCancelamento']
-        
-        
-        self.flag_cancelamento = attributes[:'flagCancelamento']
-        
-      
-      end
-
-      
-      if attributes[:'flagPermiteBloqueio']
-        
-        
-        self.flag_permite_bloqueio = attributes[:'flagPermiteBloqueio']
-        
-      
-      end
-
-      
-      if attributes[:'flagReativar']
-        
-        
-        self.flag_reativar = attributes[:'flagReativar']
+        self.cobrar_tarifa_ao_emitir_nova_via = attributes[:'cobrarTarifaAoEmitirNovaVia']
         
       
       end
@@ -275,50 +179,6 @@ module Pier
       
       
       
-      if @flag_cancela_cartao.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      if @id_status_destino_desbloqueio.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @id_status_destino_conta.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @flag_cobra_tarifa.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
       
       
       
@@ -336,36 +196,6 @@ module Pier
       
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -404,16 +234,10 @@ module Pier
       self.class == o.class &&
           id == o.id &&
           nome == o.nome &&
-          flag_cancela_cartao == o.flag_cancela_cartao &&
-          flag_cancela_no_desbloqueio == o.flag_cancela_no_desbloqueio &&
-          id_status_destino_desbloqueio == o.id_status_destino_desbloqueio &&
-          id_status_destino_conta == o.id_status_destino_conta &&
-          flag_cobra_tarifa == o.flag_cobra_tarifa &&
-          flag_permite_nova_via_cartao == o.flag_permite_nova_via_cartao &&
-          flag_permite_desbloqueio == o.flag_permite_desbloqueio &&
-          flag_cancelamento == o.flag_cancelamento &&
-          flag_permite_bloqueio == o.flag_permite_bloqueio &&
-          flag_reativar == o.flag_reativar
+          permite_desbloquear == o.permite_desbloquear &&
+          permite_atribuir_como_bloqueio == o.permite_atribuir_como_bloqueio &&
+          permite_atribuir_como_cancelamento == o.permite_atribuir_como_cancelamento &&
+          cobrar_tarifa_ao_emitir_nova_via == o.cobrar_tarifa_ao_emitir_nova_via
     end
 
     # @see the `==` method
@@ -425,7 +249,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, nome, flag_cancela_cartao, flag_cancela_no_desbloqueio, id_status_destino_desbloqueio, id_status_destino_conta, flag_cobra_tarifa, flag_permite_nova_via_cartao, flag_permite_desbloqueio, flag_cancelamento, flag_permite_bloqueio, flag_reativar].hash
+      [id, nome, permite_desbloquear, permite_atribuir_como_bloqueio, permite_atribuir_como_cancelamento, cobrar_tarifa_ao_emitir_nova_via].hash
     end
 
     # Builds the object from hash

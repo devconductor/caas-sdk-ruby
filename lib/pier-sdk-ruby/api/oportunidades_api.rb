@@ -124,8 +124,8 @@ module Pier
     # @param update update
     # @param [Hash] opts the optional parameters
     # @return [OportunidadeResponse]
-    def alterar_using_put3(id, update, opts = {})
-      data, _status_code, _headers = alterar_using_put3_with_http_info(id, update, opts)
+    def alterar_using_put4(id, update, opts = {})
+      data, _status_code, _headers = alterar_using_put4_with_http_info(id, update, opts)
       return data
     end
 
@@ -135,14 +135,14 @@ module Pier
     # @param update update
     # @param [Hash] opts the optional parameters
     # @return [Array<(OportunidadeResponse, Fixnum, Hash)>] OportunidadeResponse data, response status code and response headers
-    def alterar_using_put3_with_http_info(id, update, opts = {})
+    def alterar_using_put4_with_http_info(id, update, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadesApi.alterar_using_put3 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadesApi.alterar_using_put4 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling OportunidadesApi.alterar_using_put3" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling OportunidadesApi.alterar_using_put4" if id.nil?
       
       
       
@@ -150,7 +150,7 @@ module Pier
       
       
       # verify the required parameter 'update' is set
-      fail ArgumentError, "Missing the required parameter 'update' when calling OportunidadesApi.alterar_using_put3" if update.nil?
+      fail ArgumentError, "Missing the required parameter 'update' when calling OportunidadesApi.alterar_using_put4" if update.nil?
       
       
       
@@ -188,7 +188,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'OportunidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadesApi#alterar_using_put3\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadesApi#alterar_using_put4\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -200,8 +200,8 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [TipoOportunidadeResponse]
-    def alterar_using_put7(id, persist, opts = {})
-      data, _status_code, _headers = alterar_using_put7_with_http_info(id, persist, opts)
+    def alterar_using_put8(id, persist, opts = {})
+      data, _status_code, _headers = alterar_using_put8_with_http_info(id, persist, opts)
       return data
     end
 
@@ -211,14 +211,14 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(TipoOportunidadeResponse, Fixnum, Hash)>] TipoOportunidadeResponse data, response status code and response headers
-    def alterar_using_put7_with_http_info(id, persist, opts = {})
+    def alterar_using_put8_with_http_info(id, persist, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadesApi.alterar_using_put7 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadesApi.alterar_using_put8 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling OportunidadesApi.alterar_using_put7" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling OportunidadesApi.alterar_using_put8" if id.nil?
       
       
       
@@ -226,7 +226,7 @@ module Pier
       
       
       # verify the required parameter 'persist' is set
-      fail ArgumentError, "Missing the required parameter 'persist' when calling OportunidadesApi.alterar_using_put7" if persist.nil?
+      fail ArgumentError, "Missing the required parameter 'persist' when calling OportunidadesApi.alterar_using_put8" if persist.nil?
       
       
       
@@ -264,7 +264,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TipoOportunidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadesApi#alterar_using_put7\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadesApi#alterar_using_put8\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -481,6 +481,7 @@ module Pier
     # Lista as auditorias dos status oportunidades
     # Este recurso permite listar os status oportunidades.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :rev_type C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
@@ -500,6 +501,7 @@ module Pier
     # Lista as auditorias dos status oportunidades
     # Este recurso permite listar os status oportunidades.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :rev_type C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
@@ -576,11 +578,18 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/auditorias-status-oportunidades".sub('{format}','json')
 
       # query parameters
       query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'revType'] = opts[:'rev_type'] if opts[:'rev_type']
@@ -627,6 +636,7 @@ module Pier
     # Lista as auditorias das oportunidades
     # Este recurso permite listar as auditorias das oportunidades.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_status_oportunidade C\u00C3\u00B3digo identificador do status oportunidade
@@ -648,6 +658,7 @@ module Pier
     # Lista as auditorias das oportunidades
     # Este recurso permite listar as auditorias das oportunidades.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_status_oportunidade C\u00C3\u00B3digo identificador do status oportunidade
@@ -738,11 +749,18 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/auditorias-oportunidades".sub('{format}','json')
 
       # query parameters
       query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'idStatusOportunidade'] = opts[:'id_status_oportunidade'] if opts[:'id_status_oportunidade']
@@ -791,6 +809,7 @@ module Pier
     # Lista as auditorias dos tipos oportunidades
     # Este recurso permite listar os tipos oportunidades.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :rev_type C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
@@ -808,6 +827,7 @@ module Pier
     # Lista as auditorias dos tipos oportunidades
     # Este recurso permite listar os tipos oportunidades.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :rev_type C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
@@ -870,11 +890,18 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/auditorias-tipos-oportunidades".sub('{format}','json')
 
       # query parameters
       query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'revType'] = opts[:'rev_type'] if opts[:'rev_type']
@@ -920,6 +947,7 @@ module Pier
     # Este recurso permite listar os status do tipo oportunidades.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :nome Nome do status oportunidade
@@ -935,6 +963,7 @@ module Pier
     # Este recurso permite listar os status do tipo oportunidades.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :nome Nome do status oportunidade
@@ -984,11 +1013,18 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/tipos-oportunidades/{id}/status".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
@@ -1029,43 +1065,49 @@ module Pier
 
     # Lista as oportunidades
     # Este recurso permite listar as oportunidades.
-    # @param data_inicio_vigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_status_oportunidade C\u00C3\u00B3digo identificador do status oportunidade
     # @option opts [String] :data_cadastro Data do cadastro da oportunidade
     # @option opts [String] :data_atualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
     # @option opts [String] :numero_receita_federal N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
+    # @option opts [String] :data_inicio_vigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
     # @option opts [String] :data_fim_vigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
     # @return [PageOportunidadeResponse]
-    def listar_using_get13(data_inicio_vigencia, opts = {})
-      data, _status_code, _headers = listar_using_get13_with_http_info(data_inicio_vigencia, opts)
+    def listar_using_get14(opts = {})
+      data, _status_code, _headers = listar_using_get14_with_http_info(opts)
       return data
     end
 
     # Lista as oportunidades
     # Este recurso permite listar as oportunidades.
-    # @param data_inicio_vigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_status_oportunidade C\u00C3\u00B3digo identificador do status oportunidade
     # @option opts [String] :data_cadastro Data do cadastro da oportunidade
     # @option opts [String] :data_atualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
     # @option opts [String] :numero_receita_federal N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
+    # @option opts [String] :data_inicio_vigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
     # @option opts [String] :data_fim_vigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
     # @return [Array<(PageOportunidadeResponse, Fixnum, Hash)>] PageOportunidadeResponse data, response status code and response headers
-    def listar_using_get13_with_http_info(data_inicio_vigencia, opts = {})
+    def listar_using_get14_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadesApi.listar_using_get13 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadesApi.listar_using_get14 ..."
       end
       
       
-      # verify the required parameter 'data_inicio_vigencia' is set
-      fail ArgumentError, "Missing the required parameter 'data_inicio_vigencia' when calling OportunidadesApi.listar_using_get13" if data_inicio_vigencia.nil?
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1124,13 +1166,14 @@ module Pier
 
       # query parameters
       query_params = {}
-      query_params[:'dataInicioVigencia'] = data_inicio_vigencia
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'idStatusOportunidade'] = opts[:'id_status_oportunidade'] if opts[:'id_status_oportunidade']
       query_params[:'dataCadastro'] = opts[:'data_cadastro'] if opts[:'data_cadastro']
       query_params[:'dataAtualizacao'] = opts[:'data_atualizacao'] if opts[:'data_atualizacao']
       query_params[:'numeroReceitaFederal'] = opts[:'numero_receita_federal'] if opts[:'numero_receita_federal']
+      query_params[:'dataInicioVigencia'] = opts[:'data_inicio_vigencia'] if opts[:'data_inicio_vigencia']
       query_params[:'dataFimVigencia'] = opts[:'data_fim_vigencia'] if opts[:'data_fim_vigencia']
       query_params[:'flagAtivo'] = opts[:'flag_ativo'] if opts[:'flag_ativo']
 
@@ -1160,7 +1203,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageOportunidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadesApi#listar_using_get13\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadesApi#listar_using_get14\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1169,28 +1212,36 @@ module Pier
     # Lista os tipos oportunidades
     # Este recurso permite listar os tipos oportunidades.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
     # @return [PageTipoOportunidadeResponse]
-    def listar_using_get25(opts = {})
-      data, _status_code, _headers = listar_using_get25_with_http_info(opts)
+    def listar_using_get27(opts = {})
+      data, _status_code, _headers = listar_using_get27_with_http_info(opts)
       return data
     end
 
     # Lista os tipos oportunidades
     # Este recurso permite listar os tipos oportunidades.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
     # @return [Array<(PageTipoOportunidadeResponse, Fixnum, Hash)>] PageTipoOportunidadeResponse data, response status code and response headers
-    def listar_using_get25_with_http_info(opts = {})
+    def listar_using_get27_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadesApi.listar_using_get25 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadesApi.listar_using_get27 ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1221,6 +1272,7 @@ module Pier
 
       # query parameters
       query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'descricao'] = opts[:'descricao'] if opts[:'descricao']
@@ -1252,7 +1304,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTipoOportunidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadesApi#listar_using_get25\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadesApi#listar_using_get27\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1339,8 +1391,8 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [TipoOportunidadeResponse]
-    def salvar_using_post13(persist, opts = {})
-      data, _status_code, _headers = salvar_using_post13_with_http_info(persist, opts)
+    def salvar_using_post14(persist, opts = {})
+      data, _status_code, _headers = salvar_using_post14_with_http_info(persist, opts)
       return data
     end
 
@@ -1349,14 +1401,14 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(TipoOportunidadeResponse, Fixnum, Hash)>] TipoOportunidadeResponse data, response status code and response headers
-    def salvar_using_post13_with_http_info(persist, opts = {})
+    def salvar_using_post14_with_http_info(persist, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadesApi.salvar_using_post13 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadesApi.salvar_using_post14 ..."
       end
       
       
       # verify the required parameter 'persist' is set
-      fail ArgumentError, "Missing the required parameter 'persist' when calling OportunidadesApi.salvar_using_post13" if persist.nil?
+      fail ArgumentError, "Missing the required parameter 'persist' when calling OportunidadesApi.salvar_using_post14" if persist.nil?
       
       
       
@@ -1394,7 +1446,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TipoOportunidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadesApi#salvar_using_post13\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadesApi#salvar_using_post14\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1405,8 +1457,8 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [OportunidadeResponse]
-    def salvar_using_post8(persist, opts = {})
-      data, _status_code, _headers = salvar_using_post8_with_http_info(persist, opts)
+    def salvar_using_post9(persist, opts = {})
+      data, _status_code, _headers = salvar_using_post9_with_http_info(persist, opts)
       return data
     end
 
@@ -1415,14 +1467,14 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(OportunidadeResponse, Fixnum, Hash)>] OportunidadeResponse data, response status code and response headers
-    def salvar_using_post8_with_http_info(persist, opts = {})
+    def salvar_using_post9_with_http_info(persist, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadesApi.salvar_using_post8 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadesApi.salvar_using_post9 ..."
       end
       
       
       # verify the required parameter 'persist' is set
-      fail ArgumentError, "Missing the required parameter 'persist' when calling OportunidadesApi.salvar_using_post8" if persist.nil?
+      fail ArgumentError, "Missing the required parameter 'persist' when calling OportunidadesApi.salvar_using_post9" if persist.nil?
       
       
       
@@ -1460,7 +1512,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'OportunidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadesApi#salvar_using_post8\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadesApi#salvar_using_post9\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

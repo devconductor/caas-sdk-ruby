@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**adicionar_using_post**](FAQApi.md#adicionar_using_post) | **POST** /api/faqs | Adiciona uma nova FAQ
-[**alterar_using_put2**](FAQApi.md#alterar_using_put2) | **PUT** /api/faqs/{id} | Alterar FAQ
+[**alterar_using_put3**](FAQApi.md#alterar_using_put3) | **PUT** /api/faqs/{id} | Alterar FAQ
 [**consultar_using_get8**](FAQApi.md#consultar_using_get8) | **GET** /api/faqs/{id} | Consultar FAQ por id
-[**listar_using_get11**](FAQApi.md#listar_using_get11) | **GET** /api/faqs | Lista FAQs
+[**listar_using_get12**](FAQApi.md#listar_using_get12) | **GET** /api/faqs | Lista FAQs
 
 
 
@@ -75,8 +75,8 @@ No authorization required
 
 
 
-# **alterar_using_put2**
-> FaqResponse alterar_using_put2(id, pergunta, resposta, opts)
+# **alterar_using_put3**
+> FaqResponse alterar_using_put3(id, pergunta, resposta, opts)
 
 Alterar FAQ
 
@@ -105,10 +105,10 @@ opts = {
 
 begin
   #Alterar FAQ
-  result = api_instance.alterar_using_put2(id, pergunta, resposta, opts)
+  result = api_instance.alterar_using_put3(id, pergunta, resposta, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling FAQApi->alterar_using_put2: #{e}"
+  puts "Exception when calling FAQApi->alterar_using_put3: #{e}"
 end
 ```
 
@@ -191,8 +191,8 @@ No authorization required
 
 
 
-# **listar_using_get11**
-> PageFaqResponse listar_using_get11(opts)
+# **listar_using_get12**
+> PageFaqResponse listar_using_get12(opts)
 
 Lista FAQs
 
@@ -207,6 +207,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::FAQApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   id_faq: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
@@ -220,10 +221,10 @@ opts = {
 
 begin
   #Lista FAQs
-  result = api_instance.listar_using_get11(opts)
+  result = api_instance.listar_using_get12(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling FAQApi->listar_using_get11: #{e}"
+  puts "Exception when calling FAQApi->listar_using_get12: #{e}"
 end
 ```
 
@@ -231,6 +232,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id_faq** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id). | [optional] 

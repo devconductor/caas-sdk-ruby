@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultar_using_get17**](EstabelecimentosApi.md#consultar_using_get17) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
 [**consultar_using_get7**](EstabelecimentosApi.md#consultar_using_get7) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
-[**listar_using_get10**](EstabelecimentosApi.md#listar_using_get10) | **GET** /api/estabelecimentos | Lista Estabelecimentos
-[**listar_using_get23**](EstabelecimentosApi.md#listar_using_get23) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
+[**listar_using_get11**](EstabelecimentosApi.md#listar_using_get11) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**listar_using_get25**](EstabelecimentosApi.md#listar_using_get25) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
 
 
 
@@ -112,8 +112,8 @@ No authorization required
 
 
 
-# **listar_using_get10**
-> PageEstabelecimentoResponse listar_using_get10(opts)
+# **listar_using_get11**
+> PageEstabelecimentoResponse listar_using_get11(opts)
 
 Lista Estabelecimentos
 
@@ -128,6 +128,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::EstabelecimentosApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   id: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
@@ -153,10 +154,10 @@ opts = {
 
 begin
   #Lista Estabelecimentos
-  result = api_instance.listar_using_get10(opts)
+  result = api_instance.listar_using_get11(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentosApi->listar_using_get10: #{e}"
+  puts "Exception when calling EstabelecimentosApi->listar_using_get11: #{e}"
 end
 ```
 
@@ -164,6 +165,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id). | [optional] 
@@ -203,8 +205,8 @@ No authorization required
 
 
 
-# **listar_using_get23**
-> PageTerminalResponse listar_using_get23(opts)
+# **listar_using_get25**
+> PageTerminalResponse listar_using_get25(opts)
 
 Lista os Terminais cadastrados no Emissor
 
@@ -219,6 +221,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::EstabelecimentosApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
@@ -229,10 +232,10 @@ opts = {
 
 begin
   #Lista os Terminais cadastrados no Emissor
-  result = api_instance.listar_using_get23(opts)
+  result = api_instance.listar_using_get25(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentosApi->listar_using_get23: #{e}"
+  puts "Exception when calling EstabelecimentosApi->listar_using_get25: #{e}"
 end
 ```
 
@@ -240,6 +243,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). | [optional] 

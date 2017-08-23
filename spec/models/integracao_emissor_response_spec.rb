@@ -65,6 +65,17 @@ describe 'IntegracaoEmissorResponse' do
   end
 
 
+  describe 'test attribute "id_arquivo"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
   describe 'test attribute "status"' do
     it 'should work' do
        # assertion here
@@ -76,7 +87,18 @@ describe 'IntegracaoEmissorResponse' do
   end
 
 
-  describe 'test attribute "data_evento"' do
+  describe 'test attribute "data_inclusao"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "data_alteracao"' do
     it 'should work' do
        # assertion here
        # should be_a()

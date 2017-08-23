@@ -111,26 +111,34 @@ module Pier
     # Lista as plataformas mobile cadastradas
     # Este m\u00C3\u00A9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :nome Nome da Plataforma Mobile
     # @return [PagePlataformaMobileResponse]
-    def listar_using_get16(opts = {})
-      data, _status_code, _headers = listar_using_get16_with_http_info(opts)
+    def listar_using_get17(opts = {})
+      data, _status_code, _headers = listar_using_get17_with_http_info(opts)
       return data
     end
 
     # Lista as plataformas mobile cadastradas
     # Este m\u00C3\u00A9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :nome Nome da Plataforma Mobile
     # @return [Array<(PagePlataformaMobileResponse, Fixnum, Hash)>] PagePlataformaMobileResponse data, response status code and response headers
-    def listar_using_get16_with_http_info(opts = {})
+    def listar_using_get17_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PlataformasMobileApi.listar_using_get16 ..."
+        @api_client.config.logger.debug "Calling API: PlataformasMobileApi.listar_using_get17 ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -155,6 +163,7 @@ module Pier
 
       # query parameters
       query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
@@ -185,7 +194,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PagePlataformaMobileResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PlataformasMobileApi#listar_using_get16\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: PlataformasMobileApi#listar_using_get17\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -196,8 +205,8 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [PlataformaMobileResponse]
-    def salvar_using_post11(persist, opts = {})
-      data, _status_code, _headers = salvar_using_post11_with_http_info(persist, opts)
+    def salvar_using_post12(persist, opts = {})
+      data, _status_code, _headers = salvar_using_post12_with_http_info(persist, opts)
       return data
     end
 
@@ -206,14 +215,14 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(PlataformaMobileResponse, Fixnum, Hash)>] PlataformaMobileResponse data, response status code and response headers
-    def salvar_using_post11_with_http_info(persist, opts = {})
+    def salvar_using_post12_with_http_info(persist, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PlataformasMobileApi.salvar_using_post11 ..."
+        @api_client.config.logger.debug "Calling API: PlataformasMobileApi.salvar_using_post12 ..."
       end
       
       
       # verify the required parameter 'persist' is set
-      fail ArgumentError, "Missing the required parameter 'persist' when calling PlataformasMobileApi.salvar_using_post11" if persist.nil?
+      fail ArgumentError, "Missing the required parameter 'persist' when calling PlataformasMobileApi.salvar_using_post12" if persist.nil?
       
       
       
@@ -251,7 +260,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PlataformaMobileResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PlataformasMobileApi#salvar_using_post11\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: PlataformasMobileApi#salvar_using_post12\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

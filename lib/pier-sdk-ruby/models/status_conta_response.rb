@@ -31,20 +31,32 @@ module Pier
     # Nome atribu\u00C3\u00ADdo ao Status da Conta.
     attr_accessor :nome
 
-    # Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
-    attr_accessor :flag_altera_limite
+    # Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o da altera\u00C3\u00A7\u00C3\u00A3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo.
+    attr_accessor :permite_alterar_vencimento
 
-    # Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
-    attr_accessor :mensagem_consulta_negada
+    # Par\u00C3\u00A2metro que define se o Status da conta permite altera\u00C3\u00A7\u00C3\u00A3o de Limites, sendo: 0: Inativo e 1: Ativo.
+    attr_accessor :permite_alterar_limite
 
-    # Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
-    attr_accessor :flag_permite_nova_via_cartao
+    # Par\u00C3\u00A2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+    attr_accessor :permite_emitir_nova_via_cartao
 
-    # Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo.
-    attr_accessor :flag_faz_transferencia
+    # Par\u00C3\u00A2metro que define se o Status da conta permite originar Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00C3\u00A1ria, sendo: 0: Inativo e 1: Ativo.
+    attr_accessor :permite_fazer_transferencia
 
-    # Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo.
-    attr_accessor :flag_recebe_transferencia
+    # Par\u00C3\u00A2metro que define se o Status da conta permite  receber Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo.
+    attr_accessor :permite_receber_transferencia
+
+    # Par\u00C3\u00A2metro que define se o Status da conta permite ter um Acordo de Cobran\u00C3\u00A7a de D\u00C3\u00ADvida criado para ela, sendo: 0: Inativo e 1: Ativo.
+    attr_accessor :permite_criar_acordo_cobranca
+
+    # Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo.
+    attr_accessor :permite_atribuir_como_bloqueio
+
+    # Par\u00C3\u00A2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo.
+    attr_accessor :permite_desbloquear
+
+    # Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo.
+    attr_accessor :permite_atribuir_como_cancelamento
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -55,15 +67,23 @@ module Pier
         
         :'nome' => :'nome',
         
-        :'flag_altera_limite' => :'flagAlteraLimite',
+        :'permite_alterar_vencimento' => :'permiteAlterarVencimento',
         
-        :'mensagem_consulta_negada' => :'mensagemConsultaNegada',
+        :'permite_alterar_limite' => :'permiteAlterarLimite',
         
-        :'flag_permite_nova_via_cartao' => :'flagPermiteNovaViaCartao',
+        :'permite_emitir_nova_via_cartao' => :'permiteEmitirNovaViaCartao',
         
-        :'flag_faz_transferencia' => :'flagFazTransferencia',
+        :'permite_fazer_transferencia' => :'permiteFazerTransferencia',
         
-        :'flag_recebe_transferencia' => :'flagRecebeTransferencia'
+        :'permite_receber_transferencia' => :'permiteReceberTransferencia',
+        
+        :'permite_criar_acordo_cobranca' => :'permiteCriarAcordoCobranca',
+        
+        :'permite_atribuir_como_bloqueio' => :'permiteAtribuirComoBloqueio',
+        
+        :'permite_desbloquear' => :'permiteDesbloquear',
+        
+        :'permite_atribuir_como_cancelamento' => :'permiteAtribuirComoCancelamento'
         
       }
     end
@@ -76,15 +96,23 @@ module Pier
         
         :'nome' => :'String',
         
-        :'flag_altera_limite' => :'Integer',
+        :'permite_alterar_vencimento' => :'Integer',
         
-        :'mensagem_consulta_negada' => :'String',
+        :'permite_alterar_limite' => :'Integer',
         
-        :'flag_permite_nova_via_cartao' => :'Integer',
+        :'permite_emitir_nova_via_cartao' => :'Integer',
         
-        :'flag_faz_transferencia' => :'Integer',
+        :'permite_fazer_transferencia' => :'Integer',
         
-        :'flag_recebe_transferencia' => :'Integer'
+        :'permite_receber_transferencia' => :'Integer',
+        
+        :'permite_criar_acordo_cobranca' => :'Integer',
+        
+        :'permite_atribuir_como_bloqueio' => :'Integer',
+        
+        :'permite_desbloquear' => :'Integer',
+        
+        :'permite_atribuir_como_cancelamento' => :'Integer'
         
       }
     end
@@ -116,46 +144,82 @@ module Pier
       end
 
       
-      if attributes[:'flagAlteraLimite']
+      if attributes[:'permiteAlterarVencimento']
         
         
-        self.flag_altera_limite = attributes[:'flagAlteraLimite']
-        
-      
-      end
-
-      
-      if attributes[:'mensagemConsultaNegada']
-        
-        
-        self.mensagem_consulta_negada = attributes[:'mensagemConsultaNegada']
+        self.permite_alterar_vencimento = attributes[:'permiteAlterarVencimento']
         
       
       end
 
       
-      if attributes[:'flagPermiteNovaViaCartao']
+      if attributes[:'permiteAlterarLimite']
         
         
-        self.flag_permite_nova_via_cartao = attributes[:'flagPermiteNovaViaCartao']
-        
-      
-      end
-
-      
-      if attributes[:'flagFazTransferencia']
-        
-        
-        self.flag_faz_transferencia = attributes[:'flagFazTransferencia']
+        self.permite_alterar_limite = attributes[:'permiteAlterarLimite']
         
       
       end
 
       
-      if attributes[:'flagRecebeTransferencia']
+      if attributes[:'permiteEmitirNovaViaCartao']
         
         
-        self.flag_recebe_transferencia = attributes[:'flagRecebeTransferencia']
+        self.permite_emitir_nova_via_cartao = attributes[:'permiteEmitirNovaViaCartao']
+        
+      
+      end
+
+      
+      if attributes[:'permiteFazerTransferencia']
+        
+        
+        self.permite_fazer_transferencia = attributes[:'permiteFazerTransferencia']
+        
+      
+      end
+
+      
+      if attributes[:'permiteReceberTransferencia']
+        
+        
+        self.permite_receber_transferencia = attributes[:'permiteReceberTransferencia']
+        
+      
+      end
+
+      
+      if attributes[:'permiteCriarAcordoCobranca']
+        
+        
+        self.permite_criar_acordo_cobranca = attributes[:'permiteCriarAcordoCobranca']
+        
+      
+      end
+
+      
+      if attributes[:'permiteAtribuirComoBloqueio']
+        
+        
+        self.permite_atribuir_como_bloqueio = attributes[:'permiteAtribuirComoBloqueio']
+        
+      
+      end
+
+      
+      if attributes[:'permiteDesbloquear']
+        
+        
+        self.permite_desbloquear = attributes[:'permiteDesbloquear']
+        
+      
+      end
+
+      
+      if attributes[:'permiteAtribuirComoCancelamento']
+        
+        
+        self.permite_atribuir_como_cancelamento = attributes[:'permiteAtribuirComoCancelamento']
         
       
       end
@@ -195,10 +259,21 @@ module Pier
       
       
       
-      if @flag_altera_limite.nil?
-        return false
-      end
-
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -221,6 +296,26 @@ module Pier
       
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -264,11 +359,15 @@ module Pier
       self.class == o.class &&
           id == o.id &&
           nome == o.nome &&
-          flag_altera_limite == o.flag_altera_limite &&
-          mensagem_consulta_negada == o.mensagem_consulta_negada &&
-          flag_permite_nova_via_cartao == o.flag_permite_nova_via_cartao &&
-          flag_faz_transferencia == o.flag_faz_transferencia &&
-          flag_recebe_transferencia == o.flag_recebe_transferencia
+          permite_alterar_vencimento == o.permite_alterar_vencimento &&
+          permite_alterar_limite == o.permite_alterar_limite &&
+          permite_emitir_nova_via_cartao == o.permite_emitir_nova_via_cartao &&
+          permite_fazer_transferencia == o.permite_fazer_transferencia &&
+          permite_receber_transferencia == o.permite_receber_transferencia &&
+          permite_criar_acordo_cobranca == o.permite_criar_acordo_cobranca &&
+          permite_atribuir_como_bloqueio == o.permite_atribuir_como_bloqueio &&
+          permite_desbloquear == o.permite_desbloquear &&
+          permite_atribuir_como_cancelamento == o.permite_atribuir_como_cancelamento
     end
 
     # @see the `==` method
@@ -280,7 +379,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, nome, flag_altera_limite, mensagem_consulta_negada, flag_permite_nova_via_cartao, flag_faz_transferencia, flag_recebe_transferencia].hash
+      [id, nome, permite_alterar_vencimento, permite_alterar_limite, permite_emitir_nova_via_cartao, permite_fazer_transferencia, permite_receber_transferencia, permite_criar_acordo_cobranca, permite_atribuir_como_bloqueio, permite_desbloquear, permite_atribuir_como_cancelamento].hash
     end
 
     # Builds the object from hash

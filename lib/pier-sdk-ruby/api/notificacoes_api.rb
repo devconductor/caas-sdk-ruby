@@ -530,6 +530,7 @@ module Pier
     # Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
     # Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [PageConfiguracaoEmailResponse]
@@ -541,6 +542,7 @@ module Pier
     # Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
     # Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [Array<(PageConfiguracaoEmailResponse, Fixnum, Hash)>] PageConfiguracaoEmailResponse data, response status code and response headers
@@ -561,11 +563,18 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/configuracoes-email".sub('{format}','json')
 
       # query parameters
       query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
 
@@ -604,6 +613,7 @@ module Pier
     # Listar Push
     # Esse recurso permite listar os Pushes do emissor
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :data_envio Apresenta a data e em que o registro foi enviado para o dispositivo.
@@ -620,6 +630,7 @@ module Pier
     # Listar Push
     # Esse recurso permite listar os Pushes do emissor
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :data_envio Apresenta a data e em que o registro foi enviado para o dispositivo.
@@ -654,8 +665,14 @@ module Pier
       
       
       
-      if opts[:'tipo_evento'] && !['RISCO_FRAUDE', 'TOKEN_SMS', 'OUTROS'].include?(opts[:'tipo_evento'])
-        fail ArgumentError, 'invalid value for "tipo_evento", must be one of RISCO_FRAUDE, TOKEN_SMS, OUTROS'
+      
+      
+      
+      
+      
+      
+      if opts[:'tipo_evento'] && !['RISCO_FRAUDE', 'CODIGO_SEGURANCA', 'OUTROS'].include?(opts[:'tipo_evento'])
+        fail ArgumentError, 'invalid value for "tipo_evento", must be one of RISCO_FRAUDE, CODIGO_SEGURANCA, OUTROS'
       end
       
       
@@ -692,6 +709,7 @@ module Pier
 
       # query parameters
       query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'dataEnvio'] = opts[:'data_envio'] if opts[:'data_envio']
@@ -735,6 +753,7 @@ module Pier
     # Listar SMS
     # Esse recurso permite listar os SMS do emissor
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
@@ -752,6 +771,7 @@ module Pier
     # Listar SMS
     # Esse recurso permite listar os SMS do emissor
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
@@ -787,8 +807,14 @@ module Pier
       
       
       
-      if opts[:'tipo_evento'] && !['RISCO_FRAUDE', 'TOKEN_SMS', 'OUTROS'].include?(opts[:'tipo_evento'])
-        fail ArgumentError, 'invalid value for "tipo_evento", must be one of RISCO_FRAUDE, TOKEN_SMS, OUTROS'
+      
+      
+      
+      
+      
+      
+      if opts[:'tipo_evento'] && !['RISCO_FRAUDE', 'CODIGO_SEGURANCA', 'OUTROS'].include?(opts[:'tipo_evento'])
+        fail ArgumentError, 'invalid value for "tipo_evento", must be one of RISCO_FRAUDE, CODIGO_SEGURANCA, OUTROS'
       end
       
       
@@ -827,6 +853,7 @@ module Pier
 
       # query parameters
       query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'dataInclusao'] = opts[:'data_inclusao'] if opts[:'data_inclusao']
@@ -871,6 +898,7 @@ module Pier
     # Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
     # Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [PageTemplateNotificacaoResponse]
@@ -882,6 +910,7 @@ module Pier
     # Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
     # Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [Array<(PageTemplateNotificacaoResponse, Fixnum, Hash)>] PageTemplateNotificacaoResponse data, response status code and response headers
@@ -902,11 +931,18 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/templates-notificacoes".sub('{format}','json')
 
       # query parameters
       query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
 

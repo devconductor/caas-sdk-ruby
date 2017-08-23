@@ -159,6 +159,7 @@ describe 'NotificacoesApi' do
   # Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
   # Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
   # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @return [PageConfiguracaoEmailResponse]
@@ -177,6 +178,7 @@ describe 'NotificacoesApi' do
   # Listar Push
   # Esse recurso permite listar os Pushes do emissor
   # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [String] :data_envio Apresenta a data e em que o registro foi enviado para o dispositivo.
@@ -200,6 +202,7 @@ describe 'NotificacoesApi' do
   # Listar SMS
   # Esse recurso permite listar os SMS do emissor
   # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [String] :data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
@@ -224,6 +227,7 @@ describe 'NotificacoesApi' do
   # Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
   # Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
   # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @return [PageTemplateNotificacaoResponse]

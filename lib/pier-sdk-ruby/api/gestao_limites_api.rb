@@ -35,45 +35,45 @@ module Pier
     # Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
     # Esse recurso permite realizar a altera\u00C3\u00A7\u00C3\u00A3o dos Limites de uma determinada Conta.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param limite_global Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
-    # @param limite_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
-    # @param limite_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
-    # @param limite_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.
-    # @param limite_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
-    # @param limite_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
-    # @param limite_consignado Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos.
-    # @param limite_internacional_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais.
-    # @param limite_internacional_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas.
-    # @param limite_internacional_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
-    # @param limite_internacional_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
-    # @param limite_internacional_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
-    # @param limite_maximo Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.
     # @param [Hash] opts the optional parameters
+    # @option opts [Float] :limite_global Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
+    # @option opts [Float] :limite_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
+    # @option opts [Float] :limite_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
+    # @option opts [Float] :limite_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.
+    # @option opts [Float] :limite_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
+    # @option opts [Float] :limite_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
+    # @option opts [Float] :limite_consignado Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos.
+    # @option opts [Float] :limite_internacional_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais.
+    # @option opts [Float] :limite_internacional_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas.
+    # @option opts [Float] :limite_internacional_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
+    # @option opts [Float] :limite_internacional_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
+    # @option opts [Float] :limite_internacional_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
+    # @option opts [Float] :limite_maximo Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.
     # @return [LimiteDisponibilidadeResponse]
-    def alterar_limite_using_put(id, limite_global, limite_compra, limite_parcelado, limite_parcelas, limite_saque_global, limite_saque_periodo, limite_consignado, limite_internacional_compra, limite_internacional_parcelado, limite_internacional_parcelas, limite_internacional_saque_global, limite_internacional_saque_periodo, limite_maximo, opts = {})
-      data, _status_code, _headers = alterar_limite_using_put_with_http_info(id, limite_global, limite_compra, limite_parcelado, limite_parcelas, limite_saque_global, limite_saque_periodo, limite_consignado, limite_internacional_compra, limite_internacional_parcelado, limite_internacional_parcelas, limite_internacional_saque_global, limite_internacional_saque_periodo, limite_maximo, opts)
+    def alterar_limite_using_put(id, opts = {})
+      data, _status_code, _headers = alterar_limite_using_put_with_http_info(id, opts)
       return data
     end
 
     # Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
     # Esse recurso permite realizar a altera\u00C3\u00A7\u00C3\u00A3o dos Limites de uma determinada Conta.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param limite_global Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
-    # @param limite_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
-    # @param limite_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
-    # @param limite_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.
-    # @param limite_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
-    # @param limite_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
-    # @param limite_consignado Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos.
-    # @param limite_internacional_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais.
-    # @param limite_internacional_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas.
-    # @param limite_internacional_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
-    # @param limite_internacional_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
-    # @param limite_internacional_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
-    # @param limite_maximo Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.
     # @param [Hash] opts the optional parameters
+    # @option opts [Float] :limite_global Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
+    # @option opts [Float] :limite_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
+    # @option opts [Float] :limite_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
+    # @option opts [Float] :limite_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.
+    # @option opts [Float] :limite_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
+    # @option opts [Float] :limite_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
+    # @option opts [Float] :limite_consignado Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos.
+    # @option opts [Float] :limite_internacional_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais.
+    # @option opts [Float] :limite_internacional_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas.
+    # @option opts [Float] :limite_internacional_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
+    # @option opts [Float] :limite_internacional_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
+    # @option opts [Float] :limite_internacional_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
+    # @option opts [Float] :limite_maximo Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.
     # @return [Array<(LimiteDisponibilidadeResponse, Fixnum, Hash)>] LimiteDisponibilidadeResponse data, response status code and response headers
-    def alterar_limite_using_put_with_http_info(id, limite_global, limite_compra, limite_parcelado, limite_parcelas, limite_saque_global, limite_saque_periodo, limite_consignado, limite_internacional_compra, limite_internacional_parcelado, limite_internacional_parcelas, limite_internacional_saque_global, limite_internacional_saque_periodo, limite_maximo, opts = {})
+    def alterar_limite_using_put_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GestaoLimitesApi.alterar_limite_using_put ..."
       end
@@ -87,104 +87,78 @@ module Pier
       
       
       
-      # verify the required parameter 'limite_global' is set
-      fail ArgumentError, "Missing the required parameter 'limite_global' when calling GestaoLimitesApi.alterar_limite_using_put" if limite_global.nil?
       
       
       
       
       
       
-      # verify the required parameter 'limite_compra' is set
-      fail ArgumentError, "Missing the required parameter 'limite_compra' when calling GestaoLimitesApi.alterar_limite_using_put" if limite_compra.nil?
       
       
       
       
       
       
-      # verify the required parameter 'limite_parcelado' is set
-      fail ArgumentError, "Missing the required parameter 'limite_parcelado' when calling GestaoLimitesApi.alterar_limite_using_put" if limite_parcelado.nil?
       
       
       
       
       
       
-      # verify the required parameter 'limite_parcelas' is set
-      fail ArgumentError, "Missing the required parameter 'limite_parcelas' when calling GestaoLimitesApi.alterar_limite_using_put" if limite_parcelas.nil?
       
       
       
       
       
       
-      # verify the required parameter 'limite_saque_global' is set
-      fail ArgumentError, "Missing the required parameter 'limite_saque_global' when calling GestaoLimitesApi.alterar_limite_using_put" if limite_saque_global.nil?
       
       
       
       
       
       
-      # verify the required parameter 'limite_saque_periodo' is set
-      fail ArgumentError, "Missing the required parameter 'limite_saque_periodo' when calling GestaoLimitesApi.alterar_limite_using_put" if limite_saque_periodo.nil?
       
       
       
       
       
       
-      # verify the required parameter 'limite_consignado' is set
-      fail ArgumentError, "Missing the required parameter 'limite_consignado' when calling GestaoLimitesApi.alterar_limite_using_put" if limite_consignado.nil?
       
       
       
       
       
       
-      # verify the required parameter 'limite_internacional_compra' is set
-      fail ArgumentError, "Missing the required parameter 'limite_internacional_compra' when calling GestaoLimitesApi.alterar_limite_using_put" if limite_internacional_compra.nil?
       
       
       
       
       
       
-      # verify the required parameter 'limite_internacional_parcelado' is set
-      fail ArgumentError, "Missing the required parameter 'limite_internacional_parcelado' when calling GestaoLimitesApi.alterar_limite_using_put" if limite_internacional_parcelado.nil?
       
       
       
       
       
       
-      # verify the required parameter 'limite_internacional_parcelas' is set
-      fail ArgumentError, "Missing the required parameter 'limite_internacional_parcelas' when calling GestaoLimitesApi.alterar_limite_using_put" if limite_internacional_parcelas.nil?
       
       
       
       
       
       
-      # verify the required parameter 'limite_internacional_saque_global' is set
-      fail ArgumentError, "Missing the required parameter 'limite_internacional_saque_global' when calling GestaoLimitesApi.alterar_limite_using_put" if limite_internacional_saque_global.nil?
       
       
       
       
       
       
-      # verify the required parameter 'limite_internacional_saque_periodo' is set
-      fail ArgumentError, "Missing the required parameter 'limite_internacional_saque_periodo' when calling GestaoLimitesApi.alterar_limite_using_put" if limite_internacional_saque_periodo.nil?
       
       
       
       
       
       
-      # verify the required parameter 'limite_maximo' is set
-      fail ArgumentError, "Missing the required parameter 'limite_maximo' when calling GestaoLimitesApi.alterar_limite_using_put" if limite_maximo.nil?
       
       
       
@@ -195,19 +169,19 @@ module Pier
 
       # query parameters
       query_params = {}
-      query_params[:'limiteGlobal'] = limite_global
-      query_params[:'limiteCompra'] = limite_compra
-      query_params[:'limiteParcelado'] = limite_parcelado
-      query_params[:'limiteParcelas'] = limite_parcelas
-      query_params[:'limiteSaqueGlobal'] = limite_saque_global
-      query_params[:'limiteSaquePeriodo'] = limite_saque_periodo
-      query_params[:'limiteConsignado'] = limite_consignado
-      query_params[:'limiteInternacionalCompra'] = limite_internacional_compra
-      query_params[:'limiteInternacionalParcelado'] = limite_internacional_parcelado
-      query_params[:'limiteInternacionalParcelas'] = limite_internacional_parcelas
-      query_params[:'limiteInternacionalSaqueGlobal'] = limite_internacional_saque_global
-      query_params[:'limiteInternacionalSaquePeriodo'] = limite_internacional_saque_periodo
-      query_params[:'limiteMaximo'] = limite_maximo
+      query_params[:'limiteGlobal'] = opts[:'limite_global'] if opts[:'limite_global']
+      query_params[:'limiteCompra'] = opts[:'limite_compra'] if opts[:'limite_compra']
+      query_params[:'limiteParcelado'] = opts[:'limite_parcelado'] if opts[:'limite_parcelado']
+      query_params[:'limiteParcelas'] = opts[:'limite_parcelas'] if opts[:'limite_parcelas']
+      query_params[:'limiteSaqueGlobal'] = opts[:'limite_saque_global'] if opts[:'limite_saque_global']
+      query_params[:'limiteSaquePeriodo'] = opts[:'limite_saque_periodo'] if opts[:'limite_saque_periodo']
+      query_params[:'limiteConsignado'] = opts[:'limite_consignado'] if opts[:'limite_consignado']
+      query_params[:'limiteInternacionalCompra'] = opts[:'limite_internacional_compra'] if opts[:'limite_internacional_compra']
+      query_params[:'limiteInternacionalParcelado'] = opts[:'limite_internacional_parcelado'] if opts[:'limite_internacional_parcelado']
+      query_params[:'limiteInternacionalParcelas'] = opts[:'limite_internacional_parcelas'] if opts[:'limite_internacional_parcelas']
+      query_params[:'limiteInternacionalSaqueGlobal'] = opts[:'limite_internacional_saque_global'] if opts[:'limite_internacional_saque_global']
+      query_params[:'limiteInternacionalSaquePeriodo'] = opts[:'limite_internacional_saque_periodo'] if opts[:'limite_internacional_saque_periodo']
+      query_params[:'limiteMaximo'] = opts[:'limite_maximo'] if opts[:'limite_maximo']
 
       # header parameters
       header_params = {}
@@ -311,6 +285,7 @@ module Pier
     # Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [PageHistoricoEventosResponse]
@@ -323,6 +298,7 @@ module Pier
     # Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [Array<(PageHistoricoEventosResponse, Fixnum, Hash)>] PageHistoricoEventosResponse data, response status code and response headers
@@ -351,11 +327,18 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/contas/{id}/historicos-alteracoes-limites".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
 

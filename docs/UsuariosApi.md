@@ -5,13 +5,13 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_senha_using_put**](UsuariosApi.md#alterar_senha_using_put) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-[**alterar_using_put9**](UsuariosApi.md#alterar_using_put9) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**alterar_using_put10**](UsuariosApi.md#alterar_using_put10) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**ativar_usuario_using_post**](UsuariosApi.md#ativar_usuario_using_post) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**consultar_using_get26**](UsuariosApi.md#consultar_using_get26) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
 [**desativar_usuario_using_post**](UsuariosApi.md#desativar_usuario_using_post) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**listar_using_get30**](UsuariosApi.md#listar_using_get30) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**listar_using_get32**](UsuariosApi.md#listar_using_get32) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**recuperar_senha_using_post**](UsuariosApi.md#recuperar_senha_using_post) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-[**salvar_using_post15**](UsuariosApi.md#salvar_using_post15) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
+[**salvar_using_post16**](UsuariosApi.md#salvar_using_post16) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
 [**validar_senha_using_get1**](UsuariosApi.md#validar_senha_using_get1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 
 
@@ -73,8 +73,8 @@ No authorization required
 
 
 
-# **alterar_using_put9**
-> UsuarioResponse alterar_using_put9(id, update)
+# **alterar_using_put10**
+> UsuarioResponse alterar_using_put10(id, update)
 
 Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 
@@ -95,10 +95,10 @@ update = Pier::UsuarioUpdate.new # UsuarioUpdate | update
 
 begin
   #Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-  result = api_instance.alterar_using_put9(id, update)
+  result = api_instance.alterar_using_put10(id, update)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling UsuariosApi->alterar_using_put9: #{e}"
+  puts "Exception when calling UsuariosApi->alterar_using_put10: #{e}"
 end
 ```
 
@@ -276,8 +276,8 @@ No authorization required
 
 
 
-# **listar_using_get30**
-> PageUsuarioResponse listar_using_get30(opts)
+# **listar_using_get32**
+> PageUsuarioResponse listar_using_get32(opts)
 
 Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 
@@ -292,6 +292,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::UsuariosApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   nome: "nome_example", # String | Nome do Usuario
@@ -302,10 +303,10 @@ opts = {
 
 begin
   #Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-  result = api_instance.listar_using_get30(opts)
+  result = api_instance.listar_using_get32(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling UsuariosApi->listar_using_get30: #{e}"
+  puts "Exception when calling UsuariosApi->listar_using_get32: #{e}"
 end
 ```
 
@@ -313,6 +314,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **nome** | **String**| Nome do Usuario | [optional] 
@@ -387,8 +389,8 @@ No authorization required
 
 
 
-# **salvar_using_post15**
-> UsuarioResponse salvar_using_post15(persist)
+# **salvar_using_post16**
+> UsuarioResponse salvar_using_post16(persist)
 
 Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
 
@@ -407,10 +409,10 @@ persist = Pier::UsuarioPersist.new # UsuarioPersist | persist
 
 begin
   #Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
-  result = api_instance.salvar_using_post15(persist)
+  result = api_instance.salvar_using_post16(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling UsuariosApi->salvar_using_post15: #{e}"
+  puts "Exception when calling UsuariosApi->salvar_using_post16: #{e}"
 end
 ```
 

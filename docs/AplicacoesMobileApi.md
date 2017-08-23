@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizar_using_put**](AplicacoesMobileApi.md#atualizar_using_put) | **PUT** /api/aplicacoes-mobile/{id} | Atualiza Aplicacao Mobile
-[**listar_using_get**](AplicacoesMobileApi.md#listar_using_get) | **GET** /api/aplicacoes-mobile | Lista os aplicacoes mobile cadastradas
+[**listar_using_get1**](AplicacoesMobileApi.md#listar_using_get1) | **GET** /api/aplicacoes-mobile | Lista os aplicacoes mobile cadastradas
 [**salvar_using_post**](AplicacoesMobileApi.md#salvar_using_post) | **POST** /api/aplicacoes-mobile | Cadastra Aplicacao Mobile
 
 
@@ -64,8 +64,8 @@ No authorization required
 
 
 
-# **listar_using_get**
-> PageAplicacaoMobileResponse listar_using_get(opts)
+# **listar_using_get1**
+> PageAplicacaoMobileResponse listar_using_get1(opts)
 
 Lista os aplicacoes mobile cadastradas
 
@@ -80,6 +80,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::AplicacoesMobileApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   id: "id_example", # String | Identificador da Aplicacao Mobile
@@ -88,10 +89,10 @@ opts = {
 
 begin
   #Lista os aplicacoes mobile cadastradas
-  result = api_instance.listar_using_get(opts)
+  result = api_instance.listar_using_get1(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling AplicacoesMobileApi->listar_using_get: #{e}"
+  puts "Exception when calling AplicacoesMobileApi->listar_using_get1: #{e}"
 end
 ```
 
@@ -99,6 +100,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **String**| Identificador da Aplicacao Mobile | [optional] 

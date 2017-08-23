@@ -167,6 +167,7 @@ module Pier
     # Lista os dispositivos cadastrados
     # Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :token Token do Dispositivo
@@ -175,14 +176,15 @@ module Pier
     # @option opts [String] :data_criacao Apresenta a data e em que o registro foi criado.
     # @option opts [String] :data_desativacao Apresenta a data e em que o registro foi desativado.
     # @return [PageDispositivoResponse]
-    def listar_using_get8(opts = {})
-      data, _status_code, _headers = listar_using_get8_with_http_info(opts)
+    def listar_using_get9(opts = {})
+      data, _status_code, _headers = listar_using_get9_with_http_info(opts)
       return data
     end
 
     # Lista os dispositivos cadastrados
     # Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :token Token do Dispositivo
@@ -191,10 +193,16 @@ module Pier
     # @option opts [String] :data_criacao Apresenta a data e em que o registro foi criado.
     # @option opts [String] :data_desativacao Apresenta a data e em que o registro foi desativado.
     # @return [Array<(PageDispositivoResponse, Fixnum, Hash)>] PageDispositivoResponse data, response status code and response headers
-    def listar_using_get8_with_http_info(opts = {})
+    def listar_using_get9_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DispositivosApi.listar_using_get8 ..."
+        @api_client.config.logger.debug "Calling API: DispositivosApi.listar_using_get9 ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -243,6 +251,7 @@ module Pier
 
       # query parameters
       query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'token'] = opts[:'token'] if opts[:'token']
@@ -277,7 +286,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageDispositivoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DispositivosApi#listar_using_get8\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DispositivosApi#listar_using_get9\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

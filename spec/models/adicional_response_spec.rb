@@ -219,6 +219,17 @@ describe 'AdicionalResponse' do
   end
 
 
+  describe 'test attribute "flag_ativo"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
   describe 'test attribute "telefones"' do
     it 'should work' do
        # assertion here

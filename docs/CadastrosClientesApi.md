@@ -4,33 +4,93 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterar_using_put1**](CadastrosClientesApi.md#alterar_using_put1) | **PUT** /api/enderecos | Atualiza os dados de um determinado Endere\u00C3\u00A7o
-[**alterar_using_put4**](CadastrosClientesApi.md#alterar_using_put4) | **PUT** /api/pessoas-detalhes/{id} | Atualiza os detalhes de uma determinada Pessoa
-[**alterar_using_put5**](CadastrosClientesApi.md#alterar_using_put5) | **PUT** /api/pessoas/{id} | Atualiza os dados de uma determinada Pessoa
-[**alterar_using_put6**](CadastrosClientesApi.md#alterar_using_put6) | **PUT** /api/telefones | Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
+[**alterar_using_put**](CadastrosClientesApi.md#alterar_using_put) | **PUT** /api/contas/{id}/adicionais/{idPessoa} | Altera Adicional de uma Conta
+[**alterar_using_put2**](CadastrosClientesApi.md#alterar_using_put2) | **PUT** /api/enderecos | Atualiza os dados de um determinado Endere\u00C3\u00A7o
+[**alterar_using_put5**](CadastrosClientesApi.md#alterar_using_put5) | **PUT** /api/pessoas-detalhes/{id} | Atualiza os detalhes de uma determinada Pessoa
+[**alterar_using_put6**](CadastrosClientesApi.md#alterar_using_put6) | **PUT** /api/pessoas/{id} | Atualiza os dados de uma determinada Pessoa
+[**alterar_using_put7**](CadastrosClientesApi.md#alterar_using_put7) | **PUT** /api/telefones | Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
 [**atribuir_assinatura_cliente_using_post**](CadastrosClientesApi.md#atribuir_assinatura_cliente_using_post) | **POST** /api/contas/{id}/atribuir-assinatura-cliente | Permite atribuir um documento para uma Conta
 [**cadastrar_using_post**](CadastrosClientesApi.md#cadastrar_using_post) | **POST** /api/contas/{id}/cadastrar-adicional | Realiza o cadastro de Adicionais para uma Conta
 [**consultar_using_get10**](CadastrosClientesApi.md#consultar_using_get10) | **GET** /api/pessoas-detalhes/{id} | Apresenta os detalhes de uma determinada Pessoa
 [**consultar_using_get11**](CadastrosClientesApi.md#consultar_using_get11) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
 [**consultar_using_get16**](CadastrosClientesApi.md#consultar_using_get16) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
 [**consultar_using_get6**](CadastrosClientesApi.md#consultar_using_get6) | **GET** /api/enderecos/{id} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
-[**listar_using_get14**](CadastrosClientesApi.md#listar_using_get14) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
-[**listar_using_get15**](CadastrosClientesApi.md#listar_using_get15) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
-[**listar_using_get22**](CadastrosClientesApi.md#listar_using_get22) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
-[**listar_using_get9**](CadastrosClientesApi.md#listar_using_get9) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
+[**inativar_using_post**](CadastrosClientesApi.md#inativar_using_post) | **POST** /api/contas/{id}/adicionais/{idPessoa}/inativar | Inativa Adicional de uma Conta
+[**listar_socios_using_get**](CadastrosClientesApi.md#listar_socios_using_get) | **GET** /api/clientes-pessoas-juridicas/{id}/socios | Listar s\u00C3\u00B3cios de uma pessoa jur\u00C3\u00ADdica
+[**listar_using_get**](CadastrosClientesApi.md#listar_using_get) | **GET** /api/contas/{id}/adicionais | Lista os Adicionais de uma Conta
+[**listar_using_get10**](CadastrosClientesApi.md#listar_using_get10) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
+[**listar_using_get15**](CadastrosClientesApi.md#listar_using_get15) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
+[**listar_using_get16**](CadastrosClientesApi.md#listar_using_get16) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
+[**listar_using_get24**](CadastrosClientesApi.md#listar_using_get24) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
 [**salvar_pessoa_fisica_aprovada_using_post**](CadastrosClientesApi.md#salvar_pessoa_fisica_aprovada_using_post) | **POST** /api/clientes-pessoas-fisicas | Cadastro de Conta e Pessoa Fisica
 [**salvar_pessoa_juridica_aprovada_using_post**](CadastrosClientesApi.md#salvar_pessoa_juridica_aprovada_using_post) | **POST** /api/clientes-pessoas-juridicas | Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica
-[**salvar_using_post10**](CadastrosClientesApi.md#salvar_using_post10) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
-[**salvar_using_post12**](CadastrosClientesApi.md#salvar_using_post12) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
+[**salvar_using_post10**](CadastrosClientesApi.md#salvar_using_post10) | **POST** /api/pessoas-detalhes | Salvar os detalhes de uma determinada Pessoa
+[**salvar_using_post11**](CadastrosClientesApi.md#salvar_using_post11) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
+[**salvar_using_post13**](CadastrosClientesApi.md#salvar_using_post13) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
 [**salvar_using_post5**](CadastrosClientesApi.md#salvar_using_post5) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
-[**salvar_using_post6**](CadastrosClientesApi.md#salvar_using_post6) | **POST** /api/contas/{id}/incluir-registro-integracao | Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
-[**salvar_using_post9**](CadastrosClientesApi.md#salvar_using_post9) | **POST** /api/pessoas-detalhes | Salvar os detalhes de uma determinada Pessoa
+[**salvar_using_post7**](CadastrosClientesApi.md#salvar_using_post7) | **POST** /api/contas/{id}/incluir-registro-integracao | Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
 
 
 
 
-# **alterar_using_put1**
-> EnderecoResponse alterar_using_put1(id, opts)
+# **alterar_using_put**
+> AdicionalResponse alterar_using_put(id, id_pessoa, adicional_update)
+
+Altera Adicional de uma Conta
+
+Este m\u00C3\u00A9todo permite que seja alterado um portador Adicional de uma determinada Conta.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::CadastrosClientesApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+id_pessoa = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+
+adicional_update = Pier::AdicionalUpdate.new # AdicionalUpdate | adicionalUpdate
+
+
+begin
+  #Altera Adicional de uma Conta
+  result = api_instance.alterar_using_put(id, id_pessoa, adicional_update)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CadastrosClientesApi->alterar_using_put: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id_pessoa** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). | 
+ **adicional_update** | [**AdicionalUpdate**](AdicionalUpdate.md)| adicionalUpdate | 
+
+
+### Return type
+
+[**AdicionalResponse**](AdicionalResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **alterar_using_put2**
+> EnderecoResponse alterar_using_put2(id, opts)
 
 Atualiza os dados de um determinado Endere\u00C3\u00A7o
 
@@ -62,10 +122,10 @@ opts = {
 
 begin
   #Atualiza os dados de um determinado Endere\u00C3\u00A7o
-  result = api_instance.alterar_using_put1(id, opts)
+  result = api_instance.alterar_using_put2(id, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosClientesApi->alterar_using_put1: #{e}"
+  puts "Exception when calling CadastrosClientesApi->alterar_using_put2: #{e}"
 end
 ```
 
@@ -103,8 +163,8 @@ No authorization required
 
 
 
-# **alterar_using_put4**
-> PessoaDetalheResponse alterar_using_put4(id, opts)
+# **alterar_using_put5**
+> PessoaDetalheResponse alterar_using_put5(id, opts)
 
 Atualiza os detalhes de uma determinada Pessoa
 
@@ -134,10 +194,10 @@ opts = {
 
 begin
   #Atualiza os detalhes de uma determinada Pessoa
-  result = api_instance.alterar_using_put4(id, opts)
+  result = api_instance.alterar_using_put5(id, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosClientesApi->alterar_using_put4: #{e}"
+  puts "Exception when calling CadastrosClientesApi->alterar_using_put5: #{e}"
 end
 ```
 
@@ -173,8 +233,8 @@ No authorization required
 
 
 
-# **alterar_using_put5**
-> PessoaResponse alterar_using_put5(id, nome, tipo, opts)
+# **alterar_using_put6**
+> PessoaResponse alterar_using_put6(id, nome, tipo, opts)
 
 Atualiza os dados de uma determinada Pessoa
 
@@ -207,10 +267,10 @@ opts = {
 
 begin
   #Atualiza os dados de uma determinada Pessoa
-  result = api_instance.alterar_using_put5(id, nome, tipo, opts)
+  result = api_instance.alterar_using_put6(id, nome, tipo, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosClientesApi->alterar_using_put5: #{e}"
+  puts "Exception when calling CadastrosClientesApi->alterar_using_put6: #{e}"
 end
 ```
 
@@ -247,8 +307,8 @@ No authorization required
 
 
 
-# **alterar_using_put6**
-> TelefoneResponse alterar_using_put6(id, opts)
+# **alterar_using_put7**
+> TelefoneResponse alterar_using_put7(id, opts)
 
 Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
 
@@ -273,10 +333,10 @@ opts = {
 
 begin
   #Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
-  result = api_instance.alterar_using_put6(id, opts)
+  result = api_instance.alterar_using_put7(id, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosClientesApi->alterar_using_put6: #{e}"
+  puts "Exception when calling CadastrosClientesApi->alterar_using_put7: #{e}"
 end
 ```
 
@@ -308,7 +368,7 @@ No authorization required
 
 
 # **atribuir_assinatura_cliente_using_post**
-> Object atribuir_assinatura_cliente_using_post(id, atribuir_assinatura_cliente_request)
+> Object atribuir_assinatura_cliente_using_post(id, body)
 
 Permite atribuir um documento para uma Conta
 
@@ -322,14 +382,14 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::CadastrosClientesApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta
 
-atribuir_assinatura_cliente_request = Pier::AtribuirAssinaturaClienteRequest.new # AtribuirAssinaturaClienteRequest | atribuirAssinaturaClienteRequest
+body = Pier::AtribuirAssinaturaClientePersist.new # AtribuirAssinaturaClientePersist | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Arquivo
 
 
 begin
   #Permite atribuir um documento para uma Conta
-  result = api_instance.atribuir_assinatura_cliente_using_post(id, atribuir_assinatura_cliente_request)
+  result = api_instance.atribuir_assinatura_cliente_using_post(id, body)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling CadastrosClientesApi->atribuir_assinatura_cliente_using_post: #{e}"
@@ -340,8 +400,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo | 
- **atribuir_assinatura_cliente_request** | [**AtribuirAssinaturaClienteRequest**](AtribuirAssinaturaClienteRequest.md)| atribuirAssinaturaClienteRequest | 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta | 
+ **body** | [**AtribuirAssinaturaClientePersist**](AtribuirAssinaturaClientePersist.md)| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Arquivo | 
 
 
 ### Return type
@@ -613,8 +673,258 @@ No authorization required
 
 
 
-# **listar_using_get14**
-> PagePessoaDetalheResponse listar_using_get14(opts)
+# **inativar_using_post**
+> String inativar_using_post(id, id_pessoa)
+
+Inativa Adicional de uma Conta
+
+Este m\u00C3\u00A9todo permite que seja inativado um portador Adicional de uma determinada Conta.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::CadastrosClientesApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+id_pessoa = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+
+
+begin
+  #Inativa Adicional de uma Conta
+  result = api_instance.inativar_using_post(id, id_pessoa)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CadastrosClientesApi->inativar_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id_pessoa** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). | 
+
+
+### Return type
+
+**String**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_socios_using_get**
+> PagePessoaResponse listar_socios_using_get(id, opts)
+
+Listar s\u00C3\u00B3cios de uma pessoa jur\u00C3\u00ADdica
+
+Lista os s\u00C3\u00B3cios vinculados \u00C3\u00A0 uma Pessoa Jur\u00C3\u00ADdica cadastrada.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::CadastrosClientesApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Jur\u00C3\u00ADdica
+
+opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+}
+
+begin
+  #Listar s\u00C3\u00B3cios de uma pessoa jur\u00C3\u00ADdica
+  result = api_instance.listar_socios_using_get(id, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CadastrosClientesApi->listar_socios_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Jur\u00C3\u00ADdica | 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+
+
+### Return type
+
+[**PagePessoaResponse**](PagePessoaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_using_get**
+> AdicionalResponse listar_using_get(id, opts)
+
+Lista os Adicionais de uma Conta
+
+Este m\u00C3\u00A9todo permite que sejam listados portadores Adicionais de uma determinada Conta.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::CadastrosClientesApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+opts = { 
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+}
+
+begin
+  #Lista os Adicionais de uma Conta
+  result = api_instance.listar_using_get(id, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CadastrosClientesApi->listar_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+
+
+### Return type
+
+[**AdicionalResponse**](AdicionalResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_using_get10**
+> PageEnderecoResponse listar_using_get10(opts)
+
+Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
+
+Este m\u00C3\u00A9todo permite que sejam listados os Endere\u00C3\u00A7os existentes na base de dados do Emissor.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::CadastrosClientesApi.new
+
+opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
+  id_pessoa: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
+  id_tipo_endereco: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
+  cep: "cep_example", # String | Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
+  logradouro: "logradouro_example", # String | Apresenta o nome do Logradouro
+  numero: 56, # Integer | Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+  complemento: "complemento_example", # String | Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
+  ponto_referencia: "ponto_referencia_example", # String | Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
+  bairro: "bairro_example", # String | Apresenta nome do bairro
+  cidade: "cidade_example", # String | Apresenta nome da cidade
+  uf: "uf_example", # String | Apresenta sigla da Unidade Federativa
+  pais: "pais_example", # String | Apresenta nome do Pais
+  data_inclusao: "data_inclusao_example", # String | Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
+  data_ultima_atualizacao: "data_ultima_atualizacao_example" # String | Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
+}
+
+begin
+  #Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
+  result = api_instance.listar_using_get10(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CadastrosClientesApi->listar_using_get10: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). | [optional] 
+ **id_pessoa** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id) | [optional] 
+ **id_tipo_endereco** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) | [optional] 
+ **cep** | **String**| Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) | [optional] 
+ **logradouro** | **String**| Apresenta o nome do Logradouro | [optional] 
+ **numero** | **Integer**| Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o | [optional] 
+ **complemento** | **String**| Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o | [optional] 
+ **ponto_referencia** | **String**| Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o | [optional] 
+ **bairro** | **String**| Apresenta nome do bairro | [optional] 
+ **cidade** | **String**| Apresenta nome da cidade | [optional] 
+ **uf** | **String**| Apresenta sigla da Unidade Federativa | [optional] 
+ **pais** | **String**| Apresenta nome do Pais | [optional] 
+ **data_inclusao** | **String**| Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o | [optional] 
+ **data_ultima_atualizacao** | **String**| Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao | [optional] 
+
+
+### Return type
+
+[**PageEnderecoResponse**](PageEnderecoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_using_get15**
+> PagePessoaDetalheResponse listar_using_get15(opts)
 
 Lista os Detalhes das Pessoas cadastradas no Emissor
 
@@ -629,6 +939,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastrosClientesApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   id_pessoa: 789, # Integer | C\u00C3\u00B3digo identificador da pessoa
@@ -645,10 +956,10 @@ opts = {
 
 begin
   #Lista os Detalhes das Pessoas cadastradas no Emissor
-  result = api_instance.listar_using_get14(opts)
+  result = api_instance.listar_using_get15(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosClientesApi->listar_using_get14: #{e}"
+  puts "Exception when calling CadastrosClientesApi->listar_using_get15: #{e}"
 end
 ```
 
@@ -656,6 +967,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id_pessoa** | **Integer**| C\u00C3\u00B3digo identificador da pessoa | [optional] 
@@ -686,8 +998,8 @@ No authorization required
 
 
 
-# **listar_using_get15**
-> PagePessoaResponse listar_using_get15(opts)
+# **listar_using_get16**
+> PagePessoaResponse listar_using_get16(opts)
 
 Lista as Pessoas cadastradas no Emissor
 
@@ -702,6 +1014,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastrosClientesApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
@@ -719,10 +1032,10 @@ opts = {
 
 begin
   #Lista as Pessoas cadastradas no Emissor
-  result = api_instance.listar_using_get15(opts)
+  result = api_instance.listar_using_get16(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosClientesApi->listar_using_get15: #{e}"
+  puts "Exception when calling CadastrosClientesApi->listar_using_get16: #{e}"
 end
 ```
 
@@ -730,6 +1043,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id). | [optional] 
@@ -761,8 +1075,8 @@ No authorization required
 
 
 
-# **listar_using_get22**
-> PageTelefoneResponse listar_using_get22(opts)
+# **listar_using_get24**
+> PageTelefoneResponse listar_using_get24(opts)
 
 Lista os Telefones cadastrados no Emissor
 
@@ -777,6 +1091,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastrosClientesApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
@@ -790,10 +1105,10 @@ opts = {
 
 begin
   #Lista os Telefones cadastrados no Emissor
-  result = api_instance.listar_using_get22(opts)
+  result = api_instance.listar_using_get24(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosClientesApi->listar_using_get22: #{e}"
+  puts "Exception when calling CadastrosClientesApi->listar_using_get24: #{e}"
 end
 ```
 
@@ -801,6 +1116,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id). | [optional] 
@@ -815,87 +1131,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PageTelefoneResponse**](PageTelefoneResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **listar_using_get9**
-> PageEnderecoResponse listar_using_get9(opts)
-
-Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
-
-Este m\u00C3\u00A9todo permite que sejam listados os Endere\u00C3\u00A7os existentes na base de dados do Emissor.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::CadastrosClientesApi.new
-
-opts = { 
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
-  id_pessoa: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
-  id_tipo_endereco: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
-  cep: "cep_example", # String | Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
-  logradouro: "logradouro_example", # String | Apresenta o nome do Logradouro
-  numero: 56, # Integer | Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
-  complemento: "complemento_example", # String | Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
-  ponto_referencia: "ponto_referencia_example", # String | Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
-  bairro: "bairro_example", # String | Apresenta nome do bairro
-  cidade: "cidade_example", # String | Apresenta nome da cidade
-  uf: "uf_example", # String | Apresenta sigla da Unidade Federativa
-  pais: "pais_example", # String | Apresenta nome do Pais
-  data_inclusao: "data_inclusao_example", # String | Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
-  data_ultima_atualizacao: "data_ultima_atualizacao_example" # String | Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
-}
-
-begin
-  #Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
-  result = api_instance.listar_using_get9(opts)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosClientesApi->listar_using_get9: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). | [optional] 
- **id_pessoa** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id) | [optional] 
- **id_tipo_endereco** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) | [optional] 
- **cep** | **String**| Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) | [optional] 
- **logradouro** | **String**| Apresenta o nome do Logradouro | [optional] 
- **numero** | **Integer**| Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o | [optional] 
- **complemento** | **String**| Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o | [optional] 
- **ponto_referencia** | **String**| Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o | [optional] 
- **bairro** | **String**| Apresenta nome do bairro | [optional] 
- **cidade** | **String**| Apresenta nome da cidade | [optional] 
- **uf** | **String**| Apresenta sigla da Unidade Federativa | [optional] 
- **pais** | **String**| Apresenta nome do Pais | [optional] 
- **data_inclusao** | **String**| Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o | [optional] 
- **data_ultima_atualizacao** | **String**| Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao | [optional] 
-
-
-### Return type
-
-[**PageEnderecoResponse**](PageEnderecoResponse.md)
 
 ### Authorization
 
@@ -1010,7 +1245,77 @@ No authorization required
 
 
 # **salvar_using_post10**
-> PessoaResponse salvar_using_post10(nome, tipo, opts)
+> PessoaDetalheResponse salvar_using_post10(id_pessoa, opts)
+
+Salvar os detalhes de uma determinada Pessoa
+
+Este m\u00C3\u00A9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::CadastrosClientesApi.new
+
+id_pessoa = 789 # Integer | Apresenta o c\u00C3\u00B3digo identificador da pessoa
+
+opts = { 
+  nome_mae: "nome_mae_example", # String | Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+  id_estado_civil: 789, # Integer | Id Estado civil da pessoa fisica
+  id_profissao: 56, # Integer | Profiss\u00C3\u00A3o da pessoa fisica
+  id_natureza_ocupacao: 789, # Integer | Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+  id_nacionalidade: 789, # Integer | Id Nacionalidade da pessoa fisica
+  numero_agencia: 56, # Integer | N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+  numero_conta_corrente: "numero_conta_corrente_example", # String | N\u00C3\u00BAmero da conta corrente.
+  email: "email_example", # String | Email da pessoa fisica
+  nome_empresa: "nome_empresa_example" # String | Nome que deve ser impresso no cart\u00C3\u00A3o
+}
+
+begin
+  #Salvar os detalhes de uma determinada Pessoa
+  result = api_instance.salvar_using_post10(id_pessoa, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CadastrosClientesApi->salvar_using_post10: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_pessoa** | **Integer**| Apresenta o c\u00C3\u00B3digo identificador da pessoa | 
+ **nome_mae** | **String**| Apresenta o nome da m\u00C3\u00A3e da pessoa fisica | [optional] 
+ **id_estado_civil** | **Integer**| Id Estado civil da pessoa fisica | [optional] 
+ **id_profissao** | **Integer**| Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
+ **id_natureza_ocupacao** | **Integer**| Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
+ **id_nacionalidade** | **Integer**| Id Nacionalidade da pessoa fisica | [optional] 
+ **numero_agencia** | **Integer**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
+ **numero_conta_corrente** | **String**| N\u00C3\u00BAmero da conta corrente. | [optional] 
+ **email** | **String**| Email da pessoa fisica | [optional] 
+ **nome_empresa** | **String**| Nome que deve ser impresso no cart\u00C3\u00A3o | [optional] 
+
+
+### Return type
+
+[**PessoaDetalheResponse**](PessoaDetalheResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **salvar_using_post11**
+> PessoaResponse salvar_using_post11(nome, tipo, opts)
 
 Realiza o cadastro de um nova Pessoa
 
@@ -1041,10 +1346,10 @@ opts = {
 
 begin
   #Realiza o cadastro de um nova Pessoa
-  result = api_instance.salvar_using_post10(nome, tipo, opts)
+  result = api_instance.salvar_using_post11(nome, tipo, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosClientesApi->salvar_using_post10: #{e}"
+  puts "Exception when calling CadastrosClientesApi->salvar_using_post11: #{e}"
 end
 ```
 
@@ -1080,8 +1385,8 @@ No authorization required
 
 
 
-# **salvar_using_post12**
-> TelefoneResponse salvar_using_post12(opts)
+# **salvar_using_post13**
+> TelefoneResponse salvar_using_post13(opts)
 
 Realiza o cadastro de um novo Telefone
 
@@ -1105,10 +1410,10 @@ opts = {
 
 begin
   #Realiza o cadastro de um novo Telefone
-  result = api_instance.salvar_using_post12(opts)
+  result = api_instance.salvar_using_post13(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosClientesApi->salvar_using_post12: #{e}"
+  puts "Exception when calling CadastrosClientesApi->salvar_using_post13: #{e}"
 end
 ```
 
@@ -1210,8 +1515,8 @@ No authorization required
 
 
 
-# **salvar_using_post6**
-> IntegracaoEmissorResponse salvar_using_post6(id, opts)
+# **salvar_using_post7**
+> IntegracaoEmissorResponse salvar_using_post7(id, opts)
 
 Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
 
@@ -1228,15 +1533,15 @@ api_instance = Pier::CadastrosClientesApi.new
 id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
 
 opts = { 
-  id_proposta_externa: 789 # Integer | Apresenta o identificador da proposta externa.
+  body: Pier::IntegracaoEmissorPersist.new # IntegracaoEmissorPersist | Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
 }
 
 begin
   #Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
-  result = api_instance.salvar_using_post6(id, opts)
+  result = api_instance.salvar_using_post7(id, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosClientesApi->salvar_using_post6: #{e}"
+  puts "Exception when calling CadastrosClientesApi->salvar_using_post7: #{e}"
 end
 ```
 
@@ -1245,82 +1550,12 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **id_proposta_externa** | **Integer**| Apresenta o identificador da proposta externa. | [optional] 
+ **body** | [**IntegracaoEmissorPersist**](IntegracaoEmissorPersist.md)| Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada | [optional] 
 
 
 ### Return type
 
 [**IntegracaoEmissorResponse**](IntegracaoEmissorResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **salvar_using_post9**
-> PessoaDetalheResponse salvar_using_post9(id_pessoa, opts)
-
-Salvar os detalhes de uma determinada Pessoa
-
-Este m\u00C3\u00A9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::CadastrosClientesApi.new
-
-id_pessoa = 789 # Integer | Apresenta o c\u00C3\u00B3digo identificador da pessoa
-
-opts = { 
-  nome_mae: "nome_mae_example", # String | Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
-  id_estado_civil: 789, # Integer | Id Estado civil da pessoa fisica
-  id_profissao: 56, # Integer | Profiss\u00C3\u00A3o da pessoa fisica
-  id_natureza_ocupacao: 789, # Integer | Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
-  id_nacionalidade: 789, # Integer | Id Nacionalidade da pessoa fisica
-  numero_agencia: 56, # Integer | N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
-  numero_conta_corrente: "numero_conta_corrente_example", # String | N\u00C3\u00BAmero da conta corrente.
-  email: "email_example", # String | Email da pessoa fisica
-  nome_empresa: "nome_empresa_example" # String | Nome que deve ser impresso no cart\u00C3\u00A3o
-}
-
-begin
-  #Salvar os detalhes de uma determinada Pessoa
-  result = api_instance.salvar_using_post9(id_pessoa, opts)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosClientesApi->salvar_using_post9: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id_pessoa** | **Integer**| Apresenta o c\u00C3\u00B3digo identificador da pessoa | 
- **nome_mae** | **String**| Apresenta o nome da m\u00C3\u00A3e da pessoa fisica | [optional] 
- **id_estado_civil** | **Integer**| Id Estado civil da pessoa fisica | [optional] 
- **id_profissao** | **Integer**| Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
- **id_natureza_ocupacao** | **Integer**| Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
- **id_nacionalidade** | **Integer**| Id Nacionalidade da pessoa fisica | [optional] 
- **numero_agencia** | **Integer**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
- **numero_conta_corrente** | **String**| N\u00C3\u00BAmero da conta corrente. | [optional] 
- **email** | **String**| Email da pessoa fisica | [optional] 
- **nome_empresa** | **String**| Nome que deve ser impresso no cart\u00C3\u00A3o | [optional] 
-
-
-### Return type
-
-[**PessoaDetalheResponse**](PessoaDetalheResponse.md)
 
 ### Authorization
 

@@ -65,7 +65,7 @@ describe 'StatusCartaoResponse' do
   end
 
 
-  describe 'test attribute "flag_cancela_cartao"' do
+  describe 'test attribute "permite_desbloquear"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -76,7 +76,7 @@ describe 'StatusCartaoResponse' do
   end
 
 
-  describe 'test attribute "flag_cancela_no_desbloqueio"' do
+  describe 'test attribute "permite_atribuir_como_bloqueio"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -87,7 +87,7 @@ describe 'StatusCartaoResponse' do
   end
 
 
-  describe 'test attribute "id_status_destino_desbloqueio"' do
+  describe 'test attribute "permite_atribuir_como_cancelamento"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -98,73 +98,7 @@ describe 'StatusCartaoResponse' do
   end
 
 
-  describe 'test attribute "id_status_destino_conta"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "flag_cobra_tarifa"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "flag_permite_nova_via_cartao"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "flag_permite_desbloqueio"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "flag_cancelamento"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "flag_permite_bloqueio"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "flag_reativar"' do
+  describe 'test attribute "cobrar_tarifa_ao_emitir_nova_via"' do
     it 'should work' do
        # assertion here
        # should be_a()

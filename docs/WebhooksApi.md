@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterar_using_put10**](WebhooksApi.md#alterar_using_put10) | **PUT** /api/webhooks/{id} | Alterar Webhook
+[**alterar_using_put11**](WebhooksApi.md#alterar_using_put11) | **PUT** /api/webhooks/{id} | Alterar Webhook
 [**consultar_using_get27**](WebhooksApi.md#consultar_using_get27) | **GET** /api/webhooks/{id} | Consultar Webhook
-[**listar_using_get31**](WebhooksApi.md#listar_using_get31) | **GET** /api/webhooks | Lista os Webhooks
-[**salvar_using_post16**](WebhooksApi.md#salvar_using_post16) | **POST** /api/webhooks | Salvar Webhook
+[**listar_using_get34**](WebhooksApi.md#listar_using_get34) | **GET** /api/webhooks | Lista os Webhooks
+[**salvar_using_post17**](WebhooksApi.md#salvar_using_post17) | **POST** /api/webhooks | Salvar Webhook
 
 
 
 
-# **alterar_using_put10**
-> WebHookResponse alterar_using_put10(id, tipo_evento, url)
+# **alterar_using_put11**
+> WebHookResponse alterar_using_put11(id, tipo_evento, url, opts)
 
 Alterar Webhook
 
@@ -33,13 +33,16 @@ tipo_evento = "tipo_evento_example" # String | TipoEvento a ser chamado pelo Web
 
 url = "url_example" # String | URL que a ser consumida pelo WebHook
 
+opts = { 
+  status: "status_example" # String | Status
+}
 
 begin
   #Alterar Webhook
-  result = api_instance.alterar_using_put10(id, tipo_evento, url)
+  result = api_instance.alterar_using_put11(id, tipo_evento, url, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling WebhooksApi->alterar_using_put10: #{e}"
+  puts "Exception when calling WebhooksApi->alterar_using_put11: #{e}"
 end
 ```
 
@@ -50,6 +53,7 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo identificador do Webhook | 
  **tipo_evento** | **String**| TipoEvento a ser chamado pelo WebHook | 
  **url** | **String**| URL que a ser consumida pelo WebHook | 
+ **status** | **String**| Status | [optional] 
 
 
 ### Return type
@@ -118,8 +122,8 @@ No authorization required
 
 
 
-# **listar_using_get31**
-> PageWebHookResponse listar_using_get31(opts)
+# **listar_using_get34**
+> PageWebHookResponse listar_using_get34(opts)
 
 Lista os Webhooks
 
@@ -134,6 +138,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::WebhooksApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   id: 789, # Integer | Id do WebHook
@@ -144,10 +149,10 @@ opts = {
 
 begin
   #Lista os Webhooks
-  result = api_instance.listar_using_get31(opts)
+  result = api_instance.listar_using_get34(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling WebhooksApi->listar_using_get31: #{e}"
+  puts "Exception when calling WebhooksApi->listar_using_get34: #{e}"
 end
 ```
 
@@ -155,6 +160,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **Integer**| Id do WebHook | [optional] 
@@ -179,8 +185,8 @@ No authorization required
 
 
 
-# **salvar_using_post16**
-> WebHookResponse salvar_using_post16(tipo_evento, url)
+# **salvar_using_post17**
+> WebHookResponse salvar_using_post17(tipo_evento, url)
 
 Salvar Webhook
 
@@ -201,10 +207,10 @@ url = "url_example" # String | URL que a ser consumida pelo WebHook
 
 begin
   #Salvar Webhook
-  result = api_instance.salvar_using_post16(tipo_evento, url)
+  result = api_instance.salvar_using_post17(tipo_evento, url)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling WebhooksApi->salvar_using_post16: #{e}"
+  puts "Exception when calling WebhooksApi->salvar_using_post17: #{e}"
 end
 ```
 

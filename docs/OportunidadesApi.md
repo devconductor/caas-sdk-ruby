@@ -5,8 +5,8 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_status_using_put**](OportunidadesApi.md#alterar_status_using_put) | **PUT** /api/tipos-oportunidades/{id}/status/{idStatus} | Altera o status do tipo oportunidade
-[**alterar_using_put3**](OportunidadesApi.md#alterar_using_put3) | **PUT** /api/oportunidades/{id} | Altera as oportunidades
-[**alterar_using_put7**](OportunidadesApi.md#alterar_using_put7) | **PUT** /api/tipos-oportunidades/{id} | Altera os tipos oportunidades
+[**alterar_using_put4**](OportunidadesApi.md#alterar_using_put4) | **PUT** /api/oportunidades/{id} | Altera as oportunidades
+[**alterar_using_put8**](OportunidadesApi.md#alterar_using_put8) | **PUT** /api/tipos-oportunidades/{id} | Altera os tipos oportunidades
 [**consultar_status_using_get**](OportunidadesApi.md#consultar_status_using_get) | **GET** /api/tipos-oportunidades/{id}/status/{idStatus} | Apresenta dados de um determinado status do tipo oportunidade
 [**consultar_using_get21**](OportunidadesApi.md#consultar_using_get21) | **GET** /api/tipos-oportunidades/{id} | Apresenta dados de um determinado tipo oportunidade
 [**consultar_using_get9**](OportunidadesApi.md#consultar_using_get9) | **GET** /api/oportunidades/{id} | Apresenta dados de uma determinada oportunidade
@@ -14,11 +14,11 @@ Method | HTTP request | Description
 [**listar_auditorias_using_get**](OportunidadesApi.md#listar_auditorias_using_get) | **GET** /api/auditorias-oportunidades | Lista as auditorias das oportunidades
 [**listar_auditorias_using_get1**](OportunidadesApi.md#listar_auditorias_using_get1) | **GET** /api/auditorias-tipos-oportunidades | Lista as auditorias dos tipos oportunidades
 [**listar_status_using_get**](OportunidadesApi.md#listar_status_using_get) | **GET** /api/tipos-oportunidades/{id}/status | Lista os status do tipo oportunidades
-[**listar_using_get13**](OportunidadesApi.md#listar_using_get13) | **GET** /api/oportunidades | Lista as oportunidades
-[**listar_using_get25**](OportunidadesApi.md#listar_using_get25) | **GET** /api/tipos-oportunidades | Lista os tipos oportunidades
+[**listar_using_get14**](OportunidadesApi.md#listar_using_get14) | **GET** /api/oportunidades | Lista as oportunidades
+[**listar_using_get27**](OportunidadesApi.md#listar_using_get27) | **GET** /api/tipos-oportunidades | Lista os tipos oportunidades
 [**salvar_status_using_post**](OportunidadesApi.md#salvar_status_using_post) | **POST** /api/tipos-oportunidades/{id}/status | Cadastra status para o tipo oportunidade
-[**salvar_using_post13**](OportunidadesApi.md#salvar_using_post13) | **POST** /api/tipos-oportunidades | Cadastra tipos oportunidades
-[**salvar_using_post8**](OportunidadesApi.md#salvar_using_post8) | **POST** /api/oportunidades | Cadastra as oportunidades
+[**salvar_using_post14**](OportunidadesApi.md#salvar_using_post14) | **POST** /api/tipos-oportunidades | Cadastra tipos oportunidades
+[**salvar_using_post9**](OportunidadesApi.md#salvar_using_post9) | **POST** /api/oportunidades | Cadastra as oportunidades
 
 
 
@@ -79,8 +79,8 @@ No authorization required
 
 
 
-# **alterar_using_put3**
-> OportunidadeResponse alterar_using_put3(id, update)
+# **alterar_using_put4**
+> OportunidadeResponse alterar_using_put4(id, update)
 
 Altera as oportunidades
 
@@ -101,10 +101,10 @@ update = Pier::OportunidadeUpdate.new # OportunidadeUpdate | update
 
 begin
   #Altera as oportunidades
-  result = api_instance.alterar_using_put3(id, update)
+  result = api_instance.alterar_using_put4(id, update)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling OportunidadesApi->alterar_using_put3: #{e}"
+  puts "Exception when calling OportunidadesApi->alterar_using_put4: #{e}"
 end
 ```
 
@@ -132,8 +132,8 @@ No authorization required
 
 
 
-# **alterar_using_put7**
-> TipoOportunidadeResponse alterar_using_put7(id, persist)
+# **alterar_using_put8**
+> TipoOportunidadeResponse alterar_using_put8(id, persist)
 
 Altera os tipos oportunidades
 
@@ -154,10 +154,10 @@ persist = Pier::TipoOportunidade.new # TipoOportunidade | persist
 
 begin
   #Altera os tipos oportunidades
-  result = api_instance.alterar_using_put7(id, persist)
+  result = api_instance.alterar_using_put8(id, persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling OportunidadesApi->alterar_using_put7: #{e}"
+  puts "Exception when calling OportunidadesApi->alterar_using_put8: #{e}"
 end
 ```
 
@@ -354,6 +354,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::OportunidadesApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   rev_type: 789, # Integer | C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
@@ -379,6 +380,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **rev_type** | **Integer**| C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades | [optional] 
@@ -423,6 +425,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::OportunidadesApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   id_status_oportunidade: 789, # Integer | C\u00C3\u00B3digo identificador do status oportunidade
@@ -450,6 +453,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id_status_oportunidade** | **Integer**| C\u00C3\u00B3digo identificador do status oportunidade | [optional] 
@@ -496,6 +500,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::OportunidadesApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   rev_type: 789, # Integer | C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
@@ -519,6 +524,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **rev_type** | **Integer**| C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades | [optional] 
@@ -563,6 +569,7 @@ api_instance = Pier::OportunidadesApi.new
 id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   nome: "nome_example", # String | Nome do status oportunidade
@@ -584,6 +591,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id). | 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **nome** | **String**| Nome do status oportunidade | [optional] 
@@ -607,8 +615,8 @@ No authorization required
 
 
 
-# **listar_using_get13**
-> PageOportunidadeResponse listar_using_get13(data_inicio_vigencia, opts)
+# **listar_using_get14**
+> PageOportunidadeResponse listar_using_get14(opts)
 
 Lista as oportunidades
 
@@ -622,25 +630,25 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::OportunidadesApi.new
 
-data_inicio_vigencia = "data_inicio_vigencia_example" # String | Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
-
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   id_status_oportunidade: 789, # Integer | C\u00C3\u00B3digo identificador do status oportunidade
   data_cadastro: "data_cadastro_example", # String | Data do cadastro da oportunidade
   data_atualizacao: "data_atualizacao_example", # String | Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
   numero_receita_federal: "numero_receita_federal_example", # String | N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
+  data_inicio_vigencia: "data_inicio_vigencia_example", # String | Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
   data_fim_vigencia: "data_fim_vigencia_example", # String | Data do fim da vig\u00C3\u00AAncia da oportunidade
   flag_ativo: true # BOOLEAN | Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
 }
 
 begin
   #Lista as oportunidades
-  result = api_instance.listar_using_get13(data_inicio_vigencia, opts)
+  result = api_instance.listar_using_get14(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling OportunidadesApi->listar_using_get13: #{e}"
+  puts "Exception when calling OportunidadesApi->listar_using_get14: #{e}"
 end
 ```
 
@@ -648,13 +656,14 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data_inicio_vigencia** | **String**| Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade | 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id_status_oportunidade** | **Integer**| C\u00C3\u00B3digo identificador do status oportunidade | [optional] 
  **data_cadastro** | **String**| Data do cadastro da oportunidade | [optional] 
  **data_atualizacao** | **String**| Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade | [optional] 
  **numero_receita_federal** | **String**| N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade | [optional] 
+ **data_inicio_vigencia** | **String**| Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade | [optional] 
  **data_fim_vigencia** | **String**| Data do fim da vig\u00C3\u00AAncia da oportunidade | [optional] 
  **flag_ativo** | **BOOLEAN**| Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa | [optional] 
 
@@ -675,8 +684,8 @@ No authorization required
 
 
 
-# **listar_using_get25**
-> PageTipoOportunidadeResponse listar_using_get25(opts)
+# **listar_using_get27**
+> PageTipoOportunidadeResponse listar_using_get27(opts)
 
 Lista os tipos oportunidades
 
@@ -691,6 +700,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::OportunidadesApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   descricao: "descricao_example", # String | Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
@@ -699,10 +709,10 @@ opts = {
 
 begin
   #Lista os tipos oportunidades
-  result = api_instance.listar_using_get25(opts)
+  result = api_instance.listar_using_get27(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling OportunidadesApi->listar_using_get25: #{e}"
+  puts "Exception when calling OportunidadesApi->listar_using_get27: #{e}"
 end
 ```
 
@@ -710,6 +720,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **descricao** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade | [optional] 
@@ -785,8 +796,8 @@ No authorization required
 
 
 
-# **salvar_using_post13**
-> TipoOportunidadeResponse salvar_using_post13(persist)
+# **salvar_using_post14**
+> TipoOportunidadeResponse salvar_using_post14(persist)
 
 Cadastra tipos oportunidades
 
@@ -805,10 +816,10 @@ persist = Pier::TipoOportunidade.new # TipoOportunidade | persist
 
 begin
   #Cadastra tipos oportunidades
-  result = api_instance.salvar_using_post13(persist)
+  result = api_instance.salvar_using_post14(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling OportunidadesApi->salvar_using_post13: #{e}"
+  puts "Exception when calling OportunidadesApi->salvar_using_post14: #{e}"
 end
 ```
 
@@ -835,8 +846,8 @@ No authorization required
 
 
 
-# **salvar_using_post8**
-> OportunidadeResponse salvar_using_post8(persist)
+# **salvar_using_post9**
+> OportunidadeResponse salvar_using_post9(persist)
 
 Cadastra as oportunidades
 
@@ -855,10 +866,10 @@ persist = Pier::OportunidadePersist.new # OportunidadePersist | persist
 
 begin
   #Cadastra as oportunidades
-  result = api_instance.salvar_using_post8(persist)
+  result = api_instance.salvar_using_post9(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling OportunidadesApi->salvar_using_post8: #{e}"
+  puts "Exception when calling OportunidadesApi->salvar_using_post9: #{e}"
 end
 ```
 

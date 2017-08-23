@@ -31,11 +31,17 @@ module Pier
     # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
     attr_accessor :id_conta
 
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo.
+    attr_accessor :id_arquivo
+
     # Status do registro.
     attr_accessor :status
 
     # Data de inclus\u00C3\u00A3o do registro.
-    attr_accessor :data_evento
+    attr_accessor :data_inclusao
+
+    # Data da ultima altera\u00C3\u00A7\u00C3\u00A3o do registro.
+    attr_accessor :data_alteracao
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -46,9 +52,13 @@ module Pier
         
         :'id_conta' => :'idConta',
         
+        :'id_arquivo' => :'idArquivo',
+        
         :'status' => :'status',
         
-        :'data_evento' => :'dataEvento'
+        :'data_inclusao' => :'dataInclusao',
+        
+        :'data_alteracao' => :'dataAlteracao'
         
       }
     end
@@ -61,9 +71,13 @@ module Pier
         
         :'id_conta' => :'Integer',
         
-        :'status' => :'Integer',
+        :'id_arquivo' => :'Integer',
         
-        :'data_evento' => :'String'
+        :'status' => :'String',
+        
+        :'data_inclusao' => :'String',
+        
+        :'data_alteracao' => :'String'
         
       }
     end
@@ -95,6 +109,15 @@ module Pier
       end
 
       
+      if attributes[:'idArquivo']
+        
+        
+        self.id_arquivo = attributes[:'idArquivo']
+        
+      
+      end
+
+      
       if attributes[:'status']
         
         
@@ -104,10 +127,19 @@ module Pier
       end
 
       
-      if attributes[:'dataEvento']
+      if attributes[:'dataInclusao']
         
         
-        self.data_evento = attributes[:'dataEvento']
+        self.data_inclusao = attributes[:'dataInclusao']
+        
+      
+      end
+
+      
+      if attributes[:'dataAlteracao']
+        
+        
+        self.data_alteracao = attributes[:'dataAlteracao']
         
       
       end
@@ -144,8 +176,26 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -174,8 +224,10 @@ module Pier
       self.class == o.class &&
           id == o.id &&
           id_conta == o.id_conta &&
+          id_arquivo == o.id_arquivo &&
           status == o.status &&
-          data_evento == o.data_evento
+          data_inclusao == o.data_inclusao &&
+          data_alteracao == o.data_alteracao
     end
 
     # @see the `==` method
@@ -187,7 +239,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_conta, status, data_evento].hash
+      [id, id_conta, id_arquivo, status, data_inclusao, data_alteracao].hash
     end
 
     # Builds the object from hash

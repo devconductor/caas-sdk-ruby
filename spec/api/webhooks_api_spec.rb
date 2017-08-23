@@ -43,15 +43,16 @@ describe 'WebhooksApi' do
   end
 
 
-  # unit tests for alterar_using_put10
+  # unit tests for alterar_using_put11
   # Alterar Webhook
   # Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
   # @param id C\u00C3\u00B3digo identificador do Webhook
   # @param tipo_evento TipoEvento a ser chamado pelo WebHook
   # @param url URL que a ser consumida pelo WebHook
   # @param [Hash] opts the optional parameters
+  # @option opts [String] :status Status
   # @return [WebHookResponse]
-  describe 'alterar_using_put10 test' do
+  describe 'alterar_using_put11 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -79,10 +80,11 @@ describe 'WebhooksApi' do
   end
 
 
-  # unit tests for listar_using_get31
+  # unit tests for listar_using_get34
   # Lista os Webhooks
   # Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
   # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [Integer] :id Id do WebHook
@@ -90,7 +92,7 @@ describe 'WebhooksApi' do
   # @option opts [String] :metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
   # @option opts [String] :url URL que a ser consumida pelo WebHook
   # @return [PageWebHookResponse]
-  describe 'listar_using_get31 test' do
+  describe 'listar_using_get34 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -101,14 +103,14 @@ describe 'WebhooksApi' do
   end
 
 
-  # unit tests for salvar_using_post16
+  # unit tests for salvar_using_post17
   # Salvar Webhook
   # Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
   # @param tipo_evento TipoEvento a ser chamado pelo WebHook
   # @param url URL que a ser consumida pelo WebHook
   # @param [Hash] opts the optional parameters
   # @return [WebHookResponse]
-  describe 'salvar_using_post16 test' do
+  describe 'salvar_using_post17 test' do
     it "should work" do
       # assertion here
       # should be_a()

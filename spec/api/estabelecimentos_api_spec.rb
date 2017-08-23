@@ -77,10 +77,11 @@ describe 'EstabelecimentosApi' do
   end
 
 
-  # unit tests for listar_using_get10
+  # unit tests for listar_using_get11
   # Lista Estabelecimentos
   # Lista todas os Estabelecimentos
   # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [Integer] :id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
@@ -103,7 +104,7 @@ describe 'EstabelecimentosApi' do
   # @option opts [Integer] :flag_cartao_digitado Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.
   # @option opts [Integer] :inativo Indica se o estabelecimento est\u00C3\u00A1 inativo.
   # @return [PageEstabelecimentoResponse]
-  describe 'listar_using_get10 test' do
+  describe 'listar_using_get11 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -114,10 +115,11 @@ describe 'EstabelecimentosApi' do
   end
 
 
-  # unit tests for listar_using_get23
+  # unit tests for listar_using_get25
   # Lista os Terminais cadastrados no Emissor
   # Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
@@ -125,7 +127,7 @@ describe 'EstabelecimentosApi' do
   # @option opts [Integer] :numero_estabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
   # @option opts [Integer] :id_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
   # @return [PageTerminalResponse]
-  describe 'listar_using_get23 test' do
+  describe 'listar_using_get25 test' do
     it "should work" do
       # assertion here
       # should be_a()

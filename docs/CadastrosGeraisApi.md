@@ -18,18 +18,21 @@ Method | HTTP request | Description
 [**desativar_uso_exterior_using_post**](CadastrosGeraisApi.md#desativar_uso_exterior_using_post) | **POST** /api/produtos/{id}/desativar-uso-exterior | Desativa o par\u00C3\u00A2metro uso exterior para o produto
 [**listar_contas_por_pessoa_using_get**](CadastrosGeraisApi.md#listar_contas_por_pessoa_using_get) | **GET** /api/pessoas/listar-contas | Lista as contas da pessoa
 [**listar_estados_civis_using_get**](CadastrosGeraisApi.md#listar_estados_civis_using_get) | **GET** /api/estados-civis | Lista os Estados C\u00C3\u00ADvis
+[**listar_fantasias_basicas_using_get**](CadastrosGeraisApi.md#listar_fantasias_basicas_using_get) | **GET** /api/fantasias-basicas | Listar Fantasias B\u00C3\u00A1sicas
 [**listar_historico_telefones_using_get**](CadastrosGeraisApi.md#listar_historico_telefones_using_get) | **GET** /api/pessoas/{id}/historico-telefones | Listar altera\u00C3\u00A7\u00C3\u00B5es de telefones realizadas nos \u00C3\u00BAltimos 60 dias
 [**listar_nacionalidades_using_get**](CadastrosGeraisApi.md#listar_nacionalidades_using_get) | **GET** /api/nacionalidades | Lista nacionalidades
 [**listar_naturezas_ocupacoes_using_get**](CadastrosGeraisApi.md#listar_naturezas_ocupacoes_using_get) | **GET** /api/ocupacoes | Lista as Ocupa\u00C3\u00A7\u00C3\u00B5es
 [**listar_origens_comerciais_using_get**](CadastrosGeraisApi.md#listar_origens_comerciais_using_get) | **GET** /api/origens-comerciais | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
 [**listar_parentescos_using_get**](CadastrosGeraisApi.md#listar_parentescos_using_get) | **GET** /api/parentescos | Lista os Parentescos
 [**listar_profissoes_using_get**](CadastrosGeraisApi.md#listar_profissoes_using_get) | **GET** /api/profissoes | Lista profiss\u00C3\u00B5es
-[**listar_using_get1**](CadastrosGeraisApi.md#listar_using_get1) | **GET** /api/atendimento-clientes | Lista todos os atendimentos
-[**listar_using_get17**](CadastrosGeraisApi.md#listar_using_get17) | **GET** /api/portadores | Lista os Portadores existentes
-[**listar_using_get18**](CadastrosGeraisApi.md#listar_using_get18) | **GET** /api/produtos | Lista os Produtos do Emissor
-[**listar_using_get2**](CadastrosGeraisApi.md#listar_using_get2) | **GET** /api/bancos | Lista os Bancos cadastrados para o Emissor
-[**listar_using_get24**](CadastrosGeraisApi.md#listar_using_get24) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-[**listar_using_get26**](CadastrosGeraisApi.md#listar_using_get26) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
+[**listar_using_get18**](CadastrosGeraisApi.md#listar_using_get18) | **GET** /api/portadores | Lista os Portadores existentes
+[**listar_using_get19**](CadastrosGeraisApi.md#listar_using_get19) | **GET** /api/produtos | Lista os Produtos do Emissor
+[**listar_using_get2**](CadastrosGeraisApi.md#listar_using_get2) | **GET** /api/atendimento-clientes | Lista todos os atendimentos
+[**listar_using_get20**](CadastrosGeraisApi.md#listar_using_get20) | **GET** /api/promotores | Lista promotores cadastrados na base do emissor
+[**listar_using_get26**](CadastrosGeraisApi.md#listar_using_get26) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+[**listar_using_get28**](CadastrosGeraisApi.md#listar_using_get28) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
+[**listar_using_get3**](CadastrosGeraisApi.md#listar_using_get3) | **GET** /api/bancos | Lista os Bancos cadastrados para o Emissor
+[**listar_using_get33**](CadastrosGeraisApi.md#listar_using_get33) | **GET** /api/vencimentos | Listar Vencimentos
 [**salvar_using_post2**](CadastrosGeraisApi.md#salvar_using_post2) | **POST** /api/atendimento-clientes | Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
 
 
@@ -357,6 +360,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastrosGeraisApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   id: 789, # Integer | C\u00C3\u00B3digo identificador do tipo de ajuste.
@@ -376,6 +380,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **Integer**| C\u00C3\u00B3digo identificador do tipo de ajuste. | [optional] 
@@ -414,6 +419,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastrosGeraisApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   id: 789, # Integer | C\u00C3\u00B3digo identificador do tipo de boleto.
@@ -434,6 +440,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **Integer**| C\u00C3\u00B3digo identificador do tipo de boleto. | [optional] 
@@ -675,6 +682,7 @@ api_instance = Pier::CadastrosGeraisApi.new
 numero_receita_federal = "numero_receita_federal_example" # String | N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ)
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 }
@@ -693,6 +701,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **numero_receita_federal** | **String**| N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ) | 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
@@ -729,6 +738,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastrosGeraisApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 }
@@ -746,6 +756,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
@@ -753,6 +764,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_fantasias_basicas_using_get**
+> PageFantasiaBasicaResponse listar_fantasias_basicas_using_get(opts)
+
+Listar Fantasias B\u00C3\u00A1sicas
+
+Lista as fantasia b\u00C3\u00A1sicas.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::CadastrosGeraisApi.new
+
+opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+}
+
+begin
+  #Listar Fantasias B\u00C3\u00A1sicas
+  result = api_instance.listar_fantasias_basicas_using_get(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CadastrosGeraisApi->listar_fantasias_basicas_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+
+
+### Return type
+
+[**PageFantasiaBasicaResponse**](PageFantasiaBasicaResponse.md)
 
 ### Authorization
 
@@ -832,6 +898,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastrosGeraisApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 }
@@ -849,6 +916,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
@@ -885,6 +953,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastrosGeraisApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 }
@@ -902,6 +971,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
@@ -938,6 +1008,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastrosGeraisApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   id: 789, # Integer | Id da origem comercial
@@ -960,6 +1031,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **Integer**| Id da origem comercial | [optional] 
@@ -1001,6 +1073,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastrosGeraisApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 }
@@ -1018,6 +1091,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
@@ -1054,6 +1128,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastrosGeraisApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 }
@@ -1071,6 +1146,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
@@ -1091,69 +1167,8 @@ No authorization required
 
 
 
-# **listar_using_get1**
-> PageAtendimentoClienteResponse listar_using_get1(opts)
-
-Lista todos os atendimentos
-
-Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::CadastrosGeraisApi.new
-
-opts = { 
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id_tipo_atendimento: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
-  id_conta: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
-  nome_atendente: "nome_atendente_example", # String | Apresenta o nome do Atendente que registrou o Atendimento.
-  data_atendimento: "data_atendimento_example" # String | Apresenta a data em que o Atendimento foi realizado.
-}
-
-begin
-  #Lista todos os atendimentos
-  result = api_instance.listar_using_get1(opts)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosGeraisApi->listar_using_get1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id_tipo_atendimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id) | [optional] 
- **id_conta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). | [optional] 
- **nome_atendente** | **String**| Apresenta o nome do Atendente que registrou o Atendimento. | [optional] 
- **data_atendimento** | **String**| Apresenta a data em que o Atendimento foi realizado. | [optional] 
-
-
-### Return type
-
-[**PageAtendimentoClienteResponse**](PageAtendimentoClienteResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **listar_using_get17**
-> PagePortadorResponse listar_using_get17(opts)
+# **listar_using_get18**
+> PagePortadorResponse listar_using_get18(opts)
 
 Lista os Portadores existentes
 
@@ -1168,6 +1183,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastrosGeraisApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   id_conta: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
@@ -1184,10 +1200,10 @@ opts = {
 
 begin
   #Lista os Portadores existentes
-  result = api_instance.listar_using_get17(opts)
+  result = api_instance.listar_using_get18(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosGeraisApi->listar_using_get17: #{e}"
+  puts "Exception when calling CadastrosGeraisApi->listar_using_get18: #{e}"
 end
 ```
 
@@ -1195,6 +1211,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id_conta** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). | [optional] 
@@ -1225,8 +1242,8 @@ No authorization required
 
 
 
-# **listar_using_get18**
-> PageProdutoResponse listar_using_get18(opts)
+# **listar_using_get19**
+> PageProdutoResponse listar_using_get19(opts)
 
 Lista os Produtos do Emissor
 
@@ -1241,6 +1258,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastrosGeraisApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   nome: "nome_example", # String | Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
@@ -1250,10 +1268,10 @@ opts = {
 
 begin
   #Lista os Produtos do Emissor
-  result = api_instance.listar_using_get18(opts)
+  result = api_instance.listar_using_get19(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosGeraisApi->listar_using_get18: #{e}"
+  puts "Exception when calling CadastrosGeraisApi->listar_using_get19: #{e}"
 end
 ```
 
@@ -1261,6 +1279,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **nome** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. | [optional] 
@@ -1285,11 +1304,11 @@ No authorization required
 
 
 # **listar_using_get2**
-> PageBancoResponse listar_using_get2(opts)
+> PageAtendimentoClienteResponse listar_using_get2(opts)
 
-Lista os Bancos cadastrados para o Emissor
+Lista todos os atendimentos
 
-Este m\u00C3\u00A9todo permite que sejam listados os Bancos existentes na base de dados do Emissor.
+Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
 
 ### Example
 ```ruby
@@ -1300,12 +1319,17 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastrosGeraisApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  id_tipo_atendimento: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
+  id_conta: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+  nome_atendente: "nome_atendente_example", # String | Apresenta o nome do Atendente que registrou o Atendimento.
+  data_atendimento: "data_atendimento_example" # String | Apresenta a data em que o Atendimento foi realizado.
 }
 
 begin
-  #Lista os Bancos cadastrados para o Emissor
+  #Lista todos os atendimentos
   result = api_instance.listar_using_get2(opts)
   p result
 rescue Pier::ApiError => e
@@ -1317,13 +1341,18 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id_tipo_atendimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id) | [optional] 
+ **id_conta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). | [optional] 
+ **nome_atendente** | **String**| Apresenta o nome do Atendente que registrou o Atendimento. | [optional] 
+ **data_atendimento** | **String**| Apresenta a data em que o Atendimento foi realizado. | [optional] 
 
 
 ### Return type
 
-[**PageBancoResponse**](PageBancoResponse.md)
+[**PageAtendimentoClienteResponse**](PageAtendimentoClienteResponse.md)
 
 ### Authorization
 
@@ -1337,8 +1366,73 @@ No authorization required
 
 
 
-# **listar_using_get24**
-> PageTipoEnderecoResponse listar_using_get24(opts)
+# **listar_using_get20**
+> PagePromotorResponse listar_using_get20(opts)
+
+Lista promotores cadastrados na base do emissor
+
+Este m\u00C3\u00A9todo permite que sejam listados os cadastros de Promoteres existentes na base de dados do Emissor.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::CadastrosGeraisApi.new
+
+opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do promotor (id)
+  nome: "nome_example", # String | Nome do Promotor
+  data_cadastro: "data_cadastro_example", # String | Data da Inclus\u00C3\u00A3o.
+  id_estabelecimento: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
+  id_usuario: 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio
+}
+
+begin
+  #Lista promotores cadastrados na base do emissor
+  result = api_instance.listar_using_get20(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CadastrosGeraisApi->listar_using_get20: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do promotor (id) | [optional] 
+ **nome** | **String**| Nome do Promotor | [optional] 
+ **data_cadastro** | **String**| Data da Inclus\u00C3\u00A3o. | [optional] 
+ **id_estabelecimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento | [optional] 
+ **id_usuario** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio | [optional] 
+
+
+### Return type
+
+[**PagePromotorResponse**](PagePromotorResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_using_get26**
+> PageTipoEnderecoResponse listar_using_get26(opts)
 
 Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
 
@@ -1353,6 +1447,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastrosGeraisApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
@@ -1361,10 +1456,10 @@ opts = {
 
 begin
   #Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-  result = api_instance.listar_using_get24(opts)
+  result = api_instance.listar_using_get26(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosGeraisApi->listar_using_get24: #{e}"
+  puts "Exception when calling CadastrosGeraisApi->listar_using_get26: #{e}"
 end
 ```
 
@@ -1372,6 +1467,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id) | [optional] 
@@ -1394,8 +1490,8 @@ No authorization required
 
 
 
-# **listar_using_get26**
-> PageTipoTelefoneResponse listar_using_get26(opts)
+# **listar_using_get28**
+> PageTipoTelefoneResponse listar_using_get28(opts)
 
 Lista os Tipos de Telefones
 
@@ -1410,6 +1506,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastrosGeraisApi.new
 
 opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
@@ -1418,10 +1515,10 @@ opts = {
 
 begin
   #Lista os Tipos de Telefones
-  result = api_instance.listar_using_get26(opts)
+  result = api_instance.listar_using_get28(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastrosGeraisApi->listar_using_get26: #{e}"
+  puts "Exception when calling CadastrosGeraisApi->listar_using_get28: #{e}"
 end
 ```
 
@@ -1429,6 +1526,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). | [optional] 
@@ -1438,6 +1536,118 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PageTipoTelefoneResponse**](PageTipoTelefoneResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_using_get3**
+> PageBancoResponse listar_using_get3(opts)
+
+Lista os Bancos cadastrados para o Emissor
+
+Este m\u00C3\u00A9todo permite que sejam listados os Bancos existentes na base de dados do Emissor.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::CadastrosGeraisApi.new
+
+opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+}
+
+begin
+  #Lista os Bancos cadastrados para o Emissor
+  result = api_instance.listar_using_get3(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CadastrosGeraisApi->listar_using_get3: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+
+
+### Return type
+
+[**PageBancoResponse**](PageBancoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_using_get33**
+> PageControleVencimentoResponse listar_using_get33(opts)
+
+Listar Vencimentos
+
+Este recurso permite que sejam listados os Vencimentos do emissor.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::CadastrosGeraisApi.new
+
+opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  data_vencimento: "data_vencimento_example" # String | Indica a data de vencimento das faturas
+}
+
+begin
+  #Listar Vencimentos
+  result = api_instance.listar_using_get33(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CadastrosGeraisApi->listar_using_get33: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **data_vencimento** | **String**| Indica a data de vencimento das faturas | [optional] 
+
+
+### Return type
+
+[**PageControleVencimentoResponse**](PageControleVencimentoResponse.md)
 
 ### Authorization
 

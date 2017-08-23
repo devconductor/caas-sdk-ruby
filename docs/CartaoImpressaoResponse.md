@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **trilha2** | **String** | Apresenta os dados da Trilha2, seguindo as regras de trilha do emissor. | [optional] 
 **trilha_cvv1** | **String** | Apresenta os dados da TrilhaCVV01, seguindo as regras de trilha do emissor. | [optional] 
 **trilha_cvv2** | **String** | Apresenta os dados da TrilhaCVV02, seguindo as regras de trilha do emissor. | [optional] 
+**numero_cartao_hash** | **Integer** | Apresenta o numero da hash do cart\u00C3\u00A3o  | [optional] 
 
 
 

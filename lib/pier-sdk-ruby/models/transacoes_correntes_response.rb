@@ -52,8 +52,8 @@ module Pier
     # Nome completo do Portador do Cart\u00C3\u00A3o.
     attr_accessor :nome_portador
 
-    # Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).
-    attr_accessor :data_transacao_utc
+    # Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada.
+    attr_accessor :data_transacao
 
     # Data de Faturamento da Transa\u00C3\u00A7\u00C3\u00A3o.
     attr_accessor :data_faturamento
@@ -159,7 +159,7 @@ module Pier
         
         :'nome_portador' => :'nomePortador',
         
-        :'data_transacao_utc' => :'dataTransacaoUTC',
+        :'data_transacao' => :'dataTransacao',
         
         :'data_faturamento' => :'dataFaturamento',
         
@@ -240,7 +240,7 @@ module Pier
         
         :'nome_portador' => :'String',
         
-        :'data_transacao_utc' => :'String',
+        :'data_transacao' => :'String',
         
         :'data_faturamento' => :'String',
         
@@ -389,10 +389,10 @@ module Pier
       end
 
       
-      if attributes[:'dataTransacaoUTC']
+      if attributes[:'dataTransacao']
         
         
-        self.data_transacao_utc = attributes[:'dataTransacaoUTC']
+        self.data_transacao = attributes[:'dataTransacao']
         
       
       end
@@ -1006,7 +1006,7 @@ module Pier
           id_conta == o.id_conta &&
           cartao_mascarado == o.cartao_mascarado &&
           nome_portador == o.nome_portador &&
-          data_transacao_utc == o.data_transacao_utc &&
+          data_transacao == o.data_transacao &&
           data_faturamento == o.data_faturamento &&
           data_vencimento == o.data_vencimento &&
           modo_entrada_transacao == o.modo_entrada_transacao &&
@@ -1045,7 +1045,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_tipo_transacao, descricao_abreviada, status_transacao, id_evento, tipo_evento, id_conta, cartao_mascarado, nome_portador, data_transacao_utc, data_faturamento, data_vencimento, modo_entrada_transacao, valor_taxa_embarque, valor_entrada, valor_brl, valor_usd, cotacao_usd, data_cotacao_usd, codigo_moeda_origem, codigo_moeda_destino, codigo_autorizacao, codigo_referencia, codigo_terminal, codigo_mcc, grupo_mcc, grupo_descricao_mcc, id_estabelecimento, nome_estabelecimento, localidade_estabelecimento, plano_parcelamento, numero_parcela, detalhes_transacao, flag_credito, flag_faturado, flag_estorno, id_transacao_estorno].hash
+      [id, id_tipo_transacao, descricao_abreviada, status_transacao, id_evento, tipo_evento, id_conta, cartao_mascarado, nome_portador, data_transacao, data_faturamento, data_vencimento, modo_entrada_transacao, valor_taxa_embarque, valor_entrada, valor_brl, valor_usd, cotacao_usd, data_cotacao_usd, codigo_moeda_origem, codigo_moeda_destino, codigo_autorizacao, codigo_referencia, codigo_terminal, codigo_mcc, grupo_mcc, grupo_descricao_mcc, id_estabelecimento, nome_estabelecimento, localidade_estabelecimento, plano_parcelamento, numero_parcela, detalhes_transacao, flag_credito, flag_faturado, flag_estorno, id_transacao_estorno].hash
     end
 
     # Builds the object from hash

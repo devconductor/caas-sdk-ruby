@@ -102,6 +102,9 @@ module Pier
     # Atributo que representa o numero do estabelecimento.
     attr_accessor :numero_estabelecimento
 
+    # Valor da taxa saque.
+    attr_accessor :valor_taxa_saque
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -157,7 +160,9 @@ module Pier
         
         :'id_conta_portador' => :'idContaPortador',
         
-        :'numero_estabelecimento' => :'numeroEstabelecimento'
+        :'numero_estabelecimento' => :'numeroEstabelecimento',
+        
+        :'valor_taxa_saque' => :'valorTaxaSaque'
         
       }
     end
@@ -216,7 +221,9 @@ module Pier
         
         :'id_conta_portador' => :'Integer',
         
-        :'numero_estabelecimento' => :'Integer'
+        :'numero_estabelecimento' => :'Integer',
+        
+        :'valor_taxa_saque' => :'Float'
         
       }
     end
@@ -464,6 +471,15 @@ module Pier
       end
 
       
+      if attributes[:'valorTaxaSaque']
+        
+        
+        self.valor_taxa_saque = attributes[:'valorTaxaSaque']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -583,8 +599,17 @@ module Pier
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -746,7 +771,8 @@ module Pier
           data_vencimento_real == o.data_vencimento_real &&
           data_vencimento_padrao == o.data_vencimento_padrao &&
           id_conta_portador == o.id_conta_portador &&
-          numero_estabelecimento == o.numero_estabelecimento
+          numero_estabelecimento == o.numero_estabelecimento &&
+          valor_taxa_saque == o.valor_taxa_saque
     end
 
     # @see the `==` method
@@ -758,7 +784,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [nsuorigem, id_autorizacao, id_transferencia, codigo_autorizacao, data_autorizacao, origem, valor, id_operacao, terminal, id_cartao, data_compra, valor_compra, numero_parcelas, valor_parcela, id_estabelecimento, data_movimento, valor_contrato, taxa_juros, valor_iof, valor_tac, id_conta, valor_entrada, data_vencimento_real, data_vencimento_padrao, id_conta_portador, numero_estabelecimento].hash
+      [nsuorigem, id_autorizacao, id_transferencia, codigo_autorizacao, data_autorizacao, origem, valor, id_operacao, terminal, id_cartao, data_compra, valor_compra, numero_parcelas, valor_parcela, id_estabelecimento, data_movimento, valor_contrato, taxa_juros, valor_iof, valor_tac, id_conta, valor_entrada, data_vencimento_real, data_vencimento_padrao, id_conta_portador, numero_estabelecimento, valor_taxa_saque].hash
     end
 
     # Builds the object from hash

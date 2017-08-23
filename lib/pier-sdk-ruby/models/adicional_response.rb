@@ -73,6 +73,9 @@ module Pier
     # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular
     attr_accessor :email
 
+    # Indica se o adicional est\u00C3\u00A1 ativo = 1 ou inativo = 0
+    attr_accessor :flag_ativo
+
     # Lista dos telefones do adicional
     attr_accessor :telefones
 
@@ -112,6 +115,8 @@ module Pier
         :'id_parentesco' => :'idParentesco',
         
         :'email' => :'email',
+        
+        :'flag_ativo' => :'flagAtivo',
         
         :'telefones' => :'telefones'
         
@@ -153,6 +158,8 @@ module Pier
         :'id_parentesco' => :'Integer',
         
         :'email' => :'String',
+        
+        :'flag_ativo' => :'Integer',
         
         :'telefones' => :'Array<TelefoneResponse>'
         
@@ -312,6 +319,15 @@ module Pier
       end
 
       
+      if attributes[:'flagAtivo']
+        
+        
+        self.flag_ativo = attributes[:'flagAtivo']
+        
+      
+      end
+
+      
       if attributes[:'telefones']
         
         if (value = attributes[:'telefones']).is_a?(Array)
@@ -406,8 +422,17 @@ module Pier
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -515,6 +540,7 @@ module Pier
           id_nacionalidade == o.id_nacionalidade &&
           id_parentesco == o.id_parentesco &&
           email == o.email &&
+          flag_ativo == o.flag_ativo &&
           telefones == o.telefones
     end
 
@@ -527,7 +553,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_conta, id_pessoa, nome, nome_impresso, numero_receita_federal, data_nascimento, sexo, numero_identidade, orgao_expedidor_identidade, unidade_federativa_identidade, data_emissao_identidade, id_estado_civil, id_profissao, id_nacionalidade, id_parentesco, email, telefones].hash
+      [id_conta, id_pessoa, nome, nome_impresso, numero_receita_federal, data_nascimento, sexo, numero_identidade, orgao_expedidor_identidade, unidade_federativa_identidade, data_emissao_identidade, id_estado_civil, id_profissao, id_nacionalidade, id_parentesco, email, flag_ativo, telefones].hash
     end
 
     # Builds the object from hash

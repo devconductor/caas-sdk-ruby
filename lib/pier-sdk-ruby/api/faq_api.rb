@@ -161,8 +161,8 @@ module Pier
     # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
     # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
     # @return [FaqResponse]
-    def alterar_using_put2(id, pergunta, resposta, opts = {})
-      data, _status_code, _headers = alterar_using_put2_with_http_info(id, pergunta, resposta, opts)
+    def alterar_using_put3(id, pergunta, resposta, opts = {})
+      data, _status_code, _headers = alterar_using_put3_with_http_info(id, pergunta, resposta, opts)
       return data
     end
 
@@ -177,14 +177,14 @@ module Pier
     # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
     # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
     # @return [Array<(FaqResponse, Fixnum, Hash)>] FaqResponse data, response status code and response headers
-    def alterar_using_put2_with_http_info(id, pergunta, resposta, opts = {})
+    def alterar_using_put3_with_http_info(id, pergunta, resposta, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: FAQApi.alterar_using_put2 ..."
+        @api_client.config.logger.debug "Calling API: FAQApi.alterar_using_put3 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling FAQApi.alterar_using_put2" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling FAQApi.alterar_using_put3" if id.nil?
       
       
       
@@ -192,7 +192,7 @@ module Pier
       
       
       # verify the required parameter 'pergunta' is set
-      fail ArgumentError, "Missing the required parameter 'pergunta' when calling FAQApi.alterar_using_put2" if pergunta.nil?
+      fail ArgumentError, "Missing the required parameter 'pergunta' when calling FAQApi.alterar_using_put3" if pergunta.nil?
       
       
       
@@ -200,7 +200,7 @@ module Pier
       
       
       # verify the required parameter 'resposta' is set
-      fail ArgumentError, "Missing the required parameter 'resposta' when calling FAQApi.alterar_using_put2" if resposta.nil?
+      fail ArgumentError, "Missing the required parameter 'resposta' when calling FAQApi.alterar_using_put3" if resposta.nil?
       
       
       
@@ -272,7 +272,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'FaqResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: FAQApi#alterar_using_put2\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: FAQApi#alterar_using_put3\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -347,6 +347,7 @@ module Pier
     # Lista FAQs
     # Lista todas as FAQs
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_faq C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
@@ -357,14 +358,15 @@ module Pier
     # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
     # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
     # @return [PageFaqResponse]
-    def listar_using_get11(opts = {})
-      data, _status_code, _headers = listar_using_get11_with_http_info(opts)
+    def listar_using_get12(opts = {})
+      data, _status_code, _headers = listar_using_get12_with_http_info(opts)
       return data
     end
 
     # Lista FAQs
     # Lista todas as FAQs
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_faq C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
@@ -375,10 +377,16 @@ module Pier
     # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
     # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
     # @return [Array<(PageFaqResponse, Fixnum, Hash)>] PageFaqResponse data, response status code and response headers
-    def listar_using_get11_with_http_info(opts = {})
+    def listar_using_get12_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: FAQApi.listar_using_get11 ..."
+        @api_client.config.logger.debug "Calling API: FAQApi.listar_using_get12 ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -443,6 +451,7 @@ module Pier
 
       # query parameters
       query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'idFaq'] = opts[:'id_faq'] if opts[:'id_faq']
@@ -479,7 +488,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageFaqResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: FAQApi#listar_using_get11\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: FAQApi#listar_using_get12\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

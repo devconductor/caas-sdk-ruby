@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **nome_origem_comercial** | **String** | Nome da origem comercial | 
 **id_fantasia_basica** | **Integer** | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia Basica (id). | [optional] 
 **nome_fantasia_basica** | **String** | Nome da Fantasia Basica | 
-**id_status_conta** | **Integer** | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). | [optional] 
+**id_status_conta** | **Integer** | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta. | [optional] 
 **status_conta** | **String** | Descri\u00C3\u00A7\u00C3\u00A3o do status da conta | [optional] 
 **dia_vencimento** | **Integer** | Apresenta o dia de vencimento. | [optional] 
 **melhor_dia_compra** | **Integer** | Apresenta o melhor dia de compra. | [optional] 

@@ -65,7 +65,7 @@ describe 'StatusContaResponse' do
   end
 
 
-  describe 'test attribute "flag_altera_limite"' do
+  describe 'test attribute "permite_alterar_vencimento"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -76,7 +76,7 @@ describe 'StatusContaResponse' do
   end
 
 
-  describe 'test attribute "mensagem_consulta_negada"' do
+  describe 'test attribute "permite_alterar_limite"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -87,7 +87,7 @@ describe 'StatusContaResponse' do
   end
 
 
-  describe 'test attribute "flag_permite_nova_via_cartao"' do
+  describe 'test attribute "permite_emitir_nova_via_cartao"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -98,7 +98,7 @@ describe 'StatusContaResponse' do
   end
 
 
-  describe 'test attribute "flag_faz_transferencia"' do
+  describe 'test attribute "permite_fazer_transferencia"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -109,7 +109,51 @@ describe 'StatusContaResponse' do
   end
 
 
-  describe 'test attribute "flag_recebe_transferencia"' do
+  describe 'test attribute "permite_receber_transferencia"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "permite_criar_acordo_cobranca"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "permite_atribuir_como_bloqueio"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "permite_desbloquear"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "permite_atribuir_como_cancelamento"' do
     it 'should work' do
        # assertion here
        # should be_a()

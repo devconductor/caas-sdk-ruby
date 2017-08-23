@@ -54,29 +54,7 @@ describe 'CartaoDetalheResponse' do
   end
 
 
-  describe 'test attribute "id_status_cartao"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "id_estagio_cartao"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "id_conta"' do
+  describe 'test attribute "flag_titular"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -98,7 +76,7 @@ describe 'CartaoDetalheResponse' do
   end
 
 
-  describe 'test attribute "id_produto"' do
+  describe 'test attribute "sequencial_cartao"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -109,7 +87,62 @@ describe 'CartaoDetalheResponse' do
   end
 
 
-  describe 'test attribute "tipo_portador"' do
+  describe 'test attribute "id_conta"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "id_status"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "data_status"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "id_estagio"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "data_estagio"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "numero_bin"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -131,7 +164,7 @@ describe 'CartaoDetalheResponse' do
   end
 
 
-  describe 'test attribute "nome_impresso"' do
+  describe 'test attribute "numero_cartao_hash"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -142,7 +175,7 @@ describe 'CartaoDetalheResponse' do
   end
 
 
-  describe 'test attribute "data_geracao"' do
+  describe 'test attribute "numero_cartao_criptografado"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -153,18 +186,7 @@ describe 'CartaoDetalheResponse' do
   end
 
 
-  describe 'test attribute "data_status_cartao"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "data_estagio_cartao"' do
+  describe 'test attribute "data_emissao"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -186,6 +208,28 @@ describe 'CartaoDetalheResponse' do
   end
 
 
+  describe 'test attribute "cartao_virtual"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "impressao_avulsa"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
   describe 'test attribute "data_impressao"' do
     it 'should work' do
        # assertion here
@@ -197,51 +241,7 @@ describe 'CartaoDetalheResponse' do
   end
 
 
-  describe 'test attribute "arquivo_impressao"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "flag_impressao_origem_comercial"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "flag_virtual"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "codigo_desbloqueio"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "sequencial_cartao"' do
+  describe 'test attribute "nome_arquivo_impressao"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -263,7 +263,40 @@ describe 'CartaoDetalheResponse' do
   end
 
 
+  describe 'test attribute "id_produto"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "nome_impresso"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
   describe 'test attribute "tipo_cartao"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "codigo_desbloqueio"' do
     it 'should work' do
        # assertion here
        # should be_a()

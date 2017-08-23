@@ -80,6 +80,7 @@ describe 'PermissaoPaisesApi' do
   # Lista os pa\u00C3\u00ADses
   # Este recurso permite listar os pa\u00C3\u00ADses.
   # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [String] :codigo C\u00C3\u00B3digo do pa\u00C3\u00ADs

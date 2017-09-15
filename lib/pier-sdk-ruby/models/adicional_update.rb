@@ -52,20 +52,8 @@ module Pier
     # Data de emiss\u00C3\u00A3o do Documento de Identidade do Adicional em formato yyyy-MM-dd.
     attr_accessor :data_emissao_identidade
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional.
-    attr_accessor :id_estado_civil
-
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional.
-    attr_accessor :id_profissao
-
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional.
-    attr_accessor :id_nacionalidade
-
     # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.
     attr_accessor :id_parentesco
-
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.
-    attr_accessor :email
 
     # Lista de telefones do adicional.
     attr_accessor :telefones
@@ -93,15 +81,7 @@ module Pier
         
         :'data_emissao_identidade' => :'dataEmissaoIdentidade',
         
-        :'id_estado_civil' => :'idEstadoCivil',
-        
-        :'id_profissao' => :'idProfissao',
-        
-        :'id_nacionalidade' => :'idNacionalidade',
-        
         :'id_parentesco' => :'idParentesco',
-        
-        :'email' => :'email',
         
         :'telefones' => :'telefones'
         
@@ -130,17 +110,9 @@ module Pier
         
         :'data_emissao_identidade' => :'String',
         
-        :'id_estado_civil' => :'Integer',
-        
-        :'id_profissao' => :'Integer',
-        
-        :'id_nacionalidade' => :'Integer',
-        
         :'id_parentesco' => :'Integer',
         
-        :'email' => :'String',
-        
-        :'telefones' => :'Array<TelefoneAdicionalPersist>'
+        :'telefones' => :'Array<TelefoneAdicionalUpdate>'
         
       }
     end
@@ -235,46 +207,10 @@ module Pier
       end
 
       
-      if attributes[:'idEstadoCivil']
-        
-        
-        self.id_estado_civil = attributes[:'idEstadoCivil']
-        
-      
-      end
-
-      
-      if attributes[:'idProfissao']
-        
-        
-        self.id_profissao = attributes[:'idProfissao']
-        
-      
-      end
-
-      
-      if attributes[:'idNacionalidade']
-        
-        
-        self.id_nacionalidade = attributes[:'idNacionalidade']
-        
-      
-      end
-
-      
       if attributes[:'idParentesco']
         
         
         self.id_parentesco = attributes[:'idParentesco']
-        
-      
-      end
-
-      
-      if attributes[:'email']
-        
-        
-        self.email = attributes[:'email']
         
       
       end
@@ -360,44 +296,8 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -468,11 +368,7 @@ module Pier
           orgao_expedidor_identidade == o.orgao_expedidor_identidade &&
           unidade_federativa_identidade == o.unidade_federativa_identidade &&
           data_emissao_identidade == o.data_emissao_identidade &&
-          id_estado_civil == o.id_estado_civil &&
-          id_profissao == o.id_profissao &&
-          id_nacionalidade == o.id_nacionalidade &&
           id_parentesco == o.id_parentesco &&
-          email == o.email &&
           telefones == o.telefones
     end
 
@@ -485,7 +381,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [nome, nome_impresso, numero_receita_federal, data_nascimento, sexo, numero_identidade, orgao_expedidor_identidade, unidade_federativa_identidade, data_emissao_identidade, id_estado_civil, id_profissao, id_nacionalidade, id_parentesco, email, telefones].hash
+      [nome, nome_impresso, numero_receita_federal, data_nascimento, sexo, numero_identidade, orgao_expedidor_identidade, unidade_federativa_identidade, data_emissao_identidade, id_parentesco, telefones].hash
     end
 
     # Builds the object from hash

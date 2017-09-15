@@ -43,6 +43,17 @@ describe 'BoletoResponse' do
     end
   end
 
+  describe 'test attribute "numero_do_documento"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
   describe 'test attribute "data_processamento"' do
     it 'should work' do
        # assertion here
@@ -76,6 +87,17 @@ describe 'BoletoResponse' do
   end
 
 
+  describe 'test attribute "data_fechamento"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
   describe 'test attribute "valor_boleto"' do
     it 'should work' do
        # assertion here
@@ -87,7 +109,7 @@ describe 'BoletoResponse' do
   end
 
 
-  describe 'test attribute "numero_do_documento"' do
+  describe 'test attribute "nome_beneficiario"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -98,7 +120,7 @@ describe 'BoletoResponse' do
   end
 
 
-  describe 'test attribute "nome_beneficiario"' do
+  describe 'test attribute "documento_beneficiario"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -131,7 +153,7 @@ describe 'BoletoResponse' do
   end
 
 
-  describe 'test attribute "digito_codigo_beneficiario"' do
+  describe 'test attribute "numero_convenio"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -142,7 +164,7 @@ describe 'BoletoResponse' do
   end
 
 
-  describe 'test attribute "numero_convenio"' do
+  describe 'test attribute "digito_codigo_beneficiario"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -175,7 +197,7 @@ describe 'BoletoResponse' do
   end
 
 
-  describe 'test attribute "banco"' do
+  describe 'test attribute "digito_nosso_numero"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -186,7 +208,7 @@ describe 'BoletoResponse' do
   end
 
 
-  describe 'test attribute "digito_nosso_numero"' do
+  describe 'test attribute "banco"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -253,17 +275,6 @@ describe 'BoletoResponse' do
 
 
   describe 'test attribute "nome_pagador"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "documento_beneficiario"' do
     it 'should work' do
        # assertion here
        # should be_a()

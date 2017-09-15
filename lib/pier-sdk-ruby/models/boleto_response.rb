@@ -25,6 +25,9 @@ require 'date'
 module Pier
   # Representa\u00C3\u00A7\u00C3\u00A3o da resposta do boleto de fatura
   class BoletoResponse
+    # N\u00C3\u00BAmero do documento \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco para identifica\u00C3\u00A7\u00C3\u00A3o do cliente
+    attr_accessor :numero_do_documento
+
     # Data do processamento (emiss\u00C3\u00A3o ou faturamento) do boleto
     attr_accessor :data_processamento
 
@@ -34,14 +37,17 @@ module Pier
     # Data do vencimento
     attr_accessor :data_vencimento
 
+    # Data do fechamento
+    attr_accessor :data_fechamento
+
     # Valor do Boleto.
     attr_accessor :valor_boleto
 
-    # N\u00C3\u00BAmero do documento \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco para identifica\u00C3\u00A7\u00C3\u00A3o do cliente
-    attr_accessor :numero_do_documento
-
     # Benefici\u00C3\u00A1rio \u00C3\u00A9 a pessoa/empresa que gera o boleto
     attr_accessor :nome_beneficiario
+
+    # Documento do Beneficiario.
+    attr_accessor :documento_beneficiario
 
     # Ag\u00C3\u00AAncia.
     attr_accessor :agencia
@@ -49,11 +55,11 @@ module Pier
     # C\u00C3\u00B3digo do benefici\u00C3\u00A1rio
     attr_accessor :codigo_beneficiario
 
-    # D\u00C3\u00ADgito do c\u00C3\u00B3digo do benefici\u00C3\u00A1rio
-    attr_accessor :digito_codigo_beneficiario
-
     # N\u00C3\u00BAmero do conv\u00C3\u00AAnio fornecido pelo banco \u00C3\u00A9 o c\u00C3\u00B3digo que identifica um emissor junto ao seu banco para associar seus boletos.
     attr_accessor :numero_convenio
+
+    # D\u00C3\u00ADgito do c\u00C3\u00B3digo do benefici\u00C3\u00A1rio
+    attr_accessor :digito_codigo_beneficiario
 
     # Carteira \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco pra identifica\u00C3\u00A7\u00C3\u00A3o do tipo do boleto
     attr_accessor :carteira
@@ -61,11 +67,11 @@ module Pier
     # Nosso n\u00C3\u00BAmero \u00C3\u00A9 o c\u00C3\u00B3digo que o benefici\u00C3\u00A1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00C3\u00A3o. Recomenda-se o uso de n\u00C3\u00BAmeros sequ\u00C3\u00AAnciais, na gera\u00C3\u00A7\u00C3\u00A3o de diversos boletos, para facilitar a identifica\u00C3\u00A7\u00C3\u00A3o dos boletos pagos
     attr_accessor :nosso_numero
 
-    # Banco
-    attr_accessor :banco
-
     # D\u00C3\u00ADgito do nosso n\u00C3\u00BAmero
     attr_accessor :digito_nosso_numero
+
+    # Banco
+    attr_accessor :banco
 
     # Aceite informa ao banco se deve aceitar o boleto ap\u00C3\u00B3s a data de vencimento (padr\u00C3\u00A3o: \"N\")
     attr_accessor :aceite
@@ -84,9 +90,6 @@ module Pier
 
     # Pagador \u00C3\u00A9 a pessoa/empresa que deve pagar o boleto
     attr_accessor :nome_pagador
-
-    # Documento do Beneficiario.
-    attr_accessor :documento_beneficiario
 
     # Documento do pagador (CPF ou CNPJ)
     attr_accessor :documento_pagador
@@ -117,33 +120,37 @@ module Pier
     def self.attribute_map
       {
         
+        :'numero_do_documento' => :'numeroDoDocumento',
+        
         :'data_processamento' => :'dataProcessamento',
         
         :'data_documento' => :'dataDocumento',
         
         :'data_vencimento' => :'dataVencimento',
         
+        :'data_fechamento' => :'dataFechamento',
+        
         :'valor_boleto' => :'valorBoleto',
         
-        :'numero_do_documento' => :'numeroDoDocumento',
-        
         :'nome_beneficiario' => :'nomeBeneficiario',
+        
+        :'documento_beneficiario' => :'documentoBeneficiario',
         
         :'agencia' => :'agencia',
         
         :'codigo_beneficiario' => :'codigoBeneficiario',
         
-        :'digito_codigo_beneficiario' => :'digitoCodigoBeneficiario',
-        
         :'numero_convenio' => :'numeroConvenio',
+        
+        :'digito_codigo_beneficiario' => :'digitoCodigoBeneficiario',
         
         :'carteira' => :'carteira',
         
         :'nosso_numero' => :'nossoNumero',
         
-        :'banco' => :'banco',
-        
         :'digito_nosso_numero' => :'digitoNossoNumero',
+        
+        :'banco' => :'banco',
         
         :'aceite' => :'aceite',
         
@@ -156,8 +163,6 @@ module Pier
         :'locais_de_pagamento' => :'locaisDePagamento',
         
         :'nome_pagador' => :'nomePagador',
-        
-        :'documento_beneficiario' => :'documentoBeneficiario',
         
         :'documento_pagador' => :'documentoPagador',
         
@@ -182,33 +187,37 @@ module Pier
     def self.swagger_types
       {
         
+        :'numero_do_documento' => :'String',
+        
         :'data_processamento' => :'String',
         
         :'data_documento' => :'String',
         
         :'data_vencimento' => :'String',
         
+        :'data_fechamento' => :'String',
+        
         :'valor_boleto' => :'Float',
         
-        :'numero_do_documento' => :'String',
-        
         :'nome_beneficiario' => :'String',
+        
+        :'documento_beneficiario' => :'String',
         
         :'agencia' => :'String',
         
         :'codigo_beneficiario' => :'String',
         
-        :'digito_codigo_beneficiario' => :'String',
-        
         :'numero_convenio' => :'String',
+        
+        :'digito_codigo_beneficiario' => :'String',
         
         :'carteira' => :'String',
         
         :'nosso_numero' => :'String',
         
-        :'banco' => :'String',
-        
         :'digito_nosso_numero' => :'String',
+        
+        :'banco' => :'String',
         
         :'aceite' => :'BOOLEAN',
         
@@ -221,8 +230,6 @@ module Pier
         :'locais_de_pagamento' => :'Array<String>',
         
         :'nome_pagador' => :'String',
-        
-        :'documento_beneficiario' => :'String',
         
         :'documento_pagador' => :'String',
         
@@ -252,6 +259,15 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
+      if attributes[:'numeroDoDocumento']
+        
+        
+        self.numero_do_documento = attributes[:'numeroDoDocumento']
+        
+      
+      end
+
+      
       if attributes[:'dataProcessamento']
         
         
@@ -279,6 +295,15 @@ module Pier
       end
 
       
+      if attributes[:'dataFechamento']
+        
+        
+        self.data_fechamento = attributes[:'dataFechamento']
+        
+      
+      end
+
+      
       if attributes[:'valorBoleto']
         
         
@@ -288,19 +313,19 @@ module Pier
       end
 
       
-      if attributes[:'numeroDoDocumento']
+      if attributes[:'nomeBeneficiario']
         
         
-        self.numero_do_documento = attributes[:'numeroDoDocumento']
+        self.nome_beneficiario = attributes[:'nomeBeneficiario']
         
       
       end
 
       
-      if attributes[:'nomeBeneficiario']
+      if attributes[:'documentoBeneficiario']
         
         
-        self.nome_beneficiario = attributes[:'nomeBeneficiario']
+        self.documento_beneficiario = attributes[:'documentoBeneficiario']
         
       
       end
@@ -324,19 +349,19 @@ module Pier
       end
 
       
-      if attributes[:'digitoCodigoBeneficiario']
+      if attributes[:'numeroConvenio']
         
         
-        self.digito_codigo_beneficiario = attributes[:'digitoCodigoBeneficiario']
+        self.numero_convenio = attributes[:'numeroConvenio']
         
       
       end
 
       
-      if attributes[:'numeroConvenio']
+      if attributes[:'digitoCodigoBeneficiario']
         
         
-        self.numero_convenio = attributes[:'numeroConvenio']
+        self.digito_codigo_beneficiario = attributes[:'digitoCodigoBeneficiario']
         
       
       end
@@ -360,19 +385,19 @@ module Pier
       end
 
       
-      if attributes[:'banco']
+      if attributes[:'digitoNossoNumero']
         
         
-        self.banco = attributes[:'banco']
+        self.digito_nosso_numero = attributes[:'digitoNossoNumero']
         
       
       end
 
       
-      if attributes[:'digitoNossoNumero']
+      if attributes[:'banco']
         
         
-        self.digito_nosso_numero = attributes[:'digitoNossoNumero']
+        self.banco = attributes[:'banco']
         
       
       end
@@ -431,15 +456,6 @@ module Pier
         
         
         self.nome_pagador = attributes[:'nomePagador']
-        
-      
-      end
-
-      
-      if attributes[:'documentoBeneficiario']
-        
-        
-        self.documento_beneficiario = attributes[:'documentoBeneficiario']
         
       
       end
@@ -648,8 +664,17 @@ module Pier
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -801,27 +826,28 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          numero_do_documento == o.numero_do_documento &&
           data_processamento == o.data_processamento &&
           data_documento == o.data_documento &&
           data_vencimento == o.data_vencimento &&
+          data_fechamento == o.data_fechamento &&
           valor_boleto == o.valor_boleto &&
-          numero_do_documento == o.numero_do_documento &&
           nome_beneficiario == o.nome_beneficiario &&
+          documento_beneficiario == o.documento_beneficiario &&
           agencia == o.agencia &&
           codigo_beneficiario == o.codigo_beneficiario &&
-          digito_codigo_beneficiario == o.digito_codigo_beneficiario &&
           numero_convenio == o.numero_convenio &&
+          digito_codigo_beneficiario == o.digito_codigo_beneficiario &&
           carteira == o.carteira &&
           nosso_numero == o.nosso_numero &&
-          banco == o.banco &&
           digito_nosso_numero == o.digito_nosso_numero &&
+          banco == o.banco &&
           aceite == o.aceite &&
           especie_do_documento == o.especie_do_documento &&
           especie == o.especie &&
           instrucoes == o.instrucoes &&
           locais_de_pagamento == o.locais_de_pagamento &&
           nome_pagador == o.nome_pagador &&
-          documento_beneficiario == o.documento_beneficiario &&
           documento_pagador == o.documento_pagador &&
           logradouro_pagador == o.logradouro_pagador &&
           bairro_pagador == o.bairro_pagador &&
@@ -841,7 +867,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [data_processamento, data_documento, data_vencimento, valor_boleto, numero_do_documento, nome_beneficiario, agencia, codigo_beneficiario, digito_codigo_beneficiario, numero_convenio, carteira, nosso_numero, banco, digito_nosso_numero, aceite, especie_do_documento, especie, instrucoes, locais_de_pagamento, nome_pagador, documento_beneficiario, documento_pagador, logradouro_pagador, bairro_pagador, cep_pagador, cidade_pagador, uf_pagador, codigo_de_barras, linha_digitavel].hash
+      [numero_do_documento, data_processamento, data_documento, data_vencimento, data_fechamento, valor_boleto, nome_beneficiario, documento_beneficiario, agencia, codigo_beneficiario, numero_convenio, digito_codigo_beneficiario, carteira, nosso_numero, digito_nosso_numero, banco, aceite, especie_do_documento, especie, instrucoes, locais_de_pagamento, nome_pagador, documento_pagador, logradouro_pagador, bairro_pagador, cep_pagador, cidade_pagador, uf_pagador, codigo_de_barras, linha_digitavel].hash
     end
 
     # Builds the object from hash

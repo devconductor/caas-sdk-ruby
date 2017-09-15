@@ -283,8 +283,8 @@ module Pier
     # @param id Id
     # @param [Hash] opts the optional parameters
     # @return [FaqResponse]
-    def consultar_using_get8(id, opts = {})
-      data, _status_code, _headers = consultar_using_get8_with_http_info(id, opts)
+    def consultar_using_get9(id, opts = {})
+      data, _status_code, _headers = consultar_using_get9_with_http_info(id, opts)
       return data
     end
 
@@ -293,14 +293,14 @@ module Pier
     # @param id Id
     # @param [Hash] opts the optional parameters
     # @return [Array<(FaqResponse, Fixnum, Hash)>] FaqResponse data, response status code and response headers
-    def consultar_using_get8_with_http_info(id, opts = {})
+    def consultar_using_get9_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: FAQApi.consultar_using_get8 ..."
+        @api_client.config.logger.debug "Calling API: FAQApi.consultar_using_get9 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling FAQApi.consultar_using_get8" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling FAQApi.consultar_using_get9" if id.nil?
       
       
       
@@ -338,7 +338,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'FaqResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: FAQApi#consultar_using_get8\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: FAQApi#consultar_using_get9\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

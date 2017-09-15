@@ -202,7 +202,7 @@ module Pier
       
       
       
-      allowed_values = ["RECUPERAR_SENHA", "VALIDAR_DISPOSITIVO"]
+      allowed_values = ["RECUPERAR_SENHA", "FATURA_POR_EMAIL", "VALIDAR_DISPOSITIVO"]
       if @tipo_layout && !allowed_values.include?(@tipo_layout)
         return false
       end
@@ -251,7 +251,7 @@ module Pier
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] tipo_layout Object to be assigned
     def tipo_layout=(tipo_layout)
-      allowed_values = ["RECUPERAR_SENHA", "VALIDAR_DISPOSITIVO"]
+      allowed_values = ["RECUPERAR_SENHA", "FATURA_POR_EMAIL", "VALIDAR_DISPOSITIVO"]
       if tipo_layout && !allowed_values.include?(tipo_layout)
         fail ArgumentError, "invalid value for 'tipo_layout', must be one of #{allowed_values}."
       end

@@ -43,17 +43,6 @@ describe 'CartaoImpressaoResponse' do
     end
   end
 
-  describe 'test attribute "flag_virtual"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
   describe 'test attribute "id_conta"' do
     it 'should work' do
        # assertion here
@@ -286,6 +275,17 @@ describe 'CartaoImpressaoResponse' do
 
 
   describe 'test attribute "trilha_cvv2"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "flag_virtual"' do
     it 'should work' do
        # assertion here
        # should be_a()

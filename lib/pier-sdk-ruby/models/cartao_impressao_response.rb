@@ -25,8 +25,6 @@ require 'date'
 module Pier
   # Objeto Cart\u00C3\u00A3o para Impresso
   class CartaoImpressaoResponse
-    attr_accessor :flag_virtual
-
     # Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence.
     attr_accessor :id_conta
 
@@ -93,6 +91,9 @@ module Pier
     # Apresenta os dados da TrilhaCVV02, seguindo as regras de trilha do emissor.
     attr_accessor :trilha_cvv2
 
+    # Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual 
+    attr_accessor :flag_virtual
+
     # Apresenta o numero da hash do cart\u00C3\u00A3o 
     attr_accessor :numero_cartao_hash
 
@@ -100,8 +101,6 @@ module Pier
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        
-        :'flag_virtual' => :'flagVirtual',
         
         :'id_conta' => :'idConta',
         
@@ -147,6 +146,8 @@ module Pier
         
         :'trilha_cvv2' => :'trilhaCVV2',
         
+        :'flag_virtual' => :'flagVirtual',
+        
         :'numero_cartao_hash' => :'numeroCartaoHash'
         
       }
@@ -155,8 +156,6 @@ module Pier
     # Attribute type mapping.
     def self.swagger_types
       {
-        
-        :'flag_virtual' => :'Integer',
         
         :'id_conta' => :'Integer',
         
@@ -202,6 +201,8 @@ module Pier
         
         :'trilha_cvv2' => :'String',
         
+        :'flag_virtual' => :'Integer',
+        
         :'numero_cartao_hash' => :'Integer'
         
       }
@@ -214,15 +215,6 @@ module Pier
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
-
-      
-      if attributes[:'flagVirtual']
-        
-        
-        self.flag_virtual = attributes[:'flagVirtual']
-        
-      
-      end
 
       
       if attributes[:'idConta']
@@ -418,6 +410,15 @@ module Pier
         
         
         self.trilha_cvv2 = attributes[:'trilhaCVV2']
+        
+      
+      end
+
+      
+      if attributes[:'flagVirtual']
+        
+        
+        self.flag_virtual = attributes[:'flagVirtual']
         
       
       end
@@ -671,7 +672,6 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          flag_virtual == o.flag_virtual &&
           id_conta == o.id_conta &&
           id_pessoa == o.id_pessoa &&
           id_cartao == o.id_cartao &&
@@ -694,6 +694,7 @@ module Pier
           trilha2 == o.trilha2 &&
           trilha_cvv1 == o.trilha_cvv1 &&
           trilha_cvv2 == o.trilha_cvv2 &&
+          flag_virtual == o.flag_virtual &&
           numero_cartao_hash == o.numero_cartao_hash
     end
 
@@ -706,7 +707,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [flag_virtual, id_conta, id_pessoa, id_cartao, id_bandeira, id_tipo_cartao, numero_cartao, nome_plastico, cvv2, data_geracao, data_validade, nome_origem_comercial, nome_empresa, numero_agencia, numero_conta_corente, nome_empresa_beneficio, cpf, tipo_portador, nome_empregador, trilha1, trilha2, trilha_cvv1, trilha_cvv2, numero_cartao_hash].hash
+      [id_conta, id_pessoa, id_cartao, id_bandeira, id_tipo_cartao, numero_cartao, nome_plastico, cvv2, data_geracao, data_validade, nome_origem_comercial, nome_empresa, numero_agencia, numero_conta_corente, nome_empresa_beneficio, cpf, tipo_portador, nome_empregador, trilha1, trilha2, trilha_cvv1, trilha_cvv2, flag_virtual, numero_cartao_hash].hash
     end
 
     # Builds the object from hash

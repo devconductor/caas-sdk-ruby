@@ -221,13 +221,13 @@ describe 'CartaoApi' do
   end
 
 
-  # unit tests for consultar_using_get4
+  # unit tests for consultar_using_get5
   # Apresenta os dados de um determinado Cart\u00C3\u00A3o
   # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
   # @param [Hash] opts the optional parameters
   # @return [CartaoDetalheResponse]
-  describe 'consultar_using_get4 test' do
+  describe 'consultar_using_get5 test' do
     it "should work" do
       # assertion here
       # should be_a()

@@ -29,6 +29,9 @@ require 'pier-sdk-ruby/configuration'
 # Models
 
 
+require 'pier-sdk-ruby/models/adicional_detalhe_response'
+
+
 require 'pier-sdk-ruby/models/adicional_persist'
 
 
@@ -39,6 +42,9 @@ require 'pier-sdk-ruby/models/adicional_update'
 
 
 require 'pier-sdk-ruby/models/ajuste_response'
+
+
+require 'pier-sdk-ruby/models/alterar_produto_request'
 
 
 require 'pier-sdk-ruby/models/antecipacao_response'
@@ -107,6 +113,15 @@ require 'pier-sdk-ruby/models/cancelamento_transacao_on_us_request'
 require 'pier-sdk-ruby/models/cartao_detalhe_response'
 
 
+require 'pier-sdk-ruby/models/cartao_embossing_request'
+
+
+require 'pier-sdk-ruby/models/cartao_embossing_response'
+
+
+require 'pier-sdk-ruby/models/cartao_impressao_provisorio_response'
+
+
 require 'pier-sdk-ruby/models/cartao_impressao_response'
 
 
@@ -171,6 +186,12 @@ require 'pier-sdk-ruby/models/dispositivo_response'
 
 
 require 'pier-sdk-ruby/models/divida_cliente_response'
+
+
+require 'pier-sdk-ruby/models/emprestimo_pessoal_request'
+
+
+require 'pier-sdk-ruby/models/emprestimo_pessoal_response'
 
 
 require 'pier-sdk-ruby/models/endereco_aprovado_persist'
@@ -437,6 +458,9 @@ require 'pier-sdk-ruby/models/page_tipo_oportunidade_response'
 require 'pier-sdk-ruby/models/page_tipo_telefone_response'
 
 
+require 'pier-sdk-ruby/models/page_transacao_nao_processada_response'
+
+
 require 'pier-sdk-ruby/models/page_transacao_response'
 
 
@@ -480,6 +504,9 @@ require 'pier-sdk-ruby/models/pessoa_persist'
 
 
 require 'pier-sdk-ruby/models/pessoa_response'
+
+
+require 'pier-sdk-ruby/models/plano_parcelamento_emprestimo_response'
 
 
 require 'pier-sdk-ruby/models/plano_parcelamento_response'
@@ -551,6 +578,9 @@ require 'pier-sdk-ruby/models/taxas_refinanciamento_response'
 require 'pier-sdk-ruby/models/telefone_adicional_persist'
 
 
+require 'pier-sdk-ruby/models/telefone_adicional_update'
+
+
 require 'pier-sdk-ruby/models/telefone_pessoa_aprovada_persist'
 
 
@@ -575,6 +605,9 @@ require 'pier-sdk-ruby/models/tipo_boleto_response'
 require 'pier-sdk-ruby/models/tipo_endereco_response'
 
 
+require 'pier-sdk-ruby/models/tipo_operacao_response'
+
+
 require 'pier-sdk-ruby/models/tipo_oportunidade'
 
 
@@ -594,6 +627,12 @@ require 'pier-sdk-ruby/models/token_response'
 
 
 require 'pier-sdk-ruby/models/transacao_corrente_response'
+
+
+require 'pier-sdk-ruby/models/transacao_nao_processada_response'
+
+
+require 'pier-sdk-ruby/models/transacao_on_us_por_id_cartao_request'
 
 
 require 'pier-sdk-ruby/models/transacao_on_us_request'
@@ -635,55 +674,59 @@ require 'pier-sdk-ruby/models/web_hook_response'
 # APIs
 
 
-require 'pier-sdk-ruby/api/antecipacoes_api'
+require 'pier-sdk-ruby/api/antecipacao_api'
 
-require 'pier-sdk-ruby/api/aplicacoes_mobile_api'
+require 'pier-sdk-ruby/api/aplicacao_mobile_api'
 
-require 'pier-sdk-ruby/api/arquivos_api'
+require 'pier-sdk-ruby/api/arquivo_api'
 
-require 'pier-sdk-ruby/api/autorizacoes_api'
+require 'pier-sdk-ruby/api/autorizacao_api'
 
 require 'pier-sdk-ruby/api/base_api'
 
-require 'pier-sdk-ruby/api/cadastros_clientes_api'
+require 'pier-sdk-ruby/api/cadastro_cliente_api'
 
-require 'pier-sdk-ruby/api/cadastros_gerais_api'
+require 'pier-sdk-ruby/api/cadastro_geral_api'
 
 require 'pier-sdk-ruby/api/cartao_api'
 
 require 'pier-sdk-ruby/api/conta_api'
 
-require 'pier-sdk-ruby/api/dispositivos_api'
+require 'pier-sdk-ruby/api/dispositivo_api'
 
-require 'pier-sdk-ruby/api/enderecos_nacionais_api'
+require 'pier-sdk-ruby/api/endereco_nacional_api'
 
-require 'pier-sdk-ruby/api/estabelecimentos_api'
+require 'pier-sdk-ruby/api/estabelecimento_api'
 
 require 'pier-sdk-ruby/api/faq_api'
 
-require 'pier-sdk-ruby/api/gestao_limites_api'
+require 'pier-sdk-ruby/api/fatura_api'
 
-require 'pier-sdk-ruby/api/jobs_api'
+require 'pier-sdk-ruby/api/job_api'
 
-require 'pier-sdk-ruby/api/notificacoes_api'
+require 'pier-sdk-ruby/api/limite_api'
 
-require 'pier-sdk-ruby/api/oportunidades_api'
+require 'pier-sdk-ruby/api/mock_api'
 
-require 'pier-sdk-ruby/api/permissao_paises_api'
+require 'pier-sdk-ruby/api/notificacao_api'
 
-require 'pier-sdk-ruby/api/plataformas_mobile_api'
+require 'pier-sdk-ruby/api/oportunidade_api'
+
+require 'pier-sdk-ruby/api/permissao_pais_api'
+
+require 'pier-sdk-ruby/api/plataforma_mobile_api'
 
 require 'pier-sdk-ruby/api/risco_fraude_api'
 
-require 'pier-sdk-ruby/api/servicos_conta_api'
+require 'pier-sdk-ruby/api/servico_conta_api'
 
-require 'pier-sdk-ruby/api/status_parametros_api'
+require 'pier-sdk-ruby/api/status_parametro_api'
 
 require 'pier-sdk-ruby/api/token_api'
 
-require 'pier-sdk-ruby/api/usuarios_api'
+require 'pier-sdk-ruby/api/usuario_api'
 
-require 'pier-sdk-ruby/api/webhooks_api'
+require 'pier-sdk-ruby/api/webhook_api'
 
 
 

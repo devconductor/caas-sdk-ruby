@@ -164,51 +164,7 @@ describe 'AdicionalResponse' do
   end
 
 
-  describe 'test attribute "id_estado_civil"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "id_profissao"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "id_nacionalidade"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
   describe 'test attribute "id_parentesco"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "email"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -230,7 +186,18 @@ describe 'AdicionalResponse' do
   end
 
 
-  describe 'test attribute "telefones"' do
+  describe 'test attribute "data_cadastro_portador"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "data_cancelamento_portador"' do
     it 'should work' do
        # assertion here
        # should be_a()

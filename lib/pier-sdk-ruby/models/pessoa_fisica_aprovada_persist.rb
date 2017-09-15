@@ -202,7 +202,7 @@ module Pier
         
         :'id_estado_civil' => :'Integer',
         
-        :'id_profissao' => :'Integer',
+        :'id_profissao' => :'String',
         
         :'id_natureza_ocupacao' => :'Integer',
         

@@ -489,10 +489,6 @@ module Pier
       
       
       
-      if @nome.nil?
-        return false
-      end
-
       
       
       
@@ -506,10 +502,6 @@ module Pier
       
       
       
-      if @nome_origem_comercial.nil?
-        return false
-      end
-
       
       
       
@@ -519,10 +511,6 @@ module Pier
       
       
       
-      if @nome_fantasia_basica.nil?
-        return false
-      end
-
       
       
       
@@ -580,37 +568,14 @@ module Pier
       
       
       
-      if @limite_global.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @limite_saque_global.nil?
-        return false
-      end
-
       
       
       
-      
-      
-      if @saldo_disponivel_global.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @saldo_disponivel_saque.nil?
-        return false
-      end
-
       
       
       

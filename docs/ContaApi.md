@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ajustar_conta_using_post**](ContaApi.md#ajustar_conta_using_post) | **POST** /api/contas/{id}/ajustes-financeiros | Lan\u00C3\u00A7a um ajuste para a conta do id informado
 [**alterar_limite_using_put**](ContaApi.md#alterar_limite_using_put) | **PUT** /api/contas/{id}/alterar-limites | Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
-[**alterar_produto_using_post**](ContaApi.md#alterar_produto_using_post) | **POST** /api/contas/{id}/alterar-produto | Altera o produto associado \u00C3\u00A0 conta.
 [**alterar_titular_using_post**](ContaApi.md#alterar_titular_using_post) | **POST** /api/contas/{id}/alterar-titular | Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
 [**alterar_vencimento_using_put**](ContaApi.md#alterar_vencimento_using_put) | **PUT** /api/contas/{id}/alterar-vencimento | Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
 [**ativar_anuidade_using_post**](ContaApi.md#ativar_anuidade_using_post) | **POST** /api/contas/{id}/atribuir-anuidade | Atribuir Anuidade
@@ -19,16 +18,15 @@ Method | HTTP request | Description
 [**consultar_fatura_consignada_using_get**](ContaApi.md#consultar_fatura_consignada_using_get) | **GET** /api/contas/{id}/faturas-consignadas/{id_fatura} | Apresenta dados de uma determinada fatura consignada
 [**consultar_fatura_using_get**](ContaApi.md#consultar_fatura_using_get) | **GET** /api/contas/{id}/faturas/consultar-fechada | Consultar Fatura da Conta
 [**consultar_lancamentos_futuros_fatura_using_get**](ContaApi.md#consultar_lancamentos_futuros_fatura_using_get) | **GET** /api/contas/{id}/faturas/consultar-aberta | Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
-[**consultar_lancamentos_futuros_fatura_using_get1**](ContaApi.md#consultar_lancamentos_futuros_fatura_using_get1) | **GET** /api/contas/{id}/faturas/planos-parcelamento | Listar planos de parcelamento
 [**consultar_limite_disponibilidade_using_get1**](ContaApi.md#consultar_limite_disponibilidade_using_get1) | **GET** /api/contas/{id}/limites-disponibilidades | Apresenta os limites da conta
 [**consultar_taxas_tarifas_using_get**](ContaApi.md#consultar_taxas_tarifas_using_get) | **GET** /api/contas/{id}/consultar-taxas-tarifas | Permite consultar a partir do ID da conta as taxas e tarifas
-[**consultar_using_get24**](ContaApi.md#consultar_using_get24) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-[**consultar_using_get25**](ContaApi.md#consultar_using_get25) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-[**consultar_using_get5**](ContaApi.md#consultar_using_get5) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
+[**consultar_using_get26**](ContaApi.md#consultar_using_get26) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+[**consultar_using_get27**](ContaApi.md#consultar_using_get27) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+[**consultar_using_get6**](ContaApi.md#consultar_using_get6) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
 [**desativar_envio_fatura_email_using_post**](ContaApi.md#desativar_envio_fatura_email_using_post) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00C3\u00A7o de envio de fatura por email
-[**enviar_fatura_email_using_post**](ContaApi.md#enviar_fatura_email_using_post) | **POST** /api/contas/{id}/faturas/{dataVencimento}/enviar-email | Envia 2\u00C2\u00AA via de fatura por E-mail
 [**gerar_boleto_recarga_using_post**](ContaApi.md#gerar_boleto_recarga_using_post) | **POST** /api/contas/{id}/gerar-boleto-recarga | Gera um boleto de recarga
 [**gerar_cartao_embossing_using_post**](ContaApi.md#gerar_cartao_embossing_using_post) | **POST** /api/contas/{id}/gerar-cartao-grafica | Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
+[**gerar_cartao_provisorio_using_post**](ContaApi.md#gerar_cartao_provisorio_using_post) | **POST** /api/contas/{id}/gerar-cartao-provisorio | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
 [**gerar_cartao_using_post**](ContaApi.md#gerar_cartao_using_post) | **POST** /api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
 [**gerar_cartao_virtual_using_post**](ContaApi.md#gerar_cartao_virtual_using_post) | **POST** /api/contas/{id}/gerar-cartao-virtual | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
 [**listar_faturas_consignadas_using_get**](ContaApi.md#listar_faturas_consignadas_using_get) | **GET** /api/contas/{id}/faturas-consignadas | Lista as faturas consignadas da conta
@@ -174,59 +172,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**LimiteDisponibilidadeResponse**](LimiteDisponibilidadeResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **alterar_produto_using_post**
-> PageContaHistoricoPagamentoResponse alterar_produto_using_post(id, id_produto)
-
-Altera o produto associado \u00C3\u00A0 conta.
-
-O recurso permite fazer modifica\u00C3\u00A7\u00C3\u00A3o do produto associado \u00C3\u00A0 conta.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::ContaApi.new
-
-id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-
-id_produto = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do novo produto a ser associado (idProduto).
-
-
-begin
-  #Altera o produto associado \u00C3\u00A0 conta.
-  result = api_instance.alterar_produto_using_post(id, id_produto)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->alterar_produto_using_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **id_produto** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do novo produto a ser associado (idProduto). | 
-
-
-### Return type
-
-[**PageContaHistoricoPagamentoResponse**](PageContaHistoricoPagamentoResponse.md)
 
 ### Authorization
 
@@ -897,69 +842,6 @@ No authorization required
 
 
 
-# **consultar_lancamentos_futuros_fatura_using_get1**
-> PagePlanoParcelamentoResponse consultar_lancamentos_futuros_fatura_using_get1(id, data_vencimento_padrao, opts)
-
-Listar planos de parcelamento
-
-Lista os planos de parcelamento da fatura de uma conta.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::ContaApi.new
-
-id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-
-data_vencimento_padrao = "data_vencimento_padrao_example" # String | Indica a data de vencimento padr\u00C3\u00A3o das faturas
-
-opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  quantidade_parcelas: 56 # Integer | 
-}
-
-begin
-  #Listar planos de parcelamento
-  result = api_instance.consultar_lancamentos_futuros_fatura_using_get1(id, data_vencimento_padrao, opts)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->consultar_lancamentos_futuros_fatura_using_get1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **data_vencimento_padrao** | **String**| Indica a data de vencimento padr\u00C3\u00A3o das faturas | 
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **quantidade_parcelas** | **Integer**|  | [optional] 
-
-
-### Return type
-
-[**PagePlanoParcelamentoResponse**](PagePlanoParcelamentoResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
 # **consultar_limite_disponibilidade_using_get1**
 > LimiteDisponibilidadeResponse consultar_limite_disponibilidade_using_get1(id)
 
@@ -1068,8 +950,8 @@ No authorization required
 
 
 
-# **consultar_using_get24**
-> TransferenciaBancariaResponse consultar_using_get24(id, id_transferencia, opts)
+# **consultar_using_get26**
+> TransferenciaBancariaResponse consultar_using_get26(id, id_transferencia, opts)
 
 Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
 
@@ -1093,10 +975,10 @@ opts = {
 
 begin
   #Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-  result = api_instance.consultar_using_get24(id, id_transferencia, opts)
+  result = api_instance.consultar_using_get26(id, id_transferencia, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->consultar_using_get24: #{e}"
+  puts "Exception when calling ContaApi->consultar_using_get26: #{e}"
 end
 ```
 
@@ -1125,8 +1007,8 @@ No authorization required
 
 
 
-# **consultar_using_get25**
-> PageTransferenciaResponse consultar_using_get25(id, id_transferencia)
+# **consultar_using_get27**
+> PageTransferenciaResponse consultar_using_get27(id, id_transferencia)
 
 Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 
@@ -1147,10 +1029,10 @@ id_transferencia = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u
 
 begin
   #Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-  result = api_instance.consultar_using_get25(id, id_transferencia)
+  result = api_instance.consultar_using_get27(id, id_transferencia)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->consultar_using_get25: #{e}"
+  puts "Exception when calling ContaApi->consultar_using_get27: #{e}"
 end
 ```
 
@@ -1178,8 +1060,8 @@ No authorization required
 
 
 
-# **consultar_using_get5**
-> ContaDetalheResponse consultar_using_get5(id)
+# **consultar_using_get6**
+> ContaDetalheResponse consultar_using_get6(id)
 
 Apresenta dados de uma determinada conta
 
@@ -1198,10 +1080,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da
 
 begin
   #Apresenta dados de uma determinada conta
-  result = api_instance.consultar_using_get5(id)
+  result = api_instance.consultar_using_get6(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->consultar_using_get5: #{e}"
+  puts "Exception when calling ContaApi->consultar_using_get6: #{e}"
 end
 ```
 
@@ -1278,63 +1160,6 @@ No authorization required
 
 
 
-# **enviar_fatura_email_using_post**
-> String enviar_fatura_email_using_post(id, data_vencimento, opts)
-
-Envia 2\u00C2\u00AA via de fatura por E-mail
-
-Envia a segunda via da fatura para o e-mail informado/cadastrado.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::ContaApi.new
-
-id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-
-data_vencimento = "data_vencimento_example" # String | Data de Vencimento da fatura.
-
-opts = { 
-  email: "email_example" # String | E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado.
-}
-
-begin
-  #Envia 2\u00C2\u00AA via de fatura por E-mail
-  result = api_instance.enviar_fatura_email_using_post(id, data_vencimento, opts)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->enviar_fatura_email_using_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **data_vencimento** | **String**| Data de Vencimento da fatura. | 
- **email** | **String**| E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado. | [optional] 
-
-
-### Return type
-
-**String**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
 # **gerar_boleto_recarga_using_post**
 > BoletoResponse gerar_boleto_recarga_using_post(id, valor, data_vencimento)
 
@@ -1392,7 +1217,7 @@ No authorization required
 
 
 # **gerar_cartao_embossing_using_post**
-> CartaoImpressaoResponse gerar_cartao_embossing_using_post(id, id_pessoa, opts)
+> CartaoEmbossingResponse gerar_cartao_embossing_using_post(id, cartao_embossing_request)
 
 Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
 
@@ -1408,15 +1233,12 @@ api_instance = Pier::ContaApi.new
 
 id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
 
-id_pessoa = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+cartao_embossing_request = Pier::CartaoEmbossingRequest.new # CartaoEmbossingRequest | cartaoEmbossingRequest
 
-opts = { 
-  id_tipo_plastico: 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id).
-}
 
 begin
   #Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
-  result = api_instance.gerar_cartao_embossing_using_post(id, id_pessoa, opts)
+  result = api_instance.gerar_cartao_embossing_using_post(id, cartao_embossing_request)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling ContaApi->gerar_cartao_embossing_using_post: #{e}"
@@ -1428,13 +1250,62 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **id_pessoa** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). | 
- **id_tipo_plastico** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). | [optional] 
+ **cartao_embossing_request** | [**CartaoEmbossingRequest**](CartaoEmbossingRequest.md)| cartaoEmbossingRequest | 
 
 
 ### Return type
 
-[**CartaoImpressaoResponse**](CartaoImpressaoResponse.md)
+[**CartaoEmbossingResponse**](CartaoEmbossingResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **gerar_cartao_provisorio_using_post**
+> CartaoImpressaoProvisorioResponse gerar_cartao_provisorio_using_post(id)
+
+Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
+
+Este recurso permite que seja gerado um cart\u00C3\u00A3o provis\u00C3\u00B3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::ContaApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+
+begin
+  #Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
+  result = api_instance.gerar_cartao_provisorio_using_post(id)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ContaApi->gerar_cartao_provisorio_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+
+
+### Return type
+
+[**CartaoImpressaoProvisorioResponse**](CartaoImpressaoProvisorioResponse.md)
 
 ### Authorization
 
@@ -1853,7 +1724,7 @@ No authorization required
 
 
 # **listar_nao_processadas_using_get**
-> PageTransacoesCorrentesResponse listar_nao_processadas_using_get(id, opts)
+> PageTransacaoNaoProcessadaResponse listar_nao_processadas_using_get(id, opts)
 
 Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
 
@@ -1900,7 +1771,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageTransacoesCorrentesResponse**](PageTransacoesCorrentesResponse.md)
+[**PageTransacaoNaoProcessadaResponse**](PageTransacaoNaoProcessadaResponse.md)
 
 ### Authorization
 

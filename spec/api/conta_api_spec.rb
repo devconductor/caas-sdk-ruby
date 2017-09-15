@@ -93,24 +93,6 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for alterar_produto_using_post
-  # Altera o produto associado \u00C3\u00A0 conta.
-  # O recurso permite fazer modifica\u00C3\u00A7\u00C3\u00A3o do produto associado \u00C3\u00A0 conta.
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-  # @param id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do novo produto a ser associado (idProduto).
-  # @param [Hash] opts the optional parameters
-  # @return [PageContaHistoricoPagamentoResponse]
-  describe 'alterar_produto_using_post test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
   # unit tests for alterar_titular_using_post
   # Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
   # Esta m\u00C3\u00A9todo permite altera a pessoa de uma conta.
@@ -336,28 +318,6 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for consultar_lancamentos_futuros_fatura_using_get1
-  # Listar planos de parcelamento
-  # Lista os planos de parcelamento da fatura de uma conta.
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-  # @param data_vencimento_padrao Indica a data de vencimento padr\u00C3\u00A3o das faturas
-  # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :quantidade_parcelas 
-  # @return [PagePlanoParcelamentoResponse]
-  describe 'consultar_lancamentos_futuros_fatura_using_get1 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
   # unit tests for consultar_limite_disponibilidade_using_get1
   # Apresenta os limites da conta
   # Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
@@ -395,7 +355,7 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for consultar_using_get24
+  # unit tests for consultar_using_get26
   # Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
   # Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
   # @param id Id Conta
@@ -403,7 +363,7 @@ describe 'ContaApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
   # @return [TransferenciaBancariaResponse]
-  describe 'consultar_using_get24 test' do
+  describe 'consultar_using_get26 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -414,14 +374,14 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for consultar_using_get25
+  # unit tests for consultar_using_get27
   # Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
   # Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
   # @param id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
   # @param [Hash] opts the optional parameters
   # @return [PageTransferenciaResponse]
-  describe 'consultar_using_get25 test' do
+  describe 'consultar_using_get27 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -432,13 +392,13 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for consultar_using_get5
+  # unit tests for consultar_using_get6
   # Apresenta dados de uma determinada conta
   # Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
   # @param [Hash] opts the optional parameters
   # @return [ContaDetalheResponse]
-  describe 'consultar_using_get5 test' do
+  describe 'consultar_using_get6 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -456,25 +416,6 @@ describe 'ContaApi' do
   # @param [Hash] opts the optional parameters
   # @return [Object]
   describe 'desativar_envio_fatura_email_using_post test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for enviar_fatura_email_using_post
-  # Envia 2\u00C2\u00AA via de fatura por E-mail
-  # Envia a segunda via da fatura para o e-mail informado/cadastrado.
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-  # @param data_vencimento Data de Vencimento da fatura.
-  # @param [Hash] opts the optional parameters
-  # @option opts [String] :email E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado.
-  # @return [String]
-  describe 'enviar_fatura_email_using_post test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -508,11 +449,27 @@ describe 'ContaApi' do
   # Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
   # Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para impress\u00C3\u00A3o de cart\u00C3\u00B5es em gr\u00C3\u00A1fica.
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-  # @param id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+  # @param cartao_embossing_request cartaoEmbossingRequest
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :id_tipo_plastico C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id).
-  # @return [CartaoImpressaoResponse]
+  # @return [CartaoEmbossingResponse]
   describe 'gerar_cartao_embossing_using_post test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for gerar_cartao_provisorio_using_post
+  # Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
+  # Este recurso permite que seja gerado um cart\u00C3\u00A3o provis\u00C3\u00B3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+  # @param [Hash] opts the optional parameters
+  # @return [CartaoImpressaoProvisorioResponse]
+  describe 'gerar_cartao_provisorio_using_post test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -672,7 +629,7 @@ describe 'ContaApi' do
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [String] :data_inicio Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida).
   # @option opts [String] :data_fim Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida).
-  # @return [PageTransacoesCorrentesResponse]
+  # @return [PageTransacaoNaoProcessadaResponse]
   describe 'listar_nao_processadas_using_get test' do
     it "should work" do
       # assertion here

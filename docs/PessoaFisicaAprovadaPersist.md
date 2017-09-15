@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **unidade_federativa_identidade** | **String** | Sigla da Unidade Federativa de onde foi expedido a Identidade | [optional] 
 **data_emissao_identidade** | **String** | Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd | [optional] 
 **id_estado_civil** | **Integer** | Id Estado civil da pessoa fisica | [optional] 
-**id_profissao** | **Integer** | Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
+**id_profissao** | **String** | Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
 **id_natureza_ocupacao** | **Integer** | Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
 **id_nacionalidade** | **Integer** | Id Nacionalidade da pessoa fisica | [optional] 
 **id_origem_comercial** | **Integer** | Id da origem comercial | 

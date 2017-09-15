@@ -58,26 +58,17 @@ module Pier
     # Data de emiss\u00C3\u00A3o do Documento de Identidade do Adicional
     attr_accessor :data_emissao_identidade
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional
-    attr_accessor :id_estado_civil
-
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional
-    attr_accessor :id_profissao
-
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional
-    attr_accessor :id_nacionalidade
-
     # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular
     attr_accessor :id_parentesco
-
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular
-    attr_accessor :email
 
     # Indica se o adicional est\u00C3\u00A1 ativo = 1 ou inativo = 0
     attr_accessor :flag_ativo
 
-    # Lista dos telefones do adicional
-    attr_accessor :telefones
+    # Indica a data de cadastro do adicional
+    attr_accessor :data_cadastro_portador
+
+    # Indica a data de cancelamento do adicional
+    attr_accessor :data_cancelamento_portador
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -106,19 +97,13 @@ module Pier
         
         :'data_emissao_identidade' => :'dataEmissaoIdentidade',
         
-        :'id_estado_civil' => :'idEstadoCivil',
-        
-        :'id_profissao' => :'idProfissao',
-        
-        :'id_nacionalidade' => :'idNacionalidade',
-        
         :'id_parentesco' => :'idParentesco',
-        
-        :'email' => :'email',
         
         :'flag_ativo' => :'flagAtivo',
         
-        :'telefones' => :'telefones'
+        :'data_cadastro_portador' => :'dataCadastroPortador',
+        
+        :'data_cancelamento_portador' => :'dataCancelamentoPortador'
         
       }
     end
@@ -149,19 +134,13 @@ module Pier
         
         :'data_emissao_identidade' => :'String',
         
-        :'id_estado_civil' => :'Integer',
-        
-        :'id_profissao' => :'Integer',
-        
-        :'id_nacionalidade' => :'Integer',
-        
         :'id_parentesco' => :'Integer',
-        
-        :'email' => :'String',
         
         :'flag_ativo' => :'Integer',
         
-        :'telefones' => :'Array<TelefoneResponse>'
+        :'data_cadastro_portador' => :'String',
+        
+        :'data_cancelamento_portador' => :'String'
         
       }
     end
@@ -274,46 +253,10 @@ module Pier
       end
 
       
-      if attributes[:'idEstadoCivil']
-        
-        
-        self.id_estado_civil = attributes[:'idEstadoCivil']
-        
-      
-      end
-
-      
-      if attributes[:'idProfissao']
-        
-        
-        self.id_profissao = attributes[:'idProfissao']
-        
-      
-      end
-
-      
-      if attributes[:'idNacionalidade']
-        
-        
-        self.id_nacionalidade = attributes[:'idNacionalidade']
-        
-      
-      end
-
-      
       if attributes[:'idParentesco']
         
         
         self.id_parentesco = attributes[:'idParentesco']
-        
-      
-      end
-
-      
-      if attributes[:'email']
-        
-        
-        self.email = attributes[:'email']
         
       
       end
@@ -328,12 +271,19 @@ module Pier
       end
 
       
-      if attributes[:'telefones']
+      if attributes[:'dataCadastroPortador']
         
-        if (value = attributes[:'telefones']).is_a?(Array)
-          self.telefones = value
-        end
         
+        self.data_cadastro_portador = attributes[:'dataCadastroPortador']
+        
+      
+      end
+
+      
+      if attributes[:'dataCancelamentoPortador']
+        
+        
+        self.data_cancelamento_portador = attributes[:'dataCancelamentoPortador']
         
       
       end
@@ -414,35 +364,8 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -535,13 +458,10 @@ module Pier
           orgao_expedidor_identidade == o.orgao_expedidor_identidade &&
           unidade_federativa_identidade == o.unidade_federativa_identidade &&
           data_emissao_identidade == o.data_emissao_identidade &&
-          id_estado_civil == o.id_estado_civil &&
-          id_profissao == o.id_profissao &&
-          id_nacionalidade == o.id_nacionalidade &&
           id_parentesco == o.id_parentesco &&
-          email == o.email &&
           flag_ativo == o.flag_ativo &&
-          telefones == o.telefones
+          data_cadastro_portador == o.data_cadastro_portador &&
+          data_cancelamento_portador == o.data_cancelamento_portador
     end
 
     # @see the `==` method
@@ -553,7 +473,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_conta, id_pessoa, nome, nome_impresso, numero_receita_federal, data_nascimento, sexo, numero_identidade, orgao_expedidor_identidade, unidade_federativa_identidade, data_emissao_identidade, id_estado_civil, id_profissao, id_nacionalidade, id_parentesco, email, flag_ativo, telefones].hash
+      [id_conta, id_pessoa, nome, nome_impresso, numero_receita_federal, data_nascimento, sexo, numero_identidade, orgao_expedidor_identidade, unidade_federativa_identidade, data_emissao_identidade, id_parentesco, flag_ativo, data_cadastro_portador, data_cancelamento_portador].hash
     end
 
     # Builds the object from hash

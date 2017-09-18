@@ -264,7 +264,7 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param data_vencimento Data de Vencimento da fatura.
     # @param [Hash] opts the optional parameters
-    # @return [Array<ByteArray>]
+    # @return [Object]
     def visualizar_documento_using_post(id, data_vencimento, opts = {})
       data, _status_code, _headers = visualizar_documento_using_post_with_http_info(id, data_vencimento, opts)
       return data
@@ -275,7 +275,7 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param data_vencimento Data de Vencimento da fatura.
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<ByteArray>, Fixnum, Hash)>] Array<ByteArray> data, response status code and response headers
+    # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
     def visualizar_documento_using_post_with_http_info(id, data_vencimento, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: MockApi.visualizar_documento_using_post ..."
@@ -327,7 +327,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Array<ByteArray>')
+        :return_type => 'Object')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: MockApi#visualizar_documento_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

@@ -173,7 +173,7 @@ No authorization required
 
 
 # **visualizar_documento_using_post**
-> Array&lt;ByteArray&gt; visualizar_documento_using_post(id, data_vencimento)
+> Object visualizar_documento_using_post(id, data_vencimento)
 
 Permite visualizar o extrato da fatura em formato PDF
 
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Array&lt;ByteArray&gt;**](ByteArray.md)
+**Object**
 
 ### Authorization
 

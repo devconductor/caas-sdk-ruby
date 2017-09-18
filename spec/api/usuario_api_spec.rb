@@ -97,13 +97,13 @@ describe 'UsuarioApi' do
   end
 
 
-  # unit tests for consultar_using_get28
+  # unit tests for consultar_using_get27
   # Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
   # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
   # @param [Hash] opts the optional parameters
   # @return [UsuarioResponse]
-  describe 'consultar_using_get28 test' do
+  describe 'consultar_using_get27 test' do
     it "should work" do
       # assertion here
       # should be_a()

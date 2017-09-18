@@ -417,8 +417,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
     # @param [Hash] opts the optional parameters
     # @return [TipoOportunidadeResponse]
-    def consultar_using_get23(id, opts = {})
-      data, _status_code, _headers = consultar_using_get23_with_http_info(id, opts)
+    def consultar_using_get22(id, opts = {})
+      data, _status_code, _headers = consultar_using_get22_with_http_info(id, opts)
       return data
     end
 
@@ -427,14 +427,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(TipoOportunidadeResponse, Fixnum, Hash)>] TipoOportunidadeResponse data, response status code and response headers
-    def consultar_using_get23_with_http_info(id, opts = {})
+    def consultar_using_get22_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadeApi.consultar_using_get23 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadeApi.consultar_using_get22 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling OportunidadeApi.consultar_using_get23" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling OportunidadeApi.consultar_using_get22" if id.nil?
       
       
       
@@ -472,7 +472,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TipoOportunidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadeApi#consultar_using_get23\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadeApi#consultar_using_get22\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

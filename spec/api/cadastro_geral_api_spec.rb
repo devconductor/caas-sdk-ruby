@@ -207,32 +207,13 @@ describe 'CadastroGeralApi' do
   end
 
 
-  # unit tests for consultar_using_get22
-  # Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-  # Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idCartao, idEstabelecimento e codigoProcessamento.
-  # @param id_cartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cartao (idCartao).
-  # @param id_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (idEstabelecimento).
-  # @param codigo_processamento C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o.
-  # @param [Hash] opts the optional parameters
-  # @return [TipoOperacaoResponse]
-  describe 'consultar_using_get22 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for consultar_using_get24
+  # unit tests for consultar_using_get23
   # Apresenta os dados de um determinado Tipo de Telefone
   # Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
   # @param [Hash] opts the optional parameters
   # @return [TipoTelefoneResponse]
-  describe 'consultar_using_get24 test' do
+  describe 'consultar_using_get23 test' do
     it "should work" do
       # assertion here
       # should be_a()

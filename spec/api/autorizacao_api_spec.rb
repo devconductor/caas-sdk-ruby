@@ -95,6 +95,24 @@ describe 'AutorizacaoApi' do
   end
 
 
+  # unit tests for cancelar_using_post3
+  # Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+  # Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idCartao.
+  # @param id Id Cartao
+  # @param cancelamento_request cancelamentoRequest
+  # @param [Hash] opts the optional parameters
+  # @return [TransacaoOnUsResponse]
+  describe 'cancelar_using_post3 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
   # unit tests for listar_codigos_processamento_autorizacao_using_get
   # Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
   # Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento para autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es financeiras.

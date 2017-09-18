@@ -23,92 +23,62 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso TipoOperacao
-  class TipoOperacaoResponse
-    # C\u00C3\u00B3digo identificador do TipoOperacao
-    attr_accessor :id
+  # Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Cancelamento de transa\u00C3\u00A7\u00C3\u00A3o por idCartao
+  class CancelamentoTransacaoPorIdCartaoRequest
+    # N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
+    attr_accessor :nsu_origem
 
-    # C\u00C3\u00B3digo do TipoOperacao
-    attr_accessor :tipo_operacao
+    # N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema a ser cancelada.
+    attr_accessor :nsu_origem_transacao_cancelada
 
-    # Nome do TipoOperacao
-    attr_accessor :nome
+    # C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
+    attr_accessor :codigo_processamento
 
-    # Decri\u00C3\u00A7\u00C3\u00A3o do TipoOperacao
-    attr_accessor :descricao
+    # Apresenta a data e hora local da transa\u00C3\u00A7\u00C3\u00A3o a ser cancelada yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+    attr_accessor :data_hora_transacao_cancelada
 
-    # Excedente permitido para o TipoOperacao
-    attr_accessor :excedente_permitido
+    # N\u00C3\u00BAmero Sequencial \u00C3\u009Anico do HOST que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que autorizou.
+    attr_accessor :nsu_autorizacao_transacao_cancelada
 
-    # Tipo do Excedente permitido para o TipoOperacao
-    attr_accessor :tipo_excedente_permitido
+    # Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.
+    attr_accessor :valor_transacao
 
-    # Valor minimo para a transa\u00C3\u00A7\u00C3\u00A3o do TipoOperacao
-    attr_accessor :valor_minimo
+    # N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).
+    attr_accessor :numero_estabelecimento
 
-    # Valor maximo para a transa\u00C3\u00A7\u00C3\u00A3o do TipoOperacao
-    attr_accessor :valor_maximo
+    # Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+    attr_accessor :data_hora_terminal
 
-    # Valor TAC da transa\u00C3\u00A7\u00C3\u00A3o do TipoOperacao
-    attr_accessor :valor_tac
+    # Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+    attr_accessor :terminal_requisitante
 
-    # Flag Tira TAC do TipoOperacao
-    attr_accessor :flag_tira_tac
-
-    # Identificador do Produto do TipoOperacao
-    attr_accessor :id_produto
-
-    # Identificador do Estabelecimento do TipoOperacao
-    attr_accessor :id_estabelecimento
-
-    # Tarifa do TipoOperacao
-    attr_accessor :tarifa
-
-    # Remunera\u00C3\u00A7\u00C3\u00A3o do Emissor para o TipoOperacao
-    attr_accessor :remuneracao_emissor
-
-    # Plano m\u00C3\u00A1ximo do TipoOperacao
-    attr_accessor :plano_maximo
-
-    # Plano minimo do TipoOperacao
-    attr_accessor :plano_minimo
+    # N\u00C3\u00BAmero de Parcelas.
+    attr_accessor :numero_parcelas
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id' => :'id',
+        :'nsu_origem' => :'nsuOrigem',
         
-        :'tipo_operacao' => :'tipoOperacao',
+        :'nsu_origem_transacao_cancelada' => :'nsuOrigemTransacaoCancelada',
         
-        :'nome' => :'nome',
+        :'codigo_processamento' => :'codigoProcessamento',
         
-        :'descricao' => :'descricao',
+        :'data_hora_transacao_cancelada' => :'dataHoraTransacaoCancelada',
         
-        :'excedente_permitido' => :'excedentePermitido',
+        :'nsu_autorizacao_transacao_cancelada' => :'nsuAutorizacaoTransacaoCancelada',
         
-        :'tipo_excedente_permitido' => :'tipoExcedentePermitido',
+        :'valor_transacao' => :'valorTransacao',
         
-        :'valor_minimo' => :'valorMinimo',
+        :'numero_estabelecimento' => :'numeroEstabelecimento',
         
-        :'valor_maximo' => :'valorMaximo',
+        :'data_hora_terminal' => :'dataHoraTerminal',
         
-        :'valor_tac' => :'valorTAC',
+        :'terminal_requisitante' => :'terminalRequisitante',
         
-        :'flag_tira_tac' => :'flagTiraTac',
-        
-        :'id_produto' => :'idProduto',
-        
-        :'id_estabelecimento' => :'idEstabelecimento',
-        
-        :'tarifa' => :'tarifa',
-        
-        :'remuneracao_emissor' => :'remuneracaoEmissor',
-        
-        :'plano_maximo' => :'planoMaximo',
-        
-        :'plano_minimo' => :'planoMinimo'
+        :'numero_parcelas' => :'numeroParcelas'
         
       }
     end
@@ -117,37 +87,25 @@ module Pier
     def self.swagger_types
       {
         
-        :'id' => :'Integer',
+        :'nsu_origem' => :'String',
         
-        :'tipo_operacao' => :'String',
+        :'nsu_origem_transacao_cancelada' => :'String',
         
-        :'nome' => :'String',
+        :'codigo_processamento' => :'String',
         
-        :'descricao' => :'String',
+        :'data_hora_transacao_cancelada' => :'String',
         
-        :'excedente_permitido' => :'Float',
+        :'nsu_autorizacao_transacao_cancelada' => :'String',
         
-        :'tipo_excedente_permitido' => :'String',
+        :'valor_transacao' => :'Float',
         
-        :'valor_minimo' => :'Float',
+        :'numero_estabelecimento' => :'Integer',
         
-        :'valor_maximo' => :'Float',
+        :'data_hora_terminal' => :'String',
         
-        :'valor_tac' => :'Float',
+        :'terminal_requisitante' => :'String',
         
-        :'flag_tira_tac' => :'Integer',
-        
-        :'id_produto' => :'Integer',
-        
-        :'id_estabelecimento' => :'Integer',
-        
-        :'tarifa' => :'Float',
-        
-        :'remuneracao_emissor' => :'Float',
-        
-        :'plano_maximo' => :'Integer',
-        
-        :'plano_minimo' => :'Integer'
+        :'numero_parcelas' => :'Integer'
         
       }
     end
@@ -161,145 +119,91 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'id']
+      if attributes[:'nsuOrigem']
         
         
-        self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes[:'tipoOperacao']
-        
-        
-        self.tipo_operacao = attributes[:'tipoOperacao']
+        self.nsu_origem = attributes[:'nsuOrigem']
         
       
       end
 
       
-      if attributes[:'nome']
+      if attributes[:'nsuOrigemTransacaoCancelada']
         
         
-        self.nome = attributes[:'nome']
-        
-      
-      end
-
-      
-      if attributes[:'descricao']
-        
-        
-        self.descricao = attributes[:'descricao']
+        self.nsu_origem_transacao_cancelada = attributes[:'nsuOrigemTransacaoCancelada']
         
       
       end
 
       
-      if attributes[:'excedentePermitido']
+      if attributes[:'codigoProcessamento']
         
         
-        self.excedente_permitido = attributes[:'excedentePermitido']
-        
-      
-      end
-
-      
-      if attributes[:'tipoExcedentePermitido']
-        
-        
-        self.tipo_excedente_permitido = attributes[:'tipoExcedentePermitido']
+        self.codigo_processamento = attributes[:'codigoProcessamento']
         
       
       end
 
       
-      if attributes[:'valorMinimo']
+      if attributes[:'dataHoraTransacaoCancelada']
         
         
-        self.valor_minimo = attributes[:'valorMinimo']
-        
-      
-      end
-
-      
-      if attributes[:'valorMaximo']
-        
-        
-        self.valor_maximo = attributes[:'valorMaximo']
+        self.data_hora_transacao_cancelada = attributes[:'dataHoraTransacaoCancelada']
         
       
       end
 
       
-      if attributes[:'valorTAC']
+      if attributes[:'nsuAutorizacaoTransacaoCancelada']
         
         
-        self.valor_tac = attributes[:'valorTAC']
-        
-      
-      end
-
-      
-      if attributes[:'flagTiraTac']
-        
-        
-        self.flag_tira_tac = attributes[:'flagTiraTac']
+        self.nsu_autorizacao_transacao_cancelada = attributes[:'nsuAutorizacaoTransacaoCancelada']
         
       
       end
 
       
-      if attributes[:'idProduto']
+      if attributes[:'valorTransacao']
         
         
-        self.id_produto = attributes[:'idProduto']
-        
-      
-      end
-
-      
-      if attributes[:'idEstabelecimento']
-        
-        
-        self.id_estabelecimento = attributes[:'idEstabelecimento']
+        self.valor_transacao = attributes[:'valorTransacao']
         
       
       end
 
       
-      if attributes[:'tarifa']
+      if attributes[:'numeroEstabelecimento']
         
         
-        self.tarifa = attributes[:'tarifa']
-        
-      
-      end
-
-      
-      if attributes[:'remuneracaoEmissor']
-        
-        
-        self.remuneracao_emissor = attributes[:'remuneracaoEmissor']
+        self.numero_estabelecimento = attributes[:'numeroEstabelecimento']
         
       
       end
 
       
-      if attributes[:'planoMaximo']
+      if attributes[:'dataHoraTerminal']
         
         
-        self.plano_maximo = attributes[:'planoMaximo']
+        self.data_hora_terminal = attributes[:'dataHoraTerminal']
         
       
       end
 
       
-      if attributes[:'planoMinimo']
+      if attributes[:'terminalRequisitante']
         
         
-        self.plano_minimo = attributes[:'planoMinimo']
+        self.terminal_requisitante = attributes[:'terminalRequisitante']
+        
+      
+      end
+
+      
+      if attributes[:'numeroParcelas']
+        
+        
+        self.numero_parcelas = attributes[:'numeroParcelas']
         
       
       end
@@ -321,7 +225,7 @@ module Pier
     def valid?
       
       
-      if @id.nil?
+      if @nsu_origem.nil?
         return false
       end
 
@@ -330,7 +234,7 @@ module Pier
       
       
       
-      if @tipo_operacao.nil?
+      if @nsu_origem_transacao_cancelada.nil?
         return false
       end
 
@@ -339,7 +243,7 @@ module Pier
       
       
       
-      if @nome.nil?
+      if @codigo_processamento.nil?
         return false
       end
 
@@ -348,7 +252,7 @@ module Pier
       
       
       
-      if @descricao.nil?
+      if @data_hora_transacao_cancelada.nil?
         return false
       end
 
@@ -357,15 +261,7 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      if @valor_minimo.nil?
+      if @nsu_autorizacao_transacao_cancelada.nil?
         return false
       end
 
@@ -374,7 +270,7 @@ module Pier
       
       
       
-      if @valor_maximo.nil?
+      if @valor_transacao.nil?
         return false
       end
 
@@ -383,15 +279,7 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      if @id_produto.nil?
+      if @numero_estabelecimento.nil?
         return false
       end
 
@@ -400,7 +288,7 @@ module Pier
       
       
       
-      if @id_estabelecimento.nil?
+      if @data_hora_terminal.nil?
         return false
       end
 
@@ -409,15 +297,7 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      if @plano_maximo.nil?
+      if @terminal_requisitante.nil?
         return false
       end
 
@@ -426,7 +306,7 @@ module Pier
       
       
       
-      if @plano_minimo.nil?
+      if @numero_parcelas.nil?
         return false
       end
 
@@ -436,36 +316,6 @@ module Pier
       
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -522,22 +372,16 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          tipo_operacao == o.tipo_operacao &&
-          nome == o.nome &&
-          descricao == o.descricao &&
-          excedente_permitido == o.excedente_permitido &&
-          tipo_excedente_permitido == o.tipo_excedente_permitido &&
-          valor_minimo == o.valor_minimo &&
-          valor_maximo == o.valor_maximo &&
-          valor_tac == o.valor_tac &&
-          flag_tira_tac == o.flag_tira_tac &&
-          id_produto == o.id_produto &&
-          id_estabelecimento == o.id_estabelecimento &&
-          tarifa == o.tarifa &&
-          remuneracao_emissor == o.remuneracao_emissor &&
-          plano_maximo == o.plano_maximo &&
-          plano_minimo == o.plano_minimo
+          nsu_origem == o.nsu_origem &&
+          nsu_origem_transacao_cancelada == o.nsu_origem_transacao_cancelada &&
+          codigo_processamento == o.codigo_processamento &&
+          data_hora_transacao_cancelada == o.data_hora_transacao_cancelada &&
+          nsu_autorizacao_transacao_cancelada == o.nsu_autorizacao_transacao_cancelada &&
+          valor_transacao == o.valor_transacao &&
+          numero_estabelecimento == o.numero_estabelecimento &&
+          data_hora_terminal == o.data_hora_terminal &&
+          terminal_requisitante == o.terminal_requisitante &&
+          numero_parcelas == o.numero_parcelas
     end
 
     # @see the `==` method
@@ -549,7 +393,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, tipo_operacao, nome, descricao, excedente_permitido, tipo_excedente_permitido, valor_minimo, valor_maximo, valor_tac, flag_tira_tac, id_produto, id_estabelecimento, tarifa, remuneracao_emissor, plano_maximo, plano_minimo].hash
+      [nsu_origem, nsu_origem_transacao_cancelada, codigo_processamento, data_hora_transacao_cancelada, nsu_autorizacao_transacao_cancelada, valor_transacao, numero_estabelecimento, data_hora_terminal, terminal_requisitante, numero_parcelas].hash
     end
 
     # Builds the object from hash

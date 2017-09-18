@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**alterar_using_put8**](OportunidadeApi.md#alterar_using_put8) | **PUT** /api/tipos-oportunidades/{id} | Altera os tipos oportunidades
 [**consultar_status_using_get**](OportunidadeApi.md#consultar_status_using_get) | **GET** /api/tipos-oportunidades/{id}/status/{idStatus} | Apresenta dados de um determinado status do tipo oportunidade
 [**consultar_using_get10**](OportunidadeApi.md#consultar_using_get10) | **GET** /api/oportunidades/{id} | Apresenta dados de uma determinada oportunidade
-[**consultar_using_get23**](OportunidadeApi.md#consultar_using_get23) | **GET** /api/tipos-oportunidades/{id} | Apresenta dados de um determinado tipo oportunidade
+[**consultar_using_get22**](OportunidadeApi.md#consultar_using_get22) | **GET** /api/tipos-oportunidades/{id} | Apresenta dados de um determinado tipo oportunidade
 [**listar_auditorias_status_using_get**](OportunidadeApi.md#listar_auditorias_status_using_get) | **GET** /api/auditorias-status-oportunidades | Lista as auditorias dos status oportunidades
 [**listar_auditorias_using_get**](OportunidadeApi.md#listar_auditorias_using_get) | **GET** /api/auditorias-oportunidades | Lista as auditorias das oportunidades
 [**listar_auditorias_using_get1**](OportunidadeApi.md#listar_auditorias_using_get1) | **GET** /api/auditorias-tipos-oportunidades | Lista as auditorias dos tipos oportunidades
@@ -288,8 +288,8 @@ No authorization required
 
 
 
-# **consultar_using_get23**
-> TipoOportunidadeResponse consultar_using_get23(id)
+# **consultar_using_get22**
+> TipoOportunidadeResponse consultar_using_get22(id)
 
 Apresenta dados de um determinado tipo oportunidade
 
@@ -308,10 +308,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta dados de um determinado tipo oportunidade
-  result = api_instance.consultar_using_get23(id)
+  result = api_instance.consultar_using_get22(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling OportunidadeApi->consultar_using_get23: #{e}"
+  puts "Exception when calling OportunidadeApi->consultar_using_get22: #{e}"
 end
 ```
 

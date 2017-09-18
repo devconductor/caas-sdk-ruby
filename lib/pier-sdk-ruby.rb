@@ -110,6 +110,9 @@ require 'pier-sdk-ruby/models/campo_codificado_descricao_response'
 require 'pier-sdk-ruby/models/cancelamento_transacao_on_us_request'
 
 
+require 'pier-sdk-ruby/models/cancelamento_transacao_por_id_cartao_request'
+
+
 require 'pier-sdk-ruby/models/cartao_detalhe_response'
 
 
@@ -603,9 +606,6 @@ require 'pier-sdk-ruby/models/tipo_boleto_response'
 
 
 require 'pier-sdk-ruby/models/tipo_endereco_response'
-
-
-require 'pier-sdk-ruby/models/tipo_operacao_response'
 
 
 require 'pier-sdk-ruby/models/tipo_oportunidade'

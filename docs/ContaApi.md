@@ -20,8 +20,8 @@ Method | HTTP request | Description
 [**consultar_lancamentos_futuros_fatura_using_get**](ContaApi.md#consultar_lancamentos_futuros_fatura_using_get) | **GET** /api/contas/{id}/faturas/consultar-aberta | Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
 [**consultar_limite_disponibilidade_using_get1**](ContaApi.md#consultar_limite_disponibilidade_using_get1) | **GET** /api/contas/{id}/limites-disponibilidades | Apresenta os limites da conta
 [**consultar_taxas_tarifas_using_get**](ContaApi.md#consultar_taxas_tarifas_using_get) | **GET** /api/contas/{id}/consultar-taxas-tarifas | Permite consultar a partir do ID da conta as taxas e tarifas
-[**consultar_using_get26**](ContaApi.md#consultar_using_get26) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-[**consultar_using_get27**](ContaApi.md#consultar_using_get27) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+[**consultar_using_get25**](ContaApi.md#consultar_using_get25) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+[**consultar_using_get26**](ContaApi.md#consultar_using_get26) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 [**consultar_using_get6**](ContaApi.md#consultar_using_get6) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
 [**desativar_envio_fatura_email_using_post**](ContaApi.md#desativar_envio_fatura_email_using_post) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00C3\u00A7o de envio de fatura por email
 [**gerar_boleto_recarga_using_post**](ContaApi.md#gerar_boleto_recarga_using_post) | **POST** /api/contas/{id}/gerar-boleto-recarga | Gera um boleto de recarga
@@ -950,8 +950,8 @@ No authorization required
 
 
 
-# **consultar_using_get26**
-> TransferenciaBancariaResponse consultar_using_get26(id, id_transferencia, opts)
+# **consultar_using_get25**
+> TransferenciaBancariaResponse consultar_using_get25(id, id_transferencia, opts)
 
 Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
 
@@ -975,10 +975,10 @@ opts = {
 
 begin
   #Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-  result = api_instance.consultar_using_get26(id, id_transferencia, opts)
+  result = api_instance.consultar_using_get25(id, id_transferencia, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->consultar_using_get26: #{e}"
+  puts "Exception when calling ContaApi->consultar_using_get25: #{e}"
 end
 ```
 
@@ -1007,8 +1007,8 @@ No authorization required
 
 
 
-# **consultar_using_get27**
-> PageTransferenciaResponse consultar_using_get27(id, id_transferencia)
+# **consultar_using_get26**
+> PageTransferenciaResponse consultar_using_get26(id, id_transferencia)
 
 Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 
@@ -1029,10 +1029,10 @@ id_transferencia = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u
 
 begin
   #Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-  result = api_instance.consultar_using_get27(id, id_transferencia)
+  result = api_instance.consultar_using_get26(id, id_transferencia)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->consultar_using_get27: #{e}"
+  puts "Exception when calling ContaApi->consultar_using_get26: #{e}"
 end
 ```
 

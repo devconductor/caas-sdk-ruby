@@ -355,7 +355,7 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for consultar_using_get26
+  # unit tests for consultar_using_get25
   # Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
   # Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
   # @param id Id Conta
@@ -363,7 +363,7 @@ describe 'ContaApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
   # @return [TransferenciaBancariaResponse]
-  describe 'consultar_using_get26 test' do
+  describe 'consultar_using_get25 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -374,14 +374,14 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for consultar_using_get27
+  # unit tests for consultar_using_get26
   # Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
   # Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
   # @param id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
   # @param [Hash] opts the optional parameters
   # @return [PageTransferenciaResponse]
-  describe 'consultar_using_get27 test' do
+  describe 'consultar_using_get26 test' do
     it "should work" do
       # assertion here
       # should be_a()

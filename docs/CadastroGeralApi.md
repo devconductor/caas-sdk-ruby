@@ -13,8 +13,7 @@ Method | HTTP request | Description
 [**consultar_using_get2**](CadastroGeralApi.md#consultar_using_get2) | **GET** /api/atendimento-clientes/{id} | Apresenta os dados de um determinado Atendimento
 [**consultar_using_get20**](CadastroGeralApi.md#consultar_using_get20) | **GET** /api/tipos-boletos | Lista os tipos de boletos do emissor 
 [**consultar_using_get21**](CadastroGeralApi.md#consultar_using_get21) | **GET** /api/tipos-enderecos/{id} | Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
-[**consultar_using_get22**](CadastroGeralApi.md#consultar_using_get22) | **GET** /api/tipo-operacao | Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-[**consultar_using_get24**](CadastroGeralApi.md#consultar_using_get24) | **GET** /api/tipos-telefones/{id} | Apresenta os dados de um determinado Tipo de Telefone
+[**consultar_using_get23**](CadastroGeralApi.md#consultar_using_get23) | **GET** /api/tipos-telefones/{id} | Apresenta os dados de um determinado Tipo de Telefone
 [**consultar_using_get3**](CadastroGeralApi.md#consultar_using_get3) | **GET** /api/bancos/{id} | Apresenta os dados de um determinado Banco
 [**desativar_uso_exterior_using_post**](CadastroGeralApi.md#desativar_uso_exterior_using_post) | **POST** /api/produtos/{id}/desativar-uso-exterior | Desativa o par\u00C3\u00A2metro uso exterior para o produto
 [**listar_contas_por_pessoa_using_get**](CadastroGeralApi.md#listar_contas_por_pessoa_using_get) | **GET** /api/pessoas/listar-contas | Lista as contas da pessoa
@@ -515,64 +514,8 @@ No authorization required
 
 
 
-# **consultar_using_get22**
-> TipoOperacaoResponse consultar_using_get22(id_cartao, id_estabelecimento, codigo_processamento)
-
-Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-
-Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idCartao, idEstabelecimento e codigoProcessamento.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::CadastroGeralApi.new
-
-id_cartao = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cartao (idCartao).
-
-id_estabelecimento = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (idEstabelecimento).
-
-codigo_processamento = "codigo_processamento_example" # String | C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o.
-
-
-begin
-  #Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-  result = api_instance.consultar_using_get22(id_cartao, id_estabelecimento, codigo_processamento)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->consultar_using_get22: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id_cartao** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cartao (idCartao). | 
- **id_estabelecimento** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (idEstabelecimento). | 
- **codigo_processamento** | **String**| C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o. | 
-
-
-### Return type
-
-[**TipoOperacaoResponse**](TipoOperacaoResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **consultar_using_get24**
-> TipoTelefoneResponse consultar_using_get24(id)
+# **consultar_using_get23**
+> TipoTelefoneResponse consultar_using_get23(id)
 
 Apresenta os dados de um determinado Tipo de Telefone
 
@@ -591,10 +534,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Tipo de Telefone
-  result = api_instance.consultar_using_get24(id)
+  result = api_instance.consultar_using_get23(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->consultar_using_get24: #{e}"
+  puts "Exception when calling CadastroGeralApi->consultar_using_get23: #{e}"
 end
 ```
 

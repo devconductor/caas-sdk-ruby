@@ -731,102 +731,13 @@ module Pier
     end
 
 
-    # Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-    # Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idCartao, idEstabelecimento e codigoProcessamento.
-    # @param id_cartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cartao (idCartao).
-    # @param id_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (idEstabelecimento).
-    # @param codigo_processamento C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o.
-    # @param [Hash] opts the optional parameters
-    # @return [TipoOperacaoResponse]
-    def consultar_using_get22(id_cartao, id_estabelecimento, codigo_processamento, opts = {})
-      data, _status_code, _headers = consultar_using_get22_with_http_info(id_cartao, id_estabelecimento, codigo_processamento, opts)
-      return data
-    end
-
-    # Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-    # Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idCartao, idEstabelecimento e codigoProcessamento.
-    # @param id_cartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cartao (idCartao).
-    # @param id_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (idEstabelecimento).
-    # @param codigo_processamento C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o.
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(TipoOperacaoResponse, Fixnum, Hash)>] TipoOperacaoResponse data, response status code and response headers
-    def consultar_using_get22_with_http_info(id_cartao, id_estabelecimento, codigo_processamento, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get22 ..."
-      end
-      
-      
-      # verify the required parameter 'id_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CadastroGeralApi.consultar_using_get22" if id_cartao.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'id_estabelecimento' is set
-      fail ArgumentError, "Missing the required parameter 'id_estabelecimento' when calling CadastroGeralApi.consultar_using_get22" if id_estabelecimento.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'codigo_processamento' is set
-      fail ArgumentError, "Missing the required parameter 'codigo_processamento' when calling CadastroGeralApi.consultar_using_get22" if codigo_processamento.nil?
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/tipo-operacao".sub('{format}','json')
-
-      # query parameters
-      query_params = {}
-      query_params[:'idCartao'] = id_cartao
-      query_params[:'idEstabelecimento'] = id_estabelecimento
-      query_params[:'codigoProcessamento'] = codigo_processamento
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'TipoOperacaoResponse')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get22\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-
     # Apresenta os dados de um determinado Tipo de Telefone
     # Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
     # @param [Hash] opts the optional parameters
     # @return [TipoTelefoneResponse]
-    def consultar_using_get24(id, opts = {})
-      data, _status_code, _headers = consultar_using_get24_with_http_info(id, opts)
+    def consultar_using_get23(id, opts = {})
+      data, _status_code, _headers = consultar_using_get23_with_http_info(id, opts)
       return data
     end
 
@@ -835,14 +746,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
     # @param [Hash] opts the optional parameters
     # @return [Array<(TipoTelefoneResponse, Fixnum, Hash)>] TipoTelefoneResponse data, response status code and response headers
-    def consultar_using_get24_with_http_info(id, opts = {})
+    def consultar_using_get23_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get24 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get23 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get24" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get23" if id.nil?
       
       
       
@@ -880,7 +791,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TipoTelefoneResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get24\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get23\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -63,13 +63,13 @@ describe 'WebhookApi' do
   end
 
 
-  # unit tests for consultar_using_get29
+  # unit tests for consultar_using_get28
   # Consultar Webhook
   # Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
   # @param [Hash] opts the optional parameters
   # @return [WebHookResponse]
-  describe 'consultar_using_get29 test' do
+  describe 'consultar_using_get28 test' do
     it "should work" do
       # assertion here
       # should be_a()

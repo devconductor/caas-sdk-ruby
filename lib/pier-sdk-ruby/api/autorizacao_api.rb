@@ -240,6 +240,82 @@ module Pier
     end
 
 
+    # Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+    # Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idCartao.
+    # @param id Id Cartao
+    # @param cancelamento_request cancelamentoRequest
+    # @param [Hash] opts the optional parameters
+    # @return [TransacaoOnUsResponse]
+    def cancelar_using_post3(id, cancelamento_request, opts = {})
+      data, _status_code, _headers = cancelar_using_post3_with_http_info(id, cancelamento_request, opts)
+      return data
+    end
+
+    # Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+    # Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idCartao.
+    # @param id Id Cartao
+    # @param cancelamento_request cancelamentoRequest
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(TransacaoOnUsResponse, Fixnum, Hash)>] TransacaoOnUsResponse data, response status code and response headers
+    def cancelar_using_post3_with_http_info(id, cancelamento_request, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AutorizacaoApi.cancelar_using_post3 ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling AutorizacaoApi.cancelar_using_post3" if id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'cancelamento_request' is set
+      fail ArgumentError, "Missing the required parameter 'cancelamento_request' when calling AutorizacaoApi.cancelar_using_post3" if cancelamento_request.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/cartoes/{id}/cancelar-transacao".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(cancelamento_request)
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TransacaoOnUsResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AutorizacaoApi#cancelar_using_post3\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
     # Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento para autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es financeiras.
     # @param [Hash] opts the optional parameters

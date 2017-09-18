@@ -133,13 +133,13 @@ describe 'OportunidadeApi' do
   end
 
 
-  # unit tests for consultar_using_get23
+  # unit tests for consultar_using_get22
   # Apresenta dados de um determinado tipo oportunidade
   # Este recurso permite consultar dados de um determinado tipo oportunidade a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
   # @param [Hash] opts the optional parameters
   # @return [TipoOportunidadeResponse]
-  describe 'consultar_using_get23 test' do
+  describe 'consultar_using_get22 test' do
     it "should work" do
       # assertion here
       # should be_a()

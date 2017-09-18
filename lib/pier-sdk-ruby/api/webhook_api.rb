@@ -143,8 +143,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
     # @param [Hash] opts the optional parameters
     # @return [WebHookResponse]
-    def consultar_using_get29(id, opts = {})
-      data, _status_code, _headers = consultar_using_get29_with_http_info(id, opts)
+    def consultar_using_get28(id, opts = {})
+      data, _status_code, _headers = consultar_using_get28_with_http_info(id, opts)
       return data
     end
 
@@ -153,14 +153,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(WebHookResponse, Fixnum, Hash)>] WebHookResponse data, response status code and response headers
-    def consultar_using_get29_with_http_info(id, opts = {})
+    def consultar_using_get28_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WebhookApi.consultar_using_get29 ..."
+        @api_client.config.logger.debug "Calling API: WebhookApi.consultar_using_get28 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling WebhookApi.consultar_using_get29" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling WebhookApi.consultar_using_get28" if id.nil?
       
       
       
@@ -198,7 +198,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'WebHookResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WebhookApi#consultar_using_get29\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: WebhookApi#consultar_using_get28\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

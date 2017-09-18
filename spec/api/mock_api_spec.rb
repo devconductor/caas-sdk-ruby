@@ -103,7 +103,7 @@ describe 'MockApi' do
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
   # @param data_vencimento Data de Vencimento da fatura.
   # @param [Hash] opts the optional parameters
-  # @return [Array<ByteArray>]
+  # @return [Object]
   describe 'visualizar_documento_using_post test' do
     it "should work" do
       # assertion here

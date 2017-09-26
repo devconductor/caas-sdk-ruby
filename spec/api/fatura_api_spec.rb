@@ -64,5 +64,42 @@ describe 'FaturaApi' do
   end
 
 
+  # unit tests for enviar_fatura_email_using_post
+  # Envia 2\u00C2\u00AA via de fatura por E-mail
+  # Envia a segunda via da fatura para o e-mail informado/cadastrado.
+  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+  # @param data_vencimento Data de Vencimento da fatura (yyyy-MM-dd).
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :email E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado.
+  # @return [Object]
+  describe 'enviar_fatura_email_using_post test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for visualizar_documento_using_get
+  # Permite visualizar o extrato da fatura em formato PDF
+  # Esta opera\u00C3\u00A7\u00C3\u00A3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00C3\u00AAs corrente, o pdf ser\u00C3\u00A1 composto pelo extrato de lan\u00C3\u00A7amentos e pela ficha de compensa\u00C3\u00A7\u00C3\u00A3o banc\u00C3\u00A1ria. Quando for de uma fatura do hist\u00C3\u00B3rico do cliente, o PDF ser\u00C3\u00A1 composto apenas pelo extrato de transa\u00C3\u00A7\u00C3\u00B5es.
+  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+  # @param data_vencimento Data de Vencimento da fatura.
+  # @param [Hash] opts the optional parameters
+  # @return [Object]
+  describe 'visualizar_documento_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
 end
 

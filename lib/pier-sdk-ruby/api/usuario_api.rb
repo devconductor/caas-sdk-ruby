@@ -32,6 +32,83 @@ module Pier
     end
 
 
+    # Alterar senha do usu\u00C3\u00A1rio.
+    # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+    # @param login Login do usu\u00C3\u00A1rio.
+    # @param senha_nova Senha Nova
+    # @param [Hash] opts the optional parameters
+    # @return [String]
+    def alterar_senha_login_using_post(login, senha_nova, opts = {})
+      data, _status_code, _headers = alterar_senha_login_using_post_with_http_info(login, senha_nova, opts)
+      return data
+    end
+
+    # Alterar senha do usu\u00C3\u00A1rio.
+    # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+    # @param login Login do usu\u00C3\u00A1rio.
+    # @param senha_nova Senha Nova
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    def alterar_senha_login_using_post_with_http_info(login, senha_nova, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: UsuarioApi.alterar_senha_login_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'login' is set
+      fail ArgumentError, "Missing the required parameter 'login' when calling UsuarioApi.alterar_senha_login_using_post" if login.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'senha_nova' is set
+      fail ArgumentError, "Missing the required parameter 'senha_nova' when calling UsuarioApi.alterar_senha_login_using_post" if senha_nova.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/usuarios/{login}/alterar-senha".sub('{format}','json').sub('{' + 'login' + '}', login.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+      header_params[:'senhaNova'] = senha_nova
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'String')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UsuarioApi#alterar_senha_login_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
     # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
@@ -120,7 +197,7 @@ module Pier
     end
 
 
-    # Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+    # Altera os usu\u00C3\u00A1rios cadastrados na base.
     # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
     # @param update update
@@ -131,7 +208,7 @@ module Pier
       return data
     end
 
-    # Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+    # Altera os usu\u00C3\u00A1rios cadastrados na base.
     # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
     # @param update update
@@ -583,29 +660,29 @@ module Pier
     end
 
 
-    # Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
+    # Cadastra Usu\u00C3\u00A1rio na base.
     # Esse recurso permite cadastrar usu\u00C3\u00A1rios.
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [UsuarioResponse]
-    def salvar_using_post16(persist, opts = {})
-      data, _status_code, _headers = salvar_using_post16_with_http_info(persist, opts)
+    def salvar_using_post19(persist, opts = {})
+      data, _status_code, _headers = salvar_using_post19_with_http_info(persist, opts)
       return data
     end
 
-    # Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
+    # Cadastra Usu\u00C3\u00A1rio na base.
     # Esse recurso permite cadastrar usu\u00C3\u00A1rios.
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(UsuarioResponse, Fixnum, Hash)>] UsuarioResponse data, response status code and response headers
-    def salvar_using_post16_with_http_info(persist, opts = {})
+    def salvar_using_post19_with_http_info(persist, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: UsuarioApi.salvar_using_post16 ..."
+        @api_client.config.logger.debug "Calling API: UsuarioApi.salvar_using_post19 ..."
       end
       
       
       # verify the required parameter 'persist' is set
-      fail ArgumentError, "Missing the required parameter 'persist' when calling UsuarioApi.salvar_using_post16" if persist.nil?
+      fail ArgumentError, "Missing the required parameter 'persist' when calling UsuarioApi.salvar_using_post19" if persist.nil?
       
       
       
@@ -643,7 +720,84 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'UsuarioResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UsuarioApi#salvar_using_post16\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UsuarioApi#salvar_using_post19\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+    # O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+    # @param login Login identificador do usu\u00C3\u00A1rio (login).
+    # @param senha Senha do usu\u00C3\u00A1rio
+    # @param [Hash] opts the optional parameters
+    # @return [Object]
+    def validar_senha_login_using_post(login, senha, opts = {})
+      data, _status_code, _headers = validar_senha_login_using_post_with_http_info(login, senha, opts)
+      return data
+    end
+
+    # Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+    # O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+    # @param login Login identificador do usu\u00C3\u00A1rio (login).
+    # @param senha Senha do usu\u00C3\u00A1rio
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
+    def validar_senha_login_using_post_with_http_info(login, senha, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: UsuarioApi.validar_senha_login_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'login' is set
+      fail ArgumentError, "Missing the required parameter 'login' when calling UsuarioApi.validar_senha_login_using_post" if login.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'senha' is set
+      fail ArgumentError, "Missing the required parameter 'senha' when calling UsuarioApi.validar_senha_login_using_post" if senha.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/usuarios/{login}/validar-senha".sub('{format}','json').sub('{' + 'login' + '}', login.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+      header_params[:'senha'] = senha
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Object')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UsuarioApi#validar_senha_login_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

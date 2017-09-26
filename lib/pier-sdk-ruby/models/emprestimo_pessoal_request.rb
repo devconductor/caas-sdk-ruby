@@ -40,9 +40,6 @@ module Pier
     # Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas
     attr_accessor :sistema_amortizacao
 
-    # Dia para cobran\u00C3\u00A7a da primeira parcela
-    attr_accessor :dia_vencimento
-
     # N\u00C3\u00BAmero de meses para cobran\u00C3\u00A7a da primeira parcela
     attr_accessor :numero_meses_carencia
 
@@ -60,8 +57,6 @@ module Pier
         :'periodo_taxa' => :'periodoTaxa',
         
         :'sistema_amortizacao' => :'sistemaAmortizacao',
-        
-        :'dia_vencimento' => :'diaVencimento',
         
         :'numero_meses_carencia' => :'numeroMesesCarencia'
         
@@ -81,8 +76,6 @@ module Pier
         :'periodo_taxa' => :'String',
         
         :'sistema_amortizacao' => :'String',
-        
-        :'dia_vencimento' => :'Integer',
         
         :'numero_meses_carencia' => :'Integer'
         
@@ -138,15 +131,6 @@ module Pier
         
         
         self.sistema_amortizacao = attributes[:'sistemaAmortizacao']
-        
-      
-      end
-
-      
-      if attributes[:'diaVencimento']
-        
-        
-        self.dia_vencimento = attributes[:'diaVencimento']
         
       
       end
@@ -222,25 +206,11 @@ module Pier
       
       
       
-      if @dia_vencimento.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
       
       
       
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -282,7 +252,6 @@ module Pier
           taxa_juros == o.taxa_juros &&
           periodo_taxa == o.periodo_taxa &&
           sistema_amortizacao == o.sistema_amortizacao &&
-          dia_vencimento == o.dia_vencimento &&
           numero_meses_carencia == o.numero_meses_carencia
     end
 
@@ -295,7 +264,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [valor_solicitado, numero_parcelas, taxa_juros, periodo_taxa, sistema_amortizacao, dia_vencimento, numero_meses_carencia].hash
+      [valor_solicitado, numero_parcelas, taxa_juros, periodo_taxa, sistema_amortizacao, numero_meses_carencia].hash
     end
 
     # Builds the object from hash

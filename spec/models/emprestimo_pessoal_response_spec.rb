@@ -65,7 +65,7 @@ describe 'EmprestimoPessoalResponse' do
   end
 
 
-  describe 'test attribute "valor_total"' do
+  describe 'test attribute "valor_maximo_solicitacao"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -76,7 +76,29 @@ describe 'EmprestimoPessoalResponse' do
   end
 
 
-  describe 'test attribute "sistema_amortizacao"' do
+  describe 'test attribute "numero_parcelas"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "valor_maximo_parcela"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "data_primeira_parcela"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -98,7 +120,18 @@ describe 'EmprestimoPessoalResponse' do
   end
 
 
-  describe 'test attribute "data_primeira_parcela"' do
+  describe 'test attribute "sistema_amortizacao"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "taxa_juros"' do
     it 'should work' do
        # assertion here
        # should be_a()

@@ -25,11 +25,11 @@ Method | HTTP request | Description
 [**listar_using_get24**](CadastroClienteApi.md#listar_using_get24) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
 [**salvar_pessoa_fisica_aprovada_using_post**](CadastroClienteApi.md#salvar_pessoa_fisica_aprovada_using_post) | **POST** /api/clientes-pessoas-fisicas | Cadastro de Conta e Pessoa Fisica
 [**salvar_pessoa_juridica_aprovada_using_post**](CadastroClienteApi.md#salvar_pessoa_juridica_aprovada_using_post) | **POST** /api/clientes-pessoas-juridicas | Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica
-[**salvar_using_post10**](CadastroClienteApi.md#salvar_using_post10) | **POST** /api/pessoas-detalhes | Salvar os detalhes de uma determinada Pessoa
-[**salvar_using_post11**](CadastroClienteApi.md#salvar_using_post11) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
-[**salvar_using_post13**](CadastroClienteApi.md#salvar_using_post13) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
-[**salvar_using_post5**](CadastroClienteApi.md#salvar_using_post5) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
-[**salvar_using_post7**](CadastroClienteApi.md#salvar_using_post7) | **POST** /api/contas/{id}/incluir-registro-integracao | Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+[**salvar_using_post10**](CadastroClienteApi.md#salvar_using_post10) | **POST** /api/contas/{id}/incluir-registro-integracao | Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+[**salvar_using_post13**](CadastroClienteApi.md#salvar_using_post13) | **POST** /api/pessoas-detalhes | Salvar os detalhes de uma determinada Pessoa
+[**salvar_using_post14**](CadastroClienteApi.md#salvar_using_post14) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
+[**salvar_using_post16**](CadastroClienteApi.md#salvar_using_post16) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
+[**salvar_using_post8**](CadastroClienteApi.md#salvar_using_post8) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
 
 
 
@@ -1301,7 +1301,61 @@ No authorization required
 
 
 # **salvar_using_post10**
-> PessoaDetalheResponse salvar_using_post10(id_pessoa, opts)
+> IntegracaoEmissorResponse salvar_using_post10(id, opts)
+
+Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+
+Este recurso permite incluir uma conta como registro para integra\u00C3\u00A7\u00C3\u00A3o.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::CadastroClienteApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+opts = { 
+  body: Pier::IntegracaoEmissorPersist.new # IntegracaoEmissorPersist | Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
+}
+
+begin
+  #Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+  result = api_instance.salvar_using_post10(id, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CadastroClienteApi->salvar_using_post10: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **body** | [**IntegracaoEmissorPersist**](IntegracaoEmissorPersist.md)| Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada | [optional] 
+
+
+### Return type
+
+[**IntegracaoEmissorResponse**](IntegracaoEmissorResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **salvar_using_post13**
+> PessoaDetalheResponse salvar_using_post13(id_pessoa, opts)
 
 Salvar os detalhes de uma determinada Pessoa
 
@@ -1331,10 +1385,10 @@ opts = {
 
 begin
   #Salvar os detalhes de uma determinada Pessoa
-  result = api_instance.salvar_using_post10(id_pessoa, opts)
+  result = api_instance.salvar_using_post13(id_pessoa, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->salvar_using_post10: #{e}"
+  puts "Exception when calling CadastroClienteApi->salvar_using_post13: #{e}"
 end
 ```
 
@@ -1370,8 +1424,8 @@ No authorization required
 
 
 
-# **salvar_using_post11**
-> PessoaResponse salvar_using_post11(nome, tipo, opts)
+# **salvar_using_post14**
+> PessoaResponse salvar_using_post14(nome, tipo, opts)
 
 Realiza o cadastro de um nova Pessoa
 
@@ -1402,10 +1456,10 @@ opts = {
 
 begin
   #Realiza o cadastro de um nova Pessoa
-  result = api_instance.salvar_using_post11(nome, tipo, opts)
+  result = api_instance.salvar_using_post14(nome, tipo, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->salvar_using_post11: #{e}"
+  puts "Exception when calling CadastroClienteApi->salvar_using_post14: #{e}"
 end
 ```
 
@@ -1441,8 +1495,8 @@ No authorization required
 
 
 
-# **salvar_using_post13**
-> TelefoneResponse salvar_using_post13(opts)
+# **salvar_using_post16**
+> TelefoneResponse salvar_using_post16(opts)
 
 Realiza o cadastro de um novo Telefone
 
@@ -1466,10 +1520,10 @@ opts = {
 
 begin
   #Realiza o cadastro de um novo Telefone
-  result = api_instance.salvar_using_post13(opts)
+  result = api_instance.salvar_using_post16(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->salvar_using_post13: #{e}"
+  puts "Exception when calling CadastroClienteApi->salvar_using_post16: #{e}"
 end
 ```
 
@@ -1500,8 +1554,8 @@ No authorization required
 
 
 
-# **salvar_using_post5**
-> EnderecoResponse salvar_using_post5(opts)
+# **salvar_using_post8**
+> EnderecoResponse salvar_using_post8(opts)
 
 Realiza o cadastro de um novo Endere\u00C3\u00A7o
 
@@ -1531,10 +1585,10 @@ opts = {
 
 begin
   #Realiza o cadastro de um novo Endere\u00C3\u00A7o
-  result = api_instance.salvar_using_post5(opts)
+  result = api_instance.salvar_using_post8(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->salvar_using_post5: #{e}"
+  puts "Exception when calling CadastroClienteApi->salvar_using_post8: #{e}"
 end
 ```
 
@@ -1558,60 +1612,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EnderecoResponse**](EnderecoResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **salvar_using_post7**
-> IntegracaoEmissorResponse salvar_using_post7(id, opts)
-
-Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
-
-Este recurso permite incluir uma conta como registro para integra\u00C3\u00A7\u00C3\u00A3o.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::CadastroClienteApi.new
-
-id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-
-opts = { 
-  body: Pier::IntegracaoEmissorPersist.new # IntegracaoEmissorPersist | Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
-}
-
-begin
-  #Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
-  result = api_instance.salvar_using_post7(id, opts)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->salvar_using_post7: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **body** | [**IntegracaoEmissorPersist**](IntegracaoEmissorPersist.md)| Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada | [optional] 
-
-
-### Return type
-
-[**IntegracaoEmissorResponse**](IntegracaoEmissorResponse.md)
 
 ### Authorization
 

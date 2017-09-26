@@ -37,6 +37,9 @@ module Pier
     # Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
     attr_accessor :tipo_notificacao
 
+    # Remetente.
+    attr_accessor :remetente
+
     # Assunto do e-mail.
     attr_accessor :assunto
 
@@ -62,6 +65,8 @@ module Pier
         
         :'tipo_notificacao' => :'tipoNotificacao',
         
+        :'remetente' => :'remetente',
+        
         :'assunto' => :'assunto',
         
         :'conteudo' => :'conteudo',
@@ -84,6 +89,8 @@ module Pier
         :'tipo_layout' => :'String',
         
         :'tipo_notificacao' => :'String',
+        
+        :'remetente' => :'String',
         
         :'assunto' => :'String',
         
@@ -136,6 +143,15 @@ module Pier
         
         
         self.tipo_notificacao = attributes[:'tipoNotificacao']
+        
+      
+      end
+
+      
+      if attributes[:'remetente']
+        
+        
+        self.remetente = attributes[:'remetente']
         
       
       end
@@ -202,7 +218,7 @@ module Pier
       
       
       
-      allowed_values = ["RECUPERAR_SENHA", "FATURA_POR_EMAIL", "VALIDAR_DISPOSITIVO"]
+      allowed_values = ["RECUPERAR_SENHA", "FATURA_POR_EMAIL", "VALIDAR_DISPOSITIVO", "NOTIFICACAO_EMAIL"]
       if @tipo_layout && !allowed_values.include?(@tipo_layout)
         return false
       end
@@ -215,6 +231,10 @@ module Pier
       if @tipo_notificacao && !allowed_values.include?(@tipo_notificacao)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -251,7 +271,7 @@ module Pier
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] tipo_layout Object to be assigned
     def tipo_layout=(tipo_layout)
-      allowed_values = ["RECUPERAR_SENHA", "FATURA_POR_EMAIL", "VALIDAR_DISPOSITIVO"]
+      allowed_values = ["RECUPERAR_SENHA", "FATURA_POR_EMAIL", "VALIDAR_DISPOSITIVO", "NOTIFICACAO_EMAIL"]
       if tipo_layout && !allowed_values.include?(tipo_layout)
         fail ArgumentError, "invalid value for 'tipo_layout', must be one of #{allowed_values}."
       end
@@ -295,6 +315,11 @@ module Pier
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared 
     def ==(o)
@@ -304,6 +329,7 @@ module Pier
           id_configuracao_email == o.id_configuracao_email &&
           tipo_layout == o.tipo_layout &&
           tipo_notificacao == o.tipo_notificacao &&
+          remetente == o.remetente &&
           assunto == o.assunto &&
           conteudo == o.conteudo &&
           data_inclusao == o.data_inclusao &&
@@ -319,7 +345,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_configuracao_email, tipo_layout, tipo_notificacao, assunto, conteudo, data_inclusao, data_alteracao].hash
+      [id, id_configuracao_email, tipo_layout, tipo_notificacao, remetente, assunto, conteudo, data_inclusao, data_alteracao].hash
     end
 
     # Builds the object from hash

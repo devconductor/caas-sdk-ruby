@@ -1386,79 +1386,13 @@ module Pier
     end
 
 
-    # Cadastra tipos oportunidades
-    # Esse recurso permite cadastrar tipos oportunidades.
-    # @param persist persist
-    # @param [Hash] opts the optional parameters
-    # @return [TipoOportunidadeResponse]
-    def salvar_using_post14(persist, opts = {})
-      data, _status_code, _headers = salvar_using_post14_with_http_info(persist, opts)
-      return data
-    end
-
-    # Cadastra tipos oportunidades
-    # Esse recurso permite cadastrar tipos oportunidades.
-    # @param persist persist
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(TipoOportunidadeResponse, Fixnum, Hash)>] TipoOportunidadeResponse data, response status code and response headers
-    def salvar_using_post14_with_http_info(persist, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadeApi.salvar_using_post14 ..."
-      end
-      
-      
-      # verify the required parameter 'persist' is set
-      fail ArgumentError, "Missing the required parameter 'persist' when calling OportunidadeApi.salvar_using_post14" if persist.nil?
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/tipos-oportunidades".sub('{format}','json')
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = @api_client.object_to_http_body(persist)
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'TipoOportunidadeResponse')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadeApi#salvar_using_post14\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-
     # Cadastra as oportunidades
     # Esse recurso permite cadastrar oportunidades.
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [OportunidadeResponse]
-    def salvar_using_post9(persist, opts = {})
-      data, _status_code, _headers = salvar_using_post9_with_http_info(persist, opts)
+    def salvar_using_post12(persist, opts = {})
+      data, _status_code, _headers = salvar_using_post12_with_http_info(persist, opts)
       return data
     end
 
@@ -1467,14 +1401,14 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(OportunidadeResponse, Fixnum, Hash)>] OportunidadeResponse data, response status code and response headers
-    def salvar_using_post9_with_http_info(persist, opts = {})
+    def salvar_using_post12_with_http_info(persist, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadeApi.salvar_using_post9 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadeApi.salvar_using_post12 ..."
       end
       
       
       # verify the required parameter 'persist' is set
-      fail ArgumentError, "Missing the required parameter 'persist' when calling OportunidadeApi.salvar_using_post9" if persist.nil?
+      fail ArgumentError, "Missing the required parameter 'persist' when calling OportunidadeApi.salvar_using_post12" if persist.nil?
       
       
       
@@ -1512,7 +1446,73 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'OportunidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadeApi#salvar_using_post9\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadeApi#salvar_using_post12\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Cadastra tipos oportunidades
+    # Esse recurso permite cadastrar tipos oportunidades.
+    # @param persist persist
+    # @param [Hash] opts the optional parameters
+    # @return [TipoOportunidadeResponse]
+    def salvar_using_post17(persist, opts = {})
+      data, _status_code, _headers = salvar_using_post17_with_http_info(persist, opts)
+      return data
+    end
+
+    # Cadastra tipos oportunidades
+    # Esse recurso permite cadastrar tipos oportunidades.
+    # @param persist persist
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(TipoOportunidadeResponse, Fixnum, Hash)>] TipoOportunidadeResponse data, response status code and response headers
+    def salvar_using_post17_with_http_info(persist, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OportunidadeApi.salvar_using_post17 ..."
+      end
+      
+      
+      # verify the required parameter 'persist' is set
+      fail ArgumentError, "Missing the required parameter 'persist' when calling OportunidadeApi.salvar_using_post17" if persist.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/tipos-oportunidades".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(persist)
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TipoOportunidadeResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OportunidadeApi#salvar_using_post17\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

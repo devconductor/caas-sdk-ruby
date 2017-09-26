@@ -828,6 +828,72 @@ module Pier
     end
 
 
+    # Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
+    # Este m\u00C3\u00A9todo permite consultar se o cliente tem direito ao benef\u00C3\u00ADcio de pagamento em atraso, em loja, at\u00C3\u00A9 o s\u00C3\u00A1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param [Hash] opts the optional parameters
+    # @return [BeneficioPagamentoAtrasoResponse]
+    def consultar_beneficio_pagamento_atraso_using_get(id, opts = {})
+      data, _status_code, _headers = consultar_beneficio_pagamento_atraso_using_get_with_http_info(id, opts)
+      return data
+    end
+
+    # Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
+    # Este m\u00C3\u00A9todo permite consultar se o cliente tem direito ao benef\u00C3\u00ADcio de pagamento em atraso, em loja, at\u00C3\u00A9 o s\u00C3\u00A1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(BeneficioPagamentoAtrasoResponse, Fixnum, Hash)>] BeneficioPagamentoAtrasoResponse data, response status code and response headers
+    def consultar_beneficio_pagamento_atraso_using_get_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ContaApi.consultar_beneficio_pagamento_atraso_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_beneficio_pagamento_atraso_using_get" if id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/consultar-beneficio-pagamento-atraso".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'BeneficioPagamentoAtrasoResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ContaApi#consultar_beneficio_pagamento_atraso_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Consulta os dados de um determinado boleto da fatura
     # Este recurso consulta um boleto da fatura
     # @param id Id Conta
@@ -3478,6 +3544,82 @@ module Pier
         :return_type => 'Object')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ContaApi#reativar_using_post1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
+    # Esta opera\u00C3\u00A7\u00C3\u00A3o pode ser utilizada para simular opera\u00C3\u00A7\u00C3\u00B5es financeiras a partir de informa\u00C3\u00A7\u00C3\u00B5es fornecidas pelo usu\u00C3\u00A1rio. Os c\u00C3\u00A1lculos gerados devem ser considerados apenas como refer\u00C3\u00AAncia para as situa\u00C3\u00A7\u00C3\u00B5es reais e n\u00C3\u00A3o como valores oficiais.
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param request request
+    # @param [Hash] opts the optional parameters
+    # @return [EmprestimoPessoalResponse]
+    def simular_emprestimo_financiamento_using_post(id, request, opts = {})
+      data, _status_code, _headers = simular_emprestimo_financiamento_using_post_with_http_info(id, request, opts)
+      return data
+    end
+
+    # Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
+    # Esta opera\u00C3\u00A7\u00C3\u00A3o pode ser utilizada para simular opera\u00C3\u00A7\u00C3\u00B5es financeiras a partir de informa\u00C3\u00A7\u00C3\u00B5es fornecidas pelo usu\u00C3\u00A1rio. Os c\u00C3\u00A1lculos gerados devem ser considerados apenas como refer\u00C3\u00AAncia para as situa\u00C3\u00A7\u00C3\u00B5es reais e n\u00C3\u00A3o como valores oficiais.
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param request request
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(EmprestimoPessoalResponse, Fixnum, Hash)>] EmprestimoPessoalResponse data, response status code and response headers
+    def simular_emprestimo_financiamento_using_post_with_http_info(id, request, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ContaApi.simular_emprestimo_financiamento_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.simular_emprestimo_financiamento_using_post" if id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'request' is set
+      fail ArgumentError, "Missing the required parameter 'request' when calling ContaApi.simular_emprestimo_financiamento_using_post" if request.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/simular-emprestimos-financiamentos".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(request)
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EmprestimoPessoalResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ContaApi#simular_emprestimo_financiamento_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -34,11 +34,11 @@ module Pier
     # Taxa de juros aplicado no empr\u00C3\u00A9stimo/financiamento
     attr_accessor :taxa_juros
 
-    # valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento
-    attr_accessor :valor_percentual_cet
-
     # valor total estimado dos tributos do Imposto sobre Opera\u00C3\u00A7\u00C3\u00B5es Financeiras
     attr_accessor :valor_tributos_iof
+
+    # valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento
+    attr_accessor :valor_percentual_cet
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -51,9 +51,9 @@ module Pier
         
         :'taxa_juros' => :'taxaJuros',
         
-        :'valor_percentual_cet' => :'valorPercentualCET',
+        :'valor_tributos_iof' => :'valorTributosIOF',
         
-        :'valor_tributos_iof' => :'valorTributosIOF'
+        :'valor_percentual_cet' => :'valorPercentualCET'
         
       }
     end
@@ -68,9 +68,9 @@ module Pier
         
         :'taxa_juros' => :'Float',
         
-        :'valor_percentual_cet' => :'Float',
+        :'valor_tributos_iof' => :'Float',
         
-        :'valor_tributos_iof' => :'Float'
+        :'valor_percentual_cet' => :'Float'
         
       }
     end
@@ -111,19 +111,19 @@ module Pier
       end
 
       
-      if attributes[:'valorPercentualCET']
+      if attributes[:'valorTributosIOF']
         
         
-        self.valor_percentual_cet = attributes[:'valorPercentualCET']
+        self.valor_tributos_iof = attributes[:'valorTributosIOF']
         
       
       end
 
       
-      if attributes[:'valorTributosIOF']
+      if attributes[:'valorPercentualCET']
         
         
-        self.valor_tributos_iof = attributes[:'valorTributosIOF']
+        self.valor_percentual_cet = attributes[:'valorPercentualCET']
         
       
       end
@@ -200,8 +200,8 @@ module Pier
           numero_parcelas == o.numero_parcelas &&
           valor_parcelas == o.valor_parcelas &&
           taxa_juros == o.taxa_juros &&
-          valor_percentual_cet == o.valor_percentual_cet &&
-          valor_tributos_iof == o.valor_tributos_iof
+          valor_tributos_iof == o.valor_tributos_iof &&
+          valor_percentual_cet == o.valor_percentual_cet
     end
 
     # @see the `==` method
@@ -213,7 +213,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [numero_parcelas, valor_parcelas, taxa_juros, valor_percentual_cet, valor_tributos_iof].hash
+      [numero_parcelas, valor_parcelas, taxa_juros, valor_tributos_iof, valor_percentual_cet].hash
     end
 
     # Builds the object from hash

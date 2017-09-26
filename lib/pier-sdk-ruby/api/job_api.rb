@@ -383,8 +383,8 @@ module Pier
     # @param groovy groovy
     # @param [Hash] opts the optional parameters
     # @return [JobResponse]
-    def salvar_using_post8(descricao, cron, groovy, opts = {})
-      data, _status_code, _headers = salvar_using_post8_with_http_info(descricao, cron, groovy, opts)
+    def salvar_using_post11(descricao, cron, groovy, opts = {})
+      data, _status_code, _headers = salvar_using_post11_with_http_info(descricao, cron, groovy, opts)
       return data
     end
 
@@ -395,14 +395,14 @@ module Pier
     # @param groovy groovy
     # @param [Hash] opts the optional parameters
     # @return [Array<(JobResponse, Fixnum, Hash)>] JobResponse data, response status code and response headers
-    def salvar_using_post8_with_http_info(descricao, cron, groovy, opts = {})
+    def salvar_using_post11_with_http_info(descricao, cron, groovy, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: JobApi.salvar_using_post8 ..."
+        @api_client.config.logger.debug "Calling API: JobApi.salvar_using_post11 ..."
       end
       
       
       # verify the required parameter 'descricao' is set
-      fail ArgumentError, "Missing the required parameter 'descricao' when calling JobApi.salvar_using_post8" if descricao.nil?
+      fail ArgumentError, "Missing the required parameter 'descricao' when calling JobApi.salvar_using_post11" if descricao.nil?
       
       
       
@@ -410,7 +410,7 @@ module Pier
       
       
       # verify the required parameter 'cron' is set
-      fail ArgumentError, "Missing the required parameter 'cron' when calling JobApi.salvar_using_post8" if cron.nil?
+      fail ArgumentError, "Missing the required parameter 'cron' when calling JobApi.salvar_using_post11" if cron.nil?
       
       
       
@@ -418,7 +418,7 @@ module Pier
       
       
       # verify the required parameter 'groovy' is set
-      fail ArgumentError, "Missing the required parameter 'groovy' when calling JobApi.salvar_using_post8" if groovy.nil?
+      fail ArgumentError, "Missing the required parameter 'groovy' when calling JobApi.salvar_using_post11" if groovy.nil?
       
       
       
@@ -458,7 +458,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'JobResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: JobApi#salvar_using_post8\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: JobApi#salvar_using_post11\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

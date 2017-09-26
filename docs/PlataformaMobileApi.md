@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizar_using_put1**](PlataformaMobileApi.md#atualizar_using_put1) | **PUT** /api/plataformas-mobile/{id} | Atualiza Plataforma Mobile
 [**listar_using_get17**](PlataformaMobileApi.md#listar_using_get17) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
-[**salvar_using_post12**](PlataformaMobileApi.md#salvar_using_post12) | **POST** /api/plataformas-mobile | Cadastra Plataforma Mobile
+[**salvar_using_post15**](PlataformaMobileApi.md#salvar_using_post15) | **POST** /api/plataformas-mobile | Cadastra Plataforma Mobile
 
 
 
@@ -121,8 +121,8 @@ No authorization required
 
 
 
-# **salvar_using_post12**
-> PlataformaMobileResponse salvar_using_post12(persist)
+# **salvar_using_post15**
+> PlataformaMobileResponse salvar_using_post15(persist)
 
 Cadastra Plataforma Mobile
 
@@ -141,10 +141,10 @@ persist = Pier::PlataformaMobilePersist.new # PlataformaMobilePersist | persist
 
 begin
   #Cadastra Plataforma Mobile
-  result = api_instance.salvar_using_post12(persist)
+  result = api_instance.salvar_using_post15(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling PlataformaMobileApi->salvar_using_post12: #{e}"
+  puts "Exception when calling PlataformaMobileApi->salvar_using_post15: #{e}"
 end
 ```
 

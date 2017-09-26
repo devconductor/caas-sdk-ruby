@@ -98,6 +98,9 @@ require 'pier-sdk-ruby/models/banco_response'
 require 'pier-sdk-ruby/models/base_response'
 
 
+require 'pier-sdk-ruby/models/beneficio_pagamento_atraso_response'
+
+
 require 'pier-sdk-ruby/models/body_access_token'
 
 
@@ -191,6 +194,27 @@ require 'pier-sdk-ruby/models/dispositivo_response'
 require 'pier-sdk-ruby/models/divida_cliente_response'
 
 
+require 'pier-sdk-ruby/models/documento_detalhe_response'
+
+
+require 'pier-sdk-ruby/models/documento_parametros_request'
+
+
+require 'pier-sdk-ruby/models/documento_response'
+
+
+require 'pier-sdk-ruby/models/documento_template_request'
+
+
+require 'pier-sdk-ruby/models/documento_template_response'
+
+
+require 'pier-sdk-ruby/models/documento_tipo_request'
+
+
+require 'pier-sdk-ruby/models/documento_tipo_response'
+
+
 require 'pier-sdk-ruby/models/emprestimo_pessoal_request'
 
 
@@ -261,6 +285,12 @@ require 'pier-sdk-ruby/models/lote_cartoes_pre_pagos_response'
 
 
 require 'pier-sdk-ruby/models/map_ofstring_andstring'
+
+
+require 'pier-sdk-ruby/models/notificacao_email_request'
+
+
+require 'pier-sdk-ruby/models/notificacao_email_response'
 
 
 require 'pier-sdk-ruby/models/notificacao_push_response'
@@ -693,6 +723,8 @@ require 'pier-sdk-ruby/api/cartao_api'
 require 'pier-sdk-ruby/api/conta_api'
 
 require 'pier-sdk-ruby/api/dispositivo_api'
+
+require 'pier-sdk-ruby/api/documentos_api'
 
 require 'pier-sdk-ruby/api/endereco_nacional_api'
 

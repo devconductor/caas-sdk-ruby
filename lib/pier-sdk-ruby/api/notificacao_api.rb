@@ -116,6 +116,7 @@ module Pier
     # @option opts [Integer] :id_configuracao_email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
     # @option opts [String] :tipo_layout Tipo do layout.
     # @option opts [String] :tipo_notificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+    # @option opts [String] :remetente Remetente
     # @option opts [String] :assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
     # @return [TemplateNotificacaoResponse]
     def alterar_template_notificacao_using_put(id, conteudo, opts = {})
@@ -131,6 +132,7 @@ module Pier
     # @option opts [Integer] :id_configuracao_email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
     # @option opts [String] :tipo_layout Tipo do layout.
     # @option opts [String] :tipo_notificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+    # @option opts [String] :remetente Remetente
     # @option opts [String] :assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
     # @return [Array<(TemplateNotificacaoResponse, Fixnum, Hash)>] TemplateNotificacaoResponse data, response status code and response headers
     def alterar_template_notificacao_using_put_with_http_info(id, conteudo, opts = {})
@@ -163,8 +165,8 @@ module Pier
       
       
       
-      if opts[:'tipo_layout'] && !['RECUPERAR_SENHA', 'FATURA_POR_EMAIL', 'VALIDAR_DISPOSITIVO'].include?(opts[:'tipo_layout'])
-        fail ArgumentError, 'invalid value for "tipo_layout", must be one of RECUPERAR_SENHA, FATURA_POR_EMAIL, VALIDAR_DISPOSITIVO'
+      if opts[:'tipo_layout'] && !['RECUPERAR_SENHA', 'FATURA_POR_EMAIL', 'VALIDAR_DISPOSITIVO', 'NOTIFICACAO_EMAIL'].include?(opts[:'tipo_layout'])
+        fail ArgumentError, 'invalid value for "tipo_layout", must be one of RECUPERAR_SENHA, FATURA_POR_EMAIL, VALIDAR_DISPOSITIVO, NOTIFICACAO_EMAIL'
       end
       
       
@@ -186,6 +188,12 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/templates-notificacoes/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
@@ -194,6 +202,7 @@ module Pier
       query_params[:'idConfiguracaoEmail'] = opts[:'id_configuracao_email'] if opts[:'id_configuracao_email']
       query_params[:'tipoLayout'] = opts[:'tipo_layout'] if opts[:'tipo_layout']
       query_params[:'tipoNotificacao'] = opts[:'tipo_notificacao'] if opts[:'tipo_notificacao']
+      query_params[:'remetente'] = opts[:'remetente'] if opts[:'remetente']
       query_params[:'assunto'] = opts[:'assunto'] if opts[:'assunto']
 
       # header parameters
@@ -1034,6 +1043,72 @@ module Pier
     end
 
 
+    # Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
+    # Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+    # @param request request
+    # @param [Hash] opts the optional parameters
+    # @return [NotificacaoEmailResponse]
+    def notificacao_email_using_post(request, opts = {})
+      data, _status_code, _headers = notificacao_email_using_post_with_http_info(request, opts)
+      return data
+    end
+
+    # Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
+    # Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+    # @param request request
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(NotificacaoEmailResponse, Fixnum, Hash)>] NotificacaoEmailResponse data, response status code and response headers
+    def notificacao_email_using_post_with_http_info(request, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: NotificacaoApi.notificacao_email_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'request' is set
+      fail ArgumentError, "Missing the required parameter 'request' when calling NotificacaoApi.notificacao_email_using_post" if request.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/notificacoes-email".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(request)
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'NotificacaoEmailResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: NotificacaoApi#notificacao_email_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Responder SMS
     # Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
     # @param [Hash] opts the optional parameters
@@ -1454,6 +1529,7 @@ module Pier
     # @option opts [Integer] :id_configuracao_email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
     # @option opts [String] :tipo_layout Tipo do layout.
     # @option opts [String] :tipo_notificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+    # @option opts [String] :remetente Remetente
     # @option opts [String] :assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
     # @return [TemplateNotificacaoResponse]
     def salvar_template_notificacao_using_post(conteudo, opts = {})
@@ -1468,6 +1544,7 @@ module Pier
     # @option opts [Integer] :id_configuracao_email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
     # @option opts [String] :tipo_layout Tipo do layout.
     # @option opts [String] :tipo_notificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+    # @option opts [String] :remetente Remetente
     # @option opts [String] :assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
     # @return [Array<(TemplateNotificacaoResponse, Fixnum, Hash)>] TemplateNotificacaoResponse data, response status code and response headers
     def salvar_template_notificacao_using_post_with_http_info(conteudo, opts = {})
@@ -1492,8 +1569,8 @@ module Pier
       
       
       
-      if opts[:'tipo_layout'] && !['RECUPERAR_SENHA', 'FATURA_POR_EMAIL', 'VALIDAR_DISPOSITIVO'].include?(opts[:'tipo_layout'])
-        fail ArgumentError, 'invalid value for "tipo_layout", must be one of RECUPERAR_SENHA, FATURA_POR_EMAIL, VALIDAR_DISPOSITIVO'
+      if opts[:'tipo_layout'] && !['RECUPERAR_SENHA', 'FATURA_POR_EMAIL', 'VALIDAR_DISPOSITIVO', 'NOTIFICACAO_EMAIL'].include?(opts[:'tipo_layout'])
+        fail ArgumentError, 'invalid value for "tipo_layout", must be one of RECUPERAR_SENHA, FATURA_POR_EMAIL, VALIDAR_DISPOSITIVO, NOTIFICACAO_EMAIL'
       end
       
       
@@ -1515,6 +1592,12 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/templates-notificacoes".sub('{format}','json')
 
@@ -1523,6 +1606,7 @@ module Pier
       query_params[:'idConfiguracaoEmail'] = opts[:'id_configuracao_email'] if opts[:'id_configuracao_email']
       query_params[:'tipoLayout'] = opts[:'tipo_layout'] if opts[:'tipo_layout']
       query_params[:'tipoNotificacao'] = opts[:'tipo_notificacao'] if opts[:'tipo_notificacao']
+      query_params[:'remetente'] = opts[:'remetente'] if opts[:'remetente']
       query_params[:'assunto'] = opts[:'assunto'] if opts[:'assunto']
 
       # header parameters

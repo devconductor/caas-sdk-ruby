@@ -417,199 +417,89 @@ module Pier
     def valid?
       
       
-      if @id.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @limite_global.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @limite_compra.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @limite_parcelado.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @limite_parcelas.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @limite_saque_global.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @limite_saque_periodo.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @limite_consignado.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @limite_internacional_compra.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @limite_internacional_parcelado.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @limite_internacional_parcelas.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @limite_internacional_saque_global.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @limite_internacional_saque_periodo.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @limite_maximo.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @saldo_disponivel_global.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @saldo_disponivel_compra.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @saldo_disponivel_parcelado.nil?
-        return false
-      end
-
       
       
       
-      
-      
-      if @saldo_disponivel_parcelas.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @saldo_disponivel_saque.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @saldo_pontos_fidelidade.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @saldo_disponivel_compra_internacional.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @saldo_disponivel_saque_internacional.nil?
-        return false
-      end
-
       
       
       

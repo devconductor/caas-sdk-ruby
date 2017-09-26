@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**alterar_using_put11**](WebhookApi.md#alterar_using_put11) | **PUT** /api/webhooks/{id} | Alterar Webhook
 [**consultar_using_get28**](WebhookApi.md#consultar_using_get28) | **GET** /api/webhooks/{id} | Consultar Webhook
 [**listar_using_get34**](WebhookApi.md#listar_using_get34) | **GET** /api/webhooks | Lista os Webhooks
-[**salvar_using_post17**](WebhookApi.md#salvar_using_post17) | **POST** /api/webhooks | Salvar Webhook
+[**salvar_using_post20**](WebhookApi.md#salvar_using_post20) | **POST** /api/webhooks | Salvar Webhook
 
 
 
@@ -185,8 +185,8 @@ No authorization required
 
 
 
-# **salvar_using_post17**
-> WebHookResponse salvar_using_post17(tipo_evento, url)
+# **salvar_using_post20**
+> WebHookResponse salvar_using_post20(tipo_evento, url)
 
 Salvar Webhook
 
@@ -207,10 +207,10 @@ url = "url_example" # String | URL que a ser consumida pelo WebHook
 
 begin
   #Salvar Webhook
-  result = api_instance.salvar_using_post17(tipo_evento, url)
+  result = api_instance.salvar_using_post20(tipo_evento, url)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling WebhookApi->salvar_using_post17: #{e}"
+  puts "Exception when calling WebhookApi->salvar_using_post20: #{e}"
 end
 ```
 

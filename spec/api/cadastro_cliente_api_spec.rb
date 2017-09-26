@@ -497,6 +497,24 @@ describe 'CadastroClienteApi' do
 
 
   # unit tests for salvar_using_post10
+  # Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+  # Este recurso permite incluir uma conta como registro para integra\u00C3\u00A7\u00C3\u00A3o.
+  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+  # @param [Hash] opts the optional parameters
+  # @option opts [IntegracaoEmissorPersist] :body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
+  # @return [IntegracaoEmissorResponse]
+  describe 'salvar_using_post10 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for salvar_using_post13
   # Salvar os detalhes de uma determinada Pessoa
   # Este m\u00C3\u00A9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa.
   # @param id_pessoa Apresenta o c\u00C3\u00B3digo identificador da pessoa
@@ -511,7 +529,7 @@ describe 'CadastroClienteApi' do
   # @option opts [String] :email Email da pessoa fisica
   # @option opts [String] :nome_empresa Nome que deve ser impresso no cart\u00C3\u00A3o
   # @return [PessoaDetalheResponse]
-  describe 'salvar_using_post10 test' do
+  describe 'salvar_using_post13 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -522,7 +540,7 @@ describe 'CadastroClienteApi' do
   end
 
 
-  # unit tests for salvar_using_post11
+  # unit tests for salvar_using_post14
   # Realiza o cadastro de um nova Pessoa
   # Este m\u00C3\u00A9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor.
   # @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
@@ -537,7 +555,7 @@ describe 'CadastroClienteApi' do
   # @option opts [String] :unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade
   # @option opts [String] :data_emissao_identidade Data emiss\u00C3\u00A3o da Identidade.
   # @return [PessoaResponse]
-  describe 'salvar_using_post11 test' do
+  describe 'salvar_using_post14 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -548,7 +566,7 @@ describe 'CadastroClienteApi' do
   end
 
 
-  # unit tests for salvar_using_post13
+  # unit tests for salvar_using_post16
   # Realiza o cadastro de um novo Telefone
   # Este m\u00C3\u00A9todo permite que seja cadastrado um novo Telefone na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -558,7 +576,7 @@ describe 'CadastroClienteApi' do
   # @option opts [String] :telefone N\u00C3\u00BAmero do telefone.
   # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
   # @return [TelefoneResponse]
-  describe 'salvar_using_post13 test' do
+  describe 'salvar_using_post16 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -569,7 +587,7 @@ describe 'CadastroClienteApi' do
   end
 
 
-  # unit tests for salvar_using_post5
+  # unit tests for salvar_using_post8
   # Realiza o cadastro de um novo Endere\u00C3\u00A7o
   # Este m\u00C3\u00A9todo permite que seja cadastrado um novo Endere\u00C3\u00A7o na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -585,25 +603,7 @@ describe 'CadastroClienteApi' do
   # @option opts [String] :uf Apresenta sigla da Unidade Federativa
   # @option opts [String] :pais Apresenta nome do Pais
   # @return [EnderecoResponse]
-  describe 'salvar_using_post5 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for salvar_using_post7
-  # Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
-  # Este recurso permite incluir uma conta como registro para integra\u00C3\u00A7\u00C3\u00A3o.
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-  # @param [Hash] opts the optional parameters
-  # @option opts [IntegracaoEmissorPersist] :body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
-  # @return [IntegracaoEmissorResponse]
-  describe 'salvar_using_post7 test' do
+  describe 'salvar_using_post8 test' do
     it "should work" do
       # assertion here
       # should be_a()

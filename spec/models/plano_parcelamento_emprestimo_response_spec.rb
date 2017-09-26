@@ -76,7 +76,7 @@ describe 'PlanoParcelamentoEmprestimoResponse' do
   end
 
 
-  describe 'test attribute "valor_percentual_cet"' do
+  describe 'test attribute "valor_tributos_iof"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -87,7 +87,7 @@ describe 'PlanoParcelamentoEmprestimoResponse' do
   end
 
 
-  describe 'test attribute "valor_tributos_iof"' do
+  describe 'test attribute "valor_percentual_cet"' do
     it 'should work' do
        # assertion here
        # should be_a()

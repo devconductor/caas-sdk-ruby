@@ -103,14 +103,14 @@ describe 'WebhookApi' do
   end
 
 
-  # unit tests for salvar_using_post17
+  # unit tests for salvar_using_post20
   # Salvar Webhook
   # Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
   # @param tipo_evento TipoEvento a ser chamado pelo WebHook
   # @param url URL que a ser consumida pelo WebHook
   # @param [Hash] opts the optional parameters
   # @return [WebHookResponse]
-  describe 'salvar_using_post17 test' do
+  describe 'salvar_using_post20 test' do
     it "should work" do
       # assertion here
       # should be_a()

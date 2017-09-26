@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**listar_sms_using_get**](NotificacaoApi.md#listar_sms_using_get) | **GET** /api/notificacoes/sms | Listar SMS
 [**listar_template_notificacao_using_get**](NotificacaoApi.md#listar_template_notificacao_using_get) | **GET** /api/templates-notificacoes | Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
 [**listar_tipos_layouts_using_get**](NotificacaoApi.md#listar_tipos_layouts_using_get) | **GET** /api/tipos-layouts | Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
+[**notificacao_email_using_post**](NotificacaoApi.md#notificacao_email_using_post) | **POST** /api/notificacoes-email | Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
 [**responder_sms_using_post**](NotificacaoApi.md#responder_sms_using_post) | **POST** /api/notificacoes/sms/responder | Responder SMS
 [**salvar_configuracao_using_post**](NotificacaoApi.md#salvar_configuracao_using_post) | **POST** /api/configuracoes-email | Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
 [**salvar_push_fcm_using_post**](NotificacaoApi.md#salvar_push_fcm_using_post) | **POST** /api/notificacoes/push/fcm | Enviar Push FCM
@@ -103,6 +104,7 @@ opts = {
   id_configuracao_email: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
   tipo_layout: "tipo_layout_example", # String | Tipo do layout.
   tipo_notificacao: "tipo_notificacao_example", # String | Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+  remetente: "remetente_example", # String | Remetente
   assunto: "assunto_example" # String | Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
 }
 
@@ -124,6 +126,7 @@ Name | Type | Description  | Notes
  **id_configuracao_email** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. | [optional] 
  **tipo_layout** | **String**| Tipo do layout. | [optional] 
  **tipo_notificacao** | **String**| Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. | [optional] 
+ **remetente** | **String**| Remetente | [optional] 
  **assunto** | **String**| Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. | [optional] 
 
 
@@ -638,6 +641,56 @@ No authorization required
 
 
 
+# **notificacao_email_using_post**
+> NotificacaoEmailResponse notificacao_email_using_post(request)
+
+Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
+
+Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::NotificacaoApi.new
+
+request = Pier::NotificacaoEmailRequest.new # NotificacaoEmailRequest | request
+
+
+begin
+  #Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
+  result = api_instance.notificacao_email_using_post(request)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling NotificacaoApi->notificacao_email_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**NotificacaoEmailRequest**](NotificacaoEmailRequest.md)| request | 
+
+
+### Return type
+
+[**NotificacaoEmailResponse**](NotificacaoEmailResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
 # **responder_sms_using_post**
 > NotificacaoSMSResponse responder_sms_using_post(opts)
 
@@ -964,6 +1017,7 @@ opts = {
   id_configuracao_email: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
   tipo_layout: "tipo_layout_example", # String | Tipo do layout.
   tipo_notificacao: "tipo_notificacao_example", # String | Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+  remetente: "remetente_example", # String | Remetente
   assunto: "assunto_example" # String | Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
 }
 
@@ -984,6 +1038,7 @@ Name | Type | Description  | Notes
  **id_configuracao_email** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. | [optional] 
  **tipo_layout** | **String**| Tipo do layout. | [optional] 
  **tipo_notificacao** | **String**| Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. | [optional] 
+ **remetente** | **String**| Remetente | [optional] 
  **assunto** | **String**| Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. | [optional] 
 
 

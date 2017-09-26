@@ -205,8 +205,8 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [PlataformaMobileResponse]
-    def salvar_using_post12(persist, opts = {})
-      data, _status_code, _headers = salvar_using_post12_with_http_info(persist, opts)
+    def salvar_using_post15(persist, opts = {})
+      data, _status_code, _headers = salvar_using_post15_with_http_info(persist, opts)
       return data
     end
 
@@ -215,14 +215,14 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(PlataformaMobileResponse, Fixnum, Hash)>] PlataformaMobileResponse data, response status code and response headers
-    def salvar_using_post12_with_http_info(persist, opts = {})
+    def salvar_using_post15_with_http_info(persist, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PlataformaMobileApi.salvar_using_post12 ..."
+        @api_client.config.logger.debug "Calling API: PlataformaMobileApi.salvar_using_post15 ..."
       end
       
       
       # verify the required parameter 'persist' is set
-      fail ArgumentError, "Missing the required parameter 'persist' when calling PlataformaMobileApi.salvar_using_post12" if persist.nil?
+      fail ArgumentError, "Missing the required parameter 'persist' when calling PlataformaMobileApi.salvar_using_post15" if persist.nil?
       
       
       
@@ -260,7 +260,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PlataformaMobileResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PlataformaMobileApi#salvar_using_post12\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: PlataformaMobileApi#salvar_using_post15\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

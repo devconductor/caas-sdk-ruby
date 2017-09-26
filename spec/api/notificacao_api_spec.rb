@@ -70,6 +70,7 @@ describe 'NotificacaoApi' do
   # @option opts [Integer] :id_configuracao_email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
   # @option opts [String] :tipo_layout Tipo do layout.
   # @option opts [String] :tipo_notificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+  # @option opts [String] :remetente Remetente
   # @option opts [String] :assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
   # @return [TemplateNotificacaoResponse]
   describe 'alterar_template_notificacao_using_put test' do
@@ -258,6 +259,23 @@ describe 'NotificacaoApi' do
   end
 
 
+  # unit tests for notificacao_email_using_post
+  # Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
+  # Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+  # @param request request
+  # @param [Hash] opts the optional parameters
+  # @return [NotificacaoEmailResponse]
+  describe 'notificacao_email_using_post test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
   # unit tests for responder_sms_using_post
   # Responder SMS
   # Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
@@ -370,6 +388,7 @@ describe 'NotificacaoApi' do
   # @option opts [Integer] :id_configuracao_email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
   # @option opts [String] :tipo_layout Tipo do layout.
   # @option opts [String] :tipo_notificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+  # @option opts [String] :remetente Remetente
   # @option opts [String] :assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
   # @return [TemplateNotificacaoResponse]
   describe 'salvar_template_notificacao_using_post test' do

@@ -98,17 +98,6 @@ describe 'EmprestimoPessoalRequest' do
   end
 
 
-  describe 'test attribute "dia_vencimento"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
   describe 'test attribute "numero_meses_carencia"' do
     it 'should work' do
        # assertion here

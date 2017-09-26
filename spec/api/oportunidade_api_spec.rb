@@ -319,13 +319,13 @@ describe 'OportunidadeApi' do
   end
 
 
-  # unit tests for salvar_using_post14
-  # Cadastra tipos oportunidades
-  # Esse recurso permite cadastrar tipos oportunidades.
+  # unit tests for salvar_using_post12
+  # Cadastra as oportunidades
+  # Esse recurso permite cadastrar oportunidades.
   # @param persist persist
   # @param [Hash] opts the optional parameters
-  # @return [TipoOportunidadeResponse]
-  describe 'salvar_using_post14 test' do
+  # @return [OportunidadeResponse]
+  describe 'salvar_using_post12 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -336,13 +336,13 @@ describe 'OportunidadeApi' do
   end
 
 
-  # unit tests for salvar_using_post9
-  # Cadastra as oportunidades
-  # Esse recurso permite cadastrar oportunidades.
+  # unit tests for salvar_using_post17
+  # Cadastra tipos oportunidades
+  # Esse recurso permite cadastrar tipos oportunidades.
   # @param persist persist
   # @param [Hash] opts the optional parameters
-  # @return [OportunidadeResponse]
-  describe 'salvar_using_post9 test' do
+  # @return [TipoOportunidadeResponse]
+  describe 'salvar_using_post17 test' do
     it "should work" do
       # assertion here
       # should be_a()

@@ -43,6 +43,24 @@ describe 'UsuarioApi' do
   end
 
 
+  # unit tests for alterar_senha_login_using_post
+  # Alterar senha do usu\u00C3\u00A1rio.
+  # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+  # @param login Login do usu\u00C3\u00A1rio.
+  # @param senha_nova Senha Nova
+  # @param [Hash] opts the optional parameters
+  # @return [String]
+  describe 'alterar_senha_login_using_post test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
   # unit tests for alterar_senha_using_put
   # Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
   # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
@@ -63,7 +81,7 @@ describe 'UsuarioApi' do
 
 
   # unit tests for alterar_using_put10
-  # Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+  # Altera os usu\u00C3\u00A1rios cadastrados na base.
   # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
   # @param update update
@@ -171,13 +189,31 @@ describe 'UsuarioApi' do
   end
 
 
-  # unit tests for salvar_using_post16
-  # Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
+  # unit tests for salvar_using_post19
+  # Cadastra Usu\u00C3\u00A1rio na base.
   # Esse recurso permite cadastrar usu\u00C3\u00A1rios.
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [UsuarioResponse]
-  describe 'salvar_using_post16 test' do
+  describe 'salvar_using_post19 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for validar_senha_login_using_post
+  # Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+  # O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+  # @param login Login identificador do usu\u00C3\u00A1rio (login).
+  # @param senha Senha do usu\u00C3\u00A1rio
+  # @param [Hash] opts the optional parameters
+  # @return [Object]
+  describe 'validar_senha_login_using_post test' do
     it "should work" do
       # assertion here
       # should be_a()

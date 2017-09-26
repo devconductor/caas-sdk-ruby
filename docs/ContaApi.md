@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**ativar_envio_fatura_email_using_post**](ContaApi.md#ativar_envio_fatura_email_using_post) | **POST** /api/contas/{id}/ativar-fatura-email |  Ativa o servi\u00C3\u00A7o de envio de fatura por email
 [**bloquear_using_post1**](ContaApi.md#bloquear_using_post1) | **POST** /api/contas/{id}/bloquear | Realiza o bloqueio de uma determinada Conta
 [**cancelar_using_post1**](ContaApi.md#cancelar_using_post1) | **POST** /api/contas/{id}/cancelar | Realiza o cancelamento de uma determinada Conta
+[**consultar_beneficio_pagamento_atraso_using_get**](ContaApi.md#consultar_beneficio_pagamento_atraso_using_get) | **GET** /api/contas/{id}/consultar-beneficio-pagamento-atraso | Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
 [**consultar_boleto_emitido_using_get**](ContaApi.md#consultar_boleto_emitido_using_get) | **GET** /api/contas/{id}/consultar-dados-pagamento-fatura | Consulta os dados de um determinado boleto da fatura
 [**consultar_divida_atualizada_cliente_using_get**](ContaApi.md#consultar_divida_atualizada_cliente_using_get) | **GET** /api/contas/{id}/recuperar-divida-atualizada | Consulta a d\u00C3\u00ADvida atualizada do cliente
 [**consultar_fatura_consignada_aberta_using_get**](ContaApi.md#consultar_fatura_consignada_aberta_using_get) | **GET** /api/contas/{id}/faturas-consignadas/consultar-aberta | Consultar a fatura consignadas abertas da conta
@@ -41,6 +42,7 @@ Method | HTTP request | Description
 [**listar_using_get31**](ContaApi.md#listar_using_get31) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
 [**listar_using_get8**](ContaApi.md#listar_using_get8) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
 [**reativar_using_post1**](ContaApi.md#reativar_using_post1) | **POST** /api/contas/{id}/reativar | Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
+[**simular_emprestimo_financiamento_using_post**](ContaApi.md#simular_emprestimo_financiamento_using_post) | **POST** /api/contas/{id}/simular-emprestimos-financiamentos | Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
 [**transacoes_using_get**](ContaApi.md#transacoes_using_get) | **GET** /api/contas/{id}/timeline | Permite listar uma linha do tempo com os eventos da conta
 [**transferir_using_post**](ContaApi.md#transferir_using_post) | **POST** /api/contas/{id}/transferencias-creditos-contas-bancarias | Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
 [**transferir_using_post1**](ContaApi.md#transferir_using_post1) | **POST** /api/contas/{id}/transferencias-creditos-cartoes | Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
@@ -503,6 +505,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ContaResponse**](ContaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **consultar_beneficio_pagamento_atraso_using_get**
+> BeneficioPagamentoAtrasoResponse consultar_beneficio_pagamento_atraso_using_get(id)
+
+Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
+
+Este m\u00C3\u00A9todo permite consultar se o cliente tem direito ao benef\u00C3\u00ADcio de pagamento em atraso, em loja, at\u00C3\u00A9 o s\u00C3\u00A1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::ContaApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+
+begin
+  #Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
+  result = api_instance.consultar_beneficio_pagamento_atraso_using_get(id)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ContaApi->consultar_beneficio_pagamento_atraso_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+
+
+### Return type
+
+[**BeneficioPagamentoAtrasoResponse**](BeneficioPagamentoAtrasoResponse.md)
 
 ### Authorization
 
@@ -2157,6 +2209,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **simular_emprestimo_financiamento_using_post**
+> EmprestimoPessoalResponse simular_emprestimo_financiamento_using_post(id, request)
+
+Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
+
+Esta opera\u00C3\u00A7\u00C3\u00A3o pode ser utilizada para simular opera\u00C3\u00A7\u00C3\u00B5es financeiras a partir de informa\u00C3\u00A7\u00C3\u00B5es fornecidas pelo usu\u00C3\u00A1rio. Os c\u00C3\u00A1lculos gerados devem ser considerados apenas como refer\u00C3\u00AAncia para as situa\u00C3\u00A7\u00C3\u00B5es reais e n\u00C3\u00A3o como valores oficiais.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::ContaApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+request = Pier::EmprestimoPessoalRequest.new # EmprestimoPessoalRequest | request
+
+
+begin
+  #Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
+  result = api_instance.simular_emprestimo_financiamento_using_post(id, request)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ContaApi->simular_emprestimo_financiamento_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **request** | [**EmprestimoPessoalRequest**](EmprestimoPessoalRequest.md)| request | 
+
+
+### Return type
+
+[**EmprestimoPessoalResponse**](EmprestimoPessoalResponse.md)
 
 ### Authorization
 

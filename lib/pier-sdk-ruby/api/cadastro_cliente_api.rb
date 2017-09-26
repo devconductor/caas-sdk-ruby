@@ -2290,6 +2290,80 @@ module Pier
     end
 
 
+    # Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+    # Este recurso permite incluir uma conta como registro para integra\u00C3\u00A7\u00C3\u00A3o.
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param [Hash] opts the optional parameters
+    # @option opts [IntegracaoEmissorPersist] :body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
+    # @return [IntegracaoEmissorResponse]
+    def salvar_using_post10(id, opts = {})
+      data, _status_code, _headers = salvar_using_post10_with_http_info(id, opts)
+      return data
+    end
+
+    # Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+    # Este recurso permite incluir uma conta como registro para integra\u00C3\u00A7\u00C3\u00A3o.
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param [Hash] opts the optional parameters
+    # @option opts [IntegracaoEmissorPersist] :body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
+    # @return [Array<(IntegracaoEmissorResponse, Fixnum, Hash)>] IntegracaoEmissorResponse data, response status code and response headers
+    def salvar_using_post10_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CadastroClienteApi.salvar_using_post10 ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroClienteApi.salvar_using_post10" if id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/incluir-registro-integracao".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'IntegracaoEmissorResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CadastroClienteApi#salvar_using_post10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Salvar os detalhes de uma determinada Pessoa
     # Este m\u00C3\u00A9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa.
     # @param id_pessoa Apresenta o c\u00C3\u00B3digo identificador da pessoa
@@ -2304,8 +2378,8 @@ module Pier
     # @option opts [String] :email Email da pessoa fisica
     # @option opts [String] :nome_empresa Nome que deve ser impresso no cart\u00C3\u00A3o
     # @return [PessoaDetalheResponse]
-    def salvar_using_post10(id_pessoa, opts = {})
-      data, _status_code, _headers = salvar_using_post10_with_http_info(id_pessoa, opts)
+    def salvar_using_post13(id_pessoa, opts = {})
+      data, _status_code, _headers = salvar_using_post13_with_http_info(id_pessoa, opts)
       return data
     end
 
@@ -2323,14 +2397,14 @@ module Pier
     # @option opts [String] :email Email da pessoa fisica
     # @option opts [String] :nome_empresa Nome que deve ser impresso no cart\u00C3\u00A3o
     # @return [Array<(PessoaDetalheResponse, Fixnum, Hash)>] PessoaDetalheResponse data, response status code and response headers
-    def salvar_using_post10_with_http_info(id_pessoa, opts = {})
+    def salvar_using_post13_with_http_info(id_pessoa, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroClienteApi.salvar_using_post10 ..."
+        @api_client.config.logger.debug "Calling API: CadastroClienteApi.salvar_using_post13 ..."
       end
       
       
       # verify the required parameter 'id_pessoa' is set
-      fail ArgumentError, "Missing the required parameter 'id_pessoa' when calling CadastroClienteApi.salvar_using_post10" if id_pessoa.nil?
+      fail ArgumentError, "Missing the required parameter 'id_pessoa' when calling CadastroClienteApi.salvar_using_post13" if id_pessoa.nil?
       
       
       
@@ -2432,7 +2506,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PessoaDetalheResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroClienteApi#salvar_using_post10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroClienteApi#salvar_using_post13\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2452,8 +2526,8 @@ module Pier
     # @option opts [String] :unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade
     # @option opts [String] :data_emissao_identidade Data emiss\u00C3\u00A3o da Identidade.
     # @return [PessoaResponse]
-    def salvar_using_post11(nome, tipo, opts = {})
-      data, _status_code, _headers = salvar_using_post11_with_http_info(nome, tipo, opts)
+    def salvar_using_post14(nome, tipo, opts = {})
+      data, _status_code, _headers = salvar_using_post14_with_http_info(nome, tipo, opts)
       return data
     end
 
@@ -2471,14 +2545,14 @@ module Pier
     # @option opts [String] :unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade
     # @option opts [String] :data_emissao_identidade Data emiss\u00C3\u00A3o da Identidade.
     # @return [Array<(PessoaResponse, Fixnum, Hash)>] PessoaResponse data, response status code and response headers
-    def salvar_using_post11_with_http_info(nome, tipo, opts = {})
+    def salvar_using_post14_with_http_info(nome, tipo, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroClienteApi.salvar_using_post11 ..."
+        @api_client.config.logger.debug "Calling API: CadastroClienteApi.salvar_using_post14 ..."
       end
       
       
       # verify the required parameter 'nome' is set
-      fail ArgumentError, "Missing the required parameter 'nome' when calling CadastroClienteApi.salvar_using_post11" if nome.nil?
+      fail ArgumentError, "Missing the required parameter 'nome' when calling CadastroClienteApi.salvar_using_post14" if nome.nil?
       
       
       
@@ -2486,7 +2560,7 @@ module Pier
       
       
       # verify the required parameter 'tipo' is set
-      fail ArgumentError, "Missing the required parameter 'tipo' when calling CadastroClienteApi.salvar_using_post11" if tipo.nil?
+      fail ArgumentError, "Missing the required parameter 'tipo' when calling CadastroClienteApi.salvar_using_post14" if tipo.nil?
       
       
       
@@ -2582,7 +2656,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PessoaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroClienteApi#salvar_using_post11\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroClienteApi#salvar_using_post14\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2597,8 +2671,8 @@ module Pier
     # @option opts [String] :telefone N\u00C3\u00BAmero do telefone.
     # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
     # @return [TelefoneResponse]
-    def salvar_using_post13(opts = {})
-      data, _status_code, _headers = salvar_using_post13_with_http_info(opts)
+    def salvar_using_post16(opts = {})
+      data, _status_code, _headers = salvar_using_post16_with_http_info(opts)
       return data
     end
 
@@ -2611,9 +2685,9 @@ module Pier
     # @option opts [String] :telefone N\u00C3\u00BAmero do telefone.
     # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
     # @return [Array<(TelefoneResponse, Fixnum, Hash)>] TelefoneResponse data, response status code and response headers
-    def salvar_using_post13_with_http_info(opts = {})
+    def salvar_using_post16_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroClienteApi.salvar_using_post13 ..."
+        @api_client.config.logger.debug "Calling API: CadastroClienteApi.salvar_using_post16 ..."
       end
       
       
@@ -2683,7 +2757,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TelefoneResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroClienteApi#salvar_using_post13\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroClienteApi#salvar_using_post16\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2704,8 +2778,8 @@ module Pier
     # @option opts [String] :uf Apresenta sigla da Unidade Federativa
     # @option opts [String] :pais Apresenta nome do Pais
     # @return [EnderecoResponse]
-    def salvar_using_post5(opts = {})
-      data, _status_code, _headers = salvar_using_post5_with_http_info(opts)
+    def salvar_using_post8(opts = {})
+      data, _status_code, _headers = salvar_using_post8_with_http_info(opts)
       return data
     end
 
@@ -2724,9 +2798,9 @@ module Pier
     # @option opts [String] :uf Apresenta sigla da Unidade Federativa
     # @option opts [String] :pais Apresenta nome do Pais
     # @return [Array<(EnderecoResponse, Fixnum, Hash)>] EnderecoResponse data, response status code and response headers
-    def salvar_using_post5_with_http_info(opts = {})
+    def salvar_using_post8_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroClienteApi.salvar_using_post5 ..."
+        @api_client.config.logger.debug "Calling API: CadastroClienteApi.salvar_using_post8 ..."
       end
       
       
@@ -2838,81 +2912,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'EnderecoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroClienteApi#salvar_using_post5\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-
-    # Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
-    # Este recurso permite incluir uma conta como registro para integra\u00C3\u00A7\u00C3\u00A3o.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param [Hash] opts the optional parameters
-    # @option opts [IntegracaoEmissorPersist] :body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
-    # @return [IntegracaoEmissorResponse]
-    def salvar_using_post7(id, opts = {})
-      data, _status_code, _headers = salvar_using_post7_with_http_info(id, opts)
-      return data
-    end
-
-    # Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
-    # Este recurso permite incluir uma conta como registro para integra\u00C3\u00A7\u00C3\u00A3o.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param [Hash] opts the optional parameters
-    # @option opts [IntegracaoEmissorPersist] :body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
-    # @return [Array<(IntegracaoEmissorResponse, Fixnum, Hash)>] IntegracaoEmissorResponse data, response status code and response headers
-    def salvar_using_post7_with_http_info(id, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroClienteApi.salvar_using_post7 ..."
-      end
-      
-      
-      # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroClienteApi.salvar_using_post7" if id.nil?
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/contas/{id}/incluir-registro-integracao".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'IntegracaoEmissorResponse')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroClienteApi#salvar_using_post7\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroClienteApi#salvar_using_post8\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

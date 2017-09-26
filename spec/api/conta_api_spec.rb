@@ -207,6 +207,23 @@ describe 'ContaApi' do
   end
 
 
+  # unit tests for consultar_beneficio_pagamento_atraso_using_get
+  # Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
+  # Este m\u00C3\u00A9todo permite consultar se o cliente tem direito ao benef\u00C3\u00ADcio de pagamento em atraso, em loja, at\u00C3\u00A9 o s\u00C3\u00A1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
+  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+  # @param [Hash] opts the optional parameters
+  # @return [BeneficioPagamentoAtrasoResponse]
+  describe 'consultar_beneficio_pagamento_atraso_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
   # unit tests for consultar_boleto_emitido_using_get
   # Consulta os dados de um determinado boleto da fatura
   # Este recurso consulta um boleto da fatura
@@ -771,6 +788,24 @@ describe 'ContaApi' do
   # @param [Hash] opts the optional parameters
   # @return [Object]
   describe 'reativar_using_post1 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for simular_emprestimo_financiamento_using_post
+  # Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
+  # Esta opera\u00C3\u00A7\u00C3\u00A3o pode ser utilizada para simular opera\u00C3\u00A7\u00C3\u00B5es financeiras a partir de informa\u00C3\u00A7\u00C3\u00B5es fornecidas pelo usu\u00C3\u00A1rio. Os c\u00C3\u00A1lculos gerados devem ser considerados apenas como refer\u00C3\u00AAncia para as situa\u00C3\u00A7\u00C3\u00B5es reais e n\u00C3\u00A3o como valores oficiais.
+  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+  # @param request request
+  # @param [Hash] opts the optional parameters
+  # @return [EmprestimoPessoalResponse]
+  describe 'simular_emprestimo_financiamento_using_post test' do
     it "should work" do
       # assertion here
       # should be_a()

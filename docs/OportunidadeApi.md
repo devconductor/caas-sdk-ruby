@@ -17,8 +17,8 @@ Method | HTTP request | Description
 [**listar_using_get14**](OportunidadeApi.md#listar_using_get14) | **GET** /api/oportunidades | Lista as oportunidades
 [**listar_using_get27**](OportunidadeApi.md#listar_using_get27) | **GET** /api/tipos-oportunidades | Lista os tipos oportunidades
 [**salvar_status_using_post**](OportunidadeApi.md#salvar_status_using_post) | **POST** /api/tipos-oportunidades/{id}/status | Cadastra status para o tipo oportunidade
-[**salvar_using_post14**](OportunidadeApi.md#salvar_using_post14) | **POST** /api/tipos-oportunidades | Cadastra tipos oportunidades
-[**salvar_using_post9**](OportunidadeApi.md#salvar_using_post9) | **POST** /api/oportunidades | Cadastra as oportunidades
+[**salvar_using_post12**](OportunidadeApi.md#salvar_using_post12) | **POST** /api/oportunidades | Cadastra as oportunidades
+[**salvar_using_post17**](OportunidadeApi.md#salvar_using_post17) | **POST** /api/tipos-oportunidades | Cadastra tipos oportunidades
 
 
 
@@ -796,58 +796,8 @@ No authorization required
 
 
 
-# **salvar_using_post14**
-> TipoOportunidadeResponse salvar_using_post14(persist)
-
-Cadastra tipos oportunidades
-
-Esse recurso permite cadastrar tipos oportunidades.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::OportunidadeApi.new
-
-persist = Pier::TipoOportunidade.new # TipoOportunidade | persist
-
-
-begin
-  #Cadastra tipos oportunidades
-  result = api_instance.salvar_using_post14(persist)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling OportunidadeApi->salvar_using_post14: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **persist** | [**TipoOportunidade**](TipoOportunidade.md)| persist | 
-
-
-### Return type
-
-[**TipoOportunidadeResponse**](TipoOportunidadeResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **salvar_using_post9**
-> OportunidadeResponse salvar_using_post9(persist)
+# **salvar_using_post12**
+> OportunidadeResponse salvar_using_post12(persist)
 
 Cadastra as oportunidades
 
@@ -866,10 +816,10 @@ persist = Pier::OportunidadePersist.new # OportunidadePersist | persist
 
 begin
   #Cadastra as oportunidades
-  result = api_instance.salvar_using_post9(persist)
+  result = api_instance.salvar_using_post12(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling OportunidadeApi->salvar_using_post9: #{e}"
+  puts "Exception when calling OportunidadeApi->salvar_using_post12: #{e}"
 end
 ```
 
@@ -883,6 +833,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**OportunidadeResponse**](OportunidadeResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **salvar_using_post17**
+> TipoOportunidadeResponse salvar_using_post17(persist)
+
+Cadastra tipos oportunidades
+
+Esse recurso permite cadastrar tipos oportunidades.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::OportunidadeApi.new
+
+persist = Pier::TipoOportunidade.new # TipoOportunidade | persist
+
+
+begin
+  #Cadastra tipos oportunidades
+  result = api_instance.salvar_using_post17(persist)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling OportunidadeApi->salvar_using_post17: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **persist** | [**TipoOportunidade**](TipoOportunidade.md)| persist | 
+
+
+### Return type
+
+[**TipoOportunidadeResponse**](TipoOportunidadeResponse.md)
 
 ### Authorization
 

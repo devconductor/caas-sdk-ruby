@@ -337,8 +337,8 @@ module Pier
     # @param url URL que a ser consumida pelo WebHook
     # @param [Hash] opts the optional parameters
     # @return [WebHookResponse]
-    def salvar_using_post17(tipo_evento, url, opts = {})
-      data, _status_code, _headers = salvar_using_post17_with_http_info(tipo_evento, url, opts)
+    def salvar_using_post20(tipo_evento, url, opts = {})
+      data, _status_code, _headers = salvar_using_post20_with_http_info(tipo_evento, url, opts)
       return data
     end
 
@@ -348,14 +348,14 @@ module Pier
     # @param url URL que a ser consumida pelo WebHook
     # @param [Hash] opts the optional parameters
     # @return [Array<(WebHookResponse, Fixnum, Hash)>] WebHookResponse data, response status code and response headers
-    def salvar_using_post17_with_http_info(tipo_evento, url, opts = {})
+    def salvar_using_post20_with_http_info(tipo_evento, url, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WebhookApi.salvar_using_post17 ..."
+        @api_client.config.logger.debug "Calling API: WebhookApi.salvar_using_post20 ..."
       end
       
       
       # verify the required parameter 'tipo_evento' is set
-      fail ArgumentError, "Missing the required parameter 'tipo_evento' when calling WebhookApi.salvar_using_post17" if tipo_evento.nil?
+      fail ArgumentError, "Missing the required parameter 'tipo_evento' when calling WebhookApi.salvar_using_post20" if tipo_evento.nil?
       
       # verify enum value
       unless ['RISCO_FRAUDE', 'CODIGO_SEGURANCA', 'OUTROS'].include?(tipo_evento)
@@ -368,7 +368,7 @@ module Pier
       
       
       # verify the required parameter 'url' is set
-      fail ArgumentError, "Missing the required parameter 'url' when calling WebhookApi.salvar_using_post17" if url.nil?
+      fail ArgumentError, "Missing the required parameter 'url' when calling WebhookApi.salvar_using_post20" if url.nil?
       
       
       
@@ -408,7 +408,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'WebHookResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WebhookApi#salvar_using_post17\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: WebhookApi#salvar_using_post20\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

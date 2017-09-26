@@ -30,17 +30,26 @@ module Pier
     # Valor solicitado do empr\u00C3\u00A9stimo/financiamento
     attr_accessor :valor_solicitado
 
-    # Valor total do empr\u00C3\u00A9stimo/financiamento
-    attr_accessor :valor_total
+    # Valor m\u00C3\u00A1ximo de empr\u00C3\u00A9stimo pelo valor limite de parcela
+    attr_accessor :valor_maximo_solicitacao
 
-    # Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas
-    attr_accessor :sistema_amortizacao
+    # N\u00C3\u00BAmero de parcelas solicitado
+    attr_accessor :numero_parcelas
+
+    # Limite m\u00C3\u00A1ximo de parcela permitido
+    attr_accessor :valor_maximo_parcela
+
+    # Data do desconto da primeira parcela
+    attr_accessor :data_primeira_parcela
 
     # Per\u00C3\u00ADodo de aplica da taxa de juros
     attr_accessor :periodo_taxa
 
-    # Data da primeira parcela do empr\u00C3\u00A9stimo/financiamento
-    attr_accessor :data_primeira_parcela
+    # Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas
+    attr_accessor :sistema_amortizacao
+
+    # Valor percentual da taxa de juros a ser aplicada
+    attr_accessor :taxa_juros
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -51,13 +60,19 @@ module Pier
         
         :'valor_solicitado' => :'valorSolicitado',
         
-        :'valor_total' => :'valorTotal',
+        :'valor_maximo_solicitacao' => :'valorMaximoSolicitacao',
         
-        :'sistema_amortizacao' => :'sistemaAmortizacao',
+        :'numero_parcelas' => :'numeroParcelas',
+        
+        :'valor_maximo_parcela' => :'valorMaximoParcela',
+        
+        :'data_primeira_parcela' => :'dataPrimeiraParcela',
         
         :'periodo_taxa' => :'periodoTaxa',
         
-        :'data_primeira_parcela' => :'dataPrimeiraParcela'
+        :'sistema_amortizacao' => :'sistemaAmortizacao',
+        
+        :'taxa_juros' => :'taxaJuros'
         
       }
     end
@@ -70,13 +85,19 @@ module Pier
         
         :'valor_solicitado' => :'Float',
         
-        :'valor_total' => :'Float',
+        :'valor_maximo_solicitacao' => :'Float',
         
-        :'sistema_amortizacao' => :'String',
+        :'numero_parcelas' => :'Integer',
+        
+        :'valor_maximo_parcela' => :'Float',
+        
+        :'data_primeira_parcela' => :'String',
         
         :'periodo_taxa' => :'String',
         
-        :'data_primeira_parcela' => :'String'
+        :'sistema_amortizacao' => :'String',
+        
+        :'taxa_juros' => :'Float'
         
       }
     end
@@ -110,19 +131,37 @@ module Pier
       end
 
       
-      if attributes[:'valorTotal']
+      if attributes[:'valorMaximoSolicitacao']
         
         
-        self.valor_total = attributes[:'valorTotal']
+        self.valor_maximo_solicitacao = attributes[:'valorMaximoSolicitacao']
         
       
       end
 
       
-      if attributes[:'sistemaAmortizacao']
+      if attributes[:'numeroParcelas']
         
         
-        self.sistema_amortizacao = attributes[:'sistemaAmortizacao']
+        self.numero_parcelas = attributes[:'numeroParcelas']
+        
+      
+      end
+
+      
+      if attributes[:'valorMaximoParcela']
+        
+        
+        self.valor_maximo_parcela = attributes[:'valorMaximoParcela']
+        
+      
+      end
+
+      
+      if attributes[:'dataPrimeiraParcela']
+        
+        
+        self.data_primeira_parcela = attributes[:'dataPrimeiraParcela']
         
       
       end
@@ -137,10 +176,19 @@ module Pier
       end
 
       
-      if attributes[:'dataPrimeiraParcela']
+      if attributes[:'sistemaAmortizacao']
         
         
-        self.data_primeira_parcela = attributes[:'dataPrimeiraParcela']
+        self.sistema_amortizacao = attributes[:'sistemaAmortizacao']
+        
+      
+      end
+
+      
+      if attributes[:'taxaJuros']
+        
+        
+        self.taxa_juros = attributes[:'taxaJuros']
         
       
       end
@@ -185,8 +233,35 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -225,10 +300,13 @@ module Pier
       self.class == o.class &&
           planos_parcelamentos == o.planos_parcelamentos &&
           valor_solicitado == o.valor_solicitado &&
-          valor_total == o.valor_total &&
-          sistema_amortizacao == o.sistema_amortizacao &&
+          valor_maximo_solicitacao == o.valor_maximo_solicitacao &&
+          numero_parcelas == o.numero_parcelas &&
+          valor_maximo_parcela == o.valor_maximo_parcela &&
+          data_primeira_parcela == o.data_primeira_parcela &&
           periodo_taxa == o.periodo_taxa &&
-          data_primeira_parcela == o.data_primeira_parcela
+          sistema_amortizacao == o.sistema_amortizacao &&
+          taxa_juros == o.taxa_juros
     end
 
     # @see the `==` method
@@ -240,7 +318,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [planos_parcelamentos, valor_solicitado, valor_total, sistema_amortizacao, periodo_taxa, data_primeira_parcela].hash
+      [planos_parcelamentos, valor_solicitado, valor_maximo_solicitacao, numero_parcelas, valor_maximo_parcela, data_primeira_parcela, periodo_taxa, sistema_amortizacao, taxa_juros].hash
     end
 
     # Builds the object from hash

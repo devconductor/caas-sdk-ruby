@@ -29,10 +29,10 @@ module Pier
     attr_accessor :id
 
     # ID do Tipo de Documento associado.
-    attr_accessor :id_documento_tipo
+    attr_accessor :id_tipo_documento
 
     # ID do Template de Documento associado.
-    attr_accessor :id_documento_template
+    attr_accessor :id_template_documento
 
     # Nome do Documento.
     attr_accessor :nome
@@ -53,9 +53,9 @@ module Pier
         
         :'id' => :'id',
         
-        :'id_documento_tipo' => :'idDocumentoTipo',
+        :'id_tipo_documento' => :'idTipoDocumento',
         
-        :'id_documento_template' => :'idDocumentoTemplate',
+        :'id_template_documento' => :'idTemplateDocumento',
         
         :'nome' => :'nome',
         
@@ -74,9 +74,9 @@ module Pier
         
         :'id' => :'Integer',
         
-        :'id_documento_tipo' => :'Integer',
+        :'id_tipo_documento' => :'Integer',
         
-        :'id_documento_template' => :'Integer',
+        :'id_template_documento' => :'Integer',
         
         :'nome' => :'String',
         
@@ -107,19 +107,19 @@ module Pier
       end
 
       
-      if attributes[:'idDocumentoTipo']
+      if attributes[:'idTipoDocumento']
         
         
-        self.id_documento_tipo = attributes[:'idDocumentoTipo']
+        self.id_tipo_documento = attributes[:'idTipoDocumento']
         
       
       end
 
       
-      if attributes[:'idDocumentoTemplate']
+      if attributes[:'idTemplateDocumento']
         
         
-        self.id_documento_template = attributes[:'idDocumentoTemplate']
+        self.id_template_documento = attributes[:'idTemplateDocumento']
         
       
       end
@@ -250,8 +250,8 @@ module Pier
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          id_documento_tipo == o.id_documento_tipo &&
-          id_documento_template == o.id_documento_template &&
+          id_tipo_documento == o.id_tipo_documento &&
+          id_template_documento == o.id_template_documento &&
           nome == o.nome &&
           documento == o.documento &&
           extensao == o.extensao &&
@@ -267,7 +267,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_documento_tipo, id_documento_template, nome, documento, extensao, documento_detalhes].hash
+      [id, id_tipo_documento, id_template_documento, nome, documento, extensao, documento_detalhes].hash
     end
 
     # Builds the object from hash

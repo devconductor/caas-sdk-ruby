@@ -143,8 +143,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
     # @param [Hash] opts the optional parameters
     # @return [WebHookResponse]
-    def consultar_using_get28(id, opts = {})
-      data, _status_code, _headers = consultar_using_get28_with_http_info(id, opts)
+    def consultar_using_get30(id, opts = {})
+      data, _status_code, _headers = consultar_using_get30_with_http_info(id, opts)
       return data
     end
 
@@ -153,14 +153,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(WebHookResponse, Fixnum, Hash)>] WebHookResponse data, response status code and response headers
-    def consultar_using_get28_with_http_info(id, opts = {})
+    def consultar_using_get30_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WebhookApi.consultar_using_get28 ..."
+        @api_client.config.logger.debug "Calling API: WebhookApi.consultar_using_get30 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling WebhookApi.consultar_using_get28" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling WebhookApi.consultar_using_get30" if id.nil?
       
       
       
@@ -198,7 +198,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'WebHookResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WebhookApi#consultar_using_get28\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: WebhookApi#consultar_using_get30\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -215,8 +215,8 @@ module Pier
     # @option opts [String] :metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
     # @option opts [String] :url URL que a ser consumida pelo WebHook
     # @return [PageWebHookResponse]
-    def listar_using_get34(opts = {})
-      data, _status_code, _headers = listar_using_get34_with_http_info(opts)
+    def listar_using_get35(opts = {})
+      data, _status_code, _headers = listar_using_get35_with_http_info(opts)
       return data
     end
 
@@ -231,9 +231,9 @@ module Pier
     # @option opts [String] :metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
     # @option opts [String] :url URL que a ser consumida pelo WebHook
     # @return [Array<(PageWebHookResponse, Fixnum, Hash)>] PageWebHookResponse data, response status code and response headers
-    def listar_using_get34_with_http_info(opts = {})
+    def listar_using_get35_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WebhookApi.listar_using_get34 ..."
+        @api_client.config.logger.debug "Calling API: WebhookApi.listar_using_get35 ..."
       end
       
       
@@ -325,7 +325,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageWebHookResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WebhookApi#listar_using_get34\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: WebhookApi#listar_using_get35\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

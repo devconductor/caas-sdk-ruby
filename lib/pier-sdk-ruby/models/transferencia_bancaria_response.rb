@@ -105,6 +105,30 @@ module Pier
     # Valor da taxa saque.
     attr_accessor :valor_taxa_saque
 
+    # C\u00C3\u00B3digo do Banco
+    attr_accessor :banco
+
+    # N\u00C3\u00BAmero da Ag\u00C3\u00AAncia
+    attr_accessor :numero_agencia
+
+    # D\u00C3\u00ADgito da Ag\u00C3\u00AAncia
+    attr_accessor :digito_agencia
+
+    # N\u00C3\u00BAmero da Conta
+    attr_accessor :numero_conta
+
+    # D\u00C3\u00ADgito da Conta
+    attr_accessor :digito_conta
+
+    # Tipo da Conta
+    attr_accessor :flag_conta_poupanca
+
+    # Documento do Favorecido
+    attr_accessor :documento_favorecido
+
+    # Nome do Favorecido
+    attr_accessor :nome_favorecido
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -162,7 +186,23 @@ module Pier
         
         :'numero_estabelecimento' => :'numeroEstabelecimento',
         
-        :'valor_taxa_saque' => :'valorTaxaSaque'
+        :'valor_taxa_saque' => :'valorTaxaSaque',
+        
+        :'banco' => :'banco',
+        
+        :'numero_agencia' => :'numeroAgencia',
+        
+        :'digito_agencia' => :'digitoAgencia',
+        
+        :'numero_conta' => :'numeroConta',
+        
+        :'digito_conta' => :'digitoConta',
+        
+        :'flag_conta_poupanca' => :'flagContaPoupanca',
+        
+        :'documento_favorecido' => :'documentoFavorecido',
+        
+        :'nome_favorecido' => :'nomeFavorecido'
         
       }
     end
@@ -223,7 +263,23 @@ module Pier
         
         :'numero_estabelecimento' => :'Integer',
         
-        :'valor_taxa_saque' => :'Float'
+        :'valor_taxa_saque' => :'Float',
+        
+        :'banco' => :'Integer',
+        
+        :'numero_agencia' => :'String',
+        
+        :'digito_agencia' => :'String',
+        
+        :'numero_conta' => :'String',
+        
+        :'digito_conta' => :'String',
+        
+        :'flag_conta_poupanca' => :'Integer',
+        
+        :'documento_favorecido' => :'String',
+        
+        :'nome_favorecido' => :'String'
         
       }
     end
@@ -480,6 +536,78 @@ module Pier
       end
 
       
+      if attributes[:'banco']
+        
+        
+        self.banco = attributes[:'banco']
+        
+      
+      end
+
+      
+      if attributes[:'numeroAgencia']
+        
+        
+        self.numero_agencia = attributes[:'numeroAgencia']
+        
+      
+      end
+
+      
+      if attributes[:'digitoAgencia']
+        
+        
+        self.digito_agencia = attributes[:'digitoAgencia']
+        
+      
+      end
+
+      
+      if attributes[:'numeroConta']
+        
+        
+        self.numero_conta = attributes[:'numeroConta']
+        
+      
+      end
+
+      
+      if attributes[:'digitoConta']
+        
+        
+        self.digito_conta = attributes[:'digitoConta']
+        
+      
+      end
+
+      
+      if attributes[:'flagContaPoupanca']
+        
+        
+        self.flag_conta_poupanca = attributes[:'flagContaPoupanca']
+        
+      
+      end
+
+      
+      if attributes[:'documentoFavorecido']
+        
+        
+        self.documento_favorecido = attributes[:'documentoFavorecido']
+        
+      
+      end
+
+      
+      if attributes[:'nomeFavorecido']
+        
+        
+        self.nome_favorecido = attributes[:'nomeFavorecido']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -603,8 +731,80 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -772,7 +972,15 @@ module Pier
           data_vencimento_padrao == o.data_vencimento_padrao &&
           id_conta_portador == o.id_conta_portador &&
           numero_estabelecimento == o.numero_estabelecimento &&
-          valor_taxa_saque == o.valor_taxa_saque
+          valor_taxa_saque == o.valor_taxa_saque &&
+          banco == o.banco &&
+          numero_agencia == o.numero_agencia &&
+          digito_agencia == o.digito_agencia &&
+          numero_conta == o.numero_conta &&
+          digito_conta == o.digito_conta &&
+          flag_conta_poupanca == o.flag_conta_poupanca &&
+          documento_favorecido == o.documento_favorecido &&
+          nome_favorecido == o.nome_favorecido
     end
 
     # @see the `==` method
@@ -784,7 +992,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [nsuorigem, id_autorizacao, id_transferencia, codigo_autorizacao, data_autorizacao, origem, valor, id_operacao, terminal, id_cartao, data_compra, valor_compra, numero_parcelas, valor_parcela, id_estabelecimento, data_movimento, valor_contrato, taxa_juros, valor_iof, valor_tac, id_conta, valor_entrada, data_vencimento_real, data_vencimento_padrao, id_conta_portador, numero_estabelecimento, valor_taxa_saque].hash
+      [nsuorigem, id_autorizacao, id_transferencia, codigo_autorizacao, data_autorizacao, origem, valor, id_operacao, terminal, id_cartao, data_compra, valor_compra, numero_parcelas, valor_parcela, id_estabelecimento, data_movimento, valor_contrato, taxa_juros, valor_iof, valor_tac, id_conta, valor_entrada, data_vencimento_real, data_vencimento_padrao, id_conta_portador, numero_estabelecimento, valor_taxa_saque, banco, numero_agencia, digito_agencia, numero_conta, digito_conta, flag_conta_poupanca, documento_favorecido, nome_favorecido].hash
     end
 
     # Builds the object from hash

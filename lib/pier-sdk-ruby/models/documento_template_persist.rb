@@ -23,19 +23,13 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto que encapsula os par\u00C3\u00A2metros para gera\u00C3\u00A7\u00C3\u00A3o de um documento
-  class DocumentoParametrosRequest
-    # ID para o tipo de documento.
+  # Representa\u00C3\u00A7\u00C3\u00A3o do template do documento.
+  class DocumentoTemplatePersist
+    # ID para o Tipo de Documento vinculado ao template.
     attr_accessor :id_tipo_documento
 
-    # ID para o template do documento.
-    attr_accessor :id_template_documento
-
-    # Nome para o arquivo.
-    attr_accessor :nome
-
-    # Lista de par\u00C3\u00A2metros para montagem do documento.
-    attr_accessor :parametros_conteudo
+    # Template para o conte\u00C3\u00BAdo do documento.
+    attr_accessor :template
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -44,11 +38,7 @@ module Pier
         
         :'id_tipo_documento' => :'idTipoDocumento',
         
-        :'id_template_documento' => :'idTemplateDocumento',
-        
-        :'nome' => :'nome',
-        
-        :'parametros_conteudo' => :'parametrosConteudo'
+        :'template' => :'template'
         
       }
     end
@@ -59,11 +49,7 @@ module Pier
         
         :'id_tipo_documento' => :'Integer',
         
-        :'id_template_documento' => :'Integer',
-        
-        :'nome' => :'String',
-        
-        :'parametros_conteudo' => :'Array<PropriedadeDocumentoRequest>'
+        :'template' => :'String'
         
       }
     end
@@ -86,30 +72,10 @@ module Pier
       end
 
       
-      if attributes[:'idTemplateDocumento']
+      if attributes[:'template']
         
         
-        self.id_template_documento = attributes[:'idTemplateDocumento']
-        
-      
-      end
-
-      
-      if attributes[:'nome']
-        
-        
-        self.nome = attributes[:'nome']
-        
-      
-      end
-
-      
-      if attributes[:'parametrosConteudo']
-        
-        if (value = attributes[:'parametrosConteudo']).is_a?(Array)
-          self.parametros_conteudo = value
-        end
-        
+        self.template = attributes[:'template']
         
       
       end
@@ -138,26 +104,8 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -175,9 +123,7 @@ module Pier
       return true if self.equal?(o)
       self.class == o.class &&
           id_tipo_documento == o.id_tipo_documento &&
-          id_template_documento == o.id_template_documento &&
-          nome == o.nome &&
-          parametros_conteudo == o.parametros_conteudo
+          template == o.template
     end
 
     # @see the `==` method
@@ -189,7 +135,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_tipo_documento, id_template_documento, nome, parametros_conteudo].hash
+      [id_tipo_documento, template].hash
     end
 
     # Builds the object from hash

@@ -218,29 +218,12 @@ describe 'CadastroClienteApi' do
   end
 
 
-  # unit tests for consultar_using_get11
+  # unit tests for consultar_using_get12
   # Apresenta os detalhes de uma determinada Pessoa
   # Este m\u00C3\u00A9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor.
   # @param id ID da Pessoa
   # @param [Hash] opts the optional parameters
   # @return [PessoaDetalheResponse]
-  describe 'consultar_using_get11 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for consultar_using_get12
-  # Apresenta os dados de uma determinada Pessoa
-  # Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
-  # @param id ID da Pessoa
-  # @param [Hash] opts the optional parameters
-  # @return [PessoaResponse]
   describe 'consultar_using_get12 test' do
     it "should work" do
       # assertion here
@@ -252,13 +235,13 @@ describe 'CadastroClienteApi' do
   end
 
 
-  # unit tests for consultar_using_get17
-  # Apresenta os dados de um determinado Telefone
-  # Este m\u00C3\u00A9todo permite consultar um determinado Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+  # unit tests for consultar_using_get13
+  # Apresenta os dados de uma determinada Pessoa
+  # Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
+  # @param id ID da Pessoa
   # @param [Hash] opts the optional parameters
-  # @return [TelefoneResponse]
-  describe 'consultar_using_get17 test' do
+  # @return [PessoaResponse]
+  describe 'consultar_using_get13 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -269,13 +252,30 @@ describe 'CadastroClienteApi' do
   end
 
 
-  # unit tests for consultar_using_get7
+  # unit tests for consultar_using_get18
+  # Apresenta os dados de um determinado Telefone
+  # Este m\u00C3\u00A9todo permite consultar um determinado Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+  # @param [Hash] opts the optional parameters
+  # @return [TelefoneResponse]
+  describe 'consultar_using_get18 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for consultar_using_get8
   # Apresenta os dados de um determinado Endere\u00C3\u00A7o
   # Este m\u00C3\u00A9todo permite consultar um determinado Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
   # @param [Hash] opts the optional parameters
   # @return [EnderecoResponse]
-  describe 'consultar_using_get7 test' do
+  describe 'consultar_using_get8 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -344,7 +344,7 @@ describe 'CadastroClienteApi' do
   end
 
 
-  # unit tests for listar_using_get10
+  # unit tests for listar_using_get11
   # Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
   # Este m\u00C3\u00A9todo permite que sejam listados os Endere\u00C3\u00A7os existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -366,7 +366,7 @@ describe 'CadastroClienteApi' do
   # @option opts [String] :data_inclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
   # @option opts [String] :data_ultima_atualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
   # @return [PageEnderecoResponse]
-  describe 'listar_using_get10 test' do
+  describe 'listar_using_get11 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -377,7 +377,7 @@ describe 'CadastroClienteApi' do
   end
 
 
-  # unit tests for listar_using_get15
+  # unit tests for listar_using_get16
   # Lista os Detalhes das Pessoas cadastradas no Emissor
   # Este m\u00C3\u00A9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -395,7 +395,7 @@ describe 'CadastroClienteApi' do
   # @option opts [String] :email Email da pessoa fisica
   # @option opts [String] :nome_empresa Nome que deve ser impresso no cart\u00C3\u00A3o
   # @return [PagePessoaDetalheResponse]
-  describe 'listar_using_get15 test' do
+  describe 'listar_using_get16 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -406,7 +406,7 @@ describe 'CadastroClienteApi' do
   end
 
 
-  # unit tests for listar_using_get16
+  # unit tests for listar_using_get17
   # Lista as Pessoas cadastradas no Emissor
   # Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -425,7 +425,7 @@ describe 'CadastroClienteApi' do
   # @option opts [String] :unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade
   # @option opts [String] :data_emissao_identidade Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
   # @return [PagePessoaResponse]
-  describe 'listar_using_get16 test' do
+  describe 'listar_using_get17 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -436,7 +436,7 @@ describe 'CadastroClienteApi' do
   end
 
 
-  # unit tests for listar_using_get24
+  # unit tests for listar_using_get25
   # Lista os Telefones cadastrados no Emissor
   # Este m\u00C3\u00A9todo permite que sejam listados os Telefones existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -451,7 +451,7 @@ describe 'CadastroClienteApi' do
   # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
   # @option opts [Integer] :status Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo
   # @return [PageTelefoneResponse]
-  describe 'listar_using_get24 test' do
+  describe 'listar_using_get25 test' do
     it "should work" do
       # assertion here
       # should be_a()

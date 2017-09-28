@@ -25,20 +25,25 @@ require 'date'
 module Pier
   # Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do  recurso Dispositivo
   class AlterarProdutoRequest
+    # C\u00C3\u00B3digo identificador do produto.
+    attr_accessor :id_produto
+
     # C\u00C3\u00B3digo identificador da origem comercial.
     attr_accessor :id_origem_comercial
 
-    # C\u00C3\u00B3digo identificador do produto.
-    attr_accessor :id_produto
+    # Valor do novo limite Global.
+    attr_accessor :limite_global
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
+        :'id_produto' => :'idProduto',
+        
         :'id_origem_comercial' => :'idOrigemComercial',
         
-        :'id_produto' => :'idProduto'
+        :'limite_global' => :'limiteGlobal'
         
       }
     end
@@ -47,9 +52,11 @@ module Pier
     def self.swagger_types
       {
         
+        :'id_produto' => :'Integer',
+        
         :'id_origem_comercial' => :'Integer',
         
-        :'id_produto' => :'Integer'
+        :'limite_global' => :'Float'
         
       }
     end
@@ -63,6 +70,15 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
+      if attributes[:'idProduto']
+        
+        
+        self.id_produto = attributes[:'idProduto']
+        
+      
+      end
+
+      
       if attributes[:'idOrigemComercial']
         
         
@@ -72,10 +88,10 @@ module Pier
       end
 
       
-      if attributes[:'idProduto']
+      if attributes[:'limiteGlobal']
         
         
-        self.id_produto = attributes[:'idProduto']
+        self.limite_global = attributes[:'limiteGlobal']
         
       
       end
@@ -97,10 +113,6 @@ module Pier
     def valid?
       
       
-      
-      
-      
-      
       if @id_produto.nil?
         return false
       end
@@ -109,8 +121,21 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -127,8 +152,9 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          id_produto == o.id_produto &&
           id_origem_comercial == o.id_origem_comercial &&
-          id_produto == o.id_produto
+          limite_global == o.limite_global
     end
 
     # @see the `==` method
@@ -140,7 +166,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_origem_comercial, id_produto].hash
+      [id_produto, id_origem_comercial, limite_global].hash
     end
 
     # Builds the object from hash

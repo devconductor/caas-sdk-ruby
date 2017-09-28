@@ -12,17 +12,17 @@ Method | HTTP request | Description
 [**atribuir_assinatura_cliente_using_post**](CadastroClienteApi.md#atribuir_assinatura_cliente_using_post) | **POST** /api/contas/{id}/atribuir-assinatura-cliente | Permite atribuir um documento para uma Conta
 [**cadastrar_using_post**](CadastroClienteApi.md#cadastrar_using_post) | **POST** /api/contas/{id}/cadastrar-adicional | Realiza o cadastro de Adicionais para uma Conta
 [**consultar_using_get**](CadastroClienteApi.md#consultar_using_get) | **GET** /api/contas/{id}/adicionais/{idPessoa} | Consulta Adicional de uma Conta
-[**consultar_using_get11**](CadastroClienteApi.md#consultar_using_get11) | **GET** /api/pessoas-detalhes/{id} | Apresenta os detalhes de uma determinada Pessoa
-[**consultar_using_get12**](CadastroClienteApi.md#consultar_using_get12) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
-[**consultar_using_get17**](CadastroClienteApi.md#consultar_using_get17) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
-[**consultar_using_get7**](CadastroClienteApi.md#consultar_using_get7) | **GET** /api/enderecos/{id} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
+[**consultar_using_get12**](CadastroClienteApi.md#consultar_using_get12) | **GET** /api/pessoas-detalhes/{id} | Apresenta os detalhes de uma determinada Pessoa
+[**consultar_using_get13**](CadastroClienteApi.md#consultar_using_get13) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
+[**consultar_using_get18**](CadastroClienteApi.md#consultar_using_get18) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
+[**consultar_using_get8**](CadastroClienteApi.md#consultar_using_get8) | **GET** /api/enderecos/{id} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
 [**inativar_using_post**](CadastroClienteApi.md#inativar_using_post) | **POST** /api/contas/{id}/adicionais/{idPessoa}/inativar | Inativa Adicional de uma Conta
 [**listar_socios_using_get**](CadastroClienteApi.md#listar_socios_using_get) | **GET** /api/clientes-pessoas-juridicas/{id}/socios | Listar s\u00C3\u00B3cios de uma pessoa jur\u00C3\u00ADdica
 [**listar_using_get**](CadastroClienteApi.md#listar_using_get) | **GET** /api/contas/{id}/adicionais | Lista os Adicionais de uma Conta
-[**listar_using_get10**](CadastroClienteApi.md#listar_using_get10) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
-[**listar_using_get15**](CadastroClienteApi.md#listar_using_get15) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
-[**listar_using_get16**](CadastroClienteApi.md#listar_using_get16) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
-[**listar_using_get24**](CadastroClienteApi.md#listar_using_get24) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
+[**listar_using_get11**](CadastroClienteApi.md#listar_using_get11) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
+[**listar_using_get16**](CadastroClienteApi.md#listar_using_get16) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
+[**listar_using_get17**](CadastroClienteApi.md#listar_using_get17) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
+[**listar_using_get25**](CadastroClienteApi.md#listar_using_get25) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
 [**salvar_pessoa_fisica_aprovada_using_post**](CadastroClienteApi.md#salvar_pessoa_fisica_aprovada_using_post) | **POST** /api/clientes-pessoas-fisicas | Cadastro de Conta e Pessoa Fisica
 [**salvar_pessoa_juridica_aprovada_using_post**](CadastroClienteApi.md#salvar_pessoa_juridica_aprovada_using_post) | **POST** /api/clientes-pessoas-juridicas | Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica
 [**salvar_using_post10**](CadastroClienteApi.md#salvar_using_post10) | **POST** /api/contas/{id}/incluir-registro-integracao | Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
@@ -527,8 +527,8 @@ No authorization required
 
 
 
-# **consultar_using_get11**
-> PessoaDetalheResponse consultar_using_get11(id)
+# **consultar_using_get12**
+> PessoaDetalheResponse consultar_using_get12(id)
 
 Apresenta os detalhes de uma determinada Pessoa
 
@@ -547,10 +547,10 @@ id = 789 # Integer | ID da Pessoa
 
 begin
   #Apresenta os detalhes de uma determinada Pessoa
-  result = api_instance.consultar_using_get11(id)
+  result = api_instance.consultar_using_get12(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->consultar_using_get11: #{e}"
+  puts "Exception when calling CadastroClienteApi->consultar_using_get12: #{e}"
 end
 ```
 
@@ -577,8 +577,8 @@ No authorization required
 
 
 
-# **consultar_using_get12**
-> PessoaResponse consultar_using_get12(id)
+# **consultar_using_get13**
+> PessoaResponse consultar_using_get13(id)
 
 Apresenta os dados de uma determinada Pessoa
 
@@ -597,10 +597,10 @@ id = 789 # Integer | ID da Pessoa
 
 begin
   #Apresenta os dados de uma determinada Pessoa
-  result = api_instance.consultar_using_get12(id)
+  result = api_instance.consultar_using_get13(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->consultar_using_get12: #{e}"
+  puts "Exception when calling CadastroClienteApi->consultar_using_get13: #{e}"
 end
 ```
 
@@ -627,8 +627,8 @@ No authorization required
 
 
 
-# **consultar_using_get17**
-> TelefoneResponse consultar_using_get17(id)
+# **consultar_using_get18**
+> TelefoneResponse consultar_using_get18(id)
 
 Apresenta os dados de um determinado Telefone
 
@@ -647,10 +647,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Telefone
-  result = api_instance.consultar_using_get17(id)
+  result = api_instance.consultar_using_get18(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->consultar_using_get17: #{e}"
+  puts "Exception when calling CadastroClienteApi->consultar_using_get18: #{e}"
 end
 ```
 
@@ -677,8 +677,8 @@ No authorization required
 
 
 
-# **consultar_using_get7**
-> EnderecoResponse consultar_using_get7(id)
+# **consultar_using_get8**
+> EnderecoResponse consultar_using_get8(id)
 
 Apresenta os dados de um determinado Endere\u00C3\u00A7o
 
@@ -697,10 +697,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Endere\u00C3\u00A7o
-  result = api_instance.consultar_using_get7(id)
+  result = api_instance.consultar_using_get8(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->consultar_using_get7: #{e}"
+  puts "Exception when calling CadastroClienteApi->consultar_using_get8: #{e}"
 end
 ```
 
@@ -896,8 +896,8 @@ No authorization required
 
 
 
-# **listar_using_get10**
-> PageEnderecoResponse listar_using_get10(opts)
+# **listar_using_get11**
+> PageEnderecoResponse listar_using_get11(opts)
 
 Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
 
@@ -933,10 +933,10 @@ opts = {
 
 begin
   #Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
-  result = api_instance.listar_using_get10(opts)
+  result = api_instance.listar_using_get11(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->listar_using_get10: #{e}"
+  puts "Exception when calling CadastroClienteApi->listar_using_get11: #{e}"
 end
 ```
 
@@ -979,8 +979,8 @@ No authorization required
 
 
 
-# **listar_using_get15**
-> PagePessoaDetalheResponse listar_using_get15(opts)
+# **listar_using_get16**
+> PagePessoaDetalheResponse listar_using_get16(opts)
 
 Lista os Detalhes das Pessoas cadastradas no Emissor
 
@@ -1012,10 +1012,10 @@ opts = {
 
 begin
   #Lista os Detalhes das Pessoas cadastradas no Emissor
-  result = api_instance.listar_using_get15(opts)
+  result = api_instance.listar_using_get16(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->listar_using_get15: #{e}"
+  puts "Exception when calling CadastroClienteApi->listar_using_get16: #{e}"
 end
 ```
 
@@ -1054,8 +1054,8 @@ No authorization required
 
 
 
-# **listar_using_get16**
-> PagePessoaResponse listar_using_get16(opts)
+# **listar_using_get17**
+> PagePessoaResponse listar_using_get17(opts)
 
 Lista as Pessoas cadastradas no Emissor
 
@@ -1088,10 +1088,10 @@ opts = {
 
 begin
   #Lista as Pessoas cadastradas no Emissor
-  result = api_instance.listar_using_get16(opts)
+  result = api_instance.listar_using_get17(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->listar_using_get16: #{e}"
+  puts "Exception when calling CadastroClienteApi->listar_using_get17: #{e}"
 end
 ```
 
@@ -1131,8 +1131,8 @@ No authorization required
 
 
 
-# **listar_using_get24**
-> PageTelefoneResponse listar_using_get24(opts)
+# **listar_using_get25**
+> PageTelefoneResponse listar_using_get25(opts)
 
 Lista os Telefones cadastrados no Emissor
 
@@ -1161,10 +1161,10 @@ opts = {
 
 begin
   #Lista os Telefones cadastrados no Emissor
-  result = api_instance.listar_using_get24(opts)
+  result = api_instance.listar_using_get25(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->listar_using_get24: #{e}"
+  puts "Exception when calling CadastroClienteApi->listar_using_get25: #{e}"
 end
 ```
 

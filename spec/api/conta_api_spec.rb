@@ -48,7 +48,7 @@ describe 'ContaApi' do
   # Este recurso insere um ajuste para a conta do id informado
   # @param id Id Conta
   # @param id_tipo_ajuste C\u00C3\u00B3digo identificador do tipo de ajuste.
-  # @param data_ajuste Data do ajuste.
+  # @param data_ajuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.
   # @param valor_ajuste Valor do ajuste
   # @param [Hash] opts the optional parameters
   # @return [AjusteResponse]
@@ -83,6 +83,24 @@ describe 'ContaApi' do
   # @option opts [Float] :limite_maximo Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.
   # @return [LimiteDisponibilidadeResponse]
   describe 'alterar_limite_using_put test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for alterar_produto_using_post
+  # Altera o produto associado \u00C3\u00A0 conta.
+  # O recurso permite fazer modifica\u00C3\u00A7\u00C3\u00A3o do produto associado \u00C3\u00A0 conta.
+  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+  # @param request request
+  # @param [Hash] opts the optional parameters
+  # @return [String]
+  describe 'alterar_produto_using_post test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -372,7 +390,7 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for consultar_using_get25
+  # unit tests for consultar_using_get27
   # Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
   # Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
   # @param id Id Conta
@@ -380,7 +398,7 @@ describe 'ContaApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
   # @return [TransferenciaBancariaResponse]
-  describe 'consultar_using_get25 test' do
+  describe 'consultar_using_get27 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -391,14 +409,14 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for consultar_using_get26
+  # unit tests for consultar_using_get28
   # Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
   # Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
   # @param id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
   # @param [Hash] opts the optional parameters
   # @return [PageTransferenciaResponse]
-  describe 'consultar_using_get26 test' do
+  describe 'consultar_using_get28 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -707,7 +725,7 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for listar_using_get30
+  # unit tests for listar_using_get31
   # Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
   # Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
   # @param id Id Conta
@@ -717,7 +735,7 @@ describe 'ContaApi' do
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @return [PageTransferenciaBancariaResponse]
-  describe 'listar_using_get30 test' do
+  describe 'listar_using_get31 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -728,7 +746,7 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for listar_using_get31
+  # unit tests for listar_using_get32
   # Lista as transfer\u00C3\u00AAncias realizadas pela conta
   # Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
@@ -742,7 +760,7 @@ describe 'ContaApi' do
   # @option opts [Float] :valor_transferencia Valor estabelecido para ser transferido.
   # @option opts [String] :data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
   # @return [PageTransferenciaResponse]
-  describe 'listar_using_get31 test' do
+  describe 'listar_using_get32 test' do
     it "should work" do
       # assertion here
       # should be_a()

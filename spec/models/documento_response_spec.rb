@@ -54,7 +54,7 @@ describe 'DocumentoResponse' do
   end
 
 
-  describe 'test attribute "id_documento_tipo"' do
+  describe 'test attribute "id_tipo_documento"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -65,7 +65,7 @@ describe 'DocumentoResponse' do
   end
 
 
-  describe 'test attribute "id_documento_template"' do
+  describe 'test attribute "id_template_documento"' do
     it 'should work' do
        # assertion here
        # should be_a()

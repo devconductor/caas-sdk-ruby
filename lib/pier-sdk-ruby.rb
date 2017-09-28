@@ -203,7 +203,7 @@ require 'pier-sdk-ruby/models/documento_parametros_request'
 require 'pier-sdk-ruby/models/documento_response'
 
 
-require 'pier-sdk-ruby/models/documento_template_request'
+require 'pier-sdk-ruby/models/documento_template_persist'
 
 
 require 'pier-sdk-ruby/models/documento_template_response'
@@ -363,6 +363,9 @@ require 'pier-sdk-ruby/models/page_controle_vencimento_response'
 
 
 require 'pier-sdk-ruby/models/page_dispositivo_response'
+
+
+require 'pier-sdk-ruby/models/page_documento_template_response'
 
 
 require 'pier-sdk-ruby/models/page_endereco_response'
@@ -569,6 +572,9 @@ require 'pier-sdk-ruby/models/produto_response'
 require 'pier-sdk-ruby/models/promotor_response'
 
 
+require 'pier-sdk-ruby/models/propriedade_documento_request'
+
+
 require 'pier-sdk-ruby/models/push_apns'
 
 
@@ -636,6 +642,9 @@ require 'pier-sdk-ruby/models/tipo_boleto_response'
 
 
 require 'pier-sdk-ruby/models/tipo_endereco_response'
+
+
+require 'pier-sdk-ruby/models/tipo_operacao_response'
 
 
 require 'pier-sdk-ruby/models/tipo_oportunidade'
@@ -724,7 +733,7 @@ require 'pier-sdk-ruby/api/conta_api'
 
 require 'pier-sdk-ruby/api/dispositivo_api'
 
-require 'pier-sdk-ruby/api/documentos_api'
+require 'pier-sdk-ruby/api/documento_api'
 
 require 'pier-sdk-ruby/api/endereco_nacional_api'
 
@@ -737,8 +746,6 @@ require 'pier-sdk-ruby/api/fatura_api'
 require 'pier-sdk-ruby/api/job_api'
 
 require 'pier-sdk-ruby/api/limite_api'
-
-require 'pier-sdk-ruby/api/mock_api'
 
 require 'pier-sdk-ruby/api/notificacao_api'
 

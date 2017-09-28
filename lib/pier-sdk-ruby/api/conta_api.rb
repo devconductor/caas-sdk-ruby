@@ -36,7 +36,7 @@ module Pier
     # Este recurso insere um ajuste para a conta do id informado
     # @param id Id Conta
     # @param id_tipo_ajuste C\u00C3\u00B3digo identificador do tipo de ajuste.
-    # @param data_ajuste Data do ajuste.
+    # @param data_ajuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.
     # @param valor_ajuste Valor do ajuste
     # @param [Hash] opts the optional parameters
     # @return [AjusteResponse]
@@ -49,7 +49,7 @@ module Pier
     # Este recurso insere um ajuste para a conta do id informado
     # @param id Id Conta
     # @param id_tipo_ajuste C\u00C3\u00B3digo identificador do tipo de ajuste.
-    # @param data_ajuste Data do ajuste.
+    # @param data_ajuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.
     # @param valor_ajuste Valor do ajuste
     # @param [Hash] opts the optional parameters
     # @return [Array<(AjusteResponse, Fixnum, Hash)>] AjusteResponse data, response status code and response headers
@@ -309,6 +309,82 @@ module Pier
         :return_type => 'LimiteDisponibilidadeResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ContaApi#alterar_limite_using_put\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Altera o produto associado \u00C3\u00A0 conta.
+    # O recurso permite fazer modifica\u00C3\u00A7\u00C3\u00A3o do produto associado \u00C3\u00A0 conta.
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param request request
+    # @param [Hash] opts the optional parameters
+    # @return [String]
+    def alterar_produto_using_post(id, request, opts = {})
+      data, _status_code, _headers = alterar_produto_using_post_with_http_info(id, request, opts)
+      return data
+    end
+
+    # Altera o produto associado \u00C3\u00A0 conta.
+    # O recurso permite fazer modifica\u00C3\u00A7\u00C3\u00A3o do produto associado \u00C3\u00A0 conta.
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param request request
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    def alterar_produto_using_post_with_http_info(id, request, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ContaApi.alterar_produto_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.alterar_produto_using_post" if id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'request' is set
+      fail ArgumentError, "Missing the required parameter 'request' when calling ContaApi.alterar_produto_using_post" if request.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/alterar-produto".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(request)
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'String')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ContaApi#alterar_produto_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1540,8 +1616,8 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
     # @return [TransferenciaBancariaResponse]
-    def consultar_using_get25(id, id_transferencia, opts = {})
-      data, _status_code, _headers = consultar_using_get25_with_http_info(id, id_transferencia, opts)
+    def consultar_using_get27(id, id_transferencia, opts = {})
+      data, _status_code, _headers = consultar_using_get27_with_http_info(id, id_transferencia, opts)
       return data
     end
 
@@ -1552,14 +1628,14 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
     # @return [Array<(TransferenciaBancariaResponse, Fixnum, Hash)>] TransferenciaBancariaResponse data, response status code and response headers
-    def consultar_using_get25_with_http_info(id, id_transferencia, opts = {})
+    def consultar_using_get27_with_http_info(id, id_transferencia, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.consultar_using_get25 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.consultar_using_get27 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_using_get25" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_using_get27" if id.nil?
       
       
       
@@ -1567,7 +1643,7 @@ module Pier
       
       
       # verify the required parameter 'id_transferencia' is set
-      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling ContaApi.consultar_using_get25" if id_transferencia.nil?
+      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling ContaApi.consultar_using_get27" if id_transferencia.nil?
       
       
       
@@ -1612,7 +1688,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TransferenciaBancariaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#consultar_using_get25\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#consultar_using_get27\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1624,8 +1700,8 @@ module Pier
     # @param id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
     # @param [Hash] opts the optional parameters
     # @return [PageTransferenciaResponse]
-    def consultar_using_get26(id, id_transferencia, opts = {})
-      data, _status_code, _headers = consultar_using_get26_with_http_info(id, id_transferencia, opts)
+    def consultar_using_get28(id, id_transferencia, opts = {})
+      data, _status_code, _headers = consultar_using_get28_with_http_info(id, id_transferencia, opts)
       return data
     end
 
@@ -1635,14 +1711,14 @@ module Pier
     # @param id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
     # @param [Hash] opts the optional parameters
     # @return [Array<(PageTransferenciaResponse, Fixnum, Hash)>] PageTransferenciaResponse data, response status code and response headers
-    def consultar_using_get26_with_http_info(id, id_transferencia, opts = {})
+    def consultar_using_get28_with_http_info(id, id_transferencia, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.consultar_using_get26 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.consultar_using_get28 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_using_get26" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_using_get28" if id.nil?
       
       
       
@@ -1650,7 +1726,7 @@ module Pier
       
       
       # verify the required parameter 'id_transferencia' is set
-      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling ContaApi.consultar_using_get26" if id_transferencia.nil?
+      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling ContaApi.consultar_using_get28" if id_transferencia.nil?
       
       
       
@@ -1688,7 +1764,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTransferenciaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#consultar_using_get26\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#consultar_using_get28\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3088,8 +3164,8 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [PageTransferenciaBancariaResponse]
-    def listar_using_get30(id, opts = {})
-      data, _status_code, _headers = listar_using_get30_with_http_info(id, opts)
+    def listar_using_get31(id, opts = {})
+      data, _status_code, _headers = listar_using_get31_with_http_info(id, opts)
       return data
     end
 
@@ -3102,14 +3178,14 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [Array<(PageTransferenciaBancariaResponse, Fixnum, Hash)>] PageTransferenciaBancariaResponse data, response status code and response headers
-    def listar_using_get30_with_http_info(id, opts = {})
+    def listar_using_get31_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get30 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get31 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.listar_using_get30" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.listar_using_get31" if id.nil?
       
       
       
@@ -3175,7 +3251,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTransferenciaBancariaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#listar_using_get30\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#listar_using_get31\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3194,8 +3270,8 @@ module Pier
     # @option opts [Float] :valor_transferencia Valor estabelecido para ser transferido.
     # @option opts [String] :data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
     # @return [PageTransferenciaResponse]
-    def listar_using_get31(id, opts = {})
-      data, _status_code, _headers = listar_using_get31_with_http_info(id, opts)
+    def listar_using_get32(id, opts = {})
+      data, _status_code, _headers = listar_using_get32_with_http_info(id, opts)
       return data
     end
 
@@ -3212,14 +3288,14 @@ module Pier
     # @option opts [Float] :valor_transferencia Valor estabelecido para ser transferido.
     # @option opts [String] :data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
     # @return [Array<(PageTransferenciaResponse, Fixnum, Hash)>] PageTransferenciaResponse data, response status code and response headers
-    def listar_using_get31_with_http_info(id, opts = {})
+    def listar_using_get32_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get31 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get32 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.listar_using_get31" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.listar_using_get32" if id.nil?
       
       
       
@@ -3313,7 +3389,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTransferenciaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#listar_using_get31\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#listar_using_get32\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

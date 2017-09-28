@@ -106,8 +106,8 @@ module Pier
     # @param groovy groovy
     # @param [Hash] opts the optional parameters
     # @return [JobResponse]
-    def atualizar_using_put(id, descricao, cron, groovy, opts = {})
-      data, _status_code, _headers = atualizar_using_put_with_http_info(id, descricao, cron, groovy, opts)
+    def atualizar_using_put1(id, descricao, cron, groovy, opts = {})
+      data, _status_code, _headers = atualizar_using_put1_with_http_info(id, descricao, cron, groovy, opts)
       return data
     end
 
@@ -119,14 +119,14 @@ module Pier
     # @param groovy groovy
     # @param [Hash] opts the optional parameters
     # @return [Array<(JobResponse, Fixnum, Hash)>] JobResponse data, response status code and response headers
-    def atualizar_using_put_with_http_info(id, descricao, cron, groovy, opts = {})
+    def atualizar_using_put1_with_http_info(id, descricao, cron, groovy, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: JobApi.atualizar_using_put ..."
+        @api_client.config.logger.debug "Calling API: JobApi.atualizar_using_put1 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling JobApi.atualizar_using_put" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling JobApi.atualizar_using_put1" if id.nil?
       
       
       
@@ -134,7 +134,7 @@ module Pier
       
       
       # verify the required parameter 'descricao' is set
-      fail ArgumentError, "Missing the required parameter 'descricao' when calling JobApi.atualizar_using_put" if descricao.nil?
+      fail ArgumentError, "Missing the required parameter 'descricao' when calling JobApi.atualizar_using_put1" if descricao.nil?
       
       
       
@@ -142,7 +142,7 @@ module Pier
       
       
       # verify the required parameter 'cron' is set
-      fail ArgumentError, "Missing the required parameter 'cron' when calling JobApi.atualizar_using_put" if cron.nil?
+      fail ArgumentError, "Missing the required parameter 'cron' when calling JobApi.atualizar_using_put1" if cron.nil?
       
       
       
@@ -150,7 +150,7 @@ module Pier
       
       
       # verify the required parameter 'groovy' is set
-      fail ArgumentError, "Missing the required parameter 'groovy' when calling JobApi.atualizar_using_put" if groovy.nil?
+      fail ArgumentError, "Missing the required parameter 'groovy' when calling JobApi.atualizar_using_put1" if groovy.nil?
       
       
       
@@ -190,7 +190,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'JobResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: JobApi#atualizar_using_put\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: JobApi#atualizar_using_put1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -272,8 +272,8 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [PageJobResponse]
-    def listar_using_get13(opts = {})
-      data, _status_code, _headers = listar_using_get13_with_http_info(opts)
+    def listar_using_get14(opts = {})
+      data, _status_code, _headers = listar_using_get14_with_http_info(opts)
       return data
     end
 
@@ -287,9 +287,9 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [Array<(PageJobResponse, Fixnum, Hash)>] PageJobResponse data, response status code and response headers
-    def listar_using_get13_with_http_info(opts = {})
+    def listar_using_get14_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: JobApi.listar_using_get13 ..."
+        @api_client.config.logger.debug "Calling API: JobApi.listar_using_get14 ..."
       end
       
       
@@ -370,7 +370,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageJobResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: JobApi#listar_using_get13\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: JobApi#listar_using_get14\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ativar_job_using_post**](JobApi.md#ativar_job_using_post) | **POST** /api/jobs/{id}/ativar-job | Ativar Job
-[**atualizar_using_put**](JobApi.md#atualizar_using_put) | **PUT** /api/jobs/{id} | Atualizar Job
+[**atualizar_using_put1**](JobApi.md#atualizar_using_put1) | **PUT** /api/jobs/{id} | Atualizar Job
 [**desativar_job_using_post**](JobApi.md#desativar_job_using_post) | **POST** /api/jobs/{id}/desativar-job | Desativar Job
-[**listar_using_get13**](JobApi.md#listar_using_get13) | **GET** /api/jobs | Listar Jobs
+[**listar_using_get14**](JobApi.md#listar_using_get14) | **GET** /api/jobs | Listar Jobs
 [**salvar_using_post11**](JobApi.md#salvar_using_post11) | **POST** /api/jobs | Cadastrar Job
 
 
@@ -63,8 +63,8 @@ No authorization required
 
 
 
-# **atualizar_using_put**
-> JobResponse atualizar_using_put(id, descricao, cron, groovy)
+# **atualizar_using_put1**
+> JobResponse atualizar_using_put1(id, descricao, cron, groovy)
 
 Atualizar Job
 
@@ -89,10 +89,10 @@ groovy = "groovy_example" # String | groovy
 
 begin
   #Atualizar Job
-  result = api_instance.atualizar_using_put(id, descricao, cron, groovy)
+  result = api_instance.atualizar_using_put1(id, descricao, cron, groovy)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling JobApi->atualizar_using_put: #{e}"
+  puts "Exception when calling JobApi->atualizar_using_put1: #{e}"
 end
 ```
 
@@ -172,8 +172,8 @@ No authorization required
 
 
 
-# **listar_using_get13**
-> PageJobResponse listar_using_get13(opts)
+# **listar_using_get14**
+> PageJobResponse listar_using_get14(opts)
 
 Listar Jobs
 
@@ -198,10 +198,10 @@ opts = {
 
 begin
   #Listar Jobs
-  result = api_instance.listar_using_get13(opts)
+  result = api_instance.listar_using_get14(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling JobApi->listar_using_get13: #{e}"
+  puts "Exception when calling JobApi->listar_using_get14: #{e}"
 end
 ```
 

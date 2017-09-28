@@ -30,6 +30,14 @@ Name | Type | Description | Notes
 **id_conta_portador** | **Integer** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) | [optional] 
 **numero_estabelecimento** | **Integer** | Atributo que representa o numero do estabelecimento. | [optional] 
 **valor_taxa_saque** | **Float** | Valor da taxa saque. | [optional] 
+**banco** | **Integer** | C\u00C3\u00B3digo do Banco | [optional] 
+**numero_agencia** | **String** | N\u00C3\u00BAmero da Ag\u00C3\u00AAncia | [optional] 
+**digito_agencia** | **String** | D\u00C3\u00ADgito da Ag\u00C3\u00AAncia | [optional] 
+**numero_conta** | **String** | N\u00C3\u00BAmero da Conta | [optional] 
+**digito_conta** | **String** | D\u00C3\u00ADgito da Conta | [optional] 
+**flag_conta_poupanca** | **Integer** | Tipo da Conta | [optional] 
+**documento_favorecido** | **String** | Documento do Favorecido | [optional] 
+**nome_favorecido** | **String** | Nome do Favorecido | [optional] 
 
 
 

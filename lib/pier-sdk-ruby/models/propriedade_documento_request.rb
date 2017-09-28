@@ -23,22 +23,27 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o do template do documento.
-  class DocumentoTemplateRequest
-    # ID para o Tipo de Documento vinculado ao template.
-    attr_accessor :id_tipo_documento
+  # Objeto que encapsula as propriedades do detalhamento do documento.
+  class PropriedadeDocumentoRequest
+    # Valor da propriedade do Documento.
+    attr_accessor :chave
 
-    # Template para o conte\u00C3\u00BAdo do documento.
-    attr_accessor :template
+    # Valor da propriedade do Documento.
+    attr_accessor :valor
+
+    # Tipo da propriedade do Documento.
+    attr_accessor :detalhes_tipo
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id_tipo_documento' => :'idTipoDocumento',
+        :'chave' => :'chave',
         
-        :'template' => :'template'
+        :'valor' => :'valor',
+        
+        :'detalhes_tipo' => :'detalhesTipo'
         
       }
     end
@@ -47,9 +52,11 @@ module Pier
     def self.swagger_types
       {
         
-        :'id_tipo_documento' => :'Integer',
+        :'chave' => :'String',
         
-        :'template' => :'String'
+        :'valor' => :'String',
+        
+        :'detalhes_tipo' => :'String'
         
       }
     end
@@ -63,19 +70,28 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'idTipoDocumento']
+      if attributes[:'chave']
         
         
-        self.id_tipo_documento = attributes[:'idTipoDocumento']
+        self.chave = attributes[:'chave']
         
       
       end
 
       
-      if attributes[:'template']
+      if attributes[:'valor']
         
         
-        self.template = attributes[:'template']
+        self.valor = attributes[:'valor']
+        
+      
+      end
+
+      
+      if attributes[:'detalhesTipo']
+        
+        
+        self.detalhes_tipo = attributes[:'detalhesTipo']
         
       
       end
@@ -104,6 +120,15 @@ module Pier
       
       
       
+      
+      
+      allowed_values = ["LIST", "IMAGEM", "TEXTO", "NUMERO"]
+      if @detalhes_tipo && !allowed_values.include?(@detalhes_tipo)
+        return false
+      end
+      
+      
+      
     end
 
     
@@ -117,13 +142,28 @@ module Pier
     
     
     
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] detalhes_tipo Object to be assigned
+    def detalhes_tipo=(detalhes_tipo)
+      allowed_values = ["LIST", "IMAGEM", "TEXTO", "NUMERO"]
+      if detalhes_tipo && !allowed_values.include?(detalhes_tipo)
+        fail ArgumentError, "invalid value for 'detalhes_tipo', must be one of #{allowed_values}."
+      end
+      @detalhes_tipo = detalhes_tipo
+    end
+
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared 
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id_tipo_documento == o.id_tipo_documento &&
-          template == o.template
+          chave == o.chave &&
+          valor == o.valor &&
+          detalhes_tipo == o.detalhes_tipo
     end
 
     # @see the `==` method
@@ -135,7 +175,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_tipo_documento, template].hash
+      [chave, valor, detalhes_tipo].hash
     end
 
     # Builds the object from hash

@@ -34,6 +34,9 @@ module Pier
     # Tipo da propriedade do Documento.
     attr_accessor :detalhes_tipo
 
+    # Atributo que indica se o par\u00C3\u00A2metro \u00C3\u00A9 um \u00C3\u00ADndice (default = false)
+    attr_accessor :flag_indice
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -43,7 +46,9 @@ module Pier
         
         :'valor' => :'valor',
         
-        :'detalhes_tipo' => :'detalhesTipo'
+        :'detalhes_tipo' => :'detalhesTipo',
+        
+        :'flag_indice' => :'flagIndice'
         
       }
     end
@@ -56,7 +61,9 @@ module Pier
         
         :'valor' => :'String',
         
-        :'detalhes_tipo' => :'String'
+        :'detalhes_tipo' => :'String',
+        
+        :'flag_indice' => :'BOOLEAN'
         
       }
     end
@@ -97,6 +104,15 @@ module Pier
       end
 
       
+      if attributes[:'flagIndice']
+        
+        
+        self.flag_indice = attributes[:'flagIndice']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -122,10 +138,14 @@ module Pier
       
       
       
-      allowed_values = ["LIST", "IMAGEM", "TEXTO", "NUMERO"]
+      allowed_values = ["IMAGEM", "TEXTO", "NUMERO"]
       if @detalhes_tipo && !allowed_values.include?(@detalhes_tipo)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -146,13 +166,18 @@ module Pier
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] detalhes_tipo Object to be assigned
     def detalhes_tipo=(detalhes_tipo)
-      allowed_values = ["LIST", "IMAGEM", "TEXTO", "NUMERO"]
+      allowed_values = ["IMAGEM", "TEXTO", "NUMERO"]
       if detalhes_tipo && !allowed_values.include?(detalhes_tipo)
         fail ArgumentError, "invalid value for 'detalhes_tipo', must be one of #{allowed_values}."
       end
       @detalhes_tipo = detalhes_tipo
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -163,7 +188,8 @@ module Pier
       self.class == o.class &&
           chave == o.chave &&
           valor == o.valor &&
-          detalhes_tipo == o.detalhes_tipo
+          detalhes_tipo == o.detalhes_tipo &&
+          flag_indice == o.flag_indice
     end
 
     # @see the `==` method
@@ -175,7 +201,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [chave, valor, detalhes_tipo].hash
+      [chave, valor, detalhes_tipo, flag_indice].hash
     end
 
     # Builds the object from hash

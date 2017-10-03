@@ -43,17 +43,6 @@ describe 'DocumentoParametrosRequest' do
     end
   end
 
-  describe 'test attribute "id_tipo_documento"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
   describe 'test attribute "id_template_documento"' do
     it 'should work' do
        # assertion here

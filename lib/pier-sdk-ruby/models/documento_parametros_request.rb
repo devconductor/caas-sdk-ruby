@@ -25,9 +25,6 @@ require 'date'
 module Pier
   # Objeto que encapsula os par\u00C3\u00A2metros para gera\u00C3\u00A7\u00C3\u00A3o de um documento
   class DocumentoParametrosRequest
-    # ID para o tipo de documento.
-    attr_accessor :id_tipo_documento
-
     # ID para o template do documento.
     attr_accessor :id_template_documento
 
@@ -42,8 +39,6 @@ module Pier
     def self.attribute_map
       {
         
-        :'id_tipo_documento' => :'idTipoDocumento',
-        
         :'id_template_documento' => :'idTemplateDocumento',
         
         :'nome' => :'nome',
@@ -56,8 +51,6 @@ module Pier
     # Attribute type mapping.
     def self.swagger_types
       {
-        
-        :'id_tipo_documento' => :'Integer',
         
         :'id_template_documento' => :'Integer',
         
@@ -75,15 +68,6 @@ module Pier
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
-
-      
-      if attributes[:'idTipoDocumento']
-        
-        
-        self.id_tipo_documento = attributes[:'idTipoDocumento']
-        
-      
-      end
 
       
       if attributes[:'idTemplateDocumento']
@@ -142,17 +126,8 @@ module Pier
       
       
       
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -174,7 +149,6 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id_tipo_documento == o.id_tipo_documento &&
           id_template_documento == o.id_template_documento &&
           nome == o.nome &&
           parametros_conteudo == o.parametros_conteudo
@@ -189,7 +163,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_tipo_documento, id_template_documento, nome, parametros_conteudo].hash
+      [id_template_documento, nome, parametros_conteudo].hash
     end
 
     # Builds the object from hash

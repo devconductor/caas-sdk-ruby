@@ -43,7 +43,7 @@ describe 'DocumentoTemplatePersist' do
     end
   end
 
-  describe 'test attribute "id_tipo_documento"' do
+  describe 'test attribute "id_tipo_template"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -55,6 +55,17 @@ describe 'DocumentoTemplatePersist' do
 
 
   describe 'test attribute "template"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "integracoes"' do
     it 'should work' do
        # assertion here
        # should be_a()

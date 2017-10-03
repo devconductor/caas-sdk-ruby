@@ -25,20 +25,25 @@ require 'date'
 module Pier
   # Representa\u00C3\u00A7\u00C3\u00A3o do template do documento.
   class DocumentoTemplatePersist
-    # ID para o Tipo de Documento vinculado ao template.
-    attr_accessor :id_tipo_documento
+    # ID para o Tipo de Template vinculado ao template.
+    attr_accessor :id_tipo_template
 
     # Template para o conte\u00C3\u00BAdo do documento.
     attr_accessor :template
+
+    # Lista de configura\u00C3\u00A7\u00C3\u00B5es de integra\u00C3\u00A7\u00C3\u00A3o
+    attr_accessor :integracoes
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id_tipo_documento' => :'idTipoDocumento',
+        :'id_tipo_template' => :'idTipoTemplate',
         
-        :'template' => :'template'
+        :'template' => :'template',
+        
+        :'integracoes' => :'integracoes'
         
       }
     end
@@ -47,9 +52,11 @@ module Pier
     def self.swagger_types
       {
         
-        :'id_tipo_documento' => :'Integer',
+        :'id_tipo_template' => :'Integer',
         
-        :'template' => :'String'
+        :'template' => :'String',
+        
+        :'integracoes' => :'Array<ReferenciaIdPersist>'
         
       }
     end
@@ -63,10 +70,10 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'idTipoDocumento']
+      if attributes[:'idTipoTemplate']
         
         
-        self.id_tipo_documento = attributes[:'idTipoDocumento']
+        self.id_tipo_template = attributes[:'idTipoTemplate']
         
       
       end
@@ -76,6 +83,17 @@ module Pier
         
         
         self.template = attributes[:'template']
+        
+      
+      end
+
+      
+      if attributes[:'integracoes']
+        
+        if (value = attributes[:'integracoes']).is_a?(Array)
+          self.integracoes = value
+        end
+        
         
       
       end
@@ -104,8 +122,17 @@ module Pier
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -122,8 +149,9 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id_tipo_documento == o.id_tipo_documento &&
-          template == o.template
+          id_tipo_template == o.id_tipo_template &&
+          template == o.template &&
+          integracoes == o.integracoes
     end
 
     # @see the `==` method
@@ -135,7 +163,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_tipo_documento, template].hash
+      [id_tipo_template, template, integracoes].hash
     end
 
     # Builds the object from hash

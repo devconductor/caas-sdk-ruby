@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterar_using_put11**](WebhookApi.md#alterar_using_put11) | **PUT** /api/webhooks/{id} | Alterar Webhook
-[**consultar_using_get30**](WebhookApi.md#consultar_using_get30) | **GET** /api/webhooks/{id} | Consultar Webhook
-[**listar_using_get35**](WebhookApi.md#listar_using_get35) | **GET** /api/webhooks | Lista os Webhooks
+[**alterar_using_put12**](WebhookApi.md#alterar_using_put12) | **PUT** /api/webhooks/{id} | Alterar Webhook
+[**consultar_using_get32**](WebhookApi.md#consultar_using_get32) | **GET** /api/webhooks/{id} | Consultar Webhook
+[**listar_using_get37**](WebhookApi.md#listar_using_get37) | **GET** /api/webhooks | Lista os Webhooks
 [**salvar_using_post20**](WebhookApi.md#salvar_using_post20) | **POST** /api/webhooks | Salvar Webhook
 
 
 
 
-# **alterar_using_put11**
-> WebHookResponse alterar_using_put11(id, tipo_evento, url, opts)
+# **alterar_using_put12**
+> WebHookResponse alterar_using_put12(id, tipo_evento, url, opts)
 
 Alterar Webhook
 
@@ -39,10 +39,10 @@ opts = {
 
 begin
   #Alterar Webhook
-  result = api_instance.alterar_using_put11(id, tipo_evento, url, opts)
+  result = api_instance.alterar_using_put12(id, tipo_evento, url, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling WebhookApi->alterar_using_put11: #{e}"
+  puts "Exception when calling WebhookApi->alterar_using_put12: #{e}"
 end
 ```
 
@@ -72,8 +72,8 @@ No authorization required
 
 
 
-# **consultar_using_get30**
-> WebHookResponse consultar_using_get30(id)
+# **consultar_using_get32**
+> WebHookResponse consultar_using_get32(id)
 
 Consultar Webhook
 
@@ -92,10 +92,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Consultar Webhook
-  result = api_instance.consultar_using_get30(id)
+  result = api_instance.consultar_using_get32(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling WebhookApi->consultar_using_get30: #{e}"
+  puts "Exception when calling WebhookApi->consultar_using_get32: #{e}"
 end
 ```
 
@@ -122,8 +122,8 @@ No authorization required
 
 
 
-# **listar_using_get35**
-> PageWebHookResponse listar_using_get35(opts)
+# **listar_using_get37**
+> PageWebHookResponse listar_using_get37(opts)
 
 Lista os Webhooks
 
@@ -149,10 +149,10 @@ opts = {
 
 begin
   #Lista os Webhooks
-  result = api_instance.listar_using_get35(opts)
+  result = api_instance.listar_using_get37(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling WebhookApi->listar_using_get35: #{e}"
+  puts "Exception when calling WebhookApi->listar_using_get37: #{e}"
 end
 ```
 

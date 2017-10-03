@@ -76,17 +76,6 @@ describe 'TransferenciaResponse' do
   end
 
 
-  describe 'test attribute "nome_pessoa_origem"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
   describe 'test attribute "id_conta_destino"' do
     it 'should work' do
        # assertion here
@@ -98,29 +87,7 @@ describe 'TransferenciaResponse' do
   end
 
 
-  describe 'test attribute "nome_pessoa_destino"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
   describe 'test attribute "valor_transferencia"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "valor_tarifa"' do
     it 'should work' do
        # assertion here
        # should be_a()

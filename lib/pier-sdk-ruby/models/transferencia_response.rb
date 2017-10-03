@@ -34,20 +34,11 @@ module Pier
     # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id).
     attr_accessor :id_conta_origem
 
-    # Apresenta o nome completo da pessoa que realizou a Transfer\u00C3\u00AAncia.
-    attr_accessor :nome_pessoa_origem
-
     # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
     attr_accessor :id_conta_destino
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cliente Portador Cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).
-    attr_accessor :nome_pessoa_destino
-
     # Valor estabelecido para ser transferido.
     attr_accessor :valor_transferencia
-
-    # Valor estabelecido da tarifa para a transfer\u00C3\u00AAncia.
-    attr_accessor :valor_tarifa
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -60,15 +51,9 @@ module Pier
         
         :'id_conta_origem' => :'idContaOrigem',
         
-        :'nome_pessoa_origem' => :'nomePessoaOrigem',
-        
         :'id_conta_destino' => :'idContaDestino',
         
-        :'nome_pessoa_destino' => :'nomePessoaDestino',
-        
-        :'valor_transferencia' => :'valorTransferencia',
-        
-        :'valor_tarifa' => :'valorTarifa'
+        :'valor_transferencia' => :'valorTransferencia'
         
       }
     end
@@ -83,15 +68,9 @@ module Pier
         
         :'id_conta_origem' => :'Integer',
         
-        :'nome_pessoa_origem' => :'String',
-        
         :'id_conta_destino' => :'Integer',
         
-        :'nome_pessoa_destino' => :'String',
-        
-        :'valor_transferencia' => :'Float',
-        
-        :'valor_tarifa' => :'Float'
+        :'valor_transferencia' => :'Float'
         
       }
     end
@@ -132,15 +111,6 @@ module Pier
       end
 
       
-      if attributes[:'nomePessoaOrigem']
-        
-        
-        self.nome_pessoa_origem = attributes[:'nomePessoaOrigem']
-        
-      
-      end
-
-      
       if attributes[:'idContaDestino']
         
         
@@ -150,28 +120,10 @@ module Pier
       end
 
       
-      if attributes[:'nomePessoaDestino']
-        
-        
-        self.nome_pessoa_destino = attributes[:'nomePessoaDestino']
-        
-      
-      end
-
-      
       if attributes[:'valorTransferencia']
         
         
         self.valor_transferencia = attributes[:'valorTransferencia']
-        
-      
-      end
-
-      
-      if attributes[:'valorTarifa']
-        
-        
-        self.valor_tarifa = attributes[:'valorTarifa']
         
       
       end
@@ -212,35 +164,8 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -275,11 +200,8 @@ module Pier
           id == o.id &&
           data_transferencia == o.data_transferencia &&
           id_conta_origem == o.id_conta_origem &&
-          nome_pessoa_origem == o.nome_pessoa_origem &&
           id_conta_destino == o.id_conta_destino &&
-          nome_pessoa_destino == o.nome_pessoa_destino &&
-          valor_transferencia == o.valor_transferencia &&
-          valor_tarifa == o.valor_tarifa
+          valor_transferencia == o.valor_transferencia
     end
 
     # @see the `==` method
@@ -291,7 +213,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, data_transferencia, id_conta_origem, nome_pessoa_origem, id_conta_destino, nome_pessoa_destino, valor_transferencia, valor_tarifa].hash
+      [id, data_transferencia, id_conta_origem, id_conta_destino, valor_transferencia].hash
     end
 
     # Builds the object from hash

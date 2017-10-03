@@ -272,8 +272,8 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [PageJobResponse]
-    def listar_using_get14(opts = {})
-      data, _status_code, _headers = listar_using_get14_with_http_info(opts)
+    def listar_using_get15(opts = {})
+      data, _status_code, _headers = listar_using_get15_with_http_info(opts)
       return data
     end
 
@@ -287,9 +287,9 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [Array<(PageJobResponse, Fixnum, Hash)>] PageJobResponse data, response status code and response headers
-    def listar_using_get14_with_http_info(opts = {})
+    def listar_using_get15_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: JobApi.listar_using_get14 ..."
+        @api_client.config.logger.debug "Calling API: JobApi.listar_using_get15 ..."
       end
       
       
@@ -370,7 +370,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageJobResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: JobApi#listar_using_get14\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: JobApi#listar_using_get15\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -383,8 +383,8 @@ module Pier
     # @param groovy groovy
     # @param [Hash] opts the optional parameters
     # @return [JobResponse]
-    def salvar_using_post11(descricao, cron, groovy, opts = {})
-      data, _status_code, _headers = salvar_using_post11_with_http_info(descricao, cron, groovy, opts)
+    def salvar_using_post10(descricao, cron, groovy, opts = {})
+      data, _status_code, _headers = salvar_using_post10_with_http_info(descricao, cron, groovy, opts)
       return data
     end
 
@@ -395,14 +395,14 @@ module Pier
     # @param groovy groovy
     # @param [Hash] opts the optional parameters
     # @return [Array<(JobResponse, Fixnum, Hash)>] JobResponse data, response status code and response headers
-    def salvar_using_post11_with_http_info(descricao, cron, groovy, opts = {})
+    def salvar_using_post10_with_http_info(descricao, cron, groovy, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: JobApi.salvar_using_post11 ..."
+        @api_client.config.logger.debug "Calling API: JobApi.salvar_using_post10 ..."
       end
       
       
       # verify the required parameter 'descricao' is set
-      fail ArgumentError, "Missing the required parameter 'descricao' when calling JobApi.salvar_using_post11" if descricao.nil?
+      fail ArgumentError, "Missing the required parameter 'descricao' when calling JobApi.salvar_using_post10" if descricao.nil?
       
       
       
@@ -410,7 +410,7 @@ module Pier
       
       
       # verify the required parameter 'cron' is set
-      fail ArgumentError, "Missing the required parameter 'cron' when calling JobApi.salvar_using_post11" if cron.nil?
+      fail ArgumentError, "Missing the required parameter 'cron' when calling JobApi.salvar_using_post10" if cron.nil?
       
       
       
@@ -418,7 +418,7 @@ module Pier
       
       
       # verify the required parameter 'groovy' is set
-      fail ArgumentError, "Missing the required parameter 'groovy' when calling JobApi.salvar_using_post11" if groovy.nil?
+      fail ArgumentError, "Missing the required parameter 'groovy' when calling JobApi.salvar_using_post10" if groovy.nil?
       
       
       
@@ -458,7 +458,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'JobResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: JobApi#salvar_using_post11\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: JobApi#salvar_using_post10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

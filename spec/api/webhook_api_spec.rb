@@ -43,7 +43,7 @@ describe 'WebhookApi' do
   end
 
 
-  # unit tests for alterar_using_put11
+  # unit tests for alterar_using_put12
   # Alterar Webhook
   # Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
   # @param id C\u00C3\u00B3digo identificador do Webhook
@@ -52,7 +52,7 @@ describe 'WebhookApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :status Status
   # @return [WebHookResponse]
-  describe 'alterar_using_put11 test' do
+  describe 'alterar_using_put12 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -63,13 +63,13 @@ describe 'WebhookApi' do
   end
 
 
-  # unit tests for consultar_using_get30
+  # unit tests for consultar_using_get32
   # Consultar Webhook
   # Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
   # @param [Hash] opts the optional parameters
   # @return [WebHookResponse]
-  describe 'consultar_using_get30 test' do
+  describe 'consultar_using_get32 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -80,7 +80,7 @@ describe 'WebhookApi' do
   end
 
 
-  # unit tests for listar_using_get35
+  # unit tests for listar_using_get37
   # Lista os Webhooks
   # Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
   # @param [Hash] opts the optional parameters
@@ -92,7 +92,7 @@ describe 'WebhookApi' do
   # @option opts [String] :metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
   # @option opts [String] :url URL que a ser consumida pelo WebHook
   # @return [PageWebHookResponse]
-  describe 'listar_using_get35 test' do
+  describe 'listar_using_get37 test' do
     it "should work" do
       # assertion here
       # should be_a()

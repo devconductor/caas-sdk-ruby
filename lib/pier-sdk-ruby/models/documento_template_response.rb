@@ -28,8 +28,8 @@ module Pier
     # ID do Template do Documento.
     attr_accessor :id
 
-    # ID do Tipo de Documento.
-    attr_accessor :id_tipo_documento
+    # ID do Tipo de Template.
+    attr_accessor :id_tipo_template
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -38,7 +38,7 @@ module Pier
         
         :'id' => :'id',
         
-        :'id_tipo_documento' => :'idTipoDocumento'
+        :'id_tipo_template' => :'idTipoTemplate'
         
       }
     end
@@ -49,7 +49,7 @@ module Pier
         
         :'id' => :'Integer',
         
-        :'id_tipo_documento' => :'Integer'
+        :'id_tipo_template' => :'Integer'
         
       }
     end
@@ -72,10 +72,10 @@ module Pier
       end
 
       
-      if attributes[:'idTipoDocumento']
+      if attributes[:'idTipoTemplate']
         
         
-        self.id_tipo_documento = attributes[:'idTipoDocumento']
+        self.id_tipo_template = attributes[:'idTipoTemplate']
         
       
       end
@@ -123,7 +123,7 @@ module Pier
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          id_tipo_documento == o.id_tipo_documento
+          id_tipo_template == o.id_tipo_template
     end
 
     # @see the `==` method
@@ -135,7 +135,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_tipo_documento].hash
+      [id, id_tipo_template].hash
     end
 
     # Builds the object from hash

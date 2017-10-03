@@ -72,7 +72,8 @@ describe 'NotificacaoApi' do
   # @option opts [String] :tipo_notificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
   # @option opts [String] :remetente Remetente
   # @option opts [String] :assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
-  # @return [TemplateNotificacaoResponse]
+  # @option opts [BOOLEAN] :template_padrao Template Padr\u00C3\u00A3o.
+  # @return [TemplateNotificacaoDetalheResponse]
   describe 'alterar_template_notificacao_using_put test' do
     it "should work" do
       # assertion here
@@ -122,12 +123,46 @@ describe 'NotificacaoApi' do
   end
 
 
+  # unit tests for consultar_por_email_using_get
+  # Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail
+  # Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail espec\u00C3\u00ADfico por id.
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+  # @param [Hash] opts the optional parameters
+  # @return [CodigoSegurancaResponse]
+  describe 'consultar_por_email_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for consultar_por_sms_using_get
+  # Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS
+  # Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS espec\u00C3\u00ADfico por id.
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+  # @param [Hash] opts the optional parameters
+  # @return [CodigoSegurancaResponse]
+  describe 'consultar_por_sms_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
   # unit tests for consultar_template_notificacao_using_get
   # Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
   # Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.
   # @param [Hash] opts the optional parameters
-  # @return [TemplateNotificacaoResponse]
+  # @return [TemplateNotificacaoDetalheResponse]
   describe 'consultar_template_notificacao_using_get test' do
     it "should work" do
       # assertion here
@@ -139,13 +174,30 @@ describe 'NotificacaoApi' do
   end
 
 
-  # unit tests for gerar_token_using_post
+  # unit tests for gerar_token_email_using_post
+  # Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por e-mail
+  # Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+  # @param email email
+  # @param [Hash] opts the optional parameters
+  # @return [String]
+  describe 'gerar_token_email_using_post test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for gerar_token_sms_using_post
   # Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
   # Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [String]
-  describe 'gerar_token_using_post test' do
+  describe 'gerar_token_sms_using_post test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -165,6 +217,44 @@ describe 'NotificacaoApi' do
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @return [PageConfiguracaoEmailResponse]
   describe 'listar_configuracao_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for listar_por_email_using_get
+  # Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a E-Mail
+  # Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por E-Mail.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @return [PageCodigoSegurancaResponse]
+  describe 'listar_por_email_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for listar_por_sms_using_get
+  # Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a SMS
+  # Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por SMS.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @return [PageCodigoSegurancaResponse]
+  describe 'listar_por_sms_using_get test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -390,7 +480,8 @@ describe 'NotificacaoApi' do
   # @option opts [String] :tipo_notificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
   # @option opts [String] :remetente Remetente
   # @option opts [String] :assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
-  # @return [TemplateNotificacaoResponse]
+  # @option opts [BOOLEAN] :template_padrao Template Padr\u00C3\u00A3o.
+  # @return [TemplateNotificacaoDetalheResponse]
   describe 'salvar_template_notificacao_using_post test' do
     it "should work" do
       # assertion here
@@ -402,13 +493,30 @@ describe 'NotificacaoApi' do
   end
 
 
-  # unit tests for validar_token_using_post
+  # unit tests for validar_token_email_using_post
+  # Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por e-mail
+  # Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+  # @param request request
+  # @param [Hash] opts the optional parameters
+  # @return [String]
+  describe 'validar_token_email_using_post test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for validar_token_sms_using_post
   # Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
   # Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
   # @param request request
   # @param [Hash] opts the optional parameters
   # @return [String]
-  describe 'validar_token_using_post test' do
+  describe 'validar_token_sms_using_post test' do
     it "should work" do
       # assertion here
       # should be_a()

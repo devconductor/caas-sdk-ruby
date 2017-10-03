@@ -54,17 +54,6 @@ describe 'DocumentoResponse' do
   end
 
 
-  describe 'test attribute "id_tipo_documento"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
   describe 'test attribute "id_template_documento"' do
     it 'should work' do
        # assertion here
@@ -87,29 +76,7 @@ describe 'DocumentoResponse' do
   end
 
 
-  describe 'test attribute "documento"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
   describe 'test attribute "extensao"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "documento_detalhes"' do
     it 'should work' do
        # assertion here
        # should be_a()

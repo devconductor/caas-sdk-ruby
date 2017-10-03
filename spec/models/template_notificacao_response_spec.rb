@@ -87,6 +87,17 @@ describe 'TemplateNotificacaoResponse' do
   end
 
 
+  describe 'test attribute "template_padrao"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
   describe 'test attribute "remetente"' do
     it 'should work' do
        # assertion here
@@ -99,17 +110,6 @@ describe 'TemplateNotificacaoResponse' do
 
 
   describe 'test attribute "assunto"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "conteudo"' do
     it 'should work' do
        # assertion here
        # should be_a()

@@ -4,66 +4,16 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_using_get19**](EstabelecimentoApi.md#consultar_using_get19) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
-[**consultar_using_get9**](EstabelecimentoApi.md#consultar_using_get9) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
-[**listar_using_get12**](EstabelecimentoApi.md#listar_using_get12) | **GET** /api/estabelecimentos | Lista Estabelecimentos
-[**listar_using_get26**](EstabelecimentoApi.md#listar_using_get26) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
+[**consultar_using_get10**](EstabelecimentoApi.md#consultar_using_get10) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
+[**consultar_using_get20**](EstabelecimentoApi.md#consultar_using_get20) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
+[**listar_using_get13**](EstabelecimentoApi.md#listar_using_get13) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**listar_using_get27**](EstabelecimentoApi.md#listar_using_get27) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
 
 
 
 
-# **consultar_using_get19**
-> TerminalResponse consultar_using_get19(id)
-
-Apresenta os dados de um determinado Terminal
-
-Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::EstabelecimentoApi.new
-
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
-
-
-begin
-  #Apresenta os dados de um determinado Terminal
-  result = api_instance.consultar_using_get19(id)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->consultar_using_get19: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). | 
-
-
-### Return type
-
-[**TerminalResponse**](TerminalResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **consultar_using_get9**
-> EstabelecimentoResponse consultar_using_get9(id)
+# **consultar_using_get10**
+> EstabelecimentoResponse consultar_using_get10(id)
 
 Consultar estabelecimento por id
 
@@ -82,10 +32,10 @@ id = 789 # Integer | Id
 
 begin
   #Consultar estabelecimento por id
-  result = api_instance.consultar_using_get9(id)
+  result = api_instance.consultar_using_get10(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->consultar_using_get9: #{e}"
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get10: #{e}"
 end
 ```
 
@@ -112,8 +62,58 @@ No authorization required
 
 
 
-# **listar_using_get12**
-> PageEstabelecimentoResponse listar_using_get12(opts)
+# **consultar_using_get20**
+> TerminalResponse consultar_using_get20(id)
+
+Apresenta os dados de um determinado Terminal
+
+Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::EstabelecimentoApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+
+
+begin
+  #Apresenta os dados de um determinado Terminal
+  result = api_instance.consultar_using_get20(id)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get20: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). | 
+
+
+### Return type
+
+[**TerminalResponse**](TerminalResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_using_get13**
+> PageEstabelecimentoResponse listar_using_get13(opts)
 
 Lista Estabelecimentos
 
@@ -154,10 +154,10 @@ opts = {
 
 begin
   #Lista Estabelecimentos
-  result = api_instance.listar_using_get12(opts)
+  result = api_instance.listar_using_get13(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get12: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get13: #{e}"
 end
 ```
 
@@ -205,8 +205,8 @@ No authorization required
 
 
 
-# **listar_using_get26**
-> PageTerminalResponse listar_using_get26(opts)
+# **listar_using_get27**
+> PageTerminalResponse listar_using_get27(opts)
 
 Lista os Terminais cadastrados no Emissor
 
@@ -232,10 +232,10 @@ opts = {
 
 begin
   #Lista os Terminais cadastrados no Emissor
-  result = api_instance.listar_using_get26(opts)
+  result = api_instance.listar_using_get27(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get26: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get27: #{e}"
 end
 ```
 

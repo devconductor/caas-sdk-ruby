@@ -12,24 +12,24 @@ Method | HTTP request | Description
 [**atribuir_assinatura_cliente_using_post**](CadastroClienteApi.md#atribuir_assinatura_cliente_using_post) | **POST** /api/contas/{id}/atribuir-assinatura-cliente | Permite atribuir um documento para uma Conta
 [**cadastrar_using_post**](CadastroClienteApi.md#cadastrar_using_post) | **POST** /api/contas/{id}/cadastrar-adicional | Realiza o cadastro de Adicionais para uma Conta
 [**consultar_using_get**](CadastroClienteApi.md#consultar_using_get) | **GET** /api/contas/{id}/adicionais/{idPessoa} | Consulta Adicional de uma Conta
-[**consultar_using_get12**](CadastroClienteApi.md#consultar_using_get12) | **GET** /api/pessoas-detalhes/{id} | Apresenta os detalhes de uma determinada Pessoa
-[**consultar_using_get13**](CadastroClienteApi.md#consultar_using_get13) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
-[**consultar_using_get18**](CadastroClienteApi.md#consultar_using_get18) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
-[**consultar_using_get8**](CadastroClienteApi.md#consultar_using_get8) | **GET** /api/enderecos/{id} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
+[**consultar_using_get13**](CadastroClienteApi.md#consultar_using_get13) | **GET** /api/pessoas-detalhes/{id} | Apresenta os detalhes de uma determinada Pessoa
+[**consultar_using_get14**](CadastroClienteApi.md#consultar_using_get14) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
+[**consultar_using_get19**](CadastroClienteApi.md#consultar_using_get19) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
+[**consultar_using_get9**](CadastroClienteApi.md#consultar_using_get9) | **GET** /api/enderecos/{id} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
 [**inativar_using_post**](CadastroClienteApi.md#inativar_using_post) | **POST** /api/contas/{id}/adicionais/{idPessoa}/inativar | Inativa Adicional de uma Conta
 [**listar_socios_using_get**](CadastroClienteApi.md#listar_socios_using_get) | **GET** /api/clientes-pessoas-juridicas/{id}/socios | Listar s\u00C3\u00B3cios de uma pessoa jur\u00C3\u00ADdica
 [**listar_using_get**](CadastroClienteApi.md#listar_using_get) | **GET** /api/contas/{id}/adicionais | Lista os Adicionais de uma Conta
-[**listar_using_get11**](CadastroClienteApi.md#listar_using_get11) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
-[**listar_using_get16**](CadastroClienteApi.md#listar_using_get16) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
-[**listar_using_get17**](CadastroClienteApi.md#listar_using_get17) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
-[**listar_using_get25**](CadastroClienteApi.md#listar_using_get25) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
+[**listar_using_get12**](CadastroClienteApi.md#listar_using_get12) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
+[**listar_using_get17**](CadastroClienteApi.md#listar_using_get17) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
+[**listar_using_get18**](CadastroClienteApi.md#listar_using_get18) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
+[**listar_using_get26**](CadastroClienteApi.md#listar_using_get26) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
 [**salvar_pessoa_fisica_aprovada_using_post**](CadastroClienteApi.md#salvar_pessoa_fisica_aprovada_using_post) | **POST** /api/clientes-pessoas-fisicas | Cadastro de Conta e Pessoa Fisica
 [**salvar_pessoa_juridica_aprovada_using_post**](CadastroClienteApi.md#salvar_pessoa_juridica_aprovada_using_post) | **POST** /api/clientes-pessoas-juridicas | Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica
-[**salvar_using_post10**](CadastroClienteApi.md#salvar_using_post10) | **POST** /api/contas/{id}/incluir-registro-integracao | Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
-[**salvar_using_post13**](CadastroClienteApi.md#salvar_using_post13) | **POST** /api/pessoas-detalhes | Salvar os detalhes de uma determinada Pessoa
-[**salvar_using_post14**](CadastroClienteApi.md#salvar_using_post14) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
-[**salvar_using_post16**](CadastroClienteApi.md#salvar_using_post16) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
-[**salvar_using_post8**](CadastroClienteApi.md#salvar_using_post8) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
+[**salvar_using_post12**](CadastroClienteApi.md#salvar_using_post12) | **POST** /api/pessoas-detalhes | Salvar os detalhes de uma determinada Pessoa
+[**salvar_using_post13**](CadastroClienteApi.md#salvar_using_post13) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
+[**salvar_using_post15**](CadastroClienteApi.md#salvar_using_post15) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
+[**salvar_using_post7**](CadastroClienteApi.md#salvar_using_post7) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
+[**salvar_using_post9**](CadastroClienteApi.md#salvar_using_post9) | **POST** /api/contas/{id}/incluir-registro-integracao | Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
 
 
 
@@ -235,7 +235,7 @@ No authorization required
 
 
 # **alterar_using_put6**
-> PessoaResponse alterar_using_put6(id, nome, tipo, opts)
+> PessoaResponse alterar_using_put6(id, nome, tipo, data_nascimento, opts)
 
 Atualiza os dados de uma determinada Pessoa
 
@@ -255,10 +255,11 @@ nome = "nome_example" # String | Apresenta o 'Nome Completo da PF' ou o 'Nome Co
 
 tipo = "tipo_example" # String | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
 
+data_nascimento = "data_nascimento_example" # String | Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
+
 opts = { 
   cpf: "cpf_example", # String | N\u00C3\u00BAmero do CPF, quando PF.
   cnpj: "cnpj_example", # String | N\u00C3\u00BAmero do CNPJ, quando PJ.
-  data_nascimento: "data_nascimento_example", # String | Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
   sexo: "sexo_example", # String | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
   numero_identidade: "numero_identidade_example", # String | N\u00C3\u00BAmero da Identidade.
   orgao_expedidor_identidade: "orgao_expedidor_identidade_example", # String | Org\u00C3\u00A3o expedidor do Identidade.
@@ -268,7 +269,7 @@ opts = {
 
 begin
   #Atualiza os dados de uma determinada Pessoa
-  result = api_instance.alterar_using_put6(id, nome, tipo, opts)
+  result = api_instance.alterar_using_put6(id, nome, tipo, data_nascimento, opts)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling CadastroClienteApi->alterar_using_put6: #{e}"
@@ -282,9 +283,9 @@ Name | Type | Description  | Notes
  **id** | **Integer**| ID da Pessoa | 
  **nome** | **String**| Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. | 
  **tipo** | **String**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica). | 
+ **data_nascimento** | **String**| Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd. | 
  **cpf** | **String**| N\u00C3\u00BAmero do CPF, quando PF. | [optional] 
  **cnpj** | **String**| N\u00C3\u00BAmero do CNPJ, quando PJ. | [optional] 
- **data_nascimento** | **String**| Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd. | [optional] 
  **sexo** | **String**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). | [optional] 
  **numero_identidade** | **String**| N\u00C3\u00BAmero da Identidade. | [optional] 
  **orgao_expedidor_identidade** | **String**| Org\u00C3\u00A3o expedidor do Identidade. | [optional] 
@@ -527,8 +528,8 @@ No authorization required
 
 
 
-# **consultar_using_get12**
-> PessoaDetalheResponse consultar_using_get12(id)
+# **consultar_using_get13**
+> PessoaDetalheResponse consultar_using_get13(id)
 
 Apresenta os detalhes de uma determinada Pessoa
 
@@ -547,10 +548,10 @@ id = 789 # Integer | ID da Pessoa
 
 begin
   #Apresenta os detalhes de uma determinada Pessoa
-  result = api_instance.consultar_using_get12(id)
+  result = api_instance.consultar_using_get13(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->consultar_using_get12: #{e}"
+  puts "Exception when calling CadastroClienteApi->consultar_using_get13: #{e}"
 end
 ```
 
@@ -577,8 +578,8 @@ No authorization required
 
 
 
-# **consultar_using_get13**
-> PessoaResponse consultar_using_get13(id)
+# **consultar_using_get14**
+> PessoaResponse consultar_using_get14(id)
 
 Apresenta os dados de uma determinada Pessoa
 
@@ -597,10 +598,10 @@ id = 789 # Integer | ID da Pessoa
 
 begin
   #Apresenta os dados de uma determinada Pessoa
-  result = api_instance.consultar_using_get13(id)
+  result = api_instance.consultar_using_get14(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->consultar_using_get13: #{e}"
+  puts "Exception when calling CadastroClienteApi->consultar_using_get14: #{e}"
 end
 ```
 
@@ -627,8 +628,8 @@ No authorization required
 
 
 
-# **consultar_using_get18**
-> TelefoneResponse consultar_using_get18(id)
+# **consultar_using_get19**
+> TelefoneResponse consultar_using_get19(id)
 
 Apresenta os dados de um determinado Telefone
 
@@ -647,10 +648,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Telefone
-  result = api_instance.consultar_using_get18(id)
+  result = api_instance.consultar_using_get19(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->consultar_using_get18: #{e}"
+  puts "Exception when calling CadastroClienteApi->consultar_using_get19: #{e}"
 end
 ```
 
@@ -677,8 +678,8 @@ No authorization required
 
 
 
-# **consultar_using_get8**
-> EnderecoResponse consultar_using_get8(id)
+# **consultar_using_get9**
+> EnderecoResponse consultar_using_get9(id)
 
 Apresenta os dados de um determinado Endere\u00C3\u00A7o
 
@@ -697,10 +698,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Endere\u00C3\u00A7o
-  result = api_instance.consultar_using_get8(id)
+  result = api_instance.consultar_using_get9(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->consultar_using_get8: #{e}"
+  puts "Exception when calling CadastroClienteApi->consultar_using_get9: #{e}"
 end
 ```
 
@@ -896,8 +897,8 @@ No authorization required
 
 
 
-# **listar_using_get11**
-> PageEnderecoResponse listar_using_get11(opts)
+# **listar_using_get12**
+> PageEnderecoResponse listar_using_get12(opts)
 
 Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
 
@@ -933,10 +934,10 @@ opts = {
 
 begin
   #Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
-  result = api_instance.listar_using_get11(opts)
+  result = api_instance.listar_using_get12(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->listar_using_get11: #{e}"
+  puts "Exception when calling CadastroClienteApi->listar_using_get12: #{e}"
 end
 ```
 
@@ -979,8 +980,8 @@ No authorization required
 
 
 
-# **listar_using_get16**
-> PagePessoaDetalheResponse listar_using_get16(opts)
+# **listar_using_get17**
+> PagePessoaDetalheResponse listar_using_get17(opts)
 
 Lista os Detalhes das Pessoas cadastradas no Emissor
 
@@ -1012,10 +1013,10 @@ opts = {
 
 begin
   #Lista os Detalhes das Pessoas cadastradas no Emissor
-  result = api_instance.listar_using_get16(opts)
+  result = api_instance.listar_using_get17(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->listar_using_get16: #{e}"
+  puts "Exception when calling CadastroClienteApi->listar_using_get17: #{e}"
 end
 ```
 
@@ -1054,8 +1055,8 @@ No authorization required
 
 
 
-# **listar_using_get17**
-> PagePessoaResponse listar_using_get17(opts)
+# **listar_using_get18**
+> PagePessoaResponse listar_using_get18(opts)
 
 Lista as Pessoas cadastradas no Emissor
 
@@ -1088,10 +1089,10 @@ opts = {
 
 begin
   #Lista as Pessoas cadastradas no Emissor
-  result = api_instance.listar_using_get17(opts)
+  result = api_instance.listar_using_get18(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->listar_using_get17: #{e}"
+  puts "Exception when calling CadastroClienteApi->listar_using_get18: #{e}"
 end
 ```
 
@@ -1131,8 +1132,8 @@ No authorization required
 
 
 
-# **listar_using_get25**
-> PageTelefoneResponse listar_using_get25(opts)
+# **listar_using_get26**
+> PageTelefoneResponse listar_using_get26(opts)
 
 Lista os Telefones cadastrados no Emissor
 
@@ -1161,10 +1162,10 @@ opts = {
 
 begin
   #Lista os Telefones cadastrados no Emissor
-  result = api_instance.listar_using_get25(opts)
+  result = api_instance.listar_using_get26(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->listar_using_get25: #{e}"
+  puts "Exception when calling CadastroClienteApi->listar_using_get26: #{e}"
 end
 ```
 
@@ -1300,62 +1301,8 @@ No authorization required
 
 
 
-# **salvar_using_post10**
-> IntegracaoEmissorResponse salvar_using_post10(id, opts)
-
-Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
-
-Este recurso permite incluir uma conta como registro para integra\u00C3\u00A7\u00C3\u00A3o.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::CadastroClienteApi.new
-
-id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-
-opts = { 
-  body: Pier::IntegracaoEmissorPersist.new # IntegracaoEmissorPersist | Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
-}
-
-begin
-  #Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
-  result = api_instance.salvar_using_post10(id, opts)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->salvar_using_post10: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **body** | [**IntegracaoEmissorPersist**](IntegracaoEmissorPersist.md)| Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada | [optional] 
-
-
-### Return type
-
-[**IntegracaoEmissorResponse**](IntegracaoEmissorResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **salvar_using_post13**
-> PessoaDetalheResponse salvar_using_post13(id_pessoa, opts)
+# **salvar_using_post12**
+> PessoaDetalheResponse salvar_using_post12(id_pessoa, opts)
 
 Salvar os detalhes de uma determinada Pessoa
 
@@ -1385,10 +1332,10 @@ opts = {
 
 begin
   #Salvar os detalhes de uma determinada Pessoa
-  result = api_instance.salvar_using_post13(id_pessoa, opts)
+  result = api_instance.salvar_using_post12(id_pessoa, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->salvar_using_post13: #{e}"
+  puts "Exception when calling CadastroClienteApi->salvar_using_post12: #{e}"
 end
 ```
 
@@ -1424,8 +1371,8 @@ No authorization required
 
 
 
-# **salvar_using_post14**
-> PessoaResponse salvar_using_post14(nome, tipo, opts)
+# **salvar_using_post13**
+> PessoaResponse salvar_using_post13(nome, tipo, data_nascimento, opts)
 
 Realiza o cadastro de um nova Pessoa
 
@@ -1443,10 +1390,11 @@ nome = "nome_example" # String | Apresenta o 'Nome Completo da PF' ou o 'Nome Co
 
 tipo = "tipo_example" # String | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
 
+data_nascimento = "data_nascimento_example" # String | Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
+
 opts = { 
   cpf: "cpf_example", # String | N\u00C3\u00BAmero do CPF, quando PF.
   cnpj: "cnpj_example", # String | N\u00C3\u00BAmero do CNPJ, quando PJ.
-  data_nascimento: "data_nascimento_example", # String | Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
   sexo: "sexo_example", # String | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
   numero_identidade: "numero_identidade_example", # String | N\u00C3\u00BAmero da Identidade.
   orgao_expedidor_identidade: "orgao_expedidor_identidade_example", # String | Org\u00C3\u00A3o expedidor do Identidade.
@@ -1456,10 +1404,10 @@ opts = {
 
 begin
   #Realiza o cadastro de um nova Pessoa
-  result = api_instance.salvar_using_post14(nome, tipo, opts)
+  result = api_instance.salvar_using_post13(nome, tipo, data_nascimento, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->salvar_using_post14: #{e}"
+  puts "Exception when calling CadastroClienteApi->salvar_using_post13: #{e}"
 end
 ```
 
@@ -1469,9 +1417,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **nome** | **String**| Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. | 
  **tipo** | **String**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica). | 
+ **data_nascimento** | **String**| Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd. | 
  **cpf** | **String**| N\u00C3\u00BAmero do CPF, quando PF. | [optional] 
  **cnpj** | **String**| N\u00C3\u00BAmero do CNPJ, quando PJ. | [optional] 
- **data_nascimento** | **String**| Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd. | [optional] 
  **sexo** | **String**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). | [optional] 
  **numero_identidade** | **String**| N\u00C3\u00BAmero da Identidade. | [optional] 
  **orgao_expedidor_identidade** | **String**| Org\u00C3\u00A3o expedidor do Identidade. | [optional] 
@@ -1495,8 +1443,8 @@ No authorization required
 
 
 
-# **salvar_using_post16**
-> TelefoneResponse salvar_using_post16(opts)
+# **salvar_using_post15**
+> TelefoneResponse salvar_using_post15(opts)
 
 Realiza o cadastro de um novo Telefone
 
@@ -1520,10 +1468,10 @@ opts = {
 
 begin
   #Realiza o cadastro de um novo Telefone
-  result = api_instance.salvar_using_post16(opts)
+  result = api_instance.salvar_using_post15(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->salvar_using_post16: #{e}"
+  puts "Exception when calling CadastroClienteApi->salvar_using_post15: #{e}"
 end
 ```
 
@@ -1554,8 +1502,8 @@ No authorization required
 
 
 
-# **salvar_using_post8**
-> EnderecoResponse salvar_using_post8(opts)
+# **salvar_using_post7**
+> EnderecoResponse salvar_using_post7(opts)
 
 Realiza o cadastro de um novo Endere\u00C3\u00A7o
 
@@ -1585,10 +1533,10 @@ opts = {
 
 begin
   #Realiza o cadastro de um novo Endere\u00C3\u00A7o
-  result = api_instance.salvar_using_post8(opts)
+  result = api_instance.salvar_using_post7(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->salvar_using_post8: #{e}"
+  puts "Exception when calling CadastroClienteApi->salvar_using_post7: #{e}"
 end
 ```
 
@@ -1612,6 +1560,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EnderecoResponse**](EnderecoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **salvar_using_post9**
+> IntegracaoEmissorResponse salvar_using_post9(id, opts)
+
+Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+
+Este recurso permite incluir uma conta como registro para integra\u00C3\u00A7\u00C3\u00A3o.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::CadastroClienteApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+opts = { 
+  body: Pier::IntegracaoEmissorPersist.new # IntegracaoEmissorPersist | Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
+}
+
+begin
+  #Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+  result = api_instance.salvar_using_post9(id, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CadastroClienteApi->salvar_using_post9: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **body** | [**IntegracaoEmissorPersist**](IntegracaoEmissorPersist.md)| Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada | [optional] 
+
+
+### Return type
+
+[**IntegracaoEmissorResponse**](IntegracaoEmissorResponse.md)
 
 ### Authorization
 

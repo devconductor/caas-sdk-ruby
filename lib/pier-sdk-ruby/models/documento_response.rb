@@ -23,13 +23,10 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o da resposta para o recurso de Documento
+  # Representa\u00C3\u00A7\u00C3\u00A3o da resposta resumida para o recurso de Documento
   class DocumentoResponse
     # ID do Documento.
     attr_accessor :id
-
-    # ID do Tipo de Documento associado.
-    attr_accessor :id_tipo_documento
 
     # ID do Template de Documento associado.
     attr_accessor :id_template_documento
@@ -37,14 +34,8 @@ module Pier
     # Nome do Documento.
     attr_accessor :nome
 
-    # Nome do Documento.
-    attr_accessor :documento
-
     # Extens\u00C3\u00A3o do Documento.
     attr_accessor :extensao
-
-    # Detalhamento do documento.
-    attr_accessor :documento_detalhes
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -53,17 +44,11 @@ module Pier
         
         :'id' => :'id',
         
-        :'id_tipo_documento' => :'idTipoDocumento',
-        
         :'id_template_documento' => :'idTemplateDocumento',
         
         :'nome' => :'nome',
         
-        :'documento' => :'documento',
-        
-        :'extensao' => :'extensao',
-        
-        :'documento_detalhes' => :'documentoDetalhes'
+        :'extensao' => :'extensao'
         
       }
     end
@@ -74,17 +59,11 @@ module Pier
         
         :'id' => :'Integer',
         
-        :'id_tipo_documento' => :'Integer',
-        
         :'id_template_documento' => :'Integer',
         
         :'nome' => :'String',
         
-        :'documento' => :'String',
-        
-        :'extensao' => :'String',
-        
-        :'documento_detalhes' => :'Array<DocumentoDetalheResponse>'
+        :'extensao' => :'String'
         
       }
     end
@@ -102,15 +81,6 @@ module Pier
         
         
         self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes[:'idTipoDocumento']
-        
-        
-        self.id_tipo_documento = attributes[:'idTipoDocumento']
         
       
       end
@@ -134,30 +104,10 @@ module Pier
       end
 
       
-      if attributes[:'documento']
-        
-        
-        self.documento = attributes[:'documento']
-        
-      
-      end
-
-      
       if attributes[:'extensao']
         
         
         self.extensao = attributes[:'extensao']
-        
-      
-      end
-
-      
-      if attributes[:'documentoDetalhes']
-        
-        if (value = attributes[:'documentoDetalhes']).is_a?(Array)
-          self.documento_detalhes = value
-        end
-        
         
       
       end
@@ -194,35 +144,8 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -250,12 +173,9 @@ module Pier
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          id_tipo_documento == o.id_tipo_documento &&
           id_template_documento == o.id_template_documento &&
           nome == o.nome &&
-          documento == o.documento &&
-          extensao == o.extensao &&
-          documento_detalhes == o.documento_detalhes
+          extensao == o.extensao
     end
 
     # @see the `==` method
@@ -267,7 +187,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_tipo_documento, id_template_documento, nome, documento, extensao, documento_detalhes].hash
+      [id, id_template_documento, nome, extensao].hash
     end
 
     # Builds the object from hash

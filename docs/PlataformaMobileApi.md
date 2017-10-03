@@ -5,8 +5,8 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizar_using_put1**](PlataformaMobileApi.md#atualizar_using_put1) | **PUT** /api/plataformas-mobile/{id} | Atualiza Plataforma Mobile
-[**listar_using_get18**](PlataformaMobileApi.md#listar_using_get18) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
-[**salvar_using_post15**](PlataformaMobileApi.md#salvar_using_post15) | **POST** /api/plataformas-mobile | Cadastra Plataforma Mobile
+[**listar_using_get19**](PlataformaMobileApi.md#listar_using_get19) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
+[**salvar_using_post14**](PlataformaMobileApi.md#salvar_using_post14) | **POST** /api/plataformas-mobile | Cadastra Plataforma Mobile
 
 
 
@@ -64,8 +64,8 @@ No authorization required
 
 
 
-# **listar_using_get18**
-> PagePlataformaMobileResponse listar_using_get18(opts)
+# **listar_using_get19**
+> PagePlataformaMobileResponse listar_using_get19(opts)
 
 Lista as plataformas mobile cadastradas
 
@@ -88,10 +88,10 @@ opts = {
 
 begin
   #Lista as plataformas mobile cadastradas
-  result = api_instance.listar_using_get18(opts)
+  result = api_instance.listar_using_get19(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling PlataformaMobileApi->listar_using_get18: #{e}"
+  puts "Exception when calling PlataformaMobileApi->listar_using_get19: #{e}"
 end
 ```
 
@@ -121,8 +121,8 @@ No authorization required
 
 
 
-# **salvar_using_post15**
-> PlataformaMobileResponse salvar_using_post15(persist)
+# **salvar_using_post14**
+> PlataformaMobileResponse salvar_using_post14(persist)
 
 Cadastra Plataforma Mobile
 
@@ -141,10 +141,10 @@ persist = Pier::PlataformaMobilePersist.new # PlataformaMobilePersist | persist
 
 begin
   #Cadastra Plataforma Mobile
-  result = api_instance.salvar_using_post15(persist)
+  result = api_instance.salvar_using_post14(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling PlataformaMobileApi->salvar_using_post15: #{e}"
+  puts "Exception when calling PlataformaMobileApi->salvar_using_post14: #{e}"
 end
 ```
 

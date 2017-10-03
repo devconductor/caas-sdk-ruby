@@ -203,8 +203,8 @@ module Pier
     # @param update update
     # @param [Hash] opts the optional parameters
     # @return [UsuarioResponse]
-    def alterar_using_put10(id, update, opts = {})
-      data, _status_code, _headers = alterar_using_put10_with_http_info(id, update, opts)
+    def alterar_using_put11(id, update, opts = {})
+      data, _status_code, _headers = alterar_using_put11_with_http_info(id, update, opts)
       return data
     end
 
@@ -214,14 +214,14 @@ module Pier
     # @param update update
     # @param [Hash] opts the optional parameters
     # @return [Array<(UsuarioResponse, Fixnum, Hash)>] UsuarioResponse data, response status code and response headers
-    def alterar_using_put10_with_http_info(id, update, opts = {})
+    def alterar_using_put11_with_http_info(id, update, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: UsuarioApi.alterar_using_put10 ..."
+        @api_client.config.logger.debug "Calling API: UsuarioApi.alterar_using_put11 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling UsuarioApi.alterar_using_put10" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling UsuarioApi.alterar_using_put11" if id.nil?
       
       
       
@@ -229,7 +229,7 @@ module Pier
       
       
       # verify the required parameter 'update' is set
-      fail ArgumentError, "Missing the required parameter 'update' when calling UsuarioApi.alterar_using_put10" if update.nil?
+      fail ArgumentError, "Missing the required parameter 'update' when calling UsuarioApi.alterar_using_put11" if update.nil?
       
       
       
@@ -267,7 +267,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'UsuarioResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UsuarioApi#alterar_using_put10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UsuarioApi#alterar_using_put11\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -344,8 +344,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
     # @param [Hash] opts the optional parameters
     # @return [UsuarioResponse]
-    def consultar_using_get29(id, opts = {})
-      data, _status_code, _headers = consultar_using_get29_with_http_info(id, opts)
+    def consultar_using_get31(id, opts = {})
+      data, _status_code, _headers = consultar_using_get31_with_http_info(id, opts)
       return data
     end
 
@@ -354,14 +354,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(UsuarioResponse, Fixnum, Hash)>] UsuarioResponse data, response status code and response headers
-    def consultar_using_get29_with_http_info(id, opts = {})
+    def consultar_using_get31_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: UsuarioApi.consultar_using_get29 ..."
+        @api_client.config.logger.debug "Calling API: UsuarioApi.consultar_using_get31 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling UsuarioApi.consultar_using_get29" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling UsuarioApi.consultar_using_get31" if id.nil?
       
       
       
@@ -399,7 +399,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'UsuarioResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UsuarioApi#consultar_using_get29\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UsuarioApi#consultar_using_get31\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -482,8 +482,8 @@ module Pier
     # @option opts [String] :email Email do Usuario
     # @option opts [String] :status Status do Usuario
     # @return [PageUsuarioResponse]
-    def listar_using_get33(opts = {})
-      data, _status_code, _headers = listar_using_get33_with_http_info(opts)
+    def listar_using_get35(opts = {})
+      data, _status_code, _headers = listar_using_get35_with_http_info(opts)
       return data
     end
 
@@ -498,9 +498,9 @@ module Pier
     # @option opts [String] :email Email do Usuario
     # @option opts [String] :status Status do Usuario
     # @return [Array<(PageUsuarioResponse, Fixnum, Hash)>] PageUsuarioResponse data, response status code and response headers
-    def listar_using_get33_with_http_info(opts = {})
+    def listar_using_get35_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: UsuarioApi.listar_using_get33 ..."
+        @api_client.config.logger.debug "Calling API: UsuarioApi.listar_using_get35 ..."
       end
       
       
@@ -588,7 +588,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageUsuarioResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UsuarioApi#listar_using_get33\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UsuarioApi#listar_using_get35\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

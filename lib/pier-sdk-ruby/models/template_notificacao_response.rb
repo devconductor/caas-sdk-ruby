@@ -37,14 +37,14 @@ module Pier
     # Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
     attr_accessor :tipo_notificacao
 
+    # Template padr\u00C3\u00A3o.
+    attr_accessor :template_padrao
+
     # Remetente.
     attr_accessor :remetente
 
     # Assunto do e-mail.
     attr_accessor :assunto
-
-    # Conteudo do e-mail.
-    attr_accessor :conteudo
 
     # Data da inclus\u00C3\u00A3o.
     attr_accessor :data_inclusao
@@ -65,11 +65,11 @@ module Pier
         
         :'tipo_notificacao' => :'tipoNotificacao',
         
+        :'template_padrao' => :'templatePadrao',
+        
         :'remetente' => :'remetente',
         
         :'assunto' => :'assunto',
-        
-        :'conteudo' => :'conteudo',
         
         :'data_inclusao' => :'dataInclusao',
         
@@ -90,11 +90,11 @@ module Pier
         
         :'tipo_notificacao' => :'String',
         
+        :'template_padrao' => :'String',
+        
         :'remetente' => :'String',
         
         :'assunto' => :'String',
-        
-        :'conteudo' => :'String',
         
         :'data_inclusao' => :'String',
         
@@ -148,6 +148,15 @@ module Pier
       end
 
       
+      if attributes[:'templatePadrao']
+        
+        
+        self.template_padrao = attributes[:'templatePadrao']
+        
+      
+      end
+
+      
       if attributes[:'remetente']
         
         
@@ -161,15 +170,6 @@ module Pier
         
         
         self.assunto = attributes[:'assunto']
-        
-      
-      end
-
-      
-      if attributes[:'conteudo']
-        
-        
-        self.conteudo = attributes[:'conteudo']
         
       
       end
@@ -329,9 +329,9 @@ module Pier
           id_configuracao_email == o.id_configuracao_email &&
           tipo_layout == o.tipo_layout &&
           tipo_notificacao == o.tipo_notificacao &&
+          template_padrao == o.template_padrao &&
           remetente == o.remetente &&
           assunto == o.assunto &&
-          conteudo == o.conteudo &&
           data_inclusao == o.data_inclusao &&
           data_alteracao == o.data_alteracao
     end
@@ -345,7 +345,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_configuracao_email, tipo_layout, tipo_notificacao, remetente, assunto, conteudo, data_inclusao, data_alteracao].hash
+      [id, id_configuracao_email, tipo_layout, tipo_notificacao, template_padrao, remetente, assunto, data_inclusao, data_alteracao].hash
     end
 
     # Builds the object from hash

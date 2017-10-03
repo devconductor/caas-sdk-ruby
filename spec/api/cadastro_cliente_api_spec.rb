@@ -122,10 +122,10 @@ describe 'CadastroClienteApi' do
   # @param id ID da Pessoa
   # @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
   # @param tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
+  # @param data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :cpf N\u00C3\u00BAmero do CPF, quando PF.
   # @option opts [String] :cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
-  # @option opts [String] :data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
   # @option opts [String] :sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
   # @option opts [String] :numero_identidade N\u00C3\u00BAmero da Identidade.
   # @option opts [String] :orgao_expedidor_identidade Org\u00C3\u00A3o expedidor do Identidade.
@@ -218,29 +218,12 @@ describe 'CadastroClienteApi' do
   end
 
 
-  # unit tests for consultar_using_get12
+  # unit tests for consultar_using_get13
   # Apresenta os detalhes de uma determinada Pessoa
   # Este m\u00C3\u00A9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor.
   # @param id ID da Pessoa
   # @param [Hash] opts the optional parameters
   # @return [PessoaDetalheResponse]
-  describe 'consultar_using_get12 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for consultar_using_get13
-  # Apresenta os dados de uma determinada Pessoa
-  # Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
-  # @param id ID da Pessoa
-  # @param [Hash] opts the optional parameters
-  # @return [PessoaResponse]
   describe 'consultar_using_get13 test' do
     it "should work" do
       # assertion here
@@ -252,13 +235,13 @@ describe 'CadastroClienteApi' do
   end
 
 
-  # unit tests for consultar_using_get18
-  # Apresenta os dados de um determinado Telefone
-  # Este m\u00C3\u00A9todo permite consultar um determinado Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+  # unit tests for consultar_using_get14
+  # Apresenta os dados de uma determinada Pessoa
+  # Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
+  # @param id ID da Pessoa
   # @param [Hash] opts the optional parameters
-  # @return [TelefoneResponse]
-  describe 'consultar_using_get18 test' do
+  # @return [PessoaResponse]
+  describe 'consultar_using_get14 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -269,13 +252,30 @@ describe 'CadastroClienteApi' do
   end
 
 
-  # unit tests for consultar_using_get8
+  # unit tests for consultar_using_get19
+  # Apresenta os dados de um determinado Telefone
+  # Este m\u00C3\u00A9todo permite consultar um determinado Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+  # @param [Hash] opts the optional parameters
+  # @return [TelefoneResponse]
+  describe 'consultar_using_get19 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for consultar_using_get9
   # Apresenta os dados de um determinado Endere\u00C3\u00A7o
   # Este m\u00C3\u00A9todo permite consultar um determinado Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
   # @param [Hash] opts the optional parameters
   # @return [EnderecoResponse]
-  describe 'consultar_using_get8 test' do
+  describe 'consultar_using_get9 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -344,7 +344,7 @@ describe 'CadastroClienteApi' do
   end
 
 
-  # unit tests for listar_using_get11
+  # unit tests for listar_using_get12
   # Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
   # Este m\u00C3\u00A9todo permite que sejam listados os Endere\u00C3\u00A7os existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -366,7 +366,7 @@ describe 'CadastroClienteApi' do
   # @option opts [String] :data_inclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
   # @option opts [String] :data_ultima_atualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
   # @return [PageEnderecoResponse]
-  describe 'listar_using_get11 test' do
+  describe 'listar_using_get12 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -377,7 +377,7 @@ describe 'CadastroClienteApi' do
   end
 
 
-  # unit tests for listar_using_get16
+  # unit tests for listar_using_get17
   # Lista os Detalhes das Pessoas cadastradas no Emissor
   # Este m\u00C3\u00A9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -395,7 +395,7 @@ describe 'CadastroClienteApi' do
   # @option opts [String] :email Email da pessoa fisica
   # @option opts [String] :nome_empresa Nome que deve ser impresso no cart\u00C3\u00A3o
   # @return [PagePessoaDetalheResponse]
-  describe 'listar_using_get16 test' do
+  describe 'listar_using_get17 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -406,7 +406,7 @@ describe 'CadastroClienteApi' do
   end
 
 
-  # unit tests for listar_using_get17
+  # unit tests for listar_using_get18
   # Lista as Pessoas cadastradas no Emissor
   # Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -425,7 +425,7 @@ describe 'CadastroClienteApi' do
   # @option opts [String] :unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade
   # @option opts [String] :data_emissao_identidade Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
   # @return [PagePessoaResponse]
-  describe 'listar_using_get17 test' do
+  describe 'listar_using_get18 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -436,7 +436,7 @@ describe 'CadastroClienteApi' do
   end
 
 
-  # unit tests for listar_using_get25
+  # unit tests for listar_using_get26
   # Lista os Telefones cadastrados no Emissor
   # Este m\u00C3\u00A9todo permite que sejam listados os Telefones existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -451,7 +451,7 @@ describe 'CadastroClienteApi' do
   # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
   # @option opts [Integer] :status Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo
   # @return [PageTelefoneResponse]
-  describe 'listar_using_get25 test' do
+  describe 'listar_using_get26 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -496,25 +496,7 @@ describe 'CadastroClienteApi' do
   end
 
 
-  # unit tests for salvar_using_post10
-  # Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
-  # Este recurso permite incluir uma conta como registro para integra\u00C3\u00A7\u00C3\u00A3o.
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-  # @param [Hash] opts the optional parameters
-  # @option opts [IntegracaoEmissorPersist] :body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
-  # @return [IntegracaoEmissorResponse]
-  describe 'salvar_using_post10 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for salvar_using_post13
+  # unit tests for salvar_using_post12
   # Salvar os detalhes de uma determinada Pessoa
   # Este m\u00C3\u00A9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa.
   # @param id_pessoa Apresenta o c\u00C3\u00B3digo identificador da pessoa
@@ -529,6 +511,32 @@ describe 'CadastroClienteApi' do
   # @option opts [String] :email Email da pessoa fisica
   # @option opts [String] :nome_empresa Nome que deve ser impresso no cart\u00C3\u00A3o
   # @return [PessoaDetalheResponse]
+  describe 'salvar_using_post12 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for salvar_using_post13
+  # Realiza o cadastro de um nova Pessoa
+  # Este m\u00C3\u00A9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor.
+  # @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
+  # @param tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
+  # @param data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :cpf N\u00C3\u00BAmero do CPF, quando PF.
+  # @option opts [String] :cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
+  # @option opts [String] :sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
+  # @option opts [String] :numero_identidade N\u00C3\u00BAmero da Identidade.
+  # @option opts [String] :orgao_expedidor_identidade Org\u00C3\u00A3o expedidor do Identidade.
+  # @option opts [String] :unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade
+  # @option opts [String] :data_emissao_identidade Data emiss\u00C3\u00A3o da Identidade.
+  # @return [PessoaResponse]
   describe 'salvar_using_post13 test' do
     it "should work" do
       # assertion here
@@ -540,33 +548,7 @@ describe 'CadastroClienteApi' do
   end
 
 
-  # unit tests for salvar_using_post14
-  # Realiza o cadastro de um nova Pessoa
-  # Este m\u00C3\u00A9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor.
-  # @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
-  # @param tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
-  # @param [Hash] opts the optional parameters
-  # @option opts [String] :cpf N\u00C3\u00BAmero do CPF, quando PF.
-  # @option opts [String] :cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
-  # @option opts [String] :data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
-  # @option opts [String] :sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
-  # @option opts [String] :numero_identidade N\u00C3\u00BAmero da Identidade.
-  # @option opts [String] :orgao_expedidor_identidade Org\u00C3\u00A3o expedidor do Identidade.
-  # @option opts [String] :unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade
-  # @option opts [String] :data_emissao_identidade Data emiss\u00C3\u00A3o da Identidade.
-  # @return [PessoaResponse]
-  describe 'salvar_using_post14 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for salvar_using_post16
+  # unit tests for salvar_using_post15
   # Realiza o cadastro de um novo Telefone
   # Este m\u00C3\u00A9todo permite que seja cadastrado um novo Telefone na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -576,7 +558,7 @@ describe 'CadastroClienteApi' do
   # @option opts [String] :telefone N\u00C3\u00BAmero do telefone.
   # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
   # @return [TelefoneResponse]
-  describe 'salvar_using_post16 test' do
+  describe 'salvar_using_post15 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -587,7 +569,7 @@ describe 'CadastroClienteApi' do
   end
 
 
-  # unit tests for salvar_using_post8
+  # unit tests for salvar_using_post7
   # Realiza o cadastro de um novo Endere\u00C3\u00A7o
   # Este m\u00C3\u00A9todo permite que seja cadastrado um novo Endere\u00C3\u00A7o na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -603,7 +585,25 @@ describe 'CadastroClienteApi' do
   # @option opts [String] :uf Apresenta sigla da Unidade Federativa
   # @option opts [String] :pais Apresenta nome do Pais
   # @return [EnderecoResponse]
-  describe 'salvar_using_post8 test' do
+  describe 'salvar_using_post7 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for salvar_using_post9
+  # Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+  # Este recurso permite incluir uma conta como registro para integra\u00C3\u00A7\u00C3\u00A3o.
+  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+  # @param [Hash] opts the optional parameters
+  # @option opts [IntegracaoEmissorPersist] :body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
+  # @return [IntegracaoEmissorResponse]
+  describe 'salvar_using_post9 test' do
     it "should work" do
       # assertion here
       # should be_a()

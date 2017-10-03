@@ -80,14 +80,14 @@ describe 'UsuarioApi' do
   end
 
 
-  # unit tests for alterar_using_put10
+  # unit tests for alterar_using_put11
   # Altera os usu\u00C3\u00A1rios cadastrados na base.
   # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
   # @param update update
   # @param [Hash] opts the optional parameters
   # @return [UsuarioResponse]
-  describe 'alterar_using_put10 test' do
+  describe 'alterar_using_put11 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -115,13 +115,13 @@ describe 'UsuarioApi' do
   end
 
 
-  # unit tests for consultar_using_get29
+  # unit tests for consultar_using_get31
   # Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
   # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
   # @param [Hash] opts the optional parameters
   # @return [UsuarioResponse]
-  describe 'consultar_using_get29 test' do
+  describe 'consultar_using_get31 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -149,7 +149,7 @@ describe 'UsuarioApi' do
   end
 
 
-  # unit tests for listar_using_get33
+  # unit tests for listar_using_get35
   # Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
   # Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
   # @param [Hash] opts the optional parameters
@@ -161,7 +161,7 @@ describe 'UsuarioApi' do
   # @option opts [String] :email Email do Usuario
   # @option opts [String] :status Status do Usuario
   # @return [PageUsuarioResponse]
-  describe 'listar_using_get33 test' do
+  describe 'listar_using_get35 test' do
     it "should work" do
       # assertion here
       # should be_a()

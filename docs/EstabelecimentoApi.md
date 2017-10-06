@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_using_get10**](EstabelecimentoApi.md#consultar_using_get10) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
-[**consultar_using_get20**](EstabelecimentoApi.md#consultar_using_get20) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
-[**listar_using_get13**](EstabelecimentoApi.md#listar_using_get13) | **GET** /api/estabelecimentos | Lista Estabelecimentos
-[**listar_using_get27**](EstabelecimentoApi.md#listar_using_get27) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
+[**consultar_using_get11**](EstabelecimentoApi.md#consultar_using_get11) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
+[**consultar_using_get21**](EstabelecimentoApi.md#consultar_using_get21) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
+[**listar_using_get14**](EstabelecimentoApi.md#listar_using_get14) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**listar_using_get28**](EstabelecimentoApi.md#listar_using_get28) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
 
 
 
 
-# **consultar_using_get10**
-> EstabelecimentoResponse consultar_using_get10(id)
+# **consultar_using_get11**
+> EstabelecimentoResponse consultar_using_get11(id)
 
 Consultar estabelecimento por id
 
@@ -32,10 +32,10 @@ id = 789 # Integer | Id
 
 begin
   #Consultar estabelecimento por id
-  result = api_instance.consultar_using_get10(id)
+  result = api_instance.consultar_using_get11(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->consultar_using_get10: #{e}"
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get11: #{e}"
 end
 ```
 
@@ -62,8 +62,8 @@ No authorization required
 
 
 
-# **consultar_using_get20**
-> TerminalResponse consultar_using_get20(id)
+# **consultar_using_get21**
+> TerminalResponse consultar_using_get21(id)
 
 Apresenta os dados de um determinado Terminal
 
@@ -82,10 +82,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Terminal
-  result = api_instance.consultar_using_get20(id)
+  result = api_instance.consultar_using_get21(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->consultar_using_get20: #{e}"
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get21: #{e}"
 end
 ```
 
@@ -112,8 +112,8 @@ No authorization required
 
 
 
-# **listar_using_get13**
-> PageEstabelecimentoResponse listar_using_get13(opts)
+# **listar_using_get14**
+> PageEstabelecimentoResponse listar_using_get14(opts)
 
 Lista Estabelecimentos
 
@@ -154,10 +154,10 @@ opts = {
 
 begin
   #Lista Estabelecimentos
-  result = api_instance.listar_using_get13(opts)
+  result = api_instance.listar_using_get14(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get13: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get14: #{e}"
 end
 ```
 
@@ -205,8 +205,8 @@ No authorization required
 
 
 
-# **listar_using_get27**
-> PageTerminalResponse listar_using_get27(opts)
+# **listar_using_get28**
+> PageTerminalResponse listar_using_get28(opts)
 
 Lista os Terminais cadastrados no Emissor
 
@@ -232,10 +232,10 @@ opts = {
 
 begin
   #Lista os Terminais cadastrados no Emissor
-  result = api_instance.listar_using_get27(opts)
+  result = api_instance.listar_using_get28(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get27: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get28: #{e}"
 end
 ```
 

@@ -21,5 +21,5 @@ Terms of Service: http://pierlabs.io/terms/
 =end
 
 module Pier
-  VERSION = "2.38.1"
+  VERSION = "2.39.3"
 end

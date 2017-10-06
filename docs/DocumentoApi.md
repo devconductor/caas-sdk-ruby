@@ -5,17 +5,17 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_using_put9**](DocumentoApi.md#alterar_using_put9) | **PUT** /api/tipos-templates/{id} | Altera o tipo de template
-[**atualizar_using_put**](DocumentoApi.md#atualizar_using_put) | **PUT** /api/templates-documentos/{id} | Atualizar templates dos documentos
-[**consultar_using_get27**](DocumentoApi.md#consultar_using_get27) | **GET** /api/tipos-templates/{id} | Consultar tipo de template
-[**consultar_using_get7**](DocumentoApi.md#consultar_using_get7) | **GET** /api/documentos/{id} | Consulta documentos
-[**consultar_using_get8**](DocumentoApi.md#consultar_using_get8) | **GET** /api/templates-documentos/{id} | Consultar templates dos documentos
+[**atualizar_using_put1**](DocumentoApi.md#atualizar_using_put1) | **PUT** /api/templates-documentos/{id} | Atualizar templates dos documentos
+[**consultar_using_get28**](DocumentoApi.md#consultar_using_get28) | **GET** /api/tipos-templates/{id} | Consultar tipo de template
+[**consultar_using_get8**](DocumentoApi.md#consultar_using_get8) | **GET** /api/documentos/{id} | Consulta documentos
+[**consultar_using_get9**](DocumentoApi.md#consultar_using_get9) | **GET** /api/templates-documentos/{id} | Consultar templates dos documentos
 [**integrar_using_post**](DocumentoApi.md#integrar_using_post) | **POST** /api/documentos/integrar | Integra um arquivo a reposit\u00C3\u00B3rios remotos.
-[**listar_using_get10**](DocumentoApi.md#listar_using_get10) | **GET** /api/documentos | Lista documentos
-[**listar_using_get11**](DocumentoApi.md#listar_using_get11) | **GET** /api/templates-documentos | Lista os templates dos documentos
-[**listar_using_get31**](DocumentoApi.md#listar_using_get31) | **GET** /api/tipos-templates | Lista os tipos de templates
-[**salvar_using_post17**](DocumentoApi.md#salvar_using_post17) | **POST** /api/tipos-templates | Cadastra os tipos de templates
-[**salvar_using_post5**](DocumentoApi.md#salvar_using_post5) | **POST** /api/documentos | Cadastra documentos
-[**salvar_using_post6**](DocumentoApi.md#salvar_using_post6) | **POST** /api/templates-documentos | Cadastra os templates dos documentos
+[**listar_using_get11**](DocumentoApi.md#listar_using_get11) | **GET** /api/documentos | Lista documentos
+[**listar_using_get12**](DocumentoApi.md#listar_using_get12) | **GET** /api/templates-documentos | Lista os templates dos documentos
+[**listar_using_get32**](DocumentoApi.md#listar_using_get32) | **GET** /api/tipos-templates | Lista os tipos de templates
+[**salvar_using_post18**](DocumentoApi.md#salvar_using_post18) | **POST** /api/tipos-templates | Cadastra os tipos de templates
+[**salvar_using_post6**](DocumentoApi.md#salvar_using_post6) | **POST** /api/documentos | Cadastra documentos
+[**salvar_using_post7**](DocumentoApi.md#salvar_using_post7) | **POST** /api/templates-documentos | Cadastra os templates dos documentos
 
 
 
@@ -73,8 +73,8 @@ No authorization required
 
 
 
-# **atualizar_using_put**
-> DocumentoTemplateResponse atualizar_using_put(id, persist)
+# **atualizar_using_put1**
+> DocumentoTemplateResponse atualizar_using_put1(id, persist)
 
 Atualizar templates dos documentos
 
@@ -95,10 +95,10 @@ persist = Pier::DocumentoTemplatePersist.new # DocumentoTemplatePersist | persis
 
 begin
   #Atualizar templates dos documentos
-  result = api_instance.atualizar_using_put(id, persist)
+  result = api_instance.atualizar_using_put1(id, persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DocumentoApi->atualizar_using_put: #{e}"
+  puts "Exception when calling DocumentoApi->atualizar_using_put1: #{e}"
 end
 ```
 
@@ -126,8 +126,8 @@ No authorization required
 
 
 
-# **consultar_using_get27**
-> TipoTemplateResponse consultar_using_get27(id)
+# **consultar_using_get28**
+> TipoTemplateResponse consultar_using_get28(id)
 
 Consultar tipo de template
 
@@ -146,10 +146,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Consultar tipo de template
-  result = api_instance.consultar_using_get27(id)
+  result = api_instance.consultar_using_get28(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DocumentoApi->consultar_using_get27: #{e}"
+  puts "Exception when calling DocumentoApi->consultar_using_get28: #{e}"
 end
 ```
 
@@ -176,8 +176,8 @@ No authorization required
 
 
 
-# **consultar_using_get7**
-> DocumentoDetalhadoResponse consultar_using_get7(id)
+# **consultar_using_get8**
+> DocumentoDetalhadoResponse consultar_using_get8(id)
 
 Consulta documentos
 
@@ -196,10 +196,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Consulta documentos
-  result = api_instance.consultar_using_get7(id)
+  result = api_instance.consultar_using_get8(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DocumentoApi->consultar_using_get7: #{e}"
+  puts "Exception when calling DocumentoApi->consultar_using_get8: #{e}"
 end
 ```
 
@@ -226,8 +226,8 @@ No authorization required
 
 
 
-# **consultar_using_get8**
-> DocumentoTemplateResponse consultar_using_get8(id)
+# **consultar_using_get9**
+> DocumentoTemplateResponse consultar_using_get9(id)
 
 Consultar templates dos documentos
 
@@ -246,10 +246,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Consultar templates dos documentos
-  result = api_instance.consultar_using_get8(id)
+  result = api_instance.consultar_using_get9(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DocumentoApi->consultar_using_get8: #{e}"
+  puts "Exception when calling DocumentoApi->consultar_using_get9: #{e}"
 end
 ```
 
@@ -326,8 +326,8 @@ No authorization required
 
 
 
-# **listar_using_get10**
-> PageDocumentoResponse listar_using_get10(opts)
+# **listar_using_get11**
+> PageDocumentoResponse listar_using_get11(opts)
 
 Lista documentos
 
@@ -352,10 +352,10 @@ opts = {
 
 begin
   #Lista documentos
-  result = api_instance.listar_using_get10(opts)
+  result = api_instance.listar_using_get11(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DocumentoApi->listar_using_get10: #{e}"
+  puts "Exception when calling DocumentoApi->listar_using_get11: #{e}"
 end
 ```
 
@@ -387,8 +387,8 @@ No authorization required
 
 
 
-# **listar_using_get11**
-> PageDocumentoTemplateResponse listar_using_get11(opts)
+# **listar_using_get12**
+> PageDocumentoTemplateResponse listar_using_get12(opts)
 
 Lista os templates dos documentos
 
@@ -411,10 +411,10 @@ opts = {
 
 begin
   #Lista os templates dos documentos
-  result = api_instance.listar_using_get11(opts)
+  result = api_instance.listar_using_get12(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DocumentoApi->listar_using_get11: #{e}"
+  puts "Exception when calling DocumentoApi->listar_using_get12: #{e}"
 end
 ```
 
@@ -444,8 +444,8 @@ No authorization required
 
 
 
-# **listar_using_get31**
-> PageTipoTemplateResponse listar_using_get31(opts)
+# **listar_using_get32**
+> PageTipoTemplateResponse listar_using_get32(opts)
 
 Lista os tipos de templates
 
@@ -467,10 +467,10 @@ opts = {
 
 begin
   #Lista os tipos de templates
-  result = api_instance.listar_using_get31(opts)
+  result = api_instance.listar_using_get32(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DocumentoApi->listar_using_get31: #{e}"
+  puts "Exception when calling DocumentoApi->listar_using_get32: #{e}"
 end
 ```
 
@@ -499,8 +499,8 @@ No authorization required
 
 
 
-# **salvar_using_post17**
-> TipoTemplateResponse salvar_using_post17(persist)
+# **salvar_using_post18**
+> TipoTemplateResponse salvar_using_post18(persist)
 
 Cadastra os tipos de templates
 
@@ -519,10 +519,10 @@ persist = Pier::TipoTemplateRequest.new # TipoTemplateRequest | persist
 
 begin
   #Cadastra os tipos de templates
-  result = api_instance.salvar_using_post17(persist)
+  result = api_instance.salvar_using_post18(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DocumentoApi->salvar_using_post17: #{e}"
+  puts "Exception when calling DocumentoApi->salvar_using_post18: #{e}"
 end
 ```
 
@@ -549,8 +549,8 @@ No authorization required
 
 
 
-# **salvar_using_post5**
-> DocumentoDetalhadoResponse salvar_using_post5(persist)
+# **salvar_using_post6**
+> DocumentoDetalhadoResponse salvar_using_post6(persist)
 
 Cadastra documentos
 
@@ -569,10 +569,10 @@ persist = Pier::DocumentoParametrosRequest.new # DocumentoParametrosRequest | pe
 
 begin
   #Cadastra documentos
-  result = api_instance.salvar_using_post5(persist)
+  result = api_instance.salvar_using_post6(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DocumentoApi->salvar_using_post5: #{e}"
+  puts "Exception when calling DocumentoApi->salvar_using_post6: #{e}"
 end
 ```
 
@@ -599,8 +599,8 @@ No authorization required
 
 
 
-# **salvar_using_post6**
-> DocumentoTemplateResponse salvar_using_post6(persist)
+# **salvar_using_post7**
+> DocumentoTemplateResponse salvar_using_post7(persist)
 
 Cadastra os templates dos documentos
 
@@ -619,10 +619,10 @@ persist = Pier::DocumentoTemplatePersist.new # DocumentoTemplatePersist | persis
 
 begin
   #Cadastra os templates dos documentos
-  result = api_instance.salvar_using_post6(persist)
+  result = api_instance.salvar_using_post7(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DocumentoApi->salvar_using_post6: #{e}"
+  puts "Exception when calling DocumentoApi->salvar_using_post7: #{e}"
 end
 ```
 

@@ -176,8 +176,8 @@ module Pier
     # @option opts [String] :data_criacao Apresenta a data e em que o registro foi criado.
     # @option opts [String] :data_desativacao Apresenta a data e em que o registro foi desativado.
     # @return [PageDispositivoResponse]
-    def listar_using_get9(opts = {})
-      data, _status_code, _headers = listar_using_get9_with_http_info(opts)
+    def listar_using_get10(opts = {})
+      data, _status_code, _headers = listar_using_get10_with_http_info(opts)
       return data
     end
 
@@ -193,9 +193,9 @@ module Pier
     # @option opts [String] :data_criacao Apresenta a data e em que o registro foi criado.
     # @option opts [String] :data_desativacao Apresenta a data e em que o registro foi desativado.
     # @return [Array<(PageDispositivoResponse, Fixnum, Hash)>] PageDispositivoResponse data, response status code and response headers
-    def listar_using_get9_with_http_info(opts = {})
+    def listar_using_get10_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DispositivoApi.listar_using_get9 ..."
+        @api_client.config.logger.debug "Calling API: DispositivoApi.listar_using_get10 ..."
       end
       
       
@@ -286,7 +286,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageDispositivoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DispositivoApi#listar_using_get9\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DispositivoApi#listar_using_get10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -297,8 +297,8 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [DispositivoResponse]
-    def salvar_using_post4(persist, opts = {})
-      data, _status_code, _headers = salvar_using_post4_with_http_info(persist, opts)
+    def salvar_using_post5(persist, opts = {})
+      data, _status_code, _headers = salvar_using_post5_with_http_info(persist, opts)
       return data
     end
 
@@ -307,14 +307,14 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(DispositivoResponse, Fixnum, Hash)>] DispositivoResponse data, response status code and response headers
-    def salvar_using_post4_with_http_info(persist, opts = {})
+    def salvar_using_post5_with_http_info(persist, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DispositivoApi.salvar_using_post4 ..."
+        @api_client.config.logger.debug "Calling API: DispositivoApi.salvar_using_post5 ..."
       end
       
       
       # verify the required parameter 'persist' is set
-      fail ArgumentError, "Missing the required parameter 'persist' when calling DispositivoApi.salvar_using_post4" if persist.nil?
+      fail ArgumentError, "Missing the required parameter 'persist' when calling DispositivoApi.salvar_using_post5" if persist.nil?
       
       
       
@@ -352,7 +352,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'DispositivoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DispositivoApi#salvar_using_post4\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DispositivoApi#salvar_using_post5\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -103,6 +103,9 @@ module Pier
     # Nome do Estabelecimento.
     attr_accessor :nome_estabelecimento
 
+    # Nome Fantasia do Estabelecimento.
+    attr_accessor :nome_fantasia_estabelecimento
+
     # Localidade do Estabelecimento.
     attr_accessor :localidade_estabelecimento
 
@@ -187,6 +190,8 @@ module Pier
         
         :'nome_estabelecimento' => :'nomeEstabelecimento',
         
+        :'nome_fantasia_estabelecimento' => :'nomeFantasiaEstabelecimento',
+        
         :'localidade_estabelecimento' => :'localidadeEstabelecimento',
         
         :'plano_parcelamento' => :'planoParcelamento',
@@ -263,6 +268,8 @@ module Pier
         :'id_estabelecimento' => :'Integer',
         
         :'nome_estabelecimento' => :'String',
+        
+        :'nome_fantasia_estabelecimento' => :'String',
         
         :'localidade_estabelecimento' => :'String',
         
@@ -528,6 +535,15 @@ module Pier
       end
 
       
+      if attributes[:'nomeFantasiaEstabelecimento']
+        
+        
+        self.nome_fantasia_estabelecimento = attributes[:'nomeFantasiaEstabelecimento']
+        
+      
+      end
+
+      
       if attributes[:'localidadeEstabelecimento']
         
         
@@ -764,8 +780,17 @@ module Pier
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -973,6 +998,7 @@ module Pier
           grupo_descricao_mcc == o.grupo_descricao_mcc &&
           id_estabelecimento == o.id_estabelecimento &&
           nome_estabelecimento == o.nome_estabelecimento &&
+          nome_fantasia_estabelecimento == o.nome_fantasia_estabelecimento &&
           localidade_estabelecimento == o.localidade_estabelecimento &&
           plano_parcelamento == o.plano_parcelamento &&
           numero_parcela == o.numero_parcela &&
@@ -993,7 +1019,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_tipo_transacao_nao_processada, descricao_tipo_transacao_nao_processada, descricao_abreviada, id_conta, cartao_mascarado, nome_portador, data_origem, data_faturamento, data_vencimento, modo_entrada_transacao, valor_taxa_embarque, valor_entrada, valor_brl, valor_usd, cotacao_usd, data_cotacao_usd, codigo_moeda_origem, codigo_moeda_destino, codigo_autorizacao, codigo_referencia, codigo_terminal, codigo_mcc, grupo_mcc, grupo_descricao_mcc, id_estabelecimento, nome_estabelecimento, localidade_estabelecimento, plano_parcelamento, numero_parcela, detalhes_transacao, flag_credito, flag_faturado, flag_estorno, id_transacao_estorno, status].hash
+      [id_tipo_transacao_nao_processada, descricao_tipo_transacao_nao_processada, descricao_abreviada, id_conta, cartao_mascarado, nome_portador, data_origem, data_faturamento, data_vencimento, modo_entrada_transacao, valor_taxa_embarque, valor_entrada, valor_brl, valor_usd, cotacao_usd, data_cotacao_usd, codigo_moeda_origem, codigo_moeda_destino, codigo_autorizacao, codigo_referencia, codigo_terminal, codigo_mcc, grupo_mcc, grupo_descricao_mcc, id_estabelecimento, nome_estabelecimento, nome_fantasia_estabelecimento, localidade_estabelecimento, plano_parcelamento, numero_parcela, detalhes_transacao, flag_credito, flag_faturado, flag_estorno, id_transacao_estorno, status].hash
     end
 
     # Builds the object from hash

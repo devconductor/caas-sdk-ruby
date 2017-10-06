@@ -290,8 +290,8 @@ module Pier
     # @option opts [BOOLEAN] :juros Indica se a compra \u00C3\u00A9 com ou sem juros.
     # @option opts [String] :tipo_origem_transacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
     # @return [PageCompraResponse]
-    def listar_using_get7(id_conta, opts = {})
-      data, _status_code, _headers = listar_using_get7_with_http_info(id_conta, opts)
+    def listar_using_get8(id_conta, opts = {})
+      data, _status_code, _headers = listar_using_get8_with_http_info(id_conta, opts)
       return data
     end
 
@@ -307,14 +307,14 @@ module Pier
     # @option opts [BOOLEAN] :juros Indica se a compra \u00C3\u00A9 com ou sem juros.
     # @option opts [String] :tipo_origem_transacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
     # @return [Array<(PageCompraResponse, Fixnum, Hash)>] PageCompraResponse data, response status code and response headers
-    def listar_using_get7_with_http_info(id_conta, opts = {})
+    def listar_using_get8_with_http_info(id_conta, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: AntecipacaoApi.listar_using_get7 ..."
+        @api_client.config.logger.debug "Calling API: AntecipacaoApi.listar_using_get8 ..."
       end
       
       
       # verify the required parameter 'id_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta' when calling AntecipacaoApi.listar_using_get7" if id_conta.nil?
+      fail ArgumentError, "Missing the required parameter 'id_conta' when calling AntecipacaoApi.listar_using_get8" if id_conta.nil?
       
       
       
@@ -406,7 +406,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageCompraResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AntecipacaoApi#listar_using_get7\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: AntecipacaoApi#listar_using_get8\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

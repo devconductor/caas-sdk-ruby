@@ -390,7 +390,7 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for consultar_using_get29
+  # unit tests for consultar_using_get30
   # Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
   # Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
   # @param id Id Conta
@@ -398,24 +398,6 @@ describe 'ContaApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
   # @return [TransferenciaBancariaResponse]
-  describe 'consultar_using_get29 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for consultar_using_get30
-  # Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-  # Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-  # @param id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
-  # @param [Hash] opts the optional parameters
-  # @return [TransferenciaDetalheResponse]
   describe 'consultar_using_get30 test' do
     it "should work" do
       # assertion here
@@ -427,13 +409,31 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for consultar_using_get6
+  # unit tests for consultar_using_get31
+  # Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+  # Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+  # @param id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
+  # @param [Hash] opts the optional parameters
+  # @return [TransferenciaDetalheResponse]
+  describe 'consultar_using_get31 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for consultar_using_get7
   # Apresenta dados de uma determinada conta
   # Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
   # @param [Hash] opts the optional parameters
   # @return [ContaDetalheResponse]
-  describe 'consultar_using_get6 test' do
+  describe 'consultar_using_get7 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -725,7 +725,7 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for listar_using_get33
+  # unit tests for listar_using_get34
   # Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
   # Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
   # @param id Id Conta
@@ -735,7 +735,7 @@ describe 'ContaApi' do
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @return [PageTransferenciaBancariaResponse]
-  describe 'listar_using_get33 test' do
+  describe 'listar_using_get34 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -746,7 +746,7 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for listar_using_get34
+  # unit tests for listar_using_get35
   # Lista as transfer\u00C3\u00AAncias realizadas pela conta
   # Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
@@ -760,7 +760,7 @@ describe 'ContaApi' do
   # @option opts [Float] :valor_transferencia Valor estabelecido para ser transferido.
   # @option opts [String] :data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
   # @return [PageTransferenciaResponse]
-  describe 'listar_using_get34 test' do
+  describe 'listar_using_get35 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -771,7 +771,7 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for listar_using_get8
+  # unit tests for listar_using_get9
   # Lista contas existentes na base de dados do Emissor
   # Este recurso permite listar contas existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -788,7 +788,7 @@ describe 'ContaApi' do
   # @option opts [String] :data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
   # @option opts [String] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
   # @return [PageContaResponse]
-  describe 'listar_using_get8 test' do
+  describe 'listar_using_get9 test' do
     it "should work" do
       # assertion here
       # should be_a()

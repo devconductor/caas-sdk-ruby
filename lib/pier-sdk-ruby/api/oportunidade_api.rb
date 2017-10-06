@@ -351,8 +351,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
     # @param [Hash] opts the optional parameters
     # @return [OportunidadeResponse]
-    def consultar_using_get12(id, opts = {})
-      data, _status_code, _headers = consultar_using_get12_with_http_info(id, opts)
+    def consultar_using_get13(id, opts = {})
+      data, _status_code, _headers = consultar_using_get13_with_http_info(id, opts)
       return data
     end
 
@@ -361,14 +361,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(OportunidadeResponse, Fixnum, Hash)>] OportunidadeResponse data, response status code and response headers
-    def consultar_using_get12_with_http_info(id, opts = {})
+    def consultar_using_get13_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadeApi.consultar_using_get12 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadeApi.consultar_using_get13 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling OportunidadeApi.consultar_using_get12" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling OportunidadeApi.consultar_using_get13" if id.nil?
       
       
       
@@ -406,7 +406,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'OportunidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadeApi#consultar_using_get12\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadeApi#consultar_using_get13\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -417,8 +417,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
     # @param [Hash] opts the optional parameters
     # @return [TipoOportunidadeResponse]
-    def consultar_using_get25(id, opts = {})
-      data, _status_code, _headers = consultar_using_get25_with_http_info(id, opts)
+    def consultar_using_get26(id, opts = {})
+      data, _status_code, _headers = consultar_using_get26_with_http_info(id, opts)
       return data
     end
 
@@ -427,14 +427,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(TipoOportunidadeResponse, Fixnum, Hash)>] TipoOportunidadeResponse data, response status code and response headers
-    def consultar_using_get25_with_http_info(id, opts = {})
+    def consultar_using_get26_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadeApi.consultar_using_get25 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadeApi.consultar_using_get26 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling OportunidadeApi.consultar_using_get25" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling OportunidadeApi.consultar_using_get26" if id.nil?
       
       
       
@@ -472,7 +472,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TipoOportunidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadeApi#consultar_using_get25\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadeApi#consultar_using_get26\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1077,8 +1077,8 @@ module Pier
     # @option opts [String] :data_fim_vigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
     # @return [PageOportunidadeResponse]
-    def listar_using_get16(opts = {})
-      data, _status_code, _headers = listar_using_get16_with_http_info(opts)
+    def listar_using_get17(opts = {})
+      data, _status_code, _headers = listar_using_get17_with_http_info(opts)
       return data
     end
 
@@ -1096,9 +1096,9 @@ module Pier
     # @option opts [String] :data_fim_vigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
     # @return [Array<(PageOportunidadeResponse, Fixnum, Hash)>] PageOportunidadeResponse data, response status code and response headers
-    def listar_using_get16_with_http_info(opts = {})
+    def listar_using_get17_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadeApi.listar_using_get16 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadeApi.listar_using_get17 ..."
       end
       
       
@@ -1203,7 +1203,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageOportunidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadeApi#listar_using_get16\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadeApi#listar_using_get17\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1218,8 +1218,8 @@ module Pier
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
     # @return [PageTipoOportunidadeResponse]
-    def listar_using_get29(opts = {})
-      data, _status_code, _headers = listar_using_get29_with_http_info(opts)
+    def listar_using_get30(opts = {})
+      data, _status_code, _headers = listar_using_get30_with_http_info(opts)
       return data
     end
 
@@ -1232,9 +1232,9 @@ module Pier
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
     # @return [Array<(PageTipoOportunidadeResponse, Fixnum, Hash)>] PageTipoOportunidadeResponse data, response status code and response headers
-    def listar_using_get29_with_http_info(opts = {})
+    def listar_using_get30_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadeApi.listar_using_get29 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadeApi.listar_using_get30 ..."
       end
       
       
@@ -1304,7 +1304,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTipoOportunidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadeApi#listar_using_get29\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadeApi#listar_using_get30\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1391,8 +1391,8 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [OportunidadeResponse]
-    def salvar_using_post11(persist, opts = {})
-      data, _status_code, _headers = salvar_using_post11_with_http_info(persist, opts)
+    def salvar_using_post12(persist, opts = {})
+      data, _status_code, _headers = salvar_using_post12_with_http_info(persist, opts)
       return data
     end
 
@@ -1401,14 +1401,14 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(OportunidadeResponse, Fixnum, Hash)>] OportunidadeResponse data, response status code and response headers
-    def salvar_using_post11_with_http_info(persist, opts = {})
+    def salvar_using_post12_with_http_info(persist, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadeApi.salvar_using_post11 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadeApi.salvar_using_post12 ..."
       end
       
       
       # verify the required parameter 'persist' is set
-      fail ArgumentError, "Missing the required parameter 'persist' when calling OportunidadeApi.salvar_using_post11" if persist.nil?
+      fail ArgumentError, "Missing the required parameter 'persist' when calling OportunidadeApi.salvar_using_post12" if persist.nil?
       
       
       
@@ -1446,7 +1446,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'OportunidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadeApi#salvar_using_post11\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadeApi#salvar_using_post12\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1457,8 +1457,8 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [TipoOportunidadeResponse]
-    def salvar_using_post16(persist, opts = {})
-      data, _status_code, _headers = salvar_using_post16_with_http_info(persist, opts)
+    def salvar_using_post17(persist, opts = {})
+      data, _status_code, _headers = salvar_using_post17_with_http_info(persist, opts)
       return data
     end
 
@@ -1467,14 +1467,14 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(TipoOportunidadeResponse, Fixnum, Hash)>] TipoOportunidadeResponse data, response status code and response headers
-    def salvar_using_post16_with_http_info(persist, opts = {})
+    def salvar_using_post17_with_http_info(persist, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadeApi.salvar_using_post16 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadeApi.salvar_using_post17 ..."
       end
       
       
       # verify the required parameter 'persist' is set
-      fail ArgumentError, "Missing the required parameter 'persist' when calling OportunidadeApi.salvar_using_post16" if persist.nil?
+      fail ArgumentError, "Missing the required parameter 'persist' when calling OportunidadeApi.salvar_using_post17" if persist.nil?
       
       
       
@@ -1512,7 +1512,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TipoOportunidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadeApi#salvar_using_post16\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadeApi#salvar_using_post17\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

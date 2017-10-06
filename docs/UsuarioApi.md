@@ -8,11 +8,11 @@ Method | HTTP request | Description
 [**alterar_senha_using_put**](UsuarioApi.md#alterar_senha_using_put) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 [**alterar_using_put11**](UsuarioApi.md#alterar_using_put11) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados na base.
 [**ativar_usuario_using_post**](UsuarioApi.md#ativar_usuario_using_post) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**consultar_using_get31**](UsuarioApi.md#consultar_using_get31) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
+[**consultar_using_get32**](UsuarioApi.md#consultar_using_get32) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
 [**desativar_usuario_using_post**](UsuarioApi.md#desativar_usuario_using_post) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**listar_using_get35**](UsuarioApi.md#listar_using_get35) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**listar_using_get36**](UsuarioApi.md#listar_using_get36) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**recuperar_senha_using_post**](UsuarioApi.md#recuperar_senha_using_post) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-[**salvar_using_post19**](UsuarioApi.md#salvar_using_post19) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base.
+[**salvar_using_post20**](UsuarioApi.md#salvar_using_post20) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base.
 [**validar_senha_login_using_post**](UsuarioApi.md#validar_senha_login_using_post) | **POST** /api/usuarios/{login}/validar-senha | Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**validar_senha_using_get1**](UsuarioApi.md#validar_senha_using_get1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 
@@ -231,8 +231,8 @@ No authorization required
 
 
 
-# **consultar_using_get31**
-> UsuarioResponse consultar_using_get31(id)
+# **consultar_using_get32**
+> UsuarioResponse consultar_using_get32(id)
 
 Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
 
@@ -251,10 +251,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
-  result = api_instance.consultar_using_get31(id)
+  result = api_instance.consultar_using_get32(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling UsuarioApi->consultar_using_get31: #{e}"
+  puts "Exception when calling UsuarioApi->consultar_using_get32: #{e}"
 end
 ```
 
@@ -331,8 +331,8 @@ No authorization required
 
 
 
-# **listar_using_get35**
-> PageUsuarioResponse listar_using_get35(opts)
+# **listar_using_get36**
+> PageUsuarioResponse listar_using_get36(opts)
 
 Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 
@@ -358,10 +358,10 @@ opts = {
 
 begin
   #Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-  result = api_instance.listar_using_get35(opts)
+  result = api_instance.listar_using_get36(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling UsuarioApi->listar_using_get35: #{e}"
+  puts "Exception when calling UsuarioApi->listar_using_get36: #{e}"
 end
 ```
 
@@ -444,8 +444,8 @@ No authorization required
 
 
 
-# **salvar_using_post19**
-> UsuarioResponse salvar_using_post19(persist)
+# **salvar_using_post20**
+> UsuarioResponse salvar_using_post20(persist)
 
 Cadastra Usu\u00C3\u00A1rio na base.
 
@@ -464,10 +464,10 @@ persist = Pier::UsuarioPersist.new # UsuarioPersist | persist
 
 begin
   #Cadastra Usu\u00C3\u00A1rio na base.
-  result = api_instance.salvar_using_post19(persist)
+  result = api_instance.salvar_using_post20(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling UsuarioApi->salvar_using_post19: #{e}"
+  puts "Exception when calling UsuarioApi->salvar_using_post20: #{e}"
 end
 ```
 

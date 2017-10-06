@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ativar_using_post**](DispositivoApi.md#ativar_using_post) | **POST** /api/dispositivos/{id}/ativar-dispositivo | Ativa Dispositivo
 [**desativar_using_post**](DispositivoApi.md#desativar_using_post) | **POST** /api/dispositivos/{id}/desativar-dispositivo | Desativa Dispositivo
-[**listar_using_get9**](DispositivoApi.md#listar_using_get9) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
-[**salvar_using_post4**](DispositivoApi.md#salvar_using_post4) | **POST** /api/dispositivos | Cadastra Dispositivo
+[**listar_using_get10**](DispositivoApi.md#listar_using_get10) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
+[**salvar_using_post5**](DispositivoApi.md#salvar_using_post5) | **POST** /api/dispositivos | Cadastra Dispositivo
 
 
 
@@ -112,8 +112,8 @@ No authorization required
 
 
 
-# **listar_using_get9**
-> PageDispositivoResponse listar_using_get9(opts)
+# **listar_using_get10**
+> PageDispositivoResponse listar_using_get10(opts)
 
 Lista os dispositivos cadastrados
 
@@ -140,10 +140,10 @@ opts = {
 
 begin
   #Lista os dispositivos cadastrados
-  result = api_instance.listar_using_get9(opts)
+  result = api_instance.listar_using_get10(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DispositivoApi->listar_using_get9: #{e}"
+  puts "Exception when calling DispositivoApi->listar_using_get10: #{e}"
 end
 ```
 
@@ -177,8 +177,8 @@ No authorization required
 
 
 
-# **salvar_using_post4**
-> DispositivoResponse salvar_using_post4(persist)
+# **salvar_using_post5**
+> DispositivoResponse salvar_using_post5(persist)
 
 Cadastra Dispositivo
 
@@ -197,10 +197,10 @@ persist = Pier::DispositivoPersist.new # DispositivoPersist | persist
 
 begin
   #Cadastra Dispositivo
-  result = api_instance.salvar_using_post4(persist)
+  result = api_instance.salvar_using_post5(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DispositivoApi->salvar_using_post4: #{e}"
+  puts "Exception when calling DispositivoApi->salvar_using_post5: #{e}"
 end
 ```
 

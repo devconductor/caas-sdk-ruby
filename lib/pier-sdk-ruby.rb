@@ -131,6 +131,30 @@ require 'pier-sdk-ruby/models/cartao_impressao_provisorio_response'
 require 'pier-sdk-ruby/models/cartao_impressao_response'
 
 
+require 'pier-sdk-ruby/models/cartao_pay_atualizar_chave_response'
+
+
+require 'pier-sdk-ruby/models/cartao_pay_cadastro_response'
+
+
+require 'pier-sdk-ruby/models/cartao_pay_confirmar_chave_response'
+
+
+require 'pier-sdk-ruby/models/cartao_pay_detalhe_response'
+
+
+require 'pier-sdk-ruby/models/cartao_pay_key_update'
+
+
+require 'pier-sdk-ruby/models/cartao_pay_persist'
+
+
+require 'pier-sdk-ruby/models/cartao_pay_response'
+
+
+require 'pier-sdk-ruby/models/cartao_pay_update'
+
+
 require 'pier-sdk-ruby/models/cartao_response'
 
 
@@ -345,6 +369,9 @@ require 'pier-sdk-ruby/models/page_base_response'
 
 
 require 'pier-sdk-ruby/models/page_campo_codificado_descricao_response'
+
+
+require 'pier-sdk-ruby/models/page_cartao_pay_response'
 
 
 require 'pier-sdk-ruby/models/page_cartao_response'
@@ -707,6 +734,15 @@ require 'pier-sdk-ruby/models/transacao_on_us_request'
 require 'pier-sdk-ruby/models/transacao_on_us_response'
 
 
+require 'pier-sdk-ruby/models/transacao_pay_query_request'
+
+
+require 'pier-sdk-ruby/models/transacao_pay_query_response'
+
+
+require 'pier-sdk-ruby/models/transacao_pay_secure_request'
+
+
 require 'pier-sdk-ruby/models/transacoes_correntes_response'
 
 
@@ -758,6 +794,8 @@ require 'pier-sdk-ruby/api/cadastro_cliente_api'
 require 'pier-sdk-ruby/api/cadastro_geral_api'
 
 require 'pier-sdk-ruby/api/cartao_api'
+
+require 'pier-sdk-ruby/api/conductor_pay_api'
 
 require 'pier-sdk-ruby/api/conta_api'
 

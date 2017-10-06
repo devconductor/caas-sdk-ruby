@@ -329,6 +329,17 @@ describe 'TransacaoNaoProcessadaResponse' do
   end
 
 
+  describe 'test attribute "nome_fantasia_estabelecimento"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
   describe 'test attribute "localidade_estabelecimento"' do
     it 'should work' do
        # assertion here

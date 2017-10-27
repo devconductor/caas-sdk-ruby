@@ -196,6 +196,7 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
     # @param quantidade_parcelas Quantidade de parcelas para serem antecipadas.
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
     # @return [AntecipacaoResponse]
     def efetivar_antecipacao_using_post(id_conta, id, quantidade_parcelas, opts = {})
       data, _status_code, _headers = efetivar_antecipacao_using_post_with_http_info(id_conta, id, quantidade_parcelas, opts)
@@ -208,6 +209,7 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
     # @param quantidade_parcelas Quantidade de parcelas para serem antecipadas.
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
     # @return [Array<(AntecipacaoResponse, Fixnum, Hash)>] AntecipacaoResponse data, response status code and response headers
     def efetivar_antecipacao_using_post_with_http_info(id_conta, id, quantidade_parcelas, opts = {})
       if @api_client.config.debugging
@@ -238,6 +240,12 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/compras-antecipaveis/{id}/efetivar-antecipacao".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
@@ -245,6 +253,7 @@ module Pier
       query_params = {}
       query_params[:'idConta'] = id_conta
       query_params[:'quantidadeParcelas'] = quantidade_parcelas
+      query_params[:'complemento'] = opts[:'complemento'] if opts[:'complemento']
 
       # header parameters
       header_params = {}
@@ -273,6 +282,82 @@ module Pier
         :return_type => 'AntecipacaoResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: AntecipacaoApi#efetivar_antecipacao_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+    # M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis com todas as parcelas de uma conta.
+    # @param id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+    # @return [AntecipacaoMockResponse]
+    def efetivar_antecipacoes_using_post(id_conta, opts = {})
+      data, _status_code, _headers = efetivar_antecipacoes_using_post_with_http_info(id_conta, opts)
+      return data
+    end
+
+    # Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+    # M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis com todas as parcelas de uma conta.
+    # @param id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+    # @return [Array<(AntecipacaoMockResponse, Fixnum, Hash)>] AntecipacaoMockResponse data, response status code and response headers
+    def efetivar_antecipacoes_using_post_with_http_info(id_conta, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AntecipacaoApi.efetivar_antecipacoes_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'id_conta' is set
+      fail ArgumentError, "Missing the required parameter 'id_conta' when calling AntecipacaoApi.efetivar_antecipacoes_using_post" if id_conta.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/compras-antecipaveis/efetivar-antecipacao".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'idConta'] = id_conta
+      query_params[:'complemento'] = opts[:'complemento'] if opts[:'complemento']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AntecipacaoMockResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AntecipacaoApi#efetivar_antecipacoes_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -417,6 +502,7 @@ module Pier
     # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
     # @return [AntecipacaoSimuladaResponse]
     def simular_antecipacao_using_get(id_conta, id, opts = {})
       data, _status_code, _headers = simular_antecipacao_using_get_with_http_info(id_conta, id, opts)
@@ -428,6 +514,7 @@ module Pier
     # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
     # @return [Array<(AntecipacaoSimuladaResponse, Fixnum, Hash)>] AntecipacaoSimuladaResponse data, response status code and response headers
     def simular_antecipacao_using_get_with_http_info(id_conta, id, opts = {})
       if @api_client.config.debugging
@@ -450,12 +537,19 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/compras-antecipaveis/{id}/simular-antecipacao".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
       query_params[:'idConta'] = id_conta
+      query_params[:'complemento'] = opts[:'complemento'] if opts[:'complemento']
 
       # header parameters
       header_params = {}
@@ -484,6 +578,82 @@ module Pier
         :return_type => 'AntecipacaoSimuladaResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: AntecipacaoApi#simular_antecipacao_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis
+    # O recurso permite realizar a simula\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis de todas as parcelas de uma determinada conta.
+    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+    # @return [AntecipacaoSimuladaLoteResponse]
+    def simular_antecipacoes_using_get(id_conta, opts = {})
+      data, _status_code, _headers = simular_antecipacoes_using_get_with_http_info(id_conta, opts)
+      return data
+    end
+
+    # Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis
+    # O recurso permite realizar a simula\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis de todas as parcelas de uma determinada conta.
+    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+    # @return [Array<(AntecipacaoSimuladaLoteResponse, Fixnum, Hash)>] AntecipacaoSimuladaLoteResponse data, response status code and response headers
+    def simular_antecipacoes_using_get_with_http_info(id_conta, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AntecipacaoApi.simular_antecipacoes_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'id_conta' is set
+      fail ArgumentError, "Missing the required parameter 'id_conta' when calling AntecipacaoApi.simular_antecipacoes_using_get" if id_conta.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/compras-antecipaveis/simular-antecipacao".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'idConta'] = id_conta
+      query_params[:'complemento'] = opts[:'complemento'] if opts[:'complemento']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AntecipacaoSimuladaLoteResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AntecipacaoApi#simular_antecipacoes_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

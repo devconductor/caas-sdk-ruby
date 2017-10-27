@@ -200,12 +200,13 @@ describe 'ConductorPayApi' do
   # unit tests for listar_using_get6
   # Lista os cart\u00C3\u00B5es cadastrados
   # Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
-  # @param device_id Device id criptografado
   # @param [Hash] opts the optional parameters
+  # @option opts [String] :device_id Device id criptografado
   # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [String] :status Status do cart\u00C3\u00A3o tokenizado
+  # @option opts [String] :numero_cartao Numero do cart\u00C3\u00A3o tokenizado
   # @return [PageCartaoPayResponse]
   describe 'listar_using_get6 test' do
     it "should work" do

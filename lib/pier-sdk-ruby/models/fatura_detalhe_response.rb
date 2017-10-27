@@ -23,37 +23,56 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Notifica\u00C3\u00A7\u00C3\u00A3o do envio do email
-  class NotificacaoEmailResponse
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da notifica\u00C3\u00A7\u00C3\u00A3o gerada.
-    attr_accessor :id
+  # Detalhes da fatura
+  class FaturaDetalheResponse
+    attr_accessor :lancamentos_fatura_response
 
-    # C\u00C3\u00B3digo identificador do template da notifica\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :id_template_notificacao
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+    attr_accessor :id_conta
 
-    # C\u00C3\u00B3digo identificador do Documento.
-    attr_accessor :id_documento
+    # Situa\u00C3\u00A7\u00C3\u00A3o de Processamento da fatura.
+    attr_accessor :situacao_processamento
 
-    # Email do destinat\u00C3\u00A1rio da notifica\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :destinatario
+    # Status de pagamento efetuado.
+    attr_accessor :pagamento_efetuado
 
-    # Email do remetente da notifica\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :remetente
+    # Data de vencimento da fatura.
+    attr_accessor :data_vencimento_fatura
+
+    # Data de vencimento real da fatura.
+    attr_accessor :data_vencimento_real
+
+    # Data de fechamento da fatura.
+    attr_accessor :data_fechamento
+
+    # Valor total da fatura.
+    attr_accessor :valor_total
+
+    # Valor do pagamento m\u00C3\u00ADnimo.
+    attr_accessor :valor_pagamento_minimo
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id' => :'id',
+        :'lancamentos_fatura_response' => :'lancamentosFaturaResponse',
         
-        :'id_template_notificacao' => :'idTemplateNotificacao',
+        :'id_conta' => :'idConta',
         
-        :'id_documento' => :'idDocumento',
+        :'situacao_processamento' => :'situacaoProcessamento',
         
-        :'destinatario' => :'destinatario',
+        :'pagamento_efetuado' => :'pagamentoEfetuado',
         
-        :'remetente' => :'remetente'
+        :'data_vencimento_fatura' => :'dataVencimentoFatura',
+        
+        :'data_vencimento_real' => :'dataVencimentoReal',
+        
+        :'data_fechamento' => :'dataFechamento',
+        
+        :'valor_total' => :'valorTotal',
+        
+        :'valor_pagamento_minimo' => :'valorPagamentoMinimo'
         
       }
     end
@@ -62,15 +81,23 @@ module Pier
     def self.swagger_types
       {
         
-        :'id' => :'Integer',
+        :'lancamentos_fatura_response' => :'Array<LancamentoFaturaResponse>',
         
-        :'id_template_notificacao' => :'Integer',
+        :'id_conta' => :'Integer',
         
-        :'id_documento' => :'Integer',
+        :'situacao_processamento' => :'String',
         
-        :'destinatario' => :'String',
+        :'pagamento_efetuado' => :'BOOLEAN',
         
-        :'remetente' => :'String'
+        :'data_vencimento_fatura' => :'String',
+        
+        :'data_vencimento_real' => :'String',
+        
+        :'data_fechamento' => :'String',
+        
+        :'valor_total' => :'Float',
+        
+        :'valor_pagamento_minimo' => :'Float'
         
       }
     end
@@ -84,46 +111,84 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'id']
+      if attributes[:'lancamentosFaturaResponse']
         
+        if (value = attributes[:'lancamentosFaturaResponse']).is_a?(Array)
+          self.lancamentos_fatura_response = value
+        end
         
-        self.id = attributes[:'id']
         
       
       end
 
       
-      if attributes[:'idTemplateNotificacao']
+      if attributes[:'idConta']
         
         
-        self.id_template_notificacao = attributes[:'idTemplateNotificacao']
-        
-      
-      end
-
-      
-      if attributes[:'idDocumento']
-        
-        
-        self.id_documento = attributes[:'idDocumento']
+        self.id_conta = attributes[:'idConta']
         
       
       end
 
       
-      if attributes[:'destinatario']
+      if attributes[:'situacaoProcessamento']
         
         
-        self.destinatario = attributes[:'destinatario']
+        self.situacao_processamento = attributes[:'situacaoProcessamento']
         
       
       end
 
       
-      if attributes[:'remetente']
+      if attributes[:'pagamentoEfetuado']
         
         
-        self.remetente = attributes[:'remetente']
+        self.pagamento_efetuado = attributes[:'pagamentoEfetuado']
+        
+      
+      end
+
+      
+      if attributes[:'dataVencimentoFatura']
+        
+        
+        self.data_vencimento_fatura = attributes[:'dataVencimentoFatura']
+        
+      
+      end
+
+      
+      if attributes[:'dataVencimentoReal']
+        
+        
+        self.data_vencimento_real = attributes[:'dataVencimentoReal']
+        
+      
+      end
+
+      
+      if attributes[:'dataFechamento']
+        
+        
+        self.data_fechamento = attributes[:'dataFechamento']
+        
+      
+      end
+
+      
+      if attributes[:'valorTotal']
+        
+        
+        self.valor_total = attributes[:'valorTotal']
+        
+      
+      end
+
+      
+      if attributes[:'valorPagamentoMinimo']
+        
+        
+        self.valor_pagamento_minimo = attributes[:'valorPagamentoMinimo']
         
       
       end
@@ -154,6 +219,27 @@ module Pier
       
       
       
+      allowed_values = ["ABERTA", "FECHADA", "TODAS"]
+      if @situacao_processamento && !allowed_values.include?(@situacao_processamento)
+        return false
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -166,6 +252,35 @@ module Pier
       
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] situacao_processamento Object to be assigned
+    def situacao_processamento=(situacao_processamento)
+      allowed_values = ["ABERTA", "FECHADA", "TODAS"]
+      if situacao_processamento && !allowed_values.include?(situacao_processamento)
+        fail ArgumentError, "invalid value for 'situacao_processamento', must be one of #{allowed_values}."
+      end
+      @situacao_processamento = situacao_processamento
+    end
+
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -197,11 +312,15 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          id_template_notificacao == o.id_template_notificacao &&
-          id_documento == o.id_documento &&
-          destinatario == o.destinatario &&
-          remetente == o.remetente
+          lancamentos_fatura_response == o.lancamentos_fatura_response &&
+          id_conta == o.id_conta &&
+          situacao_processamento == o.situacao_processamento &&
+          pagamento_efetuado == o.pagamento_efetuado &&
+          data_vencimento_fatura == o.data_vencimento_fatura &&
+          data_vencimento_real == o.data_vencimento_real &&
+          data_fechamento == o.data_fechamento &&
+          valor_total == o.valor_total &&
+          valor_pagamento_minimo == o.valor_pagamento_minimo
     end
 
     # @see the `==` method
@@ -213,7 +332,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_template_notificacao, id_documento, destinatario, remetente].hash
+      [lancamentos_fatura_response, id_conta, situacao_processamento, pagamento_efetuado, data_vencimento_fatura, data_vencimento_real, data_fechamento, valor_total, valor_pagamento_minimo].hash
     end
 
     # Builds the object from hash

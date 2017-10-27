@@ -76,11 +76,14 @@ module Pier
     # Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros
     attr_accessor :enderecos
 
-    # Valor do Limite Global
-    attr_accessor :limite_global
-
     # Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
     attr_accessor :socios
+
+    # Apresenta os dados das refer\u00C3\u00AAncias comerciais
+    attr_accessor :referencias_comerciais
+
+    # Valor do Limite Global
+    attr_accessor :limite_global
 
     # Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
     attr_accessor :limite_maximo
@@ -127,9 +130,11 @@ module Pier
         
         :'enderecos' => :'enderecos',
         
-        :'limite_global' => :'limiteGlobal',
-        
         :'socios' => :'socios',
+        
+        :'referencias_comerciais' => :'referenciasComerciais',
+        
+        :'limite_global' => :'limiteGlobal',
         
         :'limite_maximo' => :'limiteMaximo',
         
@@ -176,9 +181,11 @@ module Pier
         
         :'enderecos' => :'Array<EnderecoAprovadoPersist>',
         
-        :'limite_global' => :'Float',
-        
         :'socios' => :'Array<PessoaPersist>',
+        
+        :'referencias_comerciais' => :'Array<RefenciaComercialAprovadoPersist>',
+        
+        :'limite_global' => :'Float',
         
         :'limite_maximo' => :'Float',
         
@@ -353,21 +360,32 @@ module Pier
       end
 
       
-      if attributes[:'limiteGlobal']
-        
-        
-        self.limite_global = attributes[:'limiteGlobal']
-        
-      
-      end
-
-      
       if attributes[:'socios']
         
         if (value = attributes[:'socios']).is_a?(Array)
           self.socios = value
         end
         
+        
+      
+      end
+
+      
+      if attributes[:'referenciasComerciais']
+        
+        if (value = attributes[:'referenciasComerciais']).is_a?(Array)
+          self.referencias_comerciais = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes[:'limiteGlobal']
+        
+        
+        self.limite_global = attributes[:'limiteGlobal']
         
       
       end
@@ -510,14 +528,18 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
       if @limite_global.nil?
         return false
       end
 
-      
-      
-      
-      
       
       
       
@@ -648,6 +670,11 @@ module Pier
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared 
     def ==(o)
@@ -670,8 +697,9 @@ module Pier
           valor_pontuacao == o.valor_pontuacao &&
           telefones == o.telefones &&
           enderecos == o.enderecos &&
-          limite_global == o.limite_global &&
           socios == o.socios &&
+          referencias_comerciais == o.referencias_comerciais &&
+          limite_global == o.limite_global &&
           limite_maximo == o.limite_maximo &&
           limite_parcelas == o.limite_parcelas
     end
@@ -685,7 +713,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [razao_social, nome_fantasia, cnpj, inscricao_estadual, data_abertura_empresa, id_origem_comercial, id_produto, numero_agencia, numero_conta_corrente, email, dia_vencimento, nome_impresso, valor_renda, canal_entrada, valor_pontuacao, telefones, enderecos, limite_global, socios, limite_maximo, limite_parcelas].hash
+      [razao_social, nome_fantasia, cnpj, inscricao_estadual, data_abertura_empresa, id_origem_comercial, id_produto, numero_agencia, numero_conta_corrente, email, dia_vencimento, nome_impresso, valor_renda, canal_entrada, valor_pontuacao, telefones, enderecos, socios, referencias_comerciais, limite_global, limite_maximo, limite_parcelas].hash
     end
 
     # Builds the object from hash

@@ -534,6 +534,62 @@ module Pier
     end
 
 
+    # Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
+    # Esse recurso permite listar os tipos de transa\u00C3\u00A7\u00C3\u00B5es dispon\u00C3\u00ADveis.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<Object>]
+    def listar_tipos_eventos_transacoes_using_get(opts = {})
+      data, _status_code, _headers = listar_tipos_eventos_transacoes_using_get_with_http_info(opts)
+      return data
+    end
+
+    # Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
+    # Esse recurso permite listar os tipos de transa\u00C3\u00A7\u00C3\u00B5es dispon\u00C3\u00ADveis.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<Object>, Fixnum, Hash)>] Array<Object> data, response status code and response headers
+    def listar_tipos_eventos_transacoes_using_get_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: StatusParametroApi.listar_tipos_eventos_transacoes_using_get ..."
+      end
+      
+      # resource path
+      local_var_path = "/api/tipos-eventos-transacoes".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<Object>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: StatusParametroApi#listar_tipos_eventos_transacoes_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Lista os Status Contas cadastrados para o Emissor
     # Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters

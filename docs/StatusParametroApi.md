@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**consultar_using_get19**](StatusParametroApi.md#consultar_using_get19) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 [**listar_estagios_cartoes_using_get**](StatusParametroApi.md#listar_estagios_cartoes_using_get) | **GET** /api/estagios-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
 [**listar_status_cartoes_using_get**](StatusParametroApi.md#listar_status_cartoes_using_get) | **GET** /api/status-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
+[**listar_tipos_eventos_transacoes_using_get**](StatusParametroApi.md#listar_tipos_eventos_transacoes_using_get) | **GET** /api/tipos-eventos-transacoes | Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
 [**listar_using_get25**](StatusParametroApi.md#listar_using_get25) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
 [**listar_using_get26**](StatusParametroApi.md#listar_using_get26) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
@@ -329,6 +330,50 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PageStatusCartaoResponse**](PageStatusCartaoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_tipos_eventos_transacoes_using_get**
+> Array&lt;Object&gt; listar_tipos_eventos_transacoes_using_get
+
+Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
+
+Esse recurso permite listar os tipos de transa\u00C3\u00A7\u00C3\u00B5es dispon\u00C3\u00ADveis.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::StatusParametroApi.new
+
+begin
+  #Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
+  result = api_instance.listar_tipos_eventos_transacoes_using_get
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling StatusParametroApi->listar_tipos_eventos_transacoes_using_get: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+
+### Return type
+
+**Array&lt;Object&gt;**
 
 ### Authorization
 

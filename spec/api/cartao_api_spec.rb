@@ -153,6 +153,23 @@ describe 'CartaoApi' do
   end
 
 
+  # unit tests for consultar_cartao_impressao_using_get
+  # Consultar os dados de impress\u00C3\u00A3o de um Cart\u00C3\u00A3o
+  # Esse recurso permite consultar os dados de impress\u00C3\u00A3o de um cart\u00C3\u00A3o
+  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+  # @param [Hash] opts the optional parameters
+  # @return [Object]
+  describe 'consultar_cartao_impressao_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
   # unit tests for consultar_dados_reais_cartao_using_get
   # Consultar Detalhes do Cart\u00C3\u00A3o
   # Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.

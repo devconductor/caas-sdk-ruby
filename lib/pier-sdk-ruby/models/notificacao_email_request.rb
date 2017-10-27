@@ -25,17 +25,14 @@ require 'date'
 module Pier
   # Representa\u00C3\u00A7\u00C3\u00A3o do recurso para envio de uma notifica\u00C3\u00A7\u00C3\u00A3o por email.
   class NotificacaoEmailRequest
-    # ID para o documento a ser enviado.
-    attr_accessor :id_documento
-
     # ID para o template da notifica\u00C3\u00A7\u00C3\u00A3o.
     attr_accessor :id_template_notificacao
 
-    # Email do destinat\u00C3\u00A1rio.
-    attr_accessor :destinatario
+    # Lista de email(s) do(s) destinat\u00C3\u00A1rio(s).
+    attr_accessor :destinatarios
 
-    # Tipo de layout para o template da notifica\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :tipo_layout
+    # Lista de ids dos anexos a serem enviados.
+    attr_accessor :anexos
 
     # Mapa de par\u00C3\u00A2metros para montagem da notifica\u00C3\u00A7\u00C3\u00A3o.
     attr_accessor :parametros_conteudo
@@ -45,13 +42,11 @@ module Pier
     def self.attribute_map
       {
         
-        :'id_documento' => :'idDocumento',
-        
         :'id_template_notificacao' => :'idTemplateNotificacao',
         
-        :'destinatario' => :'destinatario',
+        :'destinatarios' => :'destinatarios',
         
-        :'tipo_layout' => :'tipoLayout',
+        :'anexos' => :'anexos',
         
         :'parametros_conteudo' => :'parametrosConteudo'
         
@@ -62,13 +57,11 @@ module Pier
     def self.swagger_types
       {
         
-        :'id_documento' => :'Integer',
-        
         :'id_template_notificacao' => :'Integer',
         
-        :'destinatario' => :'String',
+        :'destinatarios' => :'Array<String>',
         
-        :'tipo_layout' => :'String',
+        :'anexos' => :'Array<AnexoNotificacaoEmailRequest>',
         
         :'parametros_conteudo' => :'Hash<String, Object>'
         
@@ -84,15 +77,6 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'idDocumento']
-        
-        
-        self.id_documento = attributes[:'idDocumento']
-        
-      
-      end
-
-      
       if attributes[:'idTemplateNotificacao']
         
         
@@ -102,19 +86,23 @@ module Pier
       end
 
       
-      if attributes[:'destinatario']
+      if attributes[:'destinatarios']
         
+        if (value = attributes[:'destinatarios']).is_a?(Array)
+          self.destinatarios = value
+        end
         
-        self.destinatario = attributes[:'destinatario']
         
       
       end
 
       
-      if attributes[:'tipoLayout']
+      if attributes[:'anexos']
         
+        if (value = attributes[:'anexos']).is_a?(Array)
+          self.anexos = value
+        end
         
-        self.tipo_layout = attributes[:'tipoLayout']
         
       
       end
@@ -160,15 +148,6 @@ module Pier
       
       
       
-      allowed_values = ["RECUPERAR_SENHA", "FATURA_POR_EMAIL", "VALIDAR_DISPOSITIVO", "NOTIFICACAO_EMAIL"]
-      if @tipo_layout && !allowed_values.include?(@tipo_layout)
-        return false
-      end
-      
-      
-      
-      
-      
       
       
     end
@@ -186,20 +165,6 @@ module Pier
     
     
     
-    
-    
-    
-    
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] tipo_layout Object to be assigned
-    def tipo_layout=(tipo_layout)
-      allowed_values = ["RECUPERAR_SENHA", "FATURA_POR_EMAIL", "VALIDAR_DISPOSITIVO", "NOTIFICACAO_EMAIL"]
-      if tipo_layout && !allowed_values.include?(tipo_layout)
-        fail ArgumentError, "invalid value for 'tipo_layout', must be one of #{allowed_values}."
-      end
-      @tipo_layout = tipo_layout
-    end
-
     
     
     
@@ -213,10 +178,9 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id_documento == o.id_documento &&
           id_template_notificacao == o.id_template_notificacao &&
-          destinatario == o.destinatario &&
-          tipo_layout == o.tipo_layout &&
+          destinatarios == o.destinatarios &&
+          anexos == o.anexos &&
           parametros_conteudo == o.parametros_conteudo
     end
 
@@ -229,7 +193,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_documento, id_template_notificacao, destinatario, tipo_layout, parametros_conteudo].hash
+      [id_template_notificacao, destinatarios, anexos, parametros_conteudo].hash
     end
 
     # Builds the object from hash

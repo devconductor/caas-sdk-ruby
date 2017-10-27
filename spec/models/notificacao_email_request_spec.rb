@@ -43,17 +43,6 @@ describe 'NotificacaoEmailRequest' do
     end
   end
 
-  describe 'test attribute "id_documento"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
   describe 'test attribute "id_template_notificacao"' do
     it 'should work' do
        # assertion here
@@ -65,7 +54,7 @@ describe 'NotificacaoEmailRequest' do
   end
 
 
-  describe 'test attribute "destinatario"' do
+  describe 'test attribute "destinatarios"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -76,7 +65,7 @@ describe 'NotificacaoEmailRequest' do
   end
 
 
-  describe 'test attribute "tipo_layout"' do
+  describe 'test attribute "anexos"' do
     it 'should work' do
        # assertion here
        # should be_a()

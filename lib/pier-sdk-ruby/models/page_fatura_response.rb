@@ -23,7 +23,7 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Lista de faturas
+  # Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de planos de parcelamento
   class PageFaturaResponse
     attr_accessor :content
 

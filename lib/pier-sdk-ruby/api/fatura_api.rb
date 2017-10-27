@@ -32,6 +32,83 @@ module Pier
     end
 
 
+    # Consulta fatura de um cliente
+    # Consulta fatura de um cliente pela data de vencimento.
+    # @param data_vencimento Data Vencimento
+    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param [Hash] opts the optional parameters
+    # @return [FaturaDetalheResponse]
+    def consultar_fatura_using_get1(data_vencimento, id_conta, opts = {})
+      data, _status_code, _headers = consultar_fatura_using_get1_with_http_info(data_vencimento, id_conta, opts)
+      return data
+    end
+
+    # Consulta fatura de um cliente
+    # Consulta fatura de um cliente pela data de vencimento.
+    # @param data_vencimento Data Vencimento
+    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(FaturaDetalheResponse, Fixnum, Hash)>] FaturaDetalheResponse data, response status code and response headers
+    def consultar_fatura_using_get1_with_http_info(data_vencimento, id_conta, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: FaturaApi.consultar_fatura_using_get1 ..."
+      end
+      
+      
+      # verify the required parameter 'data_vencimento' is set
+      fail ArgumentError, "Missing the required parameter 'data_vencimento' when calling FaturaApi.consultar_fatura_using_get1" if data_vencimento.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'id_conta' is set
+      fail ArgumentError, "Missing the required parameter 'id_conta' when calling FaturaApi.consultar_fatura_using_get1" if id_conta.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/faturas/{dataVencimento}".sub('{format}','json').sub('{' + 'dataVencimento' + '}', data_vencimento.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'idConta'] = id_conta
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'FaturaDetalheResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: FaturaApi#consultar_fatura_using_get1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Listar planos de parcelamento
     # Lista os planos de parcelamento da fatura de uma conta.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
@@ -216,6 +293,113 @@ module Pier
         :return_type => 'Object')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: FaturaApi#enviar_fatura_email_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Listar faturas de um cliente.
+    # Lista faturas de um cliente.
+    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :situacao_processamento Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. (default to TODAS)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @return [PageFaturaResponse]
+    def listar_faturas_using_get1(id_conta, opts = {})
+      data, _status_code, _headers = listar_faturas_using_get1_with_http_info(id_conta, opts)
+      return data
+    end
+
+    # Listar faturas de um cliente.
+    # Lista faturas de um cliente.
+    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :situacao_processamento Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS].
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @return [Array<(PageFaturaResponse, Fixnum, Hash)>] PageFaturaResponse data, response status code and response headers
+    def listar_faturas_using_get1_with_http_info(id_conta, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: FaturaApi.listar_faturas_using_get1 ..."
+      end
+      
+      
+      # verify the required parameter 'id_conta' is set
+      fail ArgumentError, "Missing the required parameter 'id_conta' when calling FaturaApi.listar_faturas_using_get1" if id_conta.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'situacao_processamento'] && !['ABERTA', 'FECHADA', 'TODAS'].include?(opts[:'situacao_processamento'])
+        fail ArgumentError, 'invalid value for "situacao_processamento", must be one of ABERTA, FECHADA, TODAS'
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/faturas".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'idConta'] = id_conta
+      query_params[:'situacaoProcessamento'] = opts[:'situacao_processamento'] if opts[:'situacao_processamento']
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageFaturaResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: FaturaApi#listar_faturas_using_get1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

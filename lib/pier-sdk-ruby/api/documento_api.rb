@@ -386,7 +386,7 @@ module Pier
     # Este recurso permite integrar um documento ao reposit\u00C3\u00B3rio pre-configurado.
     # @param integrar_documento_request integrarDocumentoRequest
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [DocumentoIntegracaoResponse]
     def integrar_using_post(integrar_documento_request, opts = {})
       data, _status_code, _headers = integrar_using_post_with_http_info(integrar_documento_request, opts)
       return data
@@ -396,7 +396,7 @@ module Pier
     # Este recurso permite integrar um documento ao reposit\u00C3\u00B3rio pre-configurado.
     # @param integrar_documento_request integrarDocumentoRequest
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(DocumentoIntegracaoResponse, Fixnum, Hash)>] DocumentoIntegracaoResponse data, response status code and response headers
     def integrar_using_post_with_http_info(integrar_documento_request, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: DocumentoApi.integrar_using_post ..."
@@ -440,7 +440,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'String')
+        :return_type => 'DocumentoIntegracaoResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: DocumentoApi#integrar_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

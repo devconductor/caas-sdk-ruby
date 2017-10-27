@@ -65,16 +65,5 @@ describe 'AlterarProdutoRequest' do
   end
 
 
-  describe 'test attribute "limite_global"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
 end
 

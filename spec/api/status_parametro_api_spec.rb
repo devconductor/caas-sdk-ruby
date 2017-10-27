@@ -157,6 +157,22 @@ describe 'StatusParametroApi' do
   end
 
 
+  # unit tests for listar_tipos_eventos_transacoes_using_get
+  # Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
+  # Esse recurso permite listar os tipos de transa\u00C3\u00A7\u00C3\u00B5es dispon\u00C3\u00ADveis.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<Object>]
+  describe 'listar_tipos_eventos_transacoes_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
   # unit tests for listar_using_get25
   # Lista os Status Contas cadastrados para o Emissor
   # Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.

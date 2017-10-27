@@ -642,35 +642,35 @@ module Pier
 
     # Lista os cart\u00C3\u00B5es cadastrados
     # Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
-    # @param device_id Device id criptografado
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :device_id Device id criptografado
     # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :status Status do cart\u00C3\u00A3o tokenizado
+    # @option opts [String] :numero_cartao Numero do cart\u00C3\u00A3o tokenizado
     # @return [PageCartaoPayResponse]
-    def listar_using_get6(device_id, opts = {})
-      data, _status_code, _headers = listar_using_get6_with_http_info(device_id, opts)
+    def listar_using_get6(opts = {})
+      data, _status_code, _headers = listar_using_get6_with_http_info(opts)
       return data
     end
 
     # Lista os cart\u00C3\u00B5es cadastrados
     # Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
-    # @param device_id Device id criptografado
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :device_id Device id criptografado
     # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :status Status do cart\u00C3\u00A3o tokenizado
+    # @option opts [String] :numero_cartao Numero do cart\u00C3\u00A3o tokenizado
     # @return [Array<(PageCartaoPayResponse, Fixnum, Hash)>] PageCartaoPayResponse data, response status code and response headers
-    def listar_using_get6_with_http_info(device_id, opts = {})
+    def listar_using_get6_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConductorPayApi.listar_using_get6 ..."
       end
       
       
-      # verify the required parameter 'device_id' is set
-      fail ArgumentError, "Missing the required parameter 'device_id' when calling ConductorPayApi.listar_using_get6" if device_id.nil?
       
       
       
@@ -704,6 +704,12 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/cartoes-tokenizados".sub('{format}','json')
 
@@ -713,6 +719,7 @@ module Pier
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'status'] = opts[:'status'] if opts[:'status']
+      query_params[:'numeroCartao'] = opts[:'numero_cartao'] if opts[:'numero_cartao']
 
       # header parameters
       header_params = {}
@@ -724,7 +731,7 @@ module Pier
       # HTTP header 'Content-Type'
       local_header_content_type = ['application/json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-      header_params[:'device_id'] = device_id
+      header_params[:'device_id'] = opts[:'device_id'] if opts[:'device_id']
 
       # form parameters
       form_params = {}

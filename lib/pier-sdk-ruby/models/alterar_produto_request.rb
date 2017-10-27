@@ -31,9 +31,6 @@ module Pier
     # C\u00C3\u00B3digo identificador da origem comercial.
     attr_accessor :id_origem_comercial
 
-    # Valor do novo limite Global.
-    attr_accessor :limite_global
-
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -41,9 +38,7 @@ module Pier
         
         :'id_produto' => :'idProduto',
         
-        :'id_origem_comercial' => :'idOrigemComercial',
-        
-        :'limite_global' => :'limiteGlobal'
+        :'id_origem_comercial' => :'idOrigemComercial'
         
       }
     end
@@ -54,9 +49,7 @@ module Pier
         
         :'id_produto' => :'Integer',
         
-        :'id_origem_comercial' => :'Integer',
-        
-        :'limite_global' => :'Float'
+        :'id_origem_comercial' => :'Integer'
         
       }
     end
@@ -83,15 +76,6 @@ module Pier
         
         
         self.id_origem_comercial = attributes[:'idOrigemComercial']
-        
-      
-      end
-
-      
-      if attributes[:'limiteGlobal']
-        
-        
-        self.limite_global = attributes[:'limiteGlobal']
         
       
       end
@@ -125,17 +109,8 @@ module Pier
       
       
       
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -153,8 +128,7 @@ module Pier
       return true if self.equal?(o)
       self.class == o.class &&
           id_produto == o.id_produto &&
-          id_origem_comercial == o.id_origem_comercial &&
-          limite_global == o.limite_global
+          id_origem_comercial == o.id_origem_comercial
     end
 
     # @see the `==` method
@@ -166,7 +140,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_produto, id_origem_comercial, limite_global].hash
+      [id_produto, id_origem_comercial].hash
     end
 
     # Builds the object from hash

@@ -47,7 +47,7 @@ module Pier
     def self.swagger_types
       {
         
-        :'fatura' => :'FaturaResponse',
+        :'fatura' => :'FaturaFechadaResponse',
         
         :'transacoes' => :'Array<TransacoesCorrentesResponse>'
         

@@ -43,7 +43,7 @@ describe 'PessoaPersist' do
     end
   end
 
-  describe 'test attribute "cpf"' do
+  describe 'test attribute "nome"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -54,7 +54,7 @@ describe 'PessoaPersist' do
   end
 
 
-  describe 'test attribute "data_emissao_identidade"' do
+  describe 'test attribute "cpf"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -76,40 +76,7 @@ describe 'PessoaPersist' do
   end
 
 
-  describe 'test attribute "email"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "estado_civil"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "nacionalidade"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "nome"' do
+  describe 'test attribute "sexo"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -142,6 +109,39 @@ describe 'PessoaPersist' do
   end
 
 
+  describe 'test attribute "unidade_federativa_identidade"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "data_emissao_identidade"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "estado_civil"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
   describe 'test attribute "profissao"' do
     it 'should work' do
        # assertion here
@@ -153,7 +153,18 @@ describe 'PessoaPersist' do
   end
 
 
-  describe 'test attribute "sexo"' do
+  describe 'test attribute "nacionalidade"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "email"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -165,17 +176,6 @@ describe 'PessoaPersist' do
 
 
   describe 'test attribute "telefones"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "unidade_federativa_identidade"' do
     it 'should work' do
        # assertion here
        # should be_a()

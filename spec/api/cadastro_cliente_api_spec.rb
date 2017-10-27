@@ -182,6 +182,24 @@ describe 'CadastroClienteApi' do
   end
 
 
+  # unit tests for atualizar_using_post
+  # Atualiza conta integrada com o emissor
+  # Este recurso permite a atualiza\u00C3\u00A7\u00C3\u00A3o de uma conta integrada com o emissor.
+  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+  # @param [Hash] opts the optional parameters
+  # @option opts [IntegracaoEmissorPersist] :body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
+  # @return [IntegracaoEmissorResponse]
+  describe 'atualizar_using_post test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
   # unit tests for cadastrar_using_post
   # Realiza o cadastro de Adicionais para uma Conta
   # Este m\u00C3\u00A9todo permite que sejam cadastrados um portador Adicional para uma determinada Conta.

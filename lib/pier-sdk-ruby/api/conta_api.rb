@@ -1147,157 +1147,6 @@ module Pier
     end
 
 
-    # Consultar a fatura consignadas abertas da conta
-    # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar a fatura consignada em aberto
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :data_vencimento Data Vencimento
-    # @return [DetalhesFaturaConsignadaResponse]
-    def consultar_fatura_consignada_aberta_using_get(id, opts = {})
-      data, _status_code, _headers = consultar_fatura_consignada_aberta_using_get_with_http_info(id, opts)
-      return data
-    end
-
-    # Consultar a fatura consignadas abertas da conta
-    # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar a fatura consignada em aberto
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :data_vencimento Data Vencimento
-    # @return [Array<(DetalhesFaturaConsignadaResponse, Fixnum, Hash)>] DetalhesFaturaConsignadaResponse data, response status code and response headers
-    def consultar_fatura_consignada_aberta_using_get_with_http_info(id, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.consultar_fatura_consignada_aberta_using_get ..."
-      end
-      
-      
-      # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_fatura_consignada_aberta_using_get" if id.nil?
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/contas/{id}/faturas-consignadas/consultar-aberta".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-      query_params[:'dataVencimento'] = opts[:'data_vencimento'] if opts[:'data_vencimento']
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'DetalhesFaturaConsignadaResponse')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#consultar_fatura_consignada_aberta_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-
-    # Apresenta dados de uma determinada fatura consignada
-    # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar uma fatura, atrav\u00C3\u00A9s do id da conta e o id da fatura.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param id_fatura C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da fatura (id_fatura).
-    # @param [Hash] opts the optional parameters
-    # @return [FaturaConsignadaDetalheResponse]
-    def consultar_fatura_consignada_using_get(id, id_fatura, opts = {})
-      data, _status_code, _headers = consultar_fatura_consignada_using_get_with_http_info(id, id_fatura, opts)
-      return data
-    end
-
-    # Apresenta dados de uma determinada fatura consignada
-    # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar uma fatura, atrav\u00C3\u00A9s do id da conta e o id da fatura.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param id_fatura C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da fatura (id_fatura).
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(FaturaConsignadaDetalheResponse, Fixnum, Hash)>] FaturaConsignadaDetalheResponse data, response status code and response headers
-    def consultar_fatura_consignada_using_get_with_http_info(id, id_fatura, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.consultar_fatura_consignada_using_get ..."
-      end
-      
-      
-      # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_fatura_consignada_using_get" if id.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'id_fatura' is set
-      fail ArgumentError, "Missing the required parameter 'id_fatura' when calling ContaApi.consultar_fatura_consignada_using_get" if id_fatura.nil?
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/contas/{id}/faturas-consignadas/{id_fatura}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s).sub('{' + 'id_fatura' + '}', id_fatura.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'FaturaConsignadaDetalheResponse')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#consultar_fatura_consignada_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-
     # Consultar Fatura da Conta
     # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar os detalhes de uma fatura vinculados a uma determinada conta.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
@@ -2294,108 +2143,6 @@ module Pier
     end
 
 
-    # Lista as faturas consignadas da conta
-    # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [String] :data_vencimento Apresenta a data de vencimento da fatura.
-    # @return [PageFaturaConsignadaResponse]
-    def listar_faturas_consignadas_using_get(id, opts = {})
-      data, _status_code, _headers = listar_faturas_consignadas_using_get_with_http_info(id, opts)
-      return data
-    end
-
-    # Lista as faturas consignadas da conta
-    # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [String] :data_vencimento Apresenta a data de vencimento da fatura.
-    # @return [Array<(PageFaturaConsignadaResponse, Fixnum, Hash)>] PageFaturaConsignadaResponse data, response status code and response headers
-    def listar_faturas_consignadas_using_get_with_http_info(id, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.listar_faturas_consignadas_using_get ..."
-      end
-      
-      
-      # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.listar_faturas_consignadas_using_get" if id.nil?
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/contas/{id}/faturas-consignadas".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
-      query_params[:'page'] = opts[:'page'] if opts[:'page']
-      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
-      query_params[:'dataVencimento'] = opts[:'data_vencimento'] if opts[:'data_vencimento']
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'PageFaturaConsignadaResponse')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#listar_faturas_consignadas_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-
     # Lista as faturas da conta
     # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
@@ -2404,7 +2151,7 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :data_vencimento Data de Vencimento da Fatura.
-    # @return [PageFaturaResponse]
+    # @return [PageFaturaFechadaResponse]
     def listar_faturas_using_get(id, opts = {})
       data, _status_code, _headers = listar_faturas_using_get_with_http_info(id, opts)
       return data
@@ -2418,7 +2165,7 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :data_vencimento Data de Vencimento da Fatura.
-    # @return [Array<(PageFaturaResponse, Fixnum, Hash)>] PageFaturaResponse data, response status code and response headers
+    # @return [Array<(PageFaturaFechadaResponse, Fixnum, Hash)>] PageFaturaFechadaResponse data, response status code and response headers
     def listar_faturas_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContaApi.listar_faturas_using_get ..."
@@ -2490,7 +2237,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PageFaturaResponse')
+        :return_type => 'PageFaturaFechadaResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ContaApi#listar_faturas_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

@@ -85,6 +85,9 @@ module Pier
     # Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
     attr_accessor :socios
 
+    # Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
+    attr_accessor :referencias
+
     # Valor do Limite Global
     attr_accessor :limite_global
 
@@ -139,6 +142,8 @@ module Pier
         
         :'socios' => :'socios',
         
+        :'referencias' => :'referencias',
+        
         :'limite_global' => :'limiteGlobal',
         
         :'limite_maximo' => :'limiteMaximo',
@@ -191,6 +196,8 @@ module Pier
         :'enderecos' => :'Array<EnderecoAprovadoResponse>',
         
         :'socios' => :'Array<SocioAprovadoResponse>',
+        
+        :'referencias' => :'Array<ReferenciaComercialAprovadoResponse>',
         
         :'limite_global' => :'Float',
         
@@ -396,6 +403,17 @@ module Pier
       end
 
       
+      if attributes[:'referencias']
+        
+        if (value = attributes[:'referencias']).is_a?(Array)
+          self.referencias = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes[:'limiteGlobal']
         
         
@@ -437,6 +455,10 @@ module Pier
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
       
       
       
@@ -663,6 +685,11 @@ module Pier
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared 
     def ==(o)
@@ -688,6 +715,7 @@ module Pier
           telefones == o.telefones &&
           enderecos == o.enderecos &&
           socios == o.socios &&
+          referencias == o.referencias &&
           limite_global == o.limite_global &&
           limite_maximo == o.limite_maximo &&
           limite_parcelas == o.limite_parcelas
@@ -702,7 +730,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, razao_social, nome_fantasia, cnpj, inscricao_estadual, data_abertura_empresa, id_origem_comercial, id_produto, numero_agencia, numero_conta_corrente, email, dia_vencimento, nome_impresso, id_conta, id_proposta, canal_entrada, valor_pontuacao, telefones, enderecos, socios, limite_global, limite_maximo, limite_parcelas].hash
+      [id, razao_social, nome_fantasia, cnpj, inscricao_estadual, data_abertura_empresa, id_origem_comercial, id_produto, numero_agencia, numero_conta_corrente, email, dia_vencimento, nome_impresso, id_conta, id_proposta, canal_entrada, valor_pontuacao, telefones, enderecos, socios, referencias, limite_global, limite_maximo, limite_parcelas].hash
     end
 
     # Builds the object from hash

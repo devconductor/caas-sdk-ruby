@@ -277,7 +277,7 @@ No authorization required
 
 
 # **integrar_using_post**
-> String integrar_using_post(integrar_documento_request)
+> DocumentoIntegracaoResponse integrar_using_post(integrar_documento_request)
 
 Integra um arquivo a reposit\u00C3\u00B3rios remotos.
 
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+[**DocumentoIntegracaoResponse**](DocumentoIntegracaoResponse.md)
 
 ### Authorization
 

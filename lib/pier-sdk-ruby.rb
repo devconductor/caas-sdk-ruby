@@ -47,10 +47,22 @@ require 'pier-sdk-ruby/models/ajuste_response'
 require 'pier-sdk-ruby/models/alterar_produto_request'
 
 
+require 'pier-sdk-ruby/models/anexo_notificacao_email_request'
+
+
+require 'pier-sdk-ruby/models/antecipacao_mock_response'
+
+
 require 'pier-sdk-ruby/models/antecipacao_response'
 
 
 require 'pier-sdk-ruby/models/antecipacao_simulada_detalhes_response'
+
+
+require 'pier-sdk-ruby/models/antecipacao_simulada_lote_response'
+
+
+require 'pier-sdk-ruby/models/antecipacao_simulada_mock_response'
 
 
 require 'pier-sdk-ruby/models/antecipacao_simulada_response'
@@ -230,6 +242,9 @@ require 'pier-sdk-ruby/models/documento_detalhado_response'
 require 'pier-sdk-ruby/models/documento_detalhe_response'
 
 
+require 'pier-sdk-ruby/models/documento_integracao_response'
+
+
 require 'pier-sdk-ruby/models/documento_parametros_request'
 
 
@@ -278,6 +293,12 @@ require 'pier-sdk-ruby/models/fatura_consignada_detalhe_response'
 require 'pier-sdk-ruby/models/fatura_consignada_response'
 
 
+require 'pier-sdk-ruby/models/fatura_detalhe_response'
+
+
+require 'pier-sdk-ruby/models/fatura_fechada_response'
+
+
 require 'pier-sdk-ruby/models/fatura_response'
 
 
@@ -308,6 +329,9 @@ require 'pier-sdk-ruby/models/integrar_documento_request'
 require 'pier-sdk-ruby/models/job_response'
 
 
+require 'pier-sdk-ruby/models/lancamento_fatura_response'
+
+
 require 'pier-sdk-ruby/models/limite_disponibilidade_response'
 
 
@@ -318,9 +342,6 @@ require 'pier-sdk-ruby/models/map_ofstring_andstring'
 
 
 require 'pier-sdk-ruby/models/notificacao_email_request'
-
-
-require 'pier-sdk-ruby/models/notificacao_email_response'
 
 
 require 'pier-sdk-ruby/models/notificacao_push_response'
@@ -423,6 +444,9 @@ require 'pier-sdk-ruby/models/page_faq_response'
 
 
 require 'pier-sdk-ruby/models/page_fatura_consignada_response'
+
+
+require 'pier-sdk-ruby/models/page_fatura_fechada_response'
 
 
 require 'pier-sdk-ruby/models/page_fatura_response'
@@ -621,6 +645,12 @@ require 'pier-sdk-ruby/models/push_apns'
 
 
 require 'pier-sdk-ruby/models/push_fcm_e_gcm'
+
+
+require 'pier-sdk-ruby/models/refencia_comercial_aprovado_persist'
+
+
+require 'pier-sdk-ruby/models/referencia_comercial_aprovado_response'
 
 
 require 'pier-sdk-ruby/models/referencia_id_persist'

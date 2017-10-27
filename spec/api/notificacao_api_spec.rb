@@ -354,7 +354,7 @@ describe 'NotificacaoApi' do
   # Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
   # @param request request
   # @param [Hash] opts the optional parameters
-  # @return [NotificacaoEmailResponse]
+  # @return [Object]
   describe 'notificacao_email_using_post test' do
     it "should work" do
       # assertion here
@@ -366,7 +366,7 @@ describe 'NotificacaoApi' do
   end
 
 
-  # unit tests for responder_sms_using_post
+  # unit tests for responder_sms_get_using_get
   # Responder SMS
   # Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
   # @param [Hash] opts the optional parameters
@@ -374,7 +374,7 @@ describe 'NotificacaoApi' do
   # @option opts [String] :data Data
   # @option opts [String] :resposta TextoStatus
   # @return [NotificacaoSMSResponse]
-  describe 'responder_sms_using_post test' do
+  describe 'responder_sms_get_using_get test' do
     it "should work" do
       # assertion here
       # should be_a()

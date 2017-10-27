@@ -1420,7 +1420,7 @@ module Pier
     # Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
     # @param request request
     # @param [Hash] opts the optional parameters
-    # @return [NotificacaoEmailResponse]
+    # @return [Object]
     def notificacao_email_using_post(request, opts = {})
       data, _status_code, _headers = notificacao_email_using_post_with_http_info(request, opts)
       return data
@@ -1430,7 +1430,7 @@ module Pier
     # Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
     # @param request request
     # @param [Hash] opts the optional parameters
-    # @return [Array<(NotificacaoEmailResponse, Fixnum, Hash)>] NotificacaoEmailResponse data, response status code and response headers
+    # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
     def notificacao_email_using_post_with_http_info(request, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: NotificacaoApi.notificacao_email_using_post ..."
@@ -1474,7 +1474,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'NotificacaoEmailResponse')
+        :return_type => 'Object')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: NotificacaoApi#notificacao_email_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -1489,8 +1489,8 @@ module Pier
     # @option opts [String] :data Data
     # @option opts [String] :resposta TextoStatus
     # @return [NotificacaoSMSResponse]
-    def responder_sms_using_post(opts = {})
-      data, _status_code, _headers = responder_sms_using_post_with_http_info(opts)
+    def responder_sms_get_using_get(opts = {})
+      data, _status_code, _headers = responder_sms_get_using_get_with_http_info(opts)
       return data
     end
 
@@ -1501,9 +1501,9 @@ module Pier
     # @option opts [String] :data Data
     # @option opts [String] :resposta TextoStatus
     # @return [Array<(NotificacaoSMSResponse, Fixnum, Hash)>] NotificacaoSMSResponse data, response status code and response headers
-    def responder_sms_using_post_with_http_info(opts = {})
+    def responder_sms_get_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: NotificacaoApi.responder_sms_using_post ..."
+        @api_client.config.logger.debug "Calling API: NotificacaoApi.responder_sms_get_using_get ..."
       end
       
       
@@ -1551,7 +1551,7 @@ module Pier
       post_body = nil
       
       auth_names = []
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1559,7 +1559,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'NotificacaoSMSResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: NotificacaoApi#responder_sms_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: NotificacaoApi#responder_sms_get_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

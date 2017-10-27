@@ -43,6 +43,24 @@ describe 'FaturaApi' do
   end
 
 
+  # unit tests for consultar_fatura_using_get1
+  # Consulta fatura de um cliente
+  # Consulta fatura de um cliente pela data de vencimento.
+  # @param data_vencimento Data Vencimento
+  # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+  # @param [Hash] opts the optional parameters
+  # @return [FaturaDetalheResponse]
+  describe 'consultar_fatura_using_get1 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
   # unit tests for consultar_lancamentos_futuros_fatura_using_get1
   # Listar planos de parcelamento
   # Lista os planos de parcelamento da fatura de uma conta.
@@ -73,6 +91,27 @@ describe 'FaturaApi' do
   # @option opts [String] :email E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado.
   # @return [Object]
   describe 'enviar_fatura_email_using_post test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for listar_faturas_using_get1
+  # Listar faturas de um cliente.
+  # Lista faturas de um cliente.
+  # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :situacao_processamento Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS].
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @return [PageFaturaResponse]
+  describe 'listar_faturas_using_get1 test' do
     it "should work" do
       # assertion here
       # should be_a()

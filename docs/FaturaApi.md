@@ -4,9 +4,64 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**consultar_fatura_using_get1**](FaturaApi.md#consultar_fatura_using_get1) | **GET** /api/faturas/{dataVencimento} | Consulta fatura de um cliente
 [**consultar_lancamentos_futuros_fatura_using_get1**](FaturaApi.md#consultar_lancamentos_futuros_fatura_using_get1) | **GET** /api/contas/{id}/faturas/planos-parcelamento | Listar planos de parcelamento
 [**enviar_fatura_email_using_post**](FaturaApi.md#enviar_fatura_email_using_post) | **POST** /api/contas/{id}/faturas/{dataVencimento}/enviar-email | Envia 2\u00C2\u00AA via de fatura por E-mail
+[**listar_faturas_using_get1**](FaturaApi.md#listar_faturas_using_get1) | **GET** /api/faturas | Listar faturas de um cliente.
 [**visualizar_documento_using_get**](FaturaApi.md#visualizar_documento_using_get) | **GET** /api/contas/{id}/faturas/{dataVencimento}/arquivo.pdf | Permite visualizar o extrato da fatura em formato PDF
+
+
+
+
+# **consultar_fatura_using_get1**
+> FaturaDetalheResponse consultar_fatura_using_get1(data_vencimento, id_conta)
+
+Consulta fatura de um cliente
+
+Consulta fatura de um cliente pela data de vencimento.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::FaturaApi.new
+
+data_vencimento = "data_vencimento_example" # String | Data Vencimento
+
+id_conta = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+
+begin
+  #Consulta fatura de um cliente
+  result = api_instance.consultar_fatura_using_get1(data_vencimento, id_conta)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling FaturaApi->consultar_fatura_using_get1: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **data_vencimento** | **String**| Data Vencimento | 
+ **id_conta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+
+
+### Return type
+
+[**FaturaDetalheResponse**](FaturaDetalheResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
@@ -116,6 +171,66 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_faturas_using_get1**
+> PageFaturaResponse listar_faturas_using_get1(id_conta, opts)
+
+Listar faturas de um cliente.
+
+Lista faturas de um cliente.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::FaturaApi.new
+
+id_conta = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+opts = { 
+  situacao_processamento: "TODAS", # String | Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS].
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+}
+
+begin
+  #Listar faturas de um cliente.
+  result = api_instance.listar_faturas_using_get1(id_conta, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling FaturaApi->listar_faturas_using_get1: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_conta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **situacao_processamento** | **String**| Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. | [optional] [default to TODAS]
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+
+
+### Return type
+
+[**PageFaturaResponse**](PageFaturaResponse.md)
 
 ### Authorization
 

@@ -135,7 +135,7 @@ describe 'DocumentoApi' do
   # Este recurso permite integrar um documento ao reposit\u00C3\u00B3rio pre-configurado.
   # @param integrar_documento_request integrarDocumentoRequest
   # @param [Hash] opts the optional parameters
-  # @return [String]
+  # @return [DocumentoIntegracaoResponse]
   describe 'integrar_using_post test' do
     it "should work" do
       # assertion here

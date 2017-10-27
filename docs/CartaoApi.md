@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**bloquear_using_post**](CartaoApi.md#bloquear_using_post) | **POST** /api/cartoes/{id}/bloquear | Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
 [**cadastrar_alterar_senha_using_post**](CartaoApi.md#cadastrar_alterar_senha_using_post) | **POST** /api/cartoes/{id}/cadastrar-senha | Realiza o cadastro da senha de um Cart\u00C3\u00A3o
 [**cancelar_using_post**](CartaoApi.md#cancelar_using_post) | **POST** /api/cartoes/{id}/cancelar | Realiza o cancelamento de um determinado Cart\u00C3\u00A3o
+[**consultar_cartao_impressao_using_get**](CartaoApi.md#consultar_cartao_impressao_using_get) | **GET** /api/cartoes/{id}/consultar-dados-impressao | Consultar os dados de impress\u00C3\u00A3o de um Cart\u00C3\u00A3o
 [**consultar_dados_reais_cartao_using_get**](CartaoApi.md#consultar_dados_reais_cartao_using_get) | **GET** /api/cartoes/{id}/consultar-dados-reais | Consultar Detalhes do Cart\u00C3\u00A3o
 [**consultar_limite_disponibilidade_using_get**](CartaoApi.md#consultar_limite_disponibilidade_using_get) | **GET** /api/cartoes/{id}/limites-disponibilidades | Apresenta os limites do Portador do Cart\u00C3\u00A3o
 [**consultar_lotes_cartoes_pre_pagos_using_get**](CartaoApi.md#consultar_lotes_cartoes_pre_pagos_using_get) | **GET** /api/cartoes/lotes-cartoes-pre-pagos/{id} | Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
@@ -343,6 +344,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CartaoResponse**](CartaoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **consultar_cartao_impressao_using_get**
+> Object consultar_cartao_impressao_using_get(id)
+
+Consultar os dados de impress\u00C3\u00A3o de um Cart\u00C3\u00A3o
+
+Esse recurso permite consultar os dados de impress\u00C3\u00A3o de um cart\u00C3\u00A3o
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::CartaoApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+
+
+begin
+  #Consultar os dados de impress\u00C3\u00A3o de um Cart\u00C3\u00A3o
+  result = api_instance.consultar_cartao_impressao_using_get(id)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CartaoApi->consultar_cartao_impressao_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). | 
+
+
+### Return type
+
+**Object**
 
 ### Authorization
 

@@ -21,7 +21,7 @@ Method | HTTP request | Description
 [**listar_template_notificacao_using_get**](NotificacaoApi.md#listar_template_notificacao_using_get) | **GET** /api/templates-notificacoes | Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
 [**listar_tipos_layouts_using_get**](NotificacaoApi.md#listar_tipos_layouts_using_get) | **GET** /api/tipos-layouts | Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
 [**notificacao_email_using_post**](NotificacaoApi.md#notificacao_email_using_post) | **POST** /api/notificacoes-email | Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
-[**responder_sms_using_post**](NotificacaoApi.md#responder_sms_using_post) | **POST** /api/notificacoes/sms/responder | Responder SMS
+[**responder_sms_get_using_get**](NotificacaoApi.md#responder_sms_get_using_get) | **GET** /api/notificacoes/sms/responder | Responder SMS
 [**salvar_configuracao_using_post**](NotificacaoApi.md#salvar_configuracao_using_post) | **POST** /api/configuracoes-email | Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
 [**salvar_push_fcm_using_post**](NotificacaoApi.md#salvar_push_fcm_using_post) | **POST** /api/notificacoes/push/fcm | Enviar Push FCM
 [**salvar_push_gcm_using_post**](NotificacaoApi.md#salvar_push_gcm_using_post) | **POST** /api/notificacoes/push/gcm | Enviar Push GCM
@@ -910,7 +910,7 @@ No authorization required
 
 
 # **notificacao_email_using_post**
-> NotificacaoEmailResponse notificacao_email_using_post(request)
+> Object notificacao_email_using_post(request)
 
 Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
 
@@ -945,7 +945,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NotificacaoEmailResponse**](NotificacaoEmailResponse.md)
+**Object**
 
 ### Authorization
 
@@ -959,8 +959,8 @@ No authorization required
 
 
 
-# **responder_sms_using_post**
-> NotificacaoSMSResponse responder_sms_using_post(opts)
+# **responder_sms_get_using_get**
+> NotificacaoSMSResponse responder_sms_get_using_get(opts)
 
 Responder SMS
 
@@ -982,10 +982,10 @@ opts = {
 
 begin
   #Responder SMS
-  result = api_instance.responder_sms_using_post(opts)
+  result = api_instance.responder_sms_get_using_get(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling NotificacaoApi->responder_sms_using_post: #{e}"
+  puts "Exception when calling NotificacaoApi->responder_sms_get_using_get: #{e}"
 end
 ```
 

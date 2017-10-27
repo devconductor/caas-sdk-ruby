@@ -230,7 +230,7 @@ describe 'PessoaJuridicaAprovadaPersist' do
   end
 
 
-  describe 'test attribute "limite_global"' do
+  describe 'test attribute "socios"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -241,7 +241,18 @@ describe 'PessoaJuridicaAprovadaPersist' do
   end
 
 
-  describe 'test attribute "socios"' do
+  describe 'test attribute "referencias_comerciais"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "limite_global"' do
     it 'should work' do
        # assertion here
        # should be_a()

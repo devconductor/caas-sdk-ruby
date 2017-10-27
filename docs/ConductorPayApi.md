@@ -458,7 +458,7 @@ No authorization required
 
 
 # **listar_using_get6**
-> PageCartaoPayResponse listar_using_get6(device_id, opts)
+> PageCartaoPayResponse listar_using_get6(opts)
 
 Lista os cart\u00C3\u00B5es cadastrados
 
@@ -472,18 +472,18 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::ConductorPayApi.new
 
-device_id = "device_id_example" # String | Device id criptografado
-
 opts = { 
+  device_id: "device_id_example", # String | Device id criptografado
   sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
   limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  status: "status_example" # String | Status do cart\u00C3\u00A3o tokenizado
+  status: "status_example", # String | Status do cart\u00C3\u00A3o tokenizado
+  numero_cartao: "numero_cartao_example" # String | Numero do cart\u00C3\u00A3o tokenizado
 }
 
 begin
   #Lista os cart\u00C3\u00B5es cadastrados
-  result = api_instance.listar_using_get6(device_id, opts)
+  result = api_instance.listar_using_get6(opts)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling ConductorPayApi->listar_using_get6: #{e}"
@@ -494,11 +494,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_id** | **String**| Device id criptografado | 
+ **device_id** | **String**| Device id criptografado | [optional] 
  **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **status** | **String**| Status do cart\u00C3\u00A3o tokenizado | [optional] 
+ **numero_cartao** | **String**| Numero do cart\u00C3\u00A3o tokenizado | [optional] 
 
 
 ### Return type

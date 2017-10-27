@@ -20,8 +20,9 @@ Name | Type | Description | Notes
 **valor_pontuacao** | **Integer** | Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0) | [optional] 
 **telefones** | [**Array&lt;TelefonePessoaAprovadaPersist&gt;**](TelefonePessoaAprovadaPersist.md) | Apresenta os telefones da empresa | [optional] 
 **enderecos** | [**Array&lt;EnderecoAprovadoPersist&gt;**](EnderecoAprovadoPersist.md) | Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros | 
-**limite_global** | **Float** | Valor do Limite Global | 
 **socios** | [**Array&lt;PessoaPersist&gt;**](PessoaPersist.md) | Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista | [optional] 
+**referencias_comerciais** | [**Array&lt;RefenciaComercialAprovadoPersist&gt;**](RefenciaComercialAprovadoPersist.md) | Apresenta os dados das refer\u00C3\u00AAncias comerciais | [optional] 
+**limite_global** | **Float** | Valor do Limite Global | 
 **limite_maximo** | **Float** | Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es | 
 **limite_parcelas** | **Float** | Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras | 
 

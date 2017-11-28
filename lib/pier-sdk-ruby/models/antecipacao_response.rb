@@ -24,6 +24,10 @@ require 'date'
 
 module Pier
   class AntecipacaoResponse
+    attr_accessor :mcc
+
+    attr_accessor :uf
+
     # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
     attr_accessor :id
 
@@ -51,10 +55,56 @@ module Pier
     # Apresenta a taxa de desconto
     attr_accessor :taxa_desconto
 
+    # Data da compra.
+    attr_accessor :data_compra
+
+    # Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
+    attr_accessor :status
+
+    # Nome do estabelecimento da compra.
+    attr_accessor :nome_estabelecimento
+
+    # Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.
+    attr_accessor :tipo_origem_transacao
+
+    # Cidade onde a compra foi realizada.
+    attr_accessor :cidade
+
+    # Pa\u00C3\u00ADs onde a compra foi realizada.
+    attr_accessor :pais
+
+    # Coordenada latitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+    attr_accessor :latitude
+
+    # Coordenada longitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+    attr_accessor :longitude
+
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+    attr_accessor :id_grupo_mcc
+
+    # Descri\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+    attr_accessor :descricao_grupo_mcc
+
+    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+    attr_accessor :id_produto
+
+    # Descri\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+    attr_accessor :descricao_produto
+
+    # Descri\u00C3\u00A7\u00C3\u00A3o do estabelecimento da compra.
+    attr_accessor :descricao_estabelecimento
+
+    # Nome fantasia do estabelecimento da compra.
+    attr_accessor :nome_fantasia_estabelecimento
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
+        :'mcc' => :'mcc',
+        
+        :'uf' => :'uf',
         
         :'id' => :'id',
         
@@ -72,7 +122,35 @@ module Pier
         
         :'valor_total_com_desconto' => :'valorTotalComDesconto',
         
-        :'taxa_desconto' => :'taxaDesconto'
+        :'taxa_desconto' => :'taxaDesconto',
+        
+        :'data_compra' => :'dataCompra',
+        
+        :'status' => :'status',
+        
+        :'nome_estabelecimento' => :'nomeEstabelecimento',
+        
+        :'tipo_origem_transacao' => :'tipoOrigemTransacao',
+        
+        :'cidade' => :'cidade',
+        
+        :'pais' => :'pais',
+        
+        :'latitude' => :'latitude',
+        
+        :'longitude' => :'longitude',
+        
+        :'id_grupo_mcc' => :'idGrupoMCC',
+        
+        :'descricao_grupo_mcc' => :'descricaoGrupoMCC',
+        
+        :'id_produto' => :'idProduto',
+        
+        :'descricao_produto' => :'descricaoProduto',
+        
+        :'descricao_estabelecimento' => :'descricaoEstabelecimento',
+        
+        :'nome_fantasia_estabelecimento' => :'nomeFantasiaEstabelecimento'
         
       }
     end
@@ -80,6 +158,10 @@ module Pier
     # Attribute type mapping.
     def self.swagger_types
       {
+        
+        :'mcc' => :'Integer',
+        
+        :'uf' => :'String',
         
         :'id' => :'Integer',
         
@@ -97,7 +179,35 @@ module Pier
         
         :'valor_total_com_desconto' => :'Float',
         
-        :'taxa_desconto' => :'Float'
+        :'taxa_desconto' => :'Float',
+        
+        :'data_compra' => :'String',
+        
+        :'status' => :'String',
+        
+        :'nome_estabelecimento' => :'String',
+        
+        :'tipo_origem_transacao' => :'String',
+        
+        :'cidade' => :'String',
+        
+        :'pais' => :'String',
+        
+        :'latitude' => :'String',
+        
+        :'longitude' => :'String',
+        
+        :'id_grupo_mcc' => :'Integer',
+        
+        :'descricao_grupo_mcc' => :'String',
+        
+        :'id_produto' => :'Integer',
+        
+        :'descricao_produto' => :'String',
+        
+        :'descricao_estabelecimento' => :'String',
+        
+        :'nome_fantasia_estabelecimento' => :'String'
         
       }
     end
@@ -109,6 +219,24 @@ module Pier
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      
+      if attributes[:'mcc']
+        
+        
+        self.mcc = attributes[:'mcc']
+        
+      
+      end
+
+      
+      if attributes[:'uf']
+        
+        
+        self.uf = attributes[:'uf']
+        
+      
+      end
 
       
       if attributes[:'id']
@@ -192,6 +320,132 @@ module Pier
       end
 
       
+      if attributes[:'dataCompra']
+        
+        
+        self.data_compra = attributes[:'dataCompra']
+        
+      
+      end
+
+      
+      if attributes[:'status']
+        
+        
+        self.status = attributes[:'status']
+        
+      
+      end
+
+      
+      if attributes[:'nomeEstabelecimento']
+        
+        
+        self.nome_estabelecimento = attributes[:'nomeEstabelecimento']
+        
+      
+      end
+
+      
+      if attributes[:'tipoOrigemTransacao']
+        
+        
+        self.tipo_origem_transacao = attributes[:'tipoOrigemTransacao']
+        
+      
+      end
+
+      
+      if attributes[:'cidade']
+        
+        
+        self.cidade = attributes[:'cidade']
+        
+      
+      end
+
+      
+      if attributes[:'pais']
+        
+        
+        self.pais = attributes[:'pais']
+        
+      
+      end
+
+      
+      if attributes[:'latitude']
+        
+        
+        self.latitude = attributes[:'latitude']
+        
+      
+      end
+
+      
+      if attributes[:'longitude']
+        
+        
+        self.longitude = attributes[:'longitude']
+        
+      
+      end
+
+      
+      if attributes[:'idGrupoMCC']
+        
+        
+        self.id_grupo_mcc = attributes[:'idGrupoMCC']
+        
+      
+      end
+
+      
+      if attributes[:'descricaoGrupoMCC']
+        
+        
+        self.descricao_grupo_mcc = attributes[:'descricaoGrupoMCC']
+        
+      
+      end
+
+      
+      if attributes[:'idProduto']
+        
+        
+        self.id_produto = attributes[:'idProduto']
+        
+      
+      end
+
+      
+      if attributes[:'descricaoProduto']
+        
+        
+        self.descricao_produto = attributes[:'descricaoProduto']
+        
+      
+      end
+
+      
+      if attributes[:'descricaoEstabelecimento']
+        
+        
+        self.descricao_estabelecimento = attributes[:'descricaoEstabelecimento']
+        
+      
+      end
+
+      
+      if attributes[:'nomeFantasiaEstabelecimento']
+        
+        
+        self.nome_fantasia_estabelecimento = attributes[:'nomeFantasiaEstabelecimento']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -243,8 +497,152 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -296,6 +694,8 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          mcc == o.mcc &&
+          uf == o.uf &&
           id == o.id &&
           id_conta == o.id_conta &&
           id_compra == o.id_compra &&
@@ -304,7 +704,21 @@ module Pier
           valor_parcela == o.valor_parcela &&
           valor_desconto_total == o.valor_desconto_total &&
           valor_total_com_desconto == o.valor_total_com_desconto &&
-          taxa_desconto == o.taxa_desconto
+          taxa_desconto == o.taxa_desconto &&
+          data_compra == o.data_compra &&
+          status == o.status &&
+          nome_estabelecimento == o.nome_estabelecimento &&
+          tipo_origem_transacao == o.tipo_origem_transacao &&
+          cidade == o.cidade &&
+          pais == o.pais &&
+          latitude == o.latitude &&
+          longitude == o.longitude &&
+          id_grupo_mcc == o.id_grupo_mcc &&
+          descricao_grupo_mcc == o.descricao_grupo_mcc &&
+          id_produto == o.id_produto &&
+          descricao_produto == o.descricao_produto &&
+          descricao_estabelecimento == o.descricao_estabelecimento &&
+          nome_fantasia_estabelecimento == o.nome_fantasia_estabelecimento
     end
 
     # @see the `==` method
@@ -316,7 +730,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_conta, id_compra, quantidade_parcelas_total, quantidade_parcelas_antecipadas, valor_parcela, valor_desconto_total, valor_total_com_desconto, taxa_desconto].hash
+      [mcc, uf, id, id_conta, id_compra, quantidade_parcelas_total, quantidade_parcelas_antecipadas, valor_parcela, valor_desconto_total, valor_total_com_desconto, taxa_desconto, data_compra, status, nome_estabelecimento, tipo_origem_transacao, cidade, pais, latitude, longitude, id_grupo_mcc, descricao_grupo_mcc, id_produto, descricao_produto, descricao_estabelecimento, nome_fantasia_estabelecimento].hash
     end
 
     # Builds the object from hash

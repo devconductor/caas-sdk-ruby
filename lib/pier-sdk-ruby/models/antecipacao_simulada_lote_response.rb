@@ -63,7 +63,7 @@ module Pier
         
         :'valor_total_com_desconto' => :'Float',
         
-        :'antecipacoes_simuladas' => :'Array<AntecipacaoSimuladaMockResponse>'
+        :'antecipacoes_simuladas' => :'Array<AntecipacaoSimuladaResponse>'
         
       }
     end

@@ -182,7 +182,7 @@ No authorization required
 
 
 # **efetivar_antecipacoes_using_post**
-> AntecipacaoMockResponse efetivar_antecipacoes_using_post(id_conta, opts)
+> AntecipacaoResponse efetivar_antecipacoes_using_post(id_conta, opts)
 
 Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
 
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AntecipacaoMockResponse**](AntecipacaoMockResponse.md)
+[**AntecipacaoResponse**](AntecipacaoResponse.md)
 
 ### Authorization
 

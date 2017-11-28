@@ -63,36 +63,6 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for alterar_limite_using_put
-  # Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
-  # Esse recurso permite realizar a altera\u00C3\u00A7\u00C3\u00A3o dos Limites de uma determinada Conta.
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-  # @param [Hash] opts the optional parameters
-  # @option opts [Float] :limite_global Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
-  # @option opts [Float] :limite_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
-  # @option opts [Float] :limite_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
-  # @option opts [Float] :limite_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.
-  # @option opts [Float] :limite_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
-  # @option opts [Float] :limite_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
-  # @option opts [Float] :limite_consignado Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos.
-  # @option opts [Float] :limite_internacional_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais.
-  # @option opts [Float] :limite_internacional_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas.
-  # @option opts [Float] :limite_internacional_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
-  # @option opts [Float] :limite_internacional_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
-  # @option opts [Float] :limite_internacional_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
-  # @option opts [Float] :limite_maximo Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.
-  # @return [LimiteDisponibilidadeResponse]
-  describe 'alterar_limite_using_put test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
   # unit tests for alterar_produto_using_post
   # Altera o produto associado \u00C3\u00A0 conta.
   # O recurso permite fazer modifica\u00C3\u00A7\u00C3\u00A3o do produto associado \u00C3\u00A0 conta.
@@ -281,59 +251,6 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for consultar_fatura_using_get
-  # Consultar Fatura da Conta
-  # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar os detalhes de uma fatura vinculados a uma determinada conta.
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-  # @param data_vencimento Data Vencimento.
-  # @param [Hash] opts the optional parameters
-  # @return [DetalhesFaturaResponse]
-  describe 'consultar_fatura_using_get test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for consultar_lancamentos_futuros_fatura_using_get
-  # Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
-  # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar os detalhes dos lan\u00C3\u00A7amentos futuros de uma fatura vinculados a uma determinada conta.
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-  # @param [Hash] opts the optional parameters
-  # @option opts [String] :data_vencimento Data Vencimento
-  # @return [DetalhesFaturaResponse]
-  describe 'consultar_lancamentos_futuros_fatura_using_get test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for consultar_limite_disponibilidade_using_get1
-  # Apresenta os limites da conta
-  # Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-  # @param id Id Conta
-  # @param [Hash] opts the optional parameters
-  # @return [LimiteDisponibilidadeResponse]
-  describe 'consultar_limite_disponibilidade_using_get1 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
   # unit tests for consultar_taxas_tarifas_using_get
   # Permite consultar a partir do ID da conta as taxas e tarifas
   # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
@@ -354,7 +271,24 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for consultar_using_get30
+  # unit tests for consultar_using_get10
+  # Apresenta dados de uma determinada conta
+  # Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+  # @param [Hash] opts the optional parameters
+  # @return [ContaDetalheResponse]
+  describe 'consultar_using_get10 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for consultar_using_get35
   # Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
   # Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
   # @param id Id Conta
@@ -362,7 +296,7 @@ describe 'ContaApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
   # @return [TransferenciaBancariaResponse]
-  describe 'consultar_using_get30 test' do
+  describe 'consultar_using_get35 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -373,31 +307,14 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for consultar_using_get31
+  # unit tests for consultar_using_get36
   # Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
   # Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
   # @param id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
   # @param [Hash] opts the optional parameters
   # @return [TransferenciaDetalheResponse]
-  describe 'consultar_using_get31 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for consultar_using_get7
-  # Apresenta dados de uma determinada conta
-  # Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-  # @param [Hash] opts the optional parameters
-  # @return [ContaDetalheResponse]
-  describe 'consultar_using_get7 test' do
+  describe 'consultar_using_get36 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -506,27 +423,6 @@ describe 'ContaApi' do
   # @param [Hash] opts the optional parameters
   # @return [CartaoImpressaoResponse]
   describe 'gerar_cartao_virtual_using_post test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for listar_faturas_using_get
-  # Lista as faturas da conta
-  # Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-  # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [String] :data_vencimento Data de Vencimento da Fatura.
-  # @return [PageFaturaFechadaResponse]
-  describe 'listar_faturas_using_get test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -668,53 +564,7 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for listar_using_get34
-  # Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-  # Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
-  # @param id Id Conta
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @return [PageTransferenciaBancariaResponse]
-  describe 'listar_using_get34 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for listar_using_get35
-  # Lista as transfer\u00C3\u00AAncias realizadas pela conta
-  # Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-  # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id_transferencia C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).
-  # @option opts [Integer] :id_conta_origem C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id).
-  # @option opts [Integer] :id_conta_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
-  # @option opts [Float] :valor_transferencia Valor estabelecido para ser transferido.
-  # @option opts [String] :data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
-  # @return [PageTransferenciaResponse]
-  describe 'listar_using_get35 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for listar_using_get9
+  # unit tests for listar_using_get13
   # Lista contas existentes na base de dados do Emissor
   # Este recurso permite listar contas existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -731,7 +581,53 @@ describe 'ContaApi' do
   # @option opts [String] :data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
   # @option opts [String] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
   # @return [PageContaResponse]
-  describe 'listar_using_get9 test' do
+  describe 'listar_using_get13 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for listar_using_get40
+  # Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+  # Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
+  # @param id Id Conta
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @return [PageTransferenciaBancariaResponse]
+  describe 'listar_using_get40 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for listar_using_get41
+  # Lista as transfer\u00C3\u00AAncias realizadas pela conta
+  # Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+  # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [Integer] :id_transferencia C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).
+  # @option opts [Integer] :id_conta_origem C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id).
+  # @option opts [Integer] :id_conta_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
+  # @option opts [Float] :valor_transferencia Valor estabelecido para ser transferido.
+  # @option opts [String] :data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
+  # @return [PageTransferenciaResponse]
+  describe 'listar_using_get41 test' do
     it "should work" do
       # assertion here
       # should be_a()

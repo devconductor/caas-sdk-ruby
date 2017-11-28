@@ -118,6 +118,9 @@ module Pier
     # Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
     attr_accessor :limite_parcelas
 
+    # Valor do limite de margem consignado
+    attr_accessor :limite_consignado
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -183,7 +186,9 @@ module Pier
         
         :'limite_maximo' => :'limiteMaximo',
         
-        :'limite_parcelas' => :'limiteParcelas'
+        :'limite_parcelas' => :'limiteParcelas',
+        
+        :'limite_consignado' => :'limiteConsignado'
         
       }
     end
@@ -252,7 +257,9 @@ module Pier
         
         :'limite_maximo' => :'Float',
         
-        :'limite_parcelas' => :'Float'
+        :'limite_parcelas' => :'Float',
+        
+        :'limite_consignado' => :'Float'
         
       }
     end
@@ -549,6 +556,15 @@ module Pier
       end
 
       
+      if attributes[:'limiteConsignado']
+        
+        
+        self.limite_consignado = attributes[:'limiteConsignado']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -733,8 +749,22 @@ module Pier
       
       
       
+      
+      if @limite_consignado.nil?
+        return false
+      end
+
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -926,7 +956,8 @@ module Pier
           enderecos == o.enderecos &&
           limite_global == o.limite_global &&
           limite_maximo == o.limite_maximo &&
-          limite_parcelas == o.limite_parcelas
+          limite_parcelas == o.limite_parcelas &&
+          limite_consignado == o.limite_consignado
     end
 
     # @see the `==` method
@@ -938,7 +969,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, nome, nome_mae, data_nascimento, sexo, cpf, numero_identidade, orgao_expedidor_identidade, unidade_federativa_identidade, data_emissao_identidade, id_estado_civil, id_profissao, id_natureza_ocupacao, id_nacionalidade, id_origem_comercial, id_produto, numero_agencia, numero_conta_corrente, email, dia_vencimento, nome_impresso, nome_empresa, id_conta, id_proposta, canal_entrada, valor_pontuacao, telefones, enderecos, limite_global, limite_maximo, limite_parcelas].hash
+      [id, nome, nome_mae, data_nascimento, sexo, cpf, numero_identidade, orgao_expedidor_identidade, unidade_federativa_identidade, data_emissao_identidade, id_estado_civil, id_profissao, id_natureza_ocupacao, id_nacionalidade, id_origem_comercial, id_produto, numero_agencia, numero_conta_corrente, email, dia_vencimento, nome_impresso, nome_empresa, id_conta, id_proposta, canal_entrada, valor_pontuacao, telefones, enderecos, limite_global, limite_maximo, limite_parcelas, limite_consignado].hash
     end
 
     # Builds the object from hash

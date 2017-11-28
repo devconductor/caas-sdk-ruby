@@ -43,6 +43,28 @@ describe 'AntecipacaoResponse' do
     end
   end
 
+  describe 'test attribute "mcc"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "uf"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
   describe 'test attribute "id"' do
     it 'should work' do
        # assertion here
@@ -132,6 +154,160 @@ describe 'AntecipacaoResponse' do
 
 
   describe 'test attribute "taxa_desconto"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "data_compra"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "status"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "nome_estabelecimento"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "tipo_origem_transacao"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "cidade"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "pais"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "latitude"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "longitude"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "id_grupo_mcc"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "descricao_grupo_mcc"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "id_produto"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "descricao_produto"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "descricao_estabelecimento"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "nome_fantasia_estabelecimento"' do
     it 'should work' do
        # assertion here
        # should be_a()

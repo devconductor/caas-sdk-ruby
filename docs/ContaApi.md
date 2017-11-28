@@ -5,7 +5,6 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ajustar_conta_using_post**](ContaApi.md#ajustar_conta_using_post) | **POST** /api/contas/{id}/ajustes-financeiros | Lan\u00C3\u00A7a um ajuste para a conta do id informado
-[**alterar_limite_using_put**](ContaApi.md#alterar_limite_using_put) | **PUT** /api/contas/{id}/alterar-limites | Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
 [**alterar_produto_using_post**](ContaApi.md#alterar_produto_using_post) | **POST** /api/contas/{id}/alterar-produto | Altera o produto associado \u00C3\u00A0 conta.
 [**alterar_titular_using_post**](ContaApi.md#alterar_titular_using_post) | **POST** /api/contas/{id}/alterar-titular | Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
 [**alterar_vencimento_using_put**](ContaApi.md#alterar_vencimento_using_put) | **PUT** /api/contas/{id}/alterar-vencimento | Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
@@ -16,29 +15,25 @@ Method | HTTP request | Description
 [**consultar_beneficio_pagamento_atraso_using_get**](ContaApi.md#consultar_beneficio_pagamento_atraso_using_get) | **GET** /api/contas/{id}/consultar-beneficio-pagamento-atraso | Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
 [**consultar_boleto_emitido_using_get**](ContaApi.md#consultar_boleto_emitido_using_get) | **GET** /api/contas/{id}/consultar-dados-pagamento-fatura | Consulta os dados de um determinado boleto da fatura
 [**consultar_divida_atualizada_cliente_using_get**](ContaApi.md#consultar_divida_atualizada_cliente_using_get) | **GET** /api/contas/{id}/recuperar-divida-atualizada | Consulta a d\u00C3\u00ADvida atualizada do cliente
-[**consultar_fatura_using_get**](ContaApi.md#consultar_fatura_using_get) | **GET** /api/contas/{id}/faturas/consultar-fechada | Consultar Fatura da Conta
-[**consultar_lancamentos_futuros_fatura_using_get**](ContaApi.md#consultar_lancamentos_futuros_fatura_using_get) | **GET** /api/contas/{id}/faturas/consultar-aberta | Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
-[**consultar_limite_disponibilidade_using_get1**](ContaApi.md#consultar_limite_disponibilidade_using_get1) | **GET** /api/contas/{id}/limites-disponibilidades | Apresenta os limites da conta
 [**consultar_taxas_tarifas_using_get**](ContaApi.md#consultar_taxas_tarifas_using_get) | **GET** /api/contas/{id}/consultar-taxas-tarifas | Permite consultar a partir do ID da conta as taxas e tarifas
-[**consultar_using_get30**](ContaApi.md#consultar_using_get30) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-[**consultar_using_get31**](ContaApi.md#consultar_using_get31) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-[**consultar_using_get7**](ContaApi.md#consultar_using_get7) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
+[**consultar_using_get10**](ContaApi.md#consultar_using_get10) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
+[**consultar_using_get35**](ContaApi.md#consultar_using_get35) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+[**consultar_using_get36**](ContaApi.md#consultar_using_get36) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 [**desativar_envio_fatura_email_using_post**](ContaApi.md#desativar_envio_fatura_email_using_post) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00C3\u00A7o de envio de fatura por email
 [**gerar_boleto_recarga_using_post**](ContaApi.md#gerar_boleto_recarga_using_post) | **POST** /api/contas/{id}/gerar-boleto-recarga | Gera um boleto de recarga
 [**gerar_cartao_embossing_using_post**](ContaApi.md#gerar_cartao_embossing_using_post) | **POST** /api/contas/{id}/gerar-cartao-grafica | Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
 [**gerar_cartao_provisorio_using_post**](ContaApi.md#gerar_cartao_provisorio_using_post) | **POST** /api/contas/{id}/gerar-cartao-provisorio | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
 [**gerar_cartao_using_post**](ContaApi.md#gerar_cartao_using_post) | **POST** /api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
 [**gerar_cartao_virtual_using_post**](ContaApi.md#gerar_cartao_virtual_using_post) | **POST** /api/contas/{id}/gerar-cartao-virtual | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
-[**listar_faturas_using_get**](ContaApi.md#listar_faturas_using_get) | **GET** /api/contas/{id}/faturas | Lista as faturas da conta
 [**listar_historico_alteracoes_limites_using_get**](ContaApi.md#listar_historico_alteracoes_limites_using_get) | **GET** /api/contas/{id}/historicos-alteracoes-limites | Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
 [**listar_historico_assessoria_using_get**](ContaApi.md#listar_historico_assessoria_using_get) | **GET** /api/contas/{id}/historicos-assessorias-cobranca | Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
 [**listar_historico_atrasos_faturas_using_get**](ContaApi.md#listar_historico_atrasos_faturas_using_get) | **GET** /api/contas/{id}/historicos-faturas-atrasos | Lista o historico de atrasos das faturas
 [**listar_nao_processadas_using_get**](ContaApi.md#listar_nao_processadas_using_get) | **GET** /api/contas/{id}/transacoes/listar-nao-processadas | Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
 [**listar_pagamentos_using_get**](ContaApi.md#listar_pagamentos_using_get) | **GET** /api/contas/{id}/pagamentos | Lista hist\u00C3\u00B3rico de pagamentos da conta
 [**listar_processadas_using_get**](ContaApi.md#listar_processadas_using_get) | **GET** /api/contas/{id}/transacoes/listar-processadas | Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
-[**listar_using_get34**](ContaApi.md#listar_using_get34) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-[**listar_using_get35**](ContaApi.md#listar_using_get35) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
-[**listar_using_get9**](ContaApi.md#listar_using_get9) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
+[**listar_using_get13**](ContaApi.md#listar_using_get13) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
+[**listar_using_get40**](ContaApi.md#listar_using_get40) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+[**listar_using_get41**](ContaApi.md#listar_using_get41) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
 [**reativar_using_post1**](ContaApi.md#reativar_using_post1) | **POST** /api/contas/{id}/reativar | Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
 [**simular_emprestimo_financiamento_using_post**](ContaApi.md#simular_emprestimo_financiamento_using_post) | **POST** /api/contas/{id}/simular-emprestimos-financiamentos | Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
 [**transacoes_using_get**](ContaApi.md#transacoes_using_get) | **GET** /api/contas/{id}/timeline | Permite listar uma linha do tempo com os eventos da conta
@@ -94,84 +89,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AjusteResponse**](AjusteResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **alterar_limite_using_put**
-> LimiteDisponibilidadeResponse alterar_limite_using_put(id, opts)
-
-Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
-
-Esse recurso permite realizar a altera\u00C3\u00A7\u00C3\u00A3o dos Limites de uma determinada Conta.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::ContaApi.new
-
-id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-
-opts = { 
-  limite_global: 3.4, # Float | Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
-  limite_compra: 3.4, # Float | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
-  limite_parcelado: 3.4, # Float | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
-  limite_parcelas: 3.4, # Float | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.
-  limite_saque_global: 3.4, # Float | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
-  limite_saque_periodo: 3.4, # Float | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
-  limite_consignado: 3.4, # Float | Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos.
-  limite_internacional_compra: 3.4, # Float | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais.
-  limite_internacional_parcelado: 3.4, # Float | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas.
-  limite_internacional_parcelas: 3.4, # Float | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
-  limite_internacional_saque_global: 3.4, # Float | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
-  limite_internacional_saque_periodo: 3.4, # Float | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
-  limite_maximo: 3.4 # Float | Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.
-}
-
-begin
-  #Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
-  result = api_instance.alterar_limite_using_put(id, opts)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->alterar_limite_using_put: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **limite_global** | [**Float**](.md)| Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui. | [optional] 
- **limite_compra** | [**Float**](.md)| Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais. | [optional] 
- **limite_parcelado** | [**Float**](.md)| Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas. | [optional] 
- **limite_parcelas** | [**Float**](.md)| Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade. | [optional] 
- **limite_saque_global** | [**Float**](.md)| Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional. | [optional] 
- **limite_saque_periodo** | [**Float**](.md)| Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento. | [optional] 
- **limite_consignado** | [**Float**](.md)| Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos. | [optional] 
- **limite_internacional_compra** | [**Float**](.md)| Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais. | [optional] 
- **limite_internacional_parcelado** | [**Float**](.md)| Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas. | [optional] 
- **limite_internacional_parcelas** | [**Float**](.md)| Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. | [optional] 
- **limite_internacional_saque_global** | [**Float**](.md)| Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional. | [optional] 
- **limite_internacional_saque_periodo** | [**Float**](.md)| Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento. | [optional] 
- **limite_maximo** | [**Float**](.md)| Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es. | [optional] 
-
-
-### Return type
-
-[**LimiteDisponibilidadeResponse**](LimiteDisponibilidadeResponse.md)
 
 ### Authorization
 
@@ -731,163 +648,6 @@ No authorization required
 
 
 
-# **consultar_fatura_using_get**
-> DetalhesFaturaResponse consultar_fatura_using_get(id, data_vencimento)
-
-Consultar Fatura da Conta
-
-Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar os detalhes de uma fatura vinculados a uma determinada conta.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::ContaApi.new
-
-id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-
-data_vencimento = "data_vencimento_example" # String | Data Vencimento.
-
-
-begin
-  #Consultar Fatura da Conta
-  result = api_instance.consultar_fatura_using_get(id, data_vencimento)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->consultar_fatura_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **data_vencimento** | **String**| Data Vencimento. | 
-
-
-### Return type
-
-[**DetalhesFaturaResponse**](DetalhesFaturaResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **consultar_lancamentos_futuros_fatura_using_get**
-> DetalhesFaturaResponse consultar_lancamentos_futuros_fatura_using_get(id, opts)
-
-Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
-
-Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar os detalhes dos lan\u00C3\u00A7amentos futuros de uma fatura vinculados a uma determinada conta.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::ContaApi.new
-
-id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-
-opts = { 
-  data_vencimento: "data_vencimento_example" # String | Data Vencimento
-}
-
-begin
-  #Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
-  result = api_instance.consultar_lancamentos_futuros_fatura_using_get(id, opts)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->consultar_lancamentos_futuros_fatura_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **data_vencimento** | **String**| Data Vencimento | [optional] 
-
-
-### Return type
-
-[**DetalhesFaturaResponse**](DetalhesFaturaResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **consultar_limite_disponibilidade_using_get1**
-> LimiteDisponibilidadeResponse consultar_limite_disponibilidade_using_get1(id)
-
-Apresenta os limites da conta
-
-Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::ContaApi.new
-
-id = 789 # Integer | Id Conta
-
-
-begin
-  #Apresenta os limites da conta
-  result = api_instance.consultar_limite_disponibilidade_using_get1(id)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->consultar_limite_disponibilidade_using_get1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| Id Conta | 
-
-
-### Return type
-
-[**LimiteDisponibilidadeResponse**](LimiteDisponibilidadeResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
 # **consultar_taxas_tarifas_using_get**
 > PageTaxasRefinanciamentoResponse consultar_taxas_tarifas_using_get(id, opts)
 
@@ -946,8 +706,58 @@ No authorization required
 
 
 
-# **consultar_using_get30**
-> TransferenciaBancariaResponse consultar_using_get30(id, id_transferencia, opts)
+# **consultar_using_get10**
+> ContaDetalheResponse consultar_using_get10(id)
+
+Apresenta dados de uma determinada conta
+
+Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::ContaApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+
+begin
+  #Apresenta dados de uma determinada conta
+  result = api_instance.consultar_using_get10(id)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ContaApi->consultar_using_get10: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+
+
+### Return type
+
+[**ContaDetalheResponse**](ContaDetalheResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **consultar_using_get35**
+> TransferenciaBancariaResponse consultar_using_get35(id, id_transferencia, opts)
 
 Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
 
@@ -971,10 +781,10 @@ opts = {
 
 begin
   #Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-  result = api_instance.consultar_using_get30(id, id_transferencia, opts)
+  result = api_instance.consultar_using_get35(id, id_transferencia, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->consultar_using_get30: #{e}"
+  puts "Exception when calling ContaApi->consultar_using_get35: #{e}"
 end
 ```
 
@@ -1003,8 +813,8 @@ No authorization required
 
 
 
-# **consultar_using_get31**
-> TransferenciaDetalheResponse consultar_using_get31(id, id_transferencia)
+# **consultar_using_get36**
+> TransferenciaDetalheResponse consultar_using_get36(id, id_transferencia)
 
 Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 
@@ -1025,10 +835,10 @@ id_transferencia = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u
 
 begin
   #Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-  result = api_instance.consultar_using_get31(id, id_transferencia)
+  result = api_instance.consultar_using_get36(id, id_transferencia)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->consultar_using_get31: #{e}"
+  puts "Exception when calling ContaApi->consultar_using_get36: #{e}"
 end
 ```
 
@@ -1043,56 +853,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TransferenciaDetalheResponse**](TransferenciaDetalheResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **consultar_using_get7**
-> ContaDetalheResponse consultar_using_get7(id)
-
-Apresenta dados de uma determinada conta
-
-Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::ContaApi.new
-
-id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-
-
-begin
-  #Apresenta dados de uma determinada conta
-  result = api_instance.consultar_using_get7(id)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->consultar_using_get7: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
-
-
-### Return type
-
-[**ContaDetalheResponse**](ContaDetalheResponse.md)
 
 ### Authorization
 
@@ -1412,66 +1172,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CartaoImpressaoResponse**](CartaoImpressaoResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **listar_faturas_using_get**
-> PageFaturaFechadaResponse listar_faturas_using_get(id, opts)
-
-Lista as faturas da conta
-
-Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::ContaApi.new
-
-id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-
-opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  data_vencimento: "data_vencimento_example" # String | Data de Vencimento da Fatura.
-}
-
-begin
-  #Lista as faturas da conta
-  result = api_instance.listar_faturas_using_get(id, opts)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->listar_faturas_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **data_vencimento** | **String**| Data de Vencimento da Fatura. | [optional] 
-
-
-### Return type
-
-[**PageFaturaFechadaResponse**](PageFaturaFechadaResponse.md)
 
 ### Authorization
 
@@ -1855,136 +1555,8 @@ No authorization required
 
 
 
-# **listar_using_get34**
-> PageTransferenciaBancariaResponse listar_using_get34(id, opts)
-
-Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-
-Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::ContaApi.new
-
-id = 789 # Integer | Id Conta
-
-opts = { 
-  id_conta_bancaria_destino: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-}
-
-begin
-  #Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-  result = api_instance.listar_using_get34(id, opts)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->listar_using_get34: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| Id Conta | 
- **id_conta_bancaria_destino** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) | [optional] 
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
-
-
-### Return type
-
-[**PageTransferenciaBancariaResponse**](PageTransferenciaBancariaResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **listar_using_get35**
-> PageTransferenciaResponse listar_using_get35(id, opts)
-
-Lista as transfer\u00C3\u00AAncias realizadas pela conta
-
-Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::ContaApi.new
-
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-
-opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id_transferencia: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).
-  id_conta_origem: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id).
-  id_conta_destino: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
-  valor_transferencia: 3.4, # Float | Valor estabelecido para ser transferido.
-  data_transferencia: "data_transferencia_example" # String | Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
-}
-
-begin
-  #Lista as transfer\u00C3\u00AAncias realizadas pela conta
-  result = api_instance.listar_using_get35(id, opts)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->listar_using_get35: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id_transferencia** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id). | [optional] 
- **id_conta_origem** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id). | [optional] 
- **id_conta_destino** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id). | [optional] 
- **valor_transferencia** | [**Float**](.md)| Valor estabelecido para ser transferido. | [optional] 
- **data_transferencia** | **String**| Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. | [optional] 
-
-
-### Return type
-
-[**PageTransferenciaResponse**](PageTransferenciaResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **listar_using_get9**
-> PageContaResponse listar_using_get9(opts)
+# **listar_using_get13**
+> PageContaResponse listar_using_get13(opts)
 
 Lista contas existentes na base de dados do Emissor
 
@@ -2015,10 +1587,10 @@ opts = {
 
 begin
   #Lista contas existentes na base de dados do Emissor
-  result = api_instance.listar_using_get9(opts)
+  result = api_instance.listar_using_get13(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->listar_using_get9: #{e}"
+  puts "Exception when calling ContaApi->listar_using_get13: #{e}"
 end
 ```
 
@@ -2043,6 +1615,134 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PageContaResponse**](PageContaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_using_get40**
+> PageTransferenciaBancariaResponse listar_using_get40(id, opts)
+
+Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+
+Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::ContaApi.new
+
+id = 789 # Integer | Id Conta
+
+opts = { 
+  id_conta_bancaria_destino: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+}
+
+begin
+  #Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+  result = api_instance.listar_using_get40(id, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ContaApi->listar_using_get40: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| Id Conta | 
+ **id_conta_bancaria_destino** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+
+
+### Return type
+
+[**PageTransferenciaBancariaResponse**](PageTransferenciaBancariaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_using_get41**
+> PageTransferenciaResponse listar_using_get41(id, opts)
+
+Lista as transfer\u00C3\u00AAncias realizadas pela conta
+
+Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::ContaApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  id_transferencia: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).
+  id_conta_origem: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id).
+  id_conta_destino: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
+  valor_transferencia: 3.4, # Float | Valor estabelecido para ser transferido.
+  data_transferencia: "data_transferencia_example" # String | Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
+}
+
+begin
+  #Lista as transfer\u00C3\u00AAncias realizadas pela conta
+  result = api_instance.listar_using_get41(id, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ContaApi->listar_using_get41: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id_transferencia** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id). | [optional] 
+ **id_conta_origem** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id). | [optional] 
+ **id_conta_destino** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id). | [optional] 
+ **valor_transferencia** | [**Float**](.md)| Valor estabelecido para ser transferido. | [optional] 
+ **data_transferencia** | **String**| Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. | [optional] 
+
+
+### Return type
+
+[**PageTransferenciaResponse**](PageTransferenciaResponse.md)
 
 ### Authorization
 

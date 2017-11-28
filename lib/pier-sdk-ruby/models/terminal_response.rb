@@ -37,6 +37,12 @@ module Pier
     # N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
     attr_accessor :id_estabelecimento
 
+    # Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+    attr_accessor :flag_consulta_extrato
+
+    # Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+    attr_accessor :flag_terminal_virtual
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -48,7 +54,11 @@ module Pier
         
         :'numero_estabelecimento' => :'numeroEstabelecimento',
         
-        :'id_estabelecimento' => :'idEstabelecimento'
+        :'id_estabelecimento' => :'idEstabelecimento',
+        
+        :'flag_consulta_extrato' => :'flagConsultaExtrato',
+        
+        :'flag_terminal_virtual' => :'flagTerminalVirtual'
         
       }
     end
@@ -63,7 +73,11 @@ module Pier
         
         :'numero_estabelecimento' => :'Integer',
         
-        :'id_estabelecimento' => :'Integer'
+        :'id_estabelecimento' => :'Integer',
+        
+        :'flag_consulta_extrato' => :'BOOLEAN',
+        
+        :'flag_terminal_virtual' => :'BOOLEAN'
         
       }
     end
@@ -113,6 +127,24 @@ module Pier
       end
 
       
+      if attributes[:'flagConsultaExtrato']
+        
+        
+        self.flag_consulta_extrato = attributes[:'flagConsultaExtrato']
+        
+      
+      end
+
+      
+      if attributes[:'flagTerminalVirtual']
+        
+        
+        self.flag_terminal_virtual = attributes[:'flagTerminalVirtual']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -144,8 +176,26 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -175,7 +225,9 @@ module Pier
           id == o.id &&
           terminal == o.terminal &&
           numero_estabelecimento == o.numero_estabelecimento &&
-          id_estabelecimento == o.id_estabelecimento
+          id_estabelecimento == o.id_estabelecimento &&
+          flag_consulta_extrato == o.flag_consulta_extrato &&
+          flag_terminal_virtual == o.flag_terminal_virtual
     end
 
     # @see the `==` method
@@ -187,7 +239,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, terminal, numero_estabelecimento, id_estabelecimento].hash
+      [id, terminal, numero_estabelecimento, id_estabelecimento, flag_consulta_extrato, flag_terminal_virtual].hash
     end
 
     # Builds the object from hash

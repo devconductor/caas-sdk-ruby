@@ -51,6 +51,9 @@ module Pier
     # Valor do pagamento m\u00C3\u00ADnimo.
     attr_accessor :valor_pagamento_minimo
 
+    # Valor do saldo anterior.
+    attr_accessor :saldo_anterior
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -72,7 +75,9 @@ module Pier
         
         :'valor_total' => :'valorTotal',
         
-        :'valor_pagamento_minimo' => :'valorPagamentoMinimo'
+        :'valor_pagamento_minimo' => :'valorPagamentoMinimo',
+        
+        :'saldo_anterior' => :'saldoAnterior'
         
       }
     end
@@ -97,7 +102,9 @@ module Pier
         
         :'valor_total' => :'Float',
         
-        :'valor_pagamento_minimo' => :'Float'
+        :'valor_pagamento_minimo' => :'Float',
+        
+        :'saldo_anterior' => :'Float'
         
       }
     end
@@ -194,6 +201,15 @@ module Pier
       end
 
       
+      if attributes[:'saldoAnterior']
+        
+        
+        self.saldo_anterior = attributes[:'saldoAnterior']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -223,6 +239,10 @@ module Pier
       if @situacao_processamento && !allowed_values.include?(@situacao_processamento)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -307,6 +327,11 @@ module Pier
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared 
     def ==(o)
@@ -320,7 +345,8 @@ module Pier
           data_vencimento_real == o.data_vencimento_real &&
           data_fechamento == o.data_fechamento &&
           valor_total == o.valor_total &&
-          valor_pagamento_minimo == o.valor_pagamento_minimo
+          valor_pagamento_minimo == o.valor_pagamento_minimo &&
+          saldo_anterior == o.saldo_anterior
     end
 
     # @see the `==` method
@@ -332,7 +358,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [lancamentos_fatura_response, id_conta, situacao_processamento, pagamento_efetuado, data_vencimento_fatura, data_vencimento_real, data_fechamento, valor_total, valor_pagamento_minimo].hash
+      [lancamentos_fatura_response, id_conta, situacao_processamento, pagamento_efetuado, data_vencimento_fatura, data_vencimento_real, data_fechamento, valor_total, valor_pagamento_minimo, saldo_anterior].hash
     end
 
     # Builds the object from hash

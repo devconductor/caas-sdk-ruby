@@ -62,14 +62,14 @@ describe 'OportunidadeApi' do
   end
 
 
-  # unit tests for alterar_using_put4
-  # Altera as oportunidades
-  # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das oportunidades.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
-  # @param update update
+  # unit tests for alterar_using_put14
+  # Altera os tipos oportunidades
+  # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos tipos oportunidades.
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
+  # @param persist persist
   # @param [Hash] opts the optional parameters
-  # @return [OportunidadeResponse]
-  describe 'alterar_using_put4 test' do
+  # @return [TipoOportunidadeResponse]
+  describe 'alterar_using_put14 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -81,12 +81,12 @@ describe 'OportunidadeApi' do
 
 
   # unit tests for alterar_using_put8
-  # Altera os tipos oportunidades
-  # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos tipos oportunidades.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
-  # @param persist persist
+  # Altera as oportunidades
+  # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das oportunidades.
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
+  # @param update update
   # @param [Hash] opts the optional parameters
-  # @return [TipoOportunidadeResponse]
+  # @return [OportunidadeResponse]
   describe 'alterar_using_put8 test' do
     it "should work" do
       # assertion here
@@ -116,13 +116,13 @@ describe 'OportunidadeApi' do
   end
 
 
-  # unit tests for consultar_using_get13
+  # unit tests for consultar_using_get17
   # Apresenta dados de uma determinada oportunidade
   # Este recurso permite consultar dados de uma determinada oportunidade a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
   # @param [Hash] opts the optional parameters
   # @return [OportunidadeResponse]
-  describe 'consultar_using_get13 test' do
+  describe 'consultar_using_get17 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -133,13 +133,13 @@ describe 'OportunidadeApi' do
   end
 
 
-  # unit tests for consultar_using_get26
+  # unit tests for consultar_using_get31
   # Apresenta dados de um determinado tipo oportunidade
   # Este recurso permite consultar dados de um determinado tipo oportunidade a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
   # @param [Hash] opts the optional parameters
   # @return [TipoOportunidadeResponse]
-  describe 'consultar_using_get26 test' do
+  describe 'consultar_using_get31 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -254,7 +254,7 @@ describe 'OportunidadeApi' do
   end
 
 
-  # unit tests for listar_using_get17
+  # unit tests for listar_using_get21
   # Lista as oportunidades
   # Este recurso permite listar as oportunidades.
   # @param [Hash] opts the optional parameters
@@ -269,7 +269,7 @@ describe 'OportunidadeApi' do
   # @option opts [String] :data_fim_vigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
   # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
   # @return [PageOportunidadeResponse]
-  describe 'listar_using_get17 test' do
+  describe 'listar_using_get21 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -280,7 +280,7 @@ describe 'OportunidadeApi' do
   end
 
 
-  # unit tests for listar_using_get30
+  # unit tests for listar_using_get36
   # Lista os tipos oportunidades
   # Este recurso permite listar os tipos oportunidades.
   # @param [Hash] opts the optional parameters
@@ -290,7 +290,7 @@ describe 'OportunidadeApi' do
   # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
   # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
   # @return [PageTipoOportunidadeResponse]
-  describe 'listar_using_get30 test' do
+  describe 'listar_using_get36 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -319,13 +319,13 @@ describe 'OportunidadeApi' do
   end
 
 
-  # unit tests for salvar_using_post12
+  # unit tests for salvar_using_post15
   # Cadastra as oportunidades
   # Esse recurso permite cadastrar oportunidades.
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [OportunidadeResponse]
-  describe 'salvar_using_post12 test' do
+  describe 'salvar_using_post15 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -336,13 +336,13 @@ describe 'OportunidadeApi' do
   end
 
 
-  # unit tests for salvar_using_post17
+  # unit tests for salvar_using_post21
   # Cadastra tipos oportunidades
   # Esse recurso permite cadastrar tipos oportunidades.
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [TipoOportunidadeResponse]
-  describe 'salvar_using_post17 test' do
+  describe 'salvar_using_post21 test' do
     it "should work" do
       # assertion here
       # should be_a()

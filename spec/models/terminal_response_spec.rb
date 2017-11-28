@@ -87,5 +87,27 @@ describe 'TerminalResponse' do
   end
 
 
+  describe 'test attribute "flag_consulta_extrato"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "flag_terminal_virtual"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
 end
 

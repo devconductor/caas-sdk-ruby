@@ -219,14 +219,14 @@ describe 'ConductorPayApi' do
   end
 
 
-  # unit tests for salvar_using_post4
+  # unit tests for salvar_using_post5
   # Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
   # Este met\u00C3\u00B3do permite a tokeniza\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o a partir dos seus dados impressos.
   # @param device_id Device id criptografado
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [CartaoPayCadastroResponse]
-  describe 'salvar_using_post4 test' do
+  describe 'salvar_using_post5 test' do
     it "should work" do
       # assertion here
       # should be_a()

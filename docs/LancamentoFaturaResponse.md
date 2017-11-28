@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **numero_cartao_mascarado** | **String** | N\u00C3\u00BAmero do cart\u00C3\u00A3o mascarado | [optional] 
 **flag_solicitou_contestacao** | **BOOLEAN** | Flag que indica se o cliente solicitou contesta\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o | [optional] 
 **valor_taxa_embarque** | **Float** | Valor da taxa de embarque | [optional] 
+**descricao_abreviada** | **String** | Descri\u00C3\u00A7\u00C3\u00A3o abreviada da transa\u00C3\u00A7\u00C3\u00A3o | [optional] 
 
 
 

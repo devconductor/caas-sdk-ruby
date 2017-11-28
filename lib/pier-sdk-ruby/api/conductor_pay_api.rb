@@ -760,8 +760,8 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [CartaoPayCadastroResponse]
-    def salvar_using_post4(device_id, persist, opts = {})
-      data, _status_code, _headers = salvar_using_post4_with_http_info(device_id, persist, opts)
+    def salvar_using_post5(device_id, persist, opts = {})
+      data, _status_code, _headers = salvar_using_post5_with_http_info(device_id, persist, opts)
       return data
     end
 
@@ -771,14 +771,14 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(CartaoPayCadastroResponse, Fixnum, Hash)>] CartaoPayCadastroResponse data, response status code and response headers
-    def salvar_using_post4_with_http_info(device_id, persist, opts = {})
+    def salvar_using_post5_with_http_info(device_id, persist, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ConductorPayApi.salvar_using_post4 ..."
+        @api_client.config.logger.debug "Calling API: ConductorPayApi.salvar_using_post5 ..."
       end
       
       
       # verify the required parameter 'device_id' is set
-      fail ArgumentError, "Missing the required parameter 'device_id' when calling ConductorPayApi.salvar_using_post4" if device_id.nil?
+      fail ArgumentError, "Missing the required parameter 'device_id' when calling ConductorPayApi.salvar_using_post5" if device_id.nil?
       
       
       
@@ -786,7 +786,7 @@ module Pier
       
       
       # verify the required parameter 'persist' is set
-      fail ArgumentError, "Missing the required parameter 'persist' when calling ConductorPayApi.salvar_using_post4" if persist.nil?
+      fail ArgumentError, "Missing the required parameter 'persist' when calling ConductorPayApi.salvar_using_post5" if persist.nil?
       
       
       
@@ -825,7 +825,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'CartaoPayCadastroResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ConductorPayApi#salvar_using_post4\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ConductorPayApi#salvar_using_post5\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

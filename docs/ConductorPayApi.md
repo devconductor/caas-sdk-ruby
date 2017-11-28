@@ -14,7 +14,7 @@ Method | HTTP request | Description
 [**listar_tipos_terminais_using_get**](ConductorPayApi.md#listar_tipos_terminais_using_get) | **GET** /api/tipos-terminais | Lista os tipos de terminais
 [**listar_tipos_transacoes_using_get**](ConductorPayApi.md#listar_tipos_transacoes_using_get) | **GET** /api/tipos-transacoes | Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
 [**listar_using_get6**](ConductorPayApi.md#listar_using_get6) | **GET** /api/cartoes-tokenizados | Lista os cart\u00C3\u00B5es cadastrados
-[**salvar_using_post4**](ConductorPayApi.md#salvar_using_post4) | **POST** /api/cartoes-tokenizados | Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
+[**salvar_using_post5**](ConductorPayApi.md#salvar_using_post5) | **POST** /api/cartoes-tokenizados | Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
 
 
 
@@ -518,8 +518,8 @@ No authorization required
 
 
 
-# **salvar_using_post4**
-> CartaoPayCadastroResponse salvar_using_post4(device_id, persist)
+# **salvar_using_post5**
+> CartaoPayCadastroResponse salvar_using_post5(device_id, persist)
 
 Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
 
@@ -540,10 +540,10 @@ persist = Pier::CartaoPayPersist.new # CartaoPayPersist | persist
 
 begin
   #Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
-  result = api_instance.salvar_using_post4(device_id, persist)
+  result = api_instance.salvar_using_post5(device_id, persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ConductorPayApi->salvar_using_post4: #{e}"
+  puts "Exception when calling ConductorPayApi->salvar_using_post5: #{e}"
 end
 ```
 

@@ -50,9 +50,6 @@ require 'pier-sdk-ruby/models/alterar_produto_request'
 require 'pier-sdk-ruby/models/anexo_notificacao_email_request'
 
 
-require 'pier-sdk-ruby/models/antecipacao_mock_response'
-
-
 require 'pier-sdk-ruby/models/antecipacao_response'
 
 
@@ -60,9 +57,6 @@ require 'pier-sdk-ruby/models/antecipacao_simulada_detalhes_response'
 
 
 require 'pier-sdk-ruby/models/antecipacao_simulada_lote_response'
-
-
-require 'pier-sdk-ruby/models/antecipacao_simulada_mock_response'
 
 
 require 'pier-sdk-ruby/models/antecipacao_simulada_response'
@@ -117,6 +111,15 @@ require 'pier-sdk-ruby/models/body_access_token'
 
 
 require 'pier-sdk-ruby/models/boleto_response'
+
+
+require 'pier-sdk-ruby/models/campanha_persist'
+
+
+require 'pier-sdk-ruby/models/campanha_response'
+
+
+require 'pier-sdk-ruby/models/campanha_update'
 
 
 require 'pier-sdk-ruby/models/campo_codificado_descricao_response'
@@ -192,6 +195,27 @@ require 'pier-sdk-ruby/models/configuracao_email_persist'
 
 
 require 'pier-sdk-ruby/models/configuracao_email_response'
+
+
+require 'pier-sdk-ruby/models/configuracao_registro_cobranca_persist'
+
+
+require 'pier-sdk-ruby/models/configuracao_registro_cobranca_response'
+
+
+require 'pier-sdk-ruby/models/configuracao_rotativo_detalhe_response'
+
+
+require 'pier-sdk-ruby/models/configuracao_rotativo_persist'
+
+
+require 'pier-sdk-ruby/models/conta_bancaria_portador_persist'
+
+
+require 'pier-sdk-ruby/models/conta_bancaria_portador_response'
+
+
+require 'pier-sdk-ruby/models/conta_bancaria_portador_update'
 
 
 require 'pier-sdk-ruby/models/conta_detalhe_response'
@@ -389,6 +413,9 @@ require 'pier-sdk-ruby/models/page_banco_response'
 require 'pier-sdk-ruby/models/page_base_response'
 
 
+require 'pier-sdk-ruby/models/page_campanha_response'
+
+
 require 'pier-sdk-ruby/models/page_campo_codificado_descricao_response'
 
 
@@ -405,6 +432,12 @@ require 'pier-sdk-ruby/models/page_compra_response'
 
 
 require 'pier-sdk-ruby/models/page_configuracao_email_response'
+
+
+require 'pier-sdk-ruby/models/page_configuracao_rotativo_response'
+
+
+require 'pier-sdk-ruby/models/page_conta_bancaria_portador_response'
 
 
 require 'pier-sdk-ruby/models/page_conta_detalhe_response'
@@ -485,6 +518,9 @@ require 'pier-sdk-ruby/models/page_pais_response'
 require 'pier-sdk-ruby/models/page_pessoa_detalhe_response'
 
 
+require 'pier-sdk-ruby/models/page_pessoa_juridica_response'
+
+
 require 'pier-sdk-ruby/models/page_pessoa_response'
 
 
@@ -545,6 +581,12 @@ require 'pier-sdk-ruby/models/page_tipo_ajuste_response'
 require 'pier-sdk-ruby/models/page_tipo_boleto_response'
 
 
+require 'pier-sdk-ruby/models/page_tipo_campanha_response'
+
+
+require 'pier-sdk-ruby/models/page_tipo_debito_recorrente_response'
+
+
 require 'pier-sdk-ruby/models/page_tipo_endereco_response'
 
 
@@ -602,10 +644,22 @@ require 'pier-sdk-ruby/models/pessoa_juridica_aprovada_persist'
 require 'pier-sdk-ruby/models/pessoa_juridica_aprovada_response'
 
 
+require 'pier-sdk-ruby/models/pessoa_juridica_response'
+
+
 require 'pier-sdk-ruby/models/pessoa_persist'
 
 
 require 'pier-sdk-ruby/models/pessoa_response'
+
+
+require 'pier-sdk-ruby/models/plano_campanha_persist'
+
+
+require 'pier-sdk-ruby/models/plano_campanha_response'
+
+
+require 'pier-sdk-ruby/models/plano_campanha_update'
 
 
 require 'pier-sdk-ruby/models/plano_parcelamento_emprestimo_response'
@@ -713,10 +767,19 @@ require 'pier-sdk-ruby/models/template_notificacao_response'
 require 'pier-sdk-ruby/models/terminal_response'
 
 
+require 'pier-sdk-ruby/models/terminal_update'
+
+
 require 'pier-sdk-ruby/models/tipo_ajuste_response'
 
 
 require 'pier-sdk-ruby/models/tipo_boleto_response'
+
+
+require 'pier-sdk-ruby/models/tipo_campanha_response'
+
+
+require 'pier-sdk-ruby/models/tipo_debito_recorrente_response'
 
 
 require 'pier-sdk-ruby/models/tipo_endereco_response'
@@ -819,6 +882,8 @@ require 'pier-sdk-ruby/api/autorizacao_api'
 
 require 'pier-sdk-ruby/api/base_api'
 
+require 'pier-sdk-ruby/api/boleto_api'
+
 require 'pier-sdk-ruby/api/cadastro_cliente_api'
 
 require 'pier-sdk-ruby/api/cadastro_geral_api'
@@ -828,6 +893,8 @@ require 'pier-sdk-ruby/api/cartao_api'
 require 'pier-sdk-ruby/api/conductor_pay_api'
 
 require 'pier-sdk-ruby/api/conta_api'
+
+require 'pier-sdk-ruby/api/debito_recorrente_api'
 
 require 'pier-sdk-ruby/api/dispositivo_api'
 
@@ -845,6 +912,8 @@ require 'pier-sdk-ruby/api/job_api'
 
 require 'pier-sdk-ruby/api/limite_api'
 
+require 'pier-sdk-ruby/api/limite_disponibilidade_api'
+
 require 'pier-sdk-ruby/api/notificacao_api'
 
 require 'pier-sdk-ruby/api/oportunidade_api'
@@ -860,6 +929,8 @@ require 'pier-sdk-ruby/api/servico_conta_api'
 require 'pier-sdk-ruby/api/status_parametro_api'
 
 require 'pier-sdk-ruby/api/token_api'
+
+require 'pier-sdk-ruby/api/transferencia_bancaria_api'
 
 require 'pier-sdk-ruby/api/usuario_api'
 

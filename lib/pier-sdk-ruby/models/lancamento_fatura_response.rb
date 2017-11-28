@@ -97,6 +97,9 @@ module Pier
     # Valor da taxa de embarque
     attr_accessor :valor_taxa_embarque
 
+    # Descri\u00C3\u00A7\u00C3\u00A3o abreviada da transa\u00C3\u00A7\u00C3\u00A3o
+    attr_accessor :descricao_abreviada
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -148,7 +151,9 @@ module Pier
         
         :'flag_solicitou_contestacao' => :'flagSolicitouContestacao',
         
-        :'valor_taxa_embarque' => :'valorTaxaEmbarque'
+        :'valor_taxa_embarque' => :'valorTaxaEmbarque',
+        
+        :'descricao_abreviada' => :'descricaoAbreviada'
         
       }
     end
@@ -203,7 +208,9 @@ module Pier
         
         :'flag_solicitou_contestacao' => :'BOOLEAN',
         
-        :'valor_taxa_embarque' => :'Float'
+        :'valor_taxa_embarque' => :'Float',
+        
+        :'descricao_abreviada' => :'String'
         
       }
     end
@@ -433,6 +440,15 @@ module Pier
       end
 
       
+      if attributes[:'descricaoAbreviada']
+        
+        
+        self.descricao_abreviada = attributes[:'descricaoAbreviada']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -544,8 +560,17 @@ module Pier
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -695,7 +720,8 @@ module Pier
           nome_portador == o.nome_portador &&
           numero_cartao_mascarado == o.numero_cartao_mascarado &&
           flag_solicitou_contestacao == o.flag_solicitou_contestacao &&
-          valor_taxa_embarque == o.valor_taxa_embarque
+          valor_taxa_embarque == o.valor_taxa_embarque &&
+          descricao_abreviada == o.descricao_abreviada
     end
 
     # @see the `==` method
@@ -707,7 +733,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_transacao, descricao_tipo_transacao, id_tipo_evento, descricao_tipo_evento, id_evento, id_conta, complemento, valor_brl, valor_usd, numero_parcela, quantidade_parcelas, data_hora_transacao, nome_estabelecimento, descricao_estabelecimento, nome_fantasia_estabelecimento, flag_credito, id_mcc, id_grupo_mcc, descricao_grupo_mcc, titular, nome_portador, numero_cartao_mascarado, flag_solicitou_contestacao, valor_taxa_embarque].hash
+      [id_transacao, descricao_tipo_transacao, id_tipo_evento, descricao_tipo_evento, id_evento, id_conta, complemento, valor_brl, valor_usd, numero_parcela, quantidade_parcelas, data_hora_transacao, nome_estabelecimento, descricao_estabelecimento, nome_fantasia_estabelecimento, flag_credito, id_mcc, id_grupo_mcc, descricao_grupo_mcc, titular, nome_portador, numero_cartao_mascarado, flag_solicitou_contestacao, valor_taxa_embarque, descricao_abreviada].hash
     end
 
     # Builds the object from hash

@@ -4,16 +4,213 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_using_get11**](EstabelecimentoApi.md#consultar_using_get11) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
-[**consultar_using_get21**](EstabelecimentoApi.md#consultar_using_get21) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
-[**listar_using_get14**](EstabelecimentoApi.md#listar_using_get14) | **GET** /api/estabelecimentos | Lista Estabelecimentos
-[**listar_using_get28**](EstabelecimentoApi.md#listar_using_get28) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
+[**alterar_using_put10**](EstabelecimentoApi.md#alterar_using_put10) | **PUT** /api/pessoas-juridicas/{id} | Alterar Pessoa Jur\u00C3\u00ADdica
+[**alterar_using_put13**](EstabelecimentoApi.md#alterar_using_put13) | **PUT** /api/terminais/{id} | Altera um Terminal
+[**cadastrar_using_post2**](EstabelecimentoApi.md#cadastrar_using_post2) | **POST** /api/pessoas-juridicas | Cadastrar Pessoa Jur\u00C3\u00ADdica
+[**consultar_using_get14**](EstabelecimentoApi.md#consultar_using_get14) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
+[**consultar_using_get19**](EstabelecimentoApi.md#consultar_using_get19) | **GET** /api/pessoas-juridicas/{id} | Consultar pessoa jur\u00C3\u00ADdica
+[**consultar_using_get26**](EstabelecimentoApi.md#consultar_using_get26) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
+[**listar_using_get18**](EstabelecimentoApi.md#listar_using_get18) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**listar_using_get23**](EstabelecimentoApi.md#listar_using_get23) | **GET** /api/pessoas-juridicas | Listar pessoas jur\u00C3\u00ADdicas
+[**listar_using_get33**](EstabelecimentoApi.md#listar_using_get33) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
+[**salvar_using_post20**](EstabelecimentoApi.md#salvar_using_post20) | **POST** /api/terminais | Realiza o cadastro de um novo Terminal
 
 
 
 
-# **consultar_using_get11**
-> EstabelecimentoResponse consultar_using_get11(id)
+# **alterar_using_put10**
+> PessoaJuridicaResponse alterar_using_put10(id, razao_social, opts)
+
+Alterar Pessoa Jur\u00C3\u00ADdica
+
+Altera uma pessoa jur\u00C3\u00ADdica.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::EstabelecimentoApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica
+
+razao_social = "razao_social_example" # String | Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+
+opts = { 
+  inscricao_estadual: "inscricao_estadual_example", # String | N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual
+  contato: "contato_example", # String | Nome da pessoa para entrar em contato
+  banco: 56, # Integer | C\u00C3\u00B3digo do banco
+  agencia: 56, # Integer | Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+  digito_verificador_agencia: "digito_verificador_agencia_example", # String | D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia
+  conta_corrente: "conta_corrente_example", # String | C\u00C3\u00B3digo da Conta Corrente
+  digito_verificador_conta_corrente: "digito_verificador_conta_corrente_example" # String | D\u00C3\u00ADgito Verificador da Conta Corrente
+}
+
+begin
+  #Alterar Pessoa Jur\u00C3\u00ADdica
+  result = api_instance.alterar_using_put10(id, razao_social, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling EstabelecimentoApi->alterar_using_put10: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica | 
+ **razao_social** | **String**| Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica | 
+ **inscricao_estadual** | **String**| N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual | [optional] 
+ **contato** | **String**| Nome da pessoa para entrar em contato | [optional] 
+ **banco** | **Integer**| C\u00C3\u00B3digo do banco | [optional] 
+ **agencia** | **Integer**| Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica | [optional] 
+ **digito_verificador_agencia** | **String**| D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia | [optional] 
+ **conta_corrente** | **String**| C\u00C3\u00B3digo da Conta Corrente | [optional] 
+ **digito_verificador_conta_corrente** | **String**| D\u00C3\u00ADgito Verificador da Conta Corrente | [optional] 
+
+
+### Return type
+
+[**PessoaJuridicaResponse**](PessoaJuridicaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **alterar_using_put13**
+> TerminalResponse alterar_using_put13(id, terminal_update)
+
+Altera um Terminal
+
+Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos Terminais.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::EstabelecimentoApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal (id).
+
+terminal_update = Pier::TerminalUpdate.new # TerminalUpdate | terminalUpdate
+
+
+begin
+  #Altera um Terminal
+  result = api_instance.alterar_using_put13(id, terminal_update)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling EstabelecimentoApi->alterar_using_put13: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal (id). | 
+ **terminal_update** | [**TerminalUpdate**](TerminalUpdate.md)| terminalUpdate | 
+
+
+### Return type
+
+[**TerminalResponse**](TerminalResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **cadastrar_using_post2**
+> PessoaJuridicaResponse cadastrar_using_post2(razao_social, cnpj, opts)
+
+Cadastrar Pessoa Jur\u00C3\u00ADdica
+
+Cadastra uma pessoa jur\u00C3\u00ADdica.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::EstabelecimentoApi.new
+
+razao_social = "razao_social_example" # String | Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+
+cnpj = "cnpj_example" # String | C\u00C3\u00B3digo do Cadastro Nacional de Pessoas Jur\u00C3\u00ADdicas
+
+opts = { 
+  inscricao_estadual: "inscricao_estadual_example", # String | N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual
+  contato: "contato_example", # String | Nome da pessoa para entrar em contato
+  banco: 56, # Integer | C\u00C3\u00B3digo do banco
+  agencia: 56, # Integer | Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+  digito_verificador_agencia: "digito_verificador_agencia_example", # String | D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia
+  conta_corrente: "conta_corrente_example", # String | C\u00C3\u00B3digo da Conta Corrente
+  digito_verificador_conta_corrente: "digito_verificador_conta_corrente_example" # String | D\u00C3\u00ADgito Verificador da Conta Corrente
+}
+
+begin
+  #Cadastrar Pessoa Jur\u00C3\u00ADdica
+  result = api_instance.cadastrar_using_post2(razao_social, cnpj, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling EstabelecimentoApi->cadastrar_using_post2: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **razao_social** | **String**| Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica | 
+ **cnpj** | **String**| C\u00C3\u00B3digo do Cadastro Nacional de Pessoas Jur\u00C3\u00ADdicas | 
+ **inscricao_estadual** | **String**| N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual | [optional] 
+ **contato** | **String**| Nome da pessoa para entrar em contato | [optional] 
+ **banco** | **Integer**| C\u00C3\u00B3digo do banco | [optional] 
+ **agencia** | **Integer**| Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica | [optional] 
+ **digito_verificador_agencia** | **String**| D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia | [optional] 
+ **conta_corrente** | **String**| C\u00C3\u00B3digo da Conta Corrente | [optional] 
+ **digito_verificador_conta_corrente** | **String**| D\u00C3\u00ADgito Verificador da Conta Corrente | [optional] 
+
+
+### Return type
+
+[**PessoaJuridicaResponse**](PessoaJuridicaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **consultar_using_get14**
+> EstabelecimentoResponse consultar_using_get14(id)
 
 Consultar estabelecimento por id
 
@@ -32,10 +229,10 @@ id = 789 # Integer | Id
 
 begin
   #Consultar estabelecimento por id
-  result = api_instance.consultar_using_get11(id)
+  result = api_instance.consultar_using_get14(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->consultar_using_get11: #{e}"
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get14: #{e}"
 end
 ```
 
@@ -62,8 +259,58 @@ No authorization required
 
 
 
-# **consultar_using_get21**
-> TerminalResponse consultar_using_get21(id)
+# **consultar_using_get19**
+> PessoaJuridicaResponse consultar_using_get19(id)
+
+Consultar pessoa jur\u00C3\u00ADdica
+
+Consulta uma pessoa jur\u00C3\u00ADdica atrav\u00C3\u00A9s do seu identificador.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::EstabelecimentoApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica
+
+
+begin
+  #Consultar pessoa jur\u00C3\u00ADdica
+  result = api_instance.consultar_using_get19(id)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get19: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica | 
+
+
+### Return type
+
+[**PessoaJuridicaResponse**](PessoaJuridicaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **consultar_using_get26**
+> TerminalResponse consultar_using_get26(id)
 
 Apresenta os dados de um determinado Terminal
 
@@ -82,10 +329,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Terminal
-  result = api_instance.consultar_using_get21(id)
+  result = api_instance.consultar_using_get26(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->consultar_using_get21: #{e}"
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get26: #{e}"
 end
 ```
 
@@ -112,8 +359,8 @@ No authorization required
 
 
 
-# **listar_using_get14**
-> PageEstabelecimentoResponse listar_using_get14(opts)
+# **listar_using_get18**
+> PageEstabelecimentoResponse listar_using_get18(opts)
 
 Lista Estabelecimentos
 
@@ -154,10 +401,10 @@ opts = {
 
 begin
   #Lista Estabelecimentos
-  result = api_instance.listar_using_get14(opts)
+  result = api_instance.listar_using_get18(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get14: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get18: #{e}"
 end
 ```
 
@@ -205,8 +452,81 @@ No authorization required
 
 
 
-# **listar_using_get28**
-> PageTerminalResponse listar_using_get28(opts)
+# **listar_using_get23**
+> PagePessoaJuridicaResponse listar_using_get23(opts)
+
+Listar pessoas jur\u00C3\u00ADdicas
+
+Lista pessoas jur\u00C3\u00ADdicas cadastradas. 
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::EstabelecimentoApi.new
+
+opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  razao_social: "razao_social_example", # String | Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+  cnpj: "cnpj_example", # String | C\u00C3\u00B3digo do Cadastro Nacional de Pessoas Jur\u00C3\u00ADdicas
+  inscricao_estadual: "inscricao_estadual_example", # String | N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual
+  contato: "contato_example", # String | Nome da pessoa para entrar em contato
+  banco: 56, # Integer | C\u00C3\u00B3digo do banco
+  agencia: 56, # Integer | Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+  digito_verificador_agencia: "digito_verificador_agencia_example", # String | D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia
+  conta_corrente: "conta_corrente_example", # String | C\u00C3\u00B3digo da Conta Corrente
+  digito_verificador_conta_corrente: "digito_verificador_conta_corrente_example" # String | D\u00C3\u00ADgito Verificador da Conta Corrente
+}
+
+begin
+  #Listar pessoas jur\u00C3\u00ADdicas
+  result = api_instance.listar_using_get23(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling EstabelecimentoApi->listar_using_get23: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **razao_social** | **String**| Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica | [optional] 
+ **cnpj** | **String**| C\u00C3\u00B3digo do Cadastro Nacional de Pessoas Jur\u00C3\u00ADdicas | [optional] 
+ **inscricao_estadual** | **String**| N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual | [optional] 
+ **contato** | **String**| Nome da pessoa para entrar em contato | [optional] 
+ **banco** | **Integer**| C\u00C3\u00B3digo do banco | [optional] 
+ **agencia** | **Integer**| Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica | [optional] 
+ **digito_verificador_agencia** | **String**| D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia | [optional] 
+ **conta_corrente** | **String**| C\u00C3\u00B3digo da Conta Corrente | [optional] 
+ **digito_verificador_conta_corrente** | **String**| D\u00C3\u00ADgito Verificador da Conta Corrente | [optional] 
+
+
+### Return type
+
+[**PagePessoaJuridicaResponse**](PagePessoaJuridicaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_using_get33**
+> PageTerminalResponse listar_using_get33(opts)
 
 Lista os Terminais cadastrados no Emissor
 
@@ -232,10 +552,10 @@ opts = {
 
 begin
   #Lista os Terminais cadastrados no Emissor
-  result = api_instance.listar_using_get28(opts)
+  result = api_instance.listar_using_get33(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get28: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get33: #{e}"
 end
 ```
 
@@ -255,6 +575,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PageTerminalResponse**](PageTerminalResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **salvar_using_post20**
+> TerminalResponse salvar_using_post20(id_estabelecimento, flag_consulta_extrato, flag_terminal_virtual)
+
+Realiza o cadastro de um novo Terminal
+
+Este m\u00C3\u00A9todo permite que seja cadastrado um novo Terminal.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::EstabelecimentoApi.new
+
+id_estabelecimento = 789 # Integer | Apresenta o id do estabelecimento.
+
+flag_consulta_extrato = true # BOOLEAN | Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+
+flag_terminal_virtual = true # BOOLEAN | Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+
+
+begin
+  #Realiza o cadastro de um novo Terminal
+  result = api_instance.salvar_using_post20(id_estabelecimento, flag_consulta_extrato, flag_terminal_virtual)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling EstabelecimentoApi->salvar_using_post20: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_estabelecimento** | **Integer**| Apresenta o id do estabelecimento. | 
+ **flag_consulta_extrato** | **BOOLEAN**| Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)). | 
+ **flag_terminal_virtual** | **BOOLEAN**| Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)). | 
+
+
+### Return type
+
+[**TerminalResponse**](TerminalResponse.md)
 
 ### Authorization
 

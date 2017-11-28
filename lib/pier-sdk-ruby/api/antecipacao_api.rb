@@ -292,7 +292,7 @@ module Pier
     # @param id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
-    # @return [AntecipacaoMockResponse]
+    # @return [AntecipacaoResponse]
     def efetivar_antecipacoes_using_post(id_conta, opts = {})
       data, _status_code, _headers = efetivar_antecipacoes_using_post_with_http_info(id_conta, opts)
       return data
@@ -303,7 +303,7 @@ module Pier
     # @param id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
-    # @return [Array<(AntecipacaoMockResponse, Fixnum, Hash)>] AntecipacaoMockResponse data, response status code and response headers
+    # @return [Array<(AntecipacaoResponse, Fixnum, Hash)>] AntecipacaoResponse data, response status code and response headers
     def efetivar_antecipacoes_using_post_with_http_info(id_conta, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AntecipacaoApi.efetivar_antecipacoes_using_post ..."
@@ -355,7 +355,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'AntecipacaoMockResponse')
+        :return_type => 'AntecipacaoResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: AntecipacaoApi#efetivar_antecipacoes_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

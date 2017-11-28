@@ -105,7 +105,7 @@ describe 'AntecipacaoApi' do
   # @param id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
-  # @return [AntecipacaoMockResponse]
+  # @return [AntecipacaoResponse]
   describe 'efetivar_antecipacoes_using_post test' do
     it "should work" do
       # assertion here

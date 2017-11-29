@@ -158,7 +158,7 @@ describe 'CartaoApi' do
   # Esse recurso permite consultar os dados de impress\u00C3\u00A3o de um cart\u00C3\u00A3o
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
   # @param [Hash] opts the optional parameters
-  # @return [Object]
+  # @return [DadosCartaoImpressaoResponse]
   describe 'consultar_cartao_impressao_using_get test' do
     it "should work" do
       # assertion here

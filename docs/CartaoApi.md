@@ -358,7 +358,7 @@ No authorization required
 
 
 # **consultar_cartao_impressao_using_get**
-> Object consultar_cartao_impressao_using_get(id)
+> DadosCartaoImpressaoResponse consultar_cartao_impressao_using_get(id)
 
 Consultar os dados de impress\u00C3\u00A3o de um Cart\u00C3\u00A3o
 
@@ -393,7 +393,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**DadosCartaoImpressaoResponse**](DadosCartaoImpressaoResponse.md)
 
 ### Authorization
 

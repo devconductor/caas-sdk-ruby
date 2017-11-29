@@ -230,6 +230,9 @@ require 'pier-sdk-ruby/models/conta_response'
 require 'pier-sdk-ruby/models/controle_vencimento_response'
 
 
+require 'pier-sdk-ruby/models/dados_cartao_impressao_response'
+
+
 require 'pier-sdk-ruby/models/dados_cartao_response'
 
 

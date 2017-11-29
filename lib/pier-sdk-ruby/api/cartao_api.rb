@@ -520,7 +520,7 @@ module Pier
     # Esse recurso permite consultar os dados de impress\u00C3\u00A3o de um cart\u00C3\u00A3o
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
-    # @return [Object]
+    # @return [DadosCartaoImpressaoResponse]
     def consultar_cartao_impressao_using_get(id, opts = {})
       data, _status_code, _headers = consultar_cartao_impressao_using_get_with_http_info(id, opts)
       return data
@@ -530,7 +530,7 @@ module Pier
     # Esse recurso permite consultar os dados de impress\u00C3\u00A3o de um cart\u00C3\u00A3o
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
+    # @return [Array<(DadosCartaoImpressaoResponse, Fixnum, Hash)>] DadosCartaoImpressaoResponse data, response status code and response headers
     def consultar_cartao_impressao_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CartaoApi.consultar_cartao_impressao_using_get ..."
@@ -574,7 +574,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Object')
+        :return_type => 'DadosCartaoImpressaoResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CartaoApi#consultar_cartao_impressao_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

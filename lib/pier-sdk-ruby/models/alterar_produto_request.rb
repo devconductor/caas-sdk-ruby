@@ -31,6 +31,12 @@ module Pier
     # C\u00C3\u00B3digo identificador da origem comercial.
     attr_accessor :id_origem_comercial
 
+    # Identificador do estabelecimento.
+    attr_accessor :id_estabelecimento
+
+    # Identificador do promotor que realizou a solicita\u00C3\u00A7\u00C3\u00A3o do grade no estabelecimento.
+    attr_accessor :id_promotor
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -38,7 +44,11 @@ module Pier
         
         :'id_produto' => :'idProduto',
         
-        :'id_origem_comercial' => :'idOrigemComercial'
+        :'id_origem_comercial' => :'idOrigemComercial',
+        
+        :'id_estabelecimento' => :'idEstabelecimento',
+        
+        :'id_promotor' => :'idPromotor'
         
       }
     end
@@ -49,7 +59,11 @@ module Pier
         
         :'id_produto' => :'Integer',
         
-        :'id_origem_comercial' => :'Integer'
+        :'id_origem_comercial' => :'Integer',
+        
+        :'id_estabelecimento' => :'Integer',
+        
+        :'id_promotor' => :'Integer'
         
       }
     end
@@ -76,6 +90,24 @@ module Pier
         
         
         self.id_origem_comercial = attributes[:'idOrigemComercial']
+        
+      
+      end
+
+      
+      if attributes[:'idEstabelecimento']
+        
+        
+        self.id_estabelecimento = attributes[:'idEstabelecimento']
+        
+      
+      end
+
+      
+      if attributes[:'idPromotor']
+        
+        
+        self.id_promotor = attributes[:'idPromotor']
         
       
       end
@@ -109,8 +141,26 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -128,7 +178,9 @@ module Pier
       return true if self.equal?(o)
       self.class == o.class &&
           id_produto == o.id_produto &&
-          id_origem_comercial == o.id_origem_comercial
+          id_origem_comercial == o.id_origem_comercial &&
+          id_estabelecimento == o.id_estabelecimento &&
+          id_promotor == o.id_promotor
     end
 
     # @see the `==` method
@@ -140,7 +192,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_produto, id_origem_comercial].hash
+      [id_produto, id_origem_comercial, id_estabelecimento, id_promotor].hash
     end
 
     # Builds the object from hash

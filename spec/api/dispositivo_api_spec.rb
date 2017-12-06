@@ -77,7 +77,7 @@ describe 'DispositivoApi' do
   end
 
 
-  # unit tests for listar_using_get14
+  # unit tests for listar_using_get15
   # Lista os dispositivos cadastrados
   # Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
   # @param [Hash] opts the optional parameters
@@ -90,7 +90,7 @@ describe 'DispositivoApi' do
   # @option opts [String] :data_criacao Apresenta a data e em que o registro foi criado.
   # @option opts [String] :data_desativacao Apresenta a data e em que o registro foi desativado.
   # @return [PageDispositivoResponse]
-  describe 'listar_using_get14 test' do
+  describe 'listar_using_get15 test' do
     it "should work" do
       # assertion here
       # should be_a()

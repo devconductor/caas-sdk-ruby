@@ -169,8 +169,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
     # @param [Hash] opts the optional parameters
     # @return [StatusContaResponse]
-    def consultar_using_get23(id, opts = {})
-      data, _status_code, _headers = consultar_using_get23_with_http_info(id, opts)
+    def consultar_using_get24(id, opts = {})
+      data, _status_code, _headers = consultar_using_get24_with_http_info(id, opts)
       return data
     end
 
@@ -179,14 +179,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(StatusContaResponse, Fixnum, Hash)>] StatusContaResponse data, response status code and response headers
-    def consultar_using_get23_with_http_info(id, opts = {})
+    def consultar_using_get24_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: StatusParametroApi.consultar_using_get23 ..."
+        @api_client.config.logger.debug "Calling API: StatusParametroApi.consultar_using_get24 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling StatusParametroApi.consultar_using_get23" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling StatusParametroApi.consultar_using_get24" if id.nil?
       
       
       
@@ -224,7 +224,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'StatusContaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: StatusParametroApi#consultar_using_get23\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: StatusParametroApi#consultar_using_get24\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -235,8 +235,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [StatusImpressaoResponse]
-    def consultar_using_get24(id, opts = {})
-      data, _status_code, _headers = consultar_using_get24_with_http_info(id, opts)
+    def consultar_using_get25(id, opts = {})
+      data, _status_code, _headers = consultar_using_get25_with_http_info(id, opts)
       return data
     end
 
@@ -245,14 +245,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(StatusImpressaoResponse, Fixnum, Hash)>] StatusImpressaoResponse data, response status code and response headers
-    def consultar_using_get24_with_http_info(id, opts = {})
+    def consultar_using_get25_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: StatusParametroApi.consultar_using_get24 ..."
+        @api_client.config.logger.debug "Calling API: StatusParametroApi.consultar_using_get25 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling StatusParametroApi.consultar_using_get24" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling StatusParametroApi.consultar_using_get25" if id.nil?
       
       
       
@@ -290,7 +290,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'StatusImpressaoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: StatusParametroApi#consultar_using_get24\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: StatusParametroApi#consultar_using_get25\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -608,8 +608,8 @@ module Pier
     # @option opts [Integer] :permite_desbloquear Par\u00C3\u00A2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo.
     # @option opts [Integer] :permite_atribuir_como_cancelamento Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo.
     # @return [PageStatusContaResponse]
-    def listar_using_get30(opts = {})
-      data, _status_code, _headers = listar_using_get30_with_http_info(opts)
+    def listar_using_get31(opts = {})
+      data, _status_code, _headers = listar_using_get31_with_http_info(opts)
       return data
     end
 
@@ -631,9 +631,9 @@ module Pier
     # @option opts [Integer] :permite_desbloquear Par\u00C3\u00A2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo.
     # @option opts [Integer] :permite_atribuir_como_cancelamento Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo.
     # @return [Array<(PageStatusContaResponse, Fixnum, Hash)>] PageStatusContaResponse data, response status code and response headers
-    def listar_using_get30_with_http_info(opts = {})
+    def listar_using_get31_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: StatusParametroApi.listar_using_get30 ..."
+        @api_client.config.logger.debug "Calling API: StatusParametroApi.listar_using_get31 ..."
       end
       
       
@@ -766,7 +766,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageStatusContaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: StatusParametroApi#listar_using_get30\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: StatusParametroApi#listar_using_get31\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -781,8 +781,8 @@ module Pier
     # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
     # @option opts [String] :nome Nome do status impress\u00C3\u00A3o
     # @return [PageStatusImpressaoResponse]
-    def listar_using_get31(opts = {})
-      data, _status_code, _headers = listar_using_get31_with_http_info(opts)
+    def listar_using_get32(opts = {})
+      data, _status_code, _headers = listar_using_get32_with_http_info(opts)
       return data
     end
 
@@ -795,9 +795,9 @@ module Pier
     # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
     # @option opts [String] :nome Nome do status impress\u00C3\u00A3o
     # @return [Array<(PageStatusImpressaoResponse, Fixnum, Hash)>] PageStatusImpressaoResponse data, response status code and response headers
-    def listar_using_get31_with_http_info(opts = {})
+    def listar_using_get32_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: StatusParametroApi.listar_using_get31 ..."
+        @api_client.config.logger.debug "Calling API: StatusParametroApi.listar_using_get32 ..."
       end
       
       
@@ -867,7 +867,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageStatusImpressaoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: StatusParametroApi#listar_using_get31\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: StatusParametroApi#listar_using_get32\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

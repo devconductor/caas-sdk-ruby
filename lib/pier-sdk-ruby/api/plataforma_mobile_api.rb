@@ -116,8 +116,8 @@ module Pier
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :nome Nome da Plataforma Mobile
     # @return [PagePlataformaMobileResponse]
-    def listar_using_get25(opts = {})
-      data, _status_code, _headers = listar_using_get25_with_http_info(opts)
+    def listar_using_get26(opts = {})
+      data, _status_code, _headers = listar_using_get26_with_http_info(opts)
       return data
     end
 
@@ -129,9 +129,9 @@ module Pier
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :nome Nome da Plataforma Mobile
     # @return [Array<(PagePlataformaMobileResponse, Fixnum, Hash)>] PagePlataformaMobileResponse data, response status code and response headers
-    def listar_using_get25_with_http_info(opts = {})
+    def listar_using_get26_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PlataformaMobileApi.listar_using_get25 ..."
+        @api_client.config.logger.debug "Calling API: PlataformaMobileApi.listar_using_get26 ..."
       end
       
       
@@ -194,7 +194,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PagePlataformaMobileResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PlataformaMobileApi#listar_using_get25\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: PlataformaMobileApi#listar_using_get26\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

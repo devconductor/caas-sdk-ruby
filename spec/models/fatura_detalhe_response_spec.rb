@@ -43,17 +43,6 @@ describe 'FaturaDetalheResponse' do
     end
   end
 
-  describe 'test attribute "lancamentos_fatura_response"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
   describe 'test attribute "id_conta"' do
     it 'should work' do
        # assertion here
@@ -132,6 +121,17 @@ describe 'FaturaDetalheResponse' do
 
 
   describe 'test attribute "valor_pagamento_minimo"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
+  describe 'test attribute "lancamentos_fatura_response"' do
     it 'should work' do
        # assertion here
        # should be_a()

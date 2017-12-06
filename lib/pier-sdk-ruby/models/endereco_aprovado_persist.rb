@@ -241,6 +241,10 @@ module Pier
     def valid?
       
       
+      if @id_tipo_endereco.nil?
+        return false
+      end
+
       
       
       
@@ -270,6 +274,19 @@ module Pier
       
       
       
+      if @cidade.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @uf.nil?
+        return false
+      end
+
       
       
       
@@ -279,7 +296,10 @@ module Pier
       
       
       
-      
+      if @endereco_correspondencia.nil?
+        return false
+      end
+
       
       
       

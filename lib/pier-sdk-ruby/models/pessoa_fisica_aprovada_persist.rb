@@ -670,6 +670,11 @@ module Pier
       
       
       
+      if @telefones.nil?
+        return false
+      end
+
+      
       
       
       

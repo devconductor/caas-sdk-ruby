@@ -4,22 +4,30 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterar_using_put10**](EstabelecimentoApi.md#alterar_using_put10) | **PUT** /api/pessoas-juridicas/{id} | Alterar Pessoa Jur\u00C3\u00ADdica
-[**alterar_using_put13**](EstabelecimentoApi.md#alterar_using_put13) | **PUT** /api/terminais/{id} | Altera um Terminal
-[**cadastrar_using_post2**](EstabelecimentoApi.md#cadastrar_using_post2) | **POST** /api/pessoas-juridicas | Cadastrar Pessoa Jur\u00C3\u00ADdica
-[**consultar_using_get14**](EstabelecimentoApi.md#consultar_using_get14) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
-[**consultar_using_get19**](EstabelecimentoApi.md#consultar_using_get19) | **GET** /api/pessoas-juridicas/{id} | Consultar pessoa jur\u00C3\u00ADdica
-[**consultar_using_get26**](EstabelecimentoApi.md#consultar_using_get26) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
-[**listar_using_get18**](EstabelecimentoApi.md#listar_using_get18) | **GET** /api/estabelecimentos | Lista Estabelecimentos
-[**listar_using_get23**](EstabelecimentoApi.md#listar_using_get23) | **GET** /api/pessoas-juridicas | Listar pessoas jur\u00C3\u00ADdicas
-[**listar_using_get33**](EstabelecimentoApi.md#listar_using_get33) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
-[**salvar_using_post20**](EstabelecimentoApi.md#salvar_using_post20) | **POST** /api/terminais | Realiza o cadastro de um novo Terminal
+[**alterar_using_put11**](EstabelecimentoApi.md#alterar_using_put11) | **PUT** /api/pessoas-juridicas/{id} | Alterar Pessoa Jur\u00C3\u00ADdica
+[**alterar_using_put13**](EstabelecimentoApi.md#alterar_using_put13) | **PUT** /api/telefones-estabelecimentos/{id} | Altera um Telefone do estabelecimento
+[**alterar_using_put15**](EstabelecimentoApi.md#alterar_using_put15) | **PUT** /api/terminais/{id} | Altera um Terminal
+[**alterar_using_put5**](EstabelecimentoApi.md#alterar_using_put5) | **PUT** /api/credores/{id} | Alterar Credor
+[**cadastrar_using_post2**](EstabelecimentoApi.md#cadastrar_using_post2) | **POST** /api/credores | Cadastrar Credor
+[**cadastrar_using_post3**](EstabelecimentoApi.md#cadastrar_using_post3) | **POST** /api/pessoas-juridicas | Cadastrar Pessoa Jur\u00C3\u00ADdica
+[**consultar_using_get11**](EstabelecimentoApi.md#consultar_using_get11) | **GET** /api/credores/{id} | Consultar credor
+[**consultar_using_get15**](EstabelecimentoApi.md#consultar_using_get15) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
+[**consultar_using_get20**](EstabelecimentoApi.md#consultar_using_get20) | **GET** /api/pessoas-juridicas/{id} | Consultar pessoa jur\u00C3\u00ADdica
+[**consultar_using_get26**](EstabelecimentoApi.md#consultar_using_get26) | **GET** /api/telefones-estabelecimentos/{id} | Apresenta os dados de um determinado telefone de um estabelecimento
+[**consultar_using_get28**](EstabelecimentoApi.md#consultar_using_get28) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
+[**listar_using_get14**](EstabelecimentoApi.md#listar_using_get14) | **GET** /api/credores | Listar credores
+[**listar_using_get19**](EstabelecimentoApi.md#listar_using_get19) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**listar_using_get24**](EstabelecimentoApi.md#listar_using_get24) | **GET** /api/pessoas-juridicas | Listar pessoas jur\u00C3\u00ADdicas
+[**listar_using_get33**](EstabelecimentoApi.md#listar_using_get33) | **GET** /api/telefones-estabelecimentos | Lista os Telefones Estabelecimentos
+[**listar_using_get35**](EstabelecimentoApi.md#listar_using_get35) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
+[**salvar_using_post19**](EstabelecimentoApi.md#salvar_using_post19) | **POST** /api/telefones-estabelecimentos | Realiza o cadastro de um novo telefone para um estabelecimento 
+[**salvar_using_post21**](EstabelecimentoApi.md#salvar_using_post21) | **POST** /api/terminais | Realiza o cadastro de um novo Terminal
 
 
 
 
-# **alterar_using_put10**
-> PessoaJuridicaResponse alterar_using_put10(id, razao_social, opts)
+# **alterar_using_put11**
+> PessoaJuridicaResponse alterar_using_put11(id, razao_social, opts)
 
 Alterar Pessoa Jur\u00C3\u00ADdica
 
@@ -49,10 +57,10 @@ opts = {
 
 begin
   #Alterar Pessoa Jur\u00C3\u00ADdica
-  result = api_instance.alterar_using_put10(id, razao_social, opts)
+  result = api_instance.alterar_using_put11(id, razao_social, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->alterar_using_put10: #{e}"
+  puts "Exception when calling EstabelecimentoApi->alterar_using_put11: #{e}"
 end
 ```
 
@@ -88,7 +96,67 @@ No authorization required
 
 
 # **alterar_using_put13**
-> TerminalResponse alterar_using_put13(id, terminal_update)
+> TelefoneEstabelecimentoResponse alterar_using_put13(id, ddd, telefone, opts)
+
+Altera um Telefone do estabelecimento
+
+Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos telefones dos estabelecimentos.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::EstabelecimentoApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).
+
+ddd = "ddd_example" # String | C\u00C3\u00B3digo DDD do telefone (id).
+
+telefone = "telefone_example" # String | N\u00C3\u00BAmero do telefone.
+
+opts = { 
+  ramal: "ramal_example" # String | N\u00C3\u00BAmero do ramal.
+}
+
+begin
+  #Altera um Telefone do estabelecimento
+  result = api_instance.alterar_using_put13(id, ddd, telefone, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling EstabelecimentoApi->alterar_using_put13: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id). | 
+ **ddd** | **String**| C\u00C3\u00B3digo DDD do telefone (id). | 
+ **telefone** | **String**| N\u00C3\u00BAmero do telefone. | 
+ **ramal** | **String**| N\u00C3\u00BAmero do ramal. | [optional] 
+
+
+### Return type
+
+[**TelefoneEstabelecimentoResponse**](TelefoneEstabelecimentoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **alterar_using_put15**
+> TerminalResponse alterar_using_put15(id, terminal_update)
 
 Altera um Terminal
 
@@ -109,10 +177,10 @@ terminal_update = Pier::TerminalUpdate.new # TerminalUpdate | terminalUpdate
 
 begin
   #Altera um Terminal
-  result = api_instance.alterar_using_put13(id, terminal_update)
+  result = api_instance.alterar_using_put15(id, terminal_update)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->alterar_using_put13: #{e}"
+  puts "Exception when calling EstabelecimentoApi->alterar_using_put15: #{e}"
 end
 ```
 
@@ -140,8 +208,111 @@ No authorization required
 
 
 
+# **alterar_using_put5**
+> CredorResponse alterar_using_put5(id, credor_update)
+
+Alterar Credor
+
+Altera um credor.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::EstabelecimentoApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da credor
+
+credor_update = Pier::CredorDTO.new # CredorDTO | credorUpdate
+
+
+begin
+  #Alterar Credor
+  result = api_instance.alterar_using_put5(id, credor_update)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling EstabelecimentoApi->alterar_using_put5: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da credor | 
+ **credor_update** | [**CredorDTO**](CredorDTO.md)| credorUpdate | 
+
+
+### Return type
+
+[**CredorResponse**](CredorResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
 # **cadastrar_using_post2**
-> PessoaJuridicaResponse cadastrar_using_post2(razao_social, cnpj, opts)
+> CredorResponse cadastrar_using_post2(credor_persist)
+
+Cadastrar Credor
+
+Cadastra um credor.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::EstabelecimentoApi.new
+
+credor_persist = Pier::CredorDTO.new # CredorDTO | credorPersist
+
+
+begin
+  #Cadastrar Credor
+  result = api_instance.cadastrar_using_post2(credor_persist)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling EstabelecimentoApi->cadastrar_using_post2: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **credor_persist** | [**CredorDTO**](CredorDTO.md)| credorPersist | 
+
+
+### Return type
+
+[**CredorResponse**](CredorResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **cadastrar_using_post3**
+> PessoaJuridicaResponse cadastrar_using_post3(razao_social, cnpj, opts)
 
 Cadastrar Pessoa Jur\u00C3\u00ADdica
 
@@ -171,10 +342,10 @@ opts = {
 
 begin
   #Cadastrar Pessoa Jur\u00C3\u00ADdica
-  result = api_instance.cadastrar_using_post2(razao_social, cnpj, opts)
+  result = api_instance.cadastrar_using_post3(razao_social, cnpj, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->cadastrar_using_post2: #{e}"
+  puts "Exception when calling EstabelecimentoApi->cadastrar_using_post3: #{e}"
 end
 ```
 
@@ -209,8 +380,58 @@ No authorization required
 
 
 
-# **consultar_using_get14**
-> EstabelecimentoResponse consultar_using_get14(id)
+# **consultar_using_get11**
+> CredorResponse consultar_using_get11(id)
+
+Consultar credor
+
+Consulta um credor atrav\u00C3\u00A9s do seu identificador.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::EstabelecimentoApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da credor
+
+
+begin
+  #Consultar credor
+  result = api_instance.consultar_using_get11(id)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get11: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da credor | 
+
+
+### Return type
+
+[**CredorResponse**](CredorResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **consultar_using_get15**
+> EstabelecimentoResponse consultar_using_get15(id)
 
 Consultar estabelecimento por id
 
@@ -229,10 +450,10 @@ id = 789 # Integer | Id
 
 begin
   #Consultar estabelecimento por id
-  result = api_instance.consultar_using_get14(id)
+  result = api_instance.consultar_using_get15(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->consultar_using_get14: #{e}"
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get15: #{e}"
 end
 ```
 
@@ -259,8 +480,8 @@ No authorization required
 
 
 
-# **consultar_using_get19**
-> PessoaJuridicaResponse consultar_using_get19(id)
+# **consultar_using_get20**
+> PessoaJuridicaResponse consultar_using_get20(id)
 
 Consultar pessoa jur\u00C3\u00ADdica
 
@@ -279,10 +500,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da
 
 begin
   #Consultar pessoa jur\u00C3\u00ADdica
-  result = api_instance.consultar_using_get19(id)
+  result = api_instance.consultar_using_get20(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->consultar_using_get19: #{e}"
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get20: #{e}"
 end
 ```
 
@@ -310,7 +531,57 @@ No authorization required
 
 
 # **consultar_using_get26**
-> TerminalResponse consultar_using_get26(id)
+> TelefoneEstabelecimentoResponse consultar_using_get26(id)
+
+Apresenta os dados de um determinado telefone de um estabelecimento
+
+Este m\u00C3\u00A9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::EstabelecimentoApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).
+
+
+begin
+  #Apresenta os dados de um determinado telefone de um estabelecimento
+  result = api_instance.consultar_using_get26(id)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get26: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id). | 
+
+
+### Return type
+
+[**TelefoneEstabelecimentoResponse**](TelefoneEstabelecimentoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **consultar_using_get28**
+> TerminalResponse consultar_using_get28(id)
 
 Apresenta os dados de um determinado Terminal
 
@@ -329,10 +600,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Terminal
-  result = api_instance.consultar_using_get26(id)
+  result = api_instance.consultar_using_get28(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->consultar_using_get26: #{e}"
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get28: #{e}"
 end
 ```
 
@@ -359,8 +630,109 @@ No authorization required
 
 
 
-# **listar_using_get18**
-> PageEstabelecimentoResponse listar_using_get18(opts)
+# **listar_using_get14**
+> PageCredorResponse listar_using_get14(opts)
+
+Listar credores
+
+Lista credores cadastrados. 
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::EstabelecimentoApi.new
+
+opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  id_pessoa_juridica: 789, # Integer | Identificador da pessoa jur\u00C3\u00ADdica do credor
+  nome: "nome_example", # String | Nome do credor
+  periodicidade: "periodicidade_example", # String | Periodicidade do pagamento
+  pagamento_semanal: "pagamento_semanal_example", # String | Dia para pagamento semanal
+  pagamento_mensal: 56, # Integer | Dia da data para o pagamento mensal
+  pagamento_decendial_primeiro: 56, # Integer | Dia da data para o primeiro pagamento decendial
+  pagamento_decendial_segundo: 56, # Integer | Dia da data para o segundo pagamento decendial
+  pagamento_decendial_terceiro: 56, # Integer | Dia da data para o terceiro pagamento decendial
+  pagamento_quinzenal_primeiro: 56, # Integer | Dia da data para o primeiro pagamento quinzenal
+  pagamento_quinzenal_segundo: 56, # Integer | Dia da data para o segundo pagamento quinzenal
+  credor_banco: true, # BOOLEAN | Indica se este credor pode ser um Credor RAV de outros credores
+  percentual_rav: 3.4, # Float | Valor percentual do RAV do credor
+  recebe_rav: "recebe_rav_example", # String | Indica se o credor recebe RAV e o tipo
+  percentual_multiplica: 3.4, # Float | Percentual Multiplica
+  taxa_adm: 3.4, # Float | Taxa Administrativa
+  taxa_banco: 3.4, # Float | Taxa do Banco
+  limite_rav: 3.4, # Float | Valor limite do RAV
+  id_credor_rav: 789, # Integer | C\u00C3\u00B3digo identificador do credor RAV
+  banco: 56, # Integer | C\u00C3\u00B3digo do banco
+  agencia: 56, # Integer | Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+  digito_verificador_agencia: "digito_verificador_agencia_example", # String | D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia
+  conta_corrente: "conta_corrente_example", # String | C\u00C3\u00B3digo da Conta Corrente
+  digito_verificador_conta_corrente: "digito_verificador_conta_corrente_example" # String | D\u00C3\u00ADgito Verificador da Conta Corrente
+}
+
+begin
+  #Listar credores
+  result = api_instance.listar_using_get14(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling EstabelecimentoApi->listar_using_get14: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id_pessoa_juridica** | **Integer**| Identificador da pessoa jur\u00C3\u00ADdica do credor | [optional] 
+ **nome** | **String**| Nome do credor | [optional] 
+ **periodicidade** | **String**| Periodicidade do pagamento | [optional] 
+ **pagamento_semanal** | **String**| Dia para pagamento semanal | [optional] 
+ **pagamento_mensal** | **Integer**| Dia da data para o pagamento mensal | [optional] 
+ **pagamento_decendial_primeiro** | **Integer**| Dia da data para o primeiro pagamento decendial | [optional] 
+ **pagamento_decendial_segundo** | **Integer**| Dia da data para o segundo pagamento decendial | [optional] 
+ **pagamento_decendial_terceiro** | **Integer**| Dia da data para o terceiro pagamento decendial | [optional] 
+ **pagamento_quinzenal_primeiro** | **Integer**| Dia da data para o primeiro pagamento quinzenal | [optional] 
+ **pagamento_quinzenal_segundo** | **Integer**| Dia da data para o segundo pagamento quinzenal | [optional] 
+ **credor_banco** | **BOOLEAN**| Indica se este credor pode ser um Credor RAV de outros credores | [optional] 
+ **percentual_rav** | [**Float**](.md)| Valor percentual do RAV do credor | [optional] 
+ **recebe_rav** | **String**| Indica se o credor recebe RAV e o tipo | [optional] 
+ **percentual_multiplica** | [**Float**](.md)| Percentual Multiplica | [optional] 
+ **taxa_adm** | [**Float**](.md)| Taxa Administrativa | [optional] 
+ **taxa_banco** | [**Float**](.md)| Taxa do Banco | [optional] 
+ **limite_rav** | [**Float**](.md)| Valor limite do RAV | [optional] 
+ **id_credor_rav** | **Integer**| C\u00C3\u00B3digo identificador do credor RAV | [optional] 
+ **banco** | **Integer**| C\u00C3\u00B3digo do banco | [optional] 
+ **agencia** | **Integer**| Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica | [optional] 
+ **digito_verificador_agencia** | **String**| D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia | [optional] 
+ **conta_corrente** | **String**| C\u00C3\u00B3digo da Conta Corrente | [optional] 
+ **digito_verificador_conta_corrente** | **String**| D\u00C3\u00ADgito Verificador da Conta Corrente | [optional] 
+
+
+### Return type
+
+[**PageCredorResponse**](PageCredorResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_using_get19**
+> PageEstabelecimentoResponse listar_using_get19(opts)
 
 Lista Estabelecimentos
 
@@ -401,10 +773,10 @@ opts = {
 
 begin
   #Lista Estabelecimentos
-  result = api_instance.listar_using_get18(opts)
+  result = api_instance.listar_using_get19(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get18: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get19: #{e}"
 end
 ```
 
@@ -452,8 +824,8 @@ No authorization required
 
 
 
-# **listar_using_get23**
-> PagePessoaJuridicaResponse listar_using_get23(opts)
+# **listar_using_get24**
+> PagePessoaJuridicaResponse listar_using_get24(opts)
 
 Listar pessoas jur\u00C3\u00ADdicas
 
@@ -484,10 +856,10 @@ opts = {
 
 begin
   #Listar pessoas jur\u00C3\u00ADdicas
-  result = api_instance.listar_using_get23(opts)
+  result = api_instance.listar_using_get24(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get23: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get24: #{e}"
 end
 ```
 
@@ -526,7 +898,64 @@ No authorization required
 
 
 # **listar_using_get33**
-> PageTerminalResponse listar_using_get33(opts)
+> PageTelefoneEstabelecimentoResponse listar_using_get33(opts)
+
+Lista os Telefones Estabelecimentos
+
+Este m\u00C3\u00A9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::EstabelecimentoApi.new
+
+opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  id_estabelecimento: 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
+}
+
+begin
+  #Lista os Telefones Estabelecimentos
+  result = api_instance.listar_using_get33(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling EstabelecimentoApi->listar_using_get33: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id_estabelecimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id). | [optional] 
+
+
+### Return type
+
+[**PageTelefoneEstabelecimentoResponse**](PageTelefoneEstabelecimentoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **listar_using_get35**
+> PageTerminalResponse listar_using_get35(opts)
 
 Lista os Terminais cadastrados no Emissor
 
@@ -552,10 +981,10 @@ opts = {
 
 begin
   #Lista os Terminais cadastrados no Emissor
-  result = api_instance.listar_using_get33(opts)
+  result = api_instance.listar_using_get35(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get33: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get35: #{e}"
 end
 ```
 
@@ -588,8 +1017,68 @@ No authorization required
 
 
 
-# **salvar_using_post20**
-> TerminalResponse salvar_using_post20(id_estabelecimento, flag_consulta_extrato, flag_terminal_virtual)
+# **salvar_using_post19**
+> TelefoneEstabelecimentoResponse salvar_using_post19(id_estabelecimento, ddd, telefone, opts)
+
+Realiza o cadastro de um novo telefone para um estabelecimento 
+
+Este m\u00C3\u00A9todo permite que seja cadastrado um novo telefone para um estabelecimento.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::EstabelecimentoApi.new
+
+id_estabelecimento = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).
+
+ddd = "ddd_example" # String | C\u00C3\u00B3digo DDD do telefone (id).
+
+telefone = "telefone_example" # String | N\u00C3\u00BAmero do telefone.
+
+opts = { 
+  ramal: "ramal_example" # String | N\u00C3\u00BAmero do ramal.
+}
+
+begin
+  #Realiza o cadastro de um novo telefone para um estabelecimento 
+  result = api_instance.salvar_using_post19(id_estabelecimento, ddd, telefone, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling EstabelecimentoApi->salvar_using_post19: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_estabelecimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id). | 
+ **ddd** | **String**| C\u00C3\u00B3digo DDD do telefone (id). | 
+ **telefone** | **String**| N\u00C3\u00BAmero do telefone. | 
+ **ramal** | **String**| N\u00C3\u00BAmero do ramal. | [optional] 
+
+
+### Return type
+
+[**TelefoneEstabelecimentoResponse**](TelefoneEstabelecimentoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **salvar_using_post21**
+> TerminalResponse salvar_using_post21(id_estabelecimento, flag_consulta_extrato, flag_terminal_virtual)
 
 Realiza o cadastro de um novo Terminal
 
@@ -612,10 +1101,10 @@ flag_terminal_virtual = true # BOOLEAN | Flag indicando se o terminal permite co
 
 begin
   #Realiza o cadastro de um novo Terminal
-  result = api_instance.salvar_using_post20(id_estabelecimento, flag_consulta_extrato, flag_terminal_virtual)
+  result = api_instance.salvar_using_post21(id_estabelecimento, flag_consulta_extrato, flag_terminal_virtual)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->salvar_using_post20: #{e}"
+  puts "Exception when calling EstabelecimentoApi->salvar_using_post21: #{e}"
 end
 ```
 

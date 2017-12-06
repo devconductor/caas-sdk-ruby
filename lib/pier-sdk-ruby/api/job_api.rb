@@ -272,8 +272,8 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [PageJobResponse]
-    def listar_using_get20(opts = {})
-      data, _status_code, _headers = listar_using_get20_with_http_info(opts)
+    def listar_using_get21(opts = {})
+      data, _status_code, _headers = listar_using_get21_with_http_info(opts)
       return data
     end
 
@@ -287,9 +287,9 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [Array<(PageJobResponse, Fixnum, Hash)>] PageJobResponse data, response status code and response headers
-    def listar_using_get20_with_http_info(opts = {})
+    def listar_using_get21_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: JobApi.listar_using_get20 ..."
+        @api_client.config.logger.debug "Calling API: JobApi.listar_using_get21 ..."
       end
       
       
@@ -370,7 +370,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageJobResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: JobApi#listar_using_get20\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: JobApi#listar_using_get21\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

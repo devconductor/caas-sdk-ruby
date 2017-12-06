@@ -25,8 +25,6 @@ require 'date'
 module Pier
   # Detalhes da fatura
   class FaturaDetalheResponse
-    attr_accessor :lancamentos_fatura_response
-
     # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
     attr_accessor :id_conta
 
@@ -51,6 +49,9 @@ module Pier
     # Valor do pagamento m\u00C3\u00ADnimo.
     attr_accessor :valor_pagamento_minimo
 
+    # Lista de lan\u00C3\u00A7amentos da fatura.
+    attr_accessor :lancamentos_fatura_response
+
     # Valor do saldo anterior.
     attr_accessor :saldo_anterior
 
@@ -58,8 +59,6 @@ module Pier
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        
-        :'lancamentos_fatura_response' => :'lancamentosFaturaResponse',
         
         :'id_conta' => :'idConta',
         
@@ -77,6 +76,8 @@ module Pier
         
         :'valor_pagamento_minimo' => :'valorPagamentoMinimo',
         
+        :'lancamentos_fatura_response' => :'lancamentosFaturaResponse',
+        
         :'saldo_anterior' => :'saldoAnterior'
         
       }
@@ -85,8 +86,6 @@ module Pier
     # Attribute type mapping.
     def self.swagger_types
       {
-        
-        :'lancamentos_fatura_response' => :'Array<LancamentoFaturaResponse>',
         
         :'id_conta' => :'Integer',
         
@@ -104,6 +103,8 @@ module Pier
         
         :'valor_pagamento_minimo' => :'Float',
         
+        :'lancamentos_fatura_response' => :'Array<LancamentoFaturaResponse>',
+        
         :'saldo_anterior' => :'Float'
         
       }
@@ -116,17 +117,6 @@ module Pier
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
-
-      
-      if attributes[:'lancamentosFaturaResponse']
-        
-        if (value = attributes[:'lancamentosFaturaResponse']).is_a?(Array)
-          self.lancamentos_fatura_response = value
-        end
-        
-        
-      
-      end
 
       
       if attributes[:'idConta']
@@ -201,6 +191,17 @@ module Pier
       end
 
       
+      if attributes[:'lancamentosFaturaResponse']
+        
+        if (value = attributes[:'lancamentosFaturaResponse']).is_a?(Array)
+          self.lancamentos_fatura_response = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes[:'saldoAnterior']
         
         
@@ -224,10 +225,6 @@ module Pier
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      
-      
-      
-      
       
       
       
@@ -270,13 +267,12 @@ module Pier
       
       
       
+      
+      
+      
+      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -332,12 +328,16 @@ module Pier
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared 
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          lancamentos_fatura_response == o.lancamentos_fatura_response &&
           id_conta == o.id_conta &&
           situacao_processamento == o.situacao_processamento &&
           pagamento_efetuado == o.pagamento_efetuado &&
@@ -346,6 +346,7 @@ module Pier
           data_fechamento == o.data_fechamento &&
           valor_total == o.valor_total &&
           valor_pagamento_minimo == o.valor_pagamento_minimo &&
+          lancamentos_fatura_response == o.lancamentos_fatura_response &&
           saldo_anterior == o.saldo_anterior
     end
 
@@ -358,7 +359,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [lancamentos_fatura_response, id_conta, situacao_processamento, pagamento_efetuado, data_vencimento_fatura, data_vencimento_real, data_fechamento, valor_total, valor_pagamento_minimo, saldo_anterior].hash
+      [id_conta, situacao_processamento, pagamento_efetuado, data_vencimento_fatura, data_vencimento_real, data_fechamento, valor_total, valor_pagamento_minimo, lancamentos_fatura_response, saldo_anterior].hash
     end
 
     # Builds the object from hash

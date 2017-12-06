@@ -65,7 +65,7 @@ describe 'FAQApi' do
   end
 
 
-  # unit tests for alterar_using_put6
+  # unit tests for alterar_using_put7
   # Alterar FAQ
   # Alterar FAQ
   # @param id Id
@@ -77,7 +77,7 @@ describe 'FAQApi' do
   # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
   # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
   # @return [FaqResponse]
-  describe 'alterar_using_put6 test' do
+  describe 'alterar_using_put7 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -88,13 +88,13 @@ describe 'FAQApi' do
   end
 
 
-  # unit tests for consultar_using_get15
+  # unit tests for consultar_using_get16
   # Consultar FAQ por id
   # Consulta os detalhes de uma determinada FAQ
   # @param id Id
   # @param [Hash] opts the optional parameters
   # @return [FaqResponse]
-  describe 'consultar_using_get15 test' do
+  describe 'consultar_using_get16 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -105,7 +105,7 @@ describe 'FAQApi' do
   end
 
 
-  # unit tests for listar_using_get19
+  # unit tests for listar_using_get20
   # Lista FAQs
   # Lista todas as FAQs
   # @param [Hash] opts the optional parameters
@@ -120,7 +120,7 @@ describe 'FAQApi' do
   # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
   # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
   # @return [PageFaqResponse]
-  describe 'listar_using_get19 test' do
+  describe 'listar_using_get20 test' do
     it "should work" do
       # assertion here
       # should be_a()

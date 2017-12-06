@@ -182,8 +182,8 @@ module Pier
     # @option opts [Float] :valor Valor do tipo de d\u00C3\u00A9bito recorrente.
     # @option opts [BOOLEAN] :flag_ativo Flag que identifica se o tipo d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo.
     # @return [PageTipoDebitoRecorrenteResponse]
-    def listar_using_get34(opts = {})
-      data, _status_code, _headers = listar_using_get34_with_http_info(opts)
+    def listar_using_get36(opts = {})
+      data, _status_code, _headers = listar_using_get36_with_http_info(opts)
       return data
     end
 
@@ -198,9 +198,9 @@ module Pier
     # @option opts [Float] :valor Valor do tipo de d\u00C3\u00A9bito recorrente.
     # @option opts [BOOLEAN] :flag_ativo Flag que identifica se o tipo d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo.
     # @return [Array<(PageTipoDebitoRecorrenteResponse, Fixnum, Hash)>] PageTipoDebitoRecorrenteResponse data, response status code and response headers
-    def listar_using_get34_with_http_info(opts = {})
+    def listar_using_get36_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DebitoRecorrenteApi.listar_using_get34 ..."
+        @api_client.config.logger.debug "Calling API: DebitoRecorrenteApi.listar_using_get36 ..."
       end
       
       
@@ -284,7 +284,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTipoDebitoRecorrenteResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DebitoRecorrenteApi#listar_using_get34\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DebitoRecorrenteApi#listar_using_get36\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

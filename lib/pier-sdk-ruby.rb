@@ -230,6 +230,12 @@ require 'pier-sdk-ruby/models/conta_response'
 require 'pier-sdk-ruby/models/controle_vencimento_response'
 
 
+require 'pier-sdk-ruby/models/credor_dto'
+
+
+require 'pier-sdk-ruby/models/credor_response'
+
+
 require 'pier-sdk-ruby/models/dados_cartao_impressao_response'
 
 
@@ -455,6 +461,9 @@ require 'pier-sdk-ruby/models/page_conta_response'
 require 'pier-sdk-ruby/models/page_controle_vencimento_response'
 
 
+require 'pier-sdk-ruby/models/page_credor_response'
+
+
 require 'pier-sdk-ruby/models/page_dispositivo_response'
 
 
@@ -569,6 +578,9 @@ require 'pier-sdk-ruby/models/page_status_oportunidade_response'
 require 'pier-sdk-ruby/models/page_taxas_refinanciamento_response'
 
 
+require 'pier-sdk-ruby/models/page_telefone_estabelecimento_response'
+
+
 require 'pier-sdk-ruby/models/page_telefone_response'
 
 
@@ -615,6 +627,9 @@ require 'pier-sdk-ruby/models/page_transacoes_correntes_response'
 
 
 require 'pier-sdk-ruby/models/page_transferencia_bancaria_response'
+
+
+require 'pier-sdk-ruby/models/page_transferencia_credito_conta_bancaria_response'
 
 
 require 'pier-sdk-ruby/models/page_transferencia_response'
@@ -752,6 +767,9 @@ require 'pier-sdk-ruby/models/telefone_adicional_persist'
 require 'pier-sdk-ruby/models/telefone_adicional_update'
 
 
+require 'pier-sdk-ruby/models/telefone_estabelecimento_response'
+
+
 require 'pier-sdk-ruby/models/telefone_pessoa_aprovada_persist'
 
 
@@ -846,6 +864,15 @@ require 'pier-sdk-ruby/models/transferencia_bancaria_persist'
 
 
 require 'pier-sdk-ruby/models/transferencia_bancaria_response'
+
+
+require 'pier-sdk-ruby/models/transferencia_credito_conta_bancaria_lista_response'
+
+
+require 'pier-sdk-ruby/models/transferencia_credito_conta_bancaria_persist'
+
+
+require 'pier-sdk-ruby/models/transferencia_credito_conta_bancaria_response'
 
 
 require 'pier-sdk-ruby/models/transferencia_detalhe_response'

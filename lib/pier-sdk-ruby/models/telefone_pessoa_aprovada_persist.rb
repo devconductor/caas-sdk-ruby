@@ -129,13 +129,28 @@ module Pier
     def valid?
       
       
+      if @id_tipo_telefone.nil?
+        return false
+      end
+
       
       
       
       
       
+      if @ddd.nil?
+        return false
+      end
+
       
       
+      
+      
+      
+      if @telefone.nil?
+        return false
+      end
+
       
       
       

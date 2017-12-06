@@ -17,8 +17,7 @@ Method | HTTP request | Description
 [**consultar_divida_atualizada_cliente_using_get**](ContaApi.md#consultar_divida_atualizada_cliente_using_get) | **GET** /api/contas/{id}/recuperar-divida-atualizada | Consulta a d\u00C3\u00ADvida atualizada do cliente
 [**consultar_taxas_tarifas_using_get**](ContaApi.md#consultar_taxas_tarifas_using_get) | **GET** /api/contas/{id}/consultar-taxas-tarifas | Permite consultar a partir do ID da conta as taxas e tarifas
 [**consultar_using_get10**](ContaApi.md#consultar_using_get10) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
-[**consultar_using_get35**](ContaApi.md#consultar_using_get35) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-[**consultar_using_get36**](ContaApi.md#consultar_using_get36) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+[**consultar_using_get38**](ContaApi.md#consultar_using_get38) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 [**desativar_envio_fatura_email_using_post**](ContaApi.md#desativar_envio_fatura_email_using_post) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00C3\u00A7o de envio de fatura por email
 [**gerar_boleto_recarga_using_post**](ContaApi.md#gerar_boleto_recarga_using_post) | **POST** /api/contas/{id}/gerar-boleto-recarga | Gera um boleto de recarga
 [**gerar_cartao_embossing_using_post**](ContaApi.md#gerar_cartao_embossing_using_post) | **POST** /api/contas/{id}/gerar-cartao-grafica | Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
@@ -32,12 +31,10 @@ Method | HTTP request | Description
 [**listar_pagamentos_using_get**](ContaApi.md#listar_pagamentos_using_get) | **GET** /api/contas/{id}/pagamentos | Lista hist\u00C3\u00B3rico de pagamentos da conta
 [**listar_processadas_using_get**](ContaApi.md#listar_processadas_using_get) | **GET** /api/contas/{id}/transacoes/listar-processadas | Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
 [**listar_using_get13**](ContaApi.md#listar_using_get13) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
-[**listar_using_get40**](ContaApi.md#listar_using_get40) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-[**listar_using_get41**](ContaApi.md#listar_using_get41) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
+[**listar_using_get43**](ContaApi.md#listar_using_get43) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
 [**reativar_using_post1**](ContaApi.md#reativar_using_post1) | **POST** /api/contas/{id}/reativar | Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
 [**simular_emprestimo_financiamento_using_post**](ContaApi.md#simular_emprestimo_financiamento_using_post) | **POST** /api/contas/{id}/simular-emprestimos-financiamentos | Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
 [**transacoes_using_get**](ContaApi.md#transacoes_using_get) | **GET** /api/contas/{id}/timeline | Permite listar uma linha do tempo com os eventos da conta
-[**transferir_using_post**](ContaApi.md#transferir_using_post) | **POST** /api/contas/{id}/transferencias-creditos-contas-bancarias | Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
 [**transferir_using_post1**](ContaApi.md#transferir_using_post1) | **POST** /api/contas/{id}/transferencias-creditos-cartoes | Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
 
 
@@ -756,65 +753,8 @@ No authorization required
 
 
 
-# **consultar_using_get35**
-> TransferenciaBancariaResponse consultar_using_get35(id, id_transferencia, opts)
-
-Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-
-Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::ContaApi.new
-
-id = 789 # Integer | Id Conta
-
-id_transferencia = 789 # Integer | Id Transfer\u00C3\u00AAncia
-
-opts = { 
-  id_conta_bancaria_destino: 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
-}
-
-begin
-  #Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-  result = api_instance.consultar_using_get35(id, id_transferencia, opts)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->consultar_using_get35: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| Id Conta | 
- **id_transferencia** | **Integer**| Id Transfer\u00C3\u00AAncia | 
- **id_conta_bancaria_destino** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) | [optional] 
-
-
-### Return type
-
-[**TransferenciaBancariaResponse**](TransferenciaBancariaResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **consultar_using_get36**
-> TransferenciaDetalheResponse consultar_using_get36(id, id_transferencia)
+# **consultar_using_get38**
+> TransferenciaDetalheResponse consultar_using_get38(id, id_transferencia)
 
 Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 
@@ -835,10 +775,10 @@ id_transferencia = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u
 
 begin
   #Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-  result = api_instance.consultar_using_get36(id, id_transferencia)
+  result = api_instance.consultar_using_get38(id, id_transferencia)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->consultar_using_get36: #{e}"
+  puts "Exception when calling ContaApi->consultar_using_get38: #{e}"
 end
 ```
 
@@ -1628,68 +1568,8 @@ No authorization required
 
 
 
-# **listar_using_get40**
-> PageTransferenciaBancariaResponse listar_using_get40(id, opts)
-
-Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-
-Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::ContaApi.new
-
-id = 789 # Integer | Id Conta
-
-opts = { 
-  id_conta_bancaria_destino: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-}
-
-begin
-  #Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-  result = api_instance.listar_using_get40(id, opts)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->listar_using_get40: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| Id Conta | 
- **id_conta_bancaria_destino** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) | [optional] 
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
-
-
-### Return type
-
-[**PageTransferenciaBancariaResponse**](PageTransferenciaBancariaResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **listar_using_get41**
-> PageTransferenciaResponse listar_using_get41(id, opts)
+# **listar_using_get43**
+> PageTransferenciaResponse listar_using_get43(id, opts)
 
 Lista as transfer\u00C3\u00AAncias realizadas pela conta
 
@@ -1718,10 +1598,10 @@ opts = {
 
 begin
   #Lista as transfer\u00C3\u00AAncias realizadas pela conta
-  result = api_instance.listar_using_get41(id, opts)
+  result = api_instance.listar_using_get43(id, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->listar_using_get41: #{e}"
+  puts "Exception when calling ContaApi->listar_using_get43: #{e}"
 end
 ```
 
@@ -1904,59 +1784,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PageTransacaoResponse**](PageTransacaoResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **transferir_using_post**
-> TransferenciaBancariaResponse transferir_using_post(id, transferencia_bancaria_persist)
-
-Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
-
-Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::ContaApi.new
-
-id = 789 # Integer | Id Conta
-
-transferencia_bancaria_persist = Pier::TransferenciaBancariaPersist.new # TransferenciaBancariaPersist | transferenciaBancariaPersist
-
-
-begin
-  #Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
-  result = api_instance.transferir_using_post(id, transferencia_bancaria_persist)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->transferir_using_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| Id Conta | 
- **transferencia_bancaria_persist** | [**TransferenciaBancariaPersist**](TransferenciaBancariaPersist.md)| transferenciaBancariaPersist | 
-
-
-### Return type
-
-[**TransferenciaBancariaResponse**](TransferenciaBancariaResponse.md)
 
 ### Authorization
 

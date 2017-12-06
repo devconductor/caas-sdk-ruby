@@ -43,7 +43,7 @@ describe 'LimiteDisponibilidadeApi' do
   end
 
 
-  # unit tests for alterar_using_put7
+  # unit tests for alterar_using_put8
   # Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
   # Esse recurso permite realizar a altera\u00C3\u00A7\u00C3\u00A3o dos Limites de uma determinada Conta.
   # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
@@ -62,7 +62,7 @@ describe 'LimiteDisponibilidadeApi' do
   # @option opts [Float] :limite_internacional_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
   # @option opts [Float] :limite_maximo Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.
   # @return [LimiteDisponibilidadeResponse]
-  describe 'alterar_using_put7 test' do
+  describe 'alterar_using_put8 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -73,13 +73,13 @@ describe 'LimiteDisponibilidadeApi' do
   end
 
 
-  # unit tests for consultar_using_get16
+  # unit tests for consultar_using_get17
   # Apresenta os limites da conta
   # Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
   # @param id_conta Id Conta
   # @param [Hash] opts the optional parameters
   # @return [LimiteDisponibilidadeResponse]
-  describe 'consultar_using_get16 test' do
+  describe 'consultar_using_get17 test' do
     it "should work" do
       # assertion here
       # should be_a()

@@ -108,6 +108,157 @@ module Pier
     end
 
 
+    # Realiza a consulta de uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias de um portador
+    # Recurso utilizado para recuperar uma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador, utiliza o ID da transfer\u00C3\u00AAncia banc\u00C3\u00A1riae o idConta para realizar a consulta.
+    # @param id_transferencia Id Transfer\u00C3\u00AAncia
+    # @param [Hash] opts the optional parameters
+    # @return [TransferenciaCreditoContaBancariaResponse]
+    def consultar_transferencia_bancaria_using_get(id_transferencia, opts = {})
+      data, _status_code, _headers = consultar_transferencia_bancaria_using_get_with_http_info(id_transferencia, opts)
+      return data
+    end
+
+    # Realiza a consulta de uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias de um portador
+    # Recurso utilizado para recuperar uma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador, utiliza o ID da transfer\u00C3\u00AAncia banc\u00C3\u00A1riae o idConta para realizar a consulta.
+    # @param id_transferencia Id Transfer\u00C3\u00AAncia
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(TransferenciaCreditoContaBancariaResponse, Fixnum, Hash)>] TransferenciaCreditoContaBancariaResponse data, response status code and response headers
+    def consultar_transferencia_bancaria_using_get_with_http_info(id_transferencia, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.consultar_transferencia_bancaria_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'id_transferencia' is set
+      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling TransferenciaBancariaApi.consultar_transferencia_bancaria_using_get" if id_transferencia.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/transferencias-creditos-contas-bancarias/{idTransferencia}".sub('{format}','json').sub('{' + 'idTransferencia' + '}', id_transferencia.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TransferenciaCreditoContaBancariaResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#consultar_transferencia_bancaria_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+    # Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+    # @param id Id Conta
+    # @param id_transferencia Id Transfer\u00C3\u00AAncia
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+    # @return [TransferenciaBancariaResponse]
+    def consultar_using_get37(id, id_transferencia, opts = {})
+      data, _status_code, _headers = consultar_using_get37_with_http_info(id, id_transferencia, opts)
+      return data
+    end
+
+    # Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+    # Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+    # @param id Id Conta
+    # @param id_transferencia Id Transfer\u00C3\u00AAncia
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+    # @return [Array<(TransferenciaBancariaResponse, Fixnum, Hash)>] TransferenciaBancariaResponse data, response status code and response headers
+    def consultar_using_get37_with_http_info(id, id_transferencia, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.consultar_using_get37 ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling TransferenciaBancariaApi.consultar_using_get37" if id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'id_transferencia' is set
+      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling TransferenciaBancariaApi.consultar_using_get37" if id_transferencia.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s).sub('{' + 'id_transferencia' + '}', id_transferencia.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'id_conta_bancaria_destino'] = opts[:'id_conta_bancaria_destino'] if opts[:'id_conta_bancaria_destino']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TransferenciaBancariaResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#consultar_using_get37\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Consulta conta banc\u00C3\u00A1ria portador
     # Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).
@@ -169,6 +320,116 @@ module Pier
         :return_type => 'ContaBancariaPortadorResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TransferenciaBancariaApi#consultar_using_get9\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Realiza a listagem das transfer\u00C3\u00AAncias banc\u00C3\u00A1rias de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
+    # Recurso utilizado para listar as transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador solicitadas.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
+    # @option opts [String] :data_solicitacao_inicial Data inicial da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia.
+    # @option opts [String] :data_solicitacao_final Data final da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia
+    # @return [PageTransferenciaCreditoContaBancariaResponse]
+    def listar_transferencia_bancaria_using_get(opts = {})
+      data, _status_code, _headers = listar_transferencia_bancaria_using_get_with_http_info(opts)
+      return data
+    end
+
+    # Realiza a listagem das transfer\u00C3\u00AAncias banc\u00C3\u00A1rias de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
+    # Recurso utilizado para listar as transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador solicitadas.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
+    # @option opts [String] :data_solicitacao_inicial Data inicial da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia.
+    # @option opts [String] :data_solicitacao_final Data final da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia
+    # @return [Array<(PageTransferenciaCreditoContaBancariaResponse, Fixnum, Hash)>] PageTransferenciaCreditoContaBancariaResponse data, response status code and response headers
+    def listar_transferencia_bancaria_using_get_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.listar_transferencia_bancaria_using_get ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/transferencias-creditos-contas-bancarias".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'idConta'] = opts[:'id_conta'] if opts[:'id_conta']
+      query_params[:'dataSolicitacaoInicial'] = opts[:'data_solicitacao_inicial'] if opts[:'data_solicitacao_inicial']
+      query_params[:'dataSolicitacaoFinal'] = opts[:'data_solicitacao_final'] if opts[:'data_solicitacao_final']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageTransferenciaCreditoContaBancariaResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#listar_transferencia_bancaria_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -329,6 +590,108 @@ module Pier
     end
 
 
+    # Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+    # Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
+    # @param id Id Conta
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @return [PageTransferenciaBancariaResponse]
+    def listar_using_get42(id, opts = {})
+      data, _status_code, _headers = listar_using_get42_with_http_info(id, opts)
+      return data
+    end
+
+    # Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+    # Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
+    # @param id Id Conta
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @return [Array<(PageTransferenciaBancariaResponse, Fixnum, Hash)>] PageTransferenciaBancariaResponse data, response status code and response headers
+    def listar_using_get42_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.listar_using_get42 ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling TransferenciaBancariaApi.listar_using_get42" if id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/transferencias-creditos-contas-bancarias".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'id_conta_bancaria_destino'] = opts[:'id_conta_bancaria_destino'] if opts[:'id_conta_bancaria_destino']
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageTransferenciaBancariaResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#listar_using_get42\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Cadastra uma conta banc\u00C3\u00A1ria do portador
     # Esse recurso permite cadastrar contas banc\u00C3\u00A1rias do portador.
     # @param persist persist
@@ -390,6 +753,148 @@ module Pier
         :return_type => 'ContaBancariaPortadorResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TransferenciaBancariaApi#salvar_using_post7\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
+    # Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+    # @param persist persist
+    # @param [Hash] opts the optional parameters
+    # @return [TransferenciaCreditoContaBancariaResponse]
+    def transferencia_credito_conta_bancaria_using_post(persist, opts = {})
+      data, _status_code, _headers = transferencia_credito_conta_bancaria_using_post_with_http_info(persist, opts)
+      return data
+    end
+
+    # Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
+    # Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+    # @param persist persist
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(TransferenciaCreditoContaBancariaResponse, Fixnum, Hash)>] TransferenciaCreditoContaBancariaResponse data, response status code and response headers
+    def transferencia_credito_conta_bancaria_using_post_with_http_info(persist, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.transferencia_credito_conta_bancaria_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'persist' is set
+      fail ArgumentError, "Missing the required parameter 'persist' when calling TransferenciaBancariaApi.transferencia_credito_conta_bancaria_using_post" if persist.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/transferencias-creditos-contas-bancarias".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(persist)
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TransferenciaCreditoContaBancariaResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#transferencia_credito_conta_bancaria_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
+    # Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+    # @param id Id Conta
+    # @param transferencia_bancaria_persist transferenciaBancariaPersist
+    # @param [Hash] opts the optional parameters
+    # @return [TransferenciaBancariaResponse]
+    def transferir_using_post(id, transferencia_bancaria_persist, opts = {})
+      data, _status_code, _headers = transferir_using_post_with_http_info(id, transferencia_bancaria_persist, opts)
+      return data
+    end
+
+    # Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
+    # Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+    # @param id Id Conta
+    # @param transferencia_bancaria_persist transferenciaBancariaPersist
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(TransferenciaBancariaResponse, Fixnum, Hash)>] TransferenciaBancariaResponse data, response status code and response headers
+    def transferir_using_post_with_http_info(id, transferencia_bancaria_persist, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.transferir_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling TransferenciaBancariaApi.transferir_using_post" if id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'transferencia_bancaria_persist' is set
+      fail ArgumentError, "Missing the required parameter 'transferencia_bancaria_persist' when calling TransferenciaBancariaApi.transferir_using_post" if transferencia_bancaria_persist.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/transferencias-creditos-contas-bancarias".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(transferencia_bancaria_persist)
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TransferenciaBancariaResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#transferir_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

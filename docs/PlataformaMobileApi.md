@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizar_using_put1**](PlataformaMobileApi.md#atualizar_using_put1) | **PUT** /api/plataformas-mobile/{id} | Atualiza Plataforma Mobile
-[**listar_using_get25**](PlataformaMobileApi.md#listar_using_get25) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
+[**listar_using_get26**](PlataformaMobileApi.md#listar_using_get26) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
 [**salvar_using_post18**](PlataformaMobileApi.md#salvar_using_post18) | **POST** /api/plataformas-mobile | Cadastra Plataforma Mobile
 
 
@@ -64,8 +64,8 @@ No authorization required
 
 
 
-# **listar_using_get25**
-> PagePlataformaMobileResponse listar_using_get25(opts)
+# **listar_using_get26**
+> PagePlataformaMobileResponse listar_using_get26(opts)
 
 Lista as plataformas mobile cadastradas
 
@@ -88,10 +88,10 @@ opts = {
 
 begin
   #Lista as plataformas mobile cadastradas
-  result = api_instance.listar_using_get25(opts)
+  result = api_instance.listar_using_get26(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling PlataformaMobileApi->listar_using_get25: #{e}"
+  puts "Exception when calling PlataformaMobileApi->listar_using_get26: #{e}"
 end
 ```
 

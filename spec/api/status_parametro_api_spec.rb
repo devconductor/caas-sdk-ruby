@@ -77,13 +77,13 @@ describe 'StatusParametroApi' do
   end
 
 
-  # unit tests for consultar_using_get23
+  # unit tests for consultar_using_get24
   # Apresenta os dados de um determinado Status Conta
   # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
   # @param [Hash] opts the optional parameters
   # @return [StatusContaResponse]
-  describe 'consultar_using_get23 test' do
+  describe 'consultar_using_get24 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -94,13 +94,13 @@ describe 'StatusParametroApi' do
   end
 
 
-  # unit tests for consultar_using_get24
+  # unit tests for consultar_using_get25
   # Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
   # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
   # @param [Hash] opts the optional parameters
   # @return [StatusImpressaoResponse]
-  describe 'consultar_using_get24 test' do
+  describe 'consultar_using_get25 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -173,7 +173,7 @@ describe 'StatusParametroApi' do
   end
 
 
-  # unit tests for listar_using_get30
+  # unit tests for listar_using_get31
   # Lista os Status Contas cadastrados para o Emissor
   # Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -192,7 +192,7 @@ describe 'StatusParametroApi' do
   # @option opts [Integer] :permite_desbloquear Par\u00C3\u00A2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo.
   # @option opts [Integer] :permite_atribuir_como_cancelamento Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo.
   # @return [PageStatusContaResponse]
-  describe 'listar_using_get30 test' do
+  describe 'listar_using_get31 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -203,7 +203,7 @@ describe 'StatusParametroApi' do
   end
 
 
-  # unit tests for listar_using_get31
+  # unit tests for listar_using_get32
   # Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
   # Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
   # @param [Hash] opts the optional parameters
@@ -213,7 +213,7 @@ describe 'StatusParametroApi' do
   # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
   # @option opts [String] :nome Nome do status impress\u00C3\u00A3o
   # @return [PageStatusImpressaoResponse]
-  describe 'listar_using_get31 test' do
+  describe 'listar_using_get32 test' do
     it "should work" do
       # assertion here
       # should be_a()

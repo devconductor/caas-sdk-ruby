@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ativar_using_post**](DispositivoApi.md#ativar_using_post) | **POST** /api/dispositivos/{id}/ativar-dispositivo | Ativa Dispositivo
 [**desativar_using_post**](DispositivoApi.md#desativar_using_post) | **POST** /api/dispositivos/{id}/desativar-dispositivo | Desativa Dispositivo
-[**listar_using_get14**](DispositivoApi.md#listar_using_get14) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
+[**listar_using_get15**](DispositivoApi.md#listar_using_get15) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
 [**salvar_using_post8**](DispositivoApi.md#salvar_using_post8) | **POST** /api/dispositivos | Cadastra Dispositivo
 
 
@@ -112,8 +112,8 @@ No authorization required
 
 
 
-# **listar_using_get14**
-> PageDispositivoResponse listar_using_get14(opts)
+# **listar_using_get15**
+> PageDispositivoResponse listar_using_get15(opts)
 
 Lista os dispositivos cadastrados
 
@@ -140,10 +140,10 @@ opts = {
 
 begin
   #Lista os dispositivos cadastrados
-  result = api_instance.listar_using_get14(opts)
+  result = api_instance.listar_using_get15(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DispositivoApi->listar_using_get14: #{e}"
+  puts "Exception when calling DispositivoApi->listar_using_get15: #{e}"
 end
 ```
 

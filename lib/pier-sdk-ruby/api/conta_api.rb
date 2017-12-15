@@ -39,9 +39,10 @@ module Pier
     # @param data_ajuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.
     # @param valor_ajuste Valor do ajuste
     # @param [Hash] opts the optional parameters
-    # @return [AjusteResponse]
-    def ajustar_conta_using_post(id, id_tipo_ajuste, data_ajuste, valor_ajuste, opts = {})
-      data, _status_code, _headers = ajustar_conta_using_post_with_http_info(id, id_tipo_ajuste, data_ajuste, valor_ajuste, opts)
+    # @option opts [String] :identificador_externo Identificador Externo
+    # @return [AjusteFinanceiroResponse]
+    def ajustar_conta_using_post1(id, id_tipo_ajuste, data_ajuste, valor_ajuste, opts = {})
+      data, _status_code, _headers = ajustar_conta_using_post1_with_http_info(id, id_tipo_ajuste, data_ajuste, valor_ajuste, opts)
       return data
     end
 
@@ -52,15 +53,16 @@ module Pier
     # @param data_ajuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.
     # @param valor_ajuste Valor do ajuste
     # @param [Hash] opts the optional parameters
-    # @return [Array<(AjusteResponse, Fixnum, Hash)>] AjusteResponse data, response status code and response headers
-    def ajustar_conta_using_post_with_http_info(id, id_tipo_ajuste, data_ajuste, valor_ajuste, opts = {})
+    # @option opts [String] :identificador_externo Identificador Externo
+    # @return [Array<(AjusteFinanceiroResponse, Fixnum, Hash)>] AjusteFinanceiroResponse data, response status code and response headers
+    def ajustar_conta_using_post1_with_http_info(id, id_tipo_ajuste, data_ajuste, valor_ajuste, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.ajustar_conta_using_post ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.ajustar_conta_using_post1 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.ajustar_conta_using_post" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.ajustar_conta_using_post1" if id.nil?
       
       
       
@@ -68,7 +70,7 @@ module Pier
       
       
       # verify the required parameter 'id_tipo_ajuste' is set
-      fail ArgumentError, "Missing the required parameter 'id_tipo_ajuste' when calling ContaApi.ajustar_conta_using_post" if id_tipo_ajuste.nil?
+      fail ArgumentError, "Missing the required parameter 'id_tipo_ajuste' when calling ContaApi.ajustar_conta_using_post1" if id_tipo_ajuste.nil?
       
       
       
@@ -76,7 +78,7 @@ module Pier
       
       
       # verify the required parameter 'data_ajuste' is set
-      fail ArgumentError, "Missing the required parameter 'data_ajuste' when calling ContaApi.ajustar_conta_using_post" if data_ajuste.nil?
+      fail ArgumentError, "Missing the required parameter 'data_ajuste' when calling ContaApi.ajustar_conta_using_post1" if data_ajuste.nil?
       
       
       
@@ -84,7 +86,13 @@ module Pier
       
       
       # verify the required parameter 'valor_ajuste' is set
-      fail ArgumentError, "Missing the required parameter 'valor_ajuste' when calling ContaApi.ajustar_conta_using_post" if valor_ajuste.nil?
+      fail ArgumentError, "Missing the required parameter 'valor_ajuste' when calling ContaApi.ajustar_conta_using_post1" if valor_ajuste.nil?
+      
+      
+      
+      
+      
+      
       
       
       
@@ -98,6 +106,7 @@ module Pier
       query_params[:'idTipoAjuste'] = id_tipo_ajuste
       query_params[:'dataAjuste'] = data_ajuste
       query_params[:'valorAjuste'] = valor_ajuste
+      query_params[:'identificadorExterno'] = opts[:'identificador_externo'] if opts[:'identificador_externo']
 
       # header parameters
       header_params = {}
@@ -123,9 +132,9 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'AjusteResponse')
+        :return_type => 'AjusteFinanceiroResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#ajustar_conta_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#ajustar_conta_using_post1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1062,8 +1071,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @return [ContaDetalheResponse]
-    def consultar_using_get10(id, opts = {})
-      data, _status_code, _headers = consultar_using_get10_with_http_info(id, opts)
+    def consultar_using_get11(id, opts = {})
+      data, _status_code, _headers = consultar_using_get11_with_http_info(id, opts)
       return data
     end
 
@@ -1072,14 +1081,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(ContaDetalheResponse, Fixnum, Hash)>] ContaDetalheResponse data, response status code and response headers
-    def consultar_using_get10_with_http_info(id, opts = {})
+    def consultar_using_get11_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.consultar_using_get10 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.consultar_using_get11 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_using_get10" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_using_get11" if id.nil?
       
       
       
@@ -1117,7 +1126,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'ContaDetalheResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#consultar_using_get10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#consultar_using_get11\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1129,8 +1138,8 @@ module Pier
     # @param id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
     # @param [Hash] opts the optional parameters
     # @return [TransferenciaDetalheResponse]
-    def consultar_using_get38(id, id_transferencia, opts = {})
-      data, _status_code, _headers = consultar_using_get38_with_http_info(id, id_transferencia, opts)
+    def consultar_using_get39(id, id_transferencia, opts = {})
+      data, _status_code, _headers = consultar_using_get39_with_http_info(id, id_transferencia, opts)
       return data
     end
 
@@ -1140,14 +1149,14 @@ module Pier
     # @param id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
     # @param [Hash] opts the optional parameters
     # @return [Array<(TransferenciaDetalheResponse, Fixnum, Hash)>] TransferenciaDetalheResponse data, response status code and response headers
-    def consultar_using_get38_with_http_info(id, id_transferencia, opts = {})
+    def consultar_using_get39_with_http_info(id, id_transferencia, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.consultar_using_get38 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.consultar_using_get39 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_using_get38" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_using_get39" if id.nil?
       
       
       
@@ -1155,7 +1164,7 @@ module Pier
       
       
       # verify the required parameter 'id_transferencia' is set
-      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling ContaApi.consultar_using_get38" if id_transferencia.nil?
+      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling ContaApi.consultar_using_get39" if id_transferencia.nil?
       
       
       
@@ -1193,7 +1202,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TransferenciaDetalheResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#consultar_using_get38\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#consultar_using_get39\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

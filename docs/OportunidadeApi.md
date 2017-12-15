@@ -8,8 +8,8 @@ Method | HTTP request | Description
 [**alterar_using_put16**](OportunidadeApi.md#alterar_using_put16) | **PUT** /api/tipos-oportunidades/{id} | Altera os tipos oportunidades
 [**alterar_using_put9**](OportunidadeApi.md#alterar_using_put9) | **PUT** /api/oportunidades/{id} | Altera as oportunidades
 [**consultar_status_using_get**](OportunidadeApi.md#consultar_status_using_get) | **GET** /api/tipos-oportunidades/{id}/status/{idStatus} | Apresenta dados de um determinado status do tipo oportunidade
-[**consultar_using_get18**](OportunidadeApi.md#consultar_using_get18) | **GET** /api/oportunidades/{id} | Apresenta dados de uma determinada oportunidade
-[**consultar_using_get33**](OportunidadeApi.md#consultar_using_get33) | **GET** /api/tipos-oportunidades/{id} | Apresenta dados de um determinado tipo oportunidade
+[**consultar_using_get19**](OportunidadeApi.md#consultar_using_get19) | **GET** /api/oportunidades/{id} | Apresenta dados de uma determinada oportunidade
+[**consultar_using_get34**](OportunidadeApi.md#consultar_using_get34) | **GET** /api/tipos-oportunidades/{id} | Apresenta dados de um determinado tipo oportunidade
 [**listar_auditorias_status_using_get**](OportunidadeApi.md#listar_auditorias_status_using_get) | **GET** /api/auditorias-status-oportunidades | Lista as auditorias dos status oportunidades
 [**listar_auditorias_using_get**](OportunidadeApi.md#listar_auditorias_using_get) | **GET** /api/auditorias-oportunidades | Lista as auditorias das oportunidades
 [**listar_auditorias_using_get1**](OportunidadeApi.md#listar_auditorias_using_get1) | **GET** /api/auditorias-tipos-oportunidades | Lista as auditorias dos tipos oportunidades
@@ -238,8 +238,8 @@ No authorization required
 
 
 
-# **consultar_using_get18**
-> OportunidadeResponse consultar_using_get18(id)
+# **consultar_using_get19**
+> OportunidadeResponse consultar_using_get19(id)
 
 Apresenta dados de uma determinada oportunidade
 
@@ -258,10 +258,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da
 
 begin
   #Apresenta dados de uma determinada oportunidade
-  result = api_instance.consultar_using_get18(id)
+  result = api_instance.consultar_using_get19(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling OportunidadeApi->consultar_using_get18: #{e}"
+  puts "Exception when calling OportunidadeApi->consultar_using_get19: #{e}"
 end
 ```
 
@@ -288,8 +288,8 @@ No authorization required
 
 
 
-# **consultar_using_get33**
-> TipoOportunidadeResponse consultar_using_get33(id)
+# **consultar_using_get34**
+> TipoOportunidadeResponse consultar_using_get34(id)
 
 Apresenta dados de um determinado tipo oportunidade
 
@@ -308,10 +308,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta dados de um determinado tipo oportunidade
-  result = api_instance.consultar_using_get33(id)
+  result = api_instance.consultar_using_get34(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling OportunidadeApi->consultar_using_get33: #{e}"
+  puts "Exception when calling OportunidadeApi->consultar_using_get34: #{e}"
 end
 ```
 

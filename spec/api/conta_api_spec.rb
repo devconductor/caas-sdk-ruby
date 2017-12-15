@@ -43,7 +43,7 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for ajustar_conta_using_post
+  # unit tests for ajustar_conta_using_post1
   # Lan\u00C3\u00A7a um ajuste para a conta do id informado
   # Este recurso insere um ajuste para a conta do id informado
   # @param id Id Conta
@@ -51,8 +51,9 @@ describe 'ContaApi' do
   # @param data_ajuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.
   # @param valor_ajuste Valor do ajuste
   # @param [Hash] opts the optional parameters
-  # @return [AjusteResponse]
-  describe 'ajustar_conta_using_post test' do
+  # @option opts [String] :identificador_externo Identificador Externo
+  # @return [AjusteFinanceiroResponse]
+  describe 'ajustar_conta_using_post1 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -271,13 +272,13 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for consultar_using_get10
+  # unit tests for consultar_using_get11
   # Apresenta dados de uma determinada conta
   # Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
   # @param [Hash] opts the optional parameters
   # @return [ContaDetalheResponse]
-  describe 'consultar_using_get10 test' do
+  describe 'consultar_using_get11 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -288,14 +289,14 @@ describe 'ContaApi' do
   end
 
 
-  # unit tests for consultar_using_get38
+  # unit tests for consultar_using_get39
   # Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
   # Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
   # @param id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
   # @param [Hash] opts the optional parameters
   # @return [TransferenciaDetalheResponse]
-  describe 'consultar_using_get38 test' do
+  describe 'consultar_using_get39 test' do
     it "should work" do
       # assertion here
       # should be_a()

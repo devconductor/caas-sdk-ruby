@@ -1003,8 +1003,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
     # @param [Hash] opts the optional parameters
     # @return [EnderecoResponse]
-    def consultar_using_get14(id, opts = {})
-      data, _status_code, _headers = consultar_using_get14_with_http_info(id, opts)
+    def consultar_using_get15(id, opts = {})
+      data, _status_code, _headers = consultar_using_get15_with_http_info(id, opts)
       return data
     end
 
@@ -1013,14 +1013,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(EnderecoResponse, Fixnum, Hash)>] EnderecoResponse data, response status code and response headers
-    def consultar_using_get14_with_http_info(id, opts = {})
+    def consultar_using_get15_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroClienteApi.consultar_using_get14 ..."
+        @api_client.config.logger.debug "Calling API: CadastroClienteApi.consultar_using_get15 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroClienteApi.consultar_using_get14" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroClienteApi.consultar_using_get15" if id.nil?
       
       
       
@@ -1058,7 +1058,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'EnderecoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroClienteApi#consultar_using_get14\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroClienteApi#consultar_using_get15\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1069,8 +1069,8 @@ module Pier
     # @param id ID da Pessoa
     # @param [Hash] opts the optional parameters
     # @return [PessoaDetalheResponse]
-    def consultar_using_get19(id, opts = {})
-      data, _status_code, _headers = consultar_using_get19_with_http_info(id, opts)
+    def consultar_using_get20(id, opts = {})
+      data, _status_code, _headers = consultar_using_get20_with_http_info(id, opts)
       return data
     end
 
@@ -1079,14 +1079,14 @@ module Pier
     # @param id ID da Pessoa
     # @param [Hash] opts the optional parameters
     # @return [Array<(PessoaDetalheResponse, Fixnum, Hash)>] PessoaDetalheResponse data, response status code and response headers
-    def consultar_using_get19_with_http_info(id, opts = {})
+    def consultar_using_get20_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroClienteApi.consultar_using_get19 ..."
+        @api_client.config.logger.debug "Calling API: CadastroClienteApi.consultar_using_get20 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroClienteApi.consultar_using_get19" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroClienteApi.consultar_using_get20" if id.nil?
       
       
       
@@ -1124,7 +1124,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PessoaDetalheResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroClienteApi#consultar_using_get19\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroClienteApi#consultar_using_get20\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1135,8 +1135,8 @@ module Pier
     # @param id ID da Pessoa
     # @param [Hash] opts the optional parameters
     # @return [PessoaResponse]
-    def consultar_using_get21(id, opts = {})
-      data, _status_code, _headers = consultar_using_get21_with_http_info(id, opts)
+    def consultar_using_get22(id, opts = {})
+      data, _status_code, _headers = consultar_using_get22_with_http_info(id, opts)
       return data
     end
 
@@ -1145,14 +1145,14 @@ module Pier
     # @param id ID da Pessoa
     # @param [Hash] opts the optional parameters
     # @return [Array<(PessoaResponse, Fixnum, Hash)>] PessoaResponse data, response status code and response headers
-    def consultar_using_get21_with_http_info(id, opts = {})
+    def consultar_using_get22_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroClienteApi.consultar_using_get21 ..."
+        @api_client.config.logger.debug "Calling API: CadastroClienteApi.consultar_using_get22 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroClienteApi.consultar_using_get21" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroClienteApi.consultar_using_get22" if id.nil?
       
       
       
@@ -1190,7 +1190,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PessoaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroClienteApi#consultar_using_get21\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroClienteApi#consultar_using_get22\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1201,8 +1201,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
     # @param [Hash] opts the optional parameters
     # @return [TelefoneResponse]
-    def consultar_using_get27(id, opts = {})
-      data, _status_code, _headers = consultar_using_get27_with_http_info(id, opts)
+    def consultar_using_get28(id, opts = {})
+      data, _status_code, _headers = consultar_using_get28_with_http_info(id, opts)
       return data
     end
 
@@ -1211,14 +1211,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(TelefoneResponse, Fixnum, Hash)>] TelefoneResponse data, response status code and response headers
-    def consultar_using_get27_with_http_info(id, opts = {})
+    def consultar_using_get28_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroClienteApi.consultar_using_get27 ..."
+        @api_client.config.logger.debug "Calling API: CadastroClienteApi.consultar_using_get28 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroClienteApi.consultar_using_get27" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroClienteApi.consultar_using_get28" if id.nil?
       
       
       
@@ -1256,7 +1256,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TelefoneResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroClienteApi#consultar_using_get27\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroClienteApi#consultar_using_get28\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

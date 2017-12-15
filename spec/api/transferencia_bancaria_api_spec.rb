@@ -78,15 +78,13 @@ describe 'TransferenciaBancariaApi' do
   end
 
 
-  # unit tests for consultar_using_get37
-  # Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-  # Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
-  # @param id Id Conta
-  # @param id_transferencia Id Transfer\u00C3\u00AAncia
+  # unit tests for consultar_using_get10
+  # Consulta conta banc\u00C3\u00A1ria portador
+  # Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
-  # @return [TransferenciaBancariaResponse]
-  describe 'consultar_using_get37 test' do
+  # @return [ContaBancariaPortadorResponse]
+  describe 'consultar_using_get10 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -97,13 +95,15 @@ describe 'TransferenciaBancariaApi' do
   end
 
 
-  # unit tests for consultar_using_get9
-  # Consulta conta banc\u00C3\u00A1ria portador
-  # Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).
+  # unit tests for consultar_using_get38
+  # Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+  # Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+  # @param id Id Conta
+  # @param id_transferencia Id Transfer\u00C3\u00AAncia
   # @param [Hash] opts the optional parameters
-  # @return [ContaBancariaPortadorResponse]
-  describe 'consultar_using_get9 test' do
+  # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+  # @return [TransferenciaBancariaResponse]
+  describe 'consultar_using_get38 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -191,6 +191,23 @@ describe 'TransferenciaBancariaApi' do
   # @param [Hash] opts the optional parameters
   # @return [ContaBancariaPortadorResponse]
   describe 'salvar_using_post7 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for simular_transferencia_bancaria_using_post
+  # Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
+  # Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias.
+  # @param request request
+  # @param [Hash] opts the optional parameters
+  # @return [PlanoParcelamentoTransferenciaCreditoContaBancariaResponse]
+  describe 'simular_transferencia_bancaria_using_post test' do
     it "should work" do
       # assertion here
       # should be_a()

@@ -61,7 +61,7 @@ describe 'AplicacaoMobileApi' do
   end
 
 
-  # unit tests for listar_using_get1
+  # unit tests for listar_using_get2
   # Lista os aplicacoes mobile cadastradas
   # Este m\u00C3\u00A9todo permite que sejam listadas as aplicacoes mobile existentes na base do PIER.
   # @param [Hash] opts the optional parameters
@@ -71,7 +71,7 @@ describe 'AplicacaoMobileApi' do
   # @option opts [String] :id Identificador da Aplicacao Mobile
   # @option opts [Integer] :id_plataforma_mobile Identificador da Plataforma Mobile
   # @return [PageAplicacaoMobileResponse]
-  describe 'listar_using_get1 test' do
+  describe 'listar_using_get2 test' do
     it "should work" do
       # assertion here
       # should be_a()

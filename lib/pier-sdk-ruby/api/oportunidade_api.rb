@@ -351,8 +351,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
     # @param [Hash] opts the optional parameters
     # @return [OportunidadeResponse]
-    def consultar_using_get18(id, opts = {})
-      data, _status_code, _headers = consultar_using_get18_with_http_info(id, opts)
+    def consultar_using_get19(id, opts = {})
+      data, _status_code, _headers = consultar_using_get19_with_http_info(id, opts)
       return data
     end
 
@@ -361,14 +361,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(OportunidadeResponse, Fixnum, Hash)>] OportunidadeResponse data, response status code and response headers
-    def consultar_using_get18_with_http_info(id, opts = {})
+    def consultar_using_get19_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadeApi.consultar_using_get18 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadeApi.consultar_using_get19 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling OportunidadeApi.consultar_using_get18" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling OportunidadeApi.consultar_using_get19" if id.nil?
       
       
       
@@ -406,7 +406,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'OportunidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadeApi#consultar_using_get18\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadeApi#consultar_using_get19\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -417,8 +417,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
     # @param [Hash] opts the optional parameters
     # @return [TipoOportunidadeResponse]
-    def consultar_using_get33(id, opts = {})
-      data, _status_code, _headers = consultar_using_get33_with_http_info(id, opts)
+    def consultar_using_get34(id, opts = {})
+      data, _status_code, _headers = consultar_using_get34_with_http_info(id, opts)
       return data
     end
 
@@ -427,14 +427,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(TipoOportunidadeResponse, Fixnum, Hash)>] TipoOportunidadeResponse data, response status code and response headers
-    def consultar_using_get33_with_http_info(id, opts = {})
+    def consultar_using_get34_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadeApi.consultar_using_get33 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadeApi.consultar_using_get34 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling OportunidadeApi.consultar_using_get33" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling OportunidadeApi.consultar_using_get34" if id.nil?
       
       
       
@@ -472,7 +472,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TipoOportunidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadeApi#consultar_using_get33\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadeApi#consultar_using_get34\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

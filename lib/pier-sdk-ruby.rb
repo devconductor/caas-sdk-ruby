@@ -41,7 +41,7 @@ require 'pier-sdk-ruby/models/adicional_response'
 require 'pier-sdk-ruby/models/adicional_update'
 
 
-require 'pier-sdk-ruby/models/ajuste_response'
+require 'pier-sdk-ruby/models/ajuste_financeiro_response'
 
 
 require 'pier-sdk-ruby/models/alterar_produto_request'
@@ -245,6 +245,9 @@ require 'pier-sdk-ruby/models/dados_cartao_response'
 require 'pier-sdk-ruby/models/desfazimento_transacao_on_us_request'
 
 
+require 'pier-sdk-ruby/models/detalhe_operacao_response'
+
+
 require 'pier-sdk-ruby/models/detalhe_oportunidade_persist'
 
 
@@ -389,6 +392,9 @@ require 'pier-sdk-ruby/models/notificacao_sms_body'
 require 'pier-sdk-ruby/models/notificacao_sms_response'
 
 
+require 'pier-sdk-ruby/models/operacao_response'
+
+
 require 'pier-sdk-ruby/models/operadora_response'
 
 
@@ -405,6 +411,9 @@ require 'pier-sdk-ruby/models/oportunidade_update'
 
 
 require 'pier-sdk-ruby/models/origem_comercial_response'
+
+
+require 'pier-sdk-ruby/models/page_ajuste_response'
 
 
 require 'pier-sdk-ruby/models/page_anuidade_response'
@@ -510,6 +519,9 @@ require 'pier-sdk-ruby/models/page_job_response'
 
 
 require 'pier-sdk-ruby/models/page_lote_cartoes_pre_pagos_response'
+
+
+require 'pier-sdk-ruby/models/page_operacao_response'
 
 
 require 'pier-sdk-ruby/models/page_operadora_response'
@@ -647,6 +659,9 @@ require 'pier-sdk-ruby/models/pais_response'
 require 'pier-sdk-ruby/models/parametro_produto_response'
 
 
+require 'pier-sdk-ruby/models/parcelamento_transferencia_response'
+
+
 require 'pier-sdk-ruby/models/pessoa_detalhe_response'
 
 
@@ -684,6 +699,15 @@ require 'pier-sdk-ruby/models/plano_parcelamento_emprestimo_response'
 
 
 require 'pier-sdk-ruby/models/plano_parcelamento_response'
+
+
+require 'pier-sdk-ruby/models/plano_parcelamento_transferencia_credito_conta_bancaria_request'
+
+
+require 'pier-sdk-ruby/models/plano_parcelamento_transferencia_credito_conta_bancaria_response'
+
+
+require 'pier-sdk-ruby/models/plano_parcelamento_transferencia_response'
 
 
 require 'pier-sdk-ruby/models/plataforma_mobile_persist'
@@ -901,6 +925,8 @@ require 'pier-sdk-ruby/models/web_hook_response'
 
 # APIs
 
+
+require 'pier-sdk-ruby/api/ajuste_financeiro_api'
 
 require 'pier-sdk-ruby/api/antecipacao_api'
 

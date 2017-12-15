@@ -116,13 +116,13 @@ describe 'OportunidadeApi' do
   end
 
 
-  # unit tests for consultar_using_get18
+  # unit tests for consultar_using_get19
   # Apresenta dados de uma determinada oportunidade
   # Este recurso permite consultar dados de uma determinada oportunidade a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
   # @param [Hash] opts the optional parameters
   # @return [OportunidadeResponse]
-  describe 'consultar_using_get18 test' do
+  describe 'consultar_using_get19 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -133,13 +133,13 @@ describe 'OportunidadeApi' do
   end
 
 
-  # unit tests for consultar_using_get33
+  # unit tests for consultar_using_get34
   # Apresenta dados de um determinado tipo oportunidade
   # Este recurso permite consultar dados de um determinado tipo oportunidade a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
   # @param [Hash] opts the optional parameters
   # @return [TipoOportunidadeResponse]
-  describe 'consultar_using_get33 test' do
+  describe 'consultar_using_get34 test' do
     it "should work" do
       # assertion here
       # should be_a()

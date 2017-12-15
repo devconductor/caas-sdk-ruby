@@ -15,7 +15,7 @@ Method | HTTP request | Description
 [**consultar_limite_disponibilidade_using_get**](CartaoApi.md#consultar_limite_disponibilidade_using_get) | **GET** /api/cartoes/{id}/limites-disponibilidades | Apresenta os limites do Portador do Cart\u00C3\u00A3o
 [**consultar_lotes_cartoes_pre_pagos_using_get**](CartaoApi.md#consultar_lotes_cartoes_pre_pagos_using_get) | **GET** /api/cartoes/lotes-cartoes-pre-pagos/{id} | Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**consultar_portador_using_get**](CartaoApi.md#consultar_portador_using_get) | **GET** /api/cartoes/{id}/portadores | Apresenta os dados do Portador do Cart\u00C3\u00A3o
-[**consultar_using_get6**](CartaoApi.md#consultar_using_get6) | **GET** /api/cartoes/{id} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
+[**consultar_using_get7**](CartaoApi.md#consultar_using_get7) | **GET** /api/cartoes/{id} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
 [**desbloquear_senha_incorreta_using_post**](CartaoApi.md#desbloquear_senha_incorreta_using_post) | **POST** /api/cartoes/{id}/desbloquear-senha-incorreta | Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
 [**desbloquear_using_post**](CartaoApi.md#desbloquear_using_post) | **POST** /api/cartoes/{id}/desbloquear | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 [**gerar_lotes_cartoes_pre_pagos_using_post**](CartaoApi.md#gerar_lotes_cartoes_pre_pagos_using_post) | **POST** /api/cartoes/lotes-cartoes-pre-pagos | Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
@@ -607,8 +607,8 @@ No authorization required
 
 
 
-# **consultar_using_get6**
-> CartaoDetalheResponse consultar_using_get6(id)
+# **consultar_using_get7**
+> CartaoDetalheResponse consultar_using_get7(id)
 
 Apresenta os dados de um determinado Cart\u00C3\u00A3o
 
@@ -627,10 +627,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Cart\u00C3\u00A3o
-  result = api_instance.consultar_using_get6(id)
+  result = api_instance.consultar_using_get7(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CartaoApi->consultar_using_get6: #{e}"
+  puts "Exception when calling CartaoApi->consultar_using_get7: #{e}"
 end
 ```
 

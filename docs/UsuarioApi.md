@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**alterar_senha_using_put**](UsuarioApi.md#alterar_senha_using_put) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 [**alterar_using_put19**](UsuarioApi.md#alterar_using_put19) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados na base.
 [**ativar_usuario_using_post**](UsuarioApi.md#ativar_usuario_using_post) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**consultar_using_get39**](UsuarioApi.md#consultar_using_get39) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
+[**consultar_using_get40**](UsuarioApi.md#consultar_using_get40) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
 [**desativar_usuario_using_post**](UsuarioApi.md#desativar_usuario_using_post) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**listar_using_get44**](UsuarioApi.md#listar_using_get44) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**recuperar_senha_using_post**](UsuarioApi.md#recuperar_senha_using_post) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
@@ -231,8 +231,8 @@ No authorization required
 
 
 
-# **consultar_using_get39**
-> UsuarioResponse consultar_using_get39(id)
+# **consultar_using_get40**
+> UsuarioResponse consultar_using_get40(id)
 
 Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
 
@@ -251,10 +251,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
-  result = api_instance.consultar_using_get39(id)
+  result = api_instance.consultar_using_get40(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling UsuarioApi->consultar_using_get39: #{e}"
+  puts "Exception when calling UsuarioApi->consultar_using_get40: #{e}"
 end
 ```
 

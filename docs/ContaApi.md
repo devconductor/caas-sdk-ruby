@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ajustar_conta_using_post**](ContaApi.md#ajustar_conta_using_post) | **POST** /api/contas/{id}/ajustes-financeiros | Lan\u00C3\u00A7a um ajuste para a conta do id informado
+[**ajustar_conta_using_post1**](ContaApi.md#ajustar_conta_using_post1) | **POST** /api/contas/{id}/ajustes-financeiros | Lan\u00C3\u00A7a um ajuste para a conta do id informado
 [**alterar_produto_using_post**](ContaApi.md#alterar_produto_using_post) | **POST** /api/contas/{id}/alterar-produto | Altera o produto associado \u00C3\u00A0 conta.
 [**alterar_titular_using_post**](ContaApi.md#alterar_titular_using_post) | **POST** /api/contas/{id}/alterar-titular | Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
 [**alterar_vencimento_using_put**](ContaApi.md#alterar_vencimento_using_put) | **PUT** /api/contas/{id}/alterar-vencimento | Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
@@ -16,8 +16,8 @@ Method | HTTP request | Description
 [**consultar_boleto_emitido_using_get**](ContaApi.md#consultar_boleto_emitido_using_get) | **GET** /api/contas/{id}/consultar-dados-pagamento-fatura | Consulta os dados de um determinado boleto da fatura
 [**consultar_divida_atualizada_cliente_using_get**](ContaApi.md#consultar_divida_atualizada_cliente_using_get) | **GET** /api/contas/{id}/recuperar-divida-atualizada | Consulta a d\u00C3\u00ADvida atualizada do cliente
 [**consultar_taxas_tarifas_using_get**](ContaApi.md#consultar_taxas_tarifas_using_get) | **GET** /api/contas/{id}/consultar-taxas-tarifas | Permite consultar a partir do ID da conta as taxas e tarifas
-[**consultar_using_get10**](ContaApi.md#consultar_using_get10) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
-[**consultar_using_get38**](ContaApi.md#consultar_using_get38) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+[**consultar_using_get11**](ContaApi.md#consultar_using_get11) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
+[**consultar_using_get39**](ContaApi.md#consultar_using_get39) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 [**desativar_envio_fatura_email_using_post**](ContaApi.md#desativar_envio_fatura_email_using_post) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00C3\u00A7o de envio de fatura por email
 [**gerar_boleto_recarga_using_post**](ContaApi.md#gerar_boleto_recarga_using_post) | **POST** /api/contas/{id}/gerar-boleto-recarga | Gera um boleto de recarga
 [**gerar_cartao_embossing_using_post**](ContaApi.md#gerar_cartao_embossing_using_post) | **POST** /api/contas/{id}/gerar-cartao-grafica | Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
@@ -40,8 +40,8 @@ Method | HTTP request | Description
 
 
 
-# **ajustar_conta_using_post**
-> AjusteResponse ajustar_conta_using_post(id, id_tipo_ajuste, data_ajuste, valor_ajuste)
+# **ajustar_conta_using_post1**
+> AjusteFinanceiroResponse ajustar_conta_using_post1(id, id_tipo_ajuste, data_ajuste, valor_ajuste, opts)
 
 Lan\u00C3\u00A7a um ajuste para a conta do id informado
 
@@ -63,13 +63,16 @@ data_ajuste = "data_ajuste_example" # String | Data do ajuste no formato yyyy-MM
 
 valor_ajuste = 3.4 # Float | Valor do ajuste
 
+opts = { 
+  identificador_externo: "identificador_externo_example" # String | Identificador Externo
+}
 
 begin
   #Lan\u00C3\u00A7a um ajuste para a conta do id informado
-  result = api_instance.ajustar_conta_using_post(id, id_tipo_ajuste, data_ajuste, valor_ajuste)
+  result = api_instance.ajustar_conta_using_post1(id, id_tipo_ajuste, data_ajuste, valor_ajuste, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->ajustar_conta_using_post: #{e}"
+  puts "Exception when calling ContaApi->ajustar_conta_using_post1: #{e}"
 end
 ```
 
@@ -81,11 +84,12 @@ Name | Type | Description  | Notes
  **id_tipo_ajuste** | **Integer**| C\u00C3\u00B3digo identificador do tipo de ajuste. | 
  **data_ajuste** | **String**| Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. | 
  **valor_ajuste** | [**Float**](.md)| Valor do ajuste | 
+ **identificador_externo** | **String**| Identificador Externo | [optional] 
 
 
 ### Return type
 
-[**AjusteResponse**](AjusteResponse.md)
+[**AjusteFinanceiroResponse**](AjusteFinanceiroResponse.md)
 
 ### Authorization
 
@@ -703,8 +707,8 @@ No authorization required
 
 
 
-# **consultar_using_get10**
-> ContaDetalheResponse consultar_using_get10(id)
+# **consultar_using_get11**
+> ContaDetalheResponse consultar_using_get11(id)
 
 Apresenta dados de uma determinada conta
 
@@ -723,10 +727,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da
 
 begin
   #Apresenta dados de uma determinada conta
-  result = api_instance.consultar_using_get10(id)
+  result = api_instance.consultar_using_get11(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->consultar_using_get10: #{e}"
+  puts "Exception when calling ContaApi->consultar_using_get11: #{e}"
 end
 ```
 
@@ -753,8 +757,8 @@ No authorization required
 
 
 
-# **consultar_using_get38**
-> TransferenciaDetalheResponse consultar_using_get38(id, id_transferencia)
+# **consultar_using_get39**
+> TransferenciaDetalheResponse consultar_using_get39(id, id_transferencia)
 
 Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 
@@ -775,10 +779,10 @@ id_transferencia = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u
 
 begin
   #Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-  result = api_instance.consultar_using_get38(id, id_transferencia)
+  result = api_instance.consultar_using_get39(id, id_transferencia)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->consultar_using_get38: #{e}"
+  puts "Exception when calling ContaApi->consultar_using_get39: #{e}"
 end
 ```
 

@@ -344,8 +344,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
     # @param [Hash] opts the optional parameters
     # @return [UsuarioResponse]
-    def consultar_using_get39(id, opts = {})
-      data, _status_code, _headers = consultar_using_get39_with_http_info(id, opts)
+    def consultar_using_get40(id, opts = {})
+      data, _status_code, _headers = consultar_using_get40_with_http_info(id, opts)
       return data
     end
 
@@ -354,14 +354,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(UsuarioResponse, Fixnum, Hash)>] UsuarioResponse data, response status code and response headers
-    def consultar_using_get39_with_http_info(id, opts = {})
+    def consultar_using_get40_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: UsuarioApi.consultar_using_get39 ..."
+        @api_client.config.logger.debug "Calling API: UsuarioApi.consultar_using_get40 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling UsuarioApi.consultar_using_get39" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling UsuarioApi.consultar_using_get40" if id.nil?
       
       
       
@@ -399,7 +399,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'UsuarioResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UsuarioApi#consultar_using_get39\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UsuarioApi#consultar_using_get40\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

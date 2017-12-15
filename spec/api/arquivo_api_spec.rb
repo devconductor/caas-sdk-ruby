@@ -43,13 +43,13 @@ describe 'ArquivoApi' do
   end
 
 
-  # unit tests for consultar_using_get1
+  # unit tests for consultar_using_get2
   # Consulta de arquivo no PIER Cloud
   # Este recurso permite consultar um determinado arquivo armazenado no PIER Cloud.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
   # @param [Hash] opts the optional parameters
   # @return [ArquivoResponse]
-  describe 'consultar_using_get1 test' do
+  describe 'consultar_using_get2 test' do
     it "should work" do
       # assertion here
       # should be_a()

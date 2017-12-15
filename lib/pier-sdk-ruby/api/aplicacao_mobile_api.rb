@@ -117,8 +117,8 @@ module Pier
     # @option opts [String] :id Identificador da Aplicacao Mobile
     # @option opts [Integer] :id_plataforma_mobile Identificador da Plataforma Mobile
     # @return [PageAplicacaoMobileResponse]
-    def listar_using_get1(opts = {})
-      data, _status_code, _headers = listar_using_get1_with_http_info(opts)
+    def listar_using_get2(opts = {})
+      data, _status_code, _headers = listar_using_get2_with_http_info(opts)
       return data
     end
 
@@ -131,9 +131,9 @@ module Pier
     # @option opts [String] :id Identificador da Aplicacao Mobile
     # @option opts [Integer] :id_plataforma_mobile Identificador da Plataforma Mobile
     # @return [Array<(PageAplicacaoMobileResponse, Fixnum, Hash)>] PageAplicacaoMobileResponse data, response status code and response headers
-    def listar_using_get1_with_http_info(opts = {})
+    def listar_using_get2_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: AplicacaoMobileApi.listar_using_get1 ..."
+        @api_client.config.logger.debug "Calling API: AplicacaoMobileApi.listar_using_get2 ..."
       end
       
       
@@ -203,7 +203,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageAplicacaoMobileResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AplicacaoMobileApi#listar_using_get1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: AplicacaoMobileApi#listar_using_get2\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizar_using_put**](AplicacaoMobileApi.md#atualizar_using_put) | **PUT** /api/aplicacoes-mobile/{id} | Atualiza Aplicacao Mobile
-[**listar_using_get1**](AplicacaoMobileApi.md#listar_using_get1) | **GET** /api/aplicacoes-mobile | Lista os aplicacoes mobile cadastradas
+[**listar_using_get2**](AplicacaoMobileApi.md#listar_using_get2) | **GET** /api/aplicacoes-mobile | Lista os aplicacoes mobile cadastradas
 [**salvar_using_post**](AplicacaoMobileApi.md#salvar_using_post) | **POST** /api/aplicacoes-mobile | Cadastra Aplicacao Mobile
 
 
@@ -64,8 +64,8 @@ No authorization required
 
 
 
-# **listar_using_get1**
-> PageAplicacaoMobileResponse listar_using_get1(opts)
+# **listar_using_get2**
+> PageAplicacaoMobileResponse listar_using_get2(opts)
 
 Lista os aplicacoes mobile cadastradas
 
@@ -89,10 +89,10 @@ opts = {
 
 begin
   #Lista os aplicacoes mobile cadastradas
-  result = api_instance.listar_using_get1(opts)
+  result = api_instance.listar_using_get2(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling AplicacaoMobileApi->listar_using_get1: #{e}"
+  puts "Exception when calling AplicacaoMobileApi->listar_using_get2: #{e}"
 end
 ```
 

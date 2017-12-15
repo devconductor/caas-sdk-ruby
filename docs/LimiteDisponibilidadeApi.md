@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_using_put8**](LimiteDisponibilidadeApi.md#alterar_using_put8) | **PUT** /api/limites-disponibilidades | Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
-[**consultar_using_get17**](LimiteDisponibilidadeApi.md#consultar_using_get17) | **GET** /api/limites-disponibilidades | Apresenta os limites da conta
+[**consultar_using_get18**](LimiteDisponibilidadeApi.md#consultar_using_get18) | **GET** /api/limites-disponibilidades | Apresenta os limites da conta
 
 
 
@@ -88,8 +88,8 @@ No authorization required
 
 
 
-# **consultar_using_get17**
-> LimiteDisponibilidadeResponse consultar_using_get17(id_conta)
+# **consultar_using_get18**
+> LimiteDisponibilidadeResponse consultar_using_get18(id_conta)
 
 Apresenta os limites da conta
 
@@ -108,10 +108,10 @@ id_conta = 789 # Integer | Id Conta
 
 begin
   #Apresenta os limites da conta
-  result = api_instance.consultar_using_get17(id_conta)
+  result = api_instance.consultar_using_get18(id_conta)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling LimiteDisponibilidadeApi->consultar_using_get17: #{e}"
+  puts "Exception when calling LimiteDisponibilidadeApi->consultar_using_get18: #{e}"
 end
 ```
 

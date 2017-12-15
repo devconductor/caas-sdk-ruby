@@ -236,13 +236,13 @@ describe 'CadastroClienteApi' do
   end
 
 
-  # unit tests for consultar_using_get14
+  # unit tests for consultar_using_get15
   # Apresenta os dados de um determinado Endere\u00C3\u00A7o
   # Este m\u00C3\u00A9todo permite consultar um determinado Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
   # @param [Hash] opts the optional parameters
   # @return [EnderecoResponse]
-  describe 'consultar_using_get14 test' do
+  describe 'consultar_using_get15 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -253,13 +253,13 @@ describe 'CadastroClienteApi' do
   end
 
 
-  # unit tests for consultar_using_get19
+  # unit tests for consultar_using_get20
   # Apresenta os detalhes de uma determinada Pessoa
   # Este m\u00C3\u00A9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor.
   # @param id ID da Pessoa
   # @param [Hash] opts the optional parameters
   # @return [PessoaDetalheResponse]
-  describe 'consultar_using_get19 test' do
+  describe 'consultar_using_get20 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -270,13 +270,13 @@ describe 'CadastroClienteApi' do
   end
 
 
-  # unit tests for consultar_using_get21
+  # unit tests for consultar_using_get22
   # Apresenta os dados de uma determinada Pessoa
   # Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
   # @param id ID da Pessoa
   # @param [Hash] opts the optional parameters
   # @return [PessoaResponse]
-  describe 'consultar_using_get21 test' do
+  describe 'consultar_using_get22 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -287,13 +287,13 @@ describe 'CadastroClienteApi' do
   end
 
 
-  # unit tests for consultar_using_get27
+  # unit tests for consultar_using_get28
   # Apresenta os dados de um determinado Telefone
   # Este m\u00C3\u00A9todo permite consultar um determinado Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
   # @param [Hash] opts the optional parameters
   # @return [TelefoneResponse]
-  describe 'consultar_using_get27 test' do
+  describe 'consultar_using_get28 test' do
     it "should work" do
       # assertion here
       # should be_a()

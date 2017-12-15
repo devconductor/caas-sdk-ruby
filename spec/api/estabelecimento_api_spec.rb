@@ -166,13 +166,30 @@ describe 'EstabelecimentoApi' do
   end
 
 
-  # unit tests for consultar_using_get11
+  # unit tests for consulta_operacao_using_get
+  # Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+  # Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idoperacao
+  # @param id C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao).
+  # @param [Hash] opts the optional parameters
+  # @return [DetalheOperacaoResponse]
+  describe 'consulta_operacao_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for consultar_using_get12
   # Consultar credor
   # Consulta um credor atrav\u00C3\u00A9s do seu identificador.
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da credor
   # @param [Hash] opts the optional parameters
   # @return [CredorResponse]
-  describe 'consultar_using_get11 test' do
+  describe 'consultar_using_get12 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -183,13 +200,13 @@ describe 'EstabelecimentoApi' do
   end
 
 
-  # unit tests for consultar_using_get15
+  # unit tests for consultar_using_get16
   # Consultar estabelecimento por id
   # Consulta os detalhes de um determinado estabelecimento
   # @param id Id
   # @param [Hash] opts the optional parameters
   # @return [EstabelecimentoResponse]
-  describe 'consultar_using_get15 test' do
+  describe 'consultar_using_get16 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -200,13 +217,13 @@ describe 'EstabelecimentoApi' do
   end
 
 
-  # unit tests for consultar_using_get20
+  # unit tests for consultar_using_get21
   # Consultar pessoa jur\u00C3\u00ADdica
   # Consulta uma pessoa jur\u00C3\u00ADdica atrav\u00C3\u00A9s do seu identificador.
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica
   # @param [Hash] opts the optional parameters
   # @return [PessoaJuridicaResponse]
-  describe 'consultar_using_get20 test' do
+  describe 'consultar_using_get21 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -217,13 +234,13 @@ describe 'EstabelecimentoApi' do
   end
 
 
-  # unit tests for consultar_using_get26
+  # unit tests for consultar_using_get27
   # Apresenta os dados de um determinado telefone de um estabelecimento
   # Este m\u00C3\u00A9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).
   # @param [Hash] opts the optional parameters
   # @return [TelefoneEstabelecimentoResponse]
-  describe 'consultar_using_get26 test' do
+  describe 'consultar_using_get27 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -234,13 +251,34 @@ describe 'EstabelecimentoApi' do
   end
 
 
-  # unit tests for consultar_using_get28
+  # unit tests for consultar_using_get29
   # Apresenta os dados de um determinado Terminal
   # Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
   # @param [Hash] opts the optional parameters
   # @return [TerminalResponse]
-  describe 'consultar_using_get28 test' do
+  describe 'consultar_using_get29 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for lista_operacao_using_get
+  # Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista
+  # Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00A3o
+  # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [Integer] :id_operacao C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o
+  # @option opts [String] :codigo_processamento C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador
+  # @return [PageOperacaoResponse]
+  describe 'lista_operacao_using_get test' do
     it "should work" do
       # assertion here
       # should be_a()

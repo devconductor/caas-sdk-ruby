@@ -189,8 +189,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento (id).
     # @param [Hash] opts the optional parameters
     # @return [DocumentoDetalhadoResponse]
-    def consultar_using_get12(id, opts = {})
-      data, _status_code, _headers = consultar_using_get12_with_http_info(id, opts)
+    def consultar_using_get13(id, opts = {})
+      data, _status_code, _headers = consultar_using_get13_with_http_info(id, opts)
       return data
     end
 
@@ -199,14 +199,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(DocumentoDetalhadoResponse, Fixnum, Hash)>] DocumentoDetalhadoResponse data, response status code and response headers
-    def consultar_using_get12_with_http_info(id, opts = {})
+    def consultar_using_get13_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DocumentoApi.consultar_using_get12 ..."
+        @api_client.config.logger.debug "Calling API: DocumentoApi.consultar_using_get13 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling DocumentoApi.consultar_using_get12" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling DocumentoApi.consultar_using_get13" if id.nil?
       
       
       
@@ -244,7 +244,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'DocumentoDetalhadoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DocumentoApi#consultar_using_get12\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DocumentoApi#consultar_using_get13\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -255,8 +255,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
     # @param [Hash] opts the optional parameters
     # @return [DocumentoTemplateResponse]
-    def consultar_using_get13(id, opts = {})
-      data, _status_code, _headers = consultar_using_get13_with_http_info(id, opts)
+    def consultar_using_get14(id, opts = {})
+      data, _status_code, _headers = consultar_using_get14_with_http_info(id, opts)
       return data
     end
 
@@ -265,14 +265,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(DocumentoTemplateResponse, Fixnum, Hash)>] DocumentoTemplateResponse data, response status code and response headers
-    def consultar_using_get13_with_http_info(id, opts = {})
+    def consultar_using_get14_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DocumentoApi.consultar_using_get13 ..."
+        @api_client.config.logger.debug "Calling API: DocumentoApi.consultar_using_get14 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling DocumentoApi.consultar_using_get13" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling DocumentoApi.consultar_using_get14" if id.nil?
       
       
       
@@ -310,7 +310,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'DocumentoTemplateResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DocumentoApi#consultar_using_get13\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DocumentoApi#consultar_using_get14\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -321,8 +321,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
     # @param [Hash] opts the optional parameters
     # @return [TipoTemplateResponse]
-    def consultar_using_get35(id, opts = {})
-      data, _status_code, _headers = consultar_using_get35_with_http_info(id, opts)
+    def consultar_using_get36(id, opts = {})
+      data, _status_code, _headers = consultar_using_get36_with_http_info(id, opts)
       return data
     end
 
@@ -331,14 +331,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(TipoTemplateResponse, Fixnum, Hash)>] TipoTemplateResponse data, response status code and response headers
-    def consultar_using_get35_with_http_info(id, opts = {})
+    def consultar_using_get36_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DocumentoApi.consultar_using_get35 ..."
+        @api_client.config.logger.debug "Calling API: DocumentoApi.consultar_using_get36 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling DocumentoApi.consultar_using_get35" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling DocumentoApi.consultar_using_get36" if id.nil?
       
       
       
@@ -376,7 +376,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TipoTemplateResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DocumentoApi#consultar_using_get35\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DocumentoApi#consultar_using_get36\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

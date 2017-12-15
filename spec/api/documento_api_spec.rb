@@ -79,29 +79,12 @@ describe 'DocumentoApi' do
   end
 
 
-  # unit tests for consultar_using_get12
+  # unit tests for consultar_using_get13
   # Consulta documentos
   # Esse recurso permite consultar um documento espec\u00C3\u00ADfico a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento (id).
   # @param [Hash] opts the optional parameters
   # @return [DocumentoDetalhadoResponse]
-  describe 'consultar_using_get12 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for consultar_using_get13
-  # Consultar templates dos documentos
-  # Esse recurso permite consultar templates dos documentos.
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
-  # @param [Hash] opts the optional parameters
-  # @return [DocumentoTemplateResponse]
   describe 'consultar_using_get13 test' do
     it "should work" do
       # assertion here
@@ -113,13 +96,30 @@ describe 'DocumentoApi' do
   end
 
 
-  # unit tests for consultar_using_get35
+  # unit tests for consultar_using_get14
+  # Consultar templates dos documentos
+  # Esse recurso permite consultar templates dos documentos.
+  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
+  # @param [Hash] opts the optional parameters
+  # @return [DocumentoTemplateResponse]
+  describe 'consultar_using_get14 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for consultar_using_get36
   # Consultar tipo de template
   # Esse recurso permite consultar um determinado tipo de template a partir do id recebido e do id do emissor.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
   # @param [Hash] opts the optional parameters
   # @return [TipoTemplateResponse]
-  describe 'consultar_using_get35 test' do
+  describe 'consultar_using_get36 test' do
     it "should work" do
       # assertion here
       # should be_a()

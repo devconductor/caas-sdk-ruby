@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultar_estagio_cartao_using_get**](StatusParametroApi.md#consultar_estagio_cartao_using_get) | **GET** /api/estagios-cartoes/{id} | Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
 [**consultar_status_cartao_using_get**](StatusParametroApi.md#consultar_status_cartao_using_get) | **GET** /api/status-cartoes/{id} | Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
-[**consultar_using_get24**](StatusParametroApi.md#consultar_using_get24) | **GET** /api/status-contas/{id} | Apresenta os dados de um determinado Status Conta
-[**consultar_using_get25**](StatusParametroApi.md#consultar_using_get25) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
+[**consultar_using_get25**](StatusParametroApi.md#consultar_using_get25) | **GET** /api/status-contas/{id} | Apresenta os dados de um determinado Status Conta
+[**consultar_using_get26**](StatusParametroApi.md#consultar_using_get26) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 [**listar_estagios_cartoes_using_get**](StatusParametroApi.md#listar_estagios_cartoes_using_get) | **GET** /api/estagios-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
 [**listar_status_cartoes_using_get**](StatusParametroApi.md#listar_status_cartoes_using_get) | **GET** /api/status-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
 [**listar_tipos_eventos_transacoes_using_get**](StatusParametroApi.md#listar_tipos_eventos_transacoes_using_get) | **GET** /api/tipos-eventos-transacoes | Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
@@ -117,8 +117,8 @@ No authorization required
 
 
 
-# **consultar_using_get24**
-> StatusContaResponse consultar_using_get24(id)
+# **consultar_using_get25**
+> StatusContaResponse consultar_using_get25(id)
 
 Apresenta os dados de um determinado Status Conta
 
@@ -137,10 +137,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Status Conta
-  result = api_instance.consultar_using_get24(id)
+  result = api_instance.consultar_using_get25(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling StatusParametroApi->consultar_using_get24: #{e}"
+  puts "Exception when calling StatusParametroApi->consultar_using_get25: #{e}"
 end
 ```
 
@@ -167,8 +167,8 @@ No authorization required
 
 
 
-# **consultar_using_get25**
-> StatusImpressaoResponse consultar_using_get25(id)
+# **consultar_using_get26**
+> StatusImpressaoResponse consultar_using_get26(id)
 
 Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 
@@ -187,10 +187,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
-  result = api_instance.consultar_using_get25(id)
+  result = api_instance.consultar_using_get26(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling StatusParametroApi->consultar_using_get25: #{e}"
+  puts "Exception when calling StatusParametroApi->consultar_using_get26: #{e}"
 end
 ```
 

@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_using_get1**](ArquivoApi.md#consultar_using_get1) | **GET** /api/arquivos/{id} | Consulta de arquivo no PIER Cloud
+[**consultar_using_get2**](ArquivoApi.md#consultar_using_get2) | **GET** /api/arquivos/{id} | Consulta de arquivo no PIER Cloud
 [**salvar_using_post1**](ArquivoApi.md#salvar_using_post1) | **POST** /api/arquivos | Permite armazenar arquivos no PIER Cloud
 
 
 
 
-# **consultar_using_get1**
-> ArquivoResponse consultar_using_get1(id)
+# **consultar_using_get2**
+> ArquivoResponse consultar_using_get2(id)
 
 Consulta de arquivo no PIER Cloud
 
@@ -30,10 +30,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Consulta de arquivo no PIER Cloud
-  result = api_instance.consultar_using_get1(id)
+  result = api_instance.consultar_using_get2(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ArquivoApi->consultar_using_get1: #{e}"
+  puts "Exception when calling ArquivoApi->consultar_using_get2: #{e}"
 end
 ```
 

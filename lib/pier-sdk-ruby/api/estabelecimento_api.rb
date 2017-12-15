@@ -628,13 +628,79 @@ module Pier
     end
 
 
+    # Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+    # Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idoperacao
+    # @param id C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao).
+    # @param [Hash] opts the optional parameters
+    # @return [DetalheOperacaoResponse]
+    def consulta_operacao_using_get(id, opts = {})
+      data, _status_code, _headers = consulta_operacao_using_get_with_http_info(id, opts)
+      return data
+    end
+
+    # Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+    # Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idoperacao
+    # @param id C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao).
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(DetalheOperacaoResponse, Fixnum, Hash)>] DetalheOperacaoResponse data, response status code and response headers
+    def consulta_operacao_using_get_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.consulta_operacao_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.consulta_operacao_using_get" if id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/tipos-operacoes-estabelecimentos/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DetalheOperacaoResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#consulta_operacao_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Consultar credor
     # Consulta um credor atrav\u00C3\u00A9s do seu identificador.
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da credor
     # @param [Hash] opts the optional parameters
     # @return [CredorResponse]
-    def consultar_using_get11(id, opts = {})
-      data, _status_code, _headers = consultar_using_get11_with_http_info(id, opts)
+    def consultar_using_get12(id, opts = {})
+      data, _status_code, _headers = consultar_using_get12_with_http_info(id, opts)
       return data
     end
 
@@ -643,14 +709,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da credor
     # @param [Hash] opts the optional parameters
     # @return [Array<(CredorResponse, Fixnum, Hash)>] CredorResponse data, response status code and response headers
-    def consultar_using_get11_with_http_info(id, opts = {})
+    def consultar_using_get12_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.consultar_using_get11 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.consultar_using_get12 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.consultar_using_get11" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.consultar_using_get12" if id.nil?
       
       
       
@@ -688,7 +754,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'CredorResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#consultar_using_get11\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#consultar_using_get12\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -699,8 +765,8 @@ module Pier
     # @param id Id
     # @param [Hash] opts the optional parameters
     # @return [EstabelecimentoResponse]
-    def consultar_using_get15(id, opts = {})
-      data, _status_code, _headers = consultar_using_get15_with_http_info(id, opts)
+    def consultar_using_get16(id, opts = {})
+      data, _status_code, _headers = consultar_using_get16_with_http_info(id, opts)
       return data
     end
 
@@ -709,14 +775,14 @@ module Pier
     # @param id Id
     # @param [Hash] opts the optional parameters
     # @return [Array<(EstabelecimentoResponse, Fixnum, Hash)>] EstabelecimentoResponse data, response status code and response headers
-    def consultar_using_get15_with_http_info(id, opts = {})
+    def consultar_using_get16_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.consultar_using_get15 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.consultar_using_get16 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.consultar_using_get15" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.consultar_using_get16" if id.nil?
       
       
       
@@ -754,7 +820,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'EstabelecimentoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#consultar_using_get15\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#consultar_using_get16\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -765,8 +831,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica
     # @param [Hash] opts the optional parameters
     # @return [PessoaJuridicaResponse]
-    def consultar_using_get20(id, opts = {})
-      data, _status_code, _headers = consultar_using_get20_with_http_info(id, opts)
+    def consultar_using_get21(id, opts = {})
+      data, _status_code, _headers = consultar_using_get21_with_http_info(id, opts)
       return data
     end
 
@@ -775,14 +841,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica
     # @param [Hash] opts the optional parameters
     # @return [Array<(PessoaJuridicaResponse, Fixnum, Hash)>] PessoaJuridicaResponse data, response status code and response headers
-    def consultar_using_get20_with_http_info(id, opts = {})
+    def consultar_using_get21_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.consultar_using_get20 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.consultar_using_get21 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.consultar_using_get20" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.consultar_using_get21" if id.nil?
       
       
       
@@ -820,7 +886,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PessoaJuridicaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#consultar_using_get20\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#consultar_using_get21\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -831,8 +897,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).
     # @param [Hash] opts the optional parameters
     # @return [TelefoneEstabelecimentoResponse]
-    def consultar_using_get26(id, opts = {})
-      data, _status_code, _headers = consultar_using_get26_with_http_info(id, opts)
+    def consultar_using_get27(id, opts = {})
+      data, _status_code, _headers = consultar_using_get27_with_http_info(id, opts)
       return data
     end
 
@@ -841,14 +907,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(TelefoneEstabelecimentoResponse, Fixnum, Hash)>] TelefoneEstabelecimentoResponse data, response status code and response headers
-    def consultar_using_get26_with_http_info(id, opts = {})
+    def consultar_using_get27_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.consultar_using_get26 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.consultar_using_get27 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.consultar_using_get26" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.consultar_using_get27" if id.nil?
       
       
       
@@ -886,7 +952,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TelefoneEstabelecimentoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#consultar_using_get26\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#consultar_using_get27\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -897,8 +963,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
     # @param [Hash] opts the optional parameters
     # @return [TerminalResponse]
-    def consultar_using_get28(id, opts = {})
-      data, _status_code, _headers = consultar_using_get28_with_http_info(id, opts)
+    def consultar_using_get29(id, opts = {})
+      data, _status_code, _headers = consultar_using_get29_with_http_info(id, opts)
       return data
     end
 
@@ -907,14 +973,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(TerminalResponse, Fixnum, Hash)>] TerminalResponse data, response status code and response headers
-    def consultar_using_get28_with_http_info(id, opts = {})
+    def consultar_using_get29_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.consultar_using_get28 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.consultar_using_get29 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.consultar_using_get28" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.consultar_using_get29" if id.nil?
       
       
       
@@ -952,7 +1018,108 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TerminalResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#consultar_using_get28\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#consultar_using_get29\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista
+    # Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00A3o
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_operacao C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o
+    # @option opts [String] :codigo_processamento C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador
+    # @return [PageOperacaoResponse]
+    def lista_operacao_using_get(opts = {})
+      data, _status_code, _headers = lista_operacao_using_get_with_http_info(opts)
+      return data
+    end
+
+    # Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista
+    # Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00A3o
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_operacao C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o
+    # @option opts [String] :codigo_processamento C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador
+    # @return [Array<(PageOperacaoResponse, Fixnum, Hash)>] PageOperacaoResponse data, response status code and response headers
+    def lista_operacao_using_get_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.lista_operacao_using_get ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/tipos-operacoes-estabelecimentos".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'idOperacao'] = opts[:'id_operacao'] if opts[:'id_operacao']
+      query_params[:'codigoProcessamento'] = opts[:'codigo_processamento'] if opts[:'codigo_processamento']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageOperacaoResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#lista_operacao_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

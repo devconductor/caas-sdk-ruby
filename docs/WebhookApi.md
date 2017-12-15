@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_using_put20**](WebhookApi.md#alterar_using_put20) | **PUT** /api/webhooks/{id} | Alterar Webhook
-[**consultar_using_get40**](WebhookApi.md#consultar_using_get40) | **GET** /api/webhooks/{id} | Consultar Webhook
+[**consultar_using_get41**](WebhookApi.md#consultar_using_get41) | **GET** /api/webhooks/{id} | Consultar Webhook
 [**listar_using_get46**](WebhookApi.md#listar_using_get46) | **GET** /api/webhooks | Lista os Webhooks
 [**salvar_using_post26**](WebhookApi.md#salvar_using_post26) | **POST** /api/webhooks | Salvar Webhook
 
@@ -72,8 +72,8 @@ No authorization required
 
 
 
-# **consultar_using_get40**
-> WebHookResponse consultar_using_get40(id)
+# **consultar_using_get41**
+> WebHookResponse consultar_using_get41(id)
 
 Consultar Webhook
 
@@ -92,10 +92,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Consultar Webhook
-  result = api_instance.consultar_using_get40(id)
+  result = api_instance.consultar_using_get41(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling WebhookApi->consultar_using_get40: #{e}"
+  puts "Exception when calling WebhookApi->consultar_using_get41: #{e}"
 end
 ```
 

@@ -43,13 +43,13 @@ describe 'RiscoFraudeApi' do
   end
 
 
-  # unit tests for consultar_using_get23
+  # unit tests for consultar_using_get24
   # Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
   # Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
   # @param [Hash] opts the optional parameters
   # @return [RiscoFraudeDetalhadoResponse]
-  describe 'consultar_using_get23 test' do
+  describe 'consultar_using_get24 test' do
     it "should work" do
       # assertion here
       # should be_a()

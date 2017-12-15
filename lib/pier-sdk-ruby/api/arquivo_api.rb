@@ -37,8 +37,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
     # @param [Hash] opts the optional parameters
     # @return [ArquivoResponse]
-    def consultar_using_get1(id, opts = {})
-      data, _status_code, _headers = consultar_using_get1_with_http_info(id, opts)
+    def consultar_using_get2(id, opts = {})
+      data, _status_code, _headers = consultar_using_get2_with_http_info(id, opts)
       return data
     end
 
@@ -47,14 +47,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
     # @param [Hash] opts the optional parameters
     # @return [Array<(ArquivoResponse, Fixnum, Hash)>] ArquivoResponse data, response status code and response headers
-    def consultar_using_get1_with_http_info(id, opts = {})
+    def consultar_using_get2_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ArquivoApi.consultar_using_get1 ..."
+        @api_client.config.logger.debug "Calling API: ArquivoApi.consultar_using_get2 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ArquivoApi.consultar_using_get1" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ArquivoApi.consultar_using_get2" if id.nil?
       
       
       
@@ -92,7 +92,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'ArquivoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ArquivoApi#consultar_using_get1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ArquivoApi#consultar_using_get2\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

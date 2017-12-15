@@ -174,6 +174,72 @@ module Pier
     end
 
 
+    # Consulta conta banc\u00C3\u00A1ria portador
+    # Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).
+    # @param [Hash] opts the optional parameters
+    # @return [ContaBancariaPortadorResponse]
+    def consultar_using_get10(id, opts = {})
+      data, _status_code, _headers = consultar_using_get10_with_http_info(id, opts)
+      return data
+    end
+
+    # Consulta conta banc\u00C3\u00A1ria portador
+    # Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ContaBancariaPortadorResponse, Fixnum, Hash)>] ContaBancariaPortadorResponse data, response status code and response headers
+    def consultar_using_get10_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.consultar_using_get10 ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling TransferenciaBancariaApi.consultar_using_get10" if id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas-bancarias-portador/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ContaBancariaPortadorResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#consultar_using_get10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
     # Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
     # @param id Id Conta
@@ -181,8 +247,8 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
     # @return [TransferenciaBancariaResponse]
-    def consultar_using_get37(id, id_transferencia, opts = {})
-      data, _status_code, _headers = consultar_using_get37_with_http_info(id, id_transferencia, opts)
+    def consultar_using_get38(id, id_transferencia, opts = {})
+      data, _status_code, _headers = consultar_using_get38_with_http_info(id, id_transferencia, opts)
       return data
     end
 
@@ -193,14 +259,14 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
     # @return [Array<(TransferenciaBancariaResponse, Fixnum, Hash)>] TransferenciaBancariaResponse data, response status code and response headers
-    def consultar_using_get37_with_http_info(id, id_transferencia, opts = {})
+    def consultar_using_get38_with_http_info(id, id_transferencia, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.consultar_using_get37 ..."
+        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.consultar_using_get38 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling TransferenciaBancariaApi.consultar_using_get37" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling TransferenciaBancariaApi.consultar_using_get38" if id.nil?
       
       
       
@@ -208,7 +274,7 @@ module Pier
       
       
       # verify the required parameter 'id_transferencia' is set
-      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling TransferenciaBancariaApi.consultar_using_get37" if id_transferencia.nil?
+      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling TransferenciaBancariaApi.consultar_using_get38" if id_transferencia.nil?
       
       
       
@@ -253,73 +319,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TransferenciaBancariaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#consultar_using_get37\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-
-    # Consulta conta banc\u00C3\u00A1ria portador
-    # Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).
-    # @param [Hash] opts the optional parameters
-    # @return [ContaBancariaPortadorResponse]
-    def consultar_using_get9(id, opts = {})
-      data, _status_code, _headers = consultar_using_get9_with_http_info(id, opts)
-      return data
-    end
-
-    # Consulta conta banc\u00C3\u00A1ria portador
-    # Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(ContaBancariaPortadorResponse, Fixnum, Hash)>] ContaBancariaPortadorResponse data, response status code and response headers
-    def consultar_using_get9_with_http_info(id, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.consultar_using_get9 ..."
-      end
-      
-      
-      # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling TransferenciaBancariaApi.consultar_using_get9" if id.nil?
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/contas-bancarias-portador/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'ContaBancariaPortadorResponse')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#consultar_using_get9\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#consultar_using_get38\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -753,6 +753,72 @@ module Pier
         :return_type => 'ContaBancariaPortadorResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TransferenciaBancariaApi#salvar_using_post7\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
+    # Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias.
+    # @param request request
+    # @param [Hash] opts the optional parameters
+    # @return [PlanoParcelamentoTransferenciaCreditoContaBancariaResponse]
+    def simular_transferencia_bancaria_using_post(request, opts = {})
+      data, _status_code, _headers = simular_transferencia_bancaria_using_post_with_http_info(request, opts)
+      return data
+    end
+
+    # Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
+    # Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias.
+    # @param request request
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(PlanoParcelamentoTransferenciaCreditoContaBancariaResponse, Fixnum, Hash)>] PlanoParcelamentoTransferenciaCreditoContaBancariaResponse data, response status code and response headers
+    def simular_transferencia_bancaria_using_post_with_http_info(request, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.simular_transferencia_bancaria_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'request' is set
+      fail ArgumentError, "Missing the required parameter 'request' when calling TransferenciaBancariaApi.simular_transferencia_bancaria_using_post" if request.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/simular-transferencias-creditos-contas-bancarias".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(request)
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PlanoParcelamentoTransferenciaCreditoContaBancariaResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#simular_transferencia_bancaria_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

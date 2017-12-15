@@ -99,14 +99,14 @@ describe 'ConductorPayApi' do
   end
 
 
-  # unit tests for consultar_using_get5
+  # unit tests for consultar_using_get6
   # Apresenta os dados de um determinado cart\u00C3\u00A3o
   # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param device_id Device id criptografado
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
   # @param [Hash] opts the optional parameters
   # @return [CartaoPayDetalheResponse]
-  describe 'consultar_using_get5 test' do
+  describe 'consultar_using_get6 test' do
     it "should work" do
       # assertion here
       # should be_a()

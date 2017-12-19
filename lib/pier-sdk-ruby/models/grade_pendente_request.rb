@@ -23,47 +23,21 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Transfer\u00C3\u00AAncia cr\u00C3\u00A9dito conta banc\u00C3\u00A1ria request
-  class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest
-    # N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
-    attr_accessor :nsu_origem
+  class GradePendenteRequest
+    # C\u00C3\u00B3digo identificador da conta.
+    attr_accessor :id_conta
 
-    # Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.
-    attr_accessor :valor_transacao
-
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.
-    attr_accessor :id_cartao
-
-    # Representa o N\u00C3\u00BAmero de Meses concedido como car\u00C3\u00AAncia.
-    attr_accessor :numero_meses_carencia
-
-    # N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).
-    attr_accessor :numero_estabelecimento
-
-    # Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
-    attr_accessor :data_hora_terminal
-
-    # Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
-    attr_accessor :terminal_requisitante
+    # Data do ajuste no formato yyyy-MM-dd.
+    attr_accessor :data_base
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'nsu_origem' => :'nsuOrigem',
+        :'id_conta' => :'idConta',
         
-        :'valor_transacao' => :'valorTransacao',
-        
-        :'id_cartao' => :'idCartao',
-        
-        :'numero_meses_carencia' => :'numeroMesesCarencia',
-        
-        :'numero_estabelecimento' => :'numeroEstabelecimento',
-        
-        :'data_hora_terminal' => :'dataHoraTerminal',
-        
-        :'terminal_requisitante' => :'terminalRequisitante'
+        :'data_base' => :'dataBase'
         
       }
     end
@@ -72,19 +46,9 @@ module Pier
     def self.swagger_types
       {
         
-        :'nsu_origem' => :'String',
+        :'id_conta' => :'Integer',
         
-        :'valor_transacao' => :'Float',
-        
-        :'id_cartao' => :'Integer',
-        
-        :'numero_meses_carencia' => :'Integer',
-        
-        :'numero_estabelecimento' => :'Integer',
-        
-        :'data_hora_terminal' => :'String',
-        
-        :'terminal_requisitante' => :'String'
+        :'data_base' => :'String'
         
       }
     end
@@ -98,64 +62,19 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'nsuOrigem']
+      if attributes[:'idConta']
         
         
-        self.nsu_origem = attributes[:'nsuOrigem']
-        
-      
-      end
-
-      
-      if attributes[:'valorTransacao']
-        
-        
-        self.valor_transacao = attributes[:'valorTransacao']
+        self.id_conta = attributes[:'idConta']
         
       
       end
 
       
-      if attributes[:'idCartao']
+      if attributes[:'dataBase']
         
         
-        self.id_cartao = attributes[:'idCartao']
-        
-      
-      end
-
-      
-      if attributes[:'numeroMesesCarencia']
-        
-        
-        self.numero_meses_carencia = attributes[:'numeroMesesCarencia']
-        
-      
-      end
-
-      
-      if attributes[:'numeroEstabelecimento']
-        
-        
-        self.numero_estabelecimento = attributes[:'numeroEstabelecimento']
-        
-      
-      end
-
-      
-      if attributes[:'dataHoraTerminal']
-        
-        
-        self.data_hora_terminal = attributes[:'dataHoraTerminal']
-        
-      
-      end
-
-      
-      if attributes[:'terminalRequisitante']
-        
-        
-        self.terminal_requisitante = attributes[:'terminalRequisitante']
+        self.data_base = attributes[:'dataBase']
         
       
       end
@@ -177,95 +96,15 @@ module Pier
     def valid?
       
       
-      if @nsu_origem.nil?
-        return false
-      end
-
       
       
       
-      
-      
-      if @valor_transacao.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @id_cartao.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @numero_meses_carencia.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @numero_estabelecimento.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @data_hora_terminal.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @terminal_requisitante.nil?
-        return false
-      end
-
       
       
       
       
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -282,13 +121,8 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          nsu_origem == o.nsu_origem &&
-          valor_transacao == o.valor_transacao &&
-          id_cartao == o.id_cartao &&
-          numero_meses_carencia == o.numero_meses_carencia &&
-          numero_estabelecimento == o.numero_estabelecimento &&
-          data_hora_terminal == o.data_hora_terminal &&
-          terminal_requisitante == o.terminal_requisitante
+          id_conta == o.id_conta &&
+          data_base == o.data_base
     end
 
     # @see the `==` method
@@ -300,7 +134,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [nsu_origem, valor_transacao, id_cartao, numero_meses_carencia, numero_estabelecimento, data_hora_terminal, terminal_requisitante].hash
+      [id_conta, data_base].hash
     end
 
     # Builds the object from hash

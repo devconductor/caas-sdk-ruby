@@ -338,6 +338,9 @@ require 'pier-sdk-ruby/models/fatura_fechada_response'
 require 'pier-sdk-ruby/models/fatura_response'
 
 
+require 'pier-sdk-ruby/models/grade_pendente_request'
+
+
 require 'pier-sdk-ruby/models/historico_assessoria_response'
 
 

@@ -54,40 +54,7 @@ describe 'PlanoParcelamentoTransferenciaCreditoContaBancariaResponse' do
   end
 
 
-  describe 'test attribute "nsu_autorizacao"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "codigo_autorizacao"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
   describe 'test attribute "numero_mascarado_cartao"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "nome_portador_cartao"' do
     it 'should work' do
        # assertion here
        # should be_a()

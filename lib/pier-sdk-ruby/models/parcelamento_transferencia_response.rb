@@ -34,6 +34,15 @@ module Pier
     # Valor das demais parcelas.
     attr_accessor :valor_demais_parcelas
 
+    # Valor total do financiamento.
+    attr_accessor :valor_total
+
+    # Valor da tarifa de contrata\u00C3\u00A7\u00C3\u00A3o.
+    attr_accessor :valor_tac
+
+    # IOF
+    attr_accessor :valor_iof
+
     # Valor da taxa de juros.
     attr_accessor :taxa_juros
 
@@ -51,6 +60,12 @@ module Pier
         
         :'valor_demais_parcelas' => :'valorDemaisParcelas',
         
+        :'valor_total' => :'valorTotal',
+        
+        :'valor_tac' => :'valorTAC',
+        
+        :'valor_iof' => :'valorIOF',
+        
         :'taxa_juros' => :'taxaJuros',
         
         :'cet_anual' => :'cetAnual'
@@ -67,6 +82,12 @@ module Pier
         :'valor_primeira_parcela' => :'Float',
         
         :'valor_demais_parcelas' => :'Float',
+        
+        :'valor_total' => :'Float',
+        
+        :'valor_tac' => :'Float',
+        
+        :'valor_iof' => :'Float',
         
         :'taxa_juros' => :'Float',
         
@@ -106,6 +127,33 @@ module Pier
         
         
         self.valor_demais_parcelas = attributes[:'valorDemaisParcelas']
+        
+      
+      end
+
+      
+      if attributes[:'valorTotal']
+        
+        
+        self.valor_total = attributes[:'valorTotal']
+        
+      
+      end
+
+      
+      if attributes[:'valorTAC']
+        
+        
+        self.valor_tac = attributes[:'valorTAC']
+        
+      
+      end
+
+      
+      if attributes[:'valorIOF']
+        
+        
+        self.valor_iof = attributes[:'valorIOF']
         
       
       end
@@ -164,8 +212,35 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -200,6 +275,9 @@ module Pier
           numero_parcela == o.numero_parcela &&
           valor_primeira_parcela == o.valor_primeira_parcela &&
           valor_demais_parcelas == o.valor_demais_parcelas &&
+          valor_total == o.valor_total &&
+          valor_tac == o.valor_tac &&
+          valor_iof == o.valor_iof &&
           taxa_juros == o.taxa_juros &&
           cet_anual == o.cet_anual
     end
@@ -213,7 +291,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [numero_parcela, valor_primeira_parcela, valor_demais_parcelas, taxa_juros, cet_anual].hash
+      [numero_parcela, valor_primeira_parcela, valor_demais_parcelas, valor_total, valor_tac, valor_iof, taxa_juros, cet_anual].hash
     end
 
     # Builds the object from hash

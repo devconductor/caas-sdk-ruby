@@ -28,17 +28,8 @@ module Pier
     # N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
     attr_accessor :nsu_origem
 
-    # N\u00C3\u00BAmero Sequencial \u00C3\u009Anico gerado pelo Autorizador a cada Transa\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :nsu_autorizacao
-
-    # C\u00C3\u00B3digo de Autoriza\u00C3\u00A7\u00C3\u00A3o gerado pelo Autorizador.
-    attr_accessor :codigo_autorizacao
-
     # N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado.
     attr_accessor :numero_mascarado_cartao
-
-    # Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :nome_portador_cartao
 
     # Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
     attr_accessor :terminal_requisitante
@@ -53,13 +44,7 @@ module Pier
         
         :'nsu_origem' => :'nsuOrigem',
         
-        :'nsu_autorizacao' => :'nsuAutorizacao',
-        
-        :'codigo_autorizacao' => :'codigoAutorizacao',
-        
         :'numero_mascarado_cartao' => :'numeroMascaradoCartao',
-        
-        :'nome_portador_cartao' => :'nomePortadorCartao',
         
         :'terminal_requisitante' => :'terminalRequisitante',
         
@@ -74,13 +59,7 @@ module Pier
         
         :'nsu_origem' => :'String',
         
-        :'nsu_autorizacao' => :'String',
-        
-        :'codigo_autorizacao' => :'String',
-        
         :'numero_mascarado_cartao' => :'String',
-        
-        :'nome_portador_cartao' => :'String',
         
         :'terminal_requisitante' => :'String',
         
@@ -107,37 +86,10 @@ module Pier
       end
 
       
-      if attributes[:'nsuAutorizacao']
-        
-        
-        self.nsu_autorizacao = attributes[:'nsuAutorizacao']
-        
-      
-      end
-
-      
-      if attributes[:'codigoAutorizacao']
-        
-        
-        self.codigo_autorizacao = attributes[:'codigoAutorizacao']
-        
-      
-      end
-
-      
       if attributes[:'numeroMascaradoCartao']
         
         
         self.numero_mascarado_cartao = attributes[:'numeroMascaradoCartao']
-        
-      
-      end
-
-      
-      if attributes[:'nomePortadorCartao']
-        
-        
-        self.nome_portador_cartao = attributes[:'nomePortadorCartao']
         
       
       end
@@ -194,35 +146,8 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -250,10 +175,7 @@ module Pier
       return true if self.equal?(o)
       self.class == o.class &&
           nsu_origem == o.nsu_origem &&
-          nsu_autorizacao == o.nsu_autorizacao &&
-          codigo_autorizacao == o.codigo_autorizacao &&
           numero_mascarado_cartao == o.numero_mascarado_cartao &&
-          nome_portador_cartao == o.nome_portador_cartao &&
           terminal_requisitante == o.terminal_requisitante &&
           plano_parcelamentos == o.plano_parcelamentos
     end
@@ -267,7 +189,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [nsu_origem, nsu_autorizacao, codigo_autorizacao, numero_mascarado_cartao, nome_portador_cartao, terminal_requisitante, plano_parcelamentos].hash
+      [nsu_origem, numero_mascarado_cartao, terminal_requisitante, plano_parcelamentos].hash
     end
 
     # Builds the object from hash

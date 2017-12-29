@@ -30,4 +30,3 @@ Name | Type | Description | Notes
 **nome_fantasia_estabelecimento** | **String** | Nome fantasia do estabelecimento da compra. | [optional] 
 
 
-

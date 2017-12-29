@@ -26,4 +26,3 @@ Name | Type | Description | Notes
 **inativo** | **Integer** | Indica se o estabelecimento est\u00C3\u00A1 inativo. | [optional] 
 
 
-

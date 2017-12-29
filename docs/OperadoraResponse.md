@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **nome** | **String** | Nome da operadora | [optional] 
 
 
-

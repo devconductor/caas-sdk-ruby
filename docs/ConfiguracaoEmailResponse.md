@@ -18,4 +18,3 @@ Name | Type | Description | Notes
 **data_alteracao** | **String** | Data de altera\u00C3\u00A7\u00C3\u00A3o. | [optional] 
 
 
-

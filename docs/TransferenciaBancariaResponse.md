@@ -40,4 +40,3 @@ Name | Type | Description | Notes
 **nome_favorecido** | **String** | Nome do Favorecido | [optional] 
 
 
-

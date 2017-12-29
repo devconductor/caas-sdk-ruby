@@ -24,4 +24,3 @@ Name | Type | Description | Notes
 **nome_campanha** | **String** | Nome da campanha | [optional] 
 
 
-

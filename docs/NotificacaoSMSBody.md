@@ -12,4 +12,3 @@ Name | Type | Description | Notes
 **tipo_evento** | **String** | Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o | 
 
 
-

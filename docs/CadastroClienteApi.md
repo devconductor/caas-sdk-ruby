@@ -13,10 +13,10 @@ Method | HTTP request | Description
 [**atualizar_using_post**](CadastroClienteApi.md#atualizar_using_post) | **POST** /api/contas/{id}/atualizar-registro-integracao | Atualiza conta integrada com o emissor
 [**cadastrar_using_post**](CadastroClienteApi.md#cadastrar_using_post) | **POST** /api/contas/{id}/cadastrar-adicional | Realiza o cadastro de Adicionais para uma Conta
 [**consultar_using_get**](CadastroClienteApi.md#consultar_using_get) | **GET** /api/contas/{id}/adicionais/{idPessoa} | Consulta Adicional de uma Conta
-[**consultar_using_get14**](CadastroClienteApi.md#consultar_using_get14) | **GET** /api/enderecos/{id} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
-[**consultar_using_get19**](CadastroClienteApi.md#consultar_using_get19) | **GET** /api/pessoas-detalhes/{id} | Apresenta os detalhes de uma determinada Pessoa
-[**consultar_using_get21**](CadastroClienteApi.md#consultar_using_get21) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
-[**consultar_using_get27**](CadastroClienteApi.md#consultar_using_get27) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
+[**consultar_using_get15**](CadastroClienteApi.md#consultar_using_get15) | **GET** /api/enderecos/{id} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
+[**consultar_using_get20**](CadastroClienteApi.md#consultar_using_get20) | **GET** /api/pessoas-detalhes/{id} | Apresenta os detalhes de uma determinada Pessoa
+[**consultar_using_get22**](CadastroClienteApi.md#consultar_using_get22) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
+[**consultar_using_get28**](CadastroClienteApi.md#consultar_using_get28) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
 [**inativar_using_post**](CadastroClienteApi.md#inativar_using_post) | **POST** /api/contas/{id}/adicionais/{idPessoa}/inativar | Inativa Adicional de uma Conta
 [**listar_socios_using_get**](CadastroClienteApi.md#listar_socios_using_get) | **GET** /api/clientes-pessoas-juridicas/{id}/socios | Listar s\u00C3\u00B3cios de uma pessoa jur\u00C3\u00ADdica
 [**listar_using_get**](CadastroClienteApi.md#listar_using_get) | **GET** /api/contas/{id}/adicionais | Lista os Adicionais de uma Conta
@@ -33,8 +33,6 @@ Method | HTTP request | Description
 [**salvar_using_post20**](CadastroClienteApi.md#salvar_using_post20) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
 
 
-
-
 # **alterar_using_put**
 > AdicionalDetalheResponse alterar_using_put(id, id_pessoa, adicional_update)
 
@@ -46,7 +44,6 @@ Este m\u00C3\u00A9todo permite que seja alterado um portador Adicional de uma de
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroClienteApi.new
 
@@ -74,7 +71,6 @@ Name | Type | Description  | Notes
  **id_pessoa** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). | 
  **adicional_update** | [**AdicionalUpdate**](AdicionalUpdate.md)| adicionalUpdate | 
 
-
 ### Return type
 
 [**AdicionalDetalheResponse**](AdicionalDetalheResponse.md)
@@ -90,7 +86,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put10**
 > PessoaDetalheResponse alterar_using_put10(id, opts)
 
@@ -103,7 +98,6 @@ Este m\u00C3\u00A9todo permite que seja alterado na base do emissor os detalhes 
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::CadastroClienteApi.new
 
 id = 789 # Integer | ID da Pessoa
@@ -114,6 +108,7 @@ opts = {
   id_profissao: "id_profissao_example", # String | Profiss\u00C3\u00A3o da pessoa fisica
   id_natureza_ocupacao: 789, # Integer | Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
   id_nacionalidade: 789, # Integer | Id Nacionalidade da pessoa fisica
+  numero_banco: 56, # Integer | N\u00C3\u00BAmero do banco.
   numero_agencia: 56, # Integer | N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
   numero_conta_corrente: "numero_conta_corrente_example", # String | N\u00C3\u00BAmero da conta corrente.
   email: "email_example", # String | Email da pessoa fisica
@@ -139,11 +134,11 @@ Name | Type | Description  | Notes
  **id_profissao** | **String**| Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
  **id_natureza_ocupacao** | **Integer**| Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
  **id_nacionalidade** | **Integer**| Id Nacionalidade da pessoa fisica | [optional] 
+ **numero_banco** | **Integer**| N\u00C3\u00BAmero do banco. | [optional] 
  **numero_agencia** | **Integer**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
  **numero_conta_corrente** | **String**| N\u00C3\u00BAmero da conta corrente. | [optional] 
  **email** | **String**| Email da pessoa fisica | [optional] 
  **nome_empresa** | **String**| Nome que deve ser impresso no cart\u00C3\u00A3o | [optional] 
-
 
 ### Return type
 
@@ -160,7 +155,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put12**
 > PessoaResponse alterar_using_put12(id, nome, tipo, data_nascimento, opts)
 
@@ -172,7 +166,6 @@ Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um registro 
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroClienteApi.new
 
@@ -219,7 +212,6 @@ Name | Type | Description  | Notes
  **unidade_federativa_identidade** | **String**| Sigla da Unidade Federativa de onde foi expedido a Identidade | [optional] 
  **data_emissao_identidade** | **String**| Data emiss\u00C3\u00A3o da Identidade. | [optional] 
 
-
 ### Return type
 
 [**PessoaResponse**](PessoaResponse.md)
@@ -235,7 +227,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put14**
 > TelefoneResponse alterar_using_put14(id, opts)
 
@@ -247,7 +238,6 @@ Este m\u00C3\u00A9todo permite que seja alterado um determinado Telefone na base
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroClienteApi.new
 
@@ -279,7 +269,6 @@ Name | Type | Description  | Notes
  **telefone** | **String**| N\u00C3\u00BAmero do telefone. | [optional] 
  **ramal** | **String**| N\u00C3\u00BAmero do ramal. | [optional] 
 
-
 ### Return type
 
 [**TelefoneResponse**](TelefoneResponse.md)
@@ -295,7 +284,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put6**
 > EnderecoResponse alterar_using_put6(id, opts)
 
@@ -307,7 +295,6 @@ Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um ou mais r
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroClienteApi.new
 
@@ -353,7 +340,6 @@ Name | Type | Description  | Notes
  **uf** | **String**| Apresenta sigla da Unidade Federativa | [optional] 
  **pais** | **String**| Apresenta nome do Pais | [optional] 
 
-
 ### Return type
 
 [**EnderecoResponse**](EnderecoResponse.md)
@@ -369,7 +355,6 @@ No authorization required
 
 
 
-
 # **atribuir_assinatura_cliente_using_post**
 > Object atribuir_assinatura_cliente_using_post(id, body)
 
@@ -381,7 +366,6 @@ Este m\u00C3\u00A9todo permite que seja atribu\u00C3\u00ADdo a uma determinada C
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroClienteApi.new
 
@@ -406,7 +390,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta | 
  **body** | [**AtribuirAssinaturaClientePersist**](AtribuirAssinaturaClientePersist.md)| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Arquivo | 
 
-
 ### Return type
 
 **Object**
@@ -422,7 +405,6 @@ No authorization required
 
 
 
-
 # **atualizar_using_post**
 > IntegracaoEmissorResponse atualizar_using_post(id, opts)
 
@@ -434,7 +416,6 @@ Este recurso permite a atualiza\u00C3\u00A7\u00C3\u00A3o de uma conta integrada 
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroClienteApi.new
 
@@ -460,7 +441,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **body** | [**IntegracaoEmissorPersist**](IntegracaoEmissorPersist.md)| Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada | [optional] 
 
-
 ### Return type
 
 [**IntegracaoEmissorResponse**](IntegracaoEmissorResponse.md)
@@ -476,7 +456,6 @@ No authorization required
 
 
 
-
 # **cadastrar_using_post**
 > AdicionalDetalheResponse cadastrar_using_post(id, persist)
 
@@ -488,7 +467,6 @@ Este m\u00C3\u00A9todo permite que sejam cadastrados um portador Adicional para 
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroClienteApi.new
 
@@ -513,7 +491,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **persist** | [**AdicionalPersist**](AdicionalPersist.md)| persist | 
 
-
 ### Return type
 
 [**AdicionalDetalheResponse**](AdicionalDetalheResponse.md)
@@ -529,7 +506,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get**
 > AdicionalDetalheResponse consultar_using_get(id, id_pessoa)
 
@@ -541,7 +517,6 @@ Este m\u00C3\u00A9todo permite que seja consultado um portador Adicional de uma 
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroClienteApi.new
 
@@ -566,7 +541,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **id_pessoa** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). | 
 
-
 ### Return type
 
 [**AdicionalDetalheResponse**](AdicionalDetalheResponse.md)
@@ -582,9 +556,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get14**
-> EnderecoResponse consultar_using_get14(id)
+# **consultar_using_get15**
+> EnderecoResponse consultar_using_get15(id)
 
 Apresenta os dados de um determinado Endere\u00C3\u00A7o
 
@@ -595,7 +568,6 @@ Este m\u00C3\u00A9todo permite consultar um determinado Endere\u00C3\u00A7o a pa
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::CadastroClienteApi.new
 
 id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
@@ -603,10 +575,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Endere\u00C3\u00A7o
-  result = api_instance.consultar_using_get14(id)
+  result = api_instance.consultar_using_get15(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->consultar_using_get14: #{e}"
+  puts "Exception when calling CadastroClienteApi->consultar_using_get15: #{e}"
 end
 ```
 
@@ -615,7 +587,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). | 
-
 
 ### Return type
 
@@ -632,9 +603,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get19**
-> PessoaDetalheResponse consultar_using_get19(id)
+# **consultar_using_get20**
+> PessoaDetalheResponse consultar_using_get20(id)
 
 Apresenta os detalhes de uma determinada Pessoa
 
@@ -645,7 +615,6 @@ Este m\u00C3\u00A9todo permite a consulta dos detalhes de uma Pessoa existentes 
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::CadastroClienteApi.new
 
 id = 789 # Integer | ID da Pessoa
@@ -653,10 +622,10 @@ id = 789 # Integer | ID da Pessoa
 
 begin
   #Apresenta os detalhes de uma determinada Pessoa
-  result = api_instance.consultar_using_get19(id)
+  result = api_instance.consultar_using_get20(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->consultar_using_get19: #{e}"
+  puts "Exception when calling CadastroClienteApi->consultar_using_get20: #{e}"
 end
 ```
 
@@ -665,7 +634,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| ID da Pessoa | 
-
 
 ### Return type
 
@@ -682,9 +650,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get21**
-> PessoaResponse consultar_using_get21(id)
+# **consultar_using_get22**
+> PessoaResponse consultar_using_get22(id)
 
 Apresenta os dados de uma determinada Pessoa
 
@@ -695,7 +662,6 @@ Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base 
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::CadastroClienteApi.new
 
 id = 789 # Integer | ID da Pessoa
@@ -703,10 +669,10 @@ id = 789 # Integer | ID da Pessoa
 
 begin
   #Apresenta os dados de uma determinada Pessoa
-  result = api_instance.consultar_using_get21(id)
+  result = api_instance.consultar_using_get22(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->consultar_using_get21: #{e}"
+  puts "Exception when calling CadastroClienteApi->consultar_using_get22: #{e}"
 end
 ```
 
@@ -715,7 +681,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| ID da Pessoa | 
-
 
 ### Return type
 
@@ -732,9 +697,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get27**
-> TelefoneResponse consultar_using_get27(id)
+# **consultar_using_get28**
+> TelefoneResponse consultar_using_get28(id)
 
 Apresenta os dados de um determinado Telefone
 
@@ -745,7 +709,6 @@ Este m\u00C3\u00A9todo permite consultar um determinado Telefone a partir do seu
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::CadastroClienteApi.new
 
 id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
@@ -753,10 +716,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Telefone
-  result = api_instance.consultar_using_get27(id)
+  result = api_instance.consultar_using_get28(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->consultar_using_get27: #{e}"
+  puts "Exception when calling CadastroClienteApi->consultar_using_get28: #{e}"
 end
 ```
 
@@ -765,7 +728,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id). | 
-
 
 ### Return type
 
@@ -782,7 +744,6 @@ No authorization required
 
 
 
-
 # **inativar_using_post**
 > String inativar_using_post(id, id_pessoa)
 
@@ -794,7 +755,6 @@ Este m\u00C3\u00A9todo permite que seja inativado um portador Adicional de uma d
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroClienteApi.new
 
@@ -819,7 +779,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **id_pessoa** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). | 
 
-
 ### Return type
 
 **String**
@@ -835,7 +794,6 @@ No authorization required
 
 
 
-
 # **listar_socios_using_get**
 > PagePessoaResponse listar_socios_using_get(id, opts)
 
@@ -847,7 +805,6 @@ Lista os s\u00C3\u00B3cios vinculados \u00C3\u00A0 uma Pessoa Jur\u00C3\u00ADdic
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroClienteApi.new
 
@@ -877,7 +834,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PagePessoaResponse**](PagePessoaResponse.md)
@@ -893,7 +849,6 @@ No authorization required
 
 
 
-
 # **listar_using_get**
 > AdicionalResponse listar_using_get(id, opts)
 
@@ -905,7 +860,6 @@ Este m\u00C3\u00A9todo permite que sejam listados portadores Adicionais de uma d
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroClienteApi.new
 
@@ -935,7 +889,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**AdicionalResponse**](AdicionalResponse.md)
@@ -951,7 +904,6 @@ No authorization required
 
 
 
-
 # **listar_using_get18**
 > PageEnderecoResponse listar_using_get18(opts)
 
@@ -963,7 +915,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os Endere\u00C3\u00A7os existe
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroClienteApi.new
 
@@ -1018,7 +969,6 @@ Name | Type | Description  | Notes
  **data_inclusao** | **String**| Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o | [optional] 
  **data_ultima_atualizacao** | **String**| Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao | [optional] 
 
-
 ### Return type
 
 [**PageEnderecoResponse**](PageEnderecoResponse.md)
@@ -1034,7 +984,6 @@ No authorization required
 
 
 
-
 # **listar_using_get23**
 > PagePessoaDetalheResponse listar_using_get23(opts)
 
@@ -1046,7 +995,6 @@ Este m\u00C3\u00A9todo permite que sejam listadas od detalhes das Pessoas existe
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroClienteApi.new
 
@@ -1060,6 +1008,7 @@ opts = {
   id_profissao: "id_profissao_example", # String | Profiss\u00C3\u00A3o da pessoa fisica
   id_natureza_ocupacao: 789, # Integer | Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
   id_nacionalidade: 789, # Integer | Id Nacionalidade da pessoa fisica
+  numero_banco: 56, # Integer | N\u00C3\u00BAmero do Banco.
   numero_agencia: 56, # Integer | N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
   numero_conta_corrente: "numero_conta_corrente_example", # String | N\u00C3\u00BAmero da conta corrente.
   email: "email_example", # String | Email da pessoa fisica
@@ -1088,11 +1037,11 @@ Name | Type | Description  | Notes
  **id_profissao** | **String**| Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
  **id_natureza_ocupacao** | **Integer**| Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
  **id_nacionalidade** | **Integer**| Id Nacionalidade da pessoa fisica | [optional] 
+ **numero_banco** | **Integer**| N\u00C3\u00BAmero do Banco. | [optional] 
  **numero_agencia** | **Integer**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
  **numero_conta_corrente** | **String**| N\u00C3\u00BAmero da conta corrente. | [optional] 
  **email** | **String**| Email da pessoa fisica | [optional] 
  **nome_empresa** | **String**| Nome que deve ser impresso no cart\u00C3\u00A3o | [optional] 
-
 
 ### Return type
 
@@ -1109,7 +1058,6 @@ No authorization required
 
 
 
-
 # **listar_using_get25**
 > PagePessoaResponse listar_using_get25(opts)
 
@@ -1121,7 +1069,6 @@ Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base 
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroClienteApi.new
 
@@ -1170,7 +1117,6 @@ Name | Type | Description  | Notes
  **unidade_federativa_identidade** | **String**| Sigla da Unidade Federativa de onde foi expedido a Identidade | [optional] 
  **data_emissao_identidade** | **String**| Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd | [optional] 
 
-
 ### Return type
 
 [**PagePessoaResponse**](PagePessoaResponse.md)
@@ -1186,7 +1132,6 @@ No authorization required
 
 
 
-
 # **listar_using_get34**
 > PageTelefoneResponse listar_using_get34(opts)
 
@@ -1198,7 +1143,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os Telefones existentes na bas
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroClienteApi.new
 
@@ -1239,7 +1183,6 @@ Name | Type | Description  | Notes
  **ramal** | **String**| N\u00C3\u00BAmero do ramal. | [optional] 
  **status** | **Integer**| Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo | [optional] 
 
-
 ### Return type
 
 [**PageTelefoneResponse**](PageTelefoneResponse.md)
@@ -1255,7 +1198,6 @@ No authorization required
 
 
 
-
 # **salvar_pessoa_fisica_aprovada_using_post**
 > PessoaFisicaAprovadaResponse salvar_pessoa_fisica_aprovada_using_post(pessoa_persist)
 
@@ -1267,7 +1209,6 @@ Permite realizar o cadastro de uma Conta para um cliente do tipo Pessoa F\u00C3\
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroClienteApi.new
 
@@ -1289,7 +1230,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pessoa_persist** | [**PessoaFisicaAprovadaPersist**](PessoaFisicaAprovadaPersist.md)| pessoaPersist | 
 
-
 ### Return type
 
 [**PessoaFisicaAprovadaResponse**](PessoaFisicaAprovadaResponse.md)
@@ -1305,7 +1245,6 @@ No authorization required
 
 
 
-
 # **salvar_pessoa_juridica_aprovada_using_post**
 > PessoaJuridicaAprovadaResponse salvar_pessoa_juridica_aprovada_using_post(pessoa_persist)
 
@@ -1317,7 +1256,6 @@ Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica Permite realizar o cadastro de um
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroClienteApi.new
 
@@ -1339,7 +1277,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pessoa_persist** | [**PessoaJuridicaAprovadaPersist**](PessoaJuridicaAprovadaPersist.md)| pessoaPersist | 
 
-
 ### Return type
 
 [**PessoaJuridicaAprovadaResponse**](PessoaJuridicaAprovadaResponse.md)
@@ -1355,7 +1292,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post11**
 > EnderecoResponse salvar_using_post11(opts)
 
@@ -1367,7 +1303,6 @@ Este m\u00C3\u00A9todo permite que seja cadastrado um novo Endere\u00C3\u00A7o n
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroClienteApi.new
 
@@ -1410,7 +1345,6 @@ Name | Type | Description  | Notes
  **uf** | **String**| Apresenta sigla da Unidade Federativa | [optional] 
  **pais** | **String**| Apresenta nome do Pais | [optional] 
 
-
 ### Return type
 
 [**EnderecoResponse**](EnderecoResponse.md)
@@ -1426,7 +1360,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post13**
 > IntegracaoEmissorResponse salvar_using_post13(id, opts)
 
@@ -1438,7 +1371,6 @@ Este recurso permite incluir uma conta como registro para integra\u00C3\u00A7\u0
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroClienteApi.new
 
@@ -1464,7 +1396,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **body** | [**IntegracaoEmissorPersist**](IntegracaoEmissorPersist.md)| Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada | [optional] 
 
-
 ### Return type
 
 [**IntegracaoEmissorResponse**](IntegracaoEmissorResponse.md)
@@ -1480,7 +1411,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post16**
 > PessoaDetalheResponse salvar_using_post16(id_pessoa, opts)
 
@@ -1493,7 +1423,6 @@ Este m\u00C3\u00A9todo permite que seja incluido na base do emissor os detalhes 
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::CadastroClienteApi.new
 
 id_pessoa = 789 # Integer | Apresenta o c\u00C3\u00B3digo identificador da pessoa
@@ -1504,6 +1433,7 @@ opts = {
   id_profissao: "id_profissao_example", # String | Profiss\u00C3\u00A3o da pessoa fisica
   id_natureza_ocupacao: 789, # Integer | Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
   id_nacionalidade: 789, # Integer | Id Nacionalidade da pessoa fisica
+  numero_banco: 56, # Integer | N\u00C3\u00BAmero do banco.
   numero_agencia: 56, # Integer | N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
   numero_conta_corrente: "numero_conta_corrente_example", # String | N\u00C3\u00BAmero da conta corrente.
   email: "email_example", # String | Email da pessoa fisica
@@ -1529,11 +1459,11 @@ Name | Type | Description  | Notes
  **id_profissao** | **String**| Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
  **id_natureza_ocupacao** | **Integer**| Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
  **id_nacionalidade** | **Integer**| Id Nacionalidade da pessoa fisica | [optional] 
+ **numero_banco** | **Integer**| N\u00C3\u00BAmero do banco. | [optional] 
  **numero_agencia** | **Integer**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
  **numero_conta_corrente** | **String**| N\u00C3\u00BAmero da conta corrente. | [optional] 
  **email** | **String**| Email da pessoa fisica | [optional] 
  **nome_empresa** | **String**| Nome que deve ser impresso no cart\u00C3\u00A3o | [optional] 
-
 
 ### Return type
 
@@ -1550,7 +1480,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post17**
 > PessoaResponse salvar_using_post17(nome, tipo, data_nascimento, opts)
 
@@ -1562,7 +1491,6 @@ Este m\u00C3\u00A9todo permite que seja cadastrado uma nova Pessoa na base de da
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroClienteApi.new
 
@@ -1606,7 +1534,6 @@ Name | Type | Description  | Notes
  **unidade_federativa_identidade** | **String**| Sigla da Unidade Federativa de onde foi expedido a Identidade | [optional] 
  **data_emissao_identidade** | **String**| Data emiss\u00C3\u00A3o da Identidade. | [optional] 
 
-
 ### Return type
 
 [**PessoaResponse**](PessoaResponse.md)
@@ -1622,7 +1549,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post20**
 > TelefoneResponse salvar_using_post20(opts)
 
@@ -1634,7 +1560,6 @@ Este m\u00C3\u00A9todo permite que seja cadastrado um novo Telefone na base de d
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroClienteApi.new
 
@@ -1665,7 +1590,6 @@ Name | Type | Description  | Notes
  **telefone** | **String**| N\u00C3\u00BAmero do telefone. | [optional] 
  **ramal** | **String**| N\u00C3\u00BAmero do ramal. | [optional] 
 
-
 ### Return type
 
 [**TelefoneResponse**](TelefoneResponse.md)
@@ -1678,8 +1602,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

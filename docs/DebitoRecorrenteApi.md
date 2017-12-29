@@ -8,8 +8,6 @@ Method | HTTP request | Description
 [**listar_using_get36**](DebitoRecorrenteApi.md#listar_using_get36) | **GET** /api/tipos-debitos-recorrentes | Listar Tipos Debitos Recorrentes
 
 
-
-
 # **listar_using_get12**
 > PageTipoDebitoRecorrenteResponse listar_using_get12(id_conta, opts)
 
@@ -21,7 +19,6 @@ A entidade D\u00C3\u00A9bito Recorrente trata dos registros contratados por um d
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::DebitoRecorrenteApi.new
 
@@ -61,7 +58,6 @@ Name | Type | Description  | Notes
  **ativo** | **BOOLEAN**| Identifica se o d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo. | [optional] 
  **data_hora_ultimo_pagamento** | **String**| Data do \u00C3\u00BAltimo pagamento efetuado. | [optional] 
 
-
 ### Return type
 
 [**PageTipoDebitoRecorrenteResponse**](PageTipoDebitoRecorrenteResponse.md)
@@ -77,7 +73,6 @@ No authorization required
 
 
 
-
 # **listar_using_get36**
 > PageTipoDebitoRecorrenteResponse listar_using_get36(opts)
 
@@ -89,7 +84,6 @@ Para os emissores que utilizam a entidade Debitos Recorrentes precisam previamen
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::DebitoRecorrenteApi.new
 
@@ -124,7 +118,6 @@ Name | Type | Description  | Notes
  **valor** | [**Float**](.md)| Valor do tipo de d\u00C3\u00A9bito recorrente. | [optional] 
  **flag_ativo** | **BOOLEAN**| Flag que identifica se o tipo d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo. | [optional] 
 
-
 ### Return type
 
 [**PageTipoDebitoRecorrenteResponse**](PageTipoDebitoRecorrenteResponse.md)
@@ -137,8 +130,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

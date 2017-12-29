@@ -5,10 +5,8 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizar_using_put**](AplicacaoMobileApi.md#atualizar_using_put) | **PUT** /api/aplicacoes-mobile/{id} | Atualiza Aplicacao Mobile
-[**listar_using_get1**](AplicacaoMobileApi.md#listar_using_get1) | **GET** /api/aplicacoes-mobile | Lista os aplicacoes mobile cadastradas
+[**listar_using_get2**](AplicacaoMobileApi.md#listar_using_get2) | **GET** /api/aplicacoes-mobile | Lista os aplicacoes mobile cadastradas
 [**salvar_using_post**](AplicacaoMobileApi.md#salvar_using_post) | **POST** /api/aplicacoes-mobile | Cadastra Aplicacao Mobile
-
-
 
 
 # **atualizar_using_put**
@@ -22,7 +20,6 @@ Esse recurso permite atualizar aplicacao mobile.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::AplicacaoMobileApi.new
 
@@ -47,7 +44,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Aplicacao (id). | 
  **update** | [**AplicacaoMobileUpdate**](AplicacaoMobileUpdate.md)| update | 
 
-
 ### Return type
 
 [**AplicacaoMobileResponse**](AplicacaoMobileResponse.md)
@@ -63,9 +59,8 @@ No authorization required
 
 
 
-
-# **listar_using_get1**
-> PageAplicacaoMobileResponse listar_using_get1(opts)
+# **listar_using_get2**
+> PageAplicacaoMobileResponse listar_using_get2(opts)
 
 Lista os aplicacoes mobile cadastradas
 
@@ -75,7 +70,6 @@ Este m\u00C3\u00A9todo permite que sejam listadas as aplicacoes mobile existente
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::AplicacaoMobileApi.new
 
@@ -89,10 +83,10 @@ opts = {
 
 begin
   #Lista os aplicacoes mobile cadastradas
-  result = api_instance.listar_using_get1(opts)
+  result = api_instance.listar_using_get2(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling AplicacaoMobileApi->listar_using_get1: #{e}"
+  puts "Exception when calling AplicacaoMobileApi->listar_using_get2: #{e}"
 end
 ```
 
@@ -105,7 +99,6 @@ Name | Type | Description  | Notes
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **String**| Identificador da Aplicacao Mobile | [optional] 
  **id_plataforma_mobile** | **Integer**| Identificador da Plataforma Mobile | [optional] 
-
 
 ### Return type
 
@@ -122,7 +115,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post**
 > AplicacaoMobileResponse salvar_using_post(persist)
 
@@ -134,7 +126,6 @@ Esse recurso permite cadastrar aplicacoes mobile.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::AplicacaoMobileApi.new
 
@@ -156,7 +147,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**AplicacaoMobilePersist**](AplicacaoMobilePersist.md)| persist | 
 
-
 ### Return type
 
 [**AplicacaoMobileResponse**](AplicacaoMobileResponse.md)
@@ -169,8 +159,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

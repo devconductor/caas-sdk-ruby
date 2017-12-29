@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **quantidade_maxima_tentativas** | **Integer** | Quantidade m\u00C3\u00A1xima tentativas permitidas | [optional] 
 
 
-

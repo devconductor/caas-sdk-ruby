@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **nome_assessoria** | **String** | Apresenta o nome da Assessoria de Cobran\u00C3\u00A7a relacionada ao hist\u00C3\u00B3rico | [optional] 
 
 
-

@@ -21,6 +21,7 @@ Method | HTTP request | Description
 [**listar_template_notificacao_using_get**](NotificacaoApi.md#listar_template_notificacao_using_get) | **GET** /api/templates-notificacoes | Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
 [**listar_tipos_layouts_using_get**](NotificacaoApi.md#listar_tipos_layouts_using_get) | **GET** /api/tipos-layouts | Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
 [**notificacao_email_using_post**](NotificacaoApi.md#notificacao_email_using_post) | **POST** /api/notificacoes-email | Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
+[**reenviar_token_sms_using_post**](NotificacaoApi.md#reenviar_token_sms_using_post) | **POST** /api/notificacoes-sms/reenviar-codigo-seguranca | Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
 [**responder_sms_get_using_get**](NotificacaoApi.md#responder_sms_get_using_get) | **GET** /api/notificacoes/sms/responder | Responder SMS
 [**salvar_configuracao_using_post**](NotificacaoApi.md#salvar_configuracao_using_post) | **POST** /api/configuracoes-email | Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
 [**salvar_push_fcm_using_post**](NotificacaoApi.md#salvar_push_fcm_using_post) | **POST** /api/notificacoes/push/fcm | Enviar Push FCM
@@ -30,8 +31,6 @@ Method | HTTP request | Description
 [**salvar_template_notificacao_using_post**](NotificacaoApi.md#salvar_template_notificacao_using_post) | **POST** /api/templates-notificacoes | Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
 [**validar_token_email_using_post**](NotificacaoApi.md#validar_token_email_using_post) | **POST** /api/notificacoes-email/validar-codigo-seguranca | Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por e-mail
 [**validar_token_sms_using_post**](NotificacaoApi.md#validar_token_sms_using_post) | **POST** /api/notificacoes-sms/validar-codigo-seguranca | Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
-
-
 
 
 # **alterar_configuracao_using_put**
@@ -45,7 +44,6 @@ Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de configura\u00C3\
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -70,7 +68,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. | 
  **persist** | [**ConfiguracaoEmailPersist**](ConfiguracaoEmailPersist.md)| persist | 
 
-
 ### Return type
 
 [**ConfiguracaoEmailResponse**](ConfiguracaoEmailResponse.md)
@@ -86,7 +83,6 @@ No authorization required
 
 
 
-
 # **alterar_template_notificacao_using_put**
 > TemplateNotificacaoDetalheResponse alterar_template_notificacao_using_put(id, conteudo, opts)
 
@@ -98,7 +94,6 @@ Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de templates notifi
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -137,7 +132,6 @@ Name | Type | Description  | Notes
  **assunto** | **String**| Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. | [optional] 
  **template_padrao** | **BOOLEAN**| Template Padr\u00C3\u00A3o. | [optional] 
 
-
 ### Return type
 
 [**TemplateNotificacaoDetalheResponse**](TemplateNotificacaoDetalheResponse.md)
@@ -153,7 +147,6 @@ No authorization required
 
 
 
-
 # **atualizar_sms_using_post**
 > NotificacaoSMSResponse atualizar_sms_using_post(opts)
 
@@ -165,7 +158,6 @@ Esse recurso permite atualizar o status do SMS do emissor
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -196,7 +188,6 @@ Name | Type | Description  | Notes
  **texto_status** | **String**| TextoStatus | [optional] 
  **operadora** | **String**| Operadora | [optional] 
 
-
 ### Return type
 
 [**NotificacaoSMSResponse**](NotificacaoSMSResponse.md)
@@ -212,7 +203,6 @@ No authorization required
 
 
 
-
 # **consultar_configuracao_using_get**
 > ConfiguracaoEmailResponse consultar_configuracao_using_get(id)
 
@@ -224,7 +214,6 @@ Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -246,7 +235,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. | 
 
-
 ### Return type
 
 [**ConfiguracaoEmailResponse**](ConfiguracaoEmailResponse.md)
@@ -262,7 +250,6 @@ No authorization required
 
 
 
-
 # **consultar_por_email_using_get**
 > CodigoSegurancaResponse consultar_por_email_using_get(id)
 
@@ -274,7 +261,6 @@ Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-ma
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -296,7 +282,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. | 
 
-
 ### Return type
 
 [**CodigoSegurancaResponse**](CodigoSegurancaResponse.md)
@@ -312,7 +297,6 @@ No authorization required
 
 
 
-
 # **consultar_por_sms_using_get**
 > CodigoSegurancaResponse consultar_por_sms_using_get(id)
 
@@ -324,7 +308,6 @@ Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS 
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -346,7 +329,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. | 
 
-
 ### Return type
 
 [**CodigoSegurancaResponse**](CodigoSegurancaResponse.md)
@@ -362,7 +344,6 @@ No authorization required
 
 
 
-
 # **consultar_template_notificacao_using_get**
 > TemplateNotificacaoDetalheResponse consultar_template_notificacao_using_get(id)
 
@@ -374,7 +355,6 @@ Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -396,7 +376,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail. | 
 
-
 ### Return type
 
 [**TemplateNotificacaoDetalheResponse**](TemplateNotificacaoDetalheResponse.md)
@@ -412,7 +391,6 @@ No authorization required
 
 
 
-
 # **gerar_token_email_using_post**
 > String gerar_token_email_using_post(email)
 
@@ -424,7 +402,6 @@ Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a p
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -446,7 +423,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **email** | **String**| email | 
 
-
 ### Return type
 
 **String**
@@ -462,7 +438,6 @@ No authorization required
 
 
 
-
 # **gerar_token_sms_using_post**
 > String gerar_token_sms_using_post(persist)
 
@@ -474,7 +449,6 @@ Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a p
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -496,7 +470,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**CodigoSegurancaSMSPersist**](CodigoSegurancaSMSPersist.md)| persist | 
 
-
 ### Return type
 
 **String**
@@ -512,7 +485,6 @@ No authorization required
 
 
 
-
 # **listar_configuracao_using_get**
 > PageConfiguracaoEmailResponse listar_configuracao_using_get(opts)
 
@@ -524,7 +496,6 @@ Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -551,7 +522,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageConfiguracaoEmailResponse**](PageConfiguracaoEmailResponse.md)
@@ -567,7 +537,6 @@ No authorization required
 
 
 
-
 # **listar_por_email_using_get**
 > PageCodigoSegurancaResponse listar_por_email_using_get(opts)
 
@@ -579,7 +548,6 @@ Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por E-Mail.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -606,7 +574,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageCodigoSegurancaResponse**](PageCodigoSegurancaResponse.md)
@@ -622,7 +589,6 @@ No authorization required
 
 
 
-
 # **listar_por_sms_using_get**
 > PageCodigoSegurancaResponse listar_por_sms_using_get(opts)
 
@@ -634,7 +600,6 @@ Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por SMS.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -661,7 +626,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageCodigoSegurancaResponse**](PageCodigoSegurancaResponse.md)
@@ -677,7 +641,6 @@ No authorization required
 
 
 
-
 # **listar_push_using_get**
 > PagePushResponse listar_push_using_get(opts)
 
@@ -689,7 +652,6 @@ Esse recurso permite listar os Pushes do emissor
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -726,7 +688,6 @@ Name | Type | Description  | Notes
  **plataforma** | **String**| Plataforma de Push notifications. | [optional] 
  **protocolo** | **String**| N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es | [optional] 
 
-
 ### Return type
 
 [**PagePushResponse**](PagePushResponse.md)
@@ -742,7 +703,6 @@ No authorization required
 
 
 
-
 # **listar_sms_using_get**
 > PageSMSResponse listar_sms_using_get(opts)
 
@@ -754,7 +714,6 @@ Esse recurso permite listar os SMS do emissor
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -793,7 +752,6 @@ Name | Type | Description  | Notes
  **protocolo** | **String**| N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es | [optional] 
  **nsu** | **Integer**| Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
 
-
 ### Return type
 
 [**PageSMSResponse**](PageSMSResponse.md)
@@ -809,7 +767,6 @@ No authorization required
 
 
 
-
 # **listar_template_notificacao_using_get**
 > PageTemplateNotificacaoResponse listar_template_notificacao_using_get(opts)
 
@@ -821,7 +778,6 @@ Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -848,7 +804,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageTemplateNotificacaoResponse**](PageTemplateNotificacaoResponse.md)
@@ -864,7 +819,6 @@ No authorization required
 
 
 
-
 # **listar_tipos_layouts_using_get**
 > Array&lt;Object&gt; listar_tipos_layouts_using_get
 
@@ -876,7 +830,6 @@ Esse recurso permite listar os tipos de templates dispon\u00C3\u00ADveis os par\
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -891,7 +844,6 @@ end
 
 ### Parameters
 This endpoint does not need any parameter.
-
 
 ### Return type
 
@@ -908,7 +860,6 @@ No authorization required
 
 
 
-
 # **notificacao_email_using_post**
 > Object notificacao_email_using_post(request)
 
@@ -920,7 +871,6 @@ Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o po
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -942,7 +892,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**NotificacaoEmailRequest**](NotificacaoEmailRequest.md)| request | 
 
-
 ### Return type
 
 **Object**
@@ -958,6 +907,52 @@ No authorization required
 
 
 
+# **reenviar_token_sms_using_post**
+> String reenviar_token_sms_using_post(persist)
+
+Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
+
+Esse recurso permite que seja reenviado para um determinado n\u00C3\u00BAmero de telefone, atrav\u00C3\u00A9s de SMS, o c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado previamente para ele. Caso o c\u00C3\u00B3digo de seguran\u00C3\u00A7a j\u00C3\u00A1 n\u00C3\u00A3o esteja mais v\u00C3\u00A1lido, o recurso retornar\u00C3\u00A1 uma mensagem orientando que seja solicitada uma nova gera\u00C3\u00A7\u00C3\u00A3o para o telefone em quest\u00C3\u00A3o.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+api_instance = Pier::NotificacaoApi.new
+
+persist = Pier::CodigoSegurancaSMSPersist.new # CodigoSegurancaSMSPersist | persist
+
+
+begin
+  #Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
+  result = api_instance.reenviar_token_sms_using_post(persist)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling NotificacaoApi->reenviar_token_sms_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **persist** | [**CodigoSegurancaSMSPersist**](CodigoSegurancaSMSPersist.md)| persist | 
+
+### Return type
+
+**String**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
 
 # **responder_sms_get_using_get**
 > NotificacaoSMSResponse responder_sms_get_using_get(opts)
@@ -970,7 +965,6 @@ Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -997,7 +991,6 @@ Name | Type | Description  | Notes
  **data** | **String**| Data | [optional] 
  **resposta** | **String**| TextoStatus | [optional] 
 
-
 ### Return type
 
 [**NotificacaoSMSResponse**](NotificacaoSMSResponse.md)
@@ -1013,7 +1006,6 @@ No authorization required
 
 
 
-
 # **salvar_configuracao_using_post**
 > ConfiguracaoEmailResponse salvar_configuracao_using_post(persist)
 
@@ -1025,7 +1017,6 @@ Esse recurso salvar configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -1047,7 +1038,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**ConfiguracaoEmailPersist**](ConfiguracaoEmailPersist.md)| persist | 
 
-
 ### Return type
 
 [**ConfiguracaoEmailResponse**](ConfiguracaoEmailResponse.md)
@@ -1063,7 +1053,6 @@ No authorization required
 
 
 
-
 # **salvar_push_fcm_using_post**
 > NotificacaoResponse salvar_push_fcm_using_post(push_persists)
 
@@ -1075,7 +1064,6 @@ Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -1097,7 +1085,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **push_persists** | [**Array&lt;PushFCMEGCM&gt;**](PushFCMEGCM.md)| pushPersists | 
 
-
 ### Return type
 
 [**NotificacaoResponse**](NotificacaoResponse.md)
@@ -1113,7 +1100,6 @@ No authorization required
 
 
 
-
 # **salvar_push_gcm_using_post**
 > NotificacaoResponse salvar_push_gcm_using_post(push_persists)
 
@@ -1125,7 +1111,6 @@ Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -1147,7 +1132,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **push_persists** | [**Array&lt;PushFCMEGCM&gt;**](PushFCMEGCM.md)| pushPersists | 
 
-
 ### Return type
 
 [**NotificacaoResponse**](NotificacaoResponse.md)
@@ -1163,7 +1147,6 @@ No authorization required
 
 
 
-
 # **salvar_push_using_post**
 > NotificacaoResponse salvar_push_using_post(push_persists)
 
@@ -1175,7 +1158,6 @@ Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -1197,7 +1179,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **push_persists** | [**Array&lt;PushAPNS&gt;**](PushAPNS.md)| pushPersists | 
 
-
 ### Return type
 
 [**NotificacaoResponse**](NotificacaoResponse.md)
@@ -1213,7 +1194,6 @@ No authorization required
 
 
 
-
 # **salvar_sms_using_post**
 > NotificacaoResponse salvar_sms_using_post(lista_sms)
 
@@ -1225,7 +1205,6 @@ Esse recurso permite enviar uma lista de SMS.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -1247,7 +1226,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **lista_sms** | [**Array&lt;NotificacaoSMSBody&gt;**](NotificacaoSMSBody.md)| listaSMS | 
 
-
 ### Return type
 
 [**NotificacaoResponse**](NotificacaoResponse.md)
@@ -1263,7 +1241,6 @@ No authorization required
 
 
 
-
 # **salvar_template_notificacao_using_post**
 > TemplateNotificacaoDetalheResponse salvar_template_notificacao_using_post(conteudo, opts)
 
@@ -1275,7 +1252,6 @@ Esse recurso salvar template notifica\u00C3\u00A7\u00C3\u00B5e.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -1311,7 +1287,6 @@ Name | Type | Description  | Notes
  **assunto** | **String**| Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. | [optional] 
  **template_padrao** | **BOOLEAN**| Template Padr\u00C3\u00A3o. | [optional] 
 
-
 ### Return type
 
 [**TemplateNotificacaoDetalheResponse**](TemplateNotificacaoDetalheResponse.md)
@@ -1327,7 +1302,6 @@ No authorization required
 
 
 
-
 # **validar_token_email_using_post**
 > String validar_token_email_using_post(request)
 
@@ -1339,7 +1313,6 @@ Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a envia
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -1361,7 +1334,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**CodigoSegurancaEMAILPersist**](CodigoSegurancaEMAILPersist.md)| request | 
 
-
 ### Return type
 
 **String**
@@ -1377,7 +1349,6 @@ No authorization required
 
 
 
-
 # **validar_token_sms_using_post**
 > String validar_token_sms_using_post(request)
 
@@ -1389,7 +1360,6 @@ Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a envia
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::NotificacaoApi.new
 
@@ -1411,7 +1381,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**CodigoSegurancaSMSRequest**](CodigoSegurancaSMSRequest.md)| request | 
 
-
 ### Return type
 
 **String**
@@ -1424,8 +1393,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

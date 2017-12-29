@@ -15,4 +15,3 @@ Name | Type | Description | Notes
 **detalhes** | [**Array&lt;DetalheOportunidadeResponse&gt;**](DetalheOportunidadeResponse.md) | Lista de detalhes da oportunidade | [optional] 
 
 
-

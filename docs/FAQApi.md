@@ -6,10 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**adicionar_using_post**](FAQApi.md#adicionar_using_post) | **POST** /api/faqs | Adiciona uma nova FAQ
 [**alterar_using_put7**](FAQApi.md#alterar_using_put7) | **PUT** /api/faqs/{id} | Alterar FAQ
-[**consultar_using_get16**](FAQApi.md#consultar_using_get16) | **GET** /api/faqs/{id} | Consultar FAQ por id
+[**consultar_using_get17**](FAQApi.md#consultar_using_get17) | **GET** /api/faqs/{id} | Consultar FAQ por id
 [**listar_using_get20**](FAQApi.md#listar_using_get20) | **GET** /api/faqs | Lista FAQs
-
-
 
 
 # **adicionar_using_post**
@@ -23,7 +21,6 @@ Adiciona uma nova FAQ
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::FAQApi.new
 
@@ -58,7 +55,6 @@ Name | Type | Description  | Notes
  **categoria** | **String**| Categoria de assunto do qual a FAQ se trata. | [optional] 
  **status** | **String**| Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. | [optional] 
 
-
 ### Return type
 
 [**FaqResponse**](FaqResponse.md)
@@ -74,7 +70,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put7**
 > FaqResponse alterar_using_put7(id, pergunta, resposta, opts)
 
@@ -86,7 +81,6 @@ Alterar FAQ
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::FAQApi.new
 
@@ -124,7 +118,6 @@ Name | Type | Description  | Notes
  **categoria** | **String**| Categoria de assunto do qual a FAQ se trata. | [optional] 
  **status** | **String**| Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. | [optional] 
 
-
 ### Return type
 
 [**FaqResponse**](FaqResponse.md)
@@ -140,9 +133,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get16**
-> FaqResponse consultar_using_get16(id)
+# **consultar_using_get17**
+> FaqResponse consultar_using_get17(id)
 
 Consultar FAQ por id
 
@@ -153,7 +145,6 @@ Consulta os detalhes de uma determinada FAQ
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::FAQApi.new
 
 id = 789 # Integer | Id
@@ -161,10 +152,10 @@ id = 789 # Integer | Id
 
 begin
   #Consultar FAQ por id
-  result = api_instance.consultar_using_get16(id)
+  result = api_instance.consultar_using_get17(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling FAQApi->consultar_using_get16: #{e}"
+  puts "Exception when calling FAQApi->consultar_using_get17: #{e}"
 end
 ```
 
@@ -173,7 +164,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| Id | 
-
 
 ### Return type
 
@@ -187,7 +177,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
 
 
 
@@ -202,7 +191,6 @@ Lista todas as FAQs
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::FAQApi.new
 
@@ -243,7 +231,6 @@ Name | Type | Description  | Notes
  **categoria** | **String**| Categoria de assunto do qual a FAQ se trata. | [optional] 
  **status** | **String**| Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. | [optional] 
 
-
 ### Return type
 
 [**PageFaqResponse**](PageFaqResponse.md)
@@ -256,8 +243,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

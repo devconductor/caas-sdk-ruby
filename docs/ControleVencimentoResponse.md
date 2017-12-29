@@ -11,4 +11,3 @@ Name | Type | Description | Notes
 **data_real_vencimento** | **String** | Indica o dia \u00C3\u00BAtil que ser\u00C3\u00A1 considerado como a data de vencimento | [optional] 
 
 
-

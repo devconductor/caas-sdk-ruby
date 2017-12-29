@@ -15,7 +15,7 @@ Method | HTTP request | Description
 [**consultar_limite_disponibilidade_using_get**](CartaoApi.md#consultar_limite_disponibilidade_using_get) | **GET** /api/cartoes/{id}/limites-disponibilidades | Apresenta os limites do Portador do Cart\u00C3\u00A3o
 [**consultar_lotes_cartoes_pre_pagos_using_get**](CartaoApi.md#consultar_lotes_cartoes_pre_pagos_using_get) | **GET** /api/cartoes/lotes-cartoes-pre-pagos/{id} | Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**consultar_portador_using_get**](CartaoApi.md#consultar_portador_using_get) | **GET** /api/cartoes/{id}/portadores | Apresenta os dados do Portador do Cart\u00C3\u00A3o
-[**consultar_using_get6**](CartaoApi.md#consultar_using_get6) | **GET** /api/cartoes/{id} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
+[**consultar_using_get7**](CartaoApi.md#consultar_using_get7) | **GET** /api/cartoes/{id} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
 [**desbloquear_senha_incorreta_using_post**](CartaoApi.md#desbloquear_senha_incorreta_using_post) | **POST** /api/cartoes/{id}/desbloquear-senha-incorreta | Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
 [**desbloquear_using_post**](CartaoApi.md#desbloquear_using_post) | **POST** /api/cartoes/{id}/desbloquear | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 [**gerar_lotes_cartoes_pre_pagos_using_post**](CartaoApi.md#gerar_lotes_cartoes_pre_pagos_using_post) | **POST** /api/cartoes/lotes-cartoes-pre-pagos | Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
@@ -31,8 +31,6 @@ Method | HTTP request | Description
 [**validar_tarja_using_get**](CartaoApi.md#validar_tarja_using_get) | **GET** /api/cartoes/validar-tarja | Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
 
 
-
-
 # **alterar_alterar_senha_using_put**
 > String alterar_alterar_senha_using_put(id, senha)
 
@@ -44,7 +42,6 @@ Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CartaoApi.new
 
@@ -69,7 +66,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
  **senha** | **String**| Senha para ser cadastrada ou alterada. | 
 
-
 ### Return type
 
 **String**
@@ -85,7 +81,6 @@ No authorization required
 
 
 
-
 # **alterar_status_impressao_using_put**
 > HistoricoImpressaoCartaoResponse alterar_status_impressao_using_put(id, id_status_impressao)
 
@@ -97,7 +92,6 @@ Este m\u00C3\u00A9todo permite que uma Aplica\u00C3\u00A7\u00C3\u00A3o que reali
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CartaoApi.new
 
@@ -122,7 +116,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
  **id_status_impressao** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id). | 
 
-
 ### Return type
 
 [**HistoricoImpressaoCartaoResponse**](HistoricoImpressaoCartaoResponse.md)
@@ -138,7 +131,6 @@ No authorization required
 
 
 
-
 # **atribuir_pessoa_using_put**
 > CartaoResponse atribuir_pessoa_using_put(id, id_pessoa)
 
@@ -150,7 +142,6 @@ Esta m\u00C3\u00A9todo permite que um cart\u00C3\u00A3o pr\u00C3\u00A9-pago impr
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CartaoApi.new
 
@@ -175,7 +166,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) | 
  **id_pessoa** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id). | 
 
-
 ### Return type
 
 [**CartaoResponse**](CartaoResponse.md)
@@ -191,7 +181,6 @@ No authorization required
 
 
 
-
 # **bloquear_using_post**
 > CartaoResponse bloquear_using_post(id, id_status, observacao)
 
@@ -203,7 +192,6 @@ Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio (t
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CartaoApi.new
 
@@ -231,7 +219,6 @@ Name | Type | Description  | Notes
  **id_status** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o. | 
  **observacao** | **String**| Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio. | 
 
-
 ### Return type
 
 [**CartaoResponse**](CartaoResponse.md)
@@ -247,7 +234,6 @@ No authorization required
 
 
 
-
 # **cadastrar_alterar_senha_using_post**
 > String cadastrar_alterar_senha_using_post(id, senha)
 
@@ -259,7 +245,6 @@ Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CartaoApi.new
 
@@ -284,7 +269,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
  **senha** | **String**| Senha para ser cadastrada ou alterada. | 
 
-
 ### Return type
 
 **String**
@@ -300,7 +284,6 @@ No authorization required
 
 
 
-
 # **cancelar_using_post**
 > CartaoResponse cancelar_using_post(id, id_status, observacao)
 
@@ -312,7 +295,6 @@ Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o cancelamento d
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CartaoApi.new
 
@@ -340,7 +322,6 @@ Name | Type | Description  | Notes
  **id_status** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o. | 
  **observacao** | **String**| Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o cancelamento. | 
 
-
 ### Return type
 
 [**CartaoResponse**](CartaoResponse.md)
@@ -356,7 +337,6 @@ No authorization required
 
 
 
-
 # **consultar_cartao_impressao_using_get**
 > DadosCartaoImpressaoResponse consultar_cartao_impressao_using_get(id)
 
@@ -368,7 +348,6 @@ Esse recurso permite consultar os dados de impress\u00C3\u00A3o de um cart\u00C3
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CartaoApi.new
 
@@ -390,7 +369,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). | 
 
-
 ### Return type
 
 [**DadosCartaoImpressaoResponse**](DadosCartaoImpressaoResponse.md)
@@ -406,7 +384,6 @@ No authorization required
 
 
 
-
 # **consultar_dados_reais_cartao_using_get**
 > DadosCartaoResponse consultar_dados_reais_cartao_using_get(id)
 
@@ -418,7 +395,6 @@ Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um ca
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CartaoApi.new
 
@@ -440,7 +416,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| id | 
 
-
 ### Return type
 
 [**DadosCartaoResponse**](DadosCartaoResponse.md)
@@ -456,7 +431,6 @@ No authorization required
 
 
 
-
 # **consultar_limite_disponibilidade_using_get**
 > LimiteDisponibilidadeResponse consultar_limite_disponibilidade_using_get(id)
 
@@ -468,7 +442,6 @@ Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CartaoApi.new
 
@@ -490,7 +463,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
 
-
 ### Return type
 
 [**LimiteDisponibilidadeResponse**](LimiteDisponibilidadeResponse.md)
@@ -506,7 +478,6 @@ No authorization required
 
 
 
-
 # **consultar_lotes_cartoes_pre_pagos_using_get**
 > LoteCartoesPrePagosResponse consultar_lotes_cartoes_pre_pagos_using_get(id)
 
@@ -518,7 +489,6 @@ Este m\u00C3\u00A9todo permite consultar os cart\u00C3\u00B5es pr\u00C3\u00A9-pa
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CartaoApi.new
 
@@ -540,7 +510,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id) | 
 
-
 ### Return type
 
 [**LoteCartoesPrePagosResponse**](LoteCartoesPrePagosResponse.md)
@@ -556,7 +525,6 @@ No authorization required
 
 
 
-
 # **consultar_portador_using_get**
 > PortadorResponse consultar_portador_using_get(id)
 
@@ -568,7 +536,6 @@ Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es do
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CartaoApi.new
 
@@ -590,7 +557,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
 
-
 ### Return type
 
 [**PortadorResponse**](PortadorResponse.md)
@@ -606,9 +572,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get6**
-> CartaoDetalheResponse consultar_using_get6(id)
+# **consultar_using_get7**
+> CartaoDetalheResponse consultar_using_get7(id)
 
 Apresenta os dados de um determinado Cart\u00C3\u00A3o
 
@@ -619,7 +584,6 @@ Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::CartaoApi.new
 
 id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
@@ -627,10 +591,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Cart\u00C3\u00A3o
-  result = api_instance.consultar_using_get6(id)
+  result = api_instance.consultar_using_get7(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CartaoApi->consultar_using_get6: #{e}"
+  puts "Exception when calling CartaoApi->consultar_using_get7: #{e}"
 end
 ```
 
@@ -639,7 +603,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
-
 
 ### Return type
 
@@ -656,7 +619,6 @@ No authorization required
 
 
 
-
 # **desbloquear_senha_incorreta_using_post**
 > CartaoResponse desbloquear_senha_incorreta_using_post(id)
 
@@ -668,7 +630,6 @@ Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CartaoApi.new
 
@@ -690,7 +651,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
 
-
 ### Return type
 
 [**CartaoResponse**](CartaoResponse.md)
@@ -706,7 +666,6 @@ No authorization required
 
 
 
-
 # **desbloquear_using_post**
 > CartaoResponse desbloquear_using_post(id)
 
@@ -718,7 +677,6 @@ Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CartaoApi.new
 
@@ -740,7 +698,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
 
-
 ### Return type
 
 [**CartaoResponse**](CartaoResponse.md)
@@ -756,7 +713,6 @@ No authorization required
 
 
 
-
 # **gerar_lotes_cartoes_pre_pagos_using_post**
 > LoteCartoesPrePagosResponse gerar_lotes_cartoes_pre_pagos_using_post(opts)
 
@@ -768,7 +724,6 @@ Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores 
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CartaoApi.new
 
@@ -801,7 +756,6 @@ Name | Type | Description  | Notes
  **id_endereco** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). | [optional] 
  **quantidade_cartoes** | **Integer**| N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. | [optional] 
 
-
 ### Return type
 
 [**LoteCartoesPrePagosResponse**](LoteCartoesPrePagosResponse.md)
@@ -817,7 +771,6 @@ No authorization required
 
 
 
-
 # **gerar_nova_via_using_post**
 > CartaoResponse gerar_nova_via_using_post(id)
 
@@ -829,7 +782,6 @@ Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores 
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CartaoApi.new
 
@@ -851,7 +803,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) | 
 
-
 ### Return type
 
 [**CartaoResponse**](CartaoResponse.md)
@@ -867,7 +818,6 @@ No authorization required
 
 
 
-
 # **lancar_tarifa_segunda_via_using_post**
 > Object lancar_tarifa_segunda_via_using_post(id)
 
@@ -879,7 +829,6 @@ Esse recurso permite adicionar tar\u00C3\u00ADfa de ajuste pela emiss\u00C3\u00A
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CartaoApi.new
 
@@ -901,7 +850,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). | 
 
-
 ### Return type
 
 **Object**
@@ -917,7 +865,6 @@ No authorization required
 
 
 
-
 # **listar_lotes_cartoes_pre_pagos_using_get**
 > PageLoteCartoesPrePagosResponse listar_lotes_cartoes_pre_pagos_using_get(opts)
 
@@ -929,7 +876,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es pr\u00C3
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CartaoApi.new
 
@@ -974,7 +920,6 @@ Name | Type | Description  | Notes
  **usuario_cadastro** | **String**| Nome do Usu\u00C3\u00A1rio que criou o Lote. | [optional] 
  **status_processamento** | **Integer**| Indica o Status de Processamento do Lote. | [optional] 
 
-
 ### Return type
 
 [**PageLoteCartoesPrePagosResponse**](PageLoteCartoesPrePagosResponse.md)
@@ -990,7 +935,6 @@ No authorization required
 
 
 
-
 # **listar_using_get7**
 > PageCartaoResponse listar_using_get7(opts)
 
@@ -1002,7 +946,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existent
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CartaoApi.new
 
@@ -1065,7 +1008,6 @@ Name | Type | Description  | Notes
  **codigo_desbloqueio** | **String**| Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. | [optional] 
  **sequencial_cartao** | **Integer**| N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o | [optional] 
 
-
 ### Return type
 
 [**PageCartaoResponse**](PageCartaoResponse.md)
@@ -1081,7 +1023,6 @@ No authorization required
 
 
 
-
 # **reativar_using_post**
 > CartaoResponse reativar_using_post(id)
 
@@ -1093,7 +1034,6 @@ Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o da reativa\u00
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CartaoApi.new
 
@@ -1115,7 +1055,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
 
-
 ### Return type
 
 [**CartaoResponse**](CartaoResponse.md)
@@ -1131,7 +1070,6 @@ No authorization required
 
 
 
-
 # **validar_dados_impressos_bandeirado_using_get**
 > ValidaCartaoResponse validar_dados_impressos_bandeirado_using_get(numero_cartao, nome_portador, data_validade, codigo_seguranca)
 
@@ -1143,7 +1081,6 @@ Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores 
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CartaoApi.new
 
@@ -1174,7 +1111,6 @@ Name | Type | Description  | Notes
  **data_validade** | **String**| Data de validade do cart\u00C3\u00A3o no formato yyyy-MM | 
  **codigo_seguranca** | **String**| C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros | 
 
-
 ### Return type
 
 [**ValidaCartaoResponse**](ValidaCartaoResponse.md)
@@ -1190,7 +1126,6 @@ No authorization required
 
 
 
-
 # **validar_dados_impressos_nao_bandeirado_using_get**
 > ValidaCartaoResponse validar_dados_impressos_nao_bandeirado_using_get(numero_cartao, nome_portador, data_validade, codigo_seguranca)
 
@@ -1202,7 +1137,6 @@ Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores 
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CartaoApi.new
 
@@ -1233,7 +1167,6 @@ Name | Type | Description  | Notes
  **data_validade** | **String**| Data de validade do cart\u00C3\u00A3o no formato yyyy-MM | 
  **codigo_seguranca** | **String**| C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros | 
 
-
 ### Return type
 
 [**ValidaCartaoResponse**](ValidaCartaoResponse.md)
@@ -1249,7 +1182,6 @@ No authorization required
 
 
 
-
 # **validar_de55_cartao_mastercard_using_get**
 > ValidaCartaoResponse validar_de55_cartao_mastercard_using_get(numero_cartao, criptograma)
 
@@ -1261,7 +1193,6 @@ Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores 
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CartaoApi.new
 
@@ -1286,7 +1217,6 @@ Name | Type | Description  | Notes
  **numero_cartao** | **String**| N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. | 
  **criptograma** | **String**| Criptograma do cart\u00C3\u00A3o no formato de55 | 
 
-
 ### Return type
 
 [**ValidaCartaoResponse**](ValidaCartaoResponse.md)
@@ -1302,7 +1232,6 @@ No authorization required
 
 
 
-
 # **validar_senha_using_get**
 > ValidaSenhaCartaoResponse validar_senha_using_get(id, senha)
 
@@ -1314,7 +1243,6 @@ Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir validar que a sen
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CartaoApi.new
 
@@ -1339,7 +1267,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
  **senha** | **String**| Senha para ser validada. | 
 
-
 ### Return type
 
 [**ValidaSenhaCartaoResponse**](ValidaSenhaCartaoResponse.md)
@@ -1355,7 +1282,6 @@ No authorization required
 
 
 
-
 # **validar_tarja_using_get**
 > ValidaCartaoResponse validar_tarja_using_get(numero_cartao, trilha1, trilha2)
 
@@ -1367,7 +1293,6 @@ Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores 
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CartaoApi.new
 
@@ -1395,7 +1320,6 @@ Name | Type | Description  | Notes
  **trilha1** | **String**| Trilha 1 do cart\u00C3\u00A3o a ser validado | 
  **trilha2** | **String**| Trilha 2 do cart\u00C3\u00A3o a ser validado | 
 
-
 ### Return type
 
 [**ValidaCartaoResponse**](ValidaCartaoResponse.md)
@@ -1408,8 +1332,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

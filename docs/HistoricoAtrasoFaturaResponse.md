@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **dias_pagamento_apos_vencimento** | **Integer** | Quantidade de dias em atraso. | [optional] 
 
 
-

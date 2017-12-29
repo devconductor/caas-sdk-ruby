@@ -20,4 +20,3 @@ Name | Type | Description | Notes
 **titularidade** | **Integer** | Titularidade da conta (1:Portador \u00C3\u00A9 o titular, 0: Portador n\u00C3\u00A3o \u00C3\u00A9 o t\u00C3\u00ADtular | [optional] 
 
 
-

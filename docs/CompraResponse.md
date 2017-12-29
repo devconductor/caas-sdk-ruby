@@ -28,4 +28,3 @@ Name | Type | Description | Notes
 **nome_portador_cartao** | **String** | Nome do portador do cart\u00C3\u00A3o da compra. | [optional] 
 
 
-

@@ -14,4 +14,3 @@ Name | Type | Description | Notes
 **taxa_juros** | **Float** | Valor percentual da taxa de juros a ser aplicada | [optional] 
 
 
-

@@ -41,4 +41,3 @@ Name | Type | Description | Notes
 **status** | **Integer** | Atributo que representa o c\u00C3\u00B3digo identificador do status da transa\u00C3\u00A7\u00C3\u00A3o. | [optional] 
 
 
-

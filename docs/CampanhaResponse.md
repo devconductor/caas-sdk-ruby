@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **planos_campanhas** | [**Array&lt;PlanoCampanhaResponse&gt;**](PlanoCampanhaResponse.md) | Lista de planos associados a Campanha | 
 
 
-

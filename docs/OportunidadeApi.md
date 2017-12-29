@@ -8,8 +8,8 @@ Method | HTTP request | Description
 [**alterar_using_put16**](OportunidadeApi.md#alterar_using_put16) | **PUT** /api/tipos-oportunidades/{id} | Altera os tipos oportunidades
 [**alterar_using_put9**](OportunidadeApi.md#alterar_using_put9) | **PUT** /api/oportunidades/{id} | Altera as oportunidades
 [**consultar_status_using_get**](OportunidadeApi.md#consultar_status_using_get) | **GET** /api/tipos-oportunidades/{id}/status/{idStatus} | Apresenta dados de um determinado status do tipo oportunidade
-[**consultar_using_get18**](OportunidadeApi.md#consultar_using_get18) | **GET** /api/oportunidades/{id} | Apresenta dados de uma determinada oportunidade
-[**consultar_using_get33**](OportunidadeApi.md#consultar_using_get33) | **GET** /api/tipos-oportunidades/{id} | Apresenta dados de um determinado tipo oportunidade
+[**consultar_using_get19**](OportunidadeApi.md#consultar_using_get19) | **GET** /api/oportunidades/{id} | Apresenta dados de uma determinada oportunidade
+[**consultar_using_get34**](OportunidadeApi.md#consultar_using_get34) | **GET** /api/tipos-oportunidades/{id} | Apresenta dados de um determinado tipo oportunidade
 [**listar_auditorias_status_using_get**](OportunidadeApi.md#listar_auditorias_status_using_get) | **GET** /api/auditorias-status-oportunidades | Lista as auditorias dos status oportunidades
 [**listar_auditorias_using_get**](OportunidadeApi.md#listar_auditorias_using_get) | **GET** /api/auditorias-oportunidades | Lista as auditorias das oportunidades
 [**listar_auditorias_using_get1**](OportunidadeApi.md#listar_auditorias_using_get1) | **GET** /api/auditorias-tipos-oportunidades | Lista as auditorias dos tipos oportunidades
@@ -19,8 +19,6 @@ Method | HTTP request | Description
 [**salvar_status_using_post**](OportunidadeApi.md#salvar_status_using_post) | **POST** /api/tipos-oportunidades/{id}/status | Cadastra status para o tipo oportunidade
 [**salvar_using_post15**](OportunidadeApi.md#salvar_using_post15) | **POST** /api/oportunidades | Cadastra as oportunidades
 [**salvar_using_post22**](OportunidadeApi.md#salvar_using_post22) | **POST** /api/tipos-oportunidades | Cadastra tipos oportunidades
-
-
 
 
 # **alterar_status_using_put**
@@ -34,7 +32,6 @@ Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o do status do ti
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::OportunidadeApi.new
 
@@ -62,7 +59,6 @@ Name | Type | Description  | Notes
  **id_status** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status do tipo oportunidade (id). | 
  **persist** | [**StatusOportunidade**](StatusOportunidade.md)| persist | 
 
-
 ### Return type
 
 [**StatusOportunidadeResponse**](StatusOportunidadeResponse.md)
@@ -78,7 +74,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put16**
 > TipoOportunidadeResponse alterar_using_put16(id, persist)
 
@@ -90,7 +85,6 @@ Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos tipos oport
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::OportunidadeApi.new
 
@@ -115,7 +109,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id). | 
  **persist** | [**TipoOportunidade**](TipoOportunidade.md)| persist | 
 
-
 ### Return type
 
 [**TipoOportunidadeResponse**](TipoOportunidadeResponse.md)
@@ -131,7 +124,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put9**
 > OportunidadeResponse alterar_using_put9(id, update)
 
@@ -143,7 +135,6 @@ Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das oportunidad
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::OportunidadeApi.new
 
@@ -168,7 +159,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id). | 
  **update** | [**OportunidadeUpdate**](OportunidadeUpdate.md)| update | 
 
-
 ### Return type
 
 [**OportunidadeResponse**](OportunidadeResponse.md)
@@ -184,7 +174,6 @@ No authorization required
 
 
 
-
 # **consultar_status_using_get**
 > StatusOportunidadeResponse consultar_status_using_get(id, id_status)
 
@@ -196,7 +185,6 @@ Este recurso permite consultar dados de um determinado status do tipo oportunida
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::OportunidadeApi.new
 
@@ -221,7 +209,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id). | 
  **id_status** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status (idStatus). | 
 
-
 ### Return type
 
 [**StatusOportunidadeResponse**](StatusOportunidadeResponse.md)
@@ -237,9 +224,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get18**
-> OportunidadeResponse consultar_using_get18(id)
+# **consultar_using_get19**
+> OportunidadeResponse consultar_using_get19(id)
 
 Apresenta dados de uma determinada oportunidade
 
@@ -250,7 +236,6 @@ Este recurso permite consultar dados de uma determinada oportunidade a partir de
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::OportunidadeApi.new
 
 id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
@@ -258,10 +243,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da
 
 begin
   #Apresenta dados de uma determinada oportunidade
-  result = api_instance.consultar_using_get18(id)
+  result = api_instance.consultar_using_get19(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling OportunidadeApi->consultar_using_get18: #{e}"
+  puts "Exception when calling OportunidadeApi->consultar_using_get19: #{e}"
 end
 ```
 
@@ -270,7 +255,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id). | 
-
 
 ### Return type
 
@@ -287,9 +271,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get33**
-> TipoOportunidadeResponse consultar_using_get33(id)
+# **consultar_using_get34**
+> TipoOportunidadeResponse consultar_using_get34(id)
 
 Apresenta dados de um determinado tipo oportunidade
 
@@ -300,7 +283,6 @@ Este recurso permite consultar dados de um determinado tipo oportunidade a parti
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::OportunidadeApi.new
 
 id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
@@ -308,10 +290,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta dados de um determinado tipo oportunidade
-  result = api_instance.consultar_using_get33(id)
+  result = api_instance.consultar_using_get34(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling OportunidadeApi->consultar_using_get33: #{e}"
+  puts "Exception when calling OportunidadeApi->consultar_using_get34: #{e}"
 end
 ```
 
@@ -320,7 +302,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id). | 
-
 
 ### Return type
 
@@ -337,7 +318,6 @@ No authorization required
 
 
 
-
 # **listar_auditorias_status_using_get**
 > PageStatusOportunidadeAUDResponse listar_auditorias_status_using_get(opts)
 
@@ -349,7 +329,6 @@ Este recurso permite listar os status oportunidades.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::OportunidadeApi.new
 
@@ -392,7 +371,6 @@ Name | Type | Description  | Notes
  **flag_ativo** | **BOOLEAN**| Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo | [optional] 
  **rev_user** | **String**| Usu\u00C3\u00A1rio da auditoria | [optional] 
 
-
 ### Return type
 
 [**PageStatusOportunidadeAUDResponse**](PageStatusOportunidadeAUDResponse.md)
@@ -408,7 +386,6 @@ No authorization required
 
 
 
-
 # **listar_auditorias_using_get**
 > PageOportunidadeAUDResponse listar_auditorias_using_get(opts)
 
@@ -420,7 +397,6 @@ Este recurso permite listar as auditorias das oportunidades.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::OportunidadeApi.new
 
@@ -467,7 +443,6 @@ Name | Type | Description  | Notes
  **rev_type** | **String**| Tipo da auditoria | [optional] 
  **rev_user** | **String**| Usu\u00C3\u00A1rio da auditoria | [optional] 
 
-
 ### Return type
 
 [**PageOportunidadeAUDResponse**](PageOportunidadeAUDResponse.md)
@@ -483,7 +458,6 @@ No authorization required
 
 
 
-
 # **listar_auditorias_using_get1**
 > PageTipoOportunidadeAUDResponse listar_auditorias_using_get1(opts)
 
@@ -495,7 +469,6 @@ Este recurso permite listar os tipos oportunidades.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::OportunidadeApi.new
 
@@ -534,7 +507,6 @@ Name | Type | Description  | Notes
  **flag_ativo** | **BOOLEAN**| Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo | [optional] 
  **rev_user** | **String**| Usu\u00C3\u00A1rio da auditoria | [optional] 
 
-
 ### Return type
 
 [**PageTipoOportunidadeAUDResponse**](PageTipoOportunidadeAUDResponse.md)
@@ -550,7 +522,6 @@ No authorization required
 
 
 
-
 # **listar_status_using_get**
 > PageStatusOportunidadeResponse listar_status_using_get(id, opts)
 
@@ -562,7 +533,6 @@ Este recurso permite listar os status do tipo oportunidades.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::OportunidadeApi.new
 
@@ -598,7 +568,6 @@ Name | Type | Description  | Notes
  **descricao** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade | [optional] 
  **flag_ativo** | **BOOLEAN**| Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo | [optional] 
 
-
 ### Return type
 
 [**PageStatusOportunidadeResponse**](PageStatusOportunidadeResponse.md)
@@ -614,7 +583,6 @@ No authorization required
 
 
 
-
 # **listar_using_get22**
 > PageOportunidadeResponse listar_using_get22(opts)
 
@@ -626,7 +594,6 @@ Este recurso permite listar as oportunidades.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::OportunidadeApi.new
 
@@ -667,7 +634,6 @@ Name | Type | Description  | Notes
  **data_fim_vigencia** | **String**| Data do fim da vig\u00C3\u00AAncia da oportunidade | [optional] 
  **flag_ativo** | **BOOLEAN**| Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa | [optional] 
 
-
 ### Return type
 
 [**PageOportunidadeResponse**](PageOportunidadeResponse.md)
@@ -683,7 +649,6 @@ No authorization required
 
 
 
-
 # **listar_using_get38**
 > PageTipoOportunidadeResponse listar_using_get38(opts)
 
@@ -695,7 +660,6 @@ Este recurso permite listar os tipos oportunidades.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::OportunidadeApi.new
 
@@ -726,7 +690,6 @@ Name | Type | Description  | Notes
  **descricao** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade | [optional] 
  **flag_ativo** | **BOOLEAN**| Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo | [optional] 
 
-
 ### Return type
 
 [**PageTipoOportunidadeResponse**](PageTipoOportunidadeResponse.md)
@@ -742,7 +705,6 @@ No authorization required
 
 
 
-
 # **salvar_status_using_post**
 > StatusOportunidadeResponse salvar_status_using_post(id, persist)
 
@@ -754,7 +716,6 @@ Esse recurso permite cadastrar status para o tipo oportunidade.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::OportunidadeApi.new
 
@@ -779,7 +740,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id). | 
  **persist** | [**StatusOportunidade**](StatusOportunidade.md)| persist | 
 
-
 ### Return type
 
 [**StatusOportunidadeResponse**](StatusOportunidadeResponse.md)
@@ -795,7 +755,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post15**
 > OportunidadeResponse salvar_using_post15(persist)
 
@@ -807,7 +766,6 @@ Esse recurso permite cadastrar oportunidades.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::OportunidadeApi.new
 
@@ -829,7 +787,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**OportunidadePersist**](OportunidadePersist.md)| persist | 
 
-
 ### Return type
 
 [**OportunidadeResponse**](OportunidadeResponse.md)
@@ -845,7 +802,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post22**
 > TipoOportunidadeResponse salvar_using_post22(persist)
 
@@ -857,7 +813,6 @@ Esse recurso permite cadastrar tipos oportunidades.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::OportunidadeApi.new
 
@@ -879,7 +834,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**TipoOportunidade**](TipoOportunidade.md)| persist | 
 
-
 ### Return type
 
 [**TipoOportunidadeResponse**](TipoOportunidadeResponse.md)
@@ -892,8 +846,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

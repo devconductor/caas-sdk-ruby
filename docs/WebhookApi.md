@@ -5,11 +5,9 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_using_put20**](WebhookApi.md#alterar_using_put20) | **PUT** /api/webhooks/{id} | Alterar Webhook
-[**consultar_using_get40**](WebhookApi.md#consultar_using_get40) | **GET** /api/webhooks/{id} | Consultar Webhook
+[**consultar_using_get41**](WebhookApi.md#consultar_using_get41) | **GET** /api/webhooks/{id} | Consultar Webhook
 [**listar_using_get46**](WebhookApi.md#listar_using_get46) | **GET** /api/webhooks | Lista os Webhooks
 [**salvar_using_post26**](WebhookApi.md#salvar_using_post26) | **POST** /api/webhooks | Salvar Webhook
-
-
 
 
 # **alterar_using_put20**
@@ -23,7 +21,6 @@ Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cad
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::WebhookApi.new
 
@@ -55,7 +52,6 @@ Name | Type | Description  | Notes
  **url** | **String**| URL que a ser consumida pelo WebHook | 
  **status** | **String**| Status | [optional] 
 
-
 ### Return type
 
 [**WebHookResponse**](WebHookResponse.md)
@@ -71,9 +67,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get40**
-> WebHookResponse consultar_using_get40(id)
+# **consultar_using_get41**
+> WebHookResponse consultar_using_get41(id)
 
 Consultar Webhook
 
@@ -84,7 +79,6 @@ Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::WebhookApi.new
 
 id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
@@ -92,10 +86,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Consultar Webhook
-  result = api_instance.consultar_using_get40(id)
+  result = api_instance.consultar_using_get41(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling WebhookApi->consultar_using_get40: #{e}"
+  puts "Exception when calling WebhookApi->consultar_using_get41: #{e}"
 end
 ```
 
@@ -104,7 +98,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id). | 
-
 
 ### Return type
 
@@ -118,7 +111,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
 
 
 
@@ -133,7 +125,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::WebhookApi.new
 
@@ -168,7 +159,6 @@ Name | Type | Description  | Notes
  **metodo** | **String**| M\u00C3\u00A9todo que a ser chamado pelo WebHook | [optional] 
  **url** | **String**| URL que a ser consumida pelo WebHook | [optional] 
 
-
 ### Return type
 
 [**PageWebHookResponse**](PageWebHookResponse.md)
@@ -184,7 +174,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post26**
 > WebHookResponse salvar_using_post26(tipo_evento, url)
 
@@ -196,7 +185,6 @@ Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::WebhookApi.new
 
@@ -221,7 +209,6 @@ Name | Type | Description  | Notes
  **tipo_evento** | **String**| TipoEvento a ser chamado pelo WebHook | 
  **url** | **String**| URL que a ser consumida pelo WebHook | 
 
-
 ### Return type
 
 [**WebHookResponse**](WebHookResponse.md)
@@ -234,8 +221,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

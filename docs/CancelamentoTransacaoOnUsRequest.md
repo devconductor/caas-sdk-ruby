@@ -16,4 +16,3 @@ Name | Type | Description | Notes
 **terminal_requisitante** | **String** | Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante | 
 
 
-

@@ -15,4 +15,3 @@ Name | Type | Description | Notes
 **nome_estabelecimento** | **String** | Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude | [optional] 
 
 
-

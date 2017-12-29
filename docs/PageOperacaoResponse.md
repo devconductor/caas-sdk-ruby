@@ -1,9 +1,9 @@
-# Pier::PagePaisResponse
+# Pier::PageOperacaoResponse
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**Array&lt;PaisResponse&gt;**](PaisResponse.md) |  | [optional] 
+**content** | [**Array&lt;OperacaoResponse&gt;**](OperacaoResponse.md) |  | [optional] 
 **first** | **BOOLEAN** |  | [optional] 
 **first_page** | **BOOLEAN** |  | [optional] 
 **has_content** | **BOOLEAN** |  | [optional] 
@@ -17,6 +17,5 @@ Name | Type | Description | Notes
 **size** | **Integer** |  | [optional] 
 **total_elements** | **Integer** |  | [optional] 
 **total_pages** | **Integer** |  | [optional] 
-
 
 

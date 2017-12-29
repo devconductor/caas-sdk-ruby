@@ -4,16 +4,14 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_using_get23**](RiscoFraudeApi.md#consultar_using_get23) | **GET** /api/riscos-fraudes/{id} | Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
+[**consultar_using_get24**](RiscoFraudeApi.md#consultar_using_get24) | **GET** /api/riscos-fraudes/{id} | Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
 [**listar_tipos_resolucao_using_get**](RiscoFraudeApi.md#listar_tipos_resolucao_using_get) | **GET** /api/tipos-resolucao | Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude
 [**negar_using_post**](RiscoFraudeApi.md#negar_using_post) | **POST** /api/riscos-fraudes/{id}/negar | Negar autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
 [**reconhecer_using_post**](RiscoFraudeApi.md#reconhecer_using_post) | **POST** /api/riscos-fraudes/{id}/reconhecer | Reconhecer autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
 
 
-
-
-# **consultar_using_get23**
-> RiscoFraudeDetalhadoResponse consultar_using_get23(id)
+# **consultar_using_get24**
+> RiscoFraudeDetalhadoResponse consultar_using_get24(id)
 
 Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
 
@@ -24,7 +22,6 @@ Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como ri
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::RiscoFraudeApi.new
 
 id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
@@ -32,10 +29,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
-  result = api_instance.consultar_using_get23(id)
+  result = api_instance.consultar_using_get24(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling RiscoFraudeApi->consultar_using_get23: #{e}"
+  puts "Exception when calling RiscoFraudeApi->consultar_using_get24: #{e}"
 end
 ```
 
@@ -44,7 +41,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude | 
-
 
 ### Return type
 
@@ -61,7 +57,6 @@ No authorization required
 
 
 
-
 # **listar_tipos_resolucao_using_get**
 > TipoResolucaoResponse listar_tipos_resolucao_using_get(opts)
 
@@ -73,7 +68,6 @@ Este recurso permite que sejam listados os tipos de resolu\u00C3\u00A7\u00C3\u00
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::RiscoFraudeApi.new
 
@@ -98,7 +92,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**TipoResolucaoResponse**](TipoResolucaoResponse.md)
@@ -114,7 +107,6 @@ No authorization required
 
 
 
-
 # **negar_using_post**
 > Object negar_using_post(id)
 
@@ -126,7 +118,6 @@ Nega a realiza\u00C3\u00A7\u00C3\u00A3o de uma transa\u00C3\u00A7\u00C3\u00A3o c
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::RiscoFraudeApi.new
 
@@ -148,7 +139,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude | 
 
-
 ### Return type
 
 **Object**
@@ -164,7 +154,6 @@ No authorization required
 
 
 
-
 # **reconhecer_using_post**
 > Object reconhecer_using_post(id)
 
@@ -176,7 +165,6 @@ Confirma a autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada com
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::RiscoFraudeApi.new
 
@@ -198,7 +186,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude | 
 
-
 ### Return type
 
 **Object**
@@ -211,8 +198,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

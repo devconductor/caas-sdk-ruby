@@ -5,9 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_using_put8**](LimiteDisponibilidadeApi.md#alterar_using_put8) | **PUT** /api/limites-disponibilidades | Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
-[**consultar_using_get17**](LimiteDisponibilidadeApi.md#consultar_using_get17) | **GET** /api/limites-disponibilidades | Apresenta os limites da conta
-
-
+[**consultar_using_get18**](LimiteDisponibilidadeApi.md#consultar_using_get18) | **GET** /api/limites-disponibilidades | Apresenta os limites da conta
 
 
 # **alterar_using_put8**
@@ -21,7 +19,6 @@ Esse recurso permite realizar a altera\u00C3\u00A7\u00C3\u00A3o dos Limites de u
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::LimiteDisponibilidadeApi.new
 
@@ -71,7 +68,6 @@ Name | Type | Description  | Notes
  **limite_internacional_saque_periodo** | [**Float**](.md)| Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento. | [optional] 
  **limite_maximo** | [**Float**](.md)| Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es. | [optional] 
 
-
 ### Return type
 
 [**LimiteDisponibilidadeResponse**](LimiteDisponibilidadeResponse.md)
@@ -87,9 +83,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get17**
-> LimiteDisponibilidadeResponse consultar_using_get17(id_conta)
+# **consultar_using_get18**
+> LimiteDisponibilidadeResponse consultar_using_get18(id_conta)
 
 Apresenta os limites da conta
 
@@ -100,7 +95,6 @@ Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determ
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::LimiteDisponibilidadeApi.new
 
 id_conta = 789 # Integer | Id Conta
@@ -108,10 +102,10 @@ id_conta = 789 # Integer | Id Conta
 
 begin
   #Apresenta os limites da conta
-  result = api_instance.consultar_using_get17(id_conta)
+  result = api_instance.consultar_using_get18(id_conta)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling LimiteDisponibilidadeApi->consultar_using_get17: #{e}"
+  puts "Exception when calling LimiteDisponibilidadeApi->consultar_using_get18: #{e}"
 end
 ```
 
@@ -120,7 +114,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_conta** | **Integer**| Id Conta | 
-
 
 ### Return type
 
@@ -134,8 +127,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

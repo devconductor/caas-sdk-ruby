@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **id_usuario** | **Integer** | Apresenta o identificador do usu\u00C3\u00A1rio. | [optional] 
 
 
-

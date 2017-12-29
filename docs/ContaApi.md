@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ajustar_conta_using_post**](ContaApi.md#ajustar_conta_using_post) | **POST** /api/contas/{id}/ajustes-financeiros | Lan\u00C3\u00A7a um ajuste para a conta do id informado
+[**ajustar_conta_using_post1**](ContaApi.md#ajustar_conta_using_post1) | **POST** /api/contas/{id}/ajustes-financeiros | Lan\u00C3\u00A7a um ajuste para a conta do id informado
 [**alterar_produto_using_post**](ContaApi.md#alterar_produto_using_post) | **POST** /api/contas/{id}/alterar-produto | Altera o produto associado \u00C3\u00A0 conta.
 [**alterar_titular_using_post**](ContaApi.md#alterar_titular_using_post) | **POST** /api/contas/{id}/alterar-titular | Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
 [**alterar_vencimento_using_put**](ContaApi.md#alterar_vencimento_using_put) | **PUT** /api/contas/{id}/alterar-vencimento | Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
@@ -16,8 +16,8 @@ Method | HTTP request | Description
 [**consultar_boleto_emitido_using_get**](ContaApi.md#consultar_boleto_emitido_using_get) | **GET** /api/contas/{id}/consultar-dados-pagamento-fatura | Consulta os dados de um determinado boleto da fatura
 [**consultar_divida_atualizada_cliente_using_get**](ContaApi.md#consultar_divida_atualizada_cliente_using_get) | **GET** /api/contas/{id}/recuperar-divida-atualizada | Consulta a d\u00C3\u00ADvida atualizada do cliente
 [**consultar_taxas_tarifas_using_get**](ContaApi.md#consultar_taxas_tarifas_using_get) | **GET** /api/contas/{id}/consultar-taxas-tarifas | Permite consultar a partir do ID da conta as taxas e tarifas
-[**consultar_using_get10**](ContaApi.md#consultar_using_get10) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
-[**consultar_using_get38**](ContaApi.md#consultar_using_get38) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+[**consultar_using_get11**](ContaApi.md#consultar_using_get11) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
+[**consultar_using_get39**](ContaApi.md#consultar_using_get39) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 [**desativar_envio_fatura_email_using_post**](ContaApi.md#desativar_envio_fatura_email_using_post) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00C3\u00A7o de envio de fatura por email
 [**gerar_boleto_recarga_using_post**](ContaApi.md#gerar_boleto_recarga_using_post) | **POST** /api/contas/{id}/gerar-boleto-recarga | Gera um boleto de recarga
 [**gerar_cartao_embossing_using_post**](ContaApi.md#gerar_cartao_embossing_using_post) | **POST** /api/contas/{id}/gerar-cartao-grafica | Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
@@ -38,10 +38,8 @@ Method | HTTP request | Description
 [**transferir_using_post1**](ContaApi.md#transferir_using_post1) | **POST** /api/contas/{id}/transferencias-creditos-cartoes | Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
 
 
-
-
-# **ajustar_conta_using_post**
-> AjusteResponse ajustar_conta_using_post(id, id_tipo_ajuste, data_ajuste, valor_ajuste)
+# **ajustar_conta_using_post1**
+> AjusteFinanceiroResponse ajustar_conta_using_post1(id, id_tipo_ajuste, data_ajuste, valor_ajuste, opts)
 
 Lan\u00C3\u00A7a um ajuste para a conta do id informado
 
@@ -51,7 +49,6 @@ Este recurso insere um ajuste para a conta do id informado
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -63,13 +60,16 @@ data_ajuste = "data_ajuste_example" # String | Data do ajuste no formato yyyy-MM
 
 valor_ajuste = 3.4 # Float | Valor do ajuste
 
+opts = { 
+  identificador_externo: "identificador_externo_example" # String | Identificador Externo
+}
 
 begin
   #Lan\u00C3\u00A7a um ajuste para a conta do id informado
-  result = api_instance.ajustar_conta_using_post(id, id_tipo_ajuste, data_ajuste, valor_ajuste)
+  result = api_instance.ajustar_conta_using_post1(id, id_tipo_ajuste, data_ajuste, valor_ajuste, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->ajustar_conta_using_post: #{e}"
+  puts "Exception when calling ContaApi->ajustar_conta_using_post1: #{e}"
 end
 ```
 
@@ -81,11 +81,11 @@ Name | Type | Description  | Notes
  **id_tipo_ajuste** | **Integer**| C\u00C3\u00B3digo identificador do tipo de ajuste. | 
  **data_ajuste** | **String**| Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. | 
  **valor_ajuste** | [**Float**](.md)| Valor do ajuste | 
-
+ **identificador_externo** | **String**| Identificador Externo | [optional] 
 
 ### Return type
 
-[**AjusteResponse**](AjusteResponse.md)
+[**AjusteFinanceiroResponse**](AjusteFinanceiroResponse.md)
 
 ### Authorization
 
@@ -95,7 +95,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
 
 
 
@@ -110,7 +109,6 @@ O recurso permite fazer modifica\u00C3\u00A7\u00C3\u00A3o do produto associado \
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -135,7 +133,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **request** | [**AlterarProdutoRequest**](AlterarProdutoRequest.md)| request | 
 
-
 ### Return type
 
 **String**
@@ -151,7 +148,6 @@ No authorization required
 
 
 
-
 # **alterar_titular_using_post**
 > ContaResponse alterar_titular_using_post(id, id_pessoa)
 
@@ -163,7 +159,6 @@ Esta m\u00C3\u00A9todo permite altera a pessoa de uma conta.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -188,7 +183,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) | 
  **id_pessoa** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id). | 
 
-
 ### Return type
 
 [**ContaResponse**](ContaResponse.md)
@@ -204,7 +198,6 @@ No authorization required
 
 
 
-
 # **alterar_vencimento_using_put**
 > ContaResponse alterar_vencimento_using_put(id, novo_dia_vencimento)
 
@@ -216,7 +209,6 @@ Esse recurso permite alterar o vencimento de uma conta especifica.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -241,7 +233,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **novo_dia_vencimento** | **Integer**| Novo dia de vencimento. | 
 
-
 ### Return type
 
 [**ContaResponse**](ContaResponse.md)
@@ -257,7 +248,6 @@ No authorization required
 
 
 
-
 # **ativar_anuidade_using_post**
 > Object ativar_anuidade_using_post(id, id_anuidade, opts)
 
@@ -269,7 +259,6 @@ Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atr
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -310,7 +299,6 @@ Name | Type | Description  | Notes
  **id_operadora** | **Integer**| Identificador da operadora do celular | [optional] 
  **id_origem_comercial** | **Integer**| Identificador da origem comercial | [optional] 
 
-
 ### Return type
 
 **Object**
@@ -326,7 +314,6 @@ No authorization required
 
 
 
-
 # **ativar_envio_fatura_email_using_post**
 > Object ativar_envio_fatura_email_using_post(id)
 
@@ -338,7 +325,6 @@ Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -360,7 +346,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
 
-
 ### Return type
 
 **Object**
@@ -376,7 +361,6 @@ No authorization required
 
 
 
-
 # **bloquear_using_post1**
 > ContaResponse bloquear_using_post1(id, id_status)
 
@@ -388,7 +372,6 @@ Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -413,7 +396,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **id_status** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta. | 
 
-
 ### Return type
 
 [**ContaResponse**](ContaResponse.md)
@@ -429,7 +411,6 @@ No authorization required
 
 
 
-
 # **cancelar_using_post1**
 > ContaResponse cancelar_using_post1(id, id_status)
 
@@ -441,7 +422,6 @@ Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelament
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -466,7 +446,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **id_status** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta. | 
 
-
 ### Return type
 
 [**ContaResponse**](ContaResponse.md)
@@ -482,7 +461,6 @@ No authorization required
 
 
 
-
 # **consultar_beneficio_pagamento_atraso_using_get**
 > BeneficioPagamentoAtrasoResponse consultar_beneficio_pagamento_atraso_using_get(id)
 
@@ -494,7 +472,6 @@ Este m\u00C3\u00A9todo permite consultar se o cliente tem direito ao benef\u00C3
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -516,7 +493,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
 
-
 ### Return type
 
 [**BeneficioPagamentoAtrasoResponse**](BeneficioPagamentoAtrasoResponse.md)
@@ -532,7 +508,6 @@ No authorization required
 
 
 
-
 # **consultar_boleto_emitido_using_get**
 > BoletoResponse consultar_boleto_emitido_using_get(id)
 
@@ -544,7 +519,6 @@ Este recurso consulta um boleto da fatura
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -566,7 +540,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| Id Conta | 
 
-
 ### Return type
 
 [**BoletoResponse**](BoletoResponse.md)
@@ -582,7 +555,6 @@ No authorization required
 
 
 
-
 # **consultar_divida_atualizada_cliente_using_get**
 > DividaClienteResponse consultar_divida_atualizada_cliente_using_get(id, opts)
 
@@ -594,7 +566,6 @@ Este recurso consulta a d\u00C3\u00ADvida atualizada do cliente
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -628,7 +599,6 @@ Name | Type | Description  | Notes
  **data_vencimento** | **String**| Data do vencimento | [optional] 
  **id_escritorio_cobranca** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a | [optional] 
 
-
 ### Return type
 
 [**DividaClienteResponse**](DividaClienteResponse.md)
@@ -644,7 +614,6 @@ No authorization required
 
 
 
-
 # **consultar_taxas_tarifas_using_get**
 > PageTaxasRefinanciamentoResponse consultar_taxas_tarifas_using_get(id, opts)
 
@@ -656,7 +625,6 @@ Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores 
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -686,7 +654,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageTaxasRefinanciamentoResponse**](PageTaxasRefinanciamentoResponse.md)
@@ -702,9 +669,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get10**
-> ContaDetalheResponse consultar_using_get10(id)
+# **consultar_using_get11**
+> ContaDetalheResponse consultar_using_get11(id)
 
 Apresenta dados de uma determinada conta
 
@@ -715,7 +681,6 @@ Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::ContaApi.new
 
 id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
@@ -723,10 +688,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da
 
 begin
   #Apresenta dados de uma determinada conta
-  result = api_instance.consultar_using_get10(id)
+  result = api_instance.consultar_using_get11(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->consultar_using_get10: #{e}"
+  puts "Exception when calling ContaApi->consultar_using_get11: #{e}"
 end
 ```
 
@@ -735,7 +700,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
-
 
 ### Return type
 
@@ -752,9 +716,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get38**
-> TransferenciaDetalheResponse consultar_using_get38(id, id_transferencia)
+# **consultar_using_get39**
+> TransferenciaDetalheResponse consultar_using_get39(id, id_transferencia)
 
 Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 
@@ -765,7 +728,6 @@ Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::ContaApi.new
 
 id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
@@ -775,10 +737,10 @@ id_transferencia = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u
 
 begin
   #Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-  result = api_instance.consultar_using_get38(id, id_transferencia)
+  result = api_instance.consultar_using_get39(id, id_transferencia)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->consultar_using_get38: #{e}"
+  puts "Exception when calling ContaApi->consultar_using_get39: #{e}"
 end
 ```
 
@@ -788,7 +750,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **id_transferencia** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia). | 
-
 
 ### Return type
 
@@ -805,7 +766,6 @@ No authorization required
 
 
 
-
 # **desativar_envio_fatura_email_using_post**
 > Object desativar_envio_fatura_email_using_post(id)
 
@@ -817,7 +777,6 @@ Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -839,7 +798,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
 
-
 ### Return type
 
 **Object**
@@ -855,7 +813,6 @@ No authorization required
 
 
 
-
 # **gerar_boleto_recarga_using_post**
 > BoletoResponse gerar_boleto_recarga_using_post(id, valor, data_vencimento)
 
@@ -867,7 +824,6 @@ Este recurso gera um boleto de recarga
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -895,7 +851,6 @@ Name | Type | Description  | Notes
  **valor** | [**Float**](.md)| Atributo que representa o valor do Boleto Emitido | 
  **data_vencimento** | **String**| Atributo que representa a data de vencimento do boleto | 
 
-
 ### Return type
 
 [**BoletoResponse**](BoletoResponse.md)
@@ -911,7 +866,6 @@ No authorization required
 
 
 
-
 # **gerar_cartao_embossing_using_post**
 > CartaoEmbossingResponse gerar_cartao_embossing_using_post(id, cartao_embossing_request)
 
@@ -923,7 +877,6 @@ Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determina
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -948,7 +901,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **cartao_embossing_request** | [**CartaoEmbossingRequest**](CartaoEmbossingRequest.md)| cartaoEmbossingRequest | 
 
-
 ### Return type
 
 [**CartaoEmbossingResponse**](CartaoEmbossingResponse.md)
@@ -964,7 +916,6 @@ No authorization required
 
 
 
-
 # **gerar_cartao_provisorio_using_post**
 > CartaoImpressaoProvisorioResponse gerar_cartao_provisorio_using_post(id)
 
@@ -976,7 +927,6 @@ Este recurso permite que seja gerado um cart\u00C3\u00A3o provis\u00C3\u00B3rio 
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -998,7 +948,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
 
-
 ### Return type
 
 [**CartaoImpressaoProvisorioResponse**](CartaoImpressaoProvisorioResponse.md)
@@ -1014,7 +963,6 @@ No authorization required
 
 
 
-
 # **gerar_cartao_using_post**
 > CartaoImpressaoResponse gerar_cartao_using_post(id, id_pessoa, opts)
 
@@ -1026,7 +974,6 @@ Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determina
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -1055,7 +1002,6 @@ Name | Type | Description  | Notes
  **id_pessoa** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). | 
  **id_tipo_plastico** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). | [optional] 
 
-
 ### Return type
 
 [**CartaoImpressaoResponse**](CartaoImpressaoResponse.md)
@@ -1071,7 +1017,6 @@ No authorization required
 
 
 
-
 # **gerar_cartao_virtual_using_post**
 > CartaoImpressaoResponse gerar_cartao_virtual_using_post(id, data_validade)
 
@@ -1083,7 +1028,6 @@ Este recurso permite que seja gerado um Cart\u00C3\u00A3o virtual para um determ
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -1108,7 +1052,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **data_validade** | **String**| Data de Validade | 
 
-
 ### Return type
 
 [**CartaoImpressaoResponse**](CartaoImpressaoResponse.md)
@@ -1124,7 +1067,6 @@ No authorization required
 
 
 
-
 # **listar_historico_alteracoes_limites_using_get**
 > PageHistoricoEventosResponse listar_historico_alteracoes_limites_using_get(id, opts)
 
@@ -1136,7 +1078,6 @@ Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -1166,7 +1107,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageHistoricoEventosResponse**](PageHistoricoEventosResponse.md)
@@ -1182,7 +1122,6 @@ No authorization required
 
 
 
-
 # **listar_historico_assessoria_using_get**
 > PageHistoricoAssessoriaResponse listar_historico_assessoria_using_get(id, opts)
 
@@ -1194,7 +1133,6 @@ Permite listar todos os registros de entrada e sa\u00C3\u00ADda da Conta em arqu
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -1224,7 +1162,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageHistoricoAssessoriaResponse**](PageHistoricoAssessoriaResponse.md)
@@ -1240,7 +1177,6 @@ No authorization required
 
 
 
-
 # **listar_historico_atrasos_faturas_using_get**
 > PageHistoricoAtrasoFaturaResponse listar_historico_atrasos_faturas_using_get(id, opts)
 
@@ -1252,7 +1188,6 @@ Este recurso lista o hist\u00C3\u00B3rico do pagamento de faturas em atraso
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -1282,7 +1217,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageHistoricoAtrasoFaturaResponse**](PageHistoricoAtrasoFaturaResponse.md)
@@ -1298,7 +1232,6 @@ No authorization required
 
 
 
-
 # **listar_nao_processadas_using_get**
 > PageTransacaoNaoProcessadaResponse listar_nao_processadas_using_get(id, opts)
 
@@ -1310,7 +1243,6 @@ Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u0
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -1344,7 +1276,6 @@ Name | Type | Description  | Notes
  **data_inicio** | **String**| Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida). | [optional] 
  **data_fim** | **String**| Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida). | [optional] 
 
-
 ### Return type
 
 [**PageTransacaoNaoProcessadaResponse**](PageTransacaoNaoProcessadaResponse.md)
@@ -1360,7 +1291,6 @@ No authorization required
 
 
 
-
 # **listar_pagamentos_using_get**
 > PageContaHistoricoPagamentoResponse listar_pagamentos_using_get(id, opts)
 
@@ -1372,7 +1302,6 @@ Este recurso permite listar todos os Pagamentos realizados por uma determinada C
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -1414,7 +1343,6 @@ Name | Type | Description  | Notes
  **data_hora_pagamento** | **String**| Data e Hora da realiza\u00C3\u00A7\u00C3\u00A3o do Pagamento. Quando feito em Institui\u00C3\u00A7\u00C3\u00A3o Banc\u00C3\u00A1ria, o hor\u00C3\u00A1rio do pagamento \u00C3\u00A9 exibido com valor zero | [optional] 
  **status** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Pagamento | [optional] 
 
-
 ### Return type
 
 [**PageContaHistoricoPagamentoResponse**](PageContaHistoricoPagamentoResponse.md)
@@ -1430,7 +1358,6 @@ No authorization required
 
 
 
-
 # **listar_processadas_using_get**
 > PageTransacoesCorrentesResponse listar_processadas_using_get(id, opts)
 
@@ -1442,7 +1369,6 @@ Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u0
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -1478,7 +1404,6 @@ Name | Type | Description  | Notes
  **data_inicio** | **String**| Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). | [optional] 
  **data_fim** | **String**| Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). | [optional] 
 
-
 ### Return type
 
 [**PageTransacoesCorrentesResponse**](PageTransacoesCorrentesResponse.md)
@@ -1494,7 +1419,6 @@ No authorization required
 
 
 
-
 # **listar_using_get13**
 > PageContaResponse listar_using_get13(opts)
 
@@ -1506,7 +1430,6 @@ Este recurso permite listar contas existentes na base de dados do Emissor.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -1551,7 +1474,6 @@ Name | Type | Description  | Notes
  **data_cadastro** | **String**| Apresenta a data em que o cart\u00C3\u00A3o foi gerado. | [optional] 
  **data_ultima_alteracao_vencimento** | **String**| Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. | [optional] 
 
-
 ### Return type
 
 [**PageContaResponse**](PageContaResponse.md)
@@ -1567,7 +1489,6 @@ No authorization required
 
 
 
-
 # **listar_using_get43**
 > PageTransferenciaResponse listar_using_get43(id, opts)
 
@@ -1579,7 +1500,6 @@ Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias r
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -1619,7 +1539,6 @@ Name | Type | Description  | Notes
  **valor_transferencia** | [**Float**](.md)| Valor estabelecido para ser transferido. | [optional] 
  **data_transferencia** | **String**| Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. | [optional] 
 
-
 ### Return type
 
 [**PageTransferenciaResponse**](PageTransferenciaResponse.md)
@@ -1635,7 +1554,6 @@ No authorization required
 
 
 
-
 # **reativar_using_post1**
 > Object reativar_using_post1(id)
 
@@ -1647,7 +1565,6 @@ Este recurso permite reativar contas. Para isso, ser\u00C3\u00A1 preciso informa
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -1669,7 +1586,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| Id Conta | 
 
-
 ### Return type
 
 **Object**
@@ -1685,7 +1601,6 @@ No authorization required
 
 
 
-
 # **simular_emprestimo_financiamento_using_post**
 > EmprestimoPessoalResponse simular_emprestimo_financiamento_using_post(id, request)
 
@@ -1697,7 +1612,6 @@ Esta opera\u00C3\u00A7\u00C3\u00A3o pode ser utilizada para simular opera\u00C3\
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -1722,7 +1636,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **request** | [**EmprestimoPessoalRequest**](EmprestimoPessoalRequest.md)| request | 
 
-
 ### Return type
 
 [**EmprestimoPessoalResponse**](EmprestimoPessoalResponse.md)
@@ -1738,7 +1651,6 @@ No authorization required
 
 
 
-
 # **transacoes_using_get**
 > PageTransacaoResponse transacoes_using_get(id, opts)
 
@@ -1750,7 +1662,6 @@ Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em fo
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -1780,7 +1691,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageTransacaoResponse**](PageTransacaoResponse.md)
@@ -1796,7 +1706,6 @@ No authorization required
 
 
 
-
 # **transferir_using_post1**
 > TransferenciaDetalheResponse transferir_using_post1(id, id_conta_destino, valor_transferencia)
 
@@ -1808,7 +1717,6 @@ Este m\u00C3\u00A9todo permite que um portador de um cart\u00C3\u00A3o possa rea
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ContaApi.new
 
@@ -1836,7 +1744,6 @@ Name | Type | Description  | Notes
  **id_conta_destino** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id). | 
  **valor_transferencia** | [**Float**](.md)| Valor da Transfer\u00C3\u00AAncia. | 
 
-
 ### Return type
 
 [**TransferenciaDetalheResponse**](TransferenciaDetalheResponse.md)
@@ -1849,8 +1756,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

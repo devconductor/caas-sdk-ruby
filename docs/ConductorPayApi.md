@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**atualizar_chave_using_post**](ConductorPayApi.md#atualizar_chave_using_post) | **POST** /api/cartoes-tokenizados/{id}/atualizar-chave | Atualiza a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o
 [**atualizar_using_put**](ConductorPayApi.md#atualizar_using_put) | **PUT** /api/cartoes-tokenizados/{id} | Atualiza os dados do cart\u00C3\u00A3o
 [**confirma_atualizacao_chave_using_post**](ConductorPayApi.md#confirma_atualizacao_chave_using_post) | **POST** /api/cartoes-tokenizados/{id}/confirmar-chave | Confirma a atualiza\u00C3\u00A7\u00C3\u00A3o da chave de transa\u00C3\u00A7\u00C3\u00A3o
-[**consultar_using_get5**](ConductorPayApi.md#consultar_using_get5) | **GET** /api/cartoes-tokenizados/{id} | Apresenta os dados de um determinado cart\u00C3\u00A3o
+[**consultar_using_get6**](ConductorPayApi.md#consultar_using_get6) | **GET** /api/cartoes-tokenizados/{id} | Apresenta os dados de um determinado cart\u00C3\u00A3o
 [**listar_codigos_resposta_using_get**](ConductorPayApi.md#listar_codigos_resposta_using_get) | **GET** /api/codigos-resposta | Lista os c\u00C3\u00B3digos de resposta dos recursos de transa\u00C3\u00A7\u00C3\u00A3o e consulta de conta
 [**listar_modos_entrada_using_get**](ConductorPayApi.md#listar_modos_entrada_using_get) | **GET** /api/modos-entrada | Lista os modos entradas
 [**listar_operacoes_using_get**](ConductorPayApi.md#listar_operacoes_using_get) | **GET** /api/operacoes | Lista as opera\u00C3\u00A7\u00C3\u00B5es
@@ -15,8 +15,6 @@ Method | HTTP request | Description
 [**listar_tipos_transacoes_using_get**](ConductorPayApi.md#listar_tipos_transacoes_using_get) | **GET** /api/tipos-transacoes | Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
 [**listar_using_get6**](ConductorPayApi.md#listar_using_get6) | **GET** /api/cartoes-tokenizados | Lista os cart\u00C3\u00B5es cadastrados
 [**salvar_using_post5**](ConductorPayApi.md#salvar_using_post5) | **POST** /api/cartoes-tokenizados | Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
-
-
 
 
 # **atualizar_chave_using_post**
@@ -30,7 +28,6 @@ Este m\u00C3\u00A9todo permite atualizar a chave de gera\u00C3\u00A7\u00C3\u00A3
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ConductorPayApi.new
 
@@ -55,7 +52,6 @@ Name | Type | Description  | Notes
  **device_id** | **String**| Device id criptografado | 
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). | 
 
-
 ### Return type
 
 [**CartaoPayAtualizarChaveResponse**](CartaoPayAtualizarChaveResponse.md)
@@ -71,7 +67,6 @@ No authorization required
 
 
 
-
 # **atualizar_using_put**
 > CartaoPayResponse atualizar_using_put(device_id, id, update)
 
@@ -83,7 +78,6 @@ Este m\u00C3\u00A9todo permite atualizar os dados do cart\u00C3\u00A3o tokenizad
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ConductorPayApi.new
 
@@ -111,7 +105,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). | 
  **update** | [**CartaoPayUpdate**](CartaoPayUpdate.md)| update | 
 
-
 ### Return type
 
 [**CartaoPayResponse**](CartaoPayResponse.md)
@@ -127,7 +120,6 @@ No authorization required
 
 
 
-
 # **confirma_atualizacao_chave_using_post**
 > CartaoPayConfirmarChaveResponse confirma_atualizacao_chave_using_post(device_id, id, update)
 
@@ -139,7 +131,6 @@ Este met\u00C3\u00B3do recebe confirma\u00C3\u00A7\u00C3\u00A3o de atualiza\u00C
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ConductorPayApi.new
 
@@ -167,7 +158,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). | 
  **update** | [**CartaoPayKeyUpdate**](CartaoPayKeyUpdate.md)| update | 
 
-
 ### Return type
 
 [**CartaoPayConfirmarChaveResponse**](CartaoPayConfirmarChaveResponse.md)
@@ -183,9 +173,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get5**
-> CartaoPayDetalheResponse consultar_using_get5(device_id, id)
+# **consultar_using_get6**
+> CartaoPayDetalheResponse consultar_using_get6(device_id, id)
 
 Apresenta os dados de um determinado cart\u00C3\u00A3o
 
@@ -196,7 +185,6 @@ Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::ConductorPayApi.new
 
 device_id = "device_id_example" # String | Device id criptografado
@@ -206,10 +194,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado cart\u00C3\u00A3o
-  result = api_instance.consultar_using_get5(device_id, id)
+  result = api_instance.consultar_using_get6(device_id, id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ConductorPayApi->consultar_using_get5: #{e}"
+  puts "Exception when calling ConductorPayApi->consultar_using_get6: #{e}"
 end
 ```
 
@@ -219,7 +207,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_id** | **String**| Device id criptografado | 
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). | 
-
 
 ### Return type
 
@@ -236,7 +223,6 @@ No authorization required
 
 
 
-
 # **listar_codigos_resposta_using_get**
 > Array&lt;Object&gt; listar_codigos_resposta_using_get
 
@@ -248,7 +234,6 @@ Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de resposta das tr
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ConductorPayApi.new
 
@@ -264,7 +249,6 @@ end
 ### Parameters
 This endpoint does not need any parameter.
 
-
 ### Return type
 
 **Array&lt;Object&gt;**
@@ -277,7 +261,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
 
 
 
@@ -293,7 +276,6 @@ Este recurso permite listar os modos de entrada para transa\u00C3\u00A7\u00C3\u0
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::ConductorPayApi.new
 
 begin
@@ -308,7 +290,6 @@ end
 ### Parameters
 This endpoint does not need any parameter.
 
-
 ### Return type
 
 **Array&lt;Object&gt;**
@@ -321,7 +302,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
 
 
 
@@ -337,7 +317,6 @@ Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00B5es disponiveis de tr
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::ConductorPayApi.new
 
 begin
@@ -352,7 +331,6 @@ end
 ### Parameters
 This endpoint does not need any parameter.
 
-
 ### Return type
 
 **Array&lt;Object&gt;**
@@ -365,7 +343,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
 
 
 
@@ -381,7 +358,6 @@ Este m\u00C3\u00A9todo retorna a lista dos tipos de terminais.
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::ConductorPayApi.new
 
 begin
@@ -396,7 +372,6 @@ end
 ### Parameters
 This endpoint does not need any parameter.
 
-
 ### Return type
 
 **Array&lt;Object&gt;**
@@ -409,7 +384,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
 
 
 
@@ -425,7 +399,6 @@ Este m\u00C3\u00A9todo retorna a lista dos tipos de transa\u00C3\u00A7\u00C3\u00
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::ConductorPayApi.new
 
 begin
@@ -439,7 +412,6 @@ end
 
 ### Parameters
 This endpoint does not need any parameter.
-
 
 ### Return type
 
@@ -456,7 +428,6 @@ No authorization required
 
 
 
-
 # **listar_using_get6**
 > PageCartaoPayResponse listar_using_get6(opts)
 
@@ -468,7 +439,6 @@ Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dis
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ConductorPayApi.new
 
@@ -501,7 +471,6 @@ Name | Type | Description  | Notes
  **status** | **String**| Status do cart\u00C3\u00A3o tokenizado | [optional] 
  **numero_cartao** | **String**| Numero do cart\u00C3\u00A3o tokenizado | [optional] 
 
-
 ### Return type
 
 [**PageCartaoPayResponse**](PageCartaoPayResponse.md)
@@ -517,7 +486,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post5**
 > CartaoPayCadastroResponse salvar_using_post5(device_id, persist)
 
@@ -529,7 +497,6 @@ Este met\u00C3\u00B3do permite a tokeniza\u00C3\u00A7\u00C3\u00A3o de um cart\u0
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ConductorPayApi.new
 
@@ -554,7 +521,6 @@ Name | Type | Description  | Notes
  **device_id** | **String**| Device id criptografado | 
  **persist** | [**CartaoPayPersist**](CartaoPayPersist.md)| persist | 
 
-
 ### Return type
 
 [**CartaoPayCadastroResponse**](CartaoPayCadastroResponse.md)
@@ -567,8 +533,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

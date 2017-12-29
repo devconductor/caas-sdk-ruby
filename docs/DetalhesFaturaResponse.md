@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **transacoes** | [**Array&lt;TransacoesCorrentesResponse&gt;**](TransacoesCorrentesResponse.md) | Apresenta as transa\u00C3\u00A7\u00C3\u00B5es relacionadas a fatura. | [optional] 
 
 
-

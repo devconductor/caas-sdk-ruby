@@ -12,4 +12,3 @@ Name | Type | Description | Notes
 **status** | **String** | Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. | [optional] 
 
 
-

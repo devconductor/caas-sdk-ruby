@@ -15,4 +15,3 @@ Name | Type | Description | Notes
 **som** | **String** | Apresenta o cor do icone a ser apresentado no push | [optional] 
 
 
-

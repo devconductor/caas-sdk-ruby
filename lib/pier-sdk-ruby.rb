@@ -539,9 +539,6 @@ require 'pier-sdk-ruby/models/page_oportunidade_response'
 require 'pier-sdk-ruby/models/page_origem_comercial_response'
 
 
-require 'pier-sdk-ruby/models/page_pais_response'
-
-
 require 'pier-sdk-ruby/models/page_pessoa_detalhe_response'
 
 
@@ -656,9 +653,6 @@ require 'pier-sdk-ruby/models/page_usuario_response'
 require 'pier-sdk-ruby/models/page_web_hook_response'
 
 
-require 'pier-sdk-ruby/models/pais_response'
-
-
 require 'pier-sdk-ruby/models/parametro_produto_response'
 
 
@@ -708,9 +702,6 @@ require 'pier-sdk-ruby/models/plano_parcelamento_transferencia_credito_conta_ban
 
 
 require 'pier-sdk-ruby/models/plano_parcelamento_transferencia_credito_conta_bancaria_response'
-
-
-require 'pier-sdk-ruby/models/plano_parcelamento_transferencia_response'
 
 
 require 'pier-sdk-ruby/models/plataforma_mobile_persist'
@@ -976,8 +967,6 @@ require 'pier-sdk-ruby/api/limite_disponibilidade_api'
 require 'pier-sdk-ruby/api/notificacao_api'
 
 require 'pier-sdk-ruby/api/oportunidade_api'
-
-require 'pier-sdk-ruby/api/permissao_pais_api'
 
 require 'pier-sdk-ruby/api/plataforma_mobile_api'
 

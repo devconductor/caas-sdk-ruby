@@ -43,6 +43,9 @@ module Pier
     # Id Nacionalidade da pessoa fisica
     attr_accessor :id_nacionalidade
 
+    # N\u00C3\u00BAmero do banco.
+    attr_accessor :numero_banco
+
     # N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
     attr_accessor :numero_agencia
 
@@ -72,6 +75,8 @@ module Pier
         
         :'id_nacionalidade' => :'idNacionalidade',
         
+        :'numero_banco' => :'numeroBanco',
+        
         :'numero_agencia' => :'numeroAgencia',
         
         :'numero_conta_corrente' => :'numeroContaCorrente',
@@ -98,6 +103,8 @@ module Pier
         :'id_natureza_ocupacao' => :'Integer',
         
         :'id_nacionalidade' => :'Integer',
+        
+        :'numero_banco' => :'Integer',
         
         :'numero_agencia' => :'Integer',
         
@@ -168,6 +175,15 @@ module Pier
         
         
         self.id_nacionalidade = attributes[:'idNacionalidade']
+        
+      
+      end
+
+      
+      if attributes[:'numeroBanco']
+        
+        
+        self.numero_banco = attributes[:'numeroBanco']
         
       
       end
@@ -264,8 +280,17 @@ module Pier
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -328,6 +353,7 @@ module Pier
           id_profissao == o.id_profissao &&
           id_natureza_ocupacao == o.id_natureza_ocupacao &&
           id_nacionalidade == o.id_nacionalidade &&
+          numero_banco == o.numero_banco &&
           numero_agencia == o.numero_agencia &&
           numero_conta_corrente == o.numero_conta_corrente &&
           email == o.email &&
@@ -343,7 +369,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_pessoa, nome_mae, id_estado_civil, id_profissao, id_natureza_ocupacao, id_nacionalidade, numero_agencia, numero_conta_corrente, email, nome_empresa].hash
+      [id_pessoa, nome_mae, id_estado_civil, id_profissao, id_natureza_ocupacao, id_nacionalidade, numero_banco, numero_agencia, numero_conta_corrente, email, nome_empresa].hash
     end
 
     # Builds the object from hash

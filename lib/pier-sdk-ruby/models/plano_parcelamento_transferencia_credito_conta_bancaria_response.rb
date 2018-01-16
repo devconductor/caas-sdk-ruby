@@ -25,30 +25,35 @@ require 'date'
 module Pier
   # Plano de Parcelamentos para Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias
   class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse
-    # N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
-    attr_accessor :nsu_origem
-
     # N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado.
     attr_accessor :numero_mascarado_cartao
 
-    # Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
-    attr_accessor :terminal_requisitante
+    # Data de vencimento da primeira parcela.
+    attr_accessor :vencimento_primeira_parcela
 
-    # Lista os planos de parcelamentos
-    attr_accessor :plano_parcelamentos
+    # Valor da solicita\u00C3\u00A7\u00C3\u00A3o de saque.
+    attr_accessor :valor_transacao
+
+    # N\u00C3\u00BAmero de meses para car\u00C3\u00AAncia.
+    attr_accessor :numero_meses_carencia
+
+    # Lista com os planos de parcelamento.
+    attr_accessor :parcelas
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'nsu_origem' => :'nsuOrigem',
-        
         :'numero_mascarado_cartao' => :'numeroMascaradoCartao',
         
-        :'terminal_requisitante' => :'terminalRequisitante',
+        :'vencimento_primeira_parcela' => :'vencimentoPrimeiraParcela',
         
-        :'plano_parcelamentos' => :'planoParcelamentos'
+        :'valor_transacao' => :'valorTransacao',
+        
+        :'numero_meses_carencia' => :'numeroMesesCarencia',
+        
+        :'parcelas' => :'parcelas'
         
       }
     end
@@ -57,13 +62,15 @@ module Pier
     def self.swagger_types
       {
         
-        :'nsu_origem' => :'String',
-        
         :'numero_mascarado_cartao' => :'String',
         
-        :'terminal_requisitante' => :'String',
+        :'vencimento_primeira_parcela' => :'String',
         
-        :'plano_parcelamentos' => :'Array<PlanoParcelamentoTransferenciaResponse>'
+        :'valor_transacao' => :'Float',
+        
+        :'numero_meses_carencia' => :'Integer',
+        
+        :'parcelas' => :'Array<ParcelamentoTransferenciaResponse>'
         
       }
     end
@@ -77,15 +84,6 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'nsuOrigem']
-        
-        
-        self.nsu_origem = attributes[:'nsuOrigem']
-        
-      
-      end
-
-      
       if attributes[:'numeroMascaradoCartao']
         
         
@@ -95,19 +93,37 @@ module Pier
       end
 
       
-      if attributes[:'terminalRequisitante']
+      if attributes[:'vencimentoPrimeiraParcela']
         
         
-        self.terminal_requisitante = attributes[:'terminalRequisitante']
+        self.vencimento_primeira_parcela = attributes[:'vencimentoPrimeiraParcela']
         
       
       end
 
       
-      if attributes[:'planoParcelamentos']
+      if attributes[:'valorTransacao']
         
-        if (value = attributes[:'planoParcelamentos']).is_a?(Array)
-          self.plano_parcelamentos = value
+        
+        self.valor_transacao = attributes[:'valorTransacao']
+        
+      
+      end
+
+      
+      if attributes[:'numeroMesesCarencia']
+        
+        
+        self.numero_meses_carencia = attributes[:'numeroMesesCarencia']
+        
+      
+      end
+
+      
+      if attributes[:'parcelas']
+        
+        if (value = attributes[:'parcelas']).is_a?(Array)
+          self.parcelas = value
         end
         
         
@@ -146,8 +162,17 @@ module Pier
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -174,10 +199,11 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          nsu_origem == o.nsu_origem &&
           numero_mascarado_cartao == o.numero_mascarado_cartao &&
-          terminal_requisitante == o.terminal_requisitante &&
-          plano_parcelamentos == o.plano_parcelamentos
+          vencimento_primeira_parcela == o.vencimento_primeira_parcela &&
+          valor_transacao == o.valor_transacao &&
+          numero_meses_carencia == o.numero_meses_carencia &&
+          parcelas == o.parcelas
     end
 
     # @see the `==` method
@@ -189,7 +215,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [nsu_origem, numero_mascarado_cartao, terminal_requisitante, plano_parcelamentos].hash
+      [numero_mascarado_cartao, vencimento_primeira_parcela, valor_transacao, numero_meses_carencia, parcelas].hash
     end
 
     # Builds the object from hash

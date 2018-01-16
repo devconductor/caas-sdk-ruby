@@ -97,23 +97,6 @@ describe 'CadastroGeralApi' do
   end
 
 
-  # unit tests for ativar_uso_exterior_using_post
-  # Ativa o par\u00C3\u00A2metro uso exterior para o produto
-  # Este m\u00C3\u00A9todo permite ativar o uso no exterior para o produto atrav\u00C3\u00A9s do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
-  # @param [Hash] opts the optional parameters
-  # @return [ProdutoDetalhesResponse]
-  describe 'ativar_uso_exterior_using_post test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
   # unit tests for cadastrar_using_post1
   # Inserir configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
   # Este m\u00C3\u00A9todo permite que seja cadastrado uma nova configura\u00C3\u00A7\u00C3\u00A3o, para registro de cobran\u00C3\u00A7a.
@@ -372,23 +355,6 @@ describe 'CadastroGeralApi' do
   # @param [Hash] opts the optional parameters
   # @return [ConfiguracaoRotativoDetalheResponse]
   describe 'consultar_using_get9 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for desativar_uso_exterior_using_post
-  # Desativa o par\u00C3\u00A2metro uso exterior para o produto
-  # Este m\u00C3\u00A9todo permite desativar o uso no exterior para o produto atrav\u00C3\u00A9s do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
-  # @param [Hash] opts the optional parameters
-  # @return [ProdutoDetalhesResponse]
-  describe 'desativar_uso_exterior_using_post test' do
     it "should work" do
       # assertion here
       # should be_a()

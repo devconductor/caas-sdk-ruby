@@ -366,6 +366,23 @@ describe 'NotificacaoApi' do
   end
 
 
+  # unit tests for reenviar_token_sms_using_post
+  # Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
+  # Esse recurso permite que seja reenviado para um determinado n\u00C3\u00BAmero de telefone, atrav\u00C3\u00A9s de SMS, o c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado previamente para ele. Caso o c\u00C3\u00B3digo de seguran\u00C3\u00A7a j\u00C3\u00A1 n\u00C3\u00A3o esteja mais v\u00C3\u00A1lido, o recurso retornar\u00C3\u00A1 uma mensagem orientando que seja solicitada uma nova gera\u00C3\u00A7\u00C3\u00A3o para o telefone em quest\u00C3\u00A3o.
+  # @param persist persist
+  # @param [Hash] opts the optional parameters
+  # @return [String]
+  describe 'reenviar_token_sms_using_post test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
   # unit tests for responder_sms_get_using_get
   # Responder SMS
   # Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio

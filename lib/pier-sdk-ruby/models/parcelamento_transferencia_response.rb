@@ -28,11 +28,8 @@ module Pier
     # N\u00C3\u00BAmero de parcelas dispon\u00C3\u00ADveis.
     attr_accessor :numero_parcela
 
-    # Valor da primeira parcela.
-    attr_accessor :valor_primeira_parcela
-
     # Valor das demais parcelas.
-    attr_accessor :valor_demais_parcelas
+    attr_accessor :valor_parcelas
 
     # Valor total do financiamento.
     attr_accessor :valor_total
@@ -56,9 +53,7 @@ module Pier
         
         :'numero_parcela' => :'numeroParcela',
         
-        :'valor_primeira_parcela' => :'valorPrimeiraParcela',
-        
-        :'valor_demais_parcelas' => :'valorDemaisParcelas',
+        :'valor_parcelas' => :'valorParcelas',
         
         :'valor_total' => :'valorTotal',
         
@@ -77,11 +72,9 @@ module Pier
     def self.swagger_types
       {
         
-        :'numero_parcela' => :'String',
+        :'numero_parcela' => :'Integer',
         
-        :'valor_primeira_parcela' => :'Float',
-        
-        :'valor_demais_parcelas' => :'Float',
+        :'valor_parcelas' => :'Float',
         
         :'valor_total' => :'Float',
         
@@ -114,19 +107,10 @@ module Pier
       end
 
       
-      if attributes[:'valorPrimeiraParcela']
+      if attributes[:'valorParcelas']
         
         
-        self.valor_primeira_parcela = attributes[:'valorPrimeiraParcela']
-        
-      
-      end
-
-      
-      if attributes[:'valorDemaisParcelas']
-        
-        
-        self.valor_demais_parcelas = attributes[:'valorDemaisParcelas']
+        self.valor_parcelas = attributes[:'valorParcelas']
         
       
       end
@@ -220,17 +204,8 @@ module Pier
       
       
       
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -273,8 +248,7 @@ module Pier
       return true if self.equal?(o)
       self.class == o.class &&
           numero_parcela == o.numero_parcela &&
-          valor_primeira_parcela == o.valor_primeira_parcela &&
-          valor_demais_parcelas == o.valor_demais_parcelas &&
+          valor_parcelas == o.valor_parcelas &&
           valor_total == o.valor_total &&
           valor_tac == o.valor_tac &&
           valor_iof == o.valor_iof &&
@@ -291,7 +265,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [numero_parcela, valor_primeira_parcela, valor_demais_parcelas, valor_total, valor_tac, valor_iof, taxa_juros, cet_anual].hash
+      [numero_parcela, valor_parcelas, valor_total, valor_tac, valor_iof, taxa_juros, cet_anual].hash
     end
 
     # Builds the object from hash

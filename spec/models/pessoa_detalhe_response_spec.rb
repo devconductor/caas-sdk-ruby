@@ -109,6 +109,17 @@ describe 'PessoaDetalheResponse' do
   end
 
 
+  describe 'test attribute "numero_banco"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
   describe 'test attribute "numero_agencia"' do
     it 'should work' do
        # assertion here

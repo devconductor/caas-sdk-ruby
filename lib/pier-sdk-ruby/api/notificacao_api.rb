@@ -1482,6 +1482,72 @@ module Pier
     end
 
 
+    # Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
+    # Esse recurso permite que seja reenviado para um determinado n\u00C3\u00BAmero de telefone, atrav\u00C3\u00A9s de SMS, o c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado previamente para ele. Caso o c\u00C3\u00B3digo de seguran\u00C3\u00A7a j\u00C3\u00A1 n\u00C3\u00A3o esteja mais v\u00C3\u00A1lido, o recurso retornar\u00C3\u00A1 uma mensagem orientando que seja solicitada uma nova gera\u00C3\u00A7\u00C3\u00A3o para o telefone em quest\u00C3\u00A3o.
+    # @param persist persist
+    # @param [Hash] opts the optional parameters
+    # @return [String]
+    def reenviar_token_sms_using_post(persist, opts = {})
+      data, _status_code, _headers = reenviar_token_sms_using_post_with_http_info(persist, opts)
+      return data
+    end
+
+    # Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
+    # Esse recurso permite que seja reenviado para um determinado n\u00C3\u00BAmero de telefone, atrav\u00C3\u00A9s de SMS, o c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado previamente para ele. Caso o c\u00C3\u00B3digo de seguran\u00C3\u00A7a j\u00C3\u00A1 n\u00C3\u00A3o esteja mais v\u00C3\u00A1lido, o recurso retornar\u00C3\u00A1 uma mensagem orientando que seja solicitada uma nova gera\u00C3\u00A7\u00C3\u00A3o para o telefone em quest\u00C3\u00A3o.
+    # @param persist persist
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    def reenviar_token_sms_using_post_with_http_info(persist, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: NotificacaoApi.reenviar_token_sms_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'persist' is set
+      fail ArgumentError, "Missing the required parameter 'persist' when calling NotificacaoApi.reenviar_token_sms_using_post" if persist.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/notificacoes-sms/reenviar-codigo-seguranca".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(persist)
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'String')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: NotificacaoApi#reenviar_token_sms_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # Responder SMS
     # Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
     # @param [Hash] opts the optional parameters

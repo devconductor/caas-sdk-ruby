@@ -34,6 +34,9 @@ module Pier
     # Taxa de juros
     attr_accessor :taxa
 
+    # Nome do usu\u00C3\u00A1rio
+    attr_accessor :usuario
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -43,7 +46,9 @@ module Pier
         
         :'parcelas' => :'parcelas',
         
-        :'taxa' => :'taxa'
+        :'taxa' => :'taxa',
+        
+        :'usuario' => :'usuario'
         
       }
     end
@@ -56,7 +61,9 @@ module Pier
         
         :'parcelas' => :'Integer',
         
-        :'taxa' => :'Float'
+        :'taxa' => :'Float',
+        
+        :'usuario' => :'String'
         
       }
     end
@@ -97,6 +104,15 @@ module Pier
       end
 
       
+      if attributes[:'usuario']
+        
+        
+        self.usuario = attributes[:'usuario']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -124,8 +140,17 @@ module Pier
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -149,7 +174,8 @@ module Pier
       self.class == o.class &&
           id == o.id &&
           parcelas == o.parcelas &&
-          taxa == o.taxa
+          taxa == o.taxa &&
+          usuario == o.usuario
     end
 
     # @see the `==` method
@@ -161,7 +187,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, parcelas, taxa].hash
+      [id, parcelas, taxa, usuario].hash
     end
 
     # Builds the object from hash

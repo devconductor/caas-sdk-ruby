@@ -54,18 +54,7 @@ describe 'ParcelamentoTransferenciaResponse' do
   end
 
 
-  describe 'test attribute "valor_primeira_parcela"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "valor_demais_parcelas"' do
+  describe 'test attribute "valor_parcelas"' do
     it 'should work' do
        # assertion here
        # should be_a()

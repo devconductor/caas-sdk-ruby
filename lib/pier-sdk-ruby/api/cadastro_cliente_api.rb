@@ -127,6 +127,7 @@ module Pier
     # @option opts [String] :id_profissao Profiss\u00C3\u00A3o da pessoa fisica
     # @option opts [Integer] :id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
     # @option opts [Integer] :id_nacionalidade Id Nacionalidade da pessoa fisica
+    # @option opts [Integer] :numero_banco N\u00C3\u00BAmero do banco.
     # @option opts [Integer] :numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
     # @option opts [String] :numero_conta_corrente N\u00C3\u00BAmero da conta corrente.
     # @option opts [String] :email Email da pessoa fisica
@@ -146,6 +147,7 @@ module Pier
     # @option opts [String] :id_profissao Profiss\u00C3\u00A3o da pessoa fisica
     # @option opts [Integer] :id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
     # @option opts [Integer] :id_nacionalidade Id Nacionalidade da pessoa fisica
+    # @option opts [Integer] :numero_banco N\u00C3\u00BAmero do banco.
     # @option opts [Integer] :numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
     # @option opts [String] :numero_conta_corrente N\u00C3\u00BAmero da conta corrente.
     # @option opts [String] :email Email da pessoa fisica
@@ -218,6 +220,12 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/pessoas-detalhes/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
 
@@ -228,6 +236,7 @@ module Pier
       query_params[:'idProfissao'] = opts[:'id_profissao'] if opts[:'id_profissao']
       query_params[:'idNaturezaOcupacao'] = opts[:'id_natureza_ocupacao'] if opts[:'id_natureza_ocupacao']
       query_params[:'idNacionalidade'] = opts[:'id_nacionalidade'] if opts[:'id_nacionalidade']
+      query_params[:'numeroBanco'] = opts[:'numero_banco'] if opts[:'numero_banco']
       query_params[:'numeroAgencia'] = opts[:'numero_agencia'] if opts[:'numero_agencia']
       query_params[:'numeroContaCorrente'] = opts[:'numero_conta_corrente'] if opts[:'numero_conta_corrente']
       query_params[:'email'] = opts[:'email'] if opts[:'email']
@@ -1745,6 +1754,7 @@ module Pier
     # @option opts [String] :id_profissao Profiss\u00C3\u00A3o da pessoa fisica
     # @option opts [Integer] :id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
     # @option opts [Integer] :id_nacionalidade Id Nacionalidade da pessoa fisica
+    # @option opts [Integer] :numero_banco N\u00C3\u00BAmero do Banco.
     # @option opts [Integer] :numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
     # @option opts [String] :numero_conta_corrente N\u00C3\u00BAmero da conta corrente.
     # @option opts [String] :email Email da pessoa fisica
@@ -1767,6 +1777,7 @@ module Pier
     # @option opts [String] :id_profissao Profiss\u00C3\u00A3o da pessoa fisica
     # @option opts [Integer] :id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
     # @option opts [Integer] :id_nacionalidade Id Nacionalidade da pessoa fisica
+    # @option opts [Integer] :numero_banco N\u00C3\u00BAmero do Banco.
     # @option opts [Integer] :numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
     # @option opts [String] :numero_conta_corrente N\u00C3\u00BAmero da conta corrente.
     # @option opts [String] :email Email da pessoa fisica
@@ -1776,6 +1787,12 @@ module Pier
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CadastroClienteApi.listar_using_get23 ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1869,6 +1886,7 @@ module Pier
       query_params[:'idProfissao'] = opts[:'id_profissao'] if opts[:'id_profissao']
       query_params[:'idNaturezaOcupacao'] = opts[:'id_natureza_ocupacao'] if opts[:'id_natureza_ocupacao']
       query_params[:'idNacionalidade'] = opts[:'id_nacionalidade'] if opts[:'id_nacionalidade']
+      query_params[:'numeroBanco'] = opts[:'numero_banco'] if opts[:'numero_banco']
       query_params[:'numeroAgencia'] = opts[:'numero_agencia'] if opts[:'numero_agencia']
       query_params[:'numeroContaCorrente'] = opts[:'numero_conta_corrente'] if opts[:'numero_conta_corrente']
       query_params[:'email'] = opts[:'email'] if opts[:'email']
@@ -2604,6 +2622,7 @@ module Pier
     # @option opts [String] :id_profissao Profiss\u00C3\u00A3o da pessoa fisica
     # @option opts [Integer] :id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
     # @option opts [Integer] :id_nacionalidade Id Nacionalidade da pessoa fisica
+    # @option opts [Integer] :numero_banco N\u00C3\u00BAmero do banco.
     # @option opts [Integer] :numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
     # @option opts [String] :numero_conta_corrente N\u00C3\u00BAmero da conta corrente.
     # @option opts [String] :email Email da pessoa fisica
@@ -2623,6 +2642,7 @@ module Pier
     # @option opts [String] :id_profissao Profiss\u00C3\u00A3o da pessoa fisica
     # @option opts [Integer] :id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
     # @option opts [Integer] :id_nacionalidade Id Nacionalidade da pessoa fisica
+    # @option opts [Integer] :numero_banco N\u00C3\u00BAmero do banco.
     # @option opts [Integer] :numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
     # @option opts [String] :numero_conta_corrente N\u00C3\u00BAmero da conta corrente.
     # @option opts [String] :email Email da pessoa fisica
@@ -2695,6 +2715,12 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/pessoas-detalhes".sub('{format}','json')
 
@@ -2706,6 +2732,7 @@ module Pier
       query_params[:'idProfissao'] = opts[:'id_profissao'] if opts[:'id_profissao']
       query_params[:'idNaturezaOcupacao'] = opts[:'id_natureza_ocupacao'] if opts[:'id_natureza_ocupacao']
       query_params[:'idNacionalidade'] = opts[:'id_nacionalidade'] if opts[:'id_nacionalidade']
+      query_params[:'numeroBanco'] = opts[:'numero_banco'] if opts[:'numero_banco']
       query_params[:'numeroAgencia'] = opts[:'numero_agencia'] if opts[:'numero_agencia']
       query_params[:'numeroContaCorrente'] = opts[:'numero_conta_corrente'] if opts[:'numero_conta_corrente']
       query_params[:'email'] = opts[:'email'] if opts[:'email']

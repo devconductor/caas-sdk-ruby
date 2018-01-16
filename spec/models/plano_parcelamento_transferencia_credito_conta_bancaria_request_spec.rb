@@ -43,7 +43,7 @@ describe 'PlanoParcelamentoTransferenciaCreditoContaBancariaRequest' do
     end
   end
 
-  describe 'test attribute "nsu_origem"' do
+  describe 'test attribute "id_cartao"' do
     it 'should work' do
        # assertion here
        # should be_a()
@@ -65,51 +65,7 @@ describe 'PlanoParcelamentoTransferenciaCreditoContaBancariaRequest' do
   end
 
 
-  describe 'test attribute "id_cartao"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
   describe 'test attribute "numero_meses_carencia"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "numero_estabelecimento"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "data_hora_terminal"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
-
-  describe 'test attribute "terminal_requisitante"' do
     it 'should work' do
        # assertion here
        # should be_a()

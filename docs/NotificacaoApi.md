@@ -21,6 +21,7 @@ Method | HTTP request | Description
 [**listar_template_notificacao_using_get**](NotificacaoApi.md#listar_template_notificacao_using_get) | **GET** /api/templates-notificacoes | Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
 [**listar_tipos_layouts_using_get**](NotificacaoApi.md#listar_tipos_layouts_using_get) | **GET** /api/tipos-layouts | Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
 [**notificacao_email_using_post**](NotificacaoApi.md#notificacao_email_using_post) | **POST** /api/notificacoes-email | Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
+[**reenviar_token_sms_using_post**](NotificacaoApi.md#reenviar_token_sms_using_post) | **POST** /api/notificacoes-sms/reenviar-codigo-seguranca | Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
 [**responder_sms_get_using_get**](NotificacaoApi.md#responder_sms_get_using_get) | **GET** /api/notificacoes/sms/responder | Responder SMS
 [**salvar_configuracao_using_post**](NotificacaoApi.md#salvar_configuracao_using_post) | **POST** /api/configuracoes-email | Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
 [**salvar_push_fcm_using_post**](NotificacaoApi.md#salvar_push_fcm_using_post) | **POST** /api/notificacoes/push/fcm | Enviar Push FCM
@@ -946,6 +947,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **reenviar_token_sms_using_post**
+> String reenviar_token_sms_using_post(persist)
+
+Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
+
+Esse recurso permite que seja reenviado para um determinado n\u00C3\u00BAmero de telefone, atrav\u00C3\u00A9s de SMS, o c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado previamente para ele. Caso o c\u00C3\u00B3digo de seguran\u00C3\u00A7a j\u00C3\u00A1 n\u00C3\u00A3o esteja mais v\u00C3\u00A1lido, o recurso retornar\u00C3\u00A1 uma mensagem orientando que seja solicitada uma nova gera\u00C3\u00A7\u00C3\u00A3o para o telefone em quest\u00C3\u00A3o.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::NotificacaoApi.new
+
+persist = Pier::CodigoSegurancaSMSPersist.new # CodigoSegurancaSMSPersist | persist
+
+
+begin
+  #Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
+  result = api_instance.reenviar_token_sms_using_post(persist)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling NotificacaoApi->reenviar_token_sms_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **persist** | [**CodigoSegurancaSMSPersist**](CodigoSegurancaSMSPersist.md)| persist | 
+
+
+### Return type
+
+**String**
 
 ### Authorization
 

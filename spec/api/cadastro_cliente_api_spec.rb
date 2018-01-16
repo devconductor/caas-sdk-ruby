@@ -72,6 +72,7 @@ describe 'CadastroClienteApi' do
   # @option opts [String] :id_profissao Profiss\u00C3\u00A3o da pessoa fisica
   # @option opts [Integer] :id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
   # @option opts [Integer] :id_nacionalidade Id Nacionalidade da pessoa fisica
+  # @option opts [Integer] :numero_banco N\u00C3\u00BAmero do banco.
   # @option opts [Integer] :numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
   # @option opts [String] :numero_conta_corrente N\u00C3\u00BAmero da conta corrente.
   # @option opts [String] :email Email da pessoa fisica
@@ -408,6 +409,7 @@ describe 'CadastroClienteApi' do
   # @option opts [String] :id_profissao Profiss\u00C3\u00A3o da pessoa fisica
   # @option opts [Integer] :id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
   # @option opts [Integer] :id_nacionalidade Id Nacionalidade da pessoa fisica
+  # @option opts [Integer] :numero_banco N\u00C3\u00BAmero do Banco.
   # @option opts [Integer] :numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
   # @option opts [String] :numero_conta_corrente N\u00C3\u00BAmero da conta corrente.
   # @option opts [String] :email Email da pessoa fisica
@@ -569,6 +571,7 @@ describe 'CadastroClienteApi' do
   # @option opts [String] :id_profissao Profiss\u00C3\u00A3o da pessoa fisica
   # @option opts [Integer] :id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
   # @option opts [Integer] :id_nacionalidade Id Nacionalidade da pessoa fisica
+  # @option opts [Integer] :numero_banco N\u00C3\u00BAmero do banco.
   # @option opts [Integer] :numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
   # @option opts [String] :numero_conta_corrente N\u00C3\u00BAmero da conta corrente.
   # @option opts [String] :email Email da pessoa fisica

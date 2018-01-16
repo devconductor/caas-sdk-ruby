@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**alterar_using_put2**](CadastroGeralApi.md#alterar_using_put2) | **PUT** /api/campanhas/{id} | Alterar campanha
 [**alterar_using_put3**](CadastroGeralApi.md#alterar_using_put3) | **PUT** /api/configuracoes-registro-cobranca/{id} | Atualizar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
 [**alterar_using_put4**](CadastroGeralApi.md#alterar_using_put4) | **PUT** /api/configuracoes-rotativos/{id} | Alterar os dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo de um produto
-[**ativar_uso_exterior_using_post**](CadastroGeralApi.md#ativar_uso_exterior_using_post) | **POST** /api/produtos/{id}/ativar-uso-exterior | Ativa o par\u00C3\u00A2metro uso exterior para o produto
 [**cadastrar_using_post1**](CadastroGeralApi.md#cadastrar_using_post1) | **POST** /api/configuracoes-registro-cobranca | Inserir configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
 [**configurar_taxa_antecipacao_using_post**](CadastroGeralApi.md#configurar_taxa_antecipacao_using_post) | **POST** /api/produtos/{id}/configurar-taxa-antecipacao | Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
 [**consultar_campanha_using_get**](CadastroGeralApi.md#consultar_campanha_using_get) | **GET** /api/campanhas/{id} | Consultar campanha
@@ -23,7 +22,6 @@ Method | HTTP request | Description
 [**consultar_using_get4**](CadastroGeralApi.md#consultar_using_get4) | **GET** /api/bancos/{id} | Apresenta os dados de um determinado Banco
 [**consultar_using_get8**](CadastroGeralApi.md#consultar_using_get8) | **GET** /api/configuracoes-registro-cobranca/{id} | Consultar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
 [**consultar_using_get9**](CadastroGeralApi.md#consultar_using_get9) | **GET** /api/configuracoes-rotativos/{id} | Apresenta dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo espec\u00C3\u00ADfico.
-[**desativar_uso_exterior_using_post**](CadastroGeralApi.md#desativar_uso_exterior_using_post) | **POST** /api/produtos/{id}/desativar-uso-exterior | Desativa o par\u00C3\u00A2metro uso exterior para o produto
 [**listar_campanhas_using_get**](CadastroGeralApi.md#listar_campanhas_using_get) | **GET** /api/campanhas | Listar Campanhas
 [**listar_contas_por_pessoa_using_get**](CadastroGeralApi.md#listar_contas_por_pessoa_using_get) | **GET** /api/pessoas/listar-contas | Lista as contas da pessoa
 [**listar_estados_civis_using_get**](CadastroGeralApi.md#listar_estados_civis_using_get) | **GET** /api/estados-civis | Lista os Estados C\u00C3\u00ADvis
@@ -198,56 +196,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ConfiguracaoRotativoDetalheResponse**](ConfiguracaoRotativoDetalheResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **ativar_uso_exterior_using_post**
-> ProdutoDetalhesResponse ativar_uso_exterior_using_post(id)
-
-Ativa o par\u00C3\u00A2metro uso exterior para o produto
-
-Este m\u00C3\u00A9todo permite ativar o uso no exterior para o produto atrav\u00C3\u00A9s do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::CadastroGeralApi.new
-
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
-
-
-begin
-  #Ativa o par\u00C3\u00A2metro uso exterior para o produto
-  result = api_instance.ativar_uso_exterior_using_post(id)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->ativar_uso_exterior_using_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id) | 
-
-
-### Return type
-
-[**ProdutoDetalhesResponse**](ProdutoDetalhesResponse.md)
 
 ### Authorization
 
@@ -1030,56 +978,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ConfiguracaoRotativoDetalheResponse**](ConfiguracaoRotativoDetalheResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **desativar_uso_exterior_using_post**
-> ProdutoDetalhesResponse desativar_uso_exterior_using_post(id)
-
-Desativa o par\u00C3\u00A2metro uso exterior para o produto
-
-Este m\u00C3\u00A9todo permite desativar o uso no exterior para o produto atrav\u00C3\u00A9s do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::CadastroGeralApi.new
-
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
-
-
-begin
-  #Desativa o par\u00C3\u00A2metro uso exterior para o produto
-  result = api_instance.desativar_uso_exterior_using_post(id)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->desativar_uso_exterior_using_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id) | 
-
-
-### Return type
-
-[**ProdutoDetalhesResponse**](ProdutoDetalhesResponse.md)
 
 ### Authorization
 

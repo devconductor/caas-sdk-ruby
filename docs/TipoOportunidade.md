@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **flag_ativo** | **BOOLEAN** | Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo | 
 
 
-

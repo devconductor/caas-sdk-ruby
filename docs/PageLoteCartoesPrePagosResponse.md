@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**Array&lt;LoteCartoesPrePagos&gt;**](LoteCartoesPrePagos.md) |  | [optional] 
+**content** | [**Array&lt;LoteCartoesPrePagosResponse&gt;**](LoteCartoesPrePagosResponse.md) |  | [optional] 
 **first** | **BOOLEAN** |  | [optional] 
 **first_page** | **BOOLEAN** |  | [optional] 
 **has_content** | **BOOLEAN** |  | [optional] 
@@ -17,6 +17,5 @@ Name | Type | Description | Notes
 **size** | **Integer** |  | [optional] 
 **total_elements** | **Integer** |  | [optional] 
 **total_pages** | **Integer** |  | [optional] 
-
 
 

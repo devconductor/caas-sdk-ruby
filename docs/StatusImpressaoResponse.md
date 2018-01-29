@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **nome** | **String** | Nome do status impress\u00C3\u00A3o | [optional] 
 
 
-

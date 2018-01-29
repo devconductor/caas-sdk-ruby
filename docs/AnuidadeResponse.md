@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **flag_anuidade_bonificada** | **BOOLEAN** | Se o tipo de anuidade de b\u00C3\u00B4nus de celular \u00C3\u00A9 bonificada | [optional] 
 
 
-

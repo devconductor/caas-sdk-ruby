@@ -11,4 +11,3 @@ Name | Type | Description | Notes
 **chave_publica_device** | **String** | Chave p\u00C3\u00BAblica do dispositivo criptografada | 
 
 
-

@@ -48,8 +48,6 @@ Method | HTTP request | Description
 [**salvar_using_post6**](CadastroGeralApi.md#salvar_using_post6) | **POST** /api/configuracoes-rotativos | Inserir os dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo de um produto
 
 
-
-
 # **alterar_using_put2**
 > CampanhaResponse alterar_using_put2(id, update)
 
@@ -61,7 +59,6 @@ Este m\u00C3\u00A9todo permite que sejam alterados os dados de uma campanha.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -86,7 +83,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da campanha (id). | 
  **update** | [**CampanhaUpdate**](CampanhaUpdate.md)| update | 
 
-
 ### Return type
 
 [**CampanhaResponse**](CampanhaResponse.md)
@@ -102,7 +98,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put3**
 > ConfiguracaoRegistroCobrancaResponse alterar_using_put3(id, configuracao_persist)
 
@@ -114,7 +109,6 @@ Este m\u00C3\u00A9todo permite atualizar uma configura\u00C3\u00A7\u00C3\u00A3o,
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -139,7 +133,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id). | 
  **configuracao_persist** | [**ConfiguracaoRegistroCobrancaPersist**](ConfiguracaoRegistroCobrancaPersist.md)| configuracaoPersist | 
 
-
 ### Return type
 
 [**ConfiguracaoRegistroCobrancaResponse**](ConfiguracaoRegistroCobrancaResponse.md)
@@ -155,7 +148,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put4**
 > ConfiguracaoRotativoDetalheResponse alterar_using_put4(id, configuracao_rotativo_persist)
 
@@ -167,7 +159,6 @@ Este m\u00C3\u00A9todo permite que seja alterada uma configura\u00C3\u00A7\u00C3
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -192,7 +183,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id). | 
  **configuracao_rotativo_persist** | [**ConfiguracaoRotativoPersist**](ConfiguracaoRotativoPersist.md)| configuracaoRotativoPersist | 
 
-
 ### Return type
 
 [**ConfiguracaoRotativoDetalheResponse**](ConfiguracaoRotativoDetalheResponse.md)
@@ -208,7 +198,6 @@ No authorization required
 
 
 
-
 # **cadastrar_using_post1**
 > ConfiguracaoRegistroCobrancaResponse cadastrar_using_post1(configuracao_persist)
 
@@ -220,7 +209,6 @@ Este m\u00C3\u00A9todo permite que seja cadastrado uma nova configura\u00C3\u00A
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -242,7 +230,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **configuracao_persist** | [**ConfiguracaoRegistroCobrancaPersist**](ConfiguracaoRegistroCobrancaPersist.md)| configuracaoPersist | 
 
-
 ### Return type
 
 [**ConfiguracaoRegistroCobrancaResponse**](ConfiguracaoRegistroCobrancaResponse.md)
@@ -258,7 +245,6 @@ No authorization required
 
 
 
-
 # **configurar_taxa_antecipacao_using_post**
 > ParametroProdutoResponse configurar_taxa_antecipacao_using_post(id, taxa_antecipacao_request)
 
@@ -270,7 +256,6 @@ Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de u
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -295,7 +280,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| Id Produto | 
  **taxa_antecipacao_request** | [**TaxaAntecipacaoRequest**](TaxaAntecipacaoRequest.md)| taxaAntecipacaoRequest | 
 
-
 ### Return type
 
 [**ParametroProdutoResponse**](ParametroProdutoResponse.md)
@@ -311,7 +295,6 @@ No authorization required
 
 
 
-
 # **consultar_campanha_using_get**
 > CampanhaResponse consultar_campanha_using_get(id)
 
@@ -323,7 +306,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os dados de uma determinada ca
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -345,7 +327,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| ID da Campanha | 
 
-
 ### Return type
 
 [**CampanhaResponse**](CampanhaResponse.md)
@@ -361,7 +342,6 @@ No authorization required
 
 
 
-
 # **consultar_origem_comercial_using_get**
 > OrigemComercialResponse consultar_origem_comercial_using_get(id)
 
@@ -373,7 +353,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinad
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -395,7 +374,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| ID da Origem Comercial | 
 
-
 ### Return type
 
 [**OrigemComercialResponse**](OrigemComercialResponse.md)
@@ -411,7 +389,6 @@ No authorization required
 
 
 
-
 # **consultar_taxa_antecipacao_using_get**
 > ParametroProdutoResponse consultar_taxa_antecipacao_using_get(id, tipo_transacao)
 
@@ -423,7 +400,6 @@ Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -448,7 +424,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| Id Produto | 
  **tipo_transacao** | **String**| Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US) | 
 
-
 ### Return type
 
 [**ParametroProdutoResponse**](ParametroProdutoResponse.md)
@@ -464,7 +439,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get23**
 > ProdutoDetalhesResponse consultar_using_get23(id)
 
@@ -476,7 +450,6 @@ Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu 
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -498,7 +471,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id) | 
 
-
 ### Return type
 
 [**ProdutoDetalhesResponse**](ProdutoDetalhesResponse.md)
@@ -514,7 +486,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get3**
 > AtendimentoClienteResponse consultar_using_get3(id)
 
@@ -526,7 +497,6 @@ Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determin
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -548,7 +518,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do atendimento cliente (id). | 
 
-
 ### Return type
 
 [**AtendimentoClienteResponse**](AtendimentoClienteResponse.md)
@@ -564,7 +533,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get30**
 > PageTipoAjusteResponse consultar_using_get30(opts)
 
@@ -576,7 +544,6 @@ Este recurso permite que sejam listados os tipos de ajustes existentes na base d
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -607,7 +574,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo identificador do tipo de ajuste. | [optional] 
  **descricao** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste. | [optional] 
 
-
 ### Return type
 
 [**PageTipoAjusteResponse**](PageTipoAjusteResponse.md)
@@ -623,7 +589,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get31**
 > PageTipoBoletoResponse consultar_using_get31(opts)
 
@@ -635,7 +600,6 @@ Este recurso permite que sejam listados os tipos de boletos existentes na base d
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -668,7 +632,6 @@ Name | Type | Description  | Notes
  **descricao** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto. | [optional] 
  **banco** | **Integer**| C\u00C3\u00B3digo identificador do banco. | [optional] 
 
-
 ### Return type
 
 [**PageTipoBoletoResponse**](PageTipoBoletoResponse.md)
@@ -684,7 +647,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get32**
 > TipoEnderecoResponse consultar_using_get32(id)
 
@@ -696,7 +658,6 @@ Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Endere\u00C3\u00
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -718,7 +679,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id) | 
 
-
 ### Return type
 
 [**TipoEnderecoResponse**](TipoEnderecoResponse.md)
@@ -734,7 +694,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get33**
 > TipoOperacaoResponse consultar_using_get33(id_cartao, id_estabelecimento, codigo_processamento)
 
@@ -746,7 +705,6 @@ Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u0
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -774,7 +732,6 @@ Name | Type | Description  | Notes
  **id_estabelecimento** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (idEstabelecimento). | 
  **codigo_processamento** | **String**| C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o. | 
 
-
 ### Return type
 
 [**TipoOperacaoResponse**](TipoOperacaoResponse.md)
@@ -790,7 +747,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get35**
 > TipoTelefoneResponse consultar_using_get35(id)
 
@@ -802,7 +758,6 @@ Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a parti
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -824,7 +779,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id) | 
 
-
 ### Return type
 
 [**TipoTelefoneResponse**](TipoTelefoneResponse.md)
@@ -840,7 +794,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get4**
 > BancoResponse consultar_using_get4(id)
 
@@ -852,7 +805,6 @@ Este m\u00C3\u00A9todo permite consultar um determinado Banco a partir do seu c\
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -874,7 +826,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Banco (id). | 
 
-
 ### Return type
 
 [**BancoResponse**](BancoResponse.md)
@@ -890,7 +841,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get8**
 > ConfiguracaoRegistroCobrancaResponse consultar_using_get8(id)
 
@@ -902,7 +852,6 @@ Este m\u00C3\u00A9todo permite buscar uma configura\u00C3\u00A7\u00C3\u00A3o, pa
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -924,7 +873,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id). | 
 
-
 ### Return type
 
 [**ConfiguracaoRegistroCobrancaResponse**](ConfiguracaoRegistroCobrancaResponse.md)
@@ -940,7 +888,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get9**
 > ConfiguracaoRotativoDetalheResponse consultar_using_get9(id)
 
@@ -952,7 +899,6 @@ Este recurso permite consultar dados de configura\u00C3\u00A7\u00C3\u00A3o do pa
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -974,7 +920,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de configura\u00C3\u00A7\u00C3\u00A3o rotativo (id). | 
 
-
 ### Return type
 
 [**ConfiguracaoRotativoDetalheResponse**](ConfiguracaoRotativoDetalheResponse.md)
@@ -990,7 +935,6 @@ No authorization required
 
 
 
-
 # **listar_campanhas_using_get**
 > PageCampanhaResponse listar_campanhas_using_get(opts)
 
@@ -1002,7 +946,6 @@ Lista as campanhas.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -1031,7 +974,6 @@ Name | Type | Description  | Notes
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id_tipo_campanha** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de campanha (id). | [optional] 
 
-
 ### Return type
 
 [**PageCampanhaResponse**](PageCampanhaResponse.md)
@@ -1047,7 +989,6 @@ No authorization required
 
 
 
-
 # **listar_contas_por_pessoa_using_get**
 > PageContaDetalheResponse listar_contas_por_pessoa_using_get(numero_receita_federal, opts)
 
@@ -1059,7 +1000,6 @@ Permite listar as contas de um pessoa a partir do seu numero na receita federal.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -1089,7 +1029,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageContaDetalheResponse**](PageContaDetalheResponse.md)
@@ -1105,7 +1044,6 @@ No authorization required
 
 
 
-
 # **listar_estados_civis_using_get**
 > PageCampoCodificadoDescricaoResponse listar_estados_civis_using_get(opts)
 
@@ -1117,7 +1055,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os Estados C\u00C3\u00ADvis na
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -1144,7 +1081,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
@@ -1160,7 +1096,6 @@ No authorization required
 
 
 
-
 # **listar_fantasias_basicas_using_get**
 > PageFantasiaBasicaResponse listar_fantasias_basicas_using_get(opts)
 
@@ -1172,7 +1107,6 @@ Lista as fantasia b\u00C3\u00A1sicas.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -1199,7 +1133,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageFantasiaBasicaResponse**](PageFantasiaBasicaResponse.md)
@@ -1215,7 +1148,6 @@ No authorization required
 
 
 
-
 # **listar_historico_telefones_using_get**
 > HistoricoTelefoneResponse listar_historico_telefones_using_get(id)
 
@@ -1227,7 +1159,6 @@ Este m\u00C3\u00A9todo permite verificar quais os telefones de um determinado qu
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -1249,7 +1180,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). | 
 
-
 ### Return type
 
 [**HistoricoTelefoneResponse**](HistoricoTelefoneResponse.md)
@@ -1265,7 +1195,6 @@ No authorization required
 
 
 
-
 # **listar_nacionalidades_using_get**
 > PageCampoCodificadoDescricaoResponse listar_nacionalidades_using_get(opts)
 
@@ -1277,7 +1206,6 @@ Este m\u00C3\u00A9todo permite que sejam listados as nacionalidades na base de d
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -1304,7 +1232,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
@@ -1320,7 +1247,6 @@ No authorization required
 
 
 
-
 # **listar_naturezas_ocupacoes_using_get**
 > PageCampoCodificadoDescricaoResponse listar_naturezas_ocupacoes_using_get(opts)
 
@@ -1332,7 +1258,6 @@ Este m\u00C3\u00A9todo permite que sejam listados as naturezas de opera\u00C3\u0
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -1359,7 +1284,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
@@ -1375,7 +1299,6 @@ No authorization required
 
 
 
-
 # **listar_origens_comerciais_using_get**
 > PageOrigemComercialResponse listar_origens_comerciais_using_get(opts)
 
@@ -1387,7 +1310,6 @@ Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existent
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -1424,7 +1346,6 @@ Name | Type | Description  | Notes
  **id_estabelecimento** | **Integer**| C\u00C3\u00B3digo identificador do estabelecimento | [optional] 
  **id_produto** | **Integer**| C\u00C3\u00B3digo identificador do produto | [optional] 
 
-
 ### Return type
 
 [**PageOrigemComercialResponse**](PageOrigemComercialResponse.md)
@@ -1440,7 +1361,6 @@ No authorization required
 
 
 
-
 # **listar_parentescos_using_get**
 > PageCampoCodificadoDescricaoResponse listar_parentescos_using_get(opts)
 
@@ -1452,7 +1372,6 @@ Este m\u00C3\u00A9todo permite que sejam listados parentescos na base de dados d
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -1479,7 +1398,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
@@ -1495,7 +1413,6 @@ No authorization required
 
 
 
-
 # **listar_profissoes_using_get**
 > PageCampoCodificadoDescricaoResponse listar_profissoes_using_get(opts)
 
@@ -1507,7 +1424,6 @@ Este m\u00C3\u00A9todo permite que sejam listados as profiss\u00C3\u00B5es na ba
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -1534,7 +1450,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
@@ -1550,7 +1465,6 @@ No authorization required
 
 
 
-
 # **listar_tipos_campanhas_using_get**
 > PageTipoCampanhaResponse listar_tipos_campanhas_using_get(opts)
 
@@ -1562,7 +1476,6 @@ Lista os tipos de campanhas.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -1589,7 +1502,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageTipoCampanhaResponse**](PageTipoCampanhaResponse.md)
@@ -1605,7 +1517,6 @@ No authorization required
 
 
 
-
 # **listar_using_get10**
 > PageConfiguracaoRotativoResponse listar_using_get10(opts)
 
@@ -1617,7 +1528,6 @@ Este recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -1646,7 +1556,6 @@ Name | Type | Description  | Notes
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id_produto** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Produto. | [optional] 
 
-
 ### Return type
 
 [**PageConfiguracaoRotativoResponse**](PageConfiguracaoRotativoResponse.md)
@@ -1662,7 +1571,6 @@ No authorization required
 
 
 
-
 # **listar_using_get27**
 > PagePortadorResponse listar_using_get27(opts)
 
@@ -1674,7 +1582,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os portadores cadastrados na b
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -1721,7 +1628,6 @@ Name | Type | Description  | Notes
  **data_cadastro_portador** | **String**| Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o. | [optional] 
  **data_cancelamento_portador** | **String**| Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o. | [optional] 
 
-
 ### Return type
 
 [**PagePortadorResponse**](PagePortadorResponse.md)
@@ -1737,7 +1643,6 @@ No authorization required
 
 
 
-
 # **listar_using_get28**
 > PageProdutoResponse listar_using_get28(opts)
 
@@ -1749,7 +1654,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -1782,7 +1686,6 @@ Name | Type | Description  | Notes
  **status** | **Integer**| Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). | [optional] 
  **id_fantasia_basica** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence. | [optional] 
 
-
 ### Return type
 
 [**PageProdutoResponse**](PageProdutoResponse.md)
@@ -1798,7 +1701,6 @@ No authorization required
 
 
 
-
 # **listar_using_get29**
 > PagePromotorResponse listar_using_get29(opts)
 
@@ -1810,7 +1712,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os cadastros de Promoteres exi
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -1847,7 +1748,6 @@ Name | Type | Description  | Notes
  **id_estabelecimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento | [optional] 
  **id_usuario** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio | [optional] 
 
-
 ### Return type
 
 [**PagePromotorResponse**](PagePromotorResponse.md)
@@ -1863,7 +1763,6 @@ No authorization required
 
 
 
-
 # **listar_using_get3**
 > PageAtendimentoClienteResponse listar_using_get3(opts)
 
@@ -1875,7 +1774,6 @@ Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimen
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -1910,7 +1808,6 @@ Name | Type | Description  | Notes
  **nome_atendente** | **String**| Apresenta o nome do Atendente que registrou o Atendimento. | [optional] 
  **data_atendimento** | **String**| Apresenta a data em que o Atendimento foi realizado. | [optional] 
 
-
 ### Return type
 
 [**PageAtendimentoClienteResponse**](PageAtendimentoClienteResponse.md)
@@ -1926,7 +1823,6 @@ No authorization required
 
 
 
-
 # **listar_using_get37**
 > PageTipoEnderecoResponse listar_using_get37(opts)
 
@@ -1938,7 +1834,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -1969,7 +1864,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id) | [optional] 
  **nome** | **String**| Nome do Tipo do Endere\u00C3\u00A7o | [optional] 
 
-
 ### Return type
 
 [**PageTipoEnderecoResponse**](PageTipoEnderecoResponse.md)
@@ -1985,7 +1879,6 @@ No authorization required
 
 
 
-
 # **listar_using_get39**
 > PageTipoTelefoneResponse listar_using_get39(opts)
 
@@ -1997,7 +1890,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existent
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -2028,7 +1920,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). | [optional] 
  **nome** | **String**| Nome do Tipo do Telefone | [optional] 
 
-
 ### Return type
 
 [**PageTipoTelefoneResponse**](PageTipoTelefoneResponse.md)
@@ -2044,7 +1935,6 @@ No authorization required
 
 
 
-
 # **listar_using_get4**
 > PageBancoResponse listar_using_get4(opts)
 
@@ -2056,7 +1946,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os Bancos existentes na base d
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -2083,7 +1972,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageBancoResponse**](PageBancoResponse.md)
@@ -2099,7 +1987,6 @@ No authorization required
 
 
 
-
 # **listar_using_get45**
 > PageControleVencimentoResponse listar_using_get45(opts)
 
@@ -2111,7 +1998,6 @@ Este recurso permite que sejam listados os Vencimentos do emissor.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -2140,7 +2026,6 @@ Name | Type | Description  | Notes
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **data_vencimento** | **String**| Indica a data de vencimento das faturas | [optional] 
 
-
 ### Return type
 
 [**PageControleVencimentoResponse**](PageControleVencimentoResponse.md)
@@ -2156,7 +2041,6 @@ No authorization required
 
 
 
-
 # **listar_using_get9**
 > ConfiguracaoRegistroCobrancaResponse listar_using_get9(opts)
 
@@ -2168,7 +2052,6 @@ Este m\u00C3\u00A9todo permite listar as configura\u00C3\u00A7\u00C3\u00B5es de 
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -2195,7 +2078,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**ConfiguracaoRegistroCobrancaResponse**](ConfiguracaoRegistroCobrancaResponse.md)
@@ -2211,7 +2093,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post2**
 > AtendimentoClienteResponse salvar_using_post2(opts)
 
@@ -2221,7 +2102,6 @@ Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -2260,7 +2140,6 @@ Name | Type | Description  | Notes
  **data_hora_fim_atendimento** | **String**| Apresenta a data e hora em que o Atendimento foi finalizado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
  **flag_fila_fraude** | **Integer**| Flag fila fraude | [optional] 
 
-
 ### Return type
 
 [**AtendimentoClienteResponse**](AtendimentoClienteResponse.md)
@@ -2276,7 +2155,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post4**
 > CampanhaResponse salvar_using_post4(campanha_persist)
 
@@ -2288,7 +2166,6 @@ Este m\u00C3\u00A9todo permite que seja cadastrado uma nova campanha.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -2310,7 +2187,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **campanha_persist** | [**CampanhaPersist**](CampanhaPersist.md)| campanhaPersist | 
 
-
 ### Return type
 
 [**CampanhaResponse**](CampanhaResponse.md)
@@ -2326,7 +2202,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post6**
 > ConfiguracaoRotativoDetalheResponse salvar_using_post6(configuracao_rotativo_persist)
 
@@ -2338,7 +2213,6 @@ Este m\u00C3\u00A9todo permite que seja cadastrado uma nova configura\u00C3\u00A
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::CadastroGeralApi.new
 
@@ -2360,7 +2234,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **configuracao_rotativo_persist** | [**ConfiguracaoRotativoPersist**](ConfiguracaoRotativoPersist.md)| configuracaoRotativoPersist | 
 
-
 ### Return type
 
 [**ConfiguracaoRotativoDetalheResponse**](ConfiguracaoRotativoDetalheResponse.md)
@@ -2373,8 +2246,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

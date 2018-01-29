@@ -15,4 +15,3 @@ Name | Type | Description | Notes
 **status** | **BOOLEAN** | Status da origem comercial | 
 
 
-

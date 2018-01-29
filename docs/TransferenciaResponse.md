@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **valor_transferencia** | **Float** | Valor estabelecido para ser transferido. | [optional] 
 
 
-

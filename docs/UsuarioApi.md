@@ -17,8 +17,6 @@ Method | HTTP request | Description
 [**validar_senha_using_get1**](UsuarioApi.md#validar_senha_using_get1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 
 
-
-
 # **alterar_senha_login_using_post**
 > String alterar_senha_login_using_post(login, senha_nova)
 
@@ -30,7 +28,6 @@ Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::UsuarioApi.new
 
@@ -55,7 +52,6 @@ Name | Type | Description  | Notes
  **login** | **String**| Login do usu\u00C3\u00A1rio. | 
  **senha_nova** | **String**| Senha Nova | 
 
-
 ### Return type
 
 **String**
@@ -71,7 +67,6 @@ No authorization required
 
 
 
-
 # **alterar_senha_using_put**
 > String alterar_senha_using_put(id, senha_atual, senha_nova)
 
@@ -83,7 +78,6 @@ Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::UsuarioApi.new
 
@@ -111,7 +105,6 @@ Name | Type | Description  | Notes
  **senha_atual** | **String**| Senha Atual | 
  **senha_nova** | **String**| Senha Nova | 
 
-
 ### Return type
 
 **String**
@@ -127,7 +120,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put19**
 > UsuarioResponse alterar_using_put19(id, update)
 
@@ -139,7 +131,6 @@ Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::UsuarioApi.new
 
@@ -164,7 +155,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). | 
  **update** | [**UsuarioUpdate**](UsuarioUpdate.md)| update | 
 
-
 ### Return type
 
 [**UsuarioResponse**](UsuarioResponse.md)
@@ -180,7 +170,6 @@ No authorization required
 
 
 
-
 # **ativar_usuario_using_post**
 > UsuarioResponse ativar_usuario_using_post(id)
 
@@ -192,7 +181,6 @@ Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u0
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::UsuarioApi.new
 
@@ -214,7 +202,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). | 
 
-
 ### Return type
 
 [**UsuarioResponse**](UsuarioResponse.md)
@@ -230,7 +217,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get40**
 > UsuarioResponse consultar_using_get40(id)
 
@@ -242,7 +228,6 @@ Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::UsuarioApi.new
 
@@ -264,7 +249,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). | 
 
-
 ### Return type
 
 [**UsuarioResponse**](UsuarioResponse.md)
@@ -280,7 +264,6 @@ No authorization required
 
 
 
-
 # **desativar_usuario_using_post**
 > UsuarioResponse desativar_usuario_using_post(id)
 
@@ -292,7 +275,6 @@ Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::UsuarioApi.new
 
@@ -314,7 +296,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). | 
 
-
 ### Return type
 
 [**UsuarioResponse**](UsuarioResponse.md)
@@ -330,7 +311,6 @@ No authorization required
 
 
 
-
 # **listar_using_get44**
 > PageUsuarioResponse listar_using_get44(opts)
 
@@ -342,7 +322,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existen
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::UsuarioApi.new
 
@@ -377,7 +356,6 @@ Name | Type | Description  | Notes
  **email** | **String**| Email do Usuario | [optional] 
  **status** | **String**| Status do Usuario | [optional] 
 
-
 ### Return type
 
 [**PageUsuarioResponse**](PageUsuarioResponse.md)
@@ -393,7 +371,6 @@ No authorization required
 
 
 
-
 # **recuperar_senha_using_post**
 > String recuperar_senha_using_post(id)
 
@@ -405,7 +382,6 @@ Esse recurso permite recuperar a senha do usu\u00C3\u00A1rio.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::UsuarioApi.new
 
@@ -427,7 +403,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). | 
 
-
 ### Return type
 
 **String**
@@ -443,7 +418,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post25**
 > UsuarioResponse salvar_using_post25(persist)
 
@@ -455,7 +429,6 @@ Esse recurso permite cadastrar usu\u00C3\u00A1rios.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::UsuarioApi.new
 
@@ -477,7 +450,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**UsuarioPersist**](UsuarioPersist.md)| persist | 
 
-
 ### Return type
 
 [**UsuarioResponse**](UsuarioResponse.md)
@@ -493,7 +465,6 @@ No authorization required
 
 
 
-
 # **validar_senha_login_using_post**
 > Object validar_senha_login_using_post(login, senha)
 
@@ -505,7 +476,6 @@ O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha 
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::UsuarioApi.new
 
@@ -530,7 +500,6 @@ Name | Type | Description  | Notes
  **login** | **String**| Login identificador do usu\u00C3\u00A1rio (login). | 
  **senha** | **String**| Senha do usu\u00C3\u00A1rio | 
 
-
 ### Return type
 
 **Object**
@@ -546,7 +515,6 @@ No authorization required
 
 
 
-
 # **validar_senha_using_get1**
 > String validar_senha_using_get1(senha, id)
 
@@ -558,7 +526,6 @@ Este m\u00C3\u00A9todo permite validar a senha do usu\u00C3\u00A1rio).
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::UsuarioApi.new
 
@@ -583,7 +550,6 @@ Name | Type | Description  | Notes
  **senha** | **String**| Senha do usu\u00C3\u00A1rio | 
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). | 
 
-
 ### Return type
 
 **String**
@@ -596,8 +562,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

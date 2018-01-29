@@ -8,8 +8,6 @@ Method | HTTP request | Description
 [**salvar_using_post1**](ArquivoApi.md#salvar_using_post1) | **POST** /api/arquivos | Permite armazenar arquivos no PIER Cloud
 
 
-
-
 # **consultar_using_get2**
 > ArquivoResponse consultar_using_get2(id)
 
@@ -21,7 +19,6 @@ Este recurso permite consultar um determinado arquivo armazenado no PIER Cloud.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ArquivoApi.new
 
@@ -43,7 +40,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo | 
 
-
 ### Return type
 
 [**ArquivoResponse**](ArquivoResponse.md)
@@ -59,7 +55,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post1**
 > ArquivoResponse salvar_using_post1(arquivo_persist)
 
@@ -71,7 +66,6 @@ Este recurso permite o armazenamento de arquivos no PIER Cloud.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ArquivoApi.new
 
@@ -93,7 +87,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **arquivo_persist** | [**ArquivoPersist**](ArquivoPersist.md)| arquivoPersist | 
 
-
 ### Return type
 
 [**ArquivoResponse**](ArquivoResponse.md)
@@ -106,8 +99,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

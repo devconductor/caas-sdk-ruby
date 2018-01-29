@@ -15,4 +15,3 @@ Name | Type | Description | Notes
 **data_cancelamento_portador** | **String** | Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o. | [optional] 
 
 
-

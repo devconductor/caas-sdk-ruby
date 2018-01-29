@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **flag_ativo** | **BOOLEAN** | Flag que identifica se o tipo d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo. | [optional] 
 
 
-

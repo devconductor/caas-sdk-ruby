@@ -30,4 +30,3 @@ Name | Type | Description | Notes
 **descricao_abreviada** | **String** | Descri\u00C3\u00A7\u00C3\u00A3o abreviada da transa\u00C3\u00A7\u00C3\u00A3o | [optional] 
 
 
-

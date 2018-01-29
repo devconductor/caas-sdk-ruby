@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **integracoes** | [**Array&lt;ReferenciaIdPersist&gt;**](ReferenciaIdPersist.md) | Lista de configura\u00C3\u00A7\u00C3\u00B5es de integra\u00C3\u00A7\u00C3\u00A3o | [optional] 
 
 
-

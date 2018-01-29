@@ -18,8 +18,6 @@ Method | HTTP request | Description
 [**salvar_using_post9**](DocumentoApi.md#salvar_using_post9) | **POST** /api/documentos | Cadastra documentos
 
 
-
-
 # **alterar_using_put17**
 > TipoTemplateResponse alterar_using_put17(id, persist)
 
@@ -31,7 +29,6 @@ Esse recurso permite alterar os dados do tipo de template.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::DocumentoApi.new
 
@@ -56,7 +53,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id). | 
  **persist** | [**TipoTemplateRequest**](TipoTemplateRequest.md)| persist | 
 
-
 ### Return type
 
 [**TipoTemplateResponse**](TipoTemplateResponse.md)
@@ -72,7 +68,6 @@ No authorization required
 
 
 
-
 # **atualizar_using_put2**
 > DocumentoTemplateResponse atualizar_using_put2(id, persist)
 
@@ -84,7 +79,6 @@ Esse recurso permite atualizar templates dos documentos.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::DocumentoApi.new
 
@@ -109,7 +103,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id). | 
  **persist** | [**DocumentoTemplatePersist**](DocumentoTemplatePersist.md)| persist | 
 
-
 ### Return type
 
 [**DocumentoTemplateResponse**](DocumentoTemplateResponse.md)
@@ -125,7 +118,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get13**
 > DocumentoDetalhadoResponse consultar_using_get13(id)
 
@@ -137,7 +129,6 @@ Esse recurso permite consultar um documento espec\u00C3\u00ADfico a partir do se
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::DocumentoApi.new
 
@@ -159,7 +150,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento (id). | 
 
-
 ### Return type
 
 [**DocumentoDetalhadoResponse**](DocumentoDetalhadoResponse.md)
@@ -175,7 +165,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get14**
 > DocumentoTemplateResponse consultar_using_get14(id)
 
@@ -187,7 +176,6 @@ Esse recurso permite consultar templates dos documentos.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::DocumentoApi.new
 
@@ -209,7 +197,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id). | 
 
-
 ### Return type
 
 [**DocumentoTemplateResponse**](DocumentoTemplateResponse.md)
@@ -225,7 +212,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get36**
 > TipoTemplateResponse consultar_using_get36(id)
 
@@ -237,7 +223,6 @@ Esse recurso permite consultar um determinado tipo de template a partir do id re
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::DocumentoApi.new
 
@@ -259,7 +244,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id). | 
 
-
 ### Return type
 
 [**TipoTemplateResponse**](TipoTemplateResponse.md)
@@ -275,7 +259,6 @@ No authorization required
 
 
 
-
 # **integrar_using_post**
 > DocumentoIntegracaoResponse integrar_using_post(integrar_documento_request)
 
@@ -287,7 +270,6 @@ Este recurso permite integrar um documento ao reposit\u00C3\u00B3rio pre-configu
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::DocumentoApi.new
 
@@ -309,7 +291,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **integrar_documento_request** | [**IntegrarDocumentoRequest**](IntegrarDocumentoRequest.md)| integrarDocumentoRequest | 
 
-
 ### Return type
 
 [**DocumentoIntegracaoResponse**](DocumentoIntegracaoResponse.md)
@@ -325,7 +306,6 @@ No authorization required
 
 
 
-
 # **listar_using_get16**
 > PageDocumentoResponse listar_using_get16(opts)
 
@@ -337,7 +317,6 @@ Esse recurso permite listar documentos.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::DocumentoApi.new
 
@@ -370,7 +349,6 @@ Name | Type | Description  | Notes
  **nome** | **String**| Nome do documento. | [optional] 
  **extensao** | **String**| Extensao do documento. | [optional] 
 
-
 ### Return type
 
 [**PageDocumentoResponse**](PageDocumentoResponse.md)
@@ -386,7 +364,6 @@ No authorization required
 
 
 
-
 # **listar_using_get17**
 > PageDocumentoTemplateResponse listar_using_get17(opts)
 
@@ -398,7 +375,6 @@ Esse recurso permite listar os templates dos documentos.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::DocumentoApi.new
 
@@ -427,7 +403,6 @@ Name | Type | Description  | Notes
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id_tipo_template** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template. | [optional] 
 
-
 ### Return type
 
 [**PageDocumentoTemplateResponse**](PageDocumentoTemplateResponse.md)
@@ -443,7 +418,6 @@ No authorization required
 
 
 
-
 # **listar_using_get40**
 > PageTipoTemplateResponse listar_using_get40(opts)
 
@@ -455,7 +429,6 @@ Esse recurso permite listar os tipos de templates associados ao emissor.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::DocumentoApi.new
 
@@ -482,7 +455,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageTipoTemplateResponse**](PageTipoTemplateResponse.md)
@@ -498,7 +470,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post10**
 > DocumentoTemplateResponse salvar_using_post10(persist)
 
@@ -510,7 +481,6 @@ Esse recurso permite cadastrar templates dos documentos.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::DocumentoApi.new
 
@@ -532,7 +502,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**DocumentoTemplatePersist**](DocumentoTemplatePersist.md)| persist | 
 
-
 ### Return type
 
 [**DocumentoTemplateResponse**](DocumentoTemplateResponse.md)
@@ -548,7 +517,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post23**
 > TipoTemplateResponse salvar_using_post23(persist)
 
@@ -560,7 +528,6 @@ Esse recurso permite cadastrar tipos de templates.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::DocumentoApi.new
 
@@ -582,7 +549,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**TipoTemplateRequest**](TipoTemplateRequest.md)| persist | 
 
-
 ### Return type
 
 [**TipoTemplateResponse**](TipoTemplateResponse.md)
@@ -598,7 +564,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post9**
 > DocumentoDetalhadoResponse salvar_using_post9(persist)
 
@@ -610,7 +575,6 @@ Esse recurso permite cadastrar documentos.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::DocumentoApi.new
 
@@ -632,7 +596,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**DocumentoParametrosRequest**](DocumentoParametrosRequest.md)| persist | 
 
-
 ### Return type
 
 [**DocumentoDetalhadoResponse**](DocumentoDetalhadoResponse.md)
@@ -645,8 +608,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

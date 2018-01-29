@@ -37,4 +37,3 @@ Name | Type | Description | Notes
 **limite_consignado** | **Float** | Valor do limite de margem consignado | 
 
 
-

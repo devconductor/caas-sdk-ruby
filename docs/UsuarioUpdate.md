@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **status** | **String** | Apresenta o status do usu\u00C3\u00A1rio. | [optional] 
 
 
-

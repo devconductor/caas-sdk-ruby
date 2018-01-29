@@ -18,4 +18,3 @@ Name | Type | Description | Notes
 **telefones** | [**Array&lt;TelefonePessoaAprovadaPersist&gt;**](TelefonePessoaAprovadaPersist.md) | Informa os telefones do s\u00C3\u00B3cio | [optional] 
 
 
-

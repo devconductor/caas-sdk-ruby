@@ -33,4 +33,3 @@ Name | Type | Description | Notes
 **total_parcelado_internacionais** | **Float** | Apresenta a soma de todos os valores parcelados + compras internacionais. | 
 
 
-

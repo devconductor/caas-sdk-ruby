@@ -19,4 +19,3 @@ Name | Type | Description | Notes
 **telefones** | [**Array&lt;TelefonePessoaAprovadaResponse&gt;**](TelefonePessoaAprovadaResponse.md) | Informa os telefones do s\u00C3\u00B3cio | [optional] 
 
 
-

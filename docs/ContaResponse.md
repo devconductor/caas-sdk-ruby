@@ -16,4 +16,3 @@ Name | Type | Description | Notes
 **valor_renda** | **Float** | Apresenta o valor da renda comprovada | [optional] 
 
 
-

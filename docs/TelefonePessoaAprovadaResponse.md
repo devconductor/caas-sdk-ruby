@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **ramal** | **String** | N\u00C3\u00BAmero do ramal. | [optional] 
 
 
-

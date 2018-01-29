@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **mensagem** | **String** | Mensagem de resposta da solicita\u00C3\u00A7\u00C3\u00B5es de envio | [optional] 
 
 
-

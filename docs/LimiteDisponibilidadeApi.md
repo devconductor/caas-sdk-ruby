@@ -8,8 +8,6 @@ Method | HTTP request | Description
 [**consultar_using_get18**](LimiteDisponibilidadeApi.md#consultar_using_get18) | **GET** /api/limites-disponibilidades | Apresenta os limites da conta
 
 
-
-
 # **alterar_using_put8**
 > LimiteDisponibilidadeResponse alterar_using_put8(id_conta, opts)
 
@@ -21,7 +19,6 @@ Esse recurso permite realizar a altera\u00C3\u00A7\u00C3\u00A3o dos Limites de u
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::LimiteDisponibilidadeApi.new
 
@@ -71,7 +68,6 @@ Name | Type | Description  | Notes
  **limite_internacional_saque_periodo** | [**Float**](.md)| Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento. | [optional] 
  **limite_maximo** | [**Float**](.md)| Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es. | [optional] 
 
-
 ### Return type
 
 [**LimiteDisponibilidadeResponse**](LimiteDisponibilidadeResponse.md)
@@ -87,7 +83,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get18**
 > LimiteDisponibilidadeResponse consultar_using_get18(id_conta)
 
@@ -99,7 +94,6 @@ Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determ
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::LimiteDisponibilidadeApi.new
 
@@ -121,7 +115,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_conta** | **Integer**| Id Conta | 
 
-
 ### Return type
 
 [**LimiteDisponibilidadeResponse**](LimiteDisponibilidadeResponse.md)
@@ -134,8 +127,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

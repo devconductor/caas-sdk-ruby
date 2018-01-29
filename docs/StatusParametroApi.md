@@ -15,8 +15,6 @@ Method | HTTP request | Description
 [**listar_using_get32**](StatusParametroApi.md#listar_using_get32) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
 
-
-
 # **consultar_estagio_cartao_using_get**
 > EstagioCartaoResponse consultar_estagio_cartao_using_get(id)
 
@@ -28,7 +26,6 @@ Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determin
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::StatusParametroApi.new
 
@@ -50,7 +47,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). | 
 
-
 ### Return type
 
 [**EstagioCartaoResponse**](EstagioCartaoResponse.md)
@@ -66,7 +62,6 @@ No authorization required
 
 
 
-
 # **consultar_status_cartao_using_get**
 > StatusCartaoResponse consultar_status_cartao_using_get(id)
 
@@ -78,7 +73,6 @@ Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determin
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::StatusParametroApi.new
 
@@ -100,7 +94,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). | 
 
-
 ### Return type
 
 [**StatusCartaoResponse**](StatusCartaoResponse.md)
@@ -116,7 +109,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get25**
 > StatusContaResponse consultar_using_get25(id)
 
@@ -128,7 +120,6 @@ Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determin
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::StatusParametroApi.new
 
@@ -150,7 +141,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). | 
 
-
 ### Return type
 
 [**StatusContaResponse**](StatusContaResponse.md)
@@ -166,7 +156,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get26**
 > StatusImpressaoResponse consultar_using_get26(id)
 
@@ -178,7 +167,6 @@ Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determin
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::StatusParametroApi.new
 
@@ -200,7 +188,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
 
-
 ### Return type
 
 [**StatusImpressaoResponse**](StatusImpressaoResponse.md)
@@ -216,7 +203,6 @@ No authorization required
 
 
 
-
 # **listar_estagios_cartoes_using_get**
 > PageEstagioCartaoResponse listar_estagios_cartoes_using_get(opts)
 
@@ -228,7 +214,6 @@ Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5e
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::StatusParametroApi.new
 
@@ -259,7 +244,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| Id do est\u00C3\u00A1gio cart\u00C3\u00A3o | [optional] 
  **nome** | **String**| Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o | [optional] 
 
-
 ### Return type
 
 [**PageEstagioCartaoResponse**](PageEstagioCartaoResponse.md)
@@ -275,7 +259,6 @@ No authorization required
 
 
 
-
 # **listar_status_cartoes_using_get**
 > PageStatusCartaoResponse listar_status_cartoes_using_get(opts)
 
@@ -287,7 +270,6 @@ Este m\u00C3\u00A9todo permite que sejam listadas as possibilidades de Status qu
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::StatusParametroApi.new
 
@@ -326,7 +308,6 @@ Name | Type | Description  | Notes
  **permite_atribuir_como_cancelamento** | **Integer**| Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. | [optional] 
  **cobrar_tarifa_ao_emitir_nova_via** | **Integer**| Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. | [optional] 
 
-
 ### Return type
 
 [**PageStatusCartaoResponse**](PageStatusCartaoResponse.md)
@@ -342,7 +323,6 @@ No authorization required
 
 
 
-
 # **listar_tipos_eventos_transacoes_using_get**
 > Array&lt;Object&gt; listar_tipos_eventos_transacoes_using_get
 
@@ -354,7 +334,6 @@ Esse recurso permite listar os tipos de transa\u00C3\u00A7\u00C3\u00B5es dispon\
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::StatusParametroApi.new
 
@@ -369,7 +348,6 @@ end
 
 ### Parameters
 This endpoint does not need any parameter.
-
 
 ### Return type
 
@@ -386,7 +364,6 @@ No authorization required
 
 
 
-
 # **listar_using_get31**
 > PageStatusContaResponse listar_using_get31(opts)
 
@@ -398,7 +375,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::StatusParametroApi.new
 
@@ -447,7 +423,6 @@ Name | Type | Description  | Notes
  **permite_desbloquear** | **Integer**| Par\u00C3\u00A2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo. | [optional] 
  **permite_atribuir_como_cancelamento** | **Integer**| Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo. | [optional] 
 
-
 ### Return type
 
 [**PageStatusContaResponse**](PageStatusContaResponse.md)
@@ -463,7 +438,6 @@ No authorization required
 
 
 
-
 # **listar_using_get32**
 > PageStatusImpressaoResponse listar_using_get32(opts)
 
@@ -475,7 +449,6 @@ Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5e
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::StatusParametroApi.new
 
@@ -506,7 +479,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| Id do est\u00C3\u00A1gio cart\u00C3\u00A3o | [optional] 
  **nome** | **String**| Nome do status impress\u00C3\u00A3o | [optional] 
 
-
 ### Return type
 
 [**PageStatusImpressaoResponse**](PageStatusImpressaoResponse.md)
@@ -519,8 +491,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

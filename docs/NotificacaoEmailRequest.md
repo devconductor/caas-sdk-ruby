@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **parametros_conteudo** | **Hash&lt;String, Object&gt;** | Mapa de par\u00C3\u00A2metros para montagem da notifica\u00C3\u00A7\u00C3\u00A3o. | [optional] 
 
 
-

@@ -20,4 +20,3 @@ Name | Type | Description | Notes
 **status** | **String** | Status indicador se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativa. | [optional] 
 
 
-

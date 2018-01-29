@@ -19,4 +19,3 @@ Name | Type | Description | Notes
 **flag_processamento** | **Integer** | Quando aplic\u00C3\u00A1vel, de acordo com o Indica se o Processamento da solicita\u00C3\u00A7\u00C3\u00A3o fora realizado. | [optional] 
 
 
-

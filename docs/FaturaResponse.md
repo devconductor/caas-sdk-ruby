@@ -14,4 +14,3 @@ Name | Type | Description | Notes
 **saldo_anterior** | **Float** | Valor do saldo anterior. | [optional] 
 
 
-

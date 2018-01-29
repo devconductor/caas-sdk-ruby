@@ -20,4 +20,3 @@ Name | Type | Description | Notes
 **data_cancelamento_portador** | **String** | Indica a data de cancelamento do adicional | [optional] 
 
 
-

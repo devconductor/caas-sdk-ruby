@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **nome** | **String** | Nome do Tipo do Endere\u00C3\u00A7o | [optional] 
 
 
-

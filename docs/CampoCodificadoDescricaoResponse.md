@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **descricao** | **String** | Descri\u00C3\u00A7\u00C3\u00A3o do campo codificado. | [optional] 
 
 
-

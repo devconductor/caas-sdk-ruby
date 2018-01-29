@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **valor_taxa** | **Float** | Valor da Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o. | [optional] 
 
 
-

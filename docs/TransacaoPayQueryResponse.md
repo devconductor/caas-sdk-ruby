@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **descricao** | **String** | Mensagem descrevendo resposta. | [optional] 
 
 
-

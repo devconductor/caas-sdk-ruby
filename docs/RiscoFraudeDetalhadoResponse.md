@@ -32,4 +32,3 @@ Name | Type | Description | Notes
 **tefefones** | [**Array&lt;TelefoneResponse&gt;**](TelefoneResponse.md) | Lista de telefones associados ao portador do Cart\u00C3\u00A3o | [optional] 
 
 
-

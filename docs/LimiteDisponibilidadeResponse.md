@@ -27,4 +27,3 @@ Name | Type | Description | Notes
 **saldo_disponivel_saque_internacional** | **Float** | Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional. | [optional] 
 
 
-

@@ -11,8 +11,6 @@ Method | HTTP request | Description
 [**salvar_using_post14**](JobApi.md#salvar_using_post14) | **POST** /api/jobs | Cadastrar Job
 
 
-
-
 # **ativar_job_using_post**
 > JobResponse ativar_job_using_post(id)
 
@@ -24,7 +22,6 @@ Este recurso adiciona o job ao agendador de tarefas.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::JobApi.new
 
@@ -46,7 +43,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id). | 
 
-
 ### Return type
 
 [**JobResponse**](JobResponse.md)
@@ -62,7 +58,6 @@ No authorization required
 
 
 
-
 # **atualizar_using_put3**
 > JobResponse atualizar_using_put3(id, descricao, cron, groovy)
 
@@ -74,7 +69,6 @@ Este recurso permite atualizar os dados de um job cadastrado.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::JobApi.new
 
@@ -105,7 +99,6 @@ Name | Type | Description  | Notes
  **cron** | **String**| Cron do Job. | 
  **groovy** | **String**| groovy | 
 
-
 ### Return type
 
 [**JobResponse**](JobResponse.md)
@@ -121,7 +114,6 @@ No authorization required
 
 
 
-
 # **desativar_job_using_post**
 > JobResponse desativar_job_using_post(id)
 
@@ -133,7 +125,6 @@ Este recurso retira o job do agendador de tarefas.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::JobApi.new
 
@@ -155,7 +146,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id). | 
 
-
 ### Return type
 
 [**JobResponse**](JobResponse.md)
@@ -171,7 +161,6 @@ No authorization required
 
 
 
-
 # **listar_using_get21**
 > PageJobResponse listar_using_get21(opts)
 
@@ -183,7 +172,6 @@ Este recurso permite que sejam listados os jobs existentes na base do PIER.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::JobApi.new
 
@@ -216,7 +204,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageJobResponse**](PageJobResponse.md)
@@ -232,7 +219,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post14**
 > JobResponse salvar_using_post14(descricao, cron, groovy)
 
@@ -244,7 +230,6 @@ Esse recurso permite cadastrar jobs.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::JobApi.new
 
@@ -272,7 +257,6 @@ Name | Type | Description  | Notes
  **cron** | **String**| Cron do Job. | 
  **groovy** | **String**| groovy | 
 
-
 ### Return type
 
 [**JobResponse**](JobResponse.md)
@@ -285,8 +269,6 @@ No authorization required
 
  - **Content-Type**: text/plain
  - **Accept**: application/json
-
-
 
 
 

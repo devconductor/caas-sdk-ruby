@@ -11,8 +11,6 @@ Method | HTTP request | Description
 [**visualizar_documento_using_get**](FaturaApi.md#visualizar_documento_using_get) | **GET** /api/contas/{id}/faturas/{dataVencimento}/arquivo.pdf | Permite visualizar o extrato da fatura em formato PDF
 
 
-
-
 # **consultar_fatura_using_get1**
 > FaturaDetalheResponse consultar_fatura_using_get1(data_vencimento, id_conta)
 
@@ -24,7 +22,6 @@ Consulta fatura de um cliente pela data de vencimento.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::FaturaApi.new
 
@@ -49,7 +46,6 @@ Name | Type | Description  | Notes
  **data_vencimento** | **String**| Data Vencimento | 
  **id_conta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
 
-
 ### Return type
 
 [**FaturaDetalheResponse**](FaturaDetalheResponse.md)
@@ -65,7 +61,6 @@ No authorization required
 
 
 
-
 # **consultar_lancamentos_futuros_fatura_using_get1**
 > PagePlanoParcelamentoResponse consultar_lancamentos_futuros_fatura_using_get1(id, data_vencimento_padrao, opts)
 
@@ -77,7 +72,6 @@ Lista os planos de parcelamento da fatura de uma conta.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::FaturaApi.new
 
@@ -110,7 +104,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PagePlanoParcelamentoResponse**](PagePlanoParcelamentoResponse.md)
@@ -126,7 +119,6 @@ No authorization required
 
 
 
-
 # **enviar_fatura_email_using_post**
 > Object enviar_fatura_email_using_post(id, data_vencimento, opts)
 
@@ -138,7 +130,6 @@ Envia a segunda via da fatura para o e-mail informado/cadastrado.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::FaturaApi.new
 
@@ -167,7 +158,6 @@ Name | Type | Description  | Notes
  **data_vencimento** | **String**| Data de Vencimento da fatura (yyyy-MM-dd). | 
  **email** | **String**| E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado. | [optional] 
 
-
 ### Return type
 
 **Object**
@@ -183,7 +173,6 @@ No authorization required
 
 
 
-
 # **listar_faturas_using_get1**
 > PageFaturaResponse listar_faturas_using_get1(id_conta, opts)
 
@@ -195,7 +184,6 @@ Lista faturas de um cliente.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::FaturaApi.new
 
@@ -227,7 +215,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageFaturaResponse**](PageFaturaResponse.md)
@@ -243,7 +230,6 @@ No authorization required
 
 
 
-
 # **visualizar_documento_using_get**
 > Object visualizar_documento_using_get(id, data_vencimento)
 
@@ -255,7 +241,6 @@ Esta opera\u00C3\u00A7\u00C3\u00A3o permite visualizar o extrato da fatura de um
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::FaturaApi.new
 
@@ -280,7 +265,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **data_vencimento** | **String**| Data de Vencimento da fatura. | 
 
-
 ### Return type
 
 **Object**
@@ -293,8 +277,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/pdf
-
-
 
 
 

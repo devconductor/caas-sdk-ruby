@@ -12,4 +12,3 @@ Name | Type | Description | Notes
 **cet_anual** | **Float** | CET anual. | [optional] 
 
 
-

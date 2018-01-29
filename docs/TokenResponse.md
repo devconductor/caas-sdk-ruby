@@ -14,4 +14,3 @@ Name | Type | Description | Notes
 **data_modificacao** | **DateTime** | Data de modifica\u00C3\u00A7\u00C3\u00A3o do token | [optional] 
 
 
-

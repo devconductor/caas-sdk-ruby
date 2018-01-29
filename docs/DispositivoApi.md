@@ -10,8 +10,6 @@ Method | HTTP request | Description
 [**salvar_using_post8**](DispositivoApi.md#salvar_using_post8) | **POST** /api/dispositivos | Cadastra Dispositivo
 
 
-
-
 # **ativar_using_post**
 > DispositivoResponse ativar_using_post(id)
 
@@ -23,7 +21,6 @@ Esse recurso permite ativar dispositivo.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::DispositivoApi.new
 
@@ -45,7 +42,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id). | 
 
-
 ### Return type
 
 [**DispositivoResponse**](DispositivoResponse.md)
@@ -61,7 +57,6 @@ No authorization required
 
 
 
-
 # **desativar_using_post**
 > DispositivoResponse desativar_using_post(id)
 
@@ -73,7 +68,6 @@ Esse recurso permite desativar dispositivo.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::DispositivoApi.new
 
@@ -95,7 +89,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id). | 
 
-
 ### Return type
 
 [**DispositivoResponse**](DispositivoResponse.md)
@@ -111,7 +104,6 @@ No authorization required
 
 
 
-
 # **listar_using_get15**
 > PageDispositivoResponse listar_using_get15(opts)
 
@@ -123,7 +115,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na 
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::DispositivoApi.new
 
@@ -160,7 +151,6 @@ Name | Type | Description  | Notes
  **data_criacao** | **String**| Apresenta a data e em que o registro foi criado. | [optional] 
  **data_desativacao** | **String**| Apresenta a data e em que o registro foi desativado. | [optional] 
 
-
 ### Return type
 
 [**PageDispositivoResponse**](PageDispositivoResponse.md)
@@ -176,7 +166,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post8**
 > DispositivoResponse salvar_using_post8(persist)
 
@@ -188,7 +177,6 @@ Esse recurso permite cadastrar dispositivos.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::DispositivoApi.new
 
@@ -210,7 +198,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**DispositivoPersist**](DispositivoPersist.md)| persist | 
 
-
 ### Return type
 
 [**DispositivoResponse**](DispositivoResponse.md)
@@ -223,8 +210,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

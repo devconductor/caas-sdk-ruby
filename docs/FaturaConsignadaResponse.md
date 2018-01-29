@@ -33,4 +33,3 @@ Name | Type | Description | Notes
 **total_servicos** | **Float** | Apresenta a soma de todos os seguros cobrados na fatura do cliente. | 
 
 
-

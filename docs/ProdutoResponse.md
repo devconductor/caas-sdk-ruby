@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **id_fantasia_basica** | **Integer** | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence. | [optional] 
 
 
-

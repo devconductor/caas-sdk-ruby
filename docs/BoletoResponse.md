@@ -35,4 +35,3 @@ Name | Type | Description | Notes
 **linha_digitavel** | **String** | Linha digit\u00C3\u00A1vel formatada | [optional] 
 
 
-

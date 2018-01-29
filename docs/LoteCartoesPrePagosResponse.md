@@ -15,4 +15,3 @@ Name | Type | Description | Notes
 **status_processamento** | **Integer** | Indica o status de processamento do lote. | 
 
 
-

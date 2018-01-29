@@ -15,4 +15,3 @@ Name | Type | Description | Notes
 **cpf** | **String** | Apresenta o CPF do Portador do Cart\u00C3\u00A3o. | [optional] 
 
 
-

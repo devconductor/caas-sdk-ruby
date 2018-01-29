@@ -28,4 +28,3 @@ Name | Type | Description | Notes
 **digito_verificador_conta_corrente** | **String** | D\u00C3\u00ADgito Verificador da Conta Corrente | [optional] 
 
 
-

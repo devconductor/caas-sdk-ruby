@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **id_usuario** | **Integer** | Identificador do usu\u00C3\u00A1rio. | [optional] 
 
 
-

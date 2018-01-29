@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **parcelas** | [**Array&lt;ParcelamentoTransferenciaResponse&gt;**](ParcelamentoTransferenciaResponse.md) | Lista com os planos de parcelamento. | [optional] 
 
 
-

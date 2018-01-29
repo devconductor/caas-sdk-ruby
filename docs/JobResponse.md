@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **status** | **String** | Status do Job no agendador de tarefas | [optional] 
 
 
-

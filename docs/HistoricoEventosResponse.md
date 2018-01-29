@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **valor_atribuido** | **String** | Valor atribu\u00C3\u00ADdo na modifica\u00C3\u00A7\u00C3\u00A3o | 
 
 
-

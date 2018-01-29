@@ -7,8 +7,6 @@ Method | HTTP request | Description
 [**consultar_endereco_using_get**](EnderecoNacionalApi.md#consultar_endereco_using_get) | **GET** /api/ceps | Consultar Endere\u00C3\u00A7o
 
 
-
-
 # **consultar_endereco_using_get**
 > EnderecoResponse consultar_endereco_using_get(cep)
 
@@ -20,7 +18,6 @@ Este recurso permite consultar endere\u00C3\u00A7os atrav\u00C3\u00A9s do CEP.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::EnderecoNacionalApi.new
 
@@ -42,7 +39,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cep** | **String**| CEP | 
 
-
 ### Return type
 
 [**EnderecoResponse**](EnderecoResponse.md)
@@ -55,8 +51,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

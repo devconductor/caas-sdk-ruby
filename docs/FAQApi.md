@@ -10,8 +10,6 @@ Method | HTTP request | Description
 [**listar_using_get20**](FAQApi.md#listar_using_get20) | **GET** /api/faqs | Lista FAQs
 
 
-
-
 # **adicionar_using_post**
 > FaqResponse adicionar_using_post(pergunta, resposta, opts)
 
@@ -23,7 +21,6 @@ Adiciona uma nova FAQ
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::FAQApi.new
 
@@ -58,7 +55,6 @@ Name | Type | Description  | Notes
  **categoria** | **String**| Categoria de assunto do qual a FAQ se trata. | [optional] 
  **status** | **String**| Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. | [optional] 
 
-
 ### Return type
 
 [**FaqResponse**](FaqResponse.md)
@@ -74,7 +70,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put7**
 > FaqResponse alterar_using_put7(id, pergunta, resposta, opts)
 
@@ -86,7 +81,6 @@ Alterar FAQ
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::FAQApi.new
 
@@ -124,7 +118,6 @@ Name | Type | Description  | Notes
  **categoria** | **String**| Categoria de assunto do qual a FAQ se trata. | [optional] 
  **status** | **String**| Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. | [optional] 
 
-
 ### Return type
 
 [**FaqResponse**](FaqResponse.md)
@@ -140,7 +133,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get17**
 > FaqResponse consultar_using_get17(id)
 
@@ -152,7 +144,6 @@ Consulta os detalhes de uma determinada FAQ
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::FAQApi.new
 
@@ -174,7 +165,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| Id | 
 
-
 ### Return type
 
 [**FaqResponse**](FaqResponse.md)
@@ -190,7 +180,6 @@ No authorization required
 
 
 
-
 # **listar_using_get20**
 > PageFaqResponse listar_using_get20(opts)
 
@@ -202,7 +191,6 @@ Lista todas as FAQs
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::FAQApi.new
 
@@ -243,7 +231,6 @@ Name | Type | Description  | Notes
  **categoria** | **String**| Categoria de assunto do qual a FAQ se trata. | [optional] 
  **status** | **String**| Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. | [optional] 
 
-
 ### Return type
 
 [**PageFaqResponse**](PageFaqResponse.md)
@@ -256,8 +243,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

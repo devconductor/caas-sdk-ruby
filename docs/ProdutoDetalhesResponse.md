@@ -11,4 +11,3 @@ Name | Type | Description | Notes
 **uso_exterior** | **BOOLEAN** | Par\u00C3\u00A2metro que indica se o produto est\u00C3\u00A1 habilitado para compras no exterior. | [optional] 
 
 
-

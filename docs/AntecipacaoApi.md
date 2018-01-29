@@ -13,8 +13,6 @@ Method | HTTP request | Description
 [**simular_antecipacoes_using_get**](AntecipacaoApi.md#simular_antecipacoes_using_get) | **GET** /api/compras-antecipaveis/simular-antecipacao | Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis
 
 
-
-
 # **configurar_taxa_antecipacao_using_post**
 > ParametroProdutoResponse configurar_taxa_antecipacao_using_post(id, taxa_antecipacao_request)
 
@@ -26,7 +24,6 @@ Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de u
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::AntecipacaoApi.new
 
@@ -51,7 +48,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| Id Produto | 
  **taxa_antecipacao_request** | [**TaxaAntecipacaoRequest**](TaxaAntecipacaoRequest.md)| taxaAntecipacaoRequest | 
 
-
 ### Return type
 
 [**ParametroProdutoResponse**](ParametroProdutoResponse.md)
@@ -67,7 +63,6 @@ No authorization required
 
 
 
-
 # **consultar_taxa_antecipacao_using_get**
 > ParametroProdutoResponse consultar_taxa_antecipacao_using_get(id, tipo_transacao)
 
@@ -79,7 +74,6 @@ Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::AntecipacaoApi.new
 
@@ -104,7 +98,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| Id Produto | 
  **tipo_transacao** | **String**| Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US) | 
 
-
 ### Return type
 
 [**ParametroProdutoResponse**](ParametroProdutoResponse.md)
@@ -120,7 +113,6 @@ No authorization required
 
 
 
-
 # **efetivar_antecipacao_using_post**
 > AntecipacaoResponse efetivar_antecipacao_using_post(id_conta, id, quantidade_parcelas, opts)
 
@@ -132,7 +124,6 @@ M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::AntecipacaoApi.new
 
@@ -164,7 +155,6 @@ Name | Type | Description  | Notes
  **quantidade_parcelas** | **Integer**| Quantidade de parcelas para serem antecipadas. | 
  **complemento** | **String**| Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. | [optional] 
 
-
 ### Return type
 
 [**AntecipacaoResponse**](AntecipacaoResponse.md)
@@ -180,7 +170,6 @@ No authorization required
 
 
 
-
 # **efetivar_antecipacoes_using_post**
 > AntecipacaoResponse efetivar_antecipacoes_using_post(id_conta, opts)
 
@@ -192,7 +181,6 @@ M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o de todas as 
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::AntecipacaoApi.new
 
@@ -218,7 +206,6 @@ Name | Type | Description  | Notes
  **id_conta** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta. | 
  **complemento** | **String**| Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. | [optional] 
 
-
 ### Return type
 
 [**AntecipacaoResponse**](AntecipacaoResponse.md)
@@ -234,7 +221,6 @@ No authorization required
 
 
 
-
 # **listar_using_get8**
 > PageCompraResponse listar_using_get8(id_conta, opts)
 
@@ -246,7 +232,6 @@ Lista as compras antecip\u00C3\u00A1veis de uma conta.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::AntecipacaoApi.new
 
@@ -284,7 +269,6 @@ Name | Type | Description  | Notes
  **juros** | **BOOLEAN**| Indica se a compra \u00C3\u00A9 com ou sem juros. | [optional] 
  **tipo_origem_transacao** | **String**| Indica se a compra \u00C3\u00A9 ON-US ou OFF-US | [optional] 
 
-
 ### Return type
 
 [**PageCompraResponse**](PageCompraResponse.md)
@@ -300,7 +284,6 @@ No authorization required
 
 
 
-
 # **simular_antecipacao_using_get**
 > AntecipacaoSimuladaResponse simular_antecipacao_using_get(id_conta, id, opts)
 
@@ -312,7 +295,6 @@ Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando to
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::AntecipacaoApi.new
 
@@ -341,7 +323,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento. | 
  **complemento** | **String**| Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. | [optional] 
 
-
 ### Return type
 
 [**AntecipacaoSimuladaResponse**](AntecipacaoSimuladaResponse.md)
@@ -357,7 +338,6 @@ No authorization required
 
 
 
-
 # **simular_antecipacoes_using_get**
 > AntecipacaoSimuladaLoteResponse simular_antecipacoes_using_get(id_conta, opts)
 
@@ -369,7 +349,6 @@ O recurso permite realizar a simula\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::AntecipacaoApi.new
 
@@ -395,7 +374,6 @@ Name | Type | Description  | Notes
  **id_conta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta. | 
  **complemento** | **String**| Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. | [optional] 
 
-
 ### Return type
 
 [**AntecipacaoSimuladaLoteResponse**](AntecipacaoSimuladaLoteResponse.md)
@@ -408,8 +386,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

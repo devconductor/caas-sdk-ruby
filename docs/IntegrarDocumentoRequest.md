@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **propriedades** | [**Array&lt;PropriedadeDocumentoRequest&gt;**](PropriedadeDocumentoRequest.md) | Lista de par\u00C3\u00A2metros para montagem do documento. | [optional] 
 
 
-

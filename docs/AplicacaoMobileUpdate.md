@@ -11,4 +11,3 @@ Name | Type | Description | Notes
 **senha** | **String** | Senha da Aplicacao Mobile | [optional] 
 
 
-

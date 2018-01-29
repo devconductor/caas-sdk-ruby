@@ -20,4 +20,3 @@ Name | Type | Description | Notes
 **usuario** | **String** | Nome do usu\u00C3\u00A1rio | [optional] 
 
 
-

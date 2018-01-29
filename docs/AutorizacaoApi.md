@@ -12,8 +12,6 @@ Method | HTTP request | Description
 [**simular_using_post**](AutorizacaoApi.md#simular_using_post) | **POST** /api/simular-transacao | Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
 
 
-
-
 # **autorizar_using_post**
 > TransacaoOnUsResponse autorizar_using_post(autorizacao_on_us_request)
 
@@ -25,7 +23,6 @@ Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::AutorizacaoApi.new
 
@@ -47,7 +44,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **autorizacao_on_us_request** | [**AutorizacaoOnUsRequest**](AutorizacaoOnUsRequest.md)| autorizacaoOnUsRequest | 
 
-
 ### Return type
 
 [**TransacaoOnUsResponse**](TransacaoOnUsResponse.md)
@@ -63,7 +59,6 @@ No authorization required
 
 
 
-
 # **autorizar_using_post1**
 > TransacaoOnUsResponse autorizar_using_post1(id, transacao_on_us_por_id_cartao_request)
 
@@ -75,7 +70,6 @@ Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::AutorizacaoApi.new
 
@@ -100,7 +94,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| Id Cartao | 
  **transacao_on_us_por_id_cartao_request** | [**TransacaoOnUsPorIdCartaoRequest**](TransacaoOnUsPorIdCartaoRequest.md)| transacaoOnUsPorIdCartaoRequest | 
 
-
 ### Return type
 
 [**TransacaoOnUsResponse**](TransacaoOnUsResponse.md)
@@ -116,7 +109,6 @@ No authorization required
 
 
 
-
 # **cancelar_using_post2**
 > TransacaoOnUsResponse cancelar_using_post2(cancelamento_request)
 
@@ -128,7 +120,6 @@ Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::AutorizacaoApi.new
 
@@ -150,7 +141,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cancelamento_request** | [**CancelamentoTransacaoOnUsRequest**](CancelamentoTransacaoOnUsRequest.md)| cancelamentoRequest | 
 
-
 ### Return type
 
 [**TransacaoOnUsResponse**](TransacaoOnUsResponse.md)
@@ -166,7 +156,6 @@ No authorization required
 
 
 
-
 # **cancelar_using_post3**
 > TransacaoOnUsResponse cancelar_using_post3(id, cancelamento_request)
 
@@ -178,7 +167,6 @@ Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::AutorizacaoApi.new
 
@@ -203,7 +191,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| Id Cartao | 
  **cancelamento_request** | [**CancelamentoTransacaoPorIdCartaoRequest**](CancelamentoTransacaoPorIdCartaoRequest.md)| cancelamentoRequest | 
 
-
 ### Return type
 
 [**TransacaoOnUsResponse**](TransacaoOnUsResponse.md)
@@ -219,7 +206,6 @@ No authorization required
 
 
 
-
 # **listar_codigos_processamento_autorizacao_using_get**
 > Array&lt;Object&gt; listar_codigos_processamento_autorizacao_using_get
 
@@ -231,7 +217,6 @@ Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento p
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::AutorizacaoApi.new
 
@@ -246,7 +231,6 @@ end
 
 ### Parameters
 This endpoint does not need any parameter.
-
 
 ### Return type
 
@@ -263,7 +247,6 @@ No authorization required
 
 
 
-
 # **simular_using_post**
 > TransacaoOnUsResponse simular_using_post(transacoes_request)
 
@@ -275,7 +258,6 @@ Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::AutorizacaoApi.new
 
@@ -297,7 +279,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **transacoes_request** | [**TransacaoOnUsRequest**](TransacaoOnUsRequest.md)| transacoesRequest | 
 
-
 ### Return type
 
 [**TransacaoOnUsResponse**](TransacaoOnUsResponse.md)
@@ -310,8 +291,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

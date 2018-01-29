@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **planos_campanhas** | [**Array&lt;PlanoCampanhaUpdate&gt;**](PlanoCampanhaUpdate.md) | Lista com os planos de campanha | [optional] 
 
 
-

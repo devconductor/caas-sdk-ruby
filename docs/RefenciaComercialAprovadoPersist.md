@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **email** | **String** | E-mail de contato da refer\u00C3\u00AAncia comercial | [optional] 
 
 
-

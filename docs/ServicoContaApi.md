@@ -11,8 +11,6 @@ Method | HTTP request | Description
 [**listar_operadoras_telefonicas_using_get**](ServicoContaApi.md#listar_operadoras_telefonicas_using_get) | **GET** /api/operadoras-telefonicas | Listar Operadoras
 
 
-
-
 # **ativar_anuidade_using_post**
 > Object ativar_anuidade_using_post(id, id_anuidade, opts)
 
@@ -24,7 +22,6 @@ Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atr
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ServicoContaApi.new
 
@@ -65,7 +62,6 @@ Name | Type | Description  | Notes
  **id_operadora** | **Integer**| Identificador da operadora do celular | [optional] 
  **id_origem_comercial** | **Integer**| Identificador da origem comercial | [optional] 
 
-
 ### Return type
 
 **Object**
@@ -81,7 +77,6 @@ No authorization required
 
 
 
-
 # **ativar_envio_fatura_email_using_post**
 > Object ativar_envio_fatura_email_using_post(id)
 
@@ -93,7 +88,6 @@ Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ServicoContaApi.new
 
@@ -115,7 +109,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
 
-
 ### Return type
 
 **Object**
@@ -131,7 +124,6 @@ No authorization required
 
 
 
-
 # **desativar_envio_fatura_email_using_post**
 > Object desativar_envio_fatura_email_using_post(id)
 
@@ -143,7 +135,6 @@ Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ServicoContaApi.new
 
@@ -165,7 +156,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
 
-
 ### Return type
 
 **Object**
@@ -181,7 +171,6 @@ No authorization required
 
 
 
-
 # **listar_anuidades_using_get**
 > PageAnuidadeResponse listar_anuidades_using_get(opts)
 
@@ -193,7 +182,6 @@ Lista as anuidades
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ServicoContaApi.new
 
@@ -220,7 +208,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageAnuidadeResponse**](PageAnuidadeResponse.md)
@@ -236,7 +223,6 @@ No authorization required
 
 
 
-
 # **listar_operadoras_telefonicas_using_get**
 > PageOperadoraResponse listar_operadoras_telefonicas_using_get(opts)
 
@@ -248,7 +234,6 @@ Lista as operadoras.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::ServicoContaApi.new
 
@@ -275,7 +260,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageOperadoraResponse**](PageOperadoraResponse.md)
@@ -288,8 +272,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

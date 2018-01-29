@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **valor_percentual_cet** | **Float** | valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento | [optional] 
 
 
-

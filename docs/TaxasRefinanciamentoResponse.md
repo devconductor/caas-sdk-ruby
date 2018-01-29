@@ -27,4 +27,3 @@ Name | Type | Description | Notes
 **plano_taxa_default** | **Integer** | Plano de taxa padr\u00C3\u00A3o | [optional] 
 
 
-

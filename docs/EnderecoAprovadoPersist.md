@@ -16,4 +16,3 @@ Name | Type | Description | Notes
 **endereco_correspondencia** | **BOOLEAN** | Indica se o endere\u00C3\u00A7o informado \u00C3\u00A9 o de correspond\u00C3\u00AAncia | 
 
 
-

@@ -7,8 +7,6 @@ Method | HTTP request | Description
 [**registrar_boleto_using_post**](BoletoApi.md#registrar_boleto_using_post) | **POST** /api/boletos/{id}/registrar | Registra uma cobranca na entidade banco relacionada a cobranca informado.
 
 
-
-
 # **registrar_boleto_using_post**
 > BoletoResponse registrar_boleto_using_post(id)
 
@@ -20,7 +18,6 @@ Este recurso registra uma cobranca emitido.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::BoletoApi.new
 
@@ -42,7 +39,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Cobranca (id) | 
 
-
 ### Return type
 
 [**BoletoResponse**](BoletoResponse.md)
@@ -55,8 +51,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

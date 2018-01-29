@@ -13,4 +13,3 @@ Name | Type | Description | Notes
 **criptograma_resposta** | **String** | Criptograma de resposta | [optional] 
 
 
-

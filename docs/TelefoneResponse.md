@@ -12,4 +12,3 @@ Name | Type | Description | Notes
 **status** | **Integer** | Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo | [optional] 
 
 
-

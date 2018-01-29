@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **data_modificacao** | **String** | Apresenta a data que o telefone fora alterado. | [optional] 
 
 
-

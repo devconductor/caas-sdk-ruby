@@ -9,8 +9,6 @@ Method | HTTP request | Description
 [**salvar_using_post18**](PlataformaMobileApi.md#salvar_using_post18) | **POST** /api/plataformas-mobile | Cadastra Plataforma Mobile
 
 
-
-
 # **atualizar_using_put1**
 > PlataformaMobileResponse atualizar_using_put1(id, update)
 
@@ -22,7 +20,6 @@ Esse recurso permite atualizar plataforma mobile.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::PlataformaMobileApi.new
 
@@ -47,7 +44,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id). | 
  **update** | [**PlataformaMobileUpdate**](PlataformaMobileUpdate.md)| update | 
 
-
 ### Return type
 
 [**PlataformaMobileResponse**](PlataformaMobileResponse.md)
@@ -63,7 +59,6 @@ No authorization required
 
 
 
-
 # **listar_using_get26**
 > PagePlataformaMobileResponse listar_using_get26(opts)
 
@@ -75,7 +70,6 @@ Este m\u00C3\u00A9todo permite que sejam listadas as plataformas mobile existent
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::PlataformaMobileApi.new
 
@@ -104,7 +98,6 @@ Name | Type | Description  | Notes
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **nome** | **String**| Nome da Plataforma Mobile | [optional] 
 
-
 ### Return type
 
 [**PagePlataformaMobileResponse**](PagePlataformaMobileResponse.md)
@@ -120,7 +113,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post18**
 > PlataformaMobileResponse salvar_using_post18(persist)
 
@@ -132,7 +124,6 @@ Esse recurso permite cadastrar plataformas mobile.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::PlataformaMobileApi.new
 
@@ -154,7 +145,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**PlataformaMobilePersist**](PlataformaMobilePersist.md)| persist | 
 
-
 ### Return type
 
 [**PlataformaMobileResponse**](PlataformaMobileResponse.md)
@@ -167,8 +157,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

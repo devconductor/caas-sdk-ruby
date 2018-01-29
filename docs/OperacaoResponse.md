@@ -13,4 +13,3 @@ Name | Type | Description | Notes
 **flag_permitir_parcelamento** | **BOOLEAN** | Permitir transa\u00C3\u00A7\u00C3\u00B5es parceladas | [optional] 
 
 
-

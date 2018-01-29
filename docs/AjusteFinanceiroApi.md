@@ -9,8 +9,6 @@ Method | HTTP request | Description
 [**listar_using_get1**](AjusteFinanceiroApi.md#listar_using_get1) | **GET** /api/ajustes-financeiros | Lista ajustes existentes na base de dados do Emissor
 
 
-
-
 # **ajustar_conta_using_post**
 > AjusteFinanceiroResponse ajustar_conta_using_post(id_tipo_ajuste, data_ajuste, valor_ajuste, id_conta, opts)
 
@@ -22,7 +20,6 @@ Este recurso insere um ajuste para a conta do id informado
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::AjusteFinanceiroApi.new
 
@@ -57,7 +54,6 @@ Name | Type | Description  | Notes
  **id_conta** | **Integer**| C\u00C3\u00B3digo identificador da conta. | 
  **identificador_externo** | **String**| Codigo Hexadecimal | [optional] 
 
-
 ### Return type
 
 [**AjusteFinanceiroResponse**](AjusteFinanceiroResponse.md)
@@ -73,7 +69,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get1**
 > AjusteFinanceiroResponse consultar_using_get1(id)
 
@@ -85,7 +80,6 @@ Este m\u00C3\u00A9todo permite consultar dados de um determinado ajuste a partir
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::AjusteFinanceiroApi.new
 
@@ -107,7 +101,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id). | 
 
-
 ### Return type
 
 [**AjusteFinanceiroResponse**](AjusteFinanceiroResponse.md)
@@ -123,7 +116,6 @@ No authorization required
 
 
 
-
 # **listar_using_get1**
 > PageAjusteResponse listar_using_get1(opts)
 
@@ -135,7 +127,6 @@ Este recurso permite listar ajustes existentes na base de dados do Emissor.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::AjusteFinanceiroApi.new
 
@@ -172,7 +163,6 @@ Name | Type | Description  | Notes
  **identificador_externo** | **String**| Codigo Hexadecimal | [optional] 
  **id_conta** | **Integer**| C\u00C3\u00B3digo identificador da conta. | [optional] 
 
-
 ### Return type
 
 [**PageAjusteResponse**](PageAjusteResponse.md)
@@ -185,8 +175,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

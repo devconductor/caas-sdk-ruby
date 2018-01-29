@@ -31,4 +31,3 @@ Name | Type | Description | Notes
 **dias_atraso** | **Integer** | Apresenta a quantidade de dias que a conta esta em atraso | [optional] 
 
 
-

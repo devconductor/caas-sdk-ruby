@@ -21,4 +21,3 @@ Name | Type | Description | Notes
 **plano_minimo** | **Integer** | Plano minimo do TipoOperacao | 
 
 
-

@@ -12,4 +12,3 @@ Name | Type | Description | Notes
 **status** | **Integer** | Status do ajuste. | [optional] 
 
 
-

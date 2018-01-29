@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **digito_banco** | **String** | Digito do banco | [optional] 
 
 
-

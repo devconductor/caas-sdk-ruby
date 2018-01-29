@@ -19,4 +19,3 @@ Name | Type | Description | Notes
 **total_pages** | **Integer** |  | [optional] 
 
 
-

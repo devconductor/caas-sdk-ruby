@@ -15,4 +15,3 @@ Name | Type | Description | Notes
 **nome_favorecido** | **String** | Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. | 
 
 
-

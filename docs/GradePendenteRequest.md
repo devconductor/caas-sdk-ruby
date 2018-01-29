@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **data_base** | **String** | Data do ajuste no formato yyyy-MM-dd. | [optional] 
 
 
-

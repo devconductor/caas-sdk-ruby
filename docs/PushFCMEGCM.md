@@ -15,4 +15,3 @@ Name | Type | Description | Notes
 **cor** | **String** | Apresenta a cor do icone da notifica\u00C3\u00A7\u00C3\u00A3o. Essa cor dever\u00C3\u00A1 ser informada no formato RGB Ex. #000000. | [optional] 
 
 
-

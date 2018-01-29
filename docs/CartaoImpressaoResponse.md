@@ -29,4 +29,3 @@ Name | Type | Description | Notes
 **numero_cartao_hash** | **Integer** | Apresenta o numero da hash do cart\u00C3\u00A3o  | [optional] 
 
 
-

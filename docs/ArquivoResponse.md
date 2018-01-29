@@ -16,4 +16,3 @@ Name | Type | Description | Notes
 **detalhes** | [**Array&lt;ArquivoParametroResponse&gt;**](ArquivoParametroResponse.md) | Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo. | [optional] 
 
 
-

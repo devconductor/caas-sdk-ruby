@@ -17,8 +17,6 @@ Method | HTTP request | Description
 [**transferir_using_post**](TransferenciaBancariaApi.md#transferir_using_post) | **POST** /api/contas/{id}/transferencias-creditos-contas-bancarias | Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
 
 
-
-
 # **atualizar_using_put1**
 > ContaBancariaPortadorResponse atualizar_using_put1(id, update)
 
@@ -30,7 +28,6 @@ Esse recurso permite atualizar uma conta banc\u00C3\u00A1ria do portador.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::TransferenciaBancariaApi.new
 
@@ -55,7 +52,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria do portador (id). | 
  **update** | [**ContaBancariaPortadorUpdate**](ContaBancariaPortadorUpdate.md)| update | 
 
-
 ### Return type
 
 [**ContaBancariaPortadorResponse**](ContaBancariaPortadorResponse.md)
@@ -71,7 +67,6 @@ No authorization required
 
 
 
-
 # **consultar_transferencia_bancaria_using_get**
 > TransferenciaCreditoContaBancariaResponse consultar_transferencia_bancaria_using_get(id_transferencia)
 
@@ -83,7 +78,6 @@ Recurso utilizado para recuperar uma transfer\u00C3\u00AAncia de cr\u00C3\u00A9d
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::TransferenciaBancariaApi.new
 
@@ -105,7 +99,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_transferencia** | **Integer**| Id Transfer\u00C3\u00AAncia | 
 
-
 ### Return type
 
 [**TransferenciaCreditoContaBancariaResponse**](TransferenciaCreditoContaBancariaResponse.md)
@@ -121,7 +114,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get10**
 > ContaBancariaPortadorResponse consultar_using_get10(id)
 
@@ -133,7 +125,6 @@ Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a parti
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::TransferenciaBancariaApi.new
 
@@ -155,7 +146,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id). | 
 
-
 ### Return type
 
 [**ContaBancariaPortadorResponse**](ContaBancariaPortadorResponse.md)
@@ -171,7 +161,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get38**
 > TransferenciaBancariaResponse consultar_using_get38(id, id_transferencia, opts)
 
@@ -183,7 +172,6 @@ Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::TransferenciaBancariaApi.new
 
@@ -212,7 +200,6 @@ Name | Type | Description  | Notes
  **id_transferencia** | **Integer**| Id Transfer\u00C3\u00AAncia | 
  **id_conta_bancaria_destino** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) | [optional] 
 
-
 ### Return type
 
 [**TransferenciaBancariaResponse**](TransferenciaBancariaResponse.md)
@@ -228,7 +215,6 @@ No authorization required
 
 
 
-
 # **listar_transferencia_bancaria_using_get**
 > PageTransferenciaCreditoContaBancariaResponse listar_transferencia_bancaria_using_get(opts)
 
@@ -240,7 +226,6 @@ Recurso utilizado para listar as transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito 
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::TransferenciaBancariaApi.new
 
@@ -273,7 +258,6 @@ Name | Type | Description  | Notes
  **data_solicitacao_inicial** | **String**| Data inicial da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia. | [optional] 
  **data_solicitacao_final** | **String**| Data final da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia | [optional] 
 
-
 ### Return type
 
 [**PageTransferenciaCreditoContaBancariaResponse**](PageTransferenciaCreditoContaBancariaResponse.md)
@@ -289,7 +273,6 @@ No authorization required
 
 
 
-
 # **listar_using_get11**
 > PageContaBancariaPortadorResponse listar_using_get11(opts)
 
@@ -301,7 +284,6 @@ Esse recurso permite listar contas banc\u00C3\u00A1rias do portador.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::TransferenciaBancariaApi.new
 
@@ -344,7 +326,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageContaBancariaPortadorResponse**](PageContaBancariaPortadorResponse.md)
@@ -360,7 +341,6 @@ No authorization required
 
 
 
-
 # **listar_using_get42**
 > PageTransferenciaBancariaResponse listar_using_get42(id, opts)
 
@@ -372,7 +352,6 @@ Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o p
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::TransferenciaBancariaApi.new
 
@@ -404,7 +383,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageTransferenciaBancariaResponse**](PageTransferenciaBancariaResponse.md)
@@ -420,7 +398,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post7**
 > ContaBancariaPortadorResponse salvar_using_post7(persist)
 
@@ -432,7 +409,6 @@ Esse recurso permite cadastrar contas banc\u00C3\u00A1rias do portador.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::TransferenciaBancariaApi.new
 
@@ -454,7 +430,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**ContaBancariaPortadorPersist**](ContaBancariaPortadorPersist.md)| persist | 
 
-
 ### Return type
 
 [**ContaBancariaPortadorResponse**](ContaBancariaPortadorResponse.md)
@@ -470,7 +445,6 @@ No authorization required
 
 
 
-
 # **simular_transferencia_bancaria_using_post**
 > PlanoParcelamentoTransferenciaCreditoContaBancariaResponse simular_transferencia_bancaria_using_post(request)
 
@@ -482,7 +456,6 @@ Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma t
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::TransferenciaBancariaApi.new
 
@@ -504,7 +477,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**PlanoParcelamentoTransferenciaCreditoContaBancariaRequest**](PlanoParcelamentoTransferenciaCreditoContaBancariaRequest.md)| request | 
 
-
 ### Return type
 
 [**PlanoParcelamentoTransferenciaCreditoContaBancariaResponse**](PlanoParcelamentoTransferenciaCreditoContaBancariaResponse.md)
@@ -520,7 +492,6 @@ No authorization required
 
 
 
-
 # **transferencia_credito_conta_bancaria_using_post**
 > TransferenciaCreditoContaBancariaResponse transferencia_credito_conta_bancaria_using_post(persist)
 
@@ -532,7 +503,6 @@ Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o p
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::TransferenciaBancariaApi.new
 
@@ -554,7 +524,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**TransferenciaCreditoContaBancariaPersist**](TransferenciaCreditoContaBancariaPersist.md)| persist | 
 
-
 ### Return type
 
 [**TransferenciaCreditoContaBancariaResponse**](TransferenciaCreditoContaBancariaResponse.md)
@@ -570,7 +539,6 @@ No authorization required
 
 
 
-
 # **transferir_using_post**
 > TransferenciaBancariaResponse transferir_using_post(id, transferencia_bancaria_persist)
 
@@ -582,7 +550,6 @@ Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o p
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::TransferenciaBancariaApi.new
 
@@ -607,7 +574,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| Id Conta | 
  **transferencia_bancaria_persist** | [**TransferenciaBancariaPersist**](TransferenciaBancariaPersist.md)| transferenciaBancariaPersist | 
 
-
 ### Return type
 
 [**TransferenciaBancariaResponse**](TransferenciaBancariaResponse.md)
@@ -620,8 +586,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

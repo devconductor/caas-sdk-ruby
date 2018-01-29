@@ -16,4 +16,3 @@ Name | Type | Description | Notes
 **telefones** | [**Array&lt;TelefoneAdicionalUpdate&gt;**](TelefoneAdicionalUpdate.md) | Lista de telefones do adicional. | [optional] 
 
 
-

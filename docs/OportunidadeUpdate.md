@@ -12,4 +12,3 @@ Name | Type | Description | Notes
 **detalhes** | [**Array&lt;DetalheOportunidadeUpdate&gt;**](DetalheOportunidadeUpdate.md) | Lista de detalhes | 
 
 
-

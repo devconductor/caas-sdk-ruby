@@ -30,4 +30,3 @@ Name | Type | Description | Notes
 **usuario** | **String** | Login do usu\u00C3\u00A1rio para registro da inser\u00C3\u00A7\u00C3\u00A3o | [optional] 
 
 
-

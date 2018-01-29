@@ -25,4 +25,3 @@ Name | Type | Description | Notes
 **telefones** | [**Array&lt;TelefoneResponse&gt;**](TelefoneResponse.md) | Lista dos telefones do adicional | [optional] 
 
 
-

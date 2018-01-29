@@ -15,4 +15,3 @@ Name | Type | Description | Notes
 **conteudo** | **String** | Conteudo do e-mail. | [optional] 
 
 
-

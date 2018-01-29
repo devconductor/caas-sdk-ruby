@@ -10,8 +10,6 @@ Method | HTTP request | Description
 [**reconhecer_using_post**](RiscoFraudeApi.md#reconhecer_using_post) | **POST** /api/riscos-fraudes/{id}/reconhecer | Reconhecer autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
 
 
-
-
 # **consultar_using_get24**
 > RiscoFraudeDetalhadoResponse consultar_using_get24(id)
 
@@ -23,7 +21,6 @@ Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como ri
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::RiscoFraudeApi.new
 
@@ -45,7 +42,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude | 
 
-
 ### Return type
 
 [**RiscoFraudeDetalhadoResponse**](RiscoFraudeDetalhadoResponse.md)
@@ -61,7 +57,6 @@ No authorization required
 
 
 
-
 # **listar_tipos_resolucao_using_get**
 > TipoResolucaoResponse listar_tipos_resolucao_using_get(opts)
 
@@ -73,7 +68,6 @@ Este recurso permite que sejam listados os tipos de resolu\u00C3\u00A7\u00C3\u00
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::RiscoFraudeApi.new
 
@@ -98,7 +92,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**TipoResolucaoResponse**](TipoResolucaoResponse.md)
@@ -114,7 +107,6 @@ No authorization required
 
 
 
-
 # **negar_using_post**
 > Object negar_using_post(id)
 
@@ -126,7 +118,6 @@ Nega a realiza\u00C3\u00A7\u00C3\u00A3o de uma transa\u00C3\u00A7\u00C3\u00A3o c
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::RiscoFraudeApi.new
 
@@ -148,7 +139,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude | 
 
-
 ### Return type
 
 **Object**
@@ -164,7 +154,6 @@ No authorization required
 
 
 
-
 # **reconhecer_using_post**
 > Object reconhecer_using_post(id)
 
@@ -176,7 +165,6 @@ Confirma a autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada com
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::RiscoFraudeApi.new
 
@@ -198,7 +186,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude | 
 
-
 ### Return type
 
 **Object**
@@ -211,8 +198,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

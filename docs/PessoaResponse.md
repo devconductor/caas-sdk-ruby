@@ -16,4 +16,3 @@ Name | Type | Description | Notes
 **data_emissao_identidade** | **String** | Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd | [optional] 
 
 
-

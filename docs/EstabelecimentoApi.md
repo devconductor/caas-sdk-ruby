@@ -26,8 +26,6 @@ Method | HTTP request | Description
 [**salvar_using_post21**](EstabelecimentoApi.md#salvar_using_post21) | **POST** /api/terminais | Realiza o cadastro de um novo Terminal
 
 
-
-
 # **alterar_using_put11**
 > PessoaJuridicaResponse alterar_using_put11(id, razao_social, opts)
 
@@ -39,7 +37,6 @@ Altera uma pessoa jur\u00C3\u00ADdica.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::EstabelecimentoApi.new
 
@@ -80,7 +77,6 @@ Name | Type | Description  | Notes
  **conta_corrente** | **String**| C\u00C3\u00B3digo da Conta Corrente | [optional] 
  **digito_verificador_conta_corrente** | **String**| D\u00C3\u00ADgito Verificador da Conta Corrente | [optional] 
 
-
 ### Return type
 
 [**PessoaJuridicaResponse**](PessoaJuridicaResponse.md)
@@ -96,7 +92,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put13**
 > TelefoneEstabelecimentoResponse alterar_using_put13(id, ddd, telefone, opts)
 
@@ -108,7 +103,6 @@ Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos telefones d
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::EstabelecimentoApi.new
 
@@ -140,7 +134,6 @@ Name | Type | Description  | Notes
  **telefone** | **String**| N\u00C3\u00BAmero do telefone. | 
  **ramal** | **String**| N\u00C3\u00BAmero do ramal. | [optional] 
 
-
 ### Return type
 
 [**TelefoneEstabelecimentoResponse**](TelefoneEstabelecimentoResponse.md)
@@ -156,7 +149,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put15**
 > TerminalResponse alterar_using_put15(id, terminal_update)
 
@@ -168,7 +160,6 @@ Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos Terminais.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::EstabelecimentoApi.new
 
@@ -193,7 +184,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal (id). | 
  **terminal_update** | [**TerminalUpdate**](TerminalUpdate.md)| terminalUpdate | 
 
-
 ### Return type
 
 [**TerminalResponse**](TerminalResponse.md)
@@ -209,7 +199,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put5**
 > CredorResponse alterar_using_put5(id, credor_update)
 
@@ -221,7 +210,6 @@ Altera um credor.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::EstabelecimentoApi.new
 
@@ -246,7 +234,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da credor | 
  **credor_update** | [**CredorDTO**](CredorDTO.md)| credorUpdate | 
 
-
 ### Return type
 
 [**CredorResponse**](CredorResponse.md)
@@ -262,7 +249,6 @@ No authorization required
 
 
 
-
 # **cadastrar_using_post2**
 > CredorResponse cadastrar_using_post2(credor_persist)
 
@@ -274,7 +260,6 @@ Cadastra um credor.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::EstabelecimentoApi.new
 
@@ -296,7 +281,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **credor_persist** | [**CredorDTO**](CredorDTO.md)| credorPersist | 
 
-
 ### Return type
 
 [**CredorResponse**](CredorResponse.md)
@@ -312,7 +296,6 @@ No authorization required
 
 
 
-
 # **cadastrar_using_post3**
 > PessoaJuridicaResponse cadastrar_using_post3(razao_social, cnpj, opts)
 
@@ -324,7 +307,6 @@ Cadastra uma pessoa jur\u00C3\u00ADdica.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::EstabelecimentoApi.new
 
@@ -365,7 +347,6 @@ Name | Type | Description  | Notes
  **conta_corrente** | **String**| C\u00C3\u00B3digo da Conta Corrente | [optional] 
  **digito_verificador_conta_corrente** | **String**| D\u00C3\u00ADgito Verificador da Conta Corrente | [optional] 
 
-
 ### Return type
 
 [**PessoaJuridicaResponse**](PessoaJuridicaResponse.md)
@@ -381,7 +362,6 @@ No authorization required
 
 
 
-
 # **consulta_operacao_using_get**
 > DetalheOperacaoResponse consulta_operacao_using_get(id)
 
@@ -393,7 +373,6 @@ Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u0
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::EstabelecimentoApi.new
 
@@ -415,7 +394,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao). | 
 
-
 ### Return type
 
 [**DetalheOperacaoResponse**](DetalheOperacaoResponse.md)
@@ -431,7 +409,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get12**
 > CredorResponse consultar_using_get12(id)
 
@@ -443,7 +420,6 @@ Consulta um credor atrav\u00C3\u00A9s do seu identificador.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::EstabelecimentoApi.new
 
@@ -465,7 +441,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da credor | 
 
-
 ### Return type
 
 [**CredorResponse**](CredorResponse.md)
@@ -481,7 +456,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get16**
 > EstabelecimentoResponse consultar_using_get16(id)
 
@@ -493,7 +467,6 @@ Consulta os detalhes de um determinado estabelecimento
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::EstabelecimentoApi.new
 
@@ -515,7 +488,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| Id | 
 
-
 ### Return type
 
 [**EstabelecimentoResponse**](EstabelecimentoResponse.md)
@@ -531,7 +503,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get21**
 > PessoaJuridicaResponse consultar_using_get21(id)
 
@@ -543,7 +514,6 @@ Consulta uma pessoa jur\u00C3\u00ADdica atrav\u00C3\u00A9s do seu identificador.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::EstabelecimentoApi.new
 
@@ -565,7 +535,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica | 
 
-
 ### Return type
 
 [**PessoaJuridicaResponse**](PessoaJuridicaResponse.md)
@@ -581,7 +550,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get27**
 > TelefoneEstabelecimentoResponse consultar_using_get27(id)
 
@@ -593,7 +561,6 @@ Este m\u00C3\u00A9todo permite consultar um determinado telefone de um estabelec
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::EstabelecimentoApi.new
 
@@ -615,7 +582,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id). | 
 
-
 ### Return type
 
 [**TelefoneEstabelecimentoResponse**](TelefoneEstabelecimentoResponse.md)
@@ -631,7 +597,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get29**
 > TerminalResponse consultar_using_get29(id)
 
@@ -643,7 +608,6 @@ Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::EstabelecimentoApi.new
 
@@ -665,7 +629,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). | 
 
-
 ### Return type
 
 [**TerminalResponse**](TerminalResponse.md)
@@ -681,7 +644,6 @@ No authorization required
 
 
 
-
 # **lista_operacao_using_get**
 > PageOperacaoResponse lista_operacao_using_get(opts)
 
@@ -693,7 +655,6 @@ Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00A3o
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::EstabelecimentoApi.new
 
@@ -724,7 +685,6 @@ Name | Type | Description  | Notes
  **id_operacao** | **Integer**| C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o | [optional] 
  **codigo_processamento** | **String**| C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador | [optional] 
 
-
 ### Return type
 
 [**PageOperacaoResponse**](PageOperacaoResponse.md)
@@ -740,7 +700,6 @@ No authorization required
 
 
 
-
 # **listar_using_get14**
 > PageCredorResponse listar_using_get14(opts)
 
@@ -752,7 +711,6 @@ Lista credores cadastrados.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::EstabelecimentoApi.new
 
@@ -825,7 +783,6 @@ Name | Type | Description  | Notes
  **conta_corrente** | **String**| C\u00C3\u00B3digo da Conta Corrente | [optional] 
  **digito_verificador_conta_corrente** | **String**| D\u00C3\u00ADgito Verificador da Conta Corrente | [optional] 
 
-
 ### Return type
 
 [**PageCredorResponse**](PageCredorResponse.md)
@@ -841,7 +798,6 @@ No authorization required
 
 
 
-
 # **listar_using_get19**
 > PageEstabelecimentoResponse listar_using_get19(opts)
 
@@ -853,7 +809,6 @@ Lista todas os Estabelecimentos
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::EstabelecimentoApi.new
 
@@ -918,7 +873,6 @@ Name | Type | Description  | Notes
  **flag_cartao_digitado** | **Integer**| Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o. | [optional] 
  **inativo** | **Integer**| Indica se o estabelecimento est\u00C3\u00A1 inativo. | [optional] 
 
-
 ### Return type
 
 [**PageEstabelecimentoResponse**](PageEstabelecimentoResponse.md)
@@ -934,7 +888,6 @@ No authorization required
 
 
 
-
 # **listar_using_get24**
 > PagePessoaJuridicaResponse listar_using_get24(opts)
 
@@ -946,7 +899,6 @@ Lista pessoas jur\u00C3\u00ADdicas cadastradas.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::EstabelecimentoApi.new
 
@@ -991,7 +943,6 @@ Name | Type | Description  | Notes
  **conta_corrente** | **String**| C\u00C3\u00B3digo da Conta Corrente | [optional] 
  **digito_verificador_conta_corrente** | **String**| D\u00C3\u00ADgito Verificador da Conta Corrente | [optional] 
 
-
 ### Return type
 
 [**PagePessoaJuridicaResponse**](PagePessoaJuridicaResponse.md)
@@ -1007,7 +958,6 @@ No authorization required
 
 
 
-
 # **listar_using_get33**
 > PageTelefoneEstabelecimentoResponse listar_using_get33(opts)
 
@@ -1019,7 +969,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os telefones dos estabelecimen
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::EstabelecimentoApi.new
 
@@ -1048,7 +997,6 @@ Name | Type | Description  | Notes
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id_estabelecimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id). | [optional] 
 
-
 ### Return type
 
 [**PageTelefoneEstabelecimentoResponse**](PageTelefoneEstabelecimentoResponse.md)
@@ -1064,7 +1012,6 @@ No authorization required
 
 
 
-
 # **listar_using_get35**
 > PageTerminalResponse listar_using_get35(opts)
 
@@ -1076,7 +1023,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na bas
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::EstabelecimentoApi.new
 
@@ -1111,7 +1057,6 @@ Name | Type | Description  | Notes
  **numero_estabelecimento** | **Integer**| N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence. | [optional] 
  **id_estabelecimento** | **Integer**| N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence. | [optional] 
 
-
 ### Return type
 
 [**PageTerminalResponse**](PageTerminalResponse.md)
@@ -1127,7 +1072,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post19**
 > TelefoneEstabelecimentoResponse salvar_using_post19(id_estabelecimento, ddd, telefone, opts)
 
@@ -1139,7 +1083,6 @@ Este m\u00C3\u00A9todo permite que seja cadastrado um novo telefone para um esta
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::EstabelecimentoApi.new
 
@@ -1171,7 +1114,6 @@ Name | Type | Description  | Notes
  **telefone** | **String**| N\u00C3\u00BAmero do telefone. | 
  **ramal** | **String**| N\u00C3\u00BAmero do ramal. | [optional] 
 
-
 ### Return type
 
 [**TelefoneEstabelecimentoResponse**](TelefoneEstabelecimentoResponse.md)
@@ -1187,7 +1129,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post21**
 > TerminalResponse salvar_using_post21(id_estabelecimento, flag_consulta_extrato, flag_terminal_virtual)
 
@@ -1199,7 +1140,6 @@ Este m\u00C3\u00A9todo permite que seja cadastrado um novo Terminal.
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::EstabelecimentoApi.new
 
@@ -1227,7 +1167,6 @@ Name | Type | Description  | Notes
  **flag_consulta_extrato** | **BOOLEAN**| Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)). | 
  **flag_terminal_virtual** | **BOOLEAN**| Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)). | 
 
-
 ### Return type
 
 [**TerminalResponse**](TerminalResponse.md)
@@ -1240,8 +1179,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

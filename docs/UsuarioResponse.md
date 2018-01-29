@@ -15,4 +15,3 @@ Name | Type | Description | Notes
 **tentativas_incorretas** | **Integer** | N\u00C3\u00BAmero de tentativas de valida\u00C3\u00A7\u00C3\u00A3o incorretas | [optional] 
 
 
-

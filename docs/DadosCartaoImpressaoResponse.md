@@ -52,4 +52,3 @@ Name | Type | Description | Notes
 **pais** | **String** | Nome do pa\u00C3\u00ADs | [optional] 
 
 
-

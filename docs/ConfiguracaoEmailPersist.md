@@ -15,4 +15,3 @@ Name | Type | Description | Notes
 **senha** | **String** | Senha de usu\u00C3\u00A1rio do servi\u00C3\u00A7o de e-mail. | [optional] 
 
 
-

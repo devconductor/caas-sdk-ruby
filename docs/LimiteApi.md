@@ -7,8 +7,6 @@ Method | HTTP request | Description
 [**listar_historico_alteracoes_limites_using_get**](LimiteApi.md#listar_historico_alteracoes_limites_using_get) | **GET** /api/contas/{id}/historicos-alteracoes-limites | Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
 
 
-
-
 # **listar_historico_alteracoes_limites_using_get**
 > PageHistoricoEventosResponse listar_historico_alteracoes_limites_using_get(id, opts)
 
@@ -20,7 +18,6 @@ Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::LimiteApi.new
 
@@ -50,7 +47,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageHistoricoEventosResponse**](PageHistoricoEventosResponse.md)
@@ -63,8 +59,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

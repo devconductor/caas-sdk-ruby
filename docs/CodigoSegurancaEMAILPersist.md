@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **codigo_seguranca** | **String** | Token para valida\u00C3\u00A7\u00C3\u00A3o. | [optional] 
 
 
-

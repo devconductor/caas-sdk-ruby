@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **senha** | **String** | Apresenta a senha do usu\u00C3\u00A1rio. | [optional] 
 
 
-

@@ -12,4 +12,3 @@ Name | Type | Description | Notes
 **detalhes** | [**Array&lt;DetalheOportunidadePersist&gt;**](DetalheOportunidadePersist.md) | Lista de detalhes | 
 
 
-

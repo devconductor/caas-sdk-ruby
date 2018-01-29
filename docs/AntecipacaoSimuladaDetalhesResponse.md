@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **valor_parcelas_desconto** | **Float** | Valor total da parcela ap\u00C3\u00B3s a aplica\u00C3\u00A7\u00C3\u00A3o do desconto. | [optional] 
 
 
-

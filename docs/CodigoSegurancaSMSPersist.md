@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **telefone** | **String** | N\u00C3\u00BAmero do telefone para envio do sms. | [optional] 
 
 
-

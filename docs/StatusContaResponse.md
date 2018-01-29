@@ -16,4 +16,3 @@ Name | Type | Description | Notes
 **permite_atribuir_como_cancelamento** | **Integer** | Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo. | [optional] 
 
 
-

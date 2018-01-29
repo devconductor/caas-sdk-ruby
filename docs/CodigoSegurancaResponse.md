@@ -11,4 +11,3 @@ Name | Type | Description | Notes
 **data_validade** | **String** | Apresenta a data de validade do c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado. | [optional] 
 
 
-

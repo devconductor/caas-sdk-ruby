@@ -11,4 +11,3 @@ Name | Type | Description | Notes
 **flag_ativo** | **BOOLEAN** | Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo | [optional] 
 
 
-

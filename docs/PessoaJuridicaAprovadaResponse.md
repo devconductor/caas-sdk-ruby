@@ -29,4 +29,3 @@ Name | Type | Description | Notes
 **limite_parcelas** | **Float** | Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras | 
 
 
-

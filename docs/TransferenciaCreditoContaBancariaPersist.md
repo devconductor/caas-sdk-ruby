@@ -14,4 +14,3 @@ Name | Type | Description | Notes
 **numero_estabelecimento** | **Integer** | Representa a identifica\u00C3\u00A7\u00C3\u00A3o do n\u00C3\u00BAmero do estabelecimento. | 
 
 
-

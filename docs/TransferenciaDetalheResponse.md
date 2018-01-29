@@ -13,4 +13,3 @@ Name | Type | Description | Notes
 **valor_tarifa** | **Float** | Valor estabelecido da tarifa para a transfer\u00C3\u00AAncia. | [optional] 
 
 
-

@@ -278,6 +278,7 @@ describe 'CartaoApi' do
   # @option opts [Integer] :id_imagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id).
   # @option opts [Integer] :id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
   # @option opts [Integer] :quantidade_cartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
+  # @option opts [String] :identificador_externo N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
   # @return [LoteCartoesPrePagosResponse]
   describe 'gerar_lotes_cartoes_pre_pagos_using_post test' do
     it "should work" do
@@ -337,6 +338,7 @@ describe 'CartaoApi' do
   # @option opts [String] :data_cadastro Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
   # @option opts [String] :usuario_cadastro Nome do Usu\u00C3\u00A1rio que criou o Lote.
   # @option opts [Integer] :status_processamento Indica o Status de Processamento do Lote.
+  # @option opts [String] :identificador_externo N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
   # @return [PageLoteCartoesPrePagosResponse]
   describe 'listar_lotes_cartoes_pre_pagos_using_get test' do
     it "should work" do

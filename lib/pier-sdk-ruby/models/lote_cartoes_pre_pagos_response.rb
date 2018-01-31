@@ -49,6 +49,9 @@ module Pier
     # Indica o status de processamento do lote.
     attr_accessor :status_processamento
 
+    # N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
+    attr_accessor :identificador_externo
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -71,7 +74,9 @@ module Pier
         
         :'usuario_cadastro' => :'usuarioCadastro',
         
-        :'status_processamento' => :'statusProcessamento'
+        :'status_processamento' => :'statusProcessamento',
+        
+        :'identificador_externo' => :'identificadorExterno'
         
       }
     end
@@ -98,7 +103,9 @@ module Pier
         
         :'usuario_cadastro' => :'String',
         
-        :'status_processamento' => :'Integer'
+        :'status_processamento' => :'Integer',
+        
+        :'identificador_externo' => :'String'
         
       }
     end
@@ -197,6 +204,15 @@ module Pier
         
         
         self.status_processamento = attributes[:'statusProcessamento']
+        
+      
+      end
+
+      
+      if attributes[:'identificadorExterno']
+        
+        
+        self.identificador_externo = attributes[:'identificadorExterno']
         
       
       end
@@ -307,8 +323,22 @@ module Pier
       
       
       
+      
+      if @identificador_externo.nil?
+        return false
+      end
+
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -374,7 +404,8 @@ module Pier
           quantidade == o.quantidade &&
           data_cadastro == o.data_cadastro &&
           usuario_cadastro == o.usuario_cadastro &&
-          status_processamento == o.status_processamento
+          status_processamento == o.status_processamento &&
+          identificador_externo == o.identificador_externo
     end
 
     # @see the `==` method
@@ -386,7 +417,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_origem_comercial, id_produto, id_tipo_cartao, id_imagem, id_endereco, quantidade, data_cadastro, usuario_cadastro, status_processamento].hash
+      [id, id_origem_comercial, id_produto, id_tipo_cartao, id_imagem, id_endereco, quantidade, data_cadastro, usuario_cadastro, status_processamento, identificador_externo].hash
     end
 
     # Builds the object from hash

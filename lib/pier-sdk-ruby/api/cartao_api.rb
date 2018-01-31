@@ -1031,6 +1031,7 @@ module Pier
     # @option opts [Integer] :id_imagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id).
     # @option opts [Integer] :id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
     # @option opts [Integer] :quantidade_cartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
+    # @option opts [String] :identificador_externo N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
     # @return [LoteCartoesPrePagosResponse]
     def gerar_lotes_cartoes_pre_pagos_using_post(opts = {})
       data, _status_code, _headers = gerar_lotes_cartoes_pre_pagos_using_post_with_http_info(opts)
@@ -1046,11 +1047,18 @@ module Pier
     # @option opts [Integer] :id_imagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id).
     # @option opts [Integer] :id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
     # @option opts [Integer] :quantidade_cartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
+    # @option opts [String] :identificador_externo N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
     # @return [Array<(LoteCartoesPrePagosResponse, Fixnum, Hash)>] LoteCartoesPrePagosResponse data, response status code and response headers
     def gerar_lotes_cartoes_pre_pagos_using_post_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CartaoApi.gerar_lotes_cartoes_pre_pagos_using_post ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1099,6 +1107,7 @@ module Pier
       query_params[:'idImagem'] = opts[:'id_imagem'] if opts[:'id_imagem']
       query_params[:'idEndereco'] = opts[:'id_endereco'] if opts[:'id_endereco']
       query_params[:'quantidadeCartoes'] = opts[:'quantidade_cartoes'] if opts[:'quantidade_cartoes']
+      query_params[:'identificadorExterno'] = opts[:'identificador_externo'] if opts[:'identificador_externo']
 
       # header parameters
       header_params = {}
@@ -1276,6 +1285,7 @@ module Pier
     # @option opts [String] :data_cadastro Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
     # @option opts [String] :usuario_cadastro Nome do Usu\u00C3\u00A1rio que criou o Lote.
     # @option opts [Integer] :status_processamento Indica o Status de Processamento do Lote.
+    # @option opts [String] :identificador_externo N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
     # @return [PageLoteCartoesPrePagosResponse]
     def listar_lotes_cartoes_pre_pagos_using_get(opts = {})
       data, _status_code, _headers = listar_lotes_cartoes_pre_pagos_using_get_with_http_info(opts)
@@ -1297,11 +1307,18 @@ module Pier
     # @option opts [String] :data_cadastro Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
     # @option opts [String] :usuario_cadastro Nome do Usu\u00C3\u00A1rio que criou o Lote.
     # @option opts [Integer] :status_processamento Indica o Status de Processamento do Lote.
+    # @option opts [String] :identificador_externo N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
     # @return [Array<(PageLoteCartoesPrePagosResponse, Fixnum, Hash)>] PageLoteCartoesPrePagosResponse data, response status code and response headers
     def listar_lotes_cartoes_pre_pagos_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CartaoApi.listar_lotes_cartoes_pre_pagos_using_get ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1392,6 +1409,7 @@ module Pier
       query_params[:'dataCadastro'] = opts[:'data_cadastro'] if opts[:'data_cadastro']
       query_params[:'usuarioCadastro'] = opts[:'usuario_cadastro'] if opts[:'usuario_cadastro']
       query_params[:'statusProcessamento'] = opts[:'status_processamento'] if opts[:'status_processamento']
+      query_params[:'identificadorExterno'] = opts[:'identificador_externo'] if opts[:'identificador_externo']
 
       # header parameters
       header_params = {}

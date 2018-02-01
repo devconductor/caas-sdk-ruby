@@ -10,15 +10,14 @@ Method | HTTP request | Description
 [**cadastrar_using_post1**](CadastroGeralApi.md#cadastrar_using_post1) | **POST** /api/configuracoes-registro-cobranca | Inserir configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
 [**configurar_taxa_antecipacao_using_post**](CadastroGeralApi.md#configurar_taxa_antecipacao_using_post) | **POST** /api/produtos/{id}/configurar-taxa-antecipacao | Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
 [**consultar_campanha_using_get**](CadastroGeralApi.md#consultar_campanha_using_get) | **GET** /api/campanhas/{id} | Consultar campanha
-[**consultar_origem_comercial_using_get**](CadastroGeralApi.md#consultar_origem_comercial_using_get) | **GET** /api/origens-comerciais/{id} | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
 [**consultar_taxa_antecipacao_using_get**](CadastroGeralApi.md#consultar_taxa_antecipacao_using_get) | **GET** /api/produtos/{id}/consultar-taxa-antecipacao | Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
-[**consultar_using_get23**](CadastroGeralApi.md#consultar_using_get23) | **GET** /api/produtos/{id} | Apresenta os dados de um determinado Produto
+[**consultar_using_get24**](CadastroGeralApi.md#consultar_using_get24) | **GET** /api/produtos/{id} | Apresenta os dados de um determinado Produto
 [**consultar_using_get3**](CadastroGeralApi.md#consultar_using_get3) | **GET** /api/atendimento-clientes/{id} | Apresenta os dados de um determinado Atendimento
-[**consultar_using_get30**](CadastroGeralApi.md#consultar_using_get30) | **GET** /api/tipos-ajustes | Lista os tipos de ajustes do emissor 
-[**consultar_using_get31**](CadastroGeralApi.md#consultar_using_get31) | **GET** /api/tipos-boletos | Lista os tipos de boletos do emissor 
-[**consultar_using_get32**](CadastroGeralApi.md#consultar_using_get32) | **GET** /api/tipos-enderecos/{id} | Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
-[**consultar_using_get33**](CadastroGeralApi.md#consultar_using_get33) | **GET** /api/tipos-operacoes | Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-[**consultar_using_get35**](CadastroGeralApi.md#consultar_using_get35) | **GET** /api/tipos-telefones/{id} | Apresenta os dados de um determinado Tipo de Telefone
+[**consultar_using_get31**](CadastroGeralApi.md#consultar_using_get31) | **GET** /api/tipos-ajustes | Lista os tipos de ajustes do emissor 
+[**consultar_using_get32**](CadastroGeralApi.md#consultar_using_get32) | **GET** /api/tipos-boletos | Lista os tipos de boletos do emissor 
+[**consultar_using_get33**](CadastroGeralApi.md#consultar_using_get33) | **GET** /api/tipos-enderecos/{id} | Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
+[**consultar_using_get34**](CadastroGeralApi.md#consultar_using_get34) | **GET** /api/tipos-operacoes | Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+[**consultar_using_get36**](CadastroGeralApi.md#consultar_using_get36) | **GET** /api/tipos-telefones/{id} | Apresenta os dados de um determinado Tipo de Telefone
 [**consultar_using_get4**](CadastroGeralApi.md#consultar_using_get4) | **GET** /api/bancos/{id} | Apresenta os dados de um determinado Banco
 [**consultar_using_get8**](CadastroGeralApi.md#consultar_using_get8) | **GET** /api/configuracoes-registro-cobranca/{id} | Consultar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
 [**consultar_using_get9**](CadastroGeralApi.md#consultar_using_get9) | **GET** /api/configuracoes-rotativos/{id} | Apresenta dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo espec\u00C3\u00ADfico.
@@ -29,19 +28,18 @@ Method | HTTP request | Description
 [**listar_historico_telefones_using_get**](CadastroGeralApi.md#listar_historico_telefones_using_get) | **GET** /api/pessoas/{id}/historico-telefones | Listar altera\u00C3\u00A7\u00C3\u00B5es de telefones realizadas nos \u00C3\u00BAltimos 60 dias
 [**listar_nacionalidades_using_get**](CadastroGeralApi.md#listar_nacionalidades_using_get) | **GET** /api/nacionalidades | Lista nacionalidades
 [**listar_naturezas_ocupacoes_using_get**](CadastroGeralApi.md#listar_naturezas_ocupacoes_using_get) | **GET** /api/ocupacoes | Lista as Ocupa\u00C3\u00A7\u00C3\u00B5es
-[**listar_origens_comerciais_using_get**](CadastroGeralApi.md#listar_origens_comerciais_using_get) | **GET** /api/origens-comerciais | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
 [**listar_parentescos_using_get**](CadastroGeralApi.md#listar_parentescos_using_get) | **GET** /api/parentescos | Lista os Parentescos
 [**listar_profissoes_using_get**](CadastroGeralApi.md#listar_profissoes_using_get) | **GET** /api/profissoes | Lista profiss\u00C3\u00B5es
 [**listar_tipos_campanhas_using_get**](CadastroGeralApi.md#listar_tipos_campanhas_using_get) | **GET** /api/tipos-campanhas | Listar Tipos de Campanhas
 [**listar_using_get10**](CadastroGeralApi.md#listar_using_get10) | **GET** /api/configuracoes-rotativos | Listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
-[**listar_using_get27**](CadastroGeralApi.md#listar_using_get27) | **GET** /api/portadores | Lista os Portadores existentes
-[**listar_using_get28**](CadastroGeralApi.md#listar_using_get28) | **GET** /api/produtos | Lista os Produtos do Emissor
-[**listar_using_get29**](CadastroGeralApi.md#listar_using_get29) | **GET** /api/promotores | Lista promotores cadastrados na base do emissor
+[**listar_using_get29**](CadastroGeralApi.md#listar_using_get29) | **GET** /api/portadores | Lista os Portadores existentes
 [**listar_using_get3**](CadastroGeralApi.md#listar_using_get3) | **GET** /api/atendimento-clientes | Lista todos os atendimentos
-[**listar_using_get37**](CadastroGeralApi.md#listar_using_get37) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-[**listar_using_get39**](CadastroGeralApi.md#listar_using_get39) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
+[**listar_using_get30**](CadastroGeralApi.md#listar_using_get30) | **GET** /api/produtos | Lista os Produtos do Emissor
+[**listar_using_get31**](CadastroGeralApi.md#listar_using_get31) | **GET** /api/promotores | Lista promotores cadastrados na base do emissor
+[**listar_using_get39**](CadastroGeralApi.md#listar_using_get39) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
 [**listar_using_get4**](CadastroGeralApi.md#listar_using_get4) | **GET** /api/bancos | Lista os Bancos cadastrados para o Emissor
-[**listar_using_get45**](CadastroGeralApi.md#listar_using_get45) | **GET** /api/vencimentos | Listar Vencimentos
+[**listar_using_get41**](CadastroGeralApi.md#listar_using_get41) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
+[**listar_using_get47**](CadastroGeralApi.md#listar_using_get47) | **GET** /api/vencimentos | Listar Vencimentos
 [**listar_using_get9**](CadastroGeralApi.md#listar_using_get9) | **GET** /api/configuracoes-registro-cobranca | Listar configura\u00C3\u00A7\u00C3\u00B5es para registro de cobran\u00C3\u00A7a
 [**salvar_using_post2**](CadastroGeralApi.md#salvar_using_post2) | **POST** /api/atendimento-clientes | Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
 [**salvar_using_post4**](CadastroGeralApi.md#salvar_using_post4) | **POST** /api/campanhas | Inserir campanha
@@ -342,53 +340,6 @@ No authorization required
 
 
 
-# **consultar_origem_comercial_using_get**
-> OrigemComercialResponse consultar_origem_comercial_using_get(id)
-
-Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
-
-Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-api_instance = Pier::CadastroGeralApi.new
-
-id = 789 # Integer | ID da Origem Comercial
-
-
-begin
-  #Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
-  result = api_instance.consultar_origem_comercial_using_get(id)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->consultar_origem_comercial_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID da Origem Comercial | 
-
-### Return type
-
-[**OrigemComercialResponse**](OrigemComercialResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
 # **consultar_taxa_antecipacao_using_get**
 > ParametroProdutoResponse consultar_taxa_antecipacao_using_get(id, tipo_transacao)
 
@@ -439,8 +390,8 @@ No authorization required
 
 
 
-# **consultar_using_get23**
-> ProdutoDetalhesResponse consultar_using_get23(id)
+# **consultar_using_get24**
+> ProdutoDetalhesResponse consultar_using_get24(id)
 
 Apresenta os dados de um determinado Produto
 
@@ -458,10 +409,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Produto
-  result = api_instance.consultar_using_get23(id)
+  result = api_instance.consultar_using_get24(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->consultar_using_get23: #{e}"
+  puts "Exception when calling CadastroGeralApi->consultar_using_get24: #{e}"
 end
 ```
 
@@ -533,8 +484,8 @@ No authorization required
 
 
 
-# **consultar_using_get30**
-> PageTipoAjusteResponse consultar_using_get30(opts)
+# **consultar_using_get31**
+> PageTipoAjusteResponse consultar_using_get31(opts)
 
 Lista os tipos de ajustes do emissor 
 
@@ -557,10 +508,10 @@ opts = {
 
 begin
   #Lista os tipos de ajustes do emissor 
-  result = api_instance.consultar_using_get30(opts)
+  result = api_instance.consultar_using_get31(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->consultar_using_get30: #{e}"
+  puts "Exception when calling CadastroGeralApi->consultar_using_get31: #{e}"
 end
 ```
 
@@ -589,8 +540,8 @@ No authorization required
 
 
 
-# **consultar_using_get31**
-> PageTipoBoletoResponse consultar_using_get31(opts)
+# **consultar_using_get32**
+> PageTipoBoletoResponse consultar_using_get32(opts)
 
 Lista os tipos de boletos do emissor 
 
@@ -614,10 +565,10 @@ opts = {
 
 begin
   #Lista os tipos de boletos do emissor 
-  result = api_instance.consultar_using_get31(opts)
+  result = api_instance.consultar_using_get32(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->consultar_using_get31: #{e}"
+  puts "Exception when calling CadastroGeralApi->consultar_using_get32: #{e}"
 end
 ```
 
@@ -647,8 +598,8 @@ No authorization required
 
 
 
-# **consultar_using_get32**
-> TipoEnderecoResponse consultar_using_get32(id)
+# **consultar_using_get33**
+> TipoEnderecoResponse consultar_using_get33(id)
 
 Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
 
@@ -666,10 +617,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
-  result = api_instance.consultar_using_get32(id)
+  result = api_instance.consultar_using_get33(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->consultar_using_get32: #{e}"
+  puts "Exception when calling CadastroGeralApi->consultar_using_get33: #{e}"
 end
 ```
 
@@ -694,8 +645,8 @@ No authorization required
 
 
 
-# **consultar_using_get33**
-> TipoOperacaoResponse consultar_using_get33(id_cartao, id_estabelecimento, codigo_processamento)
+# **consultar_using_get34**
+> TipoOperacaoResponse consultar_using_get34(id_cartao, id_estabelecimento, codigo_processamento)
 
 Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
 
@@ -717,10 +668,10 @@ codigo_processamento = "codigo_processamento_example" # String | C\u00C3\u00B3di
 
 begin
   #Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-  result = api_instance.consultar_using_get33(id_cartao, id_estabelecimento, codigo_processamento)
+  result = api_instance.consultar_using_get34(id_cartao, id_estabelecimento, codigo_processamento)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->consultar_using_get33: #{e}"
+  puts "Exception when calling CadastroGeralApi->consultar_using_get34: #{e}"
 end
 ```
 
@@ -747,8 +698,8 @@ No authorization required
 
 
 
-# **consultar_using_get35**
-> TipoTelefoneResponse consultar_using_get35(id)
+# **consultar_using_get36**
+> TipoTelefoneResponse consultar_using_get36(id)
 
 Apresenta os dados de um determinado Tipo de Telefone
 
@@ -766,10 +717,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Tipo de Telefone
-  result = api_instance.consultar_using_get35(id)
+  result = api_instance.consultar_using_get36(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->consultar_using_get35: #{e}"
+  puts "Exception when calling CadastroGeralApi->consultar_using_get36: #{e}"
 end
 ```
 
@@ -1299,68 +1250,6 @@ No authorization required
 
 
 
-# **listar_origens_comerciais_using_get**
-> PageOrigemComercialResponse listar_origens_comerciais_using_get(opts)
-
-Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
-
-Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-api_instance = Pier::CadastroGeralApi.new
-
-opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id: 789, # Integer | Id da origem comercial
-  nome: "nome_example", # String | Nome da origem comercial
-  status: 56, # Integer | Status da origem comercial
-  id_estabelecimento: 789, # Integer | C\u00C3\u00B3digo identificador do estabelecimento
-  id_produto: 789 # Integer | C\u00C3\u00B3digo identificador do produto
-}
-
-begin
-  #Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
-  result = api_instance.listar_origens_comerciais_using_get(opts)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->listar_origens_comerciais_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id** | **Integer**| Id da origem comercial | [optional] 
- **nome** | **String**| Nome da origem comercial | [optional] 
- **status** | **Integer**| Status da origem comercial | [optional] 
- **id_estabelecimento** | **Integer**| C\u00C3\u00B3digo identificador do estabelecimento | [optional] 
- **id_produto** | **Integer**| C\u00C3\u00B3digo identificador do produto | [optional] 
-
-### Return type
-
-[**PageOrigemComercialResponse**](PageOrigemComercialResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
 # **listar_parentescos_using_get**
 > PageCampoCodificadoDescricaoResponse listar_parentescos_using_get(opts)
 
@@ -1571,8 +1460,8 @@ No authorization required
 
 
 
-# **listar_using_get27**
-> PagePortadorResponse listar_using_get27(opts)
+# **listar_using_get29**
+> PagePortadorResponse listar_using_get29(opts)
 
 Lista os Portadores existentes
 
@@ -1603,10 +1492,10 @@ opts = {
 
 begin
   #Lista os Portadores existentes
-  result = api_instance.listar_using_get27(opts)
+  result = api_instance.listar_using_get29(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->listar_using_get27: #{e}"
+  puts "Exception when calling CadastroGeralApi->listar_using_get29: #{e}"
 end
 ```
 
@@ -1631,126 +1520,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PagePortadorResponse**](PagePortadorResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **listar_using_get28**
-> PageProdutoResponse listar_using_get28(opts)
-
-Lista os Produtos do Emissor
-
-Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-api_instance = Pier::CadastroGeralApi.new
-
-opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  nome: "nome_example", # String | Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
-  status: 56, # Integer | Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
-  id_fantasia_basica: 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
-}
-
-begin
-  #Lista os Produtos do Emissor
-  result = api_instance.listar_using_get28(opts)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->listar_using_get28: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **nome** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. | [optional] 
- **status** | **Integer**| Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). | [optional] 
- **id_fantasia_basica** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence. | [optional] 
-
-### Return type
-
-[**PageProdutoResponse**](PageProdutoResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **listar_using_get29**
-> PagePromotorResponse listar_using_get29(opts)
-
-Lista promotores cadastrados na base do emissor
-
-Este m\u00C3\u00A9todo permite que sejam listados os cadastros de Promoteres existentes na base de dados do Emissor.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-api_instance = Pier::CadastroGeralApi.new
-
-opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do promotor (id)
-  nome: "nome_example", # String | Nome do Promotor
-  data_cadastro: "data_cadastro_example", # String | Data da Inclus\u00C3\u00A3o.
-  id_estabelecimento: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
-  id_usuario: 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio
-}
-
-begin
-  #Lista promotores cadastrados na base do emissor
-  result = api_instance.listar_using_get29(opts)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->listar_using_get29: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do promotor (id) | [optional] 
- **nome** | **String**| Nome do Promotor | [optional] 
- **data_cadastro** | **String**| Data da Inclus\u00C3\u00A3o. | [optional] 
- **id_estabelecimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento | [optional] 
- **id_usuario** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio | [optional] 
-
-### Return type
-
-[**PagePromotorResponse**](PagePromotorResponse.md)
 
 ### Authorization
 
@@ -1823,8 +1592,128 @@ No authorization required
 
 
 
-# **listar_using_get37**
-> PageTipoEnderecoResponse listar_using_get37(opts)
+# **listar_using_get30**
+> PageProdutoResponse listar_using_get30(opts)
+
+Lista os Produtos do Emissor
+
+Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+api_instance = Pier::CadastroGeralApi.new
+
+opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  nome: "nome_example", # String | Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
+  status: 56, # Integer | Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
+  id_fantasia_basica: 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
+}
+
+begin
+  #Lista os Produtos do Emissor
+  result = api_instance.listar_using_get30(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CadastroGeralApi->listar_using_get30: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **nome** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. | [optional] 
+ **status** | **Integer**| Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). | [optional] 
+ **id_fantasia_basica** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence. | [optional] 
+
+### Return type
+
+[**PageProdutoResponse**](PageProdutoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **listar_using_get31**
+> PagePromotorResponse listar_using_get31(opts)
+
+Lista promotores cadastrados na base do emissor
+
+Este m\u00C3\u00A9todo permite que sejam listados os cadastros de Promoteres existentes na base de dados do Emissor.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+api_instance = Pier::CadastroGeralApi.new
+
+opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do promotor (id)
+  nome: "nome_example", # String | Nome do Promotor
+  data_cadastro: "data_cadastro_example", # String | Data da Inclus\u00C3\u00A3o.
+  id_estabelecimento: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
+  id_usuario: 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio
+}
+
+begin
+  #Lista promotores cadastrados na base do emissor
+  result = api_instance.listar_using_get31(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CadastroGeralApi->listar_using_get31: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do promotor (id) | [optional] 
+ **nome** | **String**| Nome do Promotor | [optional] 
+ **data_cadastro** | **String**| Data da Inclus\u00C3\u00A3o. | [optional] 
+ **id_estabelecimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento | [optional] 
+ **id_usuario** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio | [optional] 
+
+### Return type
+
+[**PagePromotorResponse**](PagePromotorResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **listar_using_get39**
+> PageTipoEnderecoResponse listar_using_get39(opts)
 
 Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
 
@@ -1847,10 +1736,10 @@ opts = {
 
 begin
   #Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-  result = api_instance.listar_using_get37(opts)
+  result = api_instance.listar_using_get39(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->listar_using_get37: #{e}"
+  puts "Exception when calling CadastroGeralApi->listar_using_get39: #{e}"
 end
 ```
 
@@ -1867,62 +1756,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PageTipoEnderecoResponse**](PageTipoEnderecoResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **listar_using_get39**
-> PageTipoTelefoneResponse listar_using_get39(opts)
-
-Lista os Tipos de Telefones
-
-Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-api_instance = Pier::CadastroGeralApi.new
-
-opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
-  nome: "nome_example" # String | Nome do Tipo do Telefone
-}
-
-begin
-  #Lista os Tipos de Telefones
-  result = api_instance.listar_using_get39(opts)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->listar_using_get39: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). | [optional] 
- **nome** | **String**| Nome do Tipo do Telefone | [optional] 
-
-### Return type
-
-[**PageTipoTelefoneResponse**](PageTipoTelefoneResponse.md)
 
 ### Authorization
 
@@ -1987,8 +1820,64 @@ No authorization required
 
 
 
-# **listar_using_get45**
-> PageControleVencimentoResponse listar_using_get45(opts)
+# **listar_using_get41**
+> PageTipoTelefoneResponse listar_using_get41(opts)
+
+Lista os Tipos de Telefones
+
+Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+api_instance = Pier::CadastroGeralApi.new
+
+opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+  nome: "nome_example" # String | Nome do Tipo do Telefone
+}
+
+begin
+  #Lista os Tipos de Telefones
+  result = api_instance.listar_using_get41(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CadastroGeralApi->listar_using_get41: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). | [optional] 
+ **nome** | **String**| Nome do Tipo do Telefone | [optional] 
+
+### Return type
+
+[**PageTipoTelefoneResponse**](PageTipoTelefoneResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **listar_using_get47**
+> PageControleVencimentoResponse listar_using_get47(opts)
 
 Listar Vencimentos
 
@@ -2010,10 +1899,10 @@ opts = {
 
 begin
   #Listar Vencimentos
-  result = api_instance.listar_using_get45(opts)
+  result = api_instance.listar_using_get47(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->listar_using_get45: #{e}"
+  puts "Exception when calling CadastroGeralApi->listar_using_get47: #{e}"
 end
 ```
 

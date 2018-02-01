@@ -7,10 +7,10 @@ Method | HTTP request | Description
 [**atualizar_using_put1**](TransferenciaBancariaApi.md#atualizar_using_put1) | **PUT** /api/contas-bancarias-portador/{id} | Atualiza conta banc\u00C3\u00A1ria portador
 [**consultar_transferencia_bancaria_using_get**](TransferenciaBancariaApi.md#consultar_transferencia_bancaria_using_get) | **GET** /api/transferencias-creditos-contas-bancarias/{idTransferencia} | Realiza a consulta de uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias de um portador
 [**consultar_using_get10**](TransferenciaBancariaApi.md#consultar_using_get10) | **GET** /api/contas-bancarias-portador/{id} | Consulta conta banc\u00C3\u00A1ria portador
-[**consultar_using_get38**](TransferenciaBancariaApi.md#consultar_using_get38) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+[**consultar_using_get39**](TransferenciaBancariaApi.md#consultar_using_get39) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
 [**listar_transferencia_bancaria_using_get**](TransferenciaBancariaApi.md#listar_transferencia_bancaria_using_get) | **GET** /api/transferencias-creditos-contas-bancarias | Realiza a listagem das transfer\u00C3\u00AAncias banc\u00C3\u00A1rias de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
 [**listar_using_get11**](TransferenciaBancariaApi.md#listar_using_get11) | **GET** /api/contas-bancarias-portador | Lista contas banc\u00C3\u00A1rias portador
-[**listar_using_get42**](TransferenciaBancariaApi.md#listar_using_get42) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+[**listar_using_get44**](TransferenciaBancariaApi.md#listar_using_get44) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
 [**salvar_using_post7**](TransferenciaBancariaApi.md#salvar_using_post7) | **POST** /api/contas-bancarias-portador | Cadastra uma conta banc\u00C3\u00A1ria do portador
 [**simular_transferencia_bancaria_using_post**](TransferenciaBancariaApi.md#simular_transferencia_bancaria_using_post) | **POST** /api/simular-transferencias-creditos-contas-bancarias | Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
 [**transferencia_credito_conta_bancaria_using_post**](TransferenciaBancariaApi.md#transferencia_credito_conta_bancaria_using_post) | **POST** /api/transferencias-creditos-contas-bancarias | Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
@@ -161,8 +161,8 @@ No authorization required
 
 
 
-# **consultar_using_get38**
-> TransferenciaBancariaResponse consultar_using_get38(id, id_transferencia, opts)
+# **consultar_using_get39**
+> TransferenciaBancariaResponse consultar_using_get39(id, id_transferencia, opts)
 
 Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
 
@@ -185,10 +185,10 @@ opts = {
 
 begin
   #Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-  result = api_instance.consultar_using_get38(id, id_transferencia, opts)
+  result = api_instance.consultar_using_get39(id, id_transferencia, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling TransferenciaBancariaApi->consultar_using_get38: #{e}"
+  puts "Exception when calling TransferenciaBancariaApi->consultar_using_get39: #{e}"
 end
 ```
 
@@ -341,8 +341,8 @@ No authorization required
 
 
 
-# **listar_using_get42**
-> PageTransferenciaBancariaResponse listar_using_get42(id, opts)
+# **listar_using_get44**
+> PageTransferenciaBancariaResponse listar_using_get44(id, opts)
 
 Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
 
@@ -366,10 +366,10 @@ opts = {
 
 begin
   #Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-  result = api_instance.listar_using_get42(id, opts)
+  result = api_instance.listar_using_get44(id, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling TransferenciaBancariaApi->listar_using_get42: #{e}"
+  puts "Exception when calling TransferenciaBancariaApi->listar_using_get44: #{e}"
 end
 ```
 

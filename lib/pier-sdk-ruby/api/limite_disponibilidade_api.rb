@@ -42,8 +42,8 @@ module Pier
     # @option opts [Float] :limite_internacional_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
     # @option opts [Float] :limite_maximo Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.
     # @return [LimiteDisponibilidadeResponse]
-    def alterar_using_put8(id_conta, opts = {})
-      data, _status_code, _headers = alterar_using_put8_with_http_info(id_conta, opts)
+    def alterar_using_put9(id_conta, opts = {})
+      data, _status_code, _headers = alterar_using_put9_with_http_info(id_conta, opts)
       return data
     end
 
@@ -65,14 +65,14 @@ module Pier
     # @option opts [Float] :limite_internacional_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
     # @option opts [Float] :limite_maximo Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.
     # @return [Array<(LimiteDisponibilidadeResponse, Fixnum, Hash)>] LimiteDisponibilidadeResponse data, response status code and response headers
-    def alterar_using_put8_with_http_info(id_conta, opts = {})
+    def alterar_using_put9_with_http_info(id_conta, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: LimiteDisponibilidadeApi.alterar_using_put8 ..."
+        @api_client.config.logger.debug "Calling API: LimiteDisponibilidadeApi.alterar_using_put9 ..."
       end
       
       
       # verify the required parameter 'id_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta' when calling LimiteDisponibilidadeApi.alterar_using_put8" if id_conta.nil?
+      fail ArgumentError, "Missing the required parameter 'id_conta' when calling LimiteDisponibilidadeApi.alterar_using_put9" if id_conta.nil?
       
       
       
@@ -202,7 +202,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'LimiteDisponibilidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: LimiteDisponibilidadeApi#alterar_using_put8\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: LimiteDisponibilidadeApi#alterar_using_put9\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

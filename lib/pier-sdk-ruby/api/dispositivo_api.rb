@@ -166,8 +166,8 @@ module Pier
     # @option opts [String] :data_criacao Apresenta a data e em que o registro foi criado.
     # @option opts [String] :data_desativacao Apresenta a data e em que o registro foi desativado.
     # @return [PageDispositivoResponse]
-    def listar_using_get15(opts = {})
-      data, _status_code, _headers = listar_using_get15_with_http_info(opts)
+    def listar_using_get14(opts = {})
+      data, _status_code, _headers = listar_using_get14_with_http_info(opts)
       return data
     end
 
@@ -183,9 +183,9 @@ module Pier
     # @option opts [String] :data_criacao Apresenta a data e em que o registro foi criado.
     # @option opts [String] :data_desativacao Apresenta a data e em que o registro foi desativado.
     # @return [Array<(PageDispositivoResponse, Fixnum, Hash)>] PageDispositivoResponse data, response status code and response headers
-    def listar_using_get15_with_http_info(opts = {})
+    def listar_using_get14_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DispositivoApi.listar_using_get15 ..."
+        @api_client.config.logger.debug "Calling API: DispositivoApi.listar_using_get14 ..."
       end
       
       
@@ -276,7 +276,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageDispositivoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DispositivoApi#listar_using_get15\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DispositivoApi#listar_using_get14\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

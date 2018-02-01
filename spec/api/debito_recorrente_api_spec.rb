@@ -60,7 +60,7 @@ describe 'DebitoRecorrenteApi' do
     end
   end
 
-  # unit tests for listar_using_get36
+  # unit tests for listar_using_get38
   # Listar Tipos Debitos Recorrentes
   # Para os emissores que utilizam a entidade Debitos Recorrentes precisam previamente solicitar a Conductor o cadastro de quais Tipos eles poder\u00C3\u00A3o comercializar. Por isso, este recurso tem como objetivo apresentar todos os Tipos de D\u00C3\u00A9bitos Recorrentes que est\u00C3\u00A3o cadastrados para um determinado Emissor, independente do status dele.
   # @param [Hash] opts the optional parameters
@@ -72,7 +72,7 @@ describe 'DebitoRecorrenteApi' do
   # @option opts [Float] :valor Valor do tipo de d\u00C3\u00A9bito recorrente.
   # @option opts [BOOLEAN] :flag_ativo Flag que identifica se o tipo d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo.
   # @return [PageTipoDebitoRecorrenteResponse]
-  describe 'listar_using_get36 test' do
+  describe 'listar_using_get38 test' do
     it "should work" do
       # assertion here
       # should be_a()

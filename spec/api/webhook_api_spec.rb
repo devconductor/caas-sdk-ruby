@@ -36,7 +36,7 @@ describe 'WebhookApi' do
     end
   end
 
-  # unit tests for alterar_using_put20
+  # unit tests for alterar_using_put22
   # Alterar Webhook
   # Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
   # @param id C\u00C3\u00B3digo identificador do Webhook
@@ -45,7 +45,7 @@ describe 'WebhookApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :status Status
   # @return [WebHookResponse]
-  describe 'alterar_using_put20 test' do
+  describe 'alterar_using_put22 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -55,13 +55,13 @@ describe 'WebhookApi' do
     end
   end
 
-  # unit tests for consultar_using_get41
+  # unit tests for consultar_using_get43
   # Consultar Webhook
   # Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
   # @param [Hash] opts the optional parameters
   # @return [WebHookResponse]
-  describe 'consultar_using_get41 test' do
+  describe 'consultar_using_get43 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -71,7 +71,7 @@ describe 'WebhookApi' do
     end
   end
 
-  # unit tests for listar_using_get46
+  # unit tests for listar_using_get50
   # Lista os Webhooks
   # Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
   # @param [Hash] opts the optional parameters
@@ -83,7 +83,7 @@ describe 'WebhookApi' do
   # @option opts [String] :metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
   # @option opts [String] :url URL que a ser consumida pelo WebHook
   # @return [PageWebHookResponse]
-  describe 'listar_using_get46 test' do
+  describe 'listar_using_get50 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -93,14 +93,14 @@ describe 'WebhookApi' do
     end
   end
 
-  # unit tests for salvar_using_post26
+  # unit tests for salvar_using_post29
   # Salvar Webhook
   # Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
   # @param tipo_evento TipoEvento a ser chamado pelo WebHook
   # @param url URL que a ser consumida pelo WebHook
   # @param [Hash] opts the optional parameters
   # @return [WebHookResponse]
-  describe 'salvar_using_post26 test' do
+  describe 'salvar_using_post29 test' do
     it "should work" do
       # assertion here
       # should be_a()

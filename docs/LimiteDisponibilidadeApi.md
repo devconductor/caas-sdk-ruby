@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterar_using_put8**](LimiteDisponibilidadeApi.md#alterar_using_put8) | **PUT** /api/limites-disponibilidades | Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
+[**alterar_using_put9**](LimiteDisponibilidadeApi.md#alterar_using_put9) | **PUT** /api/limites-disponibilidades | Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
 [**consultar_using_get18**](LimiteDisponibilidadeApi.md#consultar_using_get18) | **GET** /api/limites-disponibilidades | Apresenta os limites da conta
 
 
-# **alterar_using_put8**
-> LimiteDisponibilidadeResponse alterar_using_put8(id_conta, opts)
+# **alterar_using_put9**
+> LimiteDisponibilidadeResponse alterar_using_put9(id_conta, opts)
 
 Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
 
@@ -42,10 +42,10 @@ opts = {
 
 begin
   #Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
-  result = api_instance.alterar_using_put8(id_conta, opts)
+  result = api_instance.alterar_using_put9(id_conta, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling LimiteDisponibilidadeApi->alterar_using_put8: #{e}"
+  puts "Exception when calling LimiteDisponibilidadeApi->alterar_using_put9: #{e}"
 end
 ```
 

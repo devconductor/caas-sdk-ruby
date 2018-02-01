@@ -4,12 +4,64 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**autorizar_por_conta_using_post**](AutorizacaoApi.md#autorizar_por_conta_using_post) | **POST** /api/contas/{id}/autorizar-transacao | Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
 [**autorizar_using_post**](AutorizacaoApi.md#autorizar_using_post) | **POST** /api/autorizar-transacao | Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
 [**autorizar_using_post1**](AutorizacaoApi.md#autorizar_using_post1) | **POST** /api/cartoes/{id}/autorizar-transacao | Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+[**cancelar_por_id_conta_using_post**](AutorizacaoApi.md#cancelar_por_id_conta_using_post) | **POST** /api/contas/{id}/cancelar-transacao | Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
 [**cancelar_using_post2**](AutorizacaoApi.md#cancelar_using_post2) | **POST** /api/cancelar-transacao | Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
 [**cancelar_using_post3**](AutorizacaoApi.md#cancelar_using_post3) | **POST** /api/cartoes/{id}/cancelar-transacao | Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
 [**listar_codigos_processamento_autorizacao_using_get**](AutorizacaoApi.md#listar_codigos_processamento_autorizacao_using_get) | **GET** /api/consultar-codigos-processamento-autorizacao | Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
 [**simular_using_post**](AutorizacaoApi.md#simular_using_post) | **POST** /api/simular-transacao | Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
+
+
+# **autorizar_por_conta_using_post**
+> TransacaoOnUsResponse autorizar_por_conta_using_post(id, transacao_on_us_por_id_cartao_request)
+
+Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+
+Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idConta.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+api_instance = Pier::AutorizacaoApi.new
+
+id = 789 # Integer | Id Conta
+
+transacao_on_us_por_id_cartao_request = Pier::TransacaoOnUsPorIdCartaoRequest.new # TransacaoOnUsPorIdCartaoRequest | transacaoOnUsPorIdCartaoRequest
+
+
+begin
+  #Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+  result = api_instance.autorizar_por_conta_using_post(id, transacao_on_us_por_id_cartao_request)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling AutorizacaoApi->autorizar_por_conta_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| Id Conta | 
+ **transacao_on_us_por_id_cartao_request** | [**TransacaoOnUsPorIdCartaoRequest**](TransacaoOnUsPorIdCartaoRequest.md)| transacaoOnUsPorIdCartaoRequest | 
+
+### Return type
+
+[**TransacaoOnUsResponse**](TransacaoOnUsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 
 
 # **autorizar_using_post**
@@ -93,6 +145,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| Id Cartao | 
  **transacao_on_us_por_id_cartao_request** | [**TransacaoOnUsPorIdCartaoRequest**](TransacaoOnUsPorIdCartaoRequest.md)| transacaoOnUsPorIdCartaoRequest | 
+
+### Return type
+
+[**TransacaoOnUsResponse**](TransacaoOnUsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **cancelar_por_id_conta_using_post**
+> TransacaoOnUsResponse cancelar_por_id_conta_using_post(id, cancelamento_request)
+
+Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+
+Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idConta.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+api_instance = Pier::AutorizacaoApi.new
+
+id = 789 # Integer | Id Conta
+
+cancelamento_request = Pier::CancelamentoTransacaoPorIdCartaoRequest.new # CancelamentoTransacaoPorIdCartaoRequest | cancelamentoRequest
+
+
+begin
+  #Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+  result = api_instance.cancelar_por_id_conta_using_post(id, cancelamento_request)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling AutorizacaoApi->cancelar_por_id_conta_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| Id Conta | 
+ **cancelamento_request** | [**CancelamentoTransacaoPorIdCartaoRequest**](CancelamentoTransacaoPorIdCartaoRequest.md)| cancelamentoRequest | 
 
 ### Return type
 

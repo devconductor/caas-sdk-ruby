@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**listar_using_get12**](DebitoRecorrenteApi.md#listar_using_get12) | **GET** /api/debitos-recorrentes | Lista os d\u00C3\u00A9bitos recorrentes de uma Conta
-[**listar_using_get36**](DebitoRecorrenteApi.md#listar_using_get36) | **GET** /api/tipos-debitos-recorrentes | Listar Tipos Debitos Recorrentes
+[**listar_using_get38**](DebitoRecorrenteApi.md#listar_using_get38) | **GET** /api/tipos-debitos-recorrentes | Listar Tipos Debitos Recorrentes
 
 
 # **listar_using_get12**
@@ -73,8 +73,8 @@ No authorization required
 
 
 
-# **listar_using_get36**
-> PageTipoDebitoRecorrenteResponse listar_using_get36(opts)
+# **listar_using_get38**
+> PageTipoDebitoRecorrenteResponse listar_using_get38(opts)
 
 Listar Tipos Debitos Recorrentes
 
@@ -99,10 +99,10 @@ opts = {
 
 begin
   #Listar Tipos Debitos Recorrentes
-  result = api_instance.listar_using_get36(opts)
+  result = api_instance.listar_using_get38(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DebitoRecorrenteApi->listar_using_get36: #{e}"
+  puts "Exception when calling DebitoRecorrenteApi->listar_using_get38: #{e}"
 end
 ```
 

@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**adicionar_using_post**](FAQApi.md#adicionar_using_post) | **POST** /api/faqs | Adiciona uma nova FAQ
 [**alterar_using_put7**](FAQApi.md#alterar_using_put7) | **PUT** /api/faqs/{id} | Alterar FAQ
-[**consultar_using_get17**](FAQApi.md#consultar_using_get17) | **GET** /api/faqs/{id} | Consultar FAQ por id
-[**listar_using_get20**](FAQApi.md#listar_using_get20) | **GET** /api/faqs | Lista FAQs
+[**consultar_using_get16**](FAQApi.md#consultar_using_get16) | **GET** /api/faqs/{id} | Consultar FAQ por id
+[**listar_using_get19**](FAQApi.md#listar_using_get19) | **GET** /api/faqs | Lista FAQs
 
 
 # **adicionar_using_post**
@@ -133,8 +133,8 @@ No authorization required
 
 
 
-# **consultar_using_get17**
-> FaqResponse consultar_using_get17(id)
+# **consultar_using_get16**
+> FaqResponse consultar_using_get16(id)
 
 Consultar FAQ por id
 
@@ -152,10 +152,10 @@ id = 789 # Integer | Id
 
 begin
   #Consultar FAQ por id
-  result = api_instance.consultar_using_get17(id)
+  result = api_instance.consultar_using_get16(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling FAQApi->consultar_using_get17: #{e}"
+  puts "Exception when calling FAQApi->consultar_using_get16: #{e}"
 end
 ```
 
@@ -180,8 +180,8 @@ No authorization required
 
 
 
-# **listar_using_get20**
-> PageFaqResponse listar_using_get20(opts)
+# **listar_using_get19**
+> PageFaqResponse listar_using_get19(opts)
 
 Lista FAQs
 
@@ -209,10 +209,10 @@ opts = {
 
 begin
   #Lista FAQs
-  result = api_instance.listar_using_get20(opts)
+  result = api_instance.listar_using_get19(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling FAQApi->listar_using_get20: #{e}"
+  puts "Exception when calling FAQApi->listar_using_get19: #{e}"
 end
 ```
 

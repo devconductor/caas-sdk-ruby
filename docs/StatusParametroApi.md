@@ -6,13 +6,13 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultar_estagio_cartao_using_get**](StatusParametroApi.md#consultar_estagio_cartao_using_get) | **GET** /api/estagios-cartoes/{id} | Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
 [**consultar_status_cartao_using_get**](StatusParametroApi.md#consultar_status_cartao_using_get) | **GET** /api/status-cartoes/{id} | Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
-[**consultar_using_get25**](StatusParametroApi.md#consultar_using_get25) | **GET** /api/status-contas/{id} | Apresenta os dados de um determinado Status Conta
-[**consultar_using_get26**](StatusParametroApi.md#consultar_using_get26) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
+[**consultar_using_get26**](StatusParametroApi.md#consultar_using_get26) | **GET** /api/status-contas/{id} | Apresenta os dados de um determinado Status Conta
+[**consultar_using_get27**](StatusParametroApi.md#consultar_using_get27) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 [**listar_estagios_cartoes_using_get**](StatusParametroApi.md#listar_estagios_cartoes_using_get) | **GET** /api/estagios-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
 [**listar_status_cartoes_using_get**](StatusParametroApi.md#listar_status_cartoes_using_get) | **GET** /api/status-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
 [**listar_tipos_eventos_transacoes_using_get**](StatusParametroApi.md#listar_tipos_eventos_transacoes_using_get) | **GET** /api/tipos-eventos-transacoes | Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
-[**listar_using_get31**](StatusParametroApi.md#listar_using_get31) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
-[**listar_using_get32**](StatusParametroApi.md#listar_using_get32) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+[**listar_using_get33**](StatusParametroApi.md#listar_using_get33) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
+[**listar_using_get34**](StatusParametroApi.md#listar_using_get34) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
 
 # **consultar_estagio_cartao_using_get**
@@ -109,8 +109,8 @@ No authorization required
 
 
 
-# **consultar_using_get25**
-> StatusContaResponse consultar_using_get25(id)
+# **consultar_using_get26**
+> StatusContaResponse consultar_using_get26(id)
 
 Apresenta os dados de um determinado Status Conta
 
@@ -128,10 +128,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Status Conta
-  result = api_instance.consultar_using_get25(id)
+  result = api_instance.consultar_using_get26(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling StatusParametroApi->consultar_using_get25: #{e}"
+  puts "Exception when calling StatusParametroApi->consultar_using_get26: #{e}"
 end
 ```
 
@@ -156,8 +156,8 @@ No authorization required
 
 
 
-# **consultar_using_get26**
-> StatusImpressaoResponse consultar_using_get26(id)
+# **consultar_using_get27**
+> StatusImpressaoResponse consultar_using_get27(id)
 
 Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 
@@ -175,10 +175,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
-  result = api_instance.consultar_using_get26(id)
+  result = api_instance.consultar_using_get27(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling StatusParametroApi->consultar_using_get26: #{e}"
+  puts "Exception when calling StatusParametroApi->consultar_using_get27: #{e}"
 end
 ```
 
@@ -364,8 +364,8 @@ No authorization required
 
 
 
-# **listar_using_get31**
-> PageStatusContaResponse listar_using_get31(opts)
+# **listar_using_get33**
+> PageStatusContaResponse listar_using_get33(opts)
 
 Lista os Status Contas cadastrados para o Emissor
 
@@ -397,10 +397,10 @@ opts = {
 
 begin
   #Lista os Status Contas cadastrados para o Emissor
-  result = api_instance.listar_using_get31(opts)
+  result = api_instance.listar_using_get33(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling StatusParametroApi->listar_using_get31: #{e}"
+  puts "Exception when calling StatusParametroApi->listar_using_get33: #{e}"
 end
 ```
 
@@ -438,8 +438,8 @@ No authorization required
 
 
 
-# **listar_using_get32**
-> PageStatusImpressaoResponse listar_using_get32(opts)
+# **listar_using_get34**
+> PageStatusImpressaoResponse listar_using_get34(opts)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
@@ -462,10 +462,10 @@ opts = {
 
 begin
   #Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
-  result = api_instance.listar_using_get32(opts)
+  result = api_instance.listar_using_get34(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling StatusParametroApi->listar_using_get32: #{e}"
+  puts "Exception when calling StatusParametroApi->listar_using_get34: #{e}"
 end
 ```
 

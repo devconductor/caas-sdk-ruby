@@ -25,6 +25,12 @@ module Pier
     # N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.
     attr_accessor :numero_estabelecimento
 
+    # Indica se \u00C3\u00A9 matriz ou filial.
+    attr_accessor :flag_matriz
+
+    # Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor.
+    attr_accessor :id_credor
+
     # Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal.
     attr_accessor :numero_receita_federal
 
@@ -46,23 +52,38 @@ module Pier
     # N\u00C3\u00BAmero do endere\u00C3\u00A7o.
     attr_accessor :numero_endereco
 
-    # Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
-    attr_accessor :complemento
-
     # Nome do bairro do endere\u00C3\u00A7o.
     attr_accessor :bairro
 
     # Nome da cidade do endere\u00C3\u00A7o.
     attr_accessor :cidade
 
+    # Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
+    attr_accessor :complemento
+
     # Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
     attr_accessor :uf
 
-    # Nome do pa\u00C3\u00ADs.
-    attr_accessor :pais
+    # C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+    attr_accessor :cep2
 
-    # Data de Cadastro do Estabelecimento.
-    attr_accessor :data_cadastramento
+    # Nome do Logradouro .
+    attr_accessor :nome_logradouro2
+
+    # N\u00C3\u00BAmero do endere\u00C3\u00A7o.
+    attr_accessor :numero_endereco2
+
+    # Nome do bairro do endere\u00C3\u00A7o.
+    attr_accessor :bairro2
+
+    # Nome da cidade do endere\u00C3\u00A7o.
+    attr_accessor :cidade2
+
+    # Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
+    attr_accessor :complemento2
+
+    # Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
+    attr_accessor :uf2
 
     # Detalhes espec\u00C3\u00ADficos quanto ao Cadastro do Estabelecimento.
     attr_accessor :obs
@@ -82,6 +103,48 @@ module Pier
     # Indica se o estabelecimento est\u00C3\u00A1 inativo.
     attr_accessor :inativo
 
+    # C\u00C3\u00B3digo identificador da moeda.
+    attr_accessor :id_moeda
+
+    # Identificador de Pa\u00C3\u00ADs.
+    attr_accessor :id_pais
+
+    # N\u00C3\u00BAmero do associado ao SPCBrasil.
+    attr_accessor :associado_spc_brasil
+
+    # C\u00C3\u00B3digo de Categoria de Mercado.
+    attr_accessor :mcc
+
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.
+    attr_accessor :id_tipo_estabelecimento
+
+    # Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA).
+    attr_accessor :tipo_correspondencia
+
+    # Cargo do contato do estabelecimento.
+    attr_accessor :cargo_contato
+
+    # Tipo do regime de pagamento do estabelecimento.
+    attr_accessor :tipo_pagamento
+
+    # Consulta de cadastro n\u00C3\u00BAmero um.
+    attr_accessor :consulta
+
+    # Consulta de cadastro n\u00C3\u00BAmero um.
+    attr_accessor :consulta2
+
+    # Consulta de cadastro n\u00C3\u00BAmero um.
+    attr_accessor :consulta3
+
+    # Terminal do estabelecimento.
+    attr_accessor :terminal
+
+    # Data de Cadastro do Estabelecimento.
+    attr_accessor :data_cadastramento
+
+    # Usu\u00C3\u00A1rio da aplica\u00C3\u00A7\u00C3\u00A3o.
+    attr_accessor :usuario
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -89,6 +152,10 @@ module Pier
         :'id' => :'id',
         
         :'numero_estabelecimento' => :'numeroEstabelecimento',
+        
+        :'flag_matriz' => :'flagMatriz',
+        
+        :'id_credor' => :'idCredor',
         
         :'numero_receita_federal' => :'numeroReceitaFederal',
         
@@ -104,17 +171,27 @@ module Pier
         
         :'numero_endereco' => :'numeroEndereco',
         
-        :'complemento' => :'complemento',
-        
         :'bairro' => :'bairro',
         
         :'cidade' => :'cidade',
         
+        :'complemento' => :'complemento',
+        
         :'uf' => :'uf',
         
-        :'pais' => :'pais',
+        :'cep2' => :'cep2',
         
-        :'data_cadastramento' => :'dataCadastramento',
+        :'nome_logradouro2' => :'nomeLogradouro2',
+        
+        :'numero_endereco2' => :'numeroEndereco2',
+        
+        :'bairro2' => :'bairro2',
+        
+        :'cidade2' => :'cidade2',
+        
+        :'complemento2' => :'complemento2',
+        
+        :'uf2' => :'uf2',
         
         :'obs' => :'obs',
         
@@ -126,7 +203,35 @@ module Pier
         
         :'flag_cartao_digitado' => :'flagCartaoDigitado',
         
-        :'inativo' => :'inativo'
+        :'inativo' => :'inativo',
+        
+        :'id_moeda' => :'idMoeda',
+        
+        :'id_pais' => :'idPais',
+        
+        :'associado_spc_brasil' => :'associadoSPCBrasil',
+        
+        :'mcc' => :'mcc',
+        
+        :'id_tipo_estabelecimento' => :'idTipoEstabelecimento',
+        
+        :'tipo_correspondencia' => :'tipoCorrespondencia',
+        
+        :'cargo_contato' => :'cargoContato',
+        
+        :'tipo_pagamento' => :'tipoPagamento',
+        
+        :'consulta' => :'consulta',
+        
+        :'consulta2' => :'consulta2',
+        
+        :'consulta3' => :'consulta3',
+        
+        :'terminal' => :'terminal',
+        
+        :'data_cadastramento' => :'dataCadastramento',
+        
+        :'usuario' => :'usuario'
         
       }
     end
@@ -138,6 +243,10 @@ module Pier
         :'id' => :'Integer',
         
         :'numero_estabelecimento' => :'String',
+        
+        :'flag_matriz' => :'Integer',
+        
+        :'id_credor' => :'Integer',
         
         :'numero_receita_federal' => :'Integer',
         
@@ -153,17 +262,27 @@ module Pier
         
         :'numero_endereco' => :'String',
         
-        :'complemento' => :'String',
-        
         :'bairro' => :'String',
         
         :'cidade' => :'String',
         
+        :'complemento' => :'String',
+        
         :'uf' => :'String',
         
-        :'pais' => :'String',
+        :'cep2' => :'String',
         
-        :'data_cadastramento' => :'String',
+        :'nome_logradouro2' => :'String',
+        
+        :'numero_endereco2' => :'String',
+        
+        :'bairro2' => :'String',
+        
+        :'cidade2' => :'String',
+        
+        :'complemento2' => :'String',
+        
+        :'uf2' => :'String',
         
         :'obs' => :'String',
         
@@ -175,7 +294,35 @@ module Pier
         
         :'flag_cartao_digitado' => :'Integer',
         
-        :'inativo' => :'Integer'
+        :'inativo' => :'Integer',
+        
+        :'id_moeda' => :'Integer',
+        
+        :'id_pais' => :'Integer',
+        
+        :'associado_spc_brasil' => :'Integer',
+        
+        :'mcc' => :'Integer',
+        
+        :'id_tipo_estabelecimento' => :'Integer',
+        
+        :'tipo_correspondencia' => :'String',
+        
+        :'cargo_contato' => :'String',
+        
+        :'tipo_pagamento' => :'String',
+        
+        :'consulta' => :'ConsultaCadastroEstabelecimentoDTO',
+        
+        :'consulta2' => :'ConsultaCadastroEstabelecimentoDTO',
+        
+        :'consulta3' => :'ConsultaCadastroEstabelecimentoDTO',
+        
+        :'terminal' => :'String',
+        
+        :'data_cadastramento' => :'String',
+        
+        :'usuario' => :'String'
         
       }
     end
@@ -202,6 +349,24 @@ module Pier
         
         
         self.numero_estabelecimento = attributes[:'numeroEstabelecimento']
+        
+      
+      end
+
+      
+      if attributes[:'flagMatriz']
+        
+        
+        self.flag_matriz = attributes[:'flagMatriz']
+        
+      
+      end
+
+      
+      if attributes[:'idCredor']
+        
+        
+        self.id_credor = attributes[:'idCredor']
         
       
       end
@@ -270,15 +435,6 @@ module Pier
       end
 
       
-      if attributes[:'complemento']
-        
-        
-        self.complemento = attributes[:'complemento']
-        
-      
-      end
-
-      
       if attributes[:'bairro']
         
         
@@ -297,6 +453,15 @@ module Pier
       end
 
       
+      if attributes[:'complemento']
+        
+        
+        self.complemento = attributes[:'complemento']
+        
+      
+      end
+
+      
       if attributes[:'uf']
         
         
@@ -306,19 +471,64 @@ module Pier
       end
 
       
-      if attributes[:'pais']
+      if attributes[:'cep2']
         
         
-        self.pais = attributes[:'pais']
+        self.cep2 = attributes[:'cep2']
         
       
       end
 
       
-      if attributes[:'dataCadastramento']
+      if attributes[:'nomeLogradouro2']
         
         
-        self.data_cadastramento = attributes[:'dataCadastramento']
+        self.nome_logradouro2 = attributes[:'nomeLogradouro2']
+        
+      
+      end
+
+      
+      if attributes[:'numeroEndereco2']
+        
+        
+        self.numero_endereco2 = attributes[:'numeroEndereco2']
+        
+      
+      end
+
+      
+      if attributes[:'bairro2']
+        
+        
+        self.bairro2 = attributes[:'bairro2']
+        
+      
+      end
+
+      
+      if attributes[:'cidade2']
+        
+        
+        self.cidade2 = attributes[:'cidade2']
+        
+      
+      end
+
+      
+      if attributes[:'complemento2']
+        
+        
+        self.complemento2 = attributes[:'complemento2']
+        
+      
+      end
+
+      
+      if attributes[:'uf2']
+        
+        
+        self.uf2 = attributes[:'uf2']
         
       
       end
@@ -373,6 +583,132 @@ module Pier
         
         
         self.inativo = attributes[:'inativo']
+        
+      
+      end
+
+      
+      if attributes[:'idMoeda']
+        
+        
+        self.id_moeda = attributes[:'idMoeda']
+        
+      
+      end
+
+      
+      if attributes[:'idPais']
+        
+        
+        self.id_pais = attributes[:'idPais']
+        
+      
+      end
+
+      
+      if attributes[:'associadoSPCBrasil']
+        
+        
+        self.associado_spc_brasil = attributes[:'associadoSPCBrasil']
+        
+      
+      end
+
+      
+      if attributes[:'mcc']
+        
+        
+        self.mcc = attributes[:'mcc']
+        
+      
+      end
+
+      
+      if attributes[:'idTipoEstabelecimento']
+        
+        
+        self.id_tipo_estabelecimento = attributes[:'idTipoEstabelecimento']
+        
+      
+      end
+
+      
+      if attributes[:'tipoCorrespondencia']
+        
+        
+        self.tipo_correspondencia = attributes[:'tipoCorrespondencia']
+        
+      
+      end
+
+      
+      if attributes[:'cargoContato']
+        
+        
+        self.cargo_contato = attributes[:'cargoContato']
+        
+      
+      end
+
+      
+      if attributes[:'tipoPagamento']
+        
+        
+        self.tipo_pagamento = attributes[:'tipoPagamento']
+        
+      
+      end
+
+      
+      if attributes[:'consulta']
+        
+        
+        self.consulta = attributes[:'consulta']
+        
+      
+      end
+
+      
+      if attributes[:'consulta2']
+        
+        
+        self.consulta2 = attributes[:'consulta2']
+        
+      
+      end
+
+      
+      if attributes[:'consulta3']
+        
+        
+        self.consulta3 = attributes[:'consulta3']
+        
+      
+      end
+
+      
+      if attributes[:'terminal']
+        
+        
+        self.terminal = attributes[:'terminal']
+        
+      
+      end
+
+      
+      if attributes[:'dataCadastramento']
+        
+        
+        self.data_cadastramento = attributes[:'dataCadastramento']
+        
+      
+      end
+
+      
+      if attributes[:'usuario']
+        
+        
+        self.usuario = attributes[:'usuario']
         
       
       end
@@ -477,6 +813,100 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      allowed_values = ["ORIGEM", "CORRESPONDENCIA"]
+      if @tipo_correspondencia && !allowed_values.include?(@tipo_correspondencia)
+        return false
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      allowed_values = ["CENTRALIZADO", "PV"]
+      if @tipo_pagamento && !allowed_values.include?(@tipo_pagamento)
+        return false
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
     
@@ -552,6 +982,129 @@ module Pier
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] tipo_correspondencia Object to be assigned
+    def tipo_correspondencia=(tipo_correspondencia)
+      allowed_values = ["ORIGEM", "CORRESPONDENCIA"]
+      if tipo_correspondencia && !allowed_values.include?(tipo_correspondencia)
+        fail ArgumentError, "invalid value for 'tipo_correspondencia', must be one of #{allowed_values}."
+      end
+      @tipo_correspondencia = tipo_correspondencia
+    end
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] tipo_pagamento Object to be assigned
+    def tipo_pagamento=(tipo_pagamento)
+      allowed_values = ["CENTRALIZADO", "PV"]
+      if tipo_pagamento && !allowed_values.include?(tipo_pagamento)
+        fail ArgumentError, "invalid value for 'tipo_pagamento', must be one of #{allowed_values}."
+      end
+      @tipo_pagamento = tipo_pagamento
+    end
+
     
     
     
@@ -592,6 +1145,8 @@ module Pier
       self.class == o.class &&
           id == o.id &&
           numero_estabelecimento == o.numero_estabelecimento &&
+          flag_matriz == o.flag_matriz &&
+          id_credor == o.id_credor &&
           numero_receita_federal == o.numero_receita_federal &&
           nome == o.nome &&
           descricao == o.descricao &&
@@ -599,18 +1154,37 @@ module Pier
           cep == o.cep &&
           nome_logradouro == o.nome_logradouro &&
           numero_endereco == o.numero_endereco &&
-          complemento == o.complemento &&
           bairro == o.bairro &&
           cidade == o.cidade &&
+          complemento == o.complemento &&
           uf == o.uf &&
-          pais == o.pais &&
-          data_cadastramento == o.data_cadastramento &&
+          cep2 == o.cep2 &&
+          nome_logradouro2 == o.nome_logradouro2 &&
+          numero_endereco2 == o.numero_endereco2 &&
+          bairro2 == o.bairro2 &&
+          cidade2 == o.cidade2 &&
+          complemento2 == o.complemento2 &&
+          uf2 == o.uf2 &&
           obs == o.obs &&
           contato == o.contato &&
           email == o.email &&
           flag_arquivo_secr_fazenda == o.flag_arquivo_secr_fazenda &&
           flag_cartao_digitado == o.flag_cartao_digitado &&
-          inativo == o.inativo
+          inativo == o.inativo &&
+          id_moeda == o.id_moeda &&
+          id_pais == o.id_pais &&
+          associado_spc_brasil == o.associado_spc_brasil &&
+          mcc == o.mcc &&
+          id_tipo_estabelecimento == o.id_tipo_estabelecimento &&
+          tipo_correspondencia == o.tipo_correspondencia &&
+          cargo_contato == o.cargo_contato &&
+          tipo_pagamento == o.tipo_pagamento &&
+          consulta == o.consulta &&
+          consulta2 == o.consulta2 &&
+          consulta3 == o.consulta3 &&
+          terminal == o.terminal &&
+          data_cadastramento == o.data_cadastramento &&
+          usuario == o.usuario
     end
 
     # @see the `==` method
@@ -622,7 +1196,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, numero_estabelecimento, numero_receita_federal, nome, descricao, nome_fantasia, cep, nome_logradouro, numero_endereco, complemento, bairro, cidade, uf, pais, data_cadastramento, obs, contato, email, flag_arquivo_secr_fazenda, flag_cartao_digitado, inativo].hash
+      [id, numero_estabelecimento, flag_matriz, id_credor, numero_receita_federal, nome, descricao, nome_fantasia, cep, nome_logradouro, numero_endereco, bairro, cidade, complemento, uf, cep2, nome_logradouro2, numero_endereco2, bairro2, cidade2, complemento2, uf2, obs, contato, email, flag_arquivo_secr_fazenda, flag_cartao_digitado, inativo, id_moeda, id_pais, associado_spc_brasil, mcc, id_tipo_estabelecimento, tipo_correspondencia, cargo_contato, tipo_pagamento, consulta, consulta2, consulta3, terminal, data_cadastramento, usuario].hash
     end
 
     # Builds the object from hash

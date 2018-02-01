@@ -17,9 +17,9 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Origem Comercial
+  # Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de origem comercial
   class OrigemComercialResponse
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial
+    # C\u00C3\u00B3digo identificador do OrigemComercial
     attr_accessor :id
 
     # Nome da origem comercial
@@ -28,7 +28,7 @@ module Pier
     # Descri\u00C3\u00A7\u00C3\u00A3o completa do nome da Origem Comercial
     attr_accessor :descricao
 
-    # Lista de  ProdutosOrigem associados \u00C3\u00A0 Origem comercial
+    # Produtos da origem comercial
     attr_accessor :produtos_origem
 
     # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
@@ -40,14 +40,62 @@ module Pier
     # Nome do Tipo da Origem Comercial
     attr_accessor :nome_tipo_origem_comercial
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Grupo a qual a Origem Comercial pertence
+    # Identificador do grupo da origem comercial
     attr_accessor :id_grupo_origem_comercial
 
-    # Nome do Grupo a qual a Origem Comercial pertence
+    # Nome do grupo da origem comercial
     attr_accessor :nome_grupo_origem_comercial
 
-    # Status da origem comercial
+    # Indica o status da origem comercial
     attr_accessor :status
+
+    # Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o
+    attr_accessor :flag_pre_aprovado
+
+    # Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata
+    attr_accessor :flag_aprovacao_imediata
+
+    # Nome fantasia impresso no pl\u00C3\u00A1stico
+    attr_accessor :nome_fantasia_plastico
+
+    # Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio
+    attr_accessor :flag_cartao_provisorio
+
+    # Indica se permite cart\u00C3\u00A3o definitivo
+    attr_accessor :flag_cartao_definitivo
+
+    # Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o
+    attr_accessor :usuario
+
+    # Senha para autentica\u00C3\u00A7\u00C3\u00A3o
+    attr_accessor :senha
+
+    # Indica se \u00C3\u00A9 origem externa
+    attr_accessor :flag_origem_externa
+
+    # Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o
+    attr_accessor :flag_modificado
+
+    # Indica se envia fatura
+    attr_accessor :flag_envia_fatura_usuario
+
+    # Indica se permite cr\u00C3\u00A9dito de faturamento
+    attr_accessor :flag_credito_faturamento
+
+    # Indica se concede limite provis\u00C3\u00B3rio
+    attr_accessor :flag_concede_limite_provisorio
+
+    # Indica se digitaliza documento
+    attr_accessor :flag_digitalizar_doc
+
+    # Indica se realiza embossing em loja
+    attr_accessor :flag_embossing_loja
+
+    # Indica se realiza consulta pr\u00C3\u00A9via
+    attr_accessor :flag_consulta_previa
+
+    # Tipo de pessoa
+    attr_accessor :tipo_pessoa
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -71,7 +119,39 @@ module Pier
         
         :'nome_grupo_origem_comercial' => :'nomeGrupoOrigemComercial',
         
-        :'status' => :'status'
+        :'status' => :'status',
+        
+        :'flag_pre_aprovado' => :'flagPreAprovado',
+        
+        :'flag_aprovacao_imediata' => :'flagAprovacaoImediata',
+        
+        :'nome_fantasia_plastico' => :'nomeFantasiaPlastico',
+        
+        :'flag_cartao_provisorio' => :'flagCartaoProvisorio',
+        
+        :'flag_cartao_definitivo' => :'flagCartaoDefinitivo',
+        
+        :'usuario' => :'usuario',
+        
+        :'senha' => :'senha',
+        
+        :'flag_origem_externa' => :'flagOrigemExterna',
+        
+        :'flag_modificado' => :'flagModificado',
+        
+        :'flag_envia_fatura_usuario' => :'flagEnviaFaturaUsuario',
+        
+        :'flag_credito_faturamento' => :'flagCreditoFaturamento',
+        
+        :'flag_concede_limite_provisorio' => :'flagConcedeLimiteProvisorio',
+        
+        :'flag_digitalizar_doc' => :'flagDigitalizarDoc',
+        
+        :'flag_embossing_loja' => :'flagEmbossingLoja',
+        
+        :'flag_consulta_previa' => :'flagConsultaPrevia',
+        
+        :'tipo_pessoa' => :'tipoPessoa'
         
       }
     end
@@ -98,7 +178,39 @@ module Pier
         
         :'nome_grupo_origem_comercial' => :'String',
         
-        :'status' => :'BOOLEAN'
+        :'status' => :'Integer',
+        
+        :'flag_pre_aprovado' => :'BOOLEAN',
+        
+        :'flag_aprovacao_imediata' => :'BOOLEAN',
+        
+        :'nome_fantasia_plastico' => :'String',
+        
+        :'flag_cartao_provisorio' => :'BOOLEAN',
+        
+        :'flag_cartao_definitivo' => :'BOOLEAN',
+        
+        :'usuario' => :'String',
+        
+        :'senha' => :'String',
+        
+        :'flag_origem_externa' => :'BOOLEAN',
+        
+        :'flag_modificado' => :'BOOLEAN',
+        
+        :'flag_envia_fatura_usuario' => :'BOOLEAN',
+        
+        :'flag_credito_faturamento' => :'BOOLEAN',
+        
+        :'flag_concede_limite_provisorio' => :'BOOLEAN',
+        
+        :'flag_digitalizar_doc' => :'BOOLEAN',
+        
+        :'flag_embossing_loja' => :'BOOLEAN',
+        
+        :'flag_consulta_previa' => :'BOOLEAN',
+        
+        :'tipo_pessoa' => :'String'
         
       }
     end
@@ -204,6 +316,150 @@ module Pier
       end
 
       
+      if attributes[:'flagPreAprovado']
+        
+        
+        self.flag_pre_aprovado = attributes[:'flagPreAprovado']
+        
+      
+      end
+
+      
+      if attributes[:'flagAprovacaoImediata']
+        
+        
+        self.flag_aprovacao_imediata = attributes[:'flagAprovacaoImediata']
+        
+      
+      end
+
+      
+      if attributes[:'nomeFantasiaPlastico']
+        
+        
+        self.nome_fantasia_plastico = attributes[:'nomeFantasiaPlastico']
+        
+      
+      end
+
+      
+      if attributes[:'flagCartaoProvisorio']
+        
+        
+        self.flag_cartao_provisorio = attributes[:'flagCartaoProvisorio']
+        
+      
+      end
+
+      
+      if attributes[:'flagCartaoDefinitivo']
+        
+        
+        self.flag_cartao_definitivo = attributes[:'flagCartaoDefinitivo']
+        
+      
+      end
+
+      
+      if attributes[:'usuario']
+        
+        
+        self.usuario = attributes[:'usuario']
+        
+      
+      end
+
+      
+      if attributes[:'senha']
+        
+        
+        self.senha = attributes[:'senha']
+        
+      
+      end
+
+      
+      if attributes[:'flagOrigemExterna']
+        
+        
+        self.flag_origem_externa = attributes[:'flagOrigemExterna']
+        
+      
+      end
+
+      
+      if attributes[:'flagModificado']
+        
+        
+        self.flag_modificado = attributes[:'flagModificado']
+        
+      
+      end
+
+      
+      if attributes[:'flagEnviaFaturaUsuario']
+        
+        
+        self.flag_envia_fatura_usuario = attributes[:'flagEnviaFaturaUsuario']
+        
+      
+      end
+
+      
+      if attributes[:'flagCreditoFaturamento']
+        
+        
+        self.flag_credito_faturamento = attributes[:'flagCreditoFaturamento']
+        
+      
+      end
+
+      
+      if attributes[:'flagConcedeLimiteProvisorio']
+        
+        
+        self.flag_concede_limite_provisorio = attributes[:'flagConcedeLimiteProvisorio']
+        
+      
+      end
+
+      
+      if attributes[:'flagDigitalizarDoc']
+        
+        
+        self.flag_digitalizar_doc = attributes[:'flagDigitalizarDoc']
+        
+      
+      end
+
+      
+      if attributes[:'flagEmbossingLoja']
+        
+        
+        self.flag_embossing_loja = attributes[:'flagEmbossingLoja']
+        
+      
+      end
+
+      
+      if attributes[:'flagConsultaPrevia']
+        
+        
+        self.flag_consulta_previa = attributes[:'flagConsultaPrevia']
+        
+      
+      end
+
+      
+      if attributes[:'tipoPessoa']
+        
+        
+        self.tipo_pessoa = attributes[:'tipoPessoa']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -220,92 +476,111 @@ module Pier
     def valid?
       
       
-      if @id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      allowed_values = ["PESSOA_FISICA", "PESSOA_JURIDICA"]
+      if @tipo_pessoa && !allowed_values.include?(@tipo_pessoa)
         return false
       end
-
-      
-      
-      
-      
-      
-      if @nome.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @descricao.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @produtos_origem.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @id_estabelecimento.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @id_tipo_origem_comercial.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @nome_tipo_origem_comercial.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @id_grupo_origem_comercial.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @nome_grupo_origem_comercial.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @status.nil?
-        return false
-      end
-
-      
       
       
       
@@ -359,6 +634,95 @@ module Pier
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] tipo_pessoa Object to be assigned
+    def tipo_pessoa=(tipo_pessoa)
+      allowed_values = ["PESSOA_FISICA", "PESSOA_JURIDICA"]
+      if tipo_pessoa && !allowed_values.include?(tipo_pessoa)
+        fail ArgumentError, "invalid value for 'tipo_pessoa', must be one of #{allowed_values}."
+      end
+      @tipo_pessoa = tipo_pessoa
+    end
+
     
     
     
@@ -376,7 +740,23 @@ module Pier
           nome_tipo_origem_comercial == o.nome_tipo_origem_comercial &&
           id_grupo_origem_comercial == o.id_grupo_origem_comercial &&
           nome_grupo_origem_comercial == o.nome_grupo_origem_comercial &&
-          status == o.status
+          status == o.status &&
+          flag_pre_aprovado == o.flag_pre_aprovado &&
+          flag_aprovacao_imediata == o.flag_aprovacao_imediata &&
+          nome_fantasia_plastico == o.nome_fantasia_plastico &&
+          flag_cartao_provisorio == o.flag_cartao_provisorio &&
+          flag_cartao_definitivo == o.flag_cartao_definitivo &&
+          usuario == o.usuario &&
+          senha == o.senha &&
+          flag_origem_externa == o.flag_origem_externa &&
+          flag_modificado == o.flag_modificado &&
+          flag_envia_fatura_usuario == o.flag_envia_fatura_usuario &&
+          flag_credito_faturamento == o.flag_credito_faturamento &&
+          flag_concede_limite_provisorio == o.flag_concede_limite_provisorio &&
+          flag_digitalizar_doc == o.flag_digitalizar_doc &&
+          flag_embossing_loja == o.flag_embossing_loja &&
+          flag_consulta_previa == o.flag_consulta_previa &&
+          tipo_pessoa == o.tipo_pessoa
     end
 
     # @see the `==` method
@@ -388,7 +768,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, nome, descricao, produtos_origem, id_estabelecimento, id_tipo_origem_comercial, nome_tipo_origem_comercial, id_grupo_origem_comercial, nome_grupo_origem_comercial, status].hash
+      [id, nome, descricao, produtos_origem, id_estabelecimento, id_tipo_origem_comercial, nome_tipo_origem_comercial, id_grupo_origem_comercial, nome_grupo_origem_comercial, status, flag_pre_aprovado, flag_aprovacao_imediata, nome_fantasia_plastico, flag_cartao_provisorio, flag_cartao_definitivo, usuario, senha, flag_origem_externa, flag_modificado, flag_envia_fatura_usuario, flag_credito_faturamento, flag_concede_limite_provisorio, flag_digitalizar_doc, flag_embossing_loja, flag_consulta_previa, tipo_pessoa].hash
     end
 
     # Builds the object from hash

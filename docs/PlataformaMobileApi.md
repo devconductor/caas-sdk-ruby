@@ -5,8 +5,8 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizar_using_put1**](PlataformaMobileApi.md#atualizar_using_put1) | **PUT** /api/plataformas-mobile/{id} | Atualiza Plataforma Mobile
-[**listar_using_get26**](PlataformaMobileApi.md#listar_using_get26) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
-[**salvar_using_post18**](PlataformaMobileApi.md#salvar_using_post18) | **POST** /api/plataformas-mobile | Cadastra Plataforma Mobile
+[**listar_using_get28**](PlataformaMobileApi.md#listar_using_get28) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
+[**salvar_using_post20**](PlataformaMobileApi.md#salvar_using_post20) | **POST** /api/plataformas-mobile | Cadastra Plataforma Mobile
 
 
 # **atualizar_using_put1**
@@ -59,8 +59,8 @@ No authorization required
 
 
 
-# **listar_using_get26**
-> PagePlataformaMobileResponse listar_using_get26(opts)
+# **listar_using_get28**
+> PagePlataformaMobileResponse listar_using_get28(opts)
 
 Lista as plataformas mobile cadastradas
 
@@ -82,10 +82,10 @@ opts = {
 
 begin
   #Lista as plataformas mobile cadastradas
-  result = api_instance.listar_using_get26(opts)
+  result = api_instance.listar_using_get28(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling PlataformaMobileApi->listar_using_get26: #{e}"
+  puts "Exception when calling PlataformaMobileApi->listar_using_get28: #{e}"
 end
 ```
 
@@ -113,8 +113,8 @@ No authorization required
 
 
 
-# **salvar_using_post18**
-> PlataformaMobileResponse salvar_using_post18(persist)
+# **salvar_using_post20**
+> PlataformaMobileResponse salvar_using_post20(persist)
 
 Cadastra Plataforma Mobile
 
@@ -132,10 +132,10 @@ persist = Pier::PlataformaMobilePersist.new # PlataformaMobilePersist | persist
 
 begin
   #Cadastra Plataforma Mobile
-  result = api_instance.salvar_using_post18(persist)
+  result = api_instance.salvar_using_post20(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling PlataformaMobileApi->salvar_using_post18: #{e}"
+  puts "Exception when calling PlataformaMobileApi->salvar_using_post20: #{e}"
 end
 ```
 

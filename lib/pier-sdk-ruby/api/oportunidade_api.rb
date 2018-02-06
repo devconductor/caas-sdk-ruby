@@ -1059,8 +1059,8 @@ module Pier
     # @option opts [String] :data_fim_vigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
     # @return [PageOportunidadeResponse]
-    def listar_using_get25(opts = {})
-      data, _status_code, _headers = listar_using_get25_with_http_info(opts)
+    def listar_using_get26(opts = {})
+      data, _status_code, _headers = listar_using_get26_with_http_info(opts)
       return data
     end
 
@@ -1078,9 +1078,9 @@ module Pier
     # @option opts [String] :data_fim_vigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
     # @return [Array<(PageOportunidadeResponse, Fixnum, Hash)>] PageOportunidadeResponse data, response status code and response headers
-    def listar_using_get25_with_http_info(opts = {})
+    def listar_using_get26_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadeApi.listar_using_get25 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadeApi.listar_using_get26 ..."
       end
       
       
@@ -1185,7 +1185,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageOportunidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadeApi#listar_using_get25\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadeApi#listar_using_get26\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1199,8 +1199,8 @@ module Pier
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
     # @return [PageTipoOportunidadeResponse]
-    def listar_using_get40(opts = {})
-      data, _status_code, _headers = listar_using_get40_with_http_info(opts)
+    def listar_using_get41(opts = {})
+      data, _status_code, _headers = listar_using_get41_with_http_info(opts)
       return data
     end
 
@@ -1213,9 +1213,9 @@ module Pier
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
     # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
     # @return [Array<(PageTipoOportunidadeResponse, Fixnum, Hash)>] PageTipoOportunidadeResponse data, response status code and response headers
-    def listar_using_get40_with_http_info(opts = {})
+    def listar_using_get41_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OportunidadeApi.listar_using_get40 ..."
+        @api_client.config.logger.debug "Calling API: OportunidadeApi.listar_using_get41 ..."
       end
       
       
@@ -1285,7 +1285,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTipoOportunidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OportunidadeApi#listar_using_get40\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OportunidadeApi#listar_using_get41\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

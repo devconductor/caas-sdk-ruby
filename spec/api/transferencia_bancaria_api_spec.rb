@@ -124,7 +124,7 @@ describe 'TransferenciaBancariaApi' do
     end
   end
 
-  # unit tests for listar_using_get11
+  # unit tests for listar_using_get12
   # Lista contas banc\u00C3\u00A1rias portador
   # Esse recurso permite listar contas banc\u00C3\u00A1rias do portador.
   # @param [Hash] opts the optional parameters
@@ -140,7 +140,7 @@ describe 'TransferenciaBancariaApi' do
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @return [PageContaBancariaPortadorResponse]
-  describe 'listar_using_get11 test' do
+  describe 'listar_using_get12 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -150,7 +150,7 @@ describe 'TransferenciaBancariaApi' do
     end
   end
 
-  # unit tests for listar_using_get44
+  # unit tests for listar_using_get45
   # Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
   # Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
   # @param id Id Conta
@@ -160,7 +160,7 @@ describe 'TransferenciaBancariaApi' do
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @return [PageTransferenciaBancariaResponse]
-  describe 'listar_using_get44 test' do
+  describe 'listar_using_get45 test' do
     it "should work" do
       # assertion here
       # should be_a()

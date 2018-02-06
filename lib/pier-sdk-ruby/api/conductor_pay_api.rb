@@ -633,8 +633,8 @@ module Pier
     # @option opts [String] :status Status do cart\u00C3\u00A3o tokenizado
     # @option opts [String] :numero_cartao Numero do cart\u00C3\u00A3o tokenizado
     # @return [PageCartaoPayResponse]
-    def listar_using_get6(opts = {})
-      data, _status_code, _headers = listar_using_get6_with_http_info(opts)
+    def listar_using_get7(opts = {})
+      data, _status_code, _headers = listar_using_get7_with_http_info(opts)
       return data
     end
 
@@ -648,9 +648,9 @@ module Pier
     # @option opts [String] :status Status do cart\u00C3\u00A3o tokenizado
     # @option opts [String] :numero_cartao Numero do cart\u00C3\u00A3o tokenizado
     # @return [Array<(PageCartaoPayResponse, Fixnum, Hash)>] PageCartaoPayResponse data, response status code and response headers
-    def listar_using_get6_with_http_info(opts = {})
+    def listar_using_get7_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ConductorPayApi.listar_using_get6 ..."
+        @api_client.config.logger.debug "Calling API: ConductorPayApi.listar_using_get7 ..."
       end
       
       
@@ -731,7 +731,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageCartaoPayResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ConductorPayApi#listar_using_get6\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ConductorPayApi#listar_using_get7\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

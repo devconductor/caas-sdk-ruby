@@ -505,14 +505,13 @@ describe 'CadastroGeralApi' do
   end
 
   # unit tests for listar_using_get10
-  # Listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
-  # Este recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
+  # Listar configura\u00C3\u00A7\u00C3\u00B5es para registro de cobran\u00C3\u00A7a
+  # Este m\u00C3\u00A9todo permite listar as configura\u00C3\u00A7\u00C3\u00B5es de registro de cobran\u00C3\u00A7a.
   # @param [Hash] opts the optional parameters
   # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Produto.
-  # @return [PageConfiguracaoRotativoResponse]
+  # @return [ConfiguracaoRegistroCobrancaResponse]
   describe 'listar_using_get10 test' do
     it "should work" do
       # assertion here
@@ -523,7 +522,26 @@ describe 'CadastroGeralApi' do
     end
   end
 
-  # unit tests for listar_using_get29
+  # unit tests for listar_using_get11
+  # Listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
+  # Este recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [Integer] :id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Produto.
+  # @return [PageConfiguracaoRotativoResponse]
+  describe 'listar_using_get11 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+  # unit tests for listar_using_get30
   # Lista os Portadores existentes
   # Este m\u00C3\u00A9todo permite que sejam listados os portadores cadastrados na base do emissor.
   # @param [Hash] opts the optional parameters
@@ -541,49 +559,6 @@ describe 'CadastroGeralApi' do
   # @option opts [String] :data_cadastro_portador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
   # @option opts [String] :data_cancelamento_portador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
   # @return [PagePortadorResponse]
-  describe 'listar_using_get29 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-  # unit tests for listar_using_get3
-  # Lista todos os atendimentos
-  # Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id_tipo_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
-  # @option opts [Integer] :id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
-  # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
-  # @option opts [String] :data_atendimento Apresenta a data em que o Atendimento foi realizado.
-  # @return [PageAtendimentoClienteResponse]
-  describe 'listar_using_get3 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-  # unit tests for listar_using_get30
-  # Lista os Produtos do Emissor
-  # Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [String] :nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
-  # @option opts [Integer] :status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
-  # @option opts [Integer] :id_fantasia_basica C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
-  # @return [PageProdutoResponse]
   describe 'listar_using_get30 test' do
     it "should work" do
       # assertion here
@@ -595,6 +570,27 @@ describe 'CadastroGeralApi' do
   end
 
   # unit tests for listar_using_get31
+  # Lista os Produtos do Emissor
+  # Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [String] :nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
+  # @option opts [Integer] :status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
+  # @option opts [Integer] :id_fantasia_basica C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
+  # @return [PageProdutoResponse]
+  describe 'listar_using_get31 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+  # unit tests for listar_using_get32
   # Lista promotores cadastrados na base do emissor
   # Este m\u00C3\u00A9todo permite que sejam listados os cadastros de Promoteres existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -607,27 +603,7 @@ describe 'CadastroGeralApi' do
   # @option opts [Integer] :id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
   # @option opts [Integer] :id_usuario C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio
   # @return [PagePromotorResponse]
-  describe 'listar_using_get31 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-  # unit tests for listar_using_get39
-  # Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-  # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
-  # @option opts [String] :nome Nome do Tipo do Endere\u00C3\u00A7o
-  # @return [PageTipoEnderecoResponse]
-  describe 'listar_using_get39 test' do
+  describe 'listar_using_get32 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -638,13 +614,17 @@ describe 'CadastroGeralApi' do
   end
 
   # unit tests for listar_using_get4
-  # Lista os Bancos cadastrados para o Emissor
-  # Este m\u00C3\u00A9todo permite que sejam listados os Bancos existentes na base de dados do Emissor.
+  # Lista todos os atendimentos
+  # Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
   # @param [Hash] opts the optional parameters
   # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @return [PageBancoResponse]
+  # @option opts [Integer] :id_tipo_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
+  # @option opts [Integer] :id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+  # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
+  # @option opts [String] :data_atendimento Apresenta a data em que o Atendimento foi realizado.
+  # @return [PageAtendimentoClienteResponse]
   describe 'listar_using_get4 test' do
     it "should work" do
       # assertion here
@@ -655,7 +635,27 @@ describe 'CadastroGeralApi' do
     end
   end
 
-  # unit tests for listar_using_get41
+  # unit tests for listar_using_get40
+  # Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+  # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+  # @option opts [String] :nome Nome do Tipo do Endere\u00C3\u00A7o
+  # @return [PageTipoEnderecoResponse]
+  describe 'listar_using_get40 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+  # unit tests for listar_using_get42
   # Lista os Tipos de Telefones
   # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -665,7 +665,7 @@ describe 'CadastroGeralApi' do
   # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
   # @option opts [String] :nome Nome do Tipo do Telefone
   # @return [PageTipoTelefoneResponse]
-  describe 'listar_using_get41 test' do
+  describe 'listar_using_get42 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -675,7 +675,7 @@ describe 'CadastroGeralApi' do
     end
   end
 
-  # unit tests for listar_using_get47
+  # unit tests for listar_using_get48
   # Listar Vencimentos
   # Este recurso permite que sejam listados os Vencimentos do emissor.
   # @param [Hash] opts the optional parameters
@@ -684,7 +684,7 @@ describe 'CadastroGeralApi' do
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [String] :data_vencimento Indica a data de vencimento das faturas
   # @return [PageControleVencimentoResponse]
-  describe 'listar_using_get47 test' do
+  describe 'listar_using_get48 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -694,15 +694,15 @@ describe 'CadastroGeralApi' do
     end
   end
 
-  # unit tests for listar_using_get9
-  # Listar configura\u00C3\u00A7\u00C3\u00B5es para registro de cobran\u00C3\u00A7a
-  # Este m\u00C3\u00A9todo permite listar as configura\u00C3\u00A7\u00C3\u00B5es de registro de cobran\u00C3\u00A7a.
+  # unit tests for listar_using_get5
+  # Lista os Bancos cadastrados para o Emissor
+  # Este m\u00C3\u00A9todo permite que sejam listados os Bancos existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
   # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @return [ConfiguracaoRegistroCobrancaResponse]
-  describe 'listar_using_get9 test' do
+  # @return [PageBancoResponse]
+  describe 'listar_using_get5 test' do
     it "should work" do
       # assertion here
       # should be_a()

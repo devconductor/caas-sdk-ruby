@@ -20,10 +20,10 @@ Method | HTTP request | Description
 [**inativar_using_post**](CadastroClienteApi.md#inativar_using_post) | **POST** /api/contas/{id}/adicionais/{idPessoa}/inativar | Inativa Adicional de uma Conta
 [**listar_socios_using_get**](CadastroClienteApi.md#listar_socios_using_get) | **GET** /api/clientes-pessoas-juridicas/{id}/socios | Listar s\u00C3\u00B3cios de uma pessoa jur\u00C3\u00ADdica
 [**listar_using_get**](CadastroClienteApi.md#listar_using_get) | **GET** /api/contas/{id}/adicionais | Lista os Adicionais de uma Conta
-[**listar_using_get17**](CadastroClienteApi.md#listar_using_get17) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
-[**listar_using_get26**](CadastroClienteApi.md#listar_using_get26) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
-[**listar_using_get27**](CadastroClienteApi.md#listar_using_get27) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
-[**listar_using_get36**](CadastroClienteApi.md#listar_using_get36) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
+[**listar_using_get18**](CadastroClienteApi.md#listar_using_get18) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
+[**listar_using_get27**](CadastroClienteApi.md#listar_using_get27) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
+[**listar_using_get28**](CadastroClienteApi.md#listar_using_get28) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
+[**listar_using_get37**](CadastroClienteApi.md#listar_using_get37) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
 [**salvar_pessoa_fisica_aprovada_using_post**](CadastroClienteApi.md#salvar_pessoa_fisica_aprovada_using_post) | **POST** /api/clientes-pessoas-fisicas | Cadastro de Conta e Pessoa Fisica
 [**salvar_pessoa_juridica_aprovada_using_post**](CadastroClienteApi.md#salvar_pessoa_juridica_aprovada_using_post) | **POST** /api/clientes-pessoas-juridicas | Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica
 [**salvar_using_post11**](CadastroClienteApi.md#salvar_using_post11) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
@@ -904,8 +904,8 @@ No authorization required
 
 
 
-# **listar_using_get17**
-> PageEnderecoResponse listar_using_get17(opts)
+# **listar_using_get18**
+> PageEnderecoResponse listar_using_get18(opts)
 
 Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
 
@@ -940,10 +940,10 @@ opts = {
 
 begin
   #Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
-  result = api_instance.listar_using_get17(opts)
+  result = api_instance.listar_using_get18(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->listar_using_get17: #{e}"
+  puts "Exception when calling CadastroClienteApi->listar_using_get18: #{e}"
 end
 ```
 
@@ -984,8 +984,8 @@ No authorization required
 
 
 
-# **listar_using_get26**
-> PagePessoaDetalheResponse listar_using_get26(opts)
+# **listar_using_get27**
+> PagePessoaDetalheResponse listar_using_get27(opts)
 
 Lista os Detalhes das Pessoas cadastradas no Emissor
 
@@ -1017,10 +1017,10 @@ opts = {
 
 begin
   #Lista os Detalhes das Pessoas cadastradas no Emissor
-  result = api_instance.listar_using_get26(opts)
+  result = api_instance.listar_using_get27(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->listar_using_get26: #{e}"
+  puts "Exception when calling CadastroClienteApi->listar_using_get27: #{e}"
 end
 ```
 
@@ -1058,8 +1058,8 @@ No authorization required
 
 
 
-# **listar_using_get27**
-> PagePessoaResponse listar_using_get27(opts)
+# **listar_using_get28**
+> PagePessoaResponse listar_using_get28(opts)
 
 Lista as Pessoas cadastradas no Emissor
 
@@ -1091,10 +1091,10 @@ opts = {
 
 begin
   #Lista as Pessoas cadastradas no Emissor
-  result = api_instance.listar_using_get27(opts)
+  result = api_instance.listar_using_get28(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->listar_using_get27: #{e}"
+  puts "Exception when calling CadastroClienteApi->listar_using_get28: #{e}"
 end
 ```
 
@@ -1132,8 +1132,8 @@ No authorization required
 
 
 
-# **listar_using_get36**
-> PageTelefoneResponse listar_using_get36(opts)
+# **listar_using_get37**
+> PageTelefoneResponse listar_using_get37(opts)
 
 Lista os Telefones cadastrados no Emissor
 
@@ -1161,10 +1161,10 @@ opts = {
 
 begin
   #Lista os Telefones cadastrados no Emissor
-  result = api_instance.listar_using_get36(opts)
+  result = api_instance.listar_using_get37(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroClienteApi->listar_using_get36: #{e}"
+  puts "Exception when calling CadastroClienteApi->listar_using_get37: #{e}"
 end
 ```
 

@@ -22,7 +22,7 @@ Method | HTTP request | Description
 [**gerar_nova_via_using_post**](CartaoApi.md#gerar_nova_via_using_post) | **POST** /api/cartoes/{id}/gerar-nova-via | Gerar uma nova via de Cart\u00C3\u00A3o
 [**lancar_tarifa_segunda_via_using_post**](CartaoApi.md#lancar_tarifa_segunda_via_using_post) | **POST** /api/cartoes/{id}/lancar-tarifa-reemissao | Adiciona tarifa de ajuste da segunda via do cart\u00C3\u00A3o
 [**listar_lotes_cartoes_pre_pagos_using_get**](CartaoApi.md#listar_lotes_cartoes_pre_pagos_using_get) | **GET** /api/cartoes/lotes-cartoes-pre-pagos | Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
-[**listar_using_get7**](CartaoApi.md#listar_using_get7) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
+[**listar_using_get8**](CartaoApi.md#listar_using_get8) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 [**reativar_using_post**](CartaoApi.md#reativar_using_post) | **POST** /api/cartoes/{id}/reativar | Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o
 [**validar_dados_impressos_bandeirado_using_get**](CartaoApi.md#validar_dados_impressos_bandeirado_using_get) | **GET** /api/cartoes/validar-dados-impressos-bandeirados | Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
 [**validar_dados_impressos_nao_bandeirado_using_get**](CartaoApi.md#validar_dados_impressos_nao_bandeirado_using_get) | **GET** /api/cartoes/validar-dados-impressos-nao-bandeirados | Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
@@ -939,8 +939,8 @@ No authorization required
 
 
 
-# **listar_using_get7**
-> PageCartaoResponse listar_using_get7(opts)
+# **listar_using_get8**
+> PageCartaoResponse listar_using_get8(opts)
 
 Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 
@@ -979,10 +979,10 @@ opts = {
 
 begin
   #Lista os Cart\u00C3\u00B5es gerados pelo Emissor
-  result = api_instance.listar_using_get7(opts)
+  result = api_instance.listar_using_get8(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CartaoApi->listar_using_get7: #{e}"
+  puts "Exception when calling CartaoApi->listar_using_get8: #{e}"
 end
 ```
 

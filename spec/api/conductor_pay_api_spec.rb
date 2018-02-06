@@ -181,7 +181,7 @@ describe 'ConductorPayApi' do
     end
   end
 
-  # unit tests for listar_using_get6
+  # unit tests for listar_using_get7
   # Lista os cart\u00C3\u00B5es cadastrados
   # Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
   # @param [Hash] opts the optional parameters
@@ -192,7 +192,7 @@ describe 'ConductorPayApi' do
   # @option opts [String] :status Status do cart\u00C3\u00A3o tokenizado
   # @option opts [String] :numero_cartao Numero do cart\u00C3\u00A3o tokenizado
   # @return [PageCartaoPayResponse]
-  describe 'listar_using_get6 test' do
+  describe 'listar_using_get7 test' do
     it "should work" do
       # assertion here
       # should be_a()

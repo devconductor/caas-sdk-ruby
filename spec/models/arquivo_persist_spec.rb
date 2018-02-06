@@ -76,6 +76,16 @@ describe 'ArquivoPersist' do
     end
   end
 
+  describe 'test attribute "tipo_comunicacao"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
   describe 'test attribute "detalhes"' do
     it 'should work' do
        # assertion here

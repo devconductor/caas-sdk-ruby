@@ -22,16 +22,13 @@ module Pier
     # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
     attr_accessor :id
 
-    # Tipo do arquivo
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do arquivo
     attr_accessor :id_tipo_arquivo
 
     # Descri\u00C3\u00A7\u00C3\u00A3o do tipo do arquivo
     attr_accessor :nome_tipo_arquivo
 
-    # Conte\u00C3\u00BAdo do arquivo convertido em Base 64
-    attr_accessor :arquivo
-
-    # C\u00C3\u00B3digo de status do arquivo
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Status do arquivo
     attr_accessor :id_status_arquivo
 
     # Desci\u00C3\u00A7\u00C3\u00A3o do status do arquivo
@@ -40,7 +37,7 @@ module Pier
     # Nome do arquivo
     attr_accessor :nome
 
-    # Formato/extens\u00C3\u00A3o do arquivo
+    # Formato/Extens\u00C3\u00A3o do arquivo
     attr_accessor :extensao
 
     # Data de inclus\u00C3\u00A3o do arquivo.
@@ -61,8 +58,6 @@ module Pier
         :'id_tipo_arquivo' => :'idTipoArquivo',
         
         :'nome_tipo_arquivo' => :'nomeTipoArquivo',
-        
-        :'arquivo' => :'arquivo',
         
         :'id_status_arquivo' => :'idStatusArquivo',
         
@@ -90,8 +85,6 @@ module Pier
         :'id_tipo_arquivo' => :'Integer',
         
         :'nome_tipo_arquivo' => :'String',
-        
-        :'arquivo' => :'String',
         
         :'id_status_arquivo' => :'Integer',
         
@@ -141,15 +134,6 @@ module Pier
         
         
         self.nome_tipo_arquivo = attributes[:'nomeTipoArquivo']
-        
-      
-      end
-
-      
-      if attributes[:'arquivo']
-        
-        
-        self.arquivo = attributes[:'arquivo']
         
       
       end
@@ -275,17 +259,8 @@ module Pier
       
       
       
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -345,7 +320,6 @@ module Pier
           id == o.id &&
           id_tipo_arquivo == o.id_tipo_arquivo &&
           nome_tipo_arquivo == o.nome_tipo_arquivo &&
-          arquivo == o.arquivo &&
           id_status_arquivo == o.id_status_arquivo &&
           nome_status_arquivo == o.nome_status_arquivo &&
           nome == o.nome &&
@@ -364,7 +338,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_tipo_arquivo, nome_tipo_arquivo, arquivo, id_status_arquivo, nome_status_arquivo, nome, extensao, data_inclusao, data_alteracao, detalhes].hash
+      [id, id_tipo_arquivo, nome_tipo_arquivo, id_status_arquivo, nome_status_arquivo, nome, extensao, data_inclusao, data_alteracao, detalhes].hash
     end
 
     # Builds the object from hash

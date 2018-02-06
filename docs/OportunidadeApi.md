@@ -14,8 +14,8 @@ Method | HTTP request | Description
 [**listar_auditorias_using_get**](OportunidadeApi.md#listar_auditorias_using_get) | **GET** /api/auditorias-oportunidades | Lista as auditorias das oportunidades
 [**listar_auditorias_using_get1**](OportunidadeApi.md#listar_auditorias_using_get1) | **GET** /api/auditorias-tipos-oportunidades | Lista as auditorias dos tipos oportunidades
 [**listar_status_using_get**](OportunidadeApi.md#listar_status_using_get) | **GET** /api/tipos-oportunidades/{id}/status | Lista os status do tipo oportunidades
-[**listar_using_get25**](OportunidadeApi.md#listar_using_get25) | **GET** /api/oportunidades | Lista as oportunidades
-[**listar_using_get40**](OportunidadeApi.md#listar_using_get40) | **GET** /api/tipos-oportunidades | Lista os tipos oportunidades
+[**listar_using_get26**](OportunidadeApi.md#listar_using_get26) | **GET** /api/oportunidades | Lista as oportunidades
+[**listar_using_get41**](OportunidadeApi.md#listar_using_get41) | **GET** /api/tipos-oportunidades | Lista os tipos oportunidades
 [**salvar_status_using_post**](OportunidadeApi.md#salvar_status_using_post) | **POST** /api/tipos-oportunidades/{id}/status | Cadastra status para o tipo oportunidade
 [**salvar_using_post17**](OportunidadeApi.md#salvar_using_post17) | **POST** /api/oportunidades | Cadastra as oportunidades
 [**salvar_using_post24**](OportunidadeApi.md#salvar_using_post24) | **POST** /api/tipos-oportunidades | Cadastra tipos oportunidades
@@ -583,8 +583,8 @@ No authorization required
 
 
 
-# **listar_using_get25**
-> PageOportunidadeResponse listar_using_get25(opts)
+# **listar_using_get26**
+> PageOportunidadeResponse listar_using_get26(opts)
 
 Lista as oportunidades
 
@@ -612,10 +612,10 @@ opts = {
 
 begin
   #Lista as oportunidades
-  result = api_instance.listar_using_get25(opts)
+  result = api_instance.listar_using_get26(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling OportunidadeApi->listar_using_get25: #{e}"
+  puts "Exception when calling OportunidadeApi->listar_using_get26: #{e}"
 end
 ```
 
@@ -649,8 +649,8 @@ No authorization required
 
 
 
-# **listar_using_get40**
-> PageTipoOportunidadeResponse listar_using_get40(opts)
+# **listar_using_get41**
+> PageTipoOportunidadeResponse listar_using_get41(opts)
 
 Lista os tipos oportunidades
 
@@ -673,10 +673,10 @@ opts = {
 
 begin
   #Lista os tipos oportunidades
-  result = api_instance.listar_using_get40(opts)
+  result = api_instance.listar_using_get41(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling OportunidadeApi->listar_using_get40: #{e}"
+  puts "Exception when calling OportunidadeApi->listar_using_get41: #{e}"
 end
 ```
 

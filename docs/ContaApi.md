@@ -29,8 +29,8 @@ Method | HTTP request | Description
 [**listar_historico_atrasos_faturas_using_get**](ContaApi.md#listar_historico_atrasos_faturas_using_get) | **GET** /api/contas/{id}/historicos-faturas-atrasos | Lista o historico de atrasos das faturas
 [**listar_nao_processadas_using_get**](ContaApi.md#listar_nao_processadas_using_get) | **GET** /api/contas/{id}/transacoes/listar-nao-processadas | Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
 [**listar_processadas_using_get**](ContaApi.md#listar_processadas_using_get) | **GET** /api/contas/{id}/transacoes/listar-processadas | Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
-[**listar_using_get13**](ContaApi.md#listar_using_get13) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
-[**listar_using_get45**](ContaApi.md#listar_using_get45) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
+[**listar_using_get14**](ContaApi.md#listar_using_get14) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
+[**listar_using_get46**](ContaApi.md#listar_using_get46) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
 [**reativar_using_post1**](ContaApi.md#reativar_using_post1) | **POST** /api/contas/{id}/reativar | Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
 [**simular_emprestimo_financiamento_using_post**](ContaApi.md#simular_emprestimo_financiamento_using_post) | **POST** /api/contas/{id}/simular-emprestimos-financiamentos | Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
 [**transacoes_using_get**](ContaApi.md#transacoes_using_get) | **GET** /api/contas/{id}/timeline | Permite listar uma linha do tempo com os eventos da conta
@@ -1351,8 +1351,8 @@ No authorization required
 
 
 
-# **listar_using_get13**
-> PageContaResponse listar_using_get13(opts)
+# **listar_using_get14**
+> PageContaResponse listar_using_get14(opts)
 
 Lista contas existentes na base de dados do Emissor
 
@@ -1382,10 +1382,10 @@ opts = {
 
 begin
   #Lista contas existentes na base de dados do Emissor
-  result = api_instance.listar_using_get13(opts)
+  result = api_instance.listar_using_get14(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->listar_using_get13: #{e}"
+  puts "Exception when calling ContaApi->listar_using_get14: #{e}"
 end
 ```
 
@@ -1421,8 +1421,8 @@ No authorization required
 
 
 
-# **listar_using_get45**
-> PageTransferenciaResponse listar_using_get45(id, opts)
+# **listar_using_get46**
+> PageTransferenciaResponse listar_using_get46(id, opts)
 
 Lista as transfer\u00C3\u00AAncias realizadas pela conta
 
@@ -1450,10 +1450,10 @@ opts = {
 
 begin
   #Lista as transfer\u00C3\u00AAncias realizadas pela conta
-  result = api_instance.listar_using_get45(id, opts)
+  result = api_instance.listar_using_get46(id, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->listar_using_get45: #{e}"
+  puts "Exception when calling ContaApi->listar_using_get46: #{e}"
 end
 ```
 

@@ -17,41 +17,16 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto Arquivo para persist\u00C3\u00AAncia de dados.
-  class ArquivoPersist
-    # Tipo do arquivo
-    attr_accessor :id_tipo_arquivo
-
-    # Conte\u00C3\u00BAdo do arquivo convertido em Base 64
-    attr_accessor :arquivo
-
-    # Nome do arquivo.
-    attr_accessor :nome
-
-    # Formato/extens\u00C3\u00A3o do arquivo.
-    attr_accessor :extensao
-
-    # Tipo de comunica\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :tipo_comunicacao
-
-    # Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo
-    attr_accessor :detalhes
+  # Objeto de requisi\u00C3\u00A7\u00C3\u00A3o da integra\u00C3\u00A7\u00C3\u00A3o de Arquivos.
+  class IntegrarArquivoRequest
+    # CPF do cliente de Arquivos a serem integrados
+    attr_accessor :cpf
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id_tipo_arquivo' => :'idTipoArquivo',
-        
-        :'arquivo' => :'arquivo',
-        
-        :'nome' => :'nome',
-        
-        :'extensao' => :'extensao',
-        
-        :'tipo_comunicacao' => :'tipoComunicacao',
-        
-        :'detalhes' => :'detalhes'
+        :'cpf' => :'cpf'
         
       }
     end
@@ -60,17 +35,7 @@ module Pier
     def self.swagger_types
       {
         
-        :'id_tipo_arquivo' => :'Integer',
-        
-        :'arquivo' => :'String',
-        
-        :'nome' => :'String',
-        
-        :'extensao' => :'String',
-        
-        :'tipo_comunicacao' => :'String',
-        
-        :'detalhes' => :'Array<ArquivoDetalhesPersist>'
+        :'cpf' => :'String'
         
       }
     end
@@ -84,57 +49,10 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'idTipoArquivo']
+      if attributes[:'cpf']
         
         
-        self.id_tipo_arquivo = attributes[:'idTipoArquivo']
-        
-      
-      end
-
-      
-      if attributes[:'arquivo']
-        
-        
-        self.arquivo = attributes[:'arquivo']
-        
-      
-      end
-
-      
-      if attributes[:'nome']
-        
-        
-        self.nome = attributes[:'nome']
-        
-      
-      end
-
-      
-      if attributes[:'extensao']
-        
-        
-        self.extensao = attributes[:'extensao']
-        
-      
-      end
-
-      
-      if attributes[:'tipoComunicacao']
-        
-        
-        self.tipo_comunicacao = attributes[:'tipoComunicacao']
-        
-      
-      end
-
-      
-      if attributes[:'detalhes']
-        
-        if (value = attributes[:'detalhes']).is_a?(Array)
-          self.detalhes = value
-        end
-        
+        self.cpf = attributes[:'cpf']
         
       
       end
@@ -159,77 +77,8 @@ module Pier
       
       
       
-      
-      if @arquivo.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      allowed_values = ["SOAP", "REST"]
-      if @tipo_comunicacao && !allowed_values.include?(@tipo_comunicacao)
-        return false
-      end
-      
-      
-      
-      
-      if @detalhes.nil?
-        return false
-      end
-
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] tipo_comunicacao Object to be assigned
-    def tipo_comunicacao=(tipo_comunicacao)
-      allowed_values = ["SOAP", "REST"]
-      if tipo_comunicacao && !allowed_values.include?(tipo_comunicacao)
-        fail ArgumentError, "invalid value for 'tipo_comunicacao', must be one of #{allowed_values}."
-      end
-      @tipo_comunicacao = tipo_comunicacao
-    end
-
-    
-    
     
     
     
@@ -241,12 +90,7 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id_tipo_arquivo == o.id_tipo_arquivo &&
-          arquivo == o.arquivo &&
-          nome == o.nome &&
-          extensao == o.extensao &&
-          tipo_comunicacao == o.tipo_comunicacao &&
-          detalhes == o.detalhes
+          cpf == o.cpf
     end
 
     # @see the `==` method
@@ -258,7 +102,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_tipo_arquivo, arquivo, nome, extensao, tipo_comunicacao, detalhes].hash
+      [cpf].hash
     end
 
     # Builds the object from hash

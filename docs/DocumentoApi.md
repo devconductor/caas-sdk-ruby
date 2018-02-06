@@ -9,10 +9,10 @@ Method | HTTP request | Description
 [**consultar_using_get12**](DocumentoApi.md#consultar_using_get12) | **GET** /api/documentos/{id} | Consulta documentos
 [**consultar_using_get13**](DocumentoApi.md#consultar_using_get13) | **GET** /api/templates-documentos/{id} | Consultar templates dos documentos
 [**consultar_using_get37**](DocumentoApi.md#consultar_using_get37) | **GET** /api/tipos-templates/{id} | Consultar tipo de template
-[**integrar_using_post**](DocumentoApi.md#integrar_using_post) | **POST** /api/documentos/integrar | Integra um arquivo a reposit\u00C3\u00B3rios remotos.
-[**listar_using_get15**](DocumentoApi.md#listar_using_get15) | **GET** /api/documentos | Lista documentos
-[**listar_using_get16**](DocumentoApi.md#listar_using_get16) | **GET** /api/templates-documentos | Lista os templates dos documentos
-[**listar_using_get42**](DocumentoApi.md#listar_using_get42) | **GET** /api/tipos-templates | Lista os tipos de templates
+[**integrar_using_post1**](DocumentoApi.md#integrar_using_post1) | **POST** /api/documentos/integrar | Integra um arquivo a reposit\u00C3\u00B3rios remotos.
+[**listar_using_get16**](DocumentoApi.md#listar_using_get16) | **GET** /api/documentos | Lista documentos
+[**listar_using_get17**](DocumentoApi.md#listar_using_get17) | **GET** /api/templates-documentos | Lista os templates dos documentos
+[**listar_using_get43**](DocumentoApi.md#listar_using_get43) | **GET** /api/tipos-templates | Lista os tipos de templates
 [**salvar_using_post10**](DocumentoApi.md#salvar_using_post10) | **POST** /api/templates-documentos | Cadastra os templates dos documentos
 [**salvar_using_post25**](DocumentoApi.md#salvar_using_post25) | **POST** /api/tipos-templates | Cadastra os tipos de templates
 [**salvar_using_post9**](DocumentoApi.md#salvar_using_post9) | **POST** /api/documentos | Cadastra documentos
@@ -259,8 +259,8 @@ No authorization required
 
 
 
-# **integrar_using_post**
-> DocumentoIntegracaoResponse integrar_using_post(integrar_documento_request)
+# **integrar_using_post1**
+> DocumentoIntegracaoResponse integrar_using_post1(integrar_documento_request)
 
 Integra um arquivo a reposit\u00C3\u00B3rios remotos.
 
@@ -278,10 +278,10 @@ integrar_documento_request = Pier::IntegrarDocumentoRequest.new # IntegrarDocume
 
 begin
   #Integra um arquivo a reposit\u00C3\u00B3rios remotos.
-  result = api_instance.integrar_using_post(integrar_documento_request)
+  result = api_instance.integrar_using_post1(integrar_documento_request)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DocumentoApi->integrar_using_post: #{e}"
+  puts "Exception when calling DocumentoApi->integrar_using_post1: #{e}"
 end
 ```
 
@@ -306,8 +306,8 @@ No authorization required
 
 
 
-# **listar_using_get15**
-> PageDocumentoResponse listar_using_get15(opts)
+# **listar_using_get16**
+> PageDocumentoResponse listar_using_get16(opts)
 
 Lista documentos
 
@@ -331,10 +331,10 @@ opts = {
 
 begin
   #Lista documentos
-  result = api_instance.listar_using_get15(opts)
+  result = api_instance.listar_using_get16(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DocumentoApi->listar_using_get15: #{e}"
+  puts "Exception when calling DocumentoApi->listar_using_get16: #{e}"
 end
 ```
 
@@ -364,8 +364,8 @@ No authorization required
 
 
 
-# **listar_using_get16**
-> PageDocumentoTemplateResponse listar_using_get16(opts)
+# **listar_using_get17**
+> PageDocumentoTemplateResponse listar_using_get17(opts)
 
 Lista os templates dos documentos
 
@@ -387,10 +387,10 @@ opts = {
 
 begin
   #Lista os templates dos documentos
-  result = api_instance.listar_using_get16(opts)
+  result = api_instance.listar_using_get17(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DocumentoApi->listar_using_get16: #{e}"
+  puts "Exception when calling DocumentoApi->listar_using_get17: #{e}"
 end
 ```
 
@@ -418,8 +418,8 @@ No authorization required
 
 
 
-# **listar_using_get42**
-> PageTipoTemplateResponse listar_using_get42(opts)
+# **listar_using_get43**
+> PageTipoTemplateResponse listar_using_get43(opts)
 
 Lista os tipos de templates
 
@@ -440,10 +440,10 @@ opts = {
 
 begin
   #Lista os tipos de templates
-  result = api_instance.listar_using_get42(opts)
+  result = api_instance.listar_using_get43(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DocumentoApi->listar_using_get42: #{e}"
+  puts "Exception when calling DocumentoApi->listar_using_get43: #{e}"
 end
 ```
 

@@ -2401,8 +2401,8 @@ module Pier
     # @option opts [String] :uf2 Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
     # @option opts [Integer] :flag_matriz Indica se \u00C3\u00A9 matriz ou filial.
     # @return [PageEstabelecimentoResponse]
-    def listar_using_get18(opts = {})
-      data, _status_code, _headers = listar_using_get18_with_http_info(opts)
+    def listar_using_get19(opts = {})
+      data, _status_code, _headers = listar_using_get19_with_http_info(opts)
       return data
     end
 
@@ -2447,9 +2447,9 @@ module Pier
     # @option opts [String] :uf2 Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
     # @option opts [Integer] :flag_matriz Indica se \u00C3\u00A9 matriz ou filial.
     # @return [Array<(PageEstabelecimentoResponse, Fixnum, Hash)>] PageEstabelecimentoResponse data, response status code and response headers
-    def listar_using_get18_with_http_info(opts = {})
+    def listar_using_get19_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get18 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get19 ..."
       end
       
       
@@ -2747,7 +2747,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageEstabelecimentoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get18\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get19\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2784,8 +2784,8 @@ module Pier
     # @option opts [Float] :limite_rav Valor limite do RAV
     # @option opts [Integer] :id_credor_rav C\u00C3\u00B3digo identificador do credor RAV
     # @return [PageGrupoEconomicoResponse]
-    def listar_using_get20(opts = {})
-      data, _status_code, _headers = listar_using_get20_with_http_info(opts)
+    def listar_using_get21(opts = {})
+      data, _status_code, _headers = listar_using_get21_with_http_info(opts)
       return data
     end
 
@@ -2821,9 +2821,9 @@ module Pier
     # @option opts [Float] :limite_rav Valor limite do RAV
     # @option opts [Integer] :id_credor_rav C\u00C3\u00B3digo identificador do credor RAV
     # @return [Array<(PageGrupoEconomicoResponse, Fixnum, Hash)>] PageGrupoEconomicoResponse data, response status code and response headers
-    def listar_using_get20_with_http_info(opts = {})
+    def listar_using_get21_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get20 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get21 ..."
       end
       
       
@@ -3066,7 +3066,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageGrupoEconomicoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get20\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get21\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3079,8 +3079,8 @@ module Pier
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
     # @return [PageMaquinetaResponse]
-    def listar_using_get22(opts = {})
-      data, _status_code, _headers = listar_using_get22_with_http_info(opts)
+    def listar_using_get23(opts = {})
+      data, _status_code, _headers = listar_using_get23_with_http_info(opts)
       return data
     end
 
@@ -3092,9 +3092,9 @@ module Pier
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
     # @return [Array<(PageMaquinetaResponse, Fixnum, Hash)>] PageMaquinetaResponse data, response status code and response headers
-    def listar_using_get22_with_http_info(opts = {})
+    def listar_using_get23_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get22 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get23 ..."
       end
       
       
@@ -3157,7 +3157,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageMaquinetaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get22\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get23\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3172,8 +3172,8 @@ module Pier
     # @option opts [String] :simbolo S\u00C3\u00ADmbolo da Moeda.
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda.
     # @return [PageMoedaResponse]
-    def listar_using_get23(opts = {})
-      data, _status_code, _headers = listar_using_get23_with_http_info(opts)
+    def listar_using_get24(opts = {})
+      data, _status_code, _headers = listar_using_get24_with_http_info(opts)
       return data
     end
 
@@ -3187,9 +3187,9 @@ module Pier
     # @option opts [String] :simbolo S\u00C3\u00ADmbolo da Moeda.
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda.
     # @return [Array<(PageMoedaResponse, Fixnum, Hash)>] PageMoedaResponse data, response status code and response headers
-    def listar_using_get23_with_http_info(opts = {})
+    def listar_using_get24_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get23 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get24 ..."
       end
       
       
@@ -3266,7 +3266,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageMoedaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get23\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get24\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3281,8 +3281,8 @@ module Pier
     # @option opts [Integer] :id_credor Apresenta o id do Credor.
     # @option opts [Integer] :id_produto Apresenta o id do produto que vai ser alterado.
     # @return [PageOperacaoCredorResponse]
-    def listar_using_get24(opts = {})
-      data, _status_code, _headers = listar_using_get24_with_http_info(opts)
+    def listar_using_get25(opts = {})
+      data, _status_code, _headers = listar_using_get25_with_http_info(opts)
       return data
     end
 
@@ -3296,9 +3296,9 @@ module Pier
     # @option opts [Integer] :id_credor Apresenta o id do Credor.
     # @option opts [Integer] :id_produto Apresenta o id do produto que vai ser alterado.
     # @return [Array<(PageOperacaoCredorResponse, Fixnum, Hash)>] PageOperacaoCredorResponse data, response status code and response headers
-    def listar_using_get24_with_http_info(opts = {})
+    def listar_using_get25_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get24 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get25 ..."
       end
       
       
@@ -3375,7 +3375,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageOperacaoCredorResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get24\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get25\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3388,8 +3388,8 @@ module Pier
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
     # @return [PageTelefoneEstabelecimentoResponse]
-    def listar_using_get35(opts = {})
-      data, _status_code, _headers = listar_using_get35_with_http_info(opts)
+    def listar_using_get36(opts = {})
+      data, _status_code, _headers = listar_using_get36_with_http_info(opts)
       return data
     end
 
@@ -3401,9 +3401,9 @@ module Pier
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
     # @return [Array<(PageTelefoneEstabelecimentoResponse, Fixnum, Hash)>] PageTelefoneEstabelecimentoResponse data, response status code and response headers
-    def listar_using_get35_with_http_info(opts = {})
+    def listar_using_get36_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get35 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get36 ..."
       end
       
       
@@ -3466,7 +3466,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTelefoneEstabelecimentoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get35\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get36\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3482,8 +3482,8 @@ module Pier
     # @option opts [Integer] :numero_estabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
     # @option opts [Integer] :id_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
     # @return [PageTerminalResponse]
-    def listar_using_get37(opts = {})
-      data, _status_code, _headers = listar_using_get37_with_http_info(opts)
+    def listar_using_get38(opts = {})
+      data, _status_code, _headers = listar_using_get38_with_http_info(opts)
       return data
     end
 
@@ -3498,9 +3498,9 @@ module Pier
     # @option opts [Integer] :numero_estabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
     # @option opts [Integer] :id_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
     # @return [Array<(PageTerminalResponse, Fixnum, Hash)>] PageTerminalResponse data, response status code and response headers
-    def listar_using_get37_with_http_info(opts = {})
+    def listar_using_get38_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get37 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get38 ..."
       end
       
       
@@ -3584,7 +3584,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTerminalResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get37\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get38\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3599,8 +3599,8 @@ module Pier
     # @option opts [Integer] :id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento.
     # @option opts [String] :codigo_estabelecimento_adquirente C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.
     # @return [PageVinculoEstabelecimentoAdquirenteResponse]
-    def listar_using_get48(opts = {})
-      data, _status_code, _headers = listar_using_get48_with_http_info(opts)
+    def listar_using_get49(opts = {})
+      data, _status_code, _headers = listar_using_get49_with_http_info(opts)
       return data
     end
 
@@ -3614,9 +3614,9 @@ module Pier
     # @option opts [Integer] :id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento.
     # @option opts [String] :codigo_estabelecimento_adquirente C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.
     # @return [Array<(PageVinculoEstabelecimentoAdquirenteResponse, Fixnum, Hash)>] PageVinculoEstabelecimentoAdquirenteResponse data, response status code and response headers
-    def listar_using_get48_with_http_info(opts = {})
+    def listar_using_get49_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get48 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get49 ..."
       end
       
       
@@ -3693,7 +3693,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageVinculoEstabelecimentoAdquirenteResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get48\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get49\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3709,8 +3709,8 @@ module Pier
     # @option opts [Integer] :id_operacao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id).
     # @option opts [Integer] :codigo_mcc C\u00C3\u00B3digo MCC.
     # @return [PageVinculoOperacaoResponse]
-    def listar_using_get49(id, opts = {})
-      data, _status_code, _headers = listar_using_get49_with_http_info(id, opts)
+    def listar_using_get50(id, opts = {})
+      data, _status_code, _headers = listar_using_get50_with_http_info(id, opts)
       return data
     end
 
@@ -3725,14 +3725,14 @@ module Pier
     # @option opts [Integer] :id_operacao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id).
     # @option opts [Integer] :codigo_mcc C\u00C3\u00B3digo MCC.
     # @return [Array<(PageVinculoOperacaoResponse, Fixnum, Hash)>] PageVinculoOperacaoResponse data, response status code and response headers
-    def listar_using_get49_with_http_info(id, opts = {})
+    def listar_using_get50_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get49 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get50 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.listar_using_get49" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.listar_using_get50" if id.nil?
       
       
       
@@ -3812,7 +3812,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageVinculoOperacaoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get49\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get50\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

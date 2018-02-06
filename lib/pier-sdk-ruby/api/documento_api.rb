@@ -374,8 +374,8 @@ module Pier
     # @param integrar_documento_request integrarDocumentoRequest
     # @param [Hash] opts the optional parameters
     # @return [DocumentoIntegracaoResponse]
-    def integrar_using_post(integrar_documento_request, opts = {})
-      data, _status_code, _headers = integrar_using_post_with_http_info(integrar_documento_request, opts)
+    def integrar_using_post1(integrar_documento_request, opts = {})
+      data, _status_code, _headers = integrar_using_post1_with_http_info(integrar_documento_request, opts)
       return data
     end
 
@@ -384,14 +384,14 @@ module Pier
     # @param integrar_documento_request integrarDocumentoRequest
     # @param [Hash] opts the optional parameters
     # @return [Array<(DocumentoIntegracaoResponse, Fixnum, Hash)>] DocumentoIntegracaoResponse data, response status code and response headers
-    def integrar_using_post_with_http_info(integrar_documento_request, opts = {})
+    def integrar_using_post1_with_http_info(integrar_documento_request, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DocumentoApi.integrar_using_post ..."
+        @api_client.config.logger.debug "Calling API: DocumentoApi.integrar_using_post1 ..."
       end
       
       
       # verify the required parameter 'integrar_documento_request' is set
-      fail ArgumentError, "Missing the required parameter 'integrar_documento_request' when calling DocumentoApi.integrar_using_post" if integrar_documento_request.nil?
+      fail ArgumentError, "Missing the required parameter 'integrar_documento_request' when calling DocumentoApi.integrar_using_post1" if integrar_documento_request.nil?
       
       
       
@@ -429,7 +429,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'DocumentoIntegracaoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DocumentoApi#integrar_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DocumentoApi#integrar_using_post1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -444,8 +444,8 @@ module Pier
     # @option opts [String] :nome Nome do documento.
     # @option opts [String] :extensao Extensao do documento.
     # @return [PageDocumentoResponse]
-    def listar_using_get15(opts = {})
-      data, _status_code, _headers = listar_using_get15_with_http_info(opts)
+    def listar_using_get16(opts = {})
+      data, _status_code, _headers = listar_using_get16_with_http_info(opts)
       return data
     end
 
@@ -459,9 +459,9 @@ module Pier
     # @option opts [String] :nome Nome do documento.
     # @option opts [String] :extensao Extensao do documento.
     # @return [Array<(PageDocumentoResponse, Fixnum, Hash)>] PageDocumentoResponse data, response status code and response headers
-    def listar_using_get15_with_http_info(opts = {})
+    def listar_using_get16_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DocumentoApi.listar_using_get15 ..."
+        @api_client.config.logger.debug "Calling API: DocumentoApi.listar_using_get16 ..."
       end
       
       
@@ -542,7 +542,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageDocumentoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DocumentoApi#listar_using_get15\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DocumentoApi#listar_using_get16\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -555,8 +555,8 @@ module Pier
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_tipo_template C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template.
     # @return [PageDocumentoTemplateResponse]
-    def listar_using_get16(opts = {})
-      data, _status_code, _headers = listar_using_get16_with_http_info(opts)
+    def listar_using_get17(opts = {})
+      data, _status_code, _headers = listar_using_get17_with_http_info(opts)
       return data
     end
 
@@ -568,9 +568,9 @@ module Pier
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_tipo_template C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template.
     # @return [Array<(PageDocumentoTemplateResponse, Fixnum, Hash)>] PageDocumentoTemplateResponse data, response status code and response headers
-    def listar_using_get16_with_http_info(opts = {})
+    def listar_using_get17_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DocumentoApi.listar_using_get16 ..."
+        @api_client.config.logger.debug "Calling API: DocumentoApi.listar_using_get17 ..."
       end
       
       
@@ -633,7 +633,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageDocumentoTemplateResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DocumentoApi#listar_using_get16\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DocumentoApi#listar_using_get17\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -645,8 +645,8 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [PageTipoTemplateResponse]
-    def listar_using_get42(opts = {})
-      data, _status_code, _headers = listar_using_get42_with_http_info(opts)
+    def listar_using_get43(opts = {})
+      data, _status_code, _headers = listar_using_get43_with_http_info(opts)
       return data
     end
 
@@ -657,9 +657,9 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [Array<(PageTipoTemplateResponse, Fixnum, Hash)>] PageTipoTemplateResponse data, response status code and response headers
-    def listar_using_get42_with_http_info(opts = {})
+    def listar_using_get43_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DocumentoApi.listar_using_get42 ..."
+        @api_client.config.logger.debug "Calling API: DocumentoApi.listar_using_get43 ..."
       end
       
       
@@ -715,7 +715,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTipoTemplateResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DocumentoApi#listar_using_get42\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DocumentoApi#listar_using_get43\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

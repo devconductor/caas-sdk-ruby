@@ -347,8 +347,8 @@ module Pier
     # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
     # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
     # @return [PageFaqResponse]
-    def listar_using_get19(opts = {})
-      data, _status_code, _headers = listar_using_get19_with_http_info(opts)
+    def listar_using_get20(opts = {})
+      data, _status_code, _headers = listar_using_get20_with_http_info(opts)
       return data
     end
 
@@ -366,9 +366,9 @@ module Pier
     # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
     # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
     # @return [Array<(PageFaqResponse, Fixnum, Hash)>] PageFaqResponse data, response status code and response headers
-    def listar_using_get19_with_http_info(opts = {})
+    def listar_using_get20_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: FAQApi.listar_using_get19 ..."
+        @api_client.config.logger.debug "Calling API: FAQApi.listar_using_get20 ..."
       end
       
       
@@ -477,7 +477,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageFaqResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: FAQApi#listar_using_get19\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: FAQApi#listar_using_get20\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

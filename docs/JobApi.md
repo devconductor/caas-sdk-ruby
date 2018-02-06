@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**ativar_job_using_post**](JobApi.md#ativar_job_using_post) | **POST** /api/jobs/{id}/ativar-job | Ativar Job
 [**atualizar_using_put3**](JobApi.md#atualizar_using_put3) | **PUT** /api/jobs/{id} | Atualizar Job
 [**desativar_job_using_post**](JobApi.md#desativar_job_using_post) | **POST** /api/jobs/{id}/desativar-job | Desativar Job
-[**listar_using_get21**](JobApi.md#listar_using_get21) | **GET** /api/jobs | Listar Jobs
+[**listar_using_get22**](JobApi.md#listar_using_get22) | **GET** /api/jobs | Listar Jobs
 [**salvar_using_post14**](JobApi.md#salvar_using_post14) | **POST** /api/jobs | Cadastrar Job
 
 
@@ -161,8 +161,8 @@ No authorization required
 
 
 
-# **listar_using_get21**
-> PageJobResponse listar_using_get21(opts)
+# **listar_using_get22**
+> PageJobResponse listar_using_get22(opts)
 
 Listar Jobs
 
@@ -186,10 +186,10 @@ opts = {
 
 begin
   #Listar Jobs
-  result = api_instance.listar_using_get21(opts)
+  result = api_instance.listar_using_get22(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling JobApi->listar_using_get21: #{e}"
+  puts "Exception when calling JobApi->listar_using_get22: #{e}"
 end
 ```
 

@@ -17,41 +17,67 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto Arquivo para persist\u00C3\u00AAncia de dados.
-  class ArquivoPersist
-    # Tipo do arquivo
-    attr_accessor :id_tipo_arquivo
+  # Lista arquivos armazenados na contig\u00C3\u00AAncia
+  class PageArquivoResponse
+    attr_accessor :content
 
-    # Conte\u00C3\u00BAdo do arquivo convertido em Base 64
-    attr_accessor :arquivo
+    attr_accessor :first
 
-    # Nome do arquivo.
-    attr_accessor :nome
+    attr_accessor :first_page
 
-    # Formato/extens\u00C3\u00A3o do arquivo.
-    attr_accessor :extensao
+    attr_accessor :has_content
 
-    # Tipo de comunica\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :tipo_comunicacao
+    attr_accessor :has_next_page
 
-    # Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo
-    attr_accessor :detalhes
+    attr_accessor :has_previous_page
+
+    attr_accessor :last
+
+    attr_accessor :next_page
+
+    attr_accessor :number
+
+    attr_accessor :number_of_elements
+
+    attr_accessor :previous_page
+
+    attr_accessor :size
+
+    attr_accessor :total_elements
+
+    attr_accessor :total_pages
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id_tipo_arquivo' => :'idTipoArquivo',
+        :'content' => :'content',
         
-        :'arquivo' => :'arquivo',
+        :'first' => :'first',
         
-        :'nome' => :'nome',
+        :'first_page' => :'firstPage',
         
-        :'extensao' => :'extensao',
+        :'has_content' => :'hasContent',
         
-        :'tipo_comunicacao' => :'tipoComunicacao',
+        :'has_next_page' => :'hasNextPage',
         
-        :'detalhes' => :'detalhes'
+        :'has_previous_page' => :'hasPreviousPage',
+        
+        :'last' => :'last',
+        
+        :'next_page' => :'nextPage',
+        
+        :'number' => :'number',
+        
+        :'number_of_elements' => :'numberOfElements',
+        
+        :'previous_page' => :'previousPage',
+        
+        :'size' => :'size',
+        
+        :'total_elements' => :'totalElements',
+        
+        :'total_pages' => :'totalPages'
         
       }
     end
@@ -60,17 +86,33 @@ module Pier
     def self.swagger_types
       {
         
-        :'id_tipo_arquivo' => :'Integer',
+        :'content' => :'Array<ArquivoResponse>',
         
-        :'arquivo' => :'String',
+        :'first' => :'BOOLEAN',
         
-        :'nome' => :'String',
+        :'first_page' => :'BOOLEAN',
         
-        :'extensao' => :'String',
+        :'has_content' => :'BOOLEAN',
         
-        :'tipo_comunicacao' => :'String',
+        :'has_next_page' => :'BOOLEAN',
         
-        :'detalhes' => :'Array<ArquivoDetalhesPersist>'
+        :'has_previous_page' => :'BOOLEAN',
+        
+        :'last' => :'BOOLEAN',
+        
+        :'next_page' => :'Integer',
+        
+        :'number' => :'Integer',
+        
+        :'number_of_elements' => :'Integer',
+        
+        :'previous_page' => :'Integer',
+        
+        :'size' => :'Integer',
+        
+        :'total_elements' => :'Integer',
+        
+        :'total_pages' => :'Integer'
         
       }
     end
@@ -84,57 +126,129 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'idTipoArquivo']
+      if attributes[:'content']
         
-        
-        self.id_tipo_arquivo = attributes[:'idTipoArquivo']
-        
-      
-      end
-
-      
-      if attributes[:'arquivo']
-        
-        
-        self.arquivo = attributes[:'arquivo']
-        
-      
-      end
-
-      
-      if attributes[:'nome']
-        
-        
-        self.nome = attributes[:'nome']
-        
-      
-      end
-
-      
-      if attributes[:'extensao']
-        
-        
-        self.extensao = attributes[:'extensao']
-        
-      
-      end
-
-      
-      if attributes[:'tipoComunicacao']
-        
-        
-        self.tipo_comunicacao = attributes[:'tipoComunicacao']
-        
-      
-      end
-
-      
-      if attributes[:'detalhes']
-        
-        if (value = attributes[:'detalhes']).is_a?(Array)
-          self.detalhes = value
+        if (value = attributes[:'content']).is_a?(Array)
+          self.content = value
         end
         
+        
+      
+      end
+
+      
+      if attributes[:'first']
+        
+        
+        self.first = attributes[:'first']
+        
+      
+      end
+
+      
+      if attributes[:'firstPage']
+        
+        
+        self.first_page = attributes[:'firstPage']
+        
+      
+      end
+
+      
+      if attributes[:'hasContent']
+        
+        
+        self.has_content = attributes[:'hasContent']
+        
+      
+      end
+
+      
+      if attributes[:'hasNextPage']
+        
+        
+        self.has_next_page = attributes[:'hasNextPage']
+        
+      
+      end
+
+      
+      if attributes[:'hasPreviousPage']
+        
+        
+        self.has_previous_page = attributes[:'hasPreviousPage']
+        
+      
+      end
+
+      
+      if attributes[:'last']
+        
+        
+        self.last = attributes[:'last']
+        
+      
+      end
+
+      
+      if attributes[:'nextPage']
+        
+        
+        self.next_page = attributes[:'nextPage']
+        
+      
+      end
+
+      
+      if attributes[:'number']
+        
+        
+        self.number = attributes[:'number']
+        
+      
+      end
+
+      
+      if attributes[:'numberOfElements']
+        
+        
+        self.number_of_elements = attributes[:'numberOfElements']
+        
+      
+      end
+
+      
+      if attributes[:'previousPage']
+        
+        
+        self.previous_page = attributes[:'previousPage']
+        
+      
+      end
+
+      
+      if attributes[:'size']
+        
+        
+        self.size = attributes[:'size']
+        
+      
+      end
+
+      
+      if attributes[:'totalElements']
+        
+        
+        self.total_elements = attributes[:'totalElements']
+        
+      
+      end
+
+      
+      if attributes[:'totalPages']
+        
+        
+        self.total_pages = attributes[:'totalPages']
         
       
       end
@@ -160,10 +274,6 @@ module Pier
       
       
       
-      if @arquivo.nil?
-        return false
-      end
-
       
       
       
@@ -178,18 +288,39 @@ module Pier
       
       
       
-      allowed_values = ["SOAP", "REST"]
-      if @tipo_comunicacao && !allowed_values.include?(@tipo_comunicacao)
-        return false
-      end
       
       
       
       
-      if @detalhes.nil?
-        return false
-      end
-
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -218,16 +349,47 @@ module Pier
     
     
     
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] tipo_comunicacao Object to be assigned
-    def tipo_comunicacao=(tipo_comunicacao)
-      allowed_values = ["SOAP", "REST"]
-      if tipo_comunicacao && !allowed_values.include?(tipo_comunicacao)
-        fail ArgumentError, "invalid value for 'tipo_comunicacao', must be one of #{allowed_values}."
-      end
-      @tipo_comunicacao = tipo_comunicacao
-    end
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -241,12 +403,20 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id_tipo_arquivo == o.id_tipo_arquivo &&
-          arquivo == o.arquivo &&
-          nome == o.nome &&
-          extensao == o.extensao &&
-          tipo_comunicacao == o.tipo_comunicacao &&
-          detalhes == o.detalhes
+          content == o.content &&
+          first == o.first &&
+          first_page == o.first_page &&
+          has_content == o.has_content &&
+          has_next_page == o.has_next_page &&
+          has_previous_page == o.has_previous_page &&
+          last == o.last &&
+          next_page == o.next_page &&
+          number == o.number &&
+          number_of_elements == o.number_of_elements &&
+          previous_page == o.previous_page &&
+          size == o.size &&
+          total_elements == o.total_elements &&
+          total_pages == o.total_pages
     end
 
     # @see the `==` method
@@ -258,7 +428,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_tipo_arquivo, arquivo, nome, extensao, tipo_comunicacao, detalhes].hash
+      [content, first, first_page, has_content, has_next_page, has_previous_page, last, next_page, number, number_of_elements, previous_page, size, total_elements, total_pages].hash
     end
 
     # Builds the object from hash

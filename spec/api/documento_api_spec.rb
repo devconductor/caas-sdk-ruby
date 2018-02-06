@@ -118,34 +118,13 @@ describe 'DocumentoApi' do
     end
   end
 
-  # unit tests for integrar_using_post
+  # unit tests for integrar_using_post1
   # Integra um arquivo a reposit\u00C3\u00B3rios remotos.
   # Este recurso permite integrar um documento ao reposit\u00C3\u00B3rio pre-configurado.
   # @param integrar_documento_request integrarDocumentoRequest
   # @param [Hash] opts the optional parameters
   # @return [DocumentoIntegracaoResponse]
-  describe 'integrar_using_post test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-  # unit tests for listar_using_get15
-  # Lista documentos
-  # Esse recurso permite listar documentos.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id_template_documento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do template do documento.
-  # @option opts [String] :nome Nome do documento.
-  # @option opts [String] :extensao Extensao do documento.
-  # @return [PageDocumentoResponse]
-  describe 'listar_using_get15 test' do
+  describe 'integrar_using_post1 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -156,14 +135,16 @@ describe 'DocumentoApi' do
   end
 
   # unit tests for listar_using_get16
-  # Lista os templates dos documentos
-  # Esse recurso permite listar os templates dos documentos.
+  # Lista documentos
+  # Esse recurso permite listar documentos.
   # @param [Hash] opts the optional parameters
   # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id_tipo_template C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template.
-  # @return [PageDocumentoTemplateResponse]
+  # @option opts [Integer] :id_template_documento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do template do documento.
+  # @option opts [String] :nome Nome do documento.
+  # @option opts [String] :extensao Extensao do documento.
+  # @return [PageDocumentoResponse]
   describe 'listar_using_get16 test' do
     it "should work" do
       # assertion here
@@ -174,7 +155,26 @@ describe 'DocumentoApi' do
     end
   end
 
-  # unit tests for listar_using_get42
+  # unit tests for listar_using_get17
+  # Lista os templates dos documentos
+  # Esse recurso permite listar os templates dos documentos.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [Integer] :id_tipo_template C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template.
+  # @return [PageDocumentoTemplateResponse]
+  describe 'listar_using_get17 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+  # unit tests for listar_using_get43
   # Lista os tipos de templates
   # Esse recurso permite listar os tipos de templates associados ao emissor.
   # @param [Hash] opts the optional parameters
@@ -182,7 +182,7 @@ describe 'DocumentoApi' do
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @return [PageTipoTemplateResponse]
-  describe 'listar_using_get42 test' do
+  describe 'listar_using_get43 test' do
     it "should work" do
       # assertion here
       # should be_a()

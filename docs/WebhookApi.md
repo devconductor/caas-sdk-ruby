@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_using_put22**](WebhookApi.md#alterar_using_put22) | **PUT** /api/webhooks/{id} | Alterar Webhook
 [**consultar_using_get43**](WebhookApi.md#consultar_using_get43) | **GET** /api/webhooks/{id} | Consultar Webhook
-[**listar_using_get50**](WebhookApi.md#listar_using_get50) | **GET** /api/webhooks | Lista os Webhooks
+[**listar_using_get51**](WebhookApi.md#listar_using_get51) | **GET** /api/webhooks | Lista os Webhooks
 [**salvar_using_post29**](WebhookApi.md#salvar_using_post29) | **POST** /api/webhooks | Salvar Webhook
 
 
@@ -114,8 +114,8 @@ No authorization required
 
 
 
-# **listar_using_get50**
-> PageWebHookResponse listar_using_get50(opts)
+# **listar_using_get51**
+> PageWebHookResponse listar_using_get51(opts)
 
 Lista os Webhooks
 
@@ -140,10 +140,10 @@ opts = {
 
 begin
   #Lista os Webhooks
-  result = api_instance.listar_using_get50(opts)
+  result = api_instance.listar_using_get51(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling WebhookApi->listar_using_get50: #{e}"
+  puts "Exception when calling WebhookApi->listar_using_get51: #{e}"
 end
 ```
 

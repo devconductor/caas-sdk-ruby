@@ -340,7 +340,7 @@ describe 'CadastroClienteApi' do
     end
   end
 
-  # unit tests for listar_using_get17
+  # unit tests for listar_using_get18
   # Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
   # Este m\u00C3\u00A9todo permite que sejam listados os Endere\u00C3\u00A7os existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -362,7 +362,7 @@ describe 'CadastroClienteApi' do
   # @option opts [String] :data_inclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
   # @option opts [String] :data_ultima_atualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
   # @return [PageEnderecoResponse]
-  describe 'listar_using_get17 test' do
+  describe 'listar_using_get18 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -372,7 +372,7 @@ describe 'CadastroClienteApi' do
     end
   end
 
-  # unit tests for listar_using_get26
+  # unit tests for listar_using_get27
   # Lista os Detalhes das Pessoas cadastradas no Emissor
   # Este m\u00C3\u00A9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -391,7 +391,7 @@ describe 'CadastroClienteApi' do
   # @option opts [String] :email Email da pessoa fisica
   # @option opts [String] :nome_empresa Nome que deve ser impresso no cart\u00C3\u00A3o
   # @return [PagePessoaDetalheResponse]
-  describe 'listar_using_get26 test' do
+  describe 'listar_using_get27 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -401,7 +401,7 @@ describe 'CadastroClienteApi' do
     end
   end
 
-  # unit tests for listar_using_get27
+  # unit tests for listar_using_get28
   # Lista as Pessoas cadastradas no Emissor
   # Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -420,7 +420,7 @@ describe 'CadastroClienteApi' do
   # @option opts [String] :unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade
   # @option opts [String] :data_emissao_identidade Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
   # @return [PagePessoaResponse]
-  describe 'listar_using_get27 test' do
+  describe 'listar_using_get28 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -430,7 +430,7 @@ describe 'CadastroClienteApi' do
     end
   end
 
-  # unit tests for listar_using_get36
+  # unit tests for listar_using_get37
   # Lista os Telefones cadastrados no Emissor
   # Este m\u00C3\u00A9todo permite que sejam listados os Telefones existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -445,7 +445,7 @@ describe 'CadastroClienteApi' do
   # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
   # @option opts [Integer] :status Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo
   # @return [PageTelefoneResponse]
-  describe 'listar_using_get36 test' do
+  describe 'listar_using_get37 test' do
     it "should work" do
       # assertion here
       # should be_a()

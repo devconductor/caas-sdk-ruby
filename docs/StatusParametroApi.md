@@ -11,8 +11,8 @@ Method | HTTP request | Description
 [**listar_estagios_cartoes_using_get**](StatusParametroApi.md#listar_estagios_cartoes_using_get) | **GET** /api/estagios-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
 [**listar_status_cartoes_using_get**](StatusParametroApi.md#listar_status_cartoes_using_get) | **GET** /api/status-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
 [**listar_tipos_eventos_transacoes_using_get**](StatusParametroApi.md#listar_tipos_eventos_transacoes_using_get) | **GET** /api/tipos-eventos-transacoes | Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
-[**listar_using_get33**](StatusParametroApi.md#listar_using_get33) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
-[**listar_using_get34**](StatusParametroApi.md#listar_using_get34) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+[**listar_using_get34**](StatusParametroApi.md#listar_using_get34) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
+[**listar_using_get35**](StatusParametroApi.md#listar_using_get35) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
 
 # **consultar_estagio_cartao_using_get**
@@ -364,8 +364,8 @@ No authorization required
 
 
 
-# **listar_using_get33**
-> PageStatusContaResponse listar_using_get33(opts)
+# **listar_using_get34**
+> PageStatusContaResponse listar_using_get34(opts)
 
 Lista os Status Contas cadastrados para o Emissor
 
@@ -397,10 +397,10 @@ opts = {
 
 begin
   #Lista os Status Contas cadastrados para o Emissor
-  result = api_instance.listar_using_get33(opts)
+  result = api_instance.listar_using_get34(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling StatusParametroApi->listar_using_get33: #{e}"
+  puts "Exception when calling StatusParametroApi->listar_using_get34: #{e}"
 end
 ```
 
@@ -438,8 +438,8 @@ No authorization required
 
 
 
-# **listar_using_get34**
-> PageStatusImpressaoResponse listar_using_get34(opts)
+# **listar_using_get35**
+> PageStatusImpressaoResponse listar_using_get35(opts)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
@@ -462,10 +462,10 @@ opts = {
 
 begin
   #Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
-  result = api_instance.listar_using_get34(opts)
+  result = api_instance.listar_using_get35(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling StatusParametroApi->listar_using_get34: #{e}"
+  puts "Exception when calling StatusParametroApi->listar_using_get35: #{e}"
 end
 ```
 

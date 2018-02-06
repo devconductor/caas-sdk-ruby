@@ -468,8 +468,8 @@ module Pier
     # @option opts [String] :email Email do Usuario
     # @option opts [String] :status Status do Usuario
     # @return [PageUsuarioResponse]
-    def listar_using_get46(opts = {})
-      data, _status_code, _headers = listar_using_get46_with_http_info(opts)
+    def listar_using_get47(opts = {})
+      data, _status_code, _headers = listar_using_get47_with_http_info(opts)
       return data
     end
 
@@ -484,9 +484,9 @@ module Pier
     # @option opts [String] :email Email do Usuario
     # @option opts [String] :status Status do Usuario
     # @return [Array<(PageUsuarioResponse, Fixnum, Hash)>] PageUsuarioResponse data, response status code and response headers
-    def listar_using_get46_with_http_info(opts = {})
+    def listar_using_get47_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: UsuarioApi.listar_using_get46 ..."
+        @api_client.config.logger.debug "Calling API: UsuarioApi.listar_using_get47 ..."
       end
       
       
@@ -574,7 +574,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageUsuarioResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UsuarioApi#listar_using_get46\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UsuarioApi#listar_using_get47\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

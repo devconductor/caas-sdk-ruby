@@ -205,8 +205,8 @@ module Pier
     # @option opts [String] :metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
     # @option opts [String] :url URL que a ser consumida pelo WebHook
     # @return [PageWebHookResponse]
-    def listar_using_get50(opts = {})
-      data, _status_code, _headers = listar_using_get50_with_http_info(opts)
+    def listar_using_get51(opts = {})
+      data, _status_code, _headers = listar_using_get51_with_http_info(opts)
       return data
     end
 
@@ -221,9 +221,9 @@ module Pier
     # @option opts [String] :metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
     # @option opts [String] :url URL que a ser consumida pelo WebHook
     # @return [Array<(PageWebHookResponse, Fixnum, Hash)>] PageWebHookResponse data, response status code and response headers
-    def listar_using_get50_with_http_info(opts = {})
+    def listar_using_get51_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WebhookApi.listar_using_get50 ..."
+        @api_client.config.logger.debug "Calling API: WebhookApi.listar_using_get51 ..."
       end
       
       
@@ -315,7 +315,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageWebHookResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WebhookApi#listar_using_get50\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: WebhookApi#listar_using_get51\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

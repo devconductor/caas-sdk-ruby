@@ -136,7 +136,7 @@ describe 'UsuarioApi' do
     end
   end
 
-  # unit tests for listar_using_get46
+  # unit tests for listar_using_get47
   # Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
   # Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
   # @param [Hash] opts the optional parameters
@@ -148,7 +148,7 @@ describe 'UsuarioApi' do
   # @option opts [String] :email Email do Usuario
   # @option opts [String] :status Status do Usuario
   # @return [PageUsuarioResponse]
-  describe 'listar_using_get46 test' do
+  describe 'listar_using_get47 test' do
     it "should work" do
       # assertion here
       # should be_a()

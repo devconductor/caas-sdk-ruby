@@ -437,8 +437,8 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [PageContaBancariaPortadorResponse]
-    def listar_using_get11(opts = {})
-      data, _status_code, _headers = listar_using_get11_with_http_info(opts)
+    def listar_using_get12(opts = {})
+      data, _status_code, _headers = listar_using_get12_with_http_info(opts)
       return data
     end
 
@@ -457,9 +457,9 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [Array<(PageContaBancariaPortadorResponse, Fixnum, Hash)>] PageContaBancariaPortadorResponse data, response status code and response headers
-    def listar_using_get11_with_http_info(opts = {})
+    def listar_using_get12_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.listar_using_get11 ..."
+        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.listar_using_get12 ..."
       end
       
       
@@ -571,7 +571,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageContaBancariaPortadorResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#listar_using_get11\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#listar_using_get12\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -585,8 +585,8 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [PageTransferenciaBancariaResponse]
-    def listar_using_get44(id, opts = {})
-      data, _status_code, _headers = listar_using_get44_with_http_info(id, opts)
+    def listar_using_get45(id, opts = {})
+      data, _status_code, _headers = listar_using_get45_with_http_info(id, opts)
       return data
     end
 
@@ -599,14 +599,14 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [Array<(PageTransferenciaBancariaResponse, Fixnum, Hash)>] PageTransferenciaBancariaResponse data, response status code and response headers
-    def listar_using_get44_with_http_info(id, opts = {})
+    def listar_using_get45_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.listar_using_get44 ..."
+        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.listar_using_get45 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling TransferenciaBancariaApi.listar_using_get44" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling TransferenciaBancariaApi.listar_using_get45" if id.nil?
       
       
       
@@ -672,7 +672,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTransferenciaBancariaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#listar_using_get44\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#listar_using_get45\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

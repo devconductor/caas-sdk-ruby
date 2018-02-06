@@ -350,7 +350,7 @@ describe 'CartaoApi' do
     end
   end
 
-  # unit tests for listar_using_get7
+  # unit tests for listar_using_get8
   # Lista os Cart\u00C3\u00B5es gerados pelo Emissor
   # Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
   # @param [Hash] opts the optional parameters
@@ -376,7 +376,7 @@ describe 'CartaoApi' do
   # @option opts [String] :codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
   # @option opts [Integer] :sequencial_cartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
   # @return [PageCartaoResponse]
-  describe 'listar_using_get7 test' do
+  describe 'listar_using_get8 test' do
     it "should work" do
       # assertion here
       # should be_a()

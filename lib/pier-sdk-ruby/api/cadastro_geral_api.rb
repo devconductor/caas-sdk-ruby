@@ -2110,6 +2110,88 @@ module Pier
       return data, status_code, headers
     end
 
+    # Listar configura\u00C3\u00A7\u00C3\u00B5es para registro de cobran\u00C3\u00A7a
+    # Este m\u00C3\u00A9todo permite listar as configura\u00C3\u00A7\u00C3\u00B5es de registro de cobran\u00C3\u00A7a.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @return [ConfiguracaoRegistroCobrancaResponse]
+    def listar_using_get10(opts = {})
+      data, _status_code, _headers = listar_using_get10_with_http_info(opts)
+      return data
+    end
+
+    # Listar configura\u00C3\u00A7\u00C3\u00B5es para registro de cobran\u00C3\u00A7a
+    # Este m\u00C3\u00A9todo permite listar as configura\u00C3\u00A7\u00C3\u00B5es de registro de cobran\u00C3\u00A7a.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @return [Array<(ConfiguracaoRegistroCobrancaResponse, Fixnum, Hash)>] ConfiguracaoRegistroCobrancaResponse data, response status code and response headers
+    def listar_using_get10_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get10 ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/configuracoes-registro-cobranca".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ConfiguracaoRegistroCobrancaResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
     # Este recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
     # @param [Hash] opts the optional parameters
@@ -2118,8 +2200,8 @@ module Pier
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Produto.
     # @return [PageConfiguracaoRotativoResponse]
-    def listar_using_get10(opts = {})
-      data, _status_code, _headers = listar_using_get10_with_http_info(opts)
+    def listar_using_get11(opts = {})
+      data, _status_code, _headers = listar_using_get11_with_http_info(opts)
       return data
     end
 
@@ -2131,9 +2213,9 @@ module Pier
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Produto.
     # @return [Array<(PageConfiguracaoRotativoResponse, Fixnum, Hash)>] PageConfiguracaoRotativoResponse data, response status code and response headers
-    def listar_using_get10_with_http_info(opts = {})
+    def listar_using_get11_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get10 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get11 ..."
       end
       
       
@@ -2196,7 +2278,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageConfiguracaoRotativoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get11\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2218,8 +2300,8 @@ module Pier
     # @option opts [String] :data_cadastro_portador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
     # @option opts [String] :data_cancelamento_portador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
     # @return [PagePortadorResponse]
-    def listar_using_get29(opts = {})
-      data, _status_code, _headers = listar_using_get29_with_http_info(opts)
+    def listar_using_get30(opts = {})
+      data, _status_code, _headers = listar_using_get30_with_http_info(opts)
       return data
     end
 
@@ -2240,9 +2322,9 @@ module Pier
     # @option opts [String] :data_cadastro_portador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
     # @option opts [String] :data_cancelamento_portador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
     # @return [Array<(PagePortadorResponse, Fixnum, Hash)>] PagePortadorResponse data, response status code and response headers
-    def listar_using_get29_with_http_info(opts = {})
+    def listar_using_get30_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get29 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get30 ..."
       end
       
       
@@ -2368,125 +2450,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PagePortadorResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get29\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Lista todos os atendimentos
-    # Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_tipo_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
-    # @option opts [Integer] :id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
-    # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
-    # @option opts [String] :data_atendimento Apresenta a data em que o Atendimento foi realizado.
-    # @return [PageAtendimentoClienteResponse]
-    def listar_using_get3(opts = {})
-      data, _status_code, _headers = listar_using_get3_with_http_info(opts)
-      return data
-    end
-
-    # Lista todos os atendimentos
-    # Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_tipo_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
-    # @option opts [Integer] :id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
-    # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
-    # @option opts [String] :data_atendimento Apresenta a data em que o Atendimento foi realizado.
-    # @return [Array<(PageAtendimentoClienteResponse, Fixnum, Hash)>] PageAtendimentoClienteResponse data, response status code and response headers
-    def listar_using_get3_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get3 ..."
-      end
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/atendimento-clientes".sub('{format}','json')
-
-      # query parameters
-      query_params = {}
-      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
-      query_params[:'page'] = opts[:'page'] if opts[:'page']
-      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
-      query_params[:'idTipoAtendimento'] = opts[:'id_tipo_atendimento'] if opts[:'id_tipo_atendimento']
-      query_params[:'idConta'] = opts[:'id_conta'] if opts[:'id_conta']
-      query_params[:'nomeAtendente'] = opts[:'nome_atendente'] if opts[:'nome_atendente']
-      query_params[:'dataAtendimento'] = opts[:'data_atendimento'] if opts[:'data_atendimento']
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'PageAtendimentoClienteResponse')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get3\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get30\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2501,8 +2465,8 @@ module Pier
     # @option opts [Integer] :status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
     # @option opts [Integer] :id_fantasia_basica C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
     # @return [PageProdutoResponse]
-    def listar_using_get30(opts = {})
-      data, _status_code, _headers = listar_using_get30_with_http_info(opts)
+    def listar_using_get31(opts = {})
+      data, _status_code, _headers = listar_using_get31_with_http_info(opts)
       return data
     end
 
@@ -2516,9 +2480,9 @@ module Pier
     # @option opts [Integer] :status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
     # @option opts [Integer] :id_fantasia_basica C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
     # @return [Array<(PageProdutoResponse, Fixnum, Hash)>] PageProdutoResponse data, response status code and response headers
-    def listar_using_get30_with_http_info(opts = {})
+    def listar_using_get31_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get30 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get31 ..."
       end
       
       
@@ -2595,7 +2559,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageProdutoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get30\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get31\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2612,8 +2576,8 @@ module Pier
     # @option opts [Integer] :id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
     # @option opts [Integer] :id_usuario C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio
     # @return [PagePromotorResponse]
-    def listar_using_get31(opts = {})
-      data, _status_code, _headers = listar_using_get31_with_http_info(opts)
+    def listar_using_get32(opts = {})
+      data, _status_code, _headers = listar_using_get32_with_http_info(opts)
       return data
     end
 
@@ -2629,9 +2593,9 @@ module Pier
     # @option opts [Integer] :id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
     # @option opts [Integer] :id_usuario C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio
     # @return [Array<(PagePromotorResponse, Fixnum, Hash)>] PagePromotorResponse data, response status code and response headers
-    def listar_using_get31_with_http_info(opts = {})
+    def listar_using_get32_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get31 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get32 ..."
       end
       
       
@@ -2722,7 +2686,125 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PagePromotorResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get31\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get32\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Lista todos os atendimentos
+    # Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_tipo_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
+    # @option opts [Integer] :id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+    # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
+    # @option opts [String] :data_atendimento Apresenta a data em que o Atendimento foi realizado.
+    # @return [PageAtendimentoClienteResponse]
+    def listar_using_get4(opts = {})
+      data, _status_code, _headers = listar_using_get4_with_http_info(opts)
+      return data
+    end
+
+    # Lista todos os atendimentos
+    # Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_tipo_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
+    # @option opts [Integer] :id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+    # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
+    # @option opts [String] :data_atendimento Apresenta a data em que o Atendimento foi realizado.
+    # @return [Array<(PageAtendimentoClienteResponse, Fixnum, Hash)>] PageAtendimentoClienteResponse data, response status code and response headers
+    def listar_using_get4_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get4 ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/atendimento-clientes".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'idTipoAtendimento'] = opts[:'id_tipo_atendimento'] if opts[:'id_tipo_atendimento']
+      query_params[:'idConta'] = opts[:'id_conta'] if opts[:'id_conta']
+      query_params[:'nomeAtendente'] = opts[:'nome_atendente'] if opts[:'nome_atendente']
+      query_params[:'dataAtendimento'] = opts[:'data_atendimento'] if opts[:'data_atendimento']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageAtendimentoClienteResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get4\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2736,8 +2818,8 @@ module Pier
     # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
     # @option opts [String] :nome Nome do Tipo do Endere\u00C3\u00A7o
     # @return [PageTipoEnderecoResponse]
-    def listar_using_get39(opts = {})
-      data, _status_code, _headers = listar_using_get39_with_http_info(opts)
+    def listar_using_get40(opts = {})
+      data, _status_code, _headers = listar_using_get40_with_http_info(opts)
       return data
     end
 
@@ -2750,9 +2832,9 @@ module Pier
     # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
     # @option opts [String] :nome Nome do Tipo do Endere\u00C3\u00A7o
     # @return [Array<(PageTipoEnderecoResponse, Fixnum, Hash)>] PageTipoEnderecoResponse data, response status code and response headers
-    def listar_using_get39_with_http_info(opts = {})
+    def listar_using_get40_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get39 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get40 ..."
       end
       
       
@@ -2822,89 +2904,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTipoEnderecoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get39\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Lista os Bancos cadastrados para o Emissor
-    # Este m\u00C3\u00A9todo permite que sejam listados os Bancos existentes na base de dados do Emissor.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @return [PageBancoResponse]
-    def listar_using_get4(opts = {})
-      data, _status_code, _headers = listar_using_get4_with_http_info(opts)
-      return data
-    end
-
-    # Lista os Bancos cadastrados para o Emissor
-    # Este m\u00C3\u00A9todo permite que sejam listados os Bancos existentes na base de dados do Emissor.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @return [Array<(PageBancoResponse, Fixnum, Hash)>] PageBancoResponse data, response status code and response headers
-    def listar_using_get4_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get4 ..."
-      end
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/bancos".sub('{format}','json')
-
-      # query parameters
-      query_params = {}
-      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
-      query_params[:'page'] = opts[:'page'] if opts[:'page']
-      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'PageBancoResponse')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get4\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get40\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2918,8 +2918,8 @@ module Pier
     # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
     # @option opts [String] :nome Nome do Tipo do Telefone
     # @return [PageTipoTelefoneResponse]
-    def listar_using_get41(opts = {})
-      data, _status_code, _headers = listar_using_get41_with_http_info(opts)
+    def listar_using_get42(opts = {})
+      data, _status_code, _headers = listar_using_get42_with_http_info(opts)
       return data
     end
 
@@ -2932,9 +2932,9 @@ module Pier
     # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
     # @option opts [String] :nome Nome do Tipo do Telefone
     # @return [Array<(PageTipoTelefoneResponse, Fixnum, Hash)>] PageTipoTelefoneResponse data, response status code and response headers
-    def listar_using_get41_with_http_info(opts = {})
+    def listar_using_get42_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get41 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get42 ..."
       end
       
       
@@ -3004,7 +3004,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTipoTelefoneResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get41\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get42\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3017,8 +3017,8 @@ module Pier
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :data_vencimento Indica a data de vencimento das faturas
     # @return [PageControleVencimentoResponse]
-    def listar_using_get47(opts = {})
-      data, _status_code, _headers = listar_using_get47_with_http_info(opts)
+    def listar_using_get48(opts = {})
+      data, _status_code, _headers = listar_using_get48_with_http_info(opts)
       return data
     end
 
@@ -3030,9 +3030,9 @@ module Pier
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :data_vencimento Indica a data de vencimento das faturas
     # @return [Array<(PageControleVencimentoResponse, Fixnum, Hash)>] PageControleVencimentoResponse data, response status code and response headers
-    def listar_using_get47_with_http_info(opts = {})
+    def listar_using_get48_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get47 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get48 ..."
       end
       
       
@@ -3095,33 +3095,33 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageControleVencimentoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get47\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get48\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Listar configura\u00C3\u00A7\u00C3\u00B5es para registro de cobran\u00C3\u00A7a
-    # Este m\u00C3\u00A9todo permite listar as configura\u00C3\u00A7\u00C3\u00B5es de registro de cobran\u00C3\u00A7a.
+    # Lista os Bancos cadastrados para o Emissor
+    # Este m\u00C3\u00A9todo permite que sejam listados os Bancos existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @return [ConfiguracaoRegistroCobrancaResponse]
-    def listar_using_get9(opts = {})
-      data, _status_code, _headers = listar_using_get9_with_http_info(opts)
+    # @return [PageBancoResponse]
+    def listar_using_get5(opts = {})
+      data, _status_code, _headers = listar_using_get5_with_http_info(opts)
       return data
     end
 
-    # Listar configura\u00C3\u00A7\u00C3\u00B5es para registro de cobran\u00C3\u00A7a
-    # Este m\u00C3\u00A9todo permite listar as configura\u00C3\u00A7\u00C3\u00B5es de registro de cobran\u00C3\u00A7a.
+    # Lista os Bancos cadastrados para o Emissor
+    # Este m\u00C3\u00A9todo permite que sejam listados os Bancos existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @return [Array<(ConfiguracaoRegistroCobrancaResponse, Fixnum, Hash)>] ConfiguracaoRegistroCobrancaResponse data, response status code and response headers
-    def listar_using_get9_with_http_info(opts = {})
+    # @return [Array<(PageBancoResponse, Fixnum, Hash)>] PageBancoResponse data, response status code and response headers
+    def listar_using_get5_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get9 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get5 ..."
       end
       
       
@@ -3143,7 +3143,7 @@ module Pier
       
       
       # resource path
-      local_var_path = "/api/configuracoes-registro-cobranca".sub('{format}','json')
+      local_var_path = "/api/bancos".sub('{format}','json')
 
       # query parameters
       query_params = {}
@@ -3175,9 +3175,9 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'ConfiguracaoRegistroCobrancaResponse')
+        :return_type => 'PageBancoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get9\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get5\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

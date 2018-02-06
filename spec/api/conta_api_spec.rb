@@ -488,7 +488,7 @@ describe 'ContaApi' do
     end
   end
 
-  # unit tests for listar_using_get13
+  # unit tests for listar_using_get14
   # Lista contas existentes na base de dados do Emissor
   # Este recurso permite listar contas existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -505,7 +505,7 @@ describe 'ContaApi' do
   # @option opts [String] :data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
   # @option opts [String] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
   # @return [PageContaResponse]
-  describe 'listar_using_get13 test' do
+  describe 'listar_using_get14 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -515,7 +515,7 @@ describe 'ContaApi' do
     end
   end
 
-  # unit tests for listar_using_get45
+  # unit tests for listar_using_get46
   # Lista as transfer\u00C3\u00AAncias realizadas pela conta
   # Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
@@ -529,7 +529,7 @@ describe 'ContaApi' do
   # @option opts [Float] :valor_transferencia Valor estabelecido para ser transferido.
   # @option opts [String] :data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
   # @return [PageTransferenciaResponse]
-  describe 'listar_using_get45 test' do
+  describe 'listar_using_get46 test' do
     it "should work" do
       # assertion here
       # should be_a()

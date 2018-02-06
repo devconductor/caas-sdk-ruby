@@ -36,7 +36,7 @@ describe 'DebitoRecorrenteApi' do
     end
   end
 
-  # unit tests for listar_using_get12
+  # unit tests for listar_using_get13
   # Lista os d\u00C3\u00A9bitos recorrentes de uma Conta
   # A entidade D\u00C3\u00A9bito Recorrente trata dos registros contratados por um determinado cliente (idConta) onde a cobran\u00C3\u00A7a dele se d\u00C3\u00A1 de forma cont\u00C3\u00ADnua, consistindo em uma \u00E2\u0080\u009Cassinatura\u00E2\u0080\u009D ou pagamento de mensalidades. Isso significa que, enquanto o servi\u00C3\u00A7o continuar a ser prestado, o cliente dever\u00C3\u00A1 continuar realizando os pagamentos. A determina\u00C3\u00A7\u00C3\u00A3o de quanto tempo essa rela\u00C3\u00A7\u00C3\u00A3o ir\u00C3\u00A1 durar \u00C3\u00A9 feita em contrato. Na maioria das vezes, existe um per\u00C3\u00ADodo m\u00C3\u00ADnimo e, caso o servi\u00C3\u00A7o seja cancelado ou o pagamento n\u00C3\u00A3o seja realizado, o status do D\u00C3\u00A9bito Recorrente ter\u00C3\u00A1 a FlagAtivo com valor false. Assim, este m\u00C3\u00A9todo lista todas as opera\u00C3\u00A7\u00C3\u00B5es de D\u00C3\u00A9bitos Recorrentes que um determinado idConta j\u00C3\u00A1 contratou, esteja ele ativo ou n\u00C3\u00A3o.
   # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id)
@@ -50,7 +50,7 @@ describe 'DebitoRecorrenteApi' do
   # @option opts [BOOLEAN] :ativo Identifica se o d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo.
   # @option opts [String] :data_hora_ultimo_pagamento Data do \u00C3\u00BAltimo pagamento efetuado.
   # @return [PageTipoDebitoRecorrenteResponse]
-  describe 'listar_using_get12 test' do
+  describe 'listar_using_get13 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -60,7 +60,7 @@ describe 'DebitoRecorrenteApi' do
     end
   end
 
-  # unit tests for listar_using_get38
+  # unit tests for listar_using_get39
   # Listar Tipos Debitos Recorrentes
   # Para os emissores que utilizam a entidade Debitos Recorrentes precisam previamente solicitar a Conductor o cadastro de quais Tipos eles poder\u00C3\u00A3o comercializar. Por isso, este recurso tem como objetivo apresentar todos os Tipos de D\u00C3\u00A9bitos Recorrentes que est\u00C3\u00A3o cadastrados para um determinado Emissor, independente do status dele.
   # @param [Hash] opts the optional parameters
@@ -72,7 +72,7 @@ describe 'DebitoRecorrenteApi' do
   # @option opts [Float] :valor Valor do tipo de d\u00C3\u00A9bito recorrente.
   # @option opts [BOOLEAN] :flag_ativo Flag que identifica se o tipo d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo.
   # @return [PageTipoDebitoRecorrenteResponse]
-  describe 'listar_using_get38 test' do
+  describe 'listar_using_get39 test' do
     it "should work" do
       # assertion here
       # should be_a()

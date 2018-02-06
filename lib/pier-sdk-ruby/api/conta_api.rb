@@ -2159,8 +2159,8 @@ module Pier
     # @option opts [String] :data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
     # @option opts [String] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
     # @return [PageContaResponse]
-    def listar_using_get13(opts = {})
-      data, _status_code, _headers = listar_using_get13_with_http_info(opts)
+    def listar_using_get14(opts = {})
+      data, _status_code, _headers = listar_using_get14_with_http_info(opts)
       return data
     end
 
@@ -2180,9 +2180,9 @@ module Pier
     # @option opts [String] :data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
     # @option opts [String] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
     # @return [Array<(PageContaResponse, Fixnum, Hash)>] PageContaResponse data, response status code and response headers
-    def listar_using_get13_with_http_info(opts = {})
+    def listar_using_get14_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get13 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get14 ..."
       end
       
       
@@ -2301,7 +2301,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageContaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#listar_using_get13\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#listar_using_get14\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2319,8 +2319,8 @@ module Pier
     # @option opts [Float] :valor_transferencia Valor estabelecido para ser transferido.
     # @option opts [String] :data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
     # @return [PageTransferenciaResponse]
-    def listar_using_get45(id, opts = {})
-      data, _status_code, _headers = listar_using_get45_with_http_info(id, opts)
+    def listar_using_get46(id, opts = {})
+      data, _status_code, _headers = listar_using_get46_with_http_info(id, opts)
       return data
     end
 
@@ -2337,14 +2337,14 @@ module Pier
     # @option opts [Float] :valor_transferencia Valor estabelecido para ser transferido.
     # @option opts [String] :data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
     # @return [Array<(PageTransferenciaResponse, Fixnum, Hash)>] PageTransferenciaResponse data, response status code and response headers
-    def listar_using_get45_with_http_info(id, opts = {})
+    def listar_using_get46_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get45 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get46 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.listar_using_get45" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.listar_using_get46" if id.nil?
       
       
       
@@ -2438,7 +2438,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTransferenciaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#listar_using_get45\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#listar_using_get46\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

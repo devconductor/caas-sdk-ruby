@@ -1467,8 +1467,8 @@ module Pier
     # @option opts [String] :codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
     # @option opts [Integer] :sequencial_cartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
     # @return [PageCartaoResponse]
-    def listar_using_get7(opts = {})
-      data, _status_code, _headers = listar_using_get7_with_http_info(opts)
+    def listar_using_get8(opts = {})
+      data, _status_code, _headers = listar_using_get8_with_http_info(opts)
       return data
     end
 
@@ -1497,9 +1497,9 @@ module Pier
     # @option opts [String] :codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
     # @option opts [Integer] :sequencial_cartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
     # @return [Array<(PageCartaoResponse, Fixnum, Hash)>] PageCartaoResponse data, response status code and response headers
-    def listar_using_get7_with_http_info(opts = {})
+    def listar_using_get8_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CartaoApi.listar_using_get7 ..."
+        @api_client.config.logger.debug "Calling API: CartaoApi.listar_using_get8 ..."
       end
       
       
@@ -1681,7 +1681,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageCartaoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CartaoApi#listar_using_get7\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CartaoApi#listar_using_get8\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -71,7 +71,7 @@ describe 'WebhookApi' do
     end
   end
 
-  # unit tests for listar_using_get50
+  # unit tests for listar_using_get51
   # Lista os Webhooks
   # Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
   # @param [Hash] opts the optional parameters
@@ -83,7 +83,7 @@ describe 'WebhookApi' do
   # @option opts [String] :metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
   # @option opts [String] :url URL que a ser consumida pelo WebHook
   # @return [PageWebHookResponse]
-  describe 'listar_using_get50 test' do
+  describe 'listar_using_get51 test' do
     it "should work" do
       # assertion here
       # should be_a()

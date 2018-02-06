@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listar_using_get12**](DebitoRecorrenteApi.md#listar_using_get12) | **GET** /api/debitos-recorrentes | Lista os d\u00C3\u00A9bitos recorrentes de uma Conta
-[**listar_using_get38**](DebitoRecorrenteApi.md#listar_using_get38) | **GET** /api/tipos-debitos-recorrentes | Listar Tipos Debitos Recorrentes
+[**listar_using_get13**](DebitoRecorrenteApi.md#listar_using_get13) | **GET** /api/debitos-recorrentes | Lista os d\u00C3\u00A9bitos recorrentes de uma Conta
+[**listar_using_get39**](DebitoRecorrenteApi.md#listar_using_get39) | **GET** /api/tipos-debitos-recorrentes | Listar Tipos Debitos Recorrentes
 
 
-# **listar_using_get12**
-> PageTipoDebitoRecorrenteResponse listar_using_get12(id_conta, opts)
+# **listar_using_get13**
+> PageTipoDebitoRecorrenteResponse listar_using_get13(id_conta, opts)
 
 Lista os d\u00C3\u00A9bitos recorrentes de uma Conta
 
@@ -37,10 +37,10 @@ opts = {
 
 begin
   #Lista os d\u00C3\u00A9bitos recorrentes de uma Conta
-  result = api_instance.listar_using_get12(id_conta, opts)
+  result = api_instance.listar_using_get13(id_conta, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DebitoRecorrenteApi->listar_using_get12: #{e}"
+  puts "Exception when calling DebitoRecorrenteApi->listar_using_get13: #{e}"
 end
 ```
 
@@ -73,8 +73,8 @@ No authorization required
 
 
 
-# **listar_using_get38**
-> PageTipoDebitoRecorrenteResponse listar_using_get38(opts)
+# **listar_using_get39**
+> PageTipoDebitoRecorrenteResponse listar_using_get39(opts)
 
 Listar Tipos Debitos Recorrentes
 
@@ -99,10 +99,10 @@ opts = {
 
 begin
   #Listar Tipos Debitos Recorrentes
-  result = api_instance.listar_using_get38(opts)
+  result = api_instance.listar_using_get39(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DebitoRecorrenteApi->listar_using_get38: #{e}"
+  puts "Exception when calling DebitoRecorrenteApi->listar_using_get39: #{e}"
 end
 ```
 

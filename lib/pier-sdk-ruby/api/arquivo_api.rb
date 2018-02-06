@@ -28,7 +28,7 @@ module Pier
     # Este recurso permite consultar um determinado arquivo armazenado no PIER Cloud.
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
     # @param [Hash] opts the optional parameters
-    # @return [ArquivoResponse]
+    # @return [ArquivoDetalheResponse]
     def consultar_using_get2(id, opts = {})
       data, _status_code, _headers = consultar_using_get2_with_http_info(id, opts)
       return data
@@ -38,7 +38,7 @@ module Pier
     # Este recurso permite consultar um determinado arquivo armazenado no PIER Cloud.
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
     # @param [Hash] opts the optional parameters
-    # @return [Array<(ArquivoResponse, Fixnum, Hash)>] ArquivoResponse data, response status code and response headers
+    # @return [Array<(ArquivoDetalheResponse, Fixnum, Hash)>] ArquivoDetalheResponse data, response status code and response headers
     def consultar_using_get2_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArquivoApi.consultar_using_get2 ..."
@@ -82,9 +82,192 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'ArquivoResponse')
+        :return_type => 'ArquivoDetalheResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ArquivoApi#consultar_using_get2\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Integrar Arquivos
+    # Este recurso foi desenvolvido para realizar a integra\u00C3\u00A7\u00C3\u00A3o de arquivos do PIER Cloud junto a reposit\u00C3\u00B3rios externos pr\u00C3\u00A9-configurado.
+    # @param integrar_arquivo_request integrarArquivoRequest
+    # @param [Hash] opts the optional parameters
+    # @return [Object]
+    def integrar_using_post(integrar_arquivo_request, opts = {})
+      data, _status_code, _headers = integrar_using_post_with_http_info(integrar_arquivo_request, opts)
+      return data
+    end
+
+    # Integrar Arquivos
+    # Este recurso foi desenvolvido para realizar a integra\u00C3\u00A7\u00C3\u00A3o de arquivos do PIER Cloud junto a reposit\u00C3\u00B3rios externos pr\u00C3\u00A9-configurado.
+    # @param integrar_arquivo_request integrarArquivoRequest
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
+    def integrar_using_post_with_http_info(integrar_arquivo_request, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArquivoApi.integrar_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'integrar_arquivo_request' is set
+      fail ArgumentError, "Missing the required parameter 'integrar_arquivo_request' when calling ArquivoApi.integrar_using_post" if integrar_arquivo_request.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/arquivos/integrar".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(integrar_arquivo_request)
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Object')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArquivoApi#integrar_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Listar arquivos do Pier Cloud
+    # Este recurso permite a listagem de todos os arquivos dispon\u00C3\u00ADveis no Pier Cloud.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [String] :nome Nome do arquivo
+    # @option opts [Integer] :id_tipo_arquivo Tipo do arquivo
+    # @option opts [Integer] :id_status_arquivo Identificador do status do arquivo
+    # @option opts [String] :extensao Extens\u00C3\u00A3o do arquivo
+    # @return [PageArquivoResponse]
+    def listar_using_get3(opts = {})
+      data, _status_code, _headers = listar_using_get3_with_http_info(opts)
+      return data
+    end
+
+    # Listar arquivos do Pier Cloud
+    # Este recurso permite a listagem de todos os arquivos dispon\u00C3\u00ADveis no Pier Cloud.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [String] :nome Nome do arquivo
+    # @option opts [Integer] :id_tipo_arquivo Tipo do arquivo
+    # @option opts [Integer] :id_status_arquivo Identificador do status do arquivo
+    # @option opts [String] :extensao Extens\u00C3\u00A3o do arquivo
+    # @return [Array<(PageArquivoResponse, Fixnum, Hash)>] PageArquivoResponse data, response status code and response headers
+    def listar_using_get3_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArquivoApi.listar_using_get3 ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/arquivos".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
+      query_params[:'idTipoArquivo'] = opts[:'id_tipo_arquivo'] if opts[:'id_tipo_arquivo']
+      query_params[:'idStatusArquivo'] = opts[:'id_status_arquivo'] if opts[:'id_status_arquivo']
+      query_params[:'extensao'] = opts[:'extensao'] if opts[:'extensao']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageArquivoResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArquivoApi#listar_using_get3\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -93,7 +276,7 @@ module Pier
     # Este recurso permite o armazenamento de arquivos no PIER Cloud.
     # @param arquivo_persist arquivoPersist
     # @param [Hash] opts the optional parameters
-    # @return [ArquivoResponse]
+    # @return [ArquivoDetalheResponse]
     def salvar_using_post1(arquivo_persist, opts = {})
       data, _status_code, _headers = salvar_using_post1_with_http_info(arquivo_persist, opts)
       return data
@@ -103,7 +286,7 @@ module Pier
     # Este recurso permite o armazenamento de arquivos no PIER Cloud.
     # @param arquivo_persist arquivoPersist
     # @param [Hash] opts the optional parameters
-    # @return [Array<(ArquivoResponse, Fixnum, Hash)>] ArquivoResponse data, response status code and response headers
+    # @return [Array<(ArquivoDetalheResponse, Fixnum, Hash)>] ArquivoDetalheResponse data, response status code and response headers
     def salvar_using_post1_with_http_info(arquivo_persist, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArquivoApi.salvar_using_post1 ..."
@@ -147,7 +330,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'ArquivoResponse')
+        :return_type => 'ArquivoDetalheResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ArquivoApi#salvar_using_post1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

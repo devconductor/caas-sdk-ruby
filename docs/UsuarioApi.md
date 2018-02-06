@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**ativar_usuario_using_post**](UsuarioApi.md#ativar_usuario_using_post) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**consultar_using_get41**](UsuarioApi.md#consultar_using_get41) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
 [**desativar_usuario_using_post**](UsuarioApi.md#desativar_usuario_using_post) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**listar_using_get46**](UsuarioApi.md#listar_using_get46) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**listar_using_get47**](UsuarioApi.md#listar_using_get47) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**recuperar_senha_using_post**](UsuarioApi.md#recuperar_senha_using_post) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 [**salvar_using_post27**](UsuarioApi.md#salvar_using_post27) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base.
 [**validar_senha_login_using_post**](UsuarioApi.md#validar_senha_login_using_post) | **POST** /api/usuarios/{login}/validar-senha | Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
@@ -311,8 +311,8 @@ No authorization required
 
 
 
-# **listar_using_get46**
-> PageUsuarioResponse listar_using_get46(opts)
+# **listar_using_get47**
+> PageUsuarioResponse listar_using_get47(opts)
 
 Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 
@@ -337,10 +337,10 @@ opts = {
 
 begin
   #Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-  result = api_instance.listar_using_get46(opts)
+  result = api_instance.listar_using_get47(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling UsuarioApi->listar_using_get46: #{e}"
+  puts "Exception when calling UsuarioApi->listar_using_get47: #{e}"
 end
 ```
 

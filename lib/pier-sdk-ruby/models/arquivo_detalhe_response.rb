@@ -17,39 +17,64 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto Arquivo para persist\u00C3\u00AAncia de dados.
-  class ArquivoPersist
-    # Tipo do arquivo
+  # Objeto Response do arquivo.
+  class ArquivoDetalheResponse
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
+    attr_accessor :id
+
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do arquivo
     attr_accessor :id_tipo_arquivo
+
+    # Descri\u00C3\u00A7\u00C3\u00A3o do tipo do arquivo
+    attr_accessor :nome_tipo_arquivo
 
     # Conte\u00C3\u00BAdo do arquivo convertido em Base 64
     attr_accessor :arquivo
 
-    # Nome do arquivo.
+    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Status do arquivo
+    attr_accessor :id_status_arquivo
+
+    # Desci\u00C3\u00A7\u00C3\u00A3o do status do arquivo
+    attr_accessor :nome_status_arquivo
+
+    # Nome do arquivo
     attr_accessor :nome
 
-    # Formato/extens\u00C3\u00A3o do arquivo.
+    # Formato/Extens\u00C3\u00A3o do arquivo
     attr_accessor :extensao
 
-    # Tipo de comunica\u00C3\u00A7\u00C3\u00A3o.
-    attr_accessor :tipo_comunicacao
+    # Data de inclus\u00C3\u00A3o do arquivo.
+    attr_accessor :data_inclusao
 
-    # Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo
+    # Data da \u00C3\u00BAltima altera\u00C3\u00A7\u00C3\u00A3o do aquivo.
+    attr_accessor :data_alteracao
+
+    # Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo.
     attr_accessor :detalhes
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
+        :'id' => :'id',
+        
         :'id_tipo_arquivo' => :'idTipoArquivo',
         
+        :'nome_tipo_arquivo' => :'nomeTipoArquivo',
+        
         :'arquivo' => :'arquivo',
+        
+        :'id_status_arquivo' => :'idStatusArquivo',
+        
+        :'nome_status_arquivo' => :'nomeStatusArquivo',
         
         :'nome' => :'nome',
         
         :'extensao' => :'extensao',
         
-        :'tipo_comunicacao' => :'tipoComunicacao',
+        :'data_inclusao' => :'dataInclusao',
+        
+        :'data_alteracao' => :'dataAlteracao',
         
         :'detalhes' => :'detalhes'
         
@@ -60,17 +85,27 @@ module Pier
     def self.swagger_types
       {
         
+        :'id' => :'Integer',
+        
         :'id_tipo_arquivo' => :'Integer',
         
+        :'nome_tipo_arquivo' => :'String',
+        
         :'arquivo' => :'String',
+        
+        :'id_status_arquivo' => :'Integer',
+        
+        :'nome_status_arquivo' => :'String',
         
         :'nome' => :'String',
         
         :'extensao' => :'String',
         
-        :'tipo_comunicacao' => :'String',
+        :'data_inclusao' => :'String',
         
-        :'detalhes' => :'Array<ArquivoDetalhesPersist>'
+        :'data_alteracao' => :'String',
+        
+        :'detalhes' => :'Array<ArquivoParametroResponse>'
         
       }
     end
@@ -84,6 +119,15 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
+      if attributes[:'id']
+        
+        
+        self.id = attributes[:'id']
+        
+      
+      end
+
+      
       if attributes[:'idTipoArquivo']
         
         
@@ -93,10 +137,37 @@ module Pier
       end
 
       
+      if attributes[:'nomeTipoArquivo']
+        
+        
+        self.nome_tipo_arquivo = attributes[:'nomeTipoArquivo']
+        
+      
+      end
+
+      
       if attributes[:'arquivo']
         
         
         self.arquivo = attributes[:'arquivo']
+        
+      
+      end
+
+      
+      if attributes[:'idStatusArquivo']
+        
+        
+        self.id_status_arquivo = attributes[:'idStatusArquivo']
+        
+      
+      end
+
+      
+      if attributes[:'nomeStatusArquivo']
+        
+        
+        self.nome_status_arquivo = attributes[:'nomeStatusArquivo']
         
       
       end
@@ -120,10 +191,19 @@ module Pier
       end
 
       
-      if attributes[:'tipoComunicacao']
+      if attributes[:'dataInclusao']
         
         
-        self.tipo_comunicacao = attributes[:'tipoComunicacao']
+        self.data_inclusao = attributes[:'dataInclusao']
+        
+      
+      end
+
+      
+      if attributes[:'dataAlteracao']
+        
+        
+        self.data_alteracao = attributes[:'dataAlteracao']
         
       
       end
@@ -160,10 +240,6 @@ module Pier
       
       
       
-      if @arquivo.nil?
-        return false
-      end
-
       
       
       
@@ -178,18 +254,27 @@ module Pier
       
       
       
-      allowed_values = ["SOAP", "REST"]
-      if @tipo_comunicacao && !allowed_values.include?(@tipo_comunicacao)
-        return false
-      end
       
       
       
       
-      if @detalhes.nil?
-        return false
-      end
-
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -218,16 +303,32 @@ module Pier
     
     
     
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] tipo_comunicacao Object to be assigned
-    def tipo_comunicacao=(tipo_comunicacao)
-      allowed_values = ["SOAP", "REST"]
-      if tipo_comunicacao && !allowed_values.include?(tipo_comunicacao)
-        fail ArgumentError, "invalid value for 'tipo_comunicacao', must be one of #{allowed_values}."
-      end
-      @tipo_comunicacao = tipo_comunicacao
-    end
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -241,11 +342,16 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          id == o.id &&
           id_tipo_arquivo == o.id_tipo_arquivo &&
+          nome_tipo_arquivo == o.nome_tipo_arquivo &&
           arquivo == o.arquivo &&
+          id_status_arquivo == o.id_status_arquivo &&
+          nome_status_arquivo == o.nome_status_arquivo &&
           nome == o.nome &&
           extensao == o.extensao &&
-          tipo_comunicacao == o.tipo_comunicacao &&
+          data_inclusao == o.data_inclusao &&
+          data_alteracao == o.data_alteracao &&
           detalhes == o.detalhes
     end
 
@@ -258,7 +364,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_tipo_arquivo, arquivo, nome, extensao, tipo_comunicacao, detalhes].hash
+      [id, id_tipo_arquivo, nome_tipo_arquivo, arquivo, id_status_arquivo, nome_status_arquivo, nome, extensao, data_inclusao, data_alteracao, detalhes].hash
     end
 
     # Builds the object from hash

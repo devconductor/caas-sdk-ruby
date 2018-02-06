@@ -593,8 +593,8 @@ module Pier
     # @option opts [Integer] :permite_desbloquear Par\u00C3\u00A2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo.
     # @option opts [Integer] :permite_atribuir_como_cancelamento Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo.
     # @return [PageStatusContaResponse]
-    def listar_using_get33(opts = {})
-      data, _status_code, _headers = listar_using_get33_with_http_info(opts)
+    def listar_using_get34(opts = {})
+      data, _status_code, _headers = listar_using_get34_with_http_info(opts)
       return data
     end
 
@@ -616,9 +616,9 @@ module Pier
     # @option opts [Integer] :permite_desbloquear Par\u00C3\u00A2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo.
     # @option opts [Integer] :permite_atribuir_como_cancelamento Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo.
     # @return [Array<(PageStatusContaResponse, Fixnum, Hash)>] PageStatusContaResponse data, response status code and response headers
-    def listar_using_get33_with_http_info(opts = {})
+    def listar_using_get34_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: StatusParametroApi.listar_using_get33 ..."
+        @api_client.config.logger.debug "Calling API: StatusParametroApi.listar_using_get34 ..."
       end
       
       
@@ -751,7 +751,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageStatusContaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: StatusParametroApi#listar_using_get33\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: StatusParametroApi#listar_using_get34\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -765,8 +765,8 @@ module Pier
     # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
     # @option opts [String] :nome Nome do status impress\u00C3\u00A3o
     # @return [PageStatusImpressaoResponse]
-    def listar_using_get34(opts = {})
-      data, _status_code, _headers = listar_using_get34_with_http_info(opts)
+    def listar_using_get35(opts = {})
+      data, _status_code, _headers = listar_using_get35_with_http_info(opts)
       return data
     end
 
@@ -779,9 +779,9 @@ module Pier
     # @option opts [Integer] :id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
     # @option opts [String] :nome Nome do status impress\u00C3\u00A3o
     # @return [Array<(PageStatusImpressaoResponse, Fixnum, Hash)>] PageStatusImpressaoResponse data, response status code and response headers
-    def listar_using_get34_with_http_info(opts = {})
+    def listar_using_get35_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: StatusParametroApi.listar_using_get34 ..."
+        @api_client.config.logger.debug "Calling API: StatusParametroApi.listar_using_get35 ..."
       end
       
       
@@ -851,7 +851,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageStatusImpressaoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: StatusParametroApi#listar_using_get34\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: StatusParametroApi#listar_using_get35\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

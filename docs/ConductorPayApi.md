@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**listar_operacoes_using_get**](ConductorPayApi.md#listar_operacoes_using_get) | **GET** /api/operacoes | Lista as opera\u00C3\u00A7\u00C3\u00B5es
 [**listar_tipos_terminais_using_get**](ConductorPayApi.md#listar_tipos_terminais_using_get) | **GET** /api/tipos-terminais | Lista os tipos de terminais
 [**listar_tipos_transacoes_using_get**](ConductorPayApi.md#listar_tipos_transacoes_using_get) | **GET** /api/tipos-transacoes | Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
-[**listar_using_get6**](ConductorPayApi.md#listar_using_get6) | **GET** /api/cartoes-tokenizados | Lista os cart\u00C3\u00B5es cadastrados
+[**listar_using_get7**](ConductorPayApi.md#listar_using_get7) | **GET** /api/cartoes-tokenizados | Lista os cart\u00C3\u00B5es cadastrados
 [**salvar_using_post5**](ConductorPayApi.md#salvar_using_post5) | **POST** /api/cartoes-tokenizados | Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
 
 
@@ -428,8 +428,8 @@ No authorization required
 
 
 
-# **listar_using_get6**
-> PageCartaoPayResponse listar_using_get6(opts)
+# **listar_using_get7**
+> PageCartaoPayResponse listar_using_get7(opts)
 
 Lista os cart\u00C3\u00B5es cadastrados
 
@@ -453,10 +453,10 @@ opts = {
 
 begin
   #Lista os cart\u00C3\u00B5es cadastrados
-  result = api_instance.listar_using_get6(opts)
+  result = api_instance.listar_using_get7(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ConductorPayApi->listar_using_get6: #{e}"
+  puts "Exception when calling ConductorPayApi->listar_using_get7: #{e}"
 end
 ```
 

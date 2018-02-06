@@ -1,4 +1,4 @@
-# Pier::ArquivoResponse
+# Pier::ArquivoDetalheResponse
 
 ## Properties
 Name | Type | Description | Notes
@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **id** | **Integer** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo | [optional] 
 **id_tipo_arquivo** | **Integer** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do arquivo | [optional] 
 **nome_tipo_arquivo** | **String** | Descri\u00C3\u00A7\u00C3\u00A3o do tipo do arquivo | [optional] 
+**arquivo** | **String** | Conte\u00C3\u00BAdo do arquivo convertido em Base 64 | [optional] 
 **id_status_arquivo** | **Integer** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Status do arquivo | [optional] 
 **nome_status_arquivo** | **String** | Desci\u00C3\u00A7\u00C3\u00A3o do status do arquivo | [optional] 
 **nome** | **String** | Nome do arquivo | [optional] 

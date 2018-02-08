@@ -98,7 +98,7 @@ module Pier
     attr_accessor :email
 
     # Lista de telefones associados ao portador do Cart\u00C3\u00A3o
-    attr_accessor :tefefones
+    attr_accessor :telefones
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -156,7 +156,7 @@ module Pier
         
         :'email' => :'email',
         
-        :'tefefones' => :'tefefones'
+        :'telefones' => :'telefones'
         
       }
     end
@@ -217,7 +217,7 @@ module Pier
         
         :'email' => :'String',
         
-        :'tefefones' => :'Array<TelefoneResponse>'
+        :'telefones' => :'Array<TelefoneResponse>'
         
       }
     end
@@ -465,10 +465,10 @@ module Pier
       end
 
       
-      if attributes[:'tefefones']
+      if attributes[:'telefones']
         
-        if (value = attributes[:'tefefones']).is_a?(Array)
-          self.tefefones = value
+        if (value = attributes[:'telefones']).is_a?(Array)
+          self.telefones = value
         end
         
         
@@ -768,7 +768,7 @@ module Pier
           cpf == o.cpf &&
           cnpj == o.cnpj &&
           email == o.email &&
-          tefefones == o.tefefones
+          telefones == o.telefones
     end
 
     # @see the `==` method
@@ -780,7 +780,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, id_tipo_resolucao, descricao_tipo_resolucao, flag_alto_risco, id_conta, id_cartao, id_produto, id_transacao, data_transacao, valor_transacao, codigo_moeda_origem, valor_origem, codigo_moeda_destino, valor_destino, nome_estabelecimento, id_pais, codigo_resposta_autorizador, descricao_resposta_autorizador, codigo_resposta_fraude, descricao_resposta_fraude, origem_transacao, codigo_modo_entrada_terminal, descricao_modo_entrada_terminal, cpf, cnpj, email, tefefones].hash
+      [id, id_tipo_resolucao, descricao_tipo_resolucao, flag_alto_risco, id_conta, id_cartao, id_produto, id_transacao, data_transacao, valor_transacao, codigo_moeda_origem, valor_origem, codigo_moeda_destino, valor_destino, nome_estabelecimento, id_pais, codigo_resposta_autorizador, descricao_resposta_autorizador, codigo_resposta_fraude, descricao_resposta_fraude, origem_transacao, codigo_modo_entrada_terminal, descricao_modo_entrada_terminal, cpf, cnpj, email, telefones].hash
     end
 
     # Builds the object from hash

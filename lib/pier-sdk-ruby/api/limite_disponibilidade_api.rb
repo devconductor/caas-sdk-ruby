@@ -212,8 +212,8 @@ module Pier
     # @param id_conta Id Conta
     # @param [Hash] opts the optional parameters
     # @return [LimiteDisponibilidadeResponse]
-    def consultar_using_get18(id_conta, opts = {})
-      data, _status_code, _headers = consultar_using_get18_with_http_info(id_conta, opts)
+    def consultar_using_get19(id_conta, opts = {})
+      data, _status_code, _headers = consultar_using_get19_with_http_info(id_conta, opts)
       return data
     end
 
@@ -222,14 +222,14 @@ module Pier
     # @param id_conta Id Conta
     # @param [Hash] opts the optional parameters
     # @return [Array<(LimiteDisponibilidadeResponse, Fixnum, Hash)>] LimiteDisponibilidadeResponse data, response status code and response headers
-    def consultar_using_get18_with_http_info(id_conta, opts = {})
+    def consultar_using_get19_with_http_info(id_conta, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: LimiteDisponibilidadeApi.consultar_using_get18 ..."
+        @api_client.config.logger.debug "Calling API: LimiteDisponibilidadeApi.consultar_using_get19 ..."
       end
       
       
       # verify the required parameter 'id_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta' when calling LimiteDisponibilidadeApi.consultar_using_get18" if id_conta.nil?
+      fail ArgumentError, "Missing the required parameter 'id_conta' when calling LimiteDisponibilidadeApi.consultar_using_get19" if id_conta.nil?
       
       
       
@@ -268,7 +268,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'LimiteDisponibilidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: LimiteDisponibilidadeApi#consultar_using_get18\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: LimiteDisponibilidadeApi#consultar_using_get19\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

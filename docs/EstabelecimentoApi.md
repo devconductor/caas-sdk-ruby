@@ -16,13 +16,13 @@ Method | HTTP request | Description
 [**cadastrar_using_post3**](EstabelecimentoApi.md#cadastrar_using_post3) | **POST** /api/grupos-economicos | Cadastrar Grupo Econ\u00C3\u00B4mico
 [**consulta_operacao_using_get**](EstabelecimentoApi.md#consulta_operacao_using_get) | **GET** /api/tipos-operacoes-estabelecimentos/{id} | Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
 [**consultar_origem_comercial_using_get**](EstabelecimentoApi.md#consultar_origem_comercial_using_get) | **GET** /api/origens-comerciais/{id} | Consultar Origem Comercial
-[**consultar_using_get15**](EstabelecimentoApi.md#consultar_using_get15) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
-[**consultar_using_get17**](EstabelecimentoApi.md#consultar_using_get17) | **GET** /api/grupos-economicos/{id} | Consultar grupo econ\u00C3\u00B4mico
-[**consultar_using_get19**](EstabelecimentoApi.md#consultar_using_get19) | **GET** /api/maquinetas/{id} | Apresenta os dados de uma determinada maquineta
-[**consultar_using_get20**](EstabelecimentoApi.md#consultar_using_get20) | **GET** /api/regras-operacoes-estabelecimentos/{id} | Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
-[**consultar_using_get28**](EstabelecimentoApi.md#consultar_using_get28) | **GET** /api/telefones-estabelecimentos/{id} | Apresenta os dados de um determinado telefone de um estabelecimento
-[**consultar_using_get30**](EstabelecimentoApi.md#consultar_using_get30) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
-[**consultar_using_get42**](EstabelecimentoApi.md#consultar_using_get42) | **GET** /api/adquirentes-estabelecimento/{id} | Apresenta os dados de um determinado V\u00C3\u00ADnculo
+[**consultar_using_get16**](EstabelecimentoApi.md#consultar_using_get16) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
+[**consultar_using_get18**](EstabelecimentoApi.md#consultar_using_get18) | **GET** /api/grupos-economicos/{id} | Consultar grupo econ\u00C3\u00B4mico
+[**consultar_using_get20**](EstabelecimentoApi.md#consultar_using_get20) | **GET** /api/maquinetas/{id} | Apresenta os dados de uma determinada maquineta
+[**consultar_using_get21**](EstabelecimentoApi.md#consultar_using_get21) | **GET** /api/regras-operacoes-estabelecimentos/{id} | Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
+[**consultar_using_get29**](EstabelecimentoApi.md#consultar_using_get29) | **GET** /api/telefones-estabelecimentos/{id} | Apresenta os dados de um determinado telefone de um estabelecimento
+[**consultar_using_get31**](EstabelecimentoApi.md#consultar_using_get31) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
+[**consultar_using_get43**](EstabelecimentoApi.md#consultar_using_get43) | **GET** /api/adquirentes-estabelecimento/{id} | Apresenta os dados de um determinado V\u00C3\u00ADnculo
 [**desabilitar_vinculo_using_post**](EstabelecimentoApi.md#desabilitar_vinculo_using_post) | **POST** /api/adquirentes-estabelecimento/{id}/desabilitar | Desabilitar um V\u00C3\u00ADnculo
 [**desabilitar_vinculo_using_post1**](EstabelecimentoApi.md#desabilitar_vinculo_using_post1) | **POST** /api/estabelecimentos/{id}/desabilitar-operacao | Desabilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
 [**habilitar_vinculo_using_post**](EstabelecimentoApi.md#habilitar_vinculo_using_post) | **POST** /api/adquirentes-estabelecimento/{id}/habilitar | Habilitar um V\u00C3\u00ADnculo
@@ -33,20 +33,20 @@ Method | HTTP request | Description
 [**listar_tipos_adquirentes_using_get**](EstabelecimentoApi.md#listar_tipos_adquirentes_using_get) | **GET** /api/tipos-adquirentes | Lista os Tipos de adquirentes
 [**listar_tipos_maquinetas_using_get**](EstabelecimentoApi.md#listar_tipos_maquinetas_using_get) | **GET** /api/tipos-maquinetas | Lista os Tipos de  Maquinetas
 [**listar_tipos_terminais_using_get1**](EstabelecimentoApi.md#listar_tipos_terminais_using_get1) | **GET** /api/tipos-terminais-estabelecimento | Lista os Tipos Terminais
-[**listar_using_get19**](EstabelecimentoApi.md#listar_using_get19) | **GET** /api/estabelecimentos | Lista Estabelecimentos
-[**listar_using_get21**](EstabelecimentoApi.md#listar_using_get21) | **GET** /api/grupos-economicos | Listar grupos econ\u00C3\u00B4micos
-[**listar_using_get23**](EstabelecimentoApi.md#listar_using_get23) | **GET** /api/maquinetas | Lista as Maquinetas
-[**listar_using_get24**](EstabelecimentoApi.md#listar_using_get24) | **GET** /api/tipos-moedas | Lista os tipos de moedas do emissor 
-[**listar_using_get25**](EstabelecimentoApi.md#listar_using_get25) | **GET** /api/regras-operacoes-estabelecimentos | Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
-[**listar_using_get36**](EstabelecimentoApi.md#listar_using_get36) | **GET** /api/telefones-estabelecimentos | Lista os Telefones Estabelecimentos
-[**listar_using_get38**](EstabelecimentoApi.md#listar_using_get38) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
-[**listar_using_get49**](EstabelecimentoApi.md#listar_using_get49) | **GET** /api/adquirentes-estabelecimento | Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
-[**listar_using_get50**](EstabelecimentoApi.md#listar_using_get50) | **GET** /api/estabelecimentos/{id}/operacoes | Lista os v\u00C3\u00ADnculos cadastrados no Emissor
-[**salvar_using_post15**](EstabelecimentoApi.md#salvar_using_post15) | **POST** /api/maquinetas | Realiza o cadastro de uma nova maquineta para um estabelecimento 
-[**salvar_using_post16**](EstabelecimentoApi.md#salvar_using_post16) | **POST** /api/regras-operacoes-estabelecimentos | Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
-[**salvar_using_post21**](EstabelecimentoApi.md#salvar_using_post21) | **POST** /api/telefones-estabelecimentos | Realiza o cadastro de um novo telefone para um estabelecimento 
-[**salvar_using_post23**](EstabelecimentoApi.md#salvar_using_post23) | **POST** /api/terminais | Realiza o cadastro de um novo Terminal
-[**salvar_using_post28**](EstabelecimentoApi.md#salvar_using_post28) | **POST** /api/adquirentes-estabelecimento | Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente
+[**listar_using_get21**](EstabelecimentoApi.md#listar_using_get21) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**listar_using_get23**](EstabelecimentoApi.md#listar_using_get23) | **GET** /api/grupos-economicos | Listar grupos econ\u00C3\u00B4micos
+[**listar_using_get25**](EstabelecimentoApi.md#listar_using_get25) | **GET** /api/maquinetas | Lista as Maquinetas
+[**listar_using_get26**](EstabelecimentoApi.md#listar_using_get26) | **GET** /api/tipos-moedas | Lista os tipos de moedas do emissor 
+[**listar_using_get27**](EstabelecimentoApi.md#listar_using_get27) | **GET** /api/regras-operacoes-estabelecimentos | Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
+[**listar_using_get38**](EstabelecimentoApi.md#listar_using_get38) | **GET** /api/telefones-estabelecimentos | Lista os Telefones Estabelecimentos
+[**listar_using_get40**](EstabelecimentoApi.md#listar_using_get40) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
+[**listar_using_get51**](EstabelecimentoApi.md#listar_using_get51) | **GET** /api/adquirentes-estabelecimento | Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
+[**listar_using_get52**](EstabelecimentoApi.md#listar_using_get52) | **GET** /api/estabelecimentos/{id}/operacoes | Lista os v\u00C3\u00ADnculos cadastrados no Emissor
+[**salvar_using_post16**](EstabelecimentoApi.md#salvar_using_post16) | **POST** /api/maquinetas | Realiza o cadastro de uma nova maquineta para um estabelecimento 
+[**salvar_using_post17**](EstabelecimentoApi.md#salvar_using_post17) | **POST** /api/regras-operacoes-estabelecimentos | Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
+[**salvar_using_post22**](EstabelecimentoApi.md#salvar_using_post22) | **POST** /api/telefones-estabelecimentos | Realiza o cadastro de um novo telefone para um estabelecimento 
+[**salvar_using_post24**](EstabelecimentoApi.md#salvar_using_post24) | **POST** /api/terminais | Realiza o cadastro de um novo Terminal
+[**salvar_using_post29**](EstabelecimentoApi.md#salvar_using_post29) | **POST** /api/adquirentes-estabelecimento | Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente
 
 
 # **alterar_origem_comercial_using_put**
@@ -641,8 +641,8 @@ No authorization required
 
 
 
-# **consultar_using_get15**
-> EstabelecimentoResponse consultar_using_get15(id)
+# **consultar_using_get16**
+> EstabelecimentoResponse consultar_using_get16(id)
 
 Consultar estabelecimento por id
 
@@ -660,10 +660,10 @@ id = 789 # Integer | Id
 
 begin
   #Consultar estabelecimento por id
-  result = api_instance.consultar_using_get15(id)
+  result = api_instance.consultar_using_get16(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->consultar_using_get15: #{e}"
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get16: #{e}"
 end
 ```
 
@@ -688,8 +688,8 @@ No authorization required
 
 
 
-# **consultar_using_get17**
-> GrupoEconomicoResponse consultar_using_get17(id)
+# **consultar_using_get18**
+> GrupoEconomicoResponse consultar_using_get18(id)
 
 Consultar grupo econ\u00C3\u00B4mico
 
@@ -707,10 +707,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Consultar grupo econ\u00C3\u00B4mico
-  result = api_instance.consultar_using_get17(id)
+  result = api_instance.consultar_using_get18(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->consultar_using_get17: #{e}"
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get18: #{e}"
 end
 ```
 
@@ -735,8 +735,8 @@ No authorization required
 
 
 
-# **consultar_using_get19**
-> MaquinetaResponse consultar_using_get19(id)
+# **consultar_using_get20**
+> MaquinetaResponse consultar_using_get20(id)
 
 Apresenta os dados de uma determinada maquineta
 
@@ -754,10 +754,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da
 
 begin
   #Apresenta os dados de uma determinada maquineta
-  result = api_instance.consultar_using_get19(id)
+  result = api_instance.consultar_using_get20(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->consultar_using_get19: #{e}"
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get20: #{e}"
 end
 ```
 
@@ -782,8 +782,8 @@ No authorization required
 
 
 
-# **consultar_using_get20**
-> OperacaoCredorResponse consultar_using_get20(id)
+# **consultar_using_get21**
+> OperacaoCredorResponse consultar_using_get21(id)
 
 Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
 
@@ -801,10 +801,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da
 
 begin
   #Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
-  result = api_instance.consultar_using_get20(id)
+  result = api_instance.consultar_using_get21(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->consultar_using_get20: #{e}"
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get21: #{e}"
 end
 ```
 
@@ -829,8 +829,8 @@ No authorization required
 
 
 
-# **consultar_using_get28**
-> TelefoneEstabelecimentoResponse consultar_using_get28(id)
+# **consultar_using_get29**
+> TelefoneEstabelecimentoResponse consultar_using_get29(id)
 
 Apresenta os dados de um determinado telefone de um estabelecimento
 
@@ -848,10 +848,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado telefone de um estabelecimento
-  result = api_instance.consultar_using_get28(id)
+  result = api_instance.consultar_using_get29(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->consultar_using_get28: #{e}"
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get29: #{e}"
 end
 ```
 
@@ -876,8 +876,8 @@ No authorization required
 
 
 
-# **consultar_using_get30**
-> TerminalResponse consultar_using_get30(id)
+# **consultar_using_get31**
+> TerminalResponse consultar_using_get31(id)
 
 Apresenta os dados de um determinado Terminal
 
@@ -895,10 +895,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado Terminal
-  result = api_instance.consultar_using_get30(id)
+  result = api_instance.consultar_using_get31(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->consultar_using_get30: #{e}"
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get31: #{e}"
 end
 ```
 
@@ -923,8 +923,8 @@ No authorization required
 
 
 
-# **consultar_using_get42**
-> VinculoEstabelecimentoAdquirenteResponse consultar_using_get42(id)
+# **consultar_using_get43**
+> VinculoEstabelecimentoAdquirenteResponse consultar_using_get43(id)
 
 Apresenta os dados de um determinado V\u00C3\u00ADnculo
 
@@ -942,10 +942,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado V\u00C3\u00ADnculo
-  result = api_instance.consultar_using_get42(id)
+  result = api_instance.consultar_using_get43(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->consultar_using_get42: #{e}"
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get43: #{e}"
 end
 ```
 
@@ -1528,8 +1528,8 @@ No authorization required
 
 
 
-# **listar_using_get19**
-> PageEstabelecimentoResponse listar_using_get19(opts)
+# **listar_using_get21**
+> PageEstabelecimentoResponse listar_using_get21(opts)
 
 Lista Estabelecimentos
 
@@ -1584,10 +1584,10 @@ opts = {
 
 begin
   #Lista Estabelecimentos
-  result = api_instance.listar_using_get19(opts)
+  result = api_instance.listar_using_get21(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get19: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get21: #{e}"
 end
 ```
 
@@ -1648,8 +1648,8 @@ No authorization required
 
 
 
-# **listar_using_get21**
-> PageGrupoEconomicoResponse listar_using_get21(opts)
+# **listar_using_get23**
+> PageGrupoEconomicoResponse listar_using_get23(opts)
 
 Listar grupos econ\u00C3\u00B4micos
 
@@ -1695,10 +1695,10 @@ opts = {
 
 begin
   #Listar grupos econ\u00C3\u00B4micos
-  result = api_instance.listar_using_get21(opts)
+  result = api_instance.listar_using_get23(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get21: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get23: #{e}"
 end
 ```
 
@@ -1750,8 +1750,8 @@ No authorization required
 
 
 
-# **listar_using_get23**
-> PageMaquinetaResponse listar_using_get23(opts)
+# **listar_using_get25**
+> PageMaquinetaResponse listar_using_get25(opts)
 
 Lista as Maquinetas
 
@@ -1773,10 +1773,10 @@ opts = {
 
 begin
   #Lista as Maquinetas
-  result = api_instance.listar_using_get23(opts)
+  result = api_instance.listar_using_get25(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get23: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get25: #{e}"
 end
 ```
 
@@ -1804,8 +1804,8 @@ No authorization required
 
 
 
-# **listar_using_get24**
-> PageMoedaResponse listar_using_get24(opts)
+# **listar_using_get26**
+> PageMoedaResponse listar_using_get26(opts)
 
 Lista os tipos de moedas do emissor 
 
@@ -1829,10 +1829,10 @@ opts = {
 
 begin
   #Lista os tipos de moedas do emissor 
-  result = api_instance.listar_using_get24(opts)
+  result = api_instance.listar_using_get26(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get24: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get26: #{e}"
 end
 ```
 
@@ -1862,8 +1862,8 @@ No authorization required
 
 
 
-# **listar_using_get25**
-> PageOperacaoCredorResponse listar_using_get25(opts)
+# **listar_using_get27**
+> PageOperacaoCredorResponse listar_using_get27(opts)
 
 Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
 
@@ -1887,10 +1887,10 @@ opts = {
 
 begin
   #Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
-  result = api_instance.listar_using_get25(opts)
+  result = api_instance.listar_using_get27(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get25: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get27: #{e}"
 end
 ```
 
@@ -1920,8 +1920,8 @@ No authorization required
 
 
 
-# **listar_using_get36**
-> PageTelefoneEstabelecimentoResponse listar_using_get36(opts)
+# **listar_using_get38**
+> PageTelefoneEstabelecimentoResponse listar_using_get38(opts)
 
 Lista os Telefones Estabelecimentos
 
@@ -1943,10 +1943,10 @@ opts = {
 
 begin
   #Lista os Telefones Estabelecimentos
-  result = api_instance.listar_using_get36(opts)
+  result = api_instance.listar_using_get38(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get36: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get38: #{e}"
 end
 ```
 
@@ -1974,8 +1974,8 @@ No authorization required
 
 
 
-# **listar_using_get38**
-> PageTerminalResponse listar_using_get38(opts)
+# **listar_using_get40**
+> PageTerminalResponse listar_using_get40(opts)
 
 Lista os Terminais cadastrados no Emissor
 
@@ -2000,10 +2000,10 @@ opts = {
 
 begin
   #Lista os Terminais cadastrados no Emissor
-  result = api_instance.listar_using_get38(opts)
+  result = api_instance.listar_using_get40(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get38: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get40: #{e}"
 end
 ```
 
@@ -2034,8 +2034,8 @@ No authorization required
 
 
 
-# **listar_using_get49**
-> PageVinculoEstabelecimentoAdquirenteResponse listar_using_get49(opts)
+# **listar_using_get51**
+> PageVinculoEstabelecimentoAdquirenteResponse listar_using_get51(opts)
 
 Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
 
@@ -2059,10 +2059,10 @@ opts = {
 
 begin
   #Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
-  result = api_instance.listar_using_get49(opts)
+  result = api_instance.listar_using_get51(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get49: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get51: #{e}"
 end
 ```
 
@@ -2092,8 +2092,8 @@ No authorization required
 
 
 
-# **listar_using_get50**
-> PageVinculoOperacaoResponse listar_using_get50(id, opts)
+# **listar_using_get52**
+> PageVinculoOperacaoResponse listar_using_get52(id, opts)
 
 Lista os v\u00C3\u00ADnculos cadastrados no Emissor
 
@@ -2119,10 +2119,10 @@ opts = {
 
 begin
   #Lista os v\u00C3\u00ADnculos cadastrados no Emissor
-  result = api_instance.listar_using_get50(id, opts)
+  result = api_instance.listar_using_get52(id, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get50: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get52: #{e}"
 end
 ```
 
@@ -2153,8 +2153,8 @@ No authorization required
 
 
 
-# **salvar_using_post15**
-> MaquinetaResponse salvar_using_post15(maquineta_persist)
+# **salvar_using_post16**
+> MaquinetaResponse salvar_using_post16(maquineta_persist)
 
 Realiza o cadastro de uma nova maquineta para um estabelecimento 
 
@@ -2172,10 +2172,10 @@ maquineta_persist = Pier::MaquinetaPersist.new # MaquinetaPersist | maquinetaPer
 
 begin
   #Realiza o cadastro de uma nova maquineta para um estabelecimento 
-  result = api_instance.salvar_using_post15(maquineta_persist)
+  result = api_instance.salvar_using_post16(maquineta_persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->salvar_using_post15: #{e}"
+  puts "Exception when calling EstabelecimentoApi->salvar_using_post16: #{e}"
 end
 ```
 
@@ -2200,8 +2200,8 @@ No authorization required
 
 
 
-# **salvar_using_post16**
-> OperacaoCredorResponse salvar_using_post16(oprecao_credor_persist)
+# **salvar_using_post17**
+> OperacaoCredorResponse salvar_using_post17(oprecao_credor_persist)
 
 Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
 
@@ -2219,10 +2219,10 @@ oprecao_credor_persist = Pier::OperacaoCredorPersist.new # OperacaoCredorPersist
 
 begin
   #Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
-  result = api_instance.salvar_using_post16(oprecao_credor_persist)
+  result = api_instance.salvar_using_post17(oprecao_credor_persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->salvar_using_post16: #{e}"
+  puts "Exception when calling EstabelecimentoApi->salvar_using_post17: #{e}"
 end
 ```
 
@@ -2247,8 +2247,8 @@ No authorization required
 
 
 
-# **salvar_using_post21**
-> TelefoneEstabelecimentoResponse salvar_using_post21(id_estabelecimento, ddd, telefone, opts)
+# **salvar_using_post22**
+> TelefoneEstabelecimentoResponse salvar_using_post22(id_estabelecimento, ddd, telefone, opts)
 
 Realiza o cadastro de um novo telefone para um estabelecimento 
 
@@ -2273,10 +2273,10 @@ opts = {
 
 begin
   #Realiza o cadastro de um novo telefone para um estabelecimento 
-  result = api_instance.salvar_using_post21(id_estabelecimento, ddd, telefone, opts)
+  result = api_instance.salvar_using_post22(id_estabelecimento, ddd, telefone, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->salvar_using_post21: #{e}"
+  puts "Exception when calling EstabelecimentoApi->salvar_using_post22: #{e}"
 end
 ```
 
@@ -2304,8 +2304,8 @@ No authorization required
 
 
 
-# **salvar_using_post23**
-> TerminalResponse salvar_using_post23(terminal_persist)
+# **salvar_using_post24**
+> TerminalResponse salvar_using_post24(terminal_persist)
 
 Realiza o cadastro de um novo Terminal
 
@@ -2323,10 +2323,10 @@ terminal_persist = Pier::TerminalPersist.new # TerminalPersist | terminalPersist
 
 begin
   #Realiza o cadastro de um novo Terminal
-  result = api_instance.salvar_using_post23(terminal_persist)
+  result = api_instance.salvar_using_post24(terminal_persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->salvar_using_post23: #{e}"
+  puts "Exception when calling EstabelecimentoApi->salvar_using_post24: #{e}"
 end
 ```
 
@@ -2351,8 +2351,8 @@ No authorization required
 
 
 
-# **salvar_using_post28**
-> VinculoEstabelecimentoAdquirenteResponse salvar_using_post28(vinculo_estabelecimento_adquirente_persist)
+# **salvar_using_post29**
+> VinculoEstabelecimentoAdquirenteResponse salvar_using_post29(vinculo_estabelecimento_adquirente_persist)
 
 Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente
 
@@ -2370,10 +2370,10 @@ vinculo_estabelecimento_adquirente_persist = Pier::VinculoEstabelecimentoAdquire
 
 begin
   #Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente
-  result = api_instance.salvar_using_post28(vinculo_estabelecimento_adquirente_persist)
+  result = api_instance.salvar_using_post29(vinculo_estabelecimento_adquirente_persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->salvar_using_post28: #{e}"
+  puts "Exception when calling EstabelecimentoApi->salvar_using_post29: #{e}"
 end
 ```
 

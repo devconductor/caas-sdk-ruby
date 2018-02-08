@@ -36,12 +36,51 @@ describe 'PermissaoPaisApi' do
     end
   end
 
+  # unit tests for consultar_pais_using_get
+  # Apresenta dados de um determinado pa\u00C3\u00ADs
+  # Este m\u00C3\u00A9todo permite consultar dados de um determinado pa\u00C3\u00ADs a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id).
+  # @param [Hash] opts the optional parameters
+  # @return [PaisResponse]
+  describe 'consultar_pais_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
   # unit tests for listar_continentes_using_get
   # Lista os continentes
   # Este recurso permite listar os continentes utilizados no recurso de permiss\u00C3\u00A3o de uso do cart\u00C3\u00A3o no exterior
   # @param [Hash] opts the optional parameters
   # @return [Array<Object>]
   describe 'listar_continentes_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+  # unit tests for listar_paises_using_get
+  # Lista os pa\u00C3\u00ADses
+  # Este recurso permite listar os pa\u00C3\u00ADses.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [String] :codigo C\u00C3\u00B3digo do pa\u00C3\u00ADs
+  # @option opts [String] :sigla Sigla do pa\u00C3\u00ADs
+  # @option opts [String] :descricao Nome do pa\u00C3\u00ADs
+  # @option opts [String] :continente Continente no qual o pa\u00C3\u00ADs faz parte
+  # @option opts [BOOLEAN] :flag_ativo Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo
+  # @return [PagePaisResponse]
+  describe 'listar_paises_using_get test' do
     it "should work" do
       # assertion here
       # should be_a()

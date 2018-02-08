@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ativar_using_post**](DispositivoApi.md#ativar_using_post) | **POST** /api/dispositivos/{id}/ativar-dispositivo | Ativa Dispositivo
 [**desativar_using_post**](DispositivoApi.md#desativar_using_post) | **POST** /api/dispositivos/{id}/desativar-dispositivo | Desativa Dispositivo
-[**listar_using_get15**](DispositivoApi.md#listar_using_get15) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
-[**salvar_using_post8**](DispositivoApi.md#salvar_using_post8) | **POST** /api/dispositivos | Cadastra Dispositivo
+[**listar_using_get17**](DispositivoApi.md#listar_using_get17) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
+[**salvar_using_post9**](DispositivoApi.md#salvar_using_post9) | **POST** /api/dispositivos | Cadastra Dispositivo
 
 
 # **ativar_using_post**
@@ -104,8 +104,8 @@ No authorization required
 
 
 
-# **listar_using_get15**
-> PageDispositivoResponse listar_using_get15(opts)
+# **listar_using_get17**
+> PageDispositivoResponse listar_using_get17(opts)
 
 Lista os dispositivos cadastrados
 
@@ -131,10 +131,10 @@ opts = {
 
 begin
   #Lista os dispositivos cadastrados
-  result = api_instance.listar_using_get15(opts)
+  result = api_instance.listar_using_get17(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DispositivoApi->listar_using_get15: #{e}"
+  puts "Exception when calling DispositivoApi->listar_using_get17: #{e}"
 end
 ```
 
@@ -166,8 +166,8 @@ No authorization required
 
 
 
-# **salvar_using_post8**
-> DispositivoResponse salvar_using_post8(persist)
+# **salvar_using_post9**
+> DispositivoResponse salvar_using_post9(persist)
 
 Cadastra Dispositivo
 
@@ -185,10 +185,10 @@ persist = Pier::DispositivoPersist.new # DispositivoPersist | persist
 
 begin
   #Cadastra Dispositivo
-  result = api_instance.salvar_using_post8(persist)
+  result = api_instance.salvar_using_post9(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DispositivoApi->salvar_using_post8: #{e}"
+  puts "Exception when calling DispositivoApi->salvar_using_post9: #{e}"
 end
 ```
 

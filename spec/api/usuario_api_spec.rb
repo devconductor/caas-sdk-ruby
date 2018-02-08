@@ -104,13 +104,13 @@ describe 'UsuarioApi' do
     end
   end
 
-  # unit tests for consultar_using_get41
+  # unit tests for consultar_using_get42
   # Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
   # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
   # @param [Hash] opts the optional parameters
   # @return [UsuarioResponse]
-  describe 'consultar_using_get41 test' do
+  describe 'consultar_using_get42 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -136,7 +136,7 @@ describe 'UsuarioApi' do
     end
   end
 
-  # unit tests for listar_using_get47
+  # unit tests for listar_using_get49
   # Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
   # Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
   # @param [Hash] opts the optional parameters
@@ -148,7 +148,7 @@ describe 'UsuarioApi' do
   # @option opts [String] :email Email do Usuario
   # @option opts [String] :status Status do Usuario
   # @return [PageUsuarioResponse]
-  describe 'listar_using_get47 test' do
+  describe 'listar_using_get49 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -174,13 +174,13 @@ describe 'UsuarioApi' do
     end
   end
 
-  # unit tests for salvar_using_post27
+  # unit tests for salvar_using_post28
   # Cadastra Usu\u00C3\u00A1rio na base.
   # Esse recurso permite cadastrar usu\u00C3\u00A1rios.
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [UsuarioResponse]
-  describe 'salvar_using_post27 test' do
+  describe 'salvar_using_post28 test' do
     it "should work" do
       # assertion here
       # should be_a()

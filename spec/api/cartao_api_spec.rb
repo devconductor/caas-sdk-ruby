@@ -220,13 +220,13 @@ describe 'CartaoApi' do
     end
   end
 
-  # unit tests for consultar_using_get7
+  # unit tests for consultar_using_get8
   # Apresenta os dados de um determinado Cart\u00C3\u00A3o
   # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
   # @param [Hash] opts the optional parameters
   # @return [CartaoDetalheResponse]
-  describe 'consultar_using_get7 test' do
+  describe 'consultar_using_get8 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -350,7 +350,7 @@ describe 'CartaoApi' do
     end
   end
 
-  # unit tests for listar_using_get8
+  # unit tests for listar_using_get10
   # Lista os Cart\u00C3\u00B5es gerados pelo Emissor
   # Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
   # @param [Hash] opts the optional parameters
@@ -376,7 +376,7 @@ describe 'CartaoApi' do
   # @option opts [String] :codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
   # @option opts [Integer] :sequencial_cartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
   # @return [PageCartaoResponse]
-  describe 'listar_using_get8 test' do
+  describe 'listar_using_get10 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -393,6 +393,23 @@ describe 'CartaoApi' do
   # @param [Hash] opts the optional parameters
   # @return [CartaoResponse]
   describe 'reativar_using_post test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+  # unit tests for validar_cvv_using_post
+  # Validar CVV do cart\u00C3\u00A3o
+  # Esse recurso permite a valida\u00C3\u00A7\u00C3\u00A3o do cvv de um cart\u00C3\u00A3o
+  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+  # @param valida_cvv validaCVV
+  # @param [Hash] opts the optional parameters
+  # @return [Object]
+  describe 'validar_cvv_using_post test' do
     it "should work" do
       # assertion here
       # should be_a()

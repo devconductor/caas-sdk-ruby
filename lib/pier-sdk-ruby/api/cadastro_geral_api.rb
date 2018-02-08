@@ -535,13 +535,78 @@ module Pier
       return data, status_code, headers
     end
 
+    # Apresenta dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo espec\u00C3\u00ADfico.
+    # Este recurso permite consultar dados de configura\u00C3\u00A7\u00C3\u00A3o do parcelamento rotativo a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de configura\u00C3\u00A7\u00C3\u00A3o rotativo (id).
+    # @param [Hash] opts the optional parameters
+    # @return [ConfiguracaoRotativoDetalheResponse]
+    def consultar_using_get10(id, opts = {})
+      data, _status_code, _headers = consultar_using_get10_with_http_info(id, opts)
+      return data
+    end
+
+    # Apresenta dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo espec\u00C3\u00ADfico.
+    # Este recurso permite consultar dados de configura\u00C3\u00A7\u00C3\u00A3o do parcelamento rotativo a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de configura\u00C3\u00A7\u00C3\u00A3o rotativo (id).
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ConfiguracaoRotativoDetalheResponse, Fixnum, Hash)>] ConfiguracaoRotativoDetalheResponse data, response status code and response headers
+    def consultar_using_get10_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get10 ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get10" if id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/configuracoes-rotativos/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ConfiguracaoRotativoDetalheResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Apresenta os dados de um determinado Produto
     # Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
     # @param [Hash] opts the optional parameters
     # @return [ProdutoDetalhesResponse]
-    def consultar_using_get24(id, opts = {})
-      data, _status_code, _headers = consultar_using_get24_with_http_info(id, opts)
+    def consultar_using_get25(id, opts = {})
+      data, _status_code, _headers = consultar_using_get25_with_http_info(id, opts)
       return data
     end
 
@@ -550,14 +615,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
     # @param [Hash] opts the optional parameters
     # @return [Array<(ProdutoDetalhesResponse, Fixnum, Hash)>] ProdutoDetalhesResponse data, response status code and response headers
-    def consultar_using_get24_with_http_info(id, opts = {})
+    def consultar_using_get25_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get24 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get25 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get24" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get25" if id.nil?
       
       
       
@@ -595,7 +660,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'ProdutoDetalhesResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get24\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get25\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -674,8 +739,8 @@ module Pier
     # @option opts [Integer] :id C\u00C3\u00B3digo identificador do tipo de ajuste.
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste.
     # @return [PageTipoAjusteResponse]
-    def consultar_using_get31(opts = {})
-      data, _status_code, _headers = consultar_using_get31_with_http_info(opts)
+    def consultar_using_get32(opts = {})
+      data, _status_code, _headers = consultar_using_get32_with_http_info(opts)
       return data
     end
 
@@ -688,9 +753,9 @@ module Pier
     # @option opts [Integer] :id C\u00C3\u00B3digo identificador do tipo de ajuste.
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste.
     # @return [Array<(PageTipoAjusteResponse, Fixnum, Hash)>] PageTipoAjusteResponse data, response status code and response headers
-    def consultar_using_get31_with_http_info(opts = {})
+    def consultar_using_get32_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get31 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get32 ..."
       end
       
       
@@ -760,7 +825,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTipoAjusteResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get31\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get32\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -775,8 +840,8 @@ module Pier
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto.
     # @option opts [Integer] :banco C\u00C3\u00B3digo identificador do banco.
     # @return [PageTipoBoletoResponse]
-    def consultar_using_get32(opts = {})
-      data, _status_code, _headers = consultar_using_get32_with_http_info(opts)
+    def consultar_using_get33(opts = {})
+      data, _status_code, _headers = consultar_using_get33_with_http_info(opts)
       return data
     end
 
@@ -790,9 +855,9 @@ module Pier
     # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto.
     # @option opts [Integer] :banco C\u00C3\u00B3digo identificador do banco.
     # @return [Array<(PageTipoBoletoResponse, Fixnum, Hash)>] PageTipoBoletoResponse data, response status code and response headers
-    def consultar_using_get32_with_http_info(opts = {})
+    def consultar_using_get33_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get32 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get33 ..."
       end
       
       
@@ -869,7 +934,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTipoBoletoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get32\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get33\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -879,8 +944,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
     # @param [Hash] opts the optional parameters
     # @return [TipoEnderecoResponse]
-    def consultar_using_get33(id, opts = {})
-      data, _status_code, _headers = consultar_using_get33_with_http_info(id, opts)
+    def consultar_using_get34(id, opts = {})
+      data, _status_code, _headers = consultar_using_get34_with_http_info(id, opts)
       return data
     end
 
@@ -889,14 +954,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
     # @param [Hash] opts the optional parameters
     # @return [Array<(TipoEnderecoResponse, Fixnum, Hash)>] TipoEnderecoResponse data, response status code and response headers
-    def consultar_using_get33_with_http_info(id, opts = {})
+    def consultar_using_get34_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get33 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get34 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get33" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get34" if id.nil?
       
       
       
@@ -934,7 +999,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TipoEnderecoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get33\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get34\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -946,8 +1011,8 @@ module Pier
     # @param codigo_processamento C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o.
     # @param [Hash] opts the optional parameters
     # @return [TipoOperacaoResponse]
-    def consultar_using_get34(id_cartao, id_estabelecimento, codigo_processamento, opts = {})
-      data, _status_code, _headers = consultar_using_get34_with_http_info(id_cartao, id_estabelecimento, codigo_processamento, opts)
+    def consultar_using_get35(id_cartao, id_estabelecimento, codigo_processamento, opts = {})
+      data, _status_code, _headers = consultar_using_get35_with_http_info(id_cartao, id_estabelecimento, codigo_processamento, opts)
       return data
     end
 
@@ -958,14 +1023,14 @@ module Pier
     # @param codigo_processamento C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o.
     # @param [Hash] opts the optional parameters
     # @return [Array<(TipoOperacaoResponse, Fixnum, Hash)>] TipoOperacaoResponse data, response status code and response headers
-    def consultar_using_get34_with_http_info(id_cartao, id_estabelecimento, codigo_processamento, opts = {})
+    def consultar_using_get35_with_http_info(id_cartao, id_estabelecimento, codigo_processamento, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get34 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get35 ..."
       end
       
       
       # verify the required parameter 'id_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CadastroGeralApi.consultar_using_get34" if id_cartao.nil?
+      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CadastroGeralApi.consultar_using_get35" if id_cartao.nil?
       
       
       
@@ -973,7 +1038,7 @@ module Pier
       
       
       # verify the required parameter 'id_estabelecimento' is set
-      fail ArgumentError, "Missing the required parameter 'id_estabelecimento' when calling CadastroGeralApi.consultar_using_get34" if id_estabelecimento.nil?
+      fail ArgumentError, "Missing the required parameter 'id_estabelecimento' when calling CadastroGeralApi.consultar_using_get35" if id_estabelecimento.nil?
       
       
       
@@ -981,7 +1046,7 @@ module Pier
       
       
       # verify the required parameter 'codigo_processamento' is set
-      fail ArgumentError, "Missing the required parameter 'codigo_processamento' when calling CadastroGeralApi.consultar_using_get34" if codigo_processamento.nil?
+      fail ArgumentError, "Missing the required parameter 'codigo_processamento' when calling CadastroGeralApi.consultar_using_get35" if codigo_processamento.nil?
       
       
       
@@ -1022,7 +1087,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TipoOperacaoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get34\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get35\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1032,8 +1097,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
     # @param [Hash] opts the optional parameters
     # @return [TipoTelefoneResponse]
-    def consultar_using_get36(id, opts = {})
-      data, _status_code, _headers = consultar_using_get36_with_http_info(id, opts)
+    def consultar_using_get37(id, opts = {})
+      data, _status_code, _headers = consultar_using_get37_with_http_info(id, opts)
       return data
     end
 
@@ -1042,14 +1107,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
     # @param [Hash] opts the optional parameters
     # @return [Array<(TipoTelefoneResponse, Fixnum, Hash)>] TipoTelefoneResponse data, response status code and response headers
-    def consultar_using_get36_with_http_info(id, opts = {})
+    def consultar_using_get37_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get36 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get37 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get36" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get37" if id.nil?
       
       
       
@@ -1087,7 +1152,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TipoTelefoneResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get36\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get37\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1097,8 +1162,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Banco (id).
     # @param [Hash] opts the optional parameters
     # @return [BancoResponse]
-    def consultar_using_get4(id, opts = {})
-      data, _status_code, _headers = consultar_using_get4_with_http_info(id, opts)
+    def consultar_using_get5(id, opts = {})
+      data, _status_code, _headers = consultar_using_get5_with_http_info(id, opts)
       return data
     end
 
@@ -1107,14 +1172,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Banco (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(BancoResponse, Fixnum, Hash)>] BancoResponse data, response status code and response headers
-    def consultar_using_get4_with_http_info(id, opts = {})
+    def consultar_using_get5_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get4 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get5 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get4" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get5" if id.nil?
       
       
       
@@ -1152,7 +1217,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'BancoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get4\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get5\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1162,8 +1227,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [ConfiguracaoRegistroCobrancaResponse]
-    def consultar_using_get8(id, opts = {})
-      data, _status_code, _headers = consultar_using_get8_with_http_info(id, opts)
+    def consultar_using_get9(id, opts = {})
+      data, _status_code, _headers = consultar_using_get9_with_http_info(id, opts)
       return data
     end
 
@@ -1172,14 +1237,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(ConfiguracaoRegistroCobrancaResponse, Fixnum, Hash)>] ConfiguracaoRegistroCobrancaResponse data, response status code and response headers
-    def consultar_using_get8_with_http_info(id, opts = {})
+    def consultar_using_get9_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get8 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get9 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get8" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get9" if id.nil?
       
       
       
@@ -1216,71 +1281,6 @@ module Pier
         :body => post_body,
         :auth_names => auth_names,
         :return_type => 'ConfiguracaoRegistroCobrancaResponse')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get8\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Apresenta dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo espec\u00C3\u00ADfico.
-    # Este recurso permite consultar dados de configura\u00C3\u00A7\u00C3\u00A3o do parcelamento rotativo a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de configura\u00C3\u00A7\u00C3\u00A3o rotativo (id).
-    # @param [Hash] opts the optional parameters
-    # @return [ConfiguracaoRotativoDetalheResponse]
-    def consultar_using_get9(id, opts = {})
-      data, _status_code, _headers = consultar_using_get9_with_http_info(id, opts)
-      return data
-    end
-
-    # Apresenta dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo espec\u00C3\u00ADfico.
-    # Este recurso permite consultar dados de configura\u00C3\u00A7\u00C3\u00A3o do parcelamento rotativo a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de configura\u00C3\u00A7\u00C3\u00A3o rotativo (id).
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(ConfiguracaoRotativoDetalheResponse, Fixnum, Hash)>] ConfiguracaoRotativoDetalheResponse data, response status code and response headers
-    def consultar_using_get9_with_http_info(id, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get9 ..."
-      end
-      
-      
-      # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get9" if id.nil?
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/configuracoes-rotativos/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'ConfiguracaoRotativoDetalheResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get9\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -2117,8 +2117,8 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [ConfiguracaoRegistroCobrancaResponse]
-    def listar_using_get10(opts = {})
-      data, _status_code, _headers = listar_using_get10_with_http_info(opts)
+    def listar_using_get12(opts = {})
+      data, _status_code, _headers = listar_using_get12_with_http_info(opts)
       return data
     end
 
@@ -2129,9 +2129,9 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [Array<(ConfiguracaoRegistroCobrancaResponse, Fixnum, Hash)>] ConfiguracaoRegistroCobrancaResponse data, response status code and response headers
-    def listar_using_get10_with_http_info(opts = {})
+    def listar_using_get12_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get10 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get12 ..."
       end
       
       
@@ -2187,7 +2187,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'ConfiguracaoRegistroCobrancaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get12\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2200,8 +2200,8 @@ module Pier
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Produto.
     # @return [PageConfiguracaoRotativoResponse]
-    def listar_using_get11(opts = {})
-      data, _status_code, _headers = listar_using_get11_with_http_info(opts)
+    def listar_using_get13(opts = {})
+      data, _status_code, _headers = listar_using_get13_with_http_info(opts)
       return data
     end
 
@@ -2213,9 +2213,9 @@ module Pier
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Produto.
     # @return [Array<(PageConfiguracaoRotativoResponse, Fixnum, Hash)>] PageConfiguracaoRotativoResponse data, response status code and response headers
-    def listar_using_get11_with_http_info(opts = {})
+    def listar_using_get13_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get11 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get13 ..."
       end
       
       
@@ -2278,7 +2278,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageConfiguracaoRotativoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get11\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get13\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2300,8 +2300,8 @@ module Pier
     # @option opts [String] :data_cadastro_portador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
     # @option opts [String] :data_cancelamento_portador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
     # @return [PagePortadorResponse]
-    def listar_using_get30(opts = {})
-      data, _status_code, _headers = listar_using_get30_with_http_info(opts)
+    def listar_using_get32(opts = {})
+      data, _status_code, _headers = listar_using_get32_with_http_info(opts)
       return data
     end
 
@@ -2322,9 +2322,9 @@ module Pier
     # @option opts [String] :data_cadastro_portador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
     # @option opts [String] :data_cancelamento_portador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
     # @return [Array<(PagePortadorResponse, Fixnum, Hash)>] PagePortadorResponse data, response status code and response headers
-    def listar_using_get30_with_http_info(opts = {})
+    def listar_using_get32_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get30 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get32 ..."
       end
       
       
@@ -2450,7 +2450,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PagePortadorResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get30\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get32\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2465,8 +2465,8 @@ module Pier
     # @option opts [Integer] :status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
     # @option opts [Integer] :id_fantasia_basica C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
     # @return [PageProdutoResponse]
-    def listar_using_get31(opts = {})
-      data, _status_code, _headers = listar_using_get31_with_http_info(opts)
+    def listar_using_get33(opts = {})
+      data, _status_code, _headers = listar_using_get33_with_http_info(opts)
       return data
     end
 
@@ -2480,9 +2480,9 @@ module Pier
     # @option opts [Integer] :status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
     # @option opts [Integer] :id_fantasia_basica C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
     # @return [Array<(PageProdutoResponse, Fixnum, Hash)>] PageProdutoResponse data, response status code and response headers
-    def listar_using_get31_with_http_info(opts = {})
+    def listar_using_get33_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get31 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get33 ..."
       end
       
       
@@ -2559,7 +2559,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageProdutoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get31\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get33\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2576,8 +2576,8 @@ module Pier
     # @option opts [Integer] :id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
     # @option opts [Integer] :id_usuario C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio
     # @return [PagePromotorResponse]
-    def listar_using_get32(opts = {})
-      data, _status_code, _headers = listar_using_get32_with_http_info(opts)
+    def listar_using_get34(opts = {})
+      data, _status_code, _headers = listar_using_get34_with_http_info(opts)
       return data
     end
 
@@ -2593,9 +2593,9 @@ module Pier
     # @option opts [Integer] :id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
     # @option opts [Integer] :id_usuario C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio
     # @return [Array<(PagePromotorResponse, Fixnum, Hash)>] PagePromotorResponse data, response status code and response headers
-    def listar_using_get32_with_http_info(opts = {})
+    def listar_using_get34_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get32 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get34 ..."
       end
       
       
@@ -2686,7 +2686,207 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PagePromotorResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get32\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get34\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+    # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+    # @option opts [String] :nome Nome do Tipo do Endere\u00C3\u00A7o
+    # @return [PageTipoEnderecoResponse]
+    def listar_using_get42(opts = {})
+      data, _status_code, _headers = listar_using_get42_with_http_info(opts)
+      return data
+    end
+
+    # Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+    # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+    # @option opts [String] :nome Nome do Tipo do Endere\u00C3\u00A7o
+    # @return [Array<(PageTipoEnderecoResponse, Fixnum, Hash)>] PageTipoEnderecoResponse data, response status code and response headers
+    def listar_using_get42_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get42 ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/tipos-enderecos".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'id'] = opts[:'id'] if opts[:'id']
+      query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageTipoEnderecoResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get42\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Lista os Tipos de Telefones
+    # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+    # @option opts [String] :nome Nome do Tipo do Telefone
+    # @return [PageTipoTelefoneResponse]
+    def listar_using_get44(opts = {})
+      data, _status_code, _headers = listar_using_get44_with_http_info(opts)
+      return data
+    end
+
+    # Lista os Tipos de Telefones
+    # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+    # @option opts [String] :nome Nome do Tipo do Telefone
+    # @return [Array<(PageTipoTelefoneResponse, Fixnum, Hash)>] PageTipoTelefoneResponse data, response status code and response headers
+    def listar_using_get44_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get44 ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/tipos-telefones".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'id'] = opts[:'id'] if opts[:'id']
+      query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageTipoTelefoneResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get44\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2702,8 +2902,8 @@ module Pier
     # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
     # @option opts [String] :data_atendimento Apresenta a data em que o Atendimento foi realizado.
     # @return [PageAtendimentoClienteResponse]
-    def listar_using_get4(opts = {})
-      data, _status_code, _headers = listar_using_get4_with_http_info(opts)
+    def listar_using_get5(opts = {})
+      data, _status_code, _headers = listar_using_get5_with_http_info(opts)
       return data
     end
 
@@ -2718,9 +2918,9 @@ module Pier
     # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
     # @option opts [String] :data_atendimento Apresenta a data em que o Atendimento foi realizado.
     # @return [Array<(PageAtendimentoClienteResponse, Fixnum, Hash)>] PageAtendimentoClienteResponse data, response status code and response headers
-    def listar_using_get4_with_http_info(opts = {})
+    def listar_using_get5_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get4 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get5 ..."
       end
       
       
@@ -2804,207 +3004,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageAtendimentoClienteResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get4\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-    # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
-    # @option opts [String] :nome Nome do Tipo do Endere\u00C3\u00A7o
-    # @return [PageTipoEnderecoResponse]
-    def listar_using_get40(opts = {})
-      data, _status_code, _headers = listar_using_get40_with_http_info(opts)
-      return data
-    end
-
-    # Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-    # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
-    # @option opts [String] :nome Nome do Tipo do Endere\u00C3\u00A7o
-    # @return [Array<(PageTipoEnderecoResponse, Fixnum, Hash)>] PageTipoEnderecoResponse data, response status code and response headers
-    def listar_using_get40_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get40 ..."
-      end
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/tipos-enderecos".sub('{format}','json')
-
-      # query parameters
-      query_params = {}
-      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
-      query_params[:'page'] = opts[:'page'] if opts[:'page']
-      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
-      query_params[:'id'] = opts[:'id'] if opts[:'id']
-      query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'PageTipoEnderecoResponse')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get40\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Lista os Tipos de Telefones
-    # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
-    # @option opts [String] :nome Nome do Tipo do Telefone
-    # @return [PageTipoTelefoneResponse]
-    def listar_using_get42(opts = {})
-      data, _status_code, _headers = listar_using_get42_with_http_info(opts)
-      return data
-    end
-
-    # Lista os Tipos de Telefones
-    # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
-    # @option opts [String] :nome Nome do Tipo do Telefone
-    # @return [Array<(PageTipoTelefoneResponse, Fixnum, Hash)>] PageTipoTelefoneResponse data, response status code and response headers
-    def listar_using_get42_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get42 ..."
-      end
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/tipos-telefones".sub('{format}','json')
-
-      # query parameters
-      query_params = {}
-      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
-      query_params[:'page'] = opts[:'page'] if opts[:'page']
-      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
-      query_params[:'id'] = opts[:'id'] if opts[:'id']
-      query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'PageTipoTelefoneResponse')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get42\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get5\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3017,8 +3017,8 @@ module Pier
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :data_vencimento Indica a data de vencimento das faturas
     # @return [PageControleVencimentoResponse]
-    def listar_using_get48(opts = {})
-      data, _status_code, _headers = listar_using_get48_with_http_info(opts)
+    def listar_using_get50(opts = {})
+      data, _status_code, _headers = listar_using_get50_with_http_info(opts)
       return data
     end
 
@@ -3030,9 +3030,9 @@ module Pier
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [String] :data_vencimento Indica a data de vencimento das faturas
     # @return [Array<(PageControleVencimentoResponse, Fixnum, Hash)>] PageControleVencimentoResponse data, response status code and response headers
-    def listar_using_get48_with_http_info(opts = {})
+    def listar_using_get50_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get48 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get50 ..."
       end
       
       
@@ -3095,7 +3095,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageControleVencimentoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get48\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get50\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3107,8 +3107,8 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [PageBancoResponse]
-    def listar_using_get5(opts = {})
-      data, _status_code, _headers = listar_using_get5_with_http_info(opts)
+    def listar_using_get7(opts = {})
+      data, _status_code, _headers = listar_using_get7_with_http_info(opts)
       return data
     end
 
@@ -3119,9 +3119,9 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [Array<(PageBancoResponse, Fixnum, Hash)>] PageBancoResponse data, response status code and response headers
-    def listar_using_get5_with_http_info(opts = {})
+    def listar_using_get7_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get5 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get7 ..."
       end
       
       
@@ -3177,7 +3177,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageBancoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get5\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get7\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3323,8 +3323,8 @@ module Pier
     # @param campanha_persist campanhaPersist
     # @param [Hash] opts the optional parameters
     # @return [CampanhaResponse]
-    def salvar_using_post4(campanha_persist, opts = {})
-      data, _status_code, _headers = salvar_using_post4_with_http_info(campanha_persist, opts)
+    def salvar_using_post5(campanha_persist, opts = {})
+      data, _status_code, _headers = salvar_using_post5_with_http_info(campanha_persist, opts)
       return data
     end
 
@@ -3333,14 +3333,14 @@ module Pier
     # @param campanha_persist campanhaPersist
     # @param [Hash] opts the optional parameters
     # @return [Array<(CampanhaResponse, Fixnum, Hash)>] CampanhaResponse data, response status code and response headers
-    def salvar_using_post4_with_http_info(campanha_persist, opts = {})
+    def salvar_using_post5_with_http_info(campanha_persist, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.salvar_using_post4 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.salvar_using_post5 ..."
       end
       
       
       # verify the required parameter 'campanha_persist' is set
-      fail ArgumentError, "Missing the required parameter 'campanha_persist' when calling CadastroGeralApi.salvar_using_post4" if campanha_persist.nil?
+      fail ArgumentError, "Missing the required parameter 'campanha_persist' when calling CadastroGeralApi.salvar_using_post5" if campanha_persist.nil?
       
       
       
@@ -3378,7 +3378,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'CampanhaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#salvar_using_post4\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#salvar_using_post5\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3388,8 +3388,8 @@ module Pier
     # @param configuracao_rotativo_persist configuracaoRotativoPersist
     # @param [Hash] opts the optional parameters
     # @return [ConfiguracaoRotativoDetalheResponse]
-    def salvar_using_post6(configuracao_rotativo_persist, opts = {})
-      data, _status_code, _headers = salvar_using_post6_with_http_info(configuracao_rotativo_persist, opts)
+    def salvar_using_post7(configuracao_rotativo_persist, opts = {})
+      data, _status_code, _headers = salvar_using_post7_with_http_info(configuracao_rotativo_persist, opts)
       return data
     end
 
@@ -3398,14 +3398,14 @@ module Pier
     # @param configuracao_rotativo_persist configuracaoRotativoPersist
     # @param [Hash] opts the optional parameters
     # @return [Array<(ConfiguracaoRotativoDetalheResponse, Fixnum, Hash)>] ConfiguracaoRotativoDetalheResponse data, response status code and response headers
-    def salvar_using_post6_with_http_info(configuracao_rotativo_persist, opts = {})
+    def salvar_using_post7_with_http_info(configuracao_rotativo_persist, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.salvar_using_post6 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.salvar_using_post7 ..."
       end
       
       
       # verify the required parameter 'configuracao_rotativo_persist' is set
-      fail ArgumentError, "Missing the required parameter 'configuracao_rotativo_persist' when calling CadastroGeralApi.salvar_using_post6" if configuracao_rotativo_persist.nil?
+      fail ArgumentError, "Missing the required parameter 'configuracao_rotativo_persist' when calling CadastroGeralApi.salvar_using_post7" if configuracao_rotativo_persist.nil?
       
       
       
@@ -3443,7 +3443,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'ConfiguracaoRotativoDetalheResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#salvar_using_post6\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#salvar_using_post7\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

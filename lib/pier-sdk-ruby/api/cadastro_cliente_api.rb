@@ -995,8 +995,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
     # @param [Hash] opts the optional parameters
     # @return [EnderecoResponse]
-    def consultar_using_get14(id, opts = {})
-      data, _status_code, _headers = consultar_using_get14_with_http_info(id, opts)
+    def consultar_using_get15(id, opts = {})
+      data, _status_code, _headers = consultar_using_get15_with_http_info(id, opts)
       return data
     end
 
@@ -1005,14 +1005,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(EnderecoResponse, Fixnum, Hash)>] EnderecoResponse data, response status code and response headers
-    def consultar_using_get14_with_http_info(id, opts = {})
+    def consultar_using_get15_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroClienteApi.consultar_using_get14 ..."
+        @api_client.config.logger.debug "Calling API: CadastroClienteApi.consultar_using_get15 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroClienteApi.consultar_using_get14" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroClienteApi.consultar_using_get15" if id.nil?
       
       
       
@@ -1050,7 +1050,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'EnderecoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroClienteApi#consultar_using_get14\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroClienteApi#consultar_using_get15\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1060,8 +1060,8 @@ module Pier
     # @param id ID da Pessoa
     # @param [Hash] opts the optional parameters
     # @return [PessoaDetalheResponse]
-    def consultar_using_get22(id, opts = {})
-      data, _status_code, _headers = consultar_using_get22_with_http_info(id, opts)
+    def consultar_using_get23(id, opts = {})
+      data, _status_code, _headers = consultar_using_get23_with_http_info(id, opts)
       return data
     end
 
@@ -1070,14 +1070,14 @@ module Pier
     # @param id ID da Pessoa
     # @param [Hash] opts the optional parameters
     # @return [Array<(PessoaDetalheResponse, Fixnum, Hash)>] PessoaDetalheResponse data, response status code and response headers
-    def consultar_using_get22_with_http_info(id, opts = {})
+    def consultar_using_get23_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroClienteApi.consultar_using_get22 ..."
+        @api_client.config.logger.debug "Calling API: CadastroClienteApi.consultar_using_get23 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroClienteApi.consultar_using_get22" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroClienteApi.consultar_using_get23" if id.nil?
       
       
       
@@ -1115,7 +1115,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PessoaDetalheResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroClienteApi#consultar_using_get22\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroClienteApi#consultar_using_get23\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1125,8 +1125,8 @@ module Pier
     # @param id ID da Pessoa
     # @param [Hash] opts the optional parameters
     # @return [PessoaResponse]
-    def consultar_using_get23(id, opts = {})
-      data, _status_code, _headers = consultar_using_get23_with_http_info(id, opts)
+    def consultar_using_get24(id, opts = {})
+      data, _status_code, _headers = consultar_using_get24_with_http_info(id, opts)
       return data
     end
 
@@ -1135,14 +1135,14 @@ module Pier
     # @param id ID da Pessoa
     # @param [Hash] opts the optional parameters
     # @return [Array<(PessoaResponse, Fixnum, Hash)>] PessoaResponse data, response status code and response headers
-    def consultar_using_get23_with_http_info(id, opts = {})
+    def consultar_using_get24_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroClienteApi.consultar_using_get23 ..."
+        @api_client.config.logger.debug "Calling API: CadastroClienteApi.consultar_using_get24 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroClienteApi.consultar_using_get23" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroClienteApi.consultar_using_get24" if id.nil?
       
       
       
@@ -1180,7 +1180,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PessoaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroClienteApi#consultar_using_get23\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroClienteApi#consultar_using_get24\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1190,8 +1190,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
     # @param [Hash] opts the optional parameters
     # @return [TelefoneResponse]
-    def consultar_using_get29(id, opts = {})
-      data, _status_code, _headers = consultar_using_get29_with_http_info(id, opts)
+    def consultar_using_get30(id, opts = {})
+      data, _status_code, _headers = consultar_using_get30_with_http_info(id, opts)
       return data
     end
 
@@ -1200,14 +1200,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(TelefoneResponse, Fixnum, Hash)>] TelefoneResponse data, response status code and response headers
-    def consultar_using_get29_with_http_info(id, opts = {})
+    def consultar_using_get30_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroClienteApi.consultar_using_get29 ..."
+        @api_client.config.logger.debug "Calling API: CadastroClienteApi.consultar_using_get30 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroClienteApi.consultar_using_get29" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroClienteApi.consultar_using_get30" if id.nil?
       
       
       
@@ -1245,7 +1245,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TelefoneResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroClienteApi#consultar_using_get29\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroClienteApi#consultar_using_get30\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1530,8 +1530,8 @@ module Pier
     # @option opts [String] :data_inclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
     # @option opts [String] :data_ultima_atualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
     # @return [PageEnderecoResponse]
-    def listar_using_get18(opts = {})
-      data, _status_code, _headers = listar_using_get18_with_http_info(opts)
+    def listar_using_get20(opts = {})
+      data, _status_code, _headers = listar_using_get20_with_http_info(opts)
       return data
     end
 
@@ -1556,9 +1556,9 @@ module Pier
     # @option opts [String] :data_inclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
     # @option opts [String] :data_ultima_atualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
     # @return [Array<(PageEnderecoResponse, Fixnum, Hash)>] PageEnderecoResponse data, response status code and response headers
-    def listar_using_get18_with_http_info(opts = {})
+    def listar_using_get20_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroClienteApi.listar_using_get18 ..."
+        @api_client.config.logger.debug "Calling API: CadastroClienteApi.listar_using_get20 ..."
       end
       
       
@@ -1712,7 +1712,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageEnderecoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroClienteApi#listar_using_get18\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroClienteApi#listar_using_get20\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1735,8 +1735,8 @@ module Pier
     # @option opts [String] :email Email da pessoa fisica
     # @option opts [String] :nome_empresa Nome que deve ser impresso no cart\u00C3\u00A3o
     # @return [PagePessoaDetalheResponse]
-    def listar_using_get27(opts = {})
-      data, _status_code, _headers = listar_using_get27_with_http_info(opts)
+    def listar_using_get29(opts = {})
+      data, _status_code, _headers = listar_using_get29_with_http_info(opts)
       return data
     end
 
@@ -1758,9 +1758,9 @@ module Pier
     # @option opts [String] :email Email da pessoa fisica
     # @option opts [String] :nome_empresa Nome que deve ser impresso no cart\u00C3\u00A3o
     # @return [Array<(PagePessoaDetalheResponse, Fixnum, Hash)>] PagePessoaDetalheResponse data, response status code and response headers
-    def listar_using_get27_with_http_info(opts = {})
+    def listar_using_get29_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroClienteApi.listar_using_get27 ..."
+        @api_client.config.logger.debug "Calling API: CadastroClienteApi.listar_using_get29 ..."
       end
       
       
@@ -1893,7 +1893,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PagePessoaDetalheResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroClienteApi#listar_using_get27\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroClienteApi#listar_using_get29\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1916,8 +1916,8 @@ module Pier
     # @option opts [String] :unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade
     # @option opts [String] :data_emissao_identidade Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
     # @return [PagePessoaResponse]
-    def listar_using_get28(opts = {})
-      data, _status_code, _headers = listar_using_get28_with_http_info(opts)
+    def listar_using_get30(opts = {})
+      data, _status_code, _headers = listar_using_get30_with_http_info(opts)
       return data
     end
 
@@ -1939,9 +1939,9 @@ module Pier
     # @option opts [String] :unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade
     # @option opts [String] :data_emissao_identidade Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
     # @return [Array<(PagePessoaResponse, Fixnum, Hash)>] PagePessoaResponse data, response status code and response headers
-    def listar_using_get28_with_http_info(opts = {})
+    def listar_using_get30_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroClienteApi.listar_using_get28 ..."
+        @api_client.config.logger.debug "Calling API: CadastroClienteApi.listar_using_get30 ..."
       end
       
       
@@ -2074,7 +2074,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PagePessoaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroClienteApi#listar_using_get28\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroClienteApi#listar_using_get30\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2093,8 +2093,8 @@ module Pier
     # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
     # @option opts [Integer] :status Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo
     # @return [PageTelefoneResponse]
-    def listar_using_get37(opts = {})
-      data, _status_code, _headers = listar_using_get37_with_http_info(opts)
+    def listar_using_get39(opts = {})
+      data, _status_code, _headers = listar_using_get39_with_http_info(opts)
       return data
     end
 
@@ -2112,9 +2112,9 @@ module Pier
     # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
     # @option opts [Integer] :status Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo
     # @return [Array<(PageTelefoneResponse, Fixnum, Hash)>] PageTelefoneResponse data, response status code and response headers
-    def listar_using_get37_with_http_info(opts = {})
+    def listar_using_get39_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroClienteApi.listar_using_get37 ..."
+        @api_client.config.logger.debug "Calling API: CadastroClienteApi.listar_using_get39 ..."
       end
       
       
@@ -2219,7 +2219,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTelefoneResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroClienteApi#listar_using_get37\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroClienteApi#listar_using_get39\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2369,8 +2369,8 @@ module Pier
     # @option opts [String] :uf Apresenta sigla da Unidade Federativa
     # @option opts [String] :pais Apresenta nome do Pais
     # @return [EnderecoResponse]
-    def salvar_using_post11(opts = {})
-      data, _status_code, _headers = salvar_using_post11_with_http_info(opts)
+    def salvar_using_post12(opts = {})
+      data, _status_code, _headers = salvar_using_post12_with_http_info(opts)
       return data
     end
 
@@ -2389,9 +2389,9 @@ module Pier
     # @option opts [String] :uf Apresenta sigla da Unidade Federativa
     # @option opts [String] :pais Apresenta nome do Pais
     # @return [Array<(EnderecoResponse, Fixnum, Hash)>] EnderecoResponse data, response status code and response headers
-    def salvar_using_post11_with_http_info(opts = {})
+    def salvar_using_post12_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroClienteApi.salvar_using_post11 ..."
+        @api_client.config.logger.debug "Calling API: CadastroClienteApi.salvar_using_post12 ..."
       end
       
       
@@ -2503,7 +2503,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'EnderecoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroClienteApi#salvar_using_post11\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroClienteApi#salvar_using_post12\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2514,8 +2514,8 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [IntegracaoEmissorPersist] :body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
     # @return [IntegracaoEmissorResponse]
-    def salvar_using_post13(id, opts = {})
-      data, _status_code, _headers = salvar_using_post13_with_http_info(id, opts)
+    def salvar_using_post14(id, opts = {})
+      data, _status_code, _headers = salvar_using_post14_with_http_info(id, opts)
       return data
     end
 
@@ -2525,14 +2525,14 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [IntegracaoEmissorPersist] :body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
     # @return [Array<(IntegracaoEmissorResponse, Fixnum, Hash)>] IntegracaoEmissorResponse data, response status code and response headers
-    def salvar_using_post13_with_http_info(id, opts = {})
+    def salvar_using_post14_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroClienteApi.salvar_using_post13 ..."
+        @api_client.config.logger.debug "Calling API: CadastroClienteApi.salvar_using_post14 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroClienteApi.salvar_using_post13" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroClienteApi.salvar_using_post14" if id.nil?
       
       
       
@@ -2576,7 +2576,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'IntegracaoEmissorResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroClienteApi#salvar_using_post13\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroClienteApi#salvar_using_post14\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2596,8 +2596,8 @@ module Pier
     # @option opts [String] :email Email da pessoa fisica
     # @option opts [String] :nome_empresa Nome que deve ser impresso no cart\u00C3\u00A3o
     # @return [PessoaDetalheResponse]
-    def salvar_using_post18(id_pessoa, opts = {})
-      data, _status_code, _headers = salvar_using_post18_with_http_info(id_pessoa, opts)
+    def salvar_using_post19(id_pessoa, opts = {})
+      data, _status_code, _headers = salvar_using_post19_with_http_info(id_pessoa, opts)
       return data
     end
 
@@ -2616,14 +2616,14 @@ module Pier
     # @option opts [String] :email Email da pessoa fisica
     # @option opts [String] :nome_empresa Nome que deve ser impresso no cart\u00C3\u00A3o
     # @return [Array<(PessoaDetalheResponse, Fixnum, Hash)>] PessoaDetalheResponse data, response status code and response headers
-    def salvar_using_post18_with_http_info(id_pessoa, opts = {})
+    def salvar_using_post19_with_http_info(id_pessoa, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroClienteApi.salvar_using_post18 ..."
+        @api_client.config.logger.debug "Calling API: CadastroClienteApi.salvar_using_post19 ..."
       end
       
       
       # verify the required parameter 'id_pessoa' is set
-      fail ArgumentError, "Missing the required parameter 'id_pessoa' when calling CadastroClienteApi.salvar_using_post18" if id_pessoa.nil?
+      fail ArgumentError, "Missing the required parameter 'id_pessoa' when calling CadastroClienteApi.salvar_using_post19" if id_pessoa.nil?
       
       
       
@@ -2732,7 +2732,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PessoaDetalheResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroClienteApi#salvar_using_post18\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroClienteApi#salvar_using_post19\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2751,8 +2751,8 @@ module Pier
     # @option opts [String] :unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade
     # @option opts [String] :data_emissao_identidade Data emiss\u00C3\u00A3o da Identidade.
     # @return [PessoaResponse]
-    def salvar_using_post19(nome, tipo, data_nascimento, opts = {})
-      data, _status_code, _headers = salvar_using_post19_with_http_info(nome, tipo, data_nascimento, opts)
+    def salvar_using_post20(nome, tipo, data_nascimento, opts = {})
+      data, _status_code, _headers = salvar_using_post20_with_http_info(nome, tipo, data_nascimento, opts)
       return data
     end
 
@@ -2770,14 +2770,14 @@ module Pier
     # @option opts [String] :unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade
     # @option opts [String] :data_emissao_identidade Data emiss\u00C3\u00A3o da Identidade.
     # @return [Array<(PessoaResponse, Fixnum, Hash)>] PessoaResponse data, response status code and response headers
-    def salvar_using_post19_with_http_info(nome, tipo, data_nascimento, opts = {})
+    def salvar_using_post20_with_http_info(nome, tipo, data_nascimento, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroClienteApi.salvar_using_post19 ..."
+        @api_client.config.logger.debug "Calling API: CadastroClienteApi.salvar_using_post20 ..."
       end
       
       
       # verify the required parameter 'nome' is set
-      fail ArgumentError, "Missing the required parameter 'nome' when calling CadastroClienteApi.salvar_using_post19" if nome.nil?
+      fail ArgumentError, "Missing the required parameter 'nome' when calling CadastroClienteApi.salvar_using_post20" if nome.nil?
       
       
       
@@ -2785,7 +2785,7 @@ module Pier
       
       
       # verify the required parameter 'tipo' is set
-      fail ArgumentError, "Missing the required parameter 'tipo' when calling CadastroClienteApi.salvar_using_post19" if tipo.nil?
+      fail ArgumentError, "Missing the required parameter 'tipo' when calling CadastroClienteApi.salvar_using_post20" if tipo.nil?
       
       
       
@@ -2793,7 +2793,7 @@ module Pier
       
       
       # verify the required parameter 'data_nascimento' is set
-      fail ArgumentError, "Missing the required parameter 'data_nascimento' when calling CadastroClienteApi.salvar_using_post19" if data_nascimento.nil?
+      fail ArgumentError, "Missing the required parameter 'data_nascimento' when calling CadastroClienteApi.salvar_using_post20" if data_nascimento.nil?
       
       
       
@@ -2883,7 +2883,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PessoaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroClienteApi#salvar_using_post19\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroClienteApi#salvar_using_post20\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2897,8 +2897,8 @@ module Pier
     # @option opts [String] :telefone N\u00C3\u00BAmero do telefone.
     # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
     # @return [TelefoneResponse]
-    def salvar_using_post22(opts = {})
-      data, _status_code, _headers = salvar_using_post22_with_http_info(opts)
+    def salvar_using_post23(opts = {})
+      data, _status_code, _headers = salvar_using_post23_with_http_info(opts)
       return data
     end
 
@@ -2911,9 +2911,9 @@ module Pier
     # @option opts [String] :telefone N\u00C3\u00BAmero do telefone.
     # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
     # @return [Array<(TelefoneResponse, Fixnum, Hash)>] TelefoneResponse data, response status code and response headers
-    def salvar_using_post22_with_http_info(opts = {})
+    def salvar_using_post23_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroClienteApi.salvar_using_post22 ..."
+        @api_client.config.logger.debug "Calling API: CadastroClienteApi.salvar_using_post23 ..."
       end
       
       
@@ -2983,7 +2983,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TelefoneResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroClienteApi#salvar_using_post22\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroClienteApi#salvar_using_post23\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

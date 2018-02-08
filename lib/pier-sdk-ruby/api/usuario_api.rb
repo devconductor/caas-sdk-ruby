@@ -332,8 +332,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
     # @param [Hash] opts the optional parameters
     # @return [UsuarioResponse]
-    def consultar_using_get41(id, opts = {})
-      data, _status_code, _headers = consultar_using_get41_with_http_info(id, opts)
+    def consultar_using_get42(id, opts = {})
+      data, _status_code, _headers = consultar_using_get42_with_http_info(id, opts)
       return data
     end
 
@@ -342,14 +342,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(UsuarioResponse, Fixnum, Hash)>] UsuarioResponse data, response status code and response headers
-    def consultar_using_get41_with_http_info(id, opts = {})
+    def consultar_using_get42_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: UsuarioApi.consultar_using_get41 ..."
+        @api_client.config.logger.debug "Calling API: UsuarioApi.consultar_using_get42 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling UsuarioApi.consultar_using_get41" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling UsuarioApi.consultar_using_get42" if id.nil?
       
       
       
@@ -387,7 +387,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'UsuarioResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UsuarioApi#consultar_using_get41\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UsuarioApi#consultar_using_get42\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -468,8 +468,8 @@ module Pier
     # @option opts [String] :email Email do Usuario
     # @option opts [String] :status Status do Usuario
     # @return [PageUsuarioResponse]
-    def listar_using_get47(opts = {})
-      data, _status_code, _headers = listar_using_get47_with_http_info(opts)
+    def listar_using_get49(opts = {})
+      data, _status_code, _headers = listar_using_get49_with_http_info(opts)
       return data
     end
 
@@ -484,9 +484,9 @@ module Pier
     # @option opts [String] :email Email do Usuario
     # @option opts [String] :status Status do Usuario
     # @return [Array<(PageUsuarioResponse, Fixnum, Hash)>] PageUsuarioResponse data, response status code and response headers
-    def listar_using_get47_with_http_info(opts = {})
+    def listar_using_get49_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: UsuarioApi.listar_using_get47 ..."
+        @api_client.config.logger.debug "Calling API: UsuarioApi.listar_using_get49 ..."
       end
       
       
@@ -574,7 +574,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageUsuarioResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UsuarioApi#listar_using_get47\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UsuarioApi#listar_using_get49\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -649,8 +649,8 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [UsuarioResponse]
-    def salvar_using_post27(persist, opts = {})
-      data, _status_code, _headers = salvar_using_post27_with_http_info(persist, opts)
+    def salvar_using_post28(persist, opts = {})
+      data, _status_code, _headers = salvar_using_post28_with_http_info(persist, opts)
       return data
     end
 
@@ -659,14 +659,14 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(UsuarioResponse, Fixnum, Hash)>] UsuarioResponse data, response status code and response headers
-    def salvar_using_post27_with_http_info(persist, opts = {})
+    def salvar_using_post28_with_http_info(persist, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: UsuarioApi.salvar_using_post27 ..."
+        @api_client.config.logger.debug "Calling API: UsuarioApi.salvar_using_post28 ..."
       end
       
       
       # verify the required parameter 'persist' is set
-      fail ArgumentError, "Missing the required parameter 'persist' when calling UsuarioApi.salvar_using_post27" if persist.nil?
+      fail ArgumentError, "Missing the required parameter 'persist' when calling UsuarioApi.salvar_using_post28" if persist.nil?
       
       
       
@@ -704,7 +704,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'UsuarioResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UsuarioApi#salvar_using_post27\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UsuarioApi#salvar_using_post28\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

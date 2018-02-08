@@ -69,6 +69,24 @@ describe 'ArquivoApi' do
   end
 
   # unit tests for listar_using_get3
+  # Lista as auditorias do arquivo
+  # Este recurso permite listar as auditorias de um determinado arquivo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @return [PageArquivoAUDResponse]
+  describe 'listar_using_get3 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+  # unit tests for listar_using_get4
   # Listar arquivos do Pier Cloud
   # Este recurso permite a listagem de todos os arquivos dispon\u00C3\u00ADveis no Pier Cloud.
   # @param [Hash] opts the optional parameters
@@ -80,7 +98,7 @@ describe 'ArquivoApi' do
   # @option opts [Integer] :id_status_arquivo Identificador do status do arquivo
   # @option opts [String] :extensao Extens\u00C3\u00A3o do arquivo
   # @return [PageArquivoResponse]
-  describe 'listar_using_get3 test' do
+  describe 'listar_using_get4 test' do
     it "should work" do
       # assertion here
       # should be_a()

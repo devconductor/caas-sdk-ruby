@@ -37,8 +37,8 @@ module Pier
     # @option opts [BOOLEAN] :ativo Identifica se o d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo.
     # @option opts [String] :data_hora_ultimo_pagamento Data do \u00C3\u00BAltimo pagamento efetuado.
     # @return [PageTipoDebitoRecorrenteResponse]
-    def listar_using_get13(id_conta, opts = {})
-      data, _status_code, _headers = listar_using_get13_with_http_info(id_conta, opts)
+    def listar_using_get15(id_conta, opts = {})
+      data, _status_code, _headers = listar_using_get15_with_http_info(id_conta, opts)
       return data
     end
 
@@ -55,14 +55,14 @@ module Pier
     # @option opts [BOOLEAN] :ativo Identifica se o d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo.
     # @option opts [String] :data_hora_ultimo_pagamento Data do \u00C3\u00BAltimo pagamento efetuado.
     # @return [Array<(PageTipoDebitoRecorrenteResponse, Fixnum, Hash)>] PageTipoDebitoRecorrenteResponse data, response status code and response headers
-    def listar_using_get13_with_http_info(id_conta, opts = {})
+    def listar_using_get15_with_http_info(id_conta, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DebitoRecorrenteApi.listar_using_get13 ..."
+        @api_client.config.logger.debug "Calling API: DebitoRecorrenteApi.listar_using_get15 ..."
       end
       
       
       # verify the required parameter 'id_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta' when calling DebitoRecorrenteApi.listar_using_get13" if id_conta.nil?
+      fail ArgumentError, "Missing the required parameter 'id_conta' when calling DebitoRecorrenteApi.listar_using_get15" if id_conta.nil?
       
       
       
@@ -157,7 +157,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTipoDebitoRecorrenteResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DebitoRecorrenteApi#listar_using_get13\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DebitoRecorrenteApi#listar_using_get15\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -173,8 +173,8 @@ module Pier
     # @option opts [Float] :valor Valor do tipo de d\u00C3\u00A9bito recorrente.
     # @option opts [BOOLEAN] :flag_ativo Flag que identifica se o tipo d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo.
     # @return [PageTipoDebitoRecorrenteResponse]
-    def listar_using_get39(opts = {})
-      data, _status_code, _headers = listar_using_get39_with_http_info(opts)
+    def listar_using_get41(opts = {})
+      data, _status_code, _headers = listar_using_get41_with_http_info(opts)
       return data
     end
 
@@ -189,9 +189,9 @@ module Pier
     # @option opts [Float] :valor Valor do tipo de d\u00C3\u00A9bito recorrente.
     # @option opts [BOOLEAN] :flag_ativo Flag que identifica se o tipo d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo.
     # @return [Array<(PageTipoDebitoRecorrenteResponse, Fixnum, Hash)>] PageTipoDebitoRecorrenteResponse data, response status code and response headers
-    def listar_using_get39_with_http_info(opts = {})
+    def listar_using_get41_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DebitoRecorrenteApi.listar_using_get39 ..."
+        @api_client.config.logger.debug "Calling API: DebitoRecorrenteApi.listar_using_get41 ..."
       end
       
       
@@ -275,7 +275,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTipoDebitoRecorrenteResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DebitoRecorrenteApi#listar_using_get39\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DebitoRecorrenteApi#listar_using_get41\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

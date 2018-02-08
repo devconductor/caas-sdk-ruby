@@ -92,7 +92,7 @@ describe 'ContaApi' do
 
   # unit tests for alterar_vencimento_using_put
   # Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
-  # Esse recurso permite alterar o vencimento de uma conta especifica.
+  # Esse recurso permite alterar o vencimento para no m\u00C3\u00A1ximo at\u00C3\u00A9 30 dias ap\u00C3\u00B3s data atual de uma conta especifica no PIER, respeitando o par\u00C3\u00A2metro de intervalor entre as modifica\u00C3\u00A7\u00C3\u00B5es do vencimento informado pelo emissor.
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
   # @param novo_dia_vencimento Novo dia de vencimento.
   # @param [Hash] opts the optional parameters
@@ -253,13 +253,13 @@ describe 'ContaApi' do
     end
   end
 
-  # unit tests for consultar_using_get11
+  # unit tests for consultar_using_get12
   # Apresenta dados de uma determinada conta
   # Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
   # @param [Hash] opts the optional parameters
   # @return [ContaDetalheResponse]
-  describe 'consultar_using_get11 test' do
+  describe 'consultar_using_get12 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -269,14 +269,14 @@ describe 'ContaApi' do
     end
   end
 
-  # unit tests for consultar_using_get40
+  # unit tests for consultar_using_get41
   # Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
   # Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
   # @param id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
   # @param [Hash] opts the optional parameters
   # @return [TransferenciaDetalheResponse]
-  describe 'consultar_using_get40 test' do
+  describe 'consultar_using_get41 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -488,7 +488,7 @@ describe 'ContaApi' do
     end
   end
 
-  # unit tests for listar_using_get14
+  # unit tests for listar_using_get16
   # Lista contas existentes na base de dados do Emissor
   # Este recurso permite listar contas existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
@@ -505,7 +505,7 @@ describe 'ContaApi' do
   # @option opts [String] :data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
   # @option opts [String] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
   # @return [PageContaResponse]
-  describe 'listar_using_get14 test' do
+  describe 'listar_using_get16 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -515,7 +515,7 @@ describe 'ContaApi' do
     end
   end
 
-  # unit tests for listar_using_get46
+  # unit tests for listar_using_get48
   # Lista as transfer\u00C3\u00AAncias realizadas pela conta
   # Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
@@ -529,7 +529,7 @@ describe 'ContaApi' do
   # @option opts [Float] :valor_transferencia Valor estabelecido para ser transferido.
   # @option opts [String] :data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
   # @return [PageTransferenciaResponse]
-  describe 'listar_using_get46 test' do
+  describe 'listar_using_get48 test' do
     it "should work" do
       # assertion here
       # should be_a()

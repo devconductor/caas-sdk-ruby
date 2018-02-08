@@ -278,8 +278,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [CartaoPayDetalheResponse]
-    def consultar_using_get6(device_id, id, opts = {})
-      data, _status_code, _headers = consultar_using_get6_with_http_info(device_id, id, opts)
+    def consultar_using_get7(device_id, id, opts = {})
+      data, _status_code, _headers = consultar_using_get7_with_http_info(device_id, id, opts)
       return data
     end
 
@@ -289,14 +289,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(CartaoPayDetalheResponse, Fixnum, Hash)>] CartaoPayDetalheResponse data, response status code and response headers
-    def consultar_using_get6_with_http_info(device_id, id, opts = {})
+    def consultar_using_get7_with_http_info(device_id, id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ConductorPayApi.consultar_using_get6 ..."
+        @api_client.config.logger.debug "Calling API: ConductorPayApi.consultar_using_get7 ..."
       end
       
       
       # verify the required parameter 'device_id' is set
-      fail ArgumentError, "Missing the required parameter 'device_id' when calling ConductorPayApi.consultar_using_get6" if device_id.nil?
+      fail ArgumentError, "Missing the required parameter 'device_id' when calling ConductorPayApi.consultar_using_get7" if device_id.nil?
       
       
       
@@ -304,7 +304,7 @@ module Pier
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ConductorPayApi.consultar_using_get6" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ConductorPayApi.consultar_using_get7" if id.nil?
       
       
       
@@ -343,7 +343,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'CartaoPayDetalheResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ConductorPayApi#consultar_using_get6\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ConductorPayApi#consultar_using_get7\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -633,8 +633,8 @@ module Pier
     # @option opts [String] :status Status do cart\u00C3\u00A3o tokenizado
     # @option opts [String] :numero_cartao Numero do cart\u00C3\u00A3o tokenizado
     # @return [PageCartaoPayResponse]
-    def listar_using_get7(opts = {})
-      data, _status_code, _headers = listar_using_get7_with_http_info(opts)
+    def listar_using_get9(opts = {})
+      data, _status_code, _headers = listar_using_get9_with_http_info(opts)
       return data
     end
 
@@ -648,9 +648,9 @@ module Pier
     # @option opts [String] :status Status do cart\u00C3\u00A3o tokenizado
     # @option opts [String] :numero_cartao Numero do cart\u00C3\u00A3o tokenizado
     # @return [Array<(PageCartaoPayResponse, Fixnum, Hash)>] PageCartaoPayResponse data, response status code and response headers
-    def listar_using_get7_with_http_info(opts = {})
+    def listar_using_get9_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ConductorPayApi.listar_using_get7 ..."
+        @api_client.config.logger.debug "Calling API: ConductorPayApi.listar_using_get9 ..."
       end
       
       
@@ -731,7 +731,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageCartaoPayResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ConductorPayApi#listar_using_get7\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ConductorPayApi#listar_using_get9\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -742,8 +742,8 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [CartaoPayCadastroResponse]
-    def salvar_using_post5(device_id, persist, opts = {})
-      data, _status_code, _headers = salvar_using_post5_with_http_info(device_id, persist, opts)
+    def salvar_using_post6(device_id, persist, opts = {})
+      data, _status_code, _headers = salvar_using_post6_with_http_info(device_id, persist, opts)
       return data
     end
 
@@ -753,14 +753,14 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(CartaoPayCadastroResponse, Fixnum, Hash)>] CartaoPayCadastroResponse data, response status code and response headers
-    def salvar_using_post5_with_http_info(device_id, persist, opts = {})
+    def salvar_using_post6_with_http_info(device_id, persist, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ConductorPayApi.salvar_using_post5 ..."
+        @api_client.config.logger.debug "Calling API: ConductorPayApi.salvar_using_post6 ..."
       end
       
       
       # verify the required parameter 'device_id' is set
-      fail ArgumentError, "Missing the required parameter 'device_id' when calling ConductorPayApi.salvar_using_post5" if device_id.nil?
+      fail ArgumentError, "Missing the required parameter 'device_id' when calling ConductorPayApi.salvar_using_post6" if device_id.nil?
       
       
       
@@ -768,7 +768,7 @@ module Pier
       
       
       # verify the required parameter 'persist' is set
-      fail ArgumentError, "Missing the required parameter 'persist' when calling ConductorPayApi.salvar_using_post5" if persist.nil?
+      fail ArgumentError, "Missing the required parameter 'persist' when calling ConductorPayApi.salvar_using_post6" if persist.nil?
       
       
       
@@ -807,7 +807,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'CartaoPayCadastroResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ConductorPayApi#salvar_using_post5\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ConductorPayApi#salvar_using_post6\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

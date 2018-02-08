@@ -70,28 +70,12 @@ describe 'DocumentoApi' do
     end
   end
 
-  # unit tests for consultar_using_get12
+  # unit tests for consultar_using_get13
   # Consulta documentos
   # Esse recurso permite consultar um documento espec\u00C3\u00ADfico a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento (id).
   # @param [Hash] opts the optional parameters
   # @return [DocumentoDetalhadoResponse]
-  describe 'consultar_using_get12 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-  # unit tests for consultar_using_get13
-  # Consultar templates dos documentos
-  # Esse recurso permite consultar templates dos documentos.
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
-  # @param [Hash] opts the optional parameters
-  # @return [DocumentoTemplateResponse]
   describe 'consultar_using_get13 test' do
     it "should work" do
       # assertion here
@@ -102,13 +86,29 @@ describe 'DocumentoApi' do
     end
   end
 
-  # unit tests for consultar_using_get37
+  # unit tests for consultar_using_get14
+  # Consultar templates dos documentos
+  # Esse recurso permite consultar templates dos documentos.
+  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
+  # @param [Hash] opts the optional parameters
+  # @return [DocumentoTemplateResponse]
+  describe 'consultar_using_get14 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+  # unit tests for consultar_using_get38
   # Consultar tipo de template
   # Esse recurso permite consultar um determinado tipo de template a partir do id recebido e do id do emissor.
   # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
   # @param [Hash] opts the optional parameters
   # @return [TipoTemplateResponse]
-  describe 'consultar_using_get37 test' do
+  describe 'consultar_using_get38 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -134,7 +134,7 @@ describe 'DocumentoApi' do
     end
   end
 
-  # unit tests for listar_using_get16
+  # unit tests for listar_using_get18
   # Lista documentos
   # Esse recurso permite listar documentos.
   # @param [Hash] opts the optional parameters
@@ -145,7 +145,7 @@ describe 'DocumentoApi' do
   # @option opts [String] :nome Nome do documento.
   # @option opts [String] :extensao Extensao do documento.
   # @return [PageDocumentoResponse]
-  describe 'listar_using_get16 test' do
+  describe 'listar_using_get18 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -155,7 +155,7 @@ describe 'DocumentoApi' do
     end
   end
 
-  # unit tests for listar_using_get17
+  # unit tests for listar_using_get19
   # Lista os templates dos documentos
   # Esse recurso permite listar os templates dos documentos.
   # @param [Hash] opts the optional parameters
@@ -164,7 +164,7 @@ describe 'DocumentoApi' do
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @option opts [Integer] :id_tipo_template C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template.
   # @return [PageDocumentoTemplateResponse]
-  describe 'listar_using_get17 test' do
+  describe 'listar_using_get19 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -174,7 +174,7 @@ describe 'DocumentoApi' do
     end
   end
 
-  # unit tests for listar_using_get43
+  # unit tests for listar_using_get45
   # Lista os tipos de templates
   # Esse recurso permite listar os tipos de templates associados ao emissor.
   # @param [Hash] opts the optional parameters
@@ -182,7 +182,7 @@ describe 'DocumentoApi' do
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @return [PageTipoTemplateResponse]
-  describe 'listar_using_get43 test' do
+  describe 'listar_using_get45 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -193,11 +193,11 @@ describe 'DocumentoApi' do
   end
 
   # unit tests for salvar_using_post10
-  # Cadastra os templates dos documentos
-  # Esse recurso permite cadastrar templates dos documentos.
+  # Cadastra documentos
+  # Esse recurso permite cadastrar documentos.
   # @param persist persist
   # @param [Hash] opts the optional parameters
-  # @return [DocumentoTemplateResponse]
+  # @return [DocumentoDetalhadoResponse]
   describe 'salvar_using_post10 test' do
     it "should work" do
       # assertion here
@@ -208,13 +208,13 @@ describe 'DocumentoApi' do
     end
   end
 
-  # unit tests for salvar_using_post25
-  # Cadastra os tipos de templates
-  # Esse recurso permite cadastrar tipos de templates.
+  # unit tests for salvar_using_post11
+  # Cadastra os templates dos documentos
+  # Esse recurso permite cadastrar templates dos documentos.
   # @param persist persist
   # @param [Hash] opts the optional parameters
-  # @return [TipoTemplateResponse]
-  describe 'salvar_using_post25 test' do
+  # @return [DocumentoTemplateResponse]
+  describe 'salvar_using_post11 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -224,13 +224,13 @@ describe 'DocumentoApi' do
     end
   end
 
-  # unit tests for salvar_using_post9
-  # Cadastra documentos
-  # Esse recurso permite cadastrar documentos.
+  # unit tests for salvar_using_post26
+  # Cadastra os tipos de templates
+  # Esse recurso permite cadastrar tipos de templates.
   # @param persist persist
   # @param [Hash] opts the optional parameters
-  # @return [DocumentoDetalhadoResponse]
-  describe 'salvar_using_post9 test' do
+  # @return [TipoTemplateResponse]
+  describe 'salvar_using_post26 test' do
     it "should work" do
       # assertion here
       # should be_a()

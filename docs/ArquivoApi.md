@@ -6,7 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultar_using_get2**](ArquivoApi.md#consultar_using_get2) | **GET** /api/arquivos/{id} | Consulta de arquivo no PIER Cloud
 [**integrar_using_post**](ArquivoApi.md#integrar_using_post) | **POST** /api/arquivos/integrar | Integrar Arquivos
-[**listar_using_get3**](ArquivoApi.md#listar_using_get3) | **GET** /api/arquivos | Listar arquivos do Pier Cloud
+[**listar_using_get3**](ArquivoApi.md#listar_using_get3) | **GET** /api/arquivos/{id}/auditorias | Lista as auditorias do arquivo
+[**listar_using_get4**](ArquivoApi.md#listar_using_get4) | **GET** /api/arquivos | Listar arquivos do Pier Cloud
 [**salvar_using_post1**](ArquivoApi.md#salvar_using_post1) | **POST** /api/arquivos | Permite armazenar arquivos no PIER Cloud
 
 
@@ -105,7 +106,60 @@ No authorization required
 
 
 # **listar_using_get3**
-> PageArquivoResponse listar_using_get3(opts)
+> PageArquivoAUDResponse listar_using_get3(id, opts)
+
+Lista as auditorias do arquivo
+
+Este recurso permite listar as auditorias de um determinado arquivo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+api_instance = Pier::ArquivoApi.new
+
+id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
+
+opts = { 
+  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+}
+
+begin
+  #Lista as auditorias do arquivo
+  result = api_instance.listar_using_get3(id, opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling ArquivoApi->listar_using_get3: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo | 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+
+### Return type
+
+[**PageArquivoAUDResponse**](PageArquivoAUDResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **listar_using_get4**
+> PageArquivoResponse listar_using_get4(opts)
 
 Listar arquivos do Pier Cloud
 
@@ -130,10 +184,10 @@ opts = {
 
 begin
   #Listar arquivos do Pier Cloud
-  result = api_instance.listar_using_get3(opts)
+  result = api_instance.listar_using_get4(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ArquivoApi->listar_using_get3: #{e}"
+  puts "Exception when calling ArquivoApi->listar_using_get4: #{e}"
 end
 ```
 

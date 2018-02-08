@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**consultar_taxa_antecipacao_using_get**](AntecipacaoApi.md#consultar_taxa_antecipacao_using_get) | **GET** /api/produtos/{id}/consultar-taxa-antecipacao | Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
 [**efetivar_antecipacao_using_post**](AntecipacaoApi.md#efetivar_antecipacao_using_post) | **POST** /api/compras-antecipaveis/{id}/efetivar-antecipacao | Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
 [**efetivar_antecipacoes_using_post**](AntecipacaoApi.md#efetivar_antecipacoes_using_post) | **POST** /api/compras-antecipaveis/efetivar-antecipacao | Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
-[**listar_using_get9**](AntecipacaoApi.md#listar_using_get9) | **GET** /api/compras-antecipaveis | Listar compras com parcelas antecip\u00C3\u00A1veis
+[**listar_using_get11**](AntecipacaoApi.md#listar_using_get11) | **GET** /api/compras-antecipaveis | Listar compras com parcelas antecip\u00C3\u00A1veis
 [**simular_antecipacao_using_get**](AntecipacaoApi.md#simular_antecipacao_using_get) | **GET** /api/compras-antecipaveis/{id}/simular-antecipacao | Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
 [**simular_antecipacoes_using_get**](AntecipacaoApi.md#simular_antecipacoes_using_get) | **GET** /api/compras-antecipaveis/simular-antecipacao | Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis
 
@@ -221,8 +221,8 @@ No authorization required
 
 
 
-# **listar_using_get9**
-> PageCompraResponse listar_using_get9(id_conta, opts)
+# **listar_using_get11**
+> PageCompraResponse listar_using_get11(id_conta, opts)
 
 Listar compras com parcelas antecip\u00C3\u00A1veis
 
@@ -249,10 +249,10 @@ opts = {
 
 begin
   #Listar compras com parcelas antecip\u00C3\u00A1veis
-  result = api_instance.listar_using_get9(id_conta, opts)
+  result = api_instance.listar_using_get11(id_conta, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling AntecipacaoApi->listar_using_get9: #{e}"
+  puts "Exception when calling AntecipacaoApi->listar_using_get11: #{e}"
 end
 ```
 

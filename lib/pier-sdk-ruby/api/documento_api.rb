@@ -179,8 +179,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento (id).
     # @param [Hash] opts the optional parameters
     # @return [DocumentoDetalhadoResponse]
-    def consultar_using_get12(id, opts = {})
-      data, _status_code, _headers = consultar_using_get12_with_http_info(id, opts)
+    def consultar_using_get13(id, opts = {})
+      data, _status_code, _headers = consultar_using_get13_with_http_info(id, opts)
       return data
     end
 
@@ -189,14 +189,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(DocumentoDetalhadoResponse, Fixnum, Hash)>] DocumentoDetalhadoResponse data, response status code and response headers
-    def consultar_using_get12_with_http_info(id, opts = {})
+    def consultar_using_get13_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DocumentoApi.consultar_using_get12 ..."
+        @api_client.config.logger.debug "Calling API: DocumentoApi.consultar_using_get13 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling DocumentoApi.consultar_using_get12" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling DocumentoApi.consultar_using_get13" if id.nil?
       
       
       
@@ -234,7 +234,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'DocumentoDetalhadoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DocumentoApi#consultar_using_get12\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DocumentoApi#consultar_using_get13\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -244,8 +244,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
     # @param [Hash] opts the optional parameters
     # @return [DocumentoTemplateResponse]
-    def consultar_using_get13(id, opts = {})
-      data, _status_code, _headers = consultar_using_get13_with_http_info(id, opts)
+    def consultar_using_get14(id, opts = {})
+      data, _status_code, _headers = consultar_using_get14_with_http_info(id, opts)
       return data
     end
 
@@ -254,14 +254,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(DocumentoTemplateResponse, Fixnum, Hash)>] DocumentoTemplateResponse data, response status code and response headers
-    def consultar_using_get13_with_http_info(id, opts = {})
+    def consultar_using_get14_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DocumentoApi.consultar_using_get13 ..."
+        @api_client.config.logger.debug "Calling API: DocumentoApi.consultar_using_get14 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling DocumentoApi.consultar_using_get13" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling DocumentoApi.consultar_using_get14" if id.nil?
       
       
       
@@ -299,7 +299,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'DocumentoTemplateResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DocumentoApi#consultar_using_get13\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DocumentoApi#consultar_using_get14\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -309,8 +309,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
     # @param [Hash] opts the optional parameters
     # @return [TipoTemplateResponse]
-    def consultar_using_get37(id, opts = {})
-      data, _status_code, _headers = consultar_using_get37_with_http_info(id, opts)
+    def consultar_using_get38(id, opts = {})
+      data, _status_code, _headers = consultar_using_get38_with_http_info(id, opts)
       return data
     end
 
@@ -319,14 +319,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(TipoTemplateResponse, Fixnum, Hash)>] TipoTemplateResponse data, response status code and response headers
-    def consultar_using_get37_with_http_info(id, opts = {})
+    def consultar_using_get38_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DocumentoApi.consultar_using_get37 ..."
+        @api_client.config.logger.debug "Calling API: DocumentoApi.consultar_using_get38 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling DocumentoApi.consultar_using_get37" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling DocumentoApi.consultar_using_get38" if id.nil?
       
       
       
@@ -364,7 +364,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TipoTemplateResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DocumentoApi#consultar_using_get37\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DocumentoApi#consultar_using_get38\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -444,8 +444,8 @@ module Pier
     # @option opts [String] :nome Nome do documento.
     # @option opts [String] :extensao Extensao do documento.
     # @return [PageDocumentoResponse]
-    def listar_using_get16(opts = {})
-      data, _status_code, _headers = listar_using_get16_with_http_info(opts)
+    def listar_using_get18(opts = {})
+      data, _status_code, _headers = listar_using_get18_with_http_info(opts)
       return data
     end
 
@@ -459,9 +459,9 @@ module Pier
     # @option opts [String] :nome Nome do documento.
     # @option opts [String] :extensao Extensao do documento.
     # @return [Array<(PageDocumentoResponse, Fixnum, Hash)>] PageDocumentoResponse data, response status code and response headers
-    def listar_using_get16_with_http_info(opts = {})
+    def listar_using_get18_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DocumentoApi.listar_using_get16 ..."
+        @api_client.config.logger.debug "Calling API: DocumentoApi.listar_using_get18 ..."
       end
       
       
@@ -542,7 +542,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageDocumentoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DocumentoApi#listar_using_get16\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DocumentoApi#listar_using_get18\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -555,8 +555,8 @@ module Pier
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_tipo_template C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template.
     # @return [PageDocumentoTemplateResponse]
-    def listar_using_get17(opts = {})
-      data, _status_code, _headers = listar_using_get17_with_http_info(opts)
+    def listar_using_get19(opts = {})
+      data, _status_code, _headers = listar_using_get19_with_http_info(opts)
       return data
     end
 
@@ -568,9 +568,9 @@ module Pier
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @option opts [Integer] :id_tipo_template C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template.
     # @return [Array<(PageDocumentoTemplateResponse, Fixnum, Hash)>] PageDocumentoTemplateResponse data, response status code and response headers
-    def listar_using_get17_with_http_info(opts = {})
+    def listar_using_get19_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DocumentoApi.listar_using_get17 ..."
+        @api_client.config.logger.debug "Calling API: DocumentoApi.listar_using_get19 ..."
       end
       
       
@@ -633,7 +633,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageDocumentoTemplateResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DocumentoApi#listar_using_get17\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DocumentoApi#listar_using_get19\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -645,8 +645,8 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [PageTipoTemplateResponse]
-    def listar_using_get43(opts = {})
-      data, _status_code, _headers = listar_using_get43_with_http_info(opts)
+    def listar_using_get45(opts = {})
+      data, _status_code, _headers = listar_using_get45_with_http_info(opts)
       return data
     end
 
@@ -657,9 +657,9 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [Array<(PageTipoTemplateResponse, Fixnum, Hash)>] PageTipoTemplateResponse data, response status code and response headers
-    def listar_using_get43_with_http_info(opts = {})
+    def listar_using_get45_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DocumentoApi.listar_using_get43 ..."
+        @api_client.config.logger.debug "Calling API: DocumentoApi.listar_using_get45 ..."
       end
       
       
@@ -715,137 +715,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTipoTemplateResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DocumentoApi#listar_using_get43\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Cadastra os templates dos documentos
-    # Esse recurso permite cadastrar templates dos documentos.
-    # @param persist persist
-    # @param [Hash] opts the optional parameters
-    # @return [DocumentoTemplateResponse]
-    def salvar_using_post10(persist, opts = {})
-      data, _status_code, _headers = salvar_using_post10_with_http_info(persist, opts)
-      return data
-    end
-
-    # Cadastra os templates dos documentos
-    # Esse recurso permite cadastrar templates dos documentos.
-    # @param persist persist
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(DocumentoTemplateResponse, Fixnum, Hash)>] DocumentoTemplateResponse data, response status code and response headers
-    def salvar_using_post10_with_http_info(persist, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DocumentoApi.salvar_using_post10 ..."
-      end
-      
-      
-      # verify the required parameter 'persist' is set
-      fail ArgumentError, "Missing the required parameter 'persist' when calling DocumentoApi.salvar_using_post10" if persist.nil?
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/templates-documentos".sub('{format}','json')
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = @api_client.object_to_http_body(persist)
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'DocumentoTemplateResponse')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DocumentoApi#salvar_using_post10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Cadastra os tipos de templates
-    # Esse recurso permite cadastrar tipos de templates.
-    # @param persist persist
-    # @param [Hash] opts the optional parameters
-    # @return [TipoTemplateResponse]
-    def salvar_using_post25(persist, opts = {})
-      data, _status_code, _headers = salvar_using_post25_with_http_info(persist, opts)
-      return data
-    end
-
-    # Cadastra os tipos de templates
-    # Esse recurso permite cadastrar tipos de templates.
-    # @param persist persist
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(TipoTemplateResponse, Fixnum, Hash)>] TipoTemplateResponse data, response status code and response headers
-    def salvar_using_post25_with_http_info(persist, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DocumentoApi.salvar_using_post25 ..."
-      end
-      
-      
-      # verify the required parameter 'persist' is set
-      fail ArgumentError, "Missing the required parameter 'persist' when calling DocumentoApi.salvar_using_post25" if persist.nil?
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/tipos-templates".sub('{format}','json')
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = @api_client.object_to_http_body(persist)
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'TipoTemplateResponse')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DocumentoApi#salvar_using_post25\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DocumentoApi#listar_using_get45\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -855,8 +725,8 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [DocumentoDetalhadoResponse]
-    def salvar_using_post9(persist, opts = {})
-      data, _status_code, _headers = salvar_using_post9_with_http_info(persist, opts)
+    def salvar_using_post10(persist, opts = {})
+      data, _status_code, _headers = salvar_using_post10_with_http_info(persist, opts)
       return data
     end
 
@@ -865,14 +735,14 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(DocumentoDetalhadoResponse, Fixnum, Hash)>] DocumentoDetalhadoResponse data, response status code and response headers
-    def salvar_using_post9_with_http_info(persist, opts = {})
+    def salvar_using_post10_with_http_info(persist, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DocumentoApi.salvar_using_post9 ..."
+        @api_client.config.logger.debug "Calling API: DocumentoApi.salvar_using_post10 ..."
       end
       
       
       # verify the required parameter 'persist' is set
-      fail ArgumentError, "Missing the required parameter 'persist' when calling DocumentoApi.salvar_using_post9" if persist.nil?
+      fail ArgumentError, "Missing the required parameter 'persist' when calling DocumentoApi.salvar_using_post10" if persist.nil?
       
       
       
@@ -910,7 +780,137 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'DocumentoDetalhadoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DocumentoApi#salvar_using_post9\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DocumentoApi#salvar_using_post10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Cadastra os templates dos documentos
+    # Esse recurso permite cadastrar templates dos documentos.
+    # @param persist persist
+    # @param [Hash] opts the optional parameters
+    # @return [DocumentoTemplateResponse]
+    def salvar_using_post11(persist, opts = {})
+      data, _status_code, _headers = salvar_using_post11_with_http_info(persist, opts)
+      return data
+    end
+
+    # Cadastra os templates dos documentos
+    # Esse recurso permite cadastrar templates dos documentos.
+    # @param persist persist
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(DocumentoTemplateResponse, Fixnum, Hash)>] DocumentoTemplateResponse data, response status code and response headers
+    def salvar_using_post11_with_http_info(persist, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DocumentoApi.salvar_using_post11 ..."
+      end
+      
+      
+      # verify the required parameter 'persist' is set
+      fail ArgumentError, "Missing the required parameter 'persist' when calling DocumentoApi.salvar_using_post11" if persist.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/templates-documentos".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(persist)
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DocumentoTemplateResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DocumentoApi#salvar_using_post11\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Cadastra os tipos de templates
+    # Esse recurso permite cadastrar tipos de templates.
+    # @param persist persist
+    # @param [Hash] opts the optional parameters
+    # @return [TipoTemplateResponse]
+    def salvar_using_post26(persist, opts = {})
+      data, _status_code, _headers = salvar_using_post26_with_http_info(persist, opts)
+      return data
+    end
+
+    # Cadastra os tipos de templates
+    # Esse recurso permite cadastrar tipos de templates.
+    # @param persist persist
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(TipoTemplateResponse, Fixnum, Hash)>] TipoTemplateResponse data, response status code and response headers
+    def salvar_using_post26_with_http_info(persist, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DocumentoApi.salvar_using_post26 ..."
+      end
+      
+      
+      # verify the required parameter 'persist' is set
+      fail ArgumentError, "Missing the required parameter 'persist' when calling DocumentoApi.salvar_using_post26" if persist.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/tipos-templates".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(persist)
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TipoTemplateResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DocumentoApi#salvar_using_post26\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -16,8 +16,8 @@ Method | HTTP request | Description
 [**consultar_boleto_emitido_using_get**](ContaApi.md#consultar_boleto_emitido_using_get) | **GET** /api/contas/{id}/consultar-dados-pagamento-fatura | Consulta os dados de um determinado boleto da fatura
 [**consultar_divida_atualizada_cliente_using_get**](ContaApi.md#consultar_divida_atualizada_cliente_using_get) | **GET** /api/contas/{id}/recuperar-divida-atualizada | Consulta a d\u00C3\u00ADvida atualizada do cliente
 [**consultar_taxas_tarifas_using_get**](ContaApi.md#consultar_taxas_tarifas_using_get) | **GET** /api/contas/{id}/consultar-taxas-tarifas | Permite consultar a partir do ID da conta as taxas e tarifas
-[**consultar_using_get11**](ContaApi.md#consultar_using_get11) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
-[**consultar_using_get40**](ContaApi.md#consultar_using_get40) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+[**consultar_using_get12**](ContaApi.md#consultar_using_get12) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
+[**consultar_using_get41**](ContaApi.md#consultar_using_get41) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 [**desativar_envio_fatura_email_using_post**](ContaApi.md#desativar_envio_fatura_email_using_post) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00C3\u00A7o de envio de fatura por email
 [**gerar_boleto_recarga_using_post**](ContaApi.md#gerar_boleto_recarga_using_post) | **POST** /api/contas/{id}/gerar-boleto-recarga | Gera um boleto de recarga
 [**gerar_cartao_embossing_using_post**](ContaApi.md#gerar_cartao_embossing_using_post) | **POST** /api/contas/{id}/gerar-cartao-grafica | Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
@@ -29,8 +29,8 @@ Method | HTTP request | Description
 [**listar_historico_atrasos_faturas_using_get**](ContaApi.md#listar_historico_atrasos_faturas_using_get) | **GET** /api/contas/{id}/historicos-faturas-atrasos | Lista o historico de atrasos das faturas
 [**listar_nao_processadas_using_get**](ContaApi.md#listar_nao_processadas_using_get) | **GET** /api/contas/{id}/transacoes/listar-nao-processadas | Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
 [**listar_processadas_using_get**](ContaApi.md#listar_processadas_using_get) | **GET** /api/contas/{id}/transacoes/listar-processadas | Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
-[**listar_using_get14**](ContaApi.md#listar_using_get14) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
-[**listar_using_get46**](ContaApi.md#listar_using_get46) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
+[**listar_using_get16**](ContaApi.md#listar_using_get16) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
+[**listar_using_get48**](ContaApi.md#listar_using_get48) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
 [**reativar_using_post1**](ContaApi.md#reativar_using_post1) | **POST** /api/contas/{id}/reativar | Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
 [**simular_emprestimo_financiamento_using_post**](ContaApi.md#simular_emprestimo_financiamento_using_post) | **POST** /api/contas/{id}/simular-emprestimos-financiamentos | Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
 [**transacoes_using_get**](ContaApi.md#transacoes_using_get) | **GET** /api/contas/{id}/timeline | Permite listar uma linha do tempo com os eventos da conta
@@ -202,7 +202,7 @@ No authorization required
 
 Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
 
-Esse recurso permite alterar o vencimento de uma conta especifica.
+Esse recurso permite alterar o vencimento para no m\u00C3\u00A1ximo at\u00C3\u00A9 30 dias ap\u00C3\u00B3s data atual de uma conta especifica no PIER, respeitando o par\u00C3\u00A2metro de intervalor entre as modifica\u00C3\u00A7\u00C3\u00B5es do vencimento informado pelo emissor.
 
 ### Example
 ```ruby
@@ -668,8 +668,8 @@ No authorization required
 
 
 
-# **consultar_using_get11**
-> ContaDetalheResponse consultar_using_get11(id)
+# **consultar_using_get12**
+> ContaDetalheResponse consultar_using_get12(id)
 
 Apresenta dados de uma determinada conta
 
@@ -687,10 +687,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da
 
 begin
   #Apresenta dados de uma determinada conta
-  result = api_instance.consultar_using_get11(id)
+  result = api_instance.consultar_using_get12(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->consultar_using_get11: #{e}"
+  puts "Exception when calling ContaApi->consultar_using_get12: #{e}"
 end
 ```
 
@@ -715,8 +715,8 @@ No authorization required
 
 
 
-# **consultar_using_get40**
-> TransferenciaDetalheResponse consultar_using_get40(id, id_transferencia)
+# **consultar_using_get41**
+> TransferenciaDetalheResponse consultar_using_get41(id, id_transferencia)
 
 Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 
@@ -736,10 +736,10 @@ id_transferencia = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u
 
 begin
   #Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-  result = api_instance.consultar_using_get40(id, id_transferencia)
+  result = api_instance.consultar_using_get41(id, id_transferencia)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->consultar_using_get40: #{e}"
+  puts "Exception when calling ContaApi->consultar_using_get41: #{e}"
 end
 ```
 
@@ -1351,8 +1351,8 @@ No authorization required
 
 
 
-# **listar_using_get14**
-> PageContaResponse listar_using_get14(opts)
+# **listar_using_get16**
+> PageContaResponse listar_using_get16(opts)
 
 Lista contas existentes na base de dados do Emissor
 
@@ -1382,10 +1382,10 @@ opts = {
 
 begin
   #Lista contas existentes na base de dados do Emissor
-  result = api_instance.listar_using_get14(opts)
+  result = api_instance.listar_using_get16(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->listar_using_get14: #{e}"
+  puts "Exception when calling ContaApi->listar_using_get16: #{e}"
 end
 ```
 
@@ -1421,8 +1421,8 @@ No authorization required
 
 
 
-# **listar_using_get46**
-> PageTransferenciaResponse listar_using_get46(id, opts)
+# **listar_using_get48**
+> PageTransferenciaResponse listar_using_get48(id, opts)
 
 Lista as transfer\u00C3\u00AAncias realizadas pela conta
 
@@ -1450,10 +1450,10 @@ opts = {
 
 begin
   #Lista as transfer\u00C3\u00AAncias realizadas pela conta
-  result = api_instance.listar_using_get46(id, opts)
+  result = api_instance.listar_using_get48(id, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ContaApi->listar_using_get46: #{e}"
+  puts "Exception when calling ContaApi->listar_using_get48: #{e}"
 end
 ```
 

@@ -87,7 +87,7 @@ describe 'JobApi' do
     end
   end
 
-  # unit tests for listar_using_get22
+  # unit tests for listar_using_get24
   # Listar Jobs
   # Este recurso permite que sejam listados os jobs existentes na base do PIER.
   # @param [Hash] opts the optional parameters
@@ -98,7 +98,7 @@ describe 'JobApi' do
   # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
   # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   # @return [PageJobResponse]
-  describe 'listar_using_get22 test' do
+  describe 'listar_using_get24 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -108,7 +108,7 @@ describe 'JobApi' do
     end
   end
 
-  # unit tests for salvar_using_post14
+  # unit tests for salvar_using_post15
   # Cadastrar Job
   # Esse recurso permite cadastrar jobs.
   # @param descricao descricao.
@@ -116,7 +116,7 @@ describe 'JobApi' do
   # @param groovy groovy
   # @param [Hash] opts the optional parameters
   # @return [JobResponse]
-  describe 'salvar_using_post14 test' do
+  describe 'salvar_using_post15 test' do
     it "should work" do
       # assertion here
       # should be_a()

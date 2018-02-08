@@ -65,13 +65,13 @@ describe 'LimiteDisponibilidadeApi' do
     end
   end
 
-  # unit tests for consultar_using_get18
+  # unit tests for consultar_using_get19
   # Apresenta os limites da conta
   # Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
   # @param id_conta Id Conta
   # @param [Hash] opts the optional parameters
   # @return [LimiteDisponibilidadeResponse]
-  describe 'consultar_using_get18 test' do
+  describe 'consultar_using_get19 test' do
     it "should work" do
       # assertion here
       # should be_a()

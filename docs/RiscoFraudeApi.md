@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_using_get25**](RiscoFraudeApi.md#consultar_using_get25) | **GET** /api/riscos-fraudes/{id} | Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
+[**consultar_using_get26**](RiscoFraudeApi.md#consultar_using_get26) | **GET** /api/riscos-fraudes/{id} | Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
 [**listar_tipos_resolucao_using_get**](RiscoFraudeApi.md#listar_tipos_resolucao_using_get) | **GET** /api/tipos-resolucao | Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude
 [**negar_using_post**](RiscoFraudeApi.md#negar_using_post) | **POST** /api/riscos-fraudes/{id}/negar | Negar autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
 [**reconhecer_using_post**](RiscoFraudeApi.md#reconhecer_using_post) | **POST** /api/riscos-fraudes/{id}/reconhecer | Reconhecer autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
 
 
-# **consultar_using_get25**
-> RiscoFraudeDetalhadoResponse consultar_using_get25(id)
+# **consultar_using_get26**
+> RiscoFraudeDetalhadoResponse consultar_using_get26(id)
 
 Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
 
@@ -29,10 +29,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
-  result = api_instance.consultar_using_get25(id)
+  result = api_instance.consultar_using_get26(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling RiscoFraudeApi->consultar_using_get25: #{e}"
+  puts "Exception when calling RiscoFraudeApi->consultar_using_get26: #{e}"
 end
 ```
 

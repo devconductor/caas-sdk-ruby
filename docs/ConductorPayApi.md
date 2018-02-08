@@ -7,14 +7,14 @@ Method | HTTP request | Description
 [**atualizar_chave_using_post**](ConductorPayApi.md#atualizar_chave_using_post) | **POST** /api/cartoes-tokenizados/{id}/atualizar-chave | Atualiza a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o
 [**atualizar_using_put**](ConductorPayApi.md#atualizar_using_put) | **PUT** /api/cartoes-tokenizados/{id} | Atualiza os dados do cart\u00C3\u00A3o
 [**confirma_atualizacao_chave_using_post**](ConductorPayApi.md#confirma_atualizacao_chave_using_post) | **POST** /api/cartoes-tokenizados/{id}/confirmar-chave | Confirma a atualiza\u00C3\u00A7\u00C3\u00A3o da chave de transa\u00C3\u00A7\u00C3\u00A3o
-[**consultar_using_get6**](ConductorPayApi.md#consultar_using_get6) | **GET** /api/cartoes-tokenizados/{id} | Apresenta os dados de um determinado cart\u00C3\u00A3o
+[**consultar_using_get7**](ConductorPayApi.md#consultar_using_get7) | **GET** /api/cartoes-tokenizados/{id} | Apresenta os dados de um determinado cart\u00C3\u00A3o
 [**listar_codigos_resposta_using_get**](ConductorPayApi.md#listar_codigos_resposta_using_get) | **GET** /api/codigos-resposta | Lista os c\u00C3\u00B3digos de resposta dos recursos de transa\u00C3\u00A7\u00C3\u00A3o e consulta de conta
 [**listar_modos_entrada_using_get**](ConductorPayApi.md#listar_modos_entrada_using_get) | **GET** /api/modos-entrada | Lista os modos entradas
 [**listar_operacoes_using_get**](ConductorPayApi.md#listar_operacoes_using_get) | **GET** /api/operacoes | Lista as opera\u00C3\u00A7\u00C3\u00B5es
 [**listar_tipos_terminais_using_get**](ConductorPayApi.md#listar_tipos_terminais_using_get) | **GET** /api/tipos-terminais | Lista os tipos de terminais
 [**listar_tipos_transacoes_using_get**](ConductorPayApi.md#listar_tipos_transacoes_using_get) | **GET** /api/tipos-transacoes | Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
-[**listar_using_get7**](ConductorPayApi.md#listar_using_get7) | **GET** /api/cartoes-tokenizados | Lista os cart\u00C3\u00B5es cadastrados
-[**salvar_using_post5**](ConductorPayApi.md#salvar_using_post5) | **POST** /api/cartoes-tokenizados | Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
+[**listar_using_get9**](ConductorPayApi.md#listar_using_get9) | **GET** /api/cartoes-tokenizados | Lista os cart\u00C3\u00B5es cadastrados
+[**salvar_using_post6**](ConductorPayApi.md#salvar_using_post6) | **POST** /api/cartoes-tokenizados | Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
 
 
 # **atualizar_chave_using_post**
@@ -173,8 +173,8 @@ No authorization required
 
 
 
-# **consultar_using_get6**
-> CartaoPayDetalheResponse consultar_using_get6(device_id, id)
+# **consultar_using_get7**
+> CartaoPayDetalheResponse consultar_using_get7(device_id, id)
 
 Apresenta os dados de um determinado cart\u00C3\u00A3o
 
@@ -194,10 +194,10 @@ id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do
 
 begin
   #Apresenta os dados de um determinado cart\u00C3\u00A3o
-  result = api_instance.consultar_using_get6(device_id, id)
+  result = api_instance.consultar_using_get7(device_id, id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ConductorPayApi->consultar_using_get6: #{e}"
+  puts "Exception when calling ConductorPayApi->consultar_using_get7: #{e}"
 end
 ```
 
@@ -428,8 +428,8 @@ No authorization required
 
 
 
-# **listar_using_get7**
-> PageCartaoPayResponse listar_using_get7(opts)
+# **listar_using_get9**
+> PageCartaoPayResponse listar_using_get9(opts)
 
 Lista os cart\u00C3\u00B5es cadastrados
 
@@ -453,10 +453,10 @@ opts = {
 
 begin
   #Lista os cart\u00C3\u00B5es cadastrados
-  result = api_instance.listar_using_get7(opts)
+  result = api_instance.listar_using_get9(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ConductorPayApi->listar_using_get7: #{e}"
+  puts "Exception when calling ConductorPayApi->listar_using_get9: #{e}"
 end
 ```
 
@@ -486,8 +486,8 @@ No authorization required
 
 
 
-# **salvar_using_post5**
-> CartaoPayCadastroResponse salvar_using_post5(device_id, persist)
+# **salvar_using_post6**
+> CartaoPayCadastroResponse salvar_using_post6(device_id, persist)
 
 Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
 
@@ -507,10 +507,10 @@ persist = Pier::CartaoPayPersist.new # CartaoPayPersist | persist
 
 begin
   #Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
-  result = api_instance.salvar_using_post5(device_id, persist)
+  result = api_instance.salvar_using_post6(device_id, persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling ConductorPayApi->salvar_using_post5: #{e}"
+  puts "Exception when calling ConductorPayApi->salvar_using_post6: #{e}"
 end
 ```
 

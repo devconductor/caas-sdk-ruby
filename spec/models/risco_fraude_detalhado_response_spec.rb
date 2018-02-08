@@ -296,7 +296,7 @@ describe 'RiscoFraudeDetalhadoResponse' do
     end
   end
 
-  describe 'test attribute "tefefones"' do
+  describe 'test attribute "telefones"' do
     it 'should work' do
        # assertion here
        # should be_a()

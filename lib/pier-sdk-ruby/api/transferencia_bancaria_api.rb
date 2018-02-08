@@ -169,8 +169,8 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).
     # @param [Hash] opts the optional parameters
     # @return [ContaBancariaPortadorResponse]
-    def consultar_using_get10(id, opts = {})
-      data, _status_code, _headers = consultar_using_get10_with_http_info(id, opts)
+    def consultar_using_get11(id, opts = {})
+      data, _status_code, _headers = consultar_using_get11_with_http_info(id, opts)
       return data
     end
 
@@ -179,14 +179,14 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(ContaBancariaPortadorResponse, Fixnum, Hash)>] ContaBancariaPortadorResponse data, response status code and response headers
-    def consultar_using_get10_with_http_info(id, opts = {})
+    def consultar_using_get11_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.consultar_using_get10 ..."
+        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.consultar_using_get11 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling TransferenciaBancariaApi.consultar_using_get10" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling TransferenciaBancariaApi.consultar_using_get11" if id.nil?
       
       
       
@@ -224,7 +224,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'ContaBancariaPortadorResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#consultar_using_get10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#consultar_using_get11\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -236,8 +236,8 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
     # @return [TransferenciaBancariaResponse]
-    def consultar_using_get39(id, id_transferencia, opts = {})
-      data, _status_code, _headers = consultar_using_get39_with_http_info(id, id_transferencia, opts)
+    def consultar_using_get40(id, id_transferencia, opts = {})
+      data, _status_code, _headers = consultar_using_get40_with_http_info(id, id_transferencia, opts)
       return data
     end
 
@@ -248,14 +248,14 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
     # @return [Array<(TransferenciaBancariaResponse, Fixnum, Hash)>] TransferenciaBancariaResponse data, response status code and response headers
-    def consultar_using_get39_with_http_info(id, id_transferencia, opts = {})
+    def consultar_using_get40_with_http_info(id, id_transferencia, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.consultar_using_get39 ..."
+        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.consultar_using_get40 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling TransferenciaBancariaApi.consultar_using_get39" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling TransferenciaBancariaApi.consultar_using_get40" if id.nil?
       
       
       
@@ -263,7 +263,7 @@ module Pier
       
       
       # verify the required parameter 'id_transferencia' is set
-      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling TransferenciaBancariaApi.consultar_using_get39" if id_transferencia.nil?
+      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling TransferenciaBancariaApi.consultar_using_get40" if id_transferencia.nil?
       
       
       
@@ -308,7 +308,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TransferenciaBancariaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#consultar_using_get39\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#consultar_using_get40\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -437,8 +437,8 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [PageContaBancariaPortadorResponse]
-    def listar_using_get12(opts = {})
-      data, _status_code, _headers = listar_using_get12_with_http_info(opts)
+    def listar_using_get14(opts = {})
+      data, _status_code, _headers = listar_using_get14_with_http_info(opts)
       return data
     end
 
@@ -457,9 +457,9 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [Array<(PageContaBancariaPortadorResponse, Fixnum, Hash)>] PageContaBancariaPortadorResponse data, response status code and response headers
-    def listar_using_get12_with_http_info(opts = {})
+    def listar_using_get14_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.listar_using_get12 ..."
+        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.listar_using_get14 ..."
       end
       
       
@@ -571,7 +571,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageContaBancariaPortadorResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#listar_using_get12\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#listar_using_get14\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -585,8 +585,8 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [PageTransferenciaBancariaResponse]
-    def listar_using_get45(id, opts = {})
-      data, _status_code, _headers = listar_using_get45_with_http_info(id, opts)
+    def listar_using_get47(id, opts = {})
+      data, _status_code, _headers = listar_using_get47_with_http_info(id, opts)
       return data
     end
 
@@ -599,14 +599,14 @@ module Pier
     # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
     # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
     # @return [Array<(PageTransferenciaBancariaResponse, Fixnum, Hash)>] PageTransferenciaBancariaResponse data, response status code and response headers
-    def listar_using_get45_with_http_info(id, opts = {})
+    def listar_using_get47_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.listar_using_get45 ..."
+        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.listar_using_get47 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling TransferenciaBancariaApi.listar_using_get45" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling TransferenciaBancariaApi.listar_using_get47" if id.nil?
       
       
       
@@ -672,7 +672,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTransferenciaBancariaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#listar_using_get45\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#listar_using_get47\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -682,8 +682,8 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [ContaBancariaPortadorResponse]
-    def salvar_using_post7(persist, opts = {})
-      data, _status_code, _headers = salvar_using_post7_with_http_info(persist, opts)
+    def salvar_using_post8(persist, opts = {})
+      data, _status_code, _headers = salvar_using_post8_with_http_info(persist, opts)
       return data
     end
 
@@ -692,14 +692,14 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(ContaBancariaPortadorResponse, Fixnum, Hash)>] ContaBancariaPortadorResponse data, response status code and response headers
-    def salvar_using_post7_with_http_info(persist, opts = {})
+    def salvar_using_post8_with_http_info(persist, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.salvar_using_post7 ..."
+        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.salvar_using_post8 ..."
       end
       
       
       # verify the required parameter 'persist' is set
-      fail ArgumentError, "Missing the required parameter 'persist' when calling TransferenciaBancariaApi.salvar_using_post7" if persist.nil?
+      fail ArgumentError, "Missing the required parameter 'persist' when calling TransferenciaBancariaApi.salvar_using_post8" if persist.nil?
       
       
       
@@ -737,7 +737,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'ContaBancariaPortadorResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#salvar_using_post7\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#salvar_using_post8\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

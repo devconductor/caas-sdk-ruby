@@ -2389,6 +2389,7 @@ module Pier
     # @option opts [Integer] :id_pais Identificador de Pa\u00C3\u00ADs.
     # @option opts [Integer] :mcc C\u00C3\u00B3digo de Categoria de Mercado
     # @option opts [Integer] :id_tipo_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.
+    # @option opts [Integer] :correspondencia Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.
     # @option opts [Integer] :id_moeda C\u00C3\u00B3digo identificador da moeda.
     # @option opts [String] :tipo_pagamento Tipo do regime de pagamento do estabelecimento.
     # @option opts [String] :numero_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.
@@ -2435,6 +2436,7 @@ module Pier
     # @option opts [Integer] :id_pais Identificador de Pa\u00C3\u00ADs.
     # @option opts [Integer] :mcc C\u00C3\u00B3digo de Categoria de Mercado
     # @option opts [Integer] :id_tipo_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.
+    # @option opts [Integer] :correspondencia Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.
     # @option opts [Integer] :id_moeda C\u00C3\u00B3digo identificador da moeda.
     # @option opts [String] :tipo_pagamento Tipo do regime de pagamento do estabelecimento.
     # @option opts [String] :numero_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.
@@ -2451,6 +2453,12 @@ module Pier
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get21 ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -2709,6 +2717,7 @@ module Pier
       query_params[:'idPais'] = opts[:'id_pais'] if opts[:'id_pais']
       query_params[:'mcc'] = opts[:'mcc'] if opts[:'mcc']
       query_params[:'idTipoEstabelecimento'] = opts[:'id_tipo_estabelecimento'] if opts[:'id_tipo_estabelecimento']
+      query_params[:'correspondencia'] = opts[:'correspondencia'] if opts[:'correspondencia']
       query_params[:'idMoeda'] = opts[:'id_moeda'] if opts[:'id_moeda']
       query_params[:'tipoPagamento'] = opts[:'tipo_pagamento'] if opts[:'tipo_pagamento']
       query_params[:'numeroEstabelecimento'] = opts[:'numero_estabelecimento'] if opts[:'numero_estabelecimento']

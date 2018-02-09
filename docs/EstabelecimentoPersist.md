@@ -34,7 +34,7 @@ Name | Type | Description | Notes
 **associado_spc_brasil** | **Integer** | N\u00C3\u00BAmero do associado ao SPCBrasil. | [optional] 
 **mcc** | **Integer** | C\u00C3\u00B3digo de Categoria de Mercado. | [optional] 
 **id_tipo_estabelecimento** | **Integer** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento. | [optional] 
-**tipo_correspondencia** | **String** | Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA). | [optional] 
+**correspondencia** | **Integer** | Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA. | [optional] 
 **cargo_contato** | **String** | Cargo do contato do estabelecimento. | [optional] 
 **tipo_pagamento** | **String** | Tipo do regime de pagamento do estabelecimento. | [optional] 
 **consulta** | [**ConsultaCadastroEstabelecimentoDTO**](ConsultaCadastroEstabelecimentoDTO.md) | Consulta de cadastro n\u00C3\u00BAmero um. | [optional] 

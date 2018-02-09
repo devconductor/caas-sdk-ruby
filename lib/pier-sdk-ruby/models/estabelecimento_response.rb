@@ -119,7 +119,7 @@ module Pier
     attr_accessor :id_tipo_estabelecimento
 
     # Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA).
-    attr_accessor :tipo_correspondencia
+    attr_accessor :correspondencia
 
     # Cargo do contato do estabelecimento.
     attr_accessor :cargo_contato
@@ -215,7 +215,7 @@ module Pier
         
         :'id_tipo_estabelecimento' => :'idTipoEstabelecimento',
         
-        :'tipo_correspondencia' => :'tipoCorrespondencia',
+        :'correspondencia' => :'correspondencia',
         
         :'cargo_contato' => :'cargoContato',
         
@@ -306,7 +306,7 @@ module Pier
         
         :'id_tipo_estabelecimento' => :'Integer',
         
-        :'tipo_correspondencia' => :'String',
+        :'correspondencia' => :'Integer',
         
         :'cargo_contato' => :'String',
         
@@ -633,10 +633,10 @@ module Pier
       end
 
       
-      if attributes[:'tipoCorrespondencia']
+      if attributes[:'correspondencia']
         
         
-        self.tipo_correspondencia = attributes[:'tipoCorrespondencia']
+        self.correspondencia = attributes[:'correspondencia']
         
       
       end
@@ -863,11 +863,6 @@ module Pier
       
       
       
-      allowed_values = ["ORIGEM", "CORRESPONDENCIA"]
-      if @tipo_correspondencia && !allowed_values.include?(@tipo_correspondencia)
-        return false
-      end
-      
       
       
       
@@ -1076,16 +1071,7 @@ module Pier
     
     
     
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] tipo_correspondencia Object to be assigned
-    def tipo_correspondencia=(tipo_correspondencia)
-      allowed_values = ["ORIGEM", "CORRESPONDENCIA"]
-      if tipo_correspondencia && !allowed_values.include?(tipo_correspondencia)
-        fail ArgumentError, "invalid value for 'tipo_correspondencia', must be one of #{allowed_values}."
-      end
-      @tipo_correspondencia = tipo_correspondencia
-    end
-
+    
     
     
     
@@ -1176,7 +1162,7 @@ module Pier
           associado_spc_brasil == o.associado_spc_brasil &&
           mcc == o.mcc &&
           id_tipo_estabelecimento == o.id_tipo_estabelecimento &&
-          tipo_correspondencia == o.tipo_correspondencia &&
+          correspondencia == o.correspondencia &&
           cargo_contato == o.cargo_contato &&
           tipo_pagamento == o.tipo_pagamento &&
           consulta == o.consulta &&
@@ -1196,7 +1182,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, numero_estabelecimento, flag_matriz, id_credor, numero_receita_federal, nome, descricao, nome_fantasia, cep, nome_logradouro, numero_endereco, bairro, cidade, complemento, uf, cep2, nome_logradouro2, numero_endereco2, bairro2, cidade2, complemento2, uf2, obs, contato, email, flag_arquivo_secr_fazenda, flag_cartao_digitado, inativo, id_moeda, id_pais, associado_spc_brasil, mcc, id_tipo_estabelecimento, tipo_correspondencia, cargo_contato, tipo_pagamento, consulta, consulta2, consulta3, terminal, data_cadastramento, usuario].hash
+      [id, numero_estabelecimento, flag_matriz, id_credor, numero_receita_federal, nome, descricao, nome_fantasia, cep, nome_logradouro, numero_endereco, bairro, cidade, complemento, uf, cep2, nome_logradouro2, numero_endereco2, bairro2, cidade2, complemento2, uf2, obs, contato, email, flag_arquivo_secr_fazenda, flag_cartao_digitado, inativo, id_moeda, id_pais, associado_spc_brasil, mcc, id_tipo_estabelecimento, correspondencia, cargo_contato, tipo_pagamento, consulta, consulta2, consulta3, terminal, data_cadastramento, usuario].hash
     end
 
     # Builds the object from hash

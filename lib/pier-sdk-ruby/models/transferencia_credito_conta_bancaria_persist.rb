@@ -91,7 +91,7 @@ module Pier
         
         :'terminal_requisitante' => :'String',
         
-        :'numero_estabelecimento' => :'Integer'
+        :'numero_estabelecimento' => :'String'
         
       }
     end

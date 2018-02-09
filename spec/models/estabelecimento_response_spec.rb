@@ -366,7 +366,7 @@ describe 'EstabelecimentoResponse' do
     end
   end
 
-  describe 'test attribute "tipo_correspondencia"' do
+  describe 'test attribute "correspondencia"' do
     it 'should work' do
        # assertion here
        # should be_a()

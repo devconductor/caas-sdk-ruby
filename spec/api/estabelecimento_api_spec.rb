@@ -579,6 +579,7 @@ describe 'EstabelecimentoApi' do
   # @option opts [Integer] :id_pais Identificador de Pa\u00C3\u00ADs.
   # @option opts [Integer] :mcc C\u00C3\u00B3digo de Categoria de Mercado
   # @option opts [Integer] :id_tipo_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.
+  # @option opts [Integer] :correspondencia Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.
   # @option opts [Integer] :id_moeda C\u00C3\u00B3digo identificador da moeda.
   # @option opts [String] :tipo_pagamento Tipo do regime de pagamento do estabelecimento.
   # @option opts [String] :numero_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.

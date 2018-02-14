@@ -1076,7 +1076,7 @@ No authorization required
 
 
 # **validar_cvv_using_post**
-> Object validar_cvv_using_post(id, valida_cvv)
+> String validar_cvv_using_post(id, valida_cvv)
 
 Validar CVV do cart\u00C3\u00A3o
 
@@ -1112,7 +1112,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**String**
 
 ### Authorization
 

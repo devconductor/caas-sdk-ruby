@@ -1756,7 +1756,7 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
     # @param valida_cvv validaCVV
     # @param [Hash] opts the optional parameters
-    # @return [Object]
+    # @return [String]
     def validar_cvv_using_post(id, valida_cvv, opts = {})
       data, _status_code, _headers = validar_cvv_using_post_with_http_info(id, valida_cvv, opts)
       return data
@@ -1767,7 +1767,7 @@ module Pier
     # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
     # @param valida_cvv validaCVV
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
+    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
     def validar_cvv_using_post_with_http_info(id, valida_cvv, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CartaoApi.validar_cvv_using_post ..."
@@ -1819,7 +1819,7 @@ module Pier
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Object')
+        :return_type => 'String')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CartaoApi#validar_cvv_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

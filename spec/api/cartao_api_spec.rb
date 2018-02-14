@@ -408,7 +408,7 @@ describe 'CartaoApi' do
   # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
   # @param valida_cvv validaCVV
   # @param [Hash] opts the optional parameters
-  # @return [Object]
+  # @return [String]
   describe 'validar_cvv_using_post test' do
     it "should work" do
       # assertion here

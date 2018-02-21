@@ -27,25 +27,23 @@ module Pier
     # Alterar Webhook
     # Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
     # @param id C\u00C3\u00B3digo identificador do Webhook
-    # @param tipo_evento TipoEvento a ser chamado pelo WebHook
-    # @param url URL que a ser consumida pelo WebHook
+    # @param webhook webhook
     # @param [Hash] opts the optional parameters
     # @option opts [String] :status Status
     # @return [WebHookResponse]
-    def alterar_using_put22(id, tipo_evento, url, opts = {})
-      data, _status_code, _headers = alterar_using_put22_with_http_info(id, tipo_evento, url, opts)
+    def alterar_using_put22(id, webhook, opts = {})
+      data, _status_code, _headers = alterar_using_put22_with_http_info(id, webhook, opts)
       return data
     end
 
     # Alterar Webhook
     # Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
     # @param id C\u00C3\u00B3digo identificador do Webhook
-    # @param tipo_evento TipoEvento a ser chamado pelo WebHook
-    # @param url URL que a ser consumida pelo WebHook
+    # @param webhook webhook
     # @param [Hash] opts the optional parameters
     # @option opts [String] :status Status
     # @return [Array<(WebHookResponse, Fixnum, Hash)>] WebHookResponse data, response status code and response headers
-    def alterar_using_put22_with_http_info(id, tipo_evento, url, opts = {})
+    def alterar_using_put22_with_http_info(id, webhook, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: WebhookApi.alterar_using_put22 ..."
       end
@@ -59,21 +57,8 @@ module Pier
       
       
       
-      # verify the required parameter 'tipo_evento' is set
-      fail ArgumentError, "Missing the required parameter 'tipo_evento' when calling WebhookApi.alterar_using_put22" if tipo_evento.nil?
-      
-      # verify enum value
-      unless ['RISCO_FRAUDE', 'CODIGO_SEGURANCA', 'OUTROS'].include?(tipo_evento)
-        fail ArgumentError, "invalid value for 'tipo_evento', must be one of RISCO_FRAUDE, CODIGO_SEGURANCA, OUTROS"
-      end
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'url' is set
-      fail ArgumentError, "Missing the required parameter 'url' when calling WebhookApi.alterar_using_put22" if url.nil?
+      # verify the required parameter 'webhook' is set
+      fail ArgumentError, "Missing the required parameter 'webhook' when calling WebhookApi.alterar_using_put22" if webhook.nil?
       
       
       
@@ -94,8 +79,6 @@ module Pier
 
       # query parameters
       query_params = {}
-      query_params[:'tipoEvento'] = tipo_evento
-      query_params[:'url'] = url
       query_params[:'status'] = opts[:'status'] if opts[:'status']
 
       # header parameters
@@ -113,7 +96,7 @@ module Pier
       form_params = {}
 
       # http body (model)
-      post_body = nil
+      post_body = @api_client.object_to_http_body(webhook)
       
       auth_names = []
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
@@ -322,42 +305,27 @@ module Pier
 
     # Salvar Webhook
     # Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
-    # @param tipo_evento TipoEvento a ser chamado pelo WebHook
-    # @param url URL que a ser consumida pelo WebHook
+    # @param webhook webhook
     # @param [Hash] opts the optional parameters
     # @return [WebHookResponse]
-    def salvar_using_post30(tipo_evento, url, opts = {})
-      data, _status_code, _headers = salvar_using_post30_with_http_info(tipo_evento, url, opts)
+    def salvar_using_post30(webhook, opts = {})
+      data, _status_code, _headers = salvar_using_post30_with_http_info(webhook, opts)
       return data
     end
 
     # Salvar Webhook
     # Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
-    # @param tipo_evento TipoEvento a ser chamado pelo WebHook
-    # @param url URL que a ser consumida pelo WebHook
+    # @param webhook webhook
     # @param [Hash] opts the optional parameters
     # @return [Array<(WebHookResponse, Fixnum, Hash)>] WebHookResponse data, response status code and response headers
-    def salvar_using_post30_with_http_info(tipo_evento, url, opts = {})
+    def salvar_using_post30_with_http_info(webhook, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: WebhookApi.salvar_using_post30 ..."
       end
       
       
-      # verify the required parameter 'tipo_evento' is set
-      fail ArgumentError, "Missing the required parameter 'tipo_evento' when calling WebhookApi.salvar_using_post30" if tipo_evento.nil?
-      
-      # verify enum value
-      unless ['RISCO_FRAUDE', 'CODIGO_SEGURANCA', 'OUTROS'].include?(tipo_evento)
-        fail ArgumentError, "invalid value for 'tipo_evento', must be one of RISCO_FRAUDE, CODIGO_SEGURANCA, OUTROS"
-      end
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'url' is set
-      fail ArgumentError, "Missing the required parameter 'url' when calling WebhookApi.salvar_using_post30" if url.nil?
+      # verify the required parameter 'webhook' is set
+      fail ArgumentError, "Missing the required parameter 'webhook' when calling WebhookApi.salvar_using_post30" if webhook.nil?
       
       
       
@@ -368,8 +336,6 @@ module Pier
 
       # query parameters
       query_params = {}
-      query_params[:'tipoEvento'] = tipo_evento
-      query_params[:'url'] = url
 
       # header parameters
       header_params = {}
@@ -386,7 +352,7 @@ module Pier
       form_params = {}
 
       # http body (model)
-      post_body = nil
+      post_body = @api_client.object_to_http_body(webhook)
       
       auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,

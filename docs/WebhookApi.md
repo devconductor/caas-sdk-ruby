@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **alterar_using_put22**
-> WebHookResponse alterar_using_put22(id, tipo_evento, url, opts)
+> WebHookResponse alterar_using_put22(id, webhook, opts)
 
 Alterar Webhook
 
@@ -26,9 +26,7 @@ api_instance = Pier::WebhookApi.new
 
 id = 789 # Integer | C\u00C3\u00B3digo identificador do Webhook
 
-tipo_evento = "tipo_evento_example" # String | TipoEvento a ser chamado pelo WebHook
-
-url = "url_example" # String | URL que a ser consumida pelo WebHook
+webhook = Pier::WebHook.new # WebHook | webhook
 
 opts = { 
   status: "status_example" # String | Status
@@ -36,7 +34,7 @@ opts = {
 
 begin
   #Alterar Webhook
-  result = api_instance.alterar_using_put22(id, tipo_evento, url, opts)
+  result = api_instance.alterar_using_put22(id, webhook, opts)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling WebhookApi->alterar_using_put22: #{e}"
@@ -48,8 +46,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo identificador do Webhook | 
- **tipo_evento** | **String**| TipoEvento a ser chamado pelo WebHook | 
- **url** | **String**| URL que a ser consumida pelo WebHook | 
+ **webhook** | [**WebHook**](WebHook.md)| webhook | 
  **status** | **String**| Status | [optional] 
 
 ### Return type
@@ -175,7 +172,7 @@ No authorization required
 
 
 # **salvar_using_post30**
-> WebHookResponse salvar_using_post30(tipo_evento, url)
+> WebHookResponse salvar_using_post30(webhook)
 
 Salvar Webhook
 
@@ -188,14 +185,12 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::WebhookApi.new
 
-tipo_evento = "tipo_evento_example" # String | TipoEvento a ser chamado pelo WebHook
-
-url = "url_example" # String | URL que a ser consumida pelo WebHook
+webhook = Pier::WebHook.new # WebHook | webhook
 
 
 begin
   #Salvar Webhook
-  result = api_instance.salvar_using_post30(tipo_evento, url)
+  result = api_instance.salvar_using_post30(webhook)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling WebhookApi->salvar_using_post30: #{e}"
@@ -206,8 +201,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tipo_evento** | **String**| TipoEvento a ser chamado pelo WebHook | 
- **url** | **String**| URL que a ser consumida pelo WebHook | 
+ **webhook** | [**WebHook**](WebHook.md)| webhook | 
 
 ### Return type
 

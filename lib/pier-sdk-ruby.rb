@@ -361,6 +361,7 @@ require 'pier-sdk-ruby/models/vinculo_estabelecimento_adquirente_persist'
 require 'pier-sdk-ruby/models/vinculo_estabelecimento_adquirente_response'
 require 'pier-sdk-ruby/models/vinculo_operacao_persist'
 require 'pier-sdk-ruby/models/vinculo_operacao_response'
+require 'pier-sdk-ruby/models/web_hook'
 require 'pier-sdk-ruby/models/web_hook_response'
 
 # APIs

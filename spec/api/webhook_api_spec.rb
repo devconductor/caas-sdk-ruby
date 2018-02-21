@@ -40,8 +40,7 @@ describe 'WebhookApi' do
   # Alterar Webhook
   # Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
   # @param id C\u00C3\u00B3digo identificador do Webhook
-  # @param tipo_evento TipoEvento a ser chamado pelo WebHook
-  # @param url URL que a ser consumida pelo WebHook
+  # @param webhook webhook
   # @param [Hash] opts the optional parameters
   # @option opts [String] :status Status
   # @return [WebHookResponse]
@@ -96,8 +95,7 @@ describe 'WebhookApi' do
   # unit tests for salvar_using_post30
   # Salvar Webhook
   # Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
-  # @param tipo_evento TipoEvento a ser chamado pelo WebHook
-  # @param url URL que a ser consumida pelo WebHook
+  # @param webhook webhook
   # @param [Hash] opts the optional parameters
   # @return [WebHookResponse]
   describe 'salvar_using_post30 test' do

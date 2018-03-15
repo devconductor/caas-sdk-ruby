@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00C3\u00B3digo identificador da configura\u00C3\u00A7\u00C3\u00A3o. | [optional] 
-**id_emissor** | **Integer** | C\u00C3\u00B3digo do emissor. | [optional] 
-**codigo_banco** | **Integer** | C\u00C3\u00B3digo do Banco. | [optional] 
+**id** | **Integer** | C\u00F3digo identificador da configura\u00E7\u00E3o. | [optional] 
+**id_emissor** | **Integer** | C\u00F3digo do emissor. | [optional] 
+**codigo_banco** | **Integer** | C\u00F3digo do Banco. | [optional] 
 **uri** | **String** | URL de acesso ao banco. | [optional] 
 **key_store_name** | **String** | Caminho do certificado digital do emissor. | [optional] 
 **key_store_password** | **String** | Senha do certificado digital do emissor. | [optional] 
@@ -17,6 +17,6 @@ Name | Type | Description | Notes
 **truststore_alias** | **String** | Alias do certificado digital do banco. | [optional] 
 **type_truststore** | **String** | Tipo do certificado digital do banco. | [optional] 
 **uri_adicional** | **String** | URL adicional de acesso ao banco. | [optional] 
-**status** | **String** | Status indicador se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativa. | [optional] 
+**status** | **String** | Status indicador se a configura\u00E7\u00E3o est\u00E1 ativa. | [optional] 
 
 

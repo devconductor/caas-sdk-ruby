@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -26,7 +26,7 @@ module Pier
 
     # Ativar Job
     # Este recurso adiciona o job ao agendador de tarefas.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).
     # @param [Hash] opts the optional parameters
     # @return [JobResponse]
     def ativar_job_using_post(id, opts = {})
@@ -36,7 +36,7 @@ module Pier
 
     # Ativar Job
     # Este recurso adiciona o job ao agendador de tarefas.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(JobResponse, Fixnum, Hash)>] JobResponse data, response status code and response headers
     def ativar_job_using_post_with_http_info(id, opts = {})
@@ -91,7 +91,7 @@ module Pier
 
     # Atualizar Job
     # Este recurso permite atualizar os dados de um job cadastrado.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).
     # @param descricao descricao.
     # @param cron Cron do Job.
     # @param groovy groovy
@@ -104,7 +104,7 @@ module Pier
 
     # Atualizar Job
     # Este recurso permite atualizar os dados de um job cadastrado.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).
     # @param descricao descricao.
     # @param cron Cron do Job.
     # @param groovy groovy
@@ -188,7 +188,7 @@ module Pier
 
     # Desativar Job
     # Este recurso retira o job do agendador de tarefas.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).
     # @param [Hash] opts the optional parameters
     # @return [JobResponse]
     def desativar_job_using_post(id, opts = {})
@@ -198,7 +198,7 @@ module Pier
 
     # Desativar Job
     # Este recurso retira o job do agendador de tarefas.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(JobResponse, Fixnum, Hash)>] JobResponse data, response status code and response headers
     def desativar_job_using_post_with_http_info(id, opts = {})
@@ -255,14 +255,14 @@ module Pier
     # Este recurso permite que sejam listados os jobs existentes na base do PIER.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :groovy Script Groovy do Job
-    # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do Job
+    # @option opts [String] :descricao Descri\u00E7\u00E3o do Job
     # @option opts [String] :cron Cron do Job
     # @option opts [String] :status Status do Job
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [PageJobResponse]
-    def listar_using_get24(opts = {})
-      data, _status_code, _headers = listar_using_get24_with_http_info(opts)
+    def listar_using_get26(opts = {})
+      data, _status_code, _headers = listar_using_get26_with_http_info(opts)
       return data
     end
 
@@ -270,15 +270,15 @@ module Pier
     # Este recurso permite que sejam listados os jobs existentes na base do PIER.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :groovy Script Groovy do Job
-    # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do Job
+    # @option opts [String] :descricao Descri\u00E7\u00E3o do Job
     # @option opts [String] :cron Cron do Job
     # @option opts [String] :status Status do Job
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(PageJobResponse, Fixnum, Hash)>] PageJobResponse data, response status code and response headers
-    def listar_using_get24_with_http_info(opts = {})
+    def listar_using_get26_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: JobApi.listar_using_get24 ..."
+        @api_client.config.logger.debug "Calling API: JobApi.listar_using_get26 ..."
       end
       
       
@@ -359,7 +359,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageJobResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: JobApi#listar_using_get24\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: JobApi#listar_using_get26\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

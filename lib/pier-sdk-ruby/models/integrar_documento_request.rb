@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,18 +17,18 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto de requisi\u00C3\u00A7\u00C3\u00A3o.
+  # Objeto de requisi\u00E7\u00E3o.
   class IntegrarDocumentoRequest
     # Identificador do template de documento
     attr_accessor :id_template
 
-    # Conte\u00C3\u00BAdo do arquivo convertido em Base 64
+    # Conte\u00FAdo do arquivo convertido em Base 64
     attr_accessor :arquivo
 
     # Nome do arquivo.
     attr_accessor :nome
 
-    # Lista de par\u00C3\u00A2metros para montagem do documento.
+    # Lista de par\u00E2metros para montagem do documento.
     attr_accessor :propriedades
 
     # Attribute mapping from ruby-style variable name to JSON key.

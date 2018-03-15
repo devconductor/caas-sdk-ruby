@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,27 +17,27 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto Notifica\u00C3\u00A7\u00C3\u00A3o Push FCM e GCM
+  # Objeto Notifica\u00E7\u00E3o Push FCM e GCM
   class PushFCMEGCM
-    # C\u00C3\u00B3digo identificado da pessoa
+    # C\u00F3digo identificado da pessoa
     attr_accessor :id_pessoa
 
-    # C\u00C3\u00B3digo identificador da conta
+    # C\u00F3digo identificador da conta
     attr_accessor :id_conta
 
-    # Apresenta o token do dispositivo que dever\u00C3\u00A1 receber o push.
+    # Apresenta o token do dispositivo que dever\u00E1 receber o push.
     attr_accessor :token_dispositivo
 
-    # Apresenta o token da sua aplica\u00C3\u00A7\u00C3\u00A3o Android gerada pela Google.
+    # Apresenta o token da sua aplica\u00E7\u00E3o Android gerada pela Google.
     attr_accessor :token_servidor
 
-    # Apresenta o t\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o.
+    # Apresenta o t\u00EDtulo da notifica\u00E7\u00E3o.
     attr_accessor :titulo
 
-    # Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado.
+    # Apresenta o texto da notifica\u00E7\u00E3o a ser enviado.
     attr_accessor :conteudo
 
-    # Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+    # Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o
     attr_accessor :tipo_evento
 
     # Apresenta o nome do icone a ser apresentado no push.
@@ -46,7 +46,7 @@ module Pier
     # Apresenta o cor do icone a ser apresentado no push
     attr_accessor :som
 
-    # Apresenta a cor do icone da notifica\u00C3\u00A7\u00C3\u00A3o. Essa cor dever\u00C3\u00A1 ser informada no formato RGB Ex. #000000.
+    # Apresenta a cor do icone da notifica\u00E7\u00E3o. Essa cor dever\u00E1 ser informada no formato RGB Ex. #000000.
     attr_accessor :cor
 
     # Attribute mapping from ruby-style variable name to JSON key.

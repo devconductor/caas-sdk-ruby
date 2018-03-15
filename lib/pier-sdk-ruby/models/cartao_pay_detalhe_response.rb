@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,30 +17,30 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Resposta da requisi\u00C3\u00A7\u00C3\u00A3o de consulta de cart\u00C3\u00A3o
+  # Resposta da requisi\u00E7\u00E3o de consulta de cart\u00E3o
   class CartaoPayDetalheResponse
-    # Id do cart\u00C3\u00A3o
+    # Id do cart\u00E3o
     attr_accessor :id
 
-    # N\u00C3\u00BAmero do cart\u00C3\u00A3o real criptografado
+    # N\u00FAmero do cart\u00E3o real criptografado
     attr_accessor :numero_cartao
 
-    # Data de validade do cart\u00C3\u00A3o
+    # Data de validade do cart\u00E3o
     attr_accessor :data_validade_cartao
 
-    # Nome impresso no cart\u00C3\u00A3o criptografado
+    # Nome impresso no cart\u00E3o criptografado
     attr_accessor :nome_impresso
 
-    # Identificador do emissor do cart\u00C3\u00A3o
+    # Identificador do emissor do cart\u00E3o
     attr_accessor :id_entidade
 
-    # Nome do emissor do cart\u00C3\u00A3o
+    # Nome do emissor do cart\u00E3o
     attr_accessor :nome_entidade
 
-    # Status do cart\u00C3\u00A3o
+    # Status do cart\u00E3o
     attr_accessor :status
 
-    # CVV do cart\u00C3\u00A3o criptografado
+    # CVV do cart\u00E3o criptografado
     attr_accessor :cvv
 
     # Data de validade da chave do criptograma

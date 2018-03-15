@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,7 +17,7 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de plano de campanha
+  # Representa\u00E7\u00E3o da resposta do recurso de plano de campanha
   class PlanoCampanhaResponse
     # Identificador do plano de campanha
     attr_accessor :id
@@ -28,7 +28,7 @@ module Pier
     # Taxa de juros
     attr_accessor :taxa
 
-    # Nome do usu\u00C3\u00A1rio
+    # Nome do usu\u00E1rio
     attr_accessor :usuario
 
     # Attribute mapping from ruby-style variable name to JSON key.

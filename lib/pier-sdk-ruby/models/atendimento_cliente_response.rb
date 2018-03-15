@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,28 +19,28 @@ require 'date'
 module Pier
   # Objeto AtendimentoCliente
   class AtendimentoClienteResponse
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Atendimento (id)
+    # C\u00F3digo de Identifica\u00E7\u00E3o do Atendimento (id)
     attr_accessor :id_atendimento
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o Atendimento est\u00C3\u00A1 associado
+    # C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o Atendimento est\u00E1 associado
     attr_accessor :id_conta
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
+    # C\u00F3digo de Identifica\u00E7\u00E3o do Tipo de Atendimento (id)
     attr_accessor :id_tipo_atendimento
 
-    # Apresenta a descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento
+    # Apresenta a descri\u00E7\u00E3o do Tipo de Atendimento
     attr_accessor :descricao_tipo_atendimento
 
-    # Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento.
+    # Apresenta as informa\u00E7\u00F5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00E7\u00F5es relacionadas ao Atendimento.
     attr_accessor :conteudo_atendimento
 
-    # Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
+    # Apresenta os detalhes lan\u00E7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
     attr_accessor :detalhes_atendimento
 
     # Apresenta o nome do Atendente que registrou o Atendimento.
     attr_accessor :nome_atendente
 
-    # Apresenta o nome do Sistema, Servidor, M\u00C3\u00B3dulo ou M\u00C3\u00A9todo REST que originou o registro do Atendimento.
+    # Apresenta o nome do Sistema, Servidor, M\u00F3dulo ou M\u00E9todo REST que originou o registro do Atendimento.
     attr_accessor :nome_sistema
 
     # Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
@@ -55,10 +55,10 @@ module Pier
     # Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento.
     attr_accessor :data_agendamento
 
-    # Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.
+    # Quando utilizado, apresenta a data e hora em que a solicita\u00E7\u00E3o registrada no Atendimento fora processada.
     attr_accessor :data_processamento
 
-    # Quando aplic\u00C3\u00A1vel, de acordo com o Indica se o Processamento da solicita\u00C3\u00A7\u00C3\u00A3o fora realizado.
+    # Quando aplic\u00E1vel, de acordo com o Indica se o Processamento da solicita\u00E7\u00E3o fora realizado.
     attr_accessor :flag_processamento
 
     # Attribute mapping from ruby-style variable name to JSON key.

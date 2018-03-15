@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,36 +17,36 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto Cart\u00C3\u00A3o para Impress\u00C3\u00A3o pela Gr\u00C3\u00A1fica
+  # Objeto Cart\u00E3o para Impress\u00E3o pela Gr\u00E1fica
   class CartaoEmbossingResponse
-    # Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual 
+    # Apresenta o status que informa se o cart\u00E3o \u00E9 virtual 
     attr_accessor :flag_virtual
 
-    # Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence.
+    # Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.
     attr_accessor :id_conta
 
-    # Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) portadora do cart\u00C3\u00A3o gerado.
+    # Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.
     attr_accessor :id_pessoa
 
-    # Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) que foi gerado.
+    # Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.
     attr_accessor :id_cartao
 
-    # Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Bandeira (id) a qual o Cart\u00C3\u00A3o pertence, quando bandeirado.
+    # Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado.
     attr_accessor :id_bandeira
 
-    # Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id) atribu\u00C3\u00ADdo ao Cart\u00C3\u00A3o.
+    # Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o.
     attr_accessor :id_tipo_cartao
 
-    # Apresenta a data de emiss\u00C3\u00A3o do Cart\u00C3\u00A3o.
+    # Apresenta a data de emiss\u00E3o do Cart\u00E3o.
     attr_accessor :data_geracao
 
-    # Apresenta a data de Validade do Cart\u00C3\u00A3o.
+    # Apresenta a data de Validade do Cart\u00E3o.
     attr_accessor :data_validade
 
-    # Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00C3\u00A3o pertence.
+    # Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00E3o pertence.
     attr_accessor :nome_origem_comercial
 
-    # Apresenta o CPF do Portador do Cart\u00C3\u00A3o.
+    # Apresenta o CPF do Portador do Cart\u00E3o.
     attr_accessor :cpf
 
     # Attribute mapping from ruby-style variable name to JSON key.

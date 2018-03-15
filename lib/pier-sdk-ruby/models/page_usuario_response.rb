@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,7 +17,7 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Lista de Usu\u00C3\u00A1rios
+  # Lista de Usu\u00E1rios
   class PageUsuarioResponse
     attr_accessor :content
 

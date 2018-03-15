@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,10 +19,10 @@ require 'date'
 module Pier
   # Detalhes da fatura
   class FaturaDetalheResponse
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+    # C\u00F3digo de identifica\u00E7\u00E3o da conta.
     attr_accessor :id_conta
 
-    # Situa\u00C3\u00A7\u00C3\u00A3o de Processamento da fatura.
+    # Situa\u00E7\u00E3o de Processamento da fatura.
     attr_accessor :situacao_processamento
 
     # Status de pagamento efetuado.
@@ -40,10 +40,10 @@ module Pier
     # Valor total da fatura.
     attr_accessor :valor_total
 
-    # Valor do pagamento m\u00C3\u00ADnimo.
+    # Valor do pagamento m\u00EDnimo.
     attr_accessor :valor_pagamento_minimo
 
-    # Lista de lan\u00C3\u00A7amentos da fatura.
+    # Lista de lan\u00E7amentos da fatura.
     attr_accessor :lancamentos_fatura_response
 
     # Valor do saldo anterior.

@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,36 +17,36 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o do recurso Usuario
+  # Representa\u00E7\u00E3o do recurso Usuario
   class UsuarioResponse
-    # Id do Usu\u00C3\u00A1rio
+    # Id do Usu\u00E1rio
     attr_accessor :id
 
-    # Nome do Usu\u00C3\u00A1rio
+    # Nome do Usu\u00E1rio
     attr_accessor :nome
 
-    # Login do Usu\u00C3\u00A1rio
+    # Login do Usu\u00E1rio
     attr_accessor :login
 
-    # Id do emissor do usu\u00C3\u00A1rio
+    # Id do emissor do usu\u00E1rio
     attr_accessor :id_emissor
 
-    # CPF do Usu\u00C3\u00A1rio
+    # CPF do Usu\u00E1rio
     attr_accessor :cpf
 
-    # Email do Usu\u00C3\u00A1rio
+    # Email do Usu\u00E1rio
     attr_accessor :email
 
-    # Status do Usu\u00C3\u00A1rio
+    # Status do Usu\u00E1rio
     attr_accessor :status
 
-    # Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
+    # Data de cria\u00E7\u00E3o do Usu\u00E1rio
     attr_accessor :data_criacao
 
-    # Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
+    # Data de modifica\u00E7\u00E3o do Usu\u00E1rio
     attr_accessor :data_modificacao
 
-    # N\u00C3\u00BAmero de tentativas de valida\u00C3\u00A7\u00C3\u00A3o incorretas
+    # N\u00FAmero de tentativas de valida\u00E7\u00E3o incorretas
     attr_accessor :tentativas_incorretas
 
     # Attribute mapping from ruby-style variable name to JSON key.

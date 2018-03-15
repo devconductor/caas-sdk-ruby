@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,24 +17,24 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do  recurso Dispositivo
+  # Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do  recurso Dispositivo
   class EmprestimoPessoalRequest
-    # Valor do empr\u00C3\u00A9stimo/financiamento
+    # Valor do empr\u00E9stimo/financiamento
     attr_accessor :valor_solicitado
 
-    # N\u00C3\u00BAmero total de parcelas do empr\u00C3\u00A9stimo/financiamento
+    # N\u00FAmero total de parcelas do empr\u00E9stimo/financiamento
     attr_accessor :numero_parcelas
 
     # Valor percentual da taxa de juros a ser aplicada
     attr_accessor :taxa_juros
 
-    # Per\u00C3\u00ADodo de aplica da taxa de juros
+    # Per\u00EDodo de aplica da taxa de juros
     attr_accessor :periodo_taxa
 
-    # Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas
+    # Sistema para amortiza\u00E7\u00E3o do valor das parcelas
     attr_accessor :sistema_amortizacao
 
-    # N\u00C3\u00BAmero de meses para cobran\u00C3\u00A7a da primeira parcela
+    # N\u00FAmero de meses para cobran\u00E7a da primeira parcela
     attr_accessor :numero_meses_carencia
 
     # Attribute mapping from ruby-style variable name to JSON key.

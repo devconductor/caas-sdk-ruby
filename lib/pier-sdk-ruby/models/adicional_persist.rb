@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,48 +17,48 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o da entrada do recurso de cadastrar adicionais
+  # Representa\u00E7\u00E3o da entrada do recurso de cadastrar adicionais
   class AdicionalPersist
     # Nome completo do Adicional.
     attr_accessor :nome
 
-    # Nome do Adicional que ser\u00C3\u00A1 gravado no Cart\u00C3\u00A3o.
+    # Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o.
     attr_accessor :nome_impresso
 
-    # N\u00C3\u00BAmero do CPF ou CNPJ do Adicional.
+    # N\u00FAmero do CPF ou CNPJ do Adicional.
     attr_accessor :numero_receita_federal
 
     # Data de Nascimento do Adicional em formato yyyy-MM-dd.
     attr_accessor :data_nascimento
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+    # C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).
     attr_accessor :sexo
 
-    # N\u00C3\u00BAmero do Documento de Identidade do Adicional.
+    # N\u00FAmero do Documento de Identidade do Adicional.
     attr_accessor :numero_identidade
 
-    # Nome do Org\u00C3\u00A3o Emissor do Documento de Identidade do Adicional.
+    # Nome do Org\u00E3o Emissor do Documento de Identidade do Adicional.
     attr_accessor :orgao_expedidor_identidade
 
     # Sigla da Unidade Federativa onde o Documento de Identidade do Adicional foi emitido.
     attr_accessor :unidade_federativa_identidade
 
-    # Data de emiss\u00C3\u00A3o do Documento de Identidade do Adicional em formato yyyy-MM-dd.
+    # Data de emiss\u00E3o do Documento de Identidade do Adicional em formato yyyy-MM-dd.
     attr_accessor :data_emissao_identidade
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional.
+    # C\u00F3digo de identifica\u00E7\u00E3o do Estado Civil do Adicional.
     attr_accessor :id_estado_civil
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional.
+    # C\u00F3digo de identifica\u00E7\u00E3o da Profissao do Adicional.
     attr_accessor :id_profissao
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional.
+    # C\u00F3digo de identifica\u00E7\u00E3o da Nacionalidade do Adicional.
     attr_accessor :id_nacionalidade
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.
+    # C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular.
     attr_accessor :id_parentesco
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.
+    # C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular.
     attr_accessor :email
 
     # Lista de telefones do adicional.

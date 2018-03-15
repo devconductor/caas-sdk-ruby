@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,19 +19,19 @@ require 'date'
 module Pier
   # Objeto conta
   class ContaResponse
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+    # C\u00F3digo de identifica\u00E7\u00E3o de conta (id).
     attr_accessor :id
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
+    # C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id).
     attr_accessor :id_produto
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
+    # C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta.
     attr_accessor :id_origem_comercial
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
+    # C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id).
     attr_accessor :id_pessoa
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta.
+    # C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta.
     attr_accessor :id_status_conta
 
     # Apresenta o dia de vencimento.
@@ -40,13 +40,13 @@ module Pier
     # Apresenta o melhor dia de compra.
     attr_accessor :melhor_dia_compra
 
-    # Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
+    # Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela.
     attr_accessor :data_status_conta
 
-    # Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+    # Apresenta a data em que o cart\u00E3o foi gerado.
     attr_accessor :data_cadastro
 
-    # Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+    # Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.
     attr_accessor :data_ultima_alteracao_vencimento
 
     # Apresenta o valor da renda comprovada

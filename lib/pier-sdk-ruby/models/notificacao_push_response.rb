@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -21,34 +21,34 @@ module Pier
     # Apresenta a data e em que o registro foi enviado para o dispositivo.
     attr_accessor :data_envio
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id).
+    # C\u00F3digo de identifica\u00E7\u00E3o do emissor (id).
     attr_accessor :id_emissor
 
-    # Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
+    # Nome do tipoEvento da notifica\u00E7\u00E3o
     attr_accessor :tipo_evento
 
-    # Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+    # Status de envio da notifica\u00E7\u00E3o
     attr_accessor :status
 
-    # C\u00C3\u00B3digo identificado da pessoa
+    # C\u00F3digo identificado da pessoa
     attr_accessor :id_pessoa
 
-    # C\u00C3\u00B3digo identificador da conta
+    # C\u00F3digo identificador da conta
     attr_accessor :id_conta
 
-    # Token do dispositivo a qual foi destinado a notifica\u00C3\u00A7\u00C3\u00A3o (device_token)
+    # Token do dispositivo a qual foi destinado a notifica\u00E7\u00E3o (device_token)
     attr_accessor :token_dispositivo
 
-    # T\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o enviada.
+    # T\u00EDtulo da notifica\u00E7\u00E3o enviada.
     attr_accessor :titulo
 
-    # Conte\u00C3\u00BAdo da notifica\u00C3\u00A7\u00C3\u00A3o enviada.
+    # Conte\u00FAdo da notifica\u00E7\u00E3o enviada.
     attr_accessor :conteudo
 
     # Nome do Sistema Operacional a qual foi enviado o Push.
     attr_accessor :plataforma
 
-    # N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+    # N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
     attr_accessor :protocolo
 
     # Attribute mapping from ruby-style variable name to JSON key.

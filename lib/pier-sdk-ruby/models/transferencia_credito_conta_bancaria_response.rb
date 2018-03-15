@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,42 +17,42 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias
+  # Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
   class TransferenciaCreditoContaBancariaResponse
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transferencia.
+    # C\u00F3digo de identifica\u00E7\u00E3o da transferencia.
     attr_accessor :id_transferencia
 
     # Taxa de custo efetivo total.
     attr_accessor :valor_cet
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da autoriza\u00C3\u00A7\u00C3\u00A3o.
+    # C\u00F3digo de identifica\u00E7\u00E3o da autoriza\u00E7\u00E3o.
     attr_accessor :id_autorizacao
 
-    # C\u00C3\u00B3digo da autoriza\u00C3\u00A7\u00C3\u00A3o.
+    # C\u00F3digo da autoriza\u00E7\u00E3o.
     attr_accessor :codigo_autorizacao
 
     # NSU de origem.
     attr_accessor :nsu_origem
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+    # C\u00F3digo de identifica\u00E7\u00E3o da conta.
     attr_accessor :id_conta
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.
+    # C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o.
     attr_accessor :id_cartao
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de opera\u00C3\u00A7\u00C3\u00A3o.
+    # C\u00F3digo de identifica\u00E7\u00E3o do tipo de opera\u00E7\u00E3o.
     attr_accessor :id_operacao
 
-    # Valor da transfer\u00C3\u00AAncia.
+    # Valor da transfer\u00EAncia.
     attr_accessor :valor_compra
 
     # Valor da parcela.
     attr_accessor :valor_parcela
 
-    # Valor da transfer\u00C3\u00AAncia acrescido do valor da tarifa de saque se houver tarifa de saque.
+    # Valor da transfer\u00EAncia acrescido do valor da tarifa de saque se houver tarifa de saque.
     attr_accessor :valor_contrato
 
-    # N\u00C3\u00BAmero de parcelas.
+    # N\u00FAmero de parcelas.
     attr_accessor :numero_parcelas
 
     # Valor do IOF.
@@ -67,7 +67,7 @@ module Pier
     # Percentual de juros.
     attr_accessor :taxa_juros
 
-    # Data da transfer\u00C3\u00AAncia.
+    # Data da transfer\u00EAncia.
     attr_accessor :data_compra
 
     # Data do movimento.
@@ -76,25 +76,25 @@ module Pier
     # Data do vencimento real da fatura.
     attr_accessor :data_vencimento_real
 
-    # Dia do vencimento padr\u00C3\u00A3o da fatura.
+    # Dia do vencimento padr\u00E3o da fatura.
     attr_accessor :data_vencimento_padrao
 
-    # Data da autoriza\u00C3\u00A7\u00C3\u00A3o.
+    # Data da autoriza\u00E7\u00E3o.
     attr_accessor :data_autorizacao
 
-    # C\u00C3\u00B3digo do Banco.
+    # C\u00F3digo do Banco.
     attr_accessor :banco
 
-    # N\u00C3\u00BAmero da Ag\u00C3\u00AAncia.
+    # N\u00FAmero da Ag\u00EAncia.
     attr_accessor :numero_agencia
 
-    # D\u00C3\u00ADgito da Ag\u00C3\u00AAncia.
+    # D\u00EDgito da Ag\u00EAncia.
     attr_accessor :digito_agencia
 
-    # N\u00C3\u00BAmero da Conta.
+    # N\u00FAmero da Conta.
     attr_accessor :numero_conta
 
-    # D\u00C3\u00ADgito da Conta.
+    # D\u00EDgito da Conta.
     attr_accessor :digito_conta
 
     # Tipo da Conta.
@@ -106,7 +106,7 @@ module Pier
     # Nome do Favorecido.
     attr_accessor :nome_favorecido
 
-    # C\u00C3\u00B3digo do Status
+    # C\u00F3digo do Status
     attr_accessor :status
 
     # Status Processamento.

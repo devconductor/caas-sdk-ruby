@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,37 +19,37 @@ require 'date'
 module Pier
   # Pessoa
   class PessoaResponse
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+    # C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id).
     attr_accessor :id
 
-    # Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+    # Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'.
     attr_accessor :nome
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
+    # C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00EDsica), (\"PJ\": Pessoa Jur\u00EDdica).
     attr_accessor :tipo
 
-    # N\u00C3\u00BAmero do CPF, quando PF.
+    # N\u00FAmero do CPF, quando PF.
     attr_accessor :cpf
 
-    # N\u00C3\u00BAmero do CNPJ, quando PJ.
+    # N\u00FAmero do CNPJ, quando PJ.
     attr_accessor :cnpj
 
     # Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
     attr_accessor :data_nascimento
 
-    # N\u00C3\u00BAmero da Identidade
+    # N\u00FAmero da Identidade
     attr_accessor :numero_identidade
 
-    # Org\u00C3\u00A3o expedidor do RG.
+    # Org\u00E3o expedidor do RG.
     attr_accessor :orgao_expedidor_identidade
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+    # C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).
     attr_accessor :sexo
 
     # Sigla da Unidade Federativa de onde foi expedido a Identidade
     attr_accessor :unidade_federativa_identidade
 
-    # Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
+    # Data emiss\u00E3o da identidade no formato aaaa-MM-dd
     attr_accessor :data_emissao_identidade
 
     # Attribute mapping from ruby-style variable name to JSON key.

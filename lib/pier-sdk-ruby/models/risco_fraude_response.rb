@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,36 +17,36 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Par\u00C3\u00A2metros de resposta de risco de fraude
+  # Par\u00E2metros de resposta de risco de fraude
   class RiscoFraudeResponse
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
+    # C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude
     attr_accessor :id
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro
+    # C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro
     attr_accessor :id_tipo_resolucao
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro
+    # Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro
     attr_accessor :descricao_tipo_resolucao
 
-    # Quando ativa, indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude sejam analisadas
+    # Quando ativa, indica que a transa\u00E7\u00E3o possui um alto risco de fraude e que todas as transa\u00E7\u00F5es seguintes a ela ser\u00E3o negadas at\u00E9 que todas as transa\u00E7\u00F5es classificadas com risco de fraude sejam analisadas
     attr_accessor :flag_alto_risco
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta
+    # C\u00F3digo de identifica\u00E7\u00E3o da conta
     attr_accessor :id_conta
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o
+    # C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o
     attr_accessor :id_cartao
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
+    # C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o
     attr_accessor :id_transacao
 
-    # Data em que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada
+    # Data em que a transa\u00E7\u00E3o classificada com risco de fraude foi realizada
     attr_accessor :data_transacao
 
-    # Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
+    # Valor da transa\u00E7\u00E3o classificada com risco de fraude
     attr_accessor :valor_transacao
 
-    # Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
+    # Valor da transa\u00E7\u00E3o classificada com risco de fraude
     attr_accessor :nome_estabelecimento
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -66,16 +66,6 @@ describe 'BaseResponse' do
     end
   end
 
-  describe 'test attribute "senha"' do
-    it 'should work' do
-       # assertion here
-       # should be_a()
-       # should be_nil
-       # should ==
-       # should_not ==
-    end
-  end
-
   describe 'test attribute "nome_base"' do
     it 'should work' do
        # assertion here
@@ -127,6 +117,36 @@ describe 'BaseResponse' do
   end
 
   describe 'test attribute "servidor_controle_acesso"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+  describe 'test attribute "nome_base_usuarios"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+  describe 'test attribute "servidor_usuarios"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+  describe 'test attribute "flag_cluster"' do
     it 'should work' do
        # assertion here
        # should be_a()

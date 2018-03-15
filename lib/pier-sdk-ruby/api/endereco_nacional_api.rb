@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -24,8 +24,8 @@ module Pier
       @api_client = api_client
     end
 
-    # Consultar Endere\u00C3\u00A7o
-    # Este recurso permite consultar endere\u00C3\u00A7os atrav\u00C3\u00A9s do CEP.
+    # Consultar Endere\u00E7o
+    # Este recurso permite consultar endere\u00E7os atrav\u00E9s do CEP.
     # @param cep CEP
     # @param [Hash] opts the optional parameters
     # @return [EnderecoResponse]
@@ -34,8 +34,8 @@ module Pier
       return data
     end
 
-    # Consultar Endere\u00C3\u00A7o
-    # Este recurso permite consultar endere\u00C3\u00A7os atrav\u00C3\u00A9s do CEP.
+    # Consultar Endere\u00E7o
+    # Este recurso permite consultar endere\u00E7os atrav\u00E9s do CEP.
     # @param cep CEP
     # @param [Hash] opts the optional parameters
     # @return [Array<(EnderecoResponse, Fixnum, Hash)>] EnderecoResponse data, response status code and response headers

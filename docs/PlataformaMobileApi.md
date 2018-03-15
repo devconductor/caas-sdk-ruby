@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizar_using_put1**](PlataformaMobileApi.md#atualizar_using_put1) | **PUT** /api/plataformas-mobile/{id} | Atualiza Plataforma Mobile
-[**listar_using_get31**](PlataformaMobileApi.md#listar_using_get31) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
+[**listar_using_get33**](PlataformaMobileApi.md#listar_using_get33) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
 [**salvar_using_post21**](PlataformaMobileApi.md#salvar_using_post21) | **POST** /api/plataformas-mobile | Cadastra Plataforma Mobile
 
 
@@ -23,7 +23,7 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::PlataformaMobileApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id).
 
 update = Pier::PlataformaMobileUpdate.new # PlataformaMobileUpdate | update
 
@@ -41,7 +41,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id). | 
  **update** | [**PlataformaMobileUpdate**](PlataformaMobileUpdate.md)| update | 
 
 ### Return type
@@ -59,12 +59,12 @@ No authorization required
 
 
 
-# **listar_using_get31**
-> PagePlataformaMobileResponse listar_using_get31(opts)
+# **listar_using_get33**
+> PagePlataformaMobileResponse listar_using_get33(opts)
 
 Lista as plataformas mobile cadastradas
 
-Este m\u00C3\u00A9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
+Este m\u00E9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
 
 ### Example
 ```ruby
@@ -74,18 +74,18 @@ require 'pier-sdk-ruby'
 api_instance = Pier::PlataformaMobileApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   nome: "nome_example" # String | Nome da Plataforma Mobile
 }
 
 begin
   #Lista as plataformas mobile cadastradas
-  result = api_instance.listar_using_get31(opts)
+  result = api_instance.listar_using_get33(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling PlataformaMobileApi->listar_using_get31: #{e}"
+  puts "Exception when calling PlataformaMobileApi->listar_using_get33: #{e}"
 end
 ```
 
@@ -93,9 +93,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
  **nome** | **String**| Nome da Plataforma Mobile | [optional] 
 
 ### Return type

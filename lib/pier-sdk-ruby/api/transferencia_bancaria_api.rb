@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -24,9 +24,9 @@ module Pier
       @api_client = api_client
     end
 
-    # Atualiza conta banc\u00C3\u00A1ria portador
-    # Esse recurso permite atualizar uma conta banc\u00C3\u00A1ria do portador.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria do portador (id).
+    # Atualiza conta banc\u00E1ria portador
+    # Esse recurso permite atualizar uma conta banc\u00E1ria do portador.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria do portador (id).
     # @param update update
     # @param [Hash] opts the optional parameters
     # @return [ContaBancariaPortadorResponse]
@@ -35,9 +35,9 @@ module Pier
       return data
     end
 
-    # Atualiza conta banc\u00C3\u00A1ria portador
-    # Esse recurso permite atualizar uma conta banc\u00C3\u00A1ria do portador.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria do portador (id).
+    # Atualiza conta banc\u00E1ria portador
+    # Esse recurso permite atualizar uma conta banc\u00E1ria do portador.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria do portador (id).
     # @param update update
     # @param [Hash] opts the optional parameters
     # @return [Array<(ContaBancariaPortadorResponse, Fixnum, Hash)>] ContaBancariaPortadorResponse data, response status code and response headers
@@ -99,9 +99,139 @@ module Pier
       return data, status_code, headers
     end
 
-    # Realiza a consulta de uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias de um portador
-    # Recurso utilizado para recuperar uma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador, utiliza o ID da transfer\u00C3\u00AAncia banc\u00C3\u00A1riae o idConta para realizar a consulta.
-    # @param id_transferencia Id Transfer\u00C3\u00AAncia
+    # Realizar o cancelamento de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o.
+    # Este recurso tem como objetivo permitir o canelamento de uma transfer\u00EAncia de cr\u00E9dito entre contas.
+    # @param id_transferencia Id Transfer\u00EAncia
+    # @param [Hash] opts the optional parameters
+    # @return [String]
+    def cancelar_transferencia_credito_conta_bancaria_using_post(id_transferencia, opts = {})
+      data, _status_code, _headers = cancelar_transferencia_credito_conta_bancaria_using_post_with_http_info(id_transferencia, opts)
+      return data
+    end
+
+    # Realizar o cancelamento de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o.
+    # Este recurso tem como objetivo permitir o canelamento de uma transfer\u00EAncia de cr\u00E9dito entre contas.
+    # @param id_transferencia Id Transfer\u00EAncia
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    def cancelar_transferencia_credito_conta_bancaria_using_post_with_http_info(id_transferencia, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.cancelar_transferencia_credito_conta_bancaria_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'id_transferencia' is set
+      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling TransferenciaBancariaApi.cancelar_transferencia_credito_conta_bancaria_using_post" if id_transferencia.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/transferencias-creditos-contas-bancarias/{idTransferencia}/cancelar".sub('{format}','json').sub('{' + 'idTransferencia' + '}', id_transferencia.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'String')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#cancelar_transferencia_credito_conta_bancaria_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Realizar a confirma\u00E7\u00E3o de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o.
+    # Este recurso tem como objetivo permitir a confirma\u00E7\u00E3o da transfer\u00EAncia de cr\u00E9dito entre contas.
+    # @param id_transferencia Id Transfer\u00EAncia
+    # @param [Hash] opts the optional parameters
+    # @return [String]
+    def confirmar_transferencia_credito_conta_bancaria_using_post(id_transferencia, opts = {})
+      data, _status_code, _headers = confirmar_transferencia_credito_conta_bancaria_using_post_with_http_info(id_transferencia, opts)
+      return data
+    end
+
+    # Realizar a confirma\u00E7\u00E3o de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o.
+    # Este recurso tem como objetivo permitir a confirma\u00E7\u00E3o da transfer\u00EAncia de cr\u00E9dito entre contas.
+    # @param id_transferencia Id Transfer\u00EAncia
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    def confirmar_transferencia_credito_conta_bancaria_using_post_with_http_info(id_transferencia, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.confirmar_transferencia_credito_conta_bancaria_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'id_transferencia' is set
+      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling TransferenciaBancariaApi.confirmar_transferencia_credito_conta_bancaria_using_post" if id_transferencia.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/transferencias-creditos-contas-bancarias/{idTransferencia}/confirmar".sub('{format}','json').sub('{' + 'idTransferencia' + '}', id_transferencia.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'String')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#confirmar_transferencia_credito_conta_bancaria_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Realiza a consulta de uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias de um portador
+    # Recurso utilizado para recuperar uma transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador, utiliza o ID da transfer\u00EAncia banc\u00E1riae o idConta para realizar a consulta.
+    # @param id_transferencia Id Transfer\u00EAncia
     # @param [Hash] opts the optional parameters
     # @return [TransferenciaCreditoContaBancariaResponse]
     def consultar_transferencia_bancaria_using_get(id_transferencia, opts = {})
@@ -109,9 +239,9 @@ module Pier
       return data
     end
 
-    # Realiza a consulta de uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias de um portador
-    # Recurso utilizado para recuperar uma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador, utiliza o ID da transfer\u00C3\u00AAncia banc\u00C3\u00A1riae o idConta para realizar a consulta.
-    # @param id_transferencia Id Transfer\u00C3\u00AAncia
+    # Realiza a consulta de uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias de um portador
+    # Recurso utilizado para recuperar uma transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador, utiliza o ID da transfer\u00EAncia banc\u00E1riae o idConta para realizar a consulta.
+    # @param id_transferencia Id Transfer\u00EAncia
     # @param [Hash] opts the optional parameters
     # @return [Array<(TransferenciaCreditoContaBancariaResponse, Fixnum, Hash)>] TransferenciaCreditoContaBancariaResponse data, response status code and response headers
     def consultar_transferencia_bancaria_using_get_with_http_info(id_transferencia, opts = {})
@@ -164,29 +294,29 @@ module Pier
       return data, status_code, headers
     end
 
-    # Consulta conta banc\u00C3\u00A1ria portador
-    # Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).
+    # Consulta conta banc\u00E1ria portador
+    # Esse recurso permite consultar uma conta banc\u00E1ria do portador a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria (id).
     # @param [Hash] opts the optional parameters
     # @return [ContaBancariaPortadorResponse]
-    def consultar_using_get11(id, opts = {})
-      data, _status_code, _headers = consultar_using_get11_with_http_info(id, opts)
+    def consultar_using_get12(id, opts = {})
+      data, _status_code, _headers = consultar_using_get12_with_http_info(id, opts)
       return data
     end
 
-    # Consulta conta banc\u00C3\u00A1ria portador
-    # Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).
+    # Consulta conta banc\u00E1ria portador
+    # Esse recurso permite consultar uma conta banc\u00E1ria do portador a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(ContaBancariaPortadorResponse, Fixnum, Hash)>] ContaBancariaPortadorResponse data, response status code and response headers
-    def consultar_using_get11_with_http_info(id, opts = {})
+    def consultar_using_get12_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.consultar_using_get11 ..."
+        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.consultar_using_get12 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling TransferenciaBancariaApi.consultar_using_get11" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling TransferenciaBancariaApi.consultar_using_get12" if id.nil?
       
       
       
@@ -224,38 +354,38 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'ContaBancariaPortadorResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#consultar_using_get11\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#consultar_using_get12\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-    # Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+    # Consultar uma transfer\u00EAncia banc\u00E1ria para um banco
+    # Este recurso permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada para uma conta banc\u00E1ria. De modo geral, esta opera\u00E7\u00E3o poder\u00E1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00AA via de transfer\u00EAncia entre contas.
     # @param id Id Conta
-    # @param id_transferencia Id Transfer\u00C3\u00AAncia
+    # @param id_transferencia Id Transfer\u00EAncia
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+    # @option opts [Integer] :id_conta_bancaria_destino C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id)
     # @return [TransferenciaBancariaResponse]
-    def consultar_using_get40(id, id_transferencia, opts = {})
-      data, _status_code, _headers = consultar_using_get40_with_http_info(id, id_transferencia, opts)
+    def consultar_using_get41(id, id_transferencia, opts = {})
+      data, _status_code, _headers = consultar_using_get41_with_http_info(id, id_transferencia, opts)
       return data
     end
 
-    # Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-    # Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+    # Consultar uma transfer\u00EAncia banc\u00E1ria para um banco
+    # Este recurso permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada para uma conta banc\u00E1ria. De modo geral, esta opera\u00E7\u00E3o poder\u00E1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00AA via de transfer\u00EAncia entre contas.
     # @param id Id Conta
-    # @param id_transferencia Id Transfer\u00C3\u00AAncia
+    # @param id_transferencia Id Transfer\u00EAncia
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+    # @option opts [Integer] :id_conta_bancaria_destino C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id)
     # @return [Array<(TransferenciaBancariaResponse, Fixnum, Hash)>] TransferenciaBancariaResponse data, response status code and response headers
-    def consultar_using_get40_with_http_info(id, id_transferencia, opts = {})
+    def consultar_using_get41_with_http_info(id, id_transferencia, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.consultar_using_get40 ..."
+        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.consultar_using_get41 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling TransferenciaBancariaApi.consultar_using_get40" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling TransferenciaBancariaApi.consultar_using_get41" if id.nil?
       
       
       
@@ -263,7 +393,7 @@ module Pier
       
       
       # verify the required parameter 'id_transferencia' is set
-      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling TransferenciaBancariaApi.consultar_using_get40" if id_transferencia.nil?
+      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling TransferenciaBancariaApi.consultar_using_get41" if id_transferencia.nil?
       
       
       
@@ -308,40 +438,48 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TransferenciaBancariaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#consultar_using_get40\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#consultar_using_get41\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Realiza a listagem das transfer\u00C3\u00AAncias banc\u00C3\u00A1rias de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
-    # Recurso utilizado para listar as transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador solicitadas.
+    # Realiza a listagem das transfer\u00EAncias banc\u00E1rias de cr\u00E9dito entre contas banc\u00E1rias
+    # Recurso utilizado para listar as transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador solicitadas.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
-    # @option opts [String] :data_solicitacao_inicial Data inicial da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia.
-    # @option opts [String] :data_solicitacao_final Data final da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_conta C\u00F3digo de identifica\u00E7\u00E3o da Conta.
+    # @option opts [String] :data_solicitacao_inicial Data inicial da solicita\u00E7\u00E3o de transfer\u00EAncia.
+    # @option opts [String] :data_solicitacao_final Data final da solicita\u00E7\u00E3o de transfer\u00EAncia
+    # @option opts [Integer] :status C\u00F3digo do status do processamento
     # @return [PageTransferenciaCreditoContaBancariaResponse]
     def listar_transferencia_bancaria_using_get(opts = {})
       data, _status_code, _headers = listar_transferencia_bancaria_using_get_with_http_info(opts)
       return data
     end
 
-    # Realiza a listagem das transfer\u00C3\u00AAncias banc\u00C3\u00A1rias de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
-    # Recurso utilizado para listar as transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador solicitadas.
+    # Realiza a listagem das transfer\u00EAncias banc\u00E1rias de cr\u00E9dito entre contas banc\u00E1rias
+    # Recurso utilizado para listar as transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador solicitadas.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
-    # @option opts [String] :data_solicitacao_inicial Data inicial da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia.
-    # @option opts [String] :data_solicitacao_final Data final da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_conta C\u00F3digo de identifica\u00E7\u00E3o da Conta.
+    # @option opts [String] :data_solicitacao_inicial Data inicial da solicita\u00E7\u00E3o de transfer\u00EAncia.
+    # @option opts [String] :data_solicitacao_final Data final da solicita\u00E7\u00E3o de transfer\u00EAncia
+    # @option opts [Integer] :status C\u00F3digo do status do processamento
     # @return [Array<(PageTransferenciaCreditoContaBancariaResponse, Fixnum, Hash)>] PageTransferenciaCreditoContaBancariaResponse data, response status code and response headers
     def listar_transferencia_bancaria_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.listar_transferencia_bancaria_using_get ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -390,6 +528,7 @@ module Pier
       query_params[:'idConta'] = opts[:'id_conta'] if opts[:'id_conta']
       query_params[:'dataSolicitacaoInicial'] = opts[:'data_solicitacao_inicial'] if opts[:'data_solicitacao_inicial']
       query_params[:'dataSolicitacaoFinal'] = opts[:'data_solicitacao_final'] if opts[:'data_solicitacao_final']
+      query_params[:'status'] = opts[:'status'] if opts[:'status']
 
       # header parameters
       header_params = {}
@@ -422,44 +561,44 @@ module Pier
       return data, status_code, headers
     end
 
-    # Lista contas banc\u00C3\u00A1rias portador
-    # Esse recurso permite listar contas banc\u00C3\u00A1rias do portador.
+    # Lista contas banc\u00E1rias portador
+    # Esse recurso permite listar contas banc\u00E1rias do portador.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id_conta C\u00C3\u00B3digo identificador da conta cart\u00C3\u00A3o
-    # @option opts [String] :nome_agencia Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia
-    # @option opts [String] :numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia
-    # @option opts [String] :numero_conta N\u00C3\u00BAmero da conta
-    # @option opts [Integer] :flag_conta_origem_doc Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED)
-    # @option opts [Integer] :id_pessoa_fisica C\u00C3\u00B3digo da pessoa
+    # @option opts [Integer] :id_conta C\u00F3digo identificador da conta cart\u00E3o
+    # @option opts [String] :nome_agencia Descri\u00E7\u00E3o da ag\u00EAncia
+    # @option opts [String] :numero_agencia N\u00FAmero da ag\u00EAncia
+    # @option opts [String] :numero_conta N\u00FAmero da conta
+    # @option opts [Integer] :flag_conta_origem_doc Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED)
+    # @option opts [Integer] :id_pessoa_fisica C\u00F3digo da pessoa
     # @option opts [String] :favorecido Nome do favorecido
     # @option opts [String] :numero_receira_federal Documento do favorecido
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [PageContaBancariaPortadorResponse]
-    def listar_using_get14(opts = {})
-      data, _status_code, _headers = listar_using_get14_with_http_info(opts)
+    def listar_using_get15(opts = {})
+      data, _status_code, _headers = listar_using_get15_with_http_info(opts)
       return data
     end
 
-    # Lista contas banc\u00C3\u00A1rias portador
-    # Esse recurso permite listar contas banc\u00C3\u00A1rias do portador.
+    # Lista contas banc\u00E1rias portador
+    # Esse recurso permite listar contas banc\u00E1rias do portador.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id_conta C\u00C3\u00B3digo identificador da conta cart\u00C3\u00A3o
-    # @option opts [String] :nome_agencia Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia
-    # @option opts [String] :numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia
-    # @option opts [String] :numero_conta N\u00C3\u00BAmero da conta
-    # @option opts [Integer] :flag_conta_origem_doc Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED)
-    # @option opts [Integer] :id_pessoa_fisica C\u00C3\u00B3digo da pessoa
+    # @option opts [Integer] :id_conta C\u00F3digo identificador da conta cart\u00E3o
+    # @option opts [String] :nome_agencia Descri\u00E7\u00E3o da ag\u00EAncia
+    # @option opts [String] :numero_agencia N\u00FAmero da ag\u00EAncia
+    # @option opts [String] :numero_conta N\u00FAmero da conta
+    # @option opts [Integer] :flag_conta_origem_doc Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED)
+    # @option opts [Integer] :id_pessoa_fisica C\u00F3digo da pessoa
     # @option opts [String] :favorecido Nome do favorecido
     # @option opts [String] :numero_receira_federal Documento do favorecido
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(PageContaBancariaPortadorResponse, Fixnum, Hash)>] PageContaBancariaPortadorResponse data, response status code and response headers
-    def listar_using_get14_with_http_info(opts = {})
+    def listar_using_get15_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.listar_using_get14 ..."
+        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.listar_using_get15 ..."
       end
       
       
@@ -571,42 +710,42 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageContaBancariaPortadorResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#listar_using_get14\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#listar_using_get15\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-    # Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
+    # Listar as transfer\u00EAncias banc\u00E1rias realizadas
+    # Este recurso tem como objetivo permitir que o portador de um Cart\u00E3o possa consultar uma lista das Transfer\u00EAncias Banc\u00E1rias para os Favorecidos cadastrados.
     # @param id Id Conta
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_conta_bancaria_destino C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [PageTransferenciaBancariaResponse]
-    def listar_using_get47(id, opts = {})
-      data, _status_code, _headers = listar_using_get47_with_http_info(id, opts)
+    def listar_using_get49(id, opts = {})
+      data, _status_code, _headers = listar_using_get49_with_http_info(id, opts)
       return data
     end
 
-    # Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-    # Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
+    # Listar as transfer\u00EAncias banc\u00E1rias realizadas
+    # Este recurso tem como objetivo permitir que o portador de um Cart\u00E3o possa consultar uma lista das Transfer\u00EAncias Banc\u00E1rias para os Favorecidos cadastrados.
     # @param id Id Conta
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_conta_bancaria_destino C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(PageTransferenciaBancariaResponse, Fixnum, Hash)>] PageTransferenciaBancariaResponse data, response status code and response headers
-    def listar_using_get47_with_http_info(id, opts = {})
+    def listar_using_get49_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.listar_using_get47 ..."
+        @api_client.config.logger.debug "Calling API: TransferenciaBancariaApi.listar_using_get49 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling TransferenciaBancariaApi.listar_using_get47" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling TransferenciaBancariaApi.listar_using_get49" if id.nil?
       
       
       
@@ -672,13 +811,13 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTransferenciaBancariaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#listar_using_get47\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: TransferenciaBancariaApi#listar_using_get49\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Cadastra uma conta banc\u00C3\u00A1ria do portador
-    # Esse recurso permite cadastrar contas banc\u00C3\u00A1rias do portador.
+    # Cadastra uma conta banc\u00E1ria do portador
+    # Esse recurso permite cadastrar contas banc\u00E1rias do portador.
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [ContaBancariaPortadorResponse]
@@ -687,8 +826,8 @@ module Pier
       return data
     end
 
-    # Cadastra uma conta banc\u00C3\u00A1ria do portador
-    # Esse recurso permite cadastrar contas banc\u00C3\u00A1rias do portador.
+    # Cadastra uma conta banc\u00E1ria do portador
+    # Esse recurso permite cadastrar contas banc\u00E1rias do portador.
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(ContaBancariaPortadorResponse, Fixnum, Hash)>] ContaBancariaPortadorResponse data, response status code and response headers
@@ -742,8 +881,8 @@ module Pier
       return data, status_code, headers
     end
 
-    # Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
-    # Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias.
+    # Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias
+    # Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias.
     # @param request request
     # @param [Hash] opts the optional parameters
     # @return [PlanoParcelamentoTransferenciaCreditoContaBancariaResponse]
@@ -752,8 +891,8 @@ module Pier
       return data
     end
 
-    # Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
-    # Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias.
+    # Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias
+    # Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias.
     # @param request request
     # @param [Hash] opts the optional parameters
     # @return [Array<(PlanoParcelamentoTransferenciaCreditoContaBancariaResponse, Fixnum, Hash)>] PlanoParcelamentoTransferenciaCreditoContaBancariaResponse data, response status code and response headers
@@ -807,8 +946,8 @@ module Pier
       return data, status_code, headers
     end
 
-    # Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
-    # Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+    # Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
+    # Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [TransferenciaCreditoContaBancariaResponse]
@@ -817,8 +956,8 @@ module Pier
       return data
     end
 
-    # Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
-    # Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+    # Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
+    # Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(TransferenciaCreditoContaBancariaResponse, Fixnum, Hash)>] TransferenciaCreditoContaBancariaResponse data, response status code and response headers
@@ -872,8 +1011,8 @@ module Pier
       return data, status_code, headers
     end
 
-    # Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
-    # Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+    # Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
+    # Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
     # @param id Id Conta
     # @param transferencia_bancaria_persist transferenciaBancariaPersist
     # @param [Hash] opts the optional parameters
@@ -883,8 +1022,8 @@ module Pier
       return data
     end
 
-    # Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
-    # Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+    # Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
+    # Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
     # @param id Id Conta
     # @param transferencia_bancaria_persist transferenciaBancariaPersist
     # @param [Hash] opts the optional parameters

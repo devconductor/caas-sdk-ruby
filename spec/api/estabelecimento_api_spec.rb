@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -39,7 +39,7 @@ describe 'EstabelecimentoApi' do
   # unit tests for alterar_origem_comercial_using_put
   # Alterar Origem Comercial
   # Altera uma origem comercial.
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial
+  # @param id C\u00F3digo de identifica\u00E7\u00E3o da origem comercial
   # @param origem_comercial_update origemComercialUpdate
   # @param [Hash] opts the optional parameters
   # @return [OrigemComercialResponse]
@@ -55,8 +55,8 @@ describe 'EstabelecimentoApi' do
 
   # unit tests for alterar_using_put10
   # Altera uma Maquineta
-  # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das maquinetas dos estabelecimentos.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).
+  # Este m\u00E9todo realiza a altera\u00E7\u00E3o das maquinetas dos estabelecimentos.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).
   # @param maquineta_update maquinetaUpdate
   # @param [Hash] opts the optional parameters
   # @return [MaquinetaResponse]
@@ -71,9 +71,9 @@ describe 'EstabelecimentoApi' do
   end
 
   # unit tests for alterar_using_put11
-  # Altera uma Regra Opera\u00C3\u00A7\u00C3\u00A3o
-  # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma regra opera\u00C3\u00A7\u00C3\u00A3o.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).
+  # Altera uma Regra Opera\u00E7\u00E3o
+  # Este m\u00E9todo realiza a altera\u00E7\u00E3o de uma regra opera\u00E7\u00E3o.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).
   # @param operacao_credor_update operacaoCredorUpdate
   # @param [Hash] opts the optional parameters
   # @return [OperacaoCredorResponse]
@@ -89,12 +89,10 @@ describe 'EstabelecimentoApi' do
 
   # unit tests for alterar_using_put15
   # Altera um Telefone do estabelecimento
-  # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos telefones dos estabelecimentos.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).
-  # @param ddd C\u00C3\u00B3digo DDD do telefone (id).
-  # @param telefone N\u00C3\u00BAmero do telefone.
+  # Este m\u00E9todo realiza a altera\u00E7\u00E3o dos telefones dos estabelecimentos.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).
+  # @param telefone_estabelecimento_update telefoneEstabelecimentoUpdate
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
   # @return [TelefoneEstabelecimentoResponse]
   describe 'alterar_using_put15 test' do
     it "should work" do
@@ -108,8 +106,8 @@ describe 'EstabelecimentoApi' do
 
   # unit tests for alterar_using_put17
   # Altera um Terminal
-  # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos Terminais.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal (id).
+  # Este m\u00E9todo realiza a altera\u00E7\u00E3o dos Terminais.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do terminal (id).
   # @param terminal_update terminalUpdate
   # @param [Hash] opts the optional parameters
   # @return [TerminalResponse]
@@ -141,9 +139,9 @@ describe 'EstabelecimentoApi' do
   end
 
   # unit tests for alterar_using_put8
-  # Alterar Grupo Econ\u00C3\u00B4mico
-  # Altera um grupo econ\u00C3\u00B4mico.
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico
+  # Alterar Grupo Econ\u00F4mico
+  # Altera um grupo econ\u00F4mico.
+  # @param id C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico
   # @param grupo_economico_dto grupoEconomicoDTO
   # @param [Hash] opts the optional parameters
   # @return [GrupoEconomicoResponse]
@@ -190,8 +188,8 @@ describe 'EstabelecimentoApi' do
   end
 
   # unit tests for cadastrar_using_post3
-  # Cadastrar Grupo Econ\u00C3\u00B4mico
-  # Cadastra um grupo econ\u00C3\u00B4mico.
+  # Cadastrar Grupo Econ\u00F4mico
+  # Cadastra um grupo econ\u00F4mico.
   # @param grupo_economico_dto GrupoEconomicoDTO
   # @param [Hash] opts the optional parameters
   # @return [GrupoEconomicoResponse]
@@ -206,9 +204,9 @@ describe 'EstabelecimentoApi' do
   end
 
   # unit tests for consulta_operacao_using_get
-  # Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-  # Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idoperacao
-  # @param id C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao).
+  # Apresenta dados de um determinado tipo de opera\u00E7\u00E3o
+  # Este recurso permite consultar dados de um determinado tipo opera\u00E7\u00E3o a partir do idoperacao
+  # @param id C\u00F3digo de processamento da opera\u00E7\u00E3o (idOperacao).
   # @param [Hash] opts the optional parameters
   # @return [DetalheOperacaoResponse]
   describe 'consulta_operacao_using_get test' do
@@ -223,8 +221,8 @@ describe 'EstabelecimentoApi' do
 
   # unit tests for consultar_origem_comercial_using_get
   # Consultar Origem Comercial
-  # Consulta uma origem comercial atrav\u00C3\u00A9s do seu identificador.
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial
+  # Consulta uma origem comercial atrav\u00E9s do seu identificador.
+  # @param id C\u00F3digo de identifica\u00E7\u00E3o da origem comercial
   # @param [Hash] opts the optional parameters
   # @return [OrigemComercialResponse]
   describe 'consultar_origem_comercial_using_get test' do
@@ -237,13 +235,13 @@ describe 'EstabelecimentoApi' do
     end
   end
 
-  # unit tests for consultar_using_get16
+  # unit tests for consultar_using_get17
   # Consultar estabelecimento por id
   # Consulta os detalhes de um determinado estabelecimento
   # @param id Id
   # @param [Hash] opts the optional parameters
   # @return [EstabelecimentoResponse]
-  describe 'consultar_using_get16 test' do
+  describe 'consultar_using_get17 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -253,29 +251,13 @@ describe 'EstabelecimentoApi' do
     end
   end
 
-  # unit tests for consultar_using_get18
-  # Consultar grupo econ\u00C3\u00B4mico
-  # Consulta um grupo econ\u00C3\u00B4mico atrav\u00C3\u00A9s do seu identificador.
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico
+  # unit tests for consultar_using_get19
+  # Consultar grupo econ\u00F4mico
+  # Consulta um grupo econ\u00F4mico atrav\u00E9s do seu identificador.
+  # @param id C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico
   # @param [Hash] opts the optional parameters
   # @return [GrupoEconomicoResponse]
-  describe 'consultar_using_get18 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-  # unit tests for consultar_using_get20
-  # Apresenta os dados de uma determinada maquineta
-  # Este m\u00C3\u00A9todo permite consultar uma determinada maquineta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).
-  # @param [Hash] opts the optional parameters
-  # @return [MaquinetaResponse]
-  describe 'consultar_using_get20 test' do
+  describe 'consultar_using_get19 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -286,11 +268,11 @@ describe 'EstabelecimentoApi' do
   end
 
   # unit tests for consultar_using_get21
-  # Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
-  # Este m\u00C3\u00A9todo permite consultar uma determinada regra opera\u00C3\u00A7\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).
+  # Apresenta os dados de uma determinada maquineta
+  # Este m\u00E9todo permite consultar uma determinada maquineta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).
   # @param [Hash] opts the optional parameters
-  # @return [OperacaoCredorResponse]
+  # @return [MaquinetaResponse]
   describe 'consultar_using_get21 test' do
     it "should work" do
       # assertion here
@@ -301,13 +283,29 @@ describe 'EstabelecimentoApi' do
     end
   end
 
-  # unit tests for consultar_using_get29
+  # unit tests for consultar_using_get22
+  # Apresenta os dados de uma determinada Regra Opera\u00E7\u00E3o
+  # Este m\u00E9todo permite consultar uma determinada regra opera\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).
+  # @param [Hash] opts the optional parameters
+  # @return [OperacaoCredorResponse]
+  describe 'consultar_using_get22 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+  # unit tests for consultar_using_get30
   # Apresenta os dados de um determinado telefone de um estabelecimento
-  # Este m\u00C3\u00A9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).
+  # Este m\u00E9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).
   # @param [Hash] opts the optional parameters
   # @return [TelefoneEstabelecimentoResponse]
-  describe 'consultar_using_get29 test' do
+  describe 'consultar_using_get30 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -317,13 +315,13 @@ describe 'EstabelecimentoApi' do
     end
   end
 
-  # unit tests for consultar_using_get31
+  # unit tests for consultar_using_get32
   # Apresenta os dados de um determinado Terminal
-  # Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+  # Este m\u00E9todo permite consultar um determinado Terminal a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
   # @param [Hash] opts the optional parameters
   # @return [TerminalResponse]
-  describe 'consultar_using_get31 test' do
+  describe 'consultar_using_get32 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -333,13 +331,13 @@ describe 'EstabelecimentoApi' do
     end
   end
 
-  # unit tests for consultar_using_get43
-  # Apresenta os dados de um determinado V\u00C3\u00ADnculo
-  # Este m\u00C3\u00A9todo permite consultar um determinado V\u00C3\u00ADnculo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u008Dnculo (id).
+  # unit tests for consultar_using_get44
+  # Apresenta os dados de um determinado V\u00EDnculo
+  # Este m\u00E9todo permite consultar um determinado V\u00EDnculo a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do V\u00CDnculo (id).
   # @param [Hash] opts the optional parameters
   # @return [VinculoEstabelecimentoAdquirenteResponse]
-  describe 'consultar_using_get43 test' do
+  describe 'consultar_using_get44 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -350,9 +348,9 @@ describe 'EstabelecimentoApi' do
   end
 
   # unit tests for desabilitar_vinculo_using_post
-  # Desabilitar um V\u00C3\u00ADnculo
-  # Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).
+  # Desabilitar um V\u00EDnculo
+  # Este m\u00E9todo realiza a desativa\u00E7\u00E3o de um v\u00EDnculo.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).
   # @param [Hash] opts the optional parameters
   # @return [Object]
   describe 'desabilitar_vinculo_using_post test' do
@@ -366,9 +364,9 @@ describe 'EstabelecimentoApi' do
   end
 
   # unit tests for desabilitar_vinculo_using_post1
-  # Desabilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
-  # Este m\u00C3\u00A9todo permite desabilitar um v\u00C3\u00ADnculo.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
+  # Desabilitar um v\u00EDnculo opera\u00E7\u00E3o
+  # Este m\u00E9todo permite desabilitar um v\u00EDnculo.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).
   # @param vinculo_operacao_persist vinculoOperacaoPersist
   # @param [Hash] opts the optional parameters
   # @return [Object]
@@ -383,9 +381,9 @@ describe 'EstabelecimentoApi' do
   end
 
   # unit tests for habilitar_vinculo_using_post
-  # Habilitar um V\u00C3\u00ADnculo
-  # Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).
+  # Habilitar um V\u00EDnculo
+  # Este m\u00E9todo realiza a ativa\u00E7\u00E3o de um v\u00EDnculo.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).
   # @param [Hash] opts the optional parameters
   # @return [Object]
   describe 'habilitar_vinculo_using_post test' do
@@ -399,9 +397,9 @@ describe 'EstabelecimentoApi' do
   end
 
   # unit tests for habilitar_vinculo_using_post1
-  # Habilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
-  # Este m\u00C3\u00A9todo permite habilitar um v\u00C3\u00ADnculo.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
+  # Habilitar um v\u00EDnculo opera\u00E7\u00E3o
+  # Este m\u00E9todo permite habilitar um v\u00EDnculo.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).
   # @param vinculo_operacao_persist vinculoOperacaoPersist
   # @param [Hash] opts the optional parameters
   # @return [Object]
@@ -416,14 +414,14 @@ describe 'EstabelecimentoApi' do
   end
 
   # unit tests for lista_operacao_using_get
-  # Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista
-  # Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00A3o
+  # Apresenta dados de opera\u00E7\u00F5es em uma lista
+  # Este recurso permite listar as opera\u00E7\u00E3o
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id_operacao C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o
-  # @option opts [String] :codigo_processamento C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [Integer] :id_operacao C\u00F3digo que identifica a opera\u00E7\u00E3o
+  # @option opts [String] :codigo_processamento C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador
   # @return [PageOperacaoResponse]
   describe 'lista_operacao_using_get test' do
     it "should work" do
@@ -437,11 +435,11 @@ describe 'EstabelecimentoApi' do
 
   # unit tests for listar_mcc_using_get
   # Lista os MCCs
-  # Este m\u00C3\u00A9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
+  # Este m\u00E9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   # @return [PageMCCResponse]
   describe 'listar_mcc_using_get test' do
     it "should work" do
@@ -457,32 +455,32 @@ describe 'EstabelecimentoApi' do
   # Listar Origens Comerciais
   # Lista origens comerciais cadastradas.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   # @option opts [Integer] :id Id da origem comercial
   # @option opts [String] :nome Nome da origem comercial
   # @option opts [Integer] :status Indica o status da origem comercial
   # @option opts [Integer] :id_estabelecimento Identificador do estabelecimento
   # @option opts [Integer] :id_produto Identificador do produto
-  # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial
+  # @option opts [String] :descricao Descri\u00E7\u00E3o da origem comercial
   # @option opts [Integer] :id_tipo_origem_comercial Identificador do tipo de origem comercial
   # @option opts [Integer] :id_grupo_origem_comercial Identificador do grupo de origem comercial
-  # @option opts [BOOLEAN] :flag_pre_aprovado Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o
-  # @option opts [BOOLEAN] :flag_aprovacao_imediata Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata
-  # @option opts [String] :nome_fantasia_plastico Nome fantasia impresso no pl\u00C3\u00A1stico
-  # @option opts [BOOLEAN] :flag_cartao_provisorio Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio
-  # @option opts [BOOLEAN] :flag_cartao_definitivo Indica se permite cart\u00C3\u00A3o definitivo
-  # @option opts [String] :usuario Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o
-  # @option opts [String] :senha Senha para autentica\u00C3\u00A7\u00C3\u00A3o
-  # @option opts [BOOLEAN] :flag_origem_externa Indica se \u00C3\u00A9 origem externa
-  # @option opts [BOOLEAN] :flag_modificado Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o
+  # @option opts [BOOLEAN] :flag_pre_aprovado Indica se permite pr\u00E9 aprova\u00E7\u00E3o
+  # @option opts [BOOLEAN] :flag_aprovacao_imediata Indica se permite aprova\u00E7\u00E3o imediata
+  # @option opts [String] :nome_fantasia_plastico Nome fantasia impresso no pl\u00E1stico
+  # @option opts [BOOLEAN] :flag_cartao_provisorio Indica se permite cart\u00E3o provis\u00F3rio
+  # @option opts [BOOLEAN] :flag_cartao_definitivo Indica se permite cart\u00E3o definitivo
+  # @option opts [String] :usuario Usu\u00E1rio para autentica\u00E7\u00E3o
+  # @option opts [String] :senha Senha para autentica\u00E7\u00E3o
+  # @option opts [BOOLEAN] :flag_origem_externa Indica se \u00E9 origem externa
+  # @option opts [BOOLEAN] :flag_modificado Indica se h\u00E1 modifica\u00E7\u00E3o
   # @option opts [BOOLEAN] :flag_envia_fatura_usuario Indica se envia fatura
-  # @option opts [BOOLEAN] :flag_credito_faturamento Indica se permite cr\u00C3\u00A9dito de faturamento
-  # @option opts [BOOLEAN] :flag_concede_limite_provisorio Indica se concede limite provis\u00C3\u00B3rio
+  # @option opts [BOOLEAN] :flag_credito_faturamento Indica se permite cr\u00E9dito de faturamento
+  # @option opts [BOOLEAN] :flag_concede_limite_provisorio Indica se concede limite provis\u00F3rio
   # @option opts [BOOLEAN] :flag_digitalizar_doc Indica se digitaliza documento
   # @option opts [BOOLEAN] :flag_embossing_loja Indica se realiza embossing em loja
-  # @option opts [BOOLEAN] :flag_consulta_previa Indica se realiza consulta pr\u00C3\u00A9via
+  # @option opts [BOOLEAN] :flag_consulta_previa Indica se realiza consulta pr\u00E9via
   # @option opts [String] :tipo_pessoa Tipo de pessoa
   # @return [PageOrigemComercialResponse]
   describe 'listar_origens_comerciais_using_get test' do
@@ -497,11 +495,11 @@ describe 'EstabelecimentoApi' do
 
   # unit tests for listar_tipos_adquirentes_using_get
   # Lista os Tipos de adquirentes
-  # Este m\u00C3\u00A9todo permite que sejam listados os tipos de adquirentes.
+  # Este m\u00E9todo permite que sejam listados os tipos de adquirentes.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   # @return [PageEntidadeResponse]
   describe 'listar_tipos_adquirentes_using_get test' do
     it "should work" do
@@ -513,13 +511,32 @@ describe 'EstabelecimentoApi' do
     end
   end
 
+  # unit tests for listar_tipos_estabelecimentos_using_get
+  # Lista os tipos de estabelecimentos
+  # Lista os tipos de estabelecimentos
+  # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [String] :descricao Descri\u00E7\u00E3o do tipo de estabelecimento.
+  # @return [PageTipoEstabelecimentoResponse]
+  describe 'listar_tipos_estabelecimentos_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
   # unit tests for listar_tipos_maquinetas_using_get
   # Lista os Tipos de  Maquinetas
-  # Este m\u00C3\u00A9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
+  # Este m\u00E9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   # @return [PageCampoCodificadoDescricaoResponse]
   describe 'listar_tipos_maquinetas_using_get test' do
     it "should work" do
@@ -531,13 +548,32 @@ describe 'EstabelecimentoApi' do
     end
   end
 
+  # unit tests for listar_tipos_origens_comerciais_using_get
+  # Listar tipos de origens comerciais
+  # Lista os tipos de origens comerciais
+  # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [String] :nome Nome do tipo de origem comercial
+  # @return [PageTipoOrigemComercialResponse]
+  describe 'listar_tipos_origens_comerciais_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
   # unit tests for listar_tipos_terminais_using_get1
   # Lista os Tipos Terminais
-  # Este m\u00C3\u00A9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
+  # Este m\u00E9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   # @return [PageTipoTerminalResponse]
   describe 'listar_tipos_terminais_using_get1 test' do
     it "should work" do
@@ -549,50 +585,50 @@ describe 'EstabelecimentoApi' do
     end
   end
 
-  # unit tests for listar_using_get21
+  # unit tests for listar_using_get22
   # Lista Estabelecimentos
-  # Lista todas os Estabelecimentos
+  # Lista todos os Estabelecimentos
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
-  # @option opts [Integer] :id_credor Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor.
-  # @option opts [String] :numero_receita_federal Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal.
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [Integer] :id C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id).
+  # @option opts [Integer] :id_grupo_economico Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico.
+  # @option opts [String] :numero_receita_federal Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal.
   # @option opts [String] :nome Nome do Estabelecimento.
-  # @option opts [String] :descricao Raz\u00C3\u00A3o Social do Estabelecimento.
-  # @option opts [String] :nome_fantasia T\u00C3\u00ADtulo Comercial do Estabelecimento.
-  # @option opts [String] :cep C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+  # @option opts [String] :descricao Raz\u00E3o Social do Estabelecimento.
+  # @option opts [String] :nome_fantasia T\u00EDtulo Comercial do Estabelecimento.
+  # @option opts [String] :cep C\u00F3digo de Endere\u00E7amento Postal (CEP).
   # @option opts [String] :nome_logradouro Nome do Logradouro.
-  # @option opts [Integer] :numero_endereco N\u00C3\u00BAmero do endere\u00C3\u00A7o.
-  # @option opts [String] :complemento Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
-  # @option opts [String] :bairro Nome do bairro do endere\u00C3\u00A7o.
-  # @option opts [String] :cidade Nome da cidade do endere\u00C3\u00A7o.
-  # @option opts [String] :uf Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
-  # @option opts [String] :pais Nome do pa\u00C3\u00ADs.
+  # @option opts [Integer] :numero_endereco N\u00FAmero do endere\u00E7o.
+  # @option opts [String] :complemento Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
+  # @option opts [String] :bairro Nome do bairro do endere\u00E7o.
+  # @option opts [String] :cidade Nome da cidade do endere\u00E7o.
+  # @option opts [String] :uf Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
+  # @option opts [String] :pais Nome do pa\u00EDs.
   # @option opts [String] :data_cadastramento Data de Cadastro do Estabelecimento, no formato yyyy-MM-dd.
   # @option opts [String] :contato Nome da pessoa para contato com o Estabelecimento.
   # @option opts [String] :email E-mail da pessoa para contato com o Estabelecimento.
-  # @option opts [Integer] :flag_arquivo_secr_fazenda Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.
-  # @option opts [Integer] :flag_cartao_digitado Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.
-  # @option opts [Integer] :inativo Indica se o estabelecimento est\u00C3\u00A1 inativo.
-  # @option opts [Integer] :id_pais Identificador de Pa\u00C3\u00ADs.
-  # @option opts [Integer] :mcc C\u00C3\u00B3digo de Categoria de Mercado
-  # @option opts [Integer] :id_tipo_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.
-  # @option opts [Integer] :correspondencia Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.
-  # @option opts [Integer] :id_moeda C\u00C3\u00B3digo identificador da moeda.
+  # @option opts [Integer] :flag_arquivo_secr_fazenda Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual.
+  # @option opts [Integer] :flag_cartao_digitado Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o.
+  # @option opts [Integer] :inativo Indica se o estabelecimento est\u00E1 inativo.
+  # @option opts [Integer] :id_pais Identificador de Pa\u00EDs.
+  # @option opts [Integer] :mcc C\u00F3digo de Categoria de Mercado
+  # @option opts [Integer] :id_tipo_estabelecimento C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento.
+  # @option opts [Integer] :correspondencia Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA.
+  # @option opts [Integer] :id_moeda C\u00F3digo identificador da moeda.
   # @option opts [String] :tipo_pagamento Tipo do regime de pagamento do estabelecimento.
-  # @option opts [String] :numero_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.
-  # @option opts [String] :cep2 C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+  # @option opts [String] :numero_estabelecimento N\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Conductor.
+  # @option opts [String] :cep2 C\u00F3digo de Endere\u00E7amento Postal (CEP).
   # @option opts [String] :nome_logradouro2 Nome do Logradouro.
-  # @option opts [Integer] :numero_endereco2 N\u00C3\u00BAmero do endere\u00C3\u00A7o.
-  # @option opts [String] :complemento2 Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
-  # @option opts [String] :bairro2 Nome do bairro do endere\u00C3\u00A7o.
-  # @option opts [String] :cidade2 Nome da cidade do endere\u00C3\u00A7o.
-  # @option opts [String] :uf2 Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
-  # @option opts [Integer] :flag_matriz Indica se \u00C3\u00A9 matriz ou filial.
+  # @option opts [Integer] :numero_endereco2 N\u00FAmero do endere\u00E7o.
+  # @option opts [String] :complemento2 Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
+  # @option opts [String] :bairro2 Nome do bairro do endere\u00E7o.
+  # @option opts [String] :cidade2 Nome da cidade do endere\u00E7o.
+  # @option opts [String] :uf2 Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
+  # @option opts [Integer] :flag_matriz Indica se \u00E9 matriz ou filial.
   # @return [PageEstabelecimentoResponse]
-  describe 'listar_using_get21 test' do
+  describe 'listar_using_get22 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -602,23 +638,23 @@ describe 'EstabelecimentoApi' do
     end
   end
 
-  # unit tests for listar_using_get23
-  # Listar grupos econ\u00C3\u00B4micos
-  # Lista grupos econ\u00C3\u00B4micos cadastrados. 
+  # unit tests for listar_using_get24
+  # Listar grupos econ\u00F4micos
+  # Lista grupos econ\u00F4micos cadastrados. 
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [String] :razao_social Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [String] :razao_social Raz\u00E3o social da pessoa jur\u00EDdica
   # @option opts [String] :nome_credor Nome do credor
-  # @option opts [String] :numero_receita_federal N\u00C3\u00BAmero da Receita Federal
-  # @option opts [String] :inscricao_estadual N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual
+  # @option opts [String] :numero_receita_federal N\u00FAmero da Receita Federal
+  # @option opts [String] :inscricao_estadual N\u00FAmero da inscri\u00E7\u00E3o estadual
   # @option opts [String] :contato Nome da pessoa para entrar em contato
-  # @option opts [Integer] :banco C\u00C3\u00B3digo do banco
-  # @option opts [Integer] :agencia Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
-  # @option opts [String] :digito_agencia D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia
-  # @option opts [String] :conta_corrente C\u00C3\u00B3digo da Conta Corrente
-  # @option opts [String] :digito_conta_corrente D\u00C3\u00ADgito Verificador da Conta Corrente
+  # @option opts [Integer] :banco C\u00F3digo do banco
+  # @option opts [Integer] :agencia Raz\u00E3o social da pessoa jur\u00EDdica
+  # @option opts [String] :digito_agencia D\u00EDgito Verificador da ag\u00EAncia
+  # @option opts [String] :conta_corrente C\u00F3digo da Conta Corrente
+  # @option opts [String] :digito_conta_corrente D\u00EDgito Verificador da Conta Corrente
   # @option opts [String] :periodicidade Periodicidade do pagamento
   # @option opts [String] :pagamento_semanal Dia para pagamento semanal
   # @option opts [Integer] :pagamento_mensal Dia da data para o pagamento mensal
@@ -633,9 +669,9 @@ describe 'EstabelecimentoApi' do
   # @option opts [Float] :taxa_adm Taxa Administrativa
   # @option opts [Float] :taxa_banco Taxa do Banco
   # @option opts [Float] :limite_rav Valor limite do RAV
-  # @option opts [Integer] :id_credor_rav C\u00C3\u00B3digo identificador do credor RAV
+  # @option opts [Integer] :id_credor_rav C\u00F3digo identificador do credor RAV
   # @return [PageGrupoEconomicoResponse]
-  describe 'listar_using_get23 test' do
+  describe 'listar_using_get24 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -646,14 +682,14 @@ describe 'EstabelecimentoApi' do
   end
 
   # unit tests for listar_using_get25
-  # Lista as Maquinetas
-  # Este m\u00C3\u00A9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
+  # Listar grupos de origens comerciais
+  # Lista os grupos de origens comerciais
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
-  # @return [PageMaquinetaResponse]
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [String] :nome Nome do grupo de origem comercial
+  # @return [PageGrupoOrigemComercialResponse]
   describe 'listar_using_get25 test' do
     it "should work" do
       # assertion here
@@ -664,38 +700,15 @@ describe 'EstabelecimentoApi' do
     end
   end
 
-  # unit tests for listar_using_get26
-  # Lista os tipos de moedas do emissor 
-  # Este recurso permite que sejam listados os tipos de moedas existentes na base de dados do emissor.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [String] :codigo_moeda C\u00C3\u00B3digo identificador do tipo de moeda.
-  # @option opts [String] :simbolo S\u00C3\u00ADmbolo da Moeda.
-  # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda.
-  # @return [PageMoedaResponse]
-  describe 'listar_using_get26 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
   # unit tests for listar_using_get27
-  # Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
-  # Este m\u00C3\u00A9todo permite que sejam listados as Regras opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
+  # Lista as Maquinetas
+  # Este m\u00E9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id_operacao Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o.
-  # @option opts [Integer] :id_credor Apresenta o id do Credor.
-  # @option opts [Integer] :id_produto Apresenta o id do produto que vai ser alterado.
-  # @return [PageOperacaoCredorResponse]
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [Integer] :id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id).
+  # @return [PageMaquinetaResponse]
   describe 'listar_using_get27 test' do
     it "should work" do
       # assertion here
@@ -706,16 +719,39 @@ describe 'EstabelecimentoApi' do
     end
   end
 
-  # unit tests for listar_using_get38
-  # Lista os Telefones Estabelecimentos
-  # Este m\u00C3\u00A9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
+  # unit tests for listar_using_get28
+  # Lista os tipos de moedas do emissor 
+  # Este recurso permite que sejam listados os tipos de moedas existentes na base de dados do emissor.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
-  # @return [PageTelefoneEstabelecimentoResponse]
-  describe 'listar_using_get38 test' do
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [String] :codigo_moeda C\u00F3digo identificador do tipo de moeda.
+  # @option opts [String] :simbolo S\u00EDmbolo da Moeda.
+  # @option opts [String] :descricao Descri\u00E7\u00E3o do tipo da moeda.
+  # @return [PageMoedaResponse]
+  describe 'listar_using_get28 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+  # unit tests for listar_using_get29
+  # Lista as Regras Opera\u00E7\u00F5es
+  # Este m\u00E9todo permite que sejam listados as Regras opera\u00E7\u00F5es existentes na base de dados do Emissor.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [Integer] :id_operacao Apresenta o id da Opera\u00E7\u00E3o.
+  # @option opts [Integer] :id_credor Apresenta o id do Credor.
+  # @option opts [Integer] :id_produto Apresenta o id do produto que vai ser alterado.
+  # @return [PageOperacaoCredorResponse]
+  describe 'listar_using_get29 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -726,17 +762,14 @@ describe 'EstabelecimentoApi' do
   end
 
   # unit tests for listar_using_get40
-  # Lista os Terminais cadastrados no Emissor
-  # Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
+  # Lista os Telefones Estabelecimentos
+  # Este m\u00E9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
-  # @option opts [String] :terminal C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
-  # @option opts [Integer] :numero_estabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
-  # @option opts [Integer] :id_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
-  # @return [PageTerminalResponse]
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [Integer] :id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id).
+  # @return [PageTelefoneEstabelecimentoResponse]
   describe 'listar_using_get40 test' do
     it "should work" do
       # assertion here
@@ -747,18 +780,19 @@ describe 'EstabelecimentoApi' do
     end
   end
 
-  # unit tests for listar_using_get51
-  # Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
-  # Este m\u00C3\u00A9todo permite que sejam listados os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes.
+  # unit tests for listar_using_get42
+  # Lista os Terminais cadastrados no Emissor
+  # Este m\u00E9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id_adquirente C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do adquirente (id).
-  # @option opts [Integer] :id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento.
-  # @option opts [String] :codigo_estabelecimento_adquirente C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.
-  # @return [PageVinculoEstabelecimentoAdquirenteResponse]
-  describe 'listar_using_get51 test' do
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [Integer] :id C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
+  # @option opts [String] :terminal C\u00F3digo de Identifica\u00E7\u00E3o do terminal.
+  # @option opts [Integer] :numero_estabelecimento N\u00FAmero do estabelecimento a qual o terminal pertence.
+  # @option opts [Integer] :id_estabelecimento N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence.
+  # @return [PageTerminalResponse]
+  describe 'listar_using_get42 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -768,19 +802,40 @@ describe 'EstabelecimentoApi' do
     end
   end
 
-  # unit tests for listar_using_get52
-  # Lista os v\u00C3\u00ADnculos cadastrados no Emissor
-  # Este m\u00C3\u00A9todo permite que sejam listados os v\u00C3\u00ADnculos opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
+  # unit tests for listar_using_get53
+  # Lista os V\u00EDnculos dos estabelecimento com os adquirentes
+  # Este m\u00E9todo permite que sejam listados os V\u00EDnculos dos estabelecimento com os adquirentes.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
-  # @option opts [Integer] :id_operacao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id).
-  # @option opts [Integer] :codigo_mcc C\u00C3\u00B3digo MCC.
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [Integer] :id_adquirente C\u00F3digo de Identifica\u00E7\u00E3o do adquirente (id).
+  # @option opts [Integer] :id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento.
+  # @option opts [String] :codigo_estabelecimento_adquirente C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente.
+  # @return [PageVinculoEstabelecimentoAdquirenteResponse]
+  describe 'listar_using_get53 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+  # unit tests for listar_using_get54
+  # Listar v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento
+  # Lista os v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento. 
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).
+  # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [Integer] :id_produto C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+  # @option opts [Integer] :id_operacao C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id).
+  # @option opts [Integer] :codigo_mcc C\u00F3digo MCC.
   # @return [PageVinculoOperacaoResponse]
-  describe 'listar_using_get52 test' do
+  describe 'listar_using_get54 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -792,7 +847,7 @@ describe 'EstabelecimentoApi' do
 
   # unit tests for salvar_using_post16
   # Realiza o cadastro de uma nova maquineta para um estabelecimento 
-  # Este m\u00C3\u00A9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
+  # Este m\u00E9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
   # @param maquineta_persist maquinetaPersist
   # @param [Hash] opts the optional parameters
   # @return [MaquinetaResponse]
@@ -807,8 +862,8 @@ describe 'EstabelecimentoApi' do
   end
 
   # unit tests for salvar_using_post17
-  # Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
-  # Este m\u00C3\u00A9todo permite que seja cadastrada uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o.
+  # Realiza o cadastro de uma nova Regra Opera\u00E7\u00E3o
+  # Este m\u00E9todo permite que seja cadastrada uma nova Regra Opera\u00E7\u00E3o.
   # @param oprecao_credor_persist oprecaoCredorPersist
   # @param [Hash] opts the optional parameters
   # @return [OperacaoCredorResponse]
@@ -824,12 +879,9 @@ describe 'EstabelecimentoApi' do
 
   # unit tests for salvar_using_post22
   # Realiza o cadastro de um novo telefone para um estabelecimento 
-  # Este m\u00C3\u00A9todo permite que seja cadastrado um novo telefone para um estabelecimento.
-  # @param id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).
-  # @param ddd C\u00C3\u00B3digo DDD do telefone (id).
-  # @param telefone N\u00C3\u00BAmero do telefone.
+  # Este m\u00E9todo permite que seja cadastrado um novo telefone para um estabelecimento.
+  # @param telefone_estabelecimento_persist telefoneEstabelecimentoPersist
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
   # @return [TelefoneEstabelecimentoResponse]
   describe 'salvar_using_post22 test' do
     it "should work" do
@@ -843,7 +895,7 @@ describe 'EstabelecimentoApi' do
 
   # unit tests for salvar_using_post24
   # Realiza o cadastro de um novo Terminal
-  # Este m\u00C3\u00A9todo permite que seja cadastrado um novo Terminal.
+  # Este m\u00E9todo permite que seja cadastrado um novo Terminal.
   # @param terminal_persist terminalPersist
   # @param [Hash] opts the optional parameters
   # @return [TerminalResponse]
@@ -859,7 +911,7 @@ describe 'EstabelecimentoApi' do
 
   # unit tests for salvar_using_post29
   # Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente
-  # Este m\u00C3\u00A9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
+  # Este m\u00E9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
   # @param vinculo_estabelecimento_adquirente_persist vinculoEstabelecimentoAdquirentePersist
   # @param [Hash] opts the optional parameters
   # @return [VinculoEstabelecimentoAdquirenteResponse]

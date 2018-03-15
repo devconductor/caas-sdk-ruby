@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,31 +19,31 @@ require 'date'
 module Pier
   # Objeto ContaBancariaPortador
   class ContaBancariaPortadorUpdate
-    # Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia
+    # Descri\u00E7\u00E3o da ag\u00EAncia
     attr_accessor :nome_agencia
 
-    # C\u00C3\u00B3digo do banco
+    # C\u00F3digo do banco
     attr_accessor :banco
 
-    # N\u00C3\u00BAmero da ag\u00C3\u00AAncia
+    # N\u00FAmero da ag\u00EAncia
     attr_accessor :numero_agencia
 
-    # D\u00C3\u00ADgito da ag\u00C3\u00AAncia
+    # D\u00EDgito da ag\u00EAncia
     attr_accessor :digito_agencia
 
-    # N\u00C3\u00BAmero da conta
+    # N\u00FAmero da conta
     attr_accessor :numero_conta
 
-    # D\u00C3\u00ADgito da conta
+    # D\u00EDgito da conta
     attr_accessor :digito_conta
 
-    # Sinaliza se conta banc\u00C3\u00A1ria est\u00C3\u00A1 ativa ou n\u00C3\u00A3o (1: Ativa, 0: Inativa)
+    # Sinaliza se conta banc\u00E1ria est\u00E1 ativa ou n\u00E3o (1: Ativa, 0: Inativa)
     attr_accessor :flag_ativo
 
-    # Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED)
+    # Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED)
     attr_accessor :flag_conta_origem_doc
 
-    # Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
+    # Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente)
     attr_accessor :flag_conta_poupanca
 
     # Nome do favorecido
@@ -52,7 +52,7 @@ module Pier
     # Documento do favorecido
     attr_accessor :numero_receira_federal
 
-    # Titularidade da conta (1:Portador \u00C3\u00A9 o titular, 0: Portador n\u00C3\u00A3o \u00C3\u00A9 o t\u00C3\u00ADtular
+    # Titularidade da conta (1:Portador \u00E9 o titular, 0: Portador n\u00E3o \u00E9 o t\u00EDtular
     attr_accessor :titularidade
 
     # Attribute mapping from ruby-style variable name to JSON key.

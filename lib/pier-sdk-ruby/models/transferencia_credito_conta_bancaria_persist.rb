@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,33 +17,33 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para conta banc\u00C3\u00A1ria
+  # Transfer\u00EAncia de cr\u00E9dito para conta banc\u00E1ria
   class TransferenciaCreditoContaBancariaPersist
-    # Representa o N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
+    # Representa o N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
     attr_accessor :nsu_origem
 
     # Representa o Identificador do Cartao.
     attr_accessor :id_cartao
 
-    # Representa o Identificador da conta banc\u00C3\u00A1ria.
+    # Representa o Identificador da conta banc\u00E1ria.
     attr_accessor :id_conta_bancaria
 
-    # Representa o Valor da transfer\u00C3\u00AAncia.
+    # Representa o Valor da transfer\u00EAncia.
     attr_accessor :valor
 
-    # Representa o N\u00C3\u00BAmero de Parcelas pelo qual o valor da transfer\u00C3\u00AAncia ser\u00C3\u00A1 dividido.
+    # Representa o N\u00FAmero de Parcelas pelo qual o valor da transfer\u00EAncia ser\u00E1 dividido.
     attr_accessor :numero_parcelas
 
-    # Representa o N\u00C3\u00BAmero de Meses concedido como car\u00C3\u00AAncia.
+    # Representa o N\u00FAmero de Meses concedido como car\u00EAncia.
     attr_accessor :numero_meses_carencia
 
     # Representa a Data e hora do terminal requisitante.
     attr_accessor :data_hora_terminal
 
-    # Representa a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante.
+    # Representa a identifica\u00E7\u00E3o do terminal requisitante.
     attr_accessor :terminal_requisitante
 
-    # Representa a identifica\u00C3\u00A7\u00C3\u00A3o do n\u00C3\u00BAmero do estabelecimento.
+    # Representa a identifica\u00E7\u00E3o do n\u00FAmero do estabelecimento.
     attr_accessor :numero_estabelecimento
 
     # Attribute mapping from ruby-style variable name to JSON key.

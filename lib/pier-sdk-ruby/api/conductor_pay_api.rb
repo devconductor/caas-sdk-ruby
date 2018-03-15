@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -24,10 +24,10 @@ module Pier
       @api_client = api_client
     end
 
-    # Atualiza a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo permite atualizar a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o de um dispositivo a partir do seu identificador (id).
+    # Atualiza a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o
+    # Este m\u00E9todo permite atualizar a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o de um dispositivo a partir do seu identificador (id).
     # @param device_id Device id criptografado
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).
     # @param [Hash] opts the optional parameters
     # @return [CartaoPayAtualizarChaveResponse]
     def atualizar_chave_using_post(device_id, id, opts = {})
@@ -35,10 +35,10 @@ module Pier
       return data
     end
 
-    # Atualiza a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo permite atualizar a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o de um dispositivo a partir do seu identificador (id).
+    # Atualiza a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o
+    # Este m\u00E9todo permite atualizar a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o de um dispositivo a partir do seu identificador (id).
     # @param device_id Device id criptografado
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(CartaoPayAtualizarChaveResponse, Fixnum, Hash)>] CartaoPayAtualizarChaveResponse data, response status code and response headers
     def atualizar_chave_using_post_with_http_info(device_id, id, opts = {})
@@ -100,10 +100,10 @@ module Pier
       return data, status_code, headers
     end
 
-    # Atualiza os dados do cart\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo permite atualizar os dados do cart\u00C3\u00A3o tokenizados de um dispositivo a partir do seu identificador (id).
+    # Atualiza os dados do cart\u00E3o
+    # Este m\u00E9todo permite atualizar os dados do cart\u00E3o tokenizados de um dispositivo a partir do seu identificador (id).
     # @param device_id Device id criptografado
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).
     # @param update update
     # @param [Hash] opts the optional parameters
     # @return [CartaoPayResponse]
@@ -112,10 +112,10 @@ module Pier
       return data
     end
 
-    # Atualiza os dados do cart\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo permite atualizar os dados do cart\u00C3\u00A3o tokenizados de um dispositivo a partir do seu identificador (id).
+    # Atualiza os dados do cart\u00E3o
+    # Este m\u00E9todo permite atualizar os dados do cart\u00E3o tokenizados de um dispositivo a partir do seu identificador (id).
     # @param device_id Device id criptografado
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).
     # @param update update
     # @param [Hash] opts the optional parameters
     # @return [Array<(CartaoPayResponse, Fixnum, Hash)>] CartaoPayResponse data, response status code and response headers
@@ -186,10 +186,10 @@ module Pier
       return data, status_code, headers
     end
 
-    # Confirma a atualiza\u00C3\u00A7\u00C3\u00A3o da chave de transa\u00C3\u00A7\u00C3\u00A3o
-    # Este met\u00C3\u00B3do recebe confirma\u00C3\u00A7\u00C3\u00A3o de atualiza\u00C3\u00A7\u00C3\u00A3o de chave transa\u00C3\u00A7\u00C3\u00A3o.
+    # Confirma a atualiza\u00E7\u00E3o da chave de transa\u00E7\u00E3o
+    # Este met\u00F3do recebe confirma\u00E7\u00E3o de atualiza\u00E7\u00E3o de chave transa\u00E7\u00E3o.
     # @param device_id Device id criptografado
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).
     # @param update update
     # @param [Hash] opts the optional parameters
     # @return [CartaoPayConfirmarChaveResponse]
@@ -198,10 +198,10 @@ module Pier
       return data
     end
 
-    # Confirma a atualiza\u00C3\u00A7\u00C3\u00A3o da chave de transa\u00C3\u00A7\u00C3\u00A3o
-    # Este met\u00C3\u00B3do recebe confirma\u00C3\u00A7\u00C3\u00A3o de atualiza\u00C3\u00A7\u00C3\u00A3o de chave transa\u00C3\u00A7\u00C3\u00A3o.
+    # Confirma a atualiza\u00E7\u00E3o da chave de transa\u00E7\u00E3o
+    # Este met\u00F3do recebe confirma\u00E7\u00E3o de atualiza\u00E7\u00E3o de chave transa\u00E7\u00E3o.
     # @param device_id Device id criptografado
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).
     # @param update update
     # @param [Hash] opts the optional parameters
     # @return [Array<(CartaoPayConfirmarChaveResponse, Fixnum, Hash)>] CartaoPayConfirmarChaveResponse data, response status code and response headers
@@ -272,31 +272,31 @@ module Pier
       return data, status_code, headers
     end
 
-    # Apresenta os dados de um determinado cart\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+    # Apresenta os dados de um determinado cart\u00E3o
+    # Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
     # @param device_id Device id criptografado
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).
     # @param [Hash] opts the optional parameters
     # @return [CartaoPayDetalheResponse]
-    def consultar_using_get7(device_id, id, opts = {})
-      data, _status_code, _headers = consultar_using_get7_with_http_info(device_id, id, opts)
+    def consultar_using_get8(device_id, id, opts = {})
+      data, _status_code, _headers = consultar_using_get8_with_http_info(device_id, id, opts)
       return data
     end
 
-    # Apresenta os dados de um determinado cart\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+    # Apresenta os dados de um determinado cart\u00E3o
+    # Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
     # @param device_id Device id criptografado
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(CartaoPayDetalheResponse, Fixnum, Hash)>] CartaoPayDetalheResponse data, response status code and response headers
-    def consultar_using_get7_with_http_info(device_id, id, opts = {})
+    def consultar_using_get8_with_http_info(device_id, id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ConductorPayApi.consultar_using_get7 ..."
+        @api_client.config.logger.debug "Calling API: ConductorPayApi.consultar_using_get8 ..."
       end
       
       
       # verify the required parameter 'device_id' is set
-      fail ArgumentError, "Missing the required parameter 'device_id' when calling ConductorPayApi.consultar_using_get7" if device_id.nil?
+      fail ArgumentError, "Missing the required parameter 'device_id' when calling ConductorPayApi.consultar_using_get8" if device_id.nil?
       
       
       
@@ -304,7 +304,7 @@ module Pier
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ConductorPayApi.consultar_using_get7" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ConductorPayApi.consultar_using_get8" if id.nil?
       
       
       
@@ -343,13 +343,13 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'CartaoPayDetalheResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ConductorPayApi#consultar_using_get7\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ConductorPayApi#consultar_using_get8\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Lista os c\u00C3\u00B3digos de resposta dos recursos de transa\u00C3\u00A7\u00C3\u00A3o e consulta de conta
-    # Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de resposta das transa\u00C3\u00A7\u00C3\u00B5es e consulta de saque realizada no Pay.
+    # Lista os c\u00F3digos de resposta dos recursos de transa\u00E7\u00E3o e consulta de conta
+    # Este m\u00E9todo retorna a lista dos c\u00F3digos de resposta das transa\u00E7\u00F5es e consulta de saque realizada no Pay.
     # @param [Hash] opts the optional parameters
     # @return [Array<Object>]
     def listar_codigos_resposta_using_get(opts = {})
@@ -357,8 +357,8 @@ module Pier
       return data
     end
 
-    # Lista os c\u00C3\u00B3digos de resposta dos recursos de transa\u00C3\u00A7\u00C3\u00A3o e consulta de conta
-    # Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de resposta das transa\u00C3\u00A7\u00C3\u00B5es e consulta de saque realizada no Pay.
+    # Lista os c\u00F3digos de resposta dos recursos de transa\u00E7\u00E3o e consulta de conta
+    # Este m\u00E9todo retorna a lista dos c\u00F3digos de resposta das transa\u00E7\u00F5es e consulta de saque realizada no Pay.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<Object>, Fixnum, Hash)>] Array<Object> data, response status code and response headers
     def listar_codigos_resposta_using_get_with_http_info(opts = {})
@@ -404,7 +404,7 @@ module Pier
     end
 
     # Lista os modos entradas
-    # Este recurso permite listar os modos de entrada para transa\u00C3\u00A7\u00C3\u00A3o
+    # Este recurso permite listar os modos de entrada para transa\u00E7\u00E3o
     # @param [Hash] opts the optional parameters
     # @return [Array<Object>]
     def listar_modos_entrada_using_get(opts = {})
@@ -413,7 +413,7 @@ module Pier
     end
 
     # Lista os modos entradas
-    # Este recurso permite listar os modos de entrada para transa\u00C3\u00A7\u00C3\u00A3o
+    # Este recurso permite listar os modos de entrada para transa\u00E7\u00E3o
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<Object>, Fixnum, Hash)>] Array<Object> data, response status code and response headers
     def listar_modos_entrada_using_get_with_http_info(opts = {})
@@ -458,8 +458,8 @@ module Pier
       return data, status_code, headers
     end
 
-    # Lista as opera\u00C3\u00A7\u00C3\u00B5es
-    # Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00B5es disponiveis de transa\u00C3\u00A7\u00C3\u00A3o
+    # Lista as opera\u00E7\u00F5es
+    # Este recurso permite listar as opera\u00E7\u00F5es disponiveis de transa\u00E7\u00E3o
     # @param [Hash] opts the optional parameters
     # @return [Array<Object>]
     def listar_operacoes_using_get(opts = {})
@@ -467,8 +467,8 @@ module Pier
       return data
     end
 
-    # Lista as opera\u00C3\u00A7\u00C3\u00B5es
-    # Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00B5es disponiveis de transa\u00C3\u00A7\u00C3\u00A3o
+    # Lista as opera\u00E7\u00F5es
+    # Este recurso permite listar as opera\u00E7\u00F5es disponiveis de transa\u00E7\u00E3o
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<Object>, Fixnum, Hash)>] Array<Object> data, response status code and response headers
     def listar_operacoes_using_get_with_http_info(opts = {})
@@ -514,7 +514,7 @@ module Pier
     end
 
     # Lista os tipos de terminais
-    # Este m\u00C3\u00A9todo retorna a lista dos tipos de terminais.
+    # Este m\u00E9todo retorna a lista dos tipos de terminais.
     # @param [Hash] opts the optional parameters
     # @return [Array<Object>]
     def listar_tipos_terminais_using_get(opts = {})
@@ -523,7 +523,7 @@ module Pier
     end
 
     # Lista os tipos de terminais
-    # Este m\u00C3\u00A9todo retorna a lista dos tipos de terminais.
+    # Este m\u00E9todo retorna a lista dos tipos de terminais.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<Object>, Fixnum, Hash)>] Array<Object> data, response status code and response headers
     def listar_tipos_terminais_using_get_with_http_info(opts = {})
@@ -568,8 +568,8 @@ module Pier
       return data, status_code, headers
     end
 
-    # Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
-    # Este m\u00C3\u00A9todo retorna a lista dos tipos de transa\u00C3\u00A7\u00C3\u00B5es realizadas no Pay.
+    # Lista os tipos de transa\u00E7\u00F5es
+    # Este m\u00E9todo retorna a lista dos tipos de transa\u00E7\u00F5es realizadas no Pay.
     # @param [Hash] opts the optional parameters
     # @return [Array<Object>]
     def listar_tipos_transacoes_using_get(opts = {})
@@ -577,8 +577,8 @@ module Pier
       return data
     end
 
-    # Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
-    # Este m\u00C3\u00A9todo retorna a lista dos tipos de transa\u00C3\u00A7\u00C3\u00B5es realizadas no Pay.
+    # Lista os tipos de transa\u00E7\u00F5es
+    # Este m\u00E9todo retorna a lista dos tipos de transa\u00E7\u00F5es realizadas no Pay.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<Object>, Fixnum, Hash)>] Array<Object> data, response status code and response headers
     def listar_tipos_transacoes_using_get_with_http_info(opts = {})
@@ -623,34 +623,34 @@ module Pier
       return data, status_code, headers
     end
 
-    # Lista os cart\u00C3\u00B5es cadastrados
-    # Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
+    # Lista os cart\u00F5es cadastrados
+    # Este m\u00E9todo permite listar os cart\u00F5es cadastrado em um dispositivo.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :device_id Device id criptografado
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [String] :status Status do cart\u00C3\u00A3o tokenizado
-    # @option opts [String] :numero_cartao Numero do cart\u00C3\u00A3o tokenizado
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [String] :status Status do cart\u00E3o tokenizado
+    # @option opts [String] :numero_cartao Numero do cart\u00E3o tokenizado
     # @return [PageCartaoPayResponse]
-    def listar_using_get9(opts = {})
-      data, _status_code, _headers = listar_using_get9_with_http_info(opts)
+    def listar_using_get10(opts = {})
+      data, _status_code, _headers = listar_using_get10_with_http_info(opts)
       return data
     end
 
-    # Lista os cart\u00C3\u00B5es cadastrados
-    # Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
+    # Lista os cart\u00F5es cadastrados
+    # Este m\u00E9todo permite listar os cart\u00F5es cadastrado em um dispositivo.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :device_id Device id criptografado
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [String] :status Status do cart\u00C3\u00A3o tokenizado
-    # @option opts [String] :numero_cartao Numero do cart\u00C3\u00A3o tokenizado
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [String] :status Status do cart\u00E3o tokenizado
+    # @option opts [String] :numero_cartao Numero do cart\u00E3o tokenizado
     # @return [Array<(PageCartaoPayResponse, Fixnum, Hash)>] PageCartaoPayResponse data, response status code and response headers
-    def listar_using_get9_with_http_info(opts = {})
+    def listar_using_get10_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ConductorPayApi.listar_using_get9 ..."
+        @api_client.config.logger.debug "Calling API: ConductorPayApi.listar_using_get10 ..."
       end
       
       
@@ -731,13 +731,13 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageCartaoPayResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ConductorPayApi#listar_using_get9\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ConductorPayApi#listar_using_get10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
-    # Este met\u00C3\u00B3do permite a tokeniza\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o a partir dos seus dados impressos.
+    # Cria\u00E7\u00E3o de cart\u00E3o
+    # Este met\u00F3do permite a tokeniza\u00E7\u00E3o de um cart\u00E3o a partir dos seus dados impressos.
     # @param device_id Device id criptografado
     # @param persist persist
     # @param [Hash] opts the optional parameters
@@ -747,8 +747,8 @@ module Pier
       return data
     end
 
-    # Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
-    # Este met\u00C3\u00B3do permite a tokeniza\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o a partir dos seus dados impressos.
+    # Cria\u00E7\u00E3o de cart\u00E3o
+    # Este met\u00F3do permite a tokeniza\u00E7\u00E3o de um cart\u00E3o a partir dos seus dados impressos.
     # @param device_id Device id criptografado
     # @param persist persist
     # @param [Hash] opts the optional parameters

@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -38,9 +38,9 @@ describe 'OportunidadeApi' do
 
   # unit tests for alterar_status_using_put
   # Altera o status do tipo oportunidade
-  # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o do status do tipo oportunidade.
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
-  # @param id_status C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status do tipo oportunidade (id).
+  # Este m\u00E9todo realiza a altera\u00E7\u00E3o do status do tipo oportunidade.
+  # @param id C\u00F3digo de identifica\u00E7\u00E3o do tipo oportunidade (id).
+  # @param id_status C\u00F3digo de identifica\u00E7\u00E3o do status do tipo oportunidade (id).
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [StatusOportunidadeResponse]
@@ -56,8 +56,8 @@ describe 'OportunidadeApi' do
 
   # unit tests for alterar_using_put12
   # Altera as oportunidades
-  # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das oportunidades.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
+  # Este m\u00E9todo realiza a altera\u00E7\u00E3o das oportunidades.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o da oportunidade (id).
   # @param update update
   # @param [Hash] opts the optional parameters
   # @return [OportunidadeResponse]
@@ -73,8 +73,8 @@ describe 'OportunidadeApi' do
 
   # unit tests for alterar_using_put18
   # Altera os tipos oportunidades
-  # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos tipos oportunidades.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
+  # Este m\u00E9todo realiza a altera\u00E7\u00E3o dos tipos oportunidades.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do tipo oportunidade (id).
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [TipoOportunidadeResponse]
@@ -90,9 +90,9 @@ describe 'OportunidadeApi' do
 
   # unit tests for consultar_status_using_get
   # Apresenta dados de um determinado status do tipo oportunidade
-  # Este recurso permite consultar dados de um determinado status do tipo oportunidade a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (idStatus).
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
-  # @param id_status C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status (idStatus).
+  # Este recurso permite consultar dados de um determinado status do tipo oportunidade a partir de seu codigo de identifica\u00E7\u00E3o (idStatus).
+  # @param id C\u00F3digo de identifica\u00E7\u00E3o do tipo oportunidade (id).
+  # @param id_status C\u00F3digo de identifica\u00E7\u00E3o do status (idStatus).
   # @param [Hash] opts the optional parameters
   # @return [StatusOportunidadeResponse]
   describe 'consultar_status_using_get test' do
@@ -105,13 +105,13 @@ describe 'OportunidadeApi' do
     end
   end
 
-  # unit tests for consultar_using_get22
+  # unit tests for consultar_using_get23
   # Apresenta dados de uma determinada oportunidade
-  # Este recurso permite consultar dados de uma determinada oportunidade a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
+  # Este recurso permite consultar dados de uma determinada oportunidade a partir de seu codigo de identifica\u00E7\u00E3o (id).
+  # @param id C\u00F3digo de identifica\u00E7\u00E3o da oportunidade (id).
   # @param [Hash] opts the optional parameters
   # @return [OportunidadeResponse]
-  describe 'consultar_using_get22 test' do
+  describe 'consultar_using_get23 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -121,13 +121,13 @@ describe 'OportunidadeApi' do
     end
   end
 
-  # unit tests for consultar_using_get36
+  # unit tests for consultar_using_get37
   # Apresenta dados de um determinado tipo oportunidade
-  # Este recurso permite consultar dados de um determinado tipo oportunidade a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
+  # Este recurso permite consultar dados de um determinado tipo oportunidade a partir de seu codigo de identifica\u00E7\u00E3o (id).
+  # @param id C\u00F3digo de identifica\u00E7\u00E3o do tipo oportunidade (id).
   # @param [Hash] opts the optional parameters
   # @return [TipoOportunidadeResponse]
-  describe 'consultar_using_get36 test' do
+  describe 'consultar_using_get37 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -141,17 +141,17 @@ describe 'OportunidadeApi' do
   # Lista as auditorias dos status oportunidades
   # Este recurso permite listar os status oportunidades.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :rev_type C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
-  # @option opts [String] :rev_date Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
-  # @option opts [Integer] :id C\u00C3\u00B3digo identificador do status oportunidade
-  # @option opts [Integer] :id_tipo_oportunidade C\u00C3\u00B3digo identificador do tipo oportunidade
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [Integer] :rev_type C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades
+  # @option opts [String] :rev_date Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades
+  # @option opts [Integer] :id C\u00F3digo identificador do status oportunidade
+  # @option opts [Integer] :id_tipo_oportunidade C\u00F3digo identificador do tipo oportunidade
   # @option opts [String] :nome Nome do status oportunidade
-  # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
-  # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
-  # @option opts [String] :rev_user Usu\u00C3\u00A1rio da auditoria
+  # @option opts [String] :descricao Descri\u00E7\u00E3o do status oportunidade
+  # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00E7\u00E3o se o status oportunidade est\u00E1 ativo
+  # @option opts [String] :rev_user Usu\u00E1rio da auditoria
   # @return [PageStatusOportunidadeAUDResponse]
   describe 'listar_auditorias_status_using_get test' do
     it "should work" do
@@ -167,19 +167,19 @@ describe 'OportunidadeApi' do
   # Lista as auditorias das oportunidades
   # Este recurso permite listar as auditorias das oportunidades.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id_status_oportunidade C\u00C3\u00B3digo identificador do status oportunidade
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [Integer] :id_status_oportunidade C\u00F3digo identificador do status oportunidade
   # @option opts [String] :data_cadastro Data do cadastro da oportunidade
-  # @option opts [String] :data_atualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
-  # @option opts [String] :numero_receita_federal N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
-  # @option opts [String] :data_inicio_vigencia In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
-  # @option opts [String] :datat_fim_vigencia Fim da vig\u00C3\u00AAncia da oportunidade
-  # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
+  # @option opts [String] :data_atualizacao Data da atualiza\u00E7\u00E3o da oportunidade
+  # @option opts [String] :numero_receita_federal N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade
+  # @option opts [String] :data_inicio_vigencia In\u00EDcio da vig\u00EAncia da oportunidade
+  # @option opts [String] :datat_fim_vigencia Fim da vig\u00EAncia da oportunidade
+  # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa
   # @option opts [String] :rev_date Data da auditoria
   # @option opts [String] :rev_type Tipo da auditoria
-  # @option opts [String] :rev_user Usu\u00C3\u00A1rio da auditoria
+  # @option opts [String] :rev_user Usu\u00E1rio da auditoria
   # @return [PageOportunidadeAUDResponse]
   describe 'listar_auditorias_using_get test' do
     it "should work" do
@@ -195,15 +195,15 @@ describe 'OportunidadeApi' do
   # Lista as auditorias dos tipos oportunidades
   # Este recurso permite listar os tipos oportunidades.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :rev_type C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
-  # @option opts [String] :rev_date Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
-  # @option opts [Integer] :id C\u00C3\u00B3digo identificador do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
-  # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
-  # @option opts [BOOLEAN] :flag_ativo Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo
-  # @option opts [String] :rev_user Usu\u00C3\u00A1rio da auditoria
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [Integer] :rev_type C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades
+  # @option opts [String] :rev_date Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades
+  # @option opts [Integer] :id C\u00F3digo identificador do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o
+  # @option opts [String] :descricao Descri\u00E7\u00E3o do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o
+  # @option opts [BOOLEAN] :flag_ativo Atributo que representa se o tipo oportunidade est\u00E1 ativo
+  # @option opts [String] :rev_user Usu\u00E1rio da auditoria
   # @return [PageTipoOportunidadeAUDResponse]
   describe 'listar_auditorias_using_get1 test' do
     it "should work" do
@@ -218,14 +218,14 @@ describe 'OportunidadeApi' do
   # unit tests for listar_status_using_get
   # Lista os status do tipo oportunidades
   # Este recurso permite listar os status do tipo oportunidades.
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
+  # @param id C\u00F3digo de identifica\u00E7\u00E3o do tipo oportunidade (id).
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   # @option opts [String] :nome Nome do status oportunidade
-  # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
-  # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
+  # @option opts [String] :descricao Descri\u00E7\u00E3o do status oportunidade
+  # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00E7\u00E3o se o status oportunidade est\u00E1 ativo
   # @return [PageStatusOportunidadeResponse]
   describe 'listar_status_using_get test' do
     it "should work" do
@@ -237,22 +237,22 @@ describe 'OportunidadeApi' do
     end
   end
 
-  # unit tests for listar_using_get28
+  # unit tests for listar_using_get30
   # Lista as oportunidades
   # Este recurso permite listar as oportunidades.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id_status_oportunidade C\u00C3\u00B3digo identificador do status oportunidade
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [Integer] :id_status_oportunidade C\u00F3digo identificador do status oportunidade
   # @option opts [String] :data_cadastro Data do cadastro da oportunidade
-  # @option opts [String] :data_atualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
-  # @option opts [String] :numero_receita_federal N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
-  # @option opts [String] :data_inicio_vigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
-  # @option opts [String] :data_fim_vigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
-  # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
+  # @option opts [String] :data_atualizacao Data da atualiza\u00E7\u00E3o da oportunidade
+  # @option opts [String] :numero_receita_federal N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade
+  # @option opts [String] :data_inicio_vigencia Data de in\u00EDcio da vig\u00EAncia da oportunidade
+  # @option opts [String] :data_fim_vigencia Data do fim da vig\u00EAncia da oportunidade
+  # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa
   # @return [PageOportunidadeResponse]
-  describe 'listar_using_get28 test' do
+  describe 'listar_using_get30 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -262,17 +262,17 @@ describe 'OportunidadeApi' do
     end
   end
 
-  # unit tests for listar_using_get43
+  # unit tests for listar_using_get45
   # Lista os tipos oportunidades
   # Este recurso permite listar os tipos oportunidades.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
-  # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [String] :descricao Descri\u00E7\u00E3o do tipo oportunidade
+  # @option opts [BOOLEAN] :flag_ativo Flag de verifica\u00E7\u00E3o se o tipo oportunidade est\u00E1 ativo
   # @return [PageTipoOportunidadeResponse]
-  describe 'listar_using_get43 test' do
+  describe 'listar_using_get45 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -285,7 +285,7 @@ describe 'OportunidadeApi' do
   # unit tests for salvar_status_using_post
   # Cadastra status para o tipo oportunidade
   # Esse recurso permite cadastrar status para o tipo oportunidade.
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
+  # @param id C\u00F3digo de identifica\u00E7\u00E3o do tipo oportunidade (id).
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [StatusOportunidadeResponse]

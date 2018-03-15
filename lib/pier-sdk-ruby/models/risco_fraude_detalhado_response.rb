@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,85 +19,85 @@ require 'date'
 module Pier
   # Objeto de resposta de Risco de Fraude Detalhado
   class RiscoFraudeDetalhadoResponse
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
+    # C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude
     attr_accessor :id
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro
+    # C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro
     attr_accessor :id_tipo_resolucao
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro
+    # Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro
     attr_accessor :descricao_tipo_resolucao
 
-    # Indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude sejam analisadas
+    # Indica que a transa\u00E7\u00E3o possui um alto risco de fraude e que todas as transa\u00E7\u00F5es seguintes a ela ser\u00E3o negadas at\u00E9 que todas as transa\u00E7\u00F5es classificadas com risco de fraude sejam analisadas
     attr_accessor :flag_alto_risco
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta
+    # C\u00F3digo de identifica\u00E7\u00E3o da conta
     attr_accessor :id_conta
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o
+    # C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o
     attr_accessor :id_cartao
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto
+    # C\u00F3digo de identifica\u00E7\u00E3o do produto
     attr_accessor :id_produto
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
+    # C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o
     attr_accessor :id_transacao
 
-    # Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada
+    # Data que a transa\u00E7\u00E3o classificada com risco de fraude foi realizada
     attr_accessor :data_transacao
 
-    # Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
+    # Valor da transa\u00E7\u00E3o classificada com risco de fraude
     attr_accessor :valor_transacao
 
-    # C\u00C3\u00B3digo da moeda de origem utilizada para a transa\u00C3\u00A7\u00C3\u00A3o
+    # C\u00F3digo da moeda de origem utilizada para a transa\u00E7\u00E3o
     attr_accessor :codigo_moeda_origem
 
-    # Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de origem
+    # Valor da transa\u00E7\u00E3o na moeda de origem
     attr_accessor :valor_origem
 
-    # C\u00C3\u00B3digo da moeda de destino utilizada para a transa\u00C3\u00A7\u00C3\u00A3o
+    # C\u00F3digo da moeda de destino utilizada para a transa\u00E7\u00E3o
     attr_accessor :codigo_moeda_destino
 
-    # Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de destino
+    # Valor da transa\u00E7\u00E3o na moeda de destino
     attr_accessor :valor_destino
 
-    # Nome do estabelecimento onde a transa\u00C3\u00A7\u00C3\u00A3o  com risco de fraude foi realizada
+    # Nome do estabelecimento onde a transa\u00E7\u00E3o  com risco de fraude foi realizada
     attr_accessor :nome_estabelecimento
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Pa\u00C3\u00ADs
+    # C\u00F3digo de Identifica\u00E7\u00E3o do Pa\u00EDs
     attr_accessor :id_pais
 
-    # C\u00C3\u00B3digo de resposta do autorizador para a transa\u00C3\u00A7\u00C3\u00A3o
+    # C\u00F3digo de resposta do autorizador para a transa\u00E7\u00E3o
     attr_accessor :codigo_resposta_autorizador
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o da resposta do autorizador para a transa\u00C3\u00A7\u00C3\u00A3o
+    # Descri\u00E7\u00E3o da resposta do autorizador para a transa\u00E7\u00E3o
     attr_accessor :descricao_resposta_autorizador
 
-    # C\u00C3\u00B3digo de resposta da ferramenta de Preven\u00C3\u00A7\u00C3\u00A3o a Fraude para a transa\u00C3\u00A7\u00C3\u00A3o
+    # C\u00F3digo de resposta da ferramenta de Preven\u00E7\u00E3o a Fraude para a transa\u00E7\u00E3o
     attr_accessor :codigo_resposta_fraude
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o da resposta da ferramenta de Preven\u00C3\u00A7\u00C3\u00A3o a Fraude para a transa\u00C3\u00A7\u00C3\u00A3o
+    # Descri\u00E7\u00E3o da resposta da ferramenta de Preven\u00E7\u00E3o a Fraude para a transa\u00E7\u00E3o
     attr_accessor :descricao_resposta_fraude
 
-    # Tipo de Terminal que originou a Transa\u00C3\u00A7\u00C3\u00A3o (POS, ATM, TEF, etc)
+    # Tipo de Terminal que originou a Transa\u00E7\u00E3o (POS, ATM, TEF, etc)
     attr_accessor :origem_transacao
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do modo de origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o
+    # C\u00F3digo de Identifica\u00E7\u00E3o do modo de origem da captura da Transa\u00E7\u00E3o
     attr_accessor :codigo_modo_entrada_terminal
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do modo de origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o
+    # Descri\u00E7\u00E3o do modo de origem da captura da Transa\u00E7\u00E3o
     attr_accessor :descricao_modo_entrada_terminal
 
-    # N\u00C3\u00BAmero do CPF da Pessoa portadora do Cart\u00C3\u00A3o, quando for do tipo Pessoa F\u00C3\u00ADsica
+    # N\u00FAmero do CPF da Pessoa portadora do Cart\u00E3o, quando for do tipo Pessoa F\u00EDsica
     attr_accessor :cpf
 
-    # N\u00C3\u00BAmero do CNPJ da Pessoa portadora do Cart\u00C3\u00A3o, quanto for do tipo Pessoa Jur\u00C3\u00ADdica
+    # N\u00FAmero do CNPJ da Pessoa portadora do Cart\u00E3o, quanto for do tipo Pessoa Jur\u00EDdica
     attr_accessor :cnpj
 
-    # Endere\u00C3\u00A7o de email da Pessoa portadora do Cart\u00C3\u00A3o
+    # Endere\u00E7o de email da Pessoa portadora do Cart\u00E3o
     attr_accessor :email
 
-    # Lista de telefones associados ao portador do Cart\u00C3\u00A3o
+    # Lista de telefones associados ao portador do Cart\u00E3o
     attr_accessor :telefones
 
     # Attribute mapping from ruby-style variable name to JSON key.

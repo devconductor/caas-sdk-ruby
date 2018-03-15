@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,34 +19,34 @@ require 'date'
 module Pier
   # Objeto conta
   class ContaDetalheResponse
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+    # C\u00F3digo de identifica\u00E7\u00E3o de conta (id).
     attr_accessor :id
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
+    # C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id).
     attr_accessor :id_pessoa
 
-    # Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+    # Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'.
     attr_accessor :nome
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
+    # C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id).
     attr_accessor :id_produto
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
+    # C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta.
     attr_accessor :id_origem_comercial
 
     # Nome da origem comercial
     attr_accessor :nome_origem_comercial
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia Basica (id).
+    # C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia Basica (id).
     attr_accessor :id_fantasia_basica
 
     # Nome da Fantasia Basica
     attr_accessor :nome_fantasia_basica
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta.
+    # C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta.
     attr_accessor :id_status_conta
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
+    # Descri\u00E7\u00E3o do status da conta
     attr_accessor :status_conta
 
     # Apresenta o dia de vencimento.
@@ -55,43 +55,43 @@ module Pier
     # Apresenta o melhor dia de compra.
     attr_accessor :melhor_dia_compra
 
-    # Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
+    # Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela.
     attr_accessor :data_status_conta
 
     # Valor da renda comprovada.
     attr_accessor :valor_renda
 
-    # Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+    # Apresenta a data em que o cart\u00E3o foi gerado.
     attr_accessor :data_cadastro
 
-    # Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+    # Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.
     attr_accessor :data_ultima_alteracao_vencimento
 
-    # Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+    # Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.
     attr_accessor :data_hora_ultima_compra
 
-    # N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+    # N\u00FAmero da ag\u00EAncia.
     attr_accessor :numero_agencia
 
-    # N\u00C3\u00BAmero da conta corrente.
+    # N\u00FAmero da conta corrente.
     attr_accessor :numero_conta_corrente
 
     # Forma de envio da fatura.
     attr_accessor :forma_envio_fatura
 
-    # Apresenta se a pessoa \u00C3\u00A9 titular da conta.
+    # Apresenta se a pessoa \u00E9 titular da conta.
     attr_accessor :titular
 
-    # Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
+    # Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui.
     attr_accessor :limite_global
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
+    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional.
     attr_accessor :limite_saque_global
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
+    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais.
     attr_accessor :saldo_disponivel_global
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
+    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento.
     attr_accessor :saldo_disponivel_saque
 
     # Apresenta a quantidade de dias que a conta esta em atraso

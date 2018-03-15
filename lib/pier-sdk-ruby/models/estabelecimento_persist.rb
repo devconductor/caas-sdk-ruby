@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,69 +17,69 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o de um estabelecimento
+  # Par\u00E2metros de requisi\u00E7\u00E3o de um estabelecimento
   class EstabelecimentoPersist
-    # Indica se \u00C3\u00A9 matriz ou filial.
+    # Indica se \u00E9 matriz ou filial.
     attr_accessor :flag_matriz
 
-    # Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor.
-    attr_accessor :id_credor
+    # Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico.
+    attr_accessor :id_grupo_economico
 
-    # Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal.
+    # Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal.
     attr_accessor :numero_receita_federal
 
     # Nome do Estabelecimento.
     attr_accessor :nome
 
-    # Raz\u00C3\u00A3o Social do Estabelecimento.
+    # Raz\u00E3o Social do Estabelecimento.
     attr_accessor :descricao
 
-    # T\u00C3\u00ADtulo Comercial do Estabelecimento.
+    # T\u00EDtulo Comercial do Estabelecimento.
     attr_accessor :nome_fantasia
 
-    # C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+    # C\u00F3digo de Endere\u00E7amento Postal (CEP).
     attr_accessor :cep
 
     # Nome do Logradouro.
     attr_accessor :nome_logradouro
 
-    # N\u00C3\u00BAmero do endere\u00C3\u00A7o.
+    # N\u00FAmero do endere\u00E7o.
     attr_accessor :numero_endereco
 
-    # Nome do bairro do endere\u00C3\u00A7o.
+    # Nome do bairro do endere\u00E7o.
     attr_accessor :bairro
 
-    # Nome da cidade do endere\u00C3\u00A7o.
+    # Nome da cidade do endere\u00E7o.
     attr_accessor :cidade
 
-    # Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
+    # Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
     attr_accessor :complemento
 
-    # Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
+    # Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
     attr_accessor :uf
 
-    # C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+    # C\u00F3digo de Endere\u00E7amento Postal (CEP).
     attr_accessor :cep2
 
     # Nome do Logradouro .
     attr_accessor :nome_logradouro2
 
-    # N\u00C3\u00BAmero do endere\u00C3\u00A7o.
+    # N\u00FAmero do endere\u00E7o.
     attr_accessor :numero_endereco2
 
-    # Nome do bairro do endere\u00C3\u00A7o.
+    # Nome do bairro do endere\u00E7o.
     attr_accessor :bairro2
 
-    # Nome da cidade do endere\u00C3\u00A7o.
+    # Nome da cidade do endere\u00E7o.
     attr_accessor :cidade2
 
-    # Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
+    # Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
     attr_accessor :complemento2
 
-    # Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
+    # Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
     attr_accessor :uf2
 
-    # Detalhes espec\u00C3\u00ADficos quanto ao Cadastro do Estabelecimento.
+    # Detalhes espec\u00EDficos quanto ao Cadastro do Estabelecimento.
     attr_accessor :obs
 
     # Nome da pessoa para contato com o Estabelecimento.
@@ -88,31 +88,31 @@ module Pier
     # E-mail da pessoa para contato com o Estabelecimento.
     attr_accessor :email
 
-    # Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.
+    # Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual.
     attr_accessor :flag_arquivo_secr_fazenda
 
-    # Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.
+    # Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o.
     attr_accessor :flag_cartao_digitado
 
-    # Indica se o estabelecimento est\u00C3\u00A1 inativo.
+    # Indica se o estabelecimento est\u00E1 inativo.
     attr_accessor :inativo
 
-    # C\u00C3\u00B3digo identificador da moeda.
+    # C\u00F3digo identificador da moeda.
     attr_accessor :id_moeda
 
-    # Identificador de Pa\u00C3\u00ADs.
+    # Identificador de Pa\u00EDs.
     attr_accessor :id_pais
 
-    # N\u00C3\u00BAmero do associado ao SPCBrasil.
+    # N\u00FAmero do associado ao SPCBrasil.
     attr_accessor :associado_spc_brasil
 
-    # C\u00C3\u00B3digo de Categoria de Mercado.
+    # C\u00F3digo de Categoria de Mercado.
     attr_accessor :mcc
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.
+    # C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento.
     attr_accessor :id_tipo_estabelecimento
 
-    # Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.
+    # Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA.
     attr_accessor :correspondencia
 
     # Cargo do contato do estabelecimento.
@@ -121,19 +121,19 @@ module Pier
     # Tipo do regime de pagamento do estabelecimento.
     attr_accessor :tipo_pagamento
 
-    # Consulta de cadastro n\u00C3\u00BAmero um.
+    # Consulta de cadastro n\u00FAmero um.
     attr_accessor :consulta
 
-    # Consulta de cadastro n\u00C3\u00BAmero um.
+    # Consulta de cadastro n\u00FAmero dois.
     attr_accessor :consulta2
 
-    # Consulta de cadastro n\u00C3\u00BAmero um.
+    # Consulta de cadastro n\u00FAmero tr\u00EAs.
     attr_accessor :consulta3
 
-    # Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+    # Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).
     attr_accessor :flag_terminal_virtual
 
-    # Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+    # Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).
     attr_accessor :flag_consulta_extrato
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -142,7 +142,7 @@ module Pier
         
         :'flag_matriz' => :'flagMatriz',
         
-        :'id_credor' => :'idCredor',
+        :'id_grupo_economico' => :'idGrupoEconomico',
         
         :'numero_receita_federal' => :'numeroReceitaFederal',
         
@@ -227,7 +227,7 @@ module Pier
         
         :'flag_matriz' => :'Integer',
         
-        :'id_credor' => :'Integer',
+        :'id_grupo_economico' => :'Integer',
         
         :'numero_receita_federal' => :'String',
         
@@ -324,10 +324,10 @@ module Pier
       end
 
       
-      if attributes[:'idCredor']
+      if attributes[:'idGrupoEconomico']
         
         
-        self.id_credor = attributes[:'idCredor']
+        self.id_grupo_economico = attributes[:'idGrupoEconomico']
         
       
       end
@@ -1065,7 +1065,7 @@ module Pier
       return true if self.equal?(o)
       self.class == o.class &&
           flag_matriz == o.flag_matriz &&
-          id_credor == o.id_credor &&
+          id_grupo_economico == o.id_grupo_economico &&
           numero_receita_federal == o.numero_receita_federal &&
           nome == o.nome &&
           descricao == o.descricao &&
@@ -1114,7 +1114,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [flag_matriz, id_credor, numero_receita_federal, nome, descricao, nome_fantasia, cep, nome_logradouro, numero_endereco, bairro, cidade, complemento, uf, cep2, nome_logradouro2, numero_endereco2, bairro2, cidade2, complemento2, uf2, obs, contato, email, flag_arquivo_secr_fazenda, flag_cartao_digitado, inativo, id_moeda, id_pais, associado_spc_brasil, mcc, id_tipo_estabelecimento, correspondencia, cargo_contato, tipo_pagamento, consulta, consulta2, consulta3, flag_terminal_virtual, flag_consulta_extrato].hash
+      [flag_matriz, id_grupo_economico, numero_receita_federal, nome, descricao, nome_fantasia, cep, nome_logradouro, numero_endereco, bairro, cidade, complemento, uf, cep2, nome_logradouro2, numero_endereco2, bairro2, cidade2, complemento2, uf2, obs, contato, email, flag_arquivo_secr_fazenda, flag_cartao_digitado, inativo, id_moeda, id_pais, associado_spc_brasil, mcc, id_tipo_estabelecimento, correspondencia, cargo_contato, tipo_pagamento, consulta, consulta2, consulta3, flag_terminal_virtual, flag_consulta_extrato].hash
     end
 
     # Builds the object from hash

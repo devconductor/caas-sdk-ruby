@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,36 +17,36 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
+  # Transfer\u00EAncia banc\u00E1ria
   class TransferenciaBancariaPersist
-    # Valor da transfer\u00C3\u00AAncia
+    # Valor da transfer\u00EAncia
     attr_accessor :valor_compra
 
-    # Valor da transfer\u00C3\u00AAncia
+    # Valor da transfer\u00EAncia
     attr_accessor :valor
 
-    # N\u00C3\u00BAmero do CPF ou CNPJ.
+    # N\u00FAmero do CPF ou CNPJ.
     attr_accessor :documento_favorecido
 
-    # C\u00C3\u00B3digo do banco
+    # C\u00F3digo do banco
     attr_accessor :banco
 
-    # N\u00C3\u00BAmero da ag\u00C3\u00AAncia
+    # N\u00FAmero da ag\u00EAncia
     attr_accessor :numero_agencia
 
-    # D\u00C3\u00ADgito da ag\u00C3\u00AAncia
+    # D\u00EDgito da ag\u00EAncia
     attr_accessor :digito_agencia
 
-    # N\u00C3\u00BAmero da conta
+    # N\u00FAmero da conta
     attr_accessor :numero_conta
 
-    # D\u00C3\u00ADgito da conta
+    # D\u00EDgito da conta
     attr_accessor :digito_conta
 
-    # Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
+    # Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente)
     attr_accessor :flag_conta_poupanca
 
-    # Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+    # Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'.
     attr_accessor :nome_favorecido
 
     # Attribute mapping from ruby-style variable name to JSON key.

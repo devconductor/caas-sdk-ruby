@@ -4,25 +4,25 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterar_senha_login_using_post**](UsuarioApi.md#alterar_senha_login_using_post) | **POST** /api/usuarios/{login}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio.
-[**alterar_senha_using_put**](UsuarioApi.md#alterar_senha_using_put) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-[**alterar_using_put21**](UsuarioApi.md#alterar_using_put21) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados na base.
-[**ativar_usuario_using_post**](UsuarioApi.md#ativar_usuario_using_post) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**consultar_using_get42**](UsuarioApi.md#consultar_using_get42) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
-[**desativar_usuario_using_post**](UsuarioApi.md#desativar_usuario_using_post) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**listar_using_get49**](UsuarioApi.md#listar_using_get49) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**recuperar_senha_using_post**](UsuarioApi.md#recuperar_senha_using_post) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-[**salvar_using_post28**](UsuarioApi.md#salvar_using_post28) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base.
-[**validar_senha_login_using_post**](UsuarioApi.md#validar_senha_login_using_post) | **POST** /api/usuarios/{login}/validar-senha | Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**validar_senha_using_get1**](UsuarioApi.md#validar_senha_using_get1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+[**alterar_senha_login_using_post**](UsuarioApi.md#alterar_senha_login_using_post) | **POST** /api/usuarios/{login}/alterar-senha | Alterar senha do usu\u00E1rio.
+[**alterar_senha_using_put**](UsuarioApi.md#alterar_senha_using_put) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00E1rio na base do PIER ou WS.
+[**alterar_using_put21**](UsuarioApi.md#alterar_using_put21) | **PUT** /api/usuarios/{id} | Altera os usu\u00E1rios cadastrados na base.
+[**ativar_usuario_using_post**](UsuarioApi.md#ativar_usuario_using_post) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00E1rios cadastrados na base do PIER ou WS.
+[**consultar_using_get43**](UsuarioApi.md#consultar_using_get43) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00E1rio na base do PIER ou WS.
+[**desativar_usuario_using_post**](UsuarioApi.md#desativar_usuario_using_post) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00E1rios cadastrados na base do PIER ou WS.
+[**listar_using_get51**](UsuarioApi.md#listar_using_get51) | **GET** /api/usuarios | Lista os Usu\u00E1rios cadastrados na base do PIER ou WS.
+[**recuperar_senha_using_post**](UsuarioApi.md#recuperar_senha_using_post) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00E1rio na base do PIER ou WS.
+[**salvar_using_post28**](UsuarioApi.md#salvar_using_post28) | **POST** /api/usuarios | Cadastra Usu\u00E1rio na base.
+[**validar_senha_login_using_post**](UsuarioApi.md#validar_senha_login_using_post) | **POST** /api/usuarios/{login}/validar-senha | Realiza login com valida\u00E7\u00E3o de senha dos usu\u00E1rios cadastrados na base do PIER ou WS.
+[**validar_senha_using_get1**](UsuarioApi.md#validar_senha_using_get1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00E1rio na base do PIER ou WS.
 
 
 # **alterar_senha_login_using_post**
 > String alterar_senha_login_using_post(login, senha_nova)
 
-Alterar senha do usu\u00C3\u00A1rio.
+Alterar senha do usu\u00E1rio.
 
-Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
 
 ### Example
 ```ruby
@@ -31,13 +31,13 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::UsuarioApi.new
 
-login = "login_example" # String | Login do usu\u00C3\u00A1rio.
+login = "login_example" # String | Login do usu\u00E1rio.
 
 senha_nova = "senha_nova_example" # String | Senha Nova
 
 
 begin
-  #Alterar senha do usu\u00C3\u00A1rio.
+  #Alterar senha do usu\u00E1rio.
   result = api_instance.alterar_senha_login_using_post(login, senha_nova)
   p result
 rescue Pier::ApiError => e
@@ -49,7 +49,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **login** | **String**| Login do usu\u00C3\u00A1rio. | 
+ **login** | **String**| Login do usu\u00E1rio. | 
  **senha_nova** | **String**| Senha Nova | 
 
 ### Return type
@@ -70,9 +70,9 @@ No authorization required
 # **alterar_senha_using_put**
 > String alterar_senha_using_put(id, senha_atual, senha_nova)
 
-Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+Alterar senha do usu\u00E1rio na base do PIER ou WS.
 
-Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
 
 ### Example
 ```ruby
@@ -81,7 +81,7 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::UsuarioApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
 
 senha_atual = "senha_atual_example" # String | Senha Atual
 
@@ -89,7 +89,7 @@ senha_nova = "senha_nova_example" # String | Senha Nova
 
 
 begin
-  #Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+  #Alterar senha do usu\u00E1rio na base do PIER ou WS.
   result = api_instance.alterar_senha_using_put(id, senha_atual, senha_nova)
   p result
 rescue Pier::ApiError => e
@@ -101,7 +101,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). | 
  **senha_atual** | **String**| Senha Atual | 
  **senha_nova** | **String**| Senha Nova | 
 
@@ -123,9 +123,9 @@ No authorization required
 # **alterar_using_put21**
 > UsuarioResponse alterar_using_put21(id, update)
 
-Altera os usu\u00C3\u00A1rios cadastrados na base.
+Altera os usu\u00E1rios cadastrados na base.
 
-Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+Este m\u00E9todo realiza a altera\u00E7\u00E3o dos usu\u00E1rios.
 
 ### Example
 ```ruby
@@ -134,13 +134,13 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::UsuarioApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
 
 update = Pier::UsuarioUpdate.new # UsuarioUpdate | update
 
 
 begin
-  #Altera os usu\u00C3\u00A1rios cadastrados na base.
+  #Altera os usu\u00E1rios cadastrados na base.
   result = api_instance.alterar_using_put21(id, update)
   p result
 rescue Pier::ApiError => e
@@ -152,7 +152,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). | 
  **update** | [**UsuarioUpdate**](UsuarioUpdate.md)| update | 
 
 ### Return type
@@ -173,9 +173,9 @@ No authorization required
 # **ativar_usuario_using_post**
 > UsuarioResponse ativar_usuario_using_post(id)
 
-Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+Ativa os usu\u00E1rios cadastrados na base do PIER ou WS.
 
-Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+Este m\u00E9todo realiza a ativa\u00E7\u00E3o dos usu\u00E1rios.
 
 ### Example
 ```ruby
@@ -184,11 +184,11 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::UsuarioApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
 
 
 begin
-  #Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+  #Ativa os usu\u00E1rios cadastrados na base do PIER ou WS.
   result = api_instance.ativar_usuario_using_post(id)
   p result
 rescue Pier::ApiError => e
@@ -200,7 +200,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). | 
 
 ### Return type
 
@@ -217,12 +217,12 @@ No authorization required
 
 
 
-# **consultar_using_get42**
-> UsuarioResponse consultar_using_get42(id)
+# **consultar_using_get43**
+> UsuarioResponse consultar_using_get43(id)
 
-Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
+Apresenta os dados de um determinado Usu\u00E1rio na base do PIER ou WS.
 
-Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado Usu\u00E1rio a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
 
 ### Example
 ```ruby
@@ -231,15 +231,15 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::UsuarioApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
 
 
 begin
-  #Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
-  result = api_instance.consultar_using_get42(id)
+  #Apresenta os dados de um determinado Usu\u00E1rio na base do PIER ou WS.
+  result = api_instance.consultar_using_get43(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling UsuarioApi->consultar_using_get42: #{e}"
+  puts "Exception when calling UsuarioApi->consultar_using_get43: #{e}"
 end
 ```
 
@@ -247,7 +247,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). | 
 
 ### Return type
 
@@ -267,9 +267,9 @@ No authorization required
 # **desativar_usuario_using_post**
 > UsuarioResponse desativar_usuario_using_post(id)
 
-Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+Desativa os usu\u00E1rios cadastrados na base do PIER ou WS.
 
-Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+Este m\u00E9todo realiza a desativa\u00E7\u00E3o dos usu\u00E1rios.
 
 ### Example
 ```ruby
@@ -278,11 +278,11 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::UsuarioApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
 
 
 begin
-  #Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+  #Desativa os usu\u00E1rios cadastrados na base do PIER ou WS.
   result = api_instance.desativar_usuario_using_post(id)
   p result
 rescue Pier::ApiError => e
@@ -294,7 +294,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). | 
 
 ### Return type
 
@@ -311,12 +311,12 @@ No authorization required
 
 
 
-# **listar_using_get49**
-> PageUsuarioResponse listar_using_get49(opts)
+# **listar_using_get51**
+> PageUsuarioResponse listar_using_get51(opts)
 
-Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+Lista os Usu\u00E1rios cadastrados na base do PIER ou WS.
 
-Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
+Este m\u00E9todo permite que sejam listados os usu\u00E1rios existentes na base do PIER.
 
 ### Example
 ```ruby
@@ -326,9 +326,9 @@ require 'pier-sdk-ruby'
 api_instance = Pier::UsuarioApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   nome: "nome_example", # String | Nome do Usuario
   cpf: "cpf_example", # String | CPF do Usuario
   email: "email_example", # String | Email do Usuario
@@ -336,11 +336,11 @@ opts = {
 }
 
 begin
-  #Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-  result = api_instance.listar_using_get49(opts)
+  #Lista os Usu\u00E1rios cadastrados na base do PIER ou WS.
+  result = api_instance.listar_using_get51(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling UsuarioApi->listar_using_get49: #{e}"
+  puts "Exception when calling UsuarioApi->listar_using_get51: #{e}"
 end
 ```
 
@@ -348,9 +348,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
  **nome** | **String**| Nome do Usuario | [optional] 
  **cpf** | **String**| CPF do Usuario | [optional] 
  **email** | **String**| Email do Usuario | [optional] 
@@ -374,9 +374,9 @@ No authorization required
 # **recuperar_senha_using_post**
 > String recuperar_senha_using_post(id)
 
-Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+Recuperar senha do usu\u00E1rio na base do PIER ou WS.
 
-Esse recurso permite recuperar a senha do usu\u00C3\u00A1rio.
+Esse recurso permite recuperar a senha do usu\u00E1rio.
 
 ### Example
 ```ruby
@@ -385,11 +385,11 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::UsuarioApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
 
 
 begin
-  #Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+  #Recuperar senha do usu\u00E1rio na base do PIER ou WS.
   result = api_instance.recuperar_senha_using_post(id)
   p result
 rescue Pier::ApiError => e
@@ -401,7 +401,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). | 
 
 ### Return type
 
@@ -421,9 +421,9 @@ No authorization required
 # **salvar_using_post28**
 > UsuarioResponse salvar_using_post28(persist)
 
-Cadastra Usu\u00C3\u00A1rio na base.
+Cadastra Usu\u00E1rio na base.
 
-Esse recurso permite cadastrar usu\u00C3\u00A1rios.
+Esse recurso permite cadastrar usu\u00E1rios.
 
 ### Example
 ```ruby
@@ -436,7 +436,7 @@ persist = Pier::UsuarioPersist.new # UsuarioPersist | persist
 
 
 begin
-  #Cadastra Usu\u00C3\u00A1rio na base.
+  #Cadastra Usu\u00E1rio na base.
   result = api_instance.salvar_using_post28(persist)
   p result
 rescue Pier::ApiError => e
@@ -468,9 +468,9 @@ No authorization required
 # **validar_senha_login_using_post**
 > Object validar_senha_login_using_post(login, senha)
 
-Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+Realiza login com valida\u00E7\u00E3o de senha dos usu\u00E1rios cadastrados na base do PIER ou WS.
 
-O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+O recurso permite fazer login do usu\u00E1rio atrav\u00E9s da senha definida pelo emissor.
 
 ### Example
 ```ruby
@@ -479,13 +479,13 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::UsuarioApi.new
 
-login = "login_example" # String | Login identificador do usu\u00C3\u00A1rio (login).
+login = "login_example" # String | Login identificador do usu\u00E1rio (login).
 
-senha = "senha_example" # String | Senha do usu\u00C3\u00A1rio
+senha = "senha_example" # String | Senha do usu\u00E1rio
 
 
 begin
-  #Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+  #Realiza login com valida\u00E7\u00E3o de senha dos usu\u00E1rios cadastrados na base do PIER ou WS.
   result = api_instance.validar_senha_login_using_post(login, senha)
   p result
 rescue Pier::ApiError => e
@@ -497,8 +497,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **login** | **String**| Login identificador do usu\u00C3\u00A1rio (login). | 
- **senha** | **String**| Senha do usu\u00C3\u00A1rio | 
+ **login** | **String**| Login identificador do usu\u00E1rio (login). | 
+ **senha** | **String**| Senha do usu\u00E1rio | 
 
 ### Return type
 
@@ -518,9 +518,9 @@ No authorization required
 # **validar_senha_using_get1**
 > String validar_senha_using_get1(senha, id)
 
-Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+Validar a senha do usu\u00E1rio na base do PIER ou WS.
 
-Este m\u00C3\u00A9todo permite validar a senha do usu\u00C3\u00A1rio).
+Este m\u00E9todo permite validar a senha do usu\u00E1rio).
 
 ### Example
 ```ruby
@@ -529,13 +529,13 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::UsuarioApi.new
 
-senha = "senha_example" # String | Senha do usu\u00C3\u00A1rio
+senha = "senha_example" # String | Senha do usu\u00E1rio
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
 
 
 begin
-  #Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+  #Validar a senha do usu\u00E1rio na base do PIER ou WS.
   result = api_instance.validar_senha_using_get1(senha, id)
   p result
 rescue Pier::ApiError => e
@@ -547,8 +547,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **senha** | **String**| Senha do usu\u00C3\u00A1rio | 
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). | 
+ **senha** | **String**| Senha do usu\u00E1rio | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). | 
 
 ### Return type
 

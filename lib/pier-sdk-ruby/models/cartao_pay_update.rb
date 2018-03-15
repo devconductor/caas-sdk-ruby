@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,9 +17,9 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Represneta\u00C3\u00A7\u00C3\u00A3o do recurso atualizar cart\u00C3\u00A3o
+  # Represneta\u00E7\u00E3o do recurso atualizar cart\u00E3o
   class CartaoPayUpdate
-    # Status do cart\u00C3\u00A3o
+    # Status do cart\u00E3o
     attr_accessor :status
 
     # Attribute mapping from ruby-style variable name to JSON key.

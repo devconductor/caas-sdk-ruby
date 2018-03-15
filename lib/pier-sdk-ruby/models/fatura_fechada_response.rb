@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,13 +19,13 @@ require 'date'
 module Pier
   # Fatura
   class FaturaFechadaResponse
-    # C\u00C3\u00B3digo identificador da fatura.
+    # C\u00F3digo identificador da fatura.
     attr_accessor :id
 
-    # C\u00C3\u00B3digo identificador da conta.
+    # C\u00F3digo identificador da conta.
     attr_accessor :id_conta
 
-    # C\u00C3\u00B3digo identificador da conta a qual a fatura se refere.
+    # C\u00F3digo identificador da conta a qual a fatura se refere.
     attr_accessor :flag_emite_fatura
 
     # Data de vencimento da fatura.
@@ -37,52 +37,52 @@ module Pier
     # Valor total da fatura anterior.
     attr_accessor :valor_fatura_anterior
 
-    # Valor m\u00C3\u00ADnimo para pagamento da fatura.
+    # Valor m\u00EDnimo para pagamento da fatura.
     attr_accessor :valor_pagamento_minimo
 
-    # Valor total das compras nacionais lan\u00C3\u00A7adas na fatura.
+    # Valor total das compras nacionais lan\u00E7adas na fatura.
     attr_accessor :total_compras_nacionais
 
-    # Valor total das compras internacionais lan\u00C3\u00A7adas na fatura.
+    # Valor total das compras internacionais lan\u00E7adas na fatura.
     attr_accessor :total_compras_internacionas
 
-    # Valor total dos saques nacionais lan\u00C3\u00A7ados na fatura.
+    # Valor total dos saques nacionais lan\u00E7ados na fatura.
     attr_accessor :total_saques_nacionais
 
-    # Valor total dos saques internacionais lan\u00C3\u00A7ados na fatura.
+    # Valor total dos saques internacionais lan\u00E7ados na fatura.
     attr_accessor :total_saques_internacionais
 
-    # Valor total dos d\u00C3\u00A9bitos nacionais lan\u00C3\u00A7ados na fatura.
+    # Valor total dos d\u00E9bitos nacionais lan\u00E7ados na fatura.
     attr_accessor :total_debitos_nacionais
 
-    # Valor total dos d\u00C3\u00A9bitos recorrentes lan\u00C3\u00A7ados na fatura.
+    # Valor total dos d\u00E9bitos recorrentes lan\u00E7ados na fatura.
     attr_accessor :total_debitos_recorrentes
 
-    # Valor total dos d\u00C3\u00A9bitos internacionais lan\u00C3\u00A7ados na fatura.
+    # Valor total dos d\u00E9bitos internacionais lan\u00E7ados na fatura.
     attr_accessor :total_debitos_internacionais
 
-    # Valor total dos d\u00C3\u00A9bitos diversos nacionais lan\u00C3\u00A7ados na fatura.
+    # Valor total dos d\u00E9bitos diversos nacionais lan\u00E7ados na fatura.
     attr_accessor :total_debitos_diversos_nacionais
 
-    # Valor total dos d\u00C3\u00A9bitos diversos opcionais lan\u00C3\u00A7ados na fatura.
+    # Valor total dos d\u00E9bitos diversos opcionais lan\u00E7ados na fatura.
     attr_accessor :total_debitos_opcionais
 
-    # Valor total dos pagamentos lan\u00C3\u00A7ados na fatura.
+    # Valor total dos pagamentos lan\u00E7ados na fatura.
     attr_accessor :total_pagamentos
 
-    # Valor total dos cr\u00C3\u00A9ditos nacionais lan\u00C3\u00A7ados na fatura.
+    # Valor total dos cr\u00E9ditos nacionais lan\u00E7ados na fatura.
     attr_accessor :total_creditos_nacionais
 
-    # Valor total dos ajustes lan\u00C3\u00A7ados na fatura.
+    # Valor total dos ajustes lan\u00E7ados na fatura.
     attr_accessor :total_ajustes
 
-    # Valor total das tarifas lan\u00C3\u00A7adas na fatura.
+    # Valor total das tarifas lan\u00E7adas na fatura.
     attr_accessor :total_tarifas
 
-    # Valor total da multa lan\u00C3\u00A7ada na fatura.
+    # Valor total da multa lan\u00E7ada na fatura.
     attr_accessor :total_multa
 
-    # Valor total dos juros de mora lan\u00C3\u00A7ados na fatura.
+    # Valor total dos juros de mora lan\u00E7ados na fatura.
     attr_accessor :total_juros
 
     # Valor percentual da taxa de juros rotativos.
@@ -91,7 +91,7 @@ module Pier
     # Valor percentual da taxa de saque.
     attr_accessor :taxa_saque
 
-    # Valor m\u00C3\u00A1ximo percentual da taxa de encargos para o pr\u00C3\u00B3ximo per\u00C3\u00ADodo.
+    # Valor m\u00E1ximo percentual da taxa de encargos para o pr\u00F3ximo per\u00EDodo.
     attr_accessor :taxa_maxima_proximo_periodo
 
     # Apresenta a soma de todos os seguros cobrados na fatura do cliente.

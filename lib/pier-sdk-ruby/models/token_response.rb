@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,15 +17,12 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o do recurso token
+  # Representa\u00E7\u00E3o do recurso token
   class TokenResponse
-    # C\u00C3\u00B3digo identificador do token
+    # C\u00F3digo identificador do token
     attr_accessor :id
 
-    # Token
-    attr_accessor :token
-
-    # C\u00C3\u00B3digo identificador da base
+    # C\u00F3digo identificador da base
     attr_accessor :base
 
     # Owner do token
@@ -34,16 +31,16 @@ module Pier
     # Status do token
     attr_accessor :status
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o de quem criou o token
+    # Descri\u00E7\u00E3o de quem criou o token
     attr_accessor :criado_por
 
-    # Data de cria\u00C3\u00A7\u00C3\u00A3o do token
+    # Data de cria\u00E7\u00E3o do token
     attr_accessor :data_criacao
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o de quem alterou o token
+    # Descri\u00E7\u00E3o de quem alterou o token
     attr_accessor :alterado_por
 
-    # Data de modifica\u00C3\u00A7\u00C3\u00A3o do token
+    # Data de modifica\u00E7\u00E3o do token
     attr_accessor :data_modificacao
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -51,8 +48,6 @@ module Pier
       {
         
         :'id' => :'id',
-        
-        :'token' => :'token',
         
         :'base' => :'base',
         
@@ -76,8 +71,6 @@ module Pier
       {
         
         :'id' => :'Integer',
-        
-        :'token' => :'String',
         
         :'base' => :'Integer',
         
@@ -109,15 +102,6 @@ module Pier
         
         
         self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes[:'token']
-        
-        
-        self.token = attributes[:'token']
         
       
       end
@@ -215,10 +199,6 @@ module Pier
       
       
       
-      
-      
-      
-      
       allowed_values = ["ACTIVE", "REVOKED", "DELETED"]
       if @status && !allowed_values.include?(@status)
         return false
@@ -244,11 +224,6 @@ module Pier
       
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -305,7 +280,6 @@ module Pier
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          token == o.token &&
           base == o.base &&
           owner == o.owner &&
           status == o.status &&
@@ -324,7 +298,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, token, base, owner, status, criado_por, data_criacao, alterado_por, data_modificacao].hash
+      [id, base, owner, status, criado_por, data_criacao, alterado_por, data_modificacao].hash
     end
 
     # Builds the object from hash

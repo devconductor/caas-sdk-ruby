@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,18 +17,18 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Plano de Parcelamentos para Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias
+  # Plano de Parcelamentos para Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
   class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse
-    # N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado.
+    # N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado.
     attr_accessor :numero_mascarado_cartao
 
     # Data de vencimento da primeira parcela.
     attr_accessor :vencimento_primeira_parcela
 
-    # Valor da solicita\u00C3\u00A7\u00C3\u00A3o de saque.
+    # Valor da solicita\u00E7\u00E3o de saque.
     attr_accessor :valor_transacao
 
-    # N\u00C3\u00BAmero de meses para car\u00C3\u00AAncia.
+    # N\u00FAmero de meses para car\u00EAncia.
     attr_accessor :numero_meses_carencia
 
     # Lista com os planos de parcelamento.

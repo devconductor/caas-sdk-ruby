@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,7 +17,7 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Antecipacao Simulada
+  # Representa\u00E7\u00E3o da resposta do recurso Antecipacao Simulada
   class AntecipacaoSimuladaLoteResponse
     # Valor total antecipado.
     attr_accessor :valor_total_antecipado
@@ -28,7 +28,7 @@ module Pier
     # Valor total antecipado com o desconto.
     attr_accessor :valor_total_com_desconto
 
-    # Antecipa\u00C3\u00A7\u00C3\u00B5es Simuladas.
+    # Antecipa\u00E7\u00F5es Simuladas.
     attr_accessor :antecipacoes_simuladas
 
     # Attribute mapping from ruby-style variable name to JSON key.

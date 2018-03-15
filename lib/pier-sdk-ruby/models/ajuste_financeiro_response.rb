@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -18,13 +18,13 @@ require 'date'
 
 module Pier
   class AjusteFinanceiroResponse
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id)
+    # C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id)
     attr_accessor :id
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do ajuste
+    # C\u00F3digo de identifica\u00E7\u00E3o do tipo do ajuste
     attr_accessor :id_tipo_ajuste
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta)
+    # C\u00F3digo de identifica\u00E7\u00E3o da conta (idConta)
     attr_accessor :id_conta
 
     # Data do ajuste
@@ -33,7 +33,7 @@ module Pier
     # Valor do ajuste
     attr_accessor :valor
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
+    # Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
     attr_accessor :identificador_externo
 
     # Status do ajuste.

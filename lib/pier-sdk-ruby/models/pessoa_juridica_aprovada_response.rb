@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,19 +19,19 @@ require 'date'
 module Pier
   # PessoaJuridicaAprovadaPersist
   class PessoaJuridicaAprovadaResponse
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica (id)
+    # C\u00F3digo de Identifica\u00E7\u00E3o da pessoa jur\u00EDdica (id)
     attr_accessor :id
 
-    # Apresenta o nome completo da raz\u00C3\u00A3o social (nome empresarial)'.
+    # Apresenta o nome completo da raz\u00E3o social (nome empresarial)'.
     attr_accessor :razao_social
 
     # Apresenta o nome fantasia da empresa.
     attr_accessor :nome_fantasia
 
-    # N\u00C3\u00BAmero do Cadastro Nacional de Pessoa Juridica (CNPJ)
+    # N\u00FAmero do Cadastro Nacional de Pessoa Juridica (CNPJ)
     attr_accessor :cnpj
 
-    # N\u00C3\u00BAmero da Inscri\u00C3\u00A7\u00C3\u00A3o Estadual (IE).
+    # N\u00FAmero da Inscri\u00E7\u00E3o Estadual (IE).
     attr_accessor :inscricao_estadual
 
     # Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd.
@@ -43,10 +43,10 @@ module Pier
     # Id do produto
     attr_accessor :id_produto
 
-    # N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+    # N\u00FAmero da ag\u00EAncia.
     attr_accessor :numero_agencia
 
-    # N\u00C3\u00BAmero da conta corrente.
+    # N\u00FAmero da conta corrente.
     attr_accessor :numero_conta_corrente
 
     # Email da empresa
@@ -55,40 +55,40 @@ module Pier
     # Dia vencimento
     attr_accessor :dia_vencimento
 
-    # Nome que deve ser impresso no cart\u00C3\u00A3o
+    # Nome que deve ser impresso no cart\u00E3o
     attr_accessor :nome_impresso
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada
+    # C\u00F3digo de identifica\u00E7\u00E3o da conta cadastrada
     attr_accessor :id_conta
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta
+    # C\u00F3digo de identifica\u00E7\u00E3o da proposta
     attr_accessor :id_proposta
 
     # Indica o canal pelo qual o cadastro do cliente foi realizado
     attr_accessor :canal_entrada
 
-    # Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+    # Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0)
     attr_accessor :valor_pontuacao
 
     # Apresenta os telefones da empresa
     attr_accessor :telefones
 
-    # Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros
+    # Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros
     attr_accessor :enderecos
 
-    # Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
+    # Apresenta os dados dos s\u00F3cios da empresa, caso exista
     attr_accessor :socios
 
-    # Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
+    # Apresenta os dados dos s\u00F3cios da empresa, caso exista
     attr_accessor :referencias
 
     # Valor do Limite Global
     attr_accessor :limite_global
 
-    # Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+    # Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es
     attr_accessor :limite_maximo
 
-    # Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+    # Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras
     attr_accessor :limite_parcelas
 
     # Attribute mapping from ruby-style variable name to JSON key.

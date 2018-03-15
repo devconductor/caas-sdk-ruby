@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,54 +17,54 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # D\u00C3\u00ADvida do cliente
+  # D\u00EDvida do cliente
   class DividaClienteResponse
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)
+    # C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
     attr_accessor :id
 
-    # Data de vencimento da cobran\u00C3\u00A7a
+    # Data de vencimento da cobran\u00E7a
     attr_accessor :data_vencimento_fatura_atraso
 
-    # Quantidade de dias em atraso at\u00C3\u00A9 a data de vencimento da cobran\u00C3\u00A7a
+    # Quantidade de dias em atraso at\u00E9 a data de vencimento da cobran\u00E7a
     attr_accessor :quantidade_dias_atraso
 
     # Data de vencimento do acordo
     attr_accessor :data_vencimento_acordo
 
-    # Quantidade de dias em atraso at\u00C3\u00A9 a data de vencimento do acordo
+    # Quantidade de dias em atraso at\u00E9 a data de vencimento do acordo
     attr_accessor :quantidade_dias_atraso_corrigido
 
-    # Valor do saldo devedor at\u00C3\u00A9 a data de vencimento da cobran\u00C3\u00A7a
+    # Valor do saldo devedor at\u00E9 a data de vencimento da cobran\u00E7a
     attr_accessor :valor_saldo_devedor
 
-    # Percentual de corre\u00C3\u00A7\u00C3\u00A3o
+    # Percentual de corre\u00E7\u00E3o
     attr_accessor :taxa_correcao
 
-    # Valor da corre\u00C3\u00A7\u00C3\u00A3o
+    # Valor da corre\u00E7\u00E3o
     attr_accessor :valor_correcao
 
     # Valor do IOF devido
     attr_accessor :valor_iof
 
-    # Valor do saldo devedor corrido da d\u00C3\u00ADvida at\u00C3\u00A9 a data de vencimento do acordo
+    # Valor do saldo devedor corrido da d\u00EDvida at\u00E9 a data de vencimento do acordo
     attr_accessor :valor_saldo_corrigido
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status da conta (id)
+    # C\u00F3digo de identifica\u00E7\u00E3o do status da conta (id)
     attr_accessor :id_status_conta
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
+    # Descri\u00E7\u00E3o do status da conta
     attr_accessor :descricao_status_conta
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status do acordo (id)
+    # C\u00F3digo de identifica\u00E7\u00E3o do status do acordo (id)
     attr_accessor :id_status_acordo
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do status do acordo
+    # Descri\u00E7\u00E3o do status do acordo
     attr_accessor :descricao_status_acordo
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a
+    # C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a
     attr_accessor :id_escritorio_cobranca
 
-    # Nome do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a
+    # Nome do escrit\u00F3rio de cobran\u00E7a
     attr_accessor :nome_escritorio_cobranca
 
     # Email do devedor

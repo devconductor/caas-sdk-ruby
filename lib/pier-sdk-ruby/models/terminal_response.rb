@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,22 +19,22 @@ require 'date'
 module Pier
   # ObjetoTerminal
   class TerminalResponse
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+    # C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
     attr_accessor :id
 
-    # N\u00C3\u00BAmero \u00C3\u00BAnico do terminal.
+    # N\u00FAmero \u00FAnico do terminal.
     attr_accessor :terminal
 
-    # N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
+    # N\u00FAmero do estabelecimento a qual o terminal pertence.
     attr_accessor :numero_estabelecimento
 
-    # N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
+    # N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence.
     attr_accessor :id_estabelecimento
 
-    # Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+    # Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).
     attr_accessor :flag_consulta_extrato
 
-    # Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+    # Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).
     attr_accessor :flag_terminal_virtual
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,34 +19,34 @@ require 'date'
 module Pier
   # Portador
   class PortadorResponse
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+    # C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).
     attr_accessor :id_conta
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+    # C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
     attr_accessor :id_produto
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+    # C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id).
     attr_accessor :id_pessoa
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
+    # C\u00F3digo de Identifica\u00E7\u00E3o do Parentesco (id)
     attr_accessor :id_parentesco
 
-    # Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
+    # Apresenta o tipo do Portador do cart\u00E3o, sendo: ('T': Titular, 'A': Adicional).
     attr_accessor :tipo_portador
 
-    # Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
+    # Apresenta o nome a ser impresso no cart\u00E3o.
     attr_accessor :nome_impresso
 
-    # Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
+    # Apresenta o c\u00F3digo de identifica\u00E7\u00E3o do tipo do cart\u00E3o (id), que ser\u00E1 utilizado para gerar os cart\u00F5es deste portador, vinculados a sua respectiva conta atrav\u00E9s do campo idConta.
     attr_accessor :id_tipo_cartao
 
-    # Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
+    # Quanto ativa, indica que o cadastro do Portador est\u00E1 ativo, em emissores que realizam este tipo de gest\u00E3o.
     attr_accessor :flag_ativo
 
-    # Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
+    # Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00E7\u00E3o.
     attr_accessor :data_cadastro_portador
 
-    # Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
+    # Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00E7\u00E3o.
     attr_accessor :data_cancelamento_portador
 
     # Attribute mapping from ruby-style variable name to JSON key.

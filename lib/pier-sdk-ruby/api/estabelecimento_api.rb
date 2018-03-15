@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -26,7 +26,7 @@ module Pier
 
     # Alterar Origem Comercial
     # Altera uma origem comercial.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da origem comercial
     # @param origem_comercial_update origemComercialUpdate
     # @param [Hash] opts the optional parameters
     # @return [OrigemComercialResponse]
@@ -37,7 +37,7 @@ module Pier
 
     # Alterar Origem Comercial
     # Altera uma origem comercial.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da origem comercial
     # @param origem_comercial_update origemComercialUpdate
     # @param [Hash] opts the optional parameters
     # @return [Array<(OrigemComercialResponse, Fixnum, Hash)>] OrigemComercialResponse data, response status code and response headers
@@ -100,8 +100,8 @@ module Pier
     end
 
     # Altera uma Maquineta
-    # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das maquinetas dos estabelecimentos.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).
+    # Este m\u00E9todo realiza a altera\u00E7\u00E3o das maquinetas dos estabelecimentos.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).
     # @param maquineta_update maquinetaUpdate
     # @param [Hash] opts the optional parameters
     # @return [MaquinetaResponse]
@@ -111,8 +111,8 @@ module Pier
     end
 
     # Altera uma Maquineta
-    # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das maquinetas dos estabelecimentos.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).
+    # Este m\u00E9todo realiza a altera\u00E7\u00E3o das maquinetas dos estabelecimentos.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).
     # @param maquineta_update maquinetaUpdate
     # @param [Hash] opts the optional parameters
     # @return [Array<(MaquinetaResponse, Fixnum, Hash)>] MaquinetaResponse data, response status code and response headers
@@ -174,9 +174,9 @@ module Pier
       return data, status_code, headers
     end
 
-    # Altera uma Regra Opera\u00C3\u00A7\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma regra opera\u00C3\u00A7\u00C3\u00A3o.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).
+    # Altera uma Regra Opera\u00E7\u00E3o
+    # Este m\u00E9todo realiza a altera\u00E7\u00E3o de uma regra opera\u00E7\u00E3o.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).
     # @param operacao_credor_update operacaoCredorUpdate
     # @param [Hash] opts the optional parameters
     # @return [OperacaoCredorResponse]
@@ -185,9 +185,9 @@ module Pier
       return data
     end
 
-    # Altera uma Regra Opera\u00C3\u00A7\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma regra opera\u00C3\u00A7\u00C3\u00A3o.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).
+    # Altera uma Regra Opera\u00E7\u00E3o
+    # Este m\u00E9todo realiza a altera\u00E7\u00E3o de uma regra opera\u00E7\u00E3o.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).
     # @param operacao_credor_update operacaoCredorUpdate
     # @param [Hash] opts the optional parameters
     # @return [Array<(OperacaoCredorResponse, Fixnum, Hash)>] OperacaoCredorResponse data, response status code and response headers
@@ -250,27 +250,23 @@ module Pier
     end
 
     # Altera um Telefone do estabelecimento
-    # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos telefones dos estabelecimentos.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).
-    # @param ddd C\u00C3\u00B3digo DDD do telefone (id).
-    # @param telefone N\u00C3\u00BAmero do telefone.
+    # Este m\u00E9todo realiza a altera\u00E7\u00E3o dos telefones dos estabelecimentos.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).
+    # @param telefone_estabelecimento_update telefoneEstabelecimentoUpdate
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
     # @return [TelefoneEstabelecimentoResponse]
-    def alterar_using_put15(id, ddd, telefone, opts = {})
-      data, _status_code, _headers = alterar_using_put15_with_http_info(id, ddd, telefone, opts)
+    def alterar_using_put15(id, telefone_estabelecimento_update, opts = {})
+      data, _status_code, _headers = alterar_using_put15_with_http_info(id, telefone_estabelecimento_update, opts)
       return data
     end
 
     # Altera um Telefone do estabelecimento
-    # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos telefones dos estabelecimentos.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).
-    # @param ddd C\u00C3\u00B3digo DDD do telefone (id).
-    # @param telefone N\u00C3\u00BAmero do telefone.
+    # Este m\u00E9todo realiza a altera\u00E7\u00E3o dos telefones dos estabelecimentos.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).
+    # @param telefone_estabelecimento_update telefoneEstabelecimentoUpdate
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
     # @return [Array<(TelefoneEstabelecimentoResponse, Fixnum, Hash)>] TelefoneEstabelecimentoResponse data, response status code and response headers
-    def alterar_using_put15_with_http_info(id, ddd, telefone, opts = {})
+    def alterar_using_put15_with_http_info(id, telefone_estabelecimento_update, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: EstabelecimentoApi.alterar_using_put15 ..."
       end
@@ -284,22 +280,8 @@ module Pier
       
       
       
-      # verify the required parameter 'ddd' is set
-      fail ArgumentError, "Missing the required parameter 'ddd' when calling EstabelecimentoApi.alterar_using_put15" if ddd.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'telefone' is set
-      fail ArgumentError, "Missing the required parameter 'telefone' when calling EstabelecimentoApi.alterar_using_put15" if telefone.nil?
-      
-      
-      
-      
-      
-      
+      # verify the required parameter 'telefone_estabelecimento_update' is set
+      fail ArgumentError, "Missing the required parameter 'telefone_estabelecimento_update' when calling EstabelecimentoApi.alterar_using_put15" if telefone_estabelecimento_update.nil?
       
       
       
@@ -310,9 +292,6 @@ module Pier
 
       # query parameters
       query_params = {}
-      query_params[:'ddd'] = ddd
-      query_params[:'telefone'] = telefone
-      query_params[:'ramal'] = opts[:'ramal'] if opts[:'ramal']
 
       # header parameters
       header_params = {}
@@ -329,7 +308,7 @@ module Pier
       form_params = {}
 
       # http body (model)
-      post_body = nil
+      post_body = @api_client.object_to_http_body(telefone_estabelecimento_update)
       
       auth_names = []
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
@@ -346,8 +325,8 @@ module Pier
     end
 
     # Altera um Terminal
-    # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos Terminais.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal (id).
+    # Este m\u00E9todo realiza a altera\u00E7\u00E3o dos Terminais.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do terminal (id).
     # @param terminal_update terminalUpdate
     # @param [Hash] opts the optional parameters
     # @return [TerminalResponse]
@@ -357,8 +336,8 @@ module Pier
     end
 
     # Altera um Terminal
-    # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos Terminais.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal (id).
+    # Este m\u00E9todo realiza a altera\u00E7\u00E3o dos Terminais.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do terminal (id).
     # @param terminal_update terminalUpdate
     # @param [Hash] opts the optional parameters
     # @return [Array<(TerminalResponse, Fixnum, Hash)>] TerminalResponse data, response status code and response headers
@@ -495,9 +474,9 @@ module Pier
       return data, status_code, headers
     end
 
-    # Alterar Grupo Econ\u00C3\u00B4mico
-    # Altera um grupo econ\u00C3\u00B4mico.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico
+    # Alterar Grupo Econ\u00F4mico
+    # Altera um grupo econ\u00F4mico.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico
     # @param grupo_economico_dto grupoEconomicoDTO
     # @param [Hash] opts the optional parameters
     # @return [GrupoEconomicoResponse]
@@ -506,9 +485,9 @@ module Pier
       return data
     end
 
-    # Alterar Grupo Econ\u00C3\u00B4mico
-    # Altera um grupo econ\u00C3\u00B4mico.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico
+    # Alterar Grupo Econ\u00F4mico
+    # Altera um grupo econ\u00F4mico.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico
     # @param grupo_economico_dto grupoEconomicoDTO
     # @param [Hash] opts the optional parameters
     # @return [Array<(GrupoEconomicoResponse, Fixnum, Hash)>] GrupoEconomicoResponse data, response status code and response headers
@@ -700,8 +679,8 @@ module Pier
       return data, status_code, headers
     end
 
-    # Cadastrar Grupo Econ\u00C3\u00B4mico
-    # Cadastra um grupo econ\u00C3\u00B4mico.
+    # Cadastrar Grupo Econ\u00F4mico
+    # Cadastra um grupo econ\u00F4mico.
     # @param grupo_economico_dto GrupoEconomicoDTO
     # @param [Hash] opts the optional parameters
     # @return [GrupoEconomicoResponse]
@@ -710,8 +689,8 @@ module Pier
       return data
     end
 
-    # Cadastrar Grupo Econ\u00C3\u00B4mico
-    # Cadastra um grupo econ\u00C3\u00B4mico.
+    # Cadastrar Grupo Econ\u00F4mico
+    # Cadastra um grupo econ\u00F4mico.
     # @param grupo_economico_dto GrupoEconomicoDTO
     # @param [Hash] opts the optional parameters
     # @return [Array<(GrupoEconomicoResponse, Fixnum, Hash)>] GrupoEconomicoResponse data, response status code and response headers
@@ -765,9 +744,9 @@ module Pier
       return data, status_code, headers
     end
 
-    # Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-    # Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idoperacao
-    # @param id C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao).
+    # Apresenta dados de um determinado tipo de opera\u00E7\u00E3o
+    # Este recurso permite consultar dados de um determinado tipo opera\u00E7\u00E3o a partir do idoperacao
+    # @param id C\u00F3digo de processamento da opera\u00E7\u00E3o (idOperacao).
     # @param [Hash] opts the optional parameters
     # @return [DetalheOperacaoResponse]
     def consulta_operacao_using_get(id, opts = {})
@@ -775,9 +754,9 @@ module Pier
       return data
     end
 
-    # Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-    # Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idoperacao
-    # @param id C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao).
+    # Apresenta dados de um determinado tipo de opera\u00E7\u00E3o
+    # Este recurso permite consultar dados de um determinado tipo opera\u00E7\u00E3o a partir do idoperacao
+    # @param id C\u00F3digo de processamento da opera\u00E7\u00E3o (idOperacao).
     # @param [Hash] opts the optional parameters
     # @return [Array<(DetalheOperacaoResponse, Fixnum, Hash)>] DetalheOperacaoResponse data, response status code and response headers
     def consulta_operacao_using_get_with_http_info(id, opts = {})
@@ -831,8 +810,8 @@ module Pier
     end
 
     # Consultar Origem Comercial
-    # Consulta uma origem comercial atrav\u00C3\u00A9s do seu identificador.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial
+    # Consulta uma origem comercial atrav\u00E9s do seu identificador.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da origem comercial
     # @param [Hash] opts the optional parameters
     # @return [OrigemComercialResponse]
     def consultar_origem_comercial_using_get(id, opts = {})
@@ -841,8 +820,8 @@ module Pier
     end
 
     # Consultar Origem Comercial
-    # Consulta uma origem comercial atrav\u00C3\u00A9s do seu identificador.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial
+    # Consulta uma origem comercial atrav\u00E9s do seu identificador.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da origem comercial
     # @param [Hash] opts the optional parameters
     # @return [Array<(OrigemComercialResponse, Fixnum, Hash)>] OrigemComercialResponse data, response status code and response headers
     def consultar_origem_comercial_using_get_with_http_info(id, opts = {})
@@ -900,8 +879,8 @@ module Pier
     # @param id Id
     # @param [Hash] opts the optional parameters
     # @return [EstabelecimentoResponse]
-    def consultar_using_get16(id, opts = {})
-      data, _status_code, _headers = consultar_using_get16_with_http_info(id, opts)
+    def consultar_using_get17(id, opts = {})
+      data, _status_code, _headers = consultar_using_get17_with_http_info(id, opts)
       return data
     end
 
@@ -910,14 +889,14 @@ module Pier
     # @param id Id
     # @param [Hash] opts the optional parameters
     # @return [Array<(EstabelecimentoResponse, Fixnum, Hash)>] EstabelecimentoResponse data, response status code and response headers
-    def consultar_using_get16_with_http_info(id, opts = {})
+    def consultar_using_get17_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.consultar_using_get16 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.consultar_using_get17 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.consultar_using_get16" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.consultar_using_get17" if id.nil?
       
       
       
@@ -955,34 +934,34 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'EstabelecimentoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#consultar_using_get16\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#consultar_using_get17\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Consultar grupo econ\u00C3\u00B4mico
-    # Consulta um grupo econ\u00C3\u00B4mico atrav\u00C3\u00A9s do seu identificador.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico
+    # Consultar grupo econ\u00F4mico
+    # Consulta um grupo econ\u00F4mico atrav\u00E9s do seu identificador.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico
     # @param [Hash] opts the optional parameters
     # @return [GrupoEconomicoResponse]
-    def consultar_using_get18(id, opts = {})
-      data, _status_code, _headers = consultar_using_get18_with_http_info(id, opts)
+    def consultar_using_get19(id, opts = {})
+      data, _status_code, _headers = consultar_using_get19_with_http_info(id, opts)
       return data
     end
 
-    # Consultar grupo econ\u00C3\u00B4mico
-    # Consulta um grupo econ\u00C3\u00B4mico atrav\u00C3\u00A9s do seu identificador.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico
+    # Consultar grupo econ\u00F4mico
+    # Consulta um grupo econ\u00F4mico atrav\u00E9s do seu identificador.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico
     # @param [Hash] opts the optional parameters
     # @return [Array<(GrupoEconomicoResponse, Fixnum, Hash)>] GrupoEconomicoResponse data, response status code and response headers
-    def consultar_using_get18_with_http_info(id, opts = {})
+    def consultar_using_get19_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.consultar_using_get18 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.consultar_using_get19 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.consultar_using_get18" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.consultar_using_get19" if id.nil?
       
       
       
@@ -1020,34 +999,34 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'GrupoEconomicoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#consultar_using_get18\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#consultar_using_get19\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Apresenta os dados de uma determinada maquineta
-    # Este m\u00C3\u00A9todo permite consultar uma determinada maquineta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).
+    # Este m\u00E9todo permite consultar uma determinada maquineta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).
     # @param [Hash] opts the optional parameters
     # @return [MaquinetaResponse]
-    def consultar_using_get20(id, opts = {})
-      data, _status_code, _headers = consultar_using_get20_with_http_info(id, opts)
+    def consultar_using_get21(id, opts = {})
+      data, _status_code, _headers = consultar_using_get21_with_http_info(id, opts)
       return data
     end
 
     # Apresenta os dados de uma determinada maquineta
-    # Este m\u00C3\u00A9todo permite consultar uma determinada maquineta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).
+    # Este m\u00E9todo permite consultar uma determinada maquineta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(MaquinetaResponse, Fixnum, Hash)>] MaquinetaResponse data, response status code and response headers
-    def consultar_using_get20_with_http_info(id, opts = {})
+    def consultar_using_get21_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.consultar_using_get20 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.consultar_using_get21 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.consultar_using_get20" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.consultar_using_get21" if id.nil?
       
       
       
@@ -1085,34 +1064,34 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'MaquinetaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#consultar_using_get20\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#consultar_using_get21\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo permite consultar uma determinada regra opera\u00C3\u00A7\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).
+    # Apresenta os dados de uma determinada Regra Opera\u00E7\u00E3o
+    # Este m\u00E9todo permite consultar uma determinada regra opera\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).
     # @param [Hash] opts the optional parameters
     # @return [OperacaoCredorResponse]
-    def consultar_using_get21(id, opts = {})
-      data, _status_code, _headers = consultar_using_get21_with_http_info(id, opts)
+    def consultar_using_get22(id, opts = {})
+      data, _status_code, _headers = consultar_using_get22_with_http_info(id, opts)
       return data
     end
 
-    # Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo permite consultar uma determinada regra opera\u00C3\u00A7\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).
+    # Apresenta os dados de uma determinada Regra Opera\u00E7\u00E3o
+    # Este m\u00E9todo permite consultar uma determinada regra opera\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(OperacaoCredorResponse, Fixnum, Hash)>] OperacaoCredorResponse data, response status code and response headers
-    def consultar_using_get21_with_http_info(id, opts = {})
+    def consultar_using_get22_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.consultar_using_get21 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.consultar_using_get22 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.consultar_using_get21" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.consultar_using_get22" if id.nil?
       
       
       
@@ -1150,34 +1129,34 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'OperacaoCredorResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#consultar_using_get21\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#consultar_using_get22\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Apresenta os dados de um determinado telefone de um estabelecimento
-    # Este m\u00C3\u00A9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).
+    # Este m\u00E9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).
     # @param [Hash] opts the optional parameters
     # @return [TelefoneEstabelecimentoResponse]
-    def consultar_using_get29(id, opts = {})
-      data, _status_code, _headers = consultar_using_get29_with_http_info(id, opts)
+    def consultar_using_get30(id, opts = {})
+      data, _status_code, _headers = consultar_using_get30_with_http_info(id, opts)
       return data
     end
 
     # Apresenta os dados de um determinado telefone de um estabelecimento
-    # Este m\u00C3\u00A9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).
+    # Este m\u00E9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(TelefoneEstabelecimentoResponse, Fixnum, Hash)>] TelefoneEstabelecimentoResponse data, response status code and response headers
-    def consultar_using_get29_with_http_info(id, opts = {})
+    def consultar_using_get30_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.consultar_using_get29 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.consultar_using_get30 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.consultar_using_get29" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.consultar_using_get30" if id.nil?
       
       
       
@@ -1215,34 +1194,34 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TelefoneEstabelecimentoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#consultar_using_get29\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#consultar_using_get30\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Apresenta os dados de um determinado Terminal
-    # Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+    # Este m\u00E9todo permite consultar um determinado Terminal a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
     # @param [Hash] opts the optional parameters
     # @return [TerminalResponse]
-    def consultar_using_get31(id, opts = {})
-      data, _status_code, _headers = consultar_using_get31_with_http_info(id, opts)
+    def consultar_using_get32(id, opts = {})
+      data, _status_code, _headers = consultar_using_get32_with_http_info(id, opts)
       return data
     end
 
     # Apresenta os dados de um determinado Terminal
-    # Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+    # Este m\u00E9todo permite consultar um determinado Terminal a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(TerminalResponse, Fixnum, Hash)>] TerminalResponse data, response status code and response headers
-    def consultar_using_get31_with_http_info(id, opts = {})
+    def consultar_using_get32_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.consultar_using_get31 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.consultar_using_get32 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.consultar_using_get31" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.consultar_using_get32" if id.nil?
       
       
       
@@ -1280,34 +1259,34 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TerminalResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#consultar_using_get31\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#consultar_using_get32\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Apresenta os dados de um determinado V\u00C3\u00ADnculo
-    # Este m\u00C3\u00A9todo permite consultar um determinado V\u00C3\u00ADnculo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u008Dnculo (id).
+    # Apresenta os dados de um determinado V\u00EDnculo
+    # Este m\u00E9todo permite consultar um determinado V\u00EDnculo a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do V\u00CDnculo (id).
     # @param [Hash] opts the optional parameters
     # @return [VinculoEstabelecimentoAdquirenteResponse]
-    def consultar_using_get43(id, opts = {})
-      data, _status_code, _headers = consultar_using_get43_with_http_info(id, opts)
+    def consultar_using_get44(id, opts = {})
+      data, _status_code, _headers = consultar_using_get44_with_http_info(id, opts)
       return data
     end
 
-    # Apresenta os dados de um determinado V\u00C3\u00ADnculo
-    # Este m\u00C3\u00A9todo permite consultar um determinado V\u00C3\u00ADnculo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u008Dnculo (id).
+    # Apresenta os dados de um determinado V\u00EDnculo
+    # Este m\u00E9todo permite consultar um determinado V\u00EDnculo a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do V\u00CDnculo (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(VinculoEstabelecimentoAdquirenteResponse, Fixnum, Hash)>] VinculoEstabelecimentoAdquirenteResponse data, response status code and response headers
-    def consultar_using_get43_with_http_info(id, opts = {})
+    def consultar_using_get44_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.consultar_using_get43 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.consultar_using_get44 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.consultar_using_get43" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.consultar_using_get44" if id.nil?
       
       
       
@@ -1345,14 +1324,14 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'VinculoEstabelecimentoAdquirenteResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#consultar_using_get43\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#consultar_using_get44\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Desabilitar um V\u00C3\u00ADnculo
-    # Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).
+    # Desabilitar um V\u00EDnculo
+    # Este m\u00E9todo realiza a desativa\u00E7\u00E3o de um v\u00EDnculo.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).
     # @param [Hash] opts the optional parameters
     # @return [Object]
     def desabilitar_vinculo_using_post(id, opts = {})
@@ -1360,9 +1339,9 @@ module Pier
       return data
     end
 
-    # Desabilitar um V\u00C3\u00ADnculo
-    # Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).
+    # Desabilitar um V\u00EDnculo
+    # Este m\u00E9todo realiza a desativa\u00E7\u00E3o de um v\u00EDnculo.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
     def desabilitar_vinculo_using_post_with_http_info(id, opts = {})
@@ -1415,9 +1394,9 @@ module Pier
       return data, status_code, headers
     end
 
-    # Desabilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo permite desabilitar um v\u00C3\u00ADnculo.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
+    # Desabilitar um v\u00EDnculo opera\u00E7\u00E3o
+    # Este m\u00E9todo permite desabilitar um v\u00EDnculo.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).
     # @param vinculo_operacao_persist vinculoOperacaoPersist
     # @param [Hash] opts the optional parameters
     # @return [Object]
@@ -1426,9 +1405,9 @@ module Pier
       return data
     end
 
-    # Desabilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo permite desabilitar um v\u00C3\u00ADnculo.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
+    # Desabilitar um v\u00EDnculo opera\u00E7\u00E3o
+    # Este m\u00E9todo permite desabilitar um v\u00EDnculo.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).
     # @param vinculo_operacao_persist vinculoOperacaoPersist
     # @param [Hash] opts the optional parameters
     # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
@@ -1490,9 +1469,9 @@ module Pier
       return data, status_code, headers
     end
 
-    # Habilitar um V\u00C3\u00ADnculo
-    # Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).
+    # Habilitar um V\u00EDnculo
+    # Este m\u00E9todo realiza a ativa\u00E7\u00E3o de um v\u00EDnculo.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).
     # @param [Hash] opts the optional parameters
     # @return [Object]
     def habilitar_vinculo_using_post(id, opts = {})
@@ -1500,9 +1479,9 @@ module Pier
       return data
     end
 
-    # Habilitar um V\u00C3\u00ADnculo
-    # Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).
+    # Habilitar um V\u00EDnculo
+    # Este m\u00E9todo realiza a ativa\u00E7\u00E3o de um v\u00EDnculo.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
     def habilitar_vinculo_using_post_with_http_info(id, opts = {})
@@ -1555,9 +1534,9 @@ module Pier
       return data, status_code, headers
     end
 
-    # Habilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo permite habilitar um v\u00C3\u00ADnculo.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
+    # Habilitar um v\u00EDnculo opera\u00E7\u00E3o
+    # Este m\u00E9todo permite habilitar um v\u00EDnculo.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).
     # @param vinculo_operacao_persist vinculoOperacaoPersist
     # @param [Hash] opts the optional parameters
     # @return [Object]
@@ -1566,9 +1545,9 @@ module Pier
       return data
     end
 
-    # Habilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo permite habilitar um v\u00C3\u00ADnculo.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
+    # Habilitar um v\u00EDnculo opera\u00E7\u00E3o
+    # Este m\u00E9todo permite habilitar um v\u00EDnculo.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).
     # @param vinculo_operacao_persist vinculoOperacaoPersist
     # @param [Hash] opts the optional parameters
     # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
@@ -1630,28 +1609,28 @@ module Pier
       return data, status_code, headers
     end
 
-    # Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista
-    # Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00A3o
+    # Apresenta dados de opera\u00E7\u00F5es em uma lista
+    # Este recurso permite listar as opera\u00E7\u00E3o
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_operacao C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o
-    # @option opts [String] :codigo_processamento C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_operacao C\u00F3digo que identifica a opera\u00E7\u00E3o
+    # @option opts [String] :codigo_processamento C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador
     # @return [PageOperacaoResponse]
     def lista_operacao_using_get(opts = {})
       data, _status_code, _headers = lista_operacao_using_get_with_http_info(opts)
       return data
     end
 
-    # Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista
-    # Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00A3o
+    # Apresenta dados de opera\u00E7\u00F5es em uma lista
+    # Este recurso permite listar as opera\u00E7\u00E3o
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_operacao C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o
-    # @option opts [String] :codigo_processamento C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_operacao C\u00F3digo que identifica a opera\u00E7\u00E3o
+    # @option opts [String] :codigo_processamento C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador
     # @return [Array<(PageOperacaoResponse, Fixnum, Hash)>] PageOperacaoResponse data, response status code and response headers
     def lista_operacao_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1731,11 +1710,11 @@ module Pier
     end
 
     # Lista os MCCs
-    # Este m\u00C3\u00A9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
+    # Este m\u00E9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [PageMCCResponse]
     def listar_mcc_using_get(opts = {})
       data, _status_code, _headers = listar_mcc_using_get_with_http_info(opts)
@@ -1743,11 +1722,11 @@ module Pier
     end
 
     # Lista os MCCs
-    # Este m\u00C3\u00A9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
+    # Este m\u00E9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(PageMCCResponse, Fixnum, Hash)>] PageMCCResponse data, response status code and response headers
     def listar_mcc_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1815,32 +1794,32 @@ module Pier
     # Listar Origens Comerciais
     # Lista origens comerciais cadastradas.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @option opts [Integer] :id Id da origem comercial
     # @option opts [String] :nome Nome da origem comercial
     # @option opts [Integer] :status Indica o status da origem comercial
     # @option opts [Integer] :id_estabelecimento Identificador do estabelecimento
     # @option opts [Integer] :id_produto Identificador do produto
-    # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial
+    # @option opts [String] :descricao Descri\u00E7\u00E3o da origem comercial
     # @option opts [Integer] :id_tipo_origem_comercial Identificador do tipo de origem comercial
     # @option opts [Integer] :id_grupo_origem_comercial Identificador do grupo de origem comercial
-    # @option opts [BOOLEAN] :flag_pre_aprovado Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o
-    # @option opts [BOOLEAN] :flag_aprovacao_imediata Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata
-    # @option opts [String] :nome_fantasia_plastico Nome fantasia impresso no pl\u00C3\u00A1stico
-    # @option opts [BOOLEAN] :flag_cartao_provisorio Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio
-    # @option opts [BOOLEAN] :flag_cartao_definitivo Indica se permite cart\u00C3\u00A3o definitivo
-    # @option opts [String] :usuario Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o
-    # @option opts [String] :senha Senha para autentica\u00C3\u00A7\u00C3\u00A3o
-    # @option opts [BOOLEAN] :flag_origem_externa Indica se \u00C3\u00A9 origem externa
-    # @option opts [BOOLEAN] :flag_modificado Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o
+    # @option opts [BOOLEAN] :flag_pre_aprovado Indica se permite pr\u00E9 aprova\u00E7\u00E3o
+    # @option opts [BOOLEAN] :flag_aprovacao_imediata Indica se permite aprova\u00E7\u00E3o imediata
+    # @option opts [String] :nome_fantasia_plastico Nome fantasia impresso no pl\u00E1stico
+    # @option opts [BOOLEAN] :flag_cartao_provisorio Indica se permite cart\u00E3o provis\u00F3rio
+    # @option opts [BOOLEAN] :flag_cartao_definitivo Indica se permite cart\u00E3o definitivo
+    # @option opts [String] :usuario Usu\u00E1rio para autentica\u00E7\u00E3o
+    # @option opts [String] :senha Senha para autentica\u00E7\u00E3o
+    # @option opts [BOOLEAN] :flag_origem_externa Indica se \u00E9 origem externa
+    # @option opts [BOOLEAN] :flag_modificado Indica se h\u00E1 modifica\u00E7\u00E3o
     # @option opts [BOOLEAN] :flag_envia_fatura_usuario Indica se envia fatura
-    # @option opts [BOOLEAN] :flag_credito_faturamento Indica se permite cr\u00C3\u00A9dito de faturamento
-    # @option opts [BOOLEAN] :flag_concede_limite_provisorio Indica se concede limite provis\u00C3\u00B3rio
+    # @option opts [BOOLEAN] :flag_credito_faturamento Indica se permite cr\u00E9dito de faturamento
+    # @option opts [BOOLEAN] :flag_concede_limite_provisorio Indica se concede limite provis\u00F3rio
     # @option opts [BOOLEAN] :flag_digitalizar_doc Indica se digitaliza documento
     # @option opts [BOOLEAN] :flag_embossing_loja Indica se realiza embossing em loja
-    # @option opts [BOOLEAN] :flag_consulta_previa Indica se realiza consulta pr\u00C3\u00A9via
+    # @option opts [BOOLEAN] :flag_consulta_previa Indica se realiza consulta pr\u00E9via
     # @option opts [String] :tipo_pessoa Tipo de pessoa
     # @return [PageOrigemComercialResponse]
     def listar_origens_comerciais_using_get(opts = {})
@@ -1851,32 +1830,32 @@ module Pier
     # Listar Origens Comerciais
     # Lista origens comerciais cadastradas.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @option opts [Integer] :id Id da origem comercial
     # @option opts [String] :nome Nome da origem comercial
     # @option opts [Integer] :status Indica o status da origem comercial
     # @option opts [Integer] :id_estabelecimento Identificador do estabelecimento
     # @option opts [Integer] :id_produto Identificador do produto
-    # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial
+    # @option opts [String] :descricao Descri\u00E7\u00E3o da origem comercial
     # @option opts [Integer] :id_tipo_origem_comercial Identificador do tipo de origem comercial
     # @option opts [Integer] :id_grupo_origem_comercial Identificador do grupo de origem comercial
-    # @option opts [BOOLEAN] :flag_pre_aprovado Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o
-    # @option opts [BOOLEAN] :flag_aprovacao_imediata Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata
-    # @option opts [String] :nome_fantasia_plastico Nome fantasia impresso no pl\u00C3\u00A1stico
-    # @option opts [BOOLEAN] :flag_cartao_provisorio Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio
-    # @option opts [BOOLEAN] :flag_cartao_definitivo Indica se permite cart\u00C3\u00A3o definitivo
-    # @option opts [String] :usuario Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o
-    # @option opts [String] :senha Senha para autentica\u00C3\u00A7\u00C3\u00A3o
-    # @option opts [BOOLEAN] :flag_origem_externa Indica se \u00C3\u00A9 origem externa
-    # @option opts [BOOLEAN] :flag_modificado Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o
+    # @option opts [BOOLEAN] :flag_pre_aprovado Indica se permite pr\u00E9 aprova\u00E7\u00E3o
+    # @option opts [BOOLEAN] :flag_aprovacao_imediata Indica se permite aprova\u00E7\u00E3o imediata
+    # @option opts [String] :nome_fantasia_plastico Nome fantasia impresso no pl\u00E1stico
+    # @option opts [BOOLEAN] :flag_cartao_provisorio Indica se permite cart\u00E3o provis\u00F3rio
+    # @option opts [BOOLEAN] :flag_cartao_definitivo Indica se permite cart\u00E3o definitivo
+    # @option opts [String] :usuario Usu\u00E1rio para autentica\u00E7\u00E3o
+    # @option opts [String] :senha Senha para autentica\u00E7\u00E3o
+    # @option opts [BOOLEAN] :flag_origem_externa Indica se \u00E9 origem externa
+    # @option opts [BOOLEAN] :flag_modificado Indica se h\u00E1 modifica\u00E7\u00E3o
     # @option opts [BOOLEAN] :flag_envia_fatura_usuario Indica se envia fatura
-    # @option opts [BOOLEAN] :flag_credito_faturamento Indica se permite cr\u00C3\u00A9dito de faturamento
-    # @option opts [BOOLEAN] :flag_concede_limite_provisorio Indica se concede limite provis\u00C3\u00B3rio
+    # @option opts [BOOLEAN] :flag_credito_faturamento Indica se permite cr\u00E9dito de faturamento
+    # @option opts [BOOLEAN] :flag_concede_limite_provisorio Indica se concede limite provis\u00F3rio
     # @option opts [BOOLEAN] :flag_digitalizar_doc Indica se digitaliza documento
     # @option opts [BOOLEAN] :flag_embossing_loja Indica se realiza embossing em loja
-    # @option opts [BOOLEAN] :flag_consulta_previa Indica se realiza consulta pr\u00C3\u00A9via
+    # @option opts [BOOLEAN] :flag_consulta_previa Indica se realiza consulta pr\u00E9via
     # @option opts [String] :tipo_pessoa Tipo de pessoa
     # @return [Array<(PageOrigemComercialResponse, Fixnum, Hash)>] PageOrigemComercialResponse data, response status code and response headers
     def listar_origens_comerciais_using_get_with_http_info(opts = {})
@@ -2115,11 +2094,11 @@ module Pier
     end
 
     # Lista os Tipos de adquirentes
-    # Este m\u00C3\u00A9todo permite que sejam listados os tipos de adquirentes.
+    # Este m\u00E9todo permite que sejam listados os tipos de adquirentes.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [PageEntidadeResponse]
     def listar_tipos_adquirentes_using_get(opts = {})
       data, _status_code, _headers = listar_tipos_adquirentes_using_get_with_http_info(opts)
@@ -2127,11 +2106,11 @@ module Pier
     end
 
     # Lista os Tipos de adquirentes
-    # Este m\u00C3\u00A9todo permite que sejam listados os tipos de adquirentes.
+    # Este m\u00E9todo permite que sejam listados os tipos de adquirentes.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(PageEntidadeResponse, Fixnum, Hash)>] PageEntidadeResponse data, response status code and response headers
     def listar_tipos_adquirentes_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -2196,12 +2175,103 @@ module Pier
       return data, status_code, headers
     end
 
-    # Lista os Tipos de  Maquinetas
-    # Este m\u00C3\u00A9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
+    # Lista os tipos de estabelecimentos
+    # Lista os tipos de estabelecimentos
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [String] :descricao Descri\u00E7\u00E3o do tipo de estabelecimento.
+    # @return [PageTipoEstabelecimentoResponse]
+    def listar_tipos_estabelecimentos_using_get(opts = {})
+      data, _status_code, _headers = listar_tipos_estabelecimentos_using_get_with_http_info(opts)
+      return data
+    end
+
+    # Lista os tipos de estabelecimentos
+    # Lista os tipos de estabelecimentos
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [String] :descricao Descri\u00E7\u00E3o do tipo de estabelecimento.
+    # @return [Array<(PageTipoEstabelecimentoResponse, Fixnum, Hash)>] PageTipoEstabelecimentoResponse data, response status code and response headers
+    def listar_tipos_estabelecimentos_using_get_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_tipos_estabelecimentos_using_get ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/tipos-estabelecimentos".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'descricao'] = opts[:'descricao'] if opts[:'descricao']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageTipoEstabelecimentoResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_tipos_estabelecimentos_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Lista os Tipos de  Maquinetas
+    # Este m\u00E9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [PageCampoCodificadoDescricaoResponse]
     def listar_tipos_maquinetas_using_get(opts = {})
       data, _status_code, _headers = listar_tipos_maquinetas_using_get_with_http_info(opts)
@@ -2209,11 +2279,11 @@ module Pier
     end
 
     # Lista os Tipos de  Maquinetas
-    # Este m\u00C3\u00A9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
+    # Este m\u00E9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(PageCampoCodificadoDescricaoResponse, Fixnum, Hash)>] PageCampoCodificadoDescricaoResponse data, response status code and response headers
     def listar_tipos_maquinetas_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -2278,12 +2348,103 @@ module Pier
       return data, status_code, headers
     end
 
-    # Lista os Tipos Terminais
-    # Este m\u00C3\u00A9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
+    # Listar tipos de origens comerciais
+    # Lista os tipos de origens comerciais
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [String] :nome Nome do tipo de origem comercial
+    # @return [PageTipoOrigemComercialResponse]
+    def listar_tipos_origens_comerciais_using_get(opts = {})
+      data, _status_code, _headers = listar_tipos_origens_comerciais_using_get_with_http_info(opts)
+      return data
+    end
+
+    # Listar tipos de origens comerciais
+    # Lista os tipos de origens comerciais
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [String] :nome Nome do tipo de origem comercial
+    # @return [Array<(PageTipoOrigemComercialResponse, Fixnum, Hash)>] PageTipoOrigemComercialResponse data, response status code and response headers
+    def listar_tipos_origens_comerciais_using_get_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_tipos_origens_comerciais_using_get ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/tipos-origens-comerciais".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageTipoOrigemComercialResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_tipos_origens_comerciais_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Lista os Tipos Terminais
+    # Este m\u00E9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [PageTipoTerminalResponse]
     def listar_tipos_terminais_using_get1(opts = {})
       data, _status_code, _headers = listar_tipos_terminais_using_get1_with_http_info(opts)
@@ -2291,11 +2452,11 @@ module Pier
     end
 
     # Lista os Tipos Terminais
-    # Este m\u00C3\u00A9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
+    # Este m\u00E9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(PageTipoTerminalResponse, Fixnum, Hash)>] PageTipoTerminalResponse data, response status code and response headers
     def listar_tipos_terminais_using_get1_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -2361,97 +2522,97 @@ module Pier
     end
 
     # Lista Estabelecimentos
-    # Lista todas os Estabelecimentos
+    # Lista todos os Estabelecimentos
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
-    # @option opts [Integer] :id_credor Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor.
-    # @option opts [String] :numero_receita_federal Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id).
+    # @option opts [Integer] :id_grupo_economico Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico.
+    # @option opts [String] :numero_receita_federal Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal.
     # @option opts [String] :nome Nome do Estabelecimento.
-    # @option opts [String] :descricao Raz\u00C3\u00A3o Social do Estabelecimento.
-    # @option opts [String] :nome_fantasia T\u00C3\u00ADtulo Comercial do Estabelecimento.
-    # @option opts [String] :cep C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+    # @option opts [String] :descricao Raz\u00E3o Social do Estabelecimento.
+    # @option opts [String] :nome_fantasia T\u00EDtulo Comercial do Estabelecimento.
+    # @option opts [String] :cep C\u00F3digo de Endere\u00E7amento Postal (CEP).
     # @option opts [String] :nome_logradouro Nome do Logradouro.
-    # @option opts [Integer] :numero_endereco N\u00C3\u00BAmero do endere\u00C3\u00A7o.
-    # @option opts [String] :complemento Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
-    # @option opts [String] :bairro Nome do bairro do endere\u00C3\u00A7o.
-    # @option opts [String] :cidade Nome da cidade do endere\u00C3\u00A7o.
-    # @option opts [String] :uf Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
-    # @option opts [String] :pais Nome do pa\u00C3\u00ADs.
+    # @option opts [Integer] :numero_endereco N\u00FAmero do endere\u00E7o.
+    # @option opts [String] :complemento Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
+    # @option opts [String] :bairro Nome do bairro do endere\u00E7o.
+    # @option opts [String] :cidade Nome da cidade do endere\u00E7o.
+    # @option opts [String] :uf Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
+    # @option opts [String] :pais Nome do pa\u00EDs.
     # @option opts [String] :data_cadastramento Data de Cadastro do Estabelecimento, no formato yyyy-MM-dd.
     # @option opts [String] :contato Nome da pessoa para contato com o Estabelecimento.
     # @option opts [String] :email E-mail da pessoa para contato com o Estabelecimento.
-    # @option opts [Integer] :flag_arquivo_secr_fazenda Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.
-    # @option opts [Integer] :flag_cartao_digitado Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.
-    # @option opts [Integer] :inativo Indica se o estabelecimento est\u00C3\u00A1 inativo.
-    # @option opts [Integer] :id_pais Identificador de Pa\u00C3\u00ADs.
-    # @option opts [Integer] :mcc C\u00C3\u00B3digo de Categoria de Mercado
-    # @option opts [Integer] :id_tipo_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.
-    # @option opts [Integer] :correspondencia Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.
-    # @option opts [Integer] :id_moeda C\u00C3\u00B3digo identificador da moeda.
+    # @option opts [Integer] :flag_arquivo_secr_fazenda Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual.
+    # @option opts [Integer] :flag_cartao_digitado Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o.
+    # @option opts [Integer] :inativo Indica se o estabelecimento est\u00E1 inativo.
+    # @option opts [Integer] :id_pais Identificador de Pa\u00EDs.
+    # @option opts [Integer] :mcc C\u00F3digo de Categoria de Mercado
+    # @option opts [Integer] :id_tipo_estabelecimento C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento.
+    # @option opts [Integer] :correspondencia Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA.
+    # @option opts [Integer] :id_moeda C\u00F3digo identificador da moeda.
     # @option opts [String] :tipo_pagamento Tipo do regime de pagamento do estabelecimento.
-    # @option opts [String] :numero_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.
-    # @option opts [String] :cep2 C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+    # @option opts [String] :numero_estabelecimento N\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Conductor.
+    # @option opts [String] :cep2 C\u00F3digo de Endere\u00E7amento Postal (CEP).
     # @option opts [String] :nome_logradouro2 Nome do Logradouro.
-    # @option opts [Integer] :numero_endereco2 N\u00C3\u00BAmero do endere\u00C3\u00A7o.
-    # @option opts [String] :complemento2 Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
-    # @option opts [String] :bairro2 Nome do bairro do endere\u00C3\u00A7o.
-    # @option opts [String] :cidade2 Nome da cidade do endere\u00C3\u00A7o.
-    # @option opts [String] :uf2 Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
-    # @option opts [Integer] :flag_matriz Indica se \u00C3\u00A9 matriz ou filial.
+    # @option opts [Integer] :numero_endereco2 N\u00FAmero do endere\u00E7o.
+    # @option opts [String] :complemento2 Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
+    # @option opts [String] :bairro2 Nome do bairro do endere\u00E7o.
+    # @option opts [String] :cidade2 Nome da cidade do endere\u00E7o.
+    # @option opts [String] :uf2 Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
+    # @option opts [Integer] :flag_matriz Indica se \u00E9 matriz ou filial.
     # @return [PageEstabelecimentoResponse]
-    def listar_using_get21(opts = {})
-      data, _status_code, _headers = listar_using_get21_with_http_info(opts)
+    def listar_using_get22(opts = {})
+      data, _status_code, _headers = listar_using_get22_with_http_info(opts)
       return data
     end
 
     # Lista Estabelecimentos
-    # Lista todas os Estabelecimentos
+    # Lista todos os Estabelecimentos
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
-    # @option opts [Integer] :id_credor Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor.
-    # @option opts [String] :numero_receita_federal Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id).
+    # @option opts [Integer] :id_grupo_economico Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico.
+    # @option opts [String] :numero_receita_federal Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal.
     # @option opts [String] :nome Nome do Estabelecimento.
-    # @option opts [String] :descricao Raz\u00C3\u00A3o Social do Estabelecimento.
-    # @option opts [String] :nome_fantasia T\u00C3\u00ADtulo Comercial do Estabelecimento.
-    # @option opts [String] :cep C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+    # @option opts [String] :descricao Raz\u00E3o Social do Estabelecimento.
+    # @option opts [String] :nome_fantasia T\u00EDtulo Comercial do Estabelecimento.
+    # @option opts [String] :cep C\u00F3digo de Endere\u00E7amento Postal (CEP).
     # @option opts [String] :nome_logradouro Nome do Logradouro.
-    # @option opts [Integer] :numero_endereco N\u00C3\u00BAmero do endere\u00C3\u00A7o.
-    # @option opts [String] :complemento Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
-    # @option opts [String] :bairro Nome do bairro do endere\u00C3\u00A7o.
-    # @option opts [String] :cidade Nome da cidade do endere\u00C3\u00A7o.
-    # @option opts [String] :uf Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
-    # @option opts [String] :pais Nome do pa\u00C3\u00ADs.
+    # @option opts [Integer] :numero_endereco N\u00FAmero do endere\u00E7o.
+    # @option opts [String] :complemento Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
+    # @option opts [String] :bairro Nome do bairro do endere\u00E7o.
+    # @option opts [String] :cidade Nome da cidade do endere\u00E7o.
+    # @option opts [String] :uf Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
+    # @option opts [String] :pais Nome do pa\u00EDs.
     # @option opts [String] :data_cadastramento Data de Cadastro do Estabelecimento, no formato yyyy-MM-dd.
     # @option opts [String] :contato Nome da pessoa para contato com o Estabelecimento.
     # @option opts [String] :email E-mail da pessoa para contato com o Estabelecimento.
-    # @option opts [Integer] :flag_arquivo_secr_fazenda Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.
-    # @option opts [Integer] :flag_cartao_digitado Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.
-    # @option opts [Integer] :inativo Indica se o estabelecimento est\u00C3\u00A1 inativo.
-    # @option opts [Integer] :id_pais Identificador de Pa\u00C3\u00ADs.
-    # @option opts [Integer] :mcc C\u00C3\u00B3digo de Categoria de Mercado
-    # @option opts [Integer] :id_tipo_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.
-    # @option opts [Integer] :correspondencia Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.
-    # @option opts [Integer] :id_moeda C\u00C3\u00B3digo identificador da moeda.
+    # @option opts [Integer] :flag_arquivo_secr_fazenda Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual.
+    # @option opts [Integer] :flag_cartao_digitado Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o.
+    # @option opts [Integer] :inativo Indica se o estabelecimento est\u00E1 inativo.
+    # @option opts [Integer] :id_pais Identificador de Pa\u00EDs.
+    # @option opts [Integer] :mcc C\u00F3digo de Categoria de Mercado
+    # @option opts [Integer] :id_tipo_estabelecimento C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento.
+    # @option opts [Integer] :correspondencia Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA.
+    # @option opts [Integer] :id_moeda C\u00F3digo identificador da moeda.
     # @option opts [String] :tipo_pagamento Tipo do regime de pagamento do estabelecimento.
-    # @option opts [String] :numero_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.
-    # @option opts [String] :cep2 C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+    # @option opts [String] :numero_estabelecimento N\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Conductor.
+    # @option opts [String] :cep2 C\u00F3digo de Endere\u00E7amento Postal (CEP).
     # @option opts [String] :nome_logradouro2 Nome do Logradouro.
-    # @option opts [Integer] :numero_endereco2 N\u00C3\u00BAmero do endere\u00C3\u00A7o.
-    # @option opts [String] :complemento2 Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
-    # @option opts [String] :bairro2 Nome do bairro do endere\u00C3\u00A7o.
-    # @option opts [String] :cidade2 Nome da cidade do endere\u00C3\u00A7o.
-    # @option opts [String] :uf2 Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
-    # @option opts [Integer] :flag_matriz Indica se \u00C3\u00A9 matriz ou filial.
+    # @option opts [Integer] :numero_endereco2 N\u00FAmero do endere\u00E7o.
+    # @option opts [String] :complemento2 Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
+    # @option opts [String] :bairro2 Nome do bairro do endere\u00E7o.
+    # @option opts [String] :cidade2 Nome da cidade do endere\u00E7o.
+    # @option opts [String] :uf2 Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
+    # @option opts [Integer] :flag_matriz Indica se \u00E9 matriz ou filial.
     # @return [Array<(PageEstabelecimentoResponse, Fixnum, Hash)>] PageEstabelecimentoResponse data, response status code and response headers
-    def listar_using_get21_with_http_info(opts = {})
+    def listar_using_get22_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get21 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get22 ..."
       end
       
       
@@ -2695,7 +2856,7 @@ module Pier
       query_params[:'page'] = opts[:'page'] if opts[:'page']
       query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
       query_params[:'id'] = opts[:'id'] if opts[:'id']
-      query_params[:'idCredor'] = opts[:'id_credor'] if opts[:'id_credor']
+      query_params[:'idGrupoEconomico'] = opts[:'id_grupo_economico'] if opts[:'id_grupo_economico']
       query_params[:'numeroReceitaFederal'] = opts[:'numero_receita_federal'] if opts[:'numero_receita_federal']
       query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
       query_params[:'descricao'] = opts[:'descricao'] if opts[:'descricao']
@@ -2756,27 +2917,27 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageEstabelecimentoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get21\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get22\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Listar grupos econ\u00C3\u00B4micos
-    # Lista grupos econ\u00C3\u00B4micos cadastrados. 
+    # Listar grupos econ\u00F4micos
+    # Lista grupos econ\u00F4micos cadastrados. 
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [String] :razao_social Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [String] :razao_social Raz\u00E3o social da pessoa jur\u00EDdica
     # @option opts [String] :nome_credor Nome do credor
-    # @option opts [String] :numero_receita_federal N\u00C3\u00BAmero da Receita Federal
-    # @option opts [String] :inscricao_estadual N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual
+    # @option opts [String] :numero_receita_federal N\u00FAmero da Receita Federal
+    # @option opts [String] :inscricao_estadual N\u00FAmero da inscri\u00E7\u00E3o estadual
     # @option opts [String] :contato Nome da pessoa para entrar em contato
-    # @option opts [Integer] :banco C\u00C3\u00B3digo do banco
-    # @option opts [Integer] :agencia Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
-    # @option opts [String] :digito_agencia D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia
-    # @option opts [String] :conta_corrente C\u00C3\u00B3digo da Conta Corrente
-    # @option opts [String] :digito_conta_corrente D\u00C3\u00ADgito Verificador da Conta Corrente
+    # @option opts [Integer] :banco C\u00F3digo do banco
+    # @option opts [Integer] :agencia Raz\u00E3o social da pessoa jur\u00EDdica
+    # @option opts [String] :digito_agencia D\u00EDgito Verificador da ag\u00EAncia
+    # @option opts [String] :conta_corrente C\u00F3digo da Conta Corrente
+    # @option opts [String] :digito_conta_corrente D\u00EDgito Verificador da Conta Corrente
     # @option opts [String] :periodicidade Periodicidade do pagamento
     # @option opts [String] :pagamento_semanal Dia para pagamento semanal
     # @option opts [Integer] :pagamento_mensal Dia da data para o pagamento mensal
@@ -2791,29 +2952,29 @@ module Pier
     # @option opts [Float] :taxa_adm Taxa Administrativa
     # @option opts [Float] :taxa_banco Taxa do Banco
     # @option opts [Float] :limite_rav Valor limite do RAV
-    # @option opts [Integer] :id_credor_rav C\u00C3\u00B3digo identificador do credor RAV
+    # @option opts [Integer] :id_credor_rav C\u00F3digo identificador do credor RAV
     # @return [PageGrupoEconomicoResponse]
-    def listar_using_get23(opts = {})
-      data, _status_code, _headers = listar_using_get23_with_http_info(opts)
+    def listar_using_get24(opts = {})
+      data, _status_code, _headers = listar_using_get24_with_http_info(opts)
       return data
     end
 
-    # Listar grupos econ\u00C3\u00B4micos
-    # Lista grupos econ\u00C3\u00B4micos cadastrados. 
+    # Listar grupos econ\u00F4micos
+    # Lista grupos econ\u00F4micos cadastrados. 
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [String] :razao_social Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [String] :razao_social Raz\u00E3o social da pessoa jur\u00EDdica
     # @option opts [String] :nome_credor Nome do credor
-    # @option opts [String] :numero_receita_federal N\u00C3\u00BAmero da Receita Federal
-    # @option opts [String] :inscricao_estadual N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual
+    # @option opts [String] :numero_receita_federal N\u00FAmero da Receita Federal
+    # @option opts [String] :inscricao_estadual N\u00FAmero da inscri\u00E7\u00E3o estadual
     # @option opts [String] :contato Nome da pessoa para entrar em contato
-    # @option opts [Integer] :banco C\u00C3\u00B3digo do banco
-    # @option opts [Integer] :agencia Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
-    # @option opts [String] :digito_agencia D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia
-    # @option opts [String] :conta_corrente C\u00C3\u00B3digo da Conta Corrente
-    # @option opts [String] :digito_conta_corrente D\u00C3\u00ADgito Verificador da Conta Corrente
+    # @option opts [Integer] :banco C\u00F3digo do banco
+    # @option opts [Integer] :agencia Raz\u00E3o social da pessoa jur\u00EDdica
+    # @option opts [String] :digito_agencia D\u00EDgito Verificador da ag\u00EAncia
+    # @option opts [String] :conta_corrente C\u00F3digo da Conta Corrente
+    # @option opts [String] :digito_conta_corrente D\u00EDgito Verificador da Conta Corrente
     # @option opts [String] :periodicidade Periodicidade do pagamento
     # @option opts [String] :pagamento_semanal Dia para pagamento semanal
     # @option opts [Integer] :pagamento_mensal Dia da data para o pagamento mensal
@@ -2828,11 +2989,11 @@ module Pier
     # @option opts [Float] :taxa_adm Taxa Administrativa
     # @option opts [Float] :taxa_banco Taxa do Banco
     # @option opts [Float] :limite_rav Valor limite do RAV
-    # @option opts [Integer] :id_credor_rav C\u00C3\u00B3digo identificador do credor RAV
+    # @option opts [Integer] :id_credor_rav C\u00F3digo identificador do credor RAV
     # @return [Array<(PageGrupoEconomicoResponse, Fixnum, Hash)>] PageGrupoEconomicoResponse data, response status code and response headers
-    def listar_using_get23_with_http_info(opts = {})
+    def listar_using_get24_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get23 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get24 ..."
       end
       
       
@@ -3075,35 +3236,126 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageGrupoEconomicoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get23\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get24\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Lista as Maquinetas
-    # Este m\u00C3\u00A9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
+    # Listar grupos de origens comerciais
+    # Lista os grupos de origens comerciais
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
-    # @return [PageMaquinetaResponse]
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [String] :nome Nome do grupo de origem comercial
+    # @return [PageGrupoOrigemComercialResponse]
     def listar_using_get25(opts = {})
       data, _status_code, _headers = listar_using_get25_with_http_info(opts)
       return data
     end
 
-    # Lista as Maquinetas
-    # Este m\u00C3\u00A9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
+    # Listar grupos de origens comerciais
+    # Lista os grupos de origens comerciais
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
-    # @return [Array<(PageMaquinetaResponse, Fixnum, Hash)>] PageMaquinetaResponse data, response status code and response headers
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [String] :nome Nome do grupo de origem comercial
+    # @return [Array<(PageGrupoOrigemComercialResponse, Fixnum, Hash)>] PageGrupoOrigemComercialResponse data, response status code and response headers
     def listar_using_get25_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get25 ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/grupos-origens-comerciais".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageGrupoOrigemComercialResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get25\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Lista as Maquinetas
+    # Este m\u00E9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id).
+    # @return [PageMaquinetaResponse]
+    def listar_using_get27(opts = {})
+      data, _status_code, _headers = listar_using_get27_with_http_info(opts)
+      return data
+    end
+
+    # Lista as Maquinetas
+    # Este m\u00E9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id).
+    # @return [Array<(PageMaquinetaResponse, Fixnum, Hash)>] PageMaquinetaResponse data, response status code and response headers
+    def listar_using_get27_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get27 ..."
       end
       
       
@@ -3166,7 +3418,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageMaquinetaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get25\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get27\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3174,31 +3426,31 @@ module Pier
     # Lista os tipos de moedas do emissor 
     # Este recurso permite que sejam listados os tipos de moedas existentes na base de dados do emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [String] :codigo_moeda C\u00C3\u00B3digo identificador do tipo de moeda.
-    # @option opts [String] :simbolo S\u00C3\u00ADmbolo da Moeda.
-    # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [String] :codigo_moeda C\u00F3digo identificador do tipo de moeda.
+    # @option opts [String] :simbolo S\u00EDmbolo da Moeda.
+    # @option opts [String] :descricao Descri\u00E7\u00E3o do tipo da moeda.
     # @return [PageMoedaResponse]
-    def listar_using_get26(opts = {})
-      data, _status_code, _headers = listar_using_get26_with_http_info(opts)
+    def listar_using_get28(opts = {})
+      data, _status_code, _headers = listar_using_get28_with_http_info(opts)
       return data
     end
 
     # Lista os tipos de moedas do emissor 
     # Este recurso permite que sejam listados os tipos de moedas existentes na base de dados do emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [String] :codigo_moeda C\u00C3\u00B3digo identificador do tipo de moeda.
-    # @option opts [String] :simbolo S\u00C3\u00ADmbolo da Moeda.
-    # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [String] :codigo_moeda C\u00F3digo identificador do tipo de moeda.
+    # @option opts [String] :simbolo S\u00EDmbolo da Moeda.
+    # @option opts [String] :descricao Descri\u00E7\u00E3o do tipo da moeda.
     # @return [Array<(PageMoedaResponse, Fixnum, Hash)>] PageMoedaResponse data, response status code and response headers
-    def listar_using_get26_with_http_info(opts = {})
+    def listar_using_get28_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get26 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get28 ..."
       end
       
       
@@ -3275,39 +3527,39 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageMoedaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get26\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get28\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
-    # Este m\u00C3\u00A9todo permite que sejam listados as Regras opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
+    # Lista as Regras Opera\u00E7\u00F5es
+    # Este m\u00E9todo permite que sejam listados as Regras opera\u00E7\u00F5es existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_operacao Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_operacao Apresenta o id da Opera\u00E7\u00E3o.
     # @option opts [Integer] :id_credor Apresenta o id do Credor.
     # @option opts [Integer] :id_produto Apresenta o id do produto que vai ser alterado.
     # @return [PageOperacaoCredorResponse]
-    def listar_using_get27(opts = {})
-      data, _status_code, _headers = listar_using_get27_with_http_info(opts)
+    def listar_using_get29(opts = {})
+      data, _status_code, _headers = listar_using_get29_with_http_info(opts)
       return data
     end
 
-    # Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
-    # Este m\u00C3\u00A9todo permite que sejam listados as Regras opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
+    # Lista as Regras Opera\u00E7\u00F5es
+    # Este m\u00E9todo permite que sejam listados as Regras opera\u00E7\u00F5es existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_operacao Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_operacao Apresenta o id da Opera\u00E7\u00E3o.
     # @option opts [Integer] :id_credor Apresenta o id do Credor.
     # @option opts [Integer] :id_produto Apresenta o id do produto que vai ser alterado.
     # @return [Array<(PageOperacaoCredorResponse, Fixnum, Hash)>] PageOperacaoCredorResponse data, response status code and response headers
-    def listar_using_get27_with_http_info(opts = {})
+    def listar_using_get29_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get27 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get29 ..."
       end
       
       
@@ -3384,35 +3636,35 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageOperacaoCredorResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get27\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get29\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Lista os Telefones Estabelecimentos
-    # Este m\u00C3\u00A9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
+    # Este m\u00E9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id).
     # @return [PageTelefoneEstabelecimentoResponse]
-    def listar_using_get38(opts = {})
-      data, _status_code, _headers = listar_using_get38_with_http_info(opts)
+    def listar_using_get40(opts = {})
+      data, _status_code, _headers = listar_using_get40_with_http_info(opts)
       return data
     end
 
     # Lista os Telefones Estabelecimentos
-    # Este m\u00C3\u00A9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
+    # Este m\u00E9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id).
     # @return [Array<(PageTelefoneEstabelecimentoResponse, Fixnum, Hash)>] PageTelefoneEstabelecimentoResponse data, response status code and response headers
-    def listar_using_get38_with_http_info(opts = {})
+    def listar_using_get40_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get38 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get40 ..."
       end
       
       
@@ -3475,41 +3727,41 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTelefoneEstabelecimentoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get38\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get40\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Lista os Terminais cadastrados no Emissor
-    # Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
+    # Este m\u00E9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
-    # @option opts [String] :terminal C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
-    # @option opts [Integer] :numero_estabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
-    # @option opts [Integer] :id_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
+    # @option opts [String] :terminal C\u00F3digo de Identifica\u00E7\u00E3o do terminal.
+    # @option opts [Integer] :numero_estabelecimento N\u00FAmero do estabelecimento a qual o terminal pertence.
+    # @option opts [Integer] :id_estabelecimento N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence.
     # @return [PageTerminalResponse]
-    def listar_using_get40(opts = {})
-      data, _status_code, _headers = listar_using_get40_with_http_info(opts)
+    def listar_using_get42(opts = {})
+      data, _status_code, _headers = listar_using_get42_with_http_info(opts)
       return data
     end
 
     # Lista os Terminais cadastrados no Emissor
-    # Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
+    # Este m\u00E9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
-    # @option opts [String] :terminal C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
-    # @option opts [Integer] :numero_estabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
-    # @option opts [Integer] :id_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
+    # @option opts [String] :terminal C\u00F3digo de Identifica\u00E7\u00E3o do terminal.
+    # @option opts [Integer] :numero_estabelecimento N\u00FAmero do estabelecimento a qual o terminal pertence.
+    # @option opts [Integer] :id_estabelecimento N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence.
     # @return [Array<(PageTerminalResponse, Fixnum, Hash)>] PageTerminalResponse data, response status code and response headers
-    def listar_using_get40_with_http_info(opts = {})
+    def listar_using_get42_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get40 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get42 ..."
       end
       
       
@@ -3593,39 +3845,39 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTerminalResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get40\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get42\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
-    # Este m\u00C3\u00A9todo permite que sejam listados os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes.
+    # Lista os V\u00EDnculos dos estabelecimento com os adquirentes
+    # Este m\u00E9todo permite que sejam listados os V\u00EDnculos dos estabelecimento com os adquirentes.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_adquirente C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do adquirente (id).
-    # @option opts [Integer] :id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento.
-    # @option opts [String] :codigo_estabelecimento_adquirente C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_adquirente C\u00F3digo de Identifica\u00E7\u00E3o do adquirente (id).
+    # @option opts [Integer] :id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento.
+    # @option opts [String] :codigo_estabelecimento_adquirente C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente.
     # @return [PageVinculoEstabelecimentoAdquirenteResponse]
-    def listar_using_get51(opts = {})
-      data, _status_code, _headers = listar_using_get51_with_http_info(opts)
+    def listar_using_get53(opts = {})
+      data, _status_code, _headers = listar_using_get53_with_http_info(opts)
       return data
     end
 
-    # Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
-    # Este m\u00C3\u00A9todo permite que sejam listados os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes.
+    # Lista os V\u00EDnculos dos estabelecimento com os adquirentes
+    # Este m\u00E9todo permite que sejam listados os V\u00EDnculos dos estabelecimento com os adquirentes.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_adquirente C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do adquirente (id).
-    # @option opts [Integer] :id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento.
-    # @option opts [String] :codigo_estabelecimento_adquirente C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_adquirente C\u00F3digo de Identifica\u00E7\u00E3o do adquirente (id).
+    # @option opts [Integer] :id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento.
+    # @option opts [String] :codigo_estabelecimento_adquirente C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente.
     # @return [Array<(PageVinculoEstabelecimentoAdquirenteResponse, Fixnum, Hash)>] PageVinculoEstabelecimentoAdquirenteResponse data, response status code and response headers
-    def listar_using_get51_with_http_info(opts = {})
+    def listar_using_get53_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get51 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get53 ..."
       end
       
       
@@ -3702,46 +3954,46 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageVinculoEstabelecimentoAdquirenteResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get51\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get53\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Lista os v\u00C3\u00ADnculos cadastrados no Emissor
-    # Este m\u00C3\u00A9todo permite que sejam listados os v\u00C3\u00ADnculos opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
+    # Listar v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento
+    # Lista os v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento. 
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
-    # @option opts [Integer] :id_operacao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id).
-    # @option opts [Integer] :codigo_mcc C\u00C3\u00B3digo MCC.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_produto C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+    # @option opts [Integer] :id_operacao C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id).
+    # @option opts [Integer] :codigo_mcc C\u00F3digo MCC.
     # @return [PageVinculoOperacaoResponse]
-    def listar_using_get52(id, opts = {})
-      data, _status_code, _headers = listar_using_get52_with_http_info(id, opts)
+    def listar_using_get54(id, opts = {})
+      data, _status_code, _headers = listar_using_get54_with_http_info(id, opts)
       return data
     end
 
-    # Lista os v\u00C3\u00ADnculos cadastrados no Emissor
-    # Este m\u00C3\u00A9todo permite que sejam listados os v\u00C3\u00ADnculos opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
+    # Listar v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento
+    # Lista os v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento. 
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
-    # @option opts [Integer] :id_operacao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id).
-    # @option opts [Integer] :codigo_mcc C\u00C3\u00B3digo MCC.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_produto C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+    # @option opts [Integer] :id_operacao C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id).
+    # @option opts [Integer] :codigo_mcc C\u00F3digo MCC.
     # @return [Array<(PageVinculoOperacaoResponse, Fixnum, Hash)>] PageVinculoOperacaoResponse data, response status code and response headers
-    def listar_using_get52_with_http_info(id, opts = {})
+    def listar_using_get54_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get52 ..."
+        @api_client.config.logger.debug "Calling API: EstabelecimentoApi.listar_using_get54 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.listar_using_get52" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling EstabelecimentoApi.listar_using_get54" if id.nil?
       
       
       
@@ -3821,13 +4073,13 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageVinculoOperacaoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get52\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: EstabelecimentoApi#listar_using_get54\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Realiza o cadastro de uma nova maquineta para um estabelecimento 
-    # Este m\u00C3\u00A9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
+    # Este m\u00E9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
     # @param maquineta_persist maquinetaPersist
     # @param [Hash] opts the optional parameters
     # @return [MaquinetaResponse]
@@ -3837,7 +4089,7 @@ module Pier
     end
 
     # Realiza o cadastro de uma nova maquineta para um estabelecimento 
-    # Este m\u00C3\u00A9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
+    # Este m\u00E9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
     # @param maquineta_persist maquinetaPersist
     # @param [Hash] opts the optional parameters
     # @return [Array<(MaquinetaResponse, Fixnum, Hash)>] MaquinetaResponse data, response status code and response headers
@@ -3891,8 +4143,8 @@ module Pier
       return data, status_code, headers
     end
 
-    # Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo permite que seja cadastrada uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o.
+    # Realiza o cadastro de uma nova Regra Opera\u00E7\u00E3o
+    # Este m\u00E9todo permite que seja cadastrada uma nova Regra Opera\u00E7\u00E3o.
     # @param oprecao_credor_persist oprecaoCredorPersist
     # @param [Hash] opts the optional parameters
     # @return [OperacaoCredorResponse]
@@ -3901,8 +4153,8 @@ module Pier
       return data
     end
 
-    # Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
-    # Este m\u00C3\u00A9todo permite que seja cadastrada uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o.
+    # Realiza o cadastro de uma nova Regra Opera\u00E7\u00E3o
+    # Este m\u00E9todo permite que seja cadastrada uma nova Regra Opera\u00E7\u00E3o.
     # @param oprecao_credor_persist oprecaoCredorPersist
     # @param [Hash] opts the optional parameters
     # @return [Array<(OperacaoCredorResponse, Fixnum, Hash)>] OperacaoCredorResponse data, response status code and response headers
@@ -3957,56 +4209,28 @@ module Pier
     end
 
     # Realiza o cadastro de um novo telefone para um estabelecimento 
-    # Este m\u00C3\u00A9todo permite que seja cadastrado um novo telefone para um estabelecimento.
-    # @param id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).
-    # @param ddd C\u00C3\u00B3digo DDD do telefone (id).
-    # @param telefone N\u00C3\u00BAmero do telefone.
+    # Este m\u00E9todo permite que seja cadastrado um novo telefone para um estabelecimento.
+    # @param telefone_estabelecimento_persist telefoneEstabelecimentoPersist
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
     # @return [TelefoneEstabelecimentoResponse]
-    def salvar_using_post22(id_estabelecimento, ddd, telefone, opts = {})
-      data, _status_code, _headers = salvar_using_post22_with_http_info(id_estabelecimento, ddd, telefone, opts)
+    def salvar_using_post22(telefone_estabelecimento_persist, opts = {})
+      data, _status_code, _headers = salvar_using_post22_with_http_info(telefone_estabelecimento_persist, opts)
       return data
     end
 
     # Realiza o cadastro de um novo telefone para um estabelecimento 
-    # Este m\u00C3\u00A9todo permite que seja cadastrado um novo telefone para um estabelecimento.
-    # @param id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).
-    # @param ddd C\u00C3\u00B3digo DDD do telefone (id).
-    # @param telefone N\u00C3\u00BAmero do telefone.
+    # Este m\u00E9todo permite que seja cadastrado um novo telefone para um estabelecimento.
+    # @param telefone_estabelecimento_persist telefoneEstabelecimentoPersist
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :ramal N\u00C3\u00BAmero do ramal.
     # @return [Array<(TelefoneEstabelecimentoResponse, Fixnum, Hash)>] TelefoneEstabelecimentoResponse data, response status code and response headers
-    def salvar_using_post22_with_http_info(id_estabelecimento, ddd, telefone, opts = {})
+    def salvar_using_post22_with_http_info(telefone_estabelecimento_persist, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: EstabelecimentoApi.salvar_using_post22 ..."
       end
       
       
-      # verify the required parameter 'id_estabelecimento' is set
-      fail ArgumentError, "Missing the required parameter 'id_estabelecimento' when calling EstabelecimentoApi.salvar_using_post22" if id_estabelecimento.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'ddd' is set
-      fail ArgumentError, "Missing the required parameter 'ddd' when calling EstabelecimentoApi.salvar_using_post22" if ddd.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'telefone' is set
-      fail ArgumentError, "Missing the required parameter 'telefone' when calling EstabelecimentoApi.salvar_using_post22" if telefone.nil?
-      
-      
-      
-      
-      
-      
+      # verify the required parameter 'telefone_estabelecimento_persist' is set
+      fail ArgumentError, "Missing the required parameter 'telefone_estabelecimento_persist' when calling EstabelecimentoApi.salvar_using_post22" if telefone_estabelecimento_persist.nil?
       
       
       
@@ -4017,10 +4241,6 @@ module Pier
 
       # query parameters
       query_params = {}
-      query_params[:'idEstabelecimento'] = id_estabelecimento
-      query_params[:'ddd'] = ddd
-      query_params[:'telefone'] = telefone
-      query_params[:'ramal'] = opts[:'ramal'] if opts[:'ramal']
 
       # header parameters
       header_params = {}
@@ -4037,7 +4257,7 @@ module Pier
       form_params = {}
 
       # http body (model)
-      post_body = nil
+      post_body = @api_client.object_to_http_body(telefone_estabelecimento_persist)
       
       auth_names = []
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -4054,7 +4274,7 @@ module Pier
     end
 
     # Realiza o cadastro de um novo Terminal
-    # Este m\u00C3\u00A9todo permite que seja cadastrado um novo Terminal.
+    # Este m\u00E9todo permite que seja cadastrado um novo Terminal.
     # @param terminal_persist terminalPersist
     # @param [Hash] opts the optional parameters
     # @return [TerminalResponse]
@@ -4064,7 +4284,7 @@ module Pier
     end
 
     # Realiza o cadastro de um novo Terminal
-    # Este m\u00C3\u00A9todo permite que seja cadastrado um novo Terminal.
+    # Este m\u00E9todo permite que seja cadastrado um novo Terminal.
     # @param terminal_persist terminalPersist
     # @param [Hash] opts the optional parameters
     # @return [Array<(TerminalResponse, Fixnum, Hash)>] TerminalResponse data, response status code and response headers
@@ -4119,7 +4339,7 @@ module Pier
     end
 
     # Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente
-    # Este m\u00C3\u00A9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
+    # Este m\u00E9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
     # @param vinculo_estabelecimento_adquirente_persist vinculoEstabelecimentoAdquirentePersist
     # @param [Hash] opts the optional parameters
     # @return [VinculoEstabelecimentoAdquirenteResponse]
@@ -4129,7 +4349,7 @@ module Pier
     end
 
     # Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente
-    # Este m\u00C3\u00A9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
+    # Este m\u00E9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
     # @param vinculo_estabelecimento_adquirente_persist vinculoEstabelecimentoAdquirentePersist
     # @param [Hash] opts the optional parameters
     # @return [Array<(VinculoEstabelecimentoAdquirenteResponse, Fixnum, Hash)>] VinculoEstabelecimentoAdquirenteResponse data, response status code and response headers

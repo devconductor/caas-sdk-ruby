@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,48 +17,48 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso de transa\u00C3\u00A7\u00C3\u00A3o segura conductorPay
+  # Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso de transa\u00E7\u00E3o segura conductorPay
   class TransacaoPaySecureRequest
-    # Data e hora utilizado na gera\u00C3\u00A7\u00C3\u00A3o do criptograma em GMT - 0
+    # Data e hora utilizado na gera\u00E7\u00E3o do criptograma em GMT - 0
     attr_accessor :data_hora_transacao
 
     # Numero do cartao (criptografado)
     attr_accessor :numero_cartao
 
-    # Id do cart\u00C3\u00A3o
+    # Id do cart\u00E3o
     attr_accessor :id_cartao
 
-    # Valor da transa\u00C3\u00A7\u00C3\u00A3o em moeda local
+    # Valor da transa\u00E7\u00E3o em moeda local
     attr_accessor :valor
 
-    # N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou (critografado).
+    # N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou (critografado).
     attr_accessor :nsu_origem
 
-    # Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o (criptografado).
+    # Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o (criptografado).
     attr_accessor :nome_portador_cartao
 
-    # Origem da transa\u00C3\u00A7\u00C3\u00A3o
+    # Origem da transa\u00E7\u00E3o
     attr_accessor :origem
 
-    # Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+    # Apresenta a identifica\u00E7\u00E3o do terminal requisitante
     attr_accessor :terminal_requisitante
 
-    # C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
+    # C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.
     attr_accessor :codigo_processamento
 
-    # Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM
+    # Data de Validade do Cart\u00E3o. Ex: AAMM
     attr_accessor :data_validade_cartao
 
-    # N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).
+    # N\u00FAmero do Estabelecimento (N\u00FAmero+DV).
     attr_accessor :numero_estabelecimento
 
-    # N\u00C3\u00BAmero de Parcelas.
+    # N\u00FAmero de Parcelas.
     attr_accessor :numero_parcelas
 
-    # C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o (criptografado).
+    # C\u00F3digo de Seguran\u00E7a do Cart\u00E3o (criptografado).
     attr_accessor :codigo_seguranca_cartao
 
-    # Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+    # Tipo de ordena\u00E7\u00E3o dos registros.
     attr_accessor :sort
 
     # Attribute mapping from ruby-style variable name to JSON key.

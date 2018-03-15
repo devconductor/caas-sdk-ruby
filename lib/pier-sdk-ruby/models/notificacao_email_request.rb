@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,18 +17,18 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o do recurso para envio de uma notifica\u00C3\u00A7\u00C3\u00A3o por email.
+  # Representa\u00E7\u00E3o do recurso para envio de uma notifica\u00E7\u00E3o por email.
   class NotificacaoEmailRequest
-    # ID para o template da notifica\u00C3\u00A7\u00C3\u00A3o.
+    # ID para o template da notifica\u00E7\u00E3o.
     attr_accessor :id_template_notificacao
 
-    # Lista de email(s) do(s) destinat\u00C3\u00A1rio(s).
+    # Lista de email(s) do(s) destinat\u00E1rio(s).
     attr_accessor :destinatarios
 
     # Lista de ids dos anexos a serem enviados.
     attr_accessor :anexos
 
-    # Mapa de par\u00C3\u00A2metros para montagem da notifica\u00C3\u00A7\u00C3\u00A3o.
+    # Mapa de par\u00E2metros para montagem da notifica\u00E7\u00E3o.
     attr_accessor :parametros_conteudo
 
     # Attribute mapping from ruby-style variable name to JSON key.

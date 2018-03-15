@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,12 +17,12 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+  # Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso gerar c\u00F3digo de seguran\u00E7a.
   class CodigoSegurancaSMSPersist
-    # DDD do n\u00C3\u00BAmero de telefone para envio do sms.
+    # DDD do n\u00FAmero de telefone para envio do sms.
     attr_accessor :ddd
 
-    # N\u00C3\u00BAmero do telefone para envio do sms.
+    # N\u00FAmero do telefone para envio do sms.
     attr_accessor :telefone
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,16 +19,16 @@ require 'date'
 module Pier
   # Objeto FAQ
   class FaqResponse
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
+    # C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id).
     attr_accessor :id
 
-    # Conte\u00C3\u00BAdo da pergunta.
+    # Conte\u00FAdo da pergunta.
     attr_accessor :pergunta
 
-    # Conte\u00C3\u00BAdo da resposta.
+    # Conte\u00FAdo da resposta.
     attr_accessor :resposta
 
-    # N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.
+    # N\u00EDvel de relev\u00E2ncia da pergunta.
     attr_accessor :relevancia
 
     # Plataforma em que a FAQ se encaixa.
@@ -37,7 +37,7 @@ module Pier
     # Categoria de assunto do qual a FAQ se trata.
     attr_accessor :categoria
 
-    # Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
+    # Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
     attr_accessor :status
 
     # Attribute mapping from ruby-style variable name to JSON key.

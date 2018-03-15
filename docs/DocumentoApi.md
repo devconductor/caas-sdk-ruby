@@ -6,13 +6,13 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_using_put19**](DocumentoApi.md#alterar_using_put19) | **PUT** /api/tipos-templates/{id} | Altera o tipo de template
 [**atualizar_using_put2**](DocumentoApi.md#atualizar_using_put2) | **PUT** /api/templates-documentos/{id} | Atualizar templates dos documentos
-[**consultar_using_get13**](DocumentoApi.md#consultar_using_get13) | **GET** /api/documentos/{id} | Consulta documentos
-[**consultar_using_get14**](DocumentoApi.md#consultar_using_get14) | **GET** /api/templates-documentos/{id} | Consultar templates dos documentos
-[**consultar_using_get38**](DocumentoApi.md#consultar_using_get38) | **GET** /api/tipos-templates/{id} | Consultar tipo de template
-[**integrar_using_post1**](DocumentoApi.md#integrar_using_post1) | **POST** /api/documentos/integrar | Integra um arquivo a reposit\u00C3\u00B3rios remotos.
-[**listar_using_get18**](DocumentoApi.md#listar_using_get18) | **GET** /api/documentos | Lista documentos
-[**listar_using_get19**](DocumentoApi.md#listar_using_get19) | **GET** /api/templates-documentos | Lista os templates dos documentos
-[**listar_using_get45**](DocumentoApi.md#listar_using_get45) | **GET** /api/tipos-templates | Lista os tipos de templates
+[**consultar_using_get14**](DocumentoApi.md#consultar_using_get14) | **GET** /api/documentos/{id} | Consulta documentos
+[**consultar_using_get15**](DocumentoApi.md#consultar_using_get15) | **GET** /api/templates-documentos/{id} | Consultar templates dos documentos
+[**consultar_using_get39**](DocumentoApi.md#consultar_using_get39) | **GET** /api/tipos-templates/{id} | Consultar tipo de template
+[**integrar_using_post1**](DocumentoApi.md#integrar_using_post1) | **POST** /api/documentos/integrar | Integra um arquivo a reposit\u00F3rios remotos.
+[**listar_using_get19**](DocumentoApi.md#listar_using_get19) | **GET** /api/documentos | Lista documentos
+[**listar_using_get20**](DocumentoApi.md#listar_using_get20) | **GET** /api/templates-documentos | Lista os templates dos documentos
+[**listar_using_get47**](DocumentoApi.md#listar_using_get47) | **GET** /api/tipos-templates | Lista os tipos de templates
 [**salvar_using_post10**](DocumentoApi.md#salvar_using_post10) | **POST** /api/documentos | Cadastra documentos
 [**salvar_using_post11**](DocumentoApi.md#salvar_using_post11) | **POST** /api/templates-documentos | Cadastra os templates dos documentos
 [**salvar_using_post26**](DocumentoApi.md#salvar_using_post26) | **POST** /api/tipos-templates | Cadastra os tipos de templates
@@ -32,7 +32,7 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::DocumentoApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id).
 
 persist = Pier::TipoTemplateRequest.new # TipoTemplateRequest | persist
 
@@ -50,7 +50,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id). | 
  **persist** | [**TipoTemplateRequest**](TipoTemplateRequest.md)| persist | 
 
 ### Return type
@@ -82,7 +82,7 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::DocumentoApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
+id = 789 # Integer | C\u00F3digo de identifica\u00E7\u00E3o do documento template (id).
 
 persist = Pier::DocumentoTemplatePersist.new # DocumentoTemplatePersist | persist
 
@@ -100,7 +100,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do documento template (id). | 
  **persist** | [**DocumentoTemplatePersist**](DocumentoTemplatePersist.md)| persist | 
 
 ### Return type
@@ -118,12 +118,12 @@ No authorization required
 
 
 
-# **consultar_using_get13**
-> DocumentoDetalhadoResponse consultar_using_get13(id)
+# **consultar_using_get14**
+> DocumentoDetalhadoResponse consultar_using_get14(id)
 
 Consulta documentos
 
-Esse recurso permite consultar um documento espec\u00C3\u00ADfico a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Esse recurso permite consultar um documento espec\u00EDfico a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
 
 ### Example
 ```ruby
@@ -132,15 +132,15 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::DocumentoApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento (id).
+id = 789 # Integer | C\u00F3digo de identifica\u00E7\u00E3o do documento (id).
 
 
 begin
   #Consulta documentos
-  result = api_instance.consultar_using_get13(id)
+  result = api_instance.consultar_using_get14(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DocumentoApi->consultar_using_get13: #{e}"
+  puts "Exception when calling DocumentoApi->consultar_using_get14: #{e}"
 end
 ```
 
@@ -148,7 +148,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do documento (id). | 
 
 ### Return type
 
@@ -165,8 +165,8 @@ No authorization required
 
 
 
-# **consultar_using_get14**
-> DocumentoTemplateResponse consultar_using_get14(id)
+# **consultar_using_get15**
+> DocumentoTemplateResponse consultar_using_get15(id)
 
 Consultar templates dos documentos
 
@@ -179,15 +179,15 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::DocumentoApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
+id = 789 # Integer | C\u00F3digo de identifica\u00E7\u00E3o do documento template (id).
 
 
 begin
   #Consultar templates dos documentos
-  result = api_instance.consultar_using_get14(id)
+  result = api_instance.consultar_using_get15(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DocumentoApi->consultar_using_get14: #{e}"
+  puts "Exception when calling DocumentoApi->consultar_using_get15: #{e}"
 end
 ```
 
@@ -195,7 +195,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do documento template (id). | 
 
 ### Return type
 
@@ -212,8 +212,8 @@ No authorization required
 
 
 
-# **consultar_using_get38**
-> TipoTemplateResponse consultar_using_get38(id)
+# **consultar_using_get39**
+> TipoTemplateResponse consultar_using_get39(id)
 
 Consultar tipo de template
 
@@ -226,15 +226,15 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::DocumentoApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id).
 
 
 begin
   #Consultar tipo de template
-  result = api_instance.consultar_using_get38(id)
+  result = api_instance.consultar_using_get39(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DocumentoApi->consultar_using_get38: #{e}"
+  puts "Exception when calling DocumentoApi->consultar_using_get39: #{e}"
 end
 ```
 
@@ -242,7 +242,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id). | 
 
 ### Return type
 
@@ -262,9 +262,9 @@ No authorization required
 # **integrar_using_post1**
 > DocumentoIntegracaoResponse integrar_using_post1(integrar_documento_request)
 
-Integra um arquivo a reposit\u00C3\u00B3rios remotos.
+Integra um arquivo a reposit\u00F3rios remotos.
 
-Este recurso permite integrar um documento ao reposit\u00C3\u00B3rio pre-configurado.
+Este recurso permite integrar um documento ao reposit\u00F3rio pre-configurado.
 
 ### Example
 ```ruby
@@ -277,7 +277,7 @@ integrar_documento_request = Pier::IntegrarDocumentoRequest.new # IntegrarDocume
 
 
 begin
-  #Integra um arquivo a reposit\u00C3\u00B3rios remotos.
+  #Integra um arquivo a reposit\u00F3rios remotos.
   result = api_instance.integrar_using_post1(integrar_documento_request)
   p result
 rescue Pier::ApiError => e
@@ -306,8 +306,8 @@ No authorization required
 
 
 
-# **listar_using_get18**
-> PageDocumentoResponse listar_using_get18(opts)
+# **listar_using_get19**
+> PageDocumentoResponse listar_using_get19(opts)
 
 Lista documentos
 
@@ -321,20 +321,20 @@ require 'pier-sdk-ruby'
 api_instance = Pier::DocumentoApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id_template_documento: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do template do documento.
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  id_template_documento: 789, # Integer | C\u00F3digo de identifica\u00E7\u00E3o do template do documento.
   nome: "nome_example", # String | Nome do documento.
   extensao: "extensao_example" # String | Extensao do documento.
 }
 
 begin
   #Lista documentos
-  result = api_instance.listar_using_get18(opts)
+  result = api_instance.listar_using_get19(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DocumentoApi->listar_using_get18: #{e}"
+  puts "Exception when calling DocumentoApi->listar_using_get19: #{e}"
 end
 ```
 
@@ -342,10 +342,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id_template_documento** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do template do documento. | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **id_template_documento** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do template do documento. | [optional] 
  **nome** | **String**| Nome do documento. | [optional] 
  **extensao** | **String**| Extensao do documento. | [optional] 
 
@@ -364,8 +364,8 @@ No authorization required
 
 
 
-# **listar_using_get19**
-> PageDocumentoTemplateResponse listar_using_get19(opts)
+# **listar_using_get20**
+> PageDocumentoTemplateResponse listar_using_get20(opts)
 
 Lista os templates dos documentos
 
@@ -379,18 +379,18 @@ require 'pier-sdk-ruby'
 api_instance = Pier::DocumentoApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id_tipo_template: 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template.
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  id_tipo_template: 789 # Integer | C\u00F3digo de identifica\u00E7\u00E3o do tipo do template.
 }
 
 begin
   #Lista os templates dos documentos
-  result = api_instance.listar_using_get19(opts)
+  result = api_instance.listar_using_get20(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DocumentoApi->listar_using_get19: #{e}"
+  puts "Exception when calling DocumentoApi->listar_using_get20: #{e}"
 end
 ```
 
@@ -398,10 +398,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id_tipo_template** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template. | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **id_tipo_template** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do tipo do template. | [optional] 
 
 ### Return type
 
@@ -418,8 +418,8 @@ No authorization required
 
 
 
-# **listar_using_get45**
-> PageTipoTemplateResponse listar_using_get45(opts)
+# **listar_using_get47**
+> PageTipoTemplateResponse listar_using_get47(opts)
 
 Lista os tipos de templates
 
@@ -433,17 +433,17 @@ require 'pier-sdk-ruby'
 api_instance = Pier::DocumentoApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 }
 
 begin
   #Lista os tipos de templates
-  result = api_instance.listar_using_get45(opts)
+  result = api_instance.listar_using_get47(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling DocumentoApi->listar_using_get45: #{e}"
+  puts "Exception when calling DocumentoApi->listar_using_get47: #{e}"
 end
 ```
 
@@ -451,9 +451,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 

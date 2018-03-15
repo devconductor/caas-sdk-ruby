@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,7 +17,7 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o da resposta resumida para o recurso de Documento
+  # Representa\u00E7\u00E3o da resposta resumida para o recurso de Documento
   class DocumentoResponse
     # ID do Documento.
     attr_accessor :id
@@ -28,7 +28,7 @@ module Pier
     # Nome do Documento.
     attr_accessor :nome
 
-    # Extens\u00C3\u00A3o do Documento.
+    # Extens\u00E3o do Documento.
     attr_accessor :extensao
 
     # Attribute mapping from ruby-style variable name to JSON key.

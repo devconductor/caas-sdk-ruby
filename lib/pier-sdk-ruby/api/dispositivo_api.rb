@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -26,7 +26,7 @@ module Pier
 
     # Ativa Dispositivo
     # Esse recurso permite ativar dispositivo.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id).
     # @param [Hash] opts the optional parameters
     # @return [DispositivoResponse]
     def ativar_using_post(id, opts = {})
@@ -36,7 +36,7 @@ module Pier
 
     # Ativa Dispositivo
     # Esse recurso permite ativar dispositivo.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(DispositivoResponse, Fixnum, Hash)>] DispositivoResponse data, response status code and response headers
     def ativar_using_post_with_http_info(id, opts = {})
@@ -91,7 +91,7 @@ module Pier
 
     # Desativa Dispositivo
     # Esse recurso permite desativar dispositivo.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id).
     # @param [Hash] opts the optional parameters
     # @return [DispositivoResponse]
     def desativar_using_post(id, opts = {})
@@ -101,7 +101,7 @@ module Pier
 
     # Desativa Dispositivo
     # Esse recurso permite desativar dispositivo.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(DispositivoResponse, Fixnum, Hash)>] DispositivoResponse data, response status code and response headers
     def desativar_using_post_with_http_info(id, opts = {})
@@ -155,37 +155,37 @@ module Pier
     end
 
     # Lista os dispositivos cadastrados
-    # Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
+    # Este m\u00E9todo permite que sejam listados os dispositivos existentes na base do PIER.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @option opts [String] :token Token do Dispositivo
-    # @option opts [Integer] :id_usuario Identificador do Usu\u00C3\u00A1rio
-    # @option opts [Integer] :id_aplicacao_mobile Identificador da aplica\u00C3\u00A7\u00C3\u00A3o
+    # @option opts [Integer] :id_usuario Identificador do Usu\u00E1rio
+    # @option opts [Integer] :id_aplicacao_mobile Identificador da aplica\u00E7\u00E3o
     # @option opts [String] :data_criacao Apresenta a data e em que o registro foi criado.
     # @option opts [String] :data_desativacao Apresenta a data e em que o registro foi desativado.
     # @return [PageDispositivoResponse]
-    def listar_using_get17(opts = {})
-      data, _status_code, _headers = listar_using_get17_with_http_info(opts)
+    def listar_using_get18(opts = {})
+      data, _status_code, _headers = listar_using_get18_with_http_info(opts)
       return data
     end
 
     # Lista os dispositivos cadastrados
-    # Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
+    # Este m\u00E9todo permite que sejam listados os dispositivos existentes na base do PIER.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @option opts [String] :token Token do Dispositivo
-    # @option opts [Integer] :id_usuario Identificador do Usu\u00C3\u00A1rio
-    # @option opts [Integer] :id_aplicacao_mobile Identificador da aplica\u00C3\u00A7\u00C3\u00A3o
+    # @option opts [Integer] :id_usuario Identificador do Usu\u00E1rio
+    # @option opts [Integer] :id_aplicacao_mobile Identificador da aplica\u00E7\u00E3o
     # @option opts [String] :data_criacao Apresenta a data e em que o registro foi criado.
     # @option opts [String] :data_desativacao Apresenta a data e em que o registro foi desativado.
     # @return [Array<(PageDispositivoResponse, Fixnum, Hash)>] PageDispositivoResponse data, response status code and response headers
-    def listar_using_get17_with_http_info(opts = {})
+    def listar_using_get18_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DispositivoApi.listar_using_get17 ..."
+        @api_client.config.logger.debug "Calling API: DispositivoApi.listar_using_get18 ..."
       end
       
       
@@ -276,7 +276,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageDispositivoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DispositivoApi#listar_using_get17\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DispositivoApi#listar_using_get18\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

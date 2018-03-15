@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,12 +17,12 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto ArquivoParametros para persist\u00C3\u00AAncia de dados.
+  # Objeto ArquivoParametros para persist\u00EAncia de dados.
   class ArquivoDetalhesPersist
     # Nome que identifica o detalhe do arquivo
     attr_accessor :nome_campo
 
-    # Conte\u00C3\u00BAdo do nomeCampo
+    # Conte\u00FAdo do nomeCampo
     attr_accessor :conteudo
 
     # Attribute mapping from ruby-style variable name to JSON key.

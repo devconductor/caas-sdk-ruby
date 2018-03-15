@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -26,27 +26,27 @@ module Pier
 
     # Consulta de arquivo no PIER Cloud
     # Este recurso permite consultar um determinado arquivo armazenado no PIER Cloud.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do arquivo
     # @param [Hash] opts the optional parameters
     # @return [ArquivoDetalheResponse]
-    def consultar_using_get2(id, opts = {})
-      data, _status_code, _headers = consultar_using_get2_with_http_info(id, opts)
+    def consultar_using_get3(id, opts = {})
+      data, _status_code, _headers = consultar_using_get3_with_http_info(id, opts)
       return data
     end
 
     # Consulta de arquivo no PIER Cloud
     # Este recurso permite consultar um determinado arquivo armazenado no PIER Cloud.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do arquivo
     # @param [Hash] opts the optional parameters
     # @return [Array<(ArquivoDetalheResponse, Fixnum, Hash)>] ArquivoDetalheResponse data, response status code and response headers
-    def consultar_using_get2_with_http_info(id, opts = {})
+    def consultar_using_get3_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ArquivoApi.consultar_using_get2 ..."
+        @api_client.config.logger.debug "Calling API: ArquivoApi.consultar_using_get3 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ArquivoApi.consultar_using_get2" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ArquivoApi.consultar_using_get3" if id.nil?
       
       
       
@@ -84,13 +84,13 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'ArquivoDetalheResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ArquivoApi#consultar_using_get2\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ArquivoApi#consultar_using_get3\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Integrar Arquivos
-    # Este recurso foi desenvolvido para realizar a integra\u00C3\u00A7\u00C3\u00A3o de arquivos do PIER Cloud junto a reposit\u00C3\u00B3rios externos pr\u00C3\u00A9-configurado.
+    # Este recurso foi desenvolvido para realizar a integra\u00E7\u00E3o de arquivos do PIER Cloud junto a reposit\u00F3rios externos pr\u00E9-configurado.
     # @param integrar_arquivo_request integrarArquivoRequest
     # @param [Hash] opts the optional parameters
     # @return [Object]
@@ -100,7 +100,7 @@ module Pier
     end
 
     # Integrar Arquivos
-    # Este recurso foi desenvolvido para realizar a integra\u00C3\u00A7\u00C3\u00A3o de arquivos do PIER Cloud junto a reposit\u00C3\u00B3rios externos pr\u00C3\u00A9-configurado.
+    # Este recurso foi desenvolvido para realizar a integra\u00E7\u00E3o de arquivos do PIER Cloud junto a reposit\u00F3rios externos pr\u00E9-configurado.
     # @param integrar_arquivo_request integrarArquivoRequest
     # @param [Hash] opts the optional parameters
     # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
@@ -154,33 +154,317 @@ module Pier
       return data, status_code, headers
     end
 
-    # Lista as auditorias do arquivo
-    # Este recurso permite listar as auditorias de um determinado arquivo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
+    # Lista as auditorias de arquivos vinculadas a um N\u00FAmero da Receita Federal
+    # Este recurso permite listar as auditorias de arquivos vinculadas a um N\u00FAmero da Receita Federal que ser\u00E1 passado como par\u00E2metro.
+    # @param numero_receita_federal Par\u00E2metro vinculado a um arquivo no ato de seu cadastro
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [PageArquivoAUDResponse]
-    def listar_using_get3(id, opts = {})
-      data, _status_code, _headers = listar_using_get3_with_http_info(id, opts)
+    def listar_por_numero_receita_federal_using_get(numero_receita_federal, opts = {})
+      data, _status_code, _headers = listar_por_numero_receita_federal_using_get_with_http_info(numero_receita_federal, opts)
+      return data
+    end
+
+    # Lista as auditorias de arquivos vinculadas a um N\u00FAmero da Receita Federal
+    # Este recurso permite listar as auditorias de arquivos vinculadas a um N\u00FAmero da Receita Federal que ser\u00E1 passado como par\u00E2metro.
+    # @param numero_receita_federal Par\u00E2metro vinculado a um arquivo no ato de seu cadastro
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @return [Array<(PageArquivoAUDResponse, Fixnum, Hash)>] PageArquivoAUDResponse data, response status code and response headers
+    def listar_por_numero_receita_federal_using_get_with_http_info(numero_receita_federal, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArquivoApi.listar_por_numero_receita_federal_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'numero_receita_federal' is set
+      fail ArgumentError, "Missing the required parameter 'numero_receita_federal' when calling ArquivoApi.listar_por_numero_receita_federal_using_get" if numero_receita_federal.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/arquivos-auditorias".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'numeroReceitaFederal'] = numero_receita_federal
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageArquivoAUDResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArquivoApi#listar_por_numero_receita_federal_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Listar Status de Arquivo
+    # Este recurso permite a listagem de todos os Status de Arquivo.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [String] :nome Nome do status de arquivo
+    # @option opts [String] :descricao Descri\u00E7\u00E3o do status de arquivo
+    # @return [PageStatusArquivoResponse]
+    def listar_status_arquivos_using_get(opts = {})
+      data, _status_code, _headers = listar_status_arquivos_using_get_with_http_info(opts)
+      return data
+    end
+
+    # Listar Status de Arquivo
+    # Este recurso permite a listagem de todos os Status de Arquivo.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [String] :nome Nome do status de arquivo
+    # @option opts [String] :descricao Descri\u00E7\u00E3o do status de arquivo
+    # @return [Array<(PageStatusArquivoResponse, Fixnum, Hash)>] PageStatusArquivoResponse data, response status code and response headers
+    def listar_status_arquivos_using_get_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArquivoApi.listar_status_arquivos_using_get ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/status-arquivos".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
+      query_params[:'descricao'] = opts[:'descricao'] if opts[:'descricao']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageStatusArquivoResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArquivoApi#listar_status_arquivos_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Listar Tipos de Arquivo
+    # Este recurso permite a listagem de todos os Tipos de Arquivo.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [String] :nome Nome do tipo de arquivo
+    # @option opts [String] :descricao Descri\u00E7\u00E3o do tipo de arquivo
+    # @return [PageTipoArquivoResponse]
+    def listar_tipos_arquivos_using_get(opts = {})
+      data, _status_code, _headers = listar_tipos_arquivos_using_get_with_http_info(opts)
+      return data
+    end
+
+    # Listar Tipos de Arquivo
+    # Este recurso permite a listagem de todos os Tipos de Arquivo.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [String] :nome Nome do tipo de arquivo
+    # @option opts [String] :descricao Descri\u00E7\u00E3o do tipo de arquivo
+    # @return [Array<(PageTipoArquivoResponse, Fixnum, Hash)>] PageTipoArquivoResponse data, response status code and response headers
+    def listar_tipos_arquivos_using_get_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArquivoApi.listar_tipos_arquivos_using_get ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/tipos-arquivos".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'nome'] = opts[:'nome'] if opts[:'nome']
+      query_params[:'descricao'] = opts[:'descricao'] if opts[:'descricao']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageTipoArquivoResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArquivoApi#listar_tipos_arquivos_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Lista as auditorias do arquivo
+    # Este recurso permite listar as auditorias de um determinado arquivo a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do arquivo
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @return [PageArquivoAUDResponse]
+    def listar_using_get4(id, opts = {})
+      data, _status_code, _headers = listar_using_get4_with_http_info(id, opts)
       return data
     end
 
     # Lista as auditorias do arquivo
-    # Este recurso permite listar as auditorias de um determinado arquivo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
+    # Este recurso permite listar as auditorias de um determinado arquivo a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do arquivo
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(PageArquivoAUDResponse, Fixnum, Hash)>] PageArquivoAUDResponse data, response status code and response headers
-    def listar_using_get3_with_http_info(id, opts = {})
+    def listar_using_get4_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ArquivoApi.listar_using_get3 ..."
+        @api_client.config.logger.debug "Calling API: ArquivoApi.listar_using_get4 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ArquivoApi.listar_using_get3" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ArquivoApi.listar_using_get4" if id.nil?
       
       
       
@@ -232,41 +516,41 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageArquivoAUDResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ArquivoApi#listar_using_get3\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ArquivoApi#listar_using_get4\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Listar arquivos do Pier Cloud
-    # Este recurso permite a listagem de todos os arquivos dispon\u00C3\u00ADveis no Pier Cloud.
+    # Este recurso permite a listagem de todos os arquivos dispon\u00EDveis no Pier Cloud.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @option opts [String] :nome Nome do arquivo
     # @option opts [Integer] :id_tipo_arquivo Tipo do arquivo
     # @option opts [Integer] :id_status_arquivo Identificador do status do arquivo
-    # @option opts [String] :extensao Extens\u00C3\u00A3o do arquivo
+    # @option opts [String] :extensao Extens\u00E3o do arquivo
     # @return [PageArquivoResponse]
-    def listar_using_get4(opts = {})
-      data, _status_code, _headers = listar_using_get4_with_http_info(opts)
+    def listar_using_get5(opts = {})
+      data, _status_code, _headers = listar_using_get5_with_http_info(opts)
       return data
     end
 
     # Listar arquivos do Pier Cloud
-    # Este recurso permite a listagem de todos os arquivos dispon\u00C3\u00ADveis no Pier Cloud.
+    # Este recurso permite a listagem de todos os arquivos dispon\u00EDveis no Pier Cloud.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @option opts [String] :nome Nome do arquivo
     # @option opts [Integer] :id_tipo_arquivo Tipo do arquivo
     # @option opts [Integer] :id_status_arquivo Identificador do status do arquivo
-    # @option opts [String] :extensao Extens\u00C3\u00A3o do arquivo
+    # @option opts [String] :extensao Extens\u00E3o do arquivo
     # @return [Array<(PageArquivoResponse, Fixnum, Hash)>] PageArquivoResponse data, response status code and response headers
-    def listar_using_get4_with_http_info(opts = {})
+    def listar_using_get5_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ArquivoApi.listar_using_get4 ..."
+        @api_client.config.logger.debug "Calling API: ArquivoApi.listar_using_get5 ..."
       end
       
       
@@ -350,7 +634,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageArquivoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ArquivoApi#listar_using_get4\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ArquivoApi#listar_using_get5\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

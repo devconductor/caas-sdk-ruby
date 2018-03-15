@@ -6,44 +6,47 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_origem_comercial_using_put**](EstabelecimentoApi.md#alterar_origem_comercial_using_put) | **PUT** /api/origens-comerciais/{id} | Alterar Origem Comercial
 [**alterar_using_put10**](EstabelecimentoApi.md#alterar_using_put10) | **PUT** /api/maquinetas/{id} | Altera uma Maquineta
-[**alterar_using_put11**](EstabelecimentoApi.md#alterar_using_put11) | **PUT** /api/regras-operacoes-estabelecimentos/{id} | Altera uma Regra Opera\u00C3\u00A7\u00C3\u00A3o
+[**alterar_using_put11**](EstabelecimentoApi.md#alterar_using_put11) | **PUT** /api/regras-operacoes-estabelecimentos/{id} | Altera uma Regra Opera\u00E7\u00E3o
 [**alterar_using_put15**](EstabelecimentoApi.md#alterar_using_put15) | **PUT** /api/telefones-estabelecimentos/{id} | Altera um Telefone do estabelecimento
 [**alterar_using_put17**](EstabelecimentoApi.md#alterar_using_put17) | **PUT** /api/terminais/{id} | Altera um Terminal
 [**alterar_using_put6**](EstabelecimentoApi.md#alterar_using_put6) | **PUT** /api/estabelecimentos/{id} | Alterar um estabelecimento
-[**alterar_using_put8**](EstabelecimentoApi.md#alterar_using_put8) | **PUT** /api/grupos-economicos/{id} | Alterar Grupo Econ\u00C3\u00B4mico
+[**alterar_using_put8**](EstabelecimentoApi.md#alterar_using_put8) | **PUT** /api/grupos-economicos/{id} | Alterar Grupo Econ\u00F4mico
 [**cadastrar_origem_comercial_using_post**](EstabelecimentoApi.md#cadastrar_origem_comercial_using_post) | **POST** /api/origens-comerciais | Cadastrar Origem Comercial
 [**cadastrar_using_post2**](EstabelecimentoApi.md#cadastrar_using_post2) | **POST** /api/estabelecimentos | Cadastrar um estabelecimento
-[**cadastrar_using_post3**](EstabelecimentoApi.md#cadastrar_using_post3) | **POST** /api/grupos-economicos | Cadastrar Grupo Econ\u00C3\u00B4mico
-[**consulta_operacao_using_get**](EstabelecimentoApi.md#consulta_operacao_using_get) | **GET** /api/tipos-operacoes-estabelecimentos/{id} | Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+[**cadastrar_using_post3**](EstabelecimentoApi.md#cadastrar_using_post3) | **POST** /api/grupos-economicos | Cadastrar Grupo Econ\u00F4mico
+[**consulta_operacao_using_get**](EstabelecimentoApi.md#consulta_operacao_using_get) | **GET** /api/tipos-operacoes-estabelecimentos/{id} | Apresenta dados de um determinado tipo de opera\u00E7\u00E3o
 [**consultar_origem_comercial_using_get**](EstabelecimentoApi.md#consultar_origem_comercial_using_get) | **GET** /api/origens-comerciais/{id} | Consultar Origem Comercial
-[**consultar_using_get16**](EstabelecimentoApi.md#consultar_using_get16) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
-[**consultar_using_get18**](EstabelecimentoApi.md#consultar_using_get18) | **GET** /api/grupos-economicos/{id} | Consultar grupo econ\u00C3\u00B4mico
-[**consultar_using_get20**](EstabelecimentoApi.md#consultar_using_get20) | **GET** /api/maquinetas/{id} | Apresenta os dados de uma determinada maquineta
-[**consultar_using_get21**](EstabelecimentoApi.md#consultar_using_get21) | **GET** /api/regras-operacoes-estabelecimentos/{id} | Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
-[**consultar_using_get29**](EstabelecimentoApi.md#consultar_using_get29) | **GET** /api/telefones-estabelecimentos/{id} | Apresenta os dados de um determinado telefone de um estabelecimento
-[**consultar_using_get31**](EstabelecimentoApi.md#consultar_using_get31) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
-[**consultar_using_get43**](EstabelecimentoApi.md#consultar_using_get43) | **GET** /api/adquirentes-estabelecimento/{id} | Apresenta os dados de um determinado V\u00C3\u00ADnculo
-[**desabilitar_vinculo_using_post**](EstabelecimentoApi.md#desabilitar_vinculo_using_post) | **POST** /api/adquirentes-estabelecimento/{id}/desabilitar | Desabilitar um V\u00C3\u00ADnculo
-[**desabilitar_vinculo_using_post1**](EstabelecimentoApi.md#desabilitar_vinculo_using_post1) | **POST** /api/estabelecimentos/{id}/desabilitar-operacao | Desabilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
-[**habilitar_vinculo_using_post**](EstabelecimentoApi.md#habilitar_vinculo_using_post) | **POST** /api/adquirentes-estabelecimento/{id}/habilitar | Habilitar um V\u00C3\u00ADnculo
-[**habilitar_vinculo_using_post1**](EstabelecimentoApi.md#habilitar_vinculo_using_post1) | **POST** /api/estabelecimentos/{id}/habilitar-operacao | Habilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
-[**lista_operacao_using_get**](EstabelecimentoApi.md#lista_operacao_using_get) | **GET** /api/tipos-operacoes-estabelecimentos | Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista
+[**consultar_using_get17**](EstabelecimentoApi.md#consultar_using_get17) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
+[**consultar_using_get19**](EstabelecimentoApi.md#consultar_using_get19) | **GET** /api/grupos-economicos/{id} | Consultar grupo econ\u00F4mico
+[**consultar_using_get21**](EstabelecimentoApi.md#consultar_using_get21) | **GET** /api/maquinetas/{id} | Apresenta os dados de uma determinada maquineta
+[**consultar_using_get22**](EstabelecimentoApi.md#consultar_using_get22) | **GET** /api/regras-operacoes-estabelecimentos/{id} | Apresenta os dados de uma determinada Regra Opera\u00E7\u00E3o
+[**consultar_using_get30**](EstabelecimentoApi.md#consultar_using_get30) | **GET** /api/telefones-estabelecimentos/{id} | Apresenta os dados de um determinado telefone de um estabelecimento
+[**consultar_using_get32**](EstabelecimentoApi.md#consultar_using_get32) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
+[**consultar_using_get44**](EstabelecimentoApi.md#consultar_using_get44) | **GET** /api/adquirentes-estabelecimento/{id} | Apresenta os dados de um determinado V\u00EDnculo
+[**desabilitar_vinculo_using_post**](EstabelecimentoApi.md#desabilitar_vinculo_using_post) | **POST** /api/adquirentes-estabelecimento/{id}/desabilitar | Desabilitar um V\u00EDnculo
+[**desabilitar_vinculo_using_post1**](EstabelecimentoApi.md#desabilitar_vinculo_using_post1) | **POST** /api/estabelecimentos/{id}/desabilitar-operacao | Desabilitar um v\u00EDnculo opera\u00E7\u00E3o
+[**habilitar_vinculo_using_post**](EstabelecimentoApi.md#habilitar_vinculo_using_post) | **POST** /api/adquirentes-estabelecimento/{id}/habilitar | Habilitar um V\u00EDnculo
+[**habilitar_vinculo_using_post1**](EstabelecimentoApi.md#habilitar_vinculo_using_post1) | **POST** /api/estabelecimentos/{id}/habilitar-operacao | Habilitar um v\u00EDnculo opera\u00E7\u00E3o
+[**lista_operacao_using_get**](EstabelecimentoApi.md#lista_operacao_using_get) | **GET** /api/tipos-operacoes-estabelecimentos | Apresenta dados de opera\u00E7\u00F5es em uma lista
 [**listar_mcc_using_get**](EstabelecimentoApi.md#listar_mcc_using_get) | **GET** /api/mcc-estabelecimentos | Lista os MCCs
 [**listar_origens_comerciais_using_get**](EstabelecimentoApi.md#listar_origens_comerciais_using_get) | **GET** /api/origens-comerciais | Listar Origens Comerciais
 [**listar_tipos_adquirentes_using_get**](EstabelecimentoApi.md#listar_tipos_adquirentes_using_get) | **GET** /api/tipos-adquirentes | Lista os Tipos de adquirentes
+[**listar_tipos_estabelecimentos_using_get**](EstabelecimentoApi.md#listar_tipos_estabelecimentos_using_get) | **GET** /api/tipos-estabelecimentos | Lista os tipos de estabelecimentos
 [**listar_tipos_maquinetas_using_get**](EstabelecimentoApi.md#listar_tipos_maquinetas_using_get) | **GET** /api/tipos-maquinetas | Lista os Tipos de  Maquinetas
+[**listar_tipos_origens_comerciais_using_get**](EstabelecimentoApi.md#listar_tipos_origens_comerciais_using_get) | **GET** /api/tipos-origens-comerciais | Listar tipos de origens comerciais
 [**listar_tipos_terminais_using_get1**](EstabelecimentoApi.md#listar_tipos_terminais_using_get1) | **GET** /api/tipos-terminais-estabelecimento | Lista os Tipos Terminais
-[**listar_using_get21**](EstabelecimentoApi.md#listar_using_get21) | **GET** /api/estabelecimentos | Lista Estabelecimentos
-[**listar_using_get23**](EstabelecimentoApi.md#listar_using_get23) | **GET** /api/grupos-economicos | Listar grupos econ\u00C3\u00B4micos
-[**listar_using_get25**](EstabelecimentoApi.md#listar_using_get25) | **GET** /api/maquinetas | Lista as Maquinetas
-[**listar_using_get26**](EstabelecimentoApi.md#listar_using_get26) | **GET** /api/tipos-moedas | Lista os tipos de moedas do emissor 
-[**listar_using_get27**](EstabelecimentoApi.md#listar_using_get27) | **GET** /api/regras-operacoes-estabelecimentos | Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
-[**listar_using_get38**](EstabelecimentoApi.md#listar_using_get38) | **GET** /api/telefones-estabelecimentos | Lista os Telefones Estabelecimentos
-[**listar_using_get40**](EstabelecimentoApi.md#listar_using_get40) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
-[**listar_using_get51**](EstabelecimentoApi.md#listar_using_get51) | **GET** /api/adquirentes-estabelecimento | Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
-[**listar_using_get52**](EstabelecimentoApi.md#listar_using_get52) | **GET** /api/estabelecimentos/{id}/operacoes | Lista os v\u00C3\u00ADnculos cadastrados no Emissor
+[**listar_using_get22**](EstabelecimentoApi.md#listar_using_get22) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**listar_using_get24**](EstabelecimentoApi.md#listar_using_get24) | **GET** /api/grupos-economicos | Listar grupos econ\u00F4micos
+[**listar_using_get25**](EstabelecimentoApi.md#listar_using_get25) | **GET** /api/grupos-origens-comerciais | Listar grupos de origens comerciais
+[**listar_using_get27**](EstabelecimentoApi.md#listar_using_get27) | **GET** /api/maquinetas | Lista as Maquinetas
+[**listar_using_get28**](EstabelecimentoApi.md#listar_using_get28) | **GET** /api/tipos-moedas | Lista os tipos de moedas do emissor 
+[**listar_using_get29**](EstabelecimentoApi.md#listar_using_get29) | **GET** /api/regras-operacoes-estabelecimentos | Lista as Regras Opera\u00E7\u00F5es
+[**listar_using_get40**](EstabelecimentoApi.md#listar_using_get40) | **GET** /api/telefones-estabelecimentos | Lista os Telefones Estabelecimentos
+[**listar_using_get42**](EstabelecimentoApi.md#listar_using_get42) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
+[**listar_using_get53**](EstabelecimentoApi.md#listar_using_get53) | **GET** /api/adquirentes-estabelecimento | Lista os V\u00EDnculos dos estabelecimento com os adquirentes
+[**listar_using_get54**](EstabelecimentoApi.md#listar_using_get54) | **GET** /api/estabelecimentos/{id}/operacoes | Listar v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento
 [**salvar_using_post16**](EstabelecimentoApi.md#salvar_using_post16) | **POST** /api/maquinetas | Realiza o cadastro de uma nova maquineta para um estabelecimento 
-[**salvar_using_post17**](EstabelecimentoApi.md#salvar_using_post17) | **POST** /api/regras-operacoes-estabelecimentos | Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
+[**salvar_using_post17**](EstabelecimentoApi.md#salvar_using_post17) | **POST** /api/regras-operacoes-estabelecimentos | Realiza o cadastro de uma nova Regra Opera\u00E7\u00E3o
 [**salvar_using_post22**](EstabelecimentoApi.md#salvar_using_post22) | **POST** /api/telefones-estabelecimentos | Realiza o cadastro de um novo telefone para um estabelecimento 
 [**salvar_using_post24**](EstabelecimentoApi.md#salvar_using_post24) | **POST** /api/terminais | Realiza o cadastro de um novo Terminal
 [**salvar_using_post29**](EstabelecimentoApi.md#salvar_using_post29) | **POST** /api/adquirentes-estabelecimento | Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente
@@ -63,7 +66,7 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::EstabelecimentoApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial
+id = 789 # Integer | C\u00F3digo de identifica\u00E7\u00E3o da origem comercial
 
 origem_comercial_update = Pier::OrigemComercialUpdate.new # OrigemComercialUpdate | origemComercialUpdate
 
@@ -81,7 +84,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da origem comercial | 
  **origem_comercial_update** | [**OrigemComercialUpdate**](OrigemComercialUpdate.md)| origemComercialUpdate | 
 
 ### Return type
@@ -104,7 +107,7 @@ No authorization required
 
 Altera uma Maquineta
 
-Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das maquinetas dos estabelecimentos.
+Este m\u00E9todo realiza a altera\u00E7\u00E3o das maquinetas dos estabelecimentos.
 
 ### Example
 ```ruby
@@ -113,7 +116,7 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::EstabelecimentoApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).
 
 maquineta_update = Pier::MaquinetaUpdate.new # MaquinetaUpdate | maquinetaUpdate
 
@@ -131,7 +134,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id). | 
  **maquineta_update** | [**MaquinetaUpdate**](MaquinetaUpdate.md)| maquinetaUpdate | 
 
 ### Return type
@@ -152,9 +155,9 @@ No authorization required
 # **alterar_using_put11**
 > OperacaoCredorResponse alterar_using_put11(id, operacao_credor_update)
 
-Altera uma Regra Opera\u00C3\u00A7\u00C3\u00A3o
+Altera uma Regra Opera\u00E7\u00E3o
 
-Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma regra opera\u00C3\u00A7\u00C3\u00A3o.
+Este m\u00E9todo realiza a altera\u00E7\u00E3o de uma regra opera\u00E7\u00E3o.
 
 ### Example
 ```ruby
@@ -163,13 +166,13 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::EstabelecimentoApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).
 
 operacao_credor_update = Pier::OperacaoCredorUpdate.new # OperacaoCredorUpdate | operacaoCredorUpdate
 
 
 begin
-  #Altera uma Regra Opera\u00C3\u00A7\u00C3\u00A3o
+  #Altera uma Regra Opera\u00E7\u00E3o
   result = api_instance.alterar_using_put11(id, operacao_credor_update)
   p result
 rescue Pier::ApiError => e
@@ -181,7 +184,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id). | 
  **operacao_credor_update** | [**OperacaoCredorUpdate**](OperacaoCredorUpdate.md)| operacaoCredorUpdate | 
 
 ### Return type
@@ -200,11 +203,11 @@ No authorization required
 
 
 # **alterar_using_put15**
-> TelefoneEstabelecimentoResponse alterar_using_put15(id, ddd, telefone, opts)
+> TelefoneEstabelecimentoResponse alterar_using_put15(id, telefone_estabelecimento_update)
 
 Altera um Telefone do estabelecimento
 
-Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos telefones dos estabelecimentos.
+Este m\u00E9todo realiza a altera\u00E7\u00E3o dos telefones dos estabelecimentos.
 
 ### Example
 ```ruby
@@ -213,19 +216,14 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::EstabelecimentoApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).
 
-ddd = "ddd_example" # String | C\u00C3\u00B3digo DDD do telefone (id).
+telefone_estabelecimento_update = Pier::TelefoneEstabelecimentoUpdate.new # TelefoneEstabelecimentoUpdate | telefoneEstabelecimentoUpdate
 
-telefone = "telefone_example" # String | N\u00C3\u00BAmero do telefone.
-
-opts = { 
-  ramal: "ramal_example" # String | N\u00C3\u00BAmero do ramal.
-}
 
 begin
   #Altera um Telefone do estabelecimento
-  result = api_instance.alterar_using_put15(id, ddd, telefone, opts)
+  result = api_instance.alterar_using_put15(id, telefone_estabelecimento_update)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling EstabelecimentoApi->alterar_using_put15: #{e}"
@@ -236,10 +234,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id). | 
- **ddd** | **String**| C\u00C3\u00B3digo DDD do telefone (id). | 
- **telefone** | **String**| N\u00C3\u00BAmero do telefone. | 
- **ramal** | **String**| N\u00C3\u00BAmero do ramal. | [optional] 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id). | 
+ **telefone_estabelecimento_update** | [**TelefoneEstabelecimentoUpdate**](TelefoneEstabelecimentoUpdate.md)| telefoneEstabelecimentoUpdate | 
 
 ### Return type
 
@@ -261,7 +257,7 @@ No authorization required
 
 Altera um Terminal
 
-Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos Terminais.
+Este m\u00E9todo realiza a altera\u00E7\u00E3o dos Terminais.
 
 ### Example
 ```ruby
@@ -270,7 +266,7 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::EstabelecimentoApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do terminal (id).
 
 terminal_update = Pier::TerminalUpdate.new # TerminalUpdate | terminalUpdate
 
@@ -288,7 +284,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do terminal (id). | 
  **terminal_update** | [**TerminalUpdate**](TerminalUpdate.md)| terminalUpdate | 
 
 ### Return type
@@ -359,9 +355,9 @@ No authorization required
 # **alterar_using_put8**
 > GrupoEconomicoResponse alterar_using_put8(id, grupo_economico_dto)
 
-Alterar Grupo Econ\u00C3\u00B4mico
+Alterar Grupo Econ\u00F4mico
 
-Altera um grupo econ\u00C3\u00B4mico.
+Altera um grupo econ\u00F4mico.
 
 ### Example
 ```ruby
@@ -370,13 +366,13 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::EstabelecimentoApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico
+id = 789 # Integer | C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico
 
 grupo_economico_dto = Pier::GrupoEconomicoDTO.new # GrupoEconomicoDTO | grupoEconomicoDTO
 
 
 begin
-  #Alterar Grupo Econ\u00C3\u00B4mico
+  #Alterar Grupo Econ\u00F4mico
   result = api_instance.alterar_using_put8(id, grupo_economico_dto)
   p result
 rescue Pier::ApiError => e
@@ -388,7 +384,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico | 
  **grupo_economico_dto** | [**GrupoEconomicoDTO**](GrupoEconomicoDTO.md)| grupoEconomicoDTO | 
 
 ### Return type
@@ -503,9 +499,9 @@ No authorization required
 # **cadastrar_using_post3**
 > GrupoEconomicoResponse cadastrar_using_post3(grupo_economico_dto)
 
-Cadastrar Grupo Econ\u00C3\u00B4mico
+Cadastrar Grupo Econ\u00F4mico
 
-Cadastra um grupo econ\u00C3\u00B4mico.
+Cadastra um grupo econ\u00F4mico.
 
 ### Example
 ```ruby
@@ -518,7 +514,7 @@ grupo_economico_dto = Pier::GrupoEconomicoDTO.new # GrupoEconomicoDTO | GrupoEco
 
 
 begin
-  #Cadastrar Grupo Econ\u00C3\u00B4mico
+  #Cadastrar Grupo Econ\u00F4mico
   result = api_instance.cadastrar_using_post3(grupo_economico_dto)
   p result
 rescue Pier::ApiError => e
@@ -550,9 +546,9 @@ No authorization required
 # **consulta_operacao_using_get**
 > DetalheOperacaoResponse consulta_operacao_using_get(id)
 
-Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+Apresenta dados de um determinado tipo de opera\u00E7\u00E3o
 
-Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idoperacao
+Este recurso permite consultar dados de um determinado tipo opera\u00E7\u00E3o a partir do idoperacao
 
 ### Example
 ```ruby
@@ -561,11 +557,11 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::EstabelecimentoApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao).
+id = 789 # Integer | C\u00F3digo de processamento da opera\u00E7\u00E3o (idOperacao).
 
 
 begin
-  #Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+  #Apresenta dados de um determinado tipo de opera\u00E7\u00E3o
   result = api_instance.consulta_operacao_using_get(id)
   p result
 rescue Pier::ApiError => e
@@ -577,7 +573,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao). | 
+ **id** | **Integer**| C\u00F3digo de processamento da opera\u00E7\u00E3o (idOperacao). | 
 
 ### Return type
 
@@ -599,7 +595,7 @@ No authorization required
 
 Consultar Origem Comercial
 
-Consulta uma origem comercial atrav\u00C3\u00A9s do seu identificador.
+Consulta uma origem comercial atrav\u00E9s do seu identificador.
 
 ### Example
 ```ruby
@@ -608,7 +604,7 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::EstabelecimentoApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial
+id = 789 # Integer | C\u00F3digo de identifica\u00E7\u00E3o da origem comercial
 
 
 begin
@@ -624,7 +620,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da origem comercial | 
 
 ### Return type
 
@@ -641,8 +637,8 @@ No authorization required
 
 
 
-# **consultar_using_get16**
-> EstabelecimentoResponse consultar_using_get16(id)
+# **consultar_using_get17**
+> EstabelecimentoResponse consultar_using_get17(id)
 
 Consultar estabelecimento por id
 
@@ -660,10 +656,10 @@ id = 789 # Integer | Id
 
 begin
   #Consultar estabelecimento por id
-  result = api_instance.consultar_using_get16(id)
+  result = api_instance.consultar_using_get17(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->consultar_using_get16: #{e}"
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get17: #{e}"
 end
 ```
 
@@ -688,12 +684,12 @@ No authorization required
 
 
 
-# **consultar_using_get18**
-> GrupoEconomicoResponse consultar_using_get18(id)
+# **consultar_using_get19**
+> GrupoEconomicoResponse consultar_using_get19(id)
 
-Consultar grupo econ\u00C3\u00B4mico
+Consultar grupo econ\u00F4mico
 
-Consulta um grupo econ\u00C3\u00B4mico atrav\u00C3\u00A9s do seu identificador.
+Consulta um grupo econ\u00F4mico atrav\u00E9s do seu identificador.
 
 ### Example
 ```ruby
@@ -702,15 +698,15 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::EstabelecimentoApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico
+id = 789 # Integer | C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico
 
 
 begin
-  #Consultar grupo econ\u00C3\u00B4mico
-  result = api_instance.consultar_using_get18(id)
+  #Consultar grupo econ\u00F4mico
+  result = api_instance.consultar_using_get19(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->consultar_using_get18: #{e}"
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get19: #{e}"
 end
 ```
 
@@ -718,7 +714,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico | 
 
 ### Return type
 
@@ -735,12 +731,12 @@ No authorization required
 
 
 
-# **consultar_using_get20**
-> MaquinetaResponse consultar_using_get20(id)
+# **consultar_using_get21**
+> MaquinetaResponse consultar_using_get21(id)
 
 Apresenta os dados de uma determinada maquineta
 
-Este m\u00C3\u00A9todo permite consultar uma determinada maquineta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Este m\u00E9todo permite consultar uma determinada maquineta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
 
 ### Example
 ```ruby
@@ -749,15 +745,15 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::EstabelecimentoApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).
 
 
 begin
   #Apresenta os dados de uma determinada maquineta
-  result = api_instance.consultar_using_get20(id)
+  result = api_instance.consultar_using_get21(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->consultar_using_get20: #{e}"
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get21: #{e}"
 end
 ```
 
@@ -765,7 +761,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id). | 
 
 ### Return type
 
@@ -782,12 +778,12 @@ No authorization required
 
 
 
-# **consultar_using_get21**
-> OperacaoCredorResponse consultar_using_get21(id)
+# **consultar_using_get22**
+> OperacaoCredorResponse consultar_using_get22(id)
 
-Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
+Apresenta os dados de uma determinada Regra Opera\u00E7\u00E3o
 
-Este m\u00C3\u00A9todo permite consultar uma determinada regra opera\u00C3\u00A7\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Este m\u00E9todo permite consultar uma determinada regra opera\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
 
 ### Example
 ```ruby
@@ -796,15 +792,15 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::EstabelecimentoApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).
 
 
 begin
-  #Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
-  result = api_instance.consultar_using_get21(id)
+  #Apresenta os dados de uma determinada Regra Opera\u00E7\u00E3o
+  result = api_instance.consultar_using_get22(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->consultar_using_get21: #{e}"
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get22: #{e}"
 end
 ```
 
@@ -812,7 +808,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id). | 
 
 ### Return type
 
@@ -829,12 +825,12 @@ No authorization required
 
 
 
-# **consultar_using_get29**
-> TelefoneEstabelecimentoResponse consultar_using_get29(id)
+# **consultar_using_get30**
+> TelefoneEstabelecimentoResponse consultar_using_get30(id)
 
 Apresenta os dados de um determinado telefone de um estabelecimento
 
-Este m\u00C3\u00A9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Este m\u00E9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
 
 ### Example
 ```ruby
@@ -843,15 +839,15 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::EstabelecimentoApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).
 
 
 begin
   #Apresenta os dados de um determinado telefone de um estabelecimento
-  result = api_instance.consultar_using_get29(id)
+  result = api_instance.consultar_using_get30(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->consultar_using_get29: #{e}"
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get30: #{e}"
 end
 ```
 
@@ -859,7 +855,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id). | 
 
 ### Return type
 
@@ -876,12 +872,12 @@ No authorization required
 
 
 
-# **consultar_using_get31**
-> TerminalResponse consultar_using_get31(id)
+# **consultar_using_get32**
+> TerminalResponse consultar_using_get32(id)
 
 Apresenta os dados de um determinado Terminal
 
-Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Este m\u00E9todo permite consultar um determinado Terminal a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
 
 ### Example
 ```ruby
@@ -890,15 +886,15 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::EstabelecimentoApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
 
 
 begin
   #Apresenta os dados de um determinado Terminal
-  result = api_instance.consultar_using_get31(id)
+  result = api_instance.consultar_using_get32(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->consultar_using_get31: #{e}"
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get32: #{e}"
 end
 ```
 
@@ -906,7 +902,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id). | 
 
 ### Return type
 
@@ -923,12 +919,12 @@ No authorization required
 
 
 
-# **consultar_using_get43**
-> VinculoEstabelecimentoAdquirenteResponse consultar_using_get43(id)
+# **consultar_using_get44**
+> VinculoEstabelecimentoAdquirenteResponse consultar_using_get44(id)
 
-Apresenta os dados de um determinado V\u00C3\u00ADnculo
+Apresenta os dados de um determinado V\u00EDnculo
 
-Este m\u00C3\u00A9todo permite consultar um determinado V\u00C3\u00ADnculo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Este m\u00E9todo permite consultar um determinado V\u00EDnculo a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
 
 ### Example
 ```ruby
@@ -937,15 +933,15 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::EstabelecimentoApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u008Dnculo (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do V\u00CDnculo (id).
 
 
 begin
-  #Apresenta os dados de um determinado V\u00C3\u00ADnculo
-  result = api_instance.consultar_using_get43(id)
+  #Apresenta os dados de um determinado V\u00EDnculo
+  result = api_instance.consultar_using_get44(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->consultar_using_get43: #{e}"
+  puts "Exception when calling EstabelecimentoApi->consultar_using_get44: #{e}"
 end
 ```
 
@@ -953,7 +949,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u008Dnculo (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do V\u00CDnculo (id). | 
 
 ### Return type
 
@@ -973,9 +969,9 @@ No authorization required
 # **desabilitar_vinculo_using_post**
 > Object desabilitar_vinculo_using_post(id)
 
-Desabilitar um V\u00C3\u00ADnculo
+Desabilitar um V\u00EDnculo
 
-Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
+Este m\u00E9todo realiza a desativa\u00E7\u00E3o de um v\u00EDnculo.
 
 ### Example
 ```ruby
@@ -984,11 +980,11 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::EstabelecimentoApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).
 
 
 begin
-  #Desabilitar um V\u00C3\u00ADnculo
+  #Desabilitar um V\u00EDnculo
   result = api_instance.desabilitar_vinculo_using_post(id)
   p result
 rescue Pier::ApiError => e
@@ -1000,7 +996,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id). | 
 
 ### Return type
 
@@ -1020,9 +1016,9 @@ No authorization required
 # **desabilitar_vinculo_using_post1**
 > Object desabilitar_vinculo_using_post1(id, vinculo_operacao_persist)
 
-Desabilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
+Desabilitar um v\u00EDnculo opera\u00E7\u00E3o
 
-Este m\u00C3\u00A9todo permite desabilitar um v\u00C3\u00ADnculo.
+Este m\u00E9todo permite desabilitar um v\u00EDnculo.
 
 ### Example
 ```ruby
@@ -1031,13 +1027,13 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::EstabelecimentoApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).
 
 vinculo_operacao_persist = Pier::VinculoOperacaoPersist.new # VinculoOperacaoPersist | vinculoOperacaoPersist
 
 
 begin
-  #Desabilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
+  #Desabilitar um v\u00EDnculo opera\u00E7\u00E3o
   result = api_instance.desabilitar_vinculo_using_post1(id, vinculo_operacao_persist)
   p result
 rescue Pier::ApiError => e
@@ -1049,7 +1045,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id). | 
  **vinculo_operacao_persist** | [**VinculoOperacaoPersist**](VinculoOperacaoPersist.md)| vinculoOperacaoPersist | 
 
 ### Return type
@@ -1070,9 +1066,9 @@ No authorization required
 # **habilitar_vinculo_using_post**
 > Object habilitar_vinculo_using_post(id)
 
-Habilitar um V\u00C3\u00ADnculo
+Habilitar um V\u00EDnculo
 
-Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
+Este m\u00E9todo realiza a ativa\u00E7\u00E3o de um v\u00EDnculo.
 
 ### Example
 ```ruby
@@ -1081,11 +1077,11 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::EstabelecimentoApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).
 
 
 begin
-  #Habilitar um V\u00C3\u00ADnculo
+  #Habilitar um V\u00EDnculo
   result = api_instance.habilitar_vinculo_using_post(id)
   p result
 rescue Pier::ApiError => e
@@ -1097,7 +1093,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id). | 
 
 ### Return type
 
@@ -1117,9 +1113,9 @@ No authorization required
 # **habilitar_vinculo_using_post1**
 > Object habilitar_vinculo_using_post1(id, vinculo_operacao_persist)
 
-Habilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
+Habilitar um v\u00EDnculo opera\u00E7\u00E3o
 
-Este m\u00C3\u00A9todo permite habilitar um v\u00C3\u00ADnculo.
+Este m\u00E9todo permite habilitar um v\u00EDnculo.
 
 ### Example
 ```ruby
@@ -1128,13 +1124,13 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::EstabelecimentoApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).
 
 vinculo_operacao_persist = Pier::VinculoOperacaoPersist.new # VinculoOperacaoPersist | vinculoOperacaoPersist
 
 
 begin
-  #Habilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
+  #Habilitar um v\u00EDnculo opera\u00E7\u00E3o
   result = api_instance.habilitar_vinculo_using_post1(id, vinculo_operacao_persist)
   p result
 rescue Pier::ApiError => e
@@ -1146,7 +1142,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id). | 
  **vinculo_operacao_persist** | [**VinculoOperacaoPersist**](VinculoOperacaoPersist.md)| vinculoOperacaoPersist | 
 
 ### Return type
@@ -1167,9 +1163,9 @@ No authorization required
 # **lista_operacao_using_get**
 > PageOperacaoResponse lista_operacao_using_get(opts)
 
-Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista
+Apresenta dados de opera\u00E7\u00F5es em uma lista
 
-Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00A3o
+Este recurso permite listar as opera\u00E7\u00E3o
 
 ### Example
 ```ruby
@@ -1179,15 +1175,15 @@ require 'pier-sdk-ruby'
 api_instance = Pier::EstabelecimentoApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id_operacao: 789, # Integer | C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o
-  codigo_processamento: "codigo_processamento_example" # String | C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  id_operacao: 789, # Integer | C\u00F3digo que identifica a opera\u00E7\u00E3o
+  codigo_processamento: "codigo_processamento_example" # String | C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador
 }
 
 begin
-  #Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista
+  #Apresenta dados de opera\u00E7\u00F5es em uma lista
   result = api_instance.lista_operacao_using_get(opts)
   p result
 rescue Pier::ApiError => e
@@ -1199,11 +1195,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id_operacao** | **Integer**| C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o | [optional] 
- **codigo_processamento** | **String**| C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **id_operacao** | **Integer**| C\u00F3digo que identifica a opera\u00E7\u00E3o | [optional] 
+ **codigo_processamento** | **String**| C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador | [optional] 
 
 ### Return type
 
@@ -1225,7 +1221,7 @@ No authorization required
 
 Lista os MCCs
 
-Este m\u00C3\u00A9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
+Este m\u00E9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
 
 ### Example
 ```ruby
@@ -1235,9 +1231,9 @@ require 'pier-sdk-ruby'
 api_instance = Pier::EstabelecimentoApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 }
 
 begin
@@ -1253,9 +1249,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -1287,32 +1283,32 @@ require 'pier-sdk-ruby'
 api_instance = Pier::EstabelecimentoApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   id: 789, # Integer | Id da origem comercial
   nome: "nome_example", # String | Nome da origem comercial
   status: 56, # Integer | Indica o status da origem comercial
   id_estabelecimento: 789, # Integer | Identificador do estabelecimento
   id_produto: 789, # Integer | Identificador do produto
-  descricao: "descricao_example", # String | Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial
+  descricao: "descricao_example", # String | Descri\u00E7\u00E3o da origem comercial
   id_tipo_origem_comercial: 789, # Integer | Identificador do tipo de origem comercial
   id_grupo_origem_comercial: 789, # Integer | Identificador do grupo de origem comercial
-  flag_pre_aprovado: true, # BOOLEAN | Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o
-  flag_aprovacao_imediata: true, # BOOLEAN | Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata
-  nome_fantasia_plastico: "nome_fantasia_plastico_example", # String | Nome fantasia impresso no pl\u00C3\u00A1stico
-  flag_cartao_provisorio: true, # BOOLEAN | Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio
-  flag_cartao_definitivo: true, # BOOLEAN | Indica se permite cart\u00C3\u00A3o definitivo
-  usuario: "usuario_example", # String | Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o
-  senha: "senha_example", # String | Senha para autentica\u00C3\u00A7\u00C3\u00A3o
-  flag_origem_externa: true, # BOOLEAN | Indica se \u00C3\u00A9 origem externa
-  flag_modificado: true, # BOOLEAN | Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o
+  flag_pre_aprovado: true, # BOOLEAN | Indica se permite pr\u00E9 aprova\u00E7\u00E3o
+  flag_aprovacao_imediata: true, # BOOLEAN | Indica se permite aprova\u00E7\u00E3o imediata
+  nome_fantasia_plastico: "nome_fantasia_plastico_example", # String | Nome fantasia impresso no pl\u00E1stico
+  flag_cartao_provisorio: true, # BOOLEAN | Indica se permite cart\u00E3o provis\u00F3rio
+  flag_cartao_definitivo: true, # BOOLEAN | Indica se permite cart\u00E3o definitivo
+  usuario: "usuario_example", # String | Usu\u00E1rio para autentica\u00E7\u00E3o
+  senha: "senha_example", # String | Senha para autentica\u00E7\u00E3o
+  flag_origem_externa: true, # BOOLEAN | Indica se \u00E9 origem externa
+  flag_modificado: true, # BOOLEAN | Indica se h\u00E1 modifica\u00E7\u00E3o
   flag_envia_fatura_usuario: true, # BOOLEAN | Indica se envia fatura
-  flag_credito_faturamento: true, # BOOLEAN | Indica se permite cr\u00C3\u00A9dito de faturamento
-  flag_concede_limite_provisorio: true, # BOOLEAN | Indica se concede limite provis\u00C3\u00B3rio
+  flag_credito_faturamento: true, # BOOLEAN | Indica se permite cr\u00E9dito de faturamento
+  flag_concede_limite_provisorio: true, # BOOLEAN | Indica se concede limite provis\u00F3rio
   flag_digitalizar_doc: true, # BOOLEAN | Indica se digitaliza documento
   flag_embossing_loja: true, # BOOLEAN | Indica se realiza embossing em loja
-  flag_consulta_previa: true, # BOOLEAN | Indica se realiza consulta pr\u00C3\u00A9via
+  flag_consulta_previa: true, # BOOLEAN | Indica se realiza consulta pr\u00E9via
   tipo_pessoa: "tipo_pessoa_example" # String | Tipo de pessoa
 }
 
@@ -1329,32 +1325,32 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
  **id** | **Integer**| Id da origem comercial | [optional] 
  **nome** | **String**| Nome da origem comercial | [optional] 
  **status** | **Integer**| Indica o status da origem comercial | [optional] 
  **id_estabelecimento** | **Integer**| Identificador do estabelecimento | [optional] 
  **id_produto** | **Integer**| Identificador do produto | [optional] 
- **descricao** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial | [optional] 
+ **descricao** | **String**| Descri\u00E7\u00E3o da origem comercial | [optional] 
  **id_tipo_origem_comercial** | **Integer**| Identificador do tipo de origem comercial | [optional] 
  **id_grupo_origem_comercial** | **Integer**| Identificador do grupo de origem comercial | [optional] 
- **flag_pre_aprovado** | **BOOLEAN**| Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o | [optional] 
- **flag_aprovacao_imediata** | **BOOLEAN**| Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata | [optional] 
- **nome_fantasia_plastico** | **String**| Nome fantasia impresso no pl\u00C3\u00A1stico | [optional] 
- **flag_cartao_provisorio** | **BOOLEAN**| Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio | [optional] 
- **flag_cartao_definitivo** | **BOOLEAN**| Indica se permite cart\u00C3\u00A3o definitivo | [optional] 
- **usuario** | **String**| Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o | [optional] 
- **senha** | **String**| Senha para autentica\u00C3\u00A7\u00C3\u00A3o | [optional] 
- **flag_origem_externa** | **BOOLEAN**| Indica se \u00C3\u00A9 origem externa | [optional] 
- **flag_modificado** | **BOOLEAN**| Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
+ **flag_pre_aprovado** | **BOOLEAN**| Indica se permite pr\u00E9 aprova\u00E7\u00E3o | [optional] 
+ **flag_aprovacao_imediata** | **BOOLEAN**| Indica se permite aprova\u00E7\u00E3o imediata | [optional] 
+ **nome_fantasia_plastico** | **String**| Nome fantasia impresso no pl\u00E1stico | [optional] 
+ **flag_cartao_provisorio** | **BOOLEAN**| Indica se permite cart\u00E3o provis\u00F3rio | [optional] 
+ **flag_cartao_definitivo** | **BOOLEAN**| Indica se permite cart\u00E3o definitivo | [optional] 
+ **usuario** | **String**| Usu\u00E1rio para autentica\u00E7\u00E3o | [optional] 
+ **senha** | **String**| Senha para autentica\u00E7\u00E3o | [optional] 
+ **flag_origem_externa** | **BOOLEAN**| Indica se \u00E9 origem externa | [optional] 
+ **flag_modificado** | **BOOLEAN**| Indica se h\u00E1 modifica\u00E7\u00E3o | [optional] 
  **flag_envia_fatura_usuario** | **BOOLEAN**| Indica se envia fatura | [optional] 
- **flag_credito_faturamento** | **BOOLEAN**| Indica se permite cr\u00C3\u00A9dito de faturamento | [optional] 
- **flag_concede_limite_provisorio** | **BOOLEAN**| Indica se concede limite provis\u00C3\u00B3rio | [optional] 
+ **flag_credito_faturamento** | **BOOLEAN**| Indica se permite cr\u00E9dito de faturamento | [optional] 
+ **flag_concede_limite_provisorio** | **BOOLEAN**| Indica se concede limite provis\u00F3rio | [optional] 
  **flag_digitalizar_doc** | **BOOLEAN**| Indica se digitaliza documento | [optional] 
  **flag_embossing_loja** | **BOOLEAN**| Indica se realiza embossing em loja | [optional] 
- **flag_consulta_previa** | **BOOLEAN**| Indica se realiza consulta pr\u00C3\u00A9via | [optional] 
+ **flag_consulta_previa** | **BOOLEAN**| Indica se realiza consulta pr\u00E9via | [optional] 
  **tipo_pessoa** | **String**| Tipo de pessoa | [optional] 
 
 ### Return type
@@ -1377,7 +1373,7 @@ No authorization required
 
 Lista os Tipos de adquirentes
 
-Este m\u00C3\u00A9todo permite que sejam listados os tipos de adquirentes.
+Este m\u00E9todo permite que sejam listados os tipos de adquirentes.
 
 ### Example
 ```ruby
@@ -1387,9 +1383,9 @@ require 'pier-sdk-ruby'
 api_instance = Pier::EstabelecimentoApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 }
 
 begin
@@ -1405,13 +1401,67 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
 [**PageEntidadeResponse**](PageEntidadeResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **listar_tipos_estabelecimentos_using_get**
+> PageTipoEstabelecimentoResponse listar_tipos_estabelecimentos_using_get(opts)
+
+Lista os tipos de estabelecimentos
+
+Lista os tipos de estabelecimentos
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+api_instance = Pier::EstabelecimentoApi.new
+
+opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  descricao: "descricao_example" # String | Descri\u00E7\u00E3o do tipo de estabelecimento.
+}
+
+begin
+  #Lista os tipos de estabelecimentos
+  result = api_instance.listar_tipos_estabelecimentos_using_get(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling EstabelecimentoApi->listar_tipos_estabelecimentos_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **descricao** | **String**| Descri\u00E7\u00E3o do tipo de estabelecimento. | [optional] 
+
+### Return type
+
+[**PageTipoEstabelecimentoResponse**](PageTipoEstabelecimentoResponse.md)
 
 ### Authorization
 
@@ -1429,7 +1479,7 @@ No authorization required
 
 Lista os Tipos de  Maquinetas
 
-Este m\u00C3\u00A9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
+Este m\u00E9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
 
 ### Example
 ```ruby
@@ -1439,9 +1489,9 @@ require 'pier-sdk-ruby'
 api_instance = Pier::EstabelecimentoApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 }
 
 begin
@@ -1457,13 +1507,67 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
 [**PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **listar_tipos_origens_comerciais_using_get**
+> PageTipoOrigemComercialResponse listar_tipos_origens_comerciais_using_get(opts)
+
+Listar tipos de origens comerciais
+
+Lista os tipos de origens comerciais
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+api_instance = Pier::EstabelecimentoApi.new
+
+opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  nome: "nome_example" # String | Nome do tipo de origem comercial
+}
+
+begin
+  #Listar tipos de origens comerciais
+  result = api_instance.listar_tipos_origens_comerciais_using_get(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling EstabelecimentoApi->listar_tipos_origens_comerciais_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **nome** | **String**| Nome do tipo de origem comercial | [optional] 
+
+### Return type
+
+[**PageTipoOrigemComercialResponse**](PageTipoOrigemComercialResponse.md)
 
 ### Authorization
 
@@ -1481,7 +1585,7 @@ No authorization required
 
 Lista os Tipos Terminais
 
-Este m\u00C3\u00A9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
+Este m\u00E9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
 
 ### Example
 ```ruby
@@ -1491,9 +1595,9 @@ require 'pier-sdk-ruby'
 api_instance = Pier::EstabelecimentoApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 }
 
 begin
@@ -1509,9 +1613,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -1528,12 +1632,12 @@ No authorization required
 
 
 
-# **listar_using_get21**
-> PageEstabelecimentoResponse listar_using_get21(opts)
+# **listar_using_get22**
+> PageEstabelecimentoResponse listar_using_get22(opts)
 
 Lista Estabelecimentos
 
-Lista todas os Estabelecimentos
+Lista todos os Estabelecimentos
 
 ### Example
 ```ruby
@@ -1543,52 +1647,52 @@ require 'pier-sdk-ruby'
 api_instance = Pier::EstabelecimentoApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
-  id_credor: 789, # Integer | Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor.
-  numero_receita_federal: "numero_receita_federal_example", # String | Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal.
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  id: 789, # Integer | C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id).
+  id_grupo_economico: 789, # Integer | Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico.
+  numero_receita_federal: "numero_receita_federal_example", # String | Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal.
   nome: "nome_example", # String | Nome do Estabelecimento.
-  descricao: "descricao_example", # String | Raz\u00C3\u00A3o Social do Estabelecimento.
-  nome_fantasia: "nome_fantasia_example", # String | T\u00C3\u00ADtulo Comercial do Estabelecimento.
-  cep: "cep_example", # String | C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+  descricao: "descricao_example", # String | Raz\u00E3o Social do Estabelecimento.
+  nome_fantasia: "nome_fantasia_example", # String | T\u00EDtulo Comercial do Estabelecimento.
+  cep: "cep_example", # String | C\u00F3digo de Endere\u00E7amento Postal (CEP).
   nome_logradouro: "nome_logradouro_example", # String | Nome do Logradouro.
-  numero_endereco: 56, # Integer | N\u00C3\u00BAmero do endere\u00C3\u00A7o.
-  complemento: "complemento_example", # String | Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
-  bairro: "bairro_example", # String | Nome do bairro do endere\u00C3\u00A7o.
-  cidade: "cidade_example", # String | Nome da cidade do endere\u00C3\u00A7o.
-  uf: "uf_example", # String | Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
-  pais: "pais_example", # String | Nome do pa\u00C3\u00ADs.
+  numero_endereco: 56, # Integer | N\u00FAmero do endere\u00E7o.
+  complemento: "complemento_example", # String | Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
+  bairro: "bairro_example", # String | Nome do bairro do endere\u00E7o.
+  cidade: "cidade_example", # String | Nome da cidade do endere\u00E7o.
+  uf: "uf_example", # String | Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
+  pais: "pais_example", # String | Nome do pa\u00EDs.
   data_cadastramento: "data_cadastramento_example", # String | Data de Cadastro do Estabelecimento, no formato yyyy-MM-dd.
   contato: "contato_example", # String | Nome da pessoa para contato com o Estabelecimento.
   email: "email_example", # String | E-mail da pessoa para contato com o Estabelecimento.
-  flag_arquivo_secr_fazenda: 56, # Integer | Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.
-  flag_cartao_digitado: 56, # Integer | Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.
-  inativo: 56, # Integer | Indica se o estabelecimento est\u00C3\u00A1 inativo.
-  id_pais: 789, # Integer | Identificador de Pa\u00C3\u00ADs.
-  mcc: 789, # Integer | C\u00C3\u00B3digo de Categoria de Mercado
-  id_tipo_estabelecimento: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.
-  correspondencia: 56, # Integer | Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.
-  id_moeda: 789, # Integer | C\u00C3\u00B3digo identificador da moeda.
+  flag_arquivo_secr_fazenda: 56, # Integer | Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual.
+  flag_cartao_digitado: 56, # Integer | Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o.
+  inativo: 56, # Integer | Indica se o estabelecimento est\u00E1 inativo.
+  id_pais: 789, # Integer | Identificador de Pa\u00EDs.
+  mcc: 789, # Integer | C\u00F3digo de Categoria de Mercado
+  id_tipo_estabelecimento: 789, # Integer | C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento.
+  correspondencia: 56, # Integer | Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA.
+  id_moeda: 789, # Integer | C\u00F3digo identificador da moeda.
   tipo_pagamento: "tipo_pagamento_example", # String | Tipo do regime de pagamento do estabelecimento.
-  numero_estabelecimento: "numero_estabelecimento_example", # String | N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.
-  cep2: "cep2_example", # String | C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+  numero_estabelecimento: "numero_estabelecimento_example", # String | N\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Conductor.
+  cep2: "cep2_example", # String | C\u00F3digo de Endere\u00E7amento Postal (CEP).
   nome_logradouro2: "nome_logradouro2_example", # String | Nome do Logradouro.
-  numero_endereco2: 56, # Integer | N\u00C3\u00BAmero do endere\u00C3\u00A7o.
-  complemento2: "complemento2_example", # String | Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
-  bairro2: "bairro2_example", # String | Nome do bairro do endere\u00C3\u00A7o.
-  cidade2: "cidade2_example", # String | Nome da cidade do endere\u00C3\u00A7o.
-  uf2: "uf2_example", # String | Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
-  flag_matriz: 56 # Integer | Indica se \u00C3\u00A9 matriz ou filial.
+  numero_endereco2: 56, # Integer | N\u00FAmero do endere\u00E7o.
+  complemento2: "complemento2_example", # String | Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
+  bairro2: "bairro2_example", # String | Nome do bairro do endere\u00E7o.
+  cidade2: "cidade2_example", # String | Nome da cidade do endere\u00E7o.
+  uf2: "uf2_example", # String | Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
+  flag_matriz: 56 # Integer | Indica se \u00E9 matriz ou filial.
 }
 
 begin
   #Lista Estabelecimentos
-  result = api_instance.listar_using_get21(opts)
+  result = api_instance.listar_using_get22(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get21: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get22: #{e}"
 end
 ```
 
@@ -1596,44 +1700,44 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id). | [optional] 
- **id_credor** | **Integer**| Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor. | [optional] 
- **numero_receita_federal** | **String**| Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal. | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id). | [optional] 
+ **id_grupo_economico** | **Integer**| Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico. | [optional] 
+ **numero_receita_federal** | **String**| Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal. | [optional] 
  **nome** | **String**| Nome do Estabelecimento. | [optional] 
- **descricao** | **String**| Raz\u00C3\u00A3o Social do Estabelecimento. | [optional] 
- **nome_fantasia** | **String**| T\u00C3\u00ADtulo Comercial do Estabelecimento. | [optional] 
- **cep** | **String**| C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP). | [optional] 
+ **descricao** | **String**| Raz\u00E3o Social do Estabelecimento. | [optional] 
+ **nome_fantasia** | **String**| T\u00EDtulo Comercial do Estabelecimento. | [optional] 
+ **cep** | **String**| C\u00F3digo de Endere\u00E7amento Postal (CEP). | [optional] 
  **nome_logradouro** | **String**| Nome do Logradouro. | [optional] 
- **numero_endereco** | **Integer**| N\u00C3\u00BAmero do endere\u00C3\u00A7o. | [optional] 
- **complemento** | **String**| Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o. | [optional] 
- **bairro** | **String**| Nome do bairro do endere\u00C3\u00A7o. | [optional] 
- **cidade** | **String**| Nome da cidade do endere\u00C3\u00A7o. | [optional] 
- **uf** | **String**| Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o. | [optional] 
- **pais** | **String**| Nome do pa\u00C3\u00ADs. | [optional] 
+ **numero_endereco** | **Integer**| N\u00FAmero do endere\u00E7o. | [optional] 
+ **complemento** | **String**| Descri\u00E7\u00F5es complementares referente ao endere\u00E7o. | [optional] 
+ **bairro** | **String**| Nome do bairro do endere\u00E7o. | [optional] 
+ **cidade** | **String**| Nome da cidade do endere\u00E7o. | [optional] 
+ **uf** | **String**| Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o. | [optional] 
+ **pais** | **String**| Nome do pa\u00EDs. | [optional] 
  **data_cadastramento** | **String**| Data de Cadastro do Estabelecimento, no formato yyyy-MM-dd. | [optional] 
  **contato** | **String**| Nome da pessoa para contato com o Estabelecimento. | [optional] 
  **email** | **String**| E-mail da pessoa para contato com o Estabelecimento. | [optional] 
- **flag_arquivo_secr_fazenda** | **Integer**| Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual. | [optional] 
- **flag_cartao_digitado** | **Integer**| Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o. | [optional] 
- **inativo** | **Integer**| Indica se o estabelecimento est\u00C3\u00A1 inativo. | [optional] 
- **id_pais** | **Integer**| Identificador de Pa\u00C3\u00ADs. | [optional] 
- **mcc** | **Integer**| C\u00C3\u00B3digo de Categoria de Mercado | [optional] 
- **id_tipo_estabelecimento** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento. | [optional] 
- **correspondencia** | **Integer**| Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA. | [optional] 
- **id_moeda** | **Integer**| C\u00C3\u00B3digo identificador da moeda. | [optional] 
+ **flag_arquivo_secr_fazenda** | **Integer**| Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual. | [optional] 
+ **flag_cartao_digitado** | **Integer**| Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o. | [optional] 
+ **inativo** | **Integer**| Indica se o estabelecimento est\u00E1 inativo. | [optional] 
+ **id_pais** | **Integer**| Identificador de Pa\u00EDs. | [optional] 
+ **mcc** | **Integer**| C\u00F3digo de Categoria de Mercado | [optional] 
+ **id_tipo_estabelecimento** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento. | [optional] 
+ **correspondencia** | **Integer**| Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA. | [optional] 
+ **id_moeda** | **Integer**| C\u00F3digo identificador da moeda. | [optional] 
  **tipo_pagamento** | **String**| Tipo do regime de pagamento do estabelecimento. | [optional] 
- **numero_estabelecimento** | **String**| N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor. | [optional] 
- **cep2** | **String**| C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP). | [optional] 
+ **numero_estabelecimento** | **String**| N\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Conductor. | [optional] 
+ **cep2** | **String**| C\u00F3digo de Endere\u00E7amento Postal (CEP). | [optional] 
  **nome_logradouro2** | **String**| Nome do Logradouro. | [optional] 
- **numero_endereco2** | **Integer**| N\u00C3\u00BAmero do endere\u00C3\u00A7o. | [optional] 
- **complemento2** | **String**| Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o. | [optional] 
- **bairro2** | **String**| Nome do bairro do endere\u00C3\u00A7o. | [optional] 
- **cidade2** | **String**| Nome da cidade do endere\u00C3\u00A7o. | [optional] 
- **uf2** | **String**| Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o. | [optional] 
- **flag_matriz** | **Integer**| Indica se \u00C3\u00A9 matriz ou filial. | [optional] 
+ **numero_endereco2** | **Integer**| N\u00FAmero do endere\u00E7o. | [optional] 
+ **complemento2** | **String**| Descri\u00E7\u00F5es complementares referente ao endere\u00E7o. | [optional] 
+ **bairro2** | **String**| Nome do bairro do endere\u00E7o. | [optional] 
+ **cidade2** | **String**| Nome da cidade do endere\u00E7o. | [optional] 
+ **uf2** | **String**| Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o. | [optional] 
+ **flag_matriz** | **Integer**| Indica se \u00E9 matriz ou filial. | [optional] 
 
 ### Return type
 
@@ -1650,12 +1754,12 @@ No authorization required
 
 
 
-# **listar_using_get23**
-> PageGrupoEconomicoResponse listar_using_get23(opts)
+# **listar_using_get24**
+> PageGrupoEconomicoResponse listar_using_get24(opts)
 
-Listar grupos econ\u00C3\u00B4micos
+Listar grupos econ\u00F4micos
 
-Lista grupos econ\u00C3\u00B4micos cadastrados. 
+Lista grupos econ\u00F4micos cadastrados. 
 
 ### Example
 ```ruby
@@ -1665,19 +1769,19 @@ require 'pier-sdk-ruby'
 api_instance = Pier::EstabelecimentoApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  razao_social: "razao_social_example", # String | Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  razao_social: "razao_social_example", # String | Raz\u00E3o social da pessoa jur\u00EDdica
   nome_credor: "nome_credor_example", # String | Nome do credor
-  numero_receita_federal: "numero_receita_federal_example", # String | N\u00C3\u00BAmero da Receita Federal
-  inscricao_estadual: "inscricao_estadual_example", # String | N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual
+  numero_receita_federal: "numero_receita_federal_example", # String | N\u00FAmero da Receita Federal
+  inscricao_estadual: "inscricao_estadual_example", # String | N\u00FAmero da inscri\u00E7\u00E3o estadual
   contato: "contato_example", # String | Nome da pessoa para entrar em contato
-  banco: 56, # Integer | C\u00C3\u00B3digo do banco
-  agencia: 56, # Integer | Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
-  digito_agencia: "digito_agencia_example", # String | D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia
-  conta_corrente: "conta_corrente_example", # String | C\u00C3\u00B3digo da Conta Corrente
-  digito_conta_corrente: "digito_conta_corrente_example", # String | D\u00C3\u00ADgito Verificador da Conta Corrente
+  banco: 56, # Integer | C\u00F3digo do banco
+  agencia: 56, # Integer | Raz\u00E3o social da pessoa jur\u00EDdica
+  digito_agencia: "digito_agencia_example", # String | D\u00EDgito Verificador da ag\u00EAncia
+  conta_corrente: "conta_corrente_example", # String | C\u00F3digo da Conta Corrente
+  digito_conta_corrente: "digito_conta_corrente_example", # String | D\u00EDgito Verificador da Conta Corrente
   periodicidade: "periodicidade_example", # String | Periodicidade do pagamento
   pagamento_semanal: "pagamento_semanal_example", # String | Dia para pagamento semanal
   pagamento_mensal: 56, # Integer | Dia da data para o pagamento mensal
@@ -1692,15 +1796,15 @@ opts = {
   taxa_adm: 3.4, # Float | Taxa Administrativa
   taxa_banco: 3.4, # Float | Taxa do Banco
   limite_rav: 3.4, # Float | Valor limite do RAV
-  id_credor_rav: 789 # Integer | C\u00C3\u00B3digo identificador do credor RAV
+  id_credor_rav: 789 # Integer | C\u00F3digo identificador do credor RAV
 }
 
 begin
-  #Listar grupos econ\u00C3\u00B4micos
-  result = api_instance.listar_using_get23(opts)
+  #Listar grupos econ\u00F4micos
+  result = api_instance.listar_using_get24(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get23: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get24: #{e}"
 end
 ```
 
@@ -1708,19 +1812,19 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **razao_social** | **String**| Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **razao_social** | **String**| Raz\u00E3o social da pessoa jur\u00EDdica | [optional] 
  **nome_credor** | **String**| Nome do credor | [optional] 
- **numero_receita_federal** | **String**| N\u00C3\u00BAmero da Receita Federal | [optional] 
- **inscricao_estadual** | **String**| N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual | [optional] 
+ **numero_receita_federal** | **String**| N\u00FAmero da Receita Federal | [optional] 
+ **inscricao_estadual** | **String**| N\u00FAmero da inscri\u00E7\u00E3o estadual | [optional] 
  **contato** | **String**| Nome da pessoa para entrar em contato | [optional] 
- **banco** | **Integer**| C\u00C3\u00B3digo do banco | [optional] 
- **agencia** | **Integer**| Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica | [optional] 
- **digito_agencia** | **String**| D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia | [optional] 
- **conta_corrente** | **String**| C\u00C3\u00B3digo da Conta Corrente | [optional] 
- **digito_conta_corrente** | **String**| D\u00C3\u00ADgito Verificador da Conta Corrente | [optional] 
+ **banco** | **Integer**| C\u00F3digo do banco | [optional] 
+ **agencia** | **Integer**| Raz\u00E3o social da pessoa jur\u00EDdica | [optional] 
+ **digito_agencia** | **String**| D\u00EDgito Verificador da ag\u00EAncia | [optional] 
+ **conta_corrente** | **String**| C\u00F3digo da Conta Corrente | [optional] 
+ **digito_conta_corrente** | **String**| D\u00EDgito Verificador da Conta Corrente | [optional] 
  **periodicidade** | **String**| Periodicidade do pagamento | [optional] 
  **pagamento_semanal** | **String**| Dia para pagamento semanal | [optional] 
  **pagamento_mensal** | **Integer**| Dia da data para o pagamento mensal | [optional] 
@@ -1735,7 +1839,7 @@ Name | Type | Description  | Notes
  **taxa_adm** | [**Float**](.md)| Taxa Administrativa | [optional] 
  **taxa_banco** | [**Float**](.md)| Taxa do Banco | [optional] 
  **limite_rav** | [**Float**](.md)| Valor limite do RAV | [optional] 
- **id_credor_rav** | **Integer**| C\u00C3\u00B3digo identificador do credor RAV | [optional] 
+ **id_credor_rav** | **Integer**| C\u00F3digo identificador do credor RAV | [optional] 
 
 ### Return type
 
@@ -1753,11 +1857,11 @@ No authorization required
 
 
 # **listar_using_get25**
-> PageMaquinetaResponse listar_using_get25(opts)
+> PageGrupoOrigemComercialResponse listar_using_get25(opts)
 
-Lista as Maquinetas
+Listar grupos de origens comerciais
 
-Este m\u00C3\u00A9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
+Lista os grupos de origens comerciais
 
 ### Example
 ```ruby
@@ -1767,14 +1871,14 @@ require 'pier-sdk-ruby'
 api_instance = Pier::EstabelecimentoApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id_estabelecimento: 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  nome: "nome_example" # String | Nome do grupo de origem comercial
 }
 
 begin
-  #Lista as Maquinetas
+  #Listar grupos de origens comerciais
   result = api_instance.listar_using_get25(opts)
   p result
 rescue Pier::ApiError => e
@@ -1786,10 +1890,64 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id_estabelecimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id). | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **nome** | **String**| Nome do grupo de origem comercial | [optional] 
+
+### Return type
+
+[**PageGrupoOrigemComercialResponse**](PageGrupoOrigemComercialResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **listar_using_get27**
+> PageMaquinetaResponse listar_using_get27(opts)
+
+Lista as Maquinetas
+
+Este m\u00E9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+api_instance = Pier::EstabelecimentoApi.new
+
+opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  id_estabelecimento: 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id).
+}
+
+begin
+  #Lista as Maquinetas
+  result = api_instance.listar_using_get27(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling EstabelecimentoApi->listar_using_get27: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **id_estabelecimento** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id). | [optional] 
 
 ### Return type
 
@@ -1806,8 +1964,8 @@ No authorization required
 
 
 
-# **listar_using_get26**
-> PageMoedaResponse listar_using_get26(opts)
+# **listar_using_get28**
+> PageMoedaResponse listar_using_get28(opts)
 
 Lista os tipos de moedas do emissor 
 
@@ -1821,20 +1979,20 @@ require 'pier-sdk-ruby'
 api_instance = Pier::EstabelecimentoApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  codigo_moeda: "codigo_moeda_example", # String | C\u00C3\u00B3digo identificador do tipo de moeda.
-  simbolo: "simbolo_example", # String | S\u00C3\u00ADmbolo da Moeda.
-  descricao: "descricao_example" # String | Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda.
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  codigo_moeda: "codigo_moeda_example", # String | C\u00F3digo identificador do tipo de moeda.
+  simbolo: "simbolo_example", # String | S\u00EDmbolo da Moeda.
+  descricao: "descricao_example" # String | Descri\u00E7\u00E3o do tipo da moeda.
 }
 
 begin
   #Lista os tipos de moedas do emissor 
-  result = api_instance.listar_using_get26(opts)
+  result = api_instance.listar_using_get28(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get26: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get28: #{e}"
 end
 ```
 
@@ -1842,12 +2000,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **codigo_moeda** | **String**| C\u00C3\u00B3digo identificador do tipo de moeda. | [optional] 
- **simbolo** | **String**| S\u00C3\u00ADmbolo da Moeda. | [optional] 
- **descricao** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda. | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **codigo_moeda** | **String**| C\u00F3digo identificador do tipo de moeda. | [optional] 
+ **simbolo** | **String**| S\u00EDmbolo da Moeda. | [optional] 
+ **descricao** | **String**| Descri\u00E7\u00E3o do tipo da moeda. | [optional] 
 
 ### Return type
 
@@ -1864,12 +2022,12 @@ No authorization required
 
 
 
-# **listar_using_get27**
-> PageOperacaoCredorResponse listar_using_get27(opts)
+# **listar_using_get29**
+> PageOperacaoCredorResponse listar_using_get29(opts)
 
-Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
+Lista as Regras Opera\u00E7\u00F5es
 
-Este m\u00C3\u00A9todo permite que sejam listados as Regras opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
+Este m\u00E9todo permite que sejam listados as Regras opera\u00E7\u00F5es existentes na base de dados do Emissor.
 
 ### Example
 ```ruby
@@ -1879,20 +2037,20 @@ require 'pier-sdk-ruby'
 api_instance = Pier::EstabelecimentoApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id_operacao: 789, # Integer | Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o.
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  id_operacao: 789, # Integer | Apresenta o id da Opera\u00E7\u00E3o.
   id_credor: 789, # Integer | Apresenta o id do Credor.
   id_produto: 789 # Integer | Apresenta o id do produto que vai ser alterado.
 }
 
 begin
-  #Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
-  result = api_instance.listar_using_get27(opts)
+  #Lista as Regras Opera\u00E7\u00F5es
+  result = api_instance.listar_using_get29(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get27: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get29: #{e}"
 end
 ```
 
@@ -1900,10 +2058,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id_operacao** | **Integer**| Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o. | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **id_operacao** | **Integer**| Apresenta o id da Opera\u00E7\u00E3o. | [optional] 
  **id_credor** | **Integer**| Apresenta o id do Credor. | [optional] 
  **id_produto** | **Integer**| Apresenta o id do produto que vai ser alterado. | [optional] 
 
@@ -1922,12 +2080,12 @@ No authorization required
 
 
 
-# **listar_using_get38**
-> PageTelefoneEstabelecimentoResponse listar_using_get38(opts)
+# **listar_using_get40**
+> PageTelefoneEstabelecimentoResponse listar_using_get40(opts)
 
 Lista os Telefones Estabelecimentos
 
-Este m\u00C3\u00A9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
+Este m\u00E9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
 
 ### Example
 ```ruby
@@ -1937,18 +2095,18 @@ require 'pier-sdk-ruby'
 api_instance = Pier::EstabelecimentoApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id_estabelecimento: 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  id_estabelecimento: 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id).
 }
 
 begin
   #Lista os Telefones Estabelecimentos
-  result = api_instance.listar_using_get38(opts)
+  result = api_instance.listar_using_get40(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get38: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get40: #{e}"
 end
 ```
 
@@ -1956,10 +2114,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id_estabelecimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id). | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **id_estabelecimento** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id). | [optional] 
 
 ### Return type
 
@@ -1976,12 +2134,12 @@ No authorization required
 
 
 
-# **listar_using_get40**
-> PageTerminalResponse listar_using_get40(opts)
+# **listar_using_get42**
+> PageTerminalResponse listar_using_get42(opts)
 
 Lista os Terminais cadastrados no Emissor
 
-Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
+Este m\u00E9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
 
 ### Example
 ```ruby
@@ -1991,21 +2149,21 @@ require 'pier-sdk-ruby'
 api_instance = Pier::EstabelecimentoApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
-  terminal: "terminal_example", # String | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
-  numero_estabelecimento: 789, # Integer | N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
-  id_estabelecimento: 789 # Integer | N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  id: 789, # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
+  terminal: "terminal_example", # String | C\u00F3digo de Identifica\u00E7\u00E3o do terminal.
+  numero_estabelecimento: 789, # Integer | N\u00FAmero do estabelecimento a qual o terminal pertence.
+  id_estabelecimento: 789 # Integer | N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence.
 }
 
 begin
   #Lista os Terminais cadastrados no Emissor
-  result = api_instance.listar_using_get40(opts)
+  result = api_instance.listar_using_get42(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get40: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get42: #{e}"
 end
 ```
 
@@ -2013,13 +2171,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). | [optional] 
- **terminal** | **String**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal. | [optional] 
- **numero_estabelecimento** | **Integer**| N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence. | [optional] 
- **id_estabelecimento** | **Integer**| N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence. | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id). | [optional] 
+ **terminal** | **String**| C\u00F3digo de Identifica\u00E7\u00E3o do terminal. | [optional] 
+ **numero_estabelecimento** | **Integer**| N\u00FAmero do estabelecimento a qual o terminal pertence. | [optional] 
+ **id_estabelecimento** | **Integer**| N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence. | [optional] 
 
 ### Return type
 
@@ -2036,12 +2194,12 @@ No authorization required
 
 
 
-# **listar_using_get51**
-> PageVinculoEstabelecimentoAdquirenteResponse listar_using_get51(opts)
+# **listar_using_get53**
+> PageVinculoEstabelecimentoAdquirenteResponse listar_using_get53(opts)
 
-Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
+Lista os V\u00EDnculos dos estabelecimento com os adquirentes
 
-Este m\u00C3\u00A9todo permite que sejam listados os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes.
+Este m\u00E9todo permite que sejam listados os V\u00EDnculos dos estabelecimento com os adquirentes.
 
 ### Example
 ```ruby
@@ -2051,20 +2209,20 @@ require 'pier-sdk-ruby'
 api_instance = Pier::EstabelecimentoApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id_adquirente: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do adquirente (id).
-  id_estabelecimento: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento.
-  codigo_estabelecimento_adquirente: "codigo_estabelecimento_adquirente_example" # String | C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  id_adquirente: 789, # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do adquirente (id).
+  id_estabelecimento: 789, # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento.
+  codigo_estabelecimento_adquirente: "codigo_estabelecimento_adquirente_example" # String | C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente.
 }
 
 begin
-  #Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
-  result = api_instance.listar_using_get51(opts)
+  #Lista os V\u00EDnculos dos estabelecimento com os adquirentes
+  result = api_instance.listar_using_get53(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get51: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get53: #{e}"
 end
 ```
 
@@ -2072,12 +2230,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id_adquirente** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do adquirente (id). | [optional] 
- **id_estabelecimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento. | [optional] 
- **codigo_estabelecimento_adquirente** | **String**| C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente. | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **id_adquirente** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do adquirente (id). | [optional] 
+ **id_estabelecimento** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento. | [optional] 
+ **codigo_estabelecimento_adquirente** | **String**| C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente. | [optional] 
 
 ### Return type
 
@@ -2094,12 +2252,12 @@ No authorization required
 
 
 
-# **listar_using_get52**
-> PageVinculoOperacaoResponse listar_using_get52(id, opts)
+# **listar_using_get54**
+> PageVinculoOperacaoResponse listar_using_get54(id, opts)
 
-Lista os v\u00C3\u00ADnculos cadastrados no Emissor
+Listar v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento
 
-Este m\u00C3\u00A9todo permite que sejam listados os v\u00C3\u00ADnculos opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
+Lista os v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento. 
 
 ### Example
 ```ruby
@@ -2108,23 +2266,23 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::EstabelecimentoApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id_produto: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
-  id_operacao: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id).
-  codigo_mcc: 56 # Integer | C\u00C3\u00B3digo MCC.
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  id_produto: 789, # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+  id_operacao: 789, # Integer | C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id).
+  codigo_mcc: 56 # Integer | C\u00F3digo MCC.
 }
 
 begin
-  #Lista os v\u00C3\u00ADnculos cadastrados no Emissor
-  result = api_instance.listar_using_get52(id, opts)
+  #Listar v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento
+  result = api_instance.listar_using_get54(id, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling EstabelecimentoApi->listar_using_get52: #{e}"
+  puts "Exception when calling EstabelecimentoApi->listar_using_get54: #{e}"
 end
 ```
 
@@ -2132,13 +2290,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id). | 
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id_produto** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). | [optional] 
- **id_operacao** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id). | [optional] 
- **codigo_mcc** | **Integer**| C\u00C3\u00B3digo MCC. | [optional] 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id). | 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **id_produto** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). | [optional] 
+ **id_operacao** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id). | [optional] 
+ **codigo_mcc** | **Integer**| C\u00F3digo MCC. | [optional] 
 
 ### Return type
 
@@ -2160,7 +2318,7 @@ No authorization required
 
 Realiza o cadastro de uma nova maquineta para um estabelecimento 
 
-Este m\u00C3\u00A9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
+Este m\u00E9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
 
 ### Example
 ```ruby
@@ -2205,9 +2363,9 @@ No authorization required
 # **salvar_using_post17**
 > OperacaoCredorResponse salvar_using_post17(oprecao_credor_persist)
 
-Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
+Realiza o cadastro de uma nova Regra Opera\u00E7\u00E3o
 
-Este m\u00C3\u00A9todo permite que seja cadastrada uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o.
+Este m\u00E9todo permite que seja cadastrada uma nova Regra Opera\u00E7\u00E3o.
 
 ### Example
 ```ruby
@@ -2220,7 +2378,7 @@ oprecao_credor_persist = Pier::OperacaoCredorPersist.new # OperacaoCredorPersist
 
 
 begin
-  #Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
+  #Realiza o cadastro de uma nova Regra Opera\u00E7\u00E3o
   result = api_instance.salvar_using_post17(oprecao_credor_persist)
   p result
 rescue Pier::ApiError => e
@@ -2250,11 +2408,11 @@ No authorization required
 
 
 # **salvar_using_post22**
-> TelefoneEstabelecimentoResponse salvar_using_post22(id_estabelecimento, ddd, telefone, opts)
+> TelefoneEstabelecimentoResponse salvar_using_post22(telefone_estabelecimento_persist)
 
 Realiza o cadastro de um novo telefone para um estabelecimento 
 
-Este m\u00C3\u00A9todo permite que seja cadastrado um novo telefone para um estabelecimento.
+Este m\u00E9todo permite que seja cadastrado um novo telefone para um estabelecimento.
 
 ### Example
 ```ruby
@@ -2263,19 +2421,12 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::EstabelecimentoApi.new
 
-id_estabelecimento = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).
+telefone_estabelecimento_persist = Pier::TelefoneEstabelecimentoPersist.new # TelefoneEstabelecimentoPersist | telefoneEstabelecimentoPersist
 
-ddd = "ddd_example" # String | C\u00C3\u00B3digo DDD do telefone (id).
-
-telefone = "telefone_example" # String | N\u00C3\u00BAmero do telefone.
-
-opts = { 
-  ramal: "ramal_example" # String | N\u00C3\u00BAmero do ramal.
-}
 
 begin
   #Realiza o cadastro de um novo telefone para um estabelecimento 
-  result = api_instance.salvar_using_post22(id_estabelecimento, ddd, telefone, opts)
+  result = api_instance.salvar_using_post22(telefone_estabelecimento_persist)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling EstabelecimentoApi->salvar_using_post22: #{e}"
@@ -2286,10 +2437,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_estabelecimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id). | 
- **ddd** | **String**| C\u00C3\u00B3digo DDD do telefone (id). | 
- **telefone** | **String**| N\u00C3\u00BAmero do telefone. | 
- **ramal** | **String**| N\u00C3\u00BAmero do ramal. | [optional] 
+ **telefone_estabelecimento_persist** | [**TelefoneEstabelecimentoPersist**](TelefoneEstabelecimentoPersist.md)| telefoneEstabelecimentoPersist | 
 
 ### Return type
 
@@ -2311,7 +2459,7 @@ No authorization required
 
 Realiza o cadastro de um novo Terminal
 
-Este m\u00C3\u00A9todo permite que seja cadastrado um novo Terminal.
+Este m\u00E9todo permite que seja cadastrado um novo Terminal.
 
 ### Example
 ```ruby
@@ -2358,7 +2506,7 @@ No authorization required
 
 Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente
 
-Este m\u00C3\u00A9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
+Este m\u00E9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
 
 ### Example
 ```ruby

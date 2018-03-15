@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,22 +19,22 @@ require 'date'
 module Pier
   # Objeto Oportunidade
   class OportunidadePersist
-    # C\u00C3\u00B3digo identificador do tipo oportunidade
+    # C\u00F3digo identificador do tipo oportunidade
     attr_accessor :id_tipo_oportunidade
 
-    # C\u00C3\u00B3digo identificador do status oportunidade
+    # C\u00F3digo identificador do status oportunidade
     attr_accessor :id_status_oportunidade
 
-    # N\u00C3\u00BAmero receita federal do cliente
+    # N\u00FAmero receita federal do cliente
     attr_accessor :numero_receita_federal
 
-    # Date de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
+    # Date de in\u00EDcio da vig\u00EAncia da oportunidade
     attr_accessor :data_inicio_vigencia
 
-    # Data do fim da vig\u00C3\u00AAncia da oportunidade
+    # Data do fim da vig\u00EAncia da oportunidade
     attr_accessor :data_fim_vigencia
 
-    # Atributo que indica se a oportunidade est\u00C3\u00A1 ativa
+    # Atributo que indica se a oportunidade est\u00E1 ativa
     attr_accessor :flag_ativo
 
     # Lista de detalhes

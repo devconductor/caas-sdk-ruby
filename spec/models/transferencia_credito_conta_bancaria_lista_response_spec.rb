@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -46,6 +46,26 @@ describe 'TransferenciaCreditoContaBancariaListaResponse' do
     end
   end
 
+  describe 'test attribute "id_conta"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+  describe 'test attribute "id_cartao"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
   describe 'test attribute "valor_compra"' do
     it 'should work' do
        # assertion here
@@ -67,6 +87,16 @@ describe 'TransferenciaCreditoContaBancariaListaResponse' do
   end
 
   describe 'test attribute "data_compra"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+  describe 'test attribute "status"' do
     it 'should work' do
        # assertion here
        # should be_a()

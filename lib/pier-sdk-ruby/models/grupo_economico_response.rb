@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,42 +17,42 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de grupo econ\u00C3\u00B4mico
+  # Representa\u00E7\u00E3o da resposta do recurso de grupo econ\u00F4mico
   class GrupoEconomicoResponse
-    # C\u00C3\u00B3digo identificador do grupo econ\u00C3\u00B4mico
+    # C\u00F3digo identificador do grupo econ\u00F4mico
     attr_accessor :id
 
-    # Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+    # Raz\u00E3o social da pessoa jur\u00EDdica
     attr_accessor :razao_social
 
     # Nome do credor
     attr_accessor :nome_credor
 
-    # N\u00C3\u00BAmero da Receita Federal
+    # N\u00FAmero da Receita Federal
     attr_accessor :numero_receita_federal
 
-    # N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual
+    # N\u00FAmero da inscri\u00E7\u00E3o estadual
     attr_accessor :inscricao_estadual
 
     # Nome da pessoa para entrar em contato
     attr_accessor :contato
 
-    # C\u00C3\u00B3digo do banco
+    # C\u00F3digo do banco
     attr_accessor :banco
 
-    # C\u00C3\u00B3digo da ag\u00C3\u00AAncia
+    # C\u00F3digo da ag\u00EAncia
     attr_accessor :agencia
 
-    # D\u00C3\u00ADgito verificador da ag\u00C3\u00AAncia
+    # D\u00EDgito verificador da ag\u00EAncia
     attr_accessor :digito_agencia
 
-    # C\u00C3\u00B3digo da Conta Corrente
+    # C\u00F3digo da Conta Corrente
     attr_accessor :conta_corrente
 
-    # D\u00C3\u00ADgito Verificador da Conta Corrente
+    # D\u00EDgito Verificador da Conta Corrente
     attr_accessor :digito_conta_corrente
 
-    # Login do usu\u00C3\u00A1rio para registro da inser\u00C3\u00A7\u00C3\u00A3o
+    # Login do usu\u00E1rio para registro da inser\u00E7\u00E3o
     attr_accessor :usuario
 
     # Periodicidade do pagamento
@@ -78,6 +78,9 @@ module Pier
 
     # Dia da data para o segundo pagamento quinzenal
     attr_accessor :pagamento_quinzenal_segundo
+
+    # Identificador do credor RAV
+    attr_accessor :id_credor_rav
 
     # Valor percentual do RAV do credor
     attr_accessor :percentual_rav
@@ -141,6 +144,8 @@ module Pier
         
         :'pagamento_quinzenal_segundo' => :'pagamentoQuinzenalSegundo',
         
+        :'id_credor_rav' => :'idCredorRAV',
+        
         :'percentual_rav' => :'percentualRAV',
         
         :'recebe_rav' => :'recebeRAV',
@@ -199,6 +204,8 @@ module Pier
         :'pagamento_quinzenal_primeiro' => :'Integer',
         
         :'pagamento_quinzenal_segundo' => :'Integer',
+        
+        :'id_credor_rav' => :'Integer',
         
         :'percentual_rav' => :'Float',
         
@@ -404,6 +411,15 @@ module Pier
       end
 
       
+      if attributes[:'idCredorRAV']
+        
+        
+        self.id_credor_rav = attributes[:'idCredorRAV']
+        
+      
+      end
+
+      
       if attributes[:'percentualRAV']
         
         
@@ -536,6 +552,10 @@ module Pier
       if @pagamento_semanal && !allowed_values.include?(@pagamento_semanal)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -719,6 +739,11 @@ module Pier
     
     
     
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] recebe_rav Object to be assigned
     def recebe_rav=(recebe_rav)
@@ -777,6 +802,7 @@ module Pier
           pagamento_decendial_terceiro == o.pagamento_decendial_terceiro &&
           pagamento_quinzenal_primeiro == o.pagamento_quinzenal_primeiro &&
           pagamento_quinzenal_segundo == o.pagamento_quinzenal_segundo &&
+          id_credor_rav == o.id_credor_rav &&
           percentual_rav == o.percentual_rav &&
           recebe_rav == o.recebe_rav &&
           percentual_multiplica == o.percentual_multiplica &&
@@ -794,7 +820,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, razao_social, nome_credor, numero_receita_federal, inscricao_estadual, contato, banco, agencia, digito_agencia, conta_corrente, digito_conta_corrente, usuario, periodicidade, pagamento_semanal, pagamento_mensal, pagamento_decendial_primeiro, pagamento_decendial_segundo, pagamento_decendial_terceiro, pagamento_quinzenal_primeiro, pagamento_quinzenal_segundo, percentual_rav, recebe_rav, percentual_multiplica, taxa_adm, taxa_banco, limite_rav].hash
+      [id, razao_social, nome_credor, numero_receita_federal, inscricao_estadual, contato, banco, agencia, digito_agencia, conta_corrente, digito_conta_corrente, usuario, periodicidade, pagamento_semanal, pagamento_mensal, pagamento_decendial_primeiro, pagamento_decendial_segundo, pagamento_decendial_terceiro, pagamento_quinzenal_primeiro, pagamento_quinzenal_segundo, id_credor_rav, percentual_rav, recebe_rav, percentual_multiplica, taxa_adm, taxa_banco, limite_rav].hash
     end
 
     # Builds the object from hash

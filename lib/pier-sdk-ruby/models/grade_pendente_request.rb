@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -18,7 +18,7 @@ require 'date'
 
 module Pier
   class GradePendenteRequest
-    # C\u00C3\u00B3digo identificador da conta.
+    # C\u00F3digo identificador da conta.
     attr_accessor :id_conta
 
     # Data do ajuste no formato yyyy-MM-dd.

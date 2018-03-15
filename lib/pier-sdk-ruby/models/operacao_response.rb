@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,30 +17,30 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Operacao
+  # Representa\u00E7\u00E3o da resposta do recurso Operacao
   class OperacaoResponse
-    # C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o
+    # C\u00F3digo que identifica a opera\u00E7\u00E3o
     attr_accessor :id_operacao
 
-    # C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador
+    # C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador
     attr_accessor :codigo_processamento
 
-    # C\u00C3\u00B3digo de processamento usado para cancelar transa\u00C3\u00A7\u00C3\u00B5es no autorizador
+    # C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador
     attr_accessor :codigo_processamento_cancelamento
 
-    # Nome da opera\u00C3\u00A7\u00C3\u00A3o
+    # Nome da opera\u00E7\u00E3o
     attr_accessor :nome_operacao
 
-    # Flag indicativa para crobran\u00C3\u00A7a de juros
+    # Flag indicativa para crobran\u00E7a de juros
     attr_accessor :flag_cobra_juros
 
-    # Flag indicativa para crobran\u00C3\u00A7a de tarifas
+    # Flag indicativa para crobran\u00E7a de tarifas
     attr_accessor :flag_cobra_tarifa
 
-    # Quantidade de meses para car\u00C3\u00AAncia
+    # Quantidade de meses para car\u00EAncia
     attr_accessor :carencia
 
-    # Permitir transa\u00C3\u00A7\u00C3\u00B5es parceladas
+    # Permitir transa\u00E7\u00F5es parceladas
     attr_accessor :flag_permitir_parcelamento
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,15 +17,15 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso TipoOportunidade
+  # Representa\u00E7\u00E3o da resposta do recurso TipoOportunidade
   class TipoOportunidadeResponse
-    # C\u00C3\u00B3digo identificador do TipoOportunidade
+    # C\u00F3digo identificador do TipoOportunidade
     attr_accessor :id
 
     # Descricao do TipoOportunidade
     attr_accessor :descricao
 
-    # Flag que representa se o tipo oportunidade est\u00C3\u00A1 ativo
+    # Flag que representa se o tipo oportunidade est\u00E1 ativo
     attr_accessor :flag_ativo
 
     # Attribute mapping from ruby-style variable name to JSON key.

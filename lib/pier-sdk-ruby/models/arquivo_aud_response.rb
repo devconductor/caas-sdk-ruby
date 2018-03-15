@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -22,7 +22,7 @@ module Pier
     # Identificador da auditoria arquivo
     attr_accessor :rev
 
-    # Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00C3\u00ADdo)
+    # Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)
     attr_accessor :rev_type
 
     # Identificador do arquivo auditado
@@ -46,16 +46,16 @@ module Pier
     # Uri de acesso
     attr_accessor :uri
 
-    # Data de inclus\u00C3\u00A3o do arquivo auditado
+    # Data de inclus\u00E3o do arquivo auditado
     attr_accessor :data_hora_inclusao
 
-    # Data de altera\u00C3\u00A7\u00C3\u00A3o do arquivo auditado
+    # Data de altera\u00E7\u00E3o do arquivo auditado
     attr_accessor :data_hora_alteracao
 
-    # Extens\u00C3\u00A3o do arquivo auditado
+    # Extens\u00E3o do arquivo auditado
     attr_accessor :extensao
 
-    # Lista  de par\u00C3\u00A2metros do arquivo auditado
+    # Lista  de par\u00E2metros do arquivo auditado
     attr_accessor :parametros
 
     # Attribute mapping from ruby-style variable name to JSON key.

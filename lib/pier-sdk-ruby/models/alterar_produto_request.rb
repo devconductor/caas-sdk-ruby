@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,18 +17,18 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do  recurso Dispositivo
+  # Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do  recurso Dispositivo
   class AlterarProdutoRequest
-    # C\u00C3\u00B3digo identificador do produto.
+    # C\u00F3digo identificador do produto.
     attr_accessor :id_produto
 
-    # C\u00C3\u00B3digo identificador da origem comercial.
+    # C\u00F3digo identificador da origem comercial.
     attr_accessor :id_origem_comercial
 
-    # Deve ser preenchido com o idEstabelecimento onde o Grade foi realizado. Quando n\u00C3\u00A3o informado, \u00C3\u00A9 gravado com o idEstabelecimento associado a Origem Comercial que capturou o cadastro inicial da Conta.
+    # Deve ser preenchido com o idEstabelecimento onde o Grade foi realizado. Quando n\u00E3o informado, \u00E9 gravado com o idEstabelecimento associado a Origem Comercial que capturou o cadastro inicial da Conta.
     attr_accessor :id_estabelecimento
 
-    # Deve ser preenchido com o C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Promotor que realizou o Grade. Quando n\u00C3\u00A3o informado, ser\u00C3\u00A1 gravado com um c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o padr\u00C3\u00A3o.
+    # Deve ser preenchido com o C\u00F3digo de identifica\u00E7\u00E3o do Promotor que realizou o Grade. Quando n\u00E3o informado, ser\u00E1 gravado com um c\u00F3digo de identifica\u00E7\u00E3o padr\u00E3o.
     attr_accessor :id_promotor
 
     # Attribute mapping from ruby-style variable name to JSON key.

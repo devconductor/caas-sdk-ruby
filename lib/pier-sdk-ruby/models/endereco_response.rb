@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,30 +17,30 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto Endere\u00C3\u00A7o
+  # Objeto Endere\u00E7o
   class EnderecoResponse
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
+    # C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id).
     attr_accessor :id
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
+    # C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id)
     attr_accessor :id_pessoa
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
+    # C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
     attr_accessor :id_tipo_endereco
 
-    # Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
+    # Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro '58800000'
     attr_accessor :cep
 
     # Apresenta o nome do Logradouro
     attr_accessor :logradouro
 
-    # Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+    # Apresenta o n\u00FAmero do endere\u00E7o
     attr_accessor :numero
 
-    # Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
+    # Apresenta descri\u00E7oes complementares referente ao endere\u00E7o
     attr_accessor :complemento
 
-    # Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
+    # Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o
     attr_accessor :ponto_referencia
 
     # Apresenta nome do bairro
@@ -55,10 +55,10 @@ module Pier
     # Apresenta nome do Pais
     attr_accessor :pais
 
-    # Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
+    # Apresenta a data em que fora cadastrado o Endere\u00E7o
     attr_accessor :data_inclusao
 
-    # Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
+    # Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao
     attr_accessor :data_ultima_atualizacao
 
     # Attribute mapping from ruby-style variable name to JSON key.

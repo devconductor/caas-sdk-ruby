@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -24,9 +24,9 @@ module Pier
       @api_client = api_client
     end
 
-    # Alterar senha do usu\u00C3\u00A1rio.
-    # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
-    # @param login Login do usu\u00C3\u00A1rio.
+    # Alterar senha do usu\u00E1rio.
+    # Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
+    # @param login Login do usu\u00E1rio.
     # @param senha_nova Senha Nova
     # @param [Hash] opts the optional parameters
     # @return [String]
@@ -35,9 +35,9 @@ module Pier
       return data
     end
 
-    # Alterar senha do usu\u00C3\u00A1rio.
-    # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
-    # @param login Login do usu\u00C3\u00A1rio.
+    # Alterar senha do usu\u00E1rio.
+    # Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
+    # @param login Login do usu\u00E1rio.
     # @param senha_nova Senha Nova
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
@@ -100,9 +100,9 @@ module Pier
       return data, status_code, headers
     end
 
-    # Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-    # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+    # Alterar senha do usu\u00E1rio na base do PIER ou WS.
+    # Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
     # @param senha_atual Senha Atual
     # @param senha_nova Senha Nova
     # @param [Hash] opts the optional parameters
@@ -112,9 +112,9 @@ module Pier
       return data
     end
 
-    # Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-    # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+    # Alterar senha do usu\u00E1rio na base do PIER ou WS.
+    # Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
     # @param senha_atual Senha Atual
     # @param senha_nova Senha Nova
     # @param [Hash] opts the optional parameters
@@ -187,9 +187,9 @@ module Pier
       return data, status_code, headers
     end
 
-    # Altera os usu\u00C3\u00A1rios cadastrados na base.
-    # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+    # Altera os usu\u00E1rios cadastrados na base.
+    # Este m\u00E9todo realiza a altera\u00E7\u00E3o dos usu\u00E1rios.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
     # @param update update
     # @param [Hash] opts the optional parameters
     # @return [UsuarioResponse]
@@ -198,9 +198,9 @@ module Pier
       return data
     end
 
-    # Altera os usu\u00C3\u00A1rios cadastrados na base.
-    # Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+    # Altera os usu\u00E1rios cadastrados na base.
+    # Este m\u00E9todo realiza a altera\u00E7\u00E3o dos usu\u00E1rios.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
     # @param update update
     # @param [Hash] opts the optional parameters
     # @return [Array<(UsuarioResponse, Fixnum, Hash)>] UsuarioResponse data, response status code and response headers
@@ -262,9 +262,9 @@ module Pier
       return data, status_code, headers
     end
 
-    # Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-    # Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+    # Ativa os usu\u00E1rios cadastrados na base do PIER ou WS.
+    # Este m\u00E9todo realiza a ativa\u00E7\u00E3o dos usu\u00E1rios.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
     # @param [Hash] opts the optional parameters
     # @return [UsuarioResponse]
     def ativar_usuario_using_post(id, opts = {})
@@ -272,9 +272,9 @@ module Pier
       return data
     end
 
-    # Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-    # Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+    # Ativa os usu\u00E1rios cadastrados na base do PIER ou WS.
+    # Este m\u00E9todo realiza a ativa\u00E7\u00E3o dos usu\u00E1rios.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(UsuarioResponse, Fixnum, Hash)>] UsuarioResponse data, response status code and response headers
     def ativar_usuario_using_post_with_http_info(id, opts = {})
@@ -327,29 +327,29 @@ module Pier
       return data, status_code, headers
     end
 
-    # Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
-    # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+    # Apresenta os dados de um determinado Usu\u00E1rio na base do PIER ou WS.
+    # Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado Usu\u00E1rio a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
     # @param [Hash] opts the optional parameters
     # @return [UsuarioResponse]
-    def consultar_using_get42(id, opts = {})
-      data, _status_code, _headers = consultar_using_get42_with_http_info(id, opts)
+    def consultar_using_get43(id, opts = {})
+      data, _status_code, _headers = consultar_using_get43_with_http_info(id, opts)
       return data
     end
 
-    # Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
-    # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+    # Apresenta os dados de um determinado Usu\u00E1rio na base do PIER ou WS.
+    # Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado Usu\u00E1rio a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(UsuarioResponse, Fixnum, Hash)>] UsuarioResponse data, response status code and response headers
-    def consultar_using_get42_with_http_info(id, opts = {})
+    def consultar_using_get43_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: UsuarioApi.consultar_using_get42 ..."
+        @api_client.config.logger.debug "Calling API: UsuarioApi.consultar_using_get43 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling UsuarioApi.consultar_using_get42" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling UsuarioApi.consultar_using_get43" if id.nil?
       
       
       
@@ -387,14 +387,14 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'UsuarioResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UsuarioApi#consultar_using_get42\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UsuarioApi#consultar_using_get43\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-    # Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+    # Desativa os usu\u00E1rios cadastrados na base do PIER ou WS.
+    # Este m\u00E9todo realiza a desativa\u00E7\u00E3o dos usu\u00E1rios.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
     # @param [Hash] opts the optional parameters
     # @return [UsuarioResponse]
     def desativar_usuario_using_post(id, opts = {})
@@ -402,9 +402,9 @@ module Pier
       return data
     end
 
-    # Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-    # Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+    # Desativa os usu\u00E1rios cadastrados na base do PIER ou WS.
+    # Este m\u00E9todo realiza a desativa\u00E7\u00E3o dos usu\u00E1rios.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(UsuarioResponse, Fixnum, Hash)>] UsuarioResponse data, response status code and response headers
     def desativar_usuario_using_post_with_http_info(id, opts = {})
@@ -457,36 +457,36 @@ module Pier
       return data, status_code, headers
     end
 
-    # Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-    # Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
+    # Lista os Usu\u00E1rios cadastrados na base do PIER ou WS.
+    # Este m\u00E9todo permite que sejam listados os usu\u00E1rios existentes na base do PIER.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @option opts [String] :nome Nome do Usuario
     # @option opts [String] :cpf CPF do Usuario
     # @option opts [String] :email Email do Usuario
     # @option opts [String] :status Status do Usuario
     # @return [PageUsuarioResponse]
-    def listar_using_get49(opts = {})
-      data, _status_code, _headers = listar_using_get49_with_http_info(opts)
+    def listar_using_get51(opts = {})
+      data, _status_code, _headers = listar_using_get51_with_http_info(opts)
       return data
     end
 
-    # Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-    # Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
+    # Lista os Usu\u00E1rios cadastrados na base do PIER ou WS.
+    # Este m\u00E9todo permite que sejam listados os usu\u00E1rios existentes na base do PIER.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @option opts [String] :nome Nome do Usuario
     # @option opts [String] :cpf CPF do Usuario
     # @option opts [String] :email Email do Usuario
     # @option opts [String] :status Status do Usuario
     # @return [Array<(PageUsuarioResponse, Fixnum, Hash)>] PageUsuarioResponse data, response status code and response headers
-    def listar_using_get49_with_http_info(opts = {})
+    def listar_using_get51_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: UsuarioApi.listar_using_get49 ..."
+        @api_client.config.logger.debug "Calling API: UsuarioApi.listar_using_get51 ..."
       end
       
       
@@ -574,14 +574,14 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageUsuarioResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UsuarioApi#listar_using_get49\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UsuarioApi#listar_using_get51\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-    # Esse recurso permite recuperar a senha do usu\u00C3\u00A1rio.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+    # Recuperar senha do usu\u00E1rio na base do PIER ou WS.
+    # Esse recurso permite recuperar a senha do usu\u00E1rio.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
     # @param [Hash] opts the optional parameters
     # @return [String]
     def recuperar_senha_using_post(id, opts = {})
@@ -589,9 +589,9 @@ module Pier
       return data
     end
 
-    # Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-    # Esse recurso permite recuperar a senha do usu\u00C3\u00A1rio.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+    # Recuperar senha do usu\u00E1rio na base do PIER ou WS.
+    # Esse recurso permite recuperar a senha do usu\u00E1rio.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
     def recuperar_senha_using_post_with_http_info(id, opts = {})
@@ -644,8 +644,8 @@ module Pier
       return data, status_code, headers
     end
 
-    # Cadastra Usu\u00C3\u00A1rio na base.
-    # Esse recurso permite cadastrar usu\u00C3\u00A1rios.
+    # Cadastra Usu\u00E1rio na base.
+    # Esse recurso permite cadastrar usu\u00E1rios.
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [UsuarioResponse]
@@ -654,8 +654,8 @@ module Pier
       return data
     end
 
-    # Cadastra Usu\u00C3\u00A1rio na base.
-    # Esse recurso permite cadastrar usu\u00C3\u00A1rios.
+    # Cadastra Usu\u00E1rio na base.
+    # Esse recurso permite cadastrar usu\u00E1rios.
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(UsuarioResponse, Fixnum, Hash)>] UsuarioResponse data, response status code and response headers
@@ -709,10 +709,10 @@ module Pier
       return data, status_code, headers
     end
 
-    # Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-    # O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
-    # @param login Login identificador do usu\u00C3\u00A1rio (login).
-    # @param senha Senha do usu\u00C3\u00A1rio
+    # Realiza login com valida\u00E7\u00E3o de senha dos usu\u00E1rios cadastrados na base do PIER ou WS.
+    # O recurso permite fazer login do usu\u00E1rio atrav\u00E9s da senha definida pelo emissor.
+    # @param login Login identificador do usu\u00E1rio (login).
+    # @param senha Senha do usu\u00E1rio
     # @param [Hash] opts the optional parameters
     # @return [Object]
     def validar_senha_login_using_post(login, senha, opts = {})
@@ -720,10 +720,10 @@ module Pier
       return data
     end
 
-    # Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-    # O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
-    # @param login Login identificador do usu\u00C3\u00A1rio (login).
-    # @param senha Senha do usu\u00C3\u00A1rio
+    # Realiza login com valida\u00E7\u00E3o de senha dos usu\u00E1rios cadastrados na base do PIER ou WS.
+    # O recurso permite fazer login do usu\u00E1rio atrav\u00E9s da senha definida pelo emissor.
+    # @param login Login identificador do usu\u00E1rio (login).
+    # @param senha Senha do usu\u00E1rio
     # @param [Hash] opts the optional parameters
     # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
     def validar_senha_login_using_post_with_http_info(login, senha, opts = {})
@@ -785,10 +785,10 @@ module Pier
       return data, status_code, headers
     end
 
-    # Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-    # Este m\u00C3\u00A9todo permite validar a senha do usu\u00C3\u00A1rio).
-    # @param senha Senha do usu\u00C3\u00A1rio
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+    # Validar a senha do usu\u00E1rio na base do PIER ou WS.
+    # Este m\u00E9todo permite validar a senha do usu\u00E1rio).
+    # @param senha Senha do usu\u00E1rio
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
     # @param [Hash] opts the optional parameters
     # @return [String]
     def validar_senha_using_get1(senha, id, opts = {})
@@ -796,10 +796,10 @@ module Pier
       return data
     end
 
-    # Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-    # Este m\u00C3\u00A9todo permite validar a senha do usu\u00C3\u00A1rio).
-    # @param senha Senha do usu\u00C3\u00A1rio
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+    # Validar a senha do usu\u00E1rio na base do PIER ou WS.
+    # Este m\u00E9todo permite validar a senha do usu\u00E1rio).
+    # @param senha Senha do usu\u00E1rio
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
     def validar_senha_using_get1_with_http_info(senha, id, opts = {})

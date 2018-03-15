@@ -5,45 +5,45 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_using_put2**](CadastroGeralApi.md#alterar_using_put2) | **PUT** /api/campanhas/{id} | Alterar campanha
-[**alterar_using_put3**](CadastroGeralApi.md#alterar_using_put3) | **PUT** /api/configuracoes-registro-cobranca/{id} | Atualizar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
-[**alterar_using_put4**](CadastroGeralApi.md#alterar_using_put4) | **PUT** /api/configuracoes-rotativos/{id} | Alterar os dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo de um produto
-[**cadastrar_using_post1**](CadastroGeralApi.md#cadastrar_using_post1) | **POST** /api/configuracoes-registro-cobranca | Inserir configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
-[**configurar_taxa_antecipacao_using_post**](CadastroGeralApi.md#configurar_taxa_antecipacao_using_post) | **POST** /api/produtos/{id}/configurar-taxa-antecipacao | Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+[**alterar_using_put3**](CadastroGeralApi.md#alterar_using_put3) | **PUT** /api/configuracoes-registro-cobranca/{id} | Atualizar configura\u00E7\u00E3o para registro de cobran\u00E7a
+[**alterar_using_put4**](CadastroGeralApi.md#alterar_using_put4) | **PUT** /api/configuracoes-rotativos/{id} | Alterar os dados de configura\u00E7\u00E3o do rotativo de um produto
+[**cadastrar_using_post1**](CadastroGeralApi.md#cadastrar_using_post1) | **POST** /api/configuracoes-registro-cobranca | Inserir configura\u00E7\u00E3o para registro de cobran\u00E7a
+[**configurar_taxa_antecipacao_using_post**](CadastroGeralApi.md#configurar_taxa_antecipacao_using_post) | **POST** /api/produtos/{id}/configurar-taxa-antecipacao | Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto
 [**consultar_campanha_using_get**](CadastroGeralApi.md#consultar_campanha_using_get) | **GET** /api/campanhas/{id} | Consultar campanha
-[**consultar_taxa_antecipacao_using_get**](CadastroGeralApi.md#consultar_taxa_antecipacao_using_get) | **GET** /api/produtos/{id}/consultar-taxa-antecipacao | Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
-[**consultar_using_get10**](CadastroGeralApi.md#consultar_using_get10) | **GET** /api/configuracoes-rotativos/{id} | Apresenta dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo espec\u00C3\u00ADfico.
-[**consultar_using_get25**](CadastroGeralApi.md#consultar_using_get25) | **GET** /api/produtos/{id} | Apresenta os dados de um determinado Produto
-[**consultar_using_get3**](CadastroGeralApi.md#consultar_using_get3) | **GET** /api/atendimento-clientes/{id} | Apresenta os dados de um determinado Atendimento
-[**consultar_using_get32**](CadastroGeralApi.md#consultar_using_get32) | **GET** /api/tipos-ajustes | Lista os tipos de ajustes do emissor 
-[**consultar_using_get33**](CadastroGeralApi.md#consultar_using_get33) | **GET** /api/tipos-boletos | Lista os tipos de boletos do emissor 
-[**consultar_using_get34**](CadastroGeralApi.md#consultar_using_get34) | **GET** /api/tipos-enderecos/{id} | Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
-[**consultar_using_get35**](CadastroGeralApi.md#consultar_using_get35) | **GET** /api/tipos-operacoes | Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-[**consultar_using_get37**](CadastroGeralApi.md#consultar_using_get37) | **GET** /api/tipos-telefones/{id} | Apresenta os dados de um determinado Tipo de Telefone
-[**consultar_using_get5**](CadastroGeralApi.md#consultar_using_get5) | **GET** /api/bancos/{id} | Apresenta os dados de um determinado Banco
-[**consultar_using_get9**](CadastroGeralApi.md#consultar_using_get9) | **GET** /api/configuracoes-registro-cobranca/{id} | Consultar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
+[**consultar_taxa_antecipacao_using_get**](CadastroGeralApi.md#consultar_taxa_antecipacao_using_get) | **GET** /api/produtos/{id}/consultar-taxa-antecipacao | Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto
+[**consultar_using_get10**](CadastroGeralApi.md#consultar_using_get10) | **GET** /api/configuracoes-registro-cobranca/{id} | Consultar configura\u00E7\u00E3o para registro de cobran\u00E7a
+[**consultar_using_get11**](CadastroGeralApi.md#consultar_using_get11) | **GET** /api/configuracoes-rotativos/{id} | Apresenta dados de configura\u00E7\u00E3o do rotativo espec\u00EDfico.
+[**consultar_using_get26**](CadastroGeralApi.md#consultar_using_get26) | **GET** /api/produtos/{id} | Apresenta os dados de um determinado Produto
+[**consultar_using_get33**](CadastroGeralApi.md#consultar_using_get33) | **GET** /api/tipos-ajustes | Lista os tipos de ajustes do emissor 
+[**consultar_using_get34**](CadastroGeralApi.md#consultar_using_get34) | **GET** /api/tipos-boletos | Lista os tipos de boletos do emissor 
+[**consultar_using_get35**](CadastroGeralApi.md#consultar_using_get35) | **GET** /api/tipos-enderecos/{id} | Apresenta os dados de um determinado Tipo de Endere\u00E7o
+[**consultar_using_get36**](CadastroGeralApi.md#consultar_using_get36) | **GET** /api/tipos-operacoes | Apresenta dados de um determinado tipo de opera\u00E7\u00E3o
+[**consultar_using_get38**](CadastroGeralApi.md#consultar_using_get38) | **GET** /api/tipos-telefones/{id} | Apresenta os dados de um determinado Tipo de Telefone
+[**consultar_using_get4**](CadastroGeralApi.md#consultar_using_get4) | **GET** /api/atendimento-clientes/{id} | Apresenta os dados de um determinado Atendimento
+[**consultar_using_get6**](CadastroGeralApi.md#consultar_using_get6) | **GET** /api/bancos/{id} | Apresenta os dados de um determinado Banco
 [**listar_campanhas_using_get**](CadastroGeralApi.md#listar_campanhas_using_get) | **GET** /api/campanhas | Listar Campanhas
 [**listar_contas_por_pessoa_using_get**](CadastroGeralApi.md#listar_contas_por_pessoa_using_get) | **GET** /api/pessoas/listar-contas | Lista as contas da pessoa
-[**listar_estados_civis_using_get**](CadastroGeralApi.md#listar_estados_civis_using_get) | **GET** /api/estados-civis | Lista os Estados C\u00C3\u00ADvis
-[**listar_fantasias_basicas_using_get**](CadastroGeralApi.md#listar_fantasias_basicas_using_get) | **GET** /api/fantasias-basicas | Listar Fantasias B\u00C3\u00A1sicas
-[**listar_historico_telefones_using_get**](CadastroGeralApi.md#listar_historico_telefones_using_get) | **GET** /api/pessoas/{id}/historico-telefones | Listar altera\u00C3\u00A7\u00C3\u00B5es de telefones realizadas nos \u00C3\u00BAltimos 60 dias
+[**listar_estados_civis_using_get**](CadastroGeralApi.md#listar_estados_civis_using_get) | **GET** /api/estados-civis | Lista os Estados C\u00EDvis
+[**listar_fantasias_basicas_using_get**](CadastroGeralApi.md#listar_fantasias_basicas_using_get) | **GET** /api/fantasias-basicas | Listar Fantasias B\u00E1sicas
+[**listar_historico_telefones_using_get**](CadastroGeralApi.md#listar_historico_telefones_using_get) | **GET** /api/pessoas/{id}/historico-telefones | Listar altera\u00E7\u00F5es de telefones realizadas nos \u00FAltimos 60 dias
 [**listar_nacionalidades_using_get**](CadastroGeralApi.md#listar_nacionalidades_using_get) | **GET** /api/nacionalidades | Lista nacionalidades
-[**listar_naturezas_ocupacoes_using_get**](CadastroGeralApi.md#listar_naturezas_ocupacoes_using_get) | **GET** /api/ocupacoes | Lista as Ocupa\u00C3\u00A7\u00C3\u00B5es
+[**listar_naturezas_ocupacoes_using_get**](CadastroGeralApi.md#listar_naturezas_ocupacoes_using_get) | **GET** /api/ocupacoes | Lista as Ocupa\u00E7\u00F5es
 [**listar_parentescos_using_get**](CadastroGeralApi.md#listar_parentescos_using_get) | **GET** /api/parentescos | Lista os Parentescos
-[**listar_profissoes_using_get**](CadastroGeralApi.md#listar_profissoes_using_get) | **GET** /api/profissoes | Lista profiss\u00C3\u00B5es
+[**listar_profissoes_using_get**](CadastroGeralApi.md#listar_profissoes_using_get) | **GET** /api/profissoes | Lista profiss\u00F5es
 [**listar_tipos_campanhas_using_get**](CadastroGeralApi.md#listar_tipos_campanhas_using_get) | **GET** /api/tipos-campanhas | Listar Tipos de Campanhas
-[**listar_using_get12**](CadastroGeralApi.md#listar_using_get12) | **GET** /api/configuracoes-registro-cobranca | Listar configura\u00C3\u00A7\u00C3\u00B5es para registro de cobran\u00C3\u00A7a
-[**listar_using_get13**](CadastroGeralApi.md#listar_using_get13) | **GET** /api/configuracoes-rotativos | Listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
-[**listar_using_get32**](CadastroGeralApi.md#listar_using_get32) | **GET** /api/portadores | Lista os Portadores existentes
-[**listar_using_get33**](CadastroGeralApi.md#listar_using_get33) | **GET** /api/produtos | Lista os Produtos do Emissor
-[**listar_using_get34**](CadastroGeralApi.md#listar_using_get34) | **GET** /api/promotores | Lista promotores cadastrados na base do emissor
-[**listar_using_get42**](CadastroGeralApi.md#listar_using_get42) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-[**listar_using_get44**](CadastroGeralApi.md#listar_using_get44) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
-[**listar_using_get5**](CadastroGeralApi.md#listar_using_get5) | **GET** /api/atendimento-clientes | Lista todos os atendimentos
-[**listar_using_get50**](CadastroGeralApi.md#listar_using_get50) | **GET** /api/vencimentos | Listar Vencimentos
-[**listar_using_get7**](CadastroGeralApi.md#listar_using_get7) | **GET** /api/bancos | Lista os Bancos cadastrados para o Emissor
-[**salvar_using_post2**](CadastroGeralApi.md#salvar_using_post2) | **POST** /api/atendimento-clientes | Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
+[**listar_using_get13**](CadastroGeralApi.md#listar_using_get13) | **GET** /api/configuracoes-registro-cobranca | Listar configura\u00E7\u00F5es para registro de cobran\u00E7a
+[**listar_using_get14**](CadastroGeralApi.md#listar_using_get14) | **GET** /api/configuracoes-rotativos | Listar as configura\u00E7\u00F5es rotativo.
+[**listar_using_get34**](CadastroGeralApi.md#listar_using_get34) | **GET** /api/portadores | Lista os Portadores existentes
+[**listar_using_get35**](CadastroGeralApi.md#listar_using_get35) | **GET** /api/produtos | Lista os Produtos do Emissor
+[**listar_using_get36**](CadastroGeralApi.md#listar_using_get36) | **GET** /api/promotores | Lista promotores cadastrados na base do emissor
+[**listar_using_get44**](CadastroGeralApi.md#listar_using_get44) | **GET** /api/tipos-enderecos | Lista as op\u00F5es de Tipos de Endere\u00E7os do Emissor 
+[**listar_using_get46**](CadastroGeralApi.md#listar_using_get46) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
+[**listar_using_get52**](CadastroGeralApi.md#listar_using_get52) | **GET** /api/vencimentos | Listar Vencimentos
+[**listar_using_get6**](CadastroGeralApi.md#listar_using_get6) | **GET** /api/atendimento-clientes | Lista todos os atendimentos
+[**listar_using_get8**](CadastroGeralApi.md#listar_using_get8) | **GET** /api/bancos | Lista os Bancos cadastrados para o Emissor
+[**salvar_using_post2**](CadastroGeralApi.md#salvar_using_post2) | **POST** /api/atendimento-clientes | Cadastro um novo Atendimento do tipo Gen\u00E9rico para uma Conta
 [**salvar_using_post5**](CadastroGeralApi.md#salvar_using_post5) | **POST** /api/campanhas | Inserir campanha
-[**salvar_using_post7**](CadastroGeralApi.md#salvar_using_post7) | **POST** /api/configuracoes-rotativos | Inserir os dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo de um produto
+[**salvar_using_post7**](CadastroGeralApi.md#salvar_using_post7) | **POST** /api/configuracoes-rotativos | Inserir os dados de configura\u00E7\u00E3o do rotativo de um produto
 
 
 # **alterar_using_put2**
@@ -51,7 +51,7 @@ Method | HTTP request | Description
 
 Alterar campanha
 
-Este m\u00C3\u00A9todo permite que sejam alterados os dados de uma campanha.
+Este m\u00E9todo permite que sejam alterados os dados de uma campanha.
 
 ### Example
 ```ruby
@@ -60,7 +60,7 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::CadastroGeralApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da campanha (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o da campanha (id).
 
 update = Pier::CampanhaUpdate.new # CampanhaUpdate | update
 
@@ -78,7 +78,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da campanha (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da campanha (id). | 
  **update** | [**CampanhaUpdate**](CampanhaUpdate.md)| update | 
 
 ### Return type
@@ -99,9 +99,9 @@ No authorization required
 # **alterar_using_put3**
 > ConfiguracaoRegistroCobrancaResponse alterar_using_put3(id, configuracao_persist)
 
-Atualizar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
+Atualizar configura\u00E7\u00E3o para registro de cobran\u00E7a
 
-Este m\u00C3\u00A9todo permite atualizar uma configura\u00C3\u00A7\u00C3\u00A3o, para registro de cobran\u00C3\u00A7a.
+Este m\u00E9todo permite atualizar uma configura\u00E7\u00E3o, para registro de cobran\u00E7a.
 
 ### Example
 ```ruby
@@ -110,13 +110,13 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::CadastroGeralApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o (id).
 
 configuracao_persist = Pier::ConfiguracaoRegistroCobrancaPersist.new # ConfiguracaoRegistroCobrancaPersist | configuracaoPersist
 
 
 begin
-  #Atualizar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
+  #Atualizar configura\u00E7\u00E3o para registro de cobran\u00E7a
   result = api_instance.alterar_using_put3(id, configuracao_persist)
   p result
 rescue Pier::ApiError => e
@@ -128,7 +128,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o (id). | 
  **configuracao_persist** | [**ConfiguracaoRegistroCobrancaPersist**](ConfiguracaoRegistroCobrancaPersist.md)| configuracaoPersist | 
 
 ### Return type
@@ -149,9 +149,9 @@ No authorization required
 # **alterar_using_put4**
 > ConfiguracaoRotativoDetalheResponse alterar_using_put4(id, configuracao_rotativo_persist)
 
-Alterar os dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo de um produto
+Alterar os dados de configura\u00E7\u00E3o do rotativo de um produto
 
-Este m\u00C3\u00A9todo permite que seja alterada uma configura\u00C3\u00A7\u00C3\u00A3o do rotativo para um determinado produto.
+Este m\u00E9todo permite que seja alterada uma configura\u00E7\u00E3o do rotativo para um determinado produto.
 
 ### Example
 ```ruby
@@ -160,13 +160,13 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::CadastroGeralApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o (id).
 
 configuracao_rotativo_persist = Pier::ConfiguracaoRotativoPersist.new # ConfiguracaoRotativoPersist | configuracaoRotativoPersist
 
 
 begin
-  #Alterar os dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo de um produto
+  #Alterar os dados de configura\u00E7\u00E3o do rotativo de um produto
   result = api_instance.alterar_using_put4(id, configuracao_rotativo_persist)
   p result
 rescue Pier::ApiError => e
@@ -178,7 +178,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o (id). | 
  **configuracao_rotativo_persist** | [**ConfiguracaoRotativoPersist**](ConfiguracaoRotativoPersist.md)| configuracaoRotativoPersist | 
 
 ### Return type
@@ -199,9 +199,9 @@ No authorization required
 # **cadastrar_using_post1**
 > ConfiguracaoRegistroCobrancaResponse cadastrar_using_post1(configuracao_persist)
 
-Inserir configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
+Inserir configura\u00E7\u00E3o para registro de cobran\u00E7a
 
-Este m\u00C3\u00A9todo permite que seja cadastrado uma nova configura\u00C3\u00A7\u00C3\u00A3o, para registro de cobran\u00C3\u00A7a.
+Este m\u00E9todo permite que seja cadastrado uma nova configura\u00E7\u00E3o, para registro de cobran\u00E7a.
 
 ### Example
 ```ruby
@@ -214,7 +214,7 @@ configuracao_persist = Pier::ConfiguracaoRegistroCobrancaPersist.new # Configura
 
 
 begin
-  #Inserir configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
+  #Inserir configura\u00E7\u00E3o para registro de cobran\u00E7a
   result = api_instance.cadastrar_using_post1(configuracao_persist)
   p result
 rescue Pier::ApiError => e
@@ -246,9 +246,9 @@ No authorization required
 # **configurar_taxa_antecipacao_using_post**
 > ParametroProdutoResponse configurar_taxa_antecipacao_using_post(id, taxa_antecipacao_request)
 
-Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto
 
-Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Este recurso permite configurar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
 
 ### Example
 ```ruby
@@ -263,7 +263,7 @@ taxa_antecipacao_request = Pier::TaxaAntecipacaoRequest.new # TaxaAntecipacaoReq
 
 
 begin
-  #Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+  #Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto
   result = api_instance.configurar_taxa_antecipacao_using_post(id, taxa_antecipacao_request)
   p result
 rescue Pier::ApiError => e
@@ -298,7 +298,7 @@ No authorization required
 
 Consultar campanha
 
-Este m\u00C3\u00A9todo permite que sejam listados os dados de uma determinada campanha existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Este m\u00E9todo permite que sejam listados os dados de uma determinada campanha existente na base do emissor. Para isso, \u00E9 preciso informar o seu respectivo c\u00F3digo de identifica\u00E7\u00E3o (id).
 
 ### Example
 ```ruby
@@ -343,9 +343,9 @@ No authorization required
 # **consultar_taxa_antecipacao_using_get**
 > ParametroProdutoResponse consultar_taxa_antecipacao_using_get(id, tipo_transacao)
 
-Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto
 
-Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Este recurso permite consultar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
 
 ### Example
 ```ruby
@@ -356,11 +356,11 @@ api_instance = Pier::CadastroGeralApi.new
 
 id = 789 # Integer | Id Produto
 
-tipo_transacao = "tipo_transacao_example" # String | Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US)
+tipo_transacao = "tipo_transacao_example" # String | Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US)
 
 
 begin
-  #Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+  #Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto
   result = api_instance.consultar_taxa_antecipacao_using_get(id, tipo_transacao)
   p result
 rescue Pier::ApiError => e
@@ -373,7 +373,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| Id Produto | 
- **tipo_transacao** | **String**| Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US) | 
+ **tipo_transacao** | **String**| Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US) | 
 
 ### Return type
 
@@ -391,11 +391,11 @@ No authorization required
 
 
 # **consultar_using_get10**
-> ConfiguracaoRotativoDetalheResponse consultar_using_get10(id)
+> ConfiguracaoRegistroCobrancaResponse consultar_using_get10(id)
 
-Apresenta dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo espec\u00C3\u00ADfico.
+Consultar configura\u00E7\u00E3o para registro de cobran\u00E7a
 
-Este recurso permite consultar dados de configura\u00C3\u00A7\u00C3\u00A3o do parcelamento rotativo a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Este m\u00E9todo permite buscar uma configura\u00E7\u00E3o, para registro de cobran\u00E7a.
 
 ### Example
 ```ruby
@@ -404,11 +404,11 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::CadastroGeralApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de configura\u00C3\u00A7\u00C3\u00A3o rotativo (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o (id).
 
 
 begin
-  #Apresenta dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo espec\u00C3\u00ADfico.
+  #Consultar configura\u00E7\u00E3o para registro de cobran\u00E7a
   result = api_instance.consultar_using_get10(id)
   p result
 rescue Pier::ApiError => e
@@ -420,7 +420,54 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de configura\u00C3\u00A7\u00C3\u00A3o rotativo (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o (id). | 
+
+### Return type
+
+[**ConfiguracaoRegistroCobrancaResponse**](ConfiguracaoRegistroCobrancaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **consultar_using_get11**
+> ConfiguracaoRotativoDetalheResponse consultar_using_get11(id)
+
+Apresenta dados de configura\u00E7\u00E3o do rotativo espec\u00EDfico.
+
+Este recurso permite consultar dados de configura\u00E7\u00E3o do parcelamento rotativo a partir de seu codigo de identifica\u00E7\u00E3o (id).
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+api_instance = Pier::CadastroGeralApi.new
+
+id = 789 # Integer | C\u00F3digo de identifica\u00E7\u00E3o de configura\u00E7\u00E3o rotativo (id).
+
+
+begin
+  #Apresenta dados de configura\u00E7\u00E3o do rotativo espec\u00EDfico.
+  result = api_instance.consultar_using_get11(id)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CadastroGeralApi->consultar_using_get11: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o de configura\u00E7\u00E3o rotativo (id). | 
 
 ### Return type
 
@@ -437,12 +484,12 @@ No authorization required
 
 
 
-# **consultar_using_get25**
-> ProdutoDetalhesResponse consultar_using_get25(id)
+# **consultar_using_get26**
+> ProdutoDetalhesResponse consultar_using_get26(id)
 
 Apresenta os dados de um determinado Produto
 
-Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Este m\u00E9todo permite consultar um determinado Produto a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
 
 ### Example
 ```ruby
@@ -451,15 +498,15 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::CadastroGeralApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id)
 
 
 begin
   #Apresenta os dados de um determinado Produto
-  result = api_instance.consultar_using_get25(id)
+  result = api_instance.consultar_using_get26(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->consultar_using_get25: #{e}"
+  puts "Exception when calling CadastroGeralApi->consultar_using_get26: #{e}"
 end
 ```
 
@@ -467,7 +514,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id) | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id) | 
 
 ### Return type
 
@@ -484,55 +531,8 @@ No authorization required
 
 
 
-# **consultar_using_get3**
-> AtendimentoClienteResponse consultar_using_get3(id)
-
-Apresenta os dados de um determinado Atendimento
-
-Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Atendimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (idAtendimento).
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-api_instance = Pier::CadastroGeralApi.new
-
-id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do atendimento cliente (id).
-
-
-begin
-  #Apresenta os dados de um determinado Atendimento
-  result = api_instance.consultar_using_get3(id)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->consultar_using_get3: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do atendimento cliente (id). | 
-
-### Return type
-
-[**AtendimentoClienteResponse**](AtendimentoClienteResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **consultar_using_get32**
-> PageTipoAjusteResponse consultar_using_get32(opts)
+# **consultar_using_get33**
+> PageTipoAjusteResponse consultar_using_get33(opts)
 
 Lista os tipos de ajustes do emissor 
 
@@ -546,19 +546,19 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastroGeralApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id: 789, # Integer | C\u00C3\u00B3digo identificador do tipo de ajuste.
-  descricao: "descricao_example" # String | Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste.
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  id: 789, # Integer | C\u00F3digo identificador do tipo de ajuste.
+  descricao: "descricao_example" # String | Descri\u00E7\u00E3o do tipo de ajuste.
 }
 
 begin
   #Lista os tipos de ajustes do emissor 
-  result = api_instance.consultar_using_get32(opts)
+  result = api_instance.consultar_using_get33(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->consultar_using_get32: #{e}"
+  puts "Exception when calling CadastroGeralApi->consultar_using_get33: #{e}"
 end
 ```
 
@@ -566,11 +566,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id** | **Integer**| C\u00C3\u00B3digo identificador do tipo de ajuste. | [optional] 
- **descricao** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste. | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **id** | **Integer**| C\u00F3digo identificador do tipo de ajuste. | [optional] 
+ **descricao** | **String**| Descri\u00E7\u00E3o do tipo de ajuste. | [optional] 
 
 ### Return type
 
@@ -587,8 +587,8 @@ No authorization required
 
 
 
-# **consultar_using_get33**
-> PageTipoBoletoResponse consultar_using_get33(opts)
+# **consultar_using_get34**
+> PageTipoBoletoResponse consultar_using_get34(opts)
 
 Lista os tipos de boletos do emissor 
 
@@ -602,20 +602,20 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastroGeralApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id: 789, # Integer | C\u00C3\u00B3digo identificador do tipo de boleto.
-  descricao: "descricao_example", # String | Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto.
-  banco: 789 # Integer | C\u00C3\u00B3digo identificador do banco.
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  id: 789, # Integer | C\u00F3digo identificador do tipo de boleto.
+  descricao: "descricao_example", # String | Descri\u00E7\u00E3o do tipo de boleto.
+  banco: 789 # Integer | C\u00F3digo identificador do banco.
 }
 
 begin
   #Lista os tipos de boletos do emissor 
-  result = api_instance.consultar_using_get33(opts)
+  result = api_instance.consultar_using_get34(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->consultar_using_get33: #{e}"
+  puts "Exception when calling CadastroGeralApi->consultar_using_get34: #{e}"
 end
 ```
 
@@ -623,12 +623,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id** | **Integer**| C\u00C3\u00B3digo identificador do tipo de boleto. | [optional] 
- **descricao** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto. | [optional] 
- **banco** | **Integer**| C\u00C3\u00B3digo identificador do banco. | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **id** | **Integer**| C\u00F3digo identificador do tipo de boleto. | [optional] 
+ **descricao** | **String**| Descri\u00E7\u00E3o do tipo de boleto. | [optional] 
+ **banco** | **Integer**| C\u00F3digo identificador do banco. | [optional] 
 
 ### Return type
 
@@ -645,12 +645,12 @@ No authorization required
 
 
 
-# **consultar_using_get34**
-> TipoEnderecoResponse consultar_using_get34(id)
+# **consultar_using_get35**
+> TipoEnderecoResponse consultar_using_get35(id)
 
-Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
+Apresenta os dados de um determinado Tipo de Endere\u00E7o
 
-Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Este m\u00E9todo permite consultar um determinado Tipo de Endere\u00E7o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
 
 ### Example
 ```ruby
@@ -659,15 +659,15 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::CadastroGeralApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Endere\u00E7o (id)
 
 
 begin
-  #Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
-  result = api_instance.consultar_using_get34(id)
+  #Apresenta os dados de um determinado Tipo de Endere\u00E7o
+  result = api_instance.consultar_using_get35(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->consultar_using_get34: #{e}"
+  puts "Exception when calling CadastroGeralApi->consultar_using_get35: #{e}"
 end
 ```
 
@@ -675,7 +675,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id) | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Endere\u00E7o (id) | 
 
 ### Return type
 
@@ -692,12 +692,12 @@ No authorization required
 
 
 
-# **consultar_using_get35**
-> TipoOperacaoResponse consultar_using_get35(id_cartao, id_estabelecimento, codigo_processamento)
+# **consultar_using_get36**
+> TipoOperacaoResponse consultar_using_get36(id_cartao, id_estabelecimento, codigo_processamento)
 
-Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+Apresenta dados de um determinado tipo de opera\u00E7\u00E3o
 
-Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idCartao, idEstabelecimento e codigoProcessamento.
+Este recurso permite consultar dados de um determinado tipo opera\u00E7\u00E3o a partir do idCartao, idEstabelecimento e codigoProcessamento.
 
 ### Example
 ```ruby
@@ -706,19 +706,19 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::CadastroGeralApi.new
 
-id_cartao = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cartao (idCartao).
+id_cartao = 789 # Integer | C\u00F3digo de identifica\u00E7\u00E3o do cartao (idCartao).
 
-id_estabelecimento = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (idEstabelecimento).
+id_estabelecimento = 789 # Integer | C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (idEstabelecimento).
 
-codigo_processamento = "codigo_processamento_example" # String | C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o.
+codigo_processamento = "codigo_processamento_example" # String | C\u00F3digo de processamento da opera\u00E7\u00E3o.
 
 
 begin
-  #Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-  result = api_instance.consultar_using_get35(id_cartao, id_estabelecimento, codigo_processamento)
+  #Apresenta dados de um determinado tipo de opera\u00E7\u00E3o
+  result = api_instance.consultar_using_get36(id_cartao, id_estabelecimento, codigo_processamento)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->consultar_using_get35: #{e}"
+  puts "Exception when calling CadastroGeralApi->consultar_using_get36: #{e}"
 end
 ```
 
@@ -726,9 +726,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_cartao** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cartao (idCartao). | 
- **id_estabelecimento** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (idEstabelecimento). | 
- **codigo_processamento** | **String**| C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o. | 
+ **id_cartao** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do cartao (idCartao). | 
+ **id_estabelecimento** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (idEstabelecimento). | 
+ **codigo_processamento** | **String**| C\u00F3digo de processamento da opera\u00E7\u00E3o. | 
 
 ### Return type
 
@@ -745,12 +745,12 @@ No authorization required
 
 
 
-# **consultar_using_get37**
-> TipoTelefoneResponse consultar_using_get37(id)
+# **consultar_using_get38**
+> TipoTelefoneResponse consultar_using_get38(id)
 
 Apresenta os dados de um determinado Tipo de Telefone
 
-Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Este m\u00E9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
 
 ### Example
 ```ruby
@@ -759,15 +759,15 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::CadastroGeralApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id)
 
 
 begin
   #Apresenta os dados de um determinado Tipo de Telefone
-  result = api_instance.consultar_using_get37(id)
+  result = api_instance.consultar_using_get38(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->consultar_using_get37: #{e}"
+  puts "Exception when calling CadastroGeralApi->consultar_using_get38: #{e}"
 end
 ```
 
@@ -775,7 +775,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id) | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id) | 
 
 ### Return type
 
@@ -792,12 +792,12 @@ No authorization required
 
 
 
-# **consultar_using_get5**
-> BancoResponse consultar_using_get5(id)
+# **consultar_using_get4**
+> AtendimentoClienteResponse consultar_using_get4(id)
 
-Apresenta os dados de um determinado Banco
+Apresenta os dados de um determinado Atendimento
 
-Este m\u00C3\u00A9todo permite consultar um determinado Banco a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Este m\u00E9todo permite consultar os par\u00E2metros de um determinado Atendimento a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (idAtendimento).
 
 ### Example
 ```ruby
@@ -806,15 +806,15 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::CadastroGeralApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Banco (id).
+id = 789 # Integer | C\u00F3digo de identifica\u00E7\u00E3o do atendimento cliente (id).
 
 
 begin
-  #Apresenta os dados de um determinado Banco
-  result = api_instance.consultar_using_get5(id)
+  #Apresenta os dados de um determinado Atendimento
+  result = api_instance.consultar_using_get4(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->consultar_using_get5: #{e}"
+  puts "Exception when calling CadastroGeralApi->consultar_using_get4: #{e}"
 end
 ```
 
@@ -822,11 +822,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Banco (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do atendimento cliente (id). | 
 
 ### Return type
 
-[**BancoResponse**](BancoResponse.md)
+[**AtendimentoClienteResponse**](AtendimentoClienteResponse.md)
 
 ### Authorization
 
@@ -839,12 +839,12 @@ No authorization required
 
 
 
-# **consultar_using_get9**
-> ConfiguracaoRegistroCobrancaResponse consultar_using_get9(id)
+# **consultar_using_get6**
+> BancoResponse consultar_using_get6(id)
 
-Consultar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
+Apresenta os dados de um determinado Banco
 
-Este m\u00C3\u00A9todo permite buscar uma configura\u00C3\u00A7\u00C3\u00A3o, para registro de cobran\u00C3\u00A7a.
+Este m\u00E9todo permite consultar um determinado Banco a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
 
 ### Example
 ```ruby
@@ -853,15 +853,15 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::CadastroGeralApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Banco (id).
 
 
 begin
-  #Consultar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
-  result = api_instance.consultar_using_get9(id)
+  #Apresenta os dados de um determinado Banco
+  result = api_instance.consultar_using_get6(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->consultar_using_get9: #{e}"
+  puts "Exception when calling CadastroGeralApi->consultar_using_get6: #{e}"
 end
 ```
 
@@ -869,11 +869,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Banco (id). | 
 
 ### Return type
 
-[**ConfiguracaoRegistroCobrancaResponse**](ConfiguracaoRegistroCobrancaResponse.md)
+[**BancoResponse**](BancoResponse.md)
 
 ### Authorization
 
@@ -901,10 +901,10 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastroGeralApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id_tipo_campanha: 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de campanha (id).
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  id_tipo_campanha: 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do tipo de campanha (id).
 }
 
 begin
@@ -920,10 +920,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id_tipo_campanha** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de campanha (id). | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **id_tipo_campanha** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do tipo de campanha (id). | [optional] 
 
 ### Return type
 
@@ -954,12 +954,12 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::CadastroGeralApi.new
 
-numero_receita_federal = "numero_receita_federal_example" # String | N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ)
+numero_receita_federal = "numero_receita_federal_example" # String | N\u00FAmero de identifica\u00E7\u00E3o do cliente na Receita Federal (CPF ou CNPJ)
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 }
 
 begin
@@ -975,10 +975,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **numero_receita_federal** | **String**| N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ) | 
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **numero_receita_federal** | **String**| N\u00FAmero de identifica\u00E7\u00E3o do cliente na Receita Federal (CPF ou CNPJ) | 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -998,9 +998,9 @@ No authorization required
 # **listar_estados_civis_using_get**
 > PageCampoCodificadoDescricaoResponse listar_estados_civis_using_get(opts)
 
-Lista os Estados C\u00C3\u00ADvis
+Lista os Estados C\u00EDvis
 
-Este m\u00C3\u00A9todo permite que sejam listados os Estados C\u00C3\u00ADvis na base de dados do Emissor.
+Este m\u00E9todo permite que sejam listados os Estados C\u00EDvis na base de dados do Emissor.
 
 ### Example
 ```ruby
@@ -1010,13 +1010,13 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastroGeralApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 }
 
 begin
-  #Lista os Estados C\u00C3\u00ADvis
+  #Lista os Estados C\u00EDvis
   result = api_instance.listar_estados_civis_using_get(opts)
   p result
 rescue Pier::ApiError => e
@@ -1028,9 +1028,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -1050,9 +1050,9 @@ No authorization required
 # **listar_fantasias_basicas_using_get**
 > PageFantasiaBasicaResponse listar_fantasias_basicas_using_get(opts)
 
-Listar Fantasias B\u00C3\u00A1sicas
+Listar Fantasias B\u00E1sicas
 
-Lista as fantasia b\u00C3\u00A1sicas.
+Lista as fantasia b\u00E1sicas.
 
 ### Example
 ```ruby
@@ -1062,13 +1062,13 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastroGeralApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 }
 
 begin
-  #Listar Fantasias B\u00C3\u00A1sicas
+  #Listar Fantasias B\u00E1sicas
   result = api_instance.listar_fantasias_basicas_using_get(opts)
   p result
 rescue Pier::ApiError => e
@@ -1080,9 +1080,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -1102,9 +1102,9 @@ No authorization required
 # **listar_historico_telefones_using_get**
 > HistoricoTelefoneResponse listar_historico_telefones_using_get(id)
 
-Listar altera\u00C3\u00A7\u00C3\u00B5es de telefones realizadas nos \u00C3\u00BAltimos 60 dias
+Listar altera\u00E7\u00F5es de telefones realizadas nos \u00FAltimos 60 dias
 
-Este m\u00C3\u00A9todo permite verificar quais os telefones de um determinado que cliente que sofreram altera\u00C3\u00A7\u00C3\u00A3o nos \u00C3\u00BAltimos 60 dias.
+Este m\u00E9todo permite verificar quais os telefones de um determinado que cliente que sofreram altera\u00E7\u00E3o nos \u00FAltimos 60 dias.
 
 ### Example
 ```ruby
@@ -1113,11 +1113,11 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::CadastroGeralApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id).
 
 
 begin
-  #Listar altera\u00C3\u00A7\u00C3\u00B5es de telefones realizadas nos \u00C3\u00BAltimos 60 dias
+  #Listar altera\u00E7\u00F5es de telefones realizadas nos \u00FAltimos 60 dias
   result = api_instance.listar_historico_telefones_using_get(id)
   p result
 rescue Pier::ApiError => e
@@ -1129,7 +1129,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id). | 
 
 ### Return type
 
@@ -1151,7 +1151,7 @@ No authorization required
 
 Lista nacionalidades
 
-Este m\u00C3\u00A9todo permite que sejam listados as nacionalidades na base de dados do Emissor.
+Este m\u00E9todo permite que sejam listados as nacionalidades na base de dados do Emissor.
 
 ### Example
 ```ruby
@@ -1161,9 +1161,9 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastroGeralApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 }
 
 begin
@@ -1179,9 +1179,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -1201,9 +1201,9 @@ No authorization required
 # **listar_naturezas_ocupacoes_using_get**
 > PageCampoCodificadoDescricaoResponse listar_naturezas_ocupacoes_using_get(opts)
 
-Lista as Ocupa\u00C3\u00A7\u00C3\u00B5es
+Lista as Ocupa\u00E7\u00F5es
 
-Este m\u00C3\u00A9todo permite que sejam listados as naturezas de opera\u00C3\u00A7\u00C3\u00B5es na base de dados do Emissor.
+Este m\u00E9todo permite que sejam listados as naturezas de opera\u00E7\u00F5es na base de dados do Emissor.
 
 ### Example
 ```ruby
@@ -1213,13 +1213,13 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastroGeralApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 }
 
 begin
-  #Lista as Ocupa\u00C3\u00A7\u00C3\u00B5es
+  #Lista as Ocupa\u00E7\u00F5es
   result = api_instance.listar_naturezas_ocupacoes_using_get(opts)
   p result
 rescue Pier::ApiError => e
@@ -1231,9 +1231,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -1255,7 +1255,7 @@ No authorization required
 
 Lista os Parentescos
 
-Este m\u00C3\u00A9todo permite que sejam listados parentescos na base de dados do Emissor.
+Este m\u00E9todo permite que sejam listados parentescos na base de dados do Emissor.
 
 ### Example
 ```ruby
@@ -1265,9 +1265,9 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastroGeralApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 }
 
 begin
@@ -1283,9 +1283,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -1305,9 +1305,9 @@ No authorization required
 # **listar_profissoes_using_get**
 > PageCampoCodificadoDescricaoResponse listar_profissoes_using_get(opts)
 
-Lista profiss\u00C3\u00B5es
+Lista profiss\u00F5es
 
-Este m\u00C3\u00A9todo permite que sejam listados as profiss\u00C3\u00B5es na base de dados do Emissor.
+Este m\u00E9todo permite que sejam listados as profiss\u00F5es na base de dados do Emissor.
 
 ### Example
 ```ruby
@@ -1317,13 +1317,13 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastroGeralApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 }
 
 begin
-  #Lista profiss\u00C3\u00B5es
+  #Lista profiss\u00F5es
   result = api_instance.listar_profissoes_using_get(opts)
   p result
 rescue Pier::ApiError => e
@@ -1335,9 +1335,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -1369,9 +1369,9 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastroGeralApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 }
 
 begin
@@ -1387,9 +1387,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -1406,12 +1406,12 @@ No authorization required
 
 
 
-# **listar_using_get12**
-> ConfiguracaoRegistroCobrancaResponse listar_using_get12(opts)
+# **listar_using_get13**
+> ConfiguracaoRegistroCobrancaResponse listar_using_get13(opts)
 
-Listar configura\u00C3\u00A7\u00C3\u00B5es para registro de cobran\u00C3\u00A7a
+Listar configura\u00E7\u00F5es para registro de cobran\u00E7a
 
-Este m\u00C3\u00A9todo permite listar as configura\u00C3\u00A7\u00C3\u00B5es de registro de cobran\u00C3\u00A7a.
+Este m\u00E9todo permite listar as configura\u00E7\u00F5es de registro de cobran\u00E7a.
 
 ### Example
 ```ruby
@@ -1421,17 +1421,17 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastroGeralApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 }
 
 begin
-  #Listar configura\u00C3\u00A7\u00C3\u00B5es para registro de cobran\u00C3\u00A7a
-  result = api_instance.listar_using_get12(opts)
+  #Listar configura\u00E7\u00F5es para registro de cobran\u00E7a
+  result = api_instance.listar_using_get13(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->listar_using_get12: #{e}"
+  puts "Exception when calling CadastroGeralApi->listar_using_get13: #{e}"
 end
 ```
 
@@ -1439,9 +1439,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -1458,12 +1458,12 @@ No authorization required
 
 
 
-# **listar_using_get13**
-> PageConfiguracaoRotativoResponse listar_using_get13(opts)
+# **listar_using_get14**
+> PageConfiguracaoRotativoResponse listar_using_get14(opts)
 
-Listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
+Listar as configura\u00E7\u00F5es rotativo.
 
-Este recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
+Este recurso permite listar as configura\u00E7\u00F5es rotativo.
 
 ### Example
 ```ruby
@@ -1473,18 +1473,18 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastroGeralApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id_produto: 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Produto.
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  id_produto: 789 # Integer | C\u00F3digo de identifica\u00E7\u00E3o do Produto.
 }
 
 begin
-  #Listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
-  result = api_instance.listar_using_get13(opts)
+  #Listar as configura\u00E7\u00F5es rotativo.
+  result = api_instance.listar_using_get14(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->listar_using_get13: #{e}"
+  puts "Exception when calling CadastroGeralApi->listar_using_get14: #{e}"
 end
 ```
 
@@ -1492,10 +1492,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id_produto** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Produto. | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **id_produto** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do Produto. | [optional] 
 
 ### Return type
 
@@ -1512,12 +1512,12 @@ No authorization required
 
 
 
-# **listar_using_get32**
-> PagePortadorResponse listar_using_get32(opts)
+# **listar_using_get34**
+> PagePortadorResponse listar_using_get34(opts)
 
 Lista os Portadores existentes
 
-Este m\u00C3\u00A9todo permite que sejam listados os portadores cadastrados na base do emissor.
+Este m\u00E9todo permite que sejam listados os portadores cadastrados na base do emissor.
 
 ### Example
 ```ruby
@@ -1527,27 +1527,27 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastroGeralApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id_conta: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
-  id_produto: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
-  id_pessoa: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
-  id_parentesco: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
-  tipo_portador: "tipo_portador_example", # String | Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
-  nome_impresso: "nome_impresso_example", # String | Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
-  id_tipo_cartao: 789, # Integer | Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
-  flag_ativo: 56, # Integer | Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
-  data_cadastro_portador: "data_cadastro_portador_example", # String | Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-  data_cancelamento_portador: "data_cancelamento_portador_example" # String | Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  id_conta: 789, # Integer | C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).
+  id_produto: 789, # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+  id_pessoa: 789, # Integer | C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id).
+  id_parentesco: 789, # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Parentesco (id)
+  tipo_portador: "tipo_portador_example", # String | Apresenta o tipo do Portador do cart\u00E3o, sendo: ('T': Titular, 'A': Adicional).
+  nome_impresso: "nome_impresso_example", # String | Apresenta o nome a ser impresso no cart\u00E3o.
+  id_tipo_cartao: 789, # Integer | Apresenta o c\u00F3digo de identifica\u00E7\u00E3o do tipo do cart\u00E3o (id), que ser\u00E1 utilizado para gerar os cart\u00F5es deste portador, vinculados a sua respectiva conta atrav\u00E9s do campo idConta.
+  flag_ativo: 56, # Integer | Quanto ativa, indica que o cadastro do Portador est\u00E1 ativo, em emissores que realizam este tipo de gest\u00E3o.
+  data_cadastro_portador: "data_cadastro_portador_example", # String | Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00E7\u00E3o.
+  data_cancelamento_portador: "data_cancelamento_portador_example" # String | Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00E7\u00E3o.
 }
 
 begin
   #Lista os Portadores existentes
-  result = api_instance.listar_using_get32(opts)
+  result = api_instance.listar_using_get34(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->listar_using_get32: #{e}"
+  puts "Exception when calling CadastroGeralApi->listar_using_get34: #{e}"
 end
 ```
 
@@ -1555,19 +1555,19 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id_conta** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). | [optional] 
- **id_produto** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). | [optional] 
- **id_pessoa** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id). | [optional] 
- **id_parentesco** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id) | [optional] 
- **tipo_portador** | **String**| Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). | [optional] 
- **nome_impresso** | **String**| Apresenta o nome a ser impresso no cart\u00C3\u00A3o. | [optional] 
- **id_tipo_cartao** | **Integer**| Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta. | [optional] 
- **flag_ativo** | **Integer**| Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o. | [optional] 
- **data_cadastro_portador** | **String**| Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o. | [optional] 
- **data_cancelamento_portador** | **String**| Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o. | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **id_conta** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id). | [optional] 
+ **id_produto** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). | [optional] 
+ **id_pessoa** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id). | [optional] 
+ **id_parentesco** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Parentesco (id) | [optional] 
+ **tipo_portador** | **String**| Apresenta o tipo do Portador do cart\u00E3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). | [optional] 
+ **nome_impresso** | **String**| Apresenta o nome a ser impresso no cart\u00E3o. | [optional] 
+ **id_tipo_cartao** | **Integer**| Apresenta o c\u00F3digo de identifica\u00E7\u00E3o do tipo do cart\u00E3o (id), que ser\u00E1 utilizado para gerar os cart\u00F5es deste portador, vinculados a sua respectiva conta atrav\u00E9s do campo idConta. | [optional] 
+ **flag_ativo** | **Integer**| Quanto ativa, indica que o cadastro do Portador est\u00E1 ativo, em emissores que realizam este tipo de gest\u00E3o. | [optional] 
+ **data_cadastro_portador** | **String**| Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00E7\u00E3o. | [optional] 
+ **data_cancelamento_portador** | **String**| Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00E7\u00E3o. | [optional] 
 
 ### Return type
 
@@ -1584,12 +1584,12 @@ No authorization required
 
 
 
-# **listar_using_get33**
-> PageProdutoResponse listar_using_get33(opts)
+# **listar_using_get35**
+> PageProdutoResponse listar_using_get35(opts)
 
 Lista os Produtos do Emissor
 
-Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
+Este m\u00E9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
 
 ### Example
 ```ruby
@@ -1599,20 +1599,20 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastroGeralApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  nome: "nome_example", # String | Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  nome: "nome_example", # String | Descri\u00E7\u00E3o do Nome do Produto.
   status: 56, # Integer | Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
-  id_fantasia_basica: 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
+  id_fantasia_basica: 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.
 }
 
 begin
   #Lista os Produtos do Emissor
-  result = api_instance.listar_using_get33(opts)
+  result = api_instance.listar_using_get35(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->listar_using_get33: #{e}"
+  puts "Exception when calling CadastroGeralApi->listar_using_get35: #{e}"
 end
 ```
 
@@ -1620,12 +1620,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **nome** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **nome** | **String**| Descri\u00E7\u00E3o do Nome do Produto. | [optional] 
  **status** | **Integer**| Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). | [optional] 
- **id_fantasia_basica** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence. | [optional] 
+ **id_fantasia_basica** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence. | [optional] 
 
 ### Return type
 
@@ -1642,12 +1642,12 @@ No authorization required
 
 
 
-# **listar_using_get34**
-> PagePromotorResponse listar_using_get34(opts)
+# **listar_using_get36**
+> PagePromotorResponse listar_using_get36(opts)
 
 Lista promotores cadastrados na base do emissor
 
-Este m\u00C3\u00A9todo permite que sejam listados os cadastros de Promoteres existentes na base de dados do Emissor.
+Este m\u00E9todo permite que sejam listados os cadastros de Promoteres existentes na base de dados do Emissor.
 
 ### Example
 ```ruby
@@ -1657,22 +1657,22 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastroGeralApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do promotor (id)
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  id: 789, # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do promotor (id)
   nome: "nome_example", # String | Nome do Promotor
-  data_cadastro: "data_cadastro_example", # String | Data da Inclus\u00C3\u00A3o.
-  id_estabelecimento: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
-  id_usuario: 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio
+  data_cadastro: "data_cadastro_example", # String | Data da Inclus\u00E3o.
+  id_estabelecimento: 789, # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento
+  id_usuario: 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do usu\u00E1rio
 }
 
 begin
   #Lista promotores cadastrados na base do emissor
-  result = api_instance.listar_using_get34(opts)
+  result = api_instance.listar_using_get36(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->listar_using_get34: #{e}"
+  puts "Exception when calling CadastroGeralApi->listar_using_get36: #{e}"
 end
 ```
 
@@ -1680,14 +1680,14 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do promotor (id) | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do promotor (id) | [optional] 
  **nome** | **String**| Nome do Promotor | [optional] 
- **data_cadastro** | **String**| Data da Inclus\u00C3\u00A3o. | [optional] 
- **id_estabelecimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento | [optional] 
- **id_usuario** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio | [optional] 
+ **data_cadastro** | **String**| Data da Inclus\u00E3o. | [optional] 
+ **id_estabelecimento** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento | [optional] 
+ **id_usuario** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do usu\u00E1rio | [optional] 
 
 ### Return type
 
@@ -1704,12 +1704,12 @@ No authorization required
 
 
 
-# **listar_using_get42**
-> PageTipoEnderecoResponse listar_using_get42(opts)
+# **listar_using_get44**
+> PageTipoEnderecoResponse listar_using_get44(opts)
 
-Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+Lista as op\u00F5es de Tipos de Endere\u00E7os do Emissor 
 
-Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
+Este m\u00E9todo permite que sejam listados os Tipos de Endere\u00E7os existentes na base de dados do Emissor.
 
 ### Example
 ```ruby
@@ -1719,19 +1719,19 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastroGeralApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
-  nome: "nome_example" # String | Nome do Tipo do Endere\u00C3\u00A7o
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  id: 789, # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Endere\u00E7o (id)
+  nome: "nome_example" # String | Nome do Tipo do Endere\u00E7o
 }
 
 begin
-  #Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-  result = api_instance.listar_using_get42(opts)
+  #Lista as op\u00F5es de Tipos de Endere\u00E7os do Emissor 
+  result = api_instance.listar_using_get44(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->listar_using_get42: #{e}"
+  puts "Exception when calling CadastroGeralApi->listar_using_get44: #{e}"
 end
 ```
 
@@ -1739,11 +1739,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id) | [optional] 
- **nome** | **String**| Nome do Tipo do Endere\u00C3\u00A7o | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Endere\u00E7o (id) | [optional] 
+ **nome** | **String**| Nome do Tipo do Endere\u00E7o | [optional] 
 
 ### Return type
 
@@ -1760,12 +1760,12 @@ No authorization required
 
 
 
-# **listar_using_get44**
-> PageTipoTelefoneResponse listar_using_get44(opts)
+# **listar_using_get46**
+> PageTipoTelefoneResponse listar_using_get46(opts)
 
 Lista os Tipos de Telefones
 
-Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
+Este m\u00E9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
 
 ### Example
 ```ruby
@@ -1775,19 +1775,19 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastroGeralApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  id: 789, # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id).
   nome: "nome_example" # String | Nome do Tipo do Telefone
 }
 
 begin
   #Lista os Tipos de Telefones
-  result = api_instance.listar_using_get44(opts)
+  result = api_instance.listar_using_get46(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->listar_using_get44: #{e}"
+  puts "Exception when calling CadastroGeralApi->listar_using_get46: #{e}"
 end
 ```
 
@@ -1795,10 +1795,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id). | [optional] 
  **nome** | **String**| Nome do Tipo do Telefone | [optional] 
 
 ### Return type
@@ -1816,12 +1816,12 @@ No authorization required
 
 
 
-# **listar_using_get5**
-> PageAtendimentoClienteResponse listar_using_get5(opts)
+# **listar_using_get52**
+> PageControleVencimentoResponse listar_using_get52(opts)
 
-Lista todos os atendimentos
+Listar Vencimentos
 
-Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
+Este recurso permite que sejam listados os Vencimentos do emissor.
 
 ### Example
 ```ruby
@@ -1831,21 +1831,18 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastroGeralApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id_tipo_atendimento: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
-  id_conta: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
-  nome_atendente: "nome_atendente_example", # String | Apresenta o nome do Atendente que registrou o Atendimento.
-  data_atendimento: "data_atendimento_example" # String | Apresenta a data em que o Atendimento foi realizado.
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  data_vencimento: "data_vencimento_example" # String | Indica a data de vencimento das faturas
 }
 
 begin
-  #Lista todos os atendimentos
-  result = api_instance.listar_using_get5(opts)
+  #Listar Vencimentos
+  result = api_instance.listar_using_get52(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->listar_using_get5: #{e}"
+  puts "Exception when calling CadastroGeralApi->listar_using_get52: #{e}"
 end
 ```
 
@@ -1853,11 +1850,68 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id_tipo_atendimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id) | [optional] 
- **id_conta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **data_vencimento** | **String**| Indica a data de vencimento das faturas | [optional] 
+
+### Return type
+
+[**PageControleVencimentoResponse**](PageControleVencimentoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **listar_using_get6**
+> PageAtendimentoClienteResponse listar_using_get6(opts)
+
+Lista todos os atendimentos
+
+Este m\u00E9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+api_instance = Pier::CadastroGeralApi.new
+
+opts = { 
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  id_tipo_atendimento: 789, # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Tipo de Atendimento (id)
+  id_conta: 789, # Integer | C\u00F3digo de identifica\u00E7\u00E3o de conta (id).
+  nome_atendente: "nome_atendente_example", # String | Apresenta o nome do Atendente que registrou o Atendimento.
+  data_atendimento: "data_atendimento_example" # String | Apresenta a data em que o Atendimento foi realizado.
+}
+
+begin
+  #Lista todos os atendimentos
+  result = api_instance.listar_using_get6(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling CadastroGeralApi->listar_using_get6: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **id_tipo_atendimento** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Tipo de Atendimento (id) | [optional] 
+ **id_conta** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o de conta (id). | [optional] 
  **nome_atendente** | **String**| Apresenta o nome do Atendente que registrou o Atendimento. | [optional] 
  **data_atendimento** | **String**| Apresenta a data em que o Atendimento foi realizado. | [optional] 
 
@@ -1876,66 +1930,12 @@ No authorization required
 
 
 
-# **listar_using_get50**
-> PageControleVencimentoResponse listar_using_get50(opts)
-
-Listar Vencimentos
-
-Este recurso permite que sejam listados os Vencimentos do emissor.
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-api_instance = Pier::CadastroGeralApi.new
-
-opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  data_vencimento: "data_vencimento_example" # String | Indica a data de vencimento das faturas
-}
-
-begin
-  #Listar Vencimentos
-  result = api_instance.listar_using_get50(opts)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->listar_using_get50: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **data_vencimento** | **String**| Indica a data de vencimento das faturas | [optional] 
-
-### Return type
-
-[**PageControleVencimentoResponse**](PageControleVencimentoResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **listar_using_get7**
-> PageBancoResponse listar_using_get7(opts)
+# **listar_using_get8**
+> PageBancoResponse listar_using_get8(opts)
 
 Lista os Bancos cadastrados para o Emissor
 
-Este m\u00C3\u00A9todo permite que sejam listados os Bancos existentes na base de dados do Emissor.
+Este m\u00E9todo permite que sejam listados os Bancos existentes na base de dados do Emissor.
 
 ### Example
 ```ruby
@@ -1945,17 +1945,17 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastroGeralApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 }
 
 begin
   #Lista os Bancos cadastrados para o Emissor
-  result = api_instance.listar_using_get7(opts)
+  result = api_instance.listar_using_get8(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling CadastroGeralApi->listar_using_get7: #{e}"
+  puts "Exception when calling CadastroGeralApi->listar_using_get8: #{e}"
 end
 ```
 
@@ -1963,9 +1963,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -1985,7 +1985,7 @@ No authorization required
 # **salvar_using_post2**
 > AtendimentoClienteResponse salvar_using_post2(opts)
 
-Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
+Cadastro um novo Atendimento do tipo Gen\u00E9rico para uma Conta
 
 ### Example
 ```ruby
@@ -1995,9 +1995,9 @@ require 'pier-sdk-ruby'
 api_instance = Pier::CadastroGeralApi.new
 
 opts = { 
-  id_conta: 789, # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o Atendimento est\u00C3\u00A1 associado
-  conteudo_atendimento: "conteudo_atendimento_example", # String | Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento.
-  detalhes_atendimento: "detalhes_atendimento_example", # String | Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
+  id_conta: 789, # Integer | C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o Atendimento est\u00E1 associado
+  conteudo_atendimento: "conteudo_atendimento_example", # String | Apresenta as informa\u00E7\u00F5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00E7\u00F5es relacionadas ao Atendimento.
+  detalhes_atendimento: "detalhes_atendimento_example", # String | Apresenta os detalhes lan\u00E7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
   nome_atendente: "nome_atendente_example", # String | Apresenta o nome do Atendente que registrou o Atendimento.
   data_atendimento: "data_atendimento_example", # String | Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
   data_agendamento: "data_agendamento_example", # String | Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
@@ -2007,7 +2007,7 @@ opts = {
 }
 
 begin
-  #Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
+  #Cadastro um novo Atendimento do tipo Gen\u00E9rico para uma Conta
   result = api_instance.salvar_using_post2(opts)
   p result
 rescue Pier::ApiError => e
@@ -2019,9 +2019,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_conta** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o Atendimento est\u00C3\u00A1 associado | [optional] 
- **conteudo_atendimento** | **String**| Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento. | [optional] 
- **detalhes_atendimento** | **String**| Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento. | [optional] 
+ **id_conta** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o Atendimento est\u00E1 associado | [optional] 
+ **conteudo_atendimento** | **String**| Apresenta as informa\u00E7\u00F5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00E7\u00F5es relacionadas ao Atendimento. | [optional] 
+ **detalhes_atendimento** | **String**| Apresenta os detalhes lan\u00E7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento. | [optional] 
  **nome_atendente** | **String**| Apresenta o nome do Atendente que registrou o Atendimento. | [optional] 
  **data_atendimento** | **String**| Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
  **data_agendamento** | **String**| Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
@@ -2049,7 +2049,7 @@ No authorization required
 
 Inserir campanha
 
-Este m\u00C3\u00A9todo permite que seja cadastrado uma nova campanha.
+Este m\u00E9todo permite que seja cadastrado uma nova campanha.
 
 ### Example
 ```ruby
@@ -2094,9 +2094,9 @@ No authorization required
 # **salvar_using_post7**
 > ConfiguracaoRotativoDetalheResponse salvar_using_post7(configuracao_rotativo_persist)
 
-Inserir os dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo de um produto
+Inserir os dados de configura\u00E7\u00E3o do rotativo de um produto
 
-Este m\u00C3\u00A9todo permite que seja cadastrado uma nova configura\u00C3\u00A7\u00C3\u00A3o do rotativo para um determinado produto.
+Este m\u00E9todo permite que seja cadastrado uma nova configura\u00E7\u00E3o do rotativo para um determinado produto.
 
 ### Example
 ```ruby
@@ -2109,7 +2109,7 @@ configuracao_rotativo_persist = Pier::ConfiguracaoRotativoPersist.new # Configur
 
 
 begin
-  #Inserir os dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo de um produto
+  #Inserir os dados de configura\u00E7\u00E3o do rotativo de um produto
   result = api_instance.salvar_using_post7(configuracao_rotativo_persist)
   p result
 rescue Pier::ApiError => e

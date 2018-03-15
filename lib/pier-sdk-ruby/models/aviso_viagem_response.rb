@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,15 +17,15 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso aviso viagens
+  # Representa\u00E7\u00E3o da resposta do recurso aviso viagens
   class AvisoViagemResponse
-    # C\u00C3\u00B3digo identificador \u00C3\u00BAnico do aviso viagem na base (id)
+    # C\u00F3digo identificador \u00FAnico do aviso viagem na base (id)
     attr_accessor :id
 
-    # C\u00C3\u00B3digo identificador do cart\u00C3\u00A3o na base (id)
+    # C\u00F3digo identificador do cart\u00E3o na base (id)
     attr_accessor :id_cartao
 
-    # Codigo identificador do pa\u00C3\u00ADs na base (id)
+    # Codigo identificador do pa\u00EDs na base (id)
     attr_accessor :codigo_pais
 
     # Data inicio do aviso viagem
@@ -34,7 +34,7 @@ module Pier
     # Data fim do aviso viagem
     attr_accessor :data_fim
 
-    # Identifica se o aviso viagem esta ativo ou n\u00C3\u00A3o
+    # Identifica se o aviso viagem esta ativo ou n\u00E3o
     attr_accessor :flag_ativo
 
     # Attribute mapping from ruby-style variable name to JSON key.

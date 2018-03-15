@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -37,9 +37,9 @@ describe 'TransferenciaBancariaApi' do
   end
 
   # unit tests for atualizar_using_put1
-  # Atualiza conta banc\u00C3\u00A1ria portador
-  # Esse recurso permite atualizar uma conta banc\u00C3\u00A1ria do portador.
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria do portador (id).
+  # Atualiza conta banc\u00E1ria portador
+  # Esse recurso permite atualizar uma conta banc\u00E1ria do portador.
+  # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria do portador (id).
   # @param update update
   # @param [Hash] opts the optional parameters
   # @return [ContaBancariaPortadorResponse]
@@ -53,10 +53,42 @@ describe 'TransferenciaBancariaApi' do
     end
   end
 
+  # unit tests for cancelar_transferencia_credito_conta_bancaria_using_post
+  # Realizar o cancelamento de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o.
+  # Este recurso tem como objetivo permitir o canelamento de uma transfer\u00EAncia de cr\u00E9dito entre contas.
+  # @param id_transferencia Id Transfer\u00EAncia
+  # @param [Hash] opts the optional parameters
+  # @return [String]
+  describe 'cancelar_transferencia_credito_conta_bancaria_using_post test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+  # unit tests for confirmar_transferencia_credito_conta_bancaria_using_post
+  # Realizar a confirma\u00E7\u00E3o de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o.
+  # Este recurso tem como objetivo permitir a confirma\u00E7\u00E3o da transfer\u00EAncia de cr\u00E9dito entre contas.
+  # @param id_transferencia Id Transfer\u00EAncia
+  # @param [Hash] opts the optional parameters
+  # @return [String]
+  describe 'confirmar_transferencia_credito_conta_bancaria_using_post test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
   # unit tests for consultar_transferencia_bancaria_using_get
-  # Realiza a consulta de uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias de um portador
-  # Recurso utilizado para recuperar uma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador, utiliza o ID da transfer\u00C3\u00AAncia banc\u00C3\u00A1riae o idConta para realizar a consulta.
-  # @param id_transferencia Id Transfer\u00C3\u00AAncia
+  # Realiza a consulta de uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias de um portador
+  # Recurso utilizado para recuperar uma transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador, utiliza o ID da transfer\u00EAncia banc\u00E1riae o idConta para realizar a consulta.
+  # @param id_transferencia Id Transfer\u00EAncia
   # @param [Hash] opts the optional parameters
   # @return [TransferenciaCreditoContaBancariaResponse]
   describe 'consultar_transferencia_bancaria_using_get test' do
@@ -69,13 +101,13 @@ describe 'TransferenciaBancariaApi' do
     end
   end
 
-  # unit tests for consultar_using_get11
-  # Consulta conta banc\u00C3\u00A1ria portador
-  # Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).
+  # unit tests for consultar_using_get12
+  # Consulta conta banc\u00E1ria portador
+  # Esse recurso permite consultar uma conta banc\u00E1ria do portador a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+  # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria (id).
   # @param [Hash] opts the optional parameters
   # @return [ContaBancariaPortadorResponse]
-  describe 'consultar_using_get11 test' do
+  describe 'consultar_using_get12 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -85,15 +117,15 @@ describe 'TransferenciaBancariaApi' do
     end
   end
 
-  # unit tests for consultar_using_get40
-  # Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-  # Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+  # unit tests for consultar_using_get41
+  # Consultar uma transfer\u00EAncia banc\u00E1ria para um banco
+  # Este recurso permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada para uma conta banc\u00E1ria. De modo geral, esta opera\u00E7\u00E3o poder\u00E1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00AA via de transfer\u00EAncia entre contas.
   # @param id Id Conta
-  # @param id_transferencia Id Transfer\u00C3\u00AAncia
+  # @param id_transferencia Id Transfer\u00EAncia
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+  # @option opts [Integer] :id_conta_bancaria_destino C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id)
   # @return [TransferenciaBancariaResponse]
-  describe 'consultar_using_get40 test' do
+  describe 'consultar_using_get41 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -104,15 +136,16 @@ describe 'TransferenciaBancariaApi' do
   end
 
   # unit tests for listar_transferencia_bancaria_using_get
-  # Realiza a listagem das transfer\u00C3\u00AAncias banc\u00C3\u00A1rias de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
-  # Recurso utilizado para listar as transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador solicitadas.
+  # Realiza a listagem das transfer\u00EAncias banc\u00E1rias de cr\u00E9dito entre contas banc\u00E1rias
+  # Recurso utilizado para listar as transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador solicitadas.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
-  # @option opts [String] :data_solicitacao_inicial Data inicial da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia.
-  # @option opts [String] :data_solicitacao_final Data final da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [Integer] :id_conta C\u00F3digo de identifica\u00E7\u00E3o da Conta.
+  # @option opts [String] :data_solicitacao_inicial Data inicial da solicita\u00E7\u00E3o de transfer\u00EAncia.
+  # @option opts [String] :data_solicitacao_final Data final da solicita\u00E7\u00E3o de transfer\u00EAncia
+  # @option opts [Integer] :status C\u00F3digo do status do processamento
   # @return [PageTransferenciaCreditoContaBancariaResponse]
   describe 'listar_transferencia_bancaria_using_get test' do
     it "should work" do
@@ -124,23 +157,23 @@ describe 'TransferenciaBancariaApi' do
     end
   end
 
-  # unit tests for listar_using_get14
-  # Lista contas banc\u00C3\u00A1rias portador
-  # Esse recurso permite listar contas banc\u00C3\u00A1rias do portador.
+  # unit tests for listar_using_get15
+  # Lista contas banc\u00E1rias portador
+  # Esse recurso permite listar contas banc\u00E1rias do portador.
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :id_conta C\u00C3\u00B3digo identificador da conta cart\u00C3\u00A3o
-  # @option opts [String] :nome_agencia Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia
-  # @option opts [String] :numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia
-  # @option opts [String] :numero_conta N\u00C3\u00BAmero da conta
-  # @option opts [Integer] :flag_conta_origem_doc Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED)
-  # @option opts [Integer] :id_pessoa_fisica C\u00C3\u00B3digo da pessoa
+  # @option opts [Integer] :id_conta C\u00F3digo identificador da conta cart\u00E3o
+  # @option opts [String] :nome_agencia Descri\u00E7\u00E3o da ag\u00EAncia
+  # @option opts [String] :numero_agencia N\u00FAmero da ag\u00EAncia
+  # @option opts [String] :numero_conta N\u00FAmero da conta
+  # @option opts [Integer] :flag_conta_origem_doc Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED)
+  # @option opts [Integer] :id_pessoa_fisica C\u00F3digo da pessoa
   # @option opts [String] :favorecido Nome do favorecido
   # @option opts [String] :numero_receira_federal Documento do favorecido
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   # @return [PageContaBancariaPortadorResponse]
-  describe 'listar_using_get14 test' do
+  describe 'listar_using_get15 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -150,17 +183,17 @@ describe 'TransferenciaBancariaApi' do
     end
   end
 
-  # unit tests for listar_using_get47
-  # Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-  # Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
+  # unit tests for listar_using_get49
+  # Listar as transfer\u00EAncias banc\u00E1rias realizadas
+  # Este recurso tem como objetivo permitir que o portador de um Cart\u00E3o possa consultar uma lista das Transfer\u00EAncias Banc\u00E1rias para os Favorecidos cadastrados.
   # @param id Id Conta
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [Integer] :id_conta_bancaria_destino C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id)
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   # @return [PageTransferenciaBancariaResponse]
-  describe 'listar_using_get47 test' do
+  describe 'listar_using_get49 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -171,8 +204,8 @@ describe 'TransferenciaBancariaApi' do
   end
 
   # unit tests for salvar_using_post8
-  # Cadastra uma conta banc\u00C3\u00A1ria do portador
-  # Esse recurso permite cadastrar contas banc\u00C3\u00A1rias do portador.
+  # Cadastra uma conta banc\u00E1ria do portador
+  # Esse recurso permite cadastrar contas banc\u00E1rias do portador.
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [ContaBancariaPortadorResponse]
@@ -187,8 +220,8 @@ describe 'TransferenciaBancariaApi' do
   end
 
   # unit tests for simular_transferencia_bancaria_using_post
-  # Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
-  # Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias.
+  # Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias
+  # Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias.
   # @param request request
   # @param [Hash] opts the optional parameters
   # @return [PlanoParcelamentoTransferenciaCreditoContaBancariaResponse]
@@ -203,8 +236,8 @@ describe 'TransferenciaBancariaApi' do
   end
 
   # unit tests for transferencia_credito_conta_bancaria_using_post
-  # Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
-  # Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+  # Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
+  # Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [TransferenciaCreditoContaBancariaResponse]
@@ -219,8 +252,8 @@ describe 'TransferenciaBancariaApi' do
   end
 
   # unit tests for transferir_using_post
-  # Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
-  # Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+  # Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
+  # Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
   # @param id Id Conta
   # @param transferencia_bancaria_persist transferenciaBancariaPersist
   # @param [Hash] opts the optional parameters

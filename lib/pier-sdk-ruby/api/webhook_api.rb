@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -25,8 +25,8 @@ module Pier
     end
 
     # Alterar Webhook
-    # Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
-    # @param id C\u00C3\u00B3digo identificador do Webhook
+    # Este m\u00E9todo permite que seja modificado um webhooks j\u00E1 cadastrado
+    # @param id C\u00F3digo identificador do Webhook
     # @param webhook webhook
     # @param [Hash] opts the optional parameters
     # @option opts [String] :status Status
@@ -37,8 +37,8 @@ module Pier
     end
 
     # Alterar Webhook
-    # Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
-    # @param id C\u00C3\u00B3digo identificador do Webhook
+    # Este m\u00E9todo permite que seja modificado um webhooks j\u00E1 cadastrado
+    # @param id C\u00F3digo identificador do Webhook
     # @param webhook webhook
     # @param [Hash] opts the optional parameters
     # @option opts [String] :status Status
@@ -113,28 +113,28 @@ module Pier
     end
 
     # Consultar Webhook
-    # Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
+    # Este m\u00E9todo permite que sejam consultado um webhook do emissor atrav\u00E9s de um id especifico
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Webhook (id).
     # @param [Hash] opts the optional parameters
     # @return [WebHookResponse]
-    def consultar_using_get44(id, opts = {})
-      data, _status_code, _headers = consultar_using_get44_with_http_info(id, opts)
+    def consultar_using_get45(id, opts = {})
+      data, _status_code, _headers = consultar_using_get45_with_http_info(id, opts)
       return data
     end
 
     # Consultar Webhook
-    # Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
+    # Este m\u00E9todo permite que sejam consultado um webhook do emissor atrav\u00E9s de um id especifico
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Webhook (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(WebHookResponse, Fixnum, Hash)>] WebHookResponse data, response status code and response headers
-    def consultar_using_get44_with_http_info(id, opts = {})
+    def consultar_using_get45_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WebhookApi.consultar_using_get44 ..."
+        @api_client.config.logger.debug "Calling API: WebhookApi.consultar_using_get45 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling WebhookApi.consultar_using_get44" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling WebhookApi.consultar_using_get45" if id.nil?
       
       
       
@@ -172,41 +172,41 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'WebHookResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WebhookApi#consultar_using_get44\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: WebhookApi#consultar_using_get45\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Lista os Webhooks
-    # Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
+    # Este m\u00E9todo permite que sejam listados os webhooks existentes
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @option opts [Integer] :id Id do WebHook
     # @option opts [String] :tipo_evento TipoEvento a ser chamado pelo WebHook
-    # @option opts [String] :metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
+    # @option opts [String] :metodo M\u00E9todo que a ser chamado pelo WebHook
     # @option opts [String] :url URL que a ser consumida pelo WebHook
     # @return [PageWebHookResponse]
-    def listar_using_get53(opts = {})
-      data, _status_code, _headers = listar_using_get53_with_http_info(opts)
+    def listar_using_get55(opts = {})
+      data, _status_code, _headers = listar_using_get55_with_http_info(opts)
       return data
     end
 
     # Lista os Webhooks
-    # Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
+    # Este m\u00E9todo permite que sejam listados os webhooks existentes
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @option opts [Integer] :id Id do WebHook
     # @option opts [String] :tipo_evento TipoEvento a ser chamado pelo WebHook
-    # @option opts [String] :metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
+    # @option opts [String] :metodo M\u00E9todo que a ser chamado pelo WebHook
     # @option opts [String] :url URL que a ser consumida pelo WebHook
     # @return [Array<(PageWebHookResponse, Fixnum, Hash)>] PageWebHookResponse data, response status code and response headers
-    def listar_using_get53_with_http_info(opts = {})
+    def listar_using_get55_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WebhookApi.listar_using_get53 ..."
+        @api_client.config.logger.debug "Calling API: WebhookApi.listar_using_get55 ..."
       end
       
       
@@ -298,13 +298,13 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageWebHookResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WebhookApi#listar_using_get53\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: WebhookApi#listar_using_get55\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Salvar Webhook
-    # Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
+    # Este m\u00E9todo permite que seja adicionado um novo webhook
     # @param webhook webhook
     # @param [Hash] opts the optional parameters
     # @return [WebHookResponse]
@@ -314,7 +314,7 @@ module Pier
     end
 
     # Salvar Webhook
-    # Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
+    # Este m\u00E9todo permite que seja adicionado um novo webhook
     # @param webhook webhook
     # @param [Hash] opts the optional parameters
     # @return [Array<(WebHookResponse, Fixnum, Hash)>] WebHookResponse data, response status code and response headers

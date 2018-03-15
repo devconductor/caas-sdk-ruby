@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -26,7 +26,7 @@ module Pier
 
     # Altera o tipo de template
     # Esse recurso permite alterar os dados do tipo de template.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id).
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [TipoTemplateResponse]
@@ -37,7 +37,7 @@ module Pier
 
     # Altera o tipo de template
     # Esse recurso permite alterar os dados do tipo de template.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id).
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(TipoTemplateResponse, Fixnum, Hash)>] TipoTemplateResponse data, response status code and response headers
@@ -101,7 +101,7 @@ module Pier
 
     # Atualizar templates dos documentos
     # Esse recurso permite atualizar templates dos documentos.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do documento template (id).
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [DocumentoTemplateResponse]
@@ -112,7 +112,7 @@ module Pier
 
     # Atualizar templates dos documentos
     # Esse recurso permite atualizar templates dos documentos.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do documento template (id).
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(DocumentoTemplateResponse, Fixnum, Hash)>] DocumentoTemplateResponse data, response status code and response headers
@@ -175,28 +175,28 @@ module Pier
     end
 
     # Consulta documentos
-    # Esse recurso permite consultar um documento espec\u00C3\u00ADfico a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento (id).
+    # Esse recurso permite consultar um documento espec\u00EDfico a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do documento (id).
     # @param [Hash] opts the optional parameters
     # @return [DocumentoDetalhadoResponse]
-    def consultar_using_get13(id, opts = {})
-      data, _status_code, _headers = consultar_using_get13_with_http_info(id, opts)
+    def consultar_using_get14(id, opts = {})
+      data, _status_code, _headers = consultar_using_get14_with_http_info(id, opts)
       return data
     end
 
     # Consulta documentos
-    # Esse recurso permite consultar um documento espec\u00C3\u00ADfico a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento (id).
+    # Esse recurso permite consultar um documento espec\u00EDfico a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do documento (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(DocumentoDetalhadoResponse, Fixnum, Hash)>] DocumentoDetalhadoResponse data, response status code and response headers
-    def consultar_using_get13_with_http_info(id, opts = {})
+    def consultar_using_get14_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DocumentoApi.consultar_using_get13 ..."
+        @api_client.config.logger.debug "Calling API: DocumentoApi.consultar_using_get14 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling DocumentoApi.consultar_using_get13" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling DocumentoApi.consultar_using_get14" if id.nil?
       
       
       
@@ -234,34 +234,34 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'DocumentoDetalhadoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DocumentoApi#consultar_using_get13\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DocumentoApi#consultar_using_get14\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Consultar templates dos documentos
     # Esse recurso permite consultar templates dos documentos.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do documento template (id).
     # @param [Hash] opts the optional parameters
     # @return [DocumentoTemplateResponse]
-    def consultar_using_get14(id, opts = {})
-      data, _status_code, _headers = consultar_using_get14_with_http_info(id, opts)
+    def consultar_using_get15(id, opts = {})
+      data, _status_code, _headers = consultar_using_get15_with_http_info(id, opts)
       return data
     end
 
     # Consultar templates dos documentos
     # Esse recurso permite consultar templates dos documentos.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do documento template (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(DocumentoTemplateResponse, Fixnum, Hash)>] DocumentoTemplateResponse data, response status code and response headers
-    def consultar_using_get14_with_http_info(id, opts = {})
+    def consultar_using_get15_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DocumentoApi.consultar_using_get14 ..."
+        @api_client.config.logger.debug "Calling API: DocumentoApi.consultar_using_get15 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling DocumentoApi.consultar_using_get14" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling DocumentoApi.consultar_using_get15" if id.nil?
       
       
       
@@ -299,34 +299,34 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'DocumentoTemplateResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DocumentoApi#consultar_using_get14\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DocumentoApi#consultar_using_get15\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Consultar tipo de template
     # Esse recurso permite consultar um determinado tipo de template a partir do id recebido e do id do emissor.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id).
     # @param [Hash] opts the optional parameters
     # @return [TipoTemplateResponse]
-    def consultar_using_get38(id, opts = {})
-      data, _status_code, _headers = consultar_using_get38_with_http_info(id, opts)
+    def consultar_using_get39(id, opts = {})
+      data, _status_code, _headers = consultar_using_get39_with_http_info(id, opts)
       return data
     end
 
     # Consultar tipo de template
     # Esse recurso permite consultar um determinado tipo de template a partir do id recebido e do id do emissor.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(TipoTemplateResponse, Fixnum, Hash)>] TipoTemplateResponse data, response status code and response headers
-    def consultar_using_get38_with_http_info(id, opts = {})
+    def consultar_using_get39_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DocumentoApi.consultar_using_get38 ..."
+        @api_client.config.logger.debug "Calling API: DocumentoApi.consultar_using_get39 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling DocumentoApi.consultar_using_get38" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling DocumentoApi.consultar_using_get39" if id.nil?
       
       
       
@@ -364,13 +364,13 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TipoTemplateResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DocumentoApi#consultar_using_get38\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DocumentoApi#consultar_using_get39\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Integra um arquivo a reposit\u00C3\u00B3rios remotos.
-    # Este recurso permite integrar um documento ao reposit\u00C3\u00B3rio pre-configurado.
+    # Integra um arquivo a reposit\u00F3rios remotos.
+    # Este recurso permite integrar um documento ao reposit\u00F3rio pre-configurado.
     # @param integrar_documento_request integrarDocumentoRequest
     # @param [Hash] opts the optional parameters
     # @return [DocumentoIntegracaoResponse]
@@ -379,8 +379,8 @@ module Pier
       return data
     end
 
-    # Integra um arquivo a reposit\u00C3\u00B3rios remotos.
-    # Este recurso permite integrar um documento ao reposit\u00C3\u00B3rio pre-configurado.
+    # Integra um arquivo a reposit\u00F3rios remotos.
+    # Este recurso permite integrar um documento ao reposit\u00F3rio pre-configurado.
     # @param integrar_documento_request integrarDocumentoRequest
     # @param [Hash] opts the optional parameters
     # @return [Array<(DocumentoIntegracaoResponse, Fixnum, Hash)>] DocumentoIntegracaoResponse data, response status code and response headers
@@ -437,31 +437,31 @@ module Pier
     # Lista documentos
     # Esse recurso permite listar documentos.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_template_documento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do template do documento.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_template_documento C\u00F3digo de identifica\u00E7\u00E3o do template do documento.
     # @option opts [String] :nome Nome do documento.
     # @option opts [String] :extensao Extensao do documento.
     # @return [PageDocumentoResponse]
-    def listar_using_get18(opts = {})
-      data, _status_code, _headers = listar_using_get18_with_http_info(opts)
+    def listar_using_get19(opts = {})
+      data, _status_code, _headers = listar_using_get19_with_http_info(opts)
       return data
     end
 
     # Lista documentos
     # Esse recurso permite listar documentos.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_template_documento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do template do documento.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_template_documento C\u00F3digo de identifica\u00E7\u00E3o do template do documento.
     # @option opts [String] :nome Nome do documento.
     # @option opts [String] :extensao Extensao do documento.
     # @return [Array<(PageDocumentoResponse, Fixnum, Hash)>] PageDocumentoResponse data, response status code and response headers
-    def listar_using_get18_with_http_info(opts = {})
+    def listar_using_get19_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DocumentoApi.listar_using_get18 ..."
+        @api_client.config.logger.debug "Calling API: DocumentoApi.listar_using_get19 ..."
       end
       
       
@@ -542,7 +542,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageDocumentoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DocumentoApi#listar_using_get18\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DocumentoApi#listar_using_get19\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -550,27 +550,27 @@ module Pier
     # Lista os templates dos documentos
     # Esse recurso permite listar os templates dos documentos.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_tipo_template C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_tipo_template C\u00F3digo de identifica\u00E7\u00E3o do tipo do template.
     # @return [PageDocumentoTemplateResponse]
-    def listar_using_get19(opts = {})
-      data, _status_code, _headers = listar_using_get19_with_http_info(opts)
+    def listar_using_get20(opts = {})
+      data, _status_code, _headers = listar_using_get20_with_http_info(opts)
       return data
     end
 
     # Lista os templates dos documentos
     # Esse recurso permite listar os templates dos documentos.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_tipo_template C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_tipo_template C\u00F3digo de identifica\u00E7\u00E3o do tipo do template.
     # @return [Array<(PageDocumentoTemplateResponse, Fixnum, Hash)>] PageDocumentoTemplateResponse data, response status code and response headers
-    def listar_using_get19_with_http_info(opts = {})
+    def listar_using_get20_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DocumentoApi.listar_using_get19 ..."
+        @api_client.config.logger.debug "Calling API: DocumentoApi.listar_using_get20 ..."
       end
       
       
@@ -633,7 +633,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageDocumentoTemplateResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DocumentoApi#listar_using_get19\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DocumentoApi#listar_using_get20\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -641,25 +641,25 @@ module Pier
     # Lista os tipos de templates
     # Esse recurso permite listar os tipos de templates associados ao emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [PageTipoTemplateResponse]
-    def listar_using_get45(opts = {})
-      data, _status_code, _headers = listar_using_get45_with_http_info(opts)
+    def listar_using_get47(opts = {})
+      data, _status_code, _headers = listar_using_get47_with_http_info(opts)
       return data
     end
 
     # Lista os tipos de templates
     # Esse recurso permite listar os tipos de templates associados ao emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(PageTipoTemplateResponse, Fixnum, Hash)>] PageTipoTemplateResponse data, response status code and response headers
-    def listar_using_get45_with_http_info(opts = {})
+    def listar_using_get47_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DocumentoApi.listar_using_get45 ..."
+        @api_client.config.logger.debug "Calling API: DocumentoApi.listar_using_get47 ..."
       end
       
       
@@ -715,7 +715,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTipoTemplateResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DocumentoApi#listar_using_get45\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DocumentoApi#listar_using_get47\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

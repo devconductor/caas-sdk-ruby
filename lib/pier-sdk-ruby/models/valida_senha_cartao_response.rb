@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,21 +17,21 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto de resposta para a valida\u00C3\u00A7\u00C3\u00A3o de senha do cart\u00C3\u00A3o
+  # Objeto de resposta para a valida\u00E7\u00E3o de senha do cart\u00E3o
   class ValidaSenhaCartaoResponse
     # Mensagem
     attr_accessor :mensagem
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
+    # Descri\u00E7\u00E3o do status do cart\u00E3o
     attr_accessor :id_status_cartao
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
+    # Descri\u00E7\u00E3o do status do cart\u00E3o
     attr_accessor :status_cartao
 
     # Quantidade tentativas
     attr_accessor :quantidade_tentativas
 
-    # Quantidade m\u00C3\u00A1xima tentativas permitidas
+    # Quantidade m\u00E1xima tentativas permitidas
     attr_accessor :quantidade_maxima_tentativas
 
     # Attribute mapping from ruby-style variable name to JSON key.

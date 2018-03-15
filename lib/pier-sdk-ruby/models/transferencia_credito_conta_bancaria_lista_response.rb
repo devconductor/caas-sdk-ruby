@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,19 +17,28 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Listagem de Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias
+  # Listagem de Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
   class TransferenciaCreditoContaBancariaListaResponse
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transferencia.
+    # C\u00F3digo de identifica\u00E7\u00E3o da transferencia.
     attr_accessor :id_transferencia
 
-    # Valor da transfer\u00C3\u00AAncia.
+    # C\u00F3digo de identifica\u00E7\u00E3o da conta.
+    attr_accessor :id_conta
+
+    # C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o.
+    attr_accessor :id_cartao
+
+    # Valor da transfer\u00EAncia.
     attr_accessor :valor_compra
 
-    # Valor da transfer\u00C3\u00AAncia acrescido do valor da tarifa de saque se houver tarifa de saque.
+    # Valor da transfer\u00EAncia acrescido do valor da tarifa de saque se houver tarifa de saque.
     attr_accessor :valor_contrato
 
-    # Data da transfer\u00C3\u00AAncia.
+    # Data da transfer\u00EAncia.
     attr_accessor :data_compra
+
+    # C\u00F3digo de status de processamento.
+    attr_accessor :status
 
     # Status Processamento.
     attr_accessor :status_processamento
@@ -40,11 +49,17 @@ module Pier
         
         :'id_transferencia' => :'idTransferencia',
         
+        :'id_conta' => :'idConta',
+        
+        :'id_cartao' => :'idCartao',
+        
         :'valor_compra' => :'valorCompra',
         
         :'valor_contrato' => :'valorContrato',
         
         :'data_compra' => :'dataCompra',
+        
+        :'status' => :'status',
         
         :'status_processamento' => :'statusProcessamento'
         
@@ -57,11 +72,17 @@ module Pier
         
         :'id_transferencia' => :'Integer',
         
+        :'id_conta' => :'Integer',
+        
+        :'id_cartao' => :'Integer',
+        
         :'valor_compra' => :'Float',
         
         :'valor_contrato' => :'Float',
         
         :'data_compra' => :'String',
+        
+        :'status' => :'Integer',
         
         :'status_processamento' => :'String'
         
@@ -81,6 +102,24 @@ module Pier
         
         
         self.id_transferencia = attributes[:'idTransferencia']
+        
+      
+      end
+
+      
+      if attributes[:'idConta']
+        
+        
+        self.id_conta = attributes[:'idConta']
+        
+      
+      end
+
+      
+      if attributes[:'idCartao']
+        
+        
+        self.id_cartao = attributes[:'idCartao']
         
       
       end
@@ -108,6 +147,15 @@ module Pier
         
         
         self.data_compra = attributes[:'dataCompra']
+        
+      
+      end
+
+      
+      if attributes[:'status']
+        
+        
+        self.status = attributes[:'status']
         
       
       end
@@ -157,8 +205,35 @@ module Pier
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -191,9 +266,12 @@ module Pier
       return true if self.equal?(o)
       self.class == o.class &&
           id_transferencia == o.id_transferencia &&
+          id_conta == o.id_conta &&
+          id_cartao == o.id_cartao &&
           valor_compra == o.valor_compra &&
           valor_contrato == o.valor_contrato &&
           data_compra == o.data_compra &&
+          status == o.status &&
           status_processamento == o.status_processamento
     end
 
@@ -206,7 +284,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_transferencia, valor_compra, valor_contrato, data_compra, status_processamento].hash
+      [id_transferencia, id_conta, id_cartao, valor_compra, valor_contrato, data_compra, status, status_processamento].hash
     end
 
     # Builds the object from hash

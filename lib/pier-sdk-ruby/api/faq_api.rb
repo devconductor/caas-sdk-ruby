@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -26,13 +26,13 @@ module Pier
 
     # Adiciona uma nova FAQ
     # Adiciona uma nova FAQ
-    # @param pergunta Conte\u00C3\u00BAdo da pergunta.
-    # @param resposta Conte\u00C3\u00BAdo da resposta.
+    # @param pergunta Conte\u00FAdo da pergunta.
+    # @param resposta Conte\u00FAdo da resposta.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :relevancia N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.
+    # @option opts [Integer] :relevancia N\u00EDvel de relev\u00E2ncia da pergunta.
     # @option opts [String] :plataforma Plataforma em que a FAQ se encaixa.
     # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
-    # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
+    # @option opts [String] :status Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
     # @return [FaqResponse]
     def adicionar_using_post(pergunta, resposta, opts = {})
       data, _status_code, _headers = adicionar_using_post_with_http_info(pergunta, resposta, opts)
@@ -41,13 +41,13 @@ module Pier
 
     # Adiciona uma nova FAQ
     # Adiciona uma nova FAQ
-    # @param pergunta Conte\u00C3\u00BAdo da pergunta.
-    # @param resposta Conte\u00C3\u00BAdo da resposta.
+    # @param pergunta Conte\u00FAdo da pergunta.
+    # @param resposta Conte\u00FAdo da resposta.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :relevancia N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.
+    # @option opts [Integer] :relevancia N\u00EDvel de relev\u00E2ncia da pergunta.
     # @option opts [String] :plataforma Plataforma em que a FAQ se encaixa.
     # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
-    # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
+    # @option opts [String] :status Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
     # @return [Array<(FaqResponse, Fixnum, Hash)>] FaqResponse data, response status code and response headers
     def adicionar_using_post_with_http_info(pergunta, resposta, opts = {})
       if @api_client.config.debugging
@@ -144,13 +144,13 @@ module Pier
     # Alterar FAQ
     # Alterar FAQ
     # @param id Id
-    # @param pergunta Conte\u00C3\u00BAdo da pergunta.
-    # @param resposta Conte\u00C3\u00BAdo da resposta.
+    # @param pergunta Conte\u00FAdo da pergunta.
+    # @param resposta Conte\u00FAdo da resposta.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :relevancia N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.
+    # @option opts [Integer] :relevancia N\u00EDvel de relev\u00E2ncia da pergunta.
     # @option opts [String] :plataforma Plataforma em que a FAQ se encaixa.
     # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
-    # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
+    # @option opts [String] :status Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
     # @return [FaqResponse]
     def alterar_using_put7(id, pergunta, resposta, opts = {})
       data, _status_code, _headers = alterar_using_put7_with_http_info(id, pergunta, resposta, opts)
@@ -160,13 +160,13 @@ module Pier
     # Alterar FAQ
     # Alterar FAQ
     # @param id Id
-    # @param pergunta Conte\u00C3\u00BAdo da pergunta.
-    # @param resposta Conte\u00C3\u00BAdo da resposta.
+    # @param pergunta Conte\u00FAdo da pergunta.
+    # @param resposta Conte\u00FAdo da resposta.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :relevancia N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.
+    # @option opts [Integer] :relevancia N\u00EDvel de relev\u00E2ncia da pergunta.
     # @option opts [String] :plataforma Plataforma em que a FAQ se encaixa.
     # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
-    # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
+    # @option opts [String] :status Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
     # @return [Array<(FaqResponse, Fixnum, Hash)>] FaqResponse data, response status code and response headers
     def alterar_using_put7_with_http_info(id, pergunta, resposta, opts = {})
       if @api_client.config.debugging
@@ -273,8 +273,8 @@ module Pier
     # @param id Id
     # @param [Hash] opts the optional parameters
     # @return [FaqResponse]
-    def consultar_using_get17(id, opts = {})
-      data, _status_code, _headers = consultar_using_get17_with_http_info(id, opts)
+    def consultar_using_get18(id, opts = {})
+      data, _status_code, _headers = consultar_using_get18_with_http_info(id, opts)
       return data
     end
 
@@ -283,14 +283,14 @@ module Pier
     # @param id Id
     # @param [Hash] opts the optional parameters
     # @return [Array<(FaqResponse, Fixnum, Hash)>] FaqResponse data, response status code and response headers
-    def consultar_using_get17_with_http_info(id, opts = {})
+    def consultar_using_get18_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: FAQApi.consultar_using_get17 ..."
+        @api_client.config.logger.debug "Calling API: FAQApi.consultar_using_get18 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling FAQApi.consultar_using_get17" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling FAQApi.consultar_using_get18" if id.nil?
       
       
       
@@ -328,7 +328,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'FaqResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: FAQApi#consultar_using_get17\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: FAQApi#consultar_using_get18\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -336,39 +336,39 @@ module Pier
     # Lista FAQs
     # Lista todas as FAQs
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_faq C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
-    # @option opts [String] :pergunta Conte\u00C3\u00BAdo da pergunta.
-    # @option opts [String] :resposta Conte\u00C3\u00BAdo da resposta.
-    # @option opts [Integer] :relevancia N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_faq C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id).
+    # @option opts [String] :pergunta Conte\u00FAdo da pergunta.
+    # @option opts [String] :resposta Conte\u00FAdo da resposta.
+    # @option opts [Integer] :relevancia N\u00EDvel de relev\u00E2ncia da pergunta.
     # @option opts [String] :plataforma Plataforma em que a FAQ se encaixa.
     # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
-    # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
+    # @option opts [String] :status Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
     # @return [PageFaqResponse]
-    def listar_using_get22(opts = {})
-      data, _status_code, _headers = listar_using_get22_with_http_info(opts)
+    def listar_using_get23(opts = {})
+      data, _status_code, _headers = listar_using_get23_with_http_info(opts)
       return data
     end
 
     # Lista FAQs
     # Lista todas as FAQs
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_faq C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
-    # @option opts [String] :pergunta Conte\u00C3\u00BAdo da pergunta.
-    # @option opts [String] :resposta Conte\u00C3\u00BAdo da resposta.
-    # @option opts [Integer] :relevancia N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_faq C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id).
+    # @option opts [String] :pergunta Conte\u00FAdo da pergunta.
+    # @option opts [String] :resposta Conte\u00FAdo da resposta.
+    # @option opts [Integer] :relevancia N\u00EDvel de relev\u00E2ncia da pergunta.
     # @option opts [String] :plataforma Plataforma em que a FAQ se encaixa.
     # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
-    # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
+    # @option opts [String] :status Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
     # @return [Array<(PageFaqResponse, Fixnum, Hash)>] PageFaqResponse data, response status code and response headers
-    def listar_using_get22_with_http_info(opts = {})
+    def listar_using_get23_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: FAQApi.listar_using_get22 ..."
+        @api_client.config.logger.debug "Calling API: FAQApi.listar_using_get23 ..."
       end
       
       
@@ -477,7 +477,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageFaqResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: FAQApi#listar_using_get22\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: FAQApi#listar_using_get23\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

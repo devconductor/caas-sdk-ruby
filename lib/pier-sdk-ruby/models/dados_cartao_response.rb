@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,17 +17,17 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto Dados Cart\u00C3\u00A3o
+  # Objeto Dados Cart\u00E3o
   class DadosCartaoResponse
     attr_accessor :flag_virtual
 
-    # N\u00C3\u00BAmero do cart\u00C3\u00A3o.
+    # N\u00FAmero do cart\u00E3o.
     attr_accessor :numero_cartao
 
     # Data de validade.
     attr_accessor :data_validade
 
-    # CVV2 do cart\u00C3\u00A3o.
+    # CVV2 do cart\u00E3o.
     attr_accessor :cvv2
 
     # Nome do portador.
@@ -36,25 +36,25 @@ module Pier
     # Identificador da conta do portador.
     attr_accessor :id_conta
 
-    # Identificador da cart\u00C3\u00A3o do portador.
+    # Identificador da cart\u00E3o do portador.
     attr_accessor :id_cartao
 
-    # Apresenta o n\u00C3\u00BAmero da Ag\u00C3\u00AAncia a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+    # Apresenta o n\u00FAmero da Ag\u00EAncia a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.
     attr_accessor :numero_agencia
 
-    # Apresenta o n\u00C3\u00BAmero da Conta Corrente a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+    # Apresenta o n\u00FAmero da Conta Corrente a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.
     attr_accessor :numero_conta_corente
 
     # Status da conta do portador.
     attr_accessor :id_status_conta
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do status da conta do portador.
+    # Descri\u00E7\u00E3o do status da conta do portador.
     attr_accessor :status_conta
 
-    # Status do cart\u00C3\u00A3o.
+    # Status do cart\u00E3o.
     attr_accessor :id_status_cartao
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o.
+    # Descri\u00E7\u00E3o do status do cart\u00E3o.
     attr_accessor :status_cartao
 
     # Attribute mapping from ruby-style variable name to JSON key.

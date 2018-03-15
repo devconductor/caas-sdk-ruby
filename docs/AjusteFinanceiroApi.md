@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ajustar_conta_using_post**](AjusteFinanceiroApi.md#ajustar_conta_using_post) | **POST** /api/ajustes-financeiros | Lan\u00C3\u00A7a um ajuste para a conta informada
-[**consultar_using_get1**](AjusteFinanceiroApi.md#consultar_using_get1) | **GET** /api/ajustes-financeiros/{id} | Apresenta dados de um determinado ajuste financeiro
-[**listar_using_get1**](AjusteFinanceiroApi.md#listar_using_get1) | **GET** /api/ajustes-financeiros | Lista ajustes existentes na base de dados do Emissor
+[**ajustar_conta_using_post**](AjusteFinanceiroApi.md#ajustar_conta_using_post) | **POST** /api/ajustes-financeiros | Lan\u00E7a um ajuste para a conta informada
+[**consultar_using_get2**](AjusteFinanceiroApi.md#consultar_using_get2) | **GET** /api/ajustes-financeiros/{id} | Apresenta dados de um determinado ajuste financeiro
+[**listar_using_get2**](AjusteFinanceiroApi.md#listar_using_get2) | **GET** /api/ajustes-financeiros | Lista ajustes existentes na base de dados do Emissor
 
 
 # **ajustar_conta_using_post**
 > AjusteFinanceiroResponse ajustar_conta_using_post(id_tipo_ajuste, data_ajuste, valor_ajuste, id_conta, opts)
 
-Lan\u00C3\u00A7a um ajuste para a conta informada
+Lan\u00E7a um ajuste para a conta informada
 
 Este recurso insere um ajuste para a conta do id informado
 
@@ -23,20 +23,20 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::AjusteFinanceiroApi.new
 
-id_tipo_ajuste = 789 # Integer | C\u00C3\u00B3digo identificador do tipo de ajuste.
+id_tipo_ajuste = 789 # Integer | C\u00F3digo identificador do tipo de ajuste.
 
 data_ajuste = "data_ajuste_example" # String | Data do ajuste no formato yyyy-MM-dd'T'HH:mm:ss.SSSZ.
 
 valor_ajuste = 3.4 # Float | Valor do ajuste
 
-id_conta = 789 # Integer | C\u00C3\u00B3digo identificador da conta.
+id_conta = 789 # Integer | C\u00F3digo identificador da conta.
 
 opts = { 
   identificador_externo: "identificador_externo_example" # String | Codigo Hexadecimal
 }
 
 begin
-  #Lan\u00C3\u00A7a um ajuste para a conta informada
+  #Lan\u00E7a um ajuste para a conta informada
   result = api_instance.ajustar_conta_using_post(id_tipo_ajuste, data_ajuste, valor_ajuste, id_conta, opts)
   p result
 rescue Pier::ApiError => e
@@ -48,10 +48,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_tipo_ajuste** | **Integer**| C\u00C3\u00B3digo identificador do tipo de ajuste. | 
+ **id_tipo_ajuste** | **Integer**| C\u00F3digo identificador do tipo de ajuste. | 
  **data_ajuste** | **String**| Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. | 
  **valor_ajuste** | [**Float**](.md)| Valor do ajuste | 
- **id_conta** | **Integer**| C\u00C3\u00B3digo identificador da conta. | 
+ **id_conta** | **Integer**| C\u00F3digo identificador da conta. | 
  **identificador_externo** | **String**| Codigo Hexadecimal | [optional] 
 
 ### Return type
@@ -69,12 +69,12 @@ No authorization required
 
 
 
-# **consultar_using_get1**
-> AjusteFinanceiroResponse consultar_using_get1(id)
+# **consultar_using_get2**
+> AjusteFinanceiroResponse consultar_using_get2(id)
 
 Apresenta dados de um determinado ajuste financeiro
 
-Este m\u00C3\u00A9todo permite consultar dados de um determinado ajuste a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Este m\u00E9todo permite consultar dados de um determinado ajuste a partir de seu codigo de identifica\u00E7\u00E3o (id).
 
 ### Example
 ```ruby
@@ -83,15 +83,15 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::AjusteFinanceiroApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id).
+id = 789 # Integer | C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id).
 
 
 begin
   #Apresenta dados de um determinado ajuste financeiro
-  result = api_instance.consultar_using_get1(id)
+  result = api_instance.consultar_using_get2(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling AjusteFinanceiroApi->consultar_using_get1: #{e}"
+  puts "Exception when calling AjusteFinanceiroApi->consultar_using_get2: #{e}"
 end
 ```
 
@@ -99,7 +99,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id). | 
 
 ### Return type
 
@@ -116,8 +116,8 @@ No authorization required
 
 
 
-# **listar_using_get1**
-> PageAjusteResponse listar_using_get1(opts)
+# **listar_using_get2**
+> PageAjusteResponse listar_using_get2(opts)
 
 Lista ajustes existentes na base de dados do Emissor
 
@@ -131,22 +131,22 @@ require 'pier-sdk-ruby'
 api_instance = Pier::AjusteFinanceiroApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id_tipo_ajuste: 789, # Integer | C\u00C3\u00B3digo identificador do tipo de ajuste.
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  id_tipo_ajuste: 789, # Integer | C\u00F3digo identificador do tipo de ajuste.
   data_ajuste: "data_ajuste_example", # String | Data do ajuste no formato yyyy-MM-dd'T'HH:mm:ss.SSSZ.
   valor_ajuste: 3.4, # Float | Valor do ajuste
   identificador_externo: "identificador_externo_example", # String | Codigo Hexadecimal
-  id_conta: 789 # Integer | C\u00C3\u00B3digo identificador da conta.
+  id_conta: 789 # Integer | C\u00F3digo identificador da conta.
 }
 
 begin
   #Lista ajustes existentes na base de dados do Emissor
-  result = api_instance.listar_using_get1(opts)
+  result = api_instance.listar_using_get2(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling AjusteFinanceiroApi->listar_using_get1: #{e}"
+  puts "Exception when calling AjusteFinanceiroApi->listar_using_get2: #{e}"
 end
 ```
 
@@ -154,14 +154,14 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id_tipo_ajuste** | **Integer**| C\u00C3\u00B3digo identificador do tipo de ajuste. | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **id_tipo_ajuste** | **Integer**| C\u00F3digo identificador do tipo de ajuste. | [optional] 
  **data_ajuste** | **String**| Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. | [optional] 
  **valor_ajuste** | [**Float**](.md)| Valor do ajuste | [optional] 
  **identificador_externo** | **String**| Codigo Hexadecimal | [optional] 
- **id_conta** | **Integer**| C\u00C3\u00B3digo identificador da conta. | [optional] 
+ **id_conta** | **Integer**| C\u00F3digo identificador da conta. | [optional] 
 
 ### Return type
 

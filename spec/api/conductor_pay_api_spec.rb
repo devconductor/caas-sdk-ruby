@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -37,10 +37,10 @@ describe 'ConductorPayApi' do
   end
 
   # unit tests for atualizar_chave_using_post
-  # Atualiza a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o
-  # Este m\u00C3\u00A9todo permite atualizar a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o de um dispositivo a partir do seu identificador (id).
+  # Atualiza a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o
+  # Este m\u00E9todo permite atualizar a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o de um dispositivo a partir do seu identificador (id).
   # @param device_id Device id criptografado
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+  # @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).
   # @param [Hash] opts the optional parameters
   # @return [CartaoPayAtualizarChaveResponse]
   describe 'atualizar_chave_using_post test' do
@@ -54,10 +54,10 @@ describe 'ConductorPayApi' do
   end
 
   # unit tests for atualizar_using_put
-  # Atualiza os dados do cart\u00C3\u00A3o
-  # Este m\u00C3\u00A9todo permite atualizar os dados do cart\u00C3\u00A3o tokenizados de um dispositivo a partir do seu identificador (id).
+  # Atualiza os dados do cart\u00E3o
+  # Este m\u00E9todo permite atualizar os dados do cart\u00E3o tokenizados de um dispositivo a partir do seu identificador (id).
   # @param device_id Device id criptografado
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+  # @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).
   # @param update update
   # @param [Hash] opts the optional parameters
   # @return [CartaoPayResponse]
@@ -72,10 +72,10 @@ describe 'ConductorPayApi' do
   end
 
   # unit tests for confirma_atualizacao_chave_using_post
-  # Confirma a atualiza\u00C3\u00A7\u00C3\u00A3o da chave de transa\u00C3\u00A7\u00C3\u00A3o
-  # Este met\u00C3\u00B3do recebe confirma\u00C3\u00A7\u00C3\u00A3o de atualiza\u00C3\u00A7\u00C3\u00A3o de chave transa\u00C3\u00A7\u00C3\u00A3o.
+  # Confirma a atualiza\u00E7\u00E3o da chave de transa\u00E7\u00E3o
+  # Este met\u00F3do recebe confirma\u00E7\u00E3o de atualiza\u00E7\u00E3o de chave transa\u00E7\u00E3o.
   # @param device_id Device id criptografado
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+  # @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).
   # @param update update
   # @param [Hash] opts the optional parameters
   # @return [CartaoPayConfirmarChaveResponse]
@@ -89,14 +89,14 @@ describe 'ConductorPayApi' do
     end
   end
 
-  # unit tests for consultar_using_get7
-  # Apresenta os dados de um determinado cart\u00C3\u00A3o
-  # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+  # unit tests for consultar_using_get8
+  # Apresenta os dados de um determinado cart\u00E3o
+  # Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
   # @param device_id Device id criptografado
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+  # @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).
   # @param [Hash] opts the optional parameters
   # @return [CartaoPayDetalheResponse]
-  describe 'consultar_using_get7 test' do
+  describe 'consultar_using_get8 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -107,8 +107,8 @@ describe 'ConductorPayApi' do
   end
 
   # unit tests for listar_codigos_resposta_using_get
-  # Lista os c\u00C3\u00B3digos de resposta dos recursos de transa\u00C3\u00A7\u00C3\u00A3o e consulta de conta
-  # Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de resposta das transa\u00C3\u00A7\u00C3\u00B5es e consulta de saque realizada no Pay.
+  # Lista os c\u00F3digos de resposta dos recursos de transa\u00E7\u00E3o e consulta de conta
+  # Este m\u00E9todo retorna a lista dos c\u00F3digos de resposta das transa\u00E7\u00F5es e consulta de saque realizada no Pay.
   # @param [Hash] opts the optional parameters
   # @return [Array<Object>]
   describe 'listar_codigos_resposta_using_get test' do
@@ -123,7 +123,7 @@ describe 'ConductorPayApi' do
 
   # unit tests for listar_modos_entrada_using_get
   # Lista os modos entradas
-  # Este recurso permite listar os modos de entrada para transa\u00C3\u00A7\u00C3\u00A3o
+  # Este recurso permite listar os modos de entrada para transa\u00E7\u00E3o
   # @param [Hash] opts the optional parameters
   # @return [Array<Object>]
   describe 'listar_modos_entrada_using_get test' do
@@ -137,8 +137,8 @@ describe 'ConductorPayApi' do
   end
 
   # unit tests for listar_operacoes_using_get
-  # Lista as opera\u00C3\u00A7\u00C3\u00B5es
-  # Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00B5es disponiveis de transa\u00C3\u00A7\u00C3\u00A3o
+  # Lista as opera\u00E7\u00F5es
+  # Este recurso permite listar as opera\u00E7\u00F5es disponiveis de transa\u00E7\u00E3o
   # @param [Hash] opts the optional parameters
   # @return [Array<Object>]
   describe 'listar_operacoes_using_get test' do
@@ -153,7 +153,7 @@ describe 'ConductorPayApi' do
 
   # unit tests for listar_tipos_terminais_using_get
   # Lista os tipos de terminais
-  # Este m\u00C3\u00A9todo retorna a lista dos tipos de terminais.
+  # Este m\u00E9todo retorna a lista dos tipos de terminais.
   # @param [Hash] opts the optional parameters
   # @return [Array<Object>]
   describe 'listar_tipos_terminais_using_get test' do
@@ -167,8 +167,8 @@ describe 'ConductorPayApi' do
   end
 
   # unit tests for listar_tipos_transacoes_using_get
-  # Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
-  # Este m\u00C3\u00A9todo retorna a lista dos tipos de transa\u00C3\u00A7\u00C3\u00B5es realizadas no Pay.
+  # Lista os tipos de transa\u00E7\u00F5es
+  # Este m\u00E9todo retorna a lista dos tipos de transa\u00E7\u00F5es realizadas no Pay.
   # @param [Hash] opts the optional parameters
   # @return [Array<Object>]
   describe 'listar_tipos_transacoes_using_get test' do
@@ -181,18 +181,18 @@ describe 'ConductorPayApi' do
     end
   end
 
-  # unit tests for listar_using_get9
-  # Lista os cart\u00C3\u00B5es cadastrados
-  # Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
+  # unit tests for listar_using_get10
+  # Lista os cart\u00F5es cadastrados
+  # Este m\u00E9todo permite listar os cart\u00F5es cadastrado em um dispositivo.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :device_id Device id criptografado
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [String] :status Status do cart\u00C3\u00A3o tokenizado
-  # @option opts [String] :numero_cartao Numero do cart\u00C3\u00A3o tokenizado
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [String] :status Status do cart\u00E3o tokenizado
+  # @option opts [String] :numero_cartao Numero do cart\u00E3o tokenizado
   # @return [PageCartaoPayResponse]
-  describe 'listar_using_get9 test' do
+  describe 'listar_using_get10 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -203,8 +203,8 @@ describe 'ConductorPayApi' do
   end
 
   # unit tests for salvar_using_post6
-  # Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
-  # Este met\u00C3\u00B3do permite a tokeniza\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o a partir dos seus dados impressos.
+  # Cria\u00E7\u00E3o de cart\u00E3o
+  # Este met\u00F3do permite a tokeniza\u00E7\u00E3o de um cart\u00E3o a partir dos seus dados impressos.
   # @param device_id Device id criptografado
   # @param persist persist
   # @param [Hash] opts the optional parameters

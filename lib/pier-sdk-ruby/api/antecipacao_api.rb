@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -24,8 +24,8 @@ module Pier
       @api_client = api_client
     end
 
-    # Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
-    # Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+    # Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto
+    # Este recurso permite configurar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
     # @param id Id Produto
     # @param taxa_antecipacao_request taxaAntecipacaoRequest
     # @param [Hash] opts the optional parameters
@@ -35,8 +35,8 @@ module Pier
       return data
     end
 
-    # Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
-    # Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+    # Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto
+    # Este recurso permite configurar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
     # @param id Id Produto
     # @param taxa_antecipacao_request taxaAntecipacaoRequest
     # @param [Hash] opts the optional parameters
@@ -99,10 +99,10 @@ module Pier
       return data, status_code, headers
     end
 
-    # Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
-    # Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+    # Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto
+    # Este recurso permite consultar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
     # @param id Id Produto
-    # @param tipo_transacao Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US)
+    # @param tipo_transacao Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US)
     # @param [Hash] opts the optional parameters
     # @return [ParametroProdutoResponse]
     def consultar_taxa_antecipacao_using_get(id, tipo_transacao, opts = {})
@@ -110,10 +110,10 @@ module Pier
       return data
     end
 
-    # Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
-    # Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+    # Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto
+    # Este recurso permite consultar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
     # @param id Id Produto
-    # @param tipo_transacao Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US)
+    # @param tipo_transacao Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US)
     # @param [Hash] opts the optional parameters
     # @return [Array<(ParametroProdutoResponse, Fixnum, Hash)>] ParametroProdutoResponse data, response status code and response headers
     def consultar_taxa_antecipacao_using_get_with_http_info(id, tipo_transacao, opts = {})
@@ -180,26 +180,26 @@ module Pier
       return data, status_code, headers
     end
 
-    # Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
-    # M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
-    # @param id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
+    # Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
+    # M\u00E9todo responsavel pela efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
+    # @param id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do evento.
     # @param quantidade_parcelas Quantidade de parcelas para serem antecipadas.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+    # @option opts [String] :complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o.
     # @return [AntecipacaoResponse]
     def efetivar_antecipacao_using_post(id_conta, id, quantidade_parcelas, opts = {})
       data, _status_code, _headers = efetivar_antecipacao_using_post_with_http_info(id_conta, id, quantidade_parcelas, opts)
       return data
     end
 
-    # Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
-    # M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
-    # @param id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
+    # Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
+    # M\u00E9todo responsavel pela efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
+    # @param id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do evento.
     # @param quantidade_parcelas Quantidade de parcelas para serem antecipadas.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+    # @option opts [String] :complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o.
     # @return [Array<(AntecipacaoResponse, Fixnum, Hash)>] AntecipacaoResponse data, response status code and response headers
     def efetivar_antecipacao_using_post_with_http_info(id_conta, id, quantidade_parcelas, opts = {})
       if @api_client.config.debugging
@@ -276,22 +276,22 @@ module Pier
       return data, status_code, headers
     end
 
-    # Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
-    # M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis com todas as parcelas de uma conta.
-    # @param id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
+    # Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
+    # M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas as compras antecip\u00E1veis com todas as parcelas de uma conta.
+    # @param id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+    # @option opts [String] :complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o.
     # @return [AntecipacaoResponse]
     def efetivar_antecipacoes_using_post(id_conta, opts = {})
       data, _status_code, _headers = efetivar_antecipacoes_using_post_with_http_info(id_conta, opts)
       return data
     end
 
-    # Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
-    # M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis com todas as parcelas de uma conta.
-    # @param id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
+    # Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
+    # M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas as compras antecip\u00E1veis com todas as parcelas de uma conta.
+    # @param id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+    # @option opts [String] :complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o.
     # @return [Array<(AntecipacaoResponse, Fixnum, Hash)>] AntecipacaoResponse data, response status code and response headers
     def efetivar_antecipacoes_using_post_with_http_info(id_conta, opts = {})
       if @api_client.config.debugging
@@ -351,43 +351,43 @@ module Pier
       return data, status_code, headers
     end
 
-    # Listar compras com parcelas antecip\u00C3\u00A1veis
-    # Lista as compras antecip\u00C3\u00A1veis de uma conta.
-    # @param id_conta C\u00C3\u00B3digo identificador da conta da Compra.
+    # Listar compras com parcelas antecip\u00E1veis
+    # Lista as compras antecip\u00E1veis de uma conta.
+    # @param id_conta C\u00F3digo identificador da conta da Compra.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_compra C\u00C3\u00B3digo identificador da Compra.
-    # @option opts [BOOLEAN] :parcelada Indica se a compra \u00C3\u00A9 parcelada.
-    # @option opts [BOOLEAN] :juros Indica se a compra \u00C3\u00A9 com ou sem juros.
-    # @option opts [String] :tipo_origem_transacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_compra C\u00F3digo identificador da Compra.
+    # @option opts [BOOLEAN] :parcelada Indica se a compra \u00E9 parcelada.
+    # @option opts [BOOLEAN] :juros Indica se a compra \u00E9 com ou sem juros.
+    # @option opts [String] :tipo_origem_transacao Indica se a compra \u00E9 ON-US ou OFF-US
     # @return [PageCompraResponse]
-    def listar_using_get11(id_conta, opts = {})
-      data, _status_code, _headers = listar_using_get11_with_http_info(id_conta, opts)
+    def listar_using_get12(id_conta, opts = {})
+      data, _status_code, _headers = listar_using_get12_with_http_info(id_conta, opts)
       return data
     end
 
-    # Listar compras com parcelas antecip\u00C3\u00A1veis
-    # Lista as compras antecip\u00C3\u00A1veis de uma conta.
-    # @param id_conta C\u00C3\u00B3digo identificador da conta da Compra.
+    # Listar compras com parcelas antecip\u00E1veis
+    # Lista as compras antecip\u00E1veis de uma conta.
+    # @param id_conta C\u00F3digo identificador da conta da Compra.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_compra C\u00C3\u00B3digo identificador da Compra.
-    # @option opts [BOOLEAN] :parcelada Indica se a compra \u00C3\u00A9 parcelada.
-    # @option opts [BOOLEAN] :juros Indica se a compra \u00C3\u00A9 com ou sem juros.
-    # @option opts [String] :tipo_origem_transacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_compra C\u00F3digo identificador da Compra.
+    # @option opts [BOOLEAN] :parcelada Indica se a compra \u00E9 parcelada.
+    # @option opts [BOOLEAN] :juros Indica se a compra \u00E9 com ou sem juros.
+    # @option opts [String] :tipo_origem_transacao Indica se a compra \u00E9 ON-US ou OFF-US
     # @return [Array<(PageCompraResponse, Fixnum, Hash)>] PageCompraResponse data, response status code and response headers
-    def listar_using_get11_with_http_info(id_conta, opts = {})
+    def listar_using_get12_with_http_info(id_conta, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: AntecipacaoApi.listar_using_get11 ..."
+        @api_client.config.logger.debug "Calling API: AntecipacaoApi.listar_using_get12 ..."
       end
       
       
       # verify the required parameter 'id_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta' when calling AntecipacaoApi.listar_using_get11" if id_conta.nil?
+      fail ArgumentError, "Missing the required parameter 'id_conta' when calling AntecipacaoApi.listar_using_get12" if id_conta.nil?
       
       
       
@@ -479,29 +479,29 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageCompraResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AntecipacaoApi#listar_using_get11\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: AntecipacaoApi#listar_using_get12\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
-    # Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
-    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
+    # Simular antecipa\u00E7\u00E3o de parcelas
+    # Simula a antecipa\u00E7\u00E3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00EDveis, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
+    # @param id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do evento.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+    # @option opts [String] :complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o.
     # @return [AntecipacaoSimuladaResponse]
     def simular_antecipacao_using_get(id_conta, id, opts = {})
       data, _status_code, _headers = simular_antecipacao_using_get_with_http_info(id_conta, id, opts)
       return data
     end
 
-    # Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
-    # Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
-    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
+    # Simular antecipa\u00E7\u00E3o de parcelas
+    # Simula a antecipa\u00E7\u00E3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00EDveis, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
+    # @param id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do evento.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+    # @option opts [String] :complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o.
     # @return [Array<(AntecipacaoSimuladaResponse, Fixnum, Hash)>] AntecipacaoSimuladaResponse data, response status code and response headers
     def simular_antecipacao_using_get_with_http_info(id_conta, id, opts = {})
       if @api_client.config.debugging
@@ -569,22 +569,22 @@ module Pier
       return data, status_code, headers
     end
 
-    # Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis
-    # O recurso permite realizar a simula\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis de todas as parcelas de uma determinada conta.
-    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+    # Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis
+    # O recurso permite realizar a simula\u00E7\u00E3o da antecipa\u00E7\u00E3o de todas as compras antecip\u00E1veis de todas as parcelas de uma determinada conta.
+    # @param id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+    # @option opts [String] :complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o.
     # @return [AntecipacaoSimuladaLoteResponse]
     def simular_antecipacoes_using_get(id_conta, opts = {})
       data, _status_code, _headers = simular_antecipacoes_using_get_with_http_info(id_conta, opts)
       return data
     end
 
-    # Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis
-    # O recurso permite realizar a simula\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis de todas as parcelas de uma determinada conta.
-    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+    # Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis
+    # O recurso permite realizar a simula\u00E7\u00E3o da antecipa\u00E7\u00E3o de todas as compras antecip\u00E1veis de todas as parcelas de uma determinada conta.
+    # @param id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+    # @option opts [String] :complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o.
     # @return [Array<(AntecipacaoSimuladaLoteResponse, Fixnum, Hash)>] AntecipacaoSimuladaLoteResponse data, response status code and response headers
     def simular_antecipacoes_using_get_with_http_info(id_conta, opts = {})
       if @api_client.config.debugging

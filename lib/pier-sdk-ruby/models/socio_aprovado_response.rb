@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,46 +19,46 @@ require 'date'
 module Pier
   # PessoaPersist
   class SocioAprovadoResponse
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do S\u00C3\u00B3cio (id)
+    # C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio (id)
     attr_accessor :id
 
     # Apresenta o Nome do Socio
     attr_accessor :nome
 
-    # N\u00C3\u00BAmero do CPF, quando PF.
+    # N\u00FAmero do CPF, quando PF.
     attr_accessor :cpf
 
     # Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
     attr_accessor :data_nascimento
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+    # C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).
     attr_accessor :sexo
 
-    # N\u00C3\u00BAmero da Identidade.
+    # N\u00FAmero da Identidade.
     attr_accessor :numero_identidade
 
-    # Org\u00C3\u00A3o expedidor do RG.
+    # Org\u00E3o expedidor do RG.
     attr_accessor :orgao_expedidor_identidade
 
     # Sigla da Unidade Federativa de onde foi expedido a Identidade
     attr_accessor :unidade_federativa_identidade
 
-    # Data emiss\u00C3\u00A3o da Identidade
+    # Data emiss\u00E3o da Identidade
     attr_accessor :data_emissao_identidade
 
-    # Estado civil do s\u00C3\u00B3cio
+    # Estado civil do s\u00F3cio
     attr_accessor :estado_civil
 
-    # Profiss\u00C3\u00A3o do s\u00C3\u00B3cio
+    # Profiss\u00E3o do s\u00F3cio
     attr_accessor :profissao
 
-    # Nacionalidade do s\u00C3\u00B3cio
+    # Nacionalidade do s\u00F3cio
     attr_accessor :nacionalidade
 
-    # Email do s\u00C3\u00B3cio
+    # Email do s\u00F3cio
     attr_accessor :email
 
-    # Informa os telefones do s\u00C3\u00B3cio
+    # Informa os telefones do s\u00F3cio
     attr_accessor :telefones
 
     # Attribute mapping from ruby-style variable name to JSON key.

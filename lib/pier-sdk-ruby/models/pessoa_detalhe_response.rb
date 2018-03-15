@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,37 +19,37 @@ require 'date'
 module Pier
   # PessoaDetalheResponse
   class PessoaDetalheResponse
-    # C\u00C3\u00B3digo identificador da pessoa
+    # C\u00F3digo identificador da pessoa
     attr_accessor :id_pessoa
 
-    # Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+    # Apresenta o nome da m\u00E3e da pessoa fisica
     attr_accessor :nome_mae
 
     # Id Estado civil da pessoa fisica
     attr_accessor :id_estado_civil
 
-    # Profiss\u00C3\u00A3o da pessoa fisica
+    # Profiss\u00E3o da pessoa fisica
     attr_accessor :id_profissao
 
-    # Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+    # Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica
     attr_accessor :id_natureza_ocupacao
 
     # Id Nacionalidade da pessoa fisica
     attr_accessor :id_nacionalidade
 
-    # N\u00C3\u00BAmero do banco.
+    # N\u00FAmero do banco.
     attr_accessor :numero_banco
 
-    # N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+    # N\u00FAmero da ag\u00EAncia.
     attr_accessor :numero_agencia
 
-    # N\u00C3\u00BAmero da conta corrente.
+    # N\u00FAmero da conta corrente.
     attr_accessor :numero_conta_corrente
 
     # Email da pessoa fisica
     attr_accessor :email
 
-    # Nome que deve ser impresso no cart\u00C3\u00A3o
+    # Nome que deve ser impresso no cart\u00E3o
     attr_accessor :nome_empresa
 
     # Attribute mapping from ruby-style variable name to JSON key.

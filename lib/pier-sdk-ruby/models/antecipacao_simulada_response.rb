@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,79 +17,79 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Antecipacao Simulada
+  # Representa\u00E7\u00E3o da resposta do recurso Antecipacao Simulada
   class AntecipacaoSimuladaResponse
     attr_accessor :mcc
 
     attr_accessor :uf
 
-    # C\u00C3\u00B3digo identificador da simula\u00C3\u00A7\u00C3\u00A3o de antecipa\u00C3\u00A7\u00C3\u00A3o.
+    # C\u00F3digo identificador da simula\u00E7\u00E3o de antecipa\u00E7\u00E3o.
     attr_accessor :id_antecipacao_simulada
 
-    # C\u00C3\u00B3digo identificador da conta.
+    # C\u00F3digo identificador da conta.
     attr_accessor :id_conta
 
-    # C\u00C3\u00B3digo identificador do evento compra.
+    # C\u00F3digo identificador do evento compra.
     attr_accessor :id_compra
 
-    # C\u00C3\u00B3digo identificador do tipo do evento compra.
+    # C\u00F3digo identificador do tipo do evento compra.
     attr_accessor :id_tipo_transacao
 
-    # Quantidade de parcelas antecip\u00C3\u00A1veis.
+    # Quantidade de parcelas antecip\u00E1veis.
     attr_accessor :quantidade_parcelas_antecipaveis
 
     # Valor da parcela.
     attr_accessor :valor_parcela
 
-    # Data e hora em que a simula\u00C3\u00A7\u00C3\u00A3o foi feita.
+    # Data e hora em que a simula\u00E7\u00E3o foi feita.
     attr_accessor :data_hora_simulacao
 
-    # Taxa de antecipa\u00C3\u00A7\u00C3\u00A3o aplicada (ao ano).
+    # Taxa de antecipa\u00E7\u00E3o aplicada (ao ano).
     attr_accessor :taxa_antecipacao_ano
 
-    # Estabelecimento onde foi realizada a transa\u00C3\u00A7\u00C3\u00A3o
+    # Estabelecimento onde foi realizada a transa\u00E7\u00E3o
     attr_accessor :nome_estabelecimento
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
+    # Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
     attr_accessor :status
 
     # Data da compra.
     attr_accessor :data_compra
 
-    # Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.
+    # Tipo de transa\u00E7\u00E3o da compra.
     attr_accessor :tipo_origem_transacao
 
     # Cidade onde a compra foi realizada.
     attr_accessor :cidade
 
-    # Pa\u00C3\u00ADs onde a compra foi realizada.
+    # Pa\u00EDs onde a compra foi realizada.
     attr_accessor :pais
 
-    # Coordenada latitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+    # Coordenada latitudinal da localiza\u00E7\u00E3o da compra.
     attr_accessor :latitude
 
-    # Coordenada longitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+    # Coordenada longitudinal da localiza\u00E7\u00E3o da compra.
     attr_accessor :longitude
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+    # C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra.
     attr_accessor :id_grupo_mcc
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+    # Descri\u00E7\u00E3o do Grupo MCC da compra.
     attr_accessor :descricao_grupo_mcc
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+    # C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra.
     attr_accessor :id_produto
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+    # Descri\u00E7\u00E3o do produto da compra.
     attr_accessor :descricao_produto
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do estabelecimento da compra.
+    # Descri\u00E7\u00E3o do estabelecimento da compra.
     attr_accessor :descricao_estabelecimento
 
     # Nome fantasia do estabelecimento da compra.
     attr_accessor :nome_fantasia_estabelecimento
 
-    # Detalhes da simula\u00C3\u00A7\u00C3\u00A3o.
+    # Detalhes da simula\u00E7\u00E3o.
     attr_accessor :detalhes
 
     # Attribute mapping from ruby-style variable name to JSON key.

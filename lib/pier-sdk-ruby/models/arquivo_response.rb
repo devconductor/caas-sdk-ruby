@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,34 +19,34 @@ require 'date'
 module Pier
   # Objeto Response do arquivo.
   class ArquivoResponse
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
+    # C\u00F3digo de identifica\u00E7\u00E3o do arquivo
     attr_accessor :id
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do arquivo
+    # C\u00F3digo de identifica\u00E7\u00E3o do Tipo do arquivo
     attr_accessor :id_tipo_arquivo
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do tipo do arquivo
+    # Descri\u00E7\u00E3o do tipo do arquivo
     attr_accessor :nome_tipo_arquivo
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Status do arquivo
+    # C\u00F3digo de identifica\u00E7\u00E3o do Status do arquivo
     attr_accessor :id_status_arquivo
 
-    # Desci\u00C3\u00A7\u00C3\u00A3o do status do arquivo
+    # Desci\u00E7\u00E3o do status do arquivo
     attr_accessor :nome_status_arquivo
 
     # Nome do arquivo
     attr_accessor :nome
 
-    # Formato/Extens\u00C3\u00A3o do arquivo
+    # Formato/Extens\u00E3o do arquivo
     attr_accessor :extensao
 
-    # Data de inclus\u00C3\u00A3o do arquivo.
+    # Data de inclus\u00E3o do arquivo.
     attr_accessor :data_inclusao
 
-    # Data da \u00C3\u00BAltima altera\u00C3\u00A7\u00C3\u00A3o do aquivo.
+    # Data da \u00FAltima altera\u00E7\u00E3o do aquivo.
     attr_accessor :data_alteracao
 
-    # Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo.
+    # Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo.
     attr_accessor :detalhes
 
     # Attribute mapping from ruby-style variable name to JSON key.

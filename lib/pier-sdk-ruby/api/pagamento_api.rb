@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -24,38 +24,103 @@ module Pier
       @api_client = api_client
     end
 
-    # Lista hist\u00C3\u00B3rico de pagamentos
+    # Consulta os dados de um determinado acordo
+    # Este m\u00E9todo permite consultar dados de um determinado acordo a partir de seu codigo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).
+    # @param [Hash] opts the optional parameters
+    # @return [AcordoDetalheResponse]
+    def consultar_using_get(id, opts = {})
+      data, _status_code, _headers = consultar_using_get_with_http_info(id, opts)
+      return data
+    end
+
+    # Consulta os dados de um determinado acordo
+    # Este m\u00E9todo permite consultar dados de um determinado acordo a partir de seu codigo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(AcordoDetalheResponse, Fixnum, Hash)>] AcordoDetalheResponse data, response status code and response headers
+    def consultar_using_get_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: PagamentoApi.consultar_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling PagamentoApi.consultar_using_get" if id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/acordos/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AcordoDetalheResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PagamentoApi#consultar_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Lista hist\u00F3rico de pagamentos
     # Este recurso permite listar todos os Pagamentos realizados independente do seu Status de Processamento.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta
-    # @option opts [Integer] :id_pagamento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Pagamento
-    # @option opts [Integer] :id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento onde o Pagamento foi realizado, quando este for o local de pagamento
-    # @option opts [Integer] :id_banco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Institui\u00C3\u00A7\u00C3\u00A3o Banc\u00C3\u00A1ria onde o Pagamento foi realizado, quando este for o local de pagamento
-    # @option opts [Integer] :id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o
-    # @option opts [String] :data_hora_pagamento Data e Hora da realiza\u00C3\u00A7\u00C3\u00A3o do Pagamento. Quando feito em Institui\u00C3\u00A7\u00C3\u00A3o Banc\u00C3\u00A1ria, o hor\u00C3\u00A1rio do pagamento \u00C3\u00A9 exibido com valor zero
-    # @option opts [Integer] :status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Pagamento
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta
+    # @option opts [Integer] :id_pagamento C\u00F3digo de Identifica\u00E7\u00E3o do Pagamento
+    # @option opts [Integer] :id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento onde o Pagamento foi realizado, quando este for o local de pagamento
+    # @option opts [Integer] :id_banco C\u00F3digo de Identifica\u00E7\u00E3o da Institui\u00E7\u00E3o Banc\u00E1ria onde o Pagamento foi realizado, quando este for o local de pagamento
+    # @option opts [Integer] :id_cartao C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o
+    # @option opts [String] :data_hora_pagamento Data e Hora da realiza\u00E7\u00E3o do Pagamento. Quando feito em Institui\u00E7\u00E3o Banc\u00E1ria, o hor\u00E1rio do pagamento \u00E9 exibido com valor zero
+    # @option opts [Integer] :status C\u00F3digo de Identifica\u00E7\u00E3o do Status do Pagamento
     # @return [PageHistoricoPagamentoResponse]
     def listar_pagamentos_using_get1(opts = {})
       data, _status_code, _headers = listar_pagamentos_using_get1_with_http_info(opts)
       return data
     end
 
-    # Lista hist\u00C3\u00B3rico de pagamentos
+    # Lista hist\u00F3rico de pagamentos
     # Este recurso permite listar todos os Pagamentos realizados independente do seu Status de Processamento.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta
-    # @option opts [Integer] :id_pagamento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Pagamento
-    # @option opts [Integer] :id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento onde o Pagamento foi realizado, quando este for o local de pagamento
-    # @option opts [Integer] :id_banco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Institui\u00C3\u00A7\u00C3\u00A3o Banc\u00C3\u00A1ria onde o Pagamento foi realizado, quando este for o local de pagamento
-    # @option opts [Integer] :id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o
-    # @option opts [String] :data_hora_pagamento Data e Hora da realiza\u00C3\u00A7\u00C3\u00A3o do Pagamento. Quando feito em Institui\u00C3\u00A7\u00C3\u00A3o Banc\u00C3\u00A1ria, o hor\u00C3\u00A1rio do pagamento \u00C3\u00A9 exibido com valor zero
-    # @option opts [Integer] :status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Pagamento
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta
+    # @option opts [Integer] :id_pagamento C\u00F3digo de Identifica\u00E7\u00E3o do Pagamento
+    # @option opts [Integer] :id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento onde o Pagamento foi realizado, quando este for o local de pagamento
+    # @option opts [Integer] :id_banco C\u00F3digo de Identifica\u00E7\u00E3o da Institui\u00E7\u00E3o Banc\u00E1ria onde o Pagamento foi realizado, quando este for o local de pagamento
+    # @option opts [Integer] :id_cartao C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o
+    # @option opts [String] :data_hora_pagamento Data e Hora da realiza\u00E7\u00E3o do Pagamento. Quando feito em Institui\u00E7\u00E3o Banc\u00E1ria, o hor\u00E1rio do pagamento \u00E9 exibido com valor zero
+    # @option opts [Integer] :status C\u00F3digo de Identifica\u00E7\u00E3o do Status do Pagamento
     # @return [Array<(PageHistoricoPagamentoResponse, Fixnum, Hash)>] PageHistoricoPagamentoResponse data, response status code and response headers
     def listar_pagamentos_using_get1_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -165,6 +230,124 @@ module Pier
         :return_type => 'PageHistoricoPagamentoResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: PagamentoApi#listar_pagamentos_using_get1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Lista os acordos existentes na base
+    # Este m\u00E9todo permite que sejam listados todos os acordos existentes na base do emissor.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_conta C\u00F3digo Identificador da conta na base (id)
+    # @option opts [Integer] :status_acordo Status do acordo na base
+    # @option opts [String] :data_acordo Data do acordo
+    # @option opts [Integer] :quantidade_parcelas Quantidade de parcelas
+    # @return [PageAcordoResponse]
+    def listar_using_get(opts = {})
+      data, _status_code, _headers = listar_using_get_with_http_info(opts)
+      return data
+    end
+
+    # Lista os acordos existentes na base
+    # Este m\u00E9todo permite que sejam listados todos os acordos existentes na base do emissor.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_conta C\u00F3digo Identificador da conta na base (id)
+    # @option opts [Integer] :status_acordo Status do acordo na base
+    # @option opts [String] :data_acordo Data do acordo
+    # @option opts [Integer] :quantidade_parcelas Quantidade de parcelas
+    # @return [Array<(PageAcordoResponse, Fixnum, Hash)>] PageAcordoResponse data, response status code and response headers
+    def listar_using_get_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: PagamentoApi.listar_using_get ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/acordos".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'idConta'] = opts[:'id_conta'] if opts[:'id_conta']
+      query_params[:'statusAcordo'] = opts[:'status_acordo'] if opts[:'status_acordo']
+      query_params[:'dataAcordo'] = opts[:'data_acordo'] if opts[:'data_acordo']
+      query_params[:'quantidadeParcelas'] = opts[:'quantidade_parcelas'] if opts[:'quantidade_parcelas']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageAcordoResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PagamentoApi#listar_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

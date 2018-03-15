@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,7 +17,7 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de planos de parcelamento
+  # Representa\u00E7\u00E3o da resposta do recurso de planos de parcelamento
   class PlanoParcelamentoResponse
     # Identificador do parcelamento
     attr_accessor :id
@@ -25,7 +25,7 @@ module Pier
     # Data de fechamento da fatura
     attr_accessor :data_fechamento_fatura
 
-    # Data de vencimento padr\u00C3\u00A3o
+    # Data de vencimento padr\u00E3o
     attr_accessor :data_vencimento_padrao
 
     # Valor total da fatura
@@ -55,19 +55,22 @@ module Pier
     # Valor do TAC
     attr_accessor :valor_tac
 
-    # Status da ades\u00C3\u00A3o
+    # Status da ades\u00E3o
     attr_accessor :status_adesao
 
-    # Data de inclus\u00C3\u00A3o
+    # Data de inclus\u00E3o
     attr_accessor :data_inclusao
 
-    # Data de processamento da ades\u00C3\u00A3o
+    # Data de processamento da ades\u00E3o
     attr_accessor :data_processamento_adesao
 
     # Identificador da conta
     attr_accessor :id_conta
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do tipo de servi\u00C3\u00A7o
+    # C\u00F3digo de identifica\u00E7\u00E3o do tipo de servi\u00E7o
+    attr_accessor :id_servico_tipo
+
+    # Descri\u00E7\u00E3o do tipo de servi\u00E7o
     attr_accessor :descricao_servico_tipo
 
     # Indica se a fatura foi com entrada
@@ -111,6 +114,8 @@ module Pier
         :'data_processamento_adesao' => :'dataProcessamentoAdesao',
         
         :'id_conta' => :'idConta',
+        
+        :'id_servico_tipo' => :'idServicoTipo',
         
         :'descricao_servico_tipo' => :'descricaoServicoTipo',
         
@@ -156,6 +161,8 @@ module Pier
         :'data_processamento_adesao' => :'String',
         
         :'id_conta' => :'Integer',
+        
+        :'id_servico_tipo' => :'Integer',
         
         :'descricao_servico_tipo' => :'String',
         
@@ -319,6 +326,15 @@ module Pier
       end
 
       
+      if attributes[:'idServicoTipo']
+        
+        
+        self.id_servico_tipo = attributes[:'idServicoTipo']
+        
+      
+      end
+
+      
       if attributes[:'descricaoServicoTipo']
         
         
@@ -437,8 +453,17 @@ module Pier
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -556,6 +581,7 @@ module Pier
           data_inclusao == o.data_inclusao &&
           data_processamento_adesao == o.data_processamento_adesao &&
           id_conta == o.id_conta &&
+          id_servico_tipo == o.id_servico_tipo &&
           descricao_servico_tipo == o.descricao_servico_tipo &&
           com_entrada == o.com_entrada &&
           nome_campanha == o.nome_campanha
@@ -570,7 +596,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, data_fechamento_fatura, data_vencimento_padrao, valor_total_fatura, quantidade_parcelas, valor_parcela, valor_entrada, taxa_refinanciamento, custo_efetivo_total, valor_total_refinanciamento, valor_iof, valor_tac, status_adesao, data_inclusao, data_processamento_adesao, id_conta, descricao_servico_tipo, com_entrada, nome_campanha].hash
+      [id, data_fechamento_fatura, data_vencimento_padrao, valor_total_fatura, quantidade_parcelas, valor_parcela, valor_entrada, taxa_refinanciamento, custo_efetivo_total, valor_total_refinanciamento, valor_iof, valor_tac, status_adesao, data_inclusao, data_processamento_adesao, id_conta, id_servico_tipo, descricao_servico_tipo, com_entrada, nome_campanha].hash
     end
 
     # Builds the object from hash

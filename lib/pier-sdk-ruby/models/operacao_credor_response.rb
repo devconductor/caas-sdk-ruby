@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -22,7 +22,7 @@ module Pier
     # Apresenta o id da OperacaoCredor.
     attr_accessor :id
 
-    # Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o.
+    # Apresenta o id da Opera\u00E7\u00E3o.
     attr_accessor :id_operacao
 
     # Apresenta o id do Credor.
@@ -31,10 +31,10 @@ module Pier
     # Apresenta o id do produto.
     attr_accessor :id_produto
 
-    # Remunera\u00C3\u00A7\u00C3\u00A3o Percentual.
+    # Remunera\u00E7\u00E3o Percentual.
     attr_accessor :remuneracao_percentual
 
-    # Remunera\u00C3\u00A7\u00C3\u00A3o Fixa.
+    # Remunera\u00E7\u00E3o Fixa.
     attr_accessor :remuneracao_fixa
 
     # Periodicidade (DIARIO(1), SEMANAL(2), MENSAL(3), DECENDIAL(4), QUINZENAL(5)).
@@ -52,10 +52,10 @@ module Pier
     # Flag taxa fixada.
     attr_accessor :flag_taxa_fixada
 
-    # Plano m\u00C3\u00ADnimo da regra.
+    # Plano m\u00EDnimo da regra.
     attr_accessor :plano_minimo
 
-    # Plano m\u00C3\u00A1ximo da regra.
+    # Plano m\u00E1ximo da regra.
     attr_accessor :plano_maximo
 
     # Attribute mapping from ruby-style variable name to JSON key.

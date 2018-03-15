@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -37,9 +37,9 @@ describe 'CartaoApi' do
   end
 
   # unit tests for alterar_alterar_senha_using_put
-  # Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
-  # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+  # Realiza a altera\u00E7\u00E3o da senha de um Cart\u00E3o
+  # Esta opera\u00E7\u00E3o tem como objetivo permitir que o portador de um determinado cart\u00E3o possa definir uma senha a sua escolha.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).
   # @param senha Senha para ser cadastrada ou alterada.
   # @param [Hash] opts the optional parameters
   # @return [String]
@@ -54,10 +54,10 @@ describe 'CartaoApi' do
   end
 
   # unit tests for alterar_status_impressao_using_put
-  # Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
-  # Este m\u00C3\u00A9todo permite que uma Aplica\u00C3\u00A7\u00C3\u00A3o que realize a impress\u00C3\u00A3o de cart\u00C3\u00B5es possa indicar que um determinado idCartao fora impresso ou est\u00C3\u00A1 em processo de impress\u00C3\u00A3o. Para isso, basta informar o respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00C3\u00ADdo a ele. Por padr\u00C3\u00A3o, cart\u00C3\u00B5es provis\u00C3\u00B3rios ou que j\u00C3\u00A1 tenham sido inclu\u00C3\u00ADdos em um arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica ter\u00C3\u00A3o esta requisi\u00C3\u00A7\u00C3\u00A3o negada, se utilizada.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-  # @param id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).
+  # Realiza a altera\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o
+  # Este m\u00E9todo permite que uma Aplica\u00E7\u00E3o que realize a impress\u00E3o de cart\u00F5es possa indicar que um determinado idCartao fora impresso ou est\u00E1 em processo de impress\u00E3o. Para isso, basta informar o respectivo c\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00EDdo a ele. Por padr\u00E3o, cart\u00F5es provis\u00F3rios ou que j\u00E1 tenham sido inclu\u00EDdos em um arquivo para impress\u00E3o via gr\u00E1fica ter\u00E3o esta requisi\u00E7\u00E3o negada, se utilizada.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).
+  # @param id_status_impressao C\u00F3digo de Identifica\u00E7\u00E3o do Status Impress\u00E3o (Id).
   # @param [Hash] opts the optional parameters
   # @return [HistoricoImpressaoCartaoResponse]
   describe 'alterar_status_impressao_using_put test' do
@@ -71,10 +71,10 @@ describe 'CartaoApi' do
   end
 
   # unit tests for atribuir_pessoa_using_put
-  # Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
-  # Esta m\u00C3\u00A9todo permite que um cart\u00C3\u00A3o pr\u00C3\u00A9-pago impresso de forma avulsa e an\u00C3\u00B4nimo seja atribu\u00C3\u00ADdo a uma pessoa para que esta passe a ser a portadora titular dele.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
-  # @param id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).
+  # Realiza a atribui\u00E7\u00E3o de um cart\u00E3o pr\u00E9-pago a uma pessoa
+  # Esta m\u00E9todo permite que um cart\u00E3o pr\u00E9-pago impresso de forma avulsa e an\u00F4nimo seja atribu\u00EDdo a uma pessoa para que esta passe a ser a portadora titular dele.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
+  # @param id_pessoa C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id).
   # @param [Hash] opts the optional parameters
   # @return [CartaoResponse]
   describe 'atribuir_pessoa_using_put test' do
@@ -88,11 +88,11 @@ describe 'CartaoApi' do
   end
 
   # unit tests for bloquear_using_post
-  # Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
-  # Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio (tempor\u00C3\u00A1rio) ou do cancelamento (definitivo) de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-  # @param id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.
-  # @param observacao Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.
+  # Realiza o bloqueio de um determinado Cart\u00E3o
+  # Este m\u00E9todo permite a realiza\u00E7\u00E3o do bloqueio (tempor\u00E1rio) ou do cancelamento (definitivo) de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id). Para isso, \u00E9 preciso informar qual o motivo deste bloqueio que nada mais \u00E9 do que atribuir um novo StatusCartao para ele dentre as op\u00E7\u00F5es praticadas pelo emissor.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).
+  # @param id_status C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o.
+  # @param observacao Texto informando uma observa\u00E7\u00E3o sobre o bloqueio.
   # @param [Hash] opts the optional parameters
   # @return [CartaoResponse]
   describe 'bloquear_using_post test' do
@@ -106,9 +106,9 @@ describe 'CartaoApi' do
   end
 
   # unit tests for cadastrar_alterar_senha_using_post
-  # Realiza o cadastro da senha de um Cart\u00C3\u00A3o
-  # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+  # Realiza o cadastro da senha de um Cart\u00E3o
+  # Esta opera\u00E7\u00E3o tem como objetivo permitir que o portador de um determinado cart\u00E3o possa definir uma senha a sua escolha.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).
   # @param senha Senha para ser cadastrada ou alterada.
   # @param [Hash] opts the optional parameters
   # @return [String]
@@ -123,11 +123,11 @@ describe 'CartaoApi' do
   end
 
   # unit tests for cancelar_using_post
-  # Realiza o cancelamento de um determinado Cart\u00C3\u00A3o
-  # Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o cancelamento de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-  # @param id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.
-  # @param observacao Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o cancelamento.
+  # Realiza o cancelamento de um determinado Cart\u00E3o
+  # Este m\u00E9todo permite a realiza\u00E7\u00E3o cancelamento de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id). Para isso, \u00E9 preciso informar qual o motivo deste bloqueio que nada mais \u00E9 do que atribuir um novo StatusCartao para ele dentre as op\u00E7\u00F5es praticadas pelo emissor.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).
+  # @param id_status C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o.
+  # @param observacao Texto informando uma observa\u00E7\u00E3o sobre o cancelamento.
   # @param [Hash] opts the optional parameters
   # @return [CartaoResponse]
   describe 'cancelar_using_post test' do
@@ -141,9 +141,9 @@ describe 'CartaoApi' do
   end
 
   # unit tests for consultar_cartao_impressao_using_get
-  # Consultar os dados de impress\u00C3\u00A3o de um Cart\u00C3\u00A3o
-  # Esse recurso permite consultar os dados de impress\u00C3\u00A3o de um cart\u00C3\u00A3o
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+  # Consultar os dados de impress\u00E3o de um Cart\u00E3o
+  # Esse recurso permite consultar os dados de impress\u00E3o de um cart\u00E3o
+  # @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).
   # @param [Hash] opts the optional parameters
   # @return [DadosCartaoImpressaoResponse]
   describe 'consultar_cartao_impressao_using_get test' do
@@ -157,8 +157,8 @@ describe 'CartaoApi' do
   end
 
   # unit tests for consultar_dados_reais_cartao_using_get
-  # Consultar Detalhes do Cart\u00C3\u00A3o
-  # Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
+  # Consultar Detalhes do Cart\u00E3o
+  # Este m\u00E9todo permite que seja consultado os dados necessarios de um cart\u00E3o para executar servi\u00E7os de autoriza\u00E7\u00E3o.
   # @param id id
   # @param [Hash] opts the optional parameters
   # @return [DadosCartaoResponse]
@@ -173,9 +173,9 @@ describe 'CartaoApi' do
   end
 
   # unit tests for consultar_limite_disponibilidade_using_get
-  # Apresenta os limites do Portador do Cart\u00C3\u00A3o
-  # Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+  # Apresenta os limites do Portador do Cart\u00E3o
+  # Este m\u00E9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00E3o, seja ele o titular da conta ou um adicional, a partir do c\u00F3digo de identifica\u00E7\u00E3o do Cart\u00E3o (id).
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).
   # @param [Hash] opts the optional parameters
   # @return [LimiteDisponibilidadeResponse]
   describe 'consultar_limite_disponibilidade_using_get test' do
@@ -189,9 +189,9 @@ describe 'CartaoApi' do
   end
 
   # unit tests for consultar_lotes_cartoes_pre_pagos_using_get
-  # Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
-  # Este m\u00C3\u00A9todo permite consultar os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor atrav\u00C3\u00A9s do id do lote.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id)
+  # Permite consultar um determinado Lote de Cart\u00F5es Pr\u00E9-Pago
+  # Este m\u00E9todo permite consultar os cart\u00F5es pr\u00E9-pagos existentes na base do emissor atrav\u00E9s do id do lote.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do lote de cart\u00F5es (id)
   # @param [Hash] opts the optional parameters
   # @return [LoteCartoesPrePagosResponse]
   describe 'consultar_lotes_cartoes_pre_pagos_using_get test' do
@@ -205,9 +205,9 @@ describe 'CartaoApi' do
   end
 
   # unit tests for consultar_portador_using_get
-  # Apresenta os dados do Portador do Cart\u00C3\u00A3o
-  # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es do Portador de um determinado Cart\u00C3\u00A3o a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+  # Apresenta os dados do Portador do Cart\u00E3o
+  # Este m\u00E9todo permite consultar as informa\u00E7\u00F5es do Portador de um determinado Cart\u00E3o a partir do c\u00F3digo de identifica\u00E7\u00E3o do Cart\u00E3o (id).
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).
   # @param [Hash] opts the optional parameters
   # @return [PortadorResponse]
   describe 'consultar_portador_using_get test' do
@@ -220,13 +220,13 @@ describe 'CartaoApi' do
     end
   end
 
-  # unit tests for consultar_using_get8
-  # Apresenta os dados de um determinado Cart\u00C3\u00A3o
-  # Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+  # unit tests for consultar_using_get9
+  # Apresenta os dados de um determinado Cart\u00E3o
+  # Este m\u00E9todo permite consultar as informa\u00E7\u00F5es b\u00E1sicas de um determinado Cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).
   # @param [Hash] opts the optional parameters
   # @return [CartaoDetalheResponse]
-  describe 'consultar_using_get8 test' do
+  describe 'consultar_using_get9 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -237,9 +237,9 @@ describe 'CartaoApi' do
   end
 
   # unit tests for desbloquear_senha_incorreta_using_post
-  # Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
-  # Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+  # Realiza o desbloqueio de um cart\u00E3o bloqueado por tentativas de senha incorretas
+  # Este m\u00E9todo permite que seja desbloqueado um determinado cart\u00E3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).
   # @param [Hash] opts the optional parameters
   # @return [CartaoResponse]
   describe 'desbloquear_senha_incorreta_using_post test' do
@@ -253,9 +253,9 @@ describe 'CartaoApi' do
   end
 
   # unit tests for desbloquear_using_post
-  # Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
-  # Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+  # Realiza o desbloqueio de um determinado Cart\u00E3o
+  # Este m\u00E9todo permite que seja desbloqueado um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).
   # @param [Hash] opts the optional parameters
   # @return [CartaoResponse]
   describe 'desbloquear_using_post test' do
@@ -269,16 +269,16 @@ describe 'CartaoApi' do
   end
 
   # unit tests for gerar_lotes_cartoes_pre_pagos_using_post
-  # Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
-  # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores gerem uma determinada quantidade de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pagos, de forma n\u00C3\u00A3o nominal, os quais poder\u00C3\u00A3o ser comercializados e posteriormente vinculados a um cliente que o adquirir. Para isso, al\u00C3\u00A9m de definir quantos cart\u00C3\u00B5es dever\u00C3\u00A3o ser gerados, ser\u00C3\u00A1 poss\u00C3\u00ADvel definir qual a Origem Comercial, o Produto, o Tipo do Cart\u00C3\u00A3o, a Imagem e o Endere\u00C3\u00A7o para entrega dos Cart\u00C3\u00B5es presentes no lote gerado. Por padr\u00C3\u00A3o, todos os cart\u00C3\u00B5es ser\u00C3\u00A3o associados a um idPessoa fict\u00C3\u00ADcio e receber\u00C3\u00A1 um idConta \u00C3\u00BAnico para cada um deles. Feito isso, os Cart\u00C3\u00B5es gerados por esta opera\u00C3\u00A7\u00C3\u00A3o seguir\u00C3\u00A3o os mesmos processos de impress\u00C3\u00A3o via gr\u00C3\u00A1fica previamente definidos entre o Emissor e a Conductor.
+  # Permite gerar um novo Lote de Cart\u00F5es Pr\u00E9-Pago
+  # Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores gerem uma determinada quantidade de Cart\u00F5es Pr\u00E9-Pagos, de forma n\u00E3o nominal, os quais poder\u00E3o ser comercializados e posteriormente vinculados a um cliente que o adquirir. Para isso, al\u00E9m de definir quantos cart\u00F5es dever\u00E3o ser gerados, ser\u00E1 poss\u00EDvel definir qual a Origem Comercial, o Produto, o Tipo do Cart\u00E3o, a Imagem e o Endere\u00E7o para entrega dos Cart\u00F5es presentes no lote gerado. Por padr\u00E3o, todos os cart\u00F5es ser\u00E3o associados a um idPessoa fict\u00EDcio e receber\u00E1 um idConta \u00FAnico para cada um deles. Feito isso, os Cart\u00F5es gerados por esta opera\u00E7\u00E3o seguir\u00E3o os mesmos processos de impress\u00E3o via gr\u00E1fica previamente definidos entre o Emissor e a Conductor.
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id).
-  # @option opts [Integer] :id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
-  # @option opts [Integer] :id_tipo_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id).
-  # @option opts [Integer] :id_imagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id).
-  # @option opts [Integer] :id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
-  # @option opts [Integer] :quantidade_cartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
-  # @option opts [String] :identificador_externo N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
+  # @option opts [Integer] :id_origem_comercial C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id).
+  # @option opts [Integer] :id_produto C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+  # @option opts [Integer] :id_tipo_cartao C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id).
+  # @option opts [Integer] :id_imagem C\u00F3digo de Identifica\u00E7\u00E3o da Imagem (id).
+  # @option opts [Integer] :id_endereco C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id).
+  # @option opts [Integer] :quantidade_cartoes N\u00FAmero de cart\u00F5es existentes no Lote.
+  # @option opts [String] :identificador_externo N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor).
   # @return [LoteCartoesPrePagosResponse]
   describe 'gerar_lotes_cartoes_pre_pagos_using_post test' do
     it "should work" do
@@ -291,9 +291,9 @@ describe 'CartaoApi' do
   end
 
   # unit tests for gerar_nova_via_using_post
-  # Gerar uma nova via de Cart\u00C3\u00A3o
-  # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00C3\u00A7\u00C3\u00A3o de uma nova via de Cart\u00C3\u00A3o que ser\u00C3\u00A1 encaminhando para impress\u00C3\u00A3o e postagem de acordo com os fluxos padr\u00C3\u00B5es j\u00C3\u00A1 definidos pelo emissor. Para isso, \u00C3\u00A9 preciso que o cliente j\u00C3\u00A1 possua um cart\u00C3\u00A3o gerado e informar o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o deste (idCartao) para que ele possa utilizar esta opera\u00C3\u00A7\u00C3\u00A3o. Assim, esta funcionalidade se aplica apenas para a gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es f\u00C3\u00ADsicos.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
+  # Gerar uma nova via de Cart\u00E3o
+  # Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00E7\u00E3o de uma nova via de Cart\u00E3o que ser\u00E1 encaminhando para impress\u00E3o e postagem de acordo com os fluxos padr\u00F5es j\u00E1 definidos pelo emissor. Para isso, \u00E9 preciso que o cliente j\u00E1 possua um cart\u00E3o gerado e informar o C\u00F3digo de Identifica\u00E7\u00E3o deste (idCartao) para que ele possa utilizar esta opera\u00E7\u00E3o. Assim, esta funcionalidade se aplica apenas para a gera\u00E7\u00E3o de cart\u00F5es f\u00EDsicos.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
   # @param [Hash] opts the optional parameters
   # @return [CartaoResponse]
   describe 'gerar_nova_via_using_post test' do
@@ -307,9 +307,9 @@ describe 'CartaoApi' do
   end
 
   # unit tests for lancar_tarifa_segunda_via_using_post
-  # Adiciona tarifa de ajuste da segunda via do cart\u00C3\u00A3o
-  # Esse recurso permite adicionar tar\u00C3\u00ADfa de ajuste pela emiss\u00C3\u00A3o da segunda via do cart\u00C3\u00A3o.
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+  # Adiciona tarifa de ajuste da segunda via do cart\u00E3o
+  # Esse recurso permite adicionar tar\u00EDfa de ajuste pela emiss\u00E3o da segunda via do cart\u00E3o.
+  # @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).
   # @param [Hash] opts the optional parameters
   # @return [Object]
   describe 'lancar_tarifa_segunda_via_using_post test' do
@@ -323,22 +323,22 @@ describe 'CartaoApi' do
   end
 
   # unit tests for listar_lotes_cartoes_pre_pagos_using_get
-  # Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
-  # Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor.
+  # Permite listar os Lotes de Cart\u00F5es Pr\u00E9-Pago
+  # Este m\u00E9todo permite que sejam listados os cart\u00F5es pr\u00E9-pagos existentes na base do emissor.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id).
-  # @option opts [Integer] :id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
-  # @option opts [Integer] :id_tipo_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id).
-  # @option opts [Integer] :id_imagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id).
-  # @option opts [Integer] :id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
-  # @option opts [Integer] :quantidade_cartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
-  # @option opts [String] :data_cadastro Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
-  # @option opts [String] :usuario_cadastro Nome do Usu\u00C3\u00A1rio que criou o Lote.
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [Integer] :id_origem_comercial C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id).
+  # @option opts [Integer] :id_produto C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+  # @option opts [Integer] :id_tipo_cartao C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id).
+  # @option opts [Integer] :id_imagem C\u00F3digo de Identifica\u00E7\u00E3o da Imagem (id).
+  # @option opts [Integer] :id_endereco C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id).
+  # @option opts [Integer] :quantidade_cartoes N\u00FAmero de cart\u00F5es existentes no Lote.
+  # @option opts [String] :data_cadastro Data de Cadastro do Lote de Cart\u00F5es N\u00E3o Nominais.
+  # @option opts [String] :usuario_cadastro Nome do Usu\u00E1rio que criou o Lote.
   # @option opts [Integer] :status_processamento Indica o Status de Processamento do Lote.
-  # @option opts [String] :identificador_externo N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
+  # @option opts [String] :identificador_externo N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor).
   # @return [PageLoteCartoesPrePagosResponse]
   describe 'listar_lotes_cartoes_pre_pagos_using_get test' do
     it "should work" do
@@ -350,33 +350,33 @@ describe 'CartaoApi' do
     end
   end
 
-  # unit tests for listar_using_get10
-  # Lista os Cart\u00C3\u00B5es gerados pelo Emissor
-  # Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
+  # unit tests for listar_using_get11
+  # Lista os Cart\u00F5es gerados pelo Emissor
+  # Este m\u00E9todo permite que sejam listados os cart\u00F5es existentes na base do emissor.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
-  # @option opts [Integer] :id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-  # @option opts [Integer] :id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
-  # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)
-  # @option opts [Integer] :id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
-  # @option opts [String] :tipo_portador Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional).
-  # @option opts [String] :numero_cartao Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
-  # @option opts [String] :nome_impresso Apresenta o nome impresso no cart\u00C3\u00A3o.
-  # @option opts [String] :data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-  # @option opts [String] :data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-  # @option opts [String] :data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-  # @option opts [String] :data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.
-  # @option opts [String] :data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
-  # @option opts [String] :arquivo_impressao Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
-  # @option opts [Integer] :flag_impressao_origem_comercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
-  # @option opts [Integer] :flag_provisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
-  # @option opts [String] :codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
-  # @option opts [Integer] :sequencial_cartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [Integer] :id_status_cartao C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id).
+  # @option opts [Integer] :id_estagio_cartao C\u00F3digo de Identifica\u00E7\u00E3o do Est\u00E1gio de Impress\u00E3o do Cart\u00E3o (id).
+  # @option opts [Integer] :id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o cart\u00E3o pertence (id).
+  # @option opts [Integer] :id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id)
+  # @option opts [Integer] :id_produto C\u00F3digo de Identifica\u00E7\u00E3o do Produto a qual o cart\u00E3o pertence (id).
+  # @option opts [String] :tipo_portador Apresenta o tipo do Portador do cart\u00E3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional).
+  # @option opts [String] :numero_cartao Apresenta o n\u00FAmero do cart\u00E3o.
+  # @option opts [String] :nome_impresso Apresenta o nome impresso no cart\u00E3o.
+  # @option opts [String] :data_geracao Apresenta a data em que o cart\u00E3o foi gerado.
+  # @option opts [String] :data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver.
+  # @option opts [String] :data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00E3o fora aplicado, quando houver.
+  # @option opts [String] :data_validade Apresenta a data de validade do cart\u00E3o em formato yyyy-MM, quando houver.
+  # @option opts [String] :data_impressao Apresenta a data em que o cart\u00E3o fora impresso, caso impress\u00E3o em loja, ou a data em que ele fora inclu\u00EDdo no arquivo para impress\u00E3o via gr\u00E1fica.
+  # @option opts [String] :arquivo_impressao Apresenta o nome do arquivo onde o cart\u00E3o fora inclu\u00EDdo para impress\u00E3o por uma gr\u00E1fica, quando houver.
+  # @option opts [Integer] :flag_impressao_origem_comercial Quando ativa, indica que o cart\u00E3o fora impresso na Origem Comercial.
+  # @option opts [Integer] :flag_provisorio Quando ativa, indica que o cart\u00E3o \u00E9 provis\u00F3rio. Ou seja, \u00E9 um cart\u00E3o para uso tempor\u00E1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00E3o definitivo.
+  # @option opts [String] :codigo_desbloqueio Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade.
+  # @option opts [Integer] :sequencial_cartao N\u00FAmero sequencial do cart\u00E3o
   # @return [PageCartaoResponse]
-  describe 'listar_using_get10 test' do
+  describe 'listar_using_get11 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -387,9 +387,9 @@ describe 'CartaoApi' do
   end
 
   # unit tests for reativar_using_post
-  # Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o
-  # Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o da reativa\u00C3\u00A7\u00C3\u00A3o de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+  # Realiza a reativa\u00E7\u00E3o de um determinado Cart\u00E3o
+  # Este m\u00E9todo permite a realiza\u00E7\u00E3o da reativa\u00E7\u00E3o de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).
   # @param [Hash] opts the optional parameters
   # @return [CartaoResponse]
   describe 'reativar_using_post test' do
@@ -403,9 +403,9 @@ describe 'CartaoApi' do
   end
 
   # unit tests for validar_cvv_using_post
-  # Validar CVV do cart\u00C3\u00A3o
-  # Esse recurso permite a valida\u00C3\u00A7\u00C3\u00A3o do cvv de um cart\u00C3\u00A3o
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+  # Validar CVV do cart\u00E3o
+  # Esse recurso permite a valida\u00E7\u00E3o do cvv de um cart\u00E3o
+  # @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).
   # @param valida_cvv validaCVV
   # @param [Hash] opts the optional parameters
   # @return [String]
@@ -420,12 +420,12 @@ describe 'CartaoApi' do
   end
 
   # unit tests for validar_dados_impressos_bandeirado_using_get
-  # Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
-  # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
-  # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-  # @param nome_portador Nome do portador do cart\u00C3\u00A3o
-  # @param data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
-  # @param codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
+  # Permite validar os dados impressos em um cart\u00E3o bandeirado
+  # Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir do envio dos dados sens\u00EDveis impressos nele. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o para a realiza\u00E7\u00E3o de transa\u00E7\u00F5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00F4nico (URA), dentre outras.
+  # @param numero_cartao N\u00FAmero do cart\u00E3o a ser validado.
+  # @param nome_portador Nome do portador do cart\u00E3o
+  # @param data_validade Data de validade do cart\u00E3o no formato yyyy-MM
+  # @param codigo_seguranca C\u00F3digo de seguran\u00E7a do cart\u00E3o com tr\u00EAs n\u00FAmeros
   # @param [Hash] opts the optional parameters
   # @return [ValidaCartaoResponse]
   describe 'validar_dados_impressos_bandeirado_using_get test' do
@@ -439,12 +439,12 @@ describe 'CartaoApi' do
   end
 
   # unit tests for validar_dados_impressos_nao_bandeirado_using_get
-  # Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
-  # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
-  # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-  # @param nome_portador Nome do portador do cart\u00C3\u00A3o
-  # @param data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
-  # @param codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
+  # Permite validar os dados impressos de um cartao n\u00E3o bandeirado
+  # Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir do envio dos dados sens\u00EDveis impressos nele. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o para a realiza\u00E7\u00E3o de transa\u00E7\u00F5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00F4nico (URA), dentre outras.
+  # @param numero_cartao N\u00FAmero do cart\u00E3o a ser validado.
+  # @param nome_portador Nome do portador do cart\u00E3o
+  # @param data_validade Data de validade do cart\u00E3o no formato yyyy-MM
+  # @param codigo_seguranca C\u00F3digo de seguran\u00E7a do cart\u00E3o com tr\u00EAs n\u00FAmeros
   # @param [Hash] opts the optional parameters
   # @return [ValidaCartaoResponse]
   describe 'validar_dados_impressos_nao_bandeirado_using_get test' do
@@ -458,10 +458,10 @@ describe 'CartaoApi' do
   end
 
   # unit tests for validar_de55_cartao_mastercard_using_get
-  # Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
-  # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
-  # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-  # @param criptograma Criptograma do cart\u00C3\u00A3o no formato de55
+  # Permite validar um Cart\u00E3o com bandeira Mastercard a partir do de55
+  # Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00E3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o antes de permitir que o portador realize transa\u00E7\u00F5es diversas, como as de compra e saque na modalidade d\u00E9bito em conta corrente, dentre outras.
+  # @param numero_cartao N\u00FAmero do cart\u00E3o a ser validado.
+  # @param criptograma Criptograma do cart\u00E3o no formato de55
   # @param [Hash] opts the optional parameters
   # @return [ValidaCartaoResponse]
   describe 'validar_de55_cartao_mastercard_using_get test' do
@@ -475,9 +475,9 @@ describe 'CartaoApi' do
   end
 
   # unit tests for validar_senha_using_get
-  # Permite validar a senha de um Cart\u00C3\u00A3o
-  # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00C3\u00A3o est\u00C3\u00A1 correta.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+  # Permite validar a senha de um Cart\u00E3o
+  # Esta opera\u00E7\u00E3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00E3o est\u00E1 correta.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).
   # @param senha Senha para ser validada.
   # @param [Hash] opts the optional parameters
   # @return [ValidaSenhaCartaoResponse]
@@ -492,11 +492,11 @@ describe 'CartaoApi' do
   end
 
   # unit tests for validar_tarja_using_get
-  # Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
-  # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
-  # @param numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-  # @param trilha1 Trilha 1 do cart\u00C3\u00A3o a ser validado
-  # @param trilha2 Trilha 2 do cart\u00C3\u00A3o a ser validado
+  # Permite validar um Cart\u00E3o Bandeirado a partir da Tarja
+  # Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir da leitura da tarja magn\u00E9tica do mesmo. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o antes de permitir que o portador realize transa\u00E7\u00F5es diversas, como as de compra e saque na modalidade d\u00E9bito em conta corrente, dentre outras.
+  # @param numero_cartao N\u00FAmero do cart\u00E3o a ser validado.
+  # @param trilha1 Trilha 1 do cart\u00E3o a ser validado
+  # @param trilha2 Trilha 2 do cart\u00E3o a ser validado
   # @param [Hash] opts the optional parameters
   # @return [ValidaCartaoResponse]
   describe 'validar_tarja_using_get test' do

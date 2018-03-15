@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -36,13 +36,13 @@ describe 'AvisoViagemApi' do
     end
   end
 
-  # unit tests for consultar_using_get4
+  # unit tests for consultar_using_get5
   # Consultar um aviso viagem de acordo com o id passado
-  # Este m\u00C3\u00A9todo permite que seja consultado um aviso viagen existente na base do emissor.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).
+  # Este m\u00E9todo permite que seja consultado um aviso viagen existente na base do emissor.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).
   # @param [Hash] opts the optional parameters
   # @return [AvisoViagemResponse]
-  describe 'consultar_using_get4 test' do
+  describe 'consultar_using_get5 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -54,8 +54,8 @@ describe 'AvisoViagemApi' do
 
   # unit tests for desabilitar_using_post
   # Desabilitar um aviso viagem de acordo com o id passado
-  # Este m\u00C3\u00A9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).
+  # Este m\u00E9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).
   # @param [Hash] opts the optional parameters
   # @return [AvisoViagemResponse]
   describe 'desabilitar_using_post test' do
@@ -70,8 +70,8 @@ describe 'AvisoViagemApi' do
 
   # unit tests for habilitar_using_post
   # Habilitar um aviso viagem de acordo com o id passado
-  # Este m\u00C3\u00A9todo permite que seja habilitado um aviso viagen existente na base do emissor.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).
+  # Este m\u00E9todo permite que seja habilitado um aviso viagen existente na base do emissor.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).
   # @param [Hash] opts the optional parameters
   # @return [AvisoViagemResponse]
   describe 'habilitar_using_post test' do
@@ -84,20 +84,20 @@ describe 'AvisoViagemApi' do
     end
   end
 
-  # unit tests for listar_using_get6
+  # unit tests for listar_using_get7
   # Lista os avisos viagens gerados pelo Emissor
-  # Este m\u00C3\u00A9todo permite que sejam listados os avisos viagens existentes na base do emissor.
+  # Este m\u00E9todo permite que sejam listados os avisos viagens existentes na base do emissor.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id_cartao C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id)
-  # @option opts [String] :codigo_pais Codigo identificador do pa\u00C3\u00ADs na base (id)
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [Integer] :id_cartao C\u00F3digo Identificador do cart\u00E3o na base (id)
+  # @option opts [String] :codigo_pais Codigo identificador do pa\u00EDs na base (id)
   # @option opts [String] :data_inicio Data inicio do aviso viagem
   # @option opts [String] :data_fim Data fim do aviso viagem
-  # @option opts [Integer] :flag_ativo Identifica se o aviso viagem esta ativo ou n\u00C3\u00A3o
+  # @option opts [Integer] :flag_ativo Identifica se o aviso viagem esta ativo ou n\u00E3o
   # @return [PageAvisoViagemResponse]
-  describe 'listar_using_get6 test' do
+  describe 'listar_using_get7 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -109,9 +109,9 @@ describe 'AvisoViagemApi' do
 
   # unit tests for salvar_using_post3
   # Realiza o cadastro de um novo Aviso Viagem
-  # Este m\u00C3\u00A9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
-  # @param id_cartao C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id)
-  # @param codigo_pais Codigo identificador do pa\u00C3\u00ADs na base (id)
+  # Este m\u00E9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
+  # @param id_cartao C\u00F3digo Identificador do cart\u00E3o na base (id)
+  # @param codigo_pais Codigo identificador do pa\u00EDs na base (id)
   # @param data_inicio Data inicio do aviso viagem
   # @param data_fim Data fim do aviso viagem
   # @param [Hash] opts the optional parameters

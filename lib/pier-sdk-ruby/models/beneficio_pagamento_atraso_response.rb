@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -18,7 +18,7 @@ require 'date'
 
 module Pier
   class BeneficioPagamentoAtrasoResponse
-    # Data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio de isen\u00C3\u00A7\u00C3\u00A3o total no pagamento de multa, encargos, mora e IOF.
+    # Data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio de isen\u00E7\u00E3o total no pagamento de multa, encargos, mora e IOF.
     attr_accessor :data_beneficio
 
     # Attribute mapping from ruby-style variable name to JSON key.

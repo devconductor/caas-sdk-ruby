@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,36 +17,36 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Autoriza\u00C3\u00A7\u00C3\u00A3o
+  # Objeto de Requisi\u00E7\u00E3o de Autoriza\u00E7\u00E3o
   class AutorizacaoOnUsRequest
-    # N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
+    # N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
     attr_accessor :nsu_origem
 
-    # N\u00C3\u00BAmero de Parcelas.
+    # N\u00FAmero de Parcelas.
     attr_accessor :numero_parcelas
 
-    # C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
+    # C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.
     attr_accessor :codigo_processamento
 
-    # C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o.
+    # C\u00F3digo de Seguran\u00E7a do Cart\u00E3o.
     attr_accessor :codigo_seguranca_cartao
 
-    # Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.
+    # Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.
     attr_accessor :valor_transacao
 
-    # N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o.
+    # N\u00FAmero Real do Cart\u00E3o.
     attr_accessor :numero_real_cartao
 
-    # Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM
+    # Data de Validade do Cart\u00E3o. Ex: AAMM
     attr_accessor :data_validade_cartao
 
-    # N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).
+    # N\u00FAmero do Estabelecimento (N\u00FAmero+DV).
     attr_accessor :numero_estabelecimento
 
     # Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
     attr_accessor :data_hora_terminal
 
-    # Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+    # Apresenta a identifica\u00E7\u00E3o do terminal requisitante
     attr_accessor :terminal_requisitante
 
     # Attribute mapping from ruby-style variable name to JSON key.

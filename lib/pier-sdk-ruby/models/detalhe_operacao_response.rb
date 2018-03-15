@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,45 +17,45 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Operacao
+  # Representa\u00E7\u00E3o da resposta do recurso Operacao
   class DetalheOperacaoResponse
-    # C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o
+    # C\u00F3digo que identifica a opera\u00E7\u00E3o
     attr_accessor :id_operacao
 
-    # C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador
+    # C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador
     attr_accessor :codigo_processamento
 
-    # C\u00C3\u00B3digo de processamento usado para cancelar transa\u00C3\u00A7\u00C3\u00B5es no autorizador
+    # C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador
     attr_accessor :codigo_processamento_cancelamento
 
-    # Nome da opera\u00C3\u00A7\u00C3\u00A3o
+    # Nome da opera\u00E7\u00E3o
     attr_accessor :nome_operacao
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o da opera\u00C3\u00A7\u00C3\u00A3o
+    # Descri\u00E7\u00E3o da opera\u00E7\u00E3o
     attr_accessor :descricao_operacao
 
-    # Quantidade m\u00C3\u00ADnima de meses permitido para opera\u00C3\u00A7\u00C3\u00A3o
+    # Quantidade m\u00EDnima de meses permitido para opera\u00E7\u00E3o
     attr_accessor :plano_minimo
 
-    # Quantidade M\u00C3\u00A1ximo de meses permitido para opera\u00C3\u00A7\u00C3\u00A3o
+    # Quantidade M\u00E1ximo de meses permitido para opera\u00E7\u00E3o
     attr_accessor :plano_maximo
 
-    #  Valor m\u00C3\u00ADnimo permitido permitido para opera\u00C3\u00A7\u00C3\u00A3o
+    #  Valor m\u00EDnimo permitido permitido para opera\u00E7\u00E3o
     attr_accessor :valor_minimo
 
-    #  Valor m\u00C3\u00A1ximo permitido permitido para opera\u00C3\u00A7\u00C3\u00A3o
+    #  Valor m\u00E1ximo permitido permitido para opera\u00E7\u00E3o
     attr_accessor :valor_maximo
 
-    # Flag indicativa para crobran\u00C3\u00A7a de juros
+    # Flag indicativa para crobran\u00E7a de juros
     attr_accessor :flag_cobra_juros
 
-    # Valor do juros a ser cobrado, caso opera\u00C3\u00A7\u00C3\u00A3o cobre juros
+    # Valor do juros a ser cobrado, caso opera\u00E7\u00E3o cobre juros
     attr_accessor :taxa_juros
 
-    # Flag indicativa para crobran\u00C3\u00A7a de tarifas
+    # Flag indicativa para crobran\u00E7a de tarifas
     attr_accessor :flag_cobra_tarifa
 
-    # Valor da tarifa a ser cobrado, caso opera\u00C3\u00A7\u00C3\u00A3o cobre tarifas
+    # Valor da tarifa a ser cobrado, caso opera\u00E7\u00E3o cobre tarifas
     attr_accessor :taxa_tarifa
 
     # Valor da taxa de abertura de conta
@@ -64,16 +64,16 @@ module Pier
     # Percentual da taxa de abertura de conta
     attr_accessor :percentual_tac
 
-    # Valor da opera\u00C3\u00A7\u00C3\u00A3o
+    # Valor da opera\u00E7\u00E3o
     attr_accessor :valor_operacao
 
-    # Quantidade de meses para car\u00C3\u00AAncia
+    # Quantidade de meses para car\u00EAncia
     attr_accessor :carencia
 
-    # Valor excedente permitido para opera\u00C3\u00A7\u00C3\u00A3o
+    # Valor excedente permitido para opera\u00E7\u00E3o
     attr_accessor :excedente_permitido
 
-    # Permitir transa\u00C3\u00A7\u00C3\u00B5es parceladas
+    # Permitir transa\u00E7\u00F5es parceladas
     attr_accessor :flag_permitir_parcelamento
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -38,7 +38,7 @@ describe 'FaturamentoApi' do
 
   # unit tests for alterar_tipo_faturamento_using_put
   # Alterar Faturamento
-  # Alterar as configura\u00C3\u00A7\u00C3\u00B5es de um determinado tipo de faturamento
+  # Alterar as configura\u00E7\u00F5es de um determinado tipo de faturamento
   # @param id Id
   # @param tipo_faturamento_persist tipoFaturamentoPersist
   # @param [Hash] opts the optional parameters
@@ -54,8 +54,8 @@ describe 'FaturamentoApi' do
   end
 
   # unit tests for cadastrar_faturamento_por_conta_using_post
-  # Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de faturamento para uma conta
-  # Este m\u00C3\u00A9todo permite adicionar uma nova configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento para um conta espec\u00C3\u00ADfica.
+  # Adiciona uma nova configura\u00E7\u00E3o de faturamento para uma conta
+  # Este m\u00E9todo permite adicionar uma nova configura\u00E7\u00E3o de tipo de faturamento para um conta espec\u00EDfica.
   # @param tipo_faturamento_por_conta_persist tipoFaturamentoPorContaPersist
   # @param [Hash] opts the optional parameters
   # @return [TipoFaturamentoPorContaResponse]
@@ -71,7 +71,7 @@ describe 'FaturamentoApi' do
 
   # unit tests for cadastrar_tipo_faturamento_using_post
   # Adiciona um novo faturamento
-  # Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento
+  # Adiciona uma nova configura\u00E7\u00E3o de tipo de faturamento
   # @param tipo_faturamento_persist tipoFaturamentoPersist
   # @param [Hash] opts the optional parameters
   # @return [TipoFaturamentoResponse]
@@ -102,8 +102,8 @@ describe 'FaturamentoApi' do
   end
 
   # unit tests for desativar_faturamento_por_conta_using_post
-  # Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta atrav\u00C3\u00A9s do id
-  # Desativa uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento de uma determinada conta.
+  # Desativar uma configura\u00E7\u00E3o de tipo de faturamento por conta atrav\u00E9s do id
+  # Desativa uma configura\u00E7\u00E3o de tipo de faturamento de uma determinada conta.
   # @param id Id
   # @param modificado_por modificadoPor
   # @param [Hash] opts the optional parameters
@@ -119,8 +119,8 @@ describe 'FaturamentoApi' do
   end
 
   # unit tests for desativar_tipo_faturamento_using_post
-  # Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento atrav\u00C3\u00A9s do id
-  # Desativa uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento.
+  # Desativar uma configura\u00E7\u00E3o de tipo de faturamento atrav\u00E9s do id
+  # Desativa uma configura\u00E7\u00E3o de tipo de faturamento.
   # @param id Id
   # @param [Hash] opts the optional parameters
   # @return [TipoFaturamentoResponse]
@@ -135,19 +135,19 @@ describe 'FaturamentoApi' do
   end
 
   # unit tests for listar_faturamento_por_conta_using_get
-  # Lista as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento por conta
-  # Este m\u00C3\u00A9todo permite listar as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento registrados a uma conta.
+  # Lista as configura\u00E7\u00F5es de tipos de faturamento por conta
+  # Este m\u00E9todo permite listar as configura\u00E7\u00F5es de tipos de faturamento registrados a uma conta.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id_tipo_faturamento_por_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id).
-  # @option opts [BOOLEAN] :status Representa se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativada ou desativada para a conta.
-  # @option opts [Integer] :id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id).
-  # @option opts [Integer] :id_tipo_faturamento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento relacionada (id).
-  # @option opts [String] :data_hora_inclusao Data da inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
-  # @option opts [String] :data_hora_cancelamento Data do cancelamento da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
-  # @option opts [String] :modificado_por Identificador do respons\u00C3\u00A1vel pela modifica\u00C3\u00A7\u00C3\u00A3o do registro.
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [Integer] :id_tipo_faturamento_por_conta C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id).
+  # @option opts [BOOLEAN] :status Representa se a configura\u00E7\u00E3o est\u00E1 ativada ou desativada para a conta.
+  # @option opts [Integer] :id_conta C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id).
+  # @option opts [Integer] :id_tipo_faturamento C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento relacionada (id).
+  # @option opts [String] :data_hora_inclusao Data da inclus\u00E3o da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+  # @option opts [String] :data_hora_cancelamento Data do cancelamento da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+  # @option opts [String] :modificado_por Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro.
   # @return [PageTipoFaturamentoPorContaResponse]
   describe 'listar_faturamento_por_conta_using_get test' do
     it "should work" do
@@ -161,15 +161,15 @@ describe 'FaturamentoApi' do
 
   # unit tests for listar_tipo_faturamento_using_get
   # Lista Tipos de Faturamento
-  # Lista todas as configura\u00C3\u00A7\u00C3\u00B5es dos tipos de faturamento
+  # Lista todas as configura\u00E7\u00F5es dos tipos de faturamento
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id_tipo_faturamento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento (id).
-  # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento.
-  # @option opts [BOOLEAN] :flag_apenas_demonstrativo Flag que representa que o faturamento ser\u00C3\u00A1 apenas demonstrativo.
-  # @option opts [Integer] :id_convenio C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do conv\u00C3\u00AAnio relacionado ao tipo de faturamento.
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [Integer] :id_tipo_faturamento C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id).
+  # @option opts [String] :descricao Descri\u00E7\u00E3o do tipo de faturamento.
+  # @option opts [BOOLEAN] :flag_apenas_demonstrativo Flag que representa que o faturamento ser\u00E1 apenas demonstrativo.
+  # @option opts [Integer] :id_convenio C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento.
   # @return [PageTipoFaturamentoResponse]
   describe 'listar_tipo_faturamento_using_get test' do
     it "should work" do

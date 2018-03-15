@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,21 +17,21 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto de detalhes do Template de Notifica\u00C3\u00A7\u00C3\u00A3o
+  # Objeto de detalhes do Template de Notifica\u00E7\u00E3o
   class TemplateNotificacaoDetalheResponse
-    # C\u00C3\u00B3digo Identificador.
+    # C\u00F3digo Identificador.
     attr_accessor :id
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de e-mail.
+    # C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de e-mail.
     attr_accessor :id_configuracao_email
 
     # Tipo do layout de e-mail.
     attr_accessor :tipo_layout
 
-    # Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+    # Tipo da notifica\u00E7\u00E3o.
     attr_accessor :tipo_notificacao
 
-    # Template padr\u00C3\u00A3o.
+    # Template padr\u00E3o.
     attr_accessor :template_padrao
 
     # Remetente.
@@ -40,10 +40,10 @@ module Pier
     # Assunto do e-mail.
     attr_accessor :assunto
 
-    # Data da inclus\u00C3\u00A3o.
+    # Data da inclus\u00E3o.
     attr_accessor :data_inclusao
 
-    # Data altera\u00C3\u00A7\u00C3\u00A3o.
+    # Data altera\u00E7\u00E3o.
     attr_accessor :data_alteracao
 
     # Conteudo do e-mail.

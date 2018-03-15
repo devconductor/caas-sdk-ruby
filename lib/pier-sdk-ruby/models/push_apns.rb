@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,30 +17,30 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto Push Notifica\u00C3\u00A7\u00C3\u00A3o APNS
+  # Objeto Push Notifica\u00E7\u00E3o APNS
   class PushAPNS
-    # C\u00C3\u00B3digo identificado da pessoa
+    # C\u00F3digo identificado da pessoa
     attr_accessor :id_pessoa
 
-    # C\u00C3\u00B3digo identificador da conta
+    # C\u00F3digo identificador da conta
     attr_accessor :id_conta
 
-    # Apresenta o token do dispositivo que dever\u00C3\u00A1 receber o push.
+    # Apresenta o token do dispositivo que dever\u00E1 receber o push.
     attr_accessor :token_dispositivo
 
-    # Apresenta o certificado APNs que est\u00C3\u00A1 cadastrado para o aplicativo na loja da Apple. Esse certificado dever\u00C3\u00A1 ser enviado no formado Base64.
+    # Apresenta o certificado APNs que est\u00E1 cadastrado para o aplicativo na loja da Apple. Esse certificado dever\u00E1 ser enviado no formado Base64.
     attr_accessor :certificado
 
-    # Apresenta a senha para o certificado APNs que est\u00C3\u00A1 cadastrado para o aplicativo na loja da Apple.
+    # Apresenta a senha para o certificado APNs que est\u00E1 cadastrado para o aplicativo na loja da Apple.
     attr_accessor :senha
 
-    # Apresenta o t\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o.
+    # Apresenta o t\u00EDtulo da notifica\u00E7\u00E3o.
     attr_accessor :titulo
 
-    # Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado.
+    # Apresenta o texto da notifica\u00E7\u00E3o a ser enviado.
     attr_accessor :conteudo
 
-    # Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+    # Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o
     attr_accessor :tipo_evento
 
     # Apresenta o nome do icone a ser apresentado no push.

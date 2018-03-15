@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,26 +17,26 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto cart\u00C3\u00A3o provis\u00C3\u00B3rio
+  # Objeto cart\u00E3o provis\u00F3rio
   class CartaoImpressaoProvisorioResponse
     attr_accessor :flag_virtual
 
-    # Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence.
+    # Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.
     attr_accessor :id_conta
 
-    # Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) portadora do cart\u00C3\u00A3o gerado.
+    # Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.
     attr_accessor :id_pessoa
 
-    # Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) que foi gerado.
+    # Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.
     attr_accessor :id_cartao
 
-    # Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
+    # Apresenta o n\u00FAmero do cart\u00E3o.
     attr_accessor :numero_cartao
 
-    # Apresenta o nome do Portador do Cart\u00C3\u00A3o.
+    # Apresenta o nome do Portador do Cart\u00E3o.
     attr_accessor :nome_plastico
 
-    # Apresenta a data de Validade do Cart\u00C3\u00A3o.
+    # Apresenta a data de Validade do Cart\u00E3o.
     attr_accessor :data_validade
 
     # Attribute mapping from ruby-style variable name to JSON key.

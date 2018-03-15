@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_endereco_using_get**](EnderecoNacionalApi.md#consultar_endereco_using_get) | **GET** /api/ceps | Consultar Endere\u00C3\u00A7o
+[**consultar_endereco_using_get**](EnderecoNacionalApi.md#consultar_endereco_using_get) | **GET** /api/ceps | Consultar Endere\u00E7o
 
 
 # **consultar_endereco_using_get**
 > EnderecoResponse consultar_endereco_using_get(cep)
 
-Consultar Endere\u00C3\u00A7o
+Consultar Endere\u00E7o
 
-Este recurso permite consultar endere\u00C3\u00A7os atrav\u00C3\u00A9s do CEP.
+Este recurso permite consultar endere\u00E7os atrav\u00E9s do CEP.
 
 ### Example
 ```ruby
@@ -25,7 +25,7 @@ cep = "cep_example" # String | CEP
 
 
 begin
-  #Consultar Endere\u00C3\u00A7o
+  #Consultar Endere\u00E7o
   result = api_instance.consultar_endereco_using_get(cep)
   p result
 rescue Pier::ApiError => e

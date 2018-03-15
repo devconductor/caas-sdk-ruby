@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,13 +19,13 @@ require 'date'
 module Pier
   # Objeto de Resposta da Entidade
   class EntidadeResponse
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da entidade.
+    # C\u00F3digo de Identifica\u00E7\u00E3o da entidade.
     attr_accessor :id
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o da entidade.
+    # Descri\u00E7\u00E3o da entidade.
     attr_accessor :descricao
 
-    # Flag que indica se a entidade est\u00C3\u00A1 ativa.
+    # Flag que indica se a entidade est\u00E1 ativa.
     attr_accessor :flag_ativo
 
     # Attribute mapping from ruby-style variable name to JSON key.

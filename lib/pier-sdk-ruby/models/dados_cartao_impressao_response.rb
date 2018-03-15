@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,42 +17,42 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto Cart\u00C3\u00A3o para Impresso
+  # Objeto Cart\u00E3o para Impresso
   class DadosCartaoImpressaoResponse
-    # O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence.
+    # O C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.
     attr_accessor :id_conta
 
-    # O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) portadora do cart\u00C3\u00A3o gerado.
+    # O C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.
     attr_accessor :id_pessoa
 
-    # O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) que foi gerado.
+    # O C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.
     attr_accessor :id_cartao
 
-    # O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Bandeira (id) a qual o Cart\u00C3\u00A3o pertence, quando bandeirado.
+    # O C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado.
     attr_accessor :id_bandeira
 
-    # O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id) atribu\u00C3\u00ADdo ao Cart\u00C3\u00A3o.
+    # O C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o.
     attr_accessor :id_tipo_cartao
 
-    # O n\u00C3\u00BAmero do cart\u00C3\u00A3o.
+    # O n\u00FAmero do cart\u00E3o.
     attr_accessor :numero_cartao
 
-    # O nome do Portador do Cart\u00C3\u00A3o.
+    # O nome do Portador do Cart\u00E3o.
     attr_accessor :nome_plastico
 
-    # O n\u00C3\u00BAmero do CVV a ser impresso no Cart\u00C3\u00A3o
+    # O n\u00FAmero do CVV a ser impresso no Cart\u00E3o
     attr_accessor :cvv2
 
-    # Apresenta a data de emiss\u00C3\u00A3o do Cart\u00C3\u00A3o.
+    # Apresenta a data de emiss\u00E3o do Cart\u00E3o.
     attr_accessor :data_geracao
 
-    # Apresenta a data de Validade do Cart\u00C3\u00A3o.
+    # Apresenta a data de Validade do Cart\u00E3o.
     attr_accessor :data_validade
 
-    # O CPF do Portador do Cart\u00C3\u00A3o.
+    # O CPF do Portador do Cart\u00E3o.
     attr_accessor :cpf
 
-    # O tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
+    # O tipo do Portador do cart\u00E3o, sendo: ('T': Titular, 'A': Adicional).
     attr_accessor :tipo_portador
 
     # Os dados da Trilha1, seguindo as regras de trilha do emissor.
@@ -67,7 +67,7 @@ module Pier
     # Os dados da TrilhaCVV02, seguindo as regras de trilha do emissor.
     attr_accessor :trilha_cvv2
 
-    # O status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual 
+    # O status que informa se o cart\u00E3o \u00E9 virtual 
     attr_accessor :flag_virtual
 
     # Nome da Bandeira
@@ -76,76 +76,76 @@ module Pier
     # Flag Indicativo de Titularidade da Conta
     attr_accessor :flag_titular
 
-    # C\u00C3\u00B3digo Sequencial do Cart\u00C3\u00A3o
+    # C\u00F3digo Sequencial do Cart\u00E3o
     attr_accessor :sequencial_cartao
 
-    # Identificador do Status do Cart\u00C3\u00A3o
+    # Identificador do Status do Cart\u00E3o
     attr_accessor :id_status
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o
+    # Descri\u00E7\u00E3o do Status do Cart\u00E3o
     attr_accessor :descricao_status_cartao
 
-    # Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+    # Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver.
     attr_accessor :data_status
 
-    # Identificador do Est\u00C3\u00A1gio do Cart\u00C3\u00A3o.
+    # Identificador do Est\u00E1gio do Cart\u00E3o.
     attr_accessor :id_estagio
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do Estagio do Cart\u00C3\u00A3o.
+    # Descri\u00E7\u00E3o do Estagio do Cart\u00E3o.
     attr_accessor :descricao_estagio
 
-    # Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+    # Apresenta a data em que o idEstagioCartao atual do cart\u00E3o fora aplicado, quando houver.
     attr_accessor :data_estagio
 
-    # N\u00C3\u00BAmero do Bin do Cart\u00C3\u00A3o
+    # N\u00FAmero do Bin do Cart\u00E3o
     attr_accessor :numero_bin
 
     # Identificador do Produto Associado a Conta
     attr_accessor :id_produto
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do produto
+    # Descri\u00E7\u00E3o do produto
     attr_accessor :descricao_produto
 
     # Identificador do Status da Conta
     attr_accessor :id_status_conta
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
+    # Descri\u00E7\u00E3o do status da conta
     attr_accessor :descricao_status_conta
 
-    # Data que o cart\u00C3\u00A3o foi embossado
+    # Data que o cart\u00E3o foi embossado
     attr_accessor :data_embossing
 
-    # C\u00C3\u00B3digo de desbloqueio do cart\u00C3\u00A3o
+    # C\u00F3digo de desbloqueio do cart\u00E3o
     attr_accessor :codigo_desbloqueio
 
-    # O 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+    # O 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'.
     attr_accessor :nome_pessoa
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
+    # C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00EDsica), (\"PJ\": Pessoa Jur\u00EDdica).
     attr_accessor :tipo_pessoa
 
     # Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
     attr_accessor :data_nascimento
 
-    # Identificador do Endere\u00C3\u00A7o do titular do cart\u00C3\u00A3o
+    # Identificador do Endere\u00E7o do titular do cart\u00E3o
     attr_accessor :id_endereco
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
+    # C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
     attr_accessor :id_tipo_endereco
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Endere\u00C3\u00A7o
+    # Descri\u00E7\u00E3o do Tipo de Endere\u00E7o
     attr_accessor :descricao_tipo_endereco
 
-    # O C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
+    # O C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro '58800000'
     attr_accessor :cep
 
     # Nome do Logradouro
     attr_accessor :logradouro
 
-    # N\u00C3\u00BAmero do endere\u00C3\u00A7o
+    # N\u00FAmero do endere\u00E7o
     attr_accessor :numero_endereco
 
-    # Descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
+    # Descri\u00E7oes complementares referente ao endere\u00E7o
     attr_accessor :complemento_endereco
 
     # Nome do bairro
@@ -157,8 +157,11 @@ module Pier
     # Unidade federativa
     attr_accessor :uf
 
-    # Nome do pa\u00C3\u00ADs
+    # Nome do pa\u00EDs
     attr_accessor :pais
+
+    # Senha Criptografada
+    attr_accessor :senha_criptografada
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -256,7 +259,9 @@ module Pier
         
         :'uf' => :'uf',
         
-        :'pais' => :'pais'
+        :'pais' => :'pais',
+        
+        :'senha_criptografada' => :'senhaCriptografada'
         
       }
     end
@@ -357,7 +362,9 @@ module Pier
         
         :'uf' => :'String',
         
-        :'pais' => :'String'
+        :'pais' => :'String',
+        
+        :'senha_criptografada' => :'String'
         
       }
     end
@@ -794,6 +801,15 @@ module Pier
       end
 
       
+      if attributes[:'senhaCriptografada']
+        
+        
+        self.senha_criptografada = attributes[:'senhaCriptografada']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -997,8 +1013,17 @@ module Pier
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -1286,7 +1311,8 @@ module Pier
           bairro == o.bairro &&
           cidade == o.cidade &&
           uf == o.uf &&
-          pais == o.pais
+          pais == o.pais &&
+          senha_criptografada == o.senha_criptografada
     end
 
     # @see the `==` method
@@ -1298,7 +1324,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id_conta, id_pessoa, id_cartao, id_bandeira, id_tipo_cartao, numero_cartao, nome_plastico, cvv2, data_geracao, data_validade, cpf, tipo_portador, trilha1, trilha2, trilha_cvv1, trilha_cvv2, flag_virtual, nome_bandeira, flag_titular, sequencial_cartao, id_status, descricao_status_cartao, data_status, id_estagio, descricao_estagio, data_estagio, numero_bin, id_produto, descricao_produto, id_status_conta, descricao_status_conta, data_embossing, codigo_desbloqueio, nome_pessoa, tipo_pessoa, data_nascimento, id_endereco, id_tipo_endereco, descricao_tipo_endereco, cep, logradouro, numero_endereco, complemento_endereco, bairro, cidade, uf, pais].hash
+      [id_conta, id_pessoa, id_cartao, id_bandeira, id_tipo_cartao, numero_cartao, nome_plastico, cvv2, data_geracao, data_validade, cpf, tipo_portador, trilha1, trilha2, trilha_cvv1, trilha_cvv2, flag_virtual, nome_bandeira, flag_titular, sequencial_cartao, id_status, descricao_status_cartao, data_status, id_estagio, descricao_estagio, data_estagio, numero_bin, id_produto, descricao_produto, id_status_conta, descricao_status_conta, data_embossing, codigo_desbloqueio, nome_pessoa, tipo_pessoa, data_nascimento, id_endereco, id_tipo_endereco, descricao_tipo_endereco, cep, logradouro, numero_endereco, complemento_endereco, bairro, cidade, uf, pais, senha_criptografada].hash
     end
 
     # Builds the object from hash

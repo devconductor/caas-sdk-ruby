@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -46,7 +46,7 @@ describe 'EstabelecimentoPersist' do
     end
   end
 
-  describe 'test attribute "id_credor"' do
+  describe 'test attribute "id_grupo_economico"' do
     it 'should work' do
        # assertion here
        # should be_a()

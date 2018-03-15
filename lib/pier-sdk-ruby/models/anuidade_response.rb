@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,18 +17,18 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de anuidade
+  # Representa\u00E7\u00E3o da resposta do recurso de anuidade
   class AnuidadeResponse
-    # Identificador do Tipo de anuidade de b\u00C3\u00B4nus de celular
+    # Identificador do Tipo de anuidade de b\u00F4nus de celular
     attr_accessor :id
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do tipo de anuidade de b\u00C3\u00B4nus de celular
+    # Descri\u00E7\u00E3o do tipo de anuidade de b\u00F4nus de celular
     attr_accessor :descricao
 
-    # Valor do tipo de anuidade de b\u00C3\u00B4nus de celular
+    # Valor do tipo de anuidade de b\u00F4nus de celular
     attr_accessor :valor
 
-    # Se o tipo de anuidade de b\u00C3\u00B4nus de celular \u00C3\u00A9 bonificada
+    # Se o tipo de anuidade de b\u00F4nus de celular \u00E9 bonificada
     attr_accessor :flag_anuidade_bonificada
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,25 +19,25 @@ require 'date'
 module Pier
   # Fatura futura
   class LancamentoFaturaResponse
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
+    # C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o
     attr_accessor :id_transacao
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do tipo da transa\u00C3\u00A7\u00C3\u00A3o
+    # Descri\u00E7\u00E3o do tipo da transa\u00E7\u00E3o
     attr_accessor :descricao_tipo_transacao
 
-    # C\u00C3\u00B3digo identificador do tipo do evento
+    # C\u00F3digo identificador do tipo do evento
     attr_accessor :id_tipo_evento
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do tipo do evento
+    # Descri\u00E7\u00E3o do tipo do evento
     attr_accessor :descricao_tipo_evento
 
-    # C\u00C3\u00B3digo identificador do evento
+    # C\u00F3digo identificador do evento
     attr_accessor :id_evento
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+    # C\u00F3digo de identifica\u00E7\u00E3o da conta.
     attr_accessor :id_conta
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o complementar do evento
+    # Descri\u00E7\u00E3o complementar do evento
     attr_accessor :complemento
 
     # Valor em reais
@@ -46,52 +46,52 @@ module Pier
     # Valor em dolar
     attr_accessor :valor_usd
 
-    # N\u00C3\u00BAmero da parcela
+    # N\u00FAmero da parcela
     attr_accessor :numero_parcela
 
     # Quantidade de parcelas
     attr_accessor :quantidade_parcelas
 
-    # Data da transa\u00C3\u00A7\u00C3\u00A3o
+    # Data da transa\u00E7\u00E3o
     attr_accessor :data_hora_transacao
 
     # Nome do estabelecimento
     attr_accessor :nome_estabelecimento
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do estabelecimento
+    # Descri\u00E7\u00E3o do estabelecimento
     attr_accessor :descricao_estabelecimento
 
     # Nome fantasia do estabelecimento
     attr_accessor :nome_fantasia_estabelecimento
 
-    # Flag que indica se o lan\u00C3\u00A7amento \u00C3\u00A9 de cr\u00C3\u00A9dito
+    # Flag que indica se o lan\u00E7amento \u00E9 de cr\u00E9dito
     attr_accessor :flag_credito
 
-    # C\u00C3\u00B3digo identificador do MCC (Merchant Category Codes)
+    # C\u00F3digo identificador do MCC (Merchant Category Codes)
     attr_accessor :id_mcc
 
-    # C\u00C3\u00B3digo identificador do grupo MCC
+    # C\u00F3digo identificador do grupo MCC
     attr_accessor :id_grupo_mcc
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do grupo MCC
+    # Descri\u00E7\u00E3o do grupo MCC
     attr_accessor :descricao_grupo_mcc
 
-    # Indica se o portador do cart\u00C3\u00A3o \u00C3\u00A9 o titular da conta
+    # Indica se o portador do cart\u00E3o \u00E9 o titular da conta
     attr_accessor :titular
 
-    # Nome impresso no cart\u00C3\u00A3o
+    # Nome impresso no cart\u00E3o
     attr_accessor :nome_portador
 
-    # N\u00C3\u00BAmero do cart\u00C3\u00A3o mascarado
+    # N\u00FAmero do cart\u00E3o mascarado
     attr_accessor :numero_cartao_mascarado
 
-    # Flag que indica se o cliente solicitou contesta\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
+    # Flag que indica se o cliente solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o
     attr_accessor :flag_solicitou_contestacao
 
     # Valor da taxa de embarque
     attr_accessor :valor_taxa_embarque
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o abreviada da transa\u00C3\u00A7\u00C3\u00A3o
+    # Descri\u00E7\u00E3o abreviada da transa\u00E7\u00E3o
     attr_accessor :descricao_abreviada
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -24,10 +24,10 @@ module Pier
       @api_client = api_client
     end
 
-    # Lan\u00C3\u00A7a um ajuste para a conta do id informado
+    # Lan\u00E7a um ajuste para a conta do id informado
     # Este recurso insere um ajuste para a conta do id informado
     # @param id Id Conta
-    # @param id_tipo_ajuste C\u00C3\u00B3digo identificador do tipo de ajuste.
+    # @param id_tipo_ajuste C\u00F3digo identificador do tipo de ajuste.
     # @param data_ajuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.
     # @param valor_ajuste Valor do ajuste
     # @param [Hash] opts the optional parameters
@@ -38,10 +38,10 @@ module Pier
       return data
     end
 
-    # Lan\u00C3\u00A7a um ajuste para a conta do id informado
+    # Lan\u00E7a um ajuste para a conta do id informado
     # Este recurso insere um ajuste para a conta do id informado
     # @param id Id Conta
-    # @param id_tipo_ajuste C\u00C3\u00B3digo identificador do tipo de ajuste.
+    # @param id_tipo_ajuste C\u00F3digo identificador do tipo de ajuste.
     # @param data_ajuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.
     # @param valor_ajuste Valor do ajuste
     # @param [Hash] opts the optional parameters
@@ -131,9 +131,9 @@ module Pier
       return data, status_code, headers
     end
 
-    # Altera o produto associado \u00C3\u00A0 conta.
-    # O recurso permite fazer modifica\u00C3\u00A7\u00C3\u00A3o do produto associado \u00C3\u00A0 conta.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Altera o produto associado \u00E0 conta.
+    # O recurso permite fazer modifica\u00E7\u00E3o do produto associado \u00E0 conta.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param request request
     # @param [Hash] opts the optional parameters
     # @return [String]
@@ -142,9 +142,9 @@ module Pier
       return data
     end
 
-    # Altera o produto associado \u00C3\u00A0 conta.
-    # O recurso permite fazer modifica\u00C3\u00A7\u00C3\u00A3o do produto associado \u00C3\u00A0 conta.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Altera o produto associado \u00E0 conta.
+    # O recurso permite fazer modifica\u00E7\u00E3o do produto associado \u00E0 conta.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param request request
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
@@ -206,10 +206,10 @@ module Pier
       return data, status_code, headers
     end
 
-    # Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
-    # Esta m\u00C3\u00A9todo permite altera a pessoa de uma conta.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id)
-    # @param id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).
+    # Realiza a altera\u00E7\u00E3o de uma Pessoa tilular da conta
+    # Esta m\u00E9todo permite altera a pessoa de uma conta.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id)
+    # @param id_pessoa C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id).
     # @param [Hash] opts the optional parameters
     # @return [ContaResponse]
     def alterar_titular_using_post(id, id_pessoa, opts = {})
@@ -217,10 +217,10 @@ module Pier
       return data
     end
 
-    # Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
-    # Esta m\u00C3\u00A9todo permite altera a pessoa de uma conta.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id)
-    # @param id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).
+    # Realiza a altera\u00E7\u00E3o de uma Pessoa tilular da conta
+    # Esta m\u00E9todo permite altera a pessoa de uma conta.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id)
+    # @param id_pessoa C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(ContaResponse, Fixnum, Hash)>] ContaResponse data, response status code and response headers
     def alterar_titular_using_post_with_http_info(id, id_pessoa, opts = {})
@@ -282,9 +282,9 @@ module Pier
       return data, status_code, headers
     end
 
-    # Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
-    # Esse recurso permite alterar o vencimento para no m\u00C3\u00A1ximo at\u00C3\u00A9 30 dias ap\u00C3\u00B3s data atual de uma conta especifica no PIER, respeitando o par\u00C3\u00A2metro de intervalor entre as modifica\u00C3\u00A7\u00C3\u00B5es do vencimento informado pelo emissor.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Realiza a altera\u00E7\u00E3o do dia de vencimento das faturas da conta
+    # Esse recurso permite alterar o vencimento para no m\u00E1ximo at\u00E9 30 dias ap\u00F3s data atual de uma conta especifica no PIER, respeitando o par\u00E2metro de intervalor entre as modifica\u00E7\u00F5es do vencimento informado pelo emissor.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param novo_dia_vencimento Novo dia de vencimento.
     # @param [Hash] opts the optional parameters
     # @return [ContaResponse]
@@ -293,9 +293,9 @@ module Pier
       return data
     end
 
-    # Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
-    # Esse recurso permite alterar o vencimento para no m\u00C3\u00A1ximo at\u00C3\u00A9 30 dias ap\u00C3\u00B3s data atual de uma conta especifica no PIER, respeitando o par\u00C3\u00A2metro de intervalor entre as modifica\u00C3\u00A7\u00C3\u00B5es do vencimento informado pelo emissor.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Realiza a altera\u00E7\u00E3o do dia de vencimento das faturas da conta
+    # Esse recurso permite alterar o vencimento para no m\u00E1ximo at\u00E9 30 dias ap\u00F3s data atual de uma conta especifica no PIER, respeitando o par\u00E2metro de intervalor entre as modifica\u00E7\u00F5es do vencimento informado pelo emissor.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param novo_dia_vencimento Novo dia de vencimento.
     # @param [Hash] opts the optional parameters
     # @return [Array<(ContaResponse, Fixnum, Hash)>] ContaResponse data, response status code and response headers
@@ -359,15 +359,15 @@ module Pier
     end
 
     # Atribuir Anuidade
-    # Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param id_anuidade Identificador da anuidade
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @option opts [String] :ddd DDD do celular
-    # @option opts [String] :celular N\u00C3\u00BAmero do celular
+    # @option opts [String] :celular N\u00FAmero do celular
     # @option opts [Integer] :id_operadora Identificador da operadora do celular
     # @option opts [Integer] :id_origem_comercial Identificador da origem comercial
     # @return [Object]
@@ -377,15 +377,15 @@ module Pier
     end
 
     # Atribuir Anuidade
-    # Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param id_anuidade Identificador da anuidade
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @option opts [String] :ddd DDD do celular
-    # @option opts [String] :celular N\u00C3\u00BAmero do celular
+    # @option opts [String] :celular N\u00FAmero do celular
     # @option opts [Integer] :id_operadora Identificador da operadora do celular
     # @option opts [Integer] :id_origem_comercial Identificador da origem comercial
     # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
@@ -497,9 +497,9 @@ module Pier
       return data, status_code, headers
     end
 
-    #  Ativa o servi\u00C3\u00A7o de envio de fatura por email
-    # Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    #  Ativa o servi\u00E7o de envio de fatura por email
+    # Este recurso ativa o servi\u00E7o de envio de fatura por email
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @return [Object]
     def ativar_envio_fatura_email_using_post(id, opts = {})
@@ -507,9 +507,9 @@ module Pier
       return data
     end
 
-    #  Ativa o servi\u00C3\u00A7o de envio de fatura por email
-    # Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    #  Ativa o servi\u00E7o de envio de fatura por email
+    # Este recurso ativa o servi\u00E7o de envio de fatura por email
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
     def ativar_envio_fatura_email_using_post_with_http_info(id, opts = {})
@@ -563,9 +563,9 @@ module Pier
     end
 
     # Realiza o bloqueio de uma determinada Conta
-    # Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.
+    # Este m\u00E9todo permite a realiza\u00E7\u00E3o do bloqueio de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
+    # @param id_status C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.
     # @param [Hash] opts the optional parameters
     # @return [ContaResponse]
     def bloquear_using_post1(id, id_status, opts = {})
@@ -574,9 +574,9 @@ module Pier
     end
 
     # Realiza o bloqueio de uma determinada Conta
-    # Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.
+    # Este m\u00E9todo permite a realiza\u00E7\u00E3o do bloqueio de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
+    # @param id_status C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.
     # @param [Hash] opts the optional parameters
     # @return [Array<(ContaResponse, Fixnum, Hash)>] ContaResponse data, response status code and response headers
     def bloquear_using_post1_with_http_info(id, id_status, opts = {})
@@ -639,9 +639,9 @@ module Pier
     end
 
     # Realiza o cancelamento de uma determinada Conta
-    # Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.
+    # Este m\u00E9todo permite a realiza\u00E7\u00E3o do cancelamento de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
+    # @param id_status C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.
     # @param [Hash] opts the optional parameters
     # @return [ContaResponse]
     def cancelar_using_post1(id, id_status, opts = {})
@@ -650,9 +650,9 @@ module Pier
     end
 
     # Realiza o cancelamento de uma determinada Conta
-    # Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.
+    # Este m\u00E9todo permite a realiza\u00E7\u00E3o do cancelamento de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
+    # @param id_status C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.
     # @param [Hash] opts the optional parameters
     # @return [Array<(ContaResponse, Fixnum, Hash)>] ContaResponse data, response status code and response headers
     def cancelar_using_post1_with_http_info(id, id_status, opts = {})
@@ -714,9 +714,9 @@ module Pier
       return data, status_code, headers
     end
 
-    # Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
-    # Este m\u00C3\u00A9todo permite consultar se o cliente tem direito ao benef\u00C3\u00ADcio de pagamento em atraso, em loja, at\u00C3\u00A9 o s\u00C3\u00A1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Apresenta a data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio.
+    # Este m\u00E9todo permite consultar se o cliente tem direito ao benef\u00EDcio de pagamento em atraso, em loja, at\u00E9 o s\u00E1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @return [BeneficioPagamentoAtrasoResponse]
     def consultar_beneficio_pagamento_atraso_using_get(id, opts = {})
@@ -724,9 +724,9 @@ module Pier
       return data
     end
 
-    # Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
-    # Este m\u00C3\u00A9todo permite consultar se o cliente tem direito ao benef\u00C3\u00ADcio de pagamento em atraso, em loja, at\u00C3\u00A9 o s\u00C3\u00A1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Apresenta a data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio.
+    # Este m\u00E9todo permite consultar se o cliente tem direito ao benef\u00EDcio de pagamento em atraso, em loja, at\u00E9 o s\u00E1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(BeneficioPagamentoAtrasoResponse, Fixnum, Hash)>] BeneficioPagamentoAtrasoResponse data, response status code and response headers
     def consultar_beneficio_pagamento_atraso_using_get_with_http_info(id, opts = {})
@@ -844,30 +844,30 @@ module Pier
       return data, status_code, headers
     end
 
-    # Consulta a d\u00C3\u00ADvida atualizada do cliente
-    # Este recurso consulta a d\u00C3\u00ADvida atualizada do cliente
+    # Consulta a d\u00EDvida atualizada do cliente
+    # Este recurso consulta a d\u00EDvida atualizada do cliente
     # @param id Id Conta
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @option opts [String] :data_vencimento Data do vencimento
-    # @option opts [Integer] :id_escritorio_cobranca C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a
+    # @option opts [Integer] :id_escritorio_cobranca C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a
     # @return [DividaClienteResponse]
     def consultar_divida_atualizada_cliente_using_get(id, opts = {})
       data, _status_code, _headers = consultar_divida_atualizada_cliente_using_get_with_http_info(id, opts)
       return data
     end
 
-    # Consulta a d\u00C3\u00ADvida atualizada do cliente
-    # Este recurso consulta a d\u00C3\u00ADvida atualizada do cliente
+    # Consulta a d\u00EDvida atualizada do cliente
+    # Este recurso consulta a d\u00EDvida atualizada do cliente
     # @param id Id Conta
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @option opts [String] :data_vencimento Data do vencimento
-    # @option opts [Integer] :id_escritorio_cobranca C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a
+    # @option opts [Integer] :id_escritorio_cobranca C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a
     # @return [Array<(DividaClienteResponse, Fixnum, Hash)>] DividaClienteResponse data, response status code and response headers
     def consultar_divida_atualizada_cliente_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
@@ -955,12 +955,12 @@ module Pier
     end
 
     # Permite consultar a partir do ID da conta as taxas e tarifas
-    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
+    # Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
     # @param id ID da conta a ser consultada.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [PageTaxasRefinanciamentoResponse]
     def consultar_taxas_tarifas_using_get(id, opts = {})
       data, _status_code, _headers = consultar_taxas_tarifas_using_get_with_http_info(id, opts)
@@ -968,12 +968,12 @@ module Pier
     end
 
     # Permite consultar a partir do ID da conta as taxas e tarifas
-    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
+    # Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
     # @param id ID da conta a ser consultada.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(PageTaxasRefinanciamentoResponse, Fixnum, Hash)>] PageTaxasRefinanciamentoResponse data, response status code and response headers
     def consultar_taxas_tarifas_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
@@ -1047,28 +1047,28 @@ module Pier
     end
 
     # Apresenta dados de uma determinada conta
-    # Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @return [ContaDetalheResponse]
-    def consultar_using_get12(id, opts = {})
-      data, _status_code, _headers = consultar_using_get12_with_http_info(id, opts)
+    def consultar_using_get13(id, opts = {})
+      data, _status_code, _headers = consultar_using_get13_with_http_info(id, opts)
       return data
     end
 
     # Apresenta dados de uma determinada conta
-    # Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(ContaDetalheResponse, Fixnum, Hash)>] ContaDetalheResponse data, response status code and response headers
-    def consultar_using_get12_with_http_info(id, opts = {})
+    def consultar_using_get13_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.consultar_using_get12 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.consultar_using_get13 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_using_get12" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_using_get13" if id.nil?
       
       
       
@@ -1106,36 +1106,36 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'ContaDetalheResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#consultar_using_get12\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#consultar_using_get13\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-    # Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
+    # Consulta os detalhes de uma determinada transfer\u00EAncia
+    # Este m\u00E9todo permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada entre contas.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
+    # @param id_transferencia C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia).
     # @param [Hash] opts the optional parameters
     # @return [TransferenciaDetalheResponse]
-    def consultar_using_get41(id, id_transferencia, opts = {})
-      data, _status_code, _headers = consultar_using_get41_with_http_info(id, id_transferencia, opts)
+    def consultar_using_get42(id, id_transferencia, opts = {})
+      data, _status_code, _headers = consultar_using_get42_with_http_info(id, id_transferencia, opts)
       return data
     end
 
-    # Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-    # Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
+    # Consulta os detalhes de uma determinada transfer\u00EAncia
+    # Este m\u00E9todo permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada entre contas.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
+    # @param id_transferencia C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia).
     # @param [Hash] opts the optional parameters
     # @return [Array<(TransferenciaDetalheResponse, Fixnum, Hash)>] TransferenciaDetalheResponse data, response status code and response headers
-    def consultar_using_get41_with_http_info(id, id_transferencia, opts = {})
+    def consultar_using_get42_with_http_info(id, id_transferencia, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.consultar_using_get41 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.consultar_using_get42 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_using_get41" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.consultar_using_get42" if id.nil?
       
       
       
@@ -1143,7 +1143,7 @@ module Pier
       
       
       # verify the required parameter 'id_transferencia' is set
-      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling ContaApi.consultar_using_get41" if id_transferencia.nil?
+      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling ContaApi.consultar_using_get42" if id_transferencia.nil?
       
       
       
@@ -1181,14 +1181,14 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TransferenciaDetalheResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#consultar_using_get41\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#consultar_using_get42\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Desativa o servi\u00C3\u00A7o de envio de fatura por email
-    # Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Desativa o servi\u00E7o de envio de fatura por email
+    # Este recurso desativa o servi\u00E7o de envio de fatura por email
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @return [Object]
     def desativar_envio_fatura_email_using_post(id, opts = {})
@@ -1196,9 +1196,9 @@ module Pier
       return data
     end
 
-    # Desativa o servi\u00C3\u00A7o de envio de fatura por email
-    # Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Desativa o servi\u00E7o de envio de fatura por email
+    # Este recurso desativa o servi\u00E7o de envio de fatura por email
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
     def desativar_envio_fatura_email_using_post_with_http_info(id, opts = {})
@@ -1338,9 +1338,9 @@ module Pier
       return data, status_code, headers
     end
 
-    # Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
-    # Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para impress\u00C3\u00A3o de cart\u00C3\u00B5es em gr\u00C3\u00A1fica.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Realiza o envio para gera\u00E7\u00E3o de um novo cart\u00E3o na gr\u00E1fica
+    # Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para impress\u00E3o de cart\u00F5es em gr\u00E1fica.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param cartao_embossing_request cartaoEmbossingRequest
     # @param [Hash] opts the optional parameters
     # @return [CartaoEmbossingResponse]
@@ -1349,9 +1349,9 @@ module Pier
       return data
     end
 
-    # Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
-    # Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para impress\u00C3\u00A3o de cart\u00C3\u00B5es em gr\u00C3\u00A1fica.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Realiza o envio para gera\u00E7\u00E3o de um novo cart\u00E3o na gr\u00E1fica
+    # Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para impress\u00E3o de cart\u00F5es em gr\u00E1fica.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param cartao_embossing_request cartaoEmbossingRequest
     # @param [Hash] opts the optional parameters
     # @return [Array<(CartaoEmbossingResponse, Fixnum, Hash)>] CartaoEmbossingResponse data, response status code and response headers
@@ -1413,9 +1413,9 @@ module Pier
       return data, status_code, headers
     end
 
-    # Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
-    # Este recurso permite que seja gerado um cart\u00C3\u00A3o provis\u00C3\u00B3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Realiza a gera\u00E7\u00E3o de um cart\u00E3o provisorio
+    # Este recurso permite que seja gerado um cart\u00E3o provis\u00F3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @return [CartaoImpressaoProvisorioResponse]
     def gerar_cartao_provisorio_using_post(id, opts = {})
@@ -1423,9 +1423,9 @@ module Pier
       return data
     end
 
-    # Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
-    # Este recurso permite que seja gerado um cart\u00C3\u00A3o provis\u00C3\u00B3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Realiza a gera\u00E7\u00E3o de um cart\u00E3o provisorio
+    # Este recurso permite que seja gerado um cart\u00E3o provis\u00F3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(CartaoImpressaoProvisorioResponse, Fixnum, Hash)>] CartaoImpressaoProvisorioResponse data, response status code and response headers
     def gerar_cartao_provisorio_using_post_with_http_info(id, opts = {})
@@ -1478,24 +1478,24 @@ module Pier
       return data, status_code, headers
     end
 
-    # Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
-    # Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+    # Realiza a gera\u00E7\u00E3o de um novo cart\u00E3o para impress\u00E3o avulsa
+    # Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para realizar a impress\u00E3o de cart\u00F5es em Lojas, Quiosques, Escrit\u00F3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00F5es habilidade para o fazer, no local.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
+    # @param id_pessoa C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id).
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id_tipo_plastico C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id).
+    # @option opts [Integer] :id_tipo_plastico C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id).
     # @return [CartaoImpressaoResponse]
     def gerar_cartao_using_post(id, id_pessoa, opts = {})
       data, _status_code, _headers = gerar_cartao_using_post_with_http_info(id, id_pessoa, opts)
       return data
     end
 
-    # Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
-    # Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+    # Realiza a gera\u00E7\u00E3o de um novo cart\u00E3o para impress\u00E3o avulsa
+    # Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para realizar a impress\u00E3o de cart\u00F5es em Lojas, Quiosques, Escrit\u00F3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00F5es habilidade para o fazer, no local.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
+    # @param id_pessoa C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id).
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id_tipo_plastico C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id).
+    # @option opts [Integer] :id_tipo_plastico C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id).
     # @return [Array<(CartaoImpressaoResponse, Fixnum, Hash)>] CartaoImpressaoResponse data, response status code and response headers
     def gerar_cartao_using_post_with_http_info(id, id_pessoa, opts = {})
       if @api_client.config.debugging
@@ -1562,9 +1562,9 @@ module Pier
       return data, status_code, headers
     end
 
-    # Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
-    # Este recurso permite que seja gerado um Cart\u00C3\u00A3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es virtuaes atraves de um app.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Realiza a gera\u00E7\u00E3o de um cart\u00E3o virtual
+    # Este recurso permite que seja gerado um Cart\u00E3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id). Esta funcionalidade poder\u00E1 ser utilizada para realizar a cria\u00E7\u00E3o de cart\u00F5es virtuaes atraves de um app.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param data_validade Data de Validade
     # @param [Hash] opts the optional parameters
     # @return [CartaoImpressaoResponse]
@@ -1573,9 +1573,9 @@ module Pier
       return data
     end
 
-    # Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
-    # Este recurso permite que seja gerado um Cart\u00C3\u00A3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es virtuaes atraves de um app.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Realiza a gera\u00E7\u00E3o de um cart\u00E3o virtual
+    # Este recurso permite que seja gerado um Cart\u00E3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id). Esta funcionalidade poder\u00E1 ser utilizada para realizar a cria\u00E7\u00E3o de cart\u00F5es virtuaes atraves de um app.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param data_validade Data de Validade
     # @param [Hash] opts the optional parameters
     # @return [Array<(CartaoImpressaoResponse, Fixnum, Hash)>] CartaoImpressaoResponse data, response status code and response headers
@@ -1638,26 +1638,26 @@ module Pier
       return data, status_code, headers
     end
 
-    # Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
-    # Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
+    # Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [PageHistoricoEventosResponse]
     def listar_historico_alteracoes_limites_using_get(id, opts = {})
       data, _status_code, _headers = listar_historico_alteracoes_limites_using_get_with_http_info(id, opts)
       return data
     end
 
-    # Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
-    # Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
+    # Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(PageHistoricoEventosResponse, Fixnum, Hash)>] PageHistoricoEventosResponse data, response status code and response headers
     def listar_historico_alteracoes_limites_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
@@ -1730,26 +1730,26 @@ module Pier
       return data, status_code, headers
     end
 
-    # Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
-    # Permite listar todos os registros de entrada e sa\u00C3\u00ADda da Conta em arquivos de integra\u00C3\u00A7\u00C3\u00A3o com empresas de assessorias de cobran\u00C3\u00A7a a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta).
+    # Lista o hist\u00F3rico de entradas/sa\u00EDdas de assessorias de cobran\u00E7a
+    # Permite listar todos os registros de entrada e sa\u00EDda da Conta em arquivos de integra\u00E7\u00E3o com empresas de assessorias de cobran\u00E7a a partir do c\u00F3digo de identifica\u00E7\u00E3o da conta (idConta).
     # @param id Id Conta
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [PageHistoricoAssessoriaResponse]
     def listar_historico_assessoria_using_get(id, opts = {})
       data, _status_code, _headers = listar_historico_assessoria_using_get_with_http_info(id, opts)
       return data
     end
 
-    # Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
-    # Permite listar todos os registros de entrada e sa\u00C3\u00ADda da Conta em arquivos de integra\u00C3\u00A7\u00C3\u00A3o com empresas de assessorias de cobran\u00C3\u00A7a a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta).
+    # Lista o hist\u00F3rico de entradas/sa\u00EDdas de assessorias de cobran\u00E7a
+    # Permite listar todos os registros de entrada e sa\u00EDda da Conta em arquivos de integra\u00E7\u00E3o com empresas de assessorias de cobran\u00E7a a partir do c\u00F3digo de identifica\u00E7\u00E3o da conta (idConta).
     # @param id Id Conta
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(PageHistoricoAssessoriaResponse, Fixnum, Hash)>] PageHistoricoAssessoriaResponse data, response status code and response headers
     def listar_historico_assessoria_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
@@ -1823,12 +1823,12 @@ module Pier
     end
 
     # Lista o historico de atrasos das faturas
-    # Este recurso lista o hist\u00C3\u00B3rico do pagamento de faturas em atraso
+    # Este recurso lista o hist\u00F3rico do pagamento de faturas em atraso
     # @param id Id Conta
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [PageHistoricoAtrasoFaturaResponse]
     def listar_historico_atrasos_faturas_using_get(id, opts = {})
       data, _status_code, _headers = listar_historico_atrasos_faturas_using_get_with_http_info(id, opts)
@@ -1836,12 +1836,12 @@ module Pier
     end
 
     # Lista o historico de atrasos das faturas
-    # Este recurso lista o hist\u00C3\u00B3rico do pagamento de faturas em atraso
+    # Este recurso lista o hist\u00F3rico do pagamento de faturas em atraso
     # @param id Id Conta
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(PageHistoricoAtrasoFaturaResponse, Fixnum, Hash)>] PageHistoricoAtrasoFaturaResponse data, response status code and response headers
     def listar_historico_atrasos_faturas_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
@@ -1914,30 +1914,30 @@ module Pier
       return data, status_code, headers
     end
 
-    # Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
-    # Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da Conta.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
+    # Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [String] :data_inicio Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida).
-    # @option opts [String] :data_fim Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida).
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [String] :data_inicio Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida).
+    # @option opts [String] :data_fim Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida).
     # @return [PageTransacaoNaoProcessadaResponse]
     def listar_nao_processadas_using_get(id, opts = {})
       data, _status_code, _headers = listar_nao_processadas_using_get_with_http_info(id, opts)
       return data
     end
 
-    # Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
-    # Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da Conta.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
+    # Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [String] :data_inicio Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida).
-    # @option opts [String] :data_fim Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida).
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [String] :data_inicio Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida).
+    # @option opts [String] :data_fim Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida).
     # @return [Array<(PageTransacaoNaoProcessadaResponse, Fixnum, Hash)>] PageTransacaoNaoProcessadaResponse data, response status code and response headers
     def listar_nao_processadas_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
@@ -2024,32 +2024,32 @@ module Pier
       return data, status_code, headers
     end
 
-    # Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
-    # Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es processadas da Conta.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Lista as transa\u00E7\u00F5es processadas da conta
+    # Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @option opts [String] :data_vencimento Data de vencimento do extrato no formato yyyy-MM-dd.
-    # @option opts [String] :data_inicio Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado).
-    # @option opts [String] :data_fim Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado).
+    # @option opts [String] :data_inicio Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado).
+    # @option opts [String] :data_fim Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado).
     # @return [PageTransacoesCorrentesResponse]
     def listar_processadas_using_get(id, opts = {})
       data, _status_code, _headers = listar_processadas_using_get_with_http_info(id, opts)
       return data
     end
 
-    # Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
-    # Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es processadas da Conta.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Lista as transa\u00E7\u00F5es processadas da conta
+    # Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @option opts [String] :data_vencimento Data de vencimento do extrato no formato yyyy-MM-dd.
-    # @option opts [String] :data_inicio Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado).
-    # @option opts [String] :data_fim Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado).
+    # @option opts [String] :data_inicio Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado).
+    # @option opts [String] :data_fim Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado).
     # @return [Array<(PageTransacoesCorrentesResponse, Fixnum, Hash)>] PageTransacoesCorrentesResponse data, response status code and response headers
     def listar_processadas_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
@@ -2146,43 +2146,43 @@ module Pier
     # Lista contas existentes na base de dados do Emissor
     # Este recurso permite listar contas existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
-    # @option opts [Integer] :id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
-    # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
-    # @option opts [Integer] :id_status_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status da conta.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_produto C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id).
+    # @option opts [Integer] :id_origem_comercial C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta.
+    # @option opts [Integer] :id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id).
+    # @option opts [Integer] :id_status_conta C\u00F3digo de Identifica\u00E7\u00E3o do status da conta.
     # @option opts [Integer] :dia_vencimento Apresenta o dia de vencimento.
     # @option opts [Integer] :melhor_dia_compra Apresenta o melhor dia de compra.
-    # @option opts [String] :data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
-    # @option opts [String] :data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-    # @option opts [String] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+    # @option opts [String] :data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela.
+    # @option opts [String] :data_cadastro Apresenta a data em que o cart\u00E3o foi gerado.
+    # @option opts [String] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.
     # @return [PageContaResponse]
-    def listar_using_get16(opts = {})
-      data, _status_code, _headers = listar_using_get16_with_http_info(opts)
+    def listar_using_get17(opts = {})
+      data, _status_code, _headers = listar_using_get17_with_http_info(opts)
       return data
     end
 
     # Lista contas existentes na base de dados do Emissor
     # Este recurso permite listar contas existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
-    # @option opts [Integer] :id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
-    # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
-    # @option opts [Integer] :id_status_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status da conta.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_produto C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id).
+    # @option opts [Integer] :id_origem_comercial C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta.
+    # @option opts [Integer] :id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id).
+    # @option opts [Integer] :id_status_conta C\u00F3digo de Identifica\u00E7\u00E3o do status da conta.
     # @option opts [Integer] :dia_vencimento Apresenta o dia de vencimento.
     # @option opts [Integer] :melhor_dia_compra Apresenta o melhor dia de compra.
-    # @option opts [String] :data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
-    # @option opts [String] :data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-    # @option opts [String] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+    # @option opts [String] :data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela.
+    # @option opts [String] :data_cadastro Apresenta a data em que o cart\u00E3o foi gerado.
+    # @option opts [String] :data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.
     # @return [Array<(PageContaResponse, Fixnum, Hash)>] PageContaResponse data, response status code and response headers
-    def listar_using_get16_with_http_info(opts = {})
+    def listar_using_get17_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get16 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get17 ..."
       end
       
       
@@ -2301,50 +2301,50 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageContaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#listar_using_get16\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#listar_using_get17\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Lista as transfer\u00C3\u00AAncias realizadas pela conta
-    # Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Lista as transfer\u00EAncias realizadas pela conta
+    # Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_transferencia C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).
-    # @option opts [Integer] :id_conta_origem C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id).
-    # @option opts [Integer] :id_conta_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_transferencia C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).
+    # @option opts [Integer] :id_conta_origem C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id).
+    # @option opts [Integer] :id_conta_destino C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id).
     # @option opts [Float] :valor_transferencia Valor estabelecido para ser transferido.
-    # @option opts [String] :data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
+    # @option opts [String] :data_transferencia Data estabelecida para ocorrer a transfer\u00EAncia.
     # @return [PageTransferenciaResponse]
-    def listar_using_get48(id, opts = {})
-      data, _status_code, _headers = listar_using_get48_with_http_info(id, opts)
+    def listar_using_get50(id, opts = {})
+      data, _status_code, _headers = listar_using_get50_with_http_info(id, opts)
       return data
     end
 
-    # Lista as transfer\u00C3\u00AAncias realizadas pela conta
-    # Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Lista as transfer\u00EAncias realizadas pela conta
+    # Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_transferencia C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).
-    # @option opts [Integer] :id_conta_origem C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id).
-    # @option opts [Integer] :id_conta_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_transferencia C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).
+    # @option opts [Integer] :id_conta_origem C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id).
+    # @option opts [Integer] :id_conta_destino C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id).
     # @option opts [Float] :valor_transferencia Valor estabelecido para ser transferido.
-    # @option opts [String] :data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
+    # @option opts [String] :data_transferencia Data estabelecida para ocorrer a transfer\u00EAncia.
     # @return [Array<(PageTransferenciaResponse, Fixnum, Hash)>] PageTransferenciaResponse data, response status code and response headers
-    def listar_using_get48_with_http_info(id, opts = {})
+    def listar_using_get50_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get48 ..."
+        @api_client.config.logger.debug "Calling API: ContaApi.listar_using_get50 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.listar_using_get48" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling ContaApi.listar_using_get50" if id.nil?
       
       
       
@@ -2438,13 +2438,13 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTransferenciaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ContaApi#listar_using_get48\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ContaApi#listar_using_get50\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
-    # Este recurso permite reativar contas. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+    # Realiza a reativa\u00E7\u00E3o de contas.
+    # Este recurso permite reativar contas. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
     # @param id Id Conta
     # @param [Hash] opts the optional parameters
     # @return [Object]
@@ -2453,8 +2453,8 @@ module Pier
       return data
     end
 
-    # Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
-    # Este recurso permite reativar contas. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+    # Realiza a reativa\u00E7\u00E3o de contas.
+    # Este recurso permite reativar contas. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
     # @param id Id Conta
     # @param [Hash] opts the optional parameters
     # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
@@ -2508,9 +2508,9 @@ module Pier
       return data, status_code, headers
     end
 
-    # Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
-    # Esta opera\u00C3\u00A7\u00C3\u00A3o pode ser utilizada para simular opera\u00C3\u00A7\u00C3\u00B5es financeiras a partir de informa\u00C3\u00A7\u00C3\u00B5es fornecidas pelo usu\u00C3\u00A1rio. Os c\u00C3\u00A1lculos gerados devem ser considerados apenas como refer\u00C3\u00AAncia para as situa\u00C3\u00A7\u00C3\u00B5es reais e n\u00C3\u00A3o como valores oficiais.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Simula valores de presta\u00E7\u00F5es de empr\u00E9stimos/financiamentos
+    # Esta opera\u00E7\u00E3o pode ser utilizada para simular opera\u00E7\u00F5es financeiras a partir de informa\u00E7\u00F5es fornecidas pelo usu\u00E1rio. Os c\u00E1lculos gerados devem ser considerados apenas como refer\u00EAncia para as situa\u00E7\u00F5es reais e n\u00E3o como valores oficiais.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param request request
     # @param [Hash] opts the optional parameters
     # @return [EmprestimoPessoalResponse]
@@ -2519,9 +2519,9 @@ module Pier
       return data
     end
 
-    # Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
-    # Esta opera\u00C3\u00A7\u00C3\u00A3o pode ser utilizada para simular opera\u00C3\u00A7\u00C3\u00B5es financeiras a partir de informa\u00C3\u00A7\u00C3\u00B5es fornecidas pelo usu\u00C3\u00A1rio. Os c\u00C3\u00A1lculos gerados devem ser considerados apenas como refer\u00C3\u00AAncia para as situa\u00C3\u00A7\u00C3\u00B5es reais e n\u00C3\u00A3o como valores oficiais.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Simula valores de presta\u00E7\u00F5es de empr\u00E9stimos/financiamentos
+    # Esta opera\u00E7\u00E3o pode ser utilizada para simular opera\u00E7\u00F5es financeiras a partir de informa\u00E7\u00F5es fornecidas pelo usu\u00E1rio. Os c\u00E1lculos gerados devem ser considerados apenas como refer\u00EAncia para as situa\u00E7\u00F5es reais e n\u00E3o como valores oficiais.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param request request
     # @param [Hash] opts the optional parameters
     # @return [Array<(EmprestimoPessoalResponse, Fixnum, Hash)>] EmprestimoPessoalResponse data, response status code and response headers
@@ -2584,12 +2584,12 @@ module Pier
     end
 
     # Permite listar uma linha do tempo com os eventos da conta
-    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
+    # Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente.
     # @param id Id Conta
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [PageTransacaoResponse]
     def transacoes_using_get(id, opts = {})
       data, _status_code, _headers = transacoes_using_get_with_http_info(id, opts)
@@ -2597,12 +2597,12 @@ module Pier
     end
 
     # Permite listar uma linha do tempo com os eventos da conta
-    # Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
+    # Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente.
     # @param id Id Conta
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(PageTransacaoResponse, Fixnum, Hash)>] PageTransacaoResponse data, response status code and response headers
     def transacoes_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
@@ -2675,11 +2675,11 @@ module Pier
       return data, status_code, headers
     end
 
-    # Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
-    # Este m\u00C3\u00A9todo permite que um portador de um cart\u00C3\u00A3o possa realizar auma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).
-    # @param id_conta_destino C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).
-    # @param valor_transferencia Valor da Transfer\u00C3\u00AAncia.
+    # Realiza uma transfer\u00EAncia de Cr\u00E9dito para outro cliente do mesmo Emissor
+    # Este m\u00E9todo permite que um portador de um cart\u00E3o possa realizar auma transfer\u00EAncia de cr\u00E9dito para outro cliente do mesmo emissor.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta do cliente portador do cart\u00E3o que ser\u00E1 debitado (id).
+    # @param id_conta_destino C\u00F3digo de Identifica\u00E7\u00E3o do cliente portador do cart\u00E3o que ser\u00E1 creditado (id).
+    # @param valor_transferencia Valor da Transfer\u00EAncia.
     # @param [Hash] opts the optional parameters
     # @return [TransferenciaDetalheResponse]
     def transferir_using_post1(id, id_conta_destino, valor_transferencia, opts = {})
@@ -2687,11 +2687,11 @@ module Pier
       return data
     end
 
-    # Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
-    # Este m\u00C3\u00A9todo permite que um portador de um cart\u00C3\u00A3o possa realizar auma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).
-    # @param id_conta_destino C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).
-    # @param valor_transferencia Valor da Transfer\u00C3\u00AAncia.
+    # Realiza uma transfer\u00EAncia de Cr\u00E9dito para outro cliente do mesmo Emissor
+    # Este m\u00E9todo permite que um portador de um cart\u00E3o possa realizar auma transfer\u00EAncia de cr\u00E9dito para outro cliente do mesmo emissor.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta do cliente portador do cart\u00E3o que ser\u00E1 debitado (id).
+    # @param id_conta_destino C\u00F3digo de Identifica\u00E7\u00E3o do cliente portador do cart\u00E3o que ser\u00E1 creditado (id).
+    # @param valor_transferencia Valor da Transfer\u00EAncia.
     # @param [Hash] opts the optional parameters
     # @return [Array<(TransferenciaDetalheResponse, Fixnum, Hash)>] TransferenciaDetalheResponse data, response status code and response headers
     def transferir_using_post1_with_http_info(id, id_conta_destino, valor_transferencia, opts = {})

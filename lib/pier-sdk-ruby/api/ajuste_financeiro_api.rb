@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -24,12 +24,12 @@ module Pier
       @api_client = api_client
     end
 
-    # Lan\u00C3\u00A7a um ajuste para a conta informada
+    # Lan\u00E7a um ajuste para a conta informada
     # Este recurso insere um ajuste para a conta do id informado
-    # @param id_tipo_ajuste C\u00C3\u00B3digo identificador do tipo de ajuste.
+    # @param id_tipo_ajuste C\u00F3digo identificador do tipo de ajuste.
     # @param data_ajuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.
     # @param valor_ajuste Valor do ajuste
-    # @param id_conta C\u00C3\u00B3digo identificador da conta.
+    # @param id_conta C\u00F3digo identificador da conta.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :identificador_externo Codigo Hexadecimal
     # @return [AjusteFinanceiroResponse]
@@ -38,12 +38,12 @@ module Pier
       return data
     end
 
-    # Lan\u00C3\u00A7a um ajuste para a conta informada
+    # Lan\u00E7a um ajuste para a conta informada
     # Este recurso insere um ajuste para a conta do id informado
-    # @param id_tipo_ajuste C\u00C3\u00B3digo identificador do tipo de ajuste.
+    # @param id_tipo_ajuste C\u00F3digo identificador do tipo de ajuste.
     # @param data_ajuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.
     # @param valor_ajuste Valor do ajuste
-    # @param id_conta C\u00C3\u00B3digo identificador da conta.
+    # @param id_conta C\u00F3digo identificador da conta.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :identificador_externo Codigo Hexadecimal
     # @return [Array<(AjusteFinanceiroResponse, Fixnum, Hash)>] AjusteFinanceiroResponse data, response status code and response headers
@@ -133,28 +133,28 @@ module Pier
     end
 
     # Apresenta dados de um determinado ajuste financeiro
-    # Este m\u00C3\u00A9todo permite consultar dados de um determinado ajuste a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id).
+    # Este m\u00E9todo permite consultar dados de um determinado ajuste a partir de seu codigo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id).
     # @param [Hash] opts the optional parameters
     # @return [AjusteFinanceiroResponse]
-    def consultar_using_get1(id, opts = {})
-      data, _status_code, _headers = consultar_using_get1_with_http_info(id, opts)
+    def consultar_using_get2(id, opts = {})
+      data, _status_code, _headers = consultar_using_get2_with_http_info(id, opts)
       return data
     end
 
     # Apresenta dados de um determinado ajuste financeiro
-    # Este m\u00C3\u00A9todo permite consultar dados de um determinado ajuste a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id).
+    # Este m\u00E9todo permite consultar dados de um determinado ajuste a partir de seu codigo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(AjusteFinanceiroResponse, Fixnum, Hash)>] AjusteFinanceiroResponse data, response status code and response headers
-    def consultar_using_get1_with_http_info(id, opts = {})
+    def consultar_using_get2_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: AjusteFinanceiroApi.consultar_using_get1 ..."
+        @api_client.config.logger.debug "Calling API: AjusteFinanceiroApi.consultar_using_get2 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling AjusteFinanceiroApi.consultar_using_get1" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling AjusteFinanceiroApi.consultar_using_get2" if id.nil?
       
       
       
@@ -192,7 +192,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'AjusteFinanceiroResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AjusteFinanceiroApi#consultar_using_get1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: AjusteFinanceiroApi#consultar_using_get2\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -200,35 +200,35 @@ module Pier
     # Lista ajustes existentes na base de dados do Emissor
     # Este recurso permite listar ajustes existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_tipo_ajuste C\u00C3\u00B3digo identificador do tipo de ajuste.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_tipo_ajuste C\u00F3digo identificador do tipo de ajuste.
     # @option opts [String] :data_ajuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.
     # @option opts [Float] :valor_ajuste Valor do ajuste
     # @option opts [String] :identificador_externo Codigo Hexadecimal
-    # @option opts [Integer] :id_conta C\u00C3\u00B3digo identificador da conta.
+    # @option opts [Integer] :id_conta C\u00F3digo identificador da conta.
     # @return [PageAjusteResponse]
-    def listar_using_get1(opts = {})
-      data, _status_code, _headers = listar_using_get1_with_http_info(opts)
+    def listar_using_get2(opts = {})
+      data, _status_code, _headers = listar_using_get2_with_http_info(opts)
       return data
     end
 
     # Lista ajustes existentes na base de dados do Emissor
     # Este recurso permite listar ajustes existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_tipo_ajuste C\u00C3\u00B3digo identificador do tipo de ajuste.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_tipo_ajuste C\u00F3digo identificador do tipo de ajuste.
     # @option opts [String] :data_ajuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.
     # @option opts [Float] :valor_ajuste Valor do ajuste
     # @option opts [String] :identificador_externo Codigo Hexadecimal
-    # @option opts [Integer] :id_conta C\u00C3\u00B3digo identificador da conta.
+    # @option opts [Integer] :id_conta C\u00F3digo identificador da conta.
     # @return [Array<(PageAjusteResponse, Fixnum, Hash)>] PageAjusteResponse data, response status code and response headers
-    def listar_using_get1_with_http_info(opts = {})
+    def listar_using_get2_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: AjusteFinanceiroApi.listar_using_get1 ..."
+        @api_client.config.logger.debug "Calling API: AjusteFinanceiroApi.listar_using_get2 ..."
       end
       
       
@@ -319,7 +319,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageAjusteResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AjusteFinanceiroApi#listar_using_get1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: AjusteFinanceiroApi#listar_using_get2\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

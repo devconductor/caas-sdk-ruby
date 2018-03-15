@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -25,28 +25,28 @@ module Pier
     end
 
     # Consultar um aviso viagem de acordo com o id passado
-    # Este m\u00C3\u00A9todo permite que seja consultado um aviso viagen existente na base do emissor.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).
+    # Este m\u00E9todo permite que seja consultado um aviso viagen existente na base do emissor.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).
     # @param [Hash] opts the optional parameters
     # @return [AvisoViagemResponse]
-    def consultar_using_get4(id, opts = {})
-      data, _status_code, _headers = consultar_using_get4_with_http_info(id, opts)
+    def consultar_using_get5(id, opts = {})
+      data, _status_code, _headers = consultar_using_get5_with_http_info(id, opts)
       return data
     end
 
     # Consultar um aviso viagem de acordo com o id passado
-    # Este m\u00C3\u00A9todo permite que seja consultado um aviso viagen existente na base do emissor.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).
+    # Este m\u00E9todo permite que seja consultado um aviso viagen existente na base do emissor.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(AvisoViagemResponse, Fixnum, Hash)>] AvisoViagemResponse data, response status code and response headers
-    def consultar_using_get4_with_http_info(id, opts = {})
+    def consultar_using_get5_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: AvisoViagemApi.consultar_using_get4 ..."
+        @api_client.config.logger.debug "Calling API: AvisoViagemApi.consultar_using_get5 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling AvisoViagemApi.consultar_using_get4" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling AvisoViagemApi.consultar_using_get5" if id.nil?
       
       
       
@@ -84,14 +84,14 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'AvisoViagemResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AvisoViagemApi#consultar_using_get4\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: AvisoViagemApi#consultar_using_get5\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Desabilitar um aviso viagem de acordo com o id passado
-    # Este m\u00C3\u00A9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).
+    # Este m\u00E9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).
     # @param [Hash] opts the optional parameters
     # @return [AvisoViagemResponse]
     def desabilitar_using_post(id, opts = {})
@@ -100,8 +100,8 @@ module Pier
     end
 
     # Desabilitar um aviso viagem de acordo com o id passado
-    # Este m\u00C3\u00A9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).
+    # Este m\u00E9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(AvisoViagemResponse, Fixnum, Hash)>] AvisoViagemResponse data, response status code and response headers
     def desabilitar_using_post_with_http_info(id, opts = {})
@@ -155,8 +155,8 @@ module Pier
     end
 
     # Habilitar um aviso viagem de acordo com o id passado
-    # Este m\u00C3\u00A9todo permite que seja habilitado um aviso viagen existente na base do emissor.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).
+    # Este m\u00E9todo permite que seja habilitado um aviso viagen existente na base do emissor.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).
     # @param [Hash] opts the optional parameters
     # @return [AvisoViagemResponse]
     def habilitar_using_post(id, opts = {})
@@ -165,8 +165,8 @@ module Pier
     end
 
     # Habilitar um aviso viagem de acordo com o id passado
-    # Este m\u00C3\u00A9todo permite que seja habilitado um aviso viagen existente na base do emissor.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).
+    # Este m\u00E9todo permite que seja habilitado um aviso viagen existente na base do emissor.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(AvisoViagemResponse, Fixnum, Hash)>] AvisoViagemResponse data, response status code and response headers
     def habilitar_using_post_with_http_info(id, opts = {})
@@ -220,37 +220,37 @@ module Pier
     end
 
     # Lista os avisos viagens gerados pelo Emissor
-    # Este m\u00C3\u00A9todo permite que sejam listados os avisos viagens existentes na base do emissor.
+    # Este m\u00E9todo permite que sejam listados os avisos viagens existentes na base do emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_cartao C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id)
-    # @option opts [String] :codigo_pais Codigo identificador do pa\u00C3\u00ADs na base (id)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_cartao C\u00F3digo Identificador do cart\u00E3o na base (id)
+    # @option opts [String] :codigo_pais Codigo identificador do pa\u00EDs na base (id)
     # @option opts [String] :data_inicio Data inicio do aviso viagem
     # @option opts [String] :data_fim Data fim do aviso viagem
-    # @option opts [Integer] :flag_ativo Identifica se o aviso viagem esta ativo ou n\u00C3\u00A3o
+    # @option opts [Integer] :flag_ativo Identifica se o aviso viagem esta ativo ou n\u00E3o
     # @return [PageAvisoViagemResponse]
-    def listar_using_get6(opts = {})
-      data, _status_code, _headers = listar_using_get6_with_http_info(opts)
+    def listar_using_get7(opts = {})
+      data, _status_code, _headers = listar_using_get7_with_http_info(opts)
       return data
     end
 
     # Lista os avisos viagens gerados pelo Emissor
-    # Este m\u00C3\u00A9todo permite que sejam listados os avisos viagens existentes na base do emissor.
+    # Este m\u00E9todo permite que sejam listados os avisos viagens existentes na base do emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_cartao C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id)
-    # @option opts [String] :codigo_pais Codigo identificador do pa\u00C3\u00ADs na base (id)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_cartao C\u00F3digo Identificador do cart\u00E3o na base (id)
+    # @option opts [String] :codigo_pais Codigo identificador do pa\u00EDs na base (id)
     # @option opts [String] :data_inicio Data inicio do aviso viagem
     # @option opts [String] :data_fim Data fim do aviso viagem
-    # @option opts [Integer] :flag_ativo Identifica se o aviso viagem esta ativo ou n\u00C3\u00A3o
+    # @option opts [Integer] :flag_ativo Identifica se o aviso viagem esta ativo ou n\u00E3o
     # @return [Array<(PageAvisoViagemResponse, Fixnum, Hash)>] PageAvisoViagemResponse data, response status code and response headers
-    def listar_using_get6_with_http_info(opts = {})
+    def listar_using_get7_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: AvisoViagemApi.listar_using_get6 ..."
+        @api_client.config.logger.debug "Calling API: AvisoViagemApi.listar_using_get7 ..."
       end
       
       
@@ -341,15 +341,15 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageAvisoViagemResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AvisoViagemApi#listar_using_get6\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: AvisoViagemApi#listar_using_get7\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Realiza o cadastro de um novo Aviso Viagem
-    # Este m\u00C3\u00A9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
-    # @param id_cartao C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id)
-    # @param codigo_pais Codigo identificador do pa\u00C3\u00ADs na base (id)
+    # Este m\u00E9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
+    # @param id_cartao C\u00F3digo Identificador do cart\u00E3o na base (id)
+    # @param codigo_pais Codigo identificador do pa\u00EDs na base (id)
     # @param data_inicio Data inicio do aviso viagem
     # @param data_fim Data fim do aviso viagem
     # @param [Hash] opts the optional parameters
@@ -360,9 +360,9 @@ module Pier
     end
 
     # Realiza o cadastro de um novo Aviso Viagem
-    # Este m\u00C3\u00A9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
-    # @param id_cartao C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id)
-    # @param codigo_pais Codigo identificador do pa\u00C3\u00ADs na base (id)
+    # Este m\u00E9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
+    # @param id_cartao C\u00F3digo Identificador do cart\u00E3o na base (id)
+    # @param codigo_pais Codigo identificador do pa\u00EDs na base (id)
     # @param data_inicio Data inicio do aviso viagem
     # @param data_fim Data fim do aviso viagem
     # @param [Hash] opts the optional parameters

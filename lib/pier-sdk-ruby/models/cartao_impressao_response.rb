@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,60 +17,60 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto Cart\u00C3\u00A3o para Impresso
+  # Objeto Cart\u00E3o para Impresso
   class CartaoImpressaoResponse
-    # Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence.
+    # Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.
     attr_accessor :id_conta
 
-    # Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) portadora do cart\u00C3\u00A3o gerado.
+    # Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.
     attr_accessor :id_pessoa
 
-    # Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) que foi gerado.
+    # Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.
     attr_accessor :id_cartao
 
-    # Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Bandeira (id) a qual o Cart\u00C3\u00A3o pertence, quando bandeirado.
+    # Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado.
     attr_accessor :id_bandeira
 
-    # Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id) atribu\u00C3\u00ADdo ao Cart\u00C3\u00A3o.
+    # Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o.
     attr_accessor :id_tipo_cartao
 
-    # Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
+    # Apresenta o n\u00FAmero do cart\u00E3o.
     attr_accessor :numero_cartao
 
-    # Apresenta o nome do Portador do Cart\u00C3\u00A3o.
+    # Apresenta o nome do Portador do Cart\u00E3o.
     attr_accessor :nome_plastico
 
-    # Apresenta o n\u00C3\u00BAmero do CVV a ser impresso no Cart\u00C3\u00A3o
+    # Apresenta o n\u00FAmero do CVV a ser impresso no Cart\u00E3o
     attr_accessor :cvv2
 
-    # Apresenta a data de emiss\u00C3\u00A3o do Cart\u00C3\u00A3o.
+    # Apresenta a data de emiss\u00E3o do Cart\u00E3o.
     attr_accessor :data_geracao
 
-    # Apresenta a data de Validade do Cart\u00C3\u00A3o.
+    # Apresenta a data de Validade do Cart\u00E3o.
     attr_accessor :data_validade
 
-    # Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00C3\u00A3o pertence.
+    # Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00E3o pertence.
     attr_accessor :nome_origem_comercial
 
-    # Apresenta o nome da Empresa (Pessoa Jur\u00C3\u00ADdica) titular do Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+    # Apresenta o nome da Empresa (Pessoa Jur\u00EDdica) titular do Cart\u00E3o, quando aplic\u00E1vel.
     attr_accessor :nome_empresa
 
-    # Apresenta o n\u00C3\u00BAmero da Ag\u00C3\u00AAncia a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+    # Apresenta o n\u00FAmero da Ag\u00EAncia a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.
     attr_accessor :numero_agencia
 
-    # Apresenta o n\u00C3\u00BAmero da Conta Corrente a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+    # Apresenta o n\u00FAmero da Conta Corrente a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.
     attr_accessor :numero_conta_corente
 
-    # Apresenta o nome da Pessoa F\u00C3\u00ADsica ou Jur\u00C3\u00ADdica que contratou servi\u00C3\u00A7os de benef\u00C3\u00ADcio para o portador do cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+    # Apresenta o nome da Pessoa F\u00EDsica ou Jur\u00EDdica que contratou servi\u00E7os de benef\u00EDcio para o portador do cart\u00E3o, quando aplic\u00E1vel.
     attr_accessor :nome_empresa_beneficio
 
-    # Apresenta o CPF do Portador do Cart\u00C3\u00A3o.
+    # Apresenta o CPF do Portador do Cart\u00E3o.
     attr_accessor :cpf
 
-    # Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
+    # Apresenta o tipo do Portador do cart\u00E3o, sendo: ('T': Titular, 'A': Adicional).
     attr_accessor :tipo_portador
 
-    # Apresenta o nome da Pessoa F\u00C3\u00ADsica ou Jur\u00C3\u00ADdica a ser impresso no cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+    # Apresenta o nome da Pessoa F\u00EDsica ou Jur\u00EDdica a ser impresso no cart\u00E3o, quando aplic\u00E1vel.
     attr_accessor :nome_empregador
 
     # Apresenta os dados da Trilha1, seguindo as regras de trilha do emissor.
@@ -85,10 +85,10 @@ module Pier
     # Apresenta os dados da TrilhaCVV02, seguindo as regras de trilha do emissor.
     attr_accessor :trilha_cvv2
 
-    # Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual 
+    # Apresenta o status que informa se o cart\u00E3o \u00E9 virtual 
     attr_accessor :flag_virtual
 
-    # Apresenta o numero da hash do cart\u00C3\u00A3o 
+    # Apresenta o numero da hash do cart\u00E3o 
     attr_accessor :numero_cartao_hash
 
     # Attribute mapping from ruby-style variable name to JSON key.

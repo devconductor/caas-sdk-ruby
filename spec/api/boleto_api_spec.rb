@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -39,7 +39,7 @@ describe 'BoletoApi' do
   # unit tests for registrar_boleto_using_post
   # Registra uma cobranca na entidade banco relacionada a cobranca informado.
   # Este recurso registra uma cobranca emitido.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Cobranca (id)
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o da Cobranca (id)
   # @param [Hash] opts the optional parameters
   # @return [BoletoResponse]
   describe 'registrar_boleto_using_post test' do

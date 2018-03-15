@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,27 +17,27 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto de resposta para a valida\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
+  # Objeto de resposta para a valida\u00E7\u00E3o de cart\u00E3o
   class ValidaCartaoResponse
-    # Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
+    # Descri\u00E7\u00E3o do status do cart\u00E3o
     attr_accessor :id_status_cartao
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
+    # Descri\u00E7\u00E3o do status do cart\u00E3o
     attr_accessor :status_cartao
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
+    # Descri\u00E7\u00E3o do status da conta
     attr_accessor :id_status_conta
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
+    # Descri\u00E7\u00E3o do status da conta
     attr_accessor :status_conta
 
-    # C\u00C3\u00B3digo identificador da conta.
+    # C\u00F3digo identificador da conta.
     attr_accessor :id_conta
 
-    # N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+    # N\u00FAmero da ag\u00EAncia.
     attr_accessor :numero_agencia
 
-    # N\u00C3\u00BAmero da conta corrente.
+    # N\u00FAmero da conta corrente.
     attr_accessor :numero_conta_corrente
 
     # Criptograma de resposta

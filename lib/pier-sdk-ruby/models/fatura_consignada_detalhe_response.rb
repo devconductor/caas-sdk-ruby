@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,28 +19,28 @@ require 'date'
 module Pier
   # Fatura Consignada detalhe
   class FaturaConsignadaDetalheResponse
-    # C\u00C3\u00B3digo identificador da fatura.
+    # C\u00F3digo identificador da fatura.
     attr_accessor :id
 
-    # C\u00C3\u00B3digo identificador da conta (id).
+    # C\u00F3digo identificador da conta (id).
     attr_accessor :id_conta
 
-    # Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
+    # Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui.
     attr_accessor :limite_global
 
-    # C\u00C3\u00B3digo identificador da conta a qual a fatura se refere.
+    # C\u00F3digo identificador da conta a qual a fatura se refere.
     attr_accessor :flag_emite_fatura
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
+    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais.
     attr_accessor :limite_compra
 
     # Data de vencimento da fatura.
     attr_accessor :data_vencimento_fatura
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
+    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es de compras parceladas.
     attr_accessor :limite_parcelado
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.
+    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.
     attr_accessor :limite_parcelas
 
     # Valor para pagamento total da fatura.
@@ -49,115 +49,115 @@ module Pier
     # Valor total da fatura anterior.
     attr_accessor :valor_fatura_anterior
 
-    # Valor m\u00C3\u00ADnimo para pagamento da fatura.
+    # Valor m\u00EDnimo para pagamento da fatura.
     attr_accessor :valor_pagamento_minimo
 
-    # Valor da fatura pago atrav\u00C3\u00A9s de desconto em folha.
+    # Valor da fatura pago atrav\u00E9s de desconto em folha.
     attr_accessor :valor_pagamento_consignado
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
+    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional.
     attr_accessor :limite_saque_global
 
-    # Valor complementar para considerar o pagamento m\u00C3\u00ADnimo da fatura.
+    # Valor complementar para considerar o pagamento m\u00EDnimo da fatura.
     attr_accessor :valor_pagamento_complementar
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
+    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento.
     attr_accessor :limite_saque_periodo
 
-    # Valor total das compras nacionais lan\u00C3\u00A7adas na fatura.
+    # Valor total das compras nacionais lan\u00E7adas na fatura.
     attr_accessor :total_compras_nacionais
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos.
+    # Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00E9dito que ele poder\u00E1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00E1rio/vencimentos.
     attr_accessor :limite_consignado
 
-    # Valor total das compras internacionais lan\u00C3\u00A7adas na fatura.
+    # Valor total das compras internacionais lan\u00E7adas na fatura.
     attr_accessor :total_compras_internacionas
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais.
+    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Internacionais.
     attr_accessor :limite_internacional_compra
 
-    # Valor total dos saques nacionais lan\u00C3\u00A7ados na fatura.
+    # Valor total dos saques nacionais lan\u00E7ados na fatura.
     attr_accessor :total_saques_nacionais
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas.
+    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es Internacionais de Compras Parceladas.
     attr_accessor :limite_internacional_parcelado
 
-    # Valor total dos saques internacionais lan\u00C3\u00A7ados na fatura.
+    # Valor total dos saques internacionais lan\u00E7ados na fatura.
     attr_accessor :total_saques_internacionais
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
+    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
     attr_accessor :limite_internacional_parcelas
 
-    # Valor total dos d\u00C3\u00A9bitos nacionais lan\u00C3\u00A7ados na fatura.
+    # Valor total dos d\u00E9bitos nacionais lan\u00E7ados na fatura.
     attr_accessor :total_debitos_nacionais
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
+    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional.
     attr_accessor :limite_internacional_saque_global
 
-    # Valor total dos d\u00C3\u00A9bitos recorrentes lan\u00C3\u00A7ados na fatura.
+    # Valor total dos d\u00E9bitos recorrentes lan\u00E7ados na fatura.
     attr_accessor :total_debitos_recorrentes
 
-    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
+    # Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional dentro de cada ciclo de faturamento.
     attr_accessor :limite_internacional_saque_periodo
 
-    # Valor total dos d\u00C3\u00A9bitos internacionais lan\u00C3\u00A7ados na fatura.
+    # Valor total dos d\u00E9bitos internacionais lan\u00E7ados na fatura.
     attr_accessor :total_debitos_internacionais
 
-    # Apresenta o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es.
+    # Apresenta o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es.
     attr_accessor :saldo_disponivel_global
 
-    # Valor total dos d\u00C3\u00A9bitos diversos nacionais lan\u00C3\u00A7ados na fatura.
+    # Valor total dos d\u00E9bitos diversos nacionais lan\u00E7ados na fatura.
     attr_accessor :total_debitos_diversos_nacionais
 
-    # Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.
+    # Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de compra Nacional.
     attr_accessor :saldo_disponivel_compra
 
-    # Valor total dos d\u00C3\u00A9bitos diversos opcionais lan\u00C3\u00A7ados na fatura.
+    # Valor total dos d\u00E9bitos diversos opcionais lan\u00E7ados na fatura.
     attr_accessor :total_debitos_opcionais
 
-    # Quando utilizado pelo emissor a modalidade limiteParcelado, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.
+    # Quando utilizado pelo emissor a modalidade limiteParcelado, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de compra Nacional.
     attr_accessor :saldo_disponivel_parcelado
 
-    # Valor total dos pagamentos lan\u00C3\u00A7ados na fatura.
+    # Valor total dos pagamentos lan\u00E7ados na fatura.
     attr_accessor :total_pagamentos
 
-    # Quando utilizado pelo emissor a modalidade limiteParcelas, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.
+    # Quando utilizado pelo emissor a modalidade limiteParcelas, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.
     attr_accessor :saldo_disponivel_parcelas
 
-    # Valor total dos cr\u00C3\u00A9ditos nacionais lan\u00C3\u00A7ados na fatura.
+    # Valor total dos cr\u00E9ditos nacionais lan\u00E7ados na fatura.
     attr_accessor :total_creditos_nacionais
 
-    # Valor total dos ajustes lan\u00C3\u00A7ados na fatura.
+    # Valor total dos ajustes lan\u00E7ados na fatura.
     attr_accessor :total_ajustes
 
-    # Valor total das tarifas lan\u00C3\u00A7adas na fatura.
+    # Valor total das tarifas lan\u00E7adas na fatura.
     attr_accessor :total_tarifas
 
-    # Valor total da multa lan\u00C3\u00A7ada na fatura.
+    # Valor total da multa lan\u00E7ada na fatura.
     attr_accessor :total_multa
 
-    # Quando utilizado pelo emissor a modalidade limiteSaque, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
+    # Quando utilizado pelo emissor a modalidade limiteSaque, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Nacional.
     attr_accessor :saldo_disponivel_saque
 
-    # Valor total dos juros de mora lan\u00C3\u00A7ados na fatura.
+    # Valor total dos juros de mora lan\u00E7ados na fatura.
     attr_accessor :total_juros
 
-    # Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00C3\u00A1 o saldo atual de pontos que o portador possui.
+    # Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00E1 o saldo atual de pontos que o portador possui.
     attr_accessor :saldo_pontos_fidelidade
 
     # Valor percentual da taxa de juros rotativos.
     attr_accessor :taxa_rotativo
 
-    # Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Compra Internacional.
+    # Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Compra Internacional.
     attr_accessor :saldo_disponivel_compra_internacional
 
     # Valor percentual da taxa de saque.
     attr_accessor :taxa_saque
 
-    # Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
+    # Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Internacional.
     attr_accessor :saldo_disponivel_saque_internacional
 
-    # Valor m\u00C3\u00A1ximo percentual da taxa de encargos para o pr\u00C3\u00B3ximo per\u00C3\u00ADodo.
+    # Valor m\u00E1ximo percentual da taxa de encargos para o pr\u00F3ximo per\u00EDodo.
     attr_accessor :taxa_maxima_proximo_periodo
 
     # Apresenta a soma de todos os seguros cobrados na fatura do cliente.

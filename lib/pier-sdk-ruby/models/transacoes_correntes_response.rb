@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,88 +19,88 @@ require 'date'
 module Pier
   # Objeto transacoes correntes
   class TransacoesCorrentesResponse
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).
+    # C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).
     attr_accessor :id
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
+    # C\u00F3digo de Identifica\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o.
     attr_accessor :id_tipo_transacao
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o Abreviada da Transa\u00C3\u00A7\u00C3\u00A3o.
+    # Descri\u00E7\u00E3o Abreviada da Transa\u00E7\u00E3o.
     attr_accessor :descricao_abreviada
 
-    # Status de Processamento da Transa\u00C3\u00A7\u00C3\u00A3o.
+    # Status de Processamento da Transa\u00E7\u00E3o.
     attr_accessor :status_transacao
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Evento que originou a Transa\u00C3\u00A7\u00C3\u00A3o (id).
+    # C\u00F3digo de Identifica\u00E7\u00E3o do Evento que originou a Transa\u00E7\u00E3o (id).
     attr_accessor :id_evento
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do Evento que representa a Transa\u00C3\u00A7\u00C3\u00A3o.
+    # Descri\u00E7\u00E3o do Evento que representa a Transa\u00E7\u00E3o.
     attr_accessor :tipo_evento
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+    # C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).
     attr_accessor :id_conta
 
-    # N\u00C3\u00BAmero do Cart\u00C3\u00A3o em Formato 0000XXXXXXXX0000.
+    # N\u00FAmero do Cart\u00E3o em Formato 0000XXXXXXXX0000.
     attr_accessor :cartao_mascarado
 
-    # Nome completo do Portador do Cart\u00C3\u00A3o.
+    # Nome completo do Portador do Cart\u00E3o.
     attr_accessor :nome_portador
 
-    # Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada.
+    # Data em que a Transa\u00E7\u00E3o foi realizada.
     attr_accessor :data_transacao
 
-    # Data de Faturamento da Transa\u00C3\u00A7\u00C3\u00A3o.
+    # Data de Faturamento da Transa\u00E7\u00E3o.
     attr_accessor :data_faturamento
 
     # Data de Vencimento da Fatura.
     attr_accessor :data_vencimento
 
-    # Descreve o modo utilizado para realizar a leitura dos dados do cart\u00C3\u00A3o para realizar a Transa\u00C3\u00A7\u00C3\u00A3o.
+    # Descreve o modo utilizado para realizar a leitura dos dados do cart\u00E3o para realizar a Transa\u00E7\u00E3o.
     attr_accessor :modo_entrada_transacao
 
-    # Valor da Taxa de Embarque em Real (BRL) quando a transa\u00C3\u00A7\u00C3\u00A3o for relacionada a Compra de Passagens A\u00C3\u00A9reas.
+    # Valor da Taxa de Embarque em Real (BRL) quando a transa\u00E7\u00E3o for relacionada a Compra de Passagens A\u00E9reas.
     attr_accessor :valor_taxa_embarque
 
-    # Valor da Entrada em Real (BRL) quando a transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada com o pagamento de um valor de Entrada.
+    # Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada.
     attr_accessor :valor_entrada
 
-    # Valor da Transa\u00C3\u00A7\u00C3\u00A3o em Real (BRL).
+    # Valor da Transa\u00E7\u00E3o em Real (BRL).
     attr_accessor :valor_brl
 
-    # Valor da Transa\u00C3\u00A7\u00C3\u00A3o em D\u00C3\u00B3lar Americano (USD).
+    # Valor da Transa\u00E7\u00E3o em D\u00F3lar Americano (USD).
     attr_accessor :valor_usd
 
-    # Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).
+    # Valor do D\u00F3lar Americano (USD) convertido em Real (BRL).
     attr_accessor :cotacao_usd
 
-    # Data de Fechamento da Cota\u00C3\u00A7\u00C3\u00A3o do D\u00C3\u00B3lar Americano (USD).
+    # Data de Fechamento da Cota\u00E7\u00E3o do D\u00F3lar Americano (USD).
     attr_accessor :data_cotacao_usd
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Moeda utilizada na Transa\u00C3\u00A7\u00C3\u00A3o, seguindo padr\u00C3\u00A3o ISO 4217.
+    # C\u00F3digo de Identifica\u00E7\u00E3o da Moeda utilizada na Transa\u00E7\u00E3o, seguindo padr\u00E3o ISO 4217.
     attr_accessor :codigo_moeda_origem
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Moeda da Transa\u00C3\u00A7\u00C3\u00A3o ap\u00C3\u00B3s a convers\u00C3\u00A3o, seguindo padr\u00C3\u00A3o ISO 4217.
+    # C\u00F3digo de Identifica\u00E7\u00E3o da Moeda da Transa\u00E7\u00E3o ap\u00F3s a convers\u00E3o, seguindo padr\u00E3o ISO 4217.
     attr_accessor :codigo_moeda_destino
 
-    # C\u00C3\u00B3digo de Autoriza\u00C3\u00A7\u00C3\u00A3o da Transa\u00C3\u00A7\u00C3\u00A3o.
+    # C\u00F3digo de Autoriza\u00E7\u00E3o da Transa\u00E7\u00E3o.
     attr_accessor :codigo_autorizacao
 
-    # C\u00C3\u00B3digo de Refer\u00C3\u00AAncia da Transa\u00C3\u00A7\u00C3\u00A3o quando utilizado Cart\u00C3\u00A3o Bandeirado.
+    # C\u00F3digo de Refer\u00EAncia da Transa\u00E7\u00E3o quando utilizado Cart\u00E3o Bandeirado.
     attr_accessor :codigo_referencia
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o.
+    # C\u00F3digo de Identifica\u00E7\u00E3o da origem da captura da Transa\u00E7\u00E3o.
     attr_accessor :codigo_terminal
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da categoria do Estabelecimento.
+    # C\u00F3digo de identifica\u00E7\u00E3o da categoria do Estabelecimento.
     attr_accessor :codigo_mcc
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.
+    # C\u00F3digo de identifica\u00E7\u00E3o do grupo do Estabelecimento.
     attr_accessor :grupo_mcc
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.
+    # Descri\u00E7\u00E3o do grupo do Estabelecimento.
     attr_accessor :grupo_descricao_mcc
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).
+    # C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
     attr_accessor :id_estabelecimento
 
     # Nome do Estabelecimento.
@@ -112,25 +112,25 @@ module Pier
     # Localidade do Estabelecimento.
     attr_accessor :localidade_estabelecimento
 
-    # Quando a Transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada, apresenta o n\u00C3\u00BAmero total de Parcelas.
+    # Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero total de Parcelas.
     attr_accessor :plano_parcelamento
 
-    # Quando a Transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada, apresenta o n\u00C3\u00BAmero da Parcela.
+    # Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero da Parcela.
     attr_accessor :numero_parcela
 
-    # Detalhes complementares a respeito da Transa\u00C3\u00A7\u00C3\u00A3o.
+    # Detalhes complementares a respeito da Transa\u00E7\u00E3o.
     attr_accessor :detalhes_transacao
 
-    # Quando ativa, indica que a Transa\u00C3\u00A7\u00C3\u00A3o \u00C3\u00A9 do Tipo 'Cr\u00C3\u00A9dito'.
+    # Quando ativa, indica que a Transa\u00E7\u00E3o \u00E9 do Tipo 'Cr\u00E9dito'.
     attr_accessor :flag_credito
 
-    # Quando ativa, indica que a Transa\u00C3\u00A7\u00C3\u00A3o foi consolidada em uma Fatura.
+    # Quando ativa, indica que a Transa\u00E7\u00E3o foi consolidada em uma Fatura.
     attr_accessor :flag_faturado
 
-    # Quando ativa, indica que a Transa\u00C3\u00A7\u00C3\u00A3o foi estornada.
+    # Quando ativa, indica que a Transa\u00E7\u00E3o foi estornada.
     attr_accessor :flag_estorno
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Transa\u00C3\u00A7\u00C3\u00A3o (id) que gerou o estorno.
+    # C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno.
     attr_accessor :id_transacao_estorno
 
     # Attribute mapping from ruby-style variable name to JSON key.

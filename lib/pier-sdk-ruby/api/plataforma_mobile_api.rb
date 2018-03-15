@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -26,7 +26,7 @@ module Pier
 
     # Atualiza Plataforma Mobile
     # Esse recurso permite atualizar plataforma mobile.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id).
     # @param update update
     # @param [Hash] opts the optional parameters
     # @return [PlataformaMobileResponse]
@@ -37,7 +37,7 @@ module Pier
 
     # Atualiza Plataforma Mobile
     # Esse recurso permite atualizar plataforma mobile.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id).
     # @param update update
     # @param [Hash] opts the optional parameters
     # @return [Array<(PlataformaMobileResponse, Fixnum, Hash)>] PlataformaMobileResponse data, response status code and response headers
@@ -100,29 +100,29 @@ module Pier
     end
 
     # Lista as plataformas mobile cadastradas
-    # Este m\u00C3\u00A9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
+    # Este m\u00E9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @option opts [String] :nome Nome da Plataforma Mobile
     # @return [PagePlataformaMobileResponse]
-    def listar_using_get31(opts = {})
-      data, _status_code, _headers = listar_using_get31_with_http_info(opts)
+    def listar_using_get33(opts = {})
+      data, _status_code, _headers = listar_using_get33_with_http_info(opts)
       return data
     end
 
     # Lista as plataformas mobile cadastradas
-    # Este m\u00C3\u00A9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
+    # Este m\u00E9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @option opts [String] :nome Nome da Plataforma Mobile
     # @return [Array<(PagePlataformaMobileResponse, Fixnum, Hash)>] PagePlataformaMobileResponse data, response status code and response headers
-    def listar_using_get31_with_http_info(opts = {})
+    def listar_using_get33_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PlataformaMobileApi.listar_using_get31 ..."
+        @api_client.config.logger.debug "Calling API: PlataformaMobileApi.listar_using_get33 ..."
       end
       
       
@@ -185,7 +185,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PagePlataformaMobileResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PlataformaMobileApi#listar_using_get31\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: PlataformaMobileApi#listar_using_get33\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

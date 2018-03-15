@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,9 +17,9 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Detalhe do plano de parcelamento para Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias
+  # Detalhe do plano de parcelamento para Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
   class ParcelamentoTransferenciaResponse
-    # N\u00C3\u00BAmero de parcelas dispon\u00C3\u00ADveis.
+    # N\u00FAmero de parcelas dispon\u00EDveis.
     attr_accessor :numero_parcela
 
     # Valor das demais parcelas.
@@ -28,10 +28,10 @@ module Pier
     # Valor total do financiamento.
     attr_accessor :valor_total
 
-    # Valor da tarifa de contrata\u00C3\u00A7\u00C3\u00A3o.
+    # Valor da tarifa de contrata\u00E7\u00E3o.
     attr_accessor :valor_tac
 
-    # IOF
+    # IOF calculado para o cliente
     attr_accessor :valor_iof
 
     # Valor da taxa de juros.

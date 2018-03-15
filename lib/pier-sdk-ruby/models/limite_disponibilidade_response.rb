@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,70 +19,70 @@ require 'date'
 module Pier
   # Limite Disponibilidade
   class LimiteDisponibilidadeResponse
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o de Limite e Disponibilidade (id).
+    # C\u00F3digo de Identifica\u00E7\u00E3o de Limite e Disponibilidade (id).
     attr_accessor :id
 
-    # Valor do limite de cr\u00C3\u00A9dito.
+    # Valor do limite de cr\u00E9dito.
     attr_accessor :limite_global
 
-    # Valor do limite de cr\u00C3\u00A9dito para uso exclusivo em compras nacionais.
+    # Valor do limite de cr\u00E9dito para uso exclusivo em compras nacionais.
     attr_accessor :limite_compra
 
-    # Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
+    # Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de compras parceladas.
     attr_accessor :limite_parcelado
 
-    # Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras que forem realizadas nesta modalidade.
+    # Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras que forem realizadas nesta modalidade.
     attr_accessor :limite_parcelas
 
-    # Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
+    # Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de Saque Nacional.
     attr_accessor :limite_saque_global
 
-    # Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
+    # Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento.
     attr_accessor :limite_saque_periodo
 
-    # Valor da margem de cr\u00C3\u00A9dito para consigna\u00C3\u00A7\u00C3\u00B5es (desconto em folha).
+    # Valor da margem de cr\u00E9dito para consigna\u00E7\u00F5es (desconto em folha).
     attr_accessor :limite_consignado
 
-    # Valor do limite de cr\u00C3\u00A9dito para uso exclusivo em compras internacionais.
+    # Valor do limite de cr\u00E9dito para uso exclusivo em compras internacionais.
     attr_accessor :limite_internacional_compra
 
-    # Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es internacionais de compras parceladas.
+    # Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es internacionais de compras parceladas.
     attr_accessor :limite_internacional_parcelado
 
-    # Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
+    # Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
     attr_accessor :limite_internacional_parcelas
 
-    # Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional.
+    # Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de saque internacional.
     attr_accessor :limite_internacional_saque_global
 
-    # Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional dentro de cada ciclo de faturamento.
+    # Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de saque internacional dentro de cada ciclo de faturamento.
     attr_accessor :limite_internacional_saque_periodo
 
-    # Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.
+    # Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es.
     attr_accessor :limite_maximo
 
-    # Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es.
+    # Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es.
     attr_accessor :saldo_disponivel_global
 
-    # Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra nacional.
+    # Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de compra nacional.
     attr_accessor :saldo_disponivel_compra
 
-    # Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra nacional parcelada.
+    # Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de compra nacional parcelada.
     attr_accessor :saldo_disponivel_parcelado
 
-    # Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.
+    # Valor de cr\u00E9dito dispon\u00EDvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.
     attr_accessor :saldo_disponivel_parcelas
 
-    # Valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
+    # Valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Nacional.
     attr_accessor :saldo_disponivel_saque
 
     # Saldo atual de pontos do programa de fidelidade.
     attr_accessor :saldo_pontos_fidelidade
 
-    # Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra internacional.
+    # Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de compra internacional.
     attr_accessor :saldo_disponivel_compra_internacional
 
-    # Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional.
+    # Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de saque internacional.
     attr_accessor :saldo_disponivel_saque_internacional
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**ativar_job_using_post**](JobApi.md#ativar_job_using_post) | **POST** /api/jobs/{id}/ativar-job | Ativar Job
 [**atualizar_using_put3**](JobApi.md#atualizar_using_put3) | **PUT** /api/jobs/{id} | Atualizar Job
 [**desativar_job_using_post**](JobApi.md#desativar_job_using_post) | **POST** /api/jobs/{id}/desativar-job | Desativar Job
-[**listar_using_get24**](JobApi.md#listar_using_get24) | **GET** /api/jobs | Listar Jobs
+[**listar_using_get26**](JobApi.md#listar_using_get26) | **GET** /api/jobs | Listar Jobs
 [**salvar_using_post15**](JobApi.md#salvar_using_post15) | **POST** /api/jobs | Cadastrar Job
 
 
@@ -25,7 +25,7 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::JobApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).
 
 
 begin
@@ -41,7 +41,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Job (id). | 
 
 ### Return type
 
@@ -72,7 +72,7 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::JobApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).
 
 descricao = "descricao_example" # String | descricao.
 
@@ -94,7 +94,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Job (id). | 
  **descricao** | **String**| descricao. | 
  **cron** | **String**| Cron do Job. | 
  **groovy** | **String**| groovy | 
@@ -128,7 +128,7 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::JobApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
+id = 789 # Integer | C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).
 
 
 begin
@@ -144,7 +144,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Job (id). | 
 
 ### Return type
 
@@ -161,8 +161,8 @@ No authorization required
 
 
 
-# **listar_using_get24**
-> PageJobResponse listar_using_get24(opts)
+# **listar_using_get26**
+> PageJobResponse listar_using_get26(opts)
 
 Listar Jobs
 
@@ -177,19 +177,19 @@ api_instance = Pier::JobApi.new
 
 opts = { 
   groovy: "groovy_example", # String | Script Groovy do Job
-  descricao: "descricao_example", # String | Descri\u00C3\u00A7\u00C3\u00A3o do Job
+  descricao: "descricao_example", # String | Descri\u00E7\u00E3o do Job
   cron: "cron_example", # String | Cron do Job
   status: "status_example", # String | Status do Job
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 }
 
 begin
   #Listar Jobs
-  result = api_instance.listar_using_get24(opts)
+  result = api_instance.listar_using_get26(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling JobApi->listar_using_get24: #{e}"
+  puts "Exception when calling JobApi->listar_using_get26: #{e}"
 end
 ```
 
@@ -198,11 +198,11 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groovy** | **String**| Script Groovy do Job | [optional] 
- **descricao** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do Job | [optional] 
+ **descricao** | **String**| Descri\u00E7\u00E3o do Job | [optional] 
  **cron** | **String**| Cron do Job | [optional] 
  **status** | **String**| Status do Job | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 

@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,33 +17,33 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Oportunidades
+  # Representa\u00E7\u00E3o da resposta do recurso Oportunidades
   class OportunidadeAUDResponse
-    # C\u00C3\u00B3digo identificador da oportunidade
+    # C\u00F3digo identificador da oportunidade
     attr_accessor :id
 
-    # C\u00C3\u00B3digo identificador do tipo oportunidade
+    # C\u00F3digo identificador do tipo oportunidade
     attr_accessor :id_tipo_oportunidade
 
-    # C\u00C3\u00B3digo identificador do status oportunidade
+    # C\u00F3digo identificador do status oportunidade
     attr_accessor :id_status_oportunidade
 
     # Data cadastro da oportunidade.
     attr_accessor :data_cadastro
 
-    # Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.
+    # Data atualiza\u00E7\u00E3o da oportunidade.
     attr_accessor :data_atualizacao
 
-    # N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
+    # N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade
     attr_accessor :numero_receita_federal
 
-    # In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
+    # In\u00EDcio da vig\u00EAncia da oportunidade
     attr_accessor :data_inicio_vigencia
 
-    # fim da vig\u00C3\u00AAncia da oportunidade
+    # fim da vig\u00EAncia da oportunidade
     attr_accessor :data_fim_vigencia
 
-    # Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
+    # Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa
     attr_accessor :flag_ativo
 
     # Lista de detalhes da oportunidade

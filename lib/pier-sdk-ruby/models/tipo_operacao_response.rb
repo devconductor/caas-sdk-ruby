@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,18 +17,18 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso TipoOperacao
+  # Representa\u00E7\u00E3o da resposta do recurso TipoOperacao
   class TipoOperacaoResponse
-    # C\u00C3\u00B3digo identificador do TipoOperacao
+    # C\u00F3digo identificador do TipoOperacao
     attr_accessor :id
 
-    # C\u00C3\u00B3digo do TipoOperacao
+    # C\u00F3digo do TipoOperacao
     attr_accessor :tipo_operacao
 
     # Nome do TipoOperacao
     attr_accessor :nome
 
-    # Decri\u00C3\u00A7\u00C3\u00A3o do TipoOperacao
+    # Decri\u00E7\u00E3o do TipoOperacao
     attr_accessor :descricao
 
     # Excedente permitido para o TipoOperacao
@@ -37,13 +37,13 @@ module Pier
     # Tipo do Excedente permitido para o TipoOperacao
     attr_accessor :tipo_excedente_permitido
 
-    # Valor minimo para a transa\u00C3\u00A7\u00C3\u00A3o do TipoOperacao
+    # Valor minimo para a transa\u00E7\u00E3o do TipoOperacao
     attr_accessor :valor_minimo
 
-    # Valor maximo para a transa\u00C3\u00A7\u00C3\u00A3o do TipoOperacao
+    # Valor maximo para a transa\u00E7\u00E3o do TipoOperacao
     attr_accessor :valor_maximo
 
-    # Valor TAC da transa\u00C3\u00A7\u00C3\u00A3o do TipoOperacao
+    # Valor TAC da transa\u00E7\u00E3o do TipoOperacao
     attr_accessor :valor_tac
 
     # Flag Tira TAC do TipoOperacao
@@ -58,10 +58,10 @@ module Pier
     # Tarifa do TipoOperacao
     attr_accessor :tarifa
 
-    # Remunera\u00C3\u00A7\u00C3\u00A3o do Emissor para o TipoOperacao
+    # Remunera\u00E7\u00E3o do Emissor para o TipoOperacao
     attr_accessor :remuneracao_emissor
 
-    # Plano m\u00C3\u00A1ximo do TipoOperacao
+    # Plano m\u00E1ximo do TipoOperacao
     attr_accessor :plano_maximo
 
     # Plano minimo do TipoOperacao

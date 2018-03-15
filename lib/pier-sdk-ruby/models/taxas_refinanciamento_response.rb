@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,7 +17,7 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto de resposta para a valida\u00C3\u00A7\u00C3\u00A3o das Taxas de Refinanciamento
+  # Objeto de resposta para a valida\u00E7\u00E3o das Taxas de Refinanciamento
   class TaxasRefinanciamentoResponse
     # ID das taxas
     attr_accessor :id
@@ -43,28 +43,28 @@ module Pier
     # Vencimento das taxas
     attr_accessor :vencimento
 
-    # Recupera\u00C3\u00A7\u00C3\u00A3o de encargos financeiro
+    # Recupera\u00E7\u00E3o de encargos financeiro
     attr_accessor :recuperacao_encargos_financeiros
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o da comiss\u00C3\u00A3o de garantia
+    # Descri\u00E7\u00E3o da comiss\u00E3o de garantia
     attr_accessor :comissao_garantia
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do agenciamento
+    # Descri\u00E7\u00E3o do agenciamento
     attr_accessor :agenciamento
 
-    # Taxa m\u00C3\u00A1xima do proximo per\u00C3\u00ADodo
+    # Taxa m\u00E1xima do proximo per\u00EDodo
     attr_accessor :taxa_maxima_proximo_periodo
 
     # Taxa de encargos do financiamento
     attr_accessor :taxa_encargos_financiamento
 
-    # Taxa m\u00C3\u00A1xima de saque
+    # Taxa m\u00E1xima de saque
     attr_accessor :taxa_maxima_saque
 
     # Taxa de saque
     attr_accessor :taxa_saque
 
-    # Taxa m\u00C3\u00A1xima de compras juros
+    # Taxa m\u00E1xima de compras juros
     attr_accessor :taxa_maxima_compra_juros
 
     # Taxa de juros compra
@@ -82,7 +82,7 @@ module Pier
     # Taxa Percelamento pagamento minimo
     attr_accessor :taxa_perc_calc_pagamento_minimo
 
-    # Plano de taxa padr\u00C3\u00A3o
+    # Plano de taxa padr\u00E3o
     attr_accessor :plano_taxa_default
 
     # Attribute mapping from ruby-style variable name to JSON key.

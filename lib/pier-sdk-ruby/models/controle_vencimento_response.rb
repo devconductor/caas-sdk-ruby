@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -22,19 +22,19 @@ module Pier
     #  Indica a data de vencimento das faturas
     attr_accessor :data_vencimento
 
-    #  Indica a data prevista para a realiza\u00C3\u00A7\u00C3\u00A3o do Corte das faturas
+    #  Indica a data prevista para a realiza\u00E7\u00E3o do Corte das faturas
     attr_accessor :data_prevista_corte
 
-    # Indica a data e a hora que fora realizada a realiza\u00C3\u00A7\u00C3\u00A3o do Corte das faturas
+    # Indica a data e a hora que fora realizada a realiza\u00E7\u00E3o do Corte das faturas
     attr_accessor :data_hora_realizacao_corte
 
-    # Indica a data prevista para a realiza\u00C3\u00A7\u00C3\u00A3o do faturamento
+    # Indica a data prevista para a realiza\u00E7\u00E3o do faturamento
     attr_accessor :data_prevista_faturamento
 
     # Indica a data e a hora que fora realizado o faturamento
     attr_accessor :data_hora_realizacao_faturamento
 
-    # Indica o dia \u00C3\u00BAtil que ser\u00C3\u00A1 considerado como a data de vencimento
+    # Indica o dia \u00FAtil que ser\u00E1 considerado como a data de vencimento
     attr_accessor :data_real_vencimento
 
     # Attribute mapping from ruby-style variable name to JSON key.

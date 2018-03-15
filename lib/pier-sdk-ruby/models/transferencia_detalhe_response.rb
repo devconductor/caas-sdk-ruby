@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,28 +19,28 @@ require 'date'
 module Pier
   # Objeto transferencia
   class TransferenciaDetalheResponse
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).
+    # C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).
     attr_accessor :id
 
-    # Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
+    # Data estabelecida para ocorrer a transfer\u00EAncia.
     attr_accessor :data_transferencia
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id).
+    # C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id).
     attr_accessor :id_conta_origem
 
-    # Apresenta o nome completo da pessoa que realizou a Transfer\u00C3\u00AAncia.
+    # Apresenta o nome completo da pessoa que realizou a Transfer\u00EAncia.
     attr_accessor :nome_pessoa_origem
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
+    # C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id).
     attr_accessor :id_conta_destino
 
-    # Apresenta o nome completo da pessoa que recebeu a Transfer\u00C3\u00AAncia.
+    # Apresenta o nome completo da pessoa que recebeu a Transfer\u00EAncia.
     attr_accessor :nome_pessoa_destino
 
     # Valor estabelecido para ser transferido.
     attr_accessor :valor_transferencia
 
-    # Valor estabelecido da tarifa para a transfer\u00C3\u00AAncia.
+    # Valor estabelecido da tarifa para a transfer\u00EAncia.
     attr_accessor :valor_tarifa
 
     # Attribute mapping from ruby-style variable name to JSON key.

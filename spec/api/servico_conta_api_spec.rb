@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -38,15 +38,15 @@ describe 'ServicoContaApi' do
 
   # unit tests for ativar_anuidade_using_post
   # Atribuir Anuidade
-  # Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+  # Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
+  # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
   # @param id_anuidade Identificador da anuidade
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   # @option opts [String] :ddd DDD do celular
-  # @option opts [String] :celular N\u00C3\u00BAmero do celular
+  # @option opts [String] :celular N\u00FAmero do celular
   # @option opts [Integer] :id_operadora Identificador da operadora do celular
   # @option opts [Integer] :id_origem_comercial Identificador da origem comercial
   # @return [Object]
@@ -61,9 +61,9 @@ describe 'ServicoContaApi' do
   end
 
   # unit tests for ativar_envio_fatura_email_using_post
-  #  Ativa o servi\u00C3\u00A7o de envio de fatura por email
-  # Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+  #  Ativa o servi\u00E7o de envio de fatura por email
+  # Este recurso ativa o servi\u00E7o de envio de fatura por email
+  # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
   # @param [Hash] opts the optional parameters
   # @return [Object]
   describe 'ativar_envio_fatura_email_using_post test' do
@@ -77,9 +77,9 @@ describe 'ServicoContaApi' do
   end
 
   # unit tests for desativar_envio_fatura_email_using_post
-  # Desativa o servi\u00C3\u00A7o de envio de fatura por email
-  # Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
-  # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+  # Desativa o servi\u00E7o de envio de fatura por email
+  # Este recurso desativa o servi\u00E7o de envio de fatura por email
+  # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
   # @param [Hash] opts the optional parameters
   # @return [Object]
   describe 'desativar_envio_fatura_email_using_post test' do
@@ -96,9 +96,9 @@ describe 'ServicoContaApi' do
   # Listar Anuidades
   # Lista as anuidades
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   # @return [PageAnuidadeResponse]
   describe 'listar_anuidades_using_get test' do
     it "should work" do
@@ -114,9 +114,9 @@ describe 'ServicoContaApi' do
   # Listar Operadoras
   # Lista as operadoras.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   # @return [PageOperadoraResponse]
   describe 'listar_operadoras_telefonicas_using_get test' do
     it "should work" do

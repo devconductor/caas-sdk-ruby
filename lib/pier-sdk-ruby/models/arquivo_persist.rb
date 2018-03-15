@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,24 +17,24 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto Arquivo para persist\u00C3\u00AAncia de dados.
+  # Objeto Arquivo para persist\u00EAncia de dados.
   class ArquivoPersist
     # Tipo do arquivo
     attr_accessor :id_tipo_arquivo
 
-    # Conte\u00C3\u00BAdo do arquivo convertido em Base 64
+    # Conte\u00FAdo do arquivo convertido em Base 64
     attr_accessor :arquivo
 
     # Nome do arquivo.
     attr_accessor :nome
 
-    # Formato/extens\u00C3\u00A3o do arquivo.
+    # Formato/extens\u00E3o do arquivo.
     attr_accessor :extensao
 
-    # Tipo de comunica\u00C3\u00A7\u00C3\u00A3o.
+    # Tipo de comunica\u00E7\u00E3o.
     attr_accessor :tipo_comunicacao
 
-    # Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo
+    # Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo
     attr_accessor :detalhes
 
     # Attribute mapping from ruby-style variable name to JSON key.

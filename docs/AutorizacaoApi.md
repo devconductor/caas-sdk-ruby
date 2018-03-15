@@ -4,22 +4,22 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**autorizar_por_conta_using_post**](AutorizacaoApi.md#autorizar_por_conta_using_post) | **POST** /api/contas/{id}/autorizar-transacao | Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
-[**autorizar_using_post**](AutorizacaoApi.md#autorizar_using_post) | **POST** /api/autorizar-transacao | Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
-[**autorizar_using_post1**](AutorizacaoApi.md#autorizar_using_post1) | **POST** /api/cartoes/{id}/autorizar-transacao | Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
-[**cancelar_por_id_conta_using_post**](AutorizacaoApi.md#cancelar_por_id_conta_using_post) | **POST** /api/contas/{id}/cancelar-transacao | Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
-[**cancelar_using_post2**](AutorizacaoApi.md#cancelar_using_post2) | **POST** /api/cancelar-transacao | Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
-[**cancelar_using_post3**](AutorizacaoApi.md#cancelar_using_post3) | **POST** /api/cartoes/{id}/cancelar-transacao | Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
-[**listar_codigos_processamento_autorizacao_using_get**](AutorizacaoApi.md#listar_codigos_processamento_autorizacao_using_get) | **GET** /api/consultar-codigos-processamento-autorizacao | Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
-[**simular_using_post**](AutorizacaoApi.md#simular_using_post) | **POST** /api/simular-transacao | Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
+[**autorizar_por_conta_using_post**](AutorizacaoApi.md#autorizar_por_conta_using_post) | **POST** /api/contas/{id}/autorizar-transacao | Autoriza transa\u00E7\u00E3o financeira por idConta
+[**autorizar_using_post**](AutorizacaoApi.md#autorizar_using_post) | **POST** /api/autorizar-transacao | Autoriza transa\u00E7\u00E3o financeira
+[**autorizar_using_post1**](AutorizacaoApi.md#autorizar_using_post1) | **POST** /api/cartoes/{id}/autorizar-transacao | Autoriza transa\u00E7\u00E3o financeira por idCartao
+[**cancelar_por_id_conta_using_post**](AutorizacaoApi.md#cancelar_por_id_conta_using_post) | **POST** /api/contas/{id}/cancelar-transacao | Cancela transa\u00E7\u00E3o financeira por idConta
+[**cancelar_using_post2**](AutorizacaoApi.md#cancelar_using_post2) | **POST** /api/cancelar-transacao | Cancela transa\u00E7\u00E3o financeira
+[**cancelar_using_post3**](AutorizacaoApi.md#cancelar_using_post3) | **POST** /api/cartoes/{id}/cancelar-transacao | Cancela transa\u00E7\u00E3o financeira por idCartao
+[**listar_codigos_processamento_autorizacao_using_get**](AutorizacaoApi.md#listar_codigos_processamento_autorizacao_using_get) | **GET** /api/consultar-codigos-processamento-autorizacao | Retorna c\u00F3digos de processamento de autoriza\u00E7\u00E3o
+[**simular_using_post**](AutorizacaoApi.md#simular_using_post) | **POST** /api/simular-transacao | Simula planos de transa\u00E7\u00F5es
 
 
 # **autorizar_por_conta_using_post**
 > TransacaoOnUsResponse autorizar_por_conta_using_post(id, transacao_on_us_por_id_cartao_request)
 
-Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+Autoriza transa\u00E7\u00E3o financeira por idConta
 
-Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idConta.
+Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta.
 
 ### Example
 ```ruby
@@ -34,7 +34,7 @@ transacao_on_us_por_id_cartao_request = Pier::TransacaoOnUsPorIdCartaoRequest.ne
 
 
 begin
-  #Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+  #Autoriza transa\u00E7\u00E3o financeira por idConta
   result = api_instance.autorizar_por_conta_using_post(id, transacao_on_us_por_id_cartao_request)
   p result
 rescue Pier::ApiError => e
@@ -67,9 +67,9 @@ No authorization required
 # **autorizar_using_post**
 > TransacaoOnUsResponse autorizar_using_post(autorizacao_on_us_request)
 
-Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+Autoriza transa\u00E7\u00E3o financeira
 
-Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira.
 
 ### Example
 ```ruby
@@ -82,7 +82,7 @@ autorizacao_on_us_request = Pier::AutorizacaoOnUsRequest.new # AutorizacaoOnUsRe
 
 
 begin
-  #Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+  #Autoriza transa\u00E7\u00E3o financeira
   result = api_instance.autorizar_using_post(autorizacao_on_us_request)
   p result
 rescue Pier::ApiError => e
@@ -114,9 +114,9 @@ No authorization required
 # **autorizar_using_post1**
 > TransacaoOnUsResponse autorizar_using_post1(id, transacao_on_us_por_id_cartao_request)
 
-Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+Autoriza transa\u00E7\u00E3o financeira por idCartao
 
-Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idCartao.
+Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idCartao.
 
 ### Example
 ```ruby
@@ -131,7 +131,7 @@ transacao_on_us_por_id_cartao_request = Pier::TransacaoOnUsPorIdCartaoRequest.ne
 
 
 begin
-  #Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+  #Autoriza transa\u00E7\u00E3o financeira por idCartao
   result = api_instance.autorizar_using_post1(id, transacao_on_us_por_id_cartao_request)
   p result
 rescue Pier::ApiError => e
@@ -164,9 +164,9 @@ No authorization required
 # **cancelar_por_id_conta_using_post**
 > TransacaoOnUsResponse cancelar_por_id_conta_using_post(id, cancelamento_request)
 
-Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+Cancela transa\u00E7\u00E3o financeira por idConta
 
-Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idConta.
+Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta.
 
 ### Example
 ```ruby
@@ -181,7 +181,7 @@ cancelamento_request = Pier::CancelamentoTransacaoPorIdCartaoRequest.new # Cance
 
 
 begin
-  #Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+  #Cancela transa\u00E7\u00E3o financeira por idConta
   result = api_instance.cancelar_por_id_conta_using_post(id, cancelamento_request)
   p result
 rescue Pier::ApiError => e
@@ -214,9 +214,9 @@ No authorization required
 # **cancelar_using_post2**
 > TransacaoOnUsResponse cancelar_using_post2(cancelamento_request)
 
-Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
+Cancela transa\u00E7\u00E3o financeira
 
-Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
+Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o.
 
 ### Example
 ```ruby
@@ -229,7 +229,7 @@ cancelamento_request = Pier::CancelamentoTransacaoOnUsRequest.new # Cancelamento
 
 
 begin
-  #Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
+  #Cancela transa\u00E7\u00E3o financeira
   result = api_instance.cancelar_using_post2(cancelamento_request)
   p result
 rescue Pier::ApiError => e
@@ -261,9 +261,9 @@ No authorization required
 # **cancelar_using_post3**
 > TransacaoOnUsResponse cancelar_using_post3(id, cancelamento_request)
 
-Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+Cancela transa\u00E7\u00E3o financeira por idCartao
 
-Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idCartao.
+Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idCartao.
 
 ### Example
 ```ruby
@@ -278,7 +278,7 @@ cancelamento_request = Pier::CancelamentoTransacaoPorIdCartaoRequest.new # Cance
 
 
 begin
-  #Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+  #Cancela transa\u00E7\u00E3o financeira por idCartao
   result = api_instance.cancelar_using_post3(id, cancelamento_request)
   p result
 rescue Pier::ApiError => e
@@ -311,9 +311,9 @@ No authorization required
 # **listar_codigos_processamento_autorizacao_using_get**
 > Array&lt;Object&gt; listar_codigos_processamento_autorizacao_using_get
 
-Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
+Retorna c\u00F3digos de processamento de autoriza\u00E7\u00E3o
 
-Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento para autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es financeiras.
+Este m\u00E9todo retorna a lista dos c\u00F3digos de processamento para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es financeiras.
 
 ### Example
 ```ruby
@@ -323,7 +323,7 @@ require 'pier-sdk-ruby'
 api_instance = Pier::AutorizacaoApi.new
 
 begin
-  #Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
+  #Retorna c\u00F3digos de processamento de autoriza\u00E7\u00E3o
   result = api_instance.listar_codigos_processamento_autorizacao_using_get
   p result
 rescue Pier::ApiError => e
@@ -352,9 +352,9 @@ No authorization required
 # **simular_using_post**
 > TransacaoOnUsResponse simular_using_post(transacoes_request)
 
-Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
+Simula planos de transa\u00E7\u00F5es
 
-Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
+Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es.
 
 ### Example
 ```ruby
@@ -367,7 +367,7 @@ transacoes_request = Pier::TransacaoOnUsRequest.new # TransacaoOnUsRequest | tra
 
 
 begin
-  #Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
+  #Simula planos de transa\u00E7\u00F5es
   result = api_instance.simular_using_post(transacoes_request)
   p result
 rescue Pier::ApiError => e

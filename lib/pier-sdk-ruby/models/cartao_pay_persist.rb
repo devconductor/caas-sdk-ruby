@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,24 +17,24 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o do recurso atualizar cart\u00C3\u00A3o
+  # Representa\u00E7\u00E3o do recurso atualizar cart\u00E3o
   class CartaoPayPersist
-    # N\u00C3\u00BAmero do cart\u00C3\u00A3o criptografado
+    # N\u00FAmero do cart\u00E3o criptografado
     attr_accessor :numero_cartao
 
-    # Data de validade do cart\u00C3\u00A3o
+    # Data de validade do cart\u00E3o
     attr_accessor :data_validade
 
-    # CVV do cart\u00C3\u00A3o criptografado
+    # CVV do cart\u00E3o criptografado
     attr_accessor :cvv
 
-    # CPF do portador do cart\u00C3\u00A3o criptografado
+    # CPF do portador do cart\u00E3o criptografado
     attr_accessor :numero_receita_federal
 
-    # Nome impresso no cart\u00C3\u00A3o criptografado
+    # Nome impresso no cart\u00E3o criptografado
     attr_accessor :nome_impresso
 
-    # Chave p\u00C3\u00BAblica do dispositivo criptografada
+    # Chave p\u00FAblica do dispositivo criptografada
     attr_accessor :chave_publica_device
 
     # Attribute mapping from ruby-style variable name to JSON key.

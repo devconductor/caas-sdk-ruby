@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,16 +19,16 @@ require 'date'
 module Pier
   # Produto
   class ProdutoResponse
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+    # C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
     attr_accessor :id
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
+    # Descri\u00E7\u00E3o do Nome do Produto.
     attr_accessor :nome
 
     # Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
     attr_accessor :status
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
+    # C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.
     attr_accessor :id_fantasia_basica
 
     # Attribute mapping from ruby-style variable name to JSON key.

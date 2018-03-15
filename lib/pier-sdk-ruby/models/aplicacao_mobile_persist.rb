@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -31,13 +31,13 @@ module Pier
     # Apresenta o som da mensagem da aplicacao
     attr_accessor :som
 
-    # Apresenta o icone da mensagem da aplica\u00C3\u00A7\u00C3\u00A3o.
+    # Apresenta o icone da mensagem da aplica\u00E7\u00E3o.
     attr_accessor :icone
 
-    # Apresenta o certificado da aplica\u00C3\u00A7\u00C3\u00A3o.
+    # Apresenta o certificado da aplica\u00E7\u00E3o.
     attr_accessor :certificado_base64
 
-    # Apresenta a senha da aplica\u00C3\u00A7\u00C3\u00A3o.
+    # Apresenta a senha da aplica\u00E7\u00E3o.
     attr_accessor :senha
 
     # Attribute mapping from ruby-style variable name to JSON key.

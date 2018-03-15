@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,22 +19,22 @@ require 'date'
 module Pier
   # Objeto codigo seguranca
   class CodigoSegurancaResponse
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do c\u00C3\u00B3digo de seguranca (id).
+    # C\u00F3digo de identifica\u00E7\u00E3o do c\u00F3digo de seguranca (id).
     attr_accessor :id
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Emissor (idEmissor).
+    # C\u00F3digo de Identifica\u00E7\u00E3o do Emissor (idEmissor).
     attr_accessor :id_emissor
 
-    # Apresenta o Modo de Envio do C\u00C3\u00B3digo de Seguran\u00C3\u00A7a.
+    # Apresenta o Modo de Envio do C\u00F3digo de Seguran\u00E7a.
     attr_accessor :modo_envio
 
-    # Apresenta o contato do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+    # Apresenta o contato do c\u00F3digo de seguran\u00E7a.
     attr_accessor :contato
 
-    # Apresenta o status do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+    # Apresenta o status do c\u00F3digo de seguran\u00E7a.
     attr_accessor :ativo
 
-    # Apresenta a data de validade do c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado.
+    # Apresenta a data de validade do c\u00F3digo de seguran\u00E7a gerado.
     attr_accessor :data_validade
 
     # Attribute mapping from ruby-style variable name to JSON key.

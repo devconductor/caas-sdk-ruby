@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,27 +17,27 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto Response da auditoria dos par\u00C3\u00A2metros do arquivo.
+  # Objeto Response da auditoria dos par\u00E2metros do arquivo.
   class ArquivoParametroAUDResponse
     # Identificador da auditoria arquivo
     attr_accessor :rev
 
-    # Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00C3\u00ADdo)
+    # Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)
     attr_accessor :rev_type
 
-    # Identificador do par\u00C3\u00A2metro
+    # Identificador do par\u00E2metro
     attr_accessor :id
 
-    # Nome do par\u00C3\u00A2metro
+    # Nome do par\u00E2metro
     attr_accessor :parametro
 
-    # Conte\u00C3\u00BAdo do par\u00C3\u00A2metro
+    # Conte\u00FAdo do par\u00E2metro
     attr_accessor :conteudo
 
-    # Data de inclus\u00C3\u00A3o do par\u00C3\u00A2metro
+    # Data de inclus\u00E3o do par\u00E2metro
     attr_accessor :data_hora_inclusao
 
-    # Data de altera\u00C3\u00A7\u00C3\u00A3o do par\u00C3\u00A2metro
+    # Data de altera\u00E7\u00E3o do par\u00E2metro
     attr_accessor :data_hora_alteracao
 
     # Attribute mapping from ruby-style variable name to JSON key.

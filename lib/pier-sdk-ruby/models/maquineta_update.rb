@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,18 +17,18 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o para alterar Maquineta
+  # Par\u00E2metros de requisi\u00E7\u00E3o para alterar Maquineta
   class MaquinetaUpdate
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+    # C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
     attr_accessor :id_terminal
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo Maquineta (id).
+    # C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta (id).
     attr_accessor :id_tipo_maquineta
 
-    # Valor de Manuten\u00C3\u00A7\u00C3\u00A3o da Maquineta.
+    # Valor de Manuten\u00E7\u00E3o da Maquineta.
     attr_accessor :valor
 
-    # Data da implanta\u00C3\u00A7\u00C3\u00A3o da Maquineta.
+    # Data da implanta\u00E7\u00E3o da Maquineta.
     attr_accessor :data_hora_implantacao
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,9 +17,9 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o do objeto que abstrai o hist\u00C3\u00B3rico de eventos
+  # Representa\u00E7\u00E3o do objeto que abstrai o hist\u00F3rico de eventos
   class HistoricoEventosResponse
-    # C\u00C3\u00B3digo identificador do evento
+    # C\u00F3digo identificador do evento
     attr_accessor :id_historico
 
     # Data do evento
@@ -28,10 +28,10 @@ module Pier
     # Nome do campo alterado
     attr_accessor :tipo_historico
 
-    # Valor anterior a modifica\u00C3\u00A7\u00C3\u00A3o
+    # Valor anterior a modifica\u00E7\u00E3o
     attr_accessor :valor_anterior
 
-    # Valor atribu\u00C3\u00ADdo na modifica\u00C3\u00A7\u00C3\u00A3o
+    # Valor atribu\u00EDdo na modifica\u00E7\u00E3o
     attr_accessor :valor_atribuido
 
     # Attribute mapping from ruby-style variable name to JSON key.

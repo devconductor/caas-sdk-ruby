@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,21 +17,21 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Detalhe da resposta do recurso de simular empr\u00C3\u00A9stimos/financiamentos
+  # Detalhe da resposta do recurso de simular empr\u00E9stimos/financiamentos
   class PlanoParcelamentoEmprestimoResponse
-    # N\u00C3\u00BAmeros de parcelas do empr\u00C3\u00A9stimo/financiamento
+    # N\u00FAmeros de parcelas do empr\u00E9stimo/financiamento
     attr_accessor :numero_parcelas
 
     # Valor da parcela
     attr_accessor :valor_parcelas
 
-    # Taxa de juros aplicado no empr\u00C3\u00A9stimo/financiamento
+    # Taxa de juros aplicado no empr\u00E9stimo/financiamento
     attr_accessor :taxa_juros
 
-    # valor total estimado dos tributos do Imposto sobre Opera\u00C3\u00A7\u00C3\u00B5es Financeiras
+    # valor total estimado dos tributos do Imposto sobre Opera\u00E7\u00F5es Financeiras
     attr_accessor :valor_tributos_iof
 
-    # valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento
+    # valor percentual do Custo Efetivo Total, ao ano, do empr\u00E9stimo / financiamento
     attr_accessor :valor_percentual_cet
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,59 +17,59 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o do recurso transacao
+  # Representa\u00E7\u00E3o do recurso transacao
   class TransacaoCorrenteResponse
     attr_accessor :ultima_parcela_lancada
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     attr_accessor :id_conta
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de transacao (id).
+    # C\u00F3digo de identifica\u00E7\u00E3o do tipo de transacao (id).
     attr_accessor :id_tipo_registro
 
-    # Representa\u00C3\u00A7\u00C3\u00A3o da ordena\u00C3\u00A7\u00C3\u00A3o da transacao (id).
+    # Representa\u00E7\u00E3o da ordena\u00E7\u00E3o da transacao (id).
     attr_accessor :ordem
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transacao (id).
+    # C\u00F3digo de identifica\u00E7\u00E3o da transacao (id).
     attr_accessor :id_transacao
 
-    # Atributo que representa a descri\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+    # Atributo que representa a descri\u00E7\u00E3o da transa\u00E7\u00E3o.
     attr_accessor :descricao
 
-    # Atributo que representa o c\u00C3\u00B3digo identificador do status da transa\u00C3\u00A7\u00C3\u00A3o.
+    # Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o.
     attr_accessor :status
 
-    # Atributo que representa a descri\u00C3\u00A7\u00C3\u00A3o do status da transa\u00C3\u00A7\u00C3\u00A3o.
+    # Atributo que representa a descri\u00E7\u00E3o do status da transa\u00E7\u00E3o.
     attr_accessor :descricao_status
 
-    # Atributo que representa o valor da transa\u00C3\u00A7\u00C3\u00A3o.
+    # Atributo que representa o valor da transa\u00E7\u00E3o.
     attr_accessor :valor
 
-    # Atributo que representa o valor em D\u00C3\u00B3lar da transa\u00C3\u00A7\u00C3\u00A3o.
+    # Atributo que representa o valor em D\u00F3lar da transa\u00E7\u00E3o.
     attr_accessor :valor_dolar
 
-    # Atributo que representa a quantidade de parcelas da transa\u00C3\u00A7\u00C3\u00A3o.
+    # Atributo que representa a quantidade de parcelas da transa\u00E7\u00E3o.
     attr_accessor :quantidade_parcelas
 
-    # Atributo que representa o valor da parcela da transa\u00C3\u00A7\u00C3\u00A3o.
+    # Atributo que representa o valor da parcela da transa\u00E7\u00E3o.
     attr_accessor :valor_parcela
 
-    # Atributo que representa a data de envio da transa\u00C3\u00A7\u00C3\u00A3o.
+    # Atributo que representa a data de envio da transa\u00E7\u00E3o.
     attr_accessor :data_evento
 
-    # Atributo que representa o estabelecimento da transa\u00C3\u00A7\u00C3\u00A3o.
+    # Atributo que representa o estabelecimento da transa\u00E7\u00E3o.
     attr_accessor :estabelecimento
 
-    # Atributo que identifica se a transa\u00C3\u00A7\u00C3\u00A3o \u00C3\u00A9 um cr\u00C3\u00A9dito ou d\u00C3\u00A9bito.
+    # Atributo que identifica se a transa\u00E7\u00E3o \u00E9 um cr\u00E9dito ou d\u00E9bito.
     attr_accessor :flag_credito
 
-    # Atributo que representa o tipo de estabelecimento da transa\u00C3\u00A7\u00C3\u00A3o.
+    # Atributo que representa o tipo de estabelecimento da transa\u00E7\u00E3o.
     attr_accessor :tipo_estabelecimento
 
-    # Atributo que representa o grupo MCC da transa\u00C3\u00A7\u00C3\u00A3o.
+    # Atributo que representa o grupo MCC da transa\u00E7\u00E3o.
     attr_accessor :id_grupo_mcc
 
-    # Atributo que identifica se o portador solicitou contesta\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+    # Atributo que identifica se o portador solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o.
     attr_accessor :flag_solicitou_contestacao
 
     # Attribute mapping from ruby-style variable name to JSON key.

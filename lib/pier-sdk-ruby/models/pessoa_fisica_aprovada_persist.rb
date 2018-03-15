@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -22,37 +22,37 @@ module Pier
     # Apresenta o nome completo da pessoa fisica.
     attr_accessor :nome
 
-    # Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+    # Apresenta o nome da m\u00E3e da pessoa fisica
     attr_accessor :nome_mae
 
     # Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd.
     attr_accessor :data_nascimento
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
+    # C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
     attr_accessor :sexo
 
-    # N\u00C3\u00BAmero do Cadastro de Pessoa Fisica (CPF)
+    # N\u00FAmero do Cadastro de Pessoa Fisica (CPF)
     attr_accessor :cpf
 
-    # N\u00C3\u00BAmero da Identidade
+    # N\u00FAmero da Identidade
     attr_accessor :numero_identidade
 
-    # Org\u00C3\u00A3o expedidor do RG.
+    # Org\u00E3o expedidor do RG.
     attr_accessor :orgao_expedidor_identidade
 
     # Sigla da Unidade Federativa de onde foi expedido a Identidade
     attr_accessor :unidade_federativa_identidade
 
-    # Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
+    # Data emiss\u00E3o da identidade no formato aaaa-MM-dd
     attr_accessor :data_emissao_identidade
 
     # Id Estado civil da pessoa fisica
     attr_accessor :id_estado_civil
 
-    # Profiss\u00C3\u00A3o da pessoa fisica
+    # Profiss\u00E3o da pessoa fisica
     attr_accessor :id_profissao
 
-    # Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+    # Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica
     attr_accessor :id_natureza_ocupacao
 
     # Id Nacionalidade da pessoa fisica
@@ -64,10 +64,10 @@ module Pier
     # Id do produto
     attr_accessor :id_produto
 
-    # N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+    # N\u00FAmero da ag\u00EAncia.
     attr_accessor :numero_agencia
 
-    # N\u00C3\u00BAmero da conta corrente.
+    # N\u00FAmero da conta corrente.
     attr_accessor :numero_conta_corrente
 
     # Email da pessoa fisica
@@ -76,10 +76,10 @@ module Pier
     # Dia vencimento
     attr_accessor :dia_vencimento
 
-    # Nome que deve ser impresso no cart\u00C3\u00A3o
+    # Nome que deve ser impresso no cart\u00E3o
     attr_accessor :nome_impresso
 
-    # Nome que deve ser impresso no cart\u00C3\u00A3o
+    # Nome que deve ser impresso no cart\u00E3o
     attr_accessor :nome_empresa
 
     # Apresenta o valor da renda compravada
@@ -88,22 +88,22 @@ module Pier
     # Indica o canal pelo qual o cadastro do cliente foi realizado
     attr_accessor :canal_entrada
 
-    # Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+    # Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0)
     attr_accessor :valor_pontuacao
 
     # Apresenta os telefones da empresa
     attr_accessor :telefones
 
-    # Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros
+    # Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros
     attr_accessor :enderecos
 
     # Valor do Limite Global
     attr_accessor :limite_global
 
-    # Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+    # Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es
     attr_accessor :limite_maximo
 
-    # Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+    # Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras
     attr_accessor :limite_parcelas
 
     # Valor do limite de margem consignado

@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,28 +19,28 @@ require 'date'
 module Pier
   # Objeto de Resposta de Maquineta
   class MaquinetaResponse
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta.
+    # C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta.
     attr_accessor :id
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do EStabelecimento.
+    # C\u00F3digo de Identifica\u00E7\u00E3o do EStabelecimento.
     attr_accessor :id_estabelecimento
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo Maquineta.
+    # C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta.
     attr_accessor :id_tipo_maquineta
 
-    # Valor de manuten\u00C3\u00A7\u00C3\u00A3o da Maquineta.
+    # Valor de manuten\u00E7\u00E3o da Maquineta.
     attr_accessor :valor
 
-    # Data de implanta\u00C3\u00A7\u00C3\u00A3o da Maquineta.
+    # Data de implanta\u00E7\u00E3o da Maquineta.
     attr_accessor :data_hora_implantacao
 
     # Data de cadastramento da Maquineta.
     attr_accessor :data_hora_cadastramento
 
-    # N\u00C3\u00BAmero do terminal vinculado a Maquineta.
+    # N\u00FAmero do terminal vinculado a Maquineta.
     attr_accessor :terminal
 
-    # Usu\u00C3\u00A1rio da aplica\u00C3\u00A7\u00C3\u00A3o.
+    # Usu\u00E1rio da aplica\u00E7\u00E3o.
     attr_accessor :usuario_apl
 
     # Attribute mapping from ruby-style variable name to JSON key.

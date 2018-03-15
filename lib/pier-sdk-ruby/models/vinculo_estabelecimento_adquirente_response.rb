@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,25 +19,25 @@ require 'date'
 module Pier
   # Objeto de resposta do VinculoEstabelecimentoAdquirente
   class VinculoEstabelecimentoAdquirenteResponse
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do VinculoEstabelecimentoAdquirente (id).
+    # C\u00F3digo de Identifica\u00E7\u00E3o do VinculoEstabelecimentoAdquirente (id).
     attr_accessor :id
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).
+    # C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
     attr_accessor :id_estabelecimento
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Adquirente (id).
+    # C\u00F3digo de Identifica\u00E7\u00E3o do Adquirente (id).
     attr_accessor :id_adquirente
 
-    # C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.
+    # C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente.
     attr_accessor :codigo_estabelecimento_adquirente
 
-    # Data de cadastro do v\u00C3\u00ADnculo.
+    # Data de cadastro do v\u00EDnculo.
     attr_accessor :data_hora_cadastro
 
-    # Data de cadastro do v\u00C3\u00ADnculo.
+    # Data de cadastro do v\u00EDnculo.
     attr_accessor :mensagem
 
-    # Data de cadastro do v\u00C3\u00ADnculo.
+    # Data de cadastro do v\u00EDnculo.
     attr_accessor :status
 
     # Attribute mapping from ruby-style variable name to JSON key.

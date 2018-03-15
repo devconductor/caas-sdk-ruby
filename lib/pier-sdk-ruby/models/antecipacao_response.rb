@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -22,13 +22,13 @@ module Pier
 
     attr_accessor :uf
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+    # C\u00F3digo de identifica\u00E7\u00E3o da antecipa\u00E7\u00E3o
     attr_accessor :id
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta
+    # C\u00F3digo de identifica\u00E7\u00E3o da conta
     attr_accessor :id_conta
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da compra
+    # C\u00F3digo de identifica\u00E7\u00E3o da compra
     attr_accessor :id_compra
 
     # Apresenta o numero total de parcelas da compra
@@ -52,40 +52,40 @@ module Pier
     # Data da compra.
     attr_accessor :data_compra
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
+    # Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
     attr_accessor :status
 
     # Nome do estabelecimento da compra.
     attr_accessor :nome_estabelecimento
 
-    # Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.
+    # Tipo de transa\u00E7\u00E3o da compra.
     attr_accessor :tipo_origem_transacao
 
     # Cidade onde a compra foi realizada.
     attr_accessor :cidade
 
-    # Pa\u00C3\u00ADs onde a compra foi realizada.
+    # Pa\u00EDs onde a compra foi realizada.
     attr_accessor :pais
 
-    # Coordenada latitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+    # Coordenada latitudinal da localiza\u00E7\u00E3o da compra.
     attr_accessor :latitude
 
-    # Coordenada longitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+    # Coordenada longitudinal da localiza\u00E7\u00E3o da compra.
     attr_accessor :longitude
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+    # C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra.
     attr_accessor :id_grupo_mcc
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+    # Descri\u00E7\u00E3o do Grupo MCC da compra.
     attr_accessor :descricao_grupo_mcc
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+    # C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra.
     attr_accessor :id_produto
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+    # Descri\u00E7\u00E3o do produto da compra.
     attr_accessor :descricao_produto
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do estabelecimento da compra.
+    # Descri\u00E7\u00E3o do estabelecimento da compra.
     attr_accessor :descricao_estabelecimento
 
     # Nome fantasia do estabelecimento da compra.

@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -39,13 +39,13 @@ describe 'FAQApi' do
   # unit tests for adicionar_using_post
   # Adiciona uma nova FAQ
   # Adiciona uma nova FAQ
-  # @param pergunta Conte\u00C3\u00BAdo da pergunta.
-  # @param resposta Conte\u00C3\u00BAdo da resposta.
+  # @param pergunta Conte\u00FAdo da pergunta.
+  # @param resposta Conte\u00FAdo da resposta.
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :relevancia N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.
+  # @option opts [Integer] :relevancia N\u00EDvel de relev\u00E2ncia da pergunta.
   # @option opts [String] :plataforma Plataforma em que a FAQ se encaixa.
   # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
-  # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
+  # @option opts [String] :status Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
   # @return [FaqResponse]
   describe 'adicionar_using_post test' do
     it "should work" do
@@ -61,13 +61,13 @@ describe 'FAQApi' do
   # Alterar FAQ
   # Alterar FAQ
   # @param id Id
-  # @param pergunta Conte\u00C3\u00BAdo da pergunta.
-  # @param resposta Conte\u00C3\u00BAdo da resposta.
+  # @param pergunta Conte\u00FAdo da pergunta.
+  # @param resposta Conte\u00FAdo da resposta.
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :relevancia N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.
+  # @option opts [Integer] :relevancia N\u00EDvel de relev\u00E2ncia da pergunta.
   # @option opts [String] :plataforma Plataforma em que a FAQ se encaixa.
   # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
-  # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
+  # @option opts [String] :status Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
   # @return [FaqResponse]
   describe 'alterar_using_put7 test' do
     it "should work" do
@@ -79,13 +79,13 @@ describe 'FAQApi' do
     end
   end
 
-  # unit tests for consultar_using_get17
+  # unit tests for consultar_using_get18
   # Consultar FAQ por id
   # Consulta os detalhes de uma determinada FAQ
   # @param id Id
   # @param [Hash] opts the optional parameters
   # @return [FaqResponse]
-  describe 'consultar_using_get17 test' do
+  describe 'consultar_using_get18 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -95,22 +95,22 @@ describe 'FAQApi' do
     end
   end
 
-  # unit tests for listar_using_get22
+  # unit tests for listar_using_get23
   # Lista FAQs
   # Lista todas as FAQs
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id_faq C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
-  # @option opts [String] :pergunta Conte\u00C3\u00BAdo da pergunta.
-  # @option opts [String] :resposta Conte\u00C3\u00BAdo da resposta.
-  # @option opts [Integer] :relevancia N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [Integer] :id_faq C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id).
+  # @option opts [String] :pergunta Conte\u00FAdo da pergunta.
+  # @option opts [String] :resposta Conte\u00FAdo da resposta.
+  # @option opts [Integer] :relevancia N\u00EDvel de relev\u00E2ncia da pergunta.
   # @option opts [String] :plataforma Plataforma em que a FAQ se encaixa.
   # @option opts [String] :categoria Categoria de assunto do qual a FAQ se trata.
-  # @option opts [String] :status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
+  # @option opts [String] :status Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
   # @return [PageFaqResponse]
-  describe 'listar_using_get22 test' do
+  describe 'listar_using_get23 test' do
     it "should work" do
       # assertion here
       # should be_a()

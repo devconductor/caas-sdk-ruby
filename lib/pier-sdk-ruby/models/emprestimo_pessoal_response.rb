@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,29 +17,29 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Resposta do recurso de simular empr\u00C3\u00A9stimos/financiamentos
+  # Resposta do recurso de simular empr\u00E9stimos/financiamentos
   class EmprestimoPessoalResponse
     attr_accessor :planos_parcelamentos
 
-    # Valor solicitado do empr\u00C3\u00A9stimo/financiamento
+    # Valor solicitado do empr\u00E9stimo/financiamento
     attr_accessor :valor_solicitado
 
-    # Valor m\u00C3\u00A1ximo de empr\u00C3\u00A9stimo pelo valor limite de parcela
+    # Valor m\u00E1ximo de empr\u00E9stimo pelo valor limite de parcela
     attr_accessor :valor_maximo_solicitacao
 
-    # N\u00C3\u00BAmero de parcelas solicitado
+    # N\u00FAmero de parcelas solicitado
     attr_accessor :numero_parcelas
 
-    # Limite m\u00C3\u00A1ximo de parcela permitido
+    # Limite m\u00E1ximo de parcela permitido
     attr_accessor :valor_maximo_parcela
 
     # Data do desconto da primeira parcela
     attr_accessor :data_primeira_parcela
 
-    # Per\u00C3\u00ADodo de aplica da taxa de juros
+    # Per\u00EDodo de aplica da taxa de juros
     attr_accessor :periodo_taxa
 
-    # Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas
+    # Sistema para amortiza\u00E7\u00E3o do valor das parcelas
     attr_accessor :sistema_amortizacao
 
     # Valor percentual da taxa de juros a ser aplicada

@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,12 +17,12 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o
+  # Objeto de Requisi\u00E7\u00E3o de Taxa de Antecipa\u00E7\u00E3o
   class TaxaAntecipacaoRequest
-    # C\u00C3\u00B3digo que identifica se um par\u00C3\u00A2metro refere-se a uma transa\u00C3\u00A7\u00C3\u00A3o On-Us ou Off-Us.
+    # C\u00F3digo que identifica se um par\u00E2metro refere-se a uma transa\u00E7\u00E3o On-Us ou Off-Us.
     attr_accessor :tipo_transacao
 
-    # Valor da Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o.
+    # Valor da Taxa de Antecipa\u00E7\u00E3o.
     attr_accessor :valor_taxa
 
     # Attribute mapping from ruby-style variable name to JSON key.

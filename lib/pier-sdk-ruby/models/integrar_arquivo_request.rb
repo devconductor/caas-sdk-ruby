@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,16 +17,16 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto de requisi\u00C3\u00A7\u00C3\u00A3o da integra\u00C3\u00A7\u00C3\u00A3o de Arquivos.
+  # Objeto de requisi\u00E7\u00E3o da integra\u00E7\u00E3o de Arquivos.
   class IntegrarArquivoRequest
-    # CPF do cliente de Arquivos a serem integrados
-    attr_accessor :cpf
+    # N\u00FAmero Receita Federal (CPF) vinculado a um ou mais arquivos que ser\u00E3o enviados para realizar integra\u00E7\u00E3o
+    attr_accessor :numero_receita_federal
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'cpf' => :'cpf'
+        :'numero_receita_federal' => :'numeroReceitaFederal'
         
       }
     end
@@ -35,7 +35,7 @@ module Pier
     def self.swagger_types
       {
         
-        :'cpf' => :'String'
+        :'numero_receita_federal' => :'String'
         
       }
     end
@@ -49,10 +49,10 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'cpf']
+      if attributes[:'numeroReceitaFederal']
         
         
-        self.cpf = attributes[:'cpf']
+        self.numero_receita_federal = attributes[:'numeroReceitaFederal']
         
       
       end
@@ -90,7 +90,7 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          cpf == o.cpf
+          numero_receita_federal == o.numero_receita_federal
     end
 
     # @see the `==` method
@@ -102,7 +102,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [cpf].hash
+      [numero_receita_federal].hash
     end
 
     # Builds the object from hash

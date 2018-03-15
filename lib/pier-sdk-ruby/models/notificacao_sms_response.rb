@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,28 +19,28 @@ require 'date'
 module Pier
   # Objeto SMS
   class NotificacaoSMSResponse
-    # C\u00C3\u00B3digo Identificador.
+    # C\u00F3digo Identificador.
     attr_accessor :id
 
-    # N\u00C3\u00BAmero sequencial \u00C3\u00BAnico.
+    # N\u00FAmero sequencial \u00FAnico.
     attr_accessor :nsu
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id).
+    # C\u00F3digo de identifica\u00E7\u00E3o do emissor (id).
     attr_accessor :id_emissor
 
-    # TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o
+    # TipoEvento de notifica\u00E7\u00E3o
     attr_accessor :tipo_evento
 
-    # Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+    # Status de envio da notifica\u00E7\u00E3o
     attr_accessor :status
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+    # Descri\u00E7\u00E3o do status de envio da notifica\u00E7\u00E3o
     attr_accessor :descricao_status
 
-    # C\u00C3\u00B3digo identificado da pessoa
+    # C\u00F3digo identificado da pessoa
     attr_accessor :id_pessoa
 
-    # C\u00C3\u00B3digo identificador da conta
+    # C\u00F3digo identificador da conta
     attr_accessor :id_conta
 
     # Apresenta o celular a ser eviado o SMS no formato 5588999999999 ou 5588999999999
@@ -49,25 +49,25 @@ module Pier
     # Apresenta a operadora do celular a ser eviado o SMS
     attr_accessor :operadora
 
-    # Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado
+    # Apresenta o texto da notifica\u00E7\u00E3o a ser enviado
     attr_accessor :conteudo
 
-    # Apresenta o texto da resposta da notifica\u00C3\u00A7\u00C3\u00A3o que foi enviada
+    # Apresenta o texto da resposta da notifica\u00E7\u00E3o que foi enviada
     attr_accessor :resposta
 
-    # Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
+    # Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o
     attr_accessor :data_agendamento
 
-    # Quantidade de tentativas e envio da notifica\u00C3\u00A7\u00C3\u00A3o
+    # Quantidade de tentativas e envio da notifica\u00E7\u00E3o
     attr_accessor :quantidade_tentativas_envio
 
-    # Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
+    # Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado
     attr_accessor :data_inclusao
 
     # Apresenta a data e em que o Stattjus do registro foi modificado
     attr_accessor :data_alteracao_status
 
-    # N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+    # N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
     attr_accessor :protocolo
 
     # Attribute mapping from ruby-style variable name to JSON key.

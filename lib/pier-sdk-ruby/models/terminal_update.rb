@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,10 +19,10 @@ require 'date'
 module Pier
   # TerminalUpdate
   class TerminalUpdate
-    # Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+    # Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).
     attr_accessor :flag_consulta_extrato
 
-    # Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+    # Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).
     attr_accessor :flag_terminal_virtual
 
     # Attribute mapping from ruby-style variable name to JSON key.

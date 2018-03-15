@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,12 +17,12 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o para alterar origem comercial
+  # Par\u00E2metros de requisi\u00E7\u00E3o para alterar origem comercial
   class OrigemComercialUpdate
     # Nome da origem comercial
     attr_accessor :nome
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial
+    # Descri\u00E7\u00E3o da origem comercial
     attr_accessor :descricao
 
     # Identificador do estabelecimento
@@ -37,40 +37,40 @@ module Pier
     # Indica o status da origem comercial
     attr_accessor :status
 
-    # Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o
+    # Indica se permite pr\u00E9 aprova\u00E7\u00E3o
     attr_accessor :flag_pre_aprovado
 
-    # Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata
+    # Indica se permite aprova\u00E7\u00E3o imediata
     attr_accessor :flag_aprovacao_imediata
 
-    # Nome fantasia impresso no pl\u00C3\u00A1stico
+    # Nome fantasia impresso no pl\u00E1stico
     attr_accessor :nome_fantasia_plastico
 
-    # Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio
+    # Indica se permite cart\u00E3o provis\u00F3rio
     attr_accessor :flag_cartao_provisorio
 
-    # Indica se permite cart\u00C3\u00A3o definitivo
+    # Indica se permite cart\u00E3o definitivo
     attr_accessor :flag_cartao_definitivo
 
-    # Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o
+    # Usu\u00E1rio para autentica\u00E7\u00E3o
     attr_accessor :usuario
 
-    # Senha para autentica\u00C3\u00A7\u00C3\u00A3o
+    # Senha para autentica\u00E7\u00E3o
     attr_accessor :senha
 
-    # Indica se \u00C3\u00A9 origem externa
+    # Indica se \u00E9 origem externa
     attr_accessor :flag_origem_externa
 
-    # Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o
+    # Indica se h\u00E1 modifica\u00E7\u00E3o
     attr_accessor :flag_modificado
 
     # Indica se envia fatura
     attr_accessor :flag_envia_fatura_usuario
 
-    # Indica se permite cr\u00C3\u00A9dito de faturamento
+    # Indica se permite cr\u00E9dito de faturamento
     attr_accessor :flag_credito_faturamento
 
-    # Indica se concede limite provis\u00C3\u00B3rio
+    # Indica se concede limite provis\u00F3rio
     attr_accessor :flag_concede_limite_provisorio
 
     # Indica se digitaliza documento
@@ -79,7 +79,7 @@ module Pier
     # Indica se realiza embossing em loja
     attr_accessor :flag_embossing_loja
 
-    # Indica se realiza consulta pr\u00C3\u00A9via
+    # Indica se realiza consulta pr\u00E9via
     attr_accessor :flag_consulta_previa
 
     # Tipo de pessoa

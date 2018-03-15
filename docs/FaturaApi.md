@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultar_fatura_using_get1**](FaturaApi.md#consultar_fatura_using_get1) | **GET** /api/faturas/{dataVencimento} | Consulta fatura de um cliente
 [**consultar_lancamentos_futuros_fatura_using_get1**](FaturaApi.md#consultar_lancamentos_futuros_fatura_using_get1) | **GET** /api/contas/{id}/faturas/planos-parcelamento | Listar planos de parcelamento
-[**enviar_fatura_email_using_post**](FaturaApi.md#enviar_fatura_email_using_post) | **POST** /api/contas/{id}/faturas/{dataVencimento}/enviar-email | Envia 2\u00C2\u00AA via de fatura por E-mail
+[**enviar_fatura_email_using_post**](FaturaApi.md#enviar_fatura_email_using_post) | **POST** /api/contas/{id}/faturas/{dataVencimento}/enviar-email | Envia 2\u00AA via de fatura por E-mail
 [**listar_faturas_using_get1**](FaturaApi.md#listar_faturas_using_get1) | **GET** /api/faturas | Listar faturas de um cliente.
 [**visualizar_documento_using_get**](FaturaApi.md#visualizar_documento_using_get) | **GET** /api/contas/{id}/faturas/{dataVencimento}/arquivo.pdf | Permite visualizar o extrato da fatura em formato PDF
 
@@ -27,7 +27,7 @@ api_instance = Pier::FaturaApi.new
 
 data_vencimento = "data_vencimento_example" # String | Data Vencimento
 
-id_conta = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+id_conta = 789 # Integer | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 
 begin
@@ -44,7 +44,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data_vencimento** | **String**| Data Vencimento | 
- **id_conta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id_conta** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
 
 ### Return type
 
@@ -75,14 +75,14 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::FaturaApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+id = 789 # Integer | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
-data_vencimento_padrao = "data_vencimento_padrao_example" # String | Indica a data de vencimento padr\u00C3\u00A3o das faturas
+data_vencimento_padrao = "data_vencimento_padrao_example" # String | Indica a data de vencimento padr\u00E3o das faturas
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 }
 
 begin
@@ -98,11 +98,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **data_vencimento_padrao** | **String**| Indica a data de vencimento padr\u00C3\u00A3o das faturas | 
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
+ **data_vencimento_padrao** | **String**| Indica a data de vencimento padr\u00E3o das faturas | 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -122,7 +122,7 @@ No authorization required
 # **enviar_fatura_email_using_post**
 > Object enviar_fatura_email_using_post(id, data_vencimento, opts)
 
-Envia 2\u00C2\u00AA via de fatura por E-mail
+Envia 2\u00AA via de fatura por E-mail
 
 Envia a segunda via da fatura para o e-mail informado/cadastrado.
 
@@ -133,16 +133,16 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::FaturaApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+id = 789 # Integer | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 data_vencimento = "data_vencimento_example" # String | Data de Vencimento da fatura (yyyy-MM-dd).
 
 opts = { 
-  email: "email_example" # String | E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado.
+  email: "email_example" # String | E-mail para envio da 2\u00AA via da fatura, caso n\u00E3o seja informado ser\u00E1 usado o e-mail cadastrado.
 }
 
 begin
-  #Envia 2\u00C2\u00AA via de fatura por E-mail
+  #Envia 2\u00AA via de fatura por E-mail
   result = api_instance.enviar_fatura_email_using_post(id, data_vencimento, opts)
   p result
 rescue Pier::ApiError => e
@@ -154,9 +154,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
  **data_vencimento** | **String**| Data de Vencimento da fatura (yyyy-MM-dd). | 
- **email** | **String**| E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado. | [optional] 
+ **email** | **String**| E-mail para envio da 2\u00AA via da fatura, caso n\u00E3o seja informado ser\u00E1 usado o e-mail cadastrado. | [optional] 
 
 ### Return type
 
@@ -187,13 +187,13 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::FaturaApi.new
 
-id_conta = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+id_conta = 789 # Integer | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 opts = { 
   situacao_processamento: "TODAS", # String | Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS].
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56 # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56 # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 }
 
 begin
@@ -209,11 +209,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_conta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id_conta** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
  **situacao_processamento** | **String**| Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. | [optional] [default to TODAS]
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -235,7 +235,7 @@ No authorization required
 
 Permite visualizar o extrato da fatura em formato PDF
 
-Esta opera\u00C3\u00A7\u00C3\u00A3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00C3\u00AAs corrente, o pdf ser\u00C3\u00A1 composto pelo extrato de lan\u00C3\u00A7amentos e pela ficha de compensa\u00C3\u00A7\u00C3\u00A3o banc\u00C3\u00A1ria. Quando for de uma fatura do hist\u00C3\u00B3rico do cliente, o PDF ser\u00C3\u00A1 composto apenas pelo extrato de transa\u00C3\u00A7\u00C3\u00B5es.
+Esta opera\u00E7\u00E3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00EAs corrente, o pdf ser\u00E1 composto pelo extrato de lan\u00E7amentos e pela ficha de compensa\u00E7\u00E3o banc\u00E1ria. Quando for de uma fatura do hist\u00F3rico do cliente, o PDF ser\u00E1 composto apenas pelo extrato de transa\u00E7\u00F5es.
 
 ### Example
 ```ruby
@@ -244,7 +244,7 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::FaturaApi.new
 
-id = 789 # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+id = 789 # Integer | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 data_vencimento = "data_vencimento_example" # String | Data de Vencimento da fatura.
 
@@ -262,7 +262,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
  **data_vencimento** | **String**| Data de Vencimento da fatura. | 
 
 ### Return type

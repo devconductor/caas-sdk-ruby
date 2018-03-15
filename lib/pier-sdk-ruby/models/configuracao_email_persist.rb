@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,7 +17,7 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso Configura\u00C3\u00A7\u00C3\u00A3o Email
+  # Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso Configura\u00E7\u00E3o Email
   class ConfiguracaoEmailPersist
     # IP (Host) do servidor de e-mail.
     attr_accessor :host
@@ -25,28 +25,28 @@ module Pier
     # Porta usada pelo servidor de e-mail.
     attr_accessor :port
 
-    # Porta usada pelo servi\u00C3\u00A7o TLS/STARTTLS.
+    # Porta usada pelo servi\u00E7o TLS/STARTTLS.
     attr_accessor :port_tlsstarttls
 
-    # Porta usada pelo servi\u00C3\u00A7o SSL.
+    # Porta usada pelo servi\u00E7o SSL.
     attr_accessor :port_ssl
 
-    # Protocolo de comunica\u00C3\u00A7\u00C3\u00A3o usado pelo servi\u00C3\u00A7o de e-mail.
+    # Protocolo de comunica\u00E7\u00E3o usado pelo servi\u00E7o de e-mail.
     attr_accessor :protocolo
 
-    # O servi\u00C3\u00A7o de e-mail requer autentica\u00C3\u00A7\u00C3\u00A3o.
+    # O servi\u00E7o de e-mail requer autentica\u00E7\u00E3o.
     attr_accessor :requer_autenticacao
 
-    # O servi\u00C3\u00A7o de e-mail requer SSL.
+    # O servi\u00E7o de e-mail requer SSL.
     attr_accessor :requer_ssl
 
-    # O servi\u00C3\u00A7o de e-mail requer TLS.
+    # O servi\u00E7o de e-mail requer TLS.
     attr_accessor :requer_tls
 
-    # Usuario do servi\u00C3\u00A7o de e-mail.
+    # Usuario do servi\u00E7o de e-mail.
     attr_accessor :usuario
 
-    # Senha de usu\u00C3\u00A1rio do servi\u00C3\u00A7o de e-mail.
+    # Senha de usu\u00E1rio do servi\u00E7o de e-mail.
     attr_accessor :senha
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,20 +17,20 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
+  # Transfer\u00EAncia banc\u00E1ria
   class TransferenciaBancariaResponse
     attr_accessor :nsuorigem
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da autoriza\u00C3\u00A7\u00C3\u00A3o (id)
+    # C\u00F3digo de identifica\u00E7\u00E3o da autoriza\u00E7\u00E3o (id)
     attr_accessor :id_autorizacao
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transferencia (id)
+    # C\u00F3digo de identifica\u00E7\u00E3o da transferencia (id)
     attr_accessor :id_transferencia
 
-    # C\u00C3\u00B3digo da autoriza\u00C3\u00A7\u00C3\u00A3o
+    # C\u00F3digo da autoriza\u00E7\u00E3o
     attr_accessor :codigo_autorizacao
 
-    # Data da autoriza\u00C3\u00A7\u00C3\u00A3o
+    # Data da autoriza\u00E7\u00E3o
     attr_accessor :data_autorizacao
 
     # Origem
@@ -39,34 +39,34 @@ module Pier
     # Valor
     attr_accessor :valor
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de opera\u00C3\u00A7\u00C3\u00A3o (id)
+    # C\u00F3digo de identifica\u00E7\u00E3o do tipo de opera\u00E7\u00E3o (id)
     attr_accessor :id_operacao
 
     # Terminal
     attr_accessor :terminal
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id)
+    # C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)
     attr_accessor :id_cartao
 
-    # Data da transfer\u00C3\u00AAncia
+    # Data da transfer\u00EAncia
     attr_accessor :data_compra
 
-    # Valor da transfer\u00C3\u00AAncia
+    # Valor da transfer\u00EAncia
     attr_accessor :valor_compra
 
-    # N\u00C3\u00BAmero de parcelas
+    # N\u00FAmero de parcelas
     attr_accessor :numero_parcelas
 
     # Valor da parcela
     attr_accessor :valor_parcela
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id)
+    # C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id)
     attr_accessor :id_estabelecimento
 
     # Data do movimento
     attr_accessor :data_movimento
 
-    # Valor da transfer\u00C3\u00AAncia acrescido do valor da tarifa de saque se houver tarifa de saque
+    # Valor da transfer\u00EAncia acrescido do valor da tarifa de saque se houver tarifa de saque
     attr_accessor :valor_contrato
 
     # Percentual de juros
@@ -78,7 +78,7 @@ module Pier
     # Valor da TAC
     attr_accessor :valor_tac
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)
+    # C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
     attr_accessor :id_conta
 
     # Valor da entrada (primeira parcela)
@@ -87,10 +87,10 @@ module Pier
     # Data do vencimento real da fatura
     attr_accessor :data_vencimento_real
 
-    # Dia do vencimento padr\u00C3\u00A3o da fatura
+    # Dia do vencimento padr\u00E3o da fatura
     attr_accessor :data_vencimento_padrao
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+    # C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id)
     attr_accessor :id_conta_portador
 
     # Atributo que representa o numero do estabelecimento.
@@ -99,19 +99,19 @@ module Pier
     # Valor da taxa saque.
     attr_accessor :valor_taxa_saque
 
-    # C\u00C3\u00B3digo do Banco
+    # C\u00F3digo do Banco
     attr_accessor :banco
 
-    # N\u00C3\u00BAmero da Ag\u00C3\u00AAncia
+    # N\u00FAmero da Ag\u00EAncia
     attr_accessor :numero_agencia
 
-    # D\u00C3\u00ADgito da Ag\u00C3\u00AAncia
+    # D\u00EDgito da Ag\u00EAncia
     attr_accessor :digito_agencia
 
-    # N\u00C3\u00BAmero da Conta
+    # N\u00FAmero da Conta
     attr_accessor :numero_conta
 
-    # D\u00C3\u00ADgito da Conta
+    # D\u00EDgito da Conta
     attr_accessor :digito_conta
 
     # Tipo da Conta

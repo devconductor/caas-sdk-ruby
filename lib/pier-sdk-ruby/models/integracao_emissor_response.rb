@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,24 +17,24 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Resposta do recurso de inclus\u00C3\u00A3o de registro para integra\u00C3\u00A7\u00C3\u00A3o
+  # Resposta do recurso de inclus\u00E3o de registro para integra\u00E7\u00E3o
   class IntegracaoEmissorResponse
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do registro na tabela Integra\u00C3\u00A7\u00C3\u00A3oEmissor.
+    # C\u00F3digo de identifica\u00E7\u00E3o do registro na tabela Integra\u00E7\u00E3oEmissor.
     attr_accessor :id
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+    # C\u00F3digo de identifica\u00E7\u00E3o da conta.
     attr_accessor :id_conta
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo.
+    # C\u00F3digo de identifica\u00E7\u00E3o do arquivo.
     attr_accessor :id_arquivo
 
     # Status do registro.
     attr_accessor :status
 
-    # Data de inclus\u00C3\u00A3o do registro.
+    # Data de inclus\u00E3o do registro.
     attr_accessor :data_inclusao
 
-    # Data da ultima altera\u00C3\u00A7\u00C3\u00A3o do registro.
+    # Data da ultima altera\u00E7\u00E3o do registro.
     attr_accessor :data_alteracao
 
     # Attribute mapping from ruby-style variable name to JSON key.

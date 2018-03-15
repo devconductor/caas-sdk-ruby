@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,18 +17,18 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de Tipo Debito Recorrente
+  # Representa\u00E7\u00E3o da resposta do recurso de Tipo Debito Recorrente
   class TipoDebitoRecorrenteResponse
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente (id).
+    # C\u00F3digo de identifica\u00E7\u00E3o do tipo de d\u00E9bito recorrente (id).
     attr_accessor :id
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente.
+    # Descri\u00E7\u00E3o do tipo de d\u00E9bito recorrente.
     attr_accessor :descricao
 
-    # Valor do tipo de d\u00C3\u00A9bito recorrente.
+    # Valor do tipo de d\u00E9bito recorrente.
     attr_accessor :valor
 
-    # Flag que identifica se o tipo d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo.
+    # Flag que identifica se o tipo d\u00E9bito recorrente est\u00E1 ativo.
     attr_accessor :flag_ativo
 
     # Attribute mapping from ruby-style variable name to JSON key.

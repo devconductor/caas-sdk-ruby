@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -25,8 +25,8 @@ module Pier
     end
 
     # Alterar campanha
-    # Este m\u00C3\u00A9todo permite que sejam alterados os dados de uma campanha.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da campanha (id).
+    # Este m\u00E9todo permite que sejam alterados os dados de uma campanha.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da campanha (id).
     # @param update update
     # @param [Hash] opts the optional parameters
     # @return [CampanhaResponse]
@@ -36,8 +36,8 @@ module Pier
     end
 
     # Alterar campanha
-    # Este m\u00C3\u00A9todo permite que sejam alterados os dados de uma campanha.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da campanha (id).
+    # Este m\u00E9todo permite que sejam alterados os dados de uma campanha.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da campanha (id).
     # @param update update
     # @param [Hash] opts the optional parameters
     # @return [Array<(CampanhaResponse, Fixnum, Hash)>] CampanhaResponse data, response status code and response headers
@@ -99,9 +99,9 @@ module Pier
       return data, status_code, headers
     end
 
-    # Atualizar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
-    # Este m\u00C3\u00A9todo permite atualizar uma configura\u00C3\u00A7\u00C3\u00A3o, para registro de cobran\u00C3\u00A7a.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id).
+    # Atualizar configura\u00E7\u00E3o para registro de cobran\u00E7a
+    # Este m\u00E9todo permite atualizar uma configura\u00E7\u00E3o, para registro de cobran\u00E7a.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o (id).
     # @param configuracao_persist configuracaoPersist
     # @param [Hash] opts the optional parameters
     # @return [ConfiguracaoRegistroCobrancaResponse]
@@ -110,9 +110,9 @@ module Pier
       return data
     end
 
-    # Atualizar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
-    # Este m\u00C3\u00A9todo permite atualizar uma configura\u00C3\u00A7\u00C3\u00A3o, para registro de cobran\u00C3\u00A7a.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id).
+    # Atualizar configura\u00E7\u00E3o para registro de cobran\u00E7a
+    # Este m\u00E9todo permite atualizar uma configura\u00E7\u00E3o, para registro de cobran\u00E7a.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o (id).
     # @param configuracao_persist configuracaoPersist
     # @param [Hash] opts the optional parameters
     # @return [Array<(ConfiguracaoRegistroCobrancaResponse, Fixnum, Hash)>] ConfiguracaoRegistroCobrancaResponse data, response status code and response headers
@@ -174,9 +174,9 @@ module Pier
       return data, status_code, headers
     end
 
-    # Alterar os dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo de um produto
-    # Este m\u00C3\u00A9todo permite que seja alterada uma configura\u00C3\u00A7\u00C3\u00A3o do rotativo para um determinado produto.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id).
+    # Alterar os dados de configura\u00E7\u00E3o do rotativo de um produto
+    # Este m\u00E9todo permite que seja alterada uma configura\u00E7\u00E3o do rotativo para um determinado produto.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o (id).
     # @param configuracao_rotativo_persist configuracaoRotativoPersist
     # @param [Hash] opts the optional parameters
     # @return [ConfiguracaoRotativoDetalheResponse]
@@ -185,9 +185,9 @@ module Pier
       return data
     end
 
-    # Alterar os dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo de um produto
-    # Este m\u00C3\u00A9todo permite que seja alterada uma configura\u00C3\u00A7\u00C3\u00A3o do rotativo para um determinado produto.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id).
+    # Alterar os dados de configura\u00E7\u00E3o do rotativo de um produto
+    # Este m\u00E9todo permite que seja alterada uma configura\u00E7\u00E3o do rotativo para um determinado produto.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o (id).
     # @param configuracao_rotativo_persist configuracaoRotativoPersist
     # @param [Hash] opts the optional parameters
     # @return [Array<(ConfiguracaoRotativoDetalheResponse, Fixnum, Hash)>] ConfiguracaoRotativoDetalheResponse data, response status code and response headers
@@ -249,8 +249,8 @@ module Pier
       return data, status_code, headers
     end
 
-    # Inserir configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
-    # Este m\u00C3\u00A9todo permite que seja cadastrado uma nova configura\u00C3\u00A7\u00C3\u00A3o, para registro de cobran\u00C3\u00A7a.
+    # Inserir configura\u00E7\u00E3o para registro de cobran\u00E7a
+    # Este m\u00E9todo permite que seja cadastrado uma nova configura\u00E7\u00E3o, para registro de cobran\u00E7a.
     # @param configuracao_persist configuracaoPersist
     # @param [Hash] opts the optional parameters
     # @return [ConfiguracaoRegistroCobrancaResponse]
@@ -259,8 +259,8 @@ module Pier
       return data
     end
 
-    # Inserir configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
-    # Este m\u00C3\u00A9todo permite que seja cadastrado uma nova configura\u00C3\u00A7\u00C3\u00A3o, para registro de cobran\u00C3\u00A7a.
+    # Inserir configura\u00E7\u00E3o para registro de cobran\u00E7a
+    # Este m\u00E9todo permite que seja cadastrado uma nova configura\u00E7\u00E3o, para registro de cobran\u00E7a.
     # @param configuracao_persist configuracaoPersist
     # @param [Hash] opts the optional parameters
     # @return [Array<(ConfiguracaoRegistroCobrancaResponse, Fixnum, Hash)>] ConfiguracaoRegistroCobrancaResponse data, response status code and response headers
@@ -314,8 +314,8 @@ module Pier
       return data, status_code, headers
     end
 
-    # Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
-    # Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+    # Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto
+    # Este recurso permite configurar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
     # @param id Id Produto
     # @param taxa_antecipacao_request taxaAntecipacaoRequest
     # @param [Hash] opts the optional parameters
@@ -325,8 +325,8 @@ module Pier
       return data
     end
 
-    # Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
-    # Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+    # Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto
+    # Este recurso permite configurar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
     # @param id Id Produto
     # @param taxa_antecipacao_request taxaAntecipacaoRequest
     # @param [Hash] opts the optional parameters
@@ -390,7 +390,7 @@ module Pier
     end
 
     # Consultar campanha
-    # Este m\u00C3\u00A9todo permite que sejam listados os dados de uma determinada campanha existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+    # Este m\u00E9todo permite que sejam listados os dados de uma determinada campanha existente na base do emissor. Para isso, \u00E9 preciso informar o seu respectivo c\u00F3digo de identifica\u00E7\u00E3o (id).
     # @param id ID da Campanha
     # @param [Hash] opts the optional parameters
     # @return [CampanhaResponse]
@@ -400,7 +400,7 @@ module Pier
     end
 
     # Consultar campanha
-    # Este m\u00C3\u00A9todo permite que sejam listados os dados de uma determinada campanha existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+    # Este m\u00E9todo permite que sejam listados os dados de uma determinada campanha existente na base do emissor. Para isso, \u00E9 preciso informar o seu respectivo c\u00F3digo de identifica\u00E7\u00E3o (id).
     # @param id ID da Campanha
     # @param [Hash] opts the optional parameters
     # @return [Array<(CampanhaResponse, Fixnum, Hash)>] CampanhaResponse data, response status code and response headers
@@ -454,10 +454,10 @@ module Pier
       return data, status_code, headers
     end
 
-    # Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
-    # Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+    # Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto
+    # Este recurso permite consultar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
     # @param id Id Produto
-    # @param tipo_transacao Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US)
+    # @param tipo_transacao Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US)
     # @param [Hash] opts the optional parameters
     # @return [ParametroProdutoResponse]
     def consultar_taxa_antecipacao_using_get(id, tipo_transacao, opts = {})
@@ -465,10 +465,10 @@ module Pier
       return data
     end
 
-    # Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
-    # Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+    # Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto
+    # Este recurso permite consultar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
     # @param id Id Produto
-    # @param tipo_transacao Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US)
+    # @param tipo_transacao Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US)
     # @param [Hash] opts the optional parameters
     # @return [Array<(ParametroProdutoResponse, Fixnum, Hash)>] ParametroProdutoResponse data, response status code and response headers
     def consultar_taxa_antecipacao_using_get_with_http_info(id, tipo_transacao, opts = {})
@@ -535,21 +535,21 @@ module Pier
       return data, status_code, headers
     end
 
-    # Apresenta dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo espec\u00C3\u00ADfico.
-    # Este recurso permite consultar dados de configura\u00C3\u00A7\u00C3\u00A3o do parcelamento rotativo a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de configura\u00C3\u00A7\u00C3\u00A3o rotativo (id).
+    # Consultar configura\u00E7\u00E3o para registro de cobran\u00E7a
+    # Este m\u00E9todo permite buscar uma configura\u00E7\u00E3o, para registro de cobran\u00E7a.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o (id).
     # @param [Hash] opts the optional parameters
-    # @return [ConfiguracaoRotativoDetalheResponse]
+    # @return [ConfiguracaoRegistroCobrancaResponse]
     def consultar_using_get10(id, opts = {})
       data, _status_code, _headers = consultar_using_get10_with_http_info(id, opts)
       return data
     end
 
-    # Apresenta dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo espec\u00C3\u00ADfico.
-    # Este recurso permite consultar dados de configura\u00C3\u00A7\u00C3\u00A3o do parcelamento rotativo a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de configura\u00C3\u00A7\u00C3\u00A3o rotativo (id).
+    # Consultar configura\u00E7\u00E3o para registro de cobran\u00E7a
+    # Este m\u00E9todo permite buscar uma configura\u00E7\u00E3o, para registro de cobran\u00E7a.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o (id).
     # @param [Hash] opts the optional parameters
-    # @return [Array<(ConfiguracaoRotativoDetalheResponse, Fixnum, Hash)>] ConfiguracaoRotativoDetalheResponse data, response status code and response headers
+    # @return [Array<(ConfiguracaoRegistroCobrancaResponse, Fixnum, Hash)>] ConfiguracaoRegistroCobrancaResponse data, response status code and response headers
     def consultar_using_get10_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get10 ..."
@@ -558,6 +558,71 @@ module Pier
       
       # verify the required parameter 'id' is set
       fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get10" if id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/configuracoes-registro-cobranca/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ConfiguracaoRegistroCobrancaResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Apresenta dados de configura\u00E7\u00E3o do rotativo espec\u00EDfico.
+    # Este recurso permite consultar dados de configura\u00E7\u00E3o do parcelamento rotativo a partir de seu codigo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o de configura\u00E7\u00E3o rotativo (id).
+    # @param [Hash] opts the optional parameters
+    # @return [ConfiguracaoRotativoDetalheResponse]
+    def consultar_using_get11(id, opts = {})
+      data, _status_code, _headers = consultar_using_get11_with_http_info(id, opts)
+      return data
+    end
+
+    # Apresenta dados de configura\u00E7\u00E3o do rotativo espec\u00EDfico.
+    # Este recurso permite consultar dados de configura\u00E7\u00E3o do parcelamento rotativo a partir de seu codigo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o de configura\u00E7\u00E3o rotativo (id).
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ConfiguracaoRotativoDetalheResponse, Fixnum, Hash)>] ConfiguracaoRotativoDetalheResponse data, response status code and response headers
+    def consultar_using_get11_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get11 ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get11" if id.nil?
       
       
       
@@ -595,34 +660,34 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'ConfiguracaoRotativoDetalheResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get11\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Apresenta os dados de um determinado Produto
-    # Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
+    # Este m\u00E9todo permite consultar um determinado Produto a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id)
     # @param [Hash] opts the optional parameters
     # @return [ProdutoDetalhesResponse]
-    def consultar_using_get25(id, opts = {})
-      data, _status_code, _headers = consultar_using_get25_with_http_info(id, opts)
+    def consultar_using_get26(id, opts = {})
+      data, _status_code, _headers = consultar_using_get26_with_http_info(id, opts)
       return data
     end
 
     # Apresenta os dados de um determinado Produto
-    # Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
+    # Este m\u00E9todo permite consultar um determinado Produto a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id)
     # @param [Hash] opts the optional parameters
     # @return [Array<(ProdutoDetalhesResponse, Fixnum, Hash)>] ProdutoDetalhesResponse data, response status code and response headers
-    def consultar_using_get25_with_http_info(id, opts = {})
+    def consultar_using_get26_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get25 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get26 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get25" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get26" if id.nil?
       
       
       
@@ -660,72 +725,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'ProdutoDetalhesResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get25\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Apresenta os dados de um determinado Atendimento
-    # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Atendimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (idAtendimento).
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do atendimento cliente (id).
-    # @param [Hash] opts the optional parameters
-    # @return [AtendimentoClienteResponse]
-    def consultar_using_get3(id, opts = {})
-      data, _status_code, _headers = consultar_using_get3_with_http_info(id, opts)
-      return data
-    end
-
-    # Apresenta os dados de um determinado Atendimento
-    # Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Atendimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (idAtendimento).
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do atendimento cliente (id).
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(AtendimentoClienteResponse, Fixnum, Hash)>] AtendimentoClienteResponse data, response status code and response headers
-    def consultar_using_get3_with_http_info(id, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get3 ..."
-      end
-      
-      
-      # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get3" if id.nil?
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/atendimento-clientes/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'AtendimentoClienteResponse')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get3\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get26\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -733,29 +733,29 @@ module Pier
     # Lista os tipos de ajustes do emissor 
     # Este recurso permite que sejam listados os tipos de ajustes existentes na base de dados do emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id C\u00C3\u00B3digo identificador do tipo de ajuste.
-    # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id C\u00F3digo identificador do tipo de ajuste.
+    # @option opts [String] :descricao Descri\u00E7\u00E3o do tipo de ajuste.
     # @return [PageTipoAjusteResponse]
-    def consultar_using_get32(opts = {})
-      data, _status_code, _headers = consultar_using_get32_with_http_info(opts)
+    def consultar_using_get33(opts = {})
+      data, _status_code, _headers = consultar_using_get33_with_http_info(opts)
       return data
     end
 
     # Lista os tipos de ajustes do emissor 
     # Este recurso permite que sejam listados os tipos de ajustes existentes na base de dados do emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id C\u00C3\u00B3digo identificador do tipo de ajuste.
-    # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id C\u00F3digo identificador do tipo de ajuste.
+    # @option opts [String] :descricao Descri\u00E7\u00E3o do tipo de ajuste.
     # @return [Array<(PageTipoAjusteResponse, Fixnum, Hash)>] PageTipoAjusteResponse data, response status code and response headers
-    def consultar_using_get32_with_http_info(opts = {})
+    def consultar_using_get33_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get32 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get33 ..."
       end
       
       
@@ -825,7 +825,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTipoAjusteResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get32\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get33\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -833,31 +833,31 @@ module Pier
     # Lista os tipos de boletos do emissor 
     # Este recurso permite que sejam listados os tipos de boletos existentes na base de dados do emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id C\u00C3\u00B3digo identificador do tipo de boleto.
-    # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto.
-    # @option opts [Integer] :banco C\u00C3\u00B3digo identificador do banco.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id C\u00F3digo identificador do tipo de boleto.
+    # @option opts [String] :descricao Descri\u00E7\u00E3o do tipo de boleto.
+    # @option opts [Integer] :banco C\u00F3digo identificador do banco.
     # @return [PageTipoBoletoResponse]
-    def consultar_using_get33(opts = {})
-      data, _status_code, _headers = consultar_using_get33_with_http_info(opts)
+    def consultar_using_get34(opts = {})
+      data, _status_code, _headers = consultar_using_get34_with_http_info(opts)
       return data
     end
 
     # Lista os tipos de boletos do emissor 
     # Este recurso permite que sejam listados os tipos de boletos existentes na base de dados do emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id C\u00C3\u00B3digo identificador do tipo de boleto.
-    # @option opts [String] :descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto.
-    # @option opts [Integer] :banco C\u00C3\u00B3digo identificador do banco.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id C\u00F3digo identificador do tipo de boleto.
+    # @option opts [String] :descricao Descri\u00E7\u00E3o do tipo de boleto.
+    # @option opts [Integer] :banco C\u00F3digo identificador do banco.
     # @return [Array<(PageTipoBoletoResponse, Fixnum, Hash)>] PageTipoBoletoResponse data, response status code and response headers
-    def consultar_using_get33_with_http_info(opts = {})
+    def consultar_using_get34_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get33 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get34 ..."
       end
       
       
@@ -934,34 +934,34 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTipoBoletoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get33\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get34\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
-    # Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+    # Apresenta os dados de um determinado Tipo de Endere\u00E7o
+    # Este m\u00E9todo permite consultar um determinado Tipo de Endere\u00E7o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Endere\u00E7o (id)
     # @param [Hash] opts the optional parameters
     # @return [TipoEnderecoResponse]
-    def consultar_using_get34(id, opts = {})
-      data, _status_code, _headers = consultar_using_get34_with_http_info(id, opts)
+    def consultar_using_get35(id, opts = {})
+      data, _status_code, _headers = consultar_using_get35_with_http_info(id, opts)
       return data
     end
 
-    # Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
-    # Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+    # Apresenta os dados de um determinado Tipo de Endere\u00E7o
+    # Este m\u00E9todo permite consultar um determinado Tipo de Endere\u00E7o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Endere\u00E7o (id)
     # @param [Hash] opts the optional parameters
     # @return [Array<(TipoEnderecoResponse, Fixnum, Hash)>] TipoEnderecoResponse data, response status code and response headers
-    def consultar_using_get34_with_http_info(id, opts = {})
+    def consultar_using_get35_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get34 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get35 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get34" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get35" if id.nil?
       
       
       
@@ -999,38 +999,38 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TipoEnderecoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get34\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get35\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-    # Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idCartao, idEstabelecimento e codigoProcessamento.
-    # @param id_cartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cartao (idCartao).
-    # @param id_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (idEstabelecimento).
-    # @param codigo_processamento C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o.
+    # Apresenta dados de um determinado tipo de opera\u00E7\u00E3o
+    # Este recurso permite consultar dados de um determinado tipo opera\u00E7\u00E3o a partir do idCartao, idEstabelecimento e codigoProcessamento.
+    # @param id_cartao C\u00F3digo de identifica\u00E7\u00E3o do cartao (idCartao).
+    # @param id_estabelecimento C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (idEstabelecimento).
+    # @param codigo_processamento C\u00F3digo de processamento da opera\u00E7\u00E3o.
     # @param [Hash] opts the optional parameters
     # @return [TipoOperacaoResponse]
-    def consultar_using_get35(id_cartao, id_estabelecimento, codigo_processamento, opts = {})
-      data, _status_code, _headers = consultar_using_get35_with_http_info(id_cartao, id_estabelecimento, codigo_processamento, opts)
+    def consultar_using_get36(id_cartao, id_estabelecimento, codigo_processamento, opts = {})
+      data, _status_code, _headers = consultar_using_get36_with_http_info(id_cartao, id_estabelecimento, codigo_processamento, opts)
       return data
     end
 
-    # Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-    # Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idCartao, idEstabelecimento e codigoProcessamento.
-    # @param id_cartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cartao (idCartao).
-    # @param id_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (idEstabelecimento).
-    # @param codigo_processamento C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o.
+    # Apresenta dados de um determinado tipo de opera\u00E7\u00E3o
+    # Este recurso permite consultar dados de um determinado tipo opera\u00E7\u00E3o a partir do idCartao, idEstabelecimento e codigoProcessamento.
+    # @param id_cartao C\u00F3digo de identifica\u00E7\u00E3o do cartao (idCartao).
+    # @param id_estabelecimento C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (idEstabelecimento).
+    # @param codigo_processamento C\u00F3digo de processamento da opera\u00E7\u00E3o.
     # @param [Hash] opts the optional parameters
     # @return [Array<(TipoOperacaoResponse, Fixnum, Hash)>] TipoOperacaoResponse data, response status code and response headers
-    def consultar_using_get35_with_http_info(id_cartao, id_estabelecimento, codigo_processamento, opts = {})
+    def consultar_using_get36_with_http_info(id_cartao, id_estabelecimento, codigo_processamento, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get35 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get36 ..."
       end
       
       
       # verify the required parameter 'id_cartao' is set
-      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CadastroGeralApi.consultar_using_get35" if id_cartao.nil?
+      fail ArgumentError, "Missing the required parameter 'id_cartao' when calling CadastroGeralApi.consultar_using_get36" if id_cartao.nil?
       
       
       
@@ -1038,7 +1038,7 @@ module Pier
       
       
       # verify the required parameter 'id_estabelecimento' is set
-      fail ArgumentError, "Missing the required parameter 'id_estabelecimento' when calling CadastroGeralApi.consultar_using_get35" if id_estabelecimento.nil?
+      fail ArgumentError, "Missing the required parameter 'id_estabelecimento' when calling CadastroGeralApi.consultar_using_get36" if id_estabelecimento.nil?
       
       
       
@@ -1046,7 +1046,7 @@ module Pier
       
       
       # verify the required parameter 'codigo_processamento' is set
-      fail ArgumentError, "Missing the required parameter 'codigo_processamento' when calling CadastroGeralApi.consultar_using_get35" if codigo_processamento.nil?
+      fail ArgumentError, "Missing the required parameter 'codigo_processamento' when calling CadastroGeralApi.consultar_using_get36" if codigo_processamento.nil?
       
       
       
@@ -1087,34 +1087,34 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TipoOperacaoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get35\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get36\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Apresenta os dados de um determinado Tipo de Telefone
-    # Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
+    # Este m\u00E9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id)
     # @param [Hash] opts the optional parameters
     # @return [TipoTelefoneResponse]
-    def consultar_using_get37(id, opts = {})
-      data, _status_code, _headers = consultar_using_get37_with_http_info(id, opts)
+    def consultar_using_get38(id, opts = {})
+      data, _status_code, _headers = consultar_using_get38_with_http_info(id, opts)
       return data
     end
 
     # Apresenta os dados de um determinado Tipo de Telefone
-    # Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
+    # Este m\u00E9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id)
     # @param [Hash] opts the optional parameters
     # @return [Array<(TipoTelefoneResponse, Fixnum, Hash)>] TipoTelefoneResponse data, response status code and response headers
-    def consultar_using_get37_with_http_info(id, opts = {})
+    def consultar_using_get38_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get37 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get38 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get37" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get38" if id.nil?
       
       
       
@@ -1152,34 +1152,99 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TipoTelefoneResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get37\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get38\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Apresenta os dados de um determinado Atendimento
+    # Este m\u00E9todo permite consultar os par\u00E2metros de um determinado Atendimento a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (idAtendimento).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do atendimento cliente (id).
+    # @param [Hash] opts the optional parameters
+    # @return [AtendimentoClienteResponse]
+    def consultar_using_get4(id, opts = {})
+      data, _status_code, _headers = consultar_using_get4_with_http_info(id, opts)
+      return data
+    end
+
+    # Apresenta os dados de um determinado Atendimento
+    # Este m\u00E9todo permite consultar os par\u00E2metros de um determinado Atendimento a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (idAtendimento).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do atendimento cliente (id).
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(AtendimentoClienteResponse, Fixnum, Hash)>] AtendimentoClienteResponse data, response status code and response headers
+    def consultar_using_get4_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get4 ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get4" if id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/atendimento-clientes/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AtendimentoClienteResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get4\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Apresenta os dados de um determinado Banco
-    # Este m\u00C3\u00A9todo permite consultar um determinado Banco a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Banco (id).
+    # Este m\u00E9todo permite consultar um determinado Banco a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Banco (id).
     # @param [Hash] opts the optional parameters
     # @return [BancoResponse]
-    def consultar_using_get5(id, opts = {})
-      data, _status_code, _headers = consultar_using_get5_with_http_info(id, opts)
+    def consultar_using_get6(id, opts = {})
+      data, _status_code, _headers = consultar_using_get6_with_http_info(id, opts)
       return data
     end
 
     # Apresenta os dados de um determinado Banco
-    # Este m\u00C3\u00A9todo permite consultar um determinado Banco a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Banco (id).
+    # Este m\u00E9todo permite consultar um determinado Banco a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o do Banco (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(BancoResponse, Fixnum, Hash)>] BancoResponse data, response status code and response headers
-    def consultar_using_get5_with_http_info(id, opts = {})
+    def consultar_using_get6_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get5 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get6 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get5" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get6" if id.nil?
       
       
       
@@ -1217,72 +1282,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'BancoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get5\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Consultar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
-    # Este m\u00C3\u00A9todo permite buscar uma configura\u00C3\u00A7\u00C3\u00A3o, para registro de cobran\u00C3\u00A7a.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param [Hash] opts the optional parameters
-    # @return [ConfiguracaoRegistroCobrancaResponse]
-    def consultar_using_get9(id, opts = {})
-      data, _status_code, _headers = consultar_using_get9_with_http_info(id, opts)
-      return data
-    end
-
-    # Consultar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
-    # Este m\u00C3\u00A9todo permite buscar uma configura\u00C3\u00A7\u00C3\u00A3o, para registro de cobran\u00C3\u00A7a.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(ConfiguracaoRegistroCobrancaResponse, Fixnum, Hash)>] ConfiguracaoRegistroCobrancaResponse data, response status code and response headers
-    def consultar_using_get9_with_http_info(id, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.consultar_using_get9 ..."
-      end
-      
-      
-      # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling CadastroGeralApi.consultar_using_get9" if id.nil?
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/configuracoes-registro-cobranca/{id}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'ConfiguracaoRegistroCobrancaResponse')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get9\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#consultar_using_get6\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1290,10 +1290,10 @@ module Pier
     # Listar Campanhas
     # Lista as campanhas.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_tipo_campanha C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de campanha (id).
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_tipo_campanha C\u00F3digo de Identifica\u00E7\u00E3o do tipo de campanha (id).
     # @return [PageCampanhaResponse]
     def listar_campanhas_using_get(opts = {})
       data, _status_code, _headers = listar_campanhas_using_get_with_http_info(opts)
@@ -1303,10 +1303,10 @@ module Pier
     # Listar Campanhas
     # Lista as campanhas.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_tipo_campanha C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de campanha (id).
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_tipo_campanha C\u00F3digo de Identifica\u00E7\u00E3o do tipo de campanha (id).
     # @return [Array<(PageCampanhaResponse, Fixnum, Hash)>] PageCampanhaResponse data, response status code and response headers
     def listar_campanhas_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1380,11 +1380,11 @@ module Pier
 
     # Lista as contas da pessoa
     # Permite listar as contas de um pessoa a partir do seu numero na receita federal.
-    # @param numero_receita_federal N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ)
+    # @param numero_receita_federal N\u00FAmero de identifica\u00E7\u00E3o do cliente na Receita Federal (CPF ou CNPJ)
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [PageContaDetalheResponse]
     def listar_contas_por_pessoa_using_get(numero_receita_federal, opts = {})
       data, _status_code, _headers = listar_contas_por_pessoa_using_get_with_http_info(numero_receita_federal, opts)
@@ -1393,11 +1393,11 @@ module Pier
 
     # Lista as contas da pessoa
     # Permite listar as contas de um pessoa a partir do seu numero na receita federal.
-    # @param numero_receita_federal N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ)
+    # @param numero_receita_federal N\u00FAmero de identifica\u00E7\u00E3o do cliente na Receita Federal (CPF ou CNPJ)
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(PageContaDetalheResponse, Fixnum, Hash)>] PageContaDetalheResponse data, response status code and response headers
     def listar_contas_por_pessoa_using_get_with_http_info(numero_receita_federal, opts = {})
       if @api_client.config.debugging
@@ -1471,24 +1471,24 @@ module Pier
       return data, status_code, headers
     end
 
-    # Lista os Estados C\u00C3\u00ADvis
-    # Este m\u00C3\u00A9todo permite que sejam listados os Estados C\u00C3\u00ADvis na base de dados do Emissor.
+    # Lista os Estados C\u00EDvis
+    # Este m\u00E9todo permite que sejam listados os Estados C\u00EDvis na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [PageCampoCodificadoDescricaoResponse]
     def listar_estados_civis_using_get(opts = {})
       data, _status_code, _headers = listar_estados_civis_using_get_with_http_info(opts)
       return data
     end
 
-    # Lista os Estados C\u00C3\u00ADvis
-    # Este m\u00C3\u00A9todo permite que sejam listados os Estados C\u00C3\u00ADvis na base de dados do Emissor.
+    # Lista os Estados C\u00EDvis
+    # Este m\u00E9todo permite que sejam listados os Estados C\u00EDvis na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(PageCampoCodificadoDescricaoResponse, Fixnum, Hash)>] PageCampoCodificadoDescricaoResponse data, response status code and response headers
     def listar_estados_civis_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1553,24 +1553,24 @@ module Pier
       return data, status_code, headers
     end
 
-    # Listar Fantasias B\u00C3\u00A1sicas
-    # Lista as fantasia b\u00C3\u00A1sicas.
+    # Listar Fantasias B\u00E1sicas
+    # Lista as fantasia b\u00E1sicas.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [PageFantasiaBasicaResponse]
     def listar_fantasias_basicas_using_get(opts = {})
       data, _status_code, _headers = listar_fantasias_basicas_using_get_with_http_info(opts)
       return data
     end
 
-    # Listar Fantasias B\u00C3\u00A1sicas
-    # Lista as fantasia b\u00C3\u00A1sicas.
+    # Listar Fantasias B\u00E1sicas
+    # Lista as fantasia b\u00E1sicas.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(PageFantasiaBasicaResponse, Fixnum, Hash)>] PageFantasiaBasicaResponse data, response status code and response headers
     def listar_fantasias_basicas_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1635,9 +1635,9 @@ module Pier
       return data, status_code, headers
     end
 
-    # Listar altera\u00C3\u00A7\u00C3\u00B5es de telefones realizadas nos \u00C3\u00BAltimos 60 dias
-    # Este m\u00C3\u00A9todo permite verificar quais os telefones de um determinado que cliente que sofreram altera\u00C3\u00A7\u00C3\u00A3o nos \u00C3\u00BAltimos 60 dias.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+    # Listar altera\u00E7\u00F5es de telefones realizadas nos \u00FAltimos 60 dias
+    # Este m\u00E9todo permite verificar quais os telefones de um determinado que cliente que sofreram altera\u00E7\u00E3o nos \u00FAltimos 60 dias.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id).
     # @param [Hash] opts the optional parameters
     # @return [HistoricoTelefoneResponse]
     def listar_historico_telefones_using_get(id, opts = {})
@@ -1645,9 +1645,9 @@ module Pier
       return data
     end
 
-    # Listar altera\u00C3\u00A7\u00C3\u00B5es de telefones realizadas nos \u00C3\u00BAltimos 60 dias
-    # Este m\u00C3\u00A9todo permite verificar quais os telefones de um determinado que cliente que sofreram altera\u00C3\u00A7\u00C3\u00A3o nos \u00C3\u00BAltimos 60 dias.
-    # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+    # Listar altera\u00E7\u00F5es de telefones realizadas nos \u00FAltimos 60 dias
+    # Este m\u00E9todo permite verificar quais os telefones de um determinado que cliente que sofreram altera\u00E7\u00E3o nos \u00FAltimos 60 dias.
+    # @param id C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(HistoricoTelefoneResponse, Fixnum, Hash)>] HistoricoTelefoneResponse data, response status code and response headers
     def listar_historico_telefones_using_get_with_http_info(id, opts = {})
@@ -1701,11 +1701,11 @@ module Pier
     end
 
     # Lista nacionalidades
-    # Este m\u00C3\u00A9todo permite que sejam listados as nacionalidades na base de dados do Emissor.
+    # Este m\u00E9todo permite que sejam listados as nacionalidades na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [PageCampoCodificadoDescricaoResponse]
     def listar_nacionalidades_using_get(opts = {})
       data, _status_code, _headers = listar_nacionalidades_using_get_with_http_info(opts)
@@ -1713,11 +1713,11 @@ module Pier
     end
 
     # Lista nacionalidades
-    # Este m\u00C3\u00A9todo permite que sejam listados as nacionalidades na base de dados do Emissor.
+    # Este m\u00E9todo permite que sejam listados as nacionalidades na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(PageCampoCodificadoDescricaoResponse, Fixnum, Hash)>] PageCampoCodificadoDescricaoResponse data, response status code and response headers
     def listar_nacionalidades_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1782,24 +1782,24 @@ module Pier
       return data, status_code, headers
     end
 
-    # Lista as Ocupa\u00C3\u00A7\u00C3\u00B5es
-    # Este m\u00C3\u00A9todo permite que sejam listados as naturezas de opera\u00C3\u00A7\u00C3\u00B5es na base de dados do Emissor.
+    # Lista as Ocupa\u00E7\u00F5es
+    # Este m\u00E9todo permite que sejam listados as naturezas de opera\u00E7\u00F5es na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [PageCampoCodificadoDescricaoResponse]
     def listar_naturezas_ocupacoes_using_get(opts = {})
       data, _status_code, _headers = listar_naturezas_ocupacoes_using_get_with_http_info(opts)
       return data
     end
 
-    # Lista as Ocupa\u00C3\u00A7\u00C3\u00B5es
-    # Este m\u00C3\u00A9todo permite que sejam listados as naturezas de opera\u00C3\u00A7\u00C3\u00B5es na base de dados do Emissor.
+    # Lista as Ocupa\u00E7\u00F5es
+    # Este m\u00E9todo permite que sejam listados as naturezas de opera\u00E7\u00F5es na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(PageCampoCodificadoDescricaoResponse, Fixnum, Hash)>] PageCampoCodificadoDescricaoResponse data, response status code and response headers
     def listar_naturezas_ocupacoes_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1865,11 +1865,11 @@ module Pier
     end
 
     # Lista os Parentescos
-    # Este m\u00C3\u00A9todo permite que sejam listados parentescos na base de dados do Emissor.
+    # Este m\u00E9todo permite que sejam listados parentescos na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [PageCampoCodificadoDescricaoResponse]
     def listar_parentescos_using_get(opts = {})
       data, _status_code, _headers = listar_parentescos_using_get_with_http_info(opts)
@@ -1877,11 +1877,11 @@ module Pier
     end
 
     # Lista os Parentescos
-    # Este m\u00C3\u00A9todo permite que sejam listados parentescos na base de dados do Emissor.
+    # Este m\u00E9todo permite que sejam listados parentescos na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(PageCampoCodificadoDescricaoResponse, Fixnum, Hash)>] PageCampoCodificadoDescricaoResponse data, response status code and response headers
     def listar_parentescos_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1946,24 +1946,24 @@ module Pier
       return data, status_code, headers
     end
 
-    # Lista profiss\u00C3\u00B5es
-    # Este m\u00C3\u00A9todo permite que sejam listados as profiss\u00C3\u00B5es na base de dados do Emissor.
+    # Lista profiss\u00F5es
+    # Este m\u00E9todo permite que sejam listados as profiss\u00F5es na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [PageCampoCodificadoDescricaoResponse]
     def listar_profissoes_using_get(opts = {})
       data, _status_code, _headers = listar_profissoes_using_get_with_http_info(opts)
       return data
     end
 
-    # Lista profiss\u00C3\u00B5es
-    # Este m\u00C3\u00A9todo permite que sejam listados as profiss\u00C3\u00B5es na base de dados do Emissor.
+    # Lista profiss\u00F5es
+    # Este m\u00E9todo permite que sejam listados as profiss\u00F5es na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(PageCampoCodificadoDescricaoResponse, Fixnum, Hash)>] PageCampoCodificadoDescricaoResponse data, response status code and response headers
     def listar_profissoes_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -2031,9 +2031,9 @@ module Pier
     # Listar Tipos de Campanhas
     # Lista os tipos de campanhas.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [PageTipoCampanhaResponse]
     def listar_tipos_campanhas_using_get(opts = {})
       data, _status_code, _headers = listar_tipos_campanhas_using_get_with_http_info(opts)
@@ -2043,9 +2043,9 @@ module Pier
     # Listar Tipos de Campanhas
     # Lista os tipos de campanhas.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(PageTipoCampanhaResponse, Fixnum, Hash)>] PageTipoCampanhaResponse data, response status code and response headers
     def listar_tipos_campanhas_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -2110,28 +2110,28 @@ module Pier
       return data, status_code, headers
     end
 
-    # Listar configura\u00C3\u00A7\u00C3\u00B5es para registro de cobran\u00C3\u00A7a
-    # Este m\u00C3\u00A9todo permite listar as configura\u00C3\u00A7\u00C3\u00B5es de registro de cobran\u00C3\u00A7a.
+    # Listar configura\u00E7\u00F5es para registro de cobran\u00E7a
+    # Este m\u00E9todo permite listar as configura\u00E7\u00F5es de registro de cobran\u00E7a.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [ConfiguracaoRegistroCobrancaResponse]
-    def listar_using_get12(opts = {})
-      data, _status_code, _headers = listar_using_get12_with_http_info(opts)
+    def listar_using_get13(opts = {})
+      data, _status_code, _headers = listar_using_get13_with_http_info(opts)
       return data
     end
 
-    # Listar configura\u00C3\u00A7\u00C3\u00B5es para registro de cobran\u00C3\u00A7a
-    # Este m\u00C3\u00A9todo permite listar as configura\u00C3\u00A7\u00C3\u00B5es de registro de cobran\u00C3\u00A7a.
+    # Listar configura\u00E7\u00F5es para registro de cobran\u00E7a
+    # Este m\u00E9todo permite listar as configura\u00E7\u00F5es de registro de cobran\u00E7a.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(ConfiguracaoRegistroCobrancaResponse, Fixnum, Hash)>] ConfiguracaoRegistroCobrancaResponse data, response status code and response headers
-    def listar_using_get12_with_http_info(opts = {})
+    def listar_using_get13_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get12 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get13 ..."
       end
       
       
@@ -2187,35 +2187,35 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'ConfiguracaoRegistroCobrancaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get12\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get13\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
-    # Este recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
+    # Listar as configura\u00E7\u00F5es rotativo.
+    # Este recurso permite listar as configura\u00E7\u00F5es rotativo.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Produto.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_produto C\u00F3digo de identifica\u00E7\u00E3o do Produto.
     # @return [PageConfiguracaoRotativoResponse]
-    def listar_using_get13(opts = {})
-      data, _status_code, _headers = listar_using_get13_with_http_info(opts)
+    def listar_using_get14(opts = {})
+      data, _status_code, _headers = listar_using_get14_with_http_info(opts)
       return data
     end
 
-    # Listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
-    # Este recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
+    # Listar as configura\u00E7\u00F5es rotativo.
+    # Este recurso permite listar as configura\u00E7\u00F5es rotativo.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Produto.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_produto C\u00F3digo de identifica\u00E7\u00E3o do Produto.
     # @return [Array<(PageConfiguracaoRotativoResponse, Fixnum, Hash)>] PageConfiguracaoRotativoResponse data, response status code and response headers
-    def listar_using_get13_with_http_info(opts = {})
+    def listar_using_get14_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get13 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get14 ..."
       end
       
       
@@ -2278,53 +2278,53 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageConfiguracaoRotativoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get13\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get14\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Lista os Portadores existentes
-    # Este m\u00C3\u00A9todo permite que sejam listados os portadores cadastrados na base do emissor.
+    # Este m\u00E9todo permite que sejam listados os portadores cadastrados na base do emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
-    # @option opts [Integer] :id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
-    # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
-    # @option opts [Integer] :id_parentesco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
-    # @option opts [String] :tipo_portador Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional).
-    # @option opts [String] :nome_impresso Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
-    # @option opts [Integer] :id_tipo_cartao Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
-    # @option opts [Integer] :flag_ativo Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
-    # @option opts [String] :data_cadastro_portador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-    # @option opts [String] :data_cancelamento_portador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).
+    # @option opts [Integer] :id_produto C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+    # @option opts [Integer] :id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id).
+    # @option opts [Integer] :id_parentesco C\u00F3digo de Identifica\u00E7\u00E3o do Parentesco (id)
+    # @option opts [String] :tipo_portador Apresenta o tipo do Portador do cart\u00E3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional).
+    # @option opts [String] :nome_impresso Apresenta o nome a ser impresso no cart\u00E3o.
+    # @option opts [Integer] :id_tipo_cartao Apresenta o c\u00F3digo de identifica\u00E7\u00E3o do tipo do cart\u00E3o (id), que ser\u00E1 utilizado para gerar os cart\u00F5es deste portador, vinculados a sua respectiva conta atrav\u00E9s do campo idConta.
+    # @option opts [Integer] :flag_ativo Quanto ativa, indica que o cadastro do Portador est\u00E1 ativo, em emissores que realizam este tipo de gest\u00E3o.
+    # @option opts [String] :data_cadastro_portador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00E7\u00E3o.
+    # @option opts [String] :data_cancelamento_portador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00E7\u00E3o.
     # @return [PagePortadorResponse]
-    def listar_using_get32(opts = {})
-      data, _status_code, _headers = listar_using_get32_with_http_info(opts)
+    def listar_using_get34(opts = {})
+      data, _status_code, _headers = listar_using_get34_with_http_info(opts)
       return data
     end
 
     # Lista os Portadores existentes
-    # Este m\u00C3\u00A9todo permite que sejam listados os portadores cadastrados na base do emissor.
+    # Este m\u00E9todo permite que sejam listados os portadores cadastrados na base do emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
-    # @option opts [Integer] :id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
-    # @option opts [Integer] :id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
-    # @option opts [Integer] :id_parentesco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
-    # @option opts [String] :tipo_portador Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional).
-    # @option opts [String] :nome_impresso Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
-    # @option opts [Integer] :id_tipo_cartao Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
-    # @option opts [Integer] :flag_ativo Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
-    # @option opts [String] :data_cadastro_portador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-    # @option opts [String] :data_cancelamento_portador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).
+    # @option opts [Integer] :id_produto C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+    # @option opts [Integer] :id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id).
+    # @option opts [Integer] :id_parentesco C\u00F3digo de Identifica\u00E7\u00E3o do Parentesco (id)
+    # @option opts [String] :tipo_portador Apresenta o tipo do Portador do cart\u00E3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional).
+    # @option opts [String] :nome_impresso Apresenta o nome a ser impresso no cart\u00E3o.
+    # @option opts [Integer] :id_tipo_cartao Apresenta o c\u00F3digo de identifica\u00E7\u00E3o do tipo do cart\u00E3o (id), que ser\u00E1 utilizado para gerar os cart\u00F5es deste portador, vinculados a sua respectiva conta atrav\u00E9s do campo idConta.
+    # @option opts [Integer] :flag_ativo Quanto ativa, indica que o cadastro do Portador est\u00E1 ativo, em emissores que realizam este tipo de gest\u00E3o.
+    # @option opts [String] :data_cadastro_portador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00E7\u00E3o.
+    # @option opts [String] :data_cancelamento_portador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00E7\u00E3o.
     # @return [Array<(PagePortadorResponse, Fixnum, Hash)>] PagePortadorResponse data, response status code and response headers
-    def listar_using_get32_with_http_info(opts = {})
+    def listar_using_get34_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get32 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get34 ..."
       end
       
       
@@ -2450,39 +2450,39 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PagePortadorResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get32\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get34\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Lista os Produtos do Emissor
-    # Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
+    # Este m\u00E9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [String] :nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [String] :nome Descri\u00E7\u00E3o do Nome do Produto.
     # @option opts [Integer] :status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
-    # @option opts [Integer] :id_fantasia_basica C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
+    # @option opts [Integer] :id_fantasia_basica C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.
     # @return [PageProdutoResponse]
-    def listar_using_get33(opts = {})
-      data, _status_code, _headers = listar_using_get33_with_http_info(opts)
+    def listar_using_get35(opts = {})
+      data, _status_code, _headers = listar_using_get35_with_http_info(opts)
       return data
     end
 
     # Lista os Produtos do Emissor
-    # Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
+    # Este m\u00E9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [String] :nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [String] :nome Descri\u00E7\u00E3o do Nome do Produto.
     # @option opts [Integer] :status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
-    # @option opts [Integer] :id_fantasia_basica C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
+    # @option opts [Integer] :id_fantasia_basica C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.
     # @return [Array<(PageProdutoResponse, Fixnum, Hash)>] PageProdutoResponse data, response status code and response headers
-    def listar_using_get33_with_http_info(opts = {})
+    def listar_using_get35_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get33 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get35 ..."
       end
       
       
@@ -2559,43 +2559,43 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageProdutoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get33\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get35\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Lista promotores cadastrados na base do emissor
-    # Este m\u00C3\u00A9todo permite que sejam listados os cadastros de Promoteres existentes na base de dados do Emissor.
+    # Este m\u00E9todo permite que sejam listados os cadastros de Promoteres existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do promotor (id)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id C\u00F3digo de Identifica\u00E7\u00E3o do promotor (id)
     # @option opts [String] :nome Nome do Promotor
-    # @option opts [String] :data_cadastro Data da Inclus\u00C3\u00A3o.
-    # @option opts [Integer] :id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
-    # @option opts [Integer] :id_usuario C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio
+    # @option opts [String] :data_cadastro Data da Inclus\u00E3o.
+    # @option opts [Integer] :id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento
+    # @option opts [Integer] :id_usuario C\u00F3digo de Identifica\u00E7\u00E3o do usu\u00E1rio
     # @return [PagePromotorResponse]
-    def listar_using_get34(opts = {})
-      data, _status_code, _headers = listar_using_get34_with_http_info(opts)
+    def listar_using_get36(opts = {})
+      data, _status_code, _headers = listar_using_get36_with_http_info(opts)
       return data
     end
 
     # Lista promotores cadastrados na base do emissor
-    # Este m\u00C3\u00A9todo permite que sejam listados os cadastros de Promoteres existentes na base de dados do Emissor.
+    # Este m\u00E9todo permite que sejam listados os cadastros de Promoteres existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do promotor (id)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id C\u00F3digo de Identifica\u00E7\u00E3o do promotor (id)
     # @option opts [String] :nome Nome do Promotor
-    # @option opts [String] :data_cadastro Data da Inclus\u00C3\u00A3o.
-    # @option opts [Integer] :id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
-    # @option opts [Integer] :id_usuario C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio
+    # @option opts [String] :data_cadastro Data da Inclus\u00E3o.
+    # @option opts [Integer] :id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento
+    # @option opts [Integer] :id_usuario C\u00F3digo de Identifica\u00E7\u00E3o do usu\u00E1rio
     # @return [Array<(PagePromotorResponse, Fixnum, Hash)>] PagePromotorResponse data, response status code and response headers
-    def listar_using_get34_with_http_info(opts = {})
+    def listar_using_get36_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get34 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get36 ..."
       end
       
       
@@ -2686,37 +2686,37 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PagePromotorResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get34\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get36\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-    # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
+    # Lista as op\u00F5es de Tipos de Endere\u00E7os do Emissor 
+    # Este m\u00E9todo permite que sejam listados os Tipos de Endere\u00E7os existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
-    # @option opts [String] :nome Nome do Tipo do Endere\u00C3\u00A7o
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Endere\u00E7o (id)
+    # @option opts [String] :nome Nome do Tipo do Endere\u00E7o
     # @return [PageTipoEnderecoResponse]
-    def listar_using_get42(opts = {})
-      data, _status_code, _headers = listar_using_get42_with_http_info(opts)
+    def listar_using_get44(opts = {})
+      data, _status_code, _headers = listar_using_get44_with_http_info(opts)
       return data
     end
 
-    # Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-    # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
+    # Lista as op\u00F5es de Tipos de Endere\u00E7os do Emissor 
+    # Este m\u00E9todo permite que sejam listados os Tipos de Endere\u00E7os existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
-    # @option opts [String] :nome Nome do Tipo do Endere\u00C3\u00A7o
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Endere\u00E7o (id)
+    # @option opts [String] :nome Nome do Tipo do Endere\u00E7o
     # @return [Array<(PageTipoEnderecoResponse, Fixnum, Hash)>] PageTipoEnderecoResponse data, response status code and response headers
-    def listar_using_get42_with_http_info(opts = {})
+    def listar_using_get44_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get42 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get44 ..."
       end
       
       
@@ -2786,37 +2786,37 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTipoEnderecoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get42\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get44\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Lista os Tipos de Telefones
-    # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
+    # Este m\u00E9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id).
     # @option opts [String] :nome Nome do Tipo do Telefone
     # @return [PageTipoTelefoneResponse]
-    def listar_using_get44(opts = {})
-      data, _status_code, _headers = listar_using_get44_with_http_info(opts)
+    def listar_using_get46(opts = {})
+      data, _status_code, _headers = listar_using_get46_with_http_info(opts)
       return data
     end
 
     # Lista os Tipos de Telefones
-    # Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
+    # Este m\u00E9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id).
     # @option opts [String] :nome Nome do Tipo do Telefone
     # @return [Array<(PageTipoTelefoneResponse, Fixnum, Hash)>] PageTipoTelefoneResponse data, response status code and response headers
-    def listar_using_get44_with_http_info(opts = {})
+    def listar_using_get46_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get44 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get46 ..."
       end
       
       
@@ -2886,41 +2886,132 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageTipoTelefoneResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get44\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get46\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Listar Vencimentos
+    # Este recurso permite que sejam listados os Vencimentos do emissor.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [String] :data_vencimento Indica a data de vencimento das faturas
+    # @return [PageControleVencimentoResponse]
+    def listar_using_get52(opts = {})
+      data, _status_code, _headers = listar_using_get52_with_http_info(opts)
+      return data
+    end
+
+    # Listar Vencimentos
+    # Este recurso permite que sejam listados os Vencimentos do emissor.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [String] :data_vencimento Indica a data de vencimento das faturas
+    # @return [Array<(PageControleVencimentoResponse, Fixnum, Hash)>] PageControleVencimentoResponse data, response status code and response headers
+    def listar_using_get52_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get52 ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/vencimentos".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
+      query_params[:'page'] = opts[:'page'] if opts[:'page']
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'dataVencimento'] = opts[:'data_vencimento'] if opts[:'data_vencimento']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PageControleVencimentoResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get52\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Lista todos os atendimentos
-    # Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
+    # Este m\u00E9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_tipo_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
-    # @option opts [Integer] :id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_tipo_atendimento C\u00F3digo de Identifica\u00E7\u00E3o do Tipo de Atendimento (id)
+    # @option opts [Integer] :id_conta C\u00F3digo de identifica\u00E7\u00E3o de conta (id).
     # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
     # @option opts [String] :data_atendimento Apresenta a data em que o Atendimento foi realizado.
     # @return [PageAtendimentoClienteResponse]
-    def listar_using_get5(opts = {})
-      data, _status_code, _headers = listar_using_get5_with_http_info(opts)
+    def listar_using_get6(opts = {})
+      data, _status_code, _headers = listar_using_get6_with_http_info(opts)
       return data
     end
 
     # Lista todos os atendimentos
-    # Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
+    # Este m\u00E9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [Integer] :id_tipo_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
-    # @option opts [Integer] :id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [Integer] :id_tipo_atendimento C\u00F3digo de Identifica\u00E7\u00E3o do Tipo de Atendimento (id)
+    # @option opts [Integer] :id_conta C\u00F3digo de identifica\u00E7\u00E3o de conta (id).
     # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
     # @option opts [String] :data_atendimento Apresenta a data em que o Atendimento foi realizado.
     # @return [Array<(PageAtendimentoClienteResponse, Fixnum, Hash)>] PageAtendimentoClienteResponse data, response status code and response headers
-    def listar_using_get5_with_http_info(opts = {})
+    def listar_using_get6_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get5 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get6 ..."
       end
       
       
@@ -3004,124 +3095,33 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageAtendimentoClienteResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get5\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Listar Vencimentos
-    # Este recurso permite que sejam listados os Vencimentos do emissor.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [String] :data_vencimento Indica a data de vencimento das faturas
-    # @return [PageControleVencimentoResponse]
-    def listar_using_get50(opts = {})
-      data, _status_code, _headers = listar_using_get50_with_http_info(opts)
-      return data
-    end
-
-    # Listar Vencimentos
-    # Este recurso permite que sejam listados os Vencimentos do emissor.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [String] :data_vencimento Indica a data de vencimento das faturas
-    # @return [Array<(PageControleVencimentoResponse, Fixnum, Hash)>] PageControleVencimentoResponse data, response status code and response headers
-    def listar_using_get50_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get50 ..."
-      end
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/vencimentos".sub('{format}','json')
-
-      # query parameters
-      query_params = {}
-      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :multi) if opts[:'sort']
-      query_params[:'page'] = opts[:'page'] if opts[:'page']
-      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
-      query_params[:'dataVencimento'] = opts[:'data_vencimento'] if opts[:'data_vencimento']
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'PageControleVencimentoResponse')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get50\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get6\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Lista os Bancos cadastrados para o Emissor
-    # Este m\u00C3\u00A9todo permite que sejam listados os Bancos existentes na base de dados do Emissor.
+    # Este m\u00E9todo permite que sejam listados os Bancos existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [PageBancoResponse]
-    def listar_using_get7(opts = {})
-      data, _status_code, _headers = listar_using_get7_with_http_info(opts)
+    def listar_using_get8(opts = {})
+      data, _status_code, _headers = listar_using_get8_with_http_info(opts)
       return data
     end
 
     # Lista os Bancos cadastrados para o Emissor
-    # Este m\u00C3\u00A9todo permite que sejam listados os Bancos existentes na base de dados do Emissor.
+    # Este m\u00E9todo permite que sejam listados os Bancos existentes na base de dados do Emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(PageBancoResponse, Fixnum, Hash)>] PageBancoResponse data, response status code and response headers
-    def listar_using_get7_with_http_info(opts = {})
+    def listar_using_get8_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get7 ..."
+        @api_client.config.logger.debug "Calling API: CadastroGeralApi.listar_using_get8 ..."
       end
       
       
@@ -3177,17 +3177,17 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageBancoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get7\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CadastroGeralApi#listar_using_get8\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
+    # Cadastro um novo Atendimento do tipo Gen\u00E9rico para uma Conta
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o Atendimento est\u00C3\u00A1 associado
-    # @option opts [String] :conteudo_atendimento Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento.
-    # @option opts [String] :detalhes_atendimento Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
+    # @option opts [Integer] :id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o Atendimento est\u00E1 associado
+    # @option opts [String] :conteudo_atendimento Apresenta as informa\u00E7\u00F5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00E7\u00F5es relacionadas ao Atendimento.
+    # @option opts [String] :detalhes_atendimento Apresenta os detalhes lan\u00E7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
     # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
     # @option opts [String] :data_atendimento Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
     # @option opts [String] :data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
@@ -3200,12 +3200,12 @@ module Pier
       return data
     end
 
-    # Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
+    # Cadastro um novo Atendimento do tipo Gen\u00E9rico para uma Conta
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o Atendimento est\u00C3\u00A1 associado
-    # @option opts [String] :conteudo_atendimento Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento.
-    # @option opts [String] :detalhes_atendimento Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
+    # @option opts [Integer] :id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o Atendimento est\u00E1 associado
+    # @option opts [String] :conteudo_atendimento Apresenta as informa\u00E7\u00F5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00E7\u00F5es relacionadas ao Atendimento.
+    # @option opts [String] :detalhes_atendimento Apresenta os detalhes lan\u00E7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
     # @option opts [String] :nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
     # @option opts [String] :data_atendimento Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
     # @option opts [String] :data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
@@ -3319,7 +3319,7 @@ module Pier
     end
 
     # Inserir campanha
-    # Este m\u00C3\u00A9todo permite que seja cadastrado uma nova campanha.
+    # Este m\u00E9todo permite que seja cadastrado uma nova campanha.
     # @param campanha_persist campanhaPersist
     # @param [Hash] opts the optional parameters
     # @return [CampanhaResponse]
@@ -3329,7 +3329,7 @@ module Pier
     end
 
     # Inserir campanha
-    # Este m\u00C3\u00A9todo permite que seja cadastrado uma nova campanha.
+    # Este m\u00E9todo permite que seja cadastrado uma nova campanha.
     # @param campanha_persist campanhaPersist
     # @param [Hash] opts the optional parameters
     # @return [Array<(CampanhaResponse, Fixnum, Hash)>] CampanhaResponse data, response status code and response headers
@@ -3383,8 +3383,8 @@ module Pier
       return data, status_code, headers
     end
 
-    # Inserir os dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo de um produto
-    # Este m\u00C3\u00A9todo permite que seja cadastrado uma nova configura\u00C3\u00A7\u00C3\u00A3o do rotativo para um determinado produto.
+    # Inserir os dados de configura\u00E7\u00E3o do rotativo de um produto
+    # Este m\u00E9todo permite que seja cadastrado uma nova configura\u00E7\u00E3o do rotativo para um determinado produto.
     # @param configuracao_rotativo_persist configuracaoRotativoPersist
     # @param [Hash] opts the optional parameters
     # @return [ConfiguracaoRotativoDetalheResponse]
@@ -3393,8 +3393,8 @@ module Pier
       return data
     end
 
-    # Inserir os dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo de um produto
-    # Este m\u00C3\u00A9todo permite que seja cadastrado uma nova configura\u00C3\u00A7\u00C3\u00A3o do rotativo para um determinado produto.
+    # Inserir os dados de configura\u00E7\u00E3o do rotativo de um produto
+    # Este m\u00E9todo permite que seja cadastrado uma nova configura\u00E7\u00E3o do rotativo para um determinado produto.
     # @param configuracao_rotativo_persist configuracaoRotativoPersist
     # @param [Hash] opts the optional parameters
     # @return [Array<(ConfiguracaoRotativoDetalheResponse, Fixnum, Hash)>] ConfiguracaoRotativoDetalheResponse data, response status code and response headers

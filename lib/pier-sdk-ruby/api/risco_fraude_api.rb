@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -24,29 +24,29 @@ module Pier
       @api_client = api_client
     end
 
-    # Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
-    # Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
+    # Consultar uma transa\u00E7\u00E3o classificada com risco de fraude
+    # Consulta os detalhes de uma transa\u00E7\u00E3o classificada como risco de fraude.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude
     # @param [Hash] opts the optional parameters
     # @return [RiscoFraudeDetalhadoResponse]
-    def consultar_using_get26(id, opts = {})
-      data, _status_code, _headers = consultar_using_get26_with_http_info(id, opts)
+    def consultar_using_get27(id, opts = {})
+      data, _status_code, _headers = consultar_using_get27_with_http_info(id, opts)
       return data
     end
 
-    # Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
-    # Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
+    # Consultar uma transa\u00E7\u00E3o classificada com risco de fraude
+    # Consulta os detalhes de uma transa\u00E7\u00E3o classificada como risco de fraude.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude
     # @param [Hash] opts the optional parameters
     # @return [Array<(RiscoFraudeDetalhadoResponse, Fixnum, Hash)>] RiscoFraudeDetalhadoResponse data, response status code and response headers
-    def consultar_using_get26_with_http_info(id, opts = {})
+    def consultar_using_get27_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.consultar_using_get26 ..."
+        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.consultar_using_get27 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling RiscoFraudeApi.consultar_using_get26" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling RiscoFraudeApi.consultar_using_get27" if id.nil?
       
       
       
@@ -84,27 +84,27 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'RiscoFraudeDetalhadoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: RiscoFraudeApi#consultar_using_get26\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: RiscoFraudeApi#consultar_using_get27\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude
-    # Este recurso permite que sejam listados os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude, cadastrados para um emissor.
+    # Listar os tipos de resolu\u00E7\u00E3o de fraude
+    # Este recurso permite que sejam listados os tipos de resolu\u00E7\u00E3o de fraude, cadastrados para um emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [TipoResolucaoResponse]
     def listar_tipos_resolucao_using_get(opts = {})
       data, _status_code, _headers = listar_tipos_resolucao_using_get_with_http_info(opts)
       return data
     end
 
-    # Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude
-    # Este recurso permite que sejam listados os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude, cadastrados para um emissor.
+    # Listar os tipos de resolu\u00E7\u00E3o de fraude
+    # Este recurso permite que sejam listados os tipos de resolu\u00E7\u00E3o de fraude, cadastrados para um emissor.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(TipoResolucaoResponse, Fixnum, Hash)>] TipoResolucaoResponse data, response status code and response headers
     def listar_tipos_resolucao_using_get_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -162,9 +162,9 @@ module Pier
       return data, status_code, headers
     end
 
-    # Negar autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
-    # Nega a realiza\u00C3\u00A7\u00C3\u00A3o de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
+    # Negar autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
+    # Nega a realiza\u00E7\u00E3o de uma transa\u00E7\u00E3o classificada como risco de fraude.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude
     # @param [Hash] opts the optional parameters
     # @return [Object]
     def negar_using_post(id, opts = {})
@@ -172,9 +172,9 @@ module Pier
       return data
     end
 
-    # Negar autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
-    # Nega a realiza\u00C3\u00A7\u00C3\u00A3o de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
+    # Negar autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
+    # Nega a realiza\u00E7\u00E3o de uma transa\u00E7\u00E3o classificada como risco de fraude.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude
     # @param [Hash] opts the optional parameters
     # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
     def negar_using_post_with_http_info(id, opts = {})
@@ -227,9 +227,9 @@ module Pier
       return data, status_code, headers
     end
 
-    # Reconhecer autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
-    # Confirma a autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
+    # Reconhecer autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
+    # Confirma a autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude
     # @param [Hash] opts the optional parameters
     # @return [Object]
     def reconhecer_using_post(id, opts = {})
@@ -237,9 +237,9 @@ module Pier
       return data
     end
 
-    # Reconhecer autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
-    # Confirma a autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
+    # Reconhecer autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
+    # Confirma a autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude
     # @param [Hash] opts the optional parameters
     # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
     def reconhecer_using_post_with_http_info(id, opts = {})
@@ -288,6 +288,71 @@ module Pier
         :return_type => 'Object')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RiscoFraudeApi#reconhecer_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Val\u00EDda os dados informados, consultando as informa\u00E7\u00F5es na base do emissor
+    # Verif\u00EDca a exist\u00EAncias das informa\u00E7\u00F5es na base do emissor.
+    # @param request request
+    # @param [Hash] opts the optional parameters
+    # @return [Object]
+    def validar_dados_portador_using_post(request, opts = {})
+      data, _status_code, _headers = validar_dados_portador_using_post_with_http_info(request, opts)
+      return data
+    end
+
+    # Val\u00EDda os dados informados, consultando as informa\u00E7\u00F5es na base do emissor
+    # Verif\u00EDca a exist\u00EAncias das informa\u00E7\u00F5es na base do emissor.
+    # @param request request
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
+    def validar_dados_portador_using_post_with_http_info(request, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RiscoFraudeApi.validar_dados_portador_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'request' is set
+      fail ArgumentError, "Missing the required parameter 'request' when calling RiscoFraudeApi.validar_dados_portador_using_post" if request.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/riscos-fraudes/validar-dados-portador".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(request)
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Object')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RiscoFraudeApi#validar_dados_portador_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

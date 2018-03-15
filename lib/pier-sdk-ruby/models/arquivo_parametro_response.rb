@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,15 +17,15 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto Response de par\u00C3\u00A2metros do arquivo.
+  # Objeto Response de par\u00E2metros do arquivo.
   class ArquivoParametroResponse
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do detalhe do arquivo.
+    # C\u00F3digo de identifica\u00E7\u00E3o do detalhe do arquivo.
     attr_accessor :id
 
     # Nome que identifica o detalhe do arquivo
     attr_accessor :nome_campo
 
-    # Conte\u00C3\u00BAdo do nomeCampo
+    # Conte\u00FAdo do nomeCampo
     attr_accessor :conteudo
 
     # Attribute mapping from ruby-style variable name to JSON key.

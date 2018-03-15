@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,7 +17,7 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Lista de Transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito conta banc\u00C3\u00A1ria
+  # Lista de Transfer\u00EAncias de cr\u00E9dito conta banc\u00E1ria
   class PageTransferenciaCreditoContaBancariaResponse
     attr_accessor :content
 

@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -24,9 +24,9 @@ module Pier
       @api_client = api_client
     end
 
-    # Apresenta dados de um determinado pa\u00C3\u00ADs
-    # Este m\u00C3\u00A9todo permite consultar dados de um determinado pa\u00C3\u00ADs a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id).
+    # Apresenta dados de um determinado pa\u00EDs
+    # Este m\u00E9todo permite consultar dados de um determinado pa\u00EDs a partir de seu codigo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do pa\u00EDs (id).
     # @param [Hash] opts the optional parameters
     # @return [PaisResponse]
     def consultar_pais_using_get(id, opts = {})
@@ -34,9 +34,9 @@ module Pier
       return data
     end
 
-    # Apresenta dados de um determinado pa\u00C3\u00ADs
-    # Este m\u00C3\u00A9todo permite consultar dados de um determinado pa\u00C3\u00ADs a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id).
+    # Apresenta dados de um determinado pa\u00EDs
+    # Este m\u00E9todo permite consultar dados de um determinado pa\u00EDs a partir de seu codigo de identifica\u00E7\u00E3o (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o do pa\u00EDs (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(PaisResponse, Fixnum, Hash)>] PaisResponse data, response status code and response headers
     def consultar_pais_using_get_with_http_info(id, opts = {})
@@ -90,7 +90,7 @@ module Pier
     end
 
     # Lista os continentes
-    # Este recurso permite listar os continentes utilizados no recurso de permiss\u00C3\u00A3o de uso do cart\u00C3\u00A3o no exterior
+    # Este recurso permite listar os continentes utilizados no recurso de permiss\u00E3o de uso do cart\u00E3o no exterior
     # @param [Hash] opts the optional parameters
     # @return [Array<Object>]
     def listar_continentes_using_get(opts = {})
@@ -99,7 +99,7 @@ module Pier
     end
 
     # Lista os continentes
-    # Este recurso permite listar os continentes utilizados no recurso de permiss\u00C3\u00A3o de uso do cart\u00C3\u00A3o no exterior
+    # Este recurso permite listar os continentes utilizados no recurso de permiss\u00E3o de uso do cart\u00E3o no exterior
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<Object>, Fixnum, Hash)>] Array<Object> data, response status code and response headers
     def listar_continentes_using_get_with_http_info(opts = {})
@@ -144,34 +144,34 @@ module Pier
       return data, status_code, headers
     end
 
-    # Lista os pa\u00C3\u00ADses
-    # Este recurso permite listar os pa\u00C3\u00ADses.
+    # Lista os pa\u00EDses
+    # Este recurso permite listar os pa\u00EDses.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [String] :codigo C\u00C3\u00B3digo do pa\u00C3\u00ADs
-    # @option opts [String] :sigla Sigla do pa\u00C3\u00ADs
-    # @option opts [String] :descricao Nome do pa\u00C3\u00ADs
-    # @option opts [String] :continente Continente no qual o pa\u00C3\u00ADs faz parte
-    # @option opts [BOOLEAN] :flag_ativo Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [String] :codigo C\u00F3digo do pa\u00EDs
+    # @option opts [String] :sigla Sigla do pa\u00EDs
+    # @option opts [String] :descricao Nome do pa\u00EDs
+    # @option opts [String] :continente Continente no qual o pa\u00EDs faz parte
+    # @option opts [BOOLEAN] :flag_ativo Atributo que representa se o pa\u00EDs est\u00E1 ativo
     # @return [PagePaisResponse]
     def listar_paises_using_get(opts = {})
       data, _status_code, _headers = listar_paises_using_get_with_http_info(opts)
       return data
     end
 
-    # Lista os pa\u00C3\u00ADses
-    # Este recurso permite listar os pa\u00C3\u00ADses.
+    # Lista os pa\u00EDses
+    # Este recurso permite listar os pa\u00EDses.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-    # @option opts [String] :codigo C\u00C3\u00B3digo do pa\u00C3\u00ADs
-    # @option opts [String] :sigla Sigla do pa\u00C3\u00ADs
-    # @option opts [String] :descricao Nome do pa\u00C3\u00ADs
-    # @option opts [String] :continente Continente no qual o pa\u00C3\u00ADs faz parte
-    # @option opts [BOOLEAN] :flag_ativo Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+    # @option opts [String] :codigo C\u00F3digo do pa\u00EDs
+    # @option opts [String] :sigla Sigla do pa\u00EDs
+    # @option opts [String] :descricao Nome do pa\u00EDs
+    # @option opts [String] :continente Continente no qual o pa\u00EDs faz parte
+    # @option opts [BOOLEAN] :flag_ativo Atributo que representa se o pa\u00EDs est\u00E1 ativo
     # @return [Array<(PagePaisResponse, Fixnum, Hash)>] PagePaisResponse data, response status code and response headers
     def listar_paises_using_get_with_http_info(opts = {})
       if @api_client.config.debugging

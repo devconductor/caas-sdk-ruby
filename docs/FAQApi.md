@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**adicionar_using_post**](FAQApi.md#adicionar_using_post) | **POST** /api/faqs | Adiciona uma nova FAQ
 [**alterar_using_put7**](FAQApi.md#alterar_using_put7) | **PUT** /api/faqs/{id} | Alterar FAQ
-[**consultar_using_get17**](FAQApi.md#consultar_using_get17) | **GET** /api/faqs/{id} | Consultar FAQ por id
-[**listar_using_get22**](FAQApi.md#listar_using_get22) | **GET** /api/faqs | Lista FAQs
+[**consultar_using_get18**](FAQApi.md#consultar_using_get18) | **GET** /api/faqs/{id} | Consultar FAQ por id
+[**listar_using_get23**](FAQApi.md#listar_using_get23) | **GET** /api/faqs | Lista FAQs
 
 
 # **adicionar_using_post**
@@ -24,15 +24,15 @@ require 'pier-sdk-ruby'
 
 api_instance = Pier::FAQApi.new
 
-pergunta = "pergunta_example" # String | Conte\u00C3\u00BAdo da pergunta.
+pergunta = "pergunta_example" # String | Conte\u00FAdo da pergunta.
 
-resposta = "resposta_example" # String | Conte\u00C3\u00BAdo da resposta.
+resposta = "resposta_example" # String | Conte\u00FAdo da resposta.
 
 opts = { 
-  relevancia: 56, # Integer | N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.
+  relevancia: 56, # Integer | N\u00EDvel de relev\u00E2ncia da pergunta.
   plataforma: "plataforma_example", # String | Plataforma em que a FAQ se encaixa.
   categoria: "categoria_example", # String | Categoria de assunto do qual a FAQ se trata.
-  status: "status_example" # String | Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
+  status: "status_example" # String | Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
 }
 
 begin
@@ -48,12 +48,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pergunta** | **String**| Conte\u00C3\u00BAdo da pergunta. | 
- **resposta** | **String**| Conte\u00C3\u00BAdo da resposta. | 
- **relevancia** | **Integer**| N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta. | [optional] 
+ **pergunta** | **String**| Conte\u00FAdo da pergunta. | 
+ **resposta** | **String**| Conte\u00FAdo da resposta. | 
+ **relevancia** | **Integer**| N\u00EDvel de relev\u00E2ncia da pergunta. | [optional] 
  **plataforma** | **String**| Plataforma em que a FAQ se encaixa. | [optional] 
  **categoria** | **String**| Categoria de assunto do qual a FAQ se trata. | [optional] 
- **status** | **String**| Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. | [optional] 
+ **status** | **String**| Status descrevendo a situa\u00E7\u00E3o atual da FAQ. | [optional] 
 
 ### Return type
 
@@ -86,15 +86,15 @@ api_instance = Pier::FAQApi.new
 
 id = 789 # Integer | Id
 
-pergunta = "pergunta_example" # String | Conte\u00C3\u00BAdo da pergunta.
+pergunta = "pergunta_example" # String | Conte\u00FAdo da pergunta.
 
-resposta = "resposta_example" # String | Conte\u00C3\u00BAdo da resposta.
+resposta = "resposta_example" # String | Conte\u00FAdo da resposta.
 
 opts = { 
-  relevancia: 56, # Integer | N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.
+  relevancia: 56, # Integer | N\u00EDvel de relev\u00E2ncia da pergunta.
   plataforma: "plataforma_example", # String | Plataforma em que a FAQ se encaixa.
   categoria: "categoria_example", # String | Categoria de assunto do qual a FAQ se trata.
-  status: "status_example" # String | Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
+  status: "status_example" # String | Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
 }
 
 begin
@@ -111,12 +111,12 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| Id | 
- **pergunta** | **String**| Conte\u00C3\u00BAdo da pergunta. | 
- **resposta** | **String**| Conte\u00C3\u00BAdo da resposta. | 
- **relevancia** | **Integer**| N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta. | [optional] 
+ **pergunta** | **String**| Conte\u00FAdo da pergunta. | 
+ **resposta** | **String**| Conte\u00FAdo da resposta. | 
+ **relevancia** | **Integer**| N\u00EDvel de relev\u00E2ncia da pergunta. | [optional] 
  **plataforma** | **String**| Plataforma em que a FAQ se encaixa. | [optional] 
  **categoria** | **String**| Categoria de assunto do qual a FAQ se trata. | [optional] 
- **status** | **String**| Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. | [optional] 
+ **status** | **String**| Status descrevendo a situa\u00E7\u00E3o atual da FAQ. | [optional] 
 
 ### Return type
 
@@ -133,8 +133,8 @@ No authorization required
 
 
 
-# **consultar_using_get17**
-> FaqResponse consultar_using_get17(id)
+# **consultar_using_get18**
+> FaqResponse consultar_using_get18(id)
 
 Consultar FAQ por id
 
@@ -152,10 +152,10 @@ id = 789 # Integer | Id
 
 begin
   #Consultar FAQ por id
-  result = api_instance.consultar_using_get17(id)
+  result = api_instance.consultar_using_get18(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling FAQApi->consultar_using_get17: #{e}"
+  puts "Exception when calling FAQApi->consultar_using_get18: #{e}"
 end
 ```
 
@@ -180,8 +180,8 @@ No authorization required
 
 
 
-# **listar_using_get22**
-> PageFaqResponse listar_using_get22(opts)
+# **listar_using_get23**
+> PageFaqResponse listar_using_get23(opts)
 
 Lista FAQs
 
@@ -195,24 +195,24 @@ require 'pier-sdk-ruby'
 api_instance = Pier::FAQApi.new
 
 opts = { 
-  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  page: 56, # Integer | P\u00C3\u00A1gina solicitada (Default = 0)
-  limit: 56, # Integer | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  id_faq: 789, # Integer | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
-  pergunta: "pergunta_example", # String | Conte\u00C3\u00BAdo da pergunta.
-  resposta: "resposta_example", # String | Conte\u00C3\u00BAdo da resposta.
-  relevancia: 56, # Integer | N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.
+  sort: ["sort_example"], # Array<String> | Tipo de ordena\u00E7\u00E3o dos registros.
+  page: 56, # Integer | P\u00E1gina solicitada (Default = 0)
+  limit: 56, # Integer | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  id_faq: 789, # Integer | C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id).
+  pergunta: "pergunta_example", # String | Conte\u00FAdo da pergunta.
+  resposta: "resposta_example", # String | Conte\u00FAdo da resposta.
+  relevancia: 56, # Integer | N\u00EDvel de relev\u00E2ncia da pergunta.
   plataforma: "plataforma_example", # String | Plataforma em que a FAQ se encaixa.
   categoria: "categoria_example", # String | Categoria de assunto do qual a FAQ se trata.
-  status: "status_example" # String | Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
+  status: "status_example" # String | Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
 }
 
 begin
   #Lista FAQs
-  result = api_instance.listar_using_get22(opts)
+  result = api_instance.listar_using_get23(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling FAQApi->listar_using_get22: #{e}"
+  puts "Exception when calling FAQApi->listar_using_get23: #{e}"
 end
 ```
 
@@ -220,16 +220,16 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id_faq** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id). | [optional] 
- **pergunta** | **String**| Conte\u00C3\u00BAdo da pergunta. | [optional] 
- **resposta** | **String**| Conte\u00C3\u00BAdo da resposta. | [optional] 
- **relevancia** | **Integer**| N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta. | [optional] 
+ **sort** | [**Array&lt;String&gt;**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **id_faq** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id). | [optional] 
+ **pergunta** | **String**| Conte\u00FAdo da pergunta. | [optional] 
+ **resposta** | **String**| Conte\u00FAdo da resposta. | [optional] 
+ **relevancia** | **Integer**| N\u00EDvel de relev\u00E2ncia da pergunta. | [optional] 
  **plataforma** | **String**| Plataforma em que a FAQ se encaixa. | [optional] 
  **categoria** | **String**| Categoria de assunto do qual a FAQ se trata. | [optional] 
- **status** | **String**| Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. | [optional] 
+ **status** | **String**| Status descrevendo a situa\u00E7\u00E3o atual da FAQ. | [optional] 
 
 ### Return type
 

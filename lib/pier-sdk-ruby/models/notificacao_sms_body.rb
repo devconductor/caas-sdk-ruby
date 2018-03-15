@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,15 +17,15 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto Notifica\u00C3\u00A7\u00C3\u00A3o
+  # Objeto Notifica\u00E7\u00E3o
   class NotificacaoSMSBody
-    # N\u00C3\u00BAmero sequencial \u00C3\u00BAnico
+    # N\u00FAmero sequencial \u00FAnico
     attr_accessor :nsu
 
-    # C\u00C3\u00B3digo identificado da pessoa
+    # C\u00F3digo identificado da pessoa
     attr_accessor :id_pessoa
 
-    # C\u00C3\u00B3digo identificador da conta
+    # C\u00F3digo identificador da conta
     attr_accessor :id_conta
 
     # Apresenta o celular a ser eviado o SMS no formato 5588999999999 ou 5588999999999.
@@ -34,10 +34,10 @@ module Pier
     # Apresenta o texto do SMS a ser enviado
     attr_accessor :conteudo
 
-    # Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
+    # Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o
     attr_accessor :data_agendamento
 
-    # Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+    # Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o
     attr_accessor :tipo_evento
 
     # Attribute mapping from ruby-style variable name to JSON key.

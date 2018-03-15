@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,9 +17,9 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o de um documento anexo para uma notifica\u00C3\u00A7\u00C3\u00A3o.
+  # Representa\u00E7\u00E3o de um documento anexo para uma notifica\u00E7\u00E3o.
   class AnexoNotificacaoEmailRequest
-    # ID do documento que ser\u00C3\u00A1 anexado a notifica\u00C3\u00A7\u00C3\u00A3o.
+    # ID do documento que ser\u00E1 anexado a notifica\u00E7\u00E3o.
     attr_accessor :id_documento
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,10 +19,10 @@ require 'date'
 module Pier
   # Objeto Campo Condificado
   class CampoCodificadoDescricaoResponse
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da descri\u00C3\u00A7\u00C3\u00A3o.
+    # C\u00F3digo de Identifica\u00E7\u00E3o da descri\u00E7\u00E3o.
     attr_accessor :codigo
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do campo codificado.
+    # Descri\u00E7\u00E3o do campo codificado.
     attr_accessor :descricao
 
     # Attribute mapping from ruby-style variable name to JSON key.

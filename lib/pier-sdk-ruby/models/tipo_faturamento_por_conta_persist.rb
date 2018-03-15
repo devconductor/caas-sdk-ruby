@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -19,22 +19,22 @@ require 'date'
 module Pier
   # TipoFaturamentoPorContaPersist
   class TipoFaturamentoPorContaPersist
-    # Representa se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativada ou desativada para a conta.
+    # Representa se a configura\u00E7\u00E3o est\u00E1 ativada ou desativada para a conta.
     attr_accessor :status
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta relacionada.
+    # C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada.
     attr_accessor :id_conta
 
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento relacionada.
+    # C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento relacionada.
     attr_accessor :id_tipo_faturamento
 
-    # Data da inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+    # Data da inclus\u00E3o da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
     attr_accessor :data_hora_inclusao
 
-    # Data do cancelamento da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+    # Data do cancelamento da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
     attr_accessor :data_hora_cancelamento
 
-    # Identificador do respons\u00C3\u00A1vel pela modifica\u00C3\u00A7\u00C3\u00A3o do registro.
+    # Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro.
     attr_accessor :modificado_por
 
     # Attribute mapping from ruby-style variable name to JSON key.

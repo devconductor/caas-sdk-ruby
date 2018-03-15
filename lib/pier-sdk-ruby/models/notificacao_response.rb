@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,12 +17,12 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto Notifica\u00C3\u00A7\u00C3\u00A3o SMS
+  # Objeto Notifica\u00E7\u00E3o SMS
   class NotificacaoResponse
-    # N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+    # N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
     attr_accessor :protocolo
 
-    # Mensagem de resposta da solicita\u00C3\u00A7\u00C3\u00B5es de envio
+    # Mensagem de resposta da solicita\u00E7\u00F5es de envio
     attr_accessor :mensagem
 
     # Attribute mapping from ruby-style variable name to JSON key.

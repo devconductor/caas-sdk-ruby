@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -37,8 +37,8 @@ describe 'AntecipacaoApi' do
   end
 
   # unit tests for configurar_taxa_antecipacao_using_post
-  # Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
-  # Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+  # Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto
+  # Este recurso permite configurar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
   # @param id Id Produto
   # @param taxa_antecipacao_request taxaAntecipacaoRequest
   # @param [Hash] opts the optional parameters
@@ -54,10 +54,10 @@ describe 'AntecipacaoApi' do
   end
 
   # unit tests for consultar_taxa_antecipacao_using_get
-  # Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
-  # Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+  # Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto
+  # Este recurso permite consultar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
   # @param id Id Produto
-  # @param tipo_transacao Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US)
+  # @param tipo_transacao Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US)
   # @param [Hash] opts the optional parameters
   # @return [ParametroProdutoResponse]
   describe 'consultar_taxa_antecipacao_using_get test' do
@@ -71,13 +71,13 @@ describe 'AntecipacaoApi' do
   end
 
   # unit tests for efetivar_antecipacao_using_post
-  # Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
-  # M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
-  # @param id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
+  # Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
+  # M\u00E9todo responsavel pela efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
+  # @param id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do evento.
   # @param quantidade_parcelas Quantidade de parcelas para serem antecipadas.
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+  # @option opts [String] :complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o.
   # @return [AntecipacaoResponse]
   describe 'efetivar_antecipacao_using_post test' do
     it "should work" do
@@ -90,11 +90,11 @@ describe 'AntecipacaoApi' do
   end
 
   # unit tests for efetivar_antecipacoes_using_post
-  # Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
-  # M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis com todas as parcelas de uma conta.
-  # @param id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
+  # Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
+  # M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas as compras antecip\u00E1veis com todas as parcelas de uma conta.
+  # @param id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta.
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+  # @option opts [String] :complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o.
   # @return [AntecipacaoResponse]
   describe 'efetivar_antecipacoes_using_post test' do
     it "should work" do
@@ -106,20 +106,20 @@ describe 'AntecipacaoApi' do
     end
   end
 
-  # unit tests for listar_using_get11
-  # Listar compras com parcelas antecip\u00C3\u00A1veis
-  # Lista as compras antecip\u00C3\u00A1veis de uma conta.
-  # @param id_conta C\u00C3\u00B3digo identificador da conta da Compra.
+  # unit tests for listar_using_get12
+  # Listar compras com parcelas antecip\u00E1veis
+  # Lista as compras antecip\u00E1veis de uma conta.
+  # @param id_conta C\u00F3digo identificador da conta da Compra.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [Integer] :id_compra C\u00C3\u00B3digo identificador da Compra.
-  # @option opts [BOOLEAN] :parcelada Indica se a compra \u00C3\u00A9 parcelada.
-  # @option opts [BOOLEAN] :juros Indica se a compra \u00C3\u00A9 com ou sem juros.
-  # @option opts [String] :tipo_origem_transacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [Integer] :id_compra C\u00F3digo identificador da Compra.
+  # @option opts [BOOLEAN] :parcelada Indica se a compra \u00E9 parcelada.
+  # @option opts [BOOLEAN] :juros Indica se a compra \u00E9 com ou sem juros.
+  # @option opts [String] :tipo_origem_transacao Indica se a compra \u00E9 ON-US ou OFF-US
   # @return [PageCompraResponse]
-  describe 'listar_using_get11 test' do
+  describe 'listar_using_get12 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -130,12 +130,12 @@ describe 'AntecipacaoApi' do
   end
 
   # unit tests for simular_antecipacao_using_get
-  # Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
-  # Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
-  # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
+  # Simular antecipa\u00E7\u00E3o de parcelas
+  # Simula a antecipa\u00E7\u00E3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00EDveis, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
+  # @param id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do evento.
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+  # @option opts [String] :complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o.
   # @return [AntecipacaoSimuladaResponse]
   describe 'simular_antecipacao_using_get test' do
     it "should work" do
@@ -148,11 +148,11 @@ describe 'AntecipacaoApi' do
   end
 
   # unit tests for simular_antecipacoes_using_get
-  # Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis
-  # O recurso permite realizar a simula\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis de todas as parcelas de uma determinada conta.
-  # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+  # Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis
+  # O recurso permite realizar a simula\u00E7\u00E3o da antecipa\u00E7\u00E3o de todas as compras antecip\u00E1veis de todas as parcelas de uma determinada conta.
+  # @param id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta.
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+  # @option opts [String] :complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o.
   # @return [AntecipacaoSimuladaLoteResponse]
   describe 'simular_antecipacoes_using_get test' do
     it "should work" do

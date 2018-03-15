@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -28,7 +28,7 @@ module Pier
     # Tipo da propriedade do Documento.
     attr_accessor :detalhes_tipo
 
-    # Atributo que indica se o par\u00C3\u00A2metro \u00C3\u00A9 um \u00C3\u00ADndice (default = false)
+    # Atributo que indica se o par\u00E2metro \u00E9 um \u00EDndice (default = false)
     attr_accessor :flag_indice
 
     # Attribute mapping from ruby-style variable name to JSON key.

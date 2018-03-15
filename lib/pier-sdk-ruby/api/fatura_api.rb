@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -27,7 +27,7 @@ module Pier
     # Consulta fatura de um cliente
     # Consulta fatura de um cliente pela data de vencimento.
     # @param data_vencimento Data Vencimento
-    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @return [FaturaDetalheResponse]
     def consultar_fatura_using_get1(data_vencimento, id_conta, opts = {})
@@ -38,7 +38,7 @@ module Pier
     # Consulta fatura de um cliente
     # Consulta fatura de um cliente pela data de vencimento.
     # @param data_vencimento Data Vencimento
-    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @return [Array<(FaturaDetalheResponse, Fixnum, Hash)>] FaturaDetalheResponse data, response status code and response headers
     def consultar_fatura_using_get1_with_http_info(data_vencimento, id_conta, opts = {})
@@ -102,12 +102,12 @@ module Pier
 
     # Listar planos de parcelamento
     # Lista os planos de parcelamento da fatura de uma conta.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param data_vencimento_padrao Indica a data de vencimento padr\u00C3\u00A3o das faturas
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
+    # @param data_vencimento_padrao Indica a data de vencimento padr\u00E3o das faturas
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [PagePlanoParcelamentoResponse]
     def consultar_lancamentos_futuros_fatura_using_get1(id, data_vencimento_padrao, opts = {})
       data, _status_code, _headers = consultar_lancamentos_futuros_fatura_using_get1_with_http_info(id, data_vencimento_padrao, opts)
@@ -116,12 +116,12 @@ module Pier
 
     # Listar planos de parcelamento
     # Lista os planos de parcelamento da fatura de uma conta.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-    # @param data_vencimento_padrao Indica a data de vencimento padr\u00C3\u00A3o das faturas
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
+    # @param data_vencimento_padrao Indica a data de vencimento padr\u00E3o das faturas
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(PagePlanoParcelamentoResponse, Fixnum, Hash)>] PagePlanoParcelamentoResponse data, response status code and response headers
     def consultar_lancamentos_futuros_fatura_using_get1_with_http_info(id, data_vencimento_padrao, opts = {})
       if @api_client.config.debugging
@@ -203,24 +203,24 @@ module Pier
       return data, status_code, headers
     end
 
-    # Envia 2\u00C2\u00AA via de fatura por E-mail
+    # Envia 2\u00AA via de fatura por E-mail
     # Envia a segunda via da fatura para o e-mail informado/cadastrado.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param data_vencimento Data de Vencimento da fatura (yyyy-MM-dd).
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :email E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado.
+    # @option opts [String] :email E-mail para envio da 2\u00AA via da fatura, caso n\u00E3o seja informado ser\u00E1 usado o e-mail cadastrado.
     # @return [Object]
     def enviar_fatura_email_using_post(id, data_vencimento, opts = {})
       data, _status_code, _headers = enviar_fatura_email_using_post_with_http_info(id, data_vencimento, opts)
       return data
     end
 
-    # Envia 2\u00C2\u00AA via de fatura por E-mail
+    # Envia 2\u00AA via de fatura por E-mail
     # Envia a segunda via da fatura para o e-mail informado/cadastrado.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param data_vencimento Data de Vencimento da fatura (yyyy-MM-dd).
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :email E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado.
+    # @option opts [String] :email E-mail para envio da 2\u00AA via da fatura, caso n\u00E3o seja informado ser\u00E1 usado o e-mail cadastrado.
     # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
     def enviar_fatura_email_using_post_with_http_info(id, data_vencimento, opts = {})
       if @api_client.config.debugging
@@ -289,12 +289,12 @@ module Pier
 
     # Listar faturas de um cliente.
     # Lista faturas de um cliente.
-    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @option opts [String] :situacao_processamento Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. (default to TODAS)
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [PageFaturaResponse]
     def listar_faturas_using_get1(id_conta, opts = {})
       data, _status_code, _headers = listar_faturas_using_get1_with_http_info(id_conta, opts)
@@ -303,12 +303,12 @@ module Pier
 
     # Listar faturas de um cliente.
     # Lista faturas de um cliente.
-    # @param id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # @param id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param [Hash] opts the optional parameters
     # @option opts [String] :situacao_processamento Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS].
-    # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-    # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-    # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+    # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+    # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+    # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
     # @return [Array<(PageFaturaResponse, Fixnum, Hash)>] PageFaturaResponse data, response status code and response headers
     def listar_faturas_using_get1_with_http_info(id_conta, opts = {})
       if @api_client.config.debugging
@@ -394,8 +394,8 @@ module Pier
     end
 
     # Permite visualizar o extrato da fatura em formato PDF
-    # Esta opera\u00C3\u00A7\u00C3\u00A3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00C3\u00AAs corrente, o pdf ser\u00C3\u00A1 composto pelo extrato de lan\u00C3\u00A7amentos e pela ficha de compensa\u00C3\u00A7\u00C3\u00A3o banc\u00C3\u00A1ria. Quando for de uma fatura do hist\u00C3\u00B3rico do cliente, o PDF ser\u00C3\u00A1 composto apenas pelo extrato de transa\u00C3\u00A7\u00C3\u00B5es.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Esta opera\u00E7\u00E3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00EAs corrente, o pdf ser\u00E1 composto pelo extrato de lan\u00E7amentos e pela ficha de compensa\u00E7\u00E3o banc\u00E1ria. Quando for de uma fatura do hist\u00F3rico do cliente, o PDF ser\u00E1 composto apenas pelo extrato de transa\u00E7\u00F5es.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param data_vencimento Data de Vencimento da fatura.
     # @param [Hash] opts the optional parameters
     # @return [Object]
@@ -405,8 +405,8 @@ module Pier
     end
 
     # Permite visualizar o extrato da fatura em formato PDF
-    # Esta opera\u00C3\u00A7\u00C3\u00A3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00C3\u00AAs corrente, o pdf ser\u00C3\u00A1 composto pelo extrato de lan\u00C3\u00A7amentos e pela ficha de compensa\u00C3\u00A7\u00C3\u00A3o banc\u00C3\u00A1ria. Quando for de uma fatura do hist\u00C3\u00B3rico do cliente, o PDF ser\u00C3\u00A1 composto apenas pelo extrato de transa\u00C3\u00A7\u00C3\u00B5es.
-    # @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+    # Esta opera\u00E7\u00E3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00EAs corrente, o pdf ser\u00E1 composto pelo extrato de lan\u00E7amentos e pela ficha de compensa\u00E7\u00E3o banc\u00E1ria. Quando for de uma fatura do hist\u00F3rico do cliente, o PDF ser\u00E1 composto apenas pelo extrato de transa\u00E7\u00F5es.
+    # @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
     # @param data_vencimento Data de Vencimento da fatura.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers

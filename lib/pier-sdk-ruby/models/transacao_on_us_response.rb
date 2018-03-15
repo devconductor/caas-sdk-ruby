@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,27 +17,27 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Objeto de Resposta de Autoriza\u00C3\u00A7\u00C3\u00A3o
+  # Objeto de Resposta de Autoriza\u00E7\u00E3o
   class TransacaoOnUsResponse
-    # N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
+    # N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
     attr_accessor :nsu_origem
 
-    # N\u00C3\u00BAmero Sequencial \u00C3\u009Anico gerado pelo Autorizador a cada Transa\u00C3\u00A7\u00C3\u00A3o.
+    # N\u00FAmero Sequencial \u00DAnico gerado pelo Autorizador a cada Transa\u00E7\u00E3o.
     attr_accessor :nsu_autorizacao
 
-    # Descri\u00C3\u00A7\u00C3\u00A3o do Plano de Parcelamento atribu\u00C3\u00ADdo a Transa\u00C3\u00A7\u00C3\u00A3o.
+    # Descri\u00E7\u00E3o do Plano de Parcelamento atribu\u00EDdo a Transa\u00E7\u00E3o.
     attr_accessor :plano_de_parcelamento
 
-    # C\u00C3\u00B3digo de Autoriza\u00C3\u00A7\u00C3\u00A3o gerado pelo Autorizador.
+    # C\u00F3digo de Autoriza\u00E7\u00E3o gerado pelo Autorizador.
     attr_accessor :codigo_autorizacao
 
-    # N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado.
+    # N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado.
     attr_accessor :numero_mascarado_cartao
 
-    # Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o.
+    # Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o.
     attr_accessor :nome_portador_cartao
 
-    # Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+    # Apresenta a identifica\u00E7\u00E3o do terminal requisitante
     attr_accessor :terminal_requisitante
 
     # Attribute mapping from ruby-style variable name to JSON key.

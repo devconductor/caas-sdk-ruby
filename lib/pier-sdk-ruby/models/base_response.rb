@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,19 +17,16 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Representa\u00C3\u00A7\u00C3\u00A3o do recurso Base
+  # Representa\u00E7\u00E3o do recurso Base
   class BaseResponse
-    # C\u00C3\u00B3digo identificador da base
+    # C\u00F3digo identificador da base
     attr_accessor :id
 
     # IP do servidor
     attr_accessor :servidor
 
-    # Nome do usu\u00C3\u00A1rio
+    # Nome do usu\u00E1rio
     attr_accessor :usuario
-
-    # Senha
-    attr_accessor :senha
 
     # Nome da base
     attr_accessor :nome_base
@@ -37,17 +34,26 @@ module Pier
     # senha Criptografada
     attr_accessor :senha_criptografada
 
-    # Dom\u00C3\u00ADnio da base
+    # Dom\u00EDnio da base
     attr_accessor :domain
 
     # Nome da base de controle acesso
     attr_accessor :nome_base_controle_acesso
 
-    # C\u00C3\u00B3digo do identificador do emissor
+    # C\u00F3digo do identificador do emissor
     attr_accessor :id_emissor
 
     # Servidor do controle de acesso
     attr_accessor :servidor_controle_acesso
+
+    # Nome da base de usu\u00E1rios
+    attr_accessor :nome_base_usuarios
+
+    # Servidor do controle de acesso
+    attr_accessor :servidor_usuarios
+
+    # Flag Cluester
+    attr_accessor :flag_cluster
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -59,8 +65,6 @@ module Pier
         
         :'usuario' => :'usuario',
         
-        :'senha' => :'senha',
-        
         :'nome_base' => :'nomeBase',
         
         :'senha_criptografada' => :'senhaCriptografada',
@@ -71,7 +75,13 @@ module Pier
         
         :'id_emissor' => :'idEmissor',
         
-        :'servidor_controle_acesso' => :'servidorControleAcesso'
+        :'servidor_controle_acesso' => :'servidorControleAcesso',
+        
+        :'nome_base_usuarios' => :'nomeBaseUsuarios',
+        
+        :'servidor_usuarios' => :'servidorUsuarios',
+        
+        :'flag_cluster' => :'flagCluster'
         
       }
     end
@@ -86,8 +96,6 @@ module Pier
         
         :'usuario' => :'String',
         
-        :'senha' => :'String',
-        
         :'nome_base' => :'String',
         
         :'senha_criptografada' => :'BOOLEAN',
@@ -98,7 +106,13 @@ module Pier
         
         :'id_emissor' => :'Integer',
         
-        :'servidor_controle_acesso' => :'String'
+        :'servidor_controle_acesso' => :'String',
+        
+        :'nome_base_usuarios' => :'String',
+        
+        :'servidor_usuarios' => :'String',
+        
+        :'flag_cluster' => :'BOOLEAN'
         
       }
     end
@@ -134,15 +148,6 @@ module Pier
         
         
         self.usuario = attributes[:'usuario']
-        
-      
-      end
-
-      
-      if attributes[:'senha']
-        
-        
-        self.senha = attributes[:'senha']
         
       
       end
@@ -202,6 +207,33 @@ module Pier
       end
 
       
+      if attributes[:'nomeBaseUsuarios']
+        
+        
+        self.nome_base_usuarios = attributes[:'nomeBaseUsuarios']
+        
+      
+      end
+
+      
+      if attributes[:'servidorUsuarios']
+        
+        
+        self.servidor_usuarios = attributes[:'servidorUsuarios']
+        
+      
+      end
+
+      
+      if attributes[:'flagCluster']
+        
+        
+        self.flag_cluster = attributes[:'flagCluster']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -237,15 +269,6 @@ module Pier
       
       
       if @usuario.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @senha.nil?
         return false
       end
 
@@ -302,8 +325,40 @@ module Pier
       
       
       
+      
+      if @nome_base_usuarios.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @servidor_usuarios.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -363,13 +418,15 @@ module Pier
           id == o.id &&
           servidor == o.servidor &&
           usuario == o.usuario &&
-          senha == o.senha &&
           nome_base == o.nome_base &&
           senha_criptografada == o.senha_criptografada &&
           domain == o.domain &&
           nome_base_controle_acesso == o.nome_base_controle_acesso &&
           id_emissor == o.id_emissor &&
-          servidor_controle_acesso == o.servidor_controle_acesso
+          servidor_controle_acesso == o.servidor_controle_acesso &&
+          nome_base_usuarios == o.nome_base_usuarios &&
+          servidor_usuarios == o.servidor_usuarios &&
+          flag_cluster == o.flag_cluster
     end
 
     # @see the `==` method
@@ -381,7 +438,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, servidor, usuario, senha, nome_base, senha_criptografada, domain, nome_base_controle_acesso, id_emissor, servidor_controle_acesso].hash
+      [id, servidor, usuario, nome_base, senha_criptografada, domain, nome_base_controle_acesso, id_emissor, servidor_controle_acesso, nome_base_usuarios, servidor_usuarios, flag_cluster].hash
     end
 
     # Builds the object from hash

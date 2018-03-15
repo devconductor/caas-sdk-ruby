@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -37,9 +37,9 @@ describe 'NotificacaoApi' do
   end
 
   # unit tests for alterar_configuracao_using_put
-  # Altera configura\u00C3\u00A7\u00C3\u00B5es de E-mail
-  # Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+  # Altera configura\u00E7\u00F5es de E-mail
+  # Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [ConfiguracaoEmailResponse]
@@ -54,17 +54,17 @@ describe 'NotificacaoApi' do
   end
 
   # unit tests for alterar_template_notificacao_using_put
-  # Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
-  # Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de templates notifica\u00C3\u00A7\u00C3\u00B5es.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.
+  # Alterar template de notifica\u00E7\u00E3o
+  # Esse recurso permite salvar altera\u00E7\u00F5es de templates notifica\u00E7\u00F5es.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail.
   # @param conteudo Template HTML
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :id_configuracao_email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
+  # @option opts [Integer] :id_configuracao_email C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL.
   # @option opts [String] :tipo_layout Tipo do layout.
-  # @option opts [String] :tipo_notificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+  # @option opts [String] :tipo_notificacao Tipo da notifica\u00E7\u00E3o.
   # @option opts [String] :remetente Remetente
-  # @option opts [String] :assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
-  # @option opts [BOOLEAN] :template_padrao Template Padr\u00C3\u00A3o.
+  # @option opts [String] :assunto Assunto da Notificaca\u00E7\u00E3o.
+  # @option opts [BOOLEAN] :template_padrao Template Padr\u00E3o.
   # @return [TemplateNotificacaoDetalheResponse]
   describe 'alterar_template_notificacao_using_put test' do
     it "should work" do
@@ -80,7 +80,7 @@ describe 'NotificacaoApi' do
   # Atualizar SMS
   # Esse recurso permite atualizar o status do SMS do emissor
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :nsu Seu n\u00C3\u00BAmero
+  # @option opts [String] :nsu Seu n\u00FAmero
   # @option opts [String] :status Status
   # @option opts [String] :data Data
   # @option opts [String] :texto_status TextoStatus
@@ -97,9 +97,9 @@ describe 'NotificacaoApi' do
   end
 
   # unit tests for consultar_configuracao_using_get
-  # Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail
-  # Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+  # Consulta configura\u00E7\u00E3o de E-mail
+  # Esse recurso permite consultar uma configura\u00E7\u00E3o espec\u00EDfica por id.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.
   # @param [Hash] opts the optional parameters
   # @return [ConfiguracaoEmailResponse]
   describe 'consultar_configuracao_using_get test' do
@@ -113,9 +113,9 @@ describe 'NotificacaoApi' do
   end
 
   # unit tests for consultar_por_email_using_get
-  # Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail
-  # Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail espec\u00C3\u00ADfico por id.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+  # Consulta c\u00F3digo de seguran\u00E7a E-mail
+  # Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.
   # @param [Hash] opts the optional parameters
   # @return [CodigoSegurancaResponse]
   describe 'consultar_por_email_using_get test' do
@@ -129,9 +129,9 @@ describe 'NotificacaoApi' do
   end
 
   # unit tests for consultar_por_sms_using_get
-  # Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS
-  # Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS espec\u00C3\u00ADfico por id.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+  # Consulta c\u00F3digo de seguran\u00E7a SMS
+  # Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.
   # @param [Hash] opts the optional parameters
   # @return [CodigoSegurancaResponse]
   describe 'consultar_por_sms_using_get test' do
@@ -145,9 +145,9 @@ describe 'NotificacaoApi' do
   end
 
   # unit tests for consultar_template_notificacao_using_get
-  # Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
-  # Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.
+  # Consulta template de notifica\u00E7\u00E3o
+  # Esse recurso permite consultar uma configura\u00E7\u00E3o espec\u00EDfica por id.
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail.
   # @param [Hash] opts the optional parameters
   # @return [TemplateNotificacaoDetalheResponse]
   describe 'consultar_template_notificacao_using_get test' do
@@ -161,8 +161,8 @@ describe 'NotificacaoApi' do
   end
 
   # unit tests for gerar_token_email_using_post
-  # Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por e-mail
-  # Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+  # Gerar c\u00F3digo de seguran\u00E7a e enviar por e-mail
+  # Esse recurso permite gerar e enviar c\u00F3digos de seguran\u00E7a por e-mail, para valida\u00E7\u00E3o de dispositivos.
   # @param email email
   # @param [Hash] opts the optional parameters
   # @return [String]
@@ -177,8 +177,8 @@ describe 'NotificacaoApi' do
   end
 
   # unit tests for gerar_token_sms_using_post
-  # Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
-  # Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+  # Gerar c\u00F3digo de seguran\u00E7a e enviar por sms
+  # Esse recurso permite gerar e enviar c\u00F3digos de seguran\u00E7a por sms, para valida\u00E7\u00E3o de dispositivos.
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [String]
@@ -193,12 +193,12 @@ describe 'NotificacaoApi' do
   end
 
   # unit tests for listar_configuracao_using_get
-  # Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
-  # Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
+  # Lista configura\u00E7\u00F5es de E-mails
+  # Esse recurso permite listar as configura\u00E7\u00F5es de E-mails.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   # @return [PageConfiguracaoEmailResponse]
   describe 'listar_configuracao_using_get test' do
     it "should work" do
@@ -211,12 +211,12 @@ describe 'NotificacaoApi' do
   end
 
   # unit tests for listar_por_email_using_get
-  # Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a E-Mail
-  # Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por E-Mail.
+  # Lista os c\u00F3digos de seguran\u00E7a E-Mail
+  # Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   # @return [PageCodigoSegurancaResponse]
   describe 'listar_por_email_using_get test' do
     it "should work" do
@@ -229,12 +229,12 @@ describe 'NotificacaoApi' do
   end
 
   # unit tests for listar_por_sms_using_get
-  # Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a SMS
-  # Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por SMS.
+  # Lista os c\u00F3digos de seguran\u00E7a SMS
+  # Esse recurso permite listar os codigos de seguran\u00E7a por SMS.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   # @return [PageCodigoSegurancaResponse]
   describe 'listar_por_sms_using_get test' do
     it "should work" do
@@ -250,14 +250,14 @@ describe 'NotificacaoApi' do
   # Listar Push
   # Esse recurso permite listar os Pushes do emissor
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   # @option opts [String] :data_envio Apresenta a data e em que o registro foi enviado para o dispositivo.
-  # @option opts [String] :tipo_evento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
-  # @option opts [String] :status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+  # @option opts [String] :tipo_evento Nome do tipoEvento da notifica\u00E7\u00E3o
+  # @option opts [String] :status Status de envio da notifica\u00E7\u00E3o
   # @option opts [String] :plataforma Plataforma de Push notifications.
-  # @option opts [String] :protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+  # @option opts [String] :protocolo N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
   # @return [PagePushResponse]
   describe 'listar_push_using_get test' do
     it "should work" do
@@ -273,15 +273,15 @@ describe 'NotificacaoApi' do
   # Listar SMS
   # Esse recurso permite listar os SMS do emissor
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  # @option opts [String] :data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
-  # @option opts [String] :tipo_evento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
-  # @option opts [String] :status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
-  # @option opts [String] :operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
-  # @option opts [String] :protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
-  # @option opts [Integer] :nsu Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [String] :data_inclusao Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado
+  # @option opts [String] :tipo_evento Nome do tipoEvento da notifica\u00E7\u00E3o
+  # @option opts [String] :status Status de envio da notifica\u00E7\u00E3o
+  # @option opts [String] :operadora Nome da operadora a qual a notifica\u00E7\u00E3o foi enviada.
+  # @option opts [String] :protocolo N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
+  # @option opts [Integer] :nsu Apresenta o nsu da notifica\u00E7\u00E3o
   # @return [PageSMSResponse]
   describe 'listar_sms_using_get test' do
     it "should work" do
@@ -294,12 +294,12 @@ describe 'NotificacaoApi' do
   end
 
   # unit tests for listar_template_notificacao_using_get
-  # Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
-  # Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
+  # Lista templates de notifica\u00E7\u00F5es
+  # Esse recurso permite listar templates notifica\u00E7\u00F5es.
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   # @return [PageTemplateNotificacaoResponse]
   describe 'listar_template_notificacao_using_get test' do
     it "should work" do
@@ -312,8 +312,8 @@ describe 'NotificacaoApi' do
   end
 
   # unit tests for listar_tipos_layouts_using_get
-  # Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
-  # Esse recurso permite listar os tipos de templates dispon\u00C3\u00ADveis os par\u00C3\u00A2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
+  # Lista os tipos templates de notifica\u00E7\u00E3o
+  # Esse recurso permite listar os tipos de templates dispon\u00EDveis os par\u00E2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
   # @param [Hash] opts the optional parameters
   # @return [Array<Object>]
   describe 'listar_tipos_layouts_using_get test' do
@@ -327,8 +327,8 @@ describe 'NotificacaoApi' do
   end
 
   # unit tests for notificacao_email_using_post
-  # Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
-  # Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+  # Enviar notifica\u00E7\u00E3o por email
+  # Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
   # @param request request
   # @param [Hash] opts the optional parameters
   # @return [Object]
@@ -343,8 +343,8 @@ describe 'NotificacaoApi' do
   end
 
   # unit tests for reenviar_token_sms_using_post
-  # Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
-  # Esse recurso permite que seja reenviado para um determinado n\u00C3\u00BAmero de telefone, atrav\u00C3\u00A9s de SMS, o c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado previamente para ele. Caso o c\u00C3\u00B3digo de seguran\u00C3\u00A7a j\u00C3\u00A1 n\u00C3\u00A3o esteja mais v\u00C3\u00A1lido, o recurso retornar\u00C3\u00A1 uma mensagem orientando que seja solicitada uma nova gera\u00C3\u00A7\u00C3\u00A3o para o telefone em quest\u00C3\u00A3o.
+  # Reenviar c\u00F3digo de seguran\u00E7a por sms
+  # Esse recurso permite que seja reenviado para um determinado n\u00FAmero de telefone, atrav\u00E9s de SMS, o c\u00F3digo de seguran\u00E7a gerado previamente para ele. Caso o c\u00F3digo de seguran\u00E7a j\u00E1 n\u00E3o esteja mais v\u00E1lido, o recurso retornar\u00E1 uma mensagem orientando que seja solicitada uma nova gera\u00E7\u00E3o para o telefone em quest\u00E3o.
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [String]
@@ -360,9 +360,9 @@ describe 'NotificacaoApi' do
 
   # unit tests for responder_sms_get_using_get
   # Responder SMS
-  # Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
+  # Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00E1rio
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :nsu Seu n\u00C3\u00BAmero
+  # @option opts [String] :nsu Seu n\u00FAmero
   # @option opts [String] :data Data
   # @option opts [String] :resposta TextoStatus
   # @return [NotificacaoSMSResponse]
@@ -377,8 +377,8 @@ describe 'NotificacaoApi' do
   end
 
   # unit tests for salvar_configuracao_using_post
-  # Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
-  # Esse recurso salvar configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+  # Salva configura\u00E7\u00F5es de E-mail
+  # Esse recurso salvar configura\u00E7\u00F5es de E-mail.
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [ConfiguracaoEmailResponse]
@@ -394,7 +394,7 @@ describe 'NotificacaoApi' do
 
   # unit tests for salvar_push_fcm_using_post
   # Enviar Push FCM
-  # Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma FCM (Firebase Cloud Messaging).
+  # Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma FCM (Firebase Cloud Messaging).
   # @param push_persists pushPersists
   # @param [Hash] opts the optional parameters
   # @return [NotificacaoResponse]
@@ -410,7 +410,7 @@ describe 'NotificacaoApi' do
 
   # unit tests for salvar_push_gcm_using_post
   # Enviar Push GCM
-  # Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma GCM (Google Cloud Messaging).
+  # Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma GCM (Google Cloud Messaging).
   # @param push_persists pushPersists
   # @param [Hash] opts the optional parameters
   # @return [NotificacaoResponse]
@@ -426,7 +426,7 @@ describe 'NotificacaoApi' do
 
   # unit tests for salvar_push_using_post
   # Enviar Push APNS
-  # Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma APNS (Apple Push Notification Service).
+  # Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma APNS (Apple Push Notification Service).
   # @param push_persists pushPersists
   # @param [Hash] opts the optional parameters
   # @return [NotificacaoResponse]
@@ -457,16 +457,16 @@ describe 'NotificacaoApi' do
   end
 
   # unit tests for salvar_template_notificacao_using_post
-  # Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
-  # Esse recurso salvar template notifica\u00C3\u00A7\u00C3\u00B5e.
+  # Salva template de notifica\u00E7\u00E3o
+  # Esse recurso salvar template notifica\u00E7\u00F5e.
   # @param conteudo Template HTML
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :id_configuracao_email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
+  # @option opts [Integer] :id_configuracao_email C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL.
   # @option opts [String] :tipo_layout Tipo do layout.
-  # @option opts [String] :tipo_notificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+  # @option opts [String] :tipo_notificacao Tipo da notifica\u00E7\u00E3o.
   # @option opts [String] :remetente Remetente
-  # @option opts [String] :assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
-  # @option opts [BOOLEAN] :template_padrao Template Padr\u00C3\u00A3o.
+  # @option opts [String] :assunto Assunto da Notificaca\u00E7\u00E3o.
+  # @option opts [BOOLEAN] :template_padrao Template Padr\u00E3o.
   # @return [TemplateNotificacaoDetalheResponse]
   describe 'salvar_template_notificacao_using_post test' do
     it "should work" do
@@ -479,8 +479,8 @@ describe 'NotificacaoApi' do
   end
 
   # unit tests for validar_token_email_using_post
-  # Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por e-mail
-  # Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+  # Validar c\u00F3digo de seguran\u00E7a enviado por e-mail
+  # Esse recurso permite validar os c\u00F3digos de seguran\u00E7a enviador por e-mail, para valida\u00E7\u00E3o de dispositivos.
   # @param request request
   # @param [Hash] opts the optional parameters
   # @return [String]
@@ -495,8 +495,8 @@ describe 'NotificacaoApi' do
   end
 
   # unit tests for validar_token_sms_using_post
-  # Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
-  # Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+  # Validar c\u00F3digo de seguran\u00E7a enviado por sms
+  # Esse recurso permite validar os c\u00F3digos de seguran\u00E7a enviador por sms, para valida\u00E7\u00E3o de dispositivos.
   # @param request request
   # @param [Hash] opts the optional parameters
   # @return [String]

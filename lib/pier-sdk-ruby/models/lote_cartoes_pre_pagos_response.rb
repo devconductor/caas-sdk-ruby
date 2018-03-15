@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -17,39 +17,39 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # Lote Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pagos
+  # Lote Cart\u00F5es Pr\u00E9-Pagos
   class LoteCartoesPrePagosResponse
-    # C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos (id).
+    # C\u00F3digo de identifica\u00E7\u00E3o do lote de cart\u00F5es pr\u00E9-pagos (id).
     attr_accessor :id
 
-    # C\u00C3\u00B3digo identificador da origem comercial.
+    # C\u00F3digo identificador da origem comercial.
     attr_accessor :id_origem_comercial
 
-    # C\u00C3\u00B3digo identificador do Produto.
+    # C\u00F3digo identificador do Produto.
     attr_accessor :id_produto
 
-    # C\u00C3\u00B3digo identificador do tipo do cart\u00C3\u00A3o.
+    # C\u00F3digo identificador do tipo do cart\u00E3o.
     attr_accessor :id_tipo_cartao
 
-    # C\u00C3\u00B3digo identificador da Imagem do cart\u00C3\u00A3o.
+    # C\u00F3digo identificador da Imagem do cart\u00E3o.
     attr_accessor :id_imagem
 
-    # C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o.
+    # C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o.
     attr_accessor :id_endereco
 
-    # N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
+    # N\u00FAmero de cart\u00F5es existentes no Lote.
     attr_accessor :quantidade
 
-    # Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos.
+    # Data de cadastro do lote de cart\u00F5es pr\u00E9-pagos.
     attr_accessor :data_cadastro
 
-    # Nome do usu\u00C3\u00A1rio que criou o lote.
+    # Nome do usu\u00E1rio que criou o lote.
     attr_accessor :usuario_cadastro
 
     # Indica o status de processamento do lote.
     attr_accessor :status_processamento
 
-    # N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
+    # N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor).
     attr_accessor :identificador_externo
 
     # Attribute mapping from ruby-style variable name to JSON key.

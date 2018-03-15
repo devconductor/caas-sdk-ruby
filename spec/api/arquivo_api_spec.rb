@@ -1,7 +1,7 @@
 =begin
 PIER Labs
 
-Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o
+Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o
 
 OpenAPI spec version: 0.0.1
 Contact: pierlabs@conductor.com.br
@@ -36,13 +36,13 @@ describe 'ArquivoApi' do
     end
   end
 
-  # unit tests for consultar_using_get2
+  # unit tests for consultar_using_get3
   # Consulta de arquivo no PIER Cloud
   # Este recurso permite consultar um determinado arquivo armazenado no PIER Cloud.
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do arquivo
   # @param [Hash] opts the optional parameters
   # @return [ArquivoDetalheResponse]
-  describe 'consultar_using_get2 test' do
+  describe 'consultar_using_get3 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -54,7 +54,7 @@ describe 'ArquivoApi' do
 
   # unit tests for integrar_using_post
   # Integrar Arquivos
-  # Este recurso foi desenvolvido para realizar a integra\u00C3\u00A7\u00C3\u00A3o de arquivos do PIER Cloud junto a reposit\u00C3\u00B3rios externos pr\u00C3\u00A9-configurado.
+  # Este recurso foi desenvolvido para realizar a integra\u00E7\u00E3o de arquivos do PIER Cloud junto a reposit\u00F3rios externos pr\u00E9-configurado.
   # @param integrar_arquivo_request integrarArquivoRequest
   # @param [Hash] opts the optional parameters
   # @return [Object]
@@ -68,15 +68,55 @@ describe 'ArquivoApi' do
     end
   end
 
-  # unit tests for listar_using_get3
-  # Lista as auditorias do arquivo
-  # Este recurso permite listar as auditorias de um determinado arquivo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-  # @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
+  # unit tests for listar_por_numero_receita_federal_using_get
+  # Lista as auditorias de arquivos vinculadas a um N\u00FAmero da Receita Federal
+  # Este recurso permite listar as auditorias de arquivos vinculadas a um N\u00FAmero da Receita Federal que ser\u00E1 passado como par\u00E2metro.
+  # @param numero_receita_federal Par\u00E2metro vinculado a um arquivo no ato de seu cadastro
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   # @return [PageArquivoAUDResponse]
-  describe 'listar_using_get3 test' do
+  describe 'listar_por_numero_receita_federal_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+  # unit tests for listar_status_arquivos_using_get
+  # Listar Status de Arquivo
+  # Este recurso permite a listagem de todos os Status de Arquivo.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [String] :nome Nome do status de arquivo
+  # @option opts [String] :descricao Descri\u00E7\u00E3o do status de arquivo
+  # @return [PageStatusArquivoResponse]
+  describe 'listar_status_arquivos_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+  # unit tests for listar_tipos_arquivos_using_get
+  # Listar Tipos de Arquivo
+  # Este recurso permite a listagem de todos os Tipos de Arquivo.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @option opts [String] :nome Nome do tipo de arquivo
+  # @option opts [String] :descricao Descri\u00E7\u00E3o do tipo de arquivo
+  # @return [PageTipoArquivoResponse]
+  describe 'listar_tipos_arquivos_using_get test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -87,18 +127,36 @@ describe 'ArquivoApi' do
   end
 
   # unit tests for listar_using_get4
-  # Listar arquivos do Pier Cloud
-  # Este recurso permite a listagem de todos os arquivos dispon\u00C3\u00ADveis no Pier Cloud.
+  # Lista as auditorias do arquivo
+  # Este recurso permite listar as auditorias de um determinado arquivo a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+  # @param id C\u00F3digo de Identifica\u00E7\u00E3o do arquivo
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  # @option opts [Integer] :page P\u00C3\u00A1gina solicitada (Default = 0)
-  # @option opts [Integer] :limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  # @return [PageArquivoAUDResponse]
+  describe 'listar_using_get4 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+  # unit tests for listar_using_get5
+  # Listar arquivos do Pier Cloud
+  # Este recurso permite a listagem de todos os arquivos dispon\u00EDveis no Pier Cloud.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :sort Tipo de ordena\u00E7\u00E3o dos registros.
+  # @option opts [Integer] :page P\u00E1gina solicitada (Default = 0)
+  # @option opts [Integer] :limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   # @option opts [String] :nome Nome do arquivo
   # @option opts [Integer] :id_tipo_arquivo Tipo do arquivo
   # @option opts [Integer] :id_status_arquivo Identificador do status do arquivo
-  # @option opts [String] :extensao Extens\u00C3\u00A3o do arquivo
+  # @option opts [String] :extensao Extens\u00E3o do arquivo
   # @return [PageArquivoResponse]
-  describe 'listar_using_get4 test' do
+  describe 'listar_using_get5 test' do
     it "should work" do
       # assertion here
       # should be_a()

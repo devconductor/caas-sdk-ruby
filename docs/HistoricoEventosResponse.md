@@ -3,10 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id_historico** | **Integer** | C\u00F3digo identificador do evento | 
-**data_historico** | **String** | Data do evento | 
-**tipo_historico** | **String** | Nome do campo alterado | 
-**valor_anterior** | **String** | Valor anterior a modifica\u00E7\u00E3o | [optional] 
-**valor_atribuido** | **String** | Valor atribu\u00EDdo na modifica\u00E7\u00E3o | 
+**id_historico** | **Integer** | {{{historico_eventos_response_id_historico_value}}} | 
+**data_historico** | **String** | {{{historico_eventos_response_data_historico_value}}} | 
+**tipo_historico** | **String** | {{{historico_eventos_response_tipo_historico_value}}} | 
+**valor_anterior** | **String** | {{{historico_eventos_response_valor_anterior_value}}} | [optional] 
+**valor_atribuido** | **String** | {{{historico_eventos_response_valor_atribuido_value}}} | 
+
 
 

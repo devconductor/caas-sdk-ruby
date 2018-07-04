@@ -3,33 +3,34 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo identificador da fatura. | [optional] 
-**id_conta** | **Integer** | C\u00F3digo identificador da conta. | [optional] 
-**flag_emite_fatura** | **Integer** | C\u00F3digo identificador da conta a qual a fatura se refere. | [optional] 
-**data_vencimento_fatura** | **String** | Data de vencimento da fatura. | [optional] 
-**valor_total_fatura** | **Float** | Valor para pagamento total da fatura. | [optional] 
-**valor_fatura_anterior** | **Float** | Valor total da fatura anterior. | [optional] 
-**valor_pagamento_minimo** | **Float** | Valor m\u00EDnimo para pagamento da fatura. | [optional] 
-**total_compras_nacionais** | **Float** | Valor total das compras nacionais lan\u00E7adas na fatura. | [optional] 
-**total_compras_internacionas** | **Float** | Valor total das compras internacionais lan\u00E7adas na fatura. | [optional] 
-**total_saques_nacionais** | **Float** | Valor total dos saques nacionais lan\u00E7ados na fatura. | [optional] 
-**total_saques_internacionais** | **Float** | Valor total dos saques internacionais lan\u00E7ados na fatura. | [optional] 
-**total_debitos_nacionais** | **Float** | Valor total dos d\u00E9bitos nacionais lan\u00E7ados na fatura. | [optional] 
-**total_debitos_recorrentes** | **Float** | Valor total dos d\u00E9bitos recorrentes lan\u00E7ados na fatura. | [optional] 
-**total_debitos_internacionais** | **Float** | Valor total dos d\u00E9bitos internacionais lan\u00E7ados na fatura. | [optional] 
-**total_debitos_diversos_nacionais** | **Float** | Valor total dos d\u00E9bitos diversos nacionais lan\u00E7ados na fatura. | [optional] 
-**total_debitos_opcionais** | **Float** | Valor total dos d\u00E9bitos diversos opcionais lan\u00E7ados na fatura. | [optional] 
-**total_pagamentos** | **Float** | Valor total dos pagamentos lan\u00E7ados na fatura. | [optional] 
-**total_creditos_nacionais** | **Float** | Valor total dos cr\u00E9ditos nacionais lan\u00E7ados na fatura. | [optional] 
-**total_ajustes** | **Float** | Valor total dos ajustes lan\u00E7ados na fatura. | [optional] 
-**total_tarifas** | **Float** | Valor total das tarifas lan\u00E7adas na fatura. | [optional] 
-**total_multa** | **Float** | Valor total da multa lan\u00E7ada na fatura. | [optional] 
-**total_juros** | **Float** | Valor total dos juros de mora lan\u00E7ados na fatura. | [optional] 
-**taxa_rotativo** | **Float** | Valor percentual da taxa de juros rotativos. | [optional] 
-**taxa_saque** | **Float** | Valor percentual da taxa de saque. | [optional] 
-**taxa_maxima_proximo_periodo** | **Float** | Valor m\u00E1ximo percentual da taxa de encargos para o pr\u00F3ximo per\u00EDodo. | [optional] 
-**total_servicos** | **Float** | Apresenta a soma de todos os seguros cobrados na fatura do cliente. | 
-**total_parcelado_nacionais** | **Float** | Apresenta a soma de todos os valores parcelados + compras nacionais. | 
-**total_parcelado_internacionais** | **Float** | Apresenta a soma de todos os valores parcelados + compras internacionais. | 
+**id** | **Integer** | {{{fatura_fechada_response_id_value}}} | [optional] 
+**id_conta** | **Integer** | {{{fatura_fechada_response_id_conta_value}}} | [optional] 
+**flag_emite_fatura** | **Integer** | {{{fatura_fechada_response_flag_emite_fatura_value}}} | [optional] 
+**data_vencimento_fatura** | **String** | {{{fatura_fechada_response_data_vencimento_fatura_value}}} | [optional] 
+**valor_total_fatura** | **Float** | {{{fatura_fechada_response_valor_total_fatura_value}}} | [optional] 
+**valor_fatura_anterior** | **Float** | {{{fatura_fechada_response_valor_fatura_anterior_value}}} | [optional] 
+**valor_pagamento_minimo** | **Float** | {{{fatura_fechada_response_valor_pagamento_minimo_value}}} | [optional] 
+**total_compras_nacionais** | **Float** | {{{fatura_fechada_response_total_compras_nacionais_value}}} | [optional] 
+**total_compras_internacionas** | **Float** | {{{fatura_fechada_response_total_compras_internacionas_value}}} | [optional] 
+**total_saques_nacionais** | **Float** | {{{fatura_fechada_response_total_saques_nacionais_value}}} | [optional] 
+**total_saques_internacionais** | **Float** | {{{fatura_fechada_response_total_saques_internacionais_value}}} | [optional] 
+**total_debitos_nacionais** | **Float** | {{{fatura_fechada_response_total_debitos_nacionais_value}}} | [optional] 
+**total_debitos_recorrentes** | **Float** | {{{fatura_fechada_response_total_debitos_recorrentes_value}}} | [optional] 
+**total_debitos_internacionais** | **Float** | {{{fatura_fechada_response_total_debitos_internacionais_value}}} | [optional] 
+**total_debitos_diversos_nacionais** | **Float** | {{{fatura_fechada_response_total_debitos_diversos_nacionais_value}}} | [optional] 
+**total_debitos_opcionais** | **Float** | {{{fatura_fechada_response_total_debitos_opcionais_value}}} | [optional] 
+**total_pagamentos** | **Float** | {{{fatura_fechada_response_total_pagamentos_value}}} | [optional] 
+**total_creditos_nacionais** | **Float** | {{{fatura_fechada_response_total_creditos_nacionais_value}}} | [optional] 
+**total_ajustes** | **Float** | {{{fatura_fechada_response_total_ajustes_value}}} | [optional] 
+**total_tarifas** | **Float** | {{{fatura_fechada_response_total_tarifas_value}}} | [optional] 
+**total_multa** | **Float** | {{{fatura_fechada_response_total_multa_value}}} | [optional] 
+**total_juros** | **Float** | {{{fatura_fechada_response_total_juros_value}}} | [optional] 
+**taxa_rotativo** | **Float** | {{{fatura_fechada_response_taxa_rotativo_value}}} | [optional] 
+**taxa_saque** | **Float** | {{{fatura_fechada_response_taxa_saque_value}}} | [optional] 
+**taxa_maxima_proximo_periodo** | **Float** | {{{fatura_fechada_response_taxa_maxima_proximo_periodo_value}}} | [optional] 
+**total_servicos** | **Float** | {{{fatura_fechada_response_total_servicos_value}}} | 
+**total_parcelado_nacionais** | **Float** | {{{fatura_fechada_response_total_parcelado_nacionais_value}}} | 
+**total_parcelado_internacionais** | **Float** | {{{fatura_fechada_response_total_parcelado_internacionais_value}}} | 
+
 
 

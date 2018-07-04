@@ -3,16 +3,17 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id). | 
-**nome** | **String** | Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;. | 
-**tipo** | **String** | C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00EDsica), (\&quot;PJ\&quot;: Pessoa Jur\u00EDdica). | 
-**cpf** | **String** | N\u00FAmero do CPF, quando PF. | [optional] 
-**cnpj** | **String** | N\u00FAmero do CNPJ, quando PJ. | [optional] 
-**data_nascimento** | **String** | Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. | [optional] 
-**numero_identidade** | **String** | N\u00FAmero da Identidade | [optional] 
-**orgao_expedidor_identidade** | **String** | Org\u00E3o expedidor do RG. | [optional] 
-**sexo** | **String** | C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00E3o Especificado). | [optional] 
-**unidade_federativa_identidade** | **String** | Sigla da Unidade Federativa de onde foi expedido a Identidade | [optional] 
-**data_emissao_identidade** | **String** | Data emiss\u00E3o da identidade no formato aaaa-MM-dd | [optional] 
+**id** | **Integer** | {{{pessoa_response_id_value}}} | 
+**nome** | **String** | {{{pessoa_response_nome_value}}} | 
+**tipo** | **String** | {{{pessoa_response_tipo_value}}} | 
+**cpf** | **String** | {{{pessoa_response_cpf_value}}} | [optional] 
+**cnpj** | **String** | {{{pessoa_response_cnpj_value}}} | [optional] 
+**data_nascimento** | **String** | {{{pessoa_response_data_nascimento_value}}} | [optional] 
+**numero_identidade** | **String** | {{{pessoa_response_numero_identidade_value}}} | [optional] 
+**orgao_expedidor_identidade** | **String** | {{{pessoa_response_orgao_expedidor_identidade_value}}} | [optional] 
+**sexo** | **String** | {{{pessoa_response_sexo_value}}} | [optional] 
+**unidade_federativa_identidade** | **String** | {{{pessoa_response_unidade_federativa_identidade_value}}} | [optional] 
+**data_emissao_identidade** | **String** | {{{pessoa_response_data_emissao_identidade_value}}} | [optional] 
+
 
 

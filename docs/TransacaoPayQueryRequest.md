@@ -3,9 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**numero_cartao** | **String** | Numero do cartao (criptografado) | [optional] 
-**id_cartao** | **Integer** | Id do cart\u00E3o | [optional] 
-**origem** | **String** | Origem | [optional] 
-**sort** | **Array&lt;String&gt;** | Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+**numero_cartao** | **String** | {{{transacao_pay_generic_request_numero_cartao_value}}} | [optional] 
+**id_cartao** | **Integer** | {{{transacao_pay_generic_request_id_cartao_value}}} | [optional] 
+**origem** | **String** | {{{transacao_pay_query_request_origem_value}}} | [optional] 
+**sort** | **Array&lt;String&gt;** | {{{global_menssagem_sort_sort}}} | [optional] 
+
 
 

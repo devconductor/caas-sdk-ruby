@@ -3,8 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo identificador do detalhe | [optional] 
-**nome_campo** | **String** | Nome do conte\u00FAdo | [optional] 
-**conteudo** | **String** | Conte\u00FAdo do detalhe | [optional] 
+**id** | **Integer** | {{{detalhe_oportunidade_response_id_value}}} | [optional] 
+**nome_campo** | **String** | {{{detalhe_oportunidade_response_nome_campo_value}}} | [optional] 
+**conteudo** | **String** | {{{detalhe_oportunidade_response_conteudo_value}}} | [optional] 
+
 
 

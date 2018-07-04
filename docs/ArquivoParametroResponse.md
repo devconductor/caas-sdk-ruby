@@ -3,8 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o do detalhe do arquivo. | [optional] 
-**nome_campo** | **String** | Nome que identifica o detalhe do arquivo | 
-**conteudo** | **String** | Conte\u00FAdo do nomeCampo | 
+**id** | **Integer** | {{{arquivo_parametro_response_id_value}}} | [optional] 
+**nome_campo** | **String** | {{{arquivo_parametro_response_nome_campo_value}}} | 
+**conteudo** | **String** | {{{arquivo_parametro_response_conteudo_value}}} | 
+
 
 

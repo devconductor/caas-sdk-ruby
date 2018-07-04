@@ -3,10 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mensagem** | **String** | Mensagem | [optional] 
-**id_status_cartao** | **Integer** | Descri\u00E7\u00E3o do status do cart\u00E3o | [optional] 
-**status_cartao** | **String** | Descri\u00E7\u00E3o do status do cart\u00E3o | [optional] 
-**quantidade_tentativas** | **Integer** | Quantidade tentativas | [optional] 
-**quantidade_maxima_tentativas** | **Integer** | Quantidade m\u00E1xima tentativas permitidas | [optional] 
+**mensagem** | **String** | {{{valida_senha_cartao_response_mensagem_value}}} | [optional] 
+**id_status_cartao** | **Integer** | {{{valida_senha_cartao_response_id_status_cartao_value}}} | [optional] 
+**status_cartao** | **String** | {{{valida_senha_cartao_response_status_cartao_value}}} | [optional] 
+**quantidade_tentativas** | **Integer** | {{{valida_senha_cartao_response_quantidade_tentativas_value}}} | [optional] 
+**quantidade_maxima_tentativas** | **Integer** | {{{valida_senha_cartao_response_quantidade_maxima_tentativas_value}}} | [optional] 
+
 
 

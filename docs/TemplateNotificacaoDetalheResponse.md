@@ -3,15 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo Identificador. | [optional] 
-**id_configuracao_email** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de e-mail. | [optional] 
-**tipo_layout** | **String** | Tipo do layout de e-mail. | [optional] 
-**tipo_notificacao** | **String** | Tipo da notifica\u00E7\u00E3o. | [optional] 
-**template_padrao** | **String** | Template padr\u00E3o. | [optional] 
-**remetente** | **String** | Remetente. | [optional] 
-**assunto** | **String** | Assunto do e-mail. | [optional] 
-**data_inclusao** | **String** | Data da inclus\u00E3o. | [optional] 
-**data_alteracao** | **String** | Data altera\u00E7\u00E3o. | [optional] 
-**conteudo** | **String** | Conteudo do e-mail. | [optional] 
+**id** | **Integer** | {{{template_notificacao_response_id_value}}} | [optional] 
+**id_configuracao_email** | **Integer** | {{{template_notificacao_response_id_configuracao_email_value}}} | [optional] 
+**tipo_layout** | **String** | {{{template_notificacao_response_tipo_layout_value}}} | [optional] 
+**tipo_notificacao** | **String** | {{{template_notificacao_response_tipo_notificacao_value}}} | [optional] 
+**template_padrao** | **String** | {{{template_notificacao_response_template_padrao_value}}} | [optional] 
+**remetente** | **String** | {{{template_notificacao_response_remetente_value}}} | [optional] 
+**assunto** | **String** | {{{template_notificacao_response_assunto_value}}} | [optional] 
+**data_inclusao** | **String** | {{{template_notificacao_response_data_inclusao_value}}} | [optional] 
+**data_alteracao** | **String** | {{{template_notificacao_response_data_alteracao_value}}} | [optional] 
+**conteudo** | **String** | {{{template_notificacao_detalhe_response_conteudo_value}}} | [optional] 
+
 
 

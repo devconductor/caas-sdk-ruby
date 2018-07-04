@@ -3,10 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id). | [optional] 
-**telefone** | **String** | Apresenta o N\u00FAmero do telefone. | [optional] 
-**id_tipo_telefone** | **Integer** | Apresenta o id do tipo do telefone. | [optional] 
-**tipo_telefone** | **String** | Apresenta a descri\u00E7\u00E3o do tipo do telefone. | [optional] 
-**data_modificacao** | **String** | Apresenta a data que o telefone fora alterado. | [optional] 
+**id** | **Integer** | {{{historico_telefone_response_id_value}}} | [optional] 
+**telefone** | **String** | {{{historico_telefone_response_telefone_value}}} | [optional] 
+**id_tipo_telefone** | **Integer** | {{{historico_telefone_response_id_tipo_telefone_value}}} | [optional] 
+**tipo_telefone** | **String** | {{{historico_telefone_response_tipo_telefone_value}}} | [optional] 
+**data_modificacao** | **String** | {{{historico_telefone_response_data_modificacao_value}}} | [optional] 
+
 
 

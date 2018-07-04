@@ -3,27 +3,29 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**razao_social** | **String** | Apresenta o nome completo da raz\u00E3o social (nome empresarial)&#39;. | 
-**nome_fantasia** | **String** | Apresenta o nome fantasia da empresa. | [optional] 
-**cnpj** | **String** | N\u00FAmero do Cadastro Nacional de Pessoa Juridica (CNPJ) | 
-**inscricao_estadual** | **String** | N\u00FAmero da Inscri\u00E7\u00E3o Estadual (IE). | [optional] 
-**data_abertura_empresa** | **String** | Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd. | 
-**id_origem_comercial** | **Integer** | Id da origem comercial | 
-**id_produto** | **Integer** | Id do produto | 
-**numero_agencia** | **Integer** | N\u00FAmero da ag\u00EAncia. | [optional] 
-**numero_conta_corrente** | **String** | N\u00FAmero da conta corrente. | [optional] 
-**email** | **String** | Email da empresa | [optional] 
-**dia_vencimento** | **Integer** | Dia vencimento | 
-**nome_impresso** | **String** | Nome que deve ser impresso no cart\u00E3o | [optional] 
-**valor_renda** | **Float** | Apresenta o valor da renda compravada | [optional] 
-**canal_entrada** | **String** | Indica o canal pelo qual o cadastro do cliente foi realizado | [optional] 
-**valor_pontuacao** | **Integer** | Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0) | [optional] 
-**telefones** | [**Array&lt;TelefonePessoaAprovadaPersist&gt;**](TelefonePessoaAprovadaPersist.md) | Apresenta os telefones da empresa | [optional] 
-**enderecos** | [**Array&lt;EnderecoAprovadoPersist&gt;**](EnderecoAprovadoPersist.md) | Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros | 
-**socios** | [**Array&lt;PessoaPersist&gt;**](PessoaPersist.md) | Apresenta os dados dos s\u00F3cios da empresa, caso exista | [optional] 
-**referencias_comerciais** | [**Array&lt;RefenciaComercialAprovadoPersist&gt;**](RefenciaComercialAprovadoPersist.md) | Apresenta os dados das refer\u00EAncias comerciais | [optional] 
-**limite_global** | **Float** | Valor do Limite Global | 
-**limite_maximo** | **Float** | Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es | 
-**limite_parcelas** | **Float** | Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras | 
+**razao_social** | **String** | {{{pessoa_juridica_aprovada_persist_razao_social_value}}} | 
+**nome_fantasia** | **String** | {{{pessoa_juridica_aprovada_persist_nome_fantasia_value}}} | [optional] 
+**cnpj** | **String** | {{{pessoa_juridica_aprovada_persist_cnpj_value}}} | 
+**inscricao_estadual** | **String** | {{{pessoa_juridica_aprovada_persist_inscricao_estadual_value}}} | [optional] 
+**data_abertura_empresa** | **String** | {{{pessoa_juridica_aprovada_persist_data_abertura_empresa_value}}} | 
+**id_origem_comercial** | **Integer** | {{{pessoa_juridica_aprovada_persist_id_origem_comercial_value}}} | 
+**id_produto** | **Integer** | {{{pessoa_juridica_aprovada_persist_id_produto_value}}} | 
+**numero_banco** | **Integer** | {{{pessoa_juridica_aprovada_persist_numero_banco_value}}} | [optional] 
+**numero_agencia** | **Integer** | {{{pessoa_juridica_aprovada_persist_numero_agencia_value}}} | [optional] 
+**numero_conta_corrente** | **String** | {{{pessoa_juridica_aprovada_persist_numero_conta_corrente_value}}} | [optional] 
+**email** | **String** | {{{pessoa_juridica_aprovada_persist_email_value}}} | [optional] 
+**dia_vencimento** | **Integer** | {{{pessoa_juridica_aprovada_persist_dia_vencimento_value}}} | 
+**nome_impresso** | **String** | {{{pessoa_juridica_aprovada_persist_nome_impresso_value}}} | [optional] 
+**valor_renda** | **Float** | {{{pessoa_juridica_aprovada_persist_valor_renda_value}}} | [optional] 
+**canal_entrada** | **String** | {{{pessoa_juridica_aprovada_persist_canal_entrada_value}}} | [optional] 
+**valor_pontuacao** | **Integer** | {{{pessoa_juridica_aprovada_persist_valor_pontuacao_value}}} | [optional] 
+**telefones** | [**Array&lt;TelefonePessoaAprovadaPersistValue&gt;**](TelefonePessoaAprovadaPersistValue.md) | {{{pessoa_juridica_aprovada_persist_telefones_value}}} | [optional] 
+**enderecos** | [**Array&lt;EnderecoAprovadoPersistValue&gt;**](EnderecoAprovadoPersistValue.md) | {{{pessoa_juridica_aprovada_persist_enderecos_value}}} | 
+**socios** | [**Array&lt;SocioAprovadoPersistValue&gt;**](SocioAprovadoPersistValue.md) | {{{pessoa_juridica_aprovada_persist_socios_value}}} | [optional] 
+**referencias_comerciais** | [**Array&lt;ReferenciaComercialAprovadoPersistValue&gt;**](ReferenciaComercialAprovadoPersistValue.md) | {{{pessoa_juridica_aprovada_persist_referencias_comerciais_value}}} | [optional] 
+**limite_global** | **Float** | {{{pessoa_juridica_aprovada_persist_limite_global_value}}} | 
+**limite_maximo** | **Float** | {{{pessoa_juridica_aprovada_persist_limite_maximo_value}}} | 
+**limite_parcelas** | **Float** | {{{pessoa_juridica_aprovada_persist_limite_parcelas_value}}} | 
+
 
 

@@ -3,8 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo identificador do TipoOportunidade | 
-**descricao** | **String** | Descricao do TipoOportunidade | 
-**flag_ativo** | **BOOLEAN** | Flag que representa se o tipo oportunidade est\u00E1 ativo | 
+**id** | **Integer** | {{{tipo_oportunidade_response_id_value}}} | 
+**descricao** | **String** | {{{tipo_oportunidade_response_descricao_value}}} | 
+**flag_ativo** | **BOOLEAN** | {{{tipo_oportunidade_response_flag_ativo_value}}} | 
+
 
 

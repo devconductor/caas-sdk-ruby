@@ -3,9 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo de Identifica\u00E7\u00E3o do Banco (id). | [optional] 
-**nome** | **String** | Nome do banco | [optional] 
-**descricao** | **String** | Descri\u00E7\u00E3o do banco | [optional] 
-**digito_banco** | **String** | Digito do banco | [optional] 
+**id** | **Integer** | {{{banco_response_id_value}}} | [optional] 
+**nome** | **String** | {{{banco_response_nome_value}}} | [optional] 
+**descricao** | **String** | {{{banco_response_descricao_value}}} | [optional] 
+**digito_banco** | **String** | {{{banco_response_digito_banco_value}}} | [optional] 
+
 
 

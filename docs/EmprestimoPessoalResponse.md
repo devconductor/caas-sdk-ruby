@@ -4,13 +4,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **planos_parcelamentos** | [**Array&lt;PlanoParcelamentoEmprestimoResponse&gt;**](PlanoParcelamentoEmprestimoResponse.md) |  | [optional] 
-**valor_solicitado** | **Float** | Valor solicitado do empr\u00E9stimo/financiamento | [optional] 
-**valor_maximo_solicitacao** | **Float** | Valor m\u00E1ximo de empr\u00E9stimo pelo valor limite de parcela | [optional] 
-**numero_parcelas** | **Integer** | N\u00FAmero de parcelas solicitado | [optional] 
-**valor_maximo_parcela** | **Float** | Limite m\u00E1ximo de parcela permitido | [optional] 
-**data_primeira_parcela** | **String** | Data do desconto da primeira parcela | [optional] 
-**periodo_taxa** | **String** | Per\u00EDodo de aplica da taxa de juros | [optional] 
-**sistema_amortizacao** | **String** | Sistema para amortiza\u00E7\u00E3o do valor das parcelas | [optional] 
-**taxa_juros** | **Float** | Valor percentual da taxa de juros a ser aplicada | [optional] 
+**valor_solicitado** | **Float** | {{{emprestimo_pessoal_response_valor_solicitado_value}}} | [optional] 
+**valor_maximo_solicitacao** | **Float** | {{{emprestimo_pessoal_response_valor_maximo_solicitacao_value}}} | [optional] 
+**numero_parcelas** | **Integer** | {{{emprestimo_pessoal_response_numero_parcelas_value}}} | [optional] 
+**valor_maximo_parcela** | **Float** | {{{emprestimo_pessoal_response_valor_maximo_parcela_value}}} | [optional] 
+**data_primeira_parcela** | **String** | {{{emprestimo_pessoal_response_data_primeira_parcela_value}}} | [optional] 
+**periodo_taxa** | **String** | {{{emprestimo_pessoal_response_periodo_taxa_value}}} | [optional] 
+**sistema_amortizacao** | **String** | {{{emprestimo_pessoal_response_sistema_amortizacao_value}}} | [optional] 
+**taxa_juros** | **Float** | {{{emprestimo_pessoal_response_taxa_juros_value}}} | [optional] 
+
 
 

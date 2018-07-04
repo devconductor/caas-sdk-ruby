@@ -3,15 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id_conta** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o da conta. | [optional] 
-**situacao_processamento** | **String** | Situa\u00E7\u00E3o de Processamento da fatura. | [optional] 
-**pagamento_efetuado** | **BOOLEAN** | Status de pagamento efetuado. | [optional] 
-**data_vencimento_fatura** | **String** | Data de vencimento da fatura. | [optional] 
-**data_vencimento_real** | **String** | Data de vencimento real da fatura. | [optional] 
-**data_fechamento** | **String** | Data de fechamento da fatura. | [optional] 
-**valor_total** | **Float** | Valor total da fatura. | [optional] 
-**valor_pagamento_minimo** | **Float** | Valor do pagamento m\u00EDnimo. | [optional] 
-**lancamentos_fatura_response** | [**Array&lt;LancamentoFaturaResponse&gt;**](LancamentoFaturaResponse.md) | Lista de lan\u00E7amentos da fatura. | [optional] 
-**saldo_anterior** | **Float** | Valor do saldo anterior. | [optional] 
+**id_conta** | **Integer** | {{{fatura_response_id_conta_value}}} | [optional] 
+**situacao_processamento** | **String** | {{{fatura_response_situacao_processamento_value}}} | [optional] 
+**pagamento_efetuado** | **BOOLEAN** | {{{fatura_response_pagamento_efetuado_value}}} | [optional] 
+**data_vencimento_fatura** | **String** | {{{fatura_response_data_vencimento_fatura_value}}} | [optional] 
+**data_vencimento_real** | **String** | {{{fatura_response_data_vencimento_real_value}}} | [optional] 
+**data_fechamento** | **String** | {{{fatura_response_data_fechamento_value}}} | [optional] 
+**valor_total** | **Float** | {{{fatura_response_valor_total_value}}} | [optional] 
+**valor_pagamento_minimo** | **Float** | {{{fatura_response_valor_pagamento_minimo_value}}} | [optional] 
+**lancamentos_fatura_response** | [**Array&lt;LancamentoFaturaResponse&gt;**](LancamentoFaturaResponse.md) | {{{fatura_detalhe_response_lancamentos_fatura_response_value}}} | [optional] 
+**saldo_anterior** | **Float** | {{{fatura_response_saldo_anterior_value}}} | [optional] 
+
 
 

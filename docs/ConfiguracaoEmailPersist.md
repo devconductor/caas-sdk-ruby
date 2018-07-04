@@ -3,15 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**host** | **String** | IP (Host) do servidor de e-mail. | [optional] 
-**port** | **String** | Porta usada pelo servidor de e-mail. | [optional] 
-**port_tlsstarttls** | **String** | Porta usada pelo servi\u00E7o TLS/STARTTLS. | [optional] 
-**port_ssl** | **String** | Porta usada pelo servi\u00E7o SSL. | [optional] 
-**protocolo** | **String** | Protocolo de comunica\u00E7\u00E3o usado pelo servi\u00E7o de e-mail. | [optional] 
-**requer_autenticacao** | **BOOLEAN** | O servi\u00E7o de e-mail requer autentica\u00E7\u00E3o. | [optional] 
-**requer_ssl** | **BOOLEAN** | O servi\u00E7o de e-mail requer SSL. | [optional] 
-**requer_tls** | **BOOLEAN** | O servi\u00E7o de e-mail requer TLS. | [optional] 
-**usuario** | **String** | Usuario do servi\u00E7o de e-mail. | [optional] 
-**senha** | **String** | Senha de usu\u00E1rio do servi\u00E7o de e-mail. | [optional] 
+**host** | **String** | {{{configuracao_email_persist_host_value}}} | [optional] 
+**port** | **String** | {{{configuracao_email_persist_port_value}}} | [optional] 
+**port_tlsstarttls** | **String** | {{{configuracao_email_persist_port_t_l_s_s_t_a_r_t_t_l_s_value}}} | [optional] 
+**port_ssl** | **String** | {{{configuracao_email_persist_port_s_s_l_value}}} | [optional] 
+**protocolo** | **String** | {{{configuracao_email_persist_protocolo_value}}} | [optional] 
+**requer_autenticacao** | **BOOLEAN** | {{{configuracao_email_persist_requer_autenticacao_value}}} | [optional] 
+**requer_ssl** | **BOOLEAN** | {{{configuracao_email_persist_requer_s_s_l_value}}} | [optional] 
+**requer_tls** | **BOOLEAN** | {{{configuracao_email_persist_requer_t_l_s_value}}} | [optional] 
+**usuario** | **String** | {{{configuracao_email_persist_usuario_value}}} | [optional] 
+**senha** | **String** | {{{configuracao_email_persist_senha_value}}} | [optional] 
+
 
 

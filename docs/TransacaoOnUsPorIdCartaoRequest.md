@@ -3,12 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**nsu_origem** | **String** | N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou. | 
-**codigo_processamento** | **String** | C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o. | 
-**valor_transacao** | **Float** | Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos. | 
-**numero_estabelecimento** | **Integer** | N\u00FAmero do Estabelecimento (N\u00FAmero+DV). | 
-**data_hora_terminal** | **String** | Apresenta a data e hora local da consulta yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00 | 
-**terminal_requisitante** | **String** | Apresenta a identifica\u00E7\u00E3o do terminal requisitante | 
-**numero_parcelas** | **Integer** | N\u00FAmero de Parcelas. | 
+**nsu_origem** | **String** | {{{transacao_on_us_por_id_cartao_request_nsu_origem_value}}} | 
+**codigo_processamento** | **String** | {{{transacao_on_us_por_id_cartao_request_codigo_processamento_value}}} | 
+**valor_transacao** | **Float** | {{{transacao_on_us_por_id_cartao_request_valor_transacao_value}}} | 
+**numero_estabelecimento** | **Integer** | {{{transacao_on_us_por_id_cartao_request_numero_estabelecimento_value}}} | 
+**data_hora_terminal** | **String** | {{{transacao_on_us_por_id_cartao_request_data_hora_terminal_value}}} | 
+**terminal_requisitante** | **String** | {{{transacao_on_us_por_id_cartao_request_terminal_requisitante_value}}} | 
+**numero_parcelas** | **Integer** | {{{transacao_on_us_por_id_cartao_request_numero_parcelas_value}}} | 
+
 
 

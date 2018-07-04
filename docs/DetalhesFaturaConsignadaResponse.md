@@ -3,7 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**fatura_consignada_response** | [**FaturaConsignadaResponse**](FaturaConsignadaResponse.md) | Apresenta os detalhes da fatura | [optional] 
-**transacoes** | [**Array&lt;TransacoesCorrentesResponse&gt;**](TransacoesCorrentesResponse.md) | Apresenta as transa\u00E7\u00F5es relacionadas a fatura. | [optional] 
+**fatura_consignada_response** | [**FaturaConsignadaResponse**](FaturaConsignadaResponse.md) | {{{detalhes_fatura_consignada_response_fatura_consignada_response_value}}} | [optional] 
+**transacoes** | [**Array&lt;TransacoesCorrentesResponse&gt;**](TransacoesCorrentesResponse.md) | {{{detalhes_fatura_consignada_response_transacoes_value}}} | [optional] 
+
 
 

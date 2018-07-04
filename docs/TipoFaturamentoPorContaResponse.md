@@ -3,12 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id). | [optional] 
-**id_conta** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada ao tipo de faturamento. | [optional] 
-**status** | **BOOLEAN** | Status da configura\u00E7\u00E3o que representa que se o tipo de faturamento por conta est\u00E1 ativo ou cancelado. | [optional] 
-**id_tipo_faturamento** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o da tipo de faturamento referenciado. | [optional] 
-**data_hora_inclusao** | **String** | Data de inclus\u00E3o da configura\u00E7\u00E3o de tipo de faturamento por conta. | [optional] 
-**data_hora_cancelamento** | **String** | Data de cancelamento da configura\u00E7\u00E3o de tipo de faturamento por conta. | [optional] 
-**modificado_por** | **String** | Descri\u00E7\u00E3o do respons\u00E1vel pela \u00FAltima modifica\u00E7\u00E3o da configura\u00E7\u00E3o. | [optional] 
+**id** | **Integer** | {{{tipo_faturamento_por_conta_response_id_value}}} | [optional] 
+**id_conta** | **Integer** | {{{tipo_faturamento_por_conta_response_id_conta_value}}} | [optional] 
+**ativo** | **BOOLEAN** | {{{tipo_faturamento_por_conta_response_status_value}}} | [optional] 
+**id_tipo_faturamento** | **Integer** | {{{tipo_faturamento_por_conta_response_id_tipo_faturamento_value}}} | [optional] 
+**data_hora_inclusao** | **String** | {{{tipo_faturamento_por_conta_response_data_hora_inclusao_value}}} | [optional] 
+**data_hora_cancelamento** | **String** | {{{tipo_faturamento_por_conta_response_data_hora_cancelamento_value}}} | [optional] 
+**modificado_por** | **String** | {{{tipo_faturamento_por_conta_response_modificado_por_value}}} | [optional] 
+
 
 

@@ -3,11 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id_tipo_arquivo** | **Integer** | Tipo do arquivo | [optional] 
-**arquivo** | **String** | Conte\u00FAdo do arquivo convertido em Base 64 | 
-**nome** | **String** | Nome do arquivo. | [optional] 
-**extensao** | **String** | Formato/extens\u00E3o do arquivo. | [optional] 
-**tipo_comunicacao** | **String** | Tipo de comunica\u00E7\u00E3o. | [optional] 
-**detalhes** | [**Array&lt;ArquivoDetalhesPersist&gt;**](ArquivoDetalhesPersist.md) | Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo | 
+**id_tipo_arquivo** | **Integer** | {{{arquivo_persist_id_tipo_arquivo_value}}} | [optional] 
+**arquivo** | **String** | {{{arquivo_persist_arquivo_value}}} | 
+**nome** | **String** | {{{arquivo_persist_nome_value}}} | [optional] 
+**extensao** | **String** | {{{arquivo_persist_extensao_value}}} | [optional] 
+**tipo_comunicacao** | **String** | {{{arquivo_persist_tipo_comunicacao_value}}} | [optional] 
+**detalhes** | [**Array&lt;ArquivoDetalhesPersist&gt;**](ArquivoDetalhesPersist.md) | {{{arquivo_persist_detalhes_value}}} | 
+
 
 

@@ -3,19 +3,20 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio (id) | [optional] 
-**nome** | **String** | Apresenta o Nome do Socio | [optional] 
-**cpf** | **String** | N\u00FAmero do CPF, quando PF. | [optional] 
-**data_nascimento** | **String** | Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd. | [optional] 
-**sexo** | **String** | C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00E3o Especificado). | [optional] 
-**numero_identidade** | **String** | N\u00FAmero da Identidade. | [optional] 
-**orgao_expedidor_identidade** | **String** | Org\u00E3o expedidor do RG. | [optional] 
-**unidade_federativa_identidade** | **String** | Sigla da Unidade Federativa de onde foi expedido a Identidade | [optional] 
-**data_emissao_identidade** | **String** | Data emiss\u00E3o da Identidade | [optional] 
-**estado_civil** | **String** | Estado civil do s\u00F3cio | [optional] 
-**profissao** | **String** | Profiss\u00E3o do s\u00F3cio | [optional] 
-**nacionalidade** | **String** | Nacionalidade do s\u00F3cio | [optional] 
-**email** | **String** | Email do s\u00F3cio | [optional] 
-**telefones** | [**Array&lt;TelefonePessoaAprovadaResponse&gt;**](TelefonePessoaAprovadaResponse.md) | Informa os telefones do s\u00F3cio | [optional] 
+**id** | **Integer** | {{{socio_aprovado_response_id_value}}} | [optional] 
+**nome** | **String** | {{{socio_aprovado_response_nome_value}}} | [optional] 
+**cpf** | **String** | {{{socio_aprovado_response_cpf_value}}} | [optional] 
+**data_nascimento** | **String** | {{{socio_aprovado_response_data_nascimento_value}}} | [optional] 
+**sexo** | **String** | {{{socio_aprovado_response_sexo_value}}} | [optional] 
+**numero_identidade** | **String** | {{{socio_aprovado_response_numero_identidade_value}}} | [optional] 
+**orgao_expedidor_identidade** | **String** | {{{socio_aprovado_response_orgao_expedidor_identidade_value}}} | [optional] 
+**unidade_federativa_identidade** | **String** | {{{socio_aprovado_response_unidade_federativa_identidade_value}}} | [optional] 
+**data_emissao_identidade** | **String** | {{{socio_aprovado_response_data_emissao_identidade_value}}} | [optional] 
+**estado_civil** | **String** | {{{socio_aprovado_response_estado_civil_value}}} | [optional] 
+**profissao** | **String** | {{{socio_aprovado_response_profissao_value}}} | [optional] 
+**nacionalidade** | **String** | {{{socio_aprovado_response_nacionalidade_value}}} | [optional] 
+**email** | **String** | {{{socio_aprovado_response_email_value}}} | [optional] 
+**telefones** | [**Array&lt;TelefonePessoaAprovadaResponse&gt;**](TelefonePessoaAprovadaResponse.md) | {{{socio_aprovado_response_telefones_value}}} | [optional] 
+
 
 

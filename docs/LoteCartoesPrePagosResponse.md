@@ -3,16 +3,17 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o do lote de cart\u00F5es pr\u00E9-pagos (id). | 
-**id_origem_comercial** | **Integer** | C\u00F3digo identificador da origem comercial. | 
-**id_produto** | **Integer** | C\u00F3digo identificador do Produto. | 
-**id_tipo_cartao** | **Integer** | C\u00F3digo identificador do tipo do cart\u00E3o. | 
-**id_imagem** | **Integer** | C\u00F3digo identificador da Imagem do cart\u00E3o. | 
-**id_endereco** | **Integer** | C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o. | 
-**quantidade** | **Integer** | N\u00FAmero de cart\u00F5es existentes no Lote. | 
-**data_cadastro** | **String** | Data de cadastro do lote de cart\u00F5es pr\u00E9-pagos. | 
-**usuario_cadastro** | **String** | Nome do usu\u00E1rio que criou o lote. | 
-**status_processamento** | **Integer** | Indica o status de processamento do lote. | 
-**identificador_externo** | **String** | N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor). | 
+**id** | **Integer** | {{{lote_cartoes_pre_pagos_response_id_value}}} | 
+**id_origem_comercial** | **Integer** | {{{lote_cartoes_pre_pagos_response_id_origem_comercial_value}}} | 
+**id_produto** | **Integer** | {{{lote_cartoes_pre_pagos_response_id_produto_value}}} | 
+**id_tipo_cartao** | **Integer** | {{{lote_cartoes_pre_pagos_response_id_tipo_cartao_value}}} | 
+**id_imagem** | **Integer** | {{{lote_cartoes_pre_pagos_response_id_imagem_value}}} | 
+**id_endereco** | **Integer** | {{{lote_cartoes_pre_pagos_response_id_endereco_value}}} | 
+**quantidade** | **Integer** | {{{lote_cartoes_pre_pagos_response_quantidade_value}}} | 
+**data_cadastro** | **String** | {{{lote_cartoes_pre_pagos_response_data_cadastro_value}}} | 
+**usuario_cadastro** | **String** | {{{lote_cartoes_pre_pagos_response_usuario_cadastro_value}}} | 
+**status_processamento** | **Integer** | {{{lote_cartoes_pre_pagos_response_status_processamento_value}}} | 
+**identificador_externo** | **String** | {{{lote_cartoes_pre_pagos_response_identificador_externo_value}}} | 
+
 
 

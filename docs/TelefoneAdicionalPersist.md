@@ -3,9 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id_tipo_telefone** | **Integer** | C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id). | [optional] 
-**ddd** | **String** | C\u00F3digo DDD do telefone (id). | [optional] 
-**telefone** | **String** | N\u00FAmero do telefone. | [optional] 
-**ramal** | **String** | N\u00FAmero do ramal. | [optional] 
+**id_tipo_telefone** | **Integer** | {{{telefone_adicional_persist_id_tipo_telefone_value}}} | [optional] 
+**ddd** | **String** | {{{telefone_adicional_persist_ddd_value}}} | [optional] 
+**telefone** | **String** | {{{telefone_adicional_persist_telefone_value}}} | [optional] 
+**ramal** | **String** | {{{telefone_adicional_persist_ramal_value}}} | [optional] 
+
 
 

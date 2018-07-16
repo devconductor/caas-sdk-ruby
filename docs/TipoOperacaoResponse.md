@@ -3,21 +3,22 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo identificador do TipoOperacao | 
-**tipo_operacao** | **String** | C\u00F3digo do TipoOperacao | 
-**nome** | **String** | Nome do TipoOperacao | 
-**descricao** | **String** | Decri\u00E7\u00E3o do TipoOperacao | 
-**excedente_permitido** | **Float** | Excedente permitido para o TipoOperacao | [optional] 
-**tipo_excedente_permitido** | **String** | Tipo do Excedente permitido para o TipoOperacao | [optional] 
-**valor_minimo** | **Float** | Valor minimo para a transa\u00E7\u00E3o do TipoOperacao | 
-**valor_maximo** | **Float** | Valor maximo para a transa\u00E7\u00E3o do TipoOperacao | 
-**valor_tac** | **Float** | Valor TAC da transa\u00E7\u00E3o do TipoOperacao | [optional] 
-**flag_tira_tac** | **Integer** | Flag Tira TAC do TipoOperacao | [optional] 
-**id_produto** | **Integer** | Identificador do Produto do TipoOperacao | 
-**id_estabelecimento** | **Integer** | Identificador do Estabelecimento do TipoOperacao | 
-**tarifa** | **Float** | Tarifa do TipoOperacao | [optional] 
-**remuneracao_emissor** | **Float** | Remunera\u00E7\u00E3o do Emissor para o TipoOperacao | [optional] 
-**plano_maximo** | **Integer** | Plano m\u00E1ximo do TipoOperacao | 
-**plano_minimo** | **Integer** | Plano minimo do TipoOperacao | 
+**id** | **Integer** | {{{tipo_operacao_response_id_value}}} | 
+**tipo_operacao** | **String** | {{{tipo_operacao_response_tipo_operacao_value}}} | 
+**nome** | **String** | {{{tipo_operacao_response_nome_value}}} | 
+**descricao** | **String** | {{{tipo_operacao_response_descricao_value}}} | 
+**excedente_permitido** | **Float** | {{{tipo_operacao_response_excedente_permitido_value}}} | [optional] 
+**tipo_excedente_permitido** | **String** | {{{tipo_operacao_response_tipo_excedente_permitido_value}}} | [optional] 
+**valor_minimo** | **Float** | {{{tipo_operacao_response_valor_minimo_value}}} | 
+**valor_maximo** | **Float** | {{{tipo_operacao_response_valor_maximo_value}}} | 
+**valor_tac** | **Float** | {{{tipo_operacao_response_valor_t_a_c_value}}} | [optional] 
+**flag_tira_tac** | **Integer** | {{{tipo_operacao_response_flag_tira_tac_value}}} | [optional] 
+**id_produto** | **Integer** | {{{tipo_operacao_response_id_produto_value}}} | 
+**id_estabelecimento** | **Integer** | {{{tipo_operacao_response_id_estabelecimento_value}}} | 
+**tarifa** | **Float** | {{{tipo_operacao_response_tarifa_value}}} | [optional] 
+**remuneracao_emissor** | **Float** | {{{tipo_operacao_response_remuneracao_emissor_value}}} | [optional] 
+**plano_maximo** | **Integer** | {{{tipo_operacao_response_plano_maximo_value}}} | 
+**plano_minimo** | **Integer** | {{{tipo_operacao_response_plano_minimo_value}}} | 
+
 
 

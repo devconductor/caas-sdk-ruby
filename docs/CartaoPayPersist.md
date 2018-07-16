@@ -3,11 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**numero_cartao** | **String** | N\u00FAmero do cart\u00E3o criptografado | 
-**data_validade** | **String** | Data de validade do cart\u00E3o | [optional] 
-**cvv** | **String** | CVV do cart\u00E3o criptografado | [optional] 
-**numero_receita_federal** | **String** | CPF do portador do cart\u00E3o criptografado | [optional] 
-**nome_impresso** | **String** | Nome impresso no cart\u00E3o criptografado | [optional] 
-**chave_publica_device** | **String** | Chave p\u00FAblica do dispositivo criptografada | 
+**numero_cartao** | **String** | {{{cartao_pay_persist_numero_cartao_value}}} | 
+**data_validade** | **String** | {{{cartao_pay_persist_data_validade_value}}} | [optional] 
+**cvv** | **String** | {{{cartao_pay_persist_cvv_value}}} | [optional] 
+**numero_receita_federal** | **String** | {{{cartao_pay_persist_numero_receita_federal_value}}} | [optional] 
+**nome_impresso** | **String** | {{{cartao_pay_persist_nome_impresso_value}}} | [optional] 
+**chave_publica_device** | **String** | {{{cartao_pay_persist_chave_publica_device_value}}} | 
+
 
 

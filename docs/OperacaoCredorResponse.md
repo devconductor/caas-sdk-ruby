@@ -3,18 +3,19 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | Apresenta o id da OperacaoCredor. | [optional] 
-**id_operacao** | **Integer** | Apresenta o id da Opera\u00E7\u00E3o. | [optional] 
-**id_credor** | **Integer** | Apresenta o id do Credor. | [optional] 
-**id_produto** | **Integer** | Apresenta o id do produto. | [optional] 
-**remuneracao_percentual** | **Float** | Remunera\u00E7\u00E3o Percentual. | [optional] 
-**remuneracao_fixa** | **Float** | Remunera\u00E7\u00E3o Fixa. | [optional] 
-**periodicidade** | **String** | Periodicidade (DIARIO(1), SEMANAL(2), MENSAL(3), DECENDIAL(4), QUINZENAL(5)). | [optional] 
-**vencimento_primeira_parcela** | **Integer** | Vencimento da primeira parcela. | [optional] 
-**dias_afastamento** | **Integer** | Dias afastamento. | [optional] 
-**fator_multiplicador** | **String** | Fator multiplicador (FORA_AGENDA(0), AGENDA(1)). | [optional] 
-**flag_taxa_fixada** | **BOOLEAN** | Flag taxa fixada. | [optional] 
-**plano_minimo** | **Integer** | Plano m\u00EDnimo da regra. | [optional] 
-**plano_maximo** | **Integer** | Plano m\u00E1ximo da regra. | [optional] 
+**id** | **Integer** | {{{operacao_credor_response_id_value}}} | [optional] 
+**id_operacao** | **Integer** | {{{operacao_credor_response_id_operacao_value}}} | [optional] 
+**id_grupo_economico** | **Integer** | {{{operacao_credor_response_id_grupo_economico_value}}} | [optional] 
+**id_produto** | **Integer** | {{{operacao_credor_response_id_produto_value}}} | [optional] 
+**remuneracao_percentual** | **Float** | {{{operacao_credor_response_remuneracao_percentual_value}}} | [optional] 
+**remuneracao_fixa** | **Float** | {{{operacao_credor_response_remuneracao_fixa_value}}} | [optional] 
+**periodicidade** | **String** | {{{operacao_credor_response_periodicidade_value}}} | [optional] 
+**vencimento_primeira_parcela** | **Integer** | {{{operacao_credor_response_vencimento_primeira_parcela_value}}} | [optional] 
+**dias_afastamento** | **Integer** | {{{operacao_credor_response_dias_afastamento_value}}} | [optional] 
+**fator_multiplicador** | **String** | {{{operacao_credor_response_fator_multiplicador_value}}} | [optional] 
+**flag_taxa_fixada** | **BOOLEAN** | {{{operacao_credor_response_flag_taxa_fixada_value}}} | [optional] 
+**plano_minimo** | **Integer** | {{{operacao_credor_response_plano_minimo_value}}} | [optional] 
+**plano_maximo** | **Integer** | {{{operacao_credor_response_plano_maximo_value}}} | [optional] 
+
 
 

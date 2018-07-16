@@ -3,13 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**rev** | **Integer** | C\u00F3digo identificador da auditoria dos tipos oportunidades | [optional] 
-**rev_type** | **Integer** | C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades | [optional] 
-**rev_date** | **String** | Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades | [optional] 
-**id** | **Integer** | C\u00F3digo identificador do StatusOportunidade | [optional] 
-**id_tipo_oportunidade** | **Integer** | C\u00F3digo identificador do TipoOportunidade | [optional] 
-**nome** | **String** | Nome do status oportunidade | [optional] 
-**descricao** | **String** | Descricao do StatusOportunidade | [optional] 
-**flag_ativo** | **BOOLEAN** | Flag que representa se o tipo oportunidade est\u00E1 ativo | [optional] 
+**rev** | **Integer** | {{{status_oportunidade_a_u_d_response_rev_value}}} | [optional] 
+**rev_type** | **Integer** | {{{status_oportunidade_a_u_d_response_rev_type_value}}} | [optional] 
+**rev_date** | **String** | {{{status_oportunidade_a_u_d_response_rev_date_value}}} | [optional] 
+**id** | **Integer** | {{{status_oportunidade_a_u_d_response_id_value}}} | [optional] 
+**id_tipo_oportunidade** | **Integer** | {{{status_oportunidade_a_u_d_response_id_tipo_oportunidade_value}}} | [optional] 
+**nome** | **String** | {{{status_oportunidade_a_u_d_response_nome_value}}} | [optional] 
+**descricao** | **String** | {{{status_oportunidade_a_u_d_response_descricao_value}}} | [optional] 
+**flag_ativo** | **BOOLEAN** | {{{status_oportunidade_a_u_d_response_flag_ativo_value}}} | [optional] 
+
 
 

@@ -3,13 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id_status_cartao** | **Integer** | Descri\u00E7\u00E3o do status do cart\u00E3o | [optional] 
-**status_cartao** | **String** | Descri\u00E7\u00E3o do status do cart\u00E3o | [optional] 
-**id_status_conta** | **Integer** | Descri\u00E7\u00E3o do status da conta | [optional] 
-**status_conta** | **String** | Descri\u00E7\u00E3o do status da conta | [optional] 
-**id_conta** | **Integer** | C\u00F3digo identificador da conta. | [optional] 
-**numero_agencia** | **Integer** | N\u00FAmero da ag\u00EAncia. | [optional] 
-**numero_conta_corrente** | **String** | N\u00FAmero da conta corrente. | [optional] 
-**criptograma_resposta** | **String** | Criptograma de resposta | [optional] 
+**id_status_cartao** | **Integer** | {{{valida_cartao_response_id_status_cartao_value}}} | [optional] 
+**status_cartao** | **String** | {{{valida_cartao_response_status_cartao_value}}} | [optional] 
+**id_status_conta** | **Integer** | {{{valida_cartao_response_id_status_conta_value}}} | [optional] 
+**status_conta** | **String** | {{{valida_cartao_response_status_conta_value}}} | [optional] 
+**id_conta** | **Integer** | {{{valida_cartao_response_id_conta_value}}} | [optional] 
+**numero_agencia** | **Integer** | {{{valida_cartao_response_numero_agencia_value}}} | [optional] 
+**numero_conta_corrente** | **String** | {{{valida_cartao_response_numero_conta_corrente_value}}} | [optional] 
+**criptograma_resposta** | **String** | {{{valida_cartao_response_criptograma_resposta_value}}} | [optional] 
+
 
 

@@ -3,20 +3,21 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**nome** | **String** | Nome completo do Adicional. | 
-**nome_impresso** | **String** | Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o. | [optional] 
-**numero_receita_federal** | **String** | N\u00FAmero do CPF ou CNPJ do Adicional. | 
-**data_nascimento** | **String** | Data de Nascimento do Adicional em formato yyyy-MM-dd. | [optional] 
-**sexo** | **String** | C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00E3o Especificado). | [optional] 
-**numero_identidade** | **String** | N\u00FAmero do Documento de Identidade do Adicional. | [optional] 
-**orgao_expedidor_identidade** | **String** | Nome do Org\u00E3o Emissor do Documento de Identidade do Adicional. | [optional] 
-**unidade_federativa_identidade** | **String** | Sigla da Unidade Federativa onde o Documento de Identidade do Adicional foi emitido. | [optional] 
-**data_emissao_identidade** | **String** | Data de emiss\u00E3o do Documento de Identidade do Adicional em formato yyyy-MM-dd. | [optional] 
-**id_estado_civil** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o do Estado Civil do Adicional. | [optional] 
-**id_profissao** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o da Profissao do Adicional. | [optional] 
-**id_nacionalidade** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o da Nacionalidade do Adicional. | [optional] 
-**id_parentesco** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular. | [optional] 
-**email** | **String** | C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular. | [optional] 
-**telefones** | [**Array&lt;TelefoneAdicionalPersist&gt;**](TelefoneAdicionalPersist.md) | Lista de telefones do adicional. | [optional] 
+**nome** | **String** | {{{adicional_persist_nome_value}}} | 
+**nome_impresso** | **String** | {{{adicional_persist_nome_impresso_value}}} | [optional] 
+**numero_receita_federal** | **String** | {{{adicional_persist_numero_receita_federal_value}}} | 
+**data_nascimento** | **String** | {{{adicional_persist_data_nascimento_value}}} | [optional] 
+**sexo** | **String** | {{{adicional_persist_sexo_value}}} | [optional] 
+**numero_identidade** | **String** | {{{adicional_persist_numero_identidade_value}}} | [optional] 
+**orgao_expedidor_identidade** | **String** | {{{adicional_persist_orgao_expedidor_identidade_value}}} | [optional] 
+**unidade_federativa_identidade** | **String** | {{{adicional_persist_unidade_federativa_identidade_value}}} | [optional] 
+**data_emissao_identidade** | **String** | {{{adicional_persist_data_emissao_identidade_value}}} | [optional] 
+**id_estado_civil** | **Integer** | {{{adicional_persist_id_estado_civil_value}}} | [optional] 
+**id_profissao** | **Integer** | {{{adicional_persist_id_profissao_value}}} | [optional] 
+**id_nacionalidade** | **Integer** | {{{adicional_persist_id_nacionalidade_value}}} | [optional] 
+**id_parentesco** | **Integer** | {{{adicional_persist_id_parentesco_value}}} | [optional] 
+**email** | **String** | {{{adicional_persist_email_value}}} | [optional] 
+**telefones** | [**Array&lt;TelefoneAdicionalPersist&gt;**](TelefoneAdicionalPersist.md) | {{{adicional_persist_telefones_value}}} | [optional] 
+
 
 

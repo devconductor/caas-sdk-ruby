@@ -3,12 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo de Identifica\u00E7\u00E3o do VinculoEstabelecimentoAdquirente (id). | [optional] 
-**id_estabelecimento** | **Integer** | C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id). | [optional] 
-**id_adquirente** | **Integer** | C\u00F3digo de Identifica\u00E7\u00E3o do Adquirente (id). | [optional] 
-**codigo_estabelecimento_adquirente** | **String** | C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente. | [optional] 
-**data_hora_cadastro** | **String** | Data de cadastro do v\u00EDnculo. | [optional] 
-**mensagem** | **String** | Data de cadastro do v\u00EDnculo. | [optional] 
-**status** | **Integer** | Data de cadastro do v\u00EDnculo. | [optional] 
+**id** | **Integer** | {{{vinculo_estabelecimento_adquirente_response_id_value}}} | [optional] 
+**id_estabelecimento** | **Integer** | {{{vinculo_estabelecimento_adquirente_response_id_estabelecimento_value}}} | [optional] 
+**id_adquirente** | **Integer** | {{{vinculo_estabelecimento_adquirente_response_id_adquirente_value}}} | [optional] 
+**codigo_estabelecimento_adquirente** | **String** | {{{vinculo_estabelecimento_adquirente_response_codigo_estabelecimento_adquirente_value}}} | [optional] 
+**data_hora_cadastro** | **String** | {{{vinculo_estabelecimento_adquirente_response_data_hora_cadastro_value}}} | [optional] 
+**mensagem** | **String** | {{{vinculo_estabelecimento_adquirente_response_mensagem_value}}} | [optional] 
+**status** | **Integer** | {{{vinculo_estabelecimento_adquirente_response_status_value}}} | [optional] 
+
 
 

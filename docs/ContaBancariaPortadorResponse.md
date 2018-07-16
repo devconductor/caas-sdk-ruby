@@ -3,20 +3,21 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo identificador da conta banc\u00E1ria | [optional] 
-**id_conta** | **Integer** | C\u00F3digo identificador da conta cart\u00E3o | [optional] 
-**nome_agencia** | **String** | Descri\u00E7\u00E3o da ag\u00EAncia | [optional] 
-**banco** | **Integer** | C\u00F3digo do banco | [optional] 
-**numero_agencia** | **String** | N\u00FAmero da ag\u00EAncia | [optional] 
-**digito_agencia** | **String** | D\u00EDgito da ag\u00EAncia | [optional] 
-**numero_conta** | **String** | N\u00FAmero da conta | [optional] 
-**digito_conta** | **String** | D\u00EDgito da conta | [optional] 
-**flag_ativo** | **Integer** | Sinaliza se conta banc\u00E1ria est\u00E1 ativa ou n\u00E3o (1: Ativa, 0: Inativa) | [optional] 
-**flag_conta_origem_doc** | **Integer** | Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED) | [optional] 
-**id_pessoa_fisica** | **Integer** | C\u00F3digo da pessoa | [optional] 
-**flag_conta_poupanca** | **Integer** | Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente) | [optional] 
-**favorecido** | **String** | Nome do favorecido | [optional] 
-**numero_receira_federal** | **String** | Documento do favorecido | [optional] 
-**titularidade** | **Integer** | Titularidade da conta (1:Portador \u00E9 o titular, 0: Portador n\u00E3o \u00E9 o t\u00EDtular | [optional] 
+**id** | **Integer** | {{{conta_bancaria_portador_response_id_value}}} | [optional] 
+**id_conta** | **Integer** | {{{conta_bancaria_portador_response_id_conta_value}}} | [optional] 
+**nome_agencia** | **String** | {{{conta_bancaria_portador_response_nome_agencia_value}}} | [optional] 
+**banco** | **Integer** | {{{conta_bancaria_portador_response_banco_value}}} | [optional] 
+**numero_agencia** | **String** | {{{conta_bancaria_portador_response_numero_agencia_value}}} | [optional] 
+**digito_agencia** | **String** | {{{conta_bancaria_portador_response_digito_agencia_value}}} | [optional] 
+**numero_conta** | **String** | {{{conta_bancaria_portador_response_numero_conta_value}}} | [optional] 
+**digito_conta** | **String** | {{{conta_bancaria_portador_response_digito_conta_value}}} | [optional] 
+**flag_ativo** | **Integer** | {{{conta_bancaria_portador_response_flag_ativo_value}}} | [optional] 
+**flag_conta_origem_doc** | **Integer** | {{{conta_bancaria_portador_response_flag_conta_origem_doc_value}}} | [optional] 
+**id_pessoa_fisica** | **Integer** | {{{conta_bancaria_portador_response_id_pessoa_fisica_value}}} | [optional] 
+**flag_conta_poupanca** | **Integer** | {{{conta_bancaria_portador_response_flag_conta_poupanca_value}}} | [optional] 
+**favorecido** | **String** | {{{conta_bancaria_portador_response_favorecido_value}}} | [optional] 
+**numero_receira_federal** | **String** | {{{conta_bancaria_portador_response_numero_receira_federal_value}}} | [optional] 
+**titularidade** | **Integer** | {{{conta_bancaria_portador_response_titularidade_value}}} | [optional] 
+
 
 

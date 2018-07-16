@@ -3,10 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | Id do WebHook | 
-**tipo_evento** | **String** | TipoEvento a ser chamado pelo WebHook | 
-**metodo** | **String** | M\u00E9todo que a ser chamado pelo WebHook | 
-**url** | **String** | URL que a ser consumida pelo WebHook | 
-**status** | **String** | Status do WebHook | 
+**id** | **Integer** | {{{web_hook_response_id_value}}} | 
+**tipo_evento** | **String** | {{{web_hook_response_tipo_evento_value}}} | 
+**metodo** | **String** | {{{web_hook_response_metodo_value}}} | 
+**url** | **String** | {{{web_hook_response_url_value}}} | 
+**status** | **String** | {{{web_hook_response_status_value}}} | 
+
 
 

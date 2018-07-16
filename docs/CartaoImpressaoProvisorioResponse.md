@@ -4,11 +4,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **flag_virtual** | **Integer** |  | [optional] 
-**id_conta** | **Integer** | Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence. | [optional] 
-**id_pessoa** | **Integer** | Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado. | [optional] 
-**id_cartao** | **Integer** | Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado. | [optional] 
-**numero_cartao** | **String** | Apresenta o n\u00FAmero do cart\u00E3o. | [optional] 
-**nome_plastico** | **String** | Apresenta o nome do Portador do Cart\u00E3o. | [optional] 
-**data_validade** | **String** | Apresenta a data de Validade do Cart\u00E3o. | [optional] 
+**id_conta** | **Integer** | {{{cartao_impressao_provisorio_response_id_conta_value}}} | [optional] 
+**id_pessoa** | **Integer** | {{{cartao_impressao_provisorio_response_id_pessoa_value}}} | [optional] 
+**id_cartao** | **Integer** | {{{cartao_impressao_provisorio_response_id_cartao_value}}} | [optional] 
+**numero_cartao** | **String** | {{{cartao_impressao_provisorio_response_numero_cartao_value}}} | [optional] 
+**nome_plastico** | **String** | {{{cartao_impressao_provisorio_response_nome_plastico_value}}} | [optional] 
+**data_validade** | **String** | {{{cartao_impressao_provisorio_response_data_validade_value}}} | [optional] 
+
 
 

@@ -3,12 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**rev** | **Integer** | Identificador da auditoria arquivo | [optional] 
-**rev_type** | **Integer** | Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo) | [optional] 
-**id** | **String** | Identificador do par\u00E2metro | [optional] 
-**parametro** | **String** | Nome do par\u00E2metro | [optional] 
-**conteudo** | **String** | Conte\u00FAdo do par\u00E2metro | [optional] 
-**data_hora_inclusao** | **String** | Data de inclus\u00E3o do par\u00E2metro | [optional] 
-**data_hora_alteracao** | **String** | Data de altera\u00E7\u00E3o do par\u00E2metro | [optional] 
+**rev** | **Integer** | {{{arquivo_parametro_a_u_d_response_rev_value}}} | [optional] 
+**rev_type** | **Integer** | {{{arquivo_parametro_a_u_d_response_rev_type_value}}} | [optional] 
+**id** | **String** | {{{arquivo_parametro_a_u_d_response_id_value}}} | [optional] 
+**parametro** | **String** | {{{arquivo_parametro_a_u_d_response_parametro_value}}} | [optional] 
+**conteudo** | **String** | {{{arquivo_parametro_a_u_d_response_conteudo_value}}} | [optional] 
+**data_hora_inclusao** | **String** | {{{arquivo_parametro_a_u_d_response_data_hora_inclusao_value}}} | [optional] 
+**data_hora_alteracao** | **String** | {{{arquivo_parametro_a_u_d_response_data_hora_alteracao_value}}} | [optional] 
+
 
 

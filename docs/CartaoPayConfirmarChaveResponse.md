@@ -3,14 +3,15 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | Id do cart\u00E3o | [optional] 
-**numero_cartao** | **String** | N\u00FAmero do cart\u00E3o real criptografado | [optional] 
-**data_validade_cartao** | **String** | Data de validade do cart\u00E3o | [optional] 
-**nome_impresso** | **String** | Nome impresso no cart\u00E3o criptografado | [optional] 
-**id_entidade** | **Integer** | Identificador do emissor do cart\u00E3o | [optional] 
-**nome_entidade** | **String** | Nome do emissor do cart\u00E3o | [optional] 
-**status** | **String** | Status do cart\u00E3o | [optional] 
-**data_validade_chave_criptograma** | **String** | Data de validade da chave do criptograma | [optional] 
-**chave_criptograma** | **String** | Chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o criptografada | [optional] 
+**id** | **Integer** | {{{cartao_pay_base_response_id_value}}} | [optional] 
+**numero_cartao** | **String** | {{{cartao_pay_base_response_numero_cartao_value}}} | [optional] 
+**data_validade_cartao** | **String** | {{{cartao_pay_base_response_data_validade_cartao_value}}} | [optional] 
+**nome_impresso** | **String** | {{{cartao_pay_base_response_nome_impresso_value}}} | [optional] 
+**id_entidade** | **Integer** | {{{cartao_pay_base_response_id_entidade_value}}} | [optional] 
+**nome_entidade** | **String** | {{{cartao_pay_base_response_nome_entidade_value}}} | [optional] 
+**status** | **String** | {{{cartao_pay_base_response_status_value}}} | [optional] 
+**data_validade_chave_criptograma** | **String** | {{{cartao_pay_response_data_validade_chave_criptograma_value}}} | [optional] 
+**chave_criptograma** | **String** | {{{cartao_pay_confirmar_chave_response_chave_criptograma_value}}} | [optional] 
+
 
 

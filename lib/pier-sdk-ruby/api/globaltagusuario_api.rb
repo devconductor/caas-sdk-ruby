@@ -506,8 +506,8 @@ module Pier
     # @option opts [Integer] :page {{{global_menssagem_sort_page_value}}}
     # @option opts [Integer] :limit {{{global_menssagem_sort_limit}}}
     # @return [PageControleSegurancaDispositivoResponse]
-    def consultar_using_get14(id_usuario, opts = {})
-      data, _status_code, _headers = consultar_using_get14_with_http_info(id_usuario, opts)
+    def consultar_using_get15(id_usuario, opts = {})
+      data, _status_code, _headers = consultar_using_get15_with_http_info(id_usuario, opts)
       return data
     end
 
@@ -519,14 +519,14 @@ module Pier
     # @option opts [Integer] :page {{{global_menssagem_sort_page_value}}}
     # @option opts [Integer] :limit {{{global_menssagem_sort_limit}}}
     # @return [Array<(PageControleSegurancaDispositivoResponse, Fixnum, Hash)>] PageControleSegurancaDispositivoResponse data, response status code and response headers
-    def consultar_using_get14_with_http_info(id_usuario, opts = {})
+    def consultar_using_get15_with_http_info(id_usuario, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagusuarioApi.consultar_using_get14 ..."
+        @api_client.config.logger.debug "Calling API: GlobaltagusuarioApi.consultar_using_get15 ..."
       end
       
       
       # verify the required parameter 'id_usuario' is set
-      fail ArgumentError, "Missing the required parameter 'id_usuario' when calling GlobaltagusuarioApi.consultar_using_get14" if id_usuario.nil?
+      fail ArgumentError, "Missing the required parameter 'id_usuario' when calling GlobaltagusuarioApi.consultar_using_get15" if id_usuario.nil?
       
       
       
@@ -586,7 +586,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PageControleSegurancaDispositivoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagusuarioApi#consultar_using_get14\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltagusuarioApi#consultar_using_get15\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -597,8 +597,8 @@ module Pier
     # @param id {{{usuario_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [UsuarioResponse]
-    def consultar_using_get50(id, opts = {})
-      data, _status_code, _headers = consultar_using_get50_with_http_info(id, opts)
+    def consultar_using_get51(id, opts = {})
+      data, _status_code, _headers = consultar_using_get51_with_http_info(id, opts)
       return data
     end
 
@@ -607,14 +607,14 @@ module Pier
     # @param id {{{usuario_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [Array<(UsuarioResponse, Fixnum, Hash)>] UsuarioResponse data, response status code and response headers
-    def consultar_using_get50_with_http_info(id, opts = {})
+    def consultar_using_get51_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagusuarioApi.consultar_using_get50 ..."
+        @api_client.config.logger.debug "Calling API: GlobaltagusuarioApi.consultar_using_get51 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagusuarioApi.consultar_using_get50" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagusuarioApi.consultar_using_get51" if id.nil?
       
       
       
@@ -652,7 +652,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'UsuarioResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagusuarioApi#consultar_using_get50\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltagusuarioApi#consultar_using_get51\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

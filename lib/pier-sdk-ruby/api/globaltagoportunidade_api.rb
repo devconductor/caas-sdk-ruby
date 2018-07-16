@@ -351,8 +351,8 @@ module Pier
     # @param id {{{oportunidade_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [OportunidadeResponse]
-    def consultar_using_get25(id, opts = {})
-      data, _status_code, _headers = consultar_using_get25_with_http_info(id, opts)
+    def consultar_using_get26(id, opts = {})
+      data, _status_code, _headers = consultar_using_get26_with_http_info(id, opts)
       return data
     end
 
@@ -361,14 +361,14 @@ module Pier
     # @param id {{{oportunidade_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [Array<(OportunidadeResponse, Fixnum, Hash)>] OportunidadeResponse data, response status code and response headers
-    def consultar_using_get25_with_http_info(id, opts = {})
+    def consultar_using_get26_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagoportunidadeApi.consultar_using_get25 ..."
+        @api_client.config.logger.debug "Calling API: GlobaltagoportunidadeApi.consultar_using_get26 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagoportunidadeApi.consultar_using_get25" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagoportunidadeApi.consultar_using_get26" if id.nil?
       
       
       
@@ -406,7 +406,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'OportunidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagoportunidadeApi#consultar_using_get25\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltagoportunidadeApi#consultar_using_get26\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -417,8 +417,8 @@ module Pier
     # @param id {{{tipo_oportunidade_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [TipoOportunidadeResponse]
-    def consultar_using_get44(id, opts = {})
-      data, _status_code, _headers = consultar_using_get44_with_http_info(id, opts)
+    def consultar_using_get45(id, opts = {})
+      data, _status_code, _headers = consultar_using_get45_with_http_info(id, opts)
       return data
     end
 
@@ -427,14 +427,14 @@ module Pier
     # @param id {{{tipo_oportunidade_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [Array<(TipoOportunidadeResponse, Fixnum, Hash)>] TipoOportunidadeResponse data, response status code and response headers
-    def consultar_using_get44_with_http_info(id, opts = {})
+    def consultar_using_get45_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagoportunidadeApi.consultar_using_get44 ..."
+        @api_client.config.logger.debug "Calling API: GlobaltagoportunidadeApi.consultar_using_get45 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagoportunidadeApi.consultar_using_get44" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagoportunidadeApi.consultar_using_get45" if id.nil?
       
       
       
@@ -472,7 +472,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TipoOportunidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagoportunidadeApi#consultar_using_get44\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltagoportunidadeApi#consultar_using_get45\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

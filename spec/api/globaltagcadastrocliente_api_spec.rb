@@ -219,14 +219,14 @@ describe 'GlobaltagcadastroclienteApi' do
   end
 
 
-  # unit tests for cadastrar_using_post
+  # unit tests for cadastrar_using_post1
   # {{{adicional_resource_cadastrar}}}
   # {{{adicional_resource_cadastrar_notes}}}
   # @param id {{{adicional_resource_cadastrar_param_id_conta}}}
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [AdicionalDetalheResponse]
-  describe 'cadastrar_using_post test' do
+  describe 'cadastrar_using_post1 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -237,48 +237,31 @@ describe 'GlobaltagcadastroclienteApi' do
   end
 
 
-  # unit tests for consultar_using_get1
+  # unit tests for consultar_using_get19
+  # {{{endereco_resource_consultar}}}
+  # {{{endereco_resource_consultar_notes}}}
+  # @param id {{{endereco_resource_consultar_param_id}}}
+  # @param [Hash] opts the optional parameters
+  # @return [EnderecoResponse]
+  describe 'consultar_using_get19 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for consultar_using_get2
   # {{{adicional_resource_consultar}}}
   # {{{adicional_resource_consultar_notes}}}
   # @param id {{{adicional_resource_consultar_param_id_conta}}}
   # @param id_pessoa {{{adicional_resource_consultar_param_id_pessoa}}}
   # @param [Hash] opts the optional parameters
   # @return [AdicionalDetalheResponse]
-  describe 'consultar_using_get1 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for consultar_using_get18
-  # {{{endereco_resource_consultar}}}
-  # {{{endereco_resource_consultar_notes}}}
-  # @param id {{{endereco_resource_consultar_param_id}}}
-  # @param [Hash] opts the optional parameters
-  # @return [EnderecoResponse]
-  describe 'consultar_using_get18 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for consultar_using_get29
-  # {{{pessoa_detalhe_resource_consultar}}}
-  # {{{pessoa_detalhe_resource_consultar_notes}}}
-  # @param id {{{pessoa_detalhe_resource_consultar_param_id}}}
-  # @param [Hash] opts the optional parameters
-  # @return [PessoaDetalheResponse]
-  describe 'consultar_using_get29 test' do
+  describe 'consultar_using_get2 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -290,11 +273,11 @@ describe 'GlobaltagcadastroclienteApi' do
 
 
   # unit tests for consultar_using_get30
-  # {{{pessoa_resource_consultar}}}
-  # {{{pessoa_resource_consultar_notes}}}
-  # @param id {{{pessoa_resource_consultar_param_id}}}
+  # {{{pessoa_detalhe_resource_consultar}}}
+  # {{{pessoa_detalhe_resource_consultar_notes}}}
+  # @param id {{{pessoa_detalhe_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
-  # @return [PessoaResponse]
+  # @return [PessoaDetalheResponse]
   describe 'consultar_using_get30 test' do
     it "should work" do
       # assertion here
@@ -306,13 +289,30 @@ describe 'GlobaltagcadastroclienteApi' do
   end
 
 
-  # unit tests for consultar_using_get38
+  # unit tests for consultar_using_get31
+  # {{{pessoa_resource_consultar}}}
+  # {{{pessoa_resource_consultar_notes}}}
+  # @param id {{{pessoa_resource_consultar_param_id}}}
+  # @param [Hash] opts the optional parameters
+  # @return [PessoaResponse]
+  describe 'consultar_using_get31 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for consultar_using_get39
   # {{{telefone_resource_consultar}}}
   # {{{telefone_resource_consultar_notes}}}
   # @param id {{{telefone_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
   # @return [TelefoneResponse]
-  describe 'consultar_using_get38 test' do
+  describe 'consultar_using_get39 test' do
     it "should work" do
       # assertion here
       # should be_a()

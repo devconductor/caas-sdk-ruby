@@ -132,13 +132,13 @@ describe 'GlobaltagcadastrogeralApi' do
   end
 
 
-  # unit tests for cadastrar_using_post1
+  # unit tests for cadastrar_using_post2
   # {{{configuracao_registro_cobranca_resource_cadastrar}}}
   # {{{configuracao_registro_cobranca_resource_cadastrar_notes}}}
   # @param configuracao_persist configuracaoPersist
   # @param [Hash] opts the optional parameters
   # @return [ConfiguracaoRegistroCobrancaResponse]
-  describe 'cadastrar_using_post1 test' do
+  describe 'cadastrar_using_post2 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -219,29 +219,12 @@ describe 'GlobaltagcadastrogeralApi' do
   end
 
 
-  # unit tests for consultar_using_get10
+  # unit tests for consultar_using_get11
   # {{{configuracao_registro_cobranca_resource_consultar}}}
   # {{{configuracao_registro_cobranca_resource_consultar_notes}}}
   # @param id {{{configuracao_registro_cobranca_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
   # @return [ConfiguracaoRegistroCobrancaResponse]
-  describe 'consultar_using_get10 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for consultar_using_get11
-  # {{{configuracao_rotativo_resource_consultar}}}
-  # {{{configuracao_rotativo_resource_consultar_notes}}}
-  # @param id {{{configuracao_rotativo_resource_consultar_param_id}}}
-  # @param [Hash] opts the optional parameters
-  # @return [ConfiguracaoRotativoDetalheResponse]
   describe 'consultar_using_get11 test' do
     it "should work" do
       # assertion here
@@ -253,13 +236,13 @@ describe 'GlobaltagcadastrogeralApi' do
   end
 
 
-  # unit tests for consultar_using_get31
-  # {{{produto_resource_consultar}}}
-  # {{{produto_resource_consultar_notes}}}
-  # @param id {{{produto_resource_consultar_param_id}}}
+  # unit tests for consultar_using_get12
+  # {{{configuracao_rotativo_resource_consultar}}}
+  # {{{configuracao_rotativo_resource_consultar_notes}}}
+  # @param id {{{configuracao_rotativo_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
-  # @return [ProdutoDetalhesResponse]
-  describe 'consultar_using_get31 test' do
+  # @return [ConfiguracaoRotativoDetalheResponse]
+  describe 'consultar_using_get12 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -270,13 +253,13 @@ describe 'GlobaltagcadastrogeralApi' do
   end
 
 
-  # unit tests for consultar_using_get40
-  # {{{tipo_transacoes_ajuste_resource_consultar}}}
-  # {{{tipo_transacoes_ajuste_resource_consultar_notes}}}
-  # @param id {{{tipo_transacoes_ajuste_resource_consultar_param_id}}}
+  # unit tests for consultar_using_get32
+  # {{{produto_resource_consultar}}}
+  # {{{produto_resource_consultar_notes}}}
+  # @param id {{{produto_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
-  # @return [TipoAjusteResponse]
-  describe 'consultar_using_get40 test' do
+  # @return [ProdutoDetalhesResponse]
+  describe 'consultar_using_get32 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -288,16 +271,11 @@ describe 'GlobaltagcadastrogeralApi' do
 
 
   # unit tests for consultar_using_get41
-  # {{{tipo_boleto_resource_consultar}}}
-  # {{{tipo_boleto_resource_consultar_notes}}}
+  # {{{tipo_transacoes_ajuste_resource_consultar}}}
+  # {{{tipo_transacoes_ajuste_resource_consultar_notes}}}
+  # @param id {{{tipo_transacoes_ajuste_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :sort {{{global_menssagem_sort_sort}}}
-  # @option opts [Integer] :page {{{global_menssagem_sort_page_value}}}
-  # @option opts [Integer] :limit {{{global_menssagem_sort_limit}}}
-  # @option opts [Integer] :id {{{tipo_boleto_request_id_value}}}
-  # @option opts [String] :descricao {{{tipo_boleto_request_descricao_value}}}
-  # @option opts [Integer] :banco {{{tipo_boleto_request_banco_value}}}
-  # @return [PageTipoBoletoResponse]
+  # @return [TipoAjusteResponse]
   describe 'consultar_using_get41 test' do
     it "should work" do
       # assertion here
@@ -310,11 +288,16 @@ describe 'GlobaltagcadastrogeralApi' do
 
 
   # unit tests for consultar_using_get42
-  # {{{tipo_endereco_resource_consultar}}}
-  # {{{tipo_endereco_resource_consultar_notes}}}
-  # @param id {{{tipo_endereco_resource_consultar_param_id}}}
+  # {{{tipo_boleto_resource_consultar}}}
+  # {{{tipo_boleto_resource_consultar_notes}}}
   # @param [Hash] opts the optional parameters
-  # @return [TipoEnderecoResponse]
+  # @option opts [Array<String>] :sort {{{global_menssagem_sort_sort}}}
+  # @option opts [Integer] :page {{{global_menssagem_sort_page_value}}}
+  # @option opts [Integer] :limit {{{global_menssagem_sort_limit}}}
+  # @option opts [Integer] :id {{{tipo_boleto_request_id_value}}}
+  # @option opts [String] :descricao {{{tipo_boleto_request_descricao_value}}}
+  # @option opts [Integer] :banco {{{tipo_boleto_request_banco_value}}}
+  # @return [PageTipoBoletoResponse]
   describe 'consultar_using_get42 test' do
     it "should work" do
       # assertion here
@@ -327,13 +310,11 @@ describe 'GlobaltagcadastrogeralApi' do
 
 
   # unit tests for consultar_using_get43
-  # {{{tipo_operacao_resource_consultar}}}
-  # {{{tipo_operacao_resource_consultar_notes}}}
-  # @param id_cartao {{{tipo_operacao_resource_consultar_param_id_cartao}}}
-  # @param id_estabelecimento {{{tipo_operacao_resource_consultar_param_id_estabelecimento}}}
-  # @param codigo_processamento {{{tipo_operacao_resource_consultar_param_codigo_processamento}}}
+  # {{{tipo_endereco_resource_consultar}}}
+  # {{{tipo_endereco_resource_consultar_notes}}}
+  # @param id {{{tipo_endereco_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
-  # @return [TipoOperacaoResponse]
+  # @return [TipoEnderecoResponse]
   describe 'consultar_using_get43 test' do
     it "should work" do
       # assertion here
@@ -345,13 +326,32 @@ describe 'GlobaltagcadastrogeralApi' do
   end
 
 
-  # unit tests for consultar_using_get45
+  # unit tests for consultar_using_get44
+  # {{{tipo_operacao_resource_consultar}}}
+  # {{{tipo_operacao_resource_consultar_notes}}}
+  # @param id_cartao {{{tipo_operacao_resource_consultar_param_id_cartao}}}
+  # @param id_estabelecimento {{{tipo_operacao_resource_consultar_param_id_estabelecimento}}}
+  # @param codigo_processamento {{{tipo_operacao_resource_consultar_param_codigo_processamento}}}
+  # @param [Hash] opts the optional parameters
+  # @return [TipoOperacaoResponse]
+  describe 'consultar_using_get44 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for consultar_using_get46
   # {{{tipo_telefone_resource_consultar}}}
   # {{{tipo_telefone_resource_consultar_notes}}}
   # @param id {{{tipo_telefone_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
   # @return [TipoTelefoneResponse]
-  describe 'consultar_using_get45 test' do
+  describe 'consultar_using_get46 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -362,13 +362,13 @@ describe 'GlobaltagcadastrogeralApi' do
   end
 
 
-  # unit tests for consultar_using_get5
+  # unit tests for consultar_using_get6
   # {{{atendimento_cliente_resource_consultar}}}
   # {{{atendimento_cliente_resource_consultar_notes}}}
   # @param id {{{atendimento_cliente_resource_consultar_param_id_atendimento}}}
   # @param [Hash] opts the optional parameters
   # @return [AtendimentoClienteResponse]
-  describe 'consultar_using_get5 test' do
+  describe 'consultar_using_get6 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -379,13 +379,13 @@ describe 'GlobaltagcadastrogeralApi' do
   end
 
 
-  # unit tests for consultar_using_get7
+  # unit tests for consultar_using_get8
   # {{{banco_resource_consultar}}}
   # {{{banco_resource_consultar_notes}}}
   # @param id {{{banco_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
   # @return [BancoResponse]
-  describe 'consultar_using_get7 test' do
+  describe 'consultar_using_get8 test' do
     it "should work" do
       # assertion here
       # should be_a()

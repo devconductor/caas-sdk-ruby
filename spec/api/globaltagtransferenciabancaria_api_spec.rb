@@ -43,6 +43,24 @@ describe 'GlobaltagtransferenciabancariaApi' do
   end
 
 
+  # unit tests for atualizar_taxas_juros_contas_using_put
+  # {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas}}}
+  # {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas_notes}}}
+  # @param id {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}
+  # @param update update
+  # @param [Hash] opts the optional parameters
+  # @return [TaxaJurosContaResponse]
+  describe 'atualizar_taxas_juros_contas_using_put test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
   # unit tests for atualizar_using_put1
   # {{{conta_bancaria_resource_atualizar}}}
   # {{{conta_bancaria_resource_atualizar_notes}}}
@@ -95,6 +113,24 @@ describe 'GlobaltagtransferenciabancariaApi' do
   end
 
 
+  # unit tests for consultar_taxas_juros_contas_using_get
+  # {{{transferencia_bancaria_resource_consultar_taxas_juros_contas}}}
+  # {{{transferencia_bancaria_resource_consultar_taxas_juros_contas_notes}}}
+  # @param id {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}
+  # @param numero_meses_carencia numeroMesesCarencia
+  # @param [Hash] opts the optional parameters
+  # @return [TaxaJurosContaResponse]
+  describe 'consultar_taxas_juros_contas_using_get test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
   # unit tests for consultar_transferencia_bancaria_using_get
   # {{{transferencia_bancaria_resource_consultar_transferencia_bancaria}}}
   # {{{transferencia_bancaria_resource_consultar_transferencia_bancaria_notes}}}
@@ -112,13 +148,13 @@ describe 'GlobaltagtransferenciabancariaApi' do
   end
 
 
-  # unit tests for consultar_using_get12
+  # unit tests for consultar_using_get13
   # {{{conta_bancaria_resource_consultar}}}
   # {{{conta_bancaria_resource_consultar_notes}}}
   # @param id {{{conta_bancaria_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
   # @return [ContaBancariaPortadorResponse]
-  describe 'consultar_using_get12 test' do
+  describe 'consultar_using_get13 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -129,7 +165,7 @@ describe 'GlobaltagtransferenciabancariaApi' do
   end
 
 
-  # unit tests for consultar_using_get47
+  # unit tests for consultar_using_get48
   # {{{transferencia_bancaria_resource_consultar}}}
   # {{{transferencia_bancaria_resource_consultar_notes}}}
   # @param id {{{transferencia_bancaria_resource_consultar_param_id}}}
@@ -137,7 +173,7 @@ describe 'GlobaltagtransferenciabancariaApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :id_conta_bancaria_destino {{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}}
   # @return [TransferenciaBancariaResponse]
-  describe 'consultar_using_get47 test' do
+  describe 'consultar_using_get48 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -211,6 +247,24 @@ describe 'GlobaltagtransferenciabancariaApi' do
   # @option opts [Integer] :limit {{{global_menssagem_sort_limit}}}
   # @return [PageTransferenciaBancariaResponse]
   describe 'listar_using_get59 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for salvar_taxas_juros_contas_using_post
+  # {{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}}
+  # {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_notes}}}
+  # @param id {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}
+  # @param persist persist
+  # @param [Hash] opts the optional parameters
+  # @return [TaxaJurosContaResponse]
+  describe 'salvar_taxas_juros_contas_using_post test' do
     it "should work" do
       # assertion here
       # should be_a()

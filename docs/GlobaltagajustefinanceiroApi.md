@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ajustar_conta_using_post**](GlobaltagajustefinanceiroApi.md#ajustar_conta_using_post) | **POST** /api/ajustes-financeiros | {{{ajuste_financeiro_resource_ajustar_conta}}}
-[**consultar_using_get2**](GlobaltagajustefinanceiroApi.md#consultar_using_get2) | **GET** /api/ajustes-financeiros/{id} | {{{ajuste_financeiro_resource_consultar}}}
+[**consultar_using_get3**](GlobaltagajustefinanceiroApi.md#consultar_using_get3) | **GET** /api/ajustes-financeiros/{id} | {{{ajuste_financeiro_resource_consultar}}}
 [**listar_using_get2**](GlobaltagajustefinanceiroApi.md#listar_using_get2) | **GET** /api/ajustes-financeiros | {{{ajuste_financeiro_resource_listar}}}
 
 
@@ -76,8 +76,8 @@ No authorization required
 
 
 
-# **consultar_using_get2**
-> AjusteFinanceiroResponse consultar_using_get2(id)
+# **consultar_using_get3**
+> AjusteFinanceiroResponse consultar_using_get3(id)
 
 {{{ajuste_financeiro_resource_consultar}}}
 
@@ -96,10 +96,10 @@ id = 789 # Integer | {{{ajuste_financeiro_resource_consultar_param_id}}}
 
 begin
   #{{{ajuste_financeiro_resource_consultar}}}
-  result = api_instance.consultar_using_get2(id)
+  result = api_instance.consultar_using_get3(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagajustefinanceiroApi->consultar_using_get2: #{e}"
+  puts "Exception when calling GlobaltagajustefinanceiroApi->consultar_using_get3: #{e}"
 end
 ```
 

@@ -99,14 +99,14 @@ describe 'GlobaltagpayApi' do
   end
 
 
-  # unit tests for consultar_using_get8
+  # unit tests for consultar_using_get9
   # {{{cartao_pay_resource_consultar}}}
   # {{{cartao_pay_resource_consultar_notes}}}
   # @param device_id {{{cartao_pay_resource_consultar_param_device_id}}}
   # @param id {{{cartao_pay_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
   # @return [CartaoPayDetalheResponse]
-  describe 'consultar_using_get8 test' do
+  describe 'consultar_using_get9 test' do
     it "should work" do
       # assertion here
       # should be_a()

@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_using_get33**](GlobaltagboletoApi.md#consultar_using_get33) | **GET** /api/boletos/{id} | {{{boleto_resource_consultar}}}
+[**consultar_using_get34**](GlobaltagboletoApi.md#consultar_using_get34) | **GET** /api/boletos/{id} | {{{boleto_resource_consultar}}}
 [**enviar_boleto_email_using_post**](GlobaltagboletoApi.md#enviar_boleto_email_using_post) | **POST** /api/boletos/{id}/enviar-email | {{{boleto_resource_enviar_boleto_email}}}
 [**gerar_boleto_using_post**](GlobaltagboletoApi.md#gerar_boleto_using_post) | **POST** /api/boletos | {{{boleto_resource_gerar_boleto}}}
 [**listar_using_get45**](GlobaltagboletoApi.md#listar_using_get45) | **GET** /api/boletos | {{{boleto_resource_listar}}}
@@ -14,8 +14,8 @@ Method | HTTP request | Description
 
 
 
-# **consultar_using_get33**
-> BoletoResponse consultar_using_get33(id)
+# **consultar_using_get34**
+> BoletoResponse consultar_using_get34(id)
 
 {{{boleto_resource_consultar}}}
 
@@ -34,10 +34,10 @@ id = 789 # Integer | {{{boleto_resource_consultar_param_id}}}
 
 begin
   #{{{boleto_resource_consultar}}}
-  result = api_instance.consultar_using_get33(id)
+  result = api_instance.consultar_using_get34(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagboletoApi->consultar_using_get33: #{e}"
+  puts "Exception when calling GlobaltagboletoApi->consultar_using_get34: #{e}"
 end
 ```
 

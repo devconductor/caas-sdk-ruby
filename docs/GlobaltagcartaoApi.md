@@ -16,7 +16,7 @@ Method | HTTP request | Description
 [**consultar_limite_disponibilidade_using_get**](GlobaltagcartaoApi.md#consultar_limite_disponibilidade_using_get) | **GET** /api/cartoes/{id}/limites-disponibilidades | {{{cartao_resource_consultar_limite_disponibilidade}}}
 [**consultar_lotes_cartoes_pre_pagos_using_get**](GlobaltagcartaoApi.md#consultar_lotes_cartoes_pre_pagos_using_get) | **GET** /api/cartoes/lotes-cartoes-pre-pagos/{id} | {{{cartao_resource_consultar_lotes_cartoes_pre_pagos}}}
 [**consultar_portador_using_get**](GlobaltagcartaoApi.md#consultar_portador_using_get) | **GET** /api/cartoes/{id}/portadores | {{{cartao_resource_consultar_portador}}}
-[**consultar_using_get9**](GlobaltagcartaoApi.md#consultar_using_get9) | **GET** /api/cartoes/{id} | {{{cartao_resource_consultar}}}
+[**consultar_using_get10**](GlobaltagcartaoApi.md#consultar_using_get10) | **GET** /api/cartoes/{id} | {{{cartao_resource_consultar}}}
 [**desbloquear_senha_incorreta_using_post**](GlobaltagcartaoApi.md#desbloquear_senha_incorreta_using_post) | **POST** /api/cartoes/{id}/desbloquear-senha-incorreta | {{{cartao_resource_desbloquear_senha_incorreta}}}
 [**desbloquear_using_post**](GlobaltagcartaoApi.md#desbloquear_using_post) | **POST** /api/cartoes/{id}/desbloquear | {{{cartao_resource_desbloquear}}}
 [**gerar_lotes_cartoes_pre_pagos_using_post**](GlobaltagcartaoApi.md#gerar_lotes_cartoes_pre_pagos_using_post) | **POST** /api/cartoes/lotes-cartoes-pre-pagos | {{{cartao_resource_gerar_lotes_cartoes_pre_pagos}}}
@@ -711,8 +711,8 @@ No authorization required
 
 
 
-# **consultar_using_get9**
-> CartaoDetalheResponse consultar_using_get9(id, opts)
+# **consultar_using_get10**
+> CartaoDetalheResponse consultar_using_get10(id, opts)
 
 {{{cartao_resource_consultar}}}
 
@@ -734,10 +734,10 @@ opts = {
 
 begin
   #{{{cartao_resource_consultar}}}
-  result = api_instance.consultar_using_get9(id, opts)
+  result = api_instance.consultar_using_get10(id, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcartaoApi->consultar_using_get9: #{e}"
+  puts "Exception when calling GlobaltagcartaoApi->consultar_using_get10: #{e}"
 end
 ```
 

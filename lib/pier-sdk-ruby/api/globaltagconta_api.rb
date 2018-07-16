@@ -725,6 +725,73 @@ module Pier
     end
 
 
+    # {{{aderir_pagamento_sabado_recurso_cadastrar}}}
+    # {{{aderir_pagamento_sabado_recurso_cadastrar_notas}}}
+    # @param id {{{aderir_pagamento_sabado_recurso_cadastrar_param_id}}}
+    # @param [Hash] opts the optional parameters
+    # @return [AdesaoPagamentoSabadoResponse]
+    def cadastrar_using_post(id, opts = {})
+      data, _status_code, _headers = cadastrar_using_post_with_http_info(id, opts)
+      return data
+    end
+
+    # {{{aderir_pagamento_sabado_recurso_cadastrar}}}
+    # {{{aderir_pagamento_sabado_recurso_cadastrar_notas}}}
+    # @param id {{{aderir_pagamento_sabado_recurso_cadastrar_param_id}}}
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(AdesaoPagamentoSabadoResponse, Fixnum, Hash)>] AdesaoPagamentoSabadoResponse data, response status code and response headers
+    def cadastrar_using_post_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: GlobaltagcontaApi.cadastrar_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagcontaApi.cadastrar_using_post" if id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/adesoes-pagamentos-sabados".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'id'] = id
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AdesaoPagamentoSabadoResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: GlobaltagcontaApi#cadastrar_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # {{{conta_resource_cancelar}}}
     # {{{conta_resource_cancelar_notes}}}
     # @param id {{{conta_resource_cancelar_param_id}}}
@@ -1183,14 +1250,92 @@ module Pier
     end
 
 
+    # {{{aderir_pagamento_sabado_recurso_consultar}}}
+    # {{{aderir_pagamento_sabado_recurso_consultar_notas}}}
+    # @param id {{{aderir_pagamento_sabado_recurso_consultar_param_id}}}
+    # @param data_vencimento {{{aderir_pagamento_sabado_recurso_consultar_param_data_vencimento}}}
+    # @param [Hash] opts the optional parameters
+    # @return [AdesaoPagamentoSabadoResponse]
+    def consultar_using_get1(id, data_vencimento, opts = {})
+      data, _status_code, _headers = consultar_using_get1_with_http_info(id, data_vencimento, opts)
+      return data
+    end
+
+    # {{{aderir_pagamento_sabado_recurso_consultar}}}
+    # {{{aderir_pagamento_sabado_recurso_consultar_notas}}}
+    # @param id {{{aderir_pagamento_sabado_recurso_consultar_param_id}}}
+    # @param data_vencimento {{{aderir_pagamento_sabado_recurso_consultar_param_data_vencimento}}}
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(AdesaoPagamentoSabadoResponse, Fixnum, Hash)>] AdesaoPagamentoSabadoResponse data, response status code and response headers
+    def consultar_using_get1_with_http_info(id, data_vencimento, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: GlobaltagcontaApi.consultar_using_get1 ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagcontaApi.consultar_using_get1" if id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'data_vencimento' is set
+      fail ArgumentError, "Missing the required parameter 'data_vencimento' when calling GlobaltagcontaApi.consultar_using_get1" if data_vencimento.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/adesoes-pagamentos-sabados".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'id'] = id
+      query_params[:'dataVencimento'] = data_vencimento
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AdesaoPagamentoSabadoResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: GlobaltagcontaApi#consultar_using_get1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # {{{conta_resource_consultar}}}
     # {{{conta_resource_consultar_notes}}}
     # @param id {{{conta_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @option opts [String] :authorization Authorization
     # @return [ContaDetalheResponse]
-    def consultar_using_get13(id, opts = {})
-      data, _status_code, _headers = consultar_using_get13_with_http_info(id, opts)
+    def consultar_using_get14(id, opts = {})
+      data, _status_code, _headers = consultar_using_get14_with_http_info(id, opts)
       return data
     end
 
@@ -1200,14 +1345,14 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [String] :authorization Authorization
     # @return [Array<(ContaDetalheResponse, Fixnum, Hash)>] ContaDetalheResponse data, response status code and response headers
-    def consultar_using_get13_with_http_info(id, opts = {})
+    def consultar_using_get14_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagcontaApi.consultar_using_get13 ..."
+        @api_client.config.logger.debug "Calling API: GlobaltagcontaApi.consultar_using_get14 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagcontaApi.consultar_using_get13" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagcontaApi.consultar_using_get14" if id.nil?
       
       
       
@@ -1252,7 +1397,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'ContaDetalheResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagcontaApi#consultar_using_get13\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltagcontaApi#consultar_using_get14\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1264,8 +1409,8 @@ module Pier
     # @param id_transferencia {{{transferencia_resource_consultar_param_id_transferencia}}}
     # @param [Hash] opts the optional parameters
     # @return [TransferenciaDetalheResponse]
-    def consultar_using_get48(id, id_transferencia, opts = {})
-      data, _status_code, _headers = consultar_using_get48_with_http_info(id, id_transferencia, opts)
+    def consultar_using_get49(id, id_transferencia, opts = {})
+      data, _status_code, _headers = consultar_using_get49_with_http_info(id, id_transferencia, opts)
       return data
     end
 
@@ -1275,14 +1420,14 @@ module Pier
     # @param id_transferencia {{{transferencia_resource_consultar_param_id_transferencia}}}
     # @param [Hash] opts the optional parameters
     # @return [Array<(TransferenciaDetalheResponse, Fixnum, Hash)>] TransferenciaDetalheResponse data, response status code and response headers
-    def consultar_using_get48_with_http_info(id, id_transferencia, opts = {})
+    def consultar_using_get49_with_http_info(id, id_transferencia, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagcontaApi.consultar_using_get48 ..."
+        @api_client.config.logger.debug "Calling API: GlobaltagcontaApi.consultar_using_get49 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagcontaApi.consultar_using_get48" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagcontaApi.consultar_using_get49" if id.nil?
       
       
       
@@ -1290,7 +1435,7 @@ module Pier
       
       
       # verify the required parameter 'id_transferencia' is set
-      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling GlobaltagcontaApi.consultar_using_get48" if id_transferencia.nil?
+      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling GlobaltagcontaApi.consultar_using_get49" if id_transferencia.nil?
       
       
       
@@ -1328,7 +1473,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TransferenciaDetalheResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagcontaApi#consultar_using_get48\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltagcontaApi#consultar_using_get49\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2274,6 +2419,7 @@ module Pier
     # @option opts [String] :data_inicio {{{transacoes_processadas_request_data_inicio_value}}}
     # @option opts [String] :data_fim {{{transacoes_processadas_request_data_fim_value}}}
     # @option opts [Integer] :id_tipo_transacao {{{transacoes_processadas_request_tipo_transacao}}}
+    # @option opts [Integer] :recupera_encargos {{{transacoes_processadas_request_recupera_encargos}}}
     # @return [PageTransacoesCorrentesResponse]
     def listar_processadas_using_get(id, opts = {})
       data, _status_code, _headers = listar_processadas_using_get_with_http_info(id, opts)
@@ -2291,6 +2437,7 @@ module Pier
     # @option opts [String] :data_inicio {{{transacoes_processadas_request_data_inicio_value}}}
     # @option opts [String] :data_fim {{{transacoes_processadas_request_data_fim_value}}}
     # @option opts [Integer] :id_tipo_transacao {{{transacoes_processadas_request_tipo_transacao}}}
+    # @option opts [Integer] :recupera_encargos {{{transacoes_processadas_request_recupera_encargos}}}
     # @return [Array<(PageTransacoesCorrentesResponse, Fixnum, Hash)>] PageTransacoesCorrentesResponse data, response status code and response headers
     def listar_processadas_using_get_with_http_info(id, opts = {})
       if @api_client.config.debugging
@@ -2300,6 +2447,12 @@ module Pier
       
       # verify the required parameter 'id' is set
       fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagcontaApi.listar_processadas_using_get" if id.nil?
+      
+      
+      
+      
+      
+      
       
       
       
@@ -2359,6 +2512,7 @@ module Pier
       query_params[:'dataInicio'] = opts[:'data_inicio'] if opts[:'data_inicio']
       query_params[:'dataFim'] = opts[:'data_fim'] if opts[:'data_fim']
       query_params[:'idTipoTransacao'] = opts[:'id_tipo_transacao'] if opts[:'id_tipo_transacao']
+      query_params[:'recuperaEncargos'] = opts[:'recupera_encargos'] if opts[:'recupera_encargos']
 
       # header parameters
       header_params = {}

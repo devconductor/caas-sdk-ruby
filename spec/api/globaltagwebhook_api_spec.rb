@@ -62,13 +62,13 @@ describe 'GlobaltagwebhookApi' do
   end
 
 
-  # unit tests for consultar_using_get52
+  # unit tests for consultar_using_get53
   # {{{web_hook_resource_consultar}}}
   # {{{web_hook_resource_consultar_notes}}}
   # @param id {{{web_hook_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
   # @return [WebHookResponse]
-  describe 'consultar_using_get52 test' do
+  describe 'consultar_using_get53 test' do
     it "should work" do
       # assertion here
       # should be_a()

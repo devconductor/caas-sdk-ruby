@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_using_put9**](GlobaltaglimitedisponibilidadeApi.md#alterar_using_put9) | **PUT** /api/limites-disponibilidades | {{{limite_disponibilidade_resource_alterar}}}
-[**consultar_using_get22**](GlobaltaglimitedisponibilidadeApi.md#consultar_using_get22) | **GET** /api/limites-disponibilidades | {{{limite_disponibilidade_resource_consultar}}}
+[**consultar_using_get23**](GlobaltaglimitedisponibilidadeApi.md#consultar_using_get23) | **GET** /api/limites-disponibilidades | {{{limite_disponibilidade_resource_consultar}}}
 
 
 
@@ -88,8 +88,8 @@ No authorization required
 
 
 
-# **consultar_using_get22**
-> LimiteDisponibilidadeResponse consultar_using_get22(id_conta)
+# **consultar_using_get23**
+> LimiteDisponibilidadeResponse consultar_using_get23(id_conta)
 
 {{{limite_disponibilidade_resource_consultar}}}
 
@@ -108,10 +108,10 @@ id_conta = 789 # Integer | {{{limite_disponibilidade_resource_consultar_param_id
 
 begin
   #{{{limite_disponibilidade_resource_consultar}}}
-  result = api_instance.consultar_using_get22(id_conta)
+  result = api_instance.consultar_using_get23(id_conta)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltaglimitedisponibilidadeApi->consultar_using_get22: #{e}"
+  puts "Exception when calling GlobaltaglimitedisponibilidadeApi->consultar_using_get23: #{e}"
 end
 ```
 

@@ -37,8 +37,8 @@ module Pier
     # @param codigo {{{parametro_emissor_recurso_pesquisa_codigo_param}}}
     # @param [Hash] opts the optional parameters
     # @return [ParametroEmissorResponse]
-    def consultar_using_get26(codigo, opts = {})
-      data, _status_code, _headers = consultar_using_get26_with_http_info(codigo, opts)
+    def consultar_using_get27(codigo, opts = {})
+      data, _status_code, _headers = consultar_using_get27_with_http_info(codigo, opts)
       return data
     end
 
@@ -47,14 +47,14 @@ module Pier
     # @param codigo {{{parametro_emissor_recurso_pesquisa_codigo_param}}}
     # @param [Hash] opts the optional parameters
     # @return [Array<(ParametroEmissorResponse, Fixnum, Hash)>] ParametroEmissorResponse data, response status code and response headers
-    def consultar_using_get26_with_http_info(codigo, opts = {})
+    def consultar_using_get27_with_http_info(codigo, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagparametroemissorApi.consultar_using_get26 ..."
+        @api_client.config.logger.debug "Calling API: GlobaltagparametroemissorApi.consultar_using_get27 ..."
       end
       
       
       # verify the required parameter 'codigo' is set
-      fail ArgumentError, "Missing the required parameter 'codigo' when calling GlobaltagparametroemissorApi.consultar_using_get26" if codigo.nil?
+      fail ArgumentError, "Missing the required parameter 'codigo' when calling GlobaltagparametroemissorApi.consultar_using_get27" if codigo.nil?
       
       
       
@@ -92,7 +92,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'ParametroEmissorResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagparametroemissorApi#consultar_using_get26\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltagparametroemissorApi#consultar_using_get27\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

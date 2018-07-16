@@ -23,52 +23,27 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # {{{sms_envio_response_description}}}
-  class SMSEnvioResponse
-    # {{{sms_envio_response_id_value}}}
-    attr_accessor :id
-
-    # {{{sms_envio_response_status_value}}}
-    attr_accessor :status
-
-    # {{{sms_envio_response_id_conta_value}}}
+  # {{{taxa_juros_conta_response_description}}}
+  class TaxaJurosContaResponse
+    # {{{taxa_juros_conta_response_id_conta_value}}}
     attr_accessor :id_conta
 
-    # {{{sms_envio_response_celular_value}}}
-    attr_accessor :celular
+    # {{{taxa_juros_conta_response_id_tabela_juros_value}}}
+    attr_accessor :id_tabela_juros
 
-    # {{{sms_envio_response_conteudo_value}}}
-    attr_accessor :conteudo
-
-    # {{{sms_envio_response_quantidade_tentativas_envio_value}}}
-    attr_accessor :quantidade_tentativas_envio
-
-    # {{{s_m_s_envio_response_data_inclusao_value}}}
-    attr_accessor :data_inclusao
-
-    # {{{sms_envio_response_cpf_value}}}
-    attr_accessor :cpf
+    # {{{taxa_juros_conta_response_taxas_juros_value}}}
+    attr_accessor :taxas_juros
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id' => :'id',
-        
-        :'status' => :'status',
-        
         :'id_conta' => :'idConta',
         
-        :'celular' => :'celular',
+        :'id_tabela_juros' => :'idTabelaJuros',
         
-        :'conteudo' => :'conteudo',
-        
-        :'quantidade_tentativas_envio' => :'quantidadeTentativasEnvio',
-        
-        :'data_inclusao' => :'dataInclusao',
-        
-        :'cpf' => :'cpf'
+        :'taxas_juros' => :'taxasJuros'
         
       }
     end
@@ -77,21 +52,11 @@ module Pier
     def self.swagger_types
       {
         
-        :'id' => :'Integer',
-        
-        :'status' => :'String',
-        
         :'id_conta' => :'Integer',
         
-        :'celular' => :'String',
+        :'id_tabela_juros' => :'Integer',
         
-        :'conteudo' => :'String',
-        
-        :'quantidade_tentativas_envio' => :'Integer',
-        
-        :'data_inclusao' => :'String',
-        
-        :'cpf' => :'String'
+        :'taxas_juros' => :'Array<TaxaJurosContaListaResponse>'
         
       }
     end
@@ -105,24 +70,6 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes[:'id']
-        
-        
-        self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes[:'status']
-        
-        
-        self.status = attributes[:'status']
-        
-      
-      end
-
-      
       if attributes[:'idConta']
         
         
@@ -132,46 +79,21 @@ module Pier
       end
 
       
-      if attributes[:'celular']
+      if attributes[:'idTabelaJuros']
         
         
-        self.celular = attributes[:'celular']
-        
-      
-      end
-
-      
-      if attributes[:'conteudo']
-        
-        
-        self.conteudo = attributes[:'conteudo']
+        self.id_tabela_juros = attributes[:'idTabelaJuros']
         
       
       end
 
       
-      if attributes[:'quantidadeTentativasEnvio']
+      if attributes[:'taxasJuros']
         
+        if (value = attributes[:'taxasJuros']).is_a?(Array)
+          self.taxas_juros = value
+        end
         
-        self.quantidade_tentativas_envio = attributes[:'quantidadeTentativasEnvio']
-        
-      
-      end
-
-      
-      if attributes[:'dataInclusao']
-        
-        
-        self.data_inclusao = attributes[:'dataInclusao']
-        
-      
-      end
-
-      
-      if attributes[:'cpf']
-        
-        
-        self.cpf = attributes[:'cpf']
         
       
       end
@@ -204,53 +126,8 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -272,14 +149,9 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          status == o.status &&
           id_conta == o.id_conta &&
-          celular == o.celular &&
-          conteudo == o.conteudo &&
-          quantidade_tentativas_envio == o.quantidade_tentativas_envio &&
-          data_inclusao == o.data_inclusao &&
-          cpf == o.cpf
+          id_tabela_juros == o.id_tabela_juros &&
+          taxas_juros == o.taxas_juros
     end
 
     # @see the `==` method
@@ -291,7 +163,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, status, id_conta, celular, conteudo, quantidade_tentativas_envio, data_inclusao, cpf].hash
+      [id_conta, id_tabela_juros, taxas_juros].hash
     end
 
     # Builds the object from hash

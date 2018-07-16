@@ -152,7 +152,7 @@ describe 'GlobaltagusuarioApi' do
   end
 
 
-  # unit tests for consultar_using_get14
+  # unit tests for consultar_using_get15
   # {{{controle_seguranca_dispositivo_consultar}}}
   # {{{controle_seguranca_dispositivo_consultar_notas}}}
   # @param id_usuario {{{usuario_resource_consultar_param_idUsuario}}}
@@ -161,7 +161,7 @@ describe 'GlobaltagusuarioApi' do
   # @option opts [Integer] :page {{{global_menssagem_sort_page_value}}}
   # @option opts [Integer] :limit {{{global_menssagem_sort_limit}}}
   # @return [PageControleSegurancaDispositivoResponse]
-  describe 'consultar_using_get14 test' do
+  describe 'consultar_using_get15 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -172,13 +172,13 @@ describe 'GlobaltagusuarioApi' do
   end
 
 
-  # unit tests for consultar_using_get50
+  # unit tests for consultar_using_get51
   # {{{usuario_resource_consultar}}}
   # {{{usuario_resource_consultar_notes}}}
   # @param id {{{usuario_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
   # @return [UsuarioResponse]
-  describe 'consultar_using_get50 test' do
+  describe 'consultar_using_get51 test' do
     it "should work" do
       # assertion here
       # should be_a()

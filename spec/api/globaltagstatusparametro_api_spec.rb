@@ -77,13 +77,13 @@ describe 'GlobaltagstatusparametroApi' do
   end
 
 
-  # unit tests for consultar_using_get35
+  # unit tests for consultar_using_get36
   # {{{status_conta_resource_consultar}}}
   # {{{status_conta_resource_consultar_notes}}}
   # @param id {{{status_conta_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
   # @return [StatusContaResponse]
-  describe 'consultar_using_get35 test' do
+  describe 'consultar_using_get36 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -94,13 +94,13 @@ describe 'GlobaltagstatusparametroApi' do
   end
 
 
-  # unit tests for consultar_using_get36
+  # unit tests for consultar_using_get37
   # {{{status_impressao_resource_consultar}}}
   # {{{status_impressao_resource_consultar_notes}}}
   # @param id {{{status_impressao_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
   # @return [StatusImpressaoResponse]
-  describe 'consultar_using_get36 test' do
+  describe 'consultar_using_get37 test' do
     it "should work" do
       # assertion here
       # should be_a()

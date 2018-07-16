@@ -88,13 +88,13 @@ describe 'GlobaltagfaqApi' do
   end
 
 
-  # unit tests for consultar_using_get20
+  # unit tests for consultar_using_get21
   # {{{faq_resource_consultar}}}
   # {{{faq_resource_consultar_notes}}}
   # @param id {{{faq_resource_consultar_param_id_faq}}}
   # @param [Hash] opts the optional parameters
   # @return [FaqResponse]
-  describe 'consultar_using_get20 test' do
+  describe 'consultar_using_get21 test' do
     it "should work" do
       # assertion here
       # should be_a()

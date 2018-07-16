@@ -938,8 +938,8 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [AdicionalDetalheResponse]
-    def cadastrar_using_post(id, persist, opts = {})
-      data, _status_code, _headers = cadastrar_using_post_with_http_info(id, persist, opts)
+    def cadastrar_using_post1(id, persist, opts = {})
+      data, _status_code, _headers = cadastrar_using_post1_with_http_info(id, persist, opts)
       return data
     end
 
@@ -949,14 +949,14 @@ module Pier
     # @param persist persist
     # @param [Hash] opts the optional parameters
     # @return [Array<(AdicionalDetalheResponse, Fixnum, Hash)>] AdicionalDetalheResponse data, response status code and response headers
-    def cadastrar_using_post_with_http_info(id, persist, opts = {})
+    def cadastrar_using_post1_with_http_info(id, persist, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagcadastroclienteApi.cadastrar_using_post ..."
+        @api_client.config.logger.debug "Calling API: GlobaltagcadastroclienteApi.cadastrar_using_post1 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagcadastroclienteApi.cadastrar_using_post" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagcadastroclienteApi.cadastrar_using_post1" if id.nil?
       
       
       
@@ -964,7 +964,7 @@ module Pier
       
       
       # verify the required parameter 'persist' is set
-      fail ArgumentError, "Missing the required parameter 'persist' when calling GlobaltagcadastroclienteApi.cadastrar_using_post" if persist.nil?
+      fail ArgumentError, "Missing the required parameter 'persist' when calling GlobaltagcadastroclienteApi.cadastrar_using_post1" if persist.nil?
       
       
       
@@ -1002,83 +1002,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'AdicionalDetalheResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagcadastroclienteApi#cadastrar_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-
-    # {{{adicional_resource_consultar}}}
-    # {{{adicional_resource_consultar_notes}}}
-    # @param id {{{adicional_resource_consultar_param_id_conta}}}
-    # @param id_pessoa {{{adicional_resource_consultar_param_id_pessoa}}}
-    # @param [Hash] opts the optional parameters
-    # @return [AdicionalDetalheResponse]
-    def consultar_using_get1(id, id_pessoa, opts = {})
-      data, _status_code, _headers = consultar_using_get1_with_http_info(id, id_pessoa, opts)
-      return data
-    end
-
-    # {{{adicional_resource_consultar}}}
-    # {{{adicional_resource_consultar_notes}}}
-    # @param id {{{adicional_resource_consultar_param_id_conta}}}
-    # @param id_pessoa {{{adicional_resource_consultar_param_id_pessoa}}}
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(AdicionalDetalheResponse, Fixnum, Hash)>] AdicionalDetalheResponse data, response status code and response headers
-    def consultar_using_get1_with_http_info(id, id_pessoa, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagcadastroclienteApi.consultar_using_get1 ..."
-      end
-      
-      
-      # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagcadastroclienteApi.consultar_using_get1" if id.nil?
-      
-      
-      
-      
-      
-      
-      # verify the required parameter 'id_pessoa' is set
-      fail ArgumentError, "Missing the required parameter 'id_pessoa' when calling GlobaltagcadastroclienteApi.consultar_using_get1" if id_pessoa.nil?
-      
-      
-      
-      
-      
-      # resource path
-      local_var_path = "/api/contas/{id}/adicionais/{idPessoa}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s).sub('{' + 'idPessoa' + '}', id_pessoa.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-
-      # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json']
-      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
-
-      # HTTP header 'Content-Type'
-      local_header_content_type = ['application/json']
-      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'AdicionalDetalheResponse')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagcadastroclienteApi#consultar_using_get1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltagcadastroclienteApi#cadastrar_using_post1\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1089,8 +1013,8 @@ module Pier
     # @param id {{{endereco_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [EnderecoResponse]
-    def consultar_using_get18(id, opts = {})
-      data, _status_code, _headers = consultar_using_get18_with_http_info(id, opts)
+    def consultar_using_get19(id, opts = {})
+      data, _status_code, _headers = consultar_using_get19_with_http_info(id, opts)
       return data
     end
 
@@ -1099,14 +1023,14 @@ module Pier
     # @param id {{{endereco_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [Array<(EnderecoResponse, Fixnum, Hash)>] EnderecoResponse data, response status code and response headers
-    def consultar_using_get18_with_http_info(id, opts = {})
+    def consultar_using_get19_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagcadastroclienteApi.consultar_using_get18 ..."
+        @api_client.config.logger.debug "Calling API: GlobaltagcadastroclienteApi.consultar_using_get19 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagcadastroclienteApi.consultar_using_get18" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagcadastroclienteApi.consultar_using_get19" if id.nil?
       
       
       
@@ -1144,7 +1068,83 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'EnderecoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagcadastroclienteApi#consultar_using_get18\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltagcadastroclienteApi#consultar_using_get19\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # {{{adicional_resource_consultar}}}
+    # {{{adicional_resource_consultar_notes}}}
+    # @param id {{{adicional_resource_consultar_param_id_conta}}}
+    # @param id_pessoa {{{adicional_resource_consultar_param_id_pessoa}}}
+    # @param [Hash] opts the optional parameters
+    # @return [AdicionalDetalheResponse]
+    def consultar_using_get2(id, id_pessoa, opts = {})
+      data, _status_code, _headers = consultar_using_get2_with_http_info(id, id_pessoa, opts)
+      return data
+    end
+
+    # {{{adicional_resource_consultar}}}
+    # {{{adicional_resource_consultar_notes}}}
+    # @param id {{{adicional_resource_consultar_param_id_conta}}}
+    # @param id_pessoa {{{adicional_resource_consultar_param_id_pessoa}}}
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(AdicionalDetalheResponse, Fixnum, Hash)>] AdicionalDetalheResponse data, response status code and response headers
+    def consultar_using_get2_with_http_info(id, id_pessoa, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: GlobaltagcadastroclienteApi.consultar_using_get2 ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagcadastroclienteApi.consultar_using_get2" if id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'id_pessoa' is set
+      fail ArgumentError, "Missing the required parameter 'id_pessoa' when calling GlobaltagcadastroclienteApi.consultar_using_get2" if id_pessoa.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/adicionais/{idPessoa}".sub('{format}','json').sub('{' + 'id' + '}', id.to_s).sub('{' + 'idPessoa' + '}', id_pessoa.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AdicionalDetalheResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: GlobaltagcadastroclienteApi#consultar_using_get2\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1155,8 +1155,8 @@ module Pier
     # @param id {{{pessoa_detalhe_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [PessoaDetalheResponse]
-    def consultar_using_get29(id, opts = {})
-      data, _status_code, _headers = consultar_using_get29_with_http_info(id, opts)
+    def consultar_using_get30(id, opts = {})
+      data, _status_code, _headers = consultar_using_get30_with_http_info(id, opts)
       return data
     end
 
@@ -1165,14 +1165,14 @@ module Pier
     # @param id {{{pessoa_detalhe_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [Array<(PessoaDetalheResponse, Fixnum, Hash)>] PessoaDetalheResponse data, response status code and response headers
-    def consultar_using_get29_with_http_info(id, opts = {})
+    def consultar_using_get30_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagcadastroclienteApi.consultar_using_get29 ..."
+        @api_client.config.logger.debug "Calling API: GlobaltagcadastroclienteApi.consultar_using_get30 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagcadastroclienteApi.consultar_using_get29" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagcadastroclienteApi.consultar_using_get30" if id.nil?
       
       
       
@@ -1210,7 +1210,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PessoaDetalheResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagcadastroclienteApi#consultar_using_get29\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltagcadastroclienteApi#consultar_using_get30\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1221,8 +1221,8 @@ module Pier
     # @param id {{{pessoa_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [PessoaResponse]
-    def consultar_using_get30(id, opts = {})
-      data, _status_code, _headers = consultar_using_get30_with_http_info(id, opts)
+    def consultar_using_get31(id, opts = {})
+      data, _status_code, _headers = consultar_using_get31_with_http_info(id, opts)
       return data
     end
 
@@ -1231,14 +1231,14 @@ module Pier
     # @param id {{{pessoa_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [Array<(PessoaResponse, Fixnum, Hash)>] PessoaResponse data, response status code and response headers
-    def consultar_using_get30_with_http_info(id, opts = {})
+    def consultar_using_get31_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagcadastroclienteApi.consultar_using_get30 ..."
+        @api_client.config.logger.debug "Calling API: GlobaltagcadastroclienteApi.consultar_using_get31 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagcadastroclienteApi.consultar_using_get30" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagcadastroclienteApi.consultar_using_get31" if id.nil?
       
       
       
@@ -1276,7 +1276,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'PessoaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagcadastroclienteApi#consultar_using_get30\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltagcadastroclienteApi#consultar_using_get31\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1287,8 +1287,8 @@ module Pier
     # @param id {{{telefone_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [TelefoneResponse]
-    def consultar_using_get38(id, opts = {})
-      data, _status_code, _headers = consultar_using_get38_with_http_info(id, opts)
+    def consultar_using_get39(id, opts = {})
+      data, _status_code, _headers = consultar_using_get39_with_http_info(id, opts)
       return data
     end
 
@@ -1297,14 +1297,14 @@ module Pier
     # @param id {{{telefone_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [Array<(TelefoneResponse, Fixnum, Hash)>] TelefoneResponse data, response status code and response headers
-    def consultar_using_get38_with_http_info(id, opts = {})
+    def consultar_using_get39_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagcadastroclienteApi.consultar_using_get38 ..."
+        @api_client.config.logger.debug "Calling API: GlobaltagcadastroclienteApi.consultar_using_get39 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagcadastroclienteApi.consultar_using_get38" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagcadastroclienteApi.consultar_using_get39" if id.nil?
       
       
       
@@ -1342,7 +1342,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TelefoneResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagcadastroclienteApi#consultar_using_get38\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltagcadastroclienteApi#consultar_using_get39\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

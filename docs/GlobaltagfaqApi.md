@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**adicionar_using_post**](GlobaltagfaqApi.md#adicionar_using_post) | **POST** /api/faqs | {{{faq_resource_adicionar}}}
 [**alterar_using_put7**](GlobaltagfaqApi.md#alterar_using_put7) | **PUT** /api/faqs/{id} | {{{faq_resource_alterar}}}
-[**consultar_using_get20**](GlobaltagfaqApi.md#consultar_using_get20) | **GET** /api/faqs/{id} | {{{faq_resource_consultar}}}
+[**consultar_using_get21**](GlobaltagfaqApi.md#consultar_using_get21) | **GET** /api/faqs/{id} | {{{faq_resource_consultar}}}
 [**listar_using_get26**](GlobaltagfaqApi.md#listar_using_get26) | **GET** /api/faqs | {{{faq_resource_listar}}}
 
 
@@ -141,8 +141,8 @@ No authorization required
 
 
 
-# **consultar_using_get20**
-> FaqResponse consultar_using_get20(id)
+# **consultar_using_get21**
+> FaqResponse consultar_using_get21(id)
 
 {{{faq_resource_consultar}}}
 
@@ -161,10 +161,10 @@ id = 789 # Integer | {{{faq_resource_consultar_param_id_faq}}}
 
 begin
   #{{{faq_resource_consultar}}}
-  result = api_instance.consultar_using_get20(id)
+  result = api_instance.consultar_using_get21(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagfaqApi->consultar_using_get20: #{e}"
+  puts "Exception when calling GlobaltagfaqApi->consultar_using_get21: #{e}"
 end
 ```
 

@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_using_get34**](GlobaltagriscofraudeApi.md#consultar_using_get34) | **GET** /api/riscos-fraudes/{id} | {{{risco_fraude_resource_consultar}}}
+[**consultar_using_get35**](GlobaltagriscofraudeApi.md#consultar_using_get35) | **GET** /api/riscos-fraudes/{id} | {{{risco_fraude_resource_consultar}}}
 [**listar_tipos_resolucao_using_get**](GlobaltagriscofraudeApi.md#listar_tipos_resolucao_using_get) | **GET** /api/tipos-resolucao | {{{risco_fraude_resource_listar_tipos_resolucao}}}
 [**negar_using_post**](GlobaltagriscofraudeApi.md#negar_using_post) | **POST** /api/riscos-fraudes/{id}/negar | {{{risco_fraude_resource_negar}}}
 [**reconhecer_using_post**](GlobaltagriscofraudeApi.md#reconhecer_using_post) | **POST** /api/riscos-fraudes/{id}/reconhecer | {{{risco_fraude_resource_reconhecer}}}
@@ -13,8 +13,8 @@ Method | HTTP request | Description
 
 
 
-# **consultar_using_get34**
-> RiscoFraudeDetalhadoResponse consultar_using_get34(id)
+# **consultar_using_get35**
+> RiscoFraudeDetalhadoResponse consultar_using_get35(id)
 
 {{{risco_fraude_resource_consultar}}}
 
@@ -33,10 +33,10 @@ id = 789 # Integer | {{{risco_fraude_resource_consultar_param_id_risco_fraude}}}
 
 begin
   #{{{risco_fraude_resource_consultar}}}
-  result = api_instance.consultar_using_get34(id)
+  result = api_instance.consultar_using_get35(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagriscofraudeApi->consultar_using_get34: #{e}"
+  puts "Exception when calling GlobaltagriscofraudeApi->consultar_using_get35: #{e}"
 end
 ```
 

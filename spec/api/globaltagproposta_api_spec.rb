@@ -61,13 +61,13 @@ describe 'GlobaltagpropostaApi' do
   end
 
 
-  # unit tests for consultar_using_get32
+  # unit tests for consultar_using_get33
   # {{{proposta_resource_consultar}}}
   # {{{proposta_resource_consultar_notes}}}
   # @param id {{{proposta_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
   # @return [PropostaResponse]
-  describe 'consultar_using_get32 test' do
+  describe 'consultar_using_get33 test' do
     it "should work" do
       # assertion here
       # should be_a()

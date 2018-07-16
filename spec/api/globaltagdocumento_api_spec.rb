@@ -79,29 +79,12 @@ describe 'GlobaltagdocumentoApi' do
   end
 
 
-  # unit tests for consultar_using_get16
+  # unit tests for consultar_using_get17
   # {{{documento_resource_consultar}}}
   # {{{documento_resource_consultar_notes}}}
   # @param id {{{documento_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
   # @return [DocumentoDetalhadoResponse]
-  describe 'consultar_using_get16 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for consultar_using_get17
-  # {{{documento_template_resource_consultar}}}
-  # {{{documento_template_resource_consultar_notes}}}
-  # @param id {{{documento_template_resource_consultar_param_id}}}
-  # @param [Hash] opts the optional parameters
-  # @return [DocumentoTemplateResponse]
   describe 'consultar_using_get17 test' do
     it "should work" do
       # assertion here
@@ -113,13 +96,30 @@ describe 'GlobaltagdocumentoApi' do
   end
 
 
-  # unit tests for consultar_using_get46
+  # unit tests for consultar_using_get18
+  # {{{documento_template_resource_consultar}}}
+  # {{{documento_template_resource_consultar_notes}}}
+  # @param id {{{documento_template_resource_consultar_param_id}}}
+  # @param [Hash] opts the optional parameters
+  # @return [DocumentoTemplateResponse]
+  describe 'consultar_using_get18 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for consultar_using_get47
   # {{{tipo_template_resource_consultar}}}
   # {{{tipo_template_resource_consultar_notes}}}
   # @param id {{{tipo_template_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
   # @return [TipoTemplateResponse]
-  describe 'consultar_using_get46 test' do
+  describe 'consultar_using_get47 test' do
     it "should work" do
       # assertion here
       # should be_a()

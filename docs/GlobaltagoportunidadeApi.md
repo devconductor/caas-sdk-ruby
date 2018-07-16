@@ -8,8 +8,8 @@ Method | HTTP request | Description
 [**alterar_using_put12**](GlobaltagoportunidadeApi.md#alterar_using_put12) | **PUT** /api/oportunidades/{id} | {{{oportunidade_resource_alterar}}}
 [**alterar_using_put20**](GlobaltagoportunidadeApi.md#alterar_using_put20) | **PUT** /api/tipos-oportunidades/{id} | {{{tipo_oportunidade_resource_alterar}}}
 [**consultar_status_using_get**](GlobaltagoportunidadeApi.md#consultar_status_using_get) | **GET** /api/tipos-oportunidades/{id}/status/{idStatus} | {{{tipo_oportunidade_resource_consultar_status}}}
-[**consultar_using_get25**](GlobaltagoportunidadeApi.md#consultar_using_get25) | **GET** /api/oportunidades/{id} | {{{oportunidade_resource_consultar}}}
-[**consultar_using_get44**](GlobaltagoportunidadeApi.md#consultar_using_get44) | **GET** /api/tipos-oportunidades/{id} | {{{tipo_oportunidade_resource_consultar}}}
+[**consultar_using_get26**](GlobaltagoportunidadeApi.md#consultar_using_get26) | **GET** /api/oportunidades/{id} | {{{oportunidade_resource_consultar}}}
+[**consultar_using_get45**](GlobaltagoportunidadeApi.md#consultar_using_get45) | **GET** /api/tipos-oportunidades/{id} | {{{tipo_oportunidade_resource_consultar}}}
 [**listar_auditorias_status_using_get**](GlobaltagoportunidadeApi.md#listar_auditorias_status_using_get) | **GET** /api/auditorias-status-oportunidades | {{{tipo_oportunidade_resource_listar_auditorias_status}}}
 [**listar_auditorias_using_get**](GlobaltagoportunidadeApi.md#listar_auditorias_using_get) | **GET** /api/auditorias-oportunidades | {{{oportunidade_resource_listar_auditorias}}}
 [**listar_auditorias_using_get1**](GlobaltagoportunidadeApi.md#listar_auditorias_using_get1) | **GET** /api/auditorias-tipos-oportunidades | {{{tipo_oportunidade_resource_listar_auditorias}}}
@@ -238,8 +238,8 @@ No authorization required
 
 
 
-# **consultar_using_get25**
-> OportunidadeResponse consultar_using_get25(id)
+# **consultar_using_get26**
+> OportunidadeResponse consultar_using_get26(id)
 
 {{{oportunidade_resource_consultar}}}
 
@@ -258,10 +258,10 @@ id = 789 # Integer | {{{oportunidade_resource_consultar_param_id}}}
 
 begin
   #{{{oportunidade_resource_consultar}}}
-  result = api_instance.consultar_using_get25(id)
+  result = api_instance.consultar_using_get26(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagoportunidadeApi->consultar_using_get25: #{e}"
+  puts "Exception when calling GlobaltagoportunidadeApi->consultar_using_get26: #{e}"
 end
 ```
 
@@ -288,8 +288,8 @@ No authorization required
 
 
 
-# **consultar_using_get44**
-> TipoOportunidadeResponse consultar_using_get44(id)
+# **consultar_using_get45**
+> TipoOportunidadeResponse consultar_using_get45(id)
 
 {{{tipo_oportunidade_resource_consultar}}}
 
@@ -308,10 +308,10 @@ id = 789 # Integer | {{{tipo_oportunidade_resource_consultar_param_id}}}
 
 begin
   #{{{tipo_oportunidade_resource_consultar}}}
-  result = api_instance.consultar_using_get44(id)
+  result = api_instance.consultar_using_get45(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagoportunidadeApi->consultar_using_get44: #{e}"
+  puts "Exception when calling GlobaltagoportunidadeApi->consultar_using_get45: #{e}"
 end
 ```
 

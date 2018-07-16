@@ -10,8 +10,8 @@ Method | HTTP request | Description
 [**ativar_usuario_using_post1**](GlobaltagusuarioApi.md#ativar_usuario_using_post1) | **POST** /api/usuarios/{id}/ativar-usuario | {{{usuario_resource_ativar_usuario}}}
 [**atualizar_using_put2**](GlobaltagusuarioApi.md#atualizar_using_put2) | **PUT** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_atualizar}}}
 [**consultar_contas_vinculadas_using_get**](GlobaltagusuarioApi.md#consultar_contas_vinculadas_using_get) | **GET** /api/usuarios/{id}/vincular-contas | {{{usuario_recurso_listar_por_id_usuario}}}
-[**consultar_using_get14**](GlobaltagusuarioApi.md#consultar_using_get14) | **GET** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_consultar}}}
-[**consultar_using_get50**](GlobaltagusuarioApi.md#consultar_using_get50) | **GET** /api/usuarios/{id} | {{{usuario_resource_consultar}}}
+[**consultar_using_get15**](GlobaltagusuarioApi.md#consultar_using_get15) | **GET** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_consultar}}}
+[**consultar_using_get51**](GlobaltagusuarioApi.md#consultar_using_get51) | **GET** /api/usuarios/{id} | {{{usuario_resource_consultar}}}
 [**desativar_usuario_using_post1**](GlobaltagusuarioApi.md#desativar_usuario_using_post1) | **POST** /api/usuarios/{id}/desativar-usuario | {{{usuario_resource_desativar_usuario}}}
 [**listar_using_get62**](GlobaltagusuarioApi.md#listar_using_get62) | **GET** /api/usuarios | {{{usuario_resource_listar}}}
 [**recuperar_senha_using_post**](GlobaltagusuarioApi.md#recuperar_senha_using_post) | **POST** /api/usuarios/{id}/recuperar-senha | {{{usuario_resource_recuperar_senha}}}
@@ -345,8 +345,8 @@ No authorization required
 
 
 
-# **consultar_using_get14**
-> PageControleSegurancaDispositivoResponse consultar_using_get14(id_usuario, opts)
+# **consultar_using_get15**
+> PageControleSegurancaDispositivoResponse consultar_using_get15(id_usuario, opts)
 
 {{{controle_seguranca_dispositivo_consultar}}}
 
@@ -370,10 +370,10 @@ opts = {
 
 begin
   #{{{controle_seguranca_dispositivo_consultar}}}
-  result = api_instance.consultar_using_get14(id_usuario, opts)
+  result = api_instance.consultar_using_get15(id_usuario, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagusuarioApi->consultar_using_get14: #{e}"
+  puts "Exception when calling GlobaltagusuarioApi->consultar_using_get15: #{e}"
 end
 ```
 
@@ -403,8 +403,8 @@ No authorization required
 
 
 
-# **consultar_using_get50**
-> UsuarioResponse consultar_using_get50(id)
+# **consultar_using_get51**
+> UsuarioResponse consultar_using_get51(id)
 
 {{{usuario_resource_consultar}}}
 
@@ -423,10 +423,10 @@ id = 789 # Integer | {{{usuario_resource_consultar_param_id}}}
 
 begin
   #{{{usuario_resource_consultar}}}
-  result = api_instance.consultar_using_get50(id)
+  result = api_instance.consultar_using_get51(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagusuarioApi->consultar_using_get50: #{e}"
+  puts "Exception when calling GlobaltagusuarioApi->consultar_using_get51: #{e}"
 end
 ```
 

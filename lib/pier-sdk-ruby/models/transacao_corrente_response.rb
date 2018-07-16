@@ -78,6 +78,9 @@ module Pier
     # {{{transacao_corrente_response_flag_solicitou_contestacao_value}}}
     attr_accessor :flag_solicitou_contestacao
 
+    # {{{transacao_corrente_response_tipo_transacao_value}}}
+    attr_accessor :tipo_transacao
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -117,7 +120,9 @@ module Pier
         
         :'id_grupo_mcc' => :'idGrupoMCC',
         
-        :'flag_solicitou_contestacao' => :'flagSolicitouContestacao'
+        :'flag_solicitou_contestacao' => :'flagSolicitouContestacao',
+        
+        :'tipo_transacao' => :'tipoTransacao'
         
       }
     end
@@ -160,7 +165,9 @@ module Pier
         
         :'id_grupo_mcc' => :'Integer',
         
-        :'flag_solicitou_contestacao' => :'Integer'
+        :'flag_solicitou_contestacao' => :'Integer',
+        
+        :'tipo_transacao' => :'Integer'
         
       }
     end
@@ -336,6 +343,15 @@ module Pier
       end
 
       
+      if attributes[:'tipoTransacao']
+        
+        
+        self.tipo_transacao = attributes[:'tipoTransacao']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -423,8 +439,17 @@ module Pier
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -538,7 +563,8 @@ module Pier
           flag_credito == o.flag_credito &&
           tipo_estabelecimento == o.tipo_estabelecimento &&
           id_grupo_mcc == o.id_grupo_mcc &&
-          flag_solicitou_contestacao == o.flag_solicitou_contestacao
+          flag_solicitou_contestacao == o.flag_solicitou_contestacao &&
+          tipo_transacao == o.tipo_transacao
     end
 
     # @see the `==` method
@@ -550,7 +576,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ultima_parcela_lancada, id_conta, id_tipo_registro, ordem, id_transacao, descricao, status, descricao_status, valor, valor_dolar, quantidade_parcelas, valor_parcela, data_evento, estabelecimento, flag_credito, tipo_estabelecimento, id_grupo_mcc, flag_solicitou_contestacao].hash
+      [ultima_parcela_lancada, id_conta, id_tipo_registro, ordem, id_transacao, descricao, status, descricao_status, valor, valor_dolar, quantidade_parcelas, valor_parcela, data_evento, estabelecimento, flag_credito, tipo_estabelecimento, id_grupo_mcc, flag_solicitou_contestacao, tipo_transacao].hash
     end
 
     # Builds the object from hash

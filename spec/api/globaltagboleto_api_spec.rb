@@ -43,13 +43,13 @@ describe 'GlobaltagboletoApi' do
   end
 
 
-  # unit tests for consultar_using_get33
+  # unit tests for consultar_using_get34
   # {{{boleto_resource_consultar}}}
   # {{{boleto_resource_consultar_notes}}}
   # @param id {{{boleto_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
   # @return [BoletoResponse]
-  describe 'consultar_using_get33 test' do
+  describe 'consultar_using_get34 test' do
     it "should work" do
       # assertion here
       # should be_a()

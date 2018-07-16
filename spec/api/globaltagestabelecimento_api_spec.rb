@@ -186,13 +186,13 @@ describe 'GlobaltagestabelecimentoApi' do
   end
 
 
-  # unit tests for cadastrar_using_post2
+  # unit tests for cadastrar_using_post3
   # {{{estabelecimento_resource_cadastrar}}}
   # {{{estabelecimento_resource_cadastrar_notes}}}
   # @param persist persist
   # @param [Hash] opts the optional parameters
   # @return [EstabelecimentoResponse]
-  describe 'cadastrar_using_post2 test' do
+  describe 'cadastrar_using_post3 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -203,13 +203,13 @@ describe 'GlobaltagestabelecimentoApi' do
   end
 
 
-  # unit tests for cadastrar_using_post3
+  # unit tests for cadastrar_using_post4
   # {{{grupo_economico_resource_cadastrar}}}
   # {{{grupo_economico_resource_cadastrar_notes}}}
   # @param grupo_economico_dto GrupoEconomicoDTO
   # @param [Hash] opts the optional parameters
   # @return [GrupoEconomicoResponse]
-  describe 'cadastrar_using_post3 test' do
+  describe 'cadastrar_using_post4 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -254,13 +254,13 @@ describe 'GlobaltagestabelecimentoApi' do
   end
 
 
-  # unit tests for consultar_using_get19
+  # unit tests for consultar_using_get20
   # {{{estabelecimento_resource_consultar}}}
   # {{{estabelecimento_resource_consultar_notes}}}
   # @param id {{{estabelecimento_resource_consultar_param_id_estabelecimento}}}
   # @param [Hash] opts the optional parameters
   # @return [EstabelecimentoResponse]
-  describe 'consultar_using_get19 test' do
+  describe 'consultar_using_get20 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -271,30 +271,13 @@ describe 'GlobaltagestabelecimentoApi' do
   end
 
 
-  # unit tests for consultar_using_get21
+  # unit tests for consultar_using_get22
   # {{{grupo_economico_resource_consultar}}}
   # {{{grupo_economico_resource_consultar_notes}}}
   # @param id {{{grupo_economico_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
   # @return [GrupoEconomicoResponse]
-  describe 'consultar_using_get21 test' do
-    it "should work" do
-      # assertion here
-      # should be_a()
-      # should be_nil
-      # should ==
-      # should_not ==
-    end
-  end
-
-
-  # unit tests for consultar_using_get23
-  # {{{maquineta_resource_consultar}}}
-  # {{{maquineta_resource_consultar_notes}}}
-  # @param id {{{maquineta_resource_consultar_param_id}}}
-  # @param [Hash] opts the optional parameters
-  # @return [MaquinetaResponse]
-  describe 'consultar_using_get23 test' do
+  describe 'consultar_using_get22 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -306,11 +289,11 @@ describe 'GlobaltagestabelecimentoApi' do
 
 
   # unit tests for consultar_using_get24
-  # {{{operacao_credor_resource_consultar}}}
-  # {{{operacao_credor_resource_consultar_notes}}}
-  # @param id {{{operacao_credor_resource_consultar_param_id}}}
+  # {{{maquineta_resource_consultar}}}
+  # {{{maquineta_resource_consultar_notes}}}
+  # @param id {{{maquineta_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
-  # @return [OperacaoCredorResponse]
+  # @return [MaquinetaResponse]
   describe 'consultar_using_get24 test' do
     it "should work" do
       # assertion here
@@ -322,13 +305,30 @@ describe 'GlobaltagestabelecimentoApi' do
   end
 
 
-  # unit tests for consultar_using_get37
+  # unit tests for consultar_using_get25
+  # {{{operacao_credor_resource_consultar}}}
+  # {{{operacao_credor_resource_consultar_notes}}}
+  # @param id {{{operacao_credor_resource_consultar_param_id}}}
+  # @param [Hash] opts the optional parameters
+  # @return [OperacaoCredorResponse]
+  describe 'consultar_using_get25 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for consultar_using_get38
   # {{{telefone_estabelecimento_resource_consultar}}}
   # {{{telefone_estabelecimento_resource_consultar_notes}}}
   # @param id {{{telefone_estabelecimento_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
   # @return [TelefoneEstabelecimentoResponse]
-  describe 'consultar_using_get37 test' do
+  describe 'consultar_using_get38 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -339,13 +339,13 @@ describe 'GlobaltagestabelecimentoApi' do
   end
 
 
-  # unit tests for consultar_using_get39
+  # unit tests for consultar_using_get40
   # {{{terminal_resource_consultar}}}
   # {{{terminal_resource_consultar_notes}}}
   # @param id {{{terminal_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
   # @return [TerminalResponse]
-  describe 'consultar_using_get39 test' do
+  describe 'consultar_using_get40 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -356,13 +356,13 @@ describe 'GlobaltagestabelecimentoApi' do
   end
 
 
-  # unit tests for consultar_using_get51
+  # unit tests for consultar_using_get52
   # {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
   # {{{vinculo_estabelecimento_adquirente_resource_consultar_notes}}}
   # @param id {{{vinculo_estabelecimento_adquirente_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
   # @return [VinculoEstabelecimentoAdquirenteResponse]
-  describe 'consultar_using_get51 test' do
+  describe 'consultar_using_get52 test' do
     it "should work" do
       # assertion here
       # should be_a()

@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_using_get6**](GlobaltagavisoviagemApi.md#consultar_using_get6) | **GET** /api/avisos-viagens/{id} | {{{aviso_viagem_resource_consultar}}}
+[**consultar_using_get7**](GlobaltagavisoviagemApi.md#consultar_using_get7) | **GET** /api/avisos-viagens/{id} | {{{aviso_viagem_resource_consultar}}}
 [**desabilitar_using_post**](GlobaltagavisoviagemApi.md#desabilitar_using_post) | **POST** /api/avisos-viagens/{id}/desabilitar | {{{aviso_viagem_resource_desabilitar}}}
 [**habilitar_using_post**](GlobaltagavisoviagemApi.md#habilitar_using_post) | **POST** /api/avisos-viagens/{id}/habilitar | {{{aviso_viagem_resource_habilitar}}}
 [**listar_using_get8**](GlobaltagavisoviagemApi.md#listar_using_get8) | **GET** /api/avisos-viagens | {{{aviso_viagem_resource_listar}}}
@@ -13,8 +13,8 @@ Method | HTTP request | Description
 
 
 
-# **consultar_using_get6**
-> AvisoViagemResponse consultar_using_get6(id)
+# **consultar_using_get7**
+> AvisoViagemResponse consultar_using_get7(id)
 
 {{{aviso_viagem_resource_consultar}}}
 
@@ -33,10 +33,10 @@ id = 789 # Integer | {{{aviso_viagem_resource_consultar_param_id}}}
 
 begin
   #{{{aviso_viagem_resource_consultar}}}
-  result = api_instance.consultar_using_get6(id)
+  result = api_instance.consultar_using_get7(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagavisoviagemApi->consultar_using_get6: #{e}"
+  puts "Exception when calling GlobaltagavisoviagemApi->consultar_using_get7: #{e}"
 end
 ```
 

@@ -9,21 +9,21 @@ Method | HTTP request | Description
 [**alterar_using_put2**](GlobaltagcadastrogeralApi.md#alterar_using_put2) | **PUT** /api/configuracoes-registro-cobranca/{id} | {{{configuracao_registro_cobranca_resource_alterar}}}
 [**alterar_using_put3**](GlobaltagcadastrogeralApi.md#alterar_using_put3) | **PUT** /api/configuracoes-rotativos/{id} | {{{configuracao_rotativo_resource_alterar}}}
 [**cadastrar_convenio_using_post**](GlobaltagcadastrogeralApi.md#cadastrar_convenio_using_post) | **POST** /api/convenios | Adiciona novo conv\u00EAnio para o emissor
-[**cadastrar_using_post1**](GlobaltagcadastrogeralApi.md#cadastrar_using_post1) | **POST** /api/configuracoes-registro-cobranca | {{{configuracao_registro_cobranca_resource_cadastrar}}}
+[**cadastrar_using_post2**](GlobaltagcadastrogeralApi.md#cadastrar_using_post2) | **POST** /api/configuracoes-registro-cobranca | {{{configuracao_registro_cobranca_resource_cadastrar}}}
 [**configurar_taxa_antecipacao_using_post**](GlobaltagcadastrogeralApi.md#configurar_taxa_antecipacao_using_post) | **POST** /api/produtos/{id}/configurar-taxa-antecipacao | {{{produto_resource_configurar_taxa_antecipacao}}}
 [**consultar_campanha_using_get**](GlobaltagcadastrogeralApi.md#consultar_campanha_using_get) | **GET** /api/campanhas/{id} | {{{campanha_resource_consultar_campanha}}}
 [**consultar_convenio_using_get**](GlobaltagcadastrogeralApi.md#consultar_convenio_using_get) | **GET** /api/convenios/{id} | Consultar dados banc\u00E1rios pelo id do conv\u00EAnio
 [**consultar_taxa_antecipacao_using_get**](GlobaltagcadastrogeralApi.md#consultar_taxa_antecipacao_using_get) | **GET** /api/produtos/{id}/consultar-taxa-antecipacao | {{{produto_resource_consultar_taxa_antecipacao}}}
-[**consultar_using_get10**](GlobaltagcadastrogeralApi.md#consultar_using_get10) | **GET** /api/configuracoes-registro-cobranca/{id} | {{{configuracao_registro_cobranca_resource_consultar}}}
-[**consultar_using_get11**](GlobaltagcadastrogeralApi.md#consultar_using_get11) | **GET** /api/configuracoes-rotativos/{id} | {{{configuracao_rotativo_resource_consultar}}}
-[**consultar_using_get31**](GlobaltagcadastrogeralApi.md#consultar_using_get31) | **GET** /api/produtos/{id} | {{{produto_resource_consultar}}}
-[**consultar_using_get40**](GlobaltagcadastrogeralApi.md#consultar_using_get40) | **GET** /api/tipos-ajustes/{id} | {{{tipo_transacoes_ajuste_resource_consultar}}}
-[**consultar_using_get41**](GlobaltagcadastrogeralApi.md#consultar_using_get41) | **GET** /api/tipos-boletos | {{{tipo_boleto_resource_consultar}}}
-[**consultar_using_get42**](GlobaltagcadastrogeralApi.md#consultar_using_get42) | **GET** /api/tipos-enderecos/{id} | {{{tipo_endereco_resource_consultar}}}
-[**consultar_using_get43**](GlobaltagcadastrogeralApi.md#consultar_using_get43) | **GET** /api/tipos-operacoes | {{{tipo_operacao_resource_consultar}}}
-[**consultar_using_get45**](GlobaltagcadastrogeralApi.md#consultar_using_get45) | **GET** /api/tipos-telefones/{id} | {{{tipo_telefone_resource_consultar}}}
-[**consultar_using_get5**](GlobaltagcadastrogeralApi.md#consultar_using_get5) | **GET** /api/atendimento-clientes/{id} | {{{atendimento_cliente_resource_consultar}}}
-[**consultar_using_get7**](GlobaltagcadastrogeralApi.md#consultar_using_get7) | **GET** /api/bancos/{id} | {{{banco_resource_consultar}}}
+[**consultar_using_get11**](GlobaltagcadastrogeralApi.md#consultar_using_get11) | **GET** /api/configuracoes-registro-cobranca/{id} | {{{configuracao_registro_cobranca_resource_consultar}}}
+[**consultar_using_get12**](GlobaltagcadastrogeralApi.md#consultar_using_get12) | **GET** /api/configuracoes-rotativos/{id} | {{{configuracao_rotativo_resource_consultar}}}
+[**consultar_using_get32**](GlobaltagcadastrogeralApi.md#consultar_using_get32) | **GET** /api/produtos/{id} | {{{produto_resource_consultar}}}
+[**consultar_using_get41**](GlobaltagcadastrogeralApi.md#consultar_using_get41) | **GET** /api/tipos-ajustes/{id} | {{{tipo_transacoes_ajuste_resource_consultar}}}
+[**consultar_using_get42**](GlobaltagcadastrogeralApi.md#consultar_using_get42) | **GET** /api/tipos-boletos | {{{tipo_boleto_resource_consultar}}}
+[**consultar_using_get43**](GlobaltagcadastrogeralApi.md#consultar_using_get43) | **GET** /api/tipos-enderecos/{id} | {{{tipo_endereco_resource_consultar}}}
+[**consultar_using_get44**](GlobaltagcadastrogeralApi.md#consultar_using_get44) | **GET** /api/tipos-operacoes | {{{tipo_operacao_resource_consultar}}}
+[**consultar_using_get46**](GlobaltagcadastrogeralApi.md#consultar_using_get46) | **GET** /api/tipos-telefones/{id} | {{{tipo_telefone_resource_consultar}}}
+[**consultar_using_get6**](GlobaltagcadastrogeralApi.md#consultar_using_get6) | **GET** /api/atendimento-clientes/{id} | {{{atendimento_cliente_resource_consultar}}}
+[**consultar_using_get8**](GlobaltagcadastrogeralApi.md#consultar_using_get8) | **GET** /api/bancos/{id} | {{{banco_resource_consultar}}}
 [**listar_campanhas_using_get**](GlobaltagcadastrogeralApi.md#listar_campanhas_using_get) | **GET** /api/campanhas | {{{campanha_resource_listar_campanhas}}}
 [**listar_contas_por_pessoa_using_get**](GlobaltagcadastrogeralApi.md#listar_contas_por_pessoa_using_get) | **GET** /api/pessoas/listar-contas | {{{pessoa_resource_listar_contas_por_pessoa}}}
 [**listar_convenios_using_get**](GlobaltagcadastrogeralApi.md#listar_convenios_using_get) | **GET** /api/convenios | Lista os dados banc\u00E1rios dos conv\u00EAnios existentes
@@ -315,8 +315,8 @@ No authorization required
 
 
 
-# **cadastrar_using_post1**
-> ConfiguracaoRegistroCobrancaResponse cadastrar_using_post1(configuracao_persist)
+# **cadastrar_using_post2**
+> ConfiguracaoRegistroCobrancaResponse cadastrar_using_post2(configuracao_persist)
 
 {{{configuracao_registro_cobranca_resource_cadastrar}}}
 
@@ -335,10 +335,10 @@ configuracao_persist = Pier::ConfiguracaoRegistroCobrancaPersist.new # Configura
 
 begin
   #{{{configuracao_registro_cobranca_resource_cadastrar}}}
-  result = api_instance.cadastrar_using_post1(configuracao_persist)
+  result = api_instance.cadastrar_using_post2(configuracao_persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->cadastrar_using_post1: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->cadastrar_using_post2: #{e}"
 end
 ```
 
@@ -571,8 +571,8 @@ No authorization required
 
 
 
-# **consultar_using_get10**
-> ConfiguracaoRegistroCobrancaResponse consultar_using_get10(id)
+# **consultar_using_get11**
+> ConfiguracaoRegistroCobrancaResponse consultar_using_get11(id)
 
 {{{configuracao_registro_cobranca_resource_consultar}}}
 
@@ -591,10 +591,10 @@ id = 789 # Integer | {{{configuracao_registro_cobranca_resource_consultar_param_
 
 begin
   #{{{configuracao_registro_cobranca_resource_consultar}}}
-  result = api_instance.consultar_using_get10(id)
+  result = api_instance.consultar_using_get11(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get10: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get11: #{e}"
 end
 ```
 
@@ -621,8 +621,8 @@ No authorization required
 
 
 
-# **consultar_using_get11**
-> ConfiguracaoRotativoDetalheResponse consultar_using_get11(id)
+# **consultar_using_get12**
+> ConfiguracaoRotativoDetalheResponse consultar_using_get12(id)
 
 {{{configuracao_rotativo_resource_consultar}}}
 
@@ -641,10 +641,10 @@ id = 789 # Integer | {{{configuracao_rotativo_resource_consultar_param_id}}}
 
 begin
   #{{{configuracao_rotativo_resource_consultar}}}
-  result = api_instance.consultar_using_get11(id)
+  result = api_instance.consultar_using_get12(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get11: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get12: #{e}"
 end
 ```
 
@@ -671,8 +671,8 @@ No authorization required
 
 
 
-# **consultar_using_get31**
-> ProdutoDetalhesResponse consultar_using_get31(id)
+# **consultar_using_get32**
+> ProdutoDetalhesResponse consultar_using_get32(id)
 
 {{{produto_resource_consultar}}}
 
@@ -691,10 +691,10 @@ id = 789 # Integer | {{{produto_resource_consultar_param_id}}}
 
 begin
   #{{{produto_resource_consultar}}}
-  result = api_instance.consultar_using_get31(id)
+  result = api_instance.consultar_using_get32(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get31: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get32: #{e}"
 end
 ```
 
@@ -721,8 +721,8 @@ No authorization required
 
 
 
-# **consultar_using_get40**
-> TipoAjusteResponse consultar_using_get40(id)
+# **consultar_using_get41**
+> TipoAjusteResponse consultar_using_get41(id)
 
 {{{tipo_transacoes_ajuste_resource_consultar}}}
 
@@ -741,10 +741,10 @@ id = 789 # Integer | {{{tipo_transacoes_ajuste_resource_consultar_param_id}}}
 
 begin
   #{{{tipo_transacoes_ajuste_resource_consultar}}}
-  result = api_instance.consultar_using_get40(id)
+  result = api_instance.consultar_using_get41(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get40: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get41: #{e}"
 end
 ```
 
@@ -771,8 +771,8 @@ No authorization required
 
 
 
-# **consultar_using_get41**
-> PageTipoBoletoResponse consultar_using_get41(opts)
+# **consultar_using_get42**
+> PageTipoBoletoResponse consultar_using_get42(opts)
 
 {{{tipo_boleto_resource_consultar}}}
 
@@ -797,10 +797,10 @@ opts = {
 
 begin
   #{{{tipo_boleto_resource_consultar}}}
-  result = api_instance.consultar_using_get41(opts)
+  result = api_instance.consultar_using_get42(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get41: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get42: #{e}"
 end
 ```
 
@@ -832,8 +832,8 @@ No authorization required
 
 
 
-# **consultar_using_get42**
-> TipoEnderecoResponse consultar_using_get42(id)
+# **consultar_using_get43**
+> TipoEnderecoResponse consultar_using_get43(id)
 
 {{{tipo_endereco_resource_consultar}}}
 
@@ -852,10 +852,10 @@ id = 789 # Integer | {{{tipo_endereco_resource_consultar_param_id}}}
 
 begin
   #{{{tipo_endereco_resource_consultar}}}
-  result = api_instance.consultar_using_get42(id)
+  result = api_instance.consultar_using_get43(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get42: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get43: #{e}"
 end
 ```
 
@@ -882,8 +882,8 @@ No authorization required
 
 
 
-# **consultar_using_get43**
-> TipoOperacaoResponse consultar_using_get43(id_cartao, id_estabelecimento, codigo_processamento)
+# **consultar_using_get44**
+> TipoOperacaoResponse consultar_using_get44(id_cartao, id_estabelecimento, codigo_processamento)
 
 {{{tipo_operacao_resource_consultar}}}
 
@@ -906,10 +906,10 @@ codigo_processamento = "codigo_processamento_example" # String | {{{tipo_operaca
 
 begin
   #{{{tipo_operacao_resource_consultar}}}
-  result = api_instance.consultar_using_get43(id_cartao, id_estabelecimento, codigo_processamento)
+  result = api_instance.consultar_using_get44(id_cartao, id_estabelecimento, codigo_processamento)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get43: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get44: #{e}"
 end
 ```
 
@@ -938,8 +938,8 @@ No authorization required
 
 
 
-# **consultar_using_get45**
-> TipoTelefoneResponse consultar_using_get45(id)
+# **consultar_using_get46**
+> TipoTelefoneResponse consultar_using_get46(id)
 
 {{{tipo_telefone_resource_consultar}}}
 
@@ -958,10 +958,10 @@ id = 789 # Integer | {{{tipo_telefone_resource_consultar_param_id}}}
 
 begin
   #{{{tipo_telefone_resource_consultar}}}
-  result = api_instance.consultar_using_get45(id)
+  result = api_instance.consultar_using_get46(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get45: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get46: #{e}"
 end
 ```
 
@@ -988,8 +988,8 @@ No authorization required
 
 
 
-# **consultar_using_get5**
-> AtendimentoClienteResponse consultar_using_get5(id)
+# **consultar_using_get6**
+> AtendimentoClienteResponse consultar_using_get6(id)
 
 {{{atendimento_cliente_resource_consultar}}}
 
@@ -1008,10 +1008,10 @@ id = 789 # Integer | {{{atendimento_cliente_resource_consultar_param_id_atendime
 
 begin
   #{{{atendimento_cliente_resource_consultar}}}
-  result = api_instance.consultar_using_get5(id)
+  result = api_instance.consultar_using_get6(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get5: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get6: #{e}"
 end
 ```
 
@@ -1038,8 +1038,8 @@ No authorization required
 
 
 
-# **consultar_using_get7**
-> BancoResponse consultar_using_get7(id)
+# **consultar_using_get8**
+> BancoResponse consultar_using_get8(id)
 
 {{{banco_resource_consultar}}}
 
@@ -1058,10 +1058,10 @@ id = 789 # Integer | {{{banco_resource_consultar_param_id}}}
 
 begin
   #{{{banco_resource_consultar}}}
-  result = api_instance.consultar_using_get7(id)
+  result = api_instance.consultar_using_get8(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get7: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get8: #{e}"
 end
 ```
 

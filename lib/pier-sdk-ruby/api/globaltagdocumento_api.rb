@@ -189,8 +189,8 @@ module Pier
     # @param id {{{documento_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [DocumentoDetalhadoResponse]
-    def consultar_using_get16(id, opts = {})
-      data, _status_code, _headers = consultar_using_get16_with_http_info(id, opts)
+    def consultar_using_get17(id, opts = {})
+      data, _status_code, _headers = consultar_using_get17_with_http_info(id, opts)
       return data
     end
 
@@ -199,14 +199,14 @@ module Pier
     # @param id {{{documento_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [Array<(DocumentoDetalhadoResponse, Fixnum, Hash)>] DocumentoDetalhadoResponse data, response status code and response headers
-    def consultar_using_get16_with_http_info(id, opts = {})
+    def consultar_using_get17_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagdocumentoApi.consultar_using_get16 ..."
+        @api_client.config.logger.debug "Calling API: GlobaltagdocumentoApi.consultar_using_get17 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagdocumentoApi.consultar_using_get16" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagdocumentoApi.consultar_using_get17" if id.nil?
       
       
       
@@ -244,7 +244,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'DocumentoDetalhadoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagdocumentoApi#consultar_using_get16\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltagdocumentoApi#consultar_using_get17\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -255,8 +255,8 @@ module Pier
     # @param id {{{documento_template_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [DocumentoTemplateResponse]
-    def consultar_using_get17(id, opts = {})
-      data, _status_code, _headers = consultar_using_get17_with_http_info(id, opts)
+    def consultar_using_get18(id, opts = {})
+      data, _status_code, _headers = consultar_using_get18_with_http_info(id, opts)
       return data
     end
 
@@ -265,14 +265,14 @@ module Pier
     # @param id {{{documento_template_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [Array<(DocumentoTemplateResponse, Fixnum, Hash)>] DocumentoTemplateResponse data, response status code and response headers
-    def consultar_using_get17_with_http_info(id, opts = {})
+    def consultar_using_get18_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagdocumentoApi.consultar_using_get17 ..."
+        @api_client.config.logger.debug "Calling API: GlobaltagdocumentoApi.consultar_using_get18 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagdocumentoApi.consultar_using_get17" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagdocumentoApi.consultar_using_get18" if id.nil?
       
       
       
@@ -310,7 +310,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'DocumentoTemplateResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagdocumentoApi#consultar_using_get17\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltagdocumentoApi#consultar_using_get18\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -321,8 +321,8 @@ module Pier
     # @param id {{{tipo_template_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [TipoTemplateResponse]
-    def consultar_using_get46(id, opts = {})
-      data, _status_code, _headers = consultar_using_get46_with_http_info(id, opts)
+    def consultar_using_get47(id, opts = {})
+      data, _status_code, _headers = consultar_using_get47_with_http_info(id, opts)
       return data
     end
 
@@ -331,14 +331,14 @@ module Pier
     # @param id {{{tipo_template_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [Array<(TipoTemplateResponse, Fixnum, Hash)>] TipoTemplateResponse data, response status code and response headers
-    def consultar_using_get46_with_http_info(id, opts = {})
+    def consultar_using_get47_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagdocumentoApi.consultar_using_get46 ..."
+        @api_client.config.logger.debug "Calling API: GlobaltagdocumentoApi.consultar_using_get47 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagdocumentoApi.consultar_using_get46" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagdocumentoApi.consultar_using_get47" if id.nil?
       
       
       
@@ -376,7 +376,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TipoTemplateResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagdocumentoApi#consultar_using_get46\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltagdocumentoApi#consultar_using_get47\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

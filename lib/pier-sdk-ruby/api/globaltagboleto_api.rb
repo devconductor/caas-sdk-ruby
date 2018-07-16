@@ -37,8 +37,8 @@ module Pier
     # @param id {{{boleto_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [BoletoResponse]
-    def consultar_using_get33(id, opts = {})
-      data, _status_code, _headers = consultar_using_get33_with_http_info(id, opts)
+    def consultar_using_get34(id, opts = {})
+      data, _status_code, _headers = consultar_using_get34_with_http_info(id, opts)
       return data
     end
 
@@ -47,14 +47,14 @@ module Pier
     # @param id {{{boleto_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [Array<(BoletoResponse, Fixnum, Hash)>] BoletoResponse data, response status code and response headers
-    def consultar_using_get33_with_http_info(id, opts = {})
+    def consultar_using_get34_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagboletoApi.consultar_using_get33 ..."
+        @api_client.config.logger.debug "Calling API: GlobaltagboletoApi.consultar_using_get34 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagboletoApi.consultar_using_get33" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagboletoApi.consultar_using_get34" if id.nil?
       
       
       
@@ -92,7 +92,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'BoletoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagboletoApi#consultar_using_get33\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltagboletoApi#consultar_using_get34\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

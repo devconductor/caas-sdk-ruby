@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultar_estagio_cartao_using_get**](GlobaltagstatusparametroApi.md#consultar_estagio_cartao_using_get) | **GET** /api/estagios-cartoes/{id} | {{{estagio_cartao_resource_consultar_estagio_cartao}}}
 [**consultar_status_cartao_using_get**](GlobaltagstatusparametroApi.md#consultar_status_cartao_using_get) | **GET** /api/status-cartoes/{id} | {{{status_cartao_resource_consultar_status_cartao}}}
-[**consultar_using_get35**](GlobaltagstatusparametroApi.md#consultar_using_get35) | **GET** /api/status-contas/{id} | {{{status_conta_resource_consultar}}}
-[**consultar_using_get36**](GlobaltagstatusparametroApi.md#consultar_using_get36) | **GET** /api/status-impressoes/{id} | {{{status_impressao_resource_consultar}}}
+[**consultar_using_get36**](GlobaltagstatusparametroApi.md#consultar_using_get36) | **GET** /api/status-contas/{id} | {{{status_conta_resource_consultar}}}
+[**consultar_using_get37**](GlobaltagstatusparametroApi.md#consultar_using_get37) | **GET** /api/status-impressoes/{id} | {{{status_impressao_resource_consultar}}}
 [**listar_estagios_cartoes_using_get**](GlobaltagstatusparametroApi.md#listar_estagios_cartoes_using_get) | **GET** /api/estagios-cartoes | {{{estagio_cartao_resource_listar_estagios_cartoes}}}
 [**listar_status_cartoes_using_get**](GlobaltagstatusparametroApi.md#listar_status_cartoes_using_get) | **GET** /api/status-cartoes | {{{status_cartao_resource_listar_status_cartoes}}}
 [**listar_tipos_eventos_transacoes_using_get**](GlobaltagstatusparametroApi.md#listar_tipos_eventos_transacoes_using_get) | **GET** /api/tipos-eventos-transacoes | {{{enum_resource_listar_tipos_eventos_transacoes}}}
@@ -117,8 +117,8 @@ No authorization required
 
 
 
-# **consultar_using_get35**
-> StatusContaResponse consultar_using_get35(id)
+# **consultar_using_get36**
+> StatusContaResponse consultar_using_get36(id)
 
 {{{status_conta_resource_consultar}}}
 
@@ -137,10 +137,10 @@ id = 789 # Integer | {{{status_conta_resource_consultar_param_id}}}
 
 begin
   #{{{status_conta_resource_consultar}}}
-  result = api_instance.consultar_using_get35(id)
+  result = api_instance.consultar_using_get36(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagstatusparametroApi->consultar_using_get35: #{e}"
+  puts "Exception when calling GlobaltagstatusparametroApi->consultar_using_get36: #{e}"
 end
 ```
 
@@ -167,8 +167,8 @@ No authorization required
 
 
 
-# **consultar_using_get36**
-> StatusImpressaoResponse consultar_using_get36(id)
+# **consultar_using_get37**
+> StatusImpressaoResponse consultar_using_get37(id)
 
 {{{status_impressao_resource_consultar}}}
 
@@ -187,10 +187,10 @@ id = 789 # Integer | {{{status_impressao_resource_consultar_param_id}}}
 
 begin
   #{{{status_impressao_resource_consultar}}}
-  result = api_instance.consultar_using_get36(id)
+  result = api_instance.consultar_using_get37(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagstatusparametroApi->consultar_using_get36: #{e}"
+  puts "Exception when calling GlobaltagstatusparametroApi->consultar_using_get37: #{e}"
 end
 ```
 

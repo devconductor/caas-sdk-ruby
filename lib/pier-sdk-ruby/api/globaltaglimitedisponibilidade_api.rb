@@ -221,8 +221,8 @@ module Pier
     # @param id_conta {{{limite_disponibilidade_resource_consultar_param_id_conta}}}
     # @param [Hash] opts the optional parameters
     # @return [LimiteDisponibilidadeResponse]
-    def consultar_using_get22(id_conta, opts = {})
-      data, _status_code, _headers = consultar_using_get22_with_http_info(id_conta, opts)
+    def consultar_using_get23(id_conta, opts = {})
+      data, _status_code, _headers = consultar_using_get23_with_http_info(id_conta, opts)
       return data
     end
 
@@ -231,14 +231,14 @@ module Pier
     # @param id_conta {{{limite_disponibilidade_resource_consultar_param_id_conta}}}
     # @param [Hash] opts the optional parameters
     # @return [Array<(LimiteDisponibilidadeResponse, Fixnum, Hash)>] LimiteDisponibilidadeResponse data, response status code and response headers
-    def consultar_using_get22_with_http_info(id_conta, opts = {})
+    def consultar_using_get23_with_http_info(id_conta, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltaglimitedisponibilidadeApi.consultar_using_get22 ..."
+        @api_client.config.logger.debug "Calling API: GlobaltaglimitedisponibilidadeApi.consultar_using_get23 ..."
       end
       
       
       # verify the required parameter 'id_conta' is set
-      fail ArgumentError, "Missing the required parameter 'id_conta' when calling GlobaltaglimitedisponibilidadeApi.consultar_using_get22" if id_conta.nil?
+      fail ArgumentError, "Missing the required parameter 'id_conta' when calling GlobaltaglimitedisponibilidadeApi.consultar_using_get23" if id_conta.nil?
       
       
       
@@ -277,7 +277,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'LimiteDisponibilidadeResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltaglimitedisponibilidadeApi#consultar_using_get22\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltaglimitedisponibilidadeApi#consultar_using_get23\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -241,5 +241,16 @@ describe 'TransacaoCorrenteResponse' do
   end
 
 
+  describe 'test attribute "tipo_transacao"' do
+    it 'should work' do
+       # assertion here
+       # should be_a()
+       # should be_nil
+       # should ==
+       # should_not ==
+    end
+  end
+
+
 end
 

@@ -43,13 +43,13 @@ describe 'GlobaltagparametroemissorApi' do
   end
 
 
-  # unit tests for consultar_using_get26
+  # unit tests for consultar_using_get27
   # {{{parametro_emissor_recurso}}}
   # {{{parametro_emissor_recurso_notas}}}
   # @param codigo {{{parametro_emissor_recurso_pesquisa_codigo_param}}}
   # @param [Hash] opts the optional parameters
   # @return [ParametroEmissorResponse]
-  describe 'consultar_using_get26 test' do
+  describe 'consultar_using_get27 test' do
     it "should work" do
       # assertion here
       # should be_a()

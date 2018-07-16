@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_using_get4**](GlobaltagarquivoApi.md#consultar_using_get4) | **GET** /api/arquivos/{id} | {{{arquivo_resource_consultar}}}
+[**consultar_using_get5**](GlobaltagarquivoApi.md#consultar_using_get5) | **GET** /api/arquivos/{id} | {{{arquivo_resource_consultar}}}
 [**integrar_using_post**](GlobaltagarquivoApi.md#integrar_using_post) | **POST** /api/arquivos/integrar | {{{arquivo_resource_integrar}}}
 [**listar_por_numero_receita_federal_using_get**](GlobaltagarquivoApi.md#listar_por_numero_receita_federal_using_get) | **GET** /api/arquivos-auditorias | {{{arquivo_a_u_d_resource_listar_por_numero_receita_federal}}}
 [**listar_status_arquivos_using_get**](GlobaltagarquivoApi.md#listar_status_arquivos_using_get) | **GET** /api/status-arquivos | {{{arquivo_resource_listar_status_arquivos}}}
@@ -16,8 +16,8 @@ Method | HTTP request | Description
 
 
 
-# **consultar_using_get4**
-> ArquivoDetalheResponse consultar_using_get4(id)
+# **consultar_using_get5**
+> ArquivoDetalheResponse consultar_using_get5(id)
 
 {{{arquivo_resource_consultar}}}
 
@@ -36,10 +36,10 @@ id = 789 # Integer | {{{arquivo_resource_consultar_param_id}}}
 
 begin
   #{{{arquivo_resource_consultar}}}
-  result = api_instance.consultar_using_get4(id)
+  result = api_instance.consultar_using_get5(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagarquivoApi->consultar_using_get4: #{e}"
+  puts "Exception when calling GlobaltagarquivoApi->consultar_using_get5: #{e}"
 end
 ```
 

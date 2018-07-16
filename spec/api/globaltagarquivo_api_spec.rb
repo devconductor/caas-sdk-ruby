@@ -43,13 +43,13 @@ describe 'GlobaltagarquivoApi' do
   end
 
 
-  # unit tests for consultar_using_get4
+  # unit tests for consultar_using_get5
   # {{{arquivo_resource_consultar}}}
   # {{{arquivo_resource_consultar_notes}}}
   # @param id {{{arquivo_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
   # @return [ArquivoDetalheResponse]
-  describe 'consultar_using_get4 test' do
+  describe 'consultar_using_get5 test' do
     it "should work" do
       # assertion here
       # should be_a()

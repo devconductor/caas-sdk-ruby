@@ -12,12 +12,12 @@ Method | HTTP request | Description
 [**atribuir_assinatura_cliente_using_post**](GlobaltagcadastroclienteApi.md#atribuir_assinatura_cliente_using_post) | **POST** /api/contas/{id}/atribuir-assinatura-cliente | {{{conta_pessoa_resource_atribuir_assinatura_cliente}}}
 [**atualizar_endereco_de_correspondencia_using_put**](GlobaltagcadastroclienteApi.md#atualizar_endereco_de_correspondencia_using_put) | **PUT** /api/enderecos/{id}/alterar-endereco-correspondencia | {{{endereco_resource_atualizar_correspondencia}}}
 [**atualizar_using_post**](GlobaltagcadastroclienteApi.md#atualizar_using_post) | **POST** /api/contas/{id}/atualizar-registro-integracao | {{{integracao_emissor_resource_atualizar}}}
-[**cadastrar_using_post**](GlobaltagcadastroclienteApi.md#cadastrar_using_post) | **POST** /api/contas/{id}/cadastrar-adicional | {{{adicional_resource_cadastrar}}}
-[**consultar_using_get1**](GlobaltagcadastroclienteApi.md#consultar_using_get1) | **GET** /api/contas/{id}/adicionais/{idPessoa} | {{{adicional_resource_consultar}}}
-[**consultar_using_get18**](GlobaltagcadastroclienteApi.md#consultar_using_get18) | **GET** /api/enderecos/{id} | {{{endereco_resource_consultar}}}
-[**consultar_using_get29**](GlobaltagcadastroclienteApi.md#consultar_using_get29) | **GET** /api/pessoas-detalhes/{id} | {{{pessoa_detalhe_resource_consultar}}}
-[**consultar_using_get30**](GlobaltagcadastroclienteApi.md#consultar_using_get30) | **GET** /api/pessoas/{id} | {{{pessoa_resource_consultar}}}
-[**consultar_using_get38**](GlobaltagcadastroclienteApi.md#consultar_using_get38) | **GET** /api/telefones/{id} | {{{telefone_resource_consultar}}}
+[**cadastrar_using_post1**](GlobaltagcadastroclienteApi.md#cadastrar_using_post1) | **POST** /api/contas/{id}/cadastrar-adicional | {{{adicional_resource_cadastrar}}}
+[**consultar_using_get19**](GlobaltagcadastroclienteApi.md#consultar_using_get19) | **GET** /api/enderecos/{id} | {{{endereco_resource_consultar}}}
+[**consultar_using_get2**](GlobaltagcadastroclienteApi.md#consultar_using_get2) | **GET** /api/contas/{id}/adicionais/{idPessoa} | {{{adicional_resource_consultar}}}
+[**consultar_using_get30**](GlobaltagcadastroclienteApi.md#consultar_using_get30) | **GET** /api/pessoas-detalhes/{id} | {{{pessoa_detalhe_resource_consultar}}}
+[**consultar_using_get31**](GlobaltagcadastroclienteApi.md#consultar_using_get31) | **GET** /api/pessoas/{id} | {{{pessoa_resource_consultar}}}
+[**consultar_using_get39**](GlobaltagcadastroclienteApi.md#consultar_using_get39) | **GET** /api/telefones/{id} | {{{telefone_resource_consultar}}}
 [**inativar_using_post**](GlobaltagcadastroclienteApi.md#inativar_using_post) | **POST** /api/contas/{id}/adicionais/{idPessoa}/inativar | {{{adicional_resource_inativar}}}
 [**listar_socios_using_get**](GlobaltagcadastroclienteApi.md#listar_socios_using_get) | **GET** /api/clientes-pessoas-juridicas/{id}/socios | {{{conta_pessoa_resource_listar_socios}}}
 [**listar_using_get1**](GlobaltagcadastroclienteApi.md#listar_using_get1) | **GET** /api/contas/{id}/adicionais | {{{adicional_resource_listar}}}
@@ -533,8 +533,8 @@ No authorization required
 
 
 
-# **cadastrar_using_post**
-> AdicionalDetalheResponse cadastrar_using_post(id, persist)
+# **cadastrar_using_post1**
+> AdicionalDetalheResponse cadastrar_using_post1(id, persist)
 
 {{{adicional_resource_cadastrar}}}
 
@@ -555,10 +555,10 @@ persist = Pier::AdicionalPersist.new # AdicionalPersist | persist
 
 begin
   #{{{adicional_resource_cadastrar}}}
-  result = api_instance.cadastrar_using_post(id, persist)
+  result = api_instance.cadastrar_using_post1(id, persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastroclienteApi->cadastrar_using_post: #{e}"
+  puts "Exception when calling GlobaltagcadastroclienteApi->cadastrar_using_post1: #{e}"
 end
 ```
 
@@ -586,8 +586,58 @@ No authorization required
 
 
 
-# **consultar_using_get1**
-> AdicionalDetalheResponse consultar_using_get1(id, id_pessoa)
+# **consultar_using_get19**
+> EnderecoResponse consultar_using_get19(id)
+
+{{{endereco_resource_consultar}}}
+
+{{{endereco_resource_consultar_notes}}}
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::GlobaltagcadastroclienteApi.new
+
+id = 789 # Integer | {{{endereco_resource_consultar_param_id}}}
+
+
+begin
+  #{{{endereco_resource_consultar}}}
+  result = api_instance.consultar_using_get19(id)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling GlobaltagcadastroclienteApi->consultar_using_get19: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| {{{endereco_resource_consultar_param_id}}} | 
+
+
+### Return type
+
+[**EnderecoResponse**](EnderecoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **consultar_using_get2**
+> AdicionalDetalheResponse consultar_using_get2(id, id_pessoa)
 
 {{{adicional_resource_consultar}}}
 
@@ -608,10 +658,10 @@ id_pessoa = 789 # Integer | {{{adicional_resource_consultar_param_id_pessoa}}}
 
 begin
   #{{{adicional_resource_consultar}}}
-  result = api_instance.consultar_using_get1(id, id_pessoa)
+  result = api_instance.consultar_using_get2(id, id_pessoa)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastroclienteApi->consultar_using_get1: #{e}"
+  puts "Exception when calling GlobaltagcadastroclienteApi->consultar_using_get2: #{e}"
 end
 ```
 
@@ -639,58 +689,8 @@ No authorization required
 
 
 
-# **consultar_using_get18**
-> EnderecoResponse consultar_using_get18(id)
-
-{{{endereco_resource_consultar}}}
-
-{{{endereco_resource_consultar_notes}}}
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::GlobaltagcadastroclienteApi.new
-
-id = 789 # Integer | {{{endereco_resource_consultar_param_id}}}
-
-
-begin
-  #{{{endereco_resource_consultar}}}
-  result = api_instance.consultar_using_get18(id)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastroclienteApi->consultar_using_get18: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| {{{endereco_resource_consultar_param_id}}} | 
-
-
-### Return type
-
-[**EnderecoResponse**](EnderecoResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **consultar_using_get29**
-> PessoaDetalheResponse consultar_using_get29(id)
+# **consultar_using_get30**
+> PessoaDetalheResponse consultar_using_get30(id)
 
 {{{pessoa_detalhe_resource_consultar}}}
 
@@ -709,10 +709,10 @@ id = 789 # Integer | {{{pessoa_detalhe_resource_consultar_param_id}}}
 
 begin
   #{{{pessoa_detalhe_resource_consultar}}}
-  result = api_instance.consultar_using_get29(id)
+  result = api_instance.consultar_using_get30(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastroclienteApi->consultar_using_get29: #{e}"
+  puts "Exception when calling GlobaltagcadastroclienteApi->consultar_using_get30: #{e}"
 end
 ```
 
@@ -739,8 +739,8 @@ No authorization required
 
 
 
-# **consultar_using_get30**
-> PessoaResponse consultar_using_get30(id)
+# **consultar_using_get31**
+> PessoaResponse consultar_using_get31(id)
 
 {{{pessoa_resource_consultar}}}
 
@@ -759,10 +759,10 @@ id = 789 # Integer | {{{pessoa_resource_consultar_param_id}}}
 
 begin
   #{{{pessoa_resource_consultar}}}
-  result = api_instance.consultar_using_get30(id)
+  result = api_instance.consultar_using_get31(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastroclienteApi->consultar_using_get30: #{e}"
+  puts "Exception when calling GlobaltagcadastroclienteApi->consultar_using_get31: #{e}"
 end
 ```
 
@@ -789,8 +789,8 @@ No authorization required
 
 
 
-# **consultar_using_get38**
-> TelefoneResponse consultar_using_get38(id)
+# **consultar_using_get39**
+> TelefoneResponse consultar_using_get39(id)
 
 {{{telefone_resource_consultar}}}
 
@@ -809,10 +809,10 @@ id = 789 # Integer | {{{telefone_resource_consultar_param_id}}}
 
 begin
   #{{{telefone_resource_consultar}}}
-  result = api_instance.consultar_using_get38(id)
+  result = api_instance.consultar_using_get39(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastroclienteApi->consultar_using_get38: #{e}"
+  puts "Exception when calling GlobaltagcadastroclienteApi->consultar_using_get39: #{e}"
 end
 ```
 

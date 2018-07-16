@@ -32,6 +32,82 @@ module Pier
     end
 
 
+    # {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas}}}
+    # {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas_notes}}}
+    # @param id {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}
+    # @param update update
+    # @param [Hash] opts the optional parameters
+    # @return [TaxaJurosContaResponse]
+    def atualizar_taxas_juros_contas_using_put(id, update, opts = {})
+      data, _status_code, _headers = atualizar_taxas_juros_contas_using_put_with_http_info(id, update, opts)
+      return data
+    end
+
+    # {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas}}}
+    # {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas_notes}}}
+    # @param id {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}
+    # @param update update
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(TaxaJurosContaResponse, Fixnum, Hash)>] TaxaJurosContaResponse data, response status code and response headers
+    def atualizar_taxas_juros_contas_using_put_with_http_info(id, update, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: GlobaltagtransferenciabancariaApi.atualizar_taxas_juros_contas_using_put ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagtransferenciabancariaApi.atualizar_taxas_juros_contas_using_put" if id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'update' is set
+      fail ArgumentError, "Missing the required parameter 'update' when calling GlobaltagtransferenciabancariaApi.atualizar_taxas_juros_contas_using_put" if update.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/taxas-transferencias".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(update)
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TaxaJurosContaResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: GlobaltagtransferenciabancariaApi#atualizar_taxas_juros_contas_using_put\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # {{{conta_bancaria_resource_atualizar}}}
     # {{{conta_bancaria_resource_atualizar_notes}}}
     # @param id {{{conta_bancaria_resource_atualizar_param_id}}}
@@ -240,6 +316,83 @@ module Pier
     end
 
 
+    # {{{transferencia_bancaria_resource_consultar_taxas_juros_contas}}}
+    # {{{transferencia_bancaria_resource_consultar_taxas_juros_contas_notes}}}
+    # @param id {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}
+    # @param numero_meses_carencia numeroMesesCarencia
+    # @param [Hash] opts the optional parameters
+    # @return [TaxaJurosContaResponse]
+    def consultar_taxas_juros_contas_using_get(id, numero_meses_carencia, opts = {})
+      data, _status_code, _headers = consultar_taxas_juros_contas_using_get_with_http_info(id, numero_meses_carencia, opts)
+      return data
+    end
+
+    # {{{transferencia_bancaria_resource_consultar_taxas_juros_contas}}}
+    # {{{transferencia_bancaria_resource_consultar_taxas_juros_contas_notes}}}
+    # @param id {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}
+    # @param numero_meses_carencia numeroMesesCarencia
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(TaxaJurosContaResponse, Fixnum, Hash)>] TaxaJurosContaResponse data, response status code and response headers
+    def consultar_taxas_juros_contas_using_get_with_http_info(id, numero_meses_carencia, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: GlobaltagtransferenciabancariaApi.consultar_taxas_juros_contas_using_get ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagtransferenciabancariaApi.consultar_taxas_juros_contas_using_get" if id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'numero_meses_carencia' is set
+      fail ArgumentError, "Missing the required parameter 'numero_meses_carencia' when calling GlobaltagtransferenciabancariaApi.consultar_taxas_juros_contas_using_get" if numero_meses_carencia.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/taxas-transferencias".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'numeroMesesCarencia'] = numero_meses_carencia
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TaxaJurosContaResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: GlobaltagtransferenciabancariaApi#consultar_taxas_juros_contas_using_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
     # {{{transferencia_bancaria_resource_consultar_transferencia_bancaria}}}
     # {{{transferencia_bancaria_resource_consultar_transferencia_bancaria_notes}}}
     # @param id_transferencia {{{transferencia_bancaria_resource_consultar_transferencia_bancaria_param_id_transferencia}}}
@@ -311,8 +464,8 @@ module Pier
     # @param id {{{conta_bancaria_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [ContaBancariaPortadorResponse]
-    def consultar_using_get12(id, opts = {})
-      data, _status_code, _headers = consultar_using_get12_with_http_info(id, opts)
+    def consultar_using_get13(id, opts = {})
+      data, _status_code, _headers = consultar_using_get13_with_http_info(id, opts)
       return data
     end
 
@@ -321,14 +474,14 @@ module Pier
     # @param id {{{conta_bancaria_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [Array<(ContaBancariaPortadorResponse, Fixnum, Hash)>] ContaBancariaPortadorResponse data, response status code and response headers
-    def consultar_using_get12_with_http_info(id, opts = {})
+    def consultar_using_get13_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagtransferenciabancariaApi.consultar_using_get12 ..."
+        @api_client.config.logger.debug "Calling API: GlobaltagtransferenciabancariaApi.consultar_using_get13 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagtransferenciabancariaApi.consultar_using_get12" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagtransferenciabancariaApi.consultar_using_get13" if id.nil?
       
       
       
@@ -366,7 +519,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'ContaBancariaPortadorResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagtransferenciabancariaApi#consultar_using_get12\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltagtransferenciabancariaApi#consultar_using_get13\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -379,8 +532,8 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :id_conta_bancaria_destino {{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}}
     # @return [TransferenciaBancariaResponse]
-    def consultar_using_get47(id, id_transferencia, opts = {})
-      data, _status_code, _headers = consultar_using_get47_with_http_info(id, id_transferencia, opts)
+    def consultar_using_get48(id, id_transferencia, opts = {})
+      data, _status_code, _headers = consultar_using_get48_with_http_info(id, id_transferencia, opts)
       return data
     end
 
@@ -391,14 +544,14 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :id_conta_bancaria_destino {{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}}
     # @return [Array<(TransferenciaBancariaResponse, Fixnum, Hash)>] TransferenciaBancariaResponse data, response status code and response headers
-    def consultar_using_get47_with_http_info(id, id_transferencia, opts = {})
+    def consultar_using_get48_with_http_info(id, id_transferencia, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagtransferenciabancariaApi.consultar_using_get47 ..."
+        @api_client.config.logger.debug "Calling API: GlobaltagtransferenciabancariaApi.consultar_using_get48 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagtransferenciabancariaApi.consultar_using_get47" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagtransferenciabancariaApi.consultar_using_get48" if id.nil?
       
       
       
@@ -406,7 +559,7 @@ module Pier
       
       
       # verify the required parameter 'id_transferencia' is set
-      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling GlobaltagtransferenciabancariaApi.consultar_using_get47" if id_transferencia.nil?
+      fail ArgumentError, "Missing the required parameter 'id_transferencia' when calling GlobaltagtransferenciabancariaApi.consultar_using_get48" if id_transferencia.nil?
       
       
       
@@ -451,7 +604,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'TransferenciaBancariaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagtransferenciabancariaApi#consultar_using_get47\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltagtransferenciabancariaApi#consultar_using_get48\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -846,6 +999,82 @@ module Pier
         :return_type => 'PageTransferenciaBancariaResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: GlobaltagtransferenciabancariaApi#listar_using_get59\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+
+    # {{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}}
+    # {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_notes}}}
+    # @param id {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}
+    # @param persist persist
+    # @param [Hash] opts the optional parameters
+    # @return [TaxaJurosContaResponse]
+    def salvar_taxas_juros_contas_using_post(id, persist, opts = {})
+      data, _status_code, _headers = salvar_taxas_juros_contas_using_post_with_http_info(id, persist, opts)
+      return data
+    end
+
+    # {{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}}
+    # {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_notes}}}
+    # @param id {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}
+    # @param persist persist
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(TaxaJurosContaResponse, Fixnum, Hash)>] TaxaJurosContaResponse data, response status code and response headers
+    def salvar_taxas_juros_contas_using_post_with_http_info(id, persist, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: GlobaltagtransferenciabancariaApi.salvar_taxas_juros_contas_using_post ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagtransferenciabancariaApi.salvar_taxas_juros_contas_using_post" if id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'persist' is set
+      fail ArgumentError, "Missing the required parameter 'persist' when calling GlobaltagtransferenciabancariaApi.salvar_taxas_juros_contas_using_post" if persist.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/contas/{id}/taxas-transferencias".sub('{format}','json').sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(persist)
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TaxaJurosContaResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: GlobaltagtransferenciabancariaApi#salvar_taxas_juros_contas_using_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

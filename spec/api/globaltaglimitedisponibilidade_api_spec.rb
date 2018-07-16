@@ -73,13 +73,13 @@ describe 'GlobaltaglimitedisponibilidadeApi' do
   end
 
 
-  # unit tests for consultar_using_get22
+  # unit tests for consultar_using_get23
   # {{{limite_disponibilidade_resource_consultar}}}
   # {{{limite_disponibilidade_resource_consultar_notes}}}
   # @param id_conta {{{limite_disponibilidade_resource_consultar_param_id_conta}}}
   # @param [Hash] opts the optional parameters
   # @return [LimiteDisponibilidadeResponse]
-  describe 'consultar_using_get22 test' do
+  describe 'consultar_using_get23 test' do
     it "should work" do
       # assertion here
       # should be_a()

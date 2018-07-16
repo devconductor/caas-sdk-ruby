@@ -289,8 +289,8 @@ module Pier
     # @param id {{{cartao_pay_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [CartaoPayDetalheResponse]
-    def consultar_using_get8(device_id, id, opts = {})
-      data, _status_code, _headers = consultar_using_get8_with_http_info(device_id, id, opts)
+    def consultar_using_get9(device_id, id, opts = {})
+      data, _status_code, _headers = consultar_using_get9_with_http_info(device_id, id, opts)
       return data
     end
 
@@ -300,14 +300,14 @@ module Pier
     # @param id {{{cartao_pay_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [Array<(CartaoPayDetalheResponse, Fixnum, Hash)>] CartaoPayDetalheResponse data, response status code and response headers
-    def consultar_using_get8_with_http_info(device_id, id, opts = {})
+    def consultar_using_get9_with_http_info(device_id, id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagpayApi.consultar_using_get8 ..."
+        @api_client.config.logger.debug "Calling API: GlobaltagpayApi.consultar_using_get9 ..."
       end
       
       
       # verify the required parameter 'device_id' is set
-      fail ArgumentError, "Missing the required parameter 'device_id' when calling GlobaltagpayApi.consultar_using_get8" if device_id.nil?
+      fail ArgumentError, "Missing the required parameter 'device_id' when calling GlobaltagpayApi.consultar_using_get9" if device_id.nil?
       
       
       
@@ -315,7 +315,7 @@ module Pier
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagpayApi.consultar_using_get8" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagpayApi.consultar_using_get9" if id.nil?
       
       
       
@@ -354,7 +354,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'CartaoPayDetalheResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagpayApi#consultar_using_get8\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltagpayApi#consultar_using_get9\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

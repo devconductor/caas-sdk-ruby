@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**atualizar_chave_using_post**](GlobaltagpayApi.md#atualizar_chave_using_post) | **POST** /api/cartoes-tokenizados/{id}/atualizar-chave | {{{cartao_pay_resource_atualizar_chave}}}
 [**atualizar_using_put**](GlobaltagpayApi.md#atualizar_using_put) | **PUT** /api/cartoes-tokenizados/{id} | {{{cartao_pay_resource_atualizar}}}
 [**confirma_atualizacao_chave_using_post**](GlobaltagpayApi.md#confirma_atualizacao_chave_using_post) | **POST** /api/cartoes-tokenizados/{id}/confirmar-chave | {{{cartao_pay_resource_confirma_atualizacao_chave}}}
-[**consultar_using_get8**](GlobaltagpayApi.md#consultar_using_get8) | **GET** /api/cartoes-tokenizados/{id} | {{{cartao_pay_resource_consultar}}}
+[**consultar_using_get9**](GlobaltagpayApi.md#consultar_using_get9) | **GET** /api/cartoes-tokenizados/{id} | {{{cartao_pay_resource_consultar}}}
 [**listar_codigos_resposta_using_get**](GlobaltagpayApi.md#listar_codigos_resposta_using_get) | **GET** /api/codigos-resposta | {{{enum_pay_resource_listar_codigos_resposta}}}
 [**listar_modos_entrada_using_get**](GlobaltagpayApi.md#listar_modos_entrada_using_get) | **GET** /api/modos-entrada | {{{enum_pay_resource_listar_modos_entrada}}}
 [**listar_operacoes_using_get**](GlobaltagpayApi.md#listar_operacoes_using_get) | **GET** /api/operacoes | {{{enum_pay_resource_listar_operacoes}}}
@@ -184,8 +184,8 @@ No authorization required
 
 
 
-# **consultar_using_get8**
-> CartaoPayDetalheResponse consultar_using_get8(device_id, id)
+# **consultar_using_get9**
+> CartaoPayDetalheResponse consultar_using_get9(device_id, id)
 
 {{{cartao_pay_resource_consultar}}}
 
@@ -206,10 +206,10 @@ id = 789 # Integer | {{{cartao_pay_resource_consultar_param_id}}}
 
 begin
   #{{{cartao_pay_resource_consultar}}}
-  result = api_instance.consultar_using_get8(device_id, id)
+  result = api_instance.consultar_using_get9(device_id, id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagpayApi->consultar_using_get8: #{e}"
+  puts "Exception when calling GlobaltagpayApi->consultar_using_get9: #{e}"
 end
 ```
 

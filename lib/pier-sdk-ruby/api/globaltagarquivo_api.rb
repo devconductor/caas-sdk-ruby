@@ -37,8 +37,8 @@ module Pier
     # @param id {{{arquivo_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [ArquivoDetalheResponse]
-    def consultar_using_get4(id, opts = {})
-      data, _status_code, _headers = consultar_using_get4_with_http_info(id, opts)
+    def consultar_using_get5(id, opts = {})
+      data, _status_code, _headers = consultar_using_get5_with_http_info(id, opts)
       return data
     end
 
@@ -47,14 +47,14 @@ module Pier
     # @param id {{{arquivo_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [Array<(ArquivoDetalheResponse, Fixnum, Hash)>] ArquivoDetalheResponse data, response status code and response headers
-    def consultar_using_get4_with_http_info(id, opts = {})
+    def consultar_using_get5_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagarquivoApi.consultar_using_get4 ..."
+        @api_client.config.logger.debug "Calling API: GlobaltagarquivoApi.consultar_using_get5 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagarquivoApi.consultar_using_get4" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagarquivoApi.consultar_using_get5" if id.nil?
       
       
       
@@ -92,7 +92,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'ArquivoDetalheResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagarquivoApi#consultar_using_get4\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltagarquivoApi#consultar_using_get5\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

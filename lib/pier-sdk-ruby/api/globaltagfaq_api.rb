@@ -283,8 +283,8 @@ module Pier
     # @param id {{{faq_resource_consultar_param_id_faq}}}
     # @param [Hash] opts the optional parameters
     # @return [FaqResponse]
-    def consultar_using_get20(id, opts = {})
-      data, _status_code, _headers = consultar_using_get20_with_http_info(id, opts)
+    def consultar_using_get21(id, opts = {})
+      data, _status_code, _headers = consultar_using_get21_with_http_info(id, opts)
       return data
     end
 
@@ -293,14 +293,14 @@ module Pier
     # @param id {{{faq_resource_consultar_param_id_faq}}}
     # @param [Hash] opts the optional parameters
     # @return [Array<(FaqResponse, Fixnum, Hash)>] FaqResponse data, response status code and response headers
-    def consultar_using_get20_with_http_info(id, opts = {})
+    def consultar_using_get21_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagfaqApi.consultar_using_get20 ..."
+        @api_client.config.logger.debug "Calling API: GlobaltagfaqApi.consultar_using_get21 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagfaqApi.consultar_using_get20" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagfaqApi.consultar_using_get21" if id.nil?
       
       
       
@@ -338,7 +338,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'FaqResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagfaqApi#consultar_using_get20\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltagfaqApi#consultar_using_get21\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

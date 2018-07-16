@@ -43,13 +43,13 @@ describe 'GlobaltagavisoviagemApi' do
   end
 
 
-  # unit tests for consultar_using_get6
+  # unit tests for consultar_using_get7
   # {{{aviso_viagem_resource_consultar}}}
   # {{{aviso_viagem_resource_consultar_notes}}}
   # @param id {{{aviso_viagem_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
   # @return [AvisoViagemResponse]
-  describe 'consultar_using_get6 test' do
+  describe 'consultar_using_get7 test' do
     it "should work" do
       # assertion here
       # should be_a()

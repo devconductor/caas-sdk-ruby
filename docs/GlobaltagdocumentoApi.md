@@ -6,9 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_using_put21**](GlobaltagdocumentoApi.md#alterar_using_put21) | **PUT** /api/tipos-templates/{id} | {{{tipo_template_resource_alterar}}}
 [**atualizar_using_put3**](GlobaltagdocumentoApi.md#atualizar_using_put3) | **PUT** /api/templates-documentos/{id} | {{{documento_template_resource_atualizar}}}
-[**consultar_using_get16**](GlobaltagdocumentoApi.md#consultar_using_get16) | **GET** /api/documentos/{id} | {{{documento_resource_consultar}}}
-[**consultar_using_get17**](GlobaltagdocumentoApi.md#consultar_using_get17) | **GET** /api/templates-documentos/{id} | {{{documento_template_resource_consultar}}}
-[**consultar_using_get46**](GlobaltagdocumentoApi.md#consultar_using_get46) | **GET** /api/tipos-templates/{id} | {{{tipo_template_resource_consultar}}}
+[**consultar_using_get17**](GlobaltagdocumentoApi.md#consultar_using_get17) | **GET** /api/documentos/{id} | {{{documento_resource_consultar}}}
+[**consultar_using_get18**](GlobaltagdocumentoApi.md#consultar_using_get18) | **GET** /api/templates-documentos/{id} | {{{documento_template_resource_consultar}}}
+[**consultar_using_get47**](GlobaltagdocumentoApi.md#consultar_using_get47) | **GET** /api/tipos-templates/{id} | {{{tipo_template_resource_consultar}}}
 [**integrar_using_post1**](GlobaltagdocumentoApi.md#integrar_using_post1) | **POST** /api/documentos/integrar | {{{documento_resource_integrar}}}
 [**listar_using_get21**](GlobaltagdocumentoApi.md#listar_using_get21) | **GET** /api/documentos | {{{documento_resource_listar}}}
 [**listar_using_get22**](GlobaltagdocumentoApi.md#listar_using_get22) | **GET** /api/templates-documentos | {{{documento_template_resource_listar}}}
@@ -126,8 +126,8 @@ No authorization required
 
 
 
-# **consultar_using_get16**
-> DocumentoDetalhadoResponse consultar_using_get16(id)
+# **consultar_using_get17**
+> DocumentoDetalhadoResponse consultar_using_get17(id)
 
 {{{documento_resource_consultar}}}
 
@@ -146,10 +146,10 @@ id = 789 # Integer | {{{documento_resource_consultar_param_id}}}
 
 begin
   #{{{documento_resource_consultar}}}
-  result = api_instance.consultar_using_get16(id)
+  result = api_instance.consultar_using_get17(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagdocumentoApi->consultar_using_get16: #{e}"
+  puts "Exception when calling GlobaltagdocumentoApi->consultar_using_get17: #{e}"
 end
 ```
 
@@ -176,8 +176,8 @@ No authorization required
 
 
 
-# **consultar_using_get17**
-> DocumentoTemplateResponse consultar_using_get17(id)
+# **consultar_using_get18**
+> DocumentoTemplateResponse consultar_using_get18(id)
 
 {{{documento_template_resource_consultar}}}
 
@@ -196,10 +196,10 @@ id = 789 # Integer | {{{documento_template_resource_consultar_param_id}}}
 
 begin
   #{{{documento_template_resource_consultar}}}
-  result = api_instance.consultar_using_get17(id)
+  result = api_instance.consultar_using_get18(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagdocumentoApi->consultar_using_get17: #{e}"
+  puts "Exception when calling GlobaltagdocumentoApi->consultar_using_get18: #{e}"
 end
 ```
 
@@ -226,8 +226,8 @@ No authorization required
 
 
 
-# **consultar_using_get46**
-> TipoTemplateResponse consultar_using_get46(id)
+# **consultar_using_get47**
+> TipoTemplateResponse consultar_using_get47(id)
 
 {{{tipo_template_resource_consultar}}}
 
@@ -246,10 +246,10 @@ id = 789 # Integer | {{{tipo_template_resource_consultar_param_id}}}
 
 begin
   #{{{tipo_template_resource_consultar}}}
-  result = api_instance.consultar_using_get46(id)
+  result = api_instance.consultar_using_get47(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagdocumentoApi->consultar_using_get46: #{e}"
+  puts "Exception when calling GlobaltagdocumentoApi->consultar_using_get47: #{e}"
 end
 ```
 

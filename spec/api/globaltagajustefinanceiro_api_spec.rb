@@ -65,13 +65,13 @@ describe 'GlobaltagajustefinanceiroApi' do
   end
 
 
-  # unit tests for consultar_using_get2
+  # unit tests for consultar_using_get3
   # {{{ajuste_financeiro_resource_consultar}}}
   # {{{ajuste_financeiro_resource_consultar_notes}}}
   # @param id {{{ajuste_financeiro_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
   # @return [AjusteFinanceiroResponse]
-  describe 'consultar_using_get2 test' do
+  describe 'consultar_using_get3 test' do
     it "should work" do
       # assertion here
       # should be_a()

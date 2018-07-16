@@ -268,14 +268,14 @@ describe 'GlobaltagcartaoApi' do
   end
 
 
-  # unit tests for consultar_using_get9
+  # unit tests for consultar_using_get10
   # {{{cartao_resource_consultar}}}
   # {{{cartao_resource_consultar_notes}}}
   # @param id {{{cartao_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
   # @option opts [String] :authorization Authorization
   # @return [CartaoDetalheResponse]
-  describe 'consultar_using_get9 test' do
+  describe 'consultar_using_get10 test' do
     it "should work" do
       # assertion here
       # should be_a()

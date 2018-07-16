@@ -169,8 +169,8 @@ module Pier
     # @param id {{{status_conta_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [StatusContaResponse]
-    def consultar_using_get35(id, opts = {})
-      data, _status_code, _headers = consultar_using_get35_with_http_info(id, opts)
+    def consultar_using_get36(id, opts = {})
+      data, _status_code, _headers = consultar_using_get36_with_http_info(id, opts)
       return data
     end
 
@@ -179,14 +179,14 @@ module Pier
     # @param id {{{status_conta_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [Array<(StatusContaResponse, Fixnum, Hash)>] StatusContaResponse data, response status code and response headers
-    def consultar_using_get35_with_http_info(id, opts = {})
+    def consultar_using_get36_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagstatusparametroApi.consultar_using_get35 ..."
+        @api_client.config.logger.debug "Calling API: GlobaltagstatusparametroApi.consultar_using_get36 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagstatusparametroApi.consultar_using_get35" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagstatusparametroApi.consultar_using_get36" if id.nil?
       
       
       
@@ -224,7 +224,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'StatusContaResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagstatusparametroApi#consultar_using_get35\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltagstatusparametroApi#consultar_using_get36\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -235,8 +235,8 @@ module Pier
     # @param id {{{status_impressao_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [StatusImpressaoResponse]
-    def consultar_using_get36(id, opts = {})
-      data, _status_code, _headers = consultar_using_get36_with_http_info(id, opts)
+    def consultar_using_get37(id, opts = {})
+      data, _status_code, _headers = consultar_using_get37_with_http_info(id, opts)
       return data
     end
 
@@ -245,14 +245,14 @@ module Pier
     # @param id {{{status_impressao_resource_consultar_param_id}}}
     # @param [Hash] opts the optional parameters
     # @return [Array<(StatusImpressaoResponse, Fixnum, Hash)>] StatusImpressaoResponse data, response status code and response headers
-    def consultar_using_get36_with_http_info(id, opts = {})
+    def consultar_using_get37_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagstatusparametroApi.consultar_using_get36 ..."
+        @api_client.config.logger.debug "Calling API: GlobaltagstatusparametroApi.consultar_using_get37 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagstatusparametroApi.consultar_using_get36" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagstatusparametroApi.consultar_using_get37" if id.nil?
       
       
       
@@ -290,7 +290,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'StatusImpressaoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagstatusparametroApi#consultar_using_get36\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltagstatusparametroApi#consultar_using_get37\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

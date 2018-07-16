@@ -1036,8 +1036,8 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [String] :authorization Authorization
     # @return [CartaoDetalheResponse]
-    def consultar_using_get9(id, opts = {})
-      data, _status_code, _headers = consultar_using_get9_with_http_info(id, opts)
+    def consultar_using_get10(id, opts = {})
+      data, _status_code, _headers = consultar_using_get10_with_http_info(id, opts)
       return data
     end
 
@@ -1047,14 +1047,14 @@ module Pier
     # @param [Hash] opts the optional parameters
     # @option opts [String] :authorization Authorization
     # @return [Array<(CartaoDetalheResponse, Fixnum, Hash)>] CartaoDetalheResponse data, response status code and response headers
-    def consultar_using_get9_with_http_info(id, opts = {})
+    def consultar_using_get10_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagcartaoApi.consultar_using_get9 ..."
+        @api_client.config.logger.debug "Calling API: GlobaltagcartaoApi.consultar_using_get10 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagcartaoApi.consultar_using_get9" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagcartaoApi.consultar_using_get10" if id.nil?
       
       
       
@@ -1099,7 +1099,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'CartaoDetalheResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagcartaoApi#consultar_using_get9\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltagcartaoApi#consultar_using_get10\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

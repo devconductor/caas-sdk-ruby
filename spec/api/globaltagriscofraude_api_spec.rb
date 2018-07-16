@@ -43,13 +43,13 @@ describe 'GlobaltagriscofraudeApi' do
   end
 
 
-  # unit tests for consultar_using_get34
+  # unit tests for consultar_using_get35
   # {{{risco_fraude_resource_consultar}}}
   # {{{risco_fraude_resource_consultar_notes}}}
   # @param id {{{risco_fraude_resource_consultar_param_id_risco_fraude}}}
   # @param [Hash] opts the optional parameters
   # @return [RiscoFraudeDetalhadoResponse]
-  describe 'consultar_using_get34 test' do
+  describe 'consultar_using_get35 test' do
     it "should work" do
       # assertion here
       # should be_a()

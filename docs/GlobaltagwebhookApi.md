@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_using_put24**](GlobaltagwebhookApi.md#alterar_using_put24) | **PUT** /api/webhooks/{id} | {{{web_hook_resource_alterar}}}
-[**consultar_using_get52**](GlobaltagwebhookApi.md#consultar_using_get52) | **GET** /api/webhooks/{id} | {{{web_hook_resource_consultar}}}
+[**consultar_using_get53**](GlobaltagwebhookApi.md#consultar_using_get53) | **GET** /api/webhooks/{id} | {{{web_hook_resource_consultar}}}
 [**listar_using_get66**](GlobaltagwebhookApi.md#listar_using_get66) | **GET** /api/webhooks | {{{web_hook_resource_listar}}}
 [**salvar_using_post35**](GlobaltagwebhookApi.md#salvar_using_post35) | **POST** /api/webhooks | {{{web_hook_resource_salvar}}}
 
@@ -69,8 +69,8 @@ No authorization required
 
 
 
-# **consultar_using_get52**
-> WebHookResponse consultar_using_get52(id)
+# **consultar_using_get53**
+> WebHookResponse consultar_using_get53(id)
 
 {{{web_hook_resource_consultar}}}
 
@@ -89,10 +89,10 @@ id = 789 # Integer | {{{web_hook_resource_consultar_param_id}}}
 
 begin
   #{{{web_hook_resource_consultar}}}
-  result = api_instance.consultar_using_get52(id)
+  result = api_instance.consultar_using_get53(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagwebhookApi->consultar_using_get52: #{e}"
+  puts "Exception when calling GlobaltagwebhookApi->consultar_using_get53: #{e}"
 end
 ```
 

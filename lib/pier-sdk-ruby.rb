@@ -35,6 +35,9 @@ require 'pier-sdk-ruby/models/acordo_detalhe_response'
 require 'pier-sdk-ruby/models/acordo_response'
 
 
+require 'pier-sdk-ruby/models/adesao_pagamento_sabado_response'
+
+
 require 'pier-sdk-ruby/models/adicional_detalhe_response'
 
 
@@ -1128,6 +1131,15 @@ require 'pier-sdk-ruby/models/status_proposta_update'
 
 
 require 'pier-sdk-ruby/models/taxa_antecipacao_request'
+
+
+require 'pier-sdk-ruby/models/taxa_juros_conta_lista_response'
+
+
+require 'pier-sdk-ruby/models/taxa_juros_conta_persist_value'
+
+
+require 'pier-sdk-ruby/models/taxa_juros_conta_response'
 
 
 require 'pier-sdk-ruby/models/taxas_refinanciamento_response'

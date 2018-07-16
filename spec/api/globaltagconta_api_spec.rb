@@ -186,6 +186,23 @@ describe 'GlobaltagcontaApi' do
   end
 
 
+  # unit tests for cadastrar_using_post
+  # {{{aderir_pagamento_sabado_recurso_cadastrar}}}
+  # {{{aderir_pagamento_sabado_recurso_cadastrar_notas}}}
+  # @param id {{{aderir_pagamento_sabado_recurso_cadastrar_param_id}}}
+  # @param [Hash] opts the optional parameters
+  # @return [AdesaoPagamentoSabadoResponse]
+  describe 'cadastrar_using_post test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
   # unit tests for cancelar_using_post1
   # {{{conta_resource_cancelar}}}
   # {{{conta_resource_cancelar_notes}}}
@@ -285,14 +302,14 @@ describe 'GlobaltagcontaApi' do
   end
 
 
-  # unit tests for consultar_using_get13
-  # {{{conta_resource_consultar}}}
-  # {{{conta_resource_consultar_notes}}}
-  # @param id {{{conta_resource_consultar_param_id}}}
+  # unit tests for consultar_using_get1
+  # {{{aderir_pagamento_sabado_recurso_consultar}}}
+  # {{{aderir_pagamento_sabado_recurso_consultar_notas}}}
+  # @param id {{{aderir_pagamento_sabado_recurso_consultar_param_id}}}
+  # @param data_vencimento {{{aderir_pagamento_sabado_recurso_consultar_param_data_vencimento}}}
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :authorization Authorization
-  # @return [ContaDetalheResponse]
-  describe 'consultar_using_get13 test' do
+  # @return [AdesaoPagamentoSabadoResponse]
+  describe 'consultar_using_get1 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -303,14 +320,32 @@ describe 'GlobaltagcontaApi' do
   end
 
 
-  # unit tests for consultar_using_get48
+  # unit tests for consultar_using_get14
+  # {{{conta_resource_consultar}}}
+  # {{{conta_resource_consultar_notes}}}
+  # @param id {{{conta_resource_consultar_param_id}}}
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :authorization Authorization
+  # @return [ContaDetalheResponse]
+  describe 'consultar_using_get14 test' do
+    it "should work" do
+      # assertion here
+      # should be_a()
+      # should be_nil
+      # should ==
+      # should_not ==
+    end
+  end
+
+
+  # unit tests for consultar_using_get49
   # {{{transferencia_resource_consultar}}}
   # {{{transferencia_resource_consultar_notes}}}
   # @param id {{{transferencia_resource_consultar_param_id_conta}}}
   # @param id_transferencia {{{transferencia_resource_consultar_param_id_transferencia}}}
   # @param [Hash] opts the optional parameters
   # @return [TransferenciaDetalheResponse]
-  describe 'consultar_using_get48 test' do
+  describe 'consultar_using_get49 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -532,6 +567,7 @@ describe 'GlobaltagcontaApi' do
   # @option opts [String] :data_inicio {{{transacoes_processadas_request_data_inicio_value}}}
   # @option opts [String] :data_fim {{{transacoes_processadas_request_data_fim_value}}}
   # @option opts [Integer] :id_tipo_transacao {{{transacoes_processadas_request_tipo_transacao}}}
+  # @option opts [Integer] :recupera_encargos {{{transacoes_processadas_request_recupera_encargos}}}
   # @return [PageTransacoesCorrentesResponse]
   describe 'listar_processadas_using_get test' do
     it "should work" do

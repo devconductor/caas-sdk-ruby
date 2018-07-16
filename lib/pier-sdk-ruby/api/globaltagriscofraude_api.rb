@@ -37,8 +37,8 @@ module Pier
     # @param id {{{risco_fraude_resource_consultar_param_id_risco_fraude}}}
     # @param [Hash] opts the optional parameters
     # @return [RiscoFraudeDetalhadoResponse]
-    def consultar_using_get34(id, opts = {})
-      data, _status_code, _headers = consultar_using_get34_with_http_info(id, opts)
+    def consultar_using_get35(id, opts = {})
+      data, _status_code, _headers = consultar_using_get35_with_http_info(id, opts)
       return data
     end
 
@@ -47,14 +47,14 @@ module Pier
     # @param id {{{risco_fraude_resource_consultar_param_id_risco_fraude}}}
     # @param [Hash] opts the optional parameters
     # @return [Array<(RiscoFraudeDetalhadoResponse, Fixnum, Hash)>] RiscoFraudeDetalhadoResponse data, response status code and response headers
-    def consultar_using_get34_with_http_info(id, opts = {})
+    def consultar_using_get35_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GlobaltagriscofraudeApi.consultar_using_get34 ..."
+        @api_client.config.logger.debug "Calling API: GlobaltagriscofraudeApi.consultar_using_get35 ..."
       end
       
       
       # verify the required parameter 'id' is set
-      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagriscofraudeApi.consultar_using_get34" if id.nil?
+      fail ArgumentError, "Missing the required parameter 'id' when calling GlobaltagriscofraudeApi.consultar_using_get35" if id.nil?
       
       
       
@@ -92,7 +92,7 @@ module Pier
         :auth_names => auth_names,
         :return_type => 'RiscoFraudeDetalhadoResponse')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GlobaltagriscofraudeApi#consultar_using_get34\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GlobaltagriscofraudeApi#consultar_using_get35\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

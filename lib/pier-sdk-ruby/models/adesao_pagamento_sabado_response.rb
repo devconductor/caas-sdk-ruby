@@ -23,52 +23,32 @@ Terms of Service: http://pierlabs.io/terms/
 require 'date'
 
 module Pier
-  # {{{sms_envio_response_description}}}
-  class SMSEnvioResponse
-    # {{{sms_envio_response_id_value}}}
+  # {{{adesao_pagamento_sabado_resposta_descricao}}}
+  class AdesaoPagamentoSabadoResponse
+    # {{{adesao_pagamento_sabado_resposta_data_cadastro_descricao}}}
+    attr_accessor :data_cadastro
+
+    # {{{adesao_pagamento_sabado_resposta_data_vencimento_descricao}}}
+    attr_accessor :data_vencimento
+
+    # {{{adesao_pagamento_sabado_resposta_id_descricao}}}
     attr_accessor :id
 
-    # {{{sms_envio_response_status_value}}}
-    attr_accessor :status
-
-    # {{{sms_envio_response_id_conta_value}}}
+    # {{{adesao_pagamento_sabado_resposta_id_conta_descricao}}}
     attr_accessor :id_conta
-
-    # {{{sms_envio_response_celular_value}}}
-    attr_accessor :celular
-
-    # {{{sms_envio_response_conteudo_value}}}
-    attr_accessor :conteudo
-
-    # {{{sms_envio_response_quantidade_tentativas_envio_value}}}
-    attr_accessor :quantidade_tentativas_envio
-
-    # {{{s_m_s_envio_response_data_inclusao_value}}}
-    attr_accessor :data_inclusao
-
-    # {{{sms_envio_response_cpf_value}}}
-    attr_accessor :cpf
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
+        :'data_cadastro' => :'dataCadastro',
+        
+        :'data_vencimento' => :'dataVencimento',
+        
         :'id' => :'id',
         
-        :'status' => :'status',
-        
-        :'id_conta' => :'idConta',
-        
-        :'celular' => :'celular',
-        
-        :'conteudo' => :'conteudo',
-        
-        :'quantidade_tentativas_envio' => :'quantidadeTentativasEnvio',
-        
-        :'data_inclusao' => :'dataInclusao',
-        
-        :'cpf' => :'cpf'
+        :'id_conta' => :'idConta'
         
       }
     end
@@ -77,21 +57,13 @@ module Pier
     def self.swagger_types
       {
         
+        :'data_cadastro' => :'String',
+        
+        :'data_vencimento' => :'String',
+        
         :'id' => :'Integer',
         
-        :'status' => :'String',
-        
-        :'id_conta' => :'Integer',
-        
-        :'celular' => :'String',
-        
-        :'conteudo' => :'String',
-        
-        :'quantidade_tentativas_envio' => :'Integer',
-        
-        :'data_inclusao' => :'String',
-        
-        :'cpf' => :'String'
+        :'id_conta' => :'Integer'
         
       }
     end
@@ -105,6 +77,24 @@ module Pier
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
+      if attributes[:'dataCadastro']
+        
+        
+        self.data_cadastro = attributes[:'dataCadastro']
+        
+      
+      end
+
+      
+      if attributes[:'dataVencimento']
+        
+        
+        self.data_vencimento = attributes[:'dataVencimento']
+        
+      
+      end
+
+      
       if attributes[:'id']
         
         
@@ -114,64 +104,10 @@ module Pier
       end
 
       
-      if attributes[:'status']
-        
-        
-        self.status = attributes[:'status']
-        
-      
-      end
-
-      
       if attributes[:'idConta']
         
         
         self.id_conta = attributes[:'idConta']
-        
-      
-      end
-
-      
-      if attributes[:'celular']
-        
-        
-        self.celular = attributes[:'celular']
-        
-      
-      end
-
-      
-      if attributes[:'conteudo']
-        
-        
-        self.conteudo = attributes[:'conteudo']
-        
-      
-      end
-
-      
-      if attributes[:'quantidadeTentativasEnvio']
-        
-        
-        self.quantidade_tentativas_envio = attributes[:'quantidadeTentativasEnvio']
-        
-      
-      end
-
-      
-      if attributes[:'dataInclusao']
-        
-        
-        self.data_inclusao = attributes[:'dataInclusao']
-        
-      
-      end
-
-      
-      if attributes[:'cpf']
-        
-        
-        self.cpf = attributes[:'cpf']
         
       
       end
@@ -208,44 +144,8 @@ module Pier
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -272,14 +172,10 @@ module Pier
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          data_cadastro == o.data_cadastro &&
+          data_vencimento == o.data_vencimento &&
           id == o.id &&
-          status == o.status &&
-          id_conta == o.id_conta &&
-          celular == o.celular &&
-          conteudo == o.conteudo &&
-          quantidade_tentativas_envio == o.quantidade_tentativas_envio &&
-          data_inclusao == o.data_inclusao &&
-          cpf == o.cpf
+          id_conta == o.id_conta
     end
 
     # @see the `==` method
@@ -291,7 +187,7 @@ module Pier
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, status, id_conta, celular, conteudo, quantidade_tentativas_envio, data_inclusao, cpf].hash
+      [data_cadastro, data_vencimento, id, id_conta].hash
     end
 
     # Builds the object from hash

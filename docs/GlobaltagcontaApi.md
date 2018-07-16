@@ -11,13 +11,15 @@ Method | HTTP request | Description
 [**ativar_anuidade_using_post**](GlobaltagcontaApi.md#ativar_anuidade_using_post) | **POST** /api/contas/{id}/atribuir-anuidade | {{{conta_resource_ativar_anuidade}}}
 [**ativar_envio_fatura_email_using_post**](GlobaltagcontaApi.md#ativar_envio_fatura_email_using_post) | **POST** /api/contas/{id}/ativar-fatura-email | {{{conta_resource_ativar_envio_fatura_email}}}
 [**bloquear_using_post1**](GlobaltagcontaApi.md#bloquear_using_post1) | **POST** /api/contas/{id}/bloquear | {{{conta_resource_bloquear}}}
+[**cadastrar_using_post**](GlobaltagcontaApi.md#cadastrar_using_post) | **POST** /api/adesoes-pagamentos-sabados | {{{aderir_pagamento_sabado_recurso_cadastrar}}}
 [**cancelar_using_post1**](GlobaltagcontaApi.md#cancelar_using_post1) | **POST** /api/contas/{id}/cancelar | {{{conta_resource_cancelar}}}
 [**consultar_beneficio_pagamento_atraso_using_get**](GlobaltagcontaApi.md#consultar_beneficio_pagamento_atraso_using_get) | **GET** /api/contas/{id}/consultar-beneficio-pagamento-atraso | {{{conta_resource_consultar_beneficio_pagamento_atraso}}}
 [**consultar_boleto_emitido_using_get**](GlobaltagcontaApi.md#consultar_boleto_emitido_using_get) | **GET** /api/contas/{id}/consultar-dados-pagamento-fatura | {{{conta_resource_consultar_boleto_emitido}}}
 [**consultar_divida_atualizada_cliente_using_get**](GlobaltagcontaApi.md#consultar_divida_atualizada_cliente_using_get) | **GET** /api/contas/{id}/recuperar-divida-atualizada | {{{conta_resource_consultar_divida_atualizada_cliente}}}
 [**consultar_taxas_tarifas_using_get**](GlobaltagcontaApi.md#consultar_taxas_tarifas_using_get) | **GET** /api/contas/{id}/consultar-taxas-tarifas | {{{conta_resource_consultar_taxas_tarifas}}}
-[**consultar_using_get13**](GlobaltagcontaApi.md#consultar_using_get13) | **GET** /api/contas/{id} | {{{conta_resource_consultar}}}
-[**consultar_using_get48**](GlobaltagcontaApi.md#consultar_using_get48) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | {{{transferencia_resource_consultar}}}
+[**consultar_using_get1**](GlobaltagcontaApi.md#consultar_using_get1) | **GET** /api/adesoes-pagamentos-sabados | {{{aderir_pagamento_sabado_recurso_consultar}}}
+[**consultar_using_get14**](GlobaltagcontaApi.md#consultar_using_get14) | **GET** /api/contas/{id} | {{{conta_resource_consultar}}}
+[**consultar_using_get49**](GlobaltagcontaApi.md#consultar_using_get49) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | {{{transferencia_resource_consultar}}}
 [**desativar_envio_fatura_email_using_post**](GlobaltagcontaApi.md#desativar_envio_fatura_email_using_post) | **POST** /api/contas/{id}/desativar-fatura-email | {{{conta_resource_desativar_envio_fatura_email}}}
 [**gerar_boleto_recarga_using_post**](GlobaltagcontaApi.md#gerar_boleto_recarga_using_post) | **POST** /api/contas/{id}/gerar-boleto-recarga | {{{conta_resource_gerar_boleto_recarga}}}
 [**gerar_cartao_embossing_using_post**](GlobaltagcontaApi.md#gerar_cartao_embossing_using_post) | **POST** /api/contas/{id}/gerar-cartao-grafica | {{{conta_resource_gerar_cartao_embossing}}}
@@ -461,6 +463,56 @@ No authorization required
 
 
 
+# **cadastrar_using_post**
+> AdesaoPagamentoSabadoResponse cadastrar_using_post(id)
+
+{{{aderir_pagamento_sabado_recurso_cadastrar}}}
+
+{{{aderir_pagamento_sabado_recurso_cadastrar_notas}}}
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::GlobaltagcontaApi.new
+
+id = 789 # Integer | {{{aderir_pagamento_sabado_recurso_cadastrar_param_id}}}
+
+
+begin
+  #{{{aderir_pagamento_sabado_recurso_cadastrar}}}
+  result = api_instance.cadastrar_using_post(id)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling GlobaltagcontaApi->cadastrar_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| {{{aderir_pagamento_sabado_recurso_cadastrar_param_id}}} | 
+
+
+### Return type
+
+[**AdesaoPagamentoSabadoResponse**](AdesaoPagamentoSabadoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
 # **cancelar_using_post1**
 > ContaResponse cancelar_using_post1(id, id_status, opts)
 
@@ -750,8 +802,61 @@ No authorization required
 
 
 
-# **consultar_using_get13**
-> ContaDetalheResponse consultar_using_get13(id, opts)
+# **consultar_using_get1**
+> AdesaoPagamentoSabadoResponse consultar_using_get1(id, data_vencimento)
+
+{{{aderir_pagamento_sabado_recurso_consultar}}}
+
+{{{aderir_pagamento_sabado_recurso_consultar_notas}}}
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+
+api_instance = Pier::GlobaltagcontaApi.new
+
+id = 789 # Integer | {{{aderir_pagamento_sabado_recurso_consultar_param_id}}}
+
+data_vencimento = "data_vencimento_example" # String | {{{aderir_pagamento_sabado_recurso_consultar_param_data_vencimento}}}
+
+
+begin
+  #{{{aderir_pagamento_sabado_recurso_consultar}}}
+  result = api_instance.consultar_using_get1(id, data_vencimento)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling GlobaltagcontaApi->consultar_using_get1: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| {{{aderir_pagamento_sabado_recurso_consultar_param_id}}} | 
+ **data_vencimento** | **String**| {{{aderir_pagamento_sabado_recurso_consultar_param_data_vencimento}}} | 
+
+
+### Return type
+
+[**AdesaoPagamentoSabadoResponse**](AdesaoPagamentoSabadoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+# **consultar_using_get14**
+> ContaDetalheResponse consultar_using_get14(id, opts)
 
 {{{conta_resource_consultar}}}
 
@@ -773,10 +878,10 @@ opts = {
 
 begin
   #{{{conta_resource_consultar}}}
-  result = api_instance.consultar_using_get13(id, opts)
+  result = api_instance.consultar_using_get14(id, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcontaApi->consultar_using_get13: #{e}"
+  puts "Exception when calling GlobaltagcontaApi->consultar_using_get14: #{e}"
 end
 ```
 
@@ -804,8 +909,8 @@ No authorization required
 
 
 
-# **consultar_using_get48**
-> TransferenciaDetalheResponse consultar_using_get48(id, id_transferencia)
+# **consultar_using_get49**
+> TransferenciaDetalheResponse consultar_using_get49(id, id_transferencia)
 
 {{{transferencia_resource_consultar}}}
 
@@ -826,10 +931,10 @@ id_transferencia = 789 # Integer | {{{transferencia_resource_consultar_param_id_
 
 begin
   #{{{transferencia_resource_consultar}}}
-  result = api_instance.consultar_using_get48(id, id_transferencia)
+  result = api_instance.consultar_using_get49(id, id_transferencia)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcontaApi->consultar_using_get48: #{e}"
+  puts "Exception when calling GlobaltagcontaApi->consultar_using_get49: #{e}"
 end
 ```
 
@@ -1464,7 +1569,8 @@ opts = {
   data_vencimento: "data_vencimento_example", # String | {{{transacoes_processadas_request_data_vencimento_value}}}
   data_inicio: "data_inicio_example", # String | {{{transacoes_processadas_request_data_inicio_value}}}
   data_fim: "data_fim_example", # String | {{{transacoes_processadas_request_data_fim_value}}}
-  id_tipo_transacao: 789 # Integer | {{{transacoes_processadas_request_tipo_transacao}}}
+  id_tipo_transacao: 789, # Integer | {{{transacoes_processadas_request_tipo_transacao}}}
+  recupera_encargos: 56 # Integer | {{{transacoes_processadas_request_recupera_encargos}}}
 }
 
 begin
@@ -1488,6 +1594,7 @@ Name | Type | Description  | Notes
  **data_inicio** | **String**| {{{transacoes_processadas_request_data_inicio_value}}} | [optional] 
  **data_fim** | **String**| {{{transacoes_processadas_request_data_fim_value}}} | [optional] 
  **id_tipo_transacao** | **Integer**| {{{transacoes_processadas_request_tipo_transacao}}} | [optional] 
+ **recupera_encargos** | **Integer**| {{{transacoes_processadas_request_recupera_encargos}}} | [optional] 
 
 
 ### Return type

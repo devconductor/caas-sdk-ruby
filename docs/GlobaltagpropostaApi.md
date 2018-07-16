@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_using_post**](GlobaltagpropostaApi.md#alterar_using_post) | **POST** /api/propostas/{id}/alterar-status | {{{proposta_resource_alterar_status}}}
-[**consultar_using_get32**](GlobaltagpropostaApi.md#consultar_using_get32) | **GET** /api/propostas/{id} | {{{proposta_resource_consultar}}}
+[**consultar_using_get33**](GlobaltagpropostaApi.md#consultar_using_get33) | **GET** /api/propostas/{id} | {{{proposta_resource_consultar}}}
 [**listar_status_proposta_using_get**](GlobaltagpropostaApi.md#listar_status_proposta_using_get) | **GET** /api/status-propostas | {{{proposta_resource_listar_status}}}
 [**listar_using_get44**](GlobaltagpropostaApi.md#listar_using_get44) | **GET** /api/propostas | {{{proposta_resource_listar}}}
 
@@ -65,8 +65,8 @@ No authorization required
 
 
 
-# **consultar_using_get32**
-> PropostaResponse consultar_using_get32(id)
+# **consultar_using_get33**
+> PropostaResponse consultar_using_get33(id)
 
 {{{proposta_resource_consultar}}}
 
@@ -85,10 +85,10 @@ id = 789 # Integer | {{{proposta_resource_consultar_param_id}}}
 
 begin
   #{{{proposta_resource_consultar}}}
-  result = api_instance.consultar_using_get32(id)
+  result = api_instance.consultar_using_get33(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagpropostaApi->consultar_using_get32: #{e}"
+  puts "Exception when calling GlobaltagpropostaApi->consultar_using_get33: #{e}"
 end
 ```
 

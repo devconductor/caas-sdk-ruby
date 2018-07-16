@@ -116,13 +116,13 @@ describe 'GlobaltagoportunidadeApi' do
   end
 
 
-  # unit tests for consultar_using_get25
+  # unit tests for consultar_using_get26
   # {{{oportunidade_resource_consultar}}}
   # {{{oportunidade_resource_consultar_notes}}}
   # @param id {{{oportunidade_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
   # @return [OportunidadeResponse]
-  describe 'consultar_using_get25 test' do
+  describe 'consultar_using_get26 test' do
     it "should work" do
       # assertion here
       # should be_a()
@@ -133,13 +133,13 @@ describe 'GlobaltagoportunidadeApi' do
   end
 
 
-  # unit tests for consultar_using_get44
+  # unit tests for consultar_using_get45
   # {{{tipo_oportunidade_resource_consultar}}}
   # {{{tipo_oportunidade_resource_consultar_notes}}}
   # @param id {{{tipo_oportunidade_resource_consultar_param_id}}}
   # @param [Hash] opts the optional parameters
   # @return [TipoOportunidadeResponse]
-  describe 'consultar_using_get44 test' do
+  describe 'consultar_using_get45 test' do
     it "should work" do
       # assertion here
       # should be_a()

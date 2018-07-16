@@ -12,17 +12,17 @@ Method | HTTP request | Description
 [**alterar_using_put6**](GlobaltagestabelecimentoApi.md#alterar_using_put6) | **PUT** /api/estabelecimentos/{id} | {{{estabelecimento_resource_alterar}}}
 [**alterar_using_put8**](GlobaltagestabelecimentoApi.md#alterar_using_put8) | **PUT** /api/grupos-economicos/{id} | {{{grupo_economico_resource_alterar}}}
 [**cadastrar_origem_comercial_using_post**](GlobaltagestabelecimentoApi.md#cadastrar_origem_comercial_using_post) | **POST** /api/origens-comerciais | {{{origem_comercial_resource_cadastrar_origem_comercial}}}
-[**cadastrar_using_post2**](GlobaltagestabelecimentoApi.md#cadastrar_using_post2) | **POST** /api/estabelecimentos | {{{estabelecimento_resource_cadastrar}}}
-[**cadastrar_using_post3**](GlobaltagestabelecimentoApi.md#cadastrar_using_post3) | **POST** /api/grupos-economicos | {{{grupo_economico_resource_cadastrar}}}
+[**cadastrar_using_post3**](GlobaltagestabelecimentoApi.md#cadastrar_using_post3) | **POST** /api/estabelecimentos | {{{estabelecimento_resource_cadastrar}}}
+[**cadastrar_using_post4**](GlobaltagestabelecimentoApi.md#cadastrar_using_post4) | **POST** /api/grupos-economicos | {{{grupo_economico_resource_cadastrar}}}
 [**consulta_operacao_using_get**](GlobaltagestabelecimentoApi.md#consulta_operacao_using_get) | **GET** /api/tipos-operacoes-estabelecimentos/{id} | {{{operacao_resource_consulta_operacao}}}
 [**consultar_origem_comercial_using_get**](GlobaltagestabelecimentoApi.md#consultar_origem_comercial_using_get) | **GET** /api/origens-comerciais/{id} | {{{origem_comercial_resource_consultar_origem_comercial}}}
-[**consultar_using_get19**](GlobaltagestabelecimentoApi.md#consultar_using_get19) | **GET** /api/estabelecimentos/{id} | {{{estabelecimento_resource_consultar}}}
-[**consultar_using_get21**](GlobaltagestabelecimentoApi.md#consultar_using_get21) | **GET** /api/grupos-economicos/{id} | {{{grupo_economico_resource_consultar}}}
-[**consultar_using_get23**](GlobaltagestabelecimentoApi.md#consultar_using_get23) | **GET** /api/maquinetas/{id} | {{{maquineta_resource_consultar}}}
-[**consultar_using_get24**](GlobaltagestabelecimentoApi.md#consultar_using_get24) | **GET** /api/regras-operacoes-estabelecimentos/{id} | {{{operacao_credor_resource_consultar}}}
-[**consultar_using_get37**](GlobaltagestabelecimentoApi.md#consultar_using_get37) | **GET** /api/telefones-estabelecimentos/{id} | {{{telefone_estabelecimento_resource_consultar}}}
-[**consultar_using_get39**](GlobaltagestabelecimentoApi.md#consultar_using_get39) | **GET** /api/terminais/{id} | {{{terminal_resource_consultar}}}
-[**consultar_using_get51**](GlobaltagestabelecimentoApi.md#consultar_using_get51) | **GET** /api/adquirentes-estabelecimento/{id} | {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
+[**consultar_using_get20**](GlobaltagestabelecimentoApi.md#consultar_using_get20) | **GET** /api/estabelecimentos/{id} | {{{estabelecimento_resource_consultar}}}
+[**consultar_using_get22**](GlobaltagestabelecimentoApi.md#consultar_using_get22) | **GET** /api/grupos-economicos/{id} | {{{grupo_economico_resource_consultar}}}
+[**consultar_using_get24**](GlobaltagestabelecimentoApi.md#consultar_using_get24) | **GET** /api/maquinetas/{id} | {{{maquineta_resource_consultar}}}
+[**consultar_using_get25**](GlobaltagestabelecimentoApi.md#consultar_using_get25) | **GET** /api/regras-operacoes-estabelecimentos/{id} | {{{operacao_credor_resource_consultar}}}
+[**consultar_using_get38**](GlobaltagestabelecimentoApi.md#consultar_using_get38) | **GET** /api/telefones-estabelecimentos/{id} | {{{telefone_estabelecimento_resource_consultar}}}
+[**consultar_using_get40**](GlobaltagestabelecimentoApi.md#consultar_using_get40) | **GET** /api/terminais/{id} | {{{terminal_resource_consultar}}}
+[**consultar_using_get52**](GlobaltagestabelecimentoApi.md#consultar_using_get52) | **GET** /api/adquirentes-estabelecimento/{id} | {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
 [**desabilitar_vinculo_using_post**](GlobaltagestabelecimentoApi.md#desabilitar_vinculo_using_post) | **POST** /api/adquirentes-estabelecimento/{id}/desabilitar | {{{vinculo_estabelecimento_adquirente_resource_desabilitar_vinculo}}}
 [**desabilitar_vinculo_using_post1**](GlobaltagestabelecimentoApi.md#desabilitar_vinculo_using_post1) | **POST** /api/estabelecimentos/{id}/desabilitar-operacao | {{{vinculo_operacao_resource_desabilitar_vinculo}}}
 [**habilitar_vinculo_using_post**](GlobaltagestabelecimentoApi.md#habilitar_vinculo_using_post) | **POST** /api/adquirentes-estabelecimento/{id}/habilitar | {{{vinculo_estabelecimento_adquirente_resource_habilitar_vinculo}}}
@@ -475,8 +475,8 @@ No authorization required
 
 
 
-# **cadastrar_using_post2**
-> EstabelecimentoResponse cadastrar_using_post2(persist)
+# **cadastrar_using_post3**
+> EstabelecimentoResponse cadastrar_using_post3(persist)
 
 {{{estabelecimento_resource_cadastrar}}}
 
@@ -495,10 +495,10 @@ persist = Pier::EstabelecimentoPersist.new # EstabelecimentoPersist | persist
 
 begin
   #{{{estabelecimento_resource_cadastrar}}}
-  result = api_instance.cadastrar_using_post2(persist)
+  result = api_instance.cadastrar_using_post3(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->cadastrar_using_post2: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->cadastrar_using_post3: #{e}"
 end
 ```
 
@@ -525,8 +525,8 @@ No authorization required
 
 
 
-# **cadastrar_using_post3**
-> GrupoEconomicoResponse cadastrar_using_post3(grupo_economico_dto)
+# **cadastrar_using_post4**
+> GrupoEconomicoResponse cadastrar_using_post4(grupo_economico_dto)
 
 {{{grupo_economico_resource_cadastrar}}}
 
@@ -545,10 +545,10 @@ grupo_economico_dto = Pier::GrupoEconomicoDTO.new # GrupoEconomicoDTO | GrupoEco
 
 begin
   #{{{grupo_economico_resource_cadastrar}}}
-  result = api_instance.cadastrar_using_post3(grupo_economico_dto)
+  result = api_instance.cadastrar_using_post4(grupo_economico_dto)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->cadastrar_using_post3: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->cadastrar_using_post4: #{e}"
 end
 ```
 
@@ -675,8 +675,8 @@ No authorization required
 
 
 
-# **consultar_using_get19**
-> EstabelecimentoResponse consultar_using_get19(id)
+# **consultar_using_get20**
+> EstabelecimentoResponse consultar_using_get20(id)
 
 {{{estabelecimento_resource_consultar}}}
 
@@ -695,10 +695,10 @@ id = 789 # Integer | {{{estabelecimento_resource_consultar_param_id_estabelecime
 
 begin
   #{{{estabelecimento_resource_consultar}}}
-  result = api_instance.consultar_using_get19(id)
+  result = api_instance.consultar_using_get20(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get19: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get20: #{e}"
 end
 ```
 
@@ -725,8 +725,8 @@ No authorization required
 
 
 
-# **consultar_using_get21**
-> GrupoEconomicoResponse consultar_using_get21(id)
+# **consultar_using_get22**
+> GrupoEconomicoResponse consultar_using_get22(id)
 
 {{{grupo_economico_resource_consultar}}}
 
@@ -745,10 +745,10 @@ id = 789 # Integer | {{{grupo_economico_resource_consultar_param_id}}}
 
 begin
   #{{{grupo_economico_resource_consultar}}}
-  result = api_instance.consultar_using_get21(id)
+  result = api_instance.consultar_using_get22(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get21: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get22: #{e}"
 end
 ```
 
@@ -775,8 +775,8 @@ No authorization required
 
 
 
-# **consultar_using_get23**
-> MaquinetaResponse consultar_using_get23(id)
+# **consultar_using_get24**
+> MaquinetaResponse consultar_using_get24(id)
 
 {{{maquineta_resource_consultar}}}
 
@@ -795,10 +795,10 @@ id = 789 # Integer | {{{maquineta_resource_consultar_param_id}}}
 
 begin
   #{{{maquineta_resource_consultar}}}
-  result = api_instance.consultar_using_get23(id)
+  result = api_instance.consultar_using_get24(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get23: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get24: #{e}"
 end
 ```
 
@@ -825,8 +825,8 @@ No authorization required
 
 
 
-# **consultar_using_get24**
-> OperacaoCredorResponse consultar_using_get24(id)
+# **consultar_using_get25**
+> OperacaoCredorResponse consultar_using_get25(id)
 
 {{{operacao_credor_resource_consultar}}}
 
@@ -845,10 +845,10 @@ id = 789 # Integer | {{{operacao_credor_resource_consultar_param_id}}}
 
 begin
   #{{{operacao_credor_resource_consultar}}}
-  result = api_instance.consultar_using_get24(id)
+  result = api_instance.consultar_using_get25(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get24: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get25: #{e}"
 end
 ```
 
@@ -875,8 +875,8 @@ No authorization required
 
 
 
-# **consultar_using_get37**
-> TelefoneEstabelecimentoResponse consultar_using_get37(id)
+# **consultar_using_get38**
+> TelefoneEstabelecimentoResponse consultar_using_get38(id)
 
 {{{telefone_estabelecimento_resource_consultar}}}
 
@@ -895,10 +895,10 @@ id = 789 # Integer | {{{telefone_estabelecimento_resource_consultar_param_id}}}
 
 begin
   #{{{telefone_estabelecimento_resource_consultar}}}
-  result = api_instance.consultar_using_get37(id)
+  result = api_instance.consultar_using_get38(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get37: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get38: #{e}"
 end
 ```
 
@@ -925,8 +925,8 @@ No authorization required
 
 
 
-# **consultar_using_get39**
-> TerminalResponse consultar_using_get39(id)
+# **consultar_using_get40**
+> TerminalResponse consultar_using_get40(id)
 
 {{{terminal_resource_consultar}}}
 
@@ -945,10 +945,10 @@ id = 789 # Integer | {{{terminal_resource_consultar_param_id}}}
 
 begin
   #{{{terminal_resource_consultar}}}
-  result = api_instance.consultar_using_get39(id)
+  result = api_instance.consultar_using_get40(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get39: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get40: #{e}"
 end
 ```
 
@@ -975,8 +975,8 @@ No authorization required
 
 
 
-# **consultar_using_get51**
-> VinculoEstabelecimentoAdquirenteResponse consultar_using_get51(id)
+# **consultar_using_get52**
+> VinculoEstabelecimentoAdquirenteResponse consultar_using_get52(id)
 
 {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
 
@@ -995,10 +995,10 @@ id = 789 # Integer | {{{vinculo_estabelecimento_adquirente_resource_consultar_pa
 
 begin
   #{{{vinculo_estabelecimento_adquirente_resource_consultar}}}
-  result = api_instance.consultar_using_get51(id)
+  result = api_instance.consultar_using_get52(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get51: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get52: #{e}"
 end
 ```
 

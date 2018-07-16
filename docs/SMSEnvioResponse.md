@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **conteudo** | **String** | {{{sms_envio_response_conteudo_value}}} | [optional] 
 **quantidade_tentativas_envio** | **Integer** | {{{sms_envio_response_quantidade_tentativas_envio_value}}} | [optional] 
 **data_inclusao** | **String** | {{{s_m_s_envio_response_data_inclusao_value}}} | [optional] 
+**cpf** | **String** | {{{sms_envio_response_cpf_value}}} | [optional] 
 
 
 

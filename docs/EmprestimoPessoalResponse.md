@@ -14,4 +14,3 @@ Name | Type | Description | Notes
 **taxa_juros** | **Float** | {{{emprestimo_pessoal_response_taxa_juros_value}}} | [optional] 
 
 
-

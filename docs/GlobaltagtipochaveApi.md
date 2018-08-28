@@ -7,8 +7,6 @@ Method | HTTP request | Description
 [**listar_tipo_chave_using_get**](GlobaltagtipochaveApi.md#listar_tipo_chave_using_get) | **GET** /api/tipos-chaves | {{{tipo_chave_resource_listar_tipos_chaves}}}
 
 
-
-
 # **listar_tipo_chave_using_get**
 > PageTipoChaveResponse listar_tipo_chave_using_get(opts)
 
@@ -20,7 +18,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagtipochaveApi.new
 
@@ -51,7 +48,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{tipo_chave_request_id_value}}} | [optional] 
  **descricao** | **String**| {{{tipo_chave_request_descricao_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageTipoChaveResponse**](PageTipoChaveResponse.md)
@@ -64,8 +60,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

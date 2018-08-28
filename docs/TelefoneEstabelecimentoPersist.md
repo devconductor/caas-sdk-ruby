@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **ramal** | **String** | {{{telefone_estabelecimento_persist_ramal_value}}} | [optional] 
 
 
-

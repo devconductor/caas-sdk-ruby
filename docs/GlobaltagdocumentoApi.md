@@ -5,19 +5,17 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_using_put21**](GlobaltagdocumentoApi.md#alterar_using_put21) | **PUT** /api/tipos-templates/{id} | {{{tipo_template_resource_alterar}}}
-[**atualizar_using_put3**](GlobaltagdocumentoApi.md#atualizar_using_put3) | **PUT** /api/templates-documentos/{id} | {{{documento_template_resource_atualizar}}}
-[**consultar_using_get17**](GlobaltagdocumentoApi.md#consultar_using_get17) | **GET** /api/documentos/{id} | {{{documento_resource_consultar}}}
-[**consultar_using_get18**](GlobaltagdocumentoApi.md#consultar_using_get18) | **GET** /api/templates-documentos/{id} | {{{documento_template_resource_consultar}}}
-[**consultar_using_get47**](GlobaltagdocumentoApi.md#consultar_using_get47) | **GET** /api/tipos-templates/{id} | {{{tipo_template_resource_consultar}}}
+[**atualizar_using_put4**](GlobaltagdocumentoApi.md#atualizar_using_put4) | **PUT** /api/templates-documentos/{id} | {{{documento_template_resource_atualizar}}}
+[**consultar_using_get19**](GlobaltagdocumentoApi.md#consultar_using_get19) | **GET** /api/documentos/{id} | {{{documento_resource_consultar}}}
+[**consultar_using_get20**](GlobaltagdocumentoApi.md#consultar_using_get20) | **GET** /api/templates-documentos/{id} | {{{documento_template_resource_consultar}}}
+[**consultar_using_get49**](GlobaltagdocumentoApi.md#consultar_using_get49) | **GET** /api/tipos-templates/{id} | {{{tipo_template_resource_consultar}}}
 [**integrar_using_post1**](GlobaltagdocumentoApi.md#integrar_using_post1) | **POST** /api/documentos/integrar | {{{documento_resource_integrar}}}
-[**listar_using_get21**](GlobaltagdocumentoApi.md#listar_using_get21) | **GET** /api/documentos | {{{documento_resource_listar}}}
-[**listar_using_get22**](GlobaltagdocumentoApi.md#listar_using_get22) | **GET** /api/templates-documentos | {{{documento_template_resource_listar}}}
-[**listar_using_get57**](GlobaltagdocumentoApi.md#listar_using_get57) | **GET** /api/tipos-templates | {{{tipo_template_resource_listar}}}
-[**salvar_using_post11**](GlobaltagdocumentoApi.md#salvar_using_post11) | **POST** /api/documentos | {{{documento_resource_salvar}}}
-[**salvar_using_post12**](GlobaltagdocumentoApi.md#salvar_using_post12) | **POST** /api/templates-documentos | {{{documento_template_resource_salvar}}}
-[**salvar_using_post31**](GlobaltagdocumentoApi.md#salvar_using_post31) | **POST** /api/tipos-templates | {{{tipo_template_resource_salvar}}}
-
-
+[**listar_using_get22**](GlobaltagdocumentoApi.md#listar_using_get22) | **GET** /api/documentos | {{{documento_resource_listar}}}
+[**listar_using_get23**](GlobaltagdocumentoApi.md#listar_using_get23) | **GET** /api/templates-documentos | {{{documento_template_resource_listar}}}
+[**listar_using_get60**](GlobaltagdocumentoApi.md#listar_using_get60) | **GET** /api/tipos-templates | {{{tipo_template_resource_listar}}}
+[**salvar_using_post12**](GlobaltagdocumentoApi.md#salvar_using_post12) | **POST** /api/documentos | {{{documento_resource_salvar}}}
+[**salvar_using_post13**](GlobaltagdocumentoApi.md#salvar_using_post13) | **POST** /api/templates-documentos | {{{documento_template_resource_salvar}}}
+[**salvar_using_post32**](GlobaltagdocumentoApi.md#salvar_using_post32) | **POST** /api/tipos-templates | {{{tipo_template_resource_salvar}}}
 
 
 # **alterar_using_put21**
@@ -31,7 +29,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagdocumentoApi.new
 
@@ -56,7 +53,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{tipo_template_resource_alterar_param_id}}} | 
  **persist** | [**TipoTemplateRequest**](TipoTemplateRequest.md)| persist | 
 
-
 ### Return type
 
 [**TipoTemplateResponse**](TipoTemplateResponse.md)
@@ -72,9 +68,8 @@ No authorization required
 
 
 
-
-# **atualizar_using_put3**
-> DocumentoTemplateResponse atualizar_using_put3(id, persist)
+# **atualizar_using_put4**
+> DocumentoTemplateResponse atualizar_using_put4(id, persist)
 
 {{{documento_template_resource_atualizar}}}
 
@@ -85,7 +80,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagdocumentoApi.new
 
 id = 789 # Integer | {{{documento_template_resource_atualizar_param_id}}}
@@ -95,10 +89,10 @@ persist = Pier::DocumentoTemplatePersist.new # DocumentoTemplatePersist | persis
 
 begin
   #{{{documento_template_resource_atualizar}}}
-  result = api_instance.atualizar_using_put3(id, persist)
+  result = api_instance.atualizar_using_put4(id, persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagdocumentoApi->atualizar_using_put3: #{e}"
+  puts "Exception when calling GlobaltagdocumentoApi->atualizar_using_put4: #{e}"
 end
 ```
 
@@ -108,7 +102,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{documento_template_resource_atualizar_param_id}}} | 
  **persist** | [**DocumentoTemplatePersist**](DocumentoTemplatePersist.md)| persist | 
-
 
 ### Return type
 
@@ -125,9 +118,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get17**
-> DocumentoDetalhadoResponse consultar_using_get17(id)
+# **consultar_using_get19**
+> DocumentoDetalhadoResponse consultar_using_get19(id)
 
 {{{documento_resource_consultar}}}
 
@@ -138,7 +130,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagdocumentoApi.new
 
 id = 789 # Integer | {{{documento_resource_consultar_param_id}}}
@@ -146,10 +137,10 @@ id = 789 # Integer | {{{documento_resource_consultar_param_id}}}
 
 begin
   #{{{documento_resource_consultar}}}
-  result = api_instance.consultar_using_get17(id)
+  result = api_instance.consultar_using_get19(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagdocumentoApi->consultar_using_get17: #{e}"
+  puts "Exception when calling GlobaltagdocumentoApi->consultar_using_get19: #{e}"
 end
 ```
 
@@ -158,7 +149,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{documento_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -175,9 +165,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get18**
-> DocumentoTemplateResponse consultar_using_get18(id)
+# **consultar_using_get20**
+> DocumentoTemplateResponse consultar_using_get20(id)
 
 {{{documento_template_resource_consultar}}}
 
@@ -188,7 +177,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagdocumentoApi.new
 
 id = 789 # Integer | {{{documento_template_resource_consultar_param_id}}}
@@ -196,10 +184,10 @@ id = 789 # Integer | {{{documento_template_resource_consultar_param_id}}}
 
 begin
   #{{{documento_template_resource_consultar}}}
-  result = api_instance.consultar_using_get18(id)
+  result = api_instance.consultar_using_get20(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagdocumentoApi->consultar_using_get18: #{e}"
+  puts "Exception when calling GlobaltagdocumentoApi->consultar_using_get20: #{e}"
 end
 ```
 
@@ -208,7 +196,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{documento_template_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -225,9 +212,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get47**
-> TipoTemplateResponse consultar_using_get47(id)
+# **consultar_using_get49**
+> TipoTemplateResponse consultar_using_get49(id)
 
 {{{tipo_template_resource_consultar}}}
 
@@ -238,7 +224,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagdocumentoApi.new
 
 id = 789 # Integer | {{{tipo_template_resource_consultar_param_id}}}
@@ -246,10 +231,10 @@ id = 789 # Integer | {{{tipo_template_resource_consultar_param_id}}}
 
 begin
   #{{{tipo_template_resource_consultar}}}
-  result = api_instance.consultar_using_get47(id)
+  result = api_instance.consultar_using_get49(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagdocumentoApi->consultar_using_get47: #{e}"
+  puts "Exception when calling GlobaltagdocumentoApi->consultar_using_get49: #{e}"
 end
 ```
 
@@ -258,7 +243,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{tipo_template_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -275,7 +259,6 @@ No authorization required
 
 
 
-
 # **integrar_using_post1**
 > DocumentoIntegracaoResponse integrar_using_post1(integrar_documento_request)
 
@@ -287,7 +270,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagdocumentoApi.new
 
@@ -309,7 +291,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **integrar_documento_request** | [**IntegrarDocumentoRequest**](IntegrarDocumentoRequest.md)| integrarDocumentoRequest | 
 
-
 ### Return type
 
 [**DocumentoIntegracaoResponse**](DocumentoIntegracaoResponse.md)
@@ -325,9 +306,8 @@ No authorization required
 
 
 
-
-# **listar_using_get21**
-> PageDocumentoResponse listar_using_get21(opts)
+# **listar_using_get22**
+> PageDocumentoResponse listar_using_get22(opts)
 
 {{{documento_resource_listar}}}
 
@@ -337,7 +317,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagdocumentoApi.new
 
@@ -352,10 +331,10 @@ opts = {
 
 begin
   #{{{documento_resource_listar}}}
-  result = api_instance.listar_using_get21(opts)
+  result = api_instance.listar_using_get22(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagdocumentoApi->listar_using_get21: #{e}"
+  puts "Exception when calling GlobaltagdocumentoApi->listar_using_get22: #{e}"
 end
 ```
 
@@ -369,7 +348,6 @@ Name | Type | Description  | Notes
  **id_template_documento** | **Integer**| {{{documento_request_id_template_documento_value}}} | [optional] 
  **nome** | **String**| {{{documento_request_nome_value}}} | [optional] 
  **extensao** | **String**| {{{documento_request_extensao_value}}} | [optional] 
-
 
 ### Return type
 
@@ -386,9 +364,8 @@ No authorization required
 
 
 
-
-# **listar_using_get22**
-> PageDocumentoTemplateResponse listar_using_get22(opts)
+# **listar_using_get23**
+> PageDocumentoTemplateResponse listar_using_get23(opts)
 
 {{{documento_template_resource_listar}}}
 
@@ -398,7 +375,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagdocumentoApi.new
 
@@ -411,10 +387,10 @@ opts = {
 
 begin
   #{{{documento_template_resource_listar}}}
-  result = api_instance.listar_using_get22(opts)
+  result = api_instance.listar_using_get23(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagdocumentoApi->listar_using_get22: #{e}"
+  puts "Exception when calling GlobaltagdocumentoApi->listar_using_get23: #{e}"
 end
 ```
 
@@ -426,7 +402,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
  **id_tipo_template** | **Integer**| {{{documento_template_request_id_tipo_template_value}}} | [optional] 
-
 
 ### Return type
 
@@ -443,9 +418,8 @@ No authorization required
 
 
 
-
-# **listar_using_get57**
-> PageTipoTemplateResponse listar_using_get57(opts)
+# **listar_using_get60**
+> PageTipoTemplateResponse listar_using_get60(opts)
 
 {{{tipo_template_resource_listar}}}
 
@@ -455,7 +429,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagdocumentoApi.new
 
@@ -467,10 +440,10 @@ opts = {
 
 begin
   #{{{tipo_template_resource_listar}}}
-  result = api_instance.listar_using_get57(opts)
+  result = api_instance.listar_using_get60(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagdocumentoApi->listar_using_get57: #{e}"
+  puts "Exception when calling GlobaltagdocumentoApi->listar_using_get60: #{e}"
 end
 ```
 
@@ -481,7 +454,6 @@ Name | Type | Description  | Notes
  **sort** | [**Array&lt;String&gt;**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
-
 
 ### Return type
 
@@ -498,9 +470,8 @@ No authorization required
 
 
 
-
-# **salvar_using_post11**
-> DocumentoDetalhadoResponse salvar_using_post11(persist)
+# **salvar_using_post12**
+> DocumentoDetalhadoResponse salvar_using_post12(persist)
 
 {{{documento_resource_salvar}}}
 
@@ -511,7 +482,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagdocumentoApi.new
 
 persist = Pier::DocumentoParametrosRequest.new # DocumentoParametrosRequest | persist
@@ -519,10 +489,10 @@ persist = Pier::DocumentoParametrosRequest.new # DocumentoParametrosRequest | pe
 
 begin
   #{{{documento_resource_salvar}}}
-  result = api_instance.salvar_using_post11(persist)
+  result = api_instance.salvar_using_post12(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagdocumentoApi->salvar_using_post11: #{e}"
+  puts "Exception when calling GlobaltagdocumentoApi->salvar_using_post12: #{e}"
 end
 ```
 
@@ -531,7 +501,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**DocumentoParametrosRequest**](DocumentoParametrosRequest.md)| persist | 
-
 
 ### Return type
 
@@ -548,9 +517,8 @@ No authorization required
 
 
 
-
-# **salvar_using_post12**
-> DocumentoTemplateResponse salvar_using_post12(persist)
+# **salvar_using_post13**
+> DocumentoTemplateResponse salvar_using_post13(persist)
 
 {{{documento_template_resource_salvar}}}
 
@@ -561,7 +529,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagdocumentoApi.new
 
 persist = Pier::DocumentoTemplatePersist.new # DocumentoTemplatePersist | persist
@@ -569,10 +536,10 @@ persist = Pier::DocumentoTemplatePersist.new # DocumentoTemplatePersist | persis
 
 begin
   #{{{documento_template_resource_salvar}}}
-  result = api_instance.salvar_using_post12(persist)
+  result = api_instance.salvar_using_post13(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagdocumentoApi->salvar_using_post12: #{e}"
+  puts "Exception when calling GlobaltagdocumentoApi->salvar_using_post13: #{e}"
 end
 ```
 
@@ -581,7 +548,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**DocumentoTemplatePersist**](DocumentoTemplatePersist.md)| persist | 
-
 
 ### Return type
 
@@ -598,9 +564,8 @@ No authorization required
 
 
 
-
-# **salvar_using_post31**
-> TipoTemplateResponse salvar_using_post31(persist)
+# **salvar_using_post32**
+> TipoTemplateResponse salvar_using_post32(persist)
 
 {{{tipo_template_resource_salvar}}}
 
@@ -611,7 +576,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagdocumentoApi.new
 
 persist = Pier::TipoTemplateRequest.new # TipoTemplateRequest | persist
@@ -619,10 +583,10 @@ persist = Pier::TipoTemplateRequest.new # TipoTemplateRequest | persist
 
 begin
   #{{{tipo_template_resource_salvar}}}
-  result = api_instance.salvar_using_post31(persist)
+  result = api_instance.salvar_using_post32(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagdocumentoApi->salvar_using_post31: #{e}"
+  puts "Exception when calling GlobaltagdocumentoApi->salvar_using_post32: #{e}"
 end
 ```
 
@@ -631,7 +595,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**TipoTemplateRequest**](TipoTemplateRequest.md)| persist | 
-
 
 ### Return type
 
@@ -645,8 +608,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

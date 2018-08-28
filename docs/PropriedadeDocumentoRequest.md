@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **flag_indice** | **BOOLEAN** | {{{propriedade_documento_request_flag_indice_value}}} | [optional] 
 
 
-

@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **tipo_entidade** | **String** | {{{consulta_cadastro_estabelecimento_d_t_o_tipo_entidade_value}}} | [optional] 
 
 
-

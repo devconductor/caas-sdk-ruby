@@ -13,4 +13,3 @@ Name | Type | Description | Notes
 **dias_em_atraso** | **Integer** | {{{acordo_response_dias_em_atraso_value}}} | [optional] 
 
 
-

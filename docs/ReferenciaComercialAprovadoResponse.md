@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **email** | **String** | {{{referencia_comercial_aprovado_response_email_value}}} | [optional] 
 
 
-

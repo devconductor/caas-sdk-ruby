@@ -20,4 +20,3 @@ Name | Type | Description | Notes
 **data_cancelamento_portador** | **String** | {{{adicional_response_data_cancelamento_portador_value}}} | [optional] 
 
 
-

@@ -21,4 +21,3 @@ Name | Type | Description | Notes
 **usuario** | **String** | {{{configuracao_rotativo_detalhe_response_usuario_value}}} | [optional] 
 
 
-

@@ -15,4 +15,3 @@ Name | Type | Description | Notes
 **chave_criptograma** | **String** | {{{cartao_pay_cadastro_response_chave_criptograma_value}}} | [optional] 
 
 
-

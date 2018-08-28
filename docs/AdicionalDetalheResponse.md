@@ -25,4 +25,3 @@ Name | Type | Description | Notes
 **telefones** | [**Array&lt;TelefoneResponse&gt;**](TelefoneResponse.md) | {{{adicional_detalhe_response_telefones_value}}} | [optional] 
 
 
-

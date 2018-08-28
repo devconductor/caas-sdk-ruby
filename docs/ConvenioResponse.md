@@ -25,4 +25,3 @@ Name | Type | Description | Notes
 **maquina** | **String** | M\u00E1quina pela qual foi realizado o cadastro ou altera\u00E7\u00E3o. | [optional] 
 
 
-

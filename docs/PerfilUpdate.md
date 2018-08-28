@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **permissoes** | [**Array&lt;ReferenciaIdPersist&gt;**](ReferenciaIdPersist.md) | {{{perfil_update_permissoes_value}}} | [optional] 
 
 
-

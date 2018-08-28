@@ -12,4 +12,3 @@ Name | Type | Description | Notes
 **src_name** | **String** | {{{arquivo_ajuste_lote_response_srcName_value}}} | [optional] 
 
 
-

@@ -16,4 +16,3 @@ Name | Type | Description | Notes
 **data_emissao_identidade** | **String** | {{{pessoa_response_data_emissao_identidade_value}}} | [optional] 
 
 
-

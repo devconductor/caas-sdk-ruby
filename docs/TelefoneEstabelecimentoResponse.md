@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **ramal** | **String** | {{{telefone_estabelecimento_response_ramal_value}}} | [optional] 
 
 
-

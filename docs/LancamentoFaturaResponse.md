@@ -30,4 +30,3 @@ Name | Type | Description | Notes
 **descricao_abreviada** | **String** | {{{lancamento_fatura_response_descricao_abreviada_value}}} | [optional] 
 
 
-

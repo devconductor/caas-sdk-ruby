@@ -11,4 +11,3 @@ Name | Type | Description | Notes
 **data_validade** | **String** | {{{codigo_seguranca_response_data_validade_value}}} | [optional] 
 
 
-

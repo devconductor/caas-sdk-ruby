@@ -5,10 +5,8 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizar_using_put1**](GlobaltagplataformamobileApi.md#atualizar_using_put1) | **PUT** /api/plataformas-mobile/{id} | {{{plataforma_mobile_resource_atualizar}}}
-[**listar_using_get40**](GlobaltagplataformamobileApi.md#listar_using_get40) | **GET** /api/plataformas-mobile | {{{plataforma_mobile_resource_listar}}}
-[**salvar_using_post26**](GlobaltagplataformamobileApi.md#salvar_using_post26) | **POST** /api/plataformas-mobile | {{{plataforma_mobile_resource_salvar}}}
-
-
+[**listar_using_get42**](GlobaltagplataformamobileApi.md#listar_using_get42) | **GET** /api/plataformas-mobile | {{{plataforma_mobile_resource_listar}}}
+[**salvar_using_post27**](GlobaltagplataformamobileApi.md#salvar_using_post27) | **POST** /api/plataformas-mobile | {{{plataforma_mobile_resource_salvar}}}
 
 
 # **atualizar_using_put1**
@@ -22,7 +20,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagplataformamobileApi.new
 
@@ -47,7 +44,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{plataforma_mobile_resource_atualizar_param_id}}} | 
  **update** | [**PlataformaMobileUpdateValue**](PlataformaMobileUpdateValue.md)| update | 
 
-
 ### Return type
 
 [**PlataformaMobileResponse**](PlataformaMobileResponse.md)
@@ -63,9 +59,8 @@ No authorization required
 
 
 
-
-# **listar_using_get40**
-> PagePlataformaMobileResponse listar_using_get40(opts)
+# **listar_using_get42**
+> PagePlataformaMobileResponse listar_using_get42(opts)
 
 {{{plataforma_mobile_resource_listar}}}
 
@@ -75,7 +70,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagplataformamobileApi.new
 
@@ -88,10 +82,10 @@ opts = {
 
 begin
   #{{{plataforma_mobile_resource_listar}}}
-  result = api_instance.listar_using_get40(opts)
+  result = api_instance.listar_using_get42(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagplataformamobileApi->listar_using_get40: #{e}"
+  puts "Exception when calling GlobaltagplataformamobileApi->listar_using_get42: #{e}"
 end
 ```
 
@@ -103,7 +97,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
  **nome** | **String**| {{{plataforma_mobile_request_nome_value}}} | [optional] 
-
 
 ### Return type
 
@@ -120,9 +113,8 @@ No authorization required
 
 
 
-
-# **salvar_using_post26**
-> PlataformaMobileResponse salvar_using_post26(persist)
+# **salvar_using_post27**
+> PlataformaMobileResponse salvar_using_post27(persist)
 
 {{{plataforma_mobile_resource_salvar}}}
 
@@ -133,7 +125,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagplataformamobileApi.new
 
 persist = Pier::PlataformaMobilePersistValue.new # PlataformaMobilePersistValue | persist
@@ -141,10 +132,10 @@ persist = Pier::PlataformaMobilePersistValue.new # PlataformaMobilePersistValue 
 
 begin
   #{{{plataforma_mobile_resource_salvar}}}
-  result = api_instance.salvar_using_post26(persist)
+  result = api_instance.salvar_using_post27(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagplataformamobileApi->salvar_using_post26: #{e}"
+  puts "Exception when calling GlobaltagplataformamobileApi->salvar_using_post27: #{e}"
 end
 ```
 
@@ -153,7 +144,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**PlataformaMobilePersistValue**](PlataformaMobilePersistValue.md)| persist | 
-
 
 ### Return type
 
@@ -167,8 +157,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

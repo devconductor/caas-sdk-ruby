@@ -4,17 +4,15 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_using_get7**](GlobaltagavisoviagemApi.md#consultar_using_get7) | **GET** /api/avisos-viagens/{id} | {{{aviso_viagem_resource_consultar}}}
+[**consultar_using_get8**](GlobaltagavisoviagemApi.md#consultar_using_get8) | **GET** /api/avisos-viagens/{id} | {{{aviso_viagem_resource_consultar}}}
 [**desabilitar_using_post**](GlobaltagavisoviagemApi.md#desabilitar_using_post) | **POST** /api/avisos-viagens/{id}/desabilitar | {{{aviso_viagem_resource_desabilitar}}}
 [**habilitar_using_post**](GlobaltagavisoviagemApi.md#habilitar_using_post) | **POST** /api/avisos-viagens/{id}/habilitar | {{{aviso_viagem_resource_habilitar}}}
-[**listar_using_get8**](GlobaltagavisoviagemApi.md#listar_using_get8) | **GET** /api/avisos-viagens | {{{aviso_viagem_resource_listar}}}
+[**listar_using_get9**](GlobaltagavisoviagemApi.md#listar_using_get9) | **GET** /api/avisos-viagens | {{{aviso_viagem_resource_listar}}}
 [**salvar_using_post3**](GlobaltagavisoviagemApi.md#salvar_using_post3) | **POST** /api/avisos-viagens | {{{aviso_viagem_resource_salvar}}}
 
 
-
-
-# **consultar_using_get7**
-> AvisoViagemResponse consultar_using_get7(id)
+# **consultar_using_get8**
+> AvisoViagemResponse consultar_using_get8(id)
 
 {{{aviso_viagem_resource_consultar}}}
 
@@ -25,7 +23,6 @@ Method | HTTP request | Description
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagavisoviagemApi.new
 
 id = 789 # Integer | {{{aviso_viagem_resource_consultar_param_id}}}
@@ -33,10 +30,10 @@ id = 789 # Integer | {{{aviso_viagem_resource_consultar_param_id}}}
 
 begin
   #{{{aviso_viagem_resource_consultar}}}
-  result = api_instance.consultar_using_get7(id)
+  result = api_instance.consultar_using_get8(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagavisoviagemApi->consultar_using_get7: #{e}"
+  puts "Exception when calling GlobaltagavisoviagemApi->consultar_using_get8: #{e}"
 end
 ```
 
@@ -45,7 +42,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{aviso_viagem_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -62,7 +58,6 @@ No authorization required
 
 
 
-
 # **desabilitar_using_post**
 > AvisoViagemResponse desabilitar_using_post(id)
 
@@ -74,7 +69,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagavisoviagemApi.new
 
@@ -96,7 +90,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{aviso_viagem_resource_desabilitar_param_id}}} | 
 
-
 ### Return type
 
 [**AvisoViagemResponse**](AvisoViagemResponse.md)
@@ -112,7 +105,6 @@ No authorization required
 
 
 
-
 # **habilitar_using_post**
 > AvisoViagemResponse habilitar_using_post(id)
 
@@ -124,7 +116,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagavisoviagemApi.new
 
@@ -146,7 +137,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{aviso_viagem_resource_habilitar_param_id}}} | 
 
-
 ### Return type
 
 [**AvisoViagemResponse**](AvisoViagemResponse.md)
@@ -162,9 +152,8 @@ No authorization required
 
 
 
-
-# **listar_using_get8**
-> PageAvisoViagemResponse listar_using_get8(opts)
+# **listar_using_get9**
+> PageAvisoViagemResponse listar_using_get9(opts)
 
 {{{aviso_viagem_resource_listar}}}
 
@@ -174,7 +163,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagavisoviagemApi.new
 
@@ -191,10 +179,10 @@ opts = {
 
 begin
   #{{{aviso_viagem_resource_listar}}}
-  result = api_instance.listar_using_get8(opts)
+  result = api_instance.listar_using_get9(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagavisoviagemApi->listar_using_get8: #{e}"
+  puts "Exception when calling GlobaltagavisoviagemApi->listar_using_get9: #{e}"
 end
 ```
 
@@ -211,7 +199,6 @@ Name | Type | Description  | Notes
  **data_fim** | **String**| {{{aviso_viagem_request_data_fim_value}}} | [optional] 
  **flag_ativo** | **Integer**| {{{aviso_viagem_request_flag_ativo_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageAvisoViagemResponse**](PageAvisoViagemResponse.md)
@@ -227,7 +214,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post3**
 > AvisoViagemResponse salvar_using_post3(id_cartao, codigo_pais, data_inicio, data_fim)
 
@@ -239,7 +225,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagavisoviagemApi.new
 
@@ -270,7 +255,6 @@ Name | Type | Description  | Notes
  **data_inicio** | **String**| {{{aviso_viagem_persist_data_inicio_value}}} | 
  **data_fim** | **String**| {{{aviso_viagem_persist_data_fim_value}}} | 
 
-
 ### Return type
 
 [**AvisoViagemResponse**](AvisoViagemResponse.md)
@@ -283,8 +267,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

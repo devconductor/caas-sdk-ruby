@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **descricao** | **String** | {{{campo_codificado_descricao_response_descricao_value}}} | [optional] 
 
 
-

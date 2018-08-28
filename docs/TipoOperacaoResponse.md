@@ -21,4 +21,3 @@ Name | Type | Description | Notes
 **plano_minimo** | **Integer** | {{{tipo_operacao_response_plano_minimo_value}}} | 
 
 
-

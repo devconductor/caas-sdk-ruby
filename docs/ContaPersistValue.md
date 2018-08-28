@@ -18,4 +18,3 @@ Name | Type | Description | Notes
 **flag_fatura_por_email** | **Integer** | {{{conta_persist_flag_fatura_por_email_value}}} | 
 
 
-

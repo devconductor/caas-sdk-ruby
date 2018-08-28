@@ -16,4 +16,3 @@ Name | Type | Description | Notes
 **identificador_externo** | **String** | {{{lote_cartoes_pre_pagos_response_identificador_externo_value}}} | 
 
 
-

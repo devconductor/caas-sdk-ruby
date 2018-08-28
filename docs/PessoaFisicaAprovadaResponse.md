@@ -37,4 +37,3 @@ Name | Type | Description | Notes
 **limite_consignado** | **Float** | {{{pessoa_fisica_aprovada_response_limite_consignado_value}}} | 
 
 
-

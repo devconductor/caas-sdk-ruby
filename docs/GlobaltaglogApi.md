@@ -4,13 +4,11 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**salvar_using_post18**](GlobaltaglogApi.md#salvar_using_post18) | **POST** /api/logs/log-acessos-usuario | {{{log_acesso_usuario_recurso_salvar}}}
+[**salvar_using_post19**](GlobaltaglogApi.md#salvar_using_post19) | **POST** /api/logs/log-acessos-usuario | {{{log_acesso_usuario_recurso_salvar}}}
 
 
-
-
-# **salvar_using_post18**
-> LogAcessoUsuarioResposta salvar_using_post18(log_acesso_usuario_persist)
+# **salvar_using_post19**
+> LogAcessoUsuarioResposta salvar_using_post19(log_acesso_usuario_persist)
 
 {{{log_acesso_usuario_recurso_salvar}}}
 
@@ -21,7 +19,6 @@ Method | HTTP request | Description
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltaglogApi.new
 
 log_acesso_usuario_persist = Pier::LogAcessoUsuarioPersistencia.new # LogAcessoUsuarioPersistencia | logAcessoUsuarioPersist
@@ -29,10 +26,10 @@ log_acesso_usuario_persist = Pier::LogAcessoUsuarioPersistencia.new # LogAcessoU
 
 begin
   #{{{log_acesso_usuario_recurso_salvar}}}
-  result = api_instance.salvar_using_post18(log_acesso_usuario_persist)
+  result = api_instance.salvar_using_post19(log_acesso_usuario_persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltaglogApi->salvar_using_post18: #{e}"
+  puts "Exception when calling GlobaltaglogApi->salvar_using_post19: #{e}"
 end
 ```
 
@@ -41,7 +38,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **log_acesso_usuario_persist** | [**LogAcessoUsuarioPersistencia**](LogAcessoUsuarioPersistencia.md)| logAcessoUsuarioPersist | 
-
 
 ### Return type
 
@@ -55,8 +51,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

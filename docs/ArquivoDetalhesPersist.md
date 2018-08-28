@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **conteudo** | **String** | {{{arquivo_detalhes_persist_conteudo_value}}} | 
 
 
-

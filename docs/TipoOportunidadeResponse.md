@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **flag_ativo** | **BOOLEAN** | {{{tipo_oportunidade_response_flag_ativo_value}}} | 
 
 
-

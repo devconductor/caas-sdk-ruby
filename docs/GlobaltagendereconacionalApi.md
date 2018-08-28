@@ -7,8 +7,6 @@ Method | HTTP request | Description
 [**consultar_endereco_using_get**](GlobaltagendereconacionalApi.md#consultar_endereco_using_get) | **GET** /api/ceps | {{{c_e_p_endereco_resource_consultar_endereco}}}
 
 
-
-
 # **consultar_endereco_using_get**
 > EnderecoResponse consultar_endereco_using_get(cep)
 
@@ -20,7 +18,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagendereconacionalApi.new
 
@@ -42,7 +39,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cep** | **String**| CEP | 
 
-
 ### Return type
 
 [**EnderecoResponse**](EnderecoResponse.md)
@@ -55,8 +51,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **descricao** | **String** | {{{m_c_c_response_descricao_value}}} | [optional] 
 
 
-

@@ -16,4 +16,3 @@ Name | Type | Description | Notes
 **detalhes** | [**Array&lt;ArquivoParametroResponse&gt;**](ArquivoParametroResponse.md) | {{{arquivo_detalhe_response_detalhes_value}}} | [optional] 
 
 
-

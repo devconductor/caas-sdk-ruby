@@ -13,4 +13,3 @@ Name | Type | Description | Notes
 **criptograma_resposta** | **String** | {{{valida_cartao_response_criptograma_resposta_value}}} | [optional] 
 
 
-

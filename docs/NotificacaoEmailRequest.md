@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **parametros_conteudo** | **Hash&lt;String, Object&gt;** | {{{notificacao_email_request_parametros_conteudo_value}}} | [optional] 
 
 
-

@@ -11,4 +11,3 @@ Name | Type | Description | Notes
 **cobrar_tarifa_ao_emitir_nova_via** | **Integer** | {{{status_cartao_response_cobrar_tarifa_ao_emitir_nova_via_value}}} | [optional] 
 
 
-

@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **usuario** | **String** | {{{plano_campanha_response_usuario_value}}} | [optional] 
 
 
-

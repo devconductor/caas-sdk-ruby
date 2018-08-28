@@ -5,11 +5,9 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_using_post**](GlobaltagpropostaApi.md#alterar_using_post) | **POST** /api/propostas/{id}/alterar-status | {{{proposta_resource_alterar_status}}}
-[**consultar_using_get33**](GlobaltagpropostaApi.md#consultar_using_get33) | **GET** /api/propostas/{id} | {{{proposta_resource_consultar}}}
+[**consultar_using_get35**](GlobaltagpropostaApi.md#consultar_using_get35) | **GET** /api/propostas/{id} | {{{proposta_resource_consultar}}}
 [**listar_status_proposta_using_get**](GlobaltagpropostaApi.md#listar_status_proposta_using_get) | **GET** /api/status-propostas | {{{proposta_resource_listar_status}}}
-[**listar_using_get44**](GlobaltagpropostaApi.md#listar_using_get44) | **GET** /api/propostas | {{{proposta_resource_listar}}}
-
-
+[**listar_using_get46**](GlobaltagpropostaApi.md#listar_using_get46) | **GET** /api/propostas | {{{proposta_resource_listar}}}
 
 
 # **alterar_using_post**
@@ -23,7 +21,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagpropostaApi.new
 
@@ -48,7 +45,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{proposta_resource_alterar_status_param_id}}} | 
  **update** | [**StatusPropostaUpdate**](StatusPropostaUpdate.md)| update | 
 
-
 ### Return type
 
 [**PropostaResponse**](PropostaResponse.md)
@@ -64,9 +60,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get33**
-> PropostaResponse consultar_using_get33(id)
+# **consultar_using_get35**
+> PropostaResponse consultar_using_get35(id)
 
 {{{proposta_resource_consultar}}}
 
@@ -77,7 +72,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagpropostaApi.new
 
 id = 789 # Integer | {{{proposta_resource_consultar_param_id}}}
@@ -85,10 +79,10 @@ id = 789 # Integer | {{{proposta_resource_consultar_param_id}}}
 
 begin
   #{{{proposta_resource_consultar}}}
-  result = api_instance.consultar_using_get33(id)
+  result = api_instance.consultar_using_get35(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagpropostaApi->consultar_using_get33: #{e}"
+  puts "Exception when calling GlobaltagpropostaApi->consultar_using_get35: #{e}"
 end
 ```
 
@@ -97,7 +91,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{proposta_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -111,7 +104,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
 
 
 
@@ -126,7 +118,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagpropostaApi.new
 
@@ -157,7 +148,6 @@ Name | Type | Description  | Notes
  **status** | **Integer**| {{{status_proposta_request_status_value}}} | [optional] 
  **flag_permite_alteracao** | **BOOLEAN**| {{{status_proposta_request_flag_permite_alteracao_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageStatusPropostaResponse**](PageStatusPropostaResponse.md)
@@ -173,9 +163,8 @@ No authorization required
 
 
 
-
-# **listar_using_get44**
-> PagePropostaResponse listar_using_get44(opts)
+# **listar_using_get46**
+> PagePropostaResponse listar_using_get46(opts)
 
 {{{proposta_resource_listar}}}
 
@@ -185,7 +174,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagpropostaApi.new
 
@@ -198,10 +186,10 @@ opts = {
 
 begin
   #{{{proposta_resource_listar}}}
-  result = api_instance.listar_using_get44(opts)
+  result = api_instance.listar_using_get46(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagpropostaApi->listar_using_get44: #{e}"
+  puts "Exception when calling GlobaltagpropostaApi->listar_using_get46: #{e}"
 end
 ```
 
@@ -213,7 +201,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
  **status** | **Integer**| {{{proposta_request_status_value}}} | [optional] 
-
 
 ### Return type
 
@@ -227,8 +214,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

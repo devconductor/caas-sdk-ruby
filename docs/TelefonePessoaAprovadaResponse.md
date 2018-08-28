@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **ramal** | **String** | {{{telefone_pessoa_aprovada_response_ramal_value}}} | [optional] 
 
 
-

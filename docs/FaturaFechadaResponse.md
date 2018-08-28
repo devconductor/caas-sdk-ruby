@@ -33,4 +33,3 @@ Name | Type | Description | Notes
 **total_parcelado_internacionais** | **Float** | {{{fatura_fechada_response_total_parcelado_internacionais_value}}} | 
 
 
-

@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **valor_transferencia** | **Float** | {{{transferencia_response_valor_transferencia_value}}} | [optional] 
 
 
-

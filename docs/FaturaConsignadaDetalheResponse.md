@@ -53,4 +53,3 @@ Name | Type | Description | Notes
 **total_servicos** | **Float** | {{{fatura_consignada_detalhe_response_total_servicos_value}}} | 
 
 
-

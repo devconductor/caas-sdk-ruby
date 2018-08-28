@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **id_tipo_resolucao_contestacao** | **Integer** |  | [optional] 
 
 
-

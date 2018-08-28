@@ -12,4 +12,3 @@ Name | Type | Description | Notes
 **data_hora_alteracao** | **String** | {{{arquivo_parametro_a_u_d_response_data_hora_alteracao_value}}} | [optional] 
 
 
-

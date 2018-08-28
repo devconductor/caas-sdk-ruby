@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **id_convenio** | **Integer** | {{{tipo_faturamento_persist_id_convenio_value}}} | [optional] 
 
 
-

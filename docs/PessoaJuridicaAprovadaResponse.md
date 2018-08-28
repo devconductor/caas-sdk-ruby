@@ -30,4 +30,3 @@ Name | Type | Description | Notes
 **limite_parcelas** | **Float** | {{{pessoa_juridica_aprovada_response_limite_parcelas_value}}} | 
 
 
-

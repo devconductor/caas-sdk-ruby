@@ -6,15 +6,13 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultar_estagio_cartao_using_get**](GlobaltagstatusparametroApi.md#consultar_estagio_cartao_using_get) | **GET** /api/estagios-cartoes/{id} | {{{estagio_cartao_resource_consultar_estagio_cartao}}}
 [**consultar_status_cartao_using_get**](GlobaltagstatusparametroApi.md#consultar_status_cartao_using_get) | **GET** /api/status-cartoes/{id} | {{{status_cartao_resource_consultar_status_cartao}}}
-[**consultar_using_get36**](GlobaltagstatusparametroApi.md#consultar_using_get36) | **GET** /api/status-contas/{id} | {{{status_conta_resource_consultar}}}
-[**consultar_using_get37**](GlobaltagstatusparametroApi.md#consultar_using_get37) | **GET** /api/status-impressoes/{id} | {{{status_impressao_resource_consultar}}}
+[**consultar_using_get38**](GlobaltagstatusparametroApi.md#consultar_using_get38) | **GET** /api/status-contas/{id} | {{{status_conta_resource_consultar}}}
+[**consultar_using_get39**](GlobaltagstatusparametroApi.md#consultar_using_get39) | **GET** /api/status-impressoes/{id} | {{{status_impressao_resource_consultar}}}
 [**listar_estagios_cartoes_using_get**](GlobaltagstatusparametroApi.md#listar_estagios_cartoes_using_get) | **GET** /api/estagios-cartoes | {{{estagio_cartao_resource_listar_estagios_cartoes}}}
 [**listar_status_cartoes_using_get**](GlobaltagstatusparametroApi.md#listar_status_cartoes_using_get) | **GET** /api/status-cartoes | {{{status_cartao_resource_listar_status_cartoes}}}
 [**listar_tipos_eventos_transacoes_using_get**](GlobaltagstatusparametroApi.md#listar_tipos_eventos_transacoes_using_get) | **GET** /api/tipos-eventos-transacoes | {{{enum_resource_listar_tipos_eventos_transacoes}}}
-[**listar_using_get47**](GlobaltagstatusparametroApi.md#listar_using_get47) | **GET** /api/status-contas | {{{status_conta_resource_listar}}}
-[**listar_using_get48**](GlobaltagstatusparametroApi.md#listar_using_get48) | **GET** /api/status-impressoes | {{{status_impressao_resource_listar}}}
-
-
+[**listar_using_get49**](GlobaltagstatusparametroApi.md#listar_using_get49) | **GET** /api/status-contas | {{{status_conta_resource_listar}}}
+[**listar_using_get50**](GlobaltagstatusparametroApi.md#listar_using_get50) | **GET** /api/status-impressoes | {{{status_impressao_resource_listar}}}
 
 
 # **consultar_estagio_cartao_using_get**
@@ -28,7 +26,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagstatusparametroApi.new
 
@@ -50,7 +47,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{estagio_cartao_resource_consultar_estagio_cartao_param_id}}} | 
 
-
 ### Return type
 
 [**EstagioCartaoResponse**](EstagioCartaoResponse.md)
@@ -66,7 +62,6 @@ No authorization required
 
 
 
-
 # **consultar_status_cartao_using_get**
 > StatusCartaoResponse consultar_status_cartao_using_get(id)
 
@@ -78,7 +73,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagstatusparametroApi.new
 
@@ -100,7 +94,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{status_cartao_resource_consultar_status_cartao_param_id}}} | 
 
-
 ### Return type
 
 [**StatusCartaoResponse**](StatusCartaoResponse.md)
@@ -116,9 +109,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get36**
-> StatusContaResponse consultar_using_get36(id)
+# **consultar_using_get38**
+> StatusContaResponse consultar_using_get38(id)
 
 {{{status_conta_resource_consultar}}}
 
@@ -129,7 +121,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagstatusparametroApi.new
 
 id = 789 # Integer | {{{status_conta_resource_consultar_param_id}}}
@@ -137,10 +128,10 @@ id = 789 # Integer | {{{status_conta_resource_consultar_param_id}}}
 
 begin
   #{{{status_conta_resource_consultar}}}
-  result = api_instance.consultar_using_get36(id)
+  result = api_instance.consultar_using_get38(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagstatusparametroApi->consultar_using_get36: #{e}"
+  puts "Exception when calling GlobaltagstatusparametroApi->consultar_using_get38: #{e}"
 end
 ```
 
@@ -149,7 +140,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{status_conta_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -166,9 +156,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get37**
-> StatusImpressaoResponse consultar_using_get37(id)
+# **consultar_using_get39**
+> StatusImpressaoResponse consultar_using_get39(id)
 
 {{{status_impressao_resource_consultar}}}
 
@@ -179,7 +168,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagstatusparametroApi.new
 
 id = 789 # Integer | {{{status_impressao_resource_consultar_param_id}}}
@@ -187,10 +175,10 @@ id = 789 # Integer | {{{status_impressao_resource_consultar_param_id}}}
 
 begin
   #{{{status_impressao_resource_consultar}}}
-  result = api_instance.consultar_using_get37(id)
+  result = api_instance.consultar_using_get39(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagstatusparametroApi->consultar_using_get37: #{e}"
+  puts "Exception when calling GlobaltagstatusparametroApi->consultar_using_get39: #{e}"
 end
 ```
 
@@ -199,7 +187,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{status_impressao_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -216,7 +203,6 @@ No authorization required
 
 
 
-
 # **listar_estagios_cartoes_using_get**
 > PageEstagioCartaoResponse listar_estagios_cartoes_using_get(opts)
 
@@ -228,7 +214,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagstatusparametroApi.new
 
@@ -259,7 +244,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{estagio_cartao_request_id_value}}} | [optional] 
  **nome** | **String**| {{{estagio_cartao_request_nome_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageEstagioCartaoResponse**](PageEstagioCartaoResponse.md)
@@ -275,7 +259,6 @@ No authorization required
 
 
 
-
 # **listar_status_cartoes_using_get**
 > PageStatusCartaoResponse listar_status_cartoes_using_get(opts)
 
@@ -287,7 +270,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagstatusparametroApi.new
 
@@ -326,7 +308,6 @@ Name | Type | Description  | Notes
  **permite_atribuir_como_cancelamento** | **Integer**| {{{status_cartao_request_permite_atribuir_como_cancelamento_value}}} | [optional] 
  **cobrar_tarifa_ao_emitir_nova_via** | **Integer**| {{{status_cartao_request_cobrar_tarifa_ao_emitir_nova_via_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageStatusCartaoResponse**](PageStatusCartaoResponse.md)
@@ -342,7 +323,6 @@ No authorization required
 
 
 
-
 # **listar_tipos_eventos_transacoes_using_get**
 > Array&lt;Object&gt; listar_tipos_eventos_transacoes_using_get
 
@@ -354,7 +334,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagstatusparametroApi.new
 
@@ -369,7 +348,6 @@ end
 
 ### Parameters
 This endpoint does not need any parameter.
-
 
 ### Return type
 
@@ -386,9 +364,8 @@ No authorization required
 
 
 
-
-# **listar_using_get47**
-> PageStatusContaResponse listar_using_get47(opts)
+# **listar_using_get49**
+> PageStatusContaResponse listar_using_get49(opts)
 
 {{{status_conta_resource_listar}}}
 
@@ -398,7 +375,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagstatusparametroApi.new
 
@@ -421,10 +397,10 @@ opts = {
 
 begin
   #{{{status_conta_resource_listar}}}
-  result = api_instance.listar_using_get47(opts)
+  result = api_instance.listar_using_get49(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagstatusparametroApi->listar_using_get47: #{e}"
+  puts "Exception when calling GlobaltagstatusparametroApi->listar_using_get49: #{e}"
 end
 ```
 
@@ -447,7 +423,6 @@ Name | Type | Description  | Notes
  **permite_desbloquear** | **Integer**| {{{status_conta_request_permite_desbloquear_value}}} | [optional] 
  **permite_atribuir_como_cancelamento** | **Integer**| {{{status_conta_request_permite_atribuir_como_cancelamento_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageStatusContaResponse**](PageStatusContaResponse.md)
@@ -463,9 +438,8 @@ No authorization required
 
 
 
-
-# **listar_using_get48**
-> PageStatusImpressaoResponse listar_using_get48(opts)
+# **listar_using_get50**
+> PageStatusImpressaoResponse listar_using_get50(opts)
 
 {{{status_impressao_resource_listar}}}
 
@@ -475,7 +449,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagstatusparametroApi.new
 
@@ -489,10 +462,10 @@ opts = {
 
 begin
   #{{{status_impressao_resource_listar}}}
-  result = api_instance.listar_using_get48(opts)
+  result = api_instance.listar_using_get50(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagstatusparametroApi->listar_using_get48: #{e}"
+  puts "Exception when calling GlobaltagstatusparametroApi->listar_using_get50: #{e}"
 end
 ```
 
@@ -506,7 +479,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{status_impressao_request_id_value}}} | [optional] 
  **nome** | **String**| {{{status_impressao_request_nome_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageStatusImpressaoResponse**](PageStatusImpressaoResponse.md)
@@ -519,8 +491,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

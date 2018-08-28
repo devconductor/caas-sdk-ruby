@@ -16,4 +16,3 @@ Name | Type | Description | Notes
 **descricao_status** | **String** | {{{detalhe_ajuste_lote_response_descricaoStatus_value}}} | [optional] 
 
 
-

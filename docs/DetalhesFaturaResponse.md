@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **transacoes** | [**Array&lt;TransacoesCorrentesResponse&gt;**](TransacoesCorrentesResponse.md) | {{{detalhes_fatura_response_transacoes_value}}} | [optional] 
 
 
-

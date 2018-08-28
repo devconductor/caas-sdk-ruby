@@ -14,4 +14,3 @@ Name | Type | Description | Notes
 **data_alteracao** | **String** | {{{template_notificacao_response_data_alteracao_value}}} | [optional] 
 
 
-

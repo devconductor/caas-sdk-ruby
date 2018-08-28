@@ -9,8 +9,6 @@ Method | HTTP request | Description
 [**listar_using_get**](GlobaltagpagamentoApi.md#listar_using_get) | **GET** /api/acordos | {{{acordo_resource_listar}}}
 
 
-
-
 # **consultar_using_get**
 > AcordoDetalheResponse consultar_using_get(id)
 
@@ -22,7 +20,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagpagamentoApi.new
 
@@ -44,7 +41,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{acordo_resource_consultar_param_id}}} | 
 
-
 ### Return type
 
 [**AcordoDetalheResponse**](AcordoDetalheResponse.md)
@@ -60,7 +56,6 @@ No authorization required
 
 
 
-
 # **listar_pagamentos_using_get1**
 > PageHistoricoPagamentoResponse listar_pagamentos_using_get1(opts)
 
@@ -72,7 +67,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagpagamentoApi.new
 
@@ -113,7 +107,6 @@ Name | Type | Description  | Notes
  **data_hora_pagamento** | **String**| {{{historico_pagamento_request_data_hora_pagamento_value}}} | [optional] 
  **status** | **Integer**| {{{historico_pagamento_request_status_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageHistoricoPagamentoResponse**](PageHistoricoPagamentoResponse.md)
@@ -129,7 +122,6 @@ No authorization required
 
 
 
-
 # **listar_using_get**
 > PageAcordoResponse listar_using_get(opts)
 
@@ -141,7 +133,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagpagamentoApi.new
 
@@ -176,7 +167,6 @@ Name | Type | Description  | Notes
  **data_acordo** | **String**| {{{acordo_request_data_acordo_value}}} | [optional] 
  **quantidade_parcelas** | **Integer**| {{{acordo_request_quantidade_parcelas_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageAcordoResponse**](PageAcordoResponse.md)
@@ -189,8 +179,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

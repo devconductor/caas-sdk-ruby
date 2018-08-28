@@ -35,4 +35,3 @@ Name | Type | Description | Notes
 **limite_consignado** | **Float** | {{{pessoa_fisica_aprovada_persist_limite_consignado_value}}} | [optional] 
 
 
-

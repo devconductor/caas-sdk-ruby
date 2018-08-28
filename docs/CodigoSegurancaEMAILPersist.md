@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **codigo_seguranca** | **String** | {{{codigo_seguranca_e_m_a_i_l_persist_codigo_seguranca_value}}} | [optional] 
 
 
-

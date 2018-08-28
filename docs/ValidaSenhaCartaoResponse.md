@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **quantidade_maxima_tentativas** | **Integer** | {{{valida_senha_cartao_response_quantidade_maxima_tentativas_value}}} | [optional] 
 
 
-

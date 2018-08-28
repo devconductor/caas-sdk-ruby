@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **taxa** | **Float** | {{{taxa_juros_conta_lista_response_taxa_value}}} | [optional] 
 
 
-

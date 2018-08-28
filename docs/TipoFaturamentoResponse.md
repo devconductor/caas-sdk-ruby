@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **id_convenio** | **Integer** | {{{tipo_faturamento_response_id_convenio_value}}} | [optional] 
 
 
-

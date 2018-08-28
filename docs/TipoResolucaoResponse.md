@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **descricao** | **String** | {{{tipo_resolucao_response_descricao_value}}} | [optional] 
 
 
-

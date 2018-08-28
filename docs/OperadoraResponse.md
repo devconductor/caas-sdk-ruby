@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **nome** | **String** | {{{operadora_response_nome_value}}} | [optional] 
 
 
-

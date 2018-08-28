@@ -12,4 +12,3 @@ Name | Type | Description | Notes
 **id** | **Integer** | {{{inscricao_apn_resposta_id_descricao}}} | [optional] 
 
 
-

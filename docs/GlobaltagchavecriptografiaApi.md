@@ -7,8 +7,6 @@ Method | HTTP request | Description
 [**descriptografar_using_post**](GlobaltagchavecriptografiaApi.md#descriptografar_using_post) | **POST** /api/chaves-criptografia/descriptografar | {{{chave_criptografia_recurso_descriptografar}}}
 
 
-
-
 # **descriptografar_using_post**
 > ChaveCriptografiaResponse descriptografar_using_post(chave_criptografia_request)
 
@@ -20,7 +18,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagchavecriptografiaApi.new
 
@@ -42,7 +39,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **chave_criptografia_request** | [**ChaveCriptografiaRequest**](ChaveCriptografiaRequest.md)| chaveCriptografiaRequest | 
 
-
 ### Return type
 
 [**ChaveCriptografiaResponse**](ChaveCriptografiaResponse.md)
@@ -55,8 +51,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

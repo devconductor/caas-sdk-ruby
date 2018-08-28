@@ -14,4 +14,3 @@ Name | Type | Description | Notes
 **status** | **String** | {{{log_acesso_usuario_persistencia_status_log_acesso}}} | [optional] 
 
 
-

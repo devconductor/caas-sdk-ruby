@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **cartao** | [**CartaoImpressaoResponse**](CartaoImpressaoResponse.md) | {{{cartao_impressao_multiapp_response_cartao_filho_value}}} | [optional] 
 
 
-

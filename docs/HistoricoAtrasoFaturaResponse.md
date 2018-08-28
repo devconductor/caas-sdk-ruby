@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **dias_pagamento_apos_vencimento** | **Integer** | {{{historico_atraso_fatura_response_dias_pagamento_apos_vencimento_value}}} | [optional] 
 
 
-

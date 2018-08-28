@@ -55,4 +55,3 @@ Name | Type | Description | Notes
 **id_status_impressao** | **Integer** | {{{dados_cartao_impressao_response_id_status_impressao_value}}} | [optional] 
 
 
-

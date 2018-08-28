@@ -28,4 +28,3 @@ Name | Type | Description | Notes
 **nome_portador_cartao** | **String** | {{{compra_response_nome_portador_cartao_value}}} | [optional] 
 
 
-

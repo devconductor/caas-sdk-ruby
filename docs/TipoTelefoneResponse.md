@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **nome** | **String** | {{{tipo_telefone_response_nome_value}}} | [optional] 
 
 
-

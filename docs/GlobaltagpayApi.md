@@ -5,18 +5,16 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizar_chave_using_post**](GlobaltagpayApi.md#atualizar_chave_using_post) | **POST** /api/cartoes-tokenizados/{id}/atualizar-chave | {{{cartao_pay_resource_atualizar_chave}}}
-[**atualizar_using_put**](GlobaltagpayApi.md#atualizar_using_put) | **PUT** /api/cartoes-tokenizados/{id} | {{{cartao_pay_resource_atualizar}}}
+[**atualizar_using_put1**](GlobaltagpayApi.md#atualizar_using_put1) | **PUT** /api/cartoes-tokenizados/{id} | {{{cartao_pay_resource_atualizar}}}
 [**confirma_atualizacao_chave_using_post**](GlobaltagpayApi.md#confirma_atualizacao_chave_using_post) | **POST** /api/cartoes-tokenizados/{id}/confirmar-chave | {{{cartao_pay_resource_confirma_atualizacao_chave}}}
-[**consultar_using_get9**](GlobaltagpayApi.md#consultar_using_get9) | **GET** /api/cartoes-tokenizados/{id} | {{{cartao_pay_resource_consultar}}}
+[**consultar_using_get11**](GlobaltagpayApi.md#consultar_using_get11) | **GET** /api/cartoes-tokenizados/{id} | {{{cartao_pay_resource_consultar}}}
 [**listar_codigos_resposta_using_get**](GlobaltagpayApi.md#listar_codigos_resposta_using_get) | **GET** /api/codigos-resposta | {{{enum_pay_resource_listar_codigos_resposta}}}
 [**listar_modos_entrada_using_get**](GlobaltagpayApi.md#listar_modos_entrada_using_get) | **GET** /api/modos-entrada | {{{enum_pay_resource_listar_modos_entrada}}}
 [**listar_operacoes_using_get**](GlobaltagpayApi.md#listar_operacoes_using_get) | **GET** /api/operacoes | {{{enum_pay_resource_listar_operacoes}}}
 [**listar_tipos_terminais_using_get**](GlobaltagpayApi.md#listar_tipos_terminais_using_get) | **GET** /api/tipos-terminais | {{{enum_pay_resource_listar_tipos_terminais}}}
 [**listar_tipos_transacoes_using_get**](GlobaltagpayApi.md#listar_tipos_transacoes_using_get) | **GET** /api/tipos-transacoes | {{{enum_pay_resource_listar_tipos_transacoes}}}
-[**listar_using_get10**](GlobaltagpayApi.md#listar_using_get10) | **GET** /api/cartoes-tokenizados | {{{cartao_pay_resource_listar}}}
-[**salvar_using_post5**](GlobaltagpayApi.md#salvar_using_post5) | **POST** /api/cartoes-tokenizados | {{{cartao_pay_resource_salvar}}}
-
-
+[**listar_using_get11**](GlobaltagpayApi.md#listar_using_get11) | **GET** /api/cartoes-tokenizados | {{{cartao_pay_resource_listar}}}
+[**salvar_using_post6**](GlobaltagpayApi.md#salvar_using_post6) | **POST** /api/cartoes-tokenizados | {{{cartao_pay_resource_salvar}}}
 
 
 # **atualizar_chave_using_post**
@@ -30,7 +28,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagpayApi.new
 
@@ -55,7 +52,6 @@ Name | Type | Description  | Notes
  **device_id** | **String**| {{{cartao_pay_resource_atualizar_chave_param_device_id}}} | 
  **id** | **Integer**| {{{cartao_pay_resource_atualizar_chave_param_id}}} | 
 
-
 ### Return type
 
 [**CartaoPayAtualizarChaveResponse**](CartaoPayAtualizarChaveResponse.md)
@@ -71,9 +67,8 @@ No authorization required
 
 
 
-
-# **atualizar_using_put**
-> CartaoPayResponse atualizar_using_put(device_id, id, update)
+# **atualizar_using_put1**
+> CartaoPayResponse atualizar_using_put1(device_id, id, update)
 
 {{{cartao_pay_resource_atualizar}}}
 
@@ -83,7 +78,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagpayApi.new
 
@@ -96,10 +90,10 @@ update = Pier::CartaoPayUpdate.new # CartaoPayUpdate | update
 
 begin
   #{{{cartao_pay_resource_atualizar}}}
-  result = api_instance.atualizar_using_put(device_id, id, update)
+  result = api_instance.atualizar_using_put1(device_id, id, update)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagpayApi->atualizar_using_put: #{e}"
+  puts "Exception when calling GlobaltagpayApi->atualizar_using_put1: #{e}"
 end
 ```
 
@@ -110,7 +104,6 @@ Name | Type | Description  | Notes
  **device_id** | **String**| {{{cartao_pay_resource_atualizar_param_device_id}}} | 
  **id** | **Integer**| {{{cartao_pay_resource_atualizar_param_id}}} | 
  **update** | [**CartaoPayUpdate**](CartaoPayUpdate.md)| update | 
-
 
 ### Return type
 
@@ -127,7 +120,6 @@ No authorization required
 
 
 
-
 # **confirma_atualizacao_chave_using_post**
 > CartaoPayConfirmarChaveResponse confirma_atualizacao_chave_using_post(device_id, id, update)
 
@@ -139,7 +131,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagpayApi.new
 
@@ -167,7 +158,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{cartao_pay_resource_confirma_atualizacao_chave_param_id}}} | 
  **update** | [**CartaoPayKeyUpdate**](CartaoPayKeyUpdate.md)| update | 
 
-
 ### Return type
 
 [**CartaoPayConfirmarChaveResponse**](CartaoPayConfirmarChaveResponse.md)
@@ -183,9 +173,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get9**
-> CartaoPayDetalheResponse consultar_using_get9(device_id, id)
+# **consultar_using_get11**
+> CartaoPayDetalheResponse consultar_using_get11(device_id, id)
 
 {{{cartao_pay_resource_consultar}}}
 
@@ -196,7 +185,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagpayApi.new
 
 device_id = "device_id_example" # String | {{{cartao_pay_resource_consultar_param_device_id}}}
@@ -206,10 +194,10 @@ id = 789 # Integer | {{{cartao_pay_resource_consultar_param_id}}}
 
 begin
   #{{{cartao_pay_resource_consultar}}}
-  result = api_instance.consultar_using_get9(device_id, id)
+  result = api_instance.consultar_using_get11(device_id, id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagpayApi->consultar_using_get9: #{e}"
+  puts "Exception when calling GlobaltagpayApi->consultar_using_get11: #{e}"
 end
 ```
 
@@ -219,7 +207,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_id** | **String**| {{{cartao_pay_resource_consultar_param_device_id}}} | 
  **id** | **Integer**| {{{cartao_pay_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -236,7 +223,6 @@ No authorization required
 
 
 
-
 # **listar_codigos_resposta_using_get**
 > Array&lt;Object&gt; listar_codigos_resposta_using_get
 
@@ -248,7 +234,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagpayApi.new
 
@@ -264,7 +249,6 @@ end
 ### Parameters
 This endpoint does not need any parameter.
 
-
 ### Return type
 
 **Array&lt;Object&gt;**
@@ -277,7 +261,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
 
 
 
@@ -293,7 +276,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagpayApi.new
 
 begin
@@ -308,7 +290,6 @@ end
 ### Parameters
 This endpoint does not need any parameter.
 
-
 ### Return type
 
 **Array&lt;Object&gt;**
@@ -321,7 +302,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
 
 
 
@@ -337,7 +317,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagpayApi.new
 
 begin
@@ -352,7 +331,6 @@ end
 ### Parameters
 This endpoint does not need any parameter.
 
-
 ### Return type
 
 **Array&lt;Object&gt;**
@@ -365,7 +343,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
 
 
 
@@ -381,7 +358,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagpayApi.new
 
 begin
@@ -396,7 +372,6 @@ end
 ### Parameters
 This endpoint does not need any parameter.
 
-
 ### Return type
 
 **Array&lt;Object&gt;**
@@ -409,7 +384,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
 
 
 
@@ -425,7 +399,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagpayApi.new
 
 begin
@@ -439,7 +412,6 @@ end
 
 ### Parameters
 This endpoint does not need any parameter.
-
 
 ### Return type
 
@@ -456,9 +428,8 @@ No authorization required
 
 
 
-
-# **listar_using_get10**
-> PageCartaoPayResponse listar_using_get10(opts)
+# **listar_using_get11**
+> PageCartaoPayResponse listar_using_get11(opts)
 
 {{{cartao_pay_resource_listar}}}
 
@@ -468,7 +439,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagpayApi.new
 
@@ -483,10 +453,10 @@ opts = {
 
 begin
   #{{{cartao_pay_resource_listar}}}
-  result = api_instance.listar_using_get10(opts)
+  result = api_instance.listar_using_get11(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagpayApi->listar_using_get10: #{e}"
+  puts "Exception when calling GlobaltagpayApi->listar_using_get11: #{e}"
 end
 ```
 
@@ -500,7 +470,6 @@ Name | Type | Description  | Notes
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
  **status** | **String**| {{{cartao_pay_request_status_value}}} | [optional] 
  **numero_cartao** | **String**| {{{cartao_pay_request_numero_cartao_value}}} | [optional] 
-
 
 ### Return type
 
@@ -517,9 +486,8 @@ No authorization required
 
 
 
-
-# **salvar_using_post5**
-> CartaoPayCadastroResponse salvar_using_post5(device_id, persist)
+# **salvar_using_post6**
+> CartaoPayCadastroResponse salvar_using_post6(device_id, persist)
 
 {{{cartao_pay_resource_salvar}}}
 
@@ -530,7 +498,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagpayApi.new
 
 device_id = "device_id_example" # String | {{{cartao_pay_resource_salvar_param_device_id}}}
@@ -540,10 +507,10 @@ persist = Pier::CartaoPayPersist.new # CartaoPayPersist | persist
 
 begin
   #{{{cartao_pay_resource_salvar}}}
-  result = api_instance.salvar_using_post5(device_id, persist)
+  result = api_instance.salvar_using_post6(device_id, persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagpayApi->salvar_using_post5: #{e}"
+  puts "Exception when calling GlobaltagpayApi->salvar_using_post6: #{e}"
 end
 ```
 
@@ -553,7 +520,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_id** | **String**| {{{cartao_pay_resource_salvar_param_device_id}}} | 
  **persist** | [**CartaoPayPersist**](CartaoPayPersist.md)| persist | 
-
 
 ### Return type
 
@@ -567,8 +533,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

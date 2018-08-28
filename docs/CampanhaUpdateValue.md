@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **planos_campanhas** | [**Array&lt;PlanoCampanhaUpdateValue&gt;**](PlanoCampanhaUpdateValue.md) | {{{campanha_update_planos_campanhas_value}}} | [optional] 
 
 
-

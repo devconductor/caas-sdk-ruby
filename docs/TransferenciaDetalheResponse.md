@@ -13,4 +13,3 @@ Name | Type | Description | Notes
 **valor_tarifa** | **Float** | {{{transferencia_detalhe_response_valor_tarifa_value}}} | [optional] 
 
 
-

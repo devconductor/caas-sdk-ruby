@@ -8,21 +8,19 @@ Method | HTTP request | Description
 [**alterar_senha_using_put**](GlobaltagusuarioApi.md#alterar_senha_using_put) | **PUT** /api/usuarios/{id}/alterar-senha | {{{usuario_resource_alterar_senha}}}
 [**alterar_using_put23**](GlobaltagusuarioApi.md#alterar_using_put23) | **PUT** /api/usuarios/{id} | {{{usuario_resource_alterar}}}
 [**ativar_usuario_using_post1**](GlobaltagusuarioApi.md#ativar_usuario_using_post1) | **POST** /api/usuarios/{id}/ativar-usuario | {{{usuario_resource_ativar_usuario}}}
-[**atualizar_using_put2**](GlobaltagusuarioApi.md#atualizar_using_put2) | **PUT** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_atualizar}}}
+[**atualizar_using_put3**](GlobaltagusuarioApi.md#atualizar_using_put3) | **PUT** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_atualizar}}}
 [**consultar_contas_vinculadas_using_get**](GlobaltagusuarioApi.md#consultar_contas_vinculadas_using_get) | **GET** /api/usuarios/{id}/vincular-contas | {{{usuario_recurso_listar_por_id_usuario}}}
-[**consultar_using_get15**](GlobaltagusuarioApi.md#consultar_using_get15) | **GET** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_consultar}}}
-[**consultar_using_get51**](GlobaltagusuarioApi.md#consultar_using_get51) | **GET** /api/usuarios/{id} | {{{usuario_resource_consultar}}}
+[**consultar_using_get17**](GlobaltagusuarioApi.md#consultar_using_get17) | **GET** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_consultar}}}
+[**consultar_using_get53**](GlobaltagusuarioApi.md#consultar_using_get53) | **GET** /api/usuarios/{id} | {{{usuario_resource_consultar}}}
 [**desativar_usuario_using_post1**](GlobaltagusuarioApi.md#desativar_usuario_using_post1) | **POST** /api/usuarios/{id}/desativar-usuario | {{{usuario_resource_desativar_usuario}}}
-[**listar_using_get62**](GlobaltagusuarioApi.md#listar_using_get62) | **GET** /api/usuarios | {{{usuario_resource_listar}}}
+[**listar_using_get65**](GlobaltagusuarioApi.md#listar_using_get65) | **GET** /api/usuarios | {{{usuario_resource_listar}}}
 [**recuperar_senha_using_post**](GlobaltagusuarioApi.md#recuperar_senha_using_post) | **POST** /api/usuarios/{id}/recuperar-senha | {{{usuario_resource_recuperar_senha}}}
-[**salvar_using_post33**](GlobaltagusuarioApi.md#salvar_using_post33) | **POST** /api/usuarios | {{{usuario_resource_salvar}}}
-[**salvar_using_post9**](GlobaltagusuarioApi.md#salvar_using_post9) | **POST** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_salvar}}}
+[**salvar_using_post10**](GlobaltagusuarioApi.md#salvar_using_post10) | **POST** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_salvar}}}
+[**salvar_using_post34**](GlobaltagusuarioApi.md#salvar_using_post34) | **POST** /api/usuarios | {{{usuario_resource_salvar}}}
 [**validar_senha_forte_using_post**](GlobaltagusuarioApi.md#validar_senha_forte_using_post) | **POST** /api/usuarios/validar-senha-forte | {{{usuario_resource_validar_senha_forte}}}
 [**validar_senha_login_using_post**](GlobaltagusuarioApi.md#validar_senha_login_using_post) | **POST** /api/usuarios/{login}/validar-senha | {{{usuario_resource_validar_senha_login}}}
 [**validar_senha_using_get1**](GlobaltagusuarioApi.md#validar_senha_using_get1) | **GET** /api/usuarios/{id}/validar-senha | {{{usuario_resource_validar_senha}}}
 [**vincular_contas_using_post**](GlobaltagusuarioApi.md#vincular_contas_using_post) | **POST** /api/usuarios/{id}/vincular-usuarios | {{{usuario_recurso_vincular_usuarios}}}
-
-
 
 
 # **alterar_senha_login_using_post**
@@ -36,7 +34,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagusuarioApi.new
 
@@ -61,7 +58,6 @@ Name | Type | Description  | Notes
  **login** | **String**| {{{usuario_resource_alterar_senha_login_param_login}}} | 
  **senha_nova** | **String**| {{{usuario_resource_alterar_senha_login_param_senha_nova}}} | 
 
-
 ### Return type
 
 **String**
@@ -77,7 +73,6 @@ No authorization required
 
 
 
-
 # **alterar_senha_using_put**
 > String alterar_senha_using_put(id, senha_atual, senha_nova)
 
@@ -89,7 +84,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagusuarioApi.new
 
@@ -117,7 +111,6 @@ Name | Type | Description  | Notes
  **senha_atual** | **String**| {{{usuario_resource_alterar_senha_param_senha_atual}}} | 
  **senha_nova** | **String**| {{{usuario_resource_alterar_senha_param_senha_nova}}} | 
 
-
 ### Return type
 
 **String**
@@ -133,7 +126,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put23**
 > UsuarioResponse alterar_using_put23(id, update)
 
@@ -145,7 +137,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagusuarioApi.new
 
@@ -170,7 +161,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{usuario_resource_alterar_param_id}}} | 
  **update** | [**UsuarioUpdateValue**](UsuarioUpdateValue.md)| update | 
 
-
 ### Return type
 
 [**UsuarioResponse**](UsuarioResponse.md)
@@ -186,7 +176,6 @@ No authorization required
 
 
 
-
 # **ativar_usuario_using_post1**
 > UsuarioResponse ativar_usuario_using_post1(id)
 
@@ -198,7 +187,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagusuarioApi.new
 
@@ -220,7 +208,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{usuario_resource_ativar_usuario_param_id}}} | 
 
-
 ### Return type
 
 [**UsuarioResponse**](UsuarioResponse.md)
@@ -236,9 +223,8 @@ No authorization required
 
 
 
-
-# **atualizar_using_put2**
-> ControleSegurancaDispositivoResponse atualizar_using_put2(update)
+# **atualizar_using_put3**
+> ControleSegurancaDispositivoResponse atualizar_using_put3(update)
 
 {{{controle_seguranca_dispositivo_atualizar}}}
 
@@ -249,7 +235,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagusuarioApi.new
 
 update = Pier::ControleSegurancaDispositivoUpdateValor.new # ControleSegurancaDispositivoUpdateValor | update
@@ -257,10 +242,10 @@ update = Pier::ControleSegurancaDispositivoUpdateValor.new # ControleSegurancaDi
 
 begin
   #{{{controle_seguranca_dispositivo_atualizar}}}
-  result = api_instance.atualizar_using_put2(update)
+  result = api_instance.atualizar_using_put3(update)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagusuarioApi->atualizar_using_put2: #{e}"
+  puts "Exception when calling GlobaltagusuarioApi->atualizar_using_put3: #{e}"
 end
 ```
 
@@ -269,7 +254,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **update** | [**ControleSegurancaDispositivoUpdateValor**](ControleSegurancaDispositivoUpdateValor.md)| update | 
-
 
 ### Return type
 
@@ -286,7 +270,6 @@ No authorization required
 
 
 
-
 # **consultar_contas_vinculadas_using_get**
 > PageUsuarioContasResponse consultar_contas_vinculadas_using_get(id, opts)
 
@@ -298,7 +281,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagusuarioApi.new
 
@@ -328,7 +310,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
-
 ### Return type
 
 [**PageUsuarioContasResponse**](PageUsuarioContasResponse.md)
@@ -344,9 +325,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get15**
-> PageControleSegurancaDispositivoResponse consultar_using_get15(id_usuario, opts)
+# **consultar_using_get17**
+> PageControleSegurancaDispositivoResponse consultar_using_get17(id_usuario, opts)
 
 {{{controle_seguranca_dispositivo_consultar}}}
 
@@ -356,7 +336,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagusuarioApi.new
 
@@ -370,10 +349,10 @@ opts = {
 
 begin
   #{{{controle_seguranca_dispositivo_consultar}}}
-  result = api_instance.consultar_using_get15(id_usuario, opts)
+  result = api_instance.consultar_using_get17(id_usuario, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagusuarioApi->consultar_using_get15: #{e}"
+  puts "Exception when calling GlobaltagusuarioApi->consultar_using_get17: #{e}"
 end
 ```
 
@@ -385,7 +364,6 @@ Name | Type | Description  | Notes
  **sort** | [**Array&lt;String&gt;**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
-
 
 ### Return type
 
@@ -402,9 +380,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get51**
-> UsuarioResponse consultar_using_get51(id)
+# **consultar_using_get53**
+> UsuarioResponse consultar_using_get53(id)
 
 {{{usuario_resource_consultar}}}
 
@@ -415,7 +392,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagusuarioApi.new
 
 id = 789 # Integer | {{{usuario_resource_consultar_param_id}}}
@@ -423,10 +399,10 @@ id = 789 # Integer | {{{usuario_resource_consultar_param_id}}}
 
 begin
   #{{{usuario_resource_consultar}}}
-  result = api_instance.consultar_using_get51(id)
+  result = api_instance.consultar_using_get53(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagusuarioApi->consultar_using_get51: #{e}"
+  puts "Exception when calling GlobaltagusuarioApi->consultar_using_get53: #{e}"
 end
 ```
 
@@ -435,7 +411,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{usuario_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -452,7 +427,6 @@ No authorization required
 
 
 
-
 # **desativar_usuario_using_post1**
 > UsuarioResponse desativar_usuario_using_post1(id)
 
@@ -464,7 +438,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagusuarioApi.new
 
@@ -486,7 +459,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{usuario_resource_desativar_usuario_param_id}}} | 
 
-
 ### Return type
 
 [**UsuarioResponse**](UsuarioResponse.md)
@@ -502,9 +474,8 @@ No authorization required
 
 
 
-
-# **listar_using_get62**
-> PageUsuarioResponse listar_using_get62(opts)
+# **listar_using_get65**
+> PageUsuarioResponse listar_using_get65(opts)
 
 {{{usuario_resource_listar}}}
 
@@ -514,7 +485,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagusuarioApi.new
 
@@ -530,10 +500,10 @@ opts = {
 
 begin
   #{{{usuario_resource_listar}}}
-  result = api_instance.listar_using_get62(opts)
+  result = api_instance.listar_using_get65(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagusuarioApi->listar_using_get62: #{e}"
+  puts "Exception when calling GlobaltagusuarioApi->listar_using_get65: #{e}"
 end
 ```
 
@@ -548,7 +518,6 @@ Name | Type | Description  | Notes
  **cpf** | **String**| {{{usuario_request_cpf_value}}} | [optional] 
  **email** | **String**| {{{usuario_request_email_value}}} | [optional] 
  **status** | **String**| {{{usuario_request_status_value}}} | [optional] 
-
 
 ### Return type
 
@@ -565,7 +534,6 @@ No authorization required
 
 
 
-
 # **recuperar_senha_using_post**
 > String recuperar_senha_using_post(id)
 
@@ -577,7 +545,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagusuarioApi.new
 
@@ -599,7 +566,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{usuario_resource_recuperar_senha_param_id}}} | 
 
-
 ### Return type
 
 **String**
@@ -615,59 +581,8 @@ No authorization required
 
 
 
-
-# **salvar_using_post33**
-> UsuarioResponse salvar_using_post33(persist)
-
-{{{usuario_resource_salvar}}}
-
-{{{usuario_resource_salvar_notes}}}
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::GlobaltagusuarioApi.new
-
-persist = Pier::UsuarioPersistencia.new # UsuarioPersistencia | persist
-
-
-begin
-  #{{{usuario_resource_salvar}}}
-  result = api_instance.salvar_using_post33(persist)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagusuarioApi->salvar_using_post33: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **persist** | [**UsuarioPersistencia**](UsuarioPersistencia.md)| persist | 
-
-
-### Return type
-
-[**UsuarioResponse**](UsuarioResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
-# **salvar_using_post9**
-> ControleSegurancaDispositivoResponse salvar_using_post9(persist)
+# **salvar_using_post10**
+> ControleSegurancaDispositivoResponse salvar_using_post10(persist)
 
 {{{controle_seguranca_dispositivo_salvar}}}
 
@@ -678,7 +593,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagusuarioApi.new
 
 persist = Pier::ControleSegurancaDispositivoPersistencia.new # ControleSegurancaDispositivoPersistencia | persist
@@ -686,10 +600,10 @@ persist = Pier::ControleSegurancaDispositivoPersistencia.new # ControleSeguranca
 
 begin
   #{{{controle_seguranca_dispositivo_salvar}}}
-  result = api_instance.salvar_using_post9(persist)
+  result = api_instance.salvar_using_post10(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagusuarioApi->salvar_using_post9: #{e}"
+  puts "Exception when calling GlobaltagusuarioApi->salvar_using_post10: #{e}"
 end
 ```
 
@@ -698,7 +612,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**ControleSegurancaDispositivoPersistencia**](ControleSegurancaDispositivoPersistencia.md)| persist | 
-
 
 ### Return type
 
@@ -715,6 +628,52 @@ No authorization required
 
 
 
+# **salvar_using_post34**
+> UsuarioResponse salvar_using_post34(persist)
+
+{{{usuario_resource_salvar}}}
+
+{{{usuario_resource_salvar_notes}}}
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+api_instance = Pier::GlobaltagusuarioApi.new
+
+persist = Pier::UsuarioPersistencia.new # UsuarioPersistencia | persist
+
+
+begin
+  #{{{usuario_resource_salvar}}}
+  result = api_instance.salvar_using_post34(persist)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling GlobaltagusuarioApi->salvar_using_post34: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **persist** | [**UsuarioPersistencia**](UsuarioPersistencia.md)| persist | 
+
+### Return type
+
+[**UsuarioResponse**](UsuarioResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
 
 # **validar_senha_forte_using_post**
 > String validar_senha_forte_using_post(senha, usuario_senha_forte_persist)
@@ -727,7 +686,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagusuarioApi.new
 
@@ -752,7 +710,6 @@ Name | Type | Description  | Notes
  **senha** | **String**| {{{usuario_resource_validar_senha_forte_param_senha}}} | 
  **usuario_senha_forte_persist** | [**UsuarioSenhaFortePersistencia**](UsuarioSenhaFortePersistencia.md)| {{{usuario_resource_validar_senha_forte_param_id_plataforma}}} | 
 
-
 ### Return type
 
 **String**
@@ -768,7 +725,6 @@ No authorization required
 
 
 
-
 # **validar_senha_login_using_post**
 > Object validar_senha_login_using_post(login, senha)
 
@@ -780,7 +736,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagusuarioApi.new
 
@@ -805,7 +760,6 @@ Name | Type | Description  | Notes
  **login** | **String**| {{{usuario_resource_validar_senha_login_param_login}}} | 
  **senha** | **String**| {{{usuario_resource_validar_senha_login_param_senha}}} | 
 
-
 ### Return type
 
 **Object**
@@ -821,7 +775,6 @@ No authorization required
 
 
 
-
 # **validar_senha_using_get1**
 > String validar_senha_using_get1(senha, id)
 
@@ -833,7 +786,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagusuarioApi.new
 
@@ -858,7 +810,6 @@ Name | Type | Description  | Notes
  **senha** | **String**| {{{usuario_resource_validar_senha_param_senha}}} | 
  **id** | **Integer**| {{{usuario_resource_validar_senha_param_id}}} | 
 
-
 ### Return type
 
 **String**
@@ -874,7 +825,6 @@ No authorization required
 
 
 
-
 # **vincular_contas_using_post**
 > String vincular_contas_using_post(id)
 
@@ -886,7 +836,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagusuarioApi.new
 
@@ -908,7 +857,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{usuario_recurso_vincular_usuarios_param_id}}} | 
 
-
 ### Return type
 
 **String**
@@ -921,8 +869,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

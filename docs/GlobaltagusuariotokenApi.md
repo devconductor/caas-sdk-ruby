@@ -8,8 +8,6 @@ Method | HTTP request | Description
 [**verificar_tentativa_using_get**](GlobaltagusuariotokenApi.md#verificar_tentativa_using_get) | **GET** /api/usuarios-tokens/verificar-tentativas | {{{usuario_token_recurso_controle_tentativa_cadastro_verificar}}}
 
 
-
-
 # **incrementar_tentativa_using_put**
 > ControleTentativaCadastroResponse incrementar_tentativa_using_put(cpf)
 
@@ -21,7 +19,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagusuariotokenApi.new
 
@@ -43,7 +40,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cpf** | **String**| {{{usuario_token_recurso_controle_tentativa_cadastro_incrementar_param_cpf}}} | 
 
-
 ### Return type
 
 [**ControleTentativaCadastroResponse**](ControleTentativaCadastroResponse.md)
@@ -59,7 +55,6 @@ No authorization required
 
 
 
-
 # **verificar_tentativa_using_get**
 > ControleTentativaCadastroResponse verificar_tentativa_using_get(cpf)
 
@@ -71,7 +66,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagusuariotokenApi.new
 
@@ -93,7 +87,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cpf** | **String**| {{{usuario_token_recurso_controle_tentativa_cadastro_verificar_param_cpf}}} | 
 
-
 ### Return type
 
 [**ControleTentativaCadastroResponse**](ControleTentativaCadastroResponse.md)
@@ -106,8 +99,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

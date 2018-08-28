@@ -7,8 +7,6 @@ Method | HTTP request | Description
 [**listar_sms_using_get1**](GlobaltagsmsApi.md#listar_sms_using_get1) | **GET** /api/sms | {{{sms_resource_listar_sms}}}
 
 
-
-
 # **listar_sms_using_get1**
 > PageSMSEnvioResponse listar_sms_using_get1(id_conta, opts)
 
@@ -20,7 +18,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagsmsApi.new
 
@@ -54,7 +51,6 @@ Name | Type | Description  | Notes
  **data_inicio** | **String**| {{{sms_envio_request_data_inicio_value}}} | [optional] 
  **data_fim** | **String**| {{{sms_envio_request_data_fim_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageSMSEnvioResponse**](PageSMSEnvioResponse.md)
@@ -67,8 +63,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

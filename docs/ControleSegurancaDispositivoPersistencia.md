@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **phone_id** | **String** | {{{controle_seguranca_dispositivo_phone_id_descricao}}} | 
 
 
-

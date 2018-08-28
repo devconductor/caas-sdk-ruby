@@ -32,4 +32,3 @@ Name | Type | Description | Notes
 **limite_rav** | **Float** | {{{grupo_economico_response_limite_r_a_v_value}}} | [optional] 
 
 
-

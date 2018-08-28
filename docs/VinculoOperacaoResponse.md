@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **codigo_mcc** | **Integer** | {{{vinculo_operacao_response_codigo_m_c_c_value}}} | [optional] 
 
 
-

@@ -11,8 +11,6 @@ Method | HTTP request | Description
 [**listar_operadoras_telefonicas_using_get**](GlobaltagservicocontaApi.md#listar_operadoras_telefonicas_using_get) | **GET** /api/operadoras-telefonicas | {{{operadora_resource_listar_operadoras_telefonicas}}}
 
 
-
-
 # **ativar_anuidade_using_post**
 > Object ativar_anuidade_using_post(id, id_anuidade, opts)
 
@@ -25,7 +23,6 @@ Method | HTTP request | Description
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagservicocontaApi.new
 
 id = 789 # Integer | {{{conta_resource_ativar_anuidade_param_id}}}
@@ -33,7 +30,6 @@ id = 789 # Integer | {{{conta_resource_ativar_anuidade_param_id}}}
 id_anuidade = 789 # Integer | {{{anuidade_request_id_anuidade_value}}}
 
 opts = { 
-  authorization: "authorization_example", # String | Authorization
   sort: ["sort_example"], # Array<String> | {{{global_menssagem_sort_sort}}}
   page: 56, # Integer | {{{global_menssagem_sort_page_value}}}
   limit: 56, # Integer | {{{global_menssagem_sort_limit}}}
@@ -58,7 +54,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_ativar_anuidade_param_id}}} | 
  **id_anuidade** | **Integer**| {{{anuidade_request_id_anuidade_value}}} | 
- **authorization** | **String**| Authorization | [optional] 
  **sort** | [**Array&lt;String&gt;**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
@@ -66,7 +61,6 @@ Name | Type | Description  | Notes
  **celular** | **String**| {{{anuidade_request_celular_value}}} | [optional] 
  **id_operadora** | **Integer**| {{{anuidade_request_id_operadora_value}}} | [optional] 
  **id_origem_comercial** | **Integer**| {{{anuidade_request_id_origem_comercial_value}}} | [optional] 
-
 
 ### Return type
 
@@ -83,9 +77,8 @@ No authorization required
 
 
 
-
 # **ativar_envio_fatura_email_using_post**
-> Object ativar_envio_fatura_email_using_post(id, opts)
+> Object ativar_envio_fatura_email_using_post(id)
 
 {{{conta_resource_ativar_envio_fatura_email}}}
 
@@ -96,18 +89,14 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagservicocontaApi.new
 
 id = 789 # Integer | {{{conta_resource_ativar_envio_fatura_email_param_id}}}
 
-opts = { 
-  authorization: "authorization_example" # String | Authorization
-}
 
 begin
   #{{{conta_resource_ativar_envio_fatura_email}}}
-  result = api_instance.ativar_envio_fatura_email_using_post(id, opts)
+  result = api_instance.ativar_envio_fatura_email_using_post(id)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling GlobaltagservicocontaApi->ativar_envio_fatura_email_using_post: #{e}"
@@ -119,8 +108,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_ativar_envio_fatura_email_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
-
 
 ### Return type
 
@@ -137,9 +124,8 @@ No authorization required
 
 
 
-
 # **desativar_envio_fatura_email_using_post**
-> Object desativar_envio_fatura_email_using_post(id, opts)
+> Object desativar_envio_fatura_email_using_post(id)
 
 {{{conta_resource_desativar_envio_fatura_email}}}
 
@@ -150,18 +136,14 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagservicocontaApi.new
 
 id = 789 # Integer | {{{conta_resource_desativar_envio_fatura_email_param_id}}}
 
-opts = { 
-  authorization: "authorization_example" # String | Authorization
-}
 
 begin
   #{{{conta_resource_desativar_envio_fatura_email}}}
-  result = api_instance.desativar_envio_fatura_email_using_post(id, opts)
+  result = api_instance.desativar_envio_fatura_email_using_post(id)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling GlobaltagservicocontaApi->desativar_envio_fatura_email_using_post: #{e}"
@@ -173,8 +155,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_desativar_envio_fatura_email_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
-
 
 ### Return type
 
@@ -188,7 +168,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
 
 
 
@@ -203,7 +182,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagservicocontaApi.new
 
@@ -230,7 +208,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
-
 ### Return type
 
 [**PageAnuidadeResponse**](PageAnuidadeResponse.md)
@@ -246,7 +223,6 @@ No authorization required
 
 
 
-
 # **listar_operadoras_telefonicas_using_get**
 > PageOperadoraResponse listar_operadoras_telefonicas_using_get(opts)
 
@@ -258,7 +234,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagservicocontaApi.new
 
@@ -285,7 +260,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
-
 ### Return type
 
 [**PageOperadoraResponse**](PageOperadoraResponse.md)
@@ -298,8 +272,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

@@ -15,4 +15,3 @@ Name | Type | Description | Notes
 **nome_favorecido** | **String** | {{{transferencia_bancaria_persist_nome_favorecido_value}}} | 
 
 
-

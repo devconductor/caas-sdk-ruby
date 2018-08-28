@@ -20,4 +20,3 @@ Name | Type | Description | Notes
 **titularidade** | **Integer** | {{{conta_bancaria_portador_response_titularidade_value}}} | [optional] 
 
 
-

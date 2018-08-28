@@ -11,4 +11,3 @@ Name | Type | Description | Notes
 **data_real_vencimento** | **String** | {{{controle_vencimento_response_data_real_vencimento_value}}} | [optional] 
 
 
-

@@ -9,8 +9,6 @@ Method | HTTP request | Description
 [**listar_using_get2**](GlobaltagajustefinanceiroApi.md#listar_using_get2) | **GET** /api/ajustes-financeiros | {{{ajuste_financeiro_resource_listar}}}
 
 
-
-
 # **ajustar_conta_using_post**
 > AjusteFinanceiroResponse ajustar_conta_using_post(id_tipo_ajuste, data_ajuste, valor_ajuste, id_conta, opts)
 
@@ -22,7 +20,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagajustefinanceiroApi.new
 
@@ -59,7 +56,6 @@ Name | Type | Description  | Notes
  **identificador_externo** | **String**| {{{ajuste_financeiro_persist_identificador_externo_value}}} | [optional] 
  **id_transacao_original** | **Integer**| {{{ajuste_persist_id_transacao_original}}} | [optional] 
 
-
 ### Return type
 
 [**AjusteFinanceiroResponse**](AjusteFinanceiroResponse.md)
@@ -75,7 +71,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get3**
 > AjusteFinanceiroResponse consultar_using_get3(id)
 
@@ -87,7 +82,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagajustefinanceiroApi.new
 
@@ -109,7 +103,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{ajuste_financeiro_resource_consultar_param_id}}} | 
 
-
 ### Return type
 
 [**AjusteFinanceiroResponse**](AjusteFinanceiroResponse.md)
@@ -125,7 +118,6 @@ No authorization required
 
 
 
-
 # **listar_using_get2**
 > PageAjusteResponse listar_using_get2(opts)
 
@@ -137,7 +129,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagajustefinanceiroApi.new
 
@@ -174,7 +165,6 @@ Name | Type | Description  | Notes
  **identificador_externo** | **String**| {{{ajuste_request_identificador_externo_value}}} | [optional] 
  **id_conta** | **Integer**| {{{ajuste_request_id_conta_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageAjusteResponse**](PageAjusteResponse.md)
@@ -187,8 +177,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

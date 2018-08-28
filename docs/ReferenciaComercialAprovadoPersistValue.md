@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **email** | **String** | {{{referencia_comercial_aprovado_persist_email_value}}} | [optional] 
 
 
-

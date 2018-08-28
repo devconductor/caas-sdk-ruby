@@ -29,6 +29,6 @@ Name | Type | Description | Notes
 **saldo_disponivel_global** | **Float** | {{{conta_detalhe_response_saldo_disponivel_global_value}}} | [optional] 
 **saldo_disponivel_saque** | **Float** | {{{conta_detalhe_response_saldo_disponivel_saque_value}}} | [optional] 
 **dias_atraso** | **Integer** | {{{conta_detalhe_response_dias_atraso_value}}} | [optional] 
-
+**proximo_vencimento_padrao** | **String** | {{{conta_response_proximo_vencimento_padrao_value}}} | [optional] 
 
 

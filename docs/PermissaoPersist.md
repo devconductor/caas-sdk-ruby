@@ -6,4 +6,3 @@ Name | Type | Description | Notes
 **nome** | **String** | {{{permissao_persist_nome_value}}} | [optional] 
 
 
-

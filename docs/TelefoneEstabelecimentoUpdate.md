@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **ramal** | **String** | {{{telefone_estabelecimento_update_ramal_value}}} | [optional] 
 
 
-

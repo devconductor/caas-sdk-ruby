@@ -27,4 +27,3 @@ Name | Type | Description | Notes
 **saldo_disponivel_saque_internacional** | **Float** | {{{limite_disponibilidade_response_saldo_disponivel_saque_internacional_value}}} | [optional] 
 
 
-

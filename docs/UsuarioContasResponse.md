@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **nivel_acesso** | **Integer** | {{{usuario_conta_resposta_nivel_acesso_descricao}}} | [optional] 
 
 
-

@@ -13,4 +13,3 @@ Name | Type | Description | Notes
 **flag_ativo** | **BOOLEAN** | {{{status_oportunidade_a_u_d_response_flag_ativo_value}}} | [optional] 
 
 
-

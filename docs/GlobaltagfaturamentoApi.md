@@ -14,8 +14,6 @@ Method | HTTP request | Description
 [**listar_tipo_faturamento_using_get**](GlobaltagfaturamentoApi.md#listar_tipo_faturamento_using_get) | **GET** /api/tipos-faturamento | {{{faturamento_resource_listar_tipo_faturamento}}}
 
 
-
-
 # **alterar_tipo_faturamento_using_put**
 > TipoFaturamentoResponse alterar_tipo_faturamento_using_put(id, tipo_faturamento_persist)
 
@@ -27,7 +25,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagfaturamentoApi.new
 
@@ -52,7 +49,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{faturamento_resource_alterar_tipo_faturamento_param_id_tipo_faturamento}}} | 
  **tipo_faturamento_persist** | [**TipoFaturamentoPersistValue**](TipoFaturamentoPersistValue.md)| tipoFaturamentoPersist | 
 
-
 ### Return type
 
 [**TipoFaturamentoResponse**](TipoFaturamentoResponse.md)
@@ -68,7 +64,6 @@ No authorization required
 
 
 
-
 # **cadastrar_faturamento_por_conta_using_post**
 > TipoFaturamentoPorContaResponse cadastrar_faturamento_por_conta_using_post(tipo_faturamento_por_conta_persist)
 
@@ -80,7 +75,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagfaturamentoApi.new
 
@@ -102,7 +96,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tipo_faturamento_por_conta_persist** | [**TipoFaturamentoPorContaPersistValue**](TipoFaturamentoPorContaPersistValue.md)| tipoFaturamentoPorContaPersist | 
 
-
 ### Return type
 
 [**TipoFaturamentoPorContaResponse**](TipoFaturamentoPorContaResponse.md)
@@ -118,7 +111,6 @@ No authorization required
 
 
 
-
 # **cadastrar_tipo_faturamento_using_post**
 > TipoFaturamentoResponse cadastrar_tipo_faturamento_using_post(tipo_faturamento_persist)
 
@@ -130,7 +122,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagfaturamentoApi.new
 
@@ -152,7 +143,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tipo_faturamento_persist** | [**TipoFaturamentoPersistValue**](TipoFaturamentoPersistValue.md)| tipoFaturamentoPersist | 
 
-
 ### Return type
 
 [**TipoFaturamentoResponse**](TipoFaturamentoResponse.md)
@@ -168,7 +158,6 @@ No authorization required
 
 
 
-
 # **consultar_tipo_faturamento_using_get**
 > TipoFaturamentoResponse consultar_tipo_faturamento_using_get(id)
 
@@ -180,7 +169,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagfaturamentoApi.new
 
@@ -202,7 +190,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{faturamento_resource_consultar_tipo_faturamento_param_id_tipo_faturamento}}} | 
 
-
 ### Return type
 
 [**TipoFaturamentoResponse**](TipoFaturamentoResponse.md)
@@ -218,7 +205,6 @@ No authorization required
 
 
 
-
 # **desativar_faturamento_por_conta_using_post**
 > TipoFaturamentoPorContaResponse desativar_faturamento_por_conta_using_post(id)
 
@@ -230,7 +216,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagfaturamentoApi.new
 
@@ -252,7 +237,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{faturamento_resource_desativar_faturamento_por_conta_param_id}}} | 
 
-
 ### Return type
 
 [**TipoFaturamentoPorContaResponse**](TipoFaturamentoPorContaResponse.md)
@@ -268,7 +252,6 @@ No authorization required
 
 
 
-
 # **desativar_tipo_faturamento_using_post**
 > TipoFaturamentoResponse desativar_tipo_faturamento_using_post(id)
 
@@ -280,7 +263,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagfaturamentoApi.new
 
@@ -302,7 +284,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{faturamento_resource_desativar_tipo_faturamento_param_id_tipo_faturamento}}} | 
 
-
 ### Return type
 
 [**TipoFaturamentoResponse**](TipoFaturamentoResponse.md)
@@ -318,7 +299,6 @@ No authorization required
 
 
 
-
 # **listar_faturamento_por_conta_using_get**
 > PageTipoFaturamentoPorContaResponse listar_faturamento_por_conta_using_get(opts)
 
@@ -330,7 +310,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagfaturamentoApi.new
 
@@ -371,7 +350,6 @@ Name | Type | Description  | Notes
  **data_hora_cancelamento** | **String**| {{{tipo_faturamento_por_conta_request_data_hora_cancelamento_value}}} | [optional] 
  **modificado_por** | **String**| {{{tipo_faturamento_por_conta_request_modificado_por_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageTipoFaturamentoPorContaResponse**](PageTipoFaturamentoPorContaResponse.md)
@@ -387,7 +365,6 @@ No authorization required
 
 
 
-
 # **listar_tipo_faturamento_using_get**
 > PageTipoFaturamentoResponse listar_tipo_faturamento_using_get(opts)
 
@@ -399,7 +376,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagfaturamentoApi.new
 
@@ -434,7 +410,6 @@ Name | Type | Description  | Notes
  **flag_apenas_demonstrativo** | **BOOLEAN**| {{{tipo_faturamento_request_flag_apenas_demonstrativo_value}}} | [optional] 
  **id_convenio** | **Integer**| {{{tipo_faturamento_request_id_convenio_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageTipoFaturamentoResponse**](PageTipoFaturamentoResponse.md)
@@ -447,8 +422,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

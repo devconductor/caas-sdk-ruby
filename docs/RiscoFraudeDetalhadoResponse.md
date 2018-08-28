@@ -32,4 +32,3 @@ Name | Type | Description | Notes
 **telefones** | [**Array&lt;TelefoneResponse&gt;**](TelefoneResponse.md) | {{{risco_fraude_detalhado_response_telefones_value}}} | [optional] 
 
 
-

@@ -19,4 +19,3 @@ Name | Type | Description | Notes
 **sort** | **Array&lt;String&gt;** | {{{global_menssagem_sort_sort}}} | [optional] 
 
 
-

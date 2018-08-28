@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **descricao** | **String** | {{{tipo_estabelecimento_response_descricao_value}}} | [optional] 
 
 
-

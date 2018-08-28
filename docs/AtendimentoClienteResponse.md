@@ -19,4 +19,3 @@ Name | Type | Description | Notes
 **flag_processamento** | **Integer** | {{{atendimento_cliente_response_flag_processamento_value}}} | [optional] 
 
 
-

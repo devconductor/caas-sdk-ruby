@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **valor_atribuido** | **String** | {{{historico_eventos_response_valor_atribuido_value}}} | 
 
 
-

@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **tentativas** | **Integer** | {{{controle_tentativa_cadastro_resposta_tentativas_descricao}}} | [optional] 
 
 
-

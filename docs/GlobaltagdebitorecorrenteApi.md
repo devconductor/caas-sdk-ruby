@@ -6,10 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**aderir_debito_recorrente_using_post**](GlobaltagdebitorecorrenteApi.md#aderir_debito_recorrente_using_post) | **POST** /api/debitos-recorrentes | {{{conta_debito_recorrente_resource_aderir}}}
 [**cancelar_debito_recorrente_using_post**](GlobaltagdebitorecorrenteApi.md#cancelar_debito_recorrente_using_post) | **POST** /api/debitos-recorrentes/{id}/cancelar | {{{conta_debito_recorrente_resource_cancelar}}}
-[**listar_using_get17**](GlobaltagdebitorecorrenteApi.md#listar_using_get17) | **GET** /api/debitos-recorrentes | {{{conta_debito_recorrente_resource_listar}}}
-[**listar_using_get53**](GlobaltagdebitorecorrenteApi.md#listar_using_get53) | **GET** /api/tipos-debitos-recorrentes | {{{tipo_debito_recorrente_resource_listar}}}
-
-
+[**listar_using_get18**](GlobaltagdebitorecorrenteApi.md#listar_using_get18) | **GET** /api/debitos-recorrentes | {{{conta_debito_recorrente_resource_listar}}}
+[**listar_using_get56**](GlobaltagdebitorecorrenteApi.md#listar_using_get56) | **GET** /api/tipos-debitos-recorrentes | {{{tipo_debito_recorrente_resource_listar}}}
 
 
 # **aderir_debito_recorrente_using_post**
@@ -23,7 +21,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagdebitorecorrenteApi.new
 
@@ -45,7 +42,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conta_debito_recorrente_persist** | [**ContaDebitoRecorrentePersistValue**](ContaDebitoRecorrentePersistValue.md)| contaDebitoRecorrentePersist | 
 
-
 ### Return type
 
 [**ContaDebitoRecorrenteResponse**](ContaDebitoRecorrenteResponse.md)
@@ -61,7 +57,6 @@ No authorization required
 
 
 
-
 # **cancelar_debito_recorrente_using_post**
 > ContaDebitoRecorrenteResponse cancelar_debito_recorrente_using_post(id, conta_debito_recorrente_persist)
 
@@ -73,7 +68,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagdebitorecorrenteApi.new
 
@@ -98,7 +92,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{conta_debito_recorrente_resource_cancelar_param_id_debito_recorrente}}} | 
  **conta_debito_recorrente_persist** | [**ContaDebitoRecorrentePersistValue**](ContaDebitoRecorrentePersistValue.md)| contaDebitoRecorrentePersist | 
 
-
 ### Return type
 
 [**ContaDebitoRecorrenteResponse**](ContaDebitoRecorrenteResponse.md)
@@ -114,9 +107,8 @@ No authorization required
 
 
 
-
-# **listar_using_get17**
-> PageContaDebitoRecorrenteResponse listar_using_get17(id_conta, opts)
+# **listar_using_get18**
+> PageContaDebitoRecorrenteResponse listar_using_get18(id_conta, opts)
 
 {{{conta_debito_recorrente_resource_listar}}}
 
@@ -126,7 +118,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagdebitorecorrenteApi.new
 
@@ -145,10 +136,10 @@ opts = {
 
 begin
   #{{{conta_debito_recorrente_resource_listar}}}
-  result = api_instance.listar_using_get17(id_conta, opts)
+  result = api_instance.listar_using_get18(id_conta, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagdebitorecorrenteApi->listar_using_get17: #{e}"
+  puts "Exception when calling GlobaltagdebitorecorrenteApi->listar_using_get18: #{e}"
 end
 ```
 
@@ -166,7 +157,6 @@ Name | Type | Description  | Notes
  **ativo** | **BOOLEAN**| {{{conta_debito_recorrente_request_ativo_value}}} | [optional] 
  **data_hora_ultimo_pagamento** | **String**| {{{conta_debito_recorrente_request_data_hora_ultimo_pagamento_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageContaDebitoRecorrenteResponse**](PageContaDebitoRecorrenteResponse.md)
@@ -182,9 +172,8 @@ No authorization required
 
 
 
-
-# **listar_using_get53**
-> PageTipoDebitoRecorrenteResponse listar_using_get53(opts)
+# **listar_using_get56**
+> PageTipoDebitoRecorrenteResponse listar_using_get56(opts)
 
 {{{tipo_debito_recorrente_resource_listar}}}
 
@@ -194,7 +183,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagdebitorecorrenteApi.new
 
@@ -210,10 +198,10 @@ opts = {
 
 begin
   #{{{tipo_debito_recorrente_resource_listar}}}
-  result = api_instance.listar_using_get53(opts)
+  result = api_instance.listar_using_get56(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagdebitorecorrenteApi->listar_using_get53: #{e}"
+  puts "Exception when calling GlobaltagdebitorecorrenteApi->listar_using_get56: #{e}"
 end
 ```
 
@@ -229,7 +217,6 @@ Name | Type | Description  | Notes
  **valor** | [**Float**](.md)| {{{tipo_debito_recorrente_request_valor_value}}} | [optional] 
  **flag_ativo** | **BOOLEAN**| {{{tipo_debito_recorrente_request_flag_ativo_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageTipoDebitoRecorrenteResponse**](PageTipoDebitoRecorrenteResponse.md)
@@ -242,8 +229,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

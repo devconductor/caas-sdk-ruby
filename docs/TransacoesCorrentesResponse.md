@@ -43,4 +43,3 @@ Name | Type | Description | Notes
 **id_transacao_estorno** | **Integer** | {{{transacoes_correntes_response_id_transacao_estorno_value}}} | [optional] 
 
 
-

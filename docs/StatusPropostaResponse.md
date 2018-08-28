@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **flag_permite_alteracao** | **BOOLEAN** | {{{status_proposta_response_flag_permite_alteracao_value}}} | [optional] 
 
 
-

@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **data_hora_implantacao** | **String** | {{{maquineta_update_data_hora_implantacao_value}}} | 
 
 
-

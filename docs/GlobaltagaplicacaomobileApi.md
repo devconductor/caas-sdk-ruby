@@ -9,8 +9,6 @@ Method | HTTP request | Description
 [**salvar_using_post**](GlobaltagaplicacaomobileApi.md#salvar_using_post) | **POST** /api/aplicacoes-mobile | {{{aplicacao_mobile_resource_salvar}}}
 
 
-
-
 # **atualizar_using_put**
 > AplicacaoMobileResponse atualizar_using_put(id, update)
 
@@ -22,7 +20,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagaplicacaomobileApi.new
 
@@ -47,7 +44,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{aplicacao_mobile_resource_atualizar_param_id}}} | 
  **update** | [**AplicacaoMobileUpdateValue**](AplicacaoMobileUpdateValue.md)| update | 
 
-
 ### Return type
 
 [**AplicacaoMobileResponse**](AplicacaoMobileResponse.md)
@@ -63,7 +59,6 @@ No authorization required
 
 
 
-
 # **listar_using_get3**
 > PageAplicacaoMobileResponse listar_using_get3(opts)
 
@@ -75,7 +70,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagaplicacaomobileApi.new
 
@@ -106,7 +100,6 @@ Name | Type | Description  | Notes
  **id** | **String**| {{{aplicacao_mobile_request_id_value}}} | [optional] 
  **id_plataforma_mobile** | **Integer**| {{{aplicacao_mobile_request_id_plataforma_mobile_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageAplicacaoMobileResponse**](PageAplicacaoMobileResponse.md)
@@ -122,7 +115,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post**
 > AplicacaoMobileResponse salvar_using_post(persist)
 
@@ -134,7 +126,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagaplicacaomobileApi.new
 
@@ -156,7 +147,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**AplicacaoMobilePersistValue**](AplicacaoMobilePersistValue.md)| persist | 
 
-
 ### Return type
 
 [**AplicacaoMobileResponse**](AplicacaoMobileResponse.md)
@@ -169,8 +159,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

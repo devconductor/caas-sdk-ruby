@@ -15,4 +15,3 @@ Name | Type | Description | Notes
 **saldo_anterior** | **Float** | {{{fatura_response_saldo_anterior_value}}} | [optional] 
 
 
-

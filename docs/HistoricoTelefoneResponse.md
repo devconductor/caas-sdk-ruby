@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **data_modificacao** | **String** | {{{historico_telefone_response_data_modificacao_value}}} | [optional] 
 
 
-

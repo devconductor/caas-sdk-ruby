@@ -11,4 +11,3 @@ Name | Type | Description | Notes
 **flag_terminal_virtual** | **BOOLEAN** | {{{terminal_response_flag_terminal_virtual_value}}} | [optional] 
 
 
-

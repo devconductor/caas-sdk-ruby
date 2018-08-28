@@ -16,4 +16,3 @@ Name | Type | Description | Notes
 **endereco_correspondencia** | **BOOLEAN** | {{{endereco_aprovado_persist_endereco_correspondencia_value}}} | 
 
 
-

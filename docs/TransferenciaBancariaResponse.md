@@ -40,4 +40,3 @@ Name | Type | Description | Notes
 **nome_favorecido** | **String** | {{{transferencia_bancaria_response_nome_favorecido_value}}} | [optional] 
 
 
-

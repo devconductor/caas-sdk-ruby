@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **id_usuario** | **Integer** | {{{dispositivo_response_id_usuario_value}}} | [optional] 
 
 
-

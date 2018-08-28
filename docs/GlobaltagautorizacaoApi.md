@@ -14,8 +14,6 @@ Method | HTTP request | Description
 [**simular_using_post**](GlobaltagautorizacaoApi.md#simular_using_post) | **POST** /api/simular-transacao | {{{transacao_on_us_resource_simular}}}
 
 
-
-
 # **autorizar_por_conta_using_post**
 > TransacaoOnUsResponse autorizar_por_conta_using_post(id, transacao_on_us_por_id_cartao_request)
 
@@ -27,7 +25,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagautorizacaoApi.new
 
@@ -52,7 +49,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{transacao_on_us_resource_autorizar_por_conta_param_id_conta}}} | 
  **transacao_on_us_por_id_cartao_request** | [**TransacaoOnUsPorIdCartaoRequest**](TransacaoOnUsPorIdCartaoRequest.md)| transacaoOnUsPorIdCartaoRequest | 
 
-
 ### Return type
 
 [**TransacaoOnUsResponse**](TransacaoOnUsResponse.md)
@@ -68,7 +64,6 @@ No authorization required
 
 
 
-
 # **autorizar_using_post**
 > TransacaoOnUsResponse autorizar_using_post(autorizacao_on_us_request)
 
@@ -80,7 +75,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagautorizacaoApi.new
 
@@ -102,7 +96,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **autorizacao_on_us_request** | [**AutorizacaoOnUsRequest**](AutorizacaoOnUsRequest.md)| autorizacaoOnUsRequest | 
 
-
 ### Return type
 
 [**TransacaoOnUsResponse**](TransacaoOnUsResponse.md)
@@ -118,7 +111,6 @@ No authorization required
 
 
 
-
 # **autorizar_using_post1**
 > TransacaoOnUsResponse autorizar_using_post1(id, transacao_on_us_por_id_cartao_request)
 
@@ -130,7 +122,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagautorizacaoApi.new
 
@@ -155,7 +146,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{transacao_on_us_resource_autorizar_param_id_cartao}}} | 
  **transacao_on_us_por_id_cartao_request** | [**TransacaoOnUsPorIdCartaoRequest**](TransacaoOnUsPorIdCartaoRequest.md)| transacaoOnUsPorIdCartaoRequest | 
 
-
 ### Return type
 
 [**TransacaoOnUsResponse**](TransacaoOnUsResponse.md)
@@ -171,7 +161,6 @@ No authorization required
 
 
 
-
 # **cancelar_por_id_conta_using_post**
 > TransacaoOnUsResponse cancelar_por_id_conta_using_post(id, cancelamento_request)
 
@@ -183,7 +172,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagautorizacaoApi.new
 
@@ -208,7 +196,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{transacao_on_us_resource_cancelar_por_id_conta_param_id_conta}}} | 
  **cancelamento_request** | [**CancelamentoTransacaoPorIdCartaoRequest**](CancelamentoTransacaoPorIdCartaoRequest.md)| cancelamentoRequest | 
 
-
 ### Return type
 
 [**TransacaoOnUsResponse**](TransacaoOnUsResponse.md)
@@ -224,7 +211,6 @@ No authorization required
 
 
 
-
 # **cancelar_using_post2**
 > TransacaoOnUsResponse cancelar_using_post2(cancelamento_request)
 
@@ -236,7 +222,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagautorizacaoApi.new
 
@@ -258,7 +243,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cancelamento_request** | [**CancelamentoTransacaoOnUsRequest**](CancelamentoTransacaoOnUsRequest.md)| cancelamentoRequest | 
 
-
 ### Return type
 
 [**TransacaoOnUsResponse**](TransacaoOnUsResponse.md)
@@ -274,7 +258,6 @@ No authorization required
 
 
 
-
 # **cancelar_using_post3**
 > TransacaoOnUsResponse cancelar_using_post3(id, cancelamento_request)
 
@@ -286,7 +269,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagautorizacaoApi.new
 
@@ -311,7 +293,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{transacao_on_us_resource_cancelar_param_id_cartao}}} | 
  **cancelamento_request** | [**CancelamentoTransacaoPorIdCartaoRequest**](CancelamentoTransacaoPorIdCartaoRequest.md)| cancelamentoRequest | 
 
-
 ### Return type
 
 [**TransacaoOnUsResponse**](TransacaoOnUsResponse.md)
@@ -327,7 +308,6 @@ No authorization required
 
 
 
-
 # **listar_codigos_processamento_autorizacao_using_get**
 > Array&lt;Object&gt; listar_codigos_processamento_autorizacao_using_get
 
@@ -339,7 +319,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagautorizacaoApi.new
 
@@ -354,7 +333,6 @@ end
 
 ### Parameters
 This endpoint does not need any parameter.
-
 
 ### Return type
 
@@ -371,7 +349,6 @@ No authorization required
 
 
 
-
 # **simular_using_post**
 > TransacaoOnUsResponse simular_using_post(transacoes_request)
 
@@ -383,7 +360,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagautorizacaoApi.new
 
@@ -405,7 +381,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **transacoes_request** | [**TransacaoOnUsRequest**](TransacaoOnUsRequest.md)| transacoesRequest | 
 
-
 ### Return type
 
 [**TransacaoOnUsResponse**](TransacaoOnUsResponse.md)
@@ -418,8 +393,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

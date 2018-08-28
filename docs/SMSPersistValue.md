@@ -12,4 +12,3 @@ Name | Type | Description | Notes
 **tipo_evento** | **String** | {{{s_m_s_persist_tipo_evento_value}}} | 
 
 
-

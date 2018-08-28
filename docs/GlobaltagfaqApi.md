@@ -6,10 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**adicionar_using_post**](GlobaltagfaqApi.md#adicionar_using_post) | **POST** /api/faqs | {{{faq_resource_adicionar}}}
 [**alterar_using_put7**](GlobaltagfaqApi.md#alterar_using_put7) | **PUT** /api/faqs/{id} | {{{faq_resource_alterar}}}
-[**consultar_using_get21**](GlobaltagfaqApi.md#consultar_using_get21) | **GET** /api/faqs/{id} | {{{faq_resource_consultar}}}
-[**listar_using_get26**](GlobaltagfaqApi.md#listar_using_get26) | **GET** /api/faqs | {{{faq_resource_listar}}}
-
-
+[**consultar_using_get23**](GlobaltagfaqApi.md#consultar_using_get23) | **GET** /api/faqs/{id} | {{{faq_resource_consultar}}}
+[**listar_using_get27**](GlobaltagfaqApi.md#listar_using_get27) | **GET** /api/faqs | {{{faq_resource_listar}}}
 
 
 # **adicionar_using_post**
@@ -23,7 +21,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagfaqApi.new
 
@@ -58,7 +55,6 @@ Name | Type | Description  | Notes
  **categoria** | **String**| {{{faq_persist_categoria_value}}} | [optional] 
  **status** | **String**| {{{faq_persist_status_value}}} | [optional] 
 
-
 ### Return type
 
 [**FaqResponse**](FaqResponse.md)
@@ -74,7 +70,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put7**
 > FaqResponse alterar_using_put7(id, pergunta, resposta, opts)
 
@@ -86,7 +81,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagfaqApi.new
 
@@ -124,7 +118,6 @@ Name | Type | Description  | Notes
  **categoria** | **String**| {{{faq_persist_categoria_value}}} | [optional] 
  **status** | **String**| {{{faq_persist_status_value}}} | [optional] 
 
-
 ### Return type
 
 [**FaqResponse**](FaqResponse.md)
@@ -140,9 +133,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get21**
-> FaqResponse consultar_using_get21(id)
+# **consultar_using_get23**
+> FaqResponse consultar_using_get23(id)
 
 {{{faq_resource_consultar}}}
 
@@ -153,7 +145,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagfaqApi.new
 
 id = 789 # Integer | {{{faq_resource_consultar_param_id_faq}}}
@@ -161,10 +152,10 @@ id = 789 # Integer | {{{faq_resource_consultar_param_id_faq}}}
 
 begin
   #{{{faq_resource_consultar}}}
-  result = api_instance.consultar_using_get21(id)
+  result = api_instance.consultar_using_get23(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagfaqApi->consultar_using_get21: #{e}"
+  puts "Exception when calling GlobaltagfaqApi->consultar_using_get23: #{e}"
 end
 ```
 
@@ -173,7 +164,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{faq_resource_consultar_param_id_faq}}} | 
-
 
 ### Return type
 
@@ -190,9 +180,8 @@ No authorization required
 
 
 
-
-# **listar_using_get26**
-> PageFaqResponse listar_using_get26(opts)
+# **listar_using_get27**
+> PageFaqResponse listar_using_get27(opts)
 
 {{{faq_resource_listar}}}
 
@@ -202,7 +191,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagfaqApi.new
 
@@ -221,10 +209,10 @@ opts = {
 
 begin
   #{{{faq_resource_listar}}}
-  result = api_instance.listar_using_get26(opts)
+  result = api_instance.listar_using_get27(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagfaqApi->listar_using_get26: #{e}"
+  puts "Exception when calling GlobaltagfaqApi->listar_using_get27: #{e}"
 end
 ```
 
@@ -243,7 +231,6 @@ Name | Type | Description  | Notes
  **categoria** | **String**| {{{faq_request_categoria_value}}} | [optional] 
  **status** | **String**| {{{faq_request_status_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageFaqResponse**](PageFaqResponse.md)
@@ -256,8 +243,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

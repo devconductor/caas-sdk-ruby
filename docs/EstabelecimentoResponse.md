@@ -47,4 +47,3 @@ Name | Type | Description | Notes
 **usuario** | **String** | {{{estabelecimento_response_usuario_value}}} | [optional] 
 
 
-

@@ -13,4 +13,3 @@ Name | Type | Description | Notes
 **telefone** | **String** | {{{dados_portador_request_telefone_value}}} | [optional] 
 
 
-

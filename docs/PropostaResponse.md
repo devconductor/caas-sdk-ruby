@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **data_cadastramento** | **String** | {{{proposta_response_data_cadastramento_value}}} | [optional] 
 
 
-

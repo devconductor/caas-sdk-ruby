@@ -10,9 +10,8 @@ Name | Type | Description | Notes
 **senha** | **String** | {{{push_a_p_n_s_persist_senha_value}}} | 
 **titulo** | **String** | {{{push_a_p_n_s_persist_titulo_value}}} | 
 **conteudo** | **String** | {{{push_a_p_n_s_persist_conteudo_value}}} | 
-**tipo_evento** | **String** | {{{push_a_p_n_s_persist_tipo_evento_value}}} | 
-**icone** | **String** | {{{push_a_p_n_s_persist_icone_value}}} | [optional] 
-**som** | **String** | {{{push_a_p_n_s_persist_som_value}}} | [optional] 
-
+**tipo_evento** | **String** | {{{push_f_c_m_g_c_m_persist_tipo_evento_value}}} | 
+**icone** | **String** | {{{push_f_c_m_g_c_m_persist_icone_value}}} | [optional] 
+**som** | **String** | {{{push_f_c_m_g_c_m_persist_som_value}}} | [optional] 
 
 

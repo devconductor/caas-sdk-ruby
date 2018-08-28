@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **id_usuario** | **Integer** | {{{dispositivo_persist_id_usuario_value}}} | [optional] 
 
 
-

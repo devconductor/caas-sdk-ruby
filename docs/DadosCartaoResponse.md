@@ -18,4 +18,3 @@ Name | Type | Description | Notes
 **status_cartao** | **String** | {{{dados_cartao_response_status_cartao_value}}} | [optional] 
 
 
-

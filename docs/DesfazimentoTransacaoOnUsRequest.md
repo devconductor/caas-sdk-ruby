@@ -15,4 +15,3 @@ Name | Type | Description | Notes
 **terminal_requisitante** | **String** | {{{transacao_on_us_request_terminal_requisitante_value}}} | 
 
 
-

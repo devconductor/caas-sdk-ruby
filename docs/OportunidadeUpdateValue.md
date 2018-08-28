@@ -12,4 +12,3 @@ Name | Type | Description | Notes
 **detalhes** | [**Array&lt;DetalheOportunidadeUpdateValue&gt;**](DetalheOportunidadeUpdateValue.md) | {{{oportunidade_update_detalhes_value}}} | 
 
 
-

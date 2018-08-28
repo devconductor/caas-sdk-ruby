@@ -15,4 +15,3 @@ Name | Type | Description | Notes
 **senha** | **String** | {{{configuracao_email_persist_senha_value}}} | [optional] 
 
 
-

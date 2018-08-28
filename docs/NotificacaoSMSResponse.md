@@ -22,4 +22,3 @@ Name | Type | Description | Notes
 **protocolo** | **String** | {{{notificacao_s_m_s_response_protocolo_value}}} | [optional] 
 
 
-

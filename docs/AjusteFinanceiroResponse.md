@@ -12,4 +12,3 @@ Name | Type | Description | Notes
 **status** | **Integer** | {{{ajuste_financeiro_response_status_value}}} | [optional] 
 
 
-

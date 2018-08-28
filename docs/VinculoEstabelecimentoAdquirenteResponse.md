@@ -12,4 +12,3 @@ Name | Type | Description | Notes
 **status** | **Integer** | {{{vinculo_estabelecimento_adquirente_response_status_value}}} | [optional] 
 
 
-

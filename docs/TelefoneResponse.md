@@ -12,4 +12,3 @@ Name | Type | Description | Notes
 **status** | **Integer** | {{{telefone_response_status_value}}} | [optional] 
 
 
-

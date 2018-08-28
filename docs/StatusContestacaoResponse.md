@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **descricao** | **String** | {{{status_contestacao_response_descricao_value}}} | [optional] 
 
 
-

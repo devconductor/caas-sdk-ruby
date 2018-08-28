@@ -12,4 +12,3 @@ Name | Type | Description | Notes
 **modificado_por** | **String** | {{{tipo_faturamento_por_conta_response_modificado_por_value}}} | [optional] 
 
 
-

@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **valor_taxa** | **Float** | {{{taxa_antecipacao_request_valor_taxa_value}}} | [optional] 
 
 
-

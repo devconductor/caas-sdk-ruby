@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **descricao** | **String** | {{{fantasia_basica_response_descricao_value}}} | [optional] 
 
 
-

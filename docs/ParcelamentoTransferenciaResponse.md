@@ -12,4 +12,3 @@ Name | Type | Description | Notes
 **cet_anual** | **Float** | {{{parcelamento_transferencia_response_cet_anual_value}}} | [optional] 
 
 
-

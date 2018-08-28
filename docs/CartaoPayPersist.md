@@ -11,4 +11,3 @@ Name | Type | Description | Notes
 **chave_publica_device** | **String** | {{{cartao_pay_persist_chave_publica_device_value}}} | 
 
 
-

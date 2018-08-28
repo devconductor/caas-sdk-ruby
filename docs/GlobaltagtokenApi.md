@@ -7,8 +7,6 @@ Method | HTTP request | Description
 [**callback_using_post**](GlobaltagtokenApi.md#callback_using_post) | **POST** /api/tokens/callback | {{{token_resource_callback}}}
 
 
-
-
 # **callback_using_post**
 > BodyAccessToken callback_using_post(body_access_token)
 
@@ -20,7 +18,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagtokenApi.new
 
@@ -42,7 +39,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body_access_token** | [**BodyAccessToken**](BodyAccessToken.md)| bodyAccessToken | 
 
-
 ### Return type
 
 [**BodyAccessToken**](BodyAccessToken.md)
@@ -55,8 +51,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

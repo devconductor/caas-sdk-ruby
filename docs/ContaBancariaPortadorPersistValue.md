@@ -19,4 +19,3 @@ Name | Type | Description | Notes
 **titularidade** | **Integer** | {{{conta_bancaria_portador_persist_titularidade_value}}} | [optional] 
 
 
-

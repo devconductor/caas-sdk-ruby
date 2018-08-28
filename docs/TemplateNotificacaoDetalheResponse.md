@@ -15,4 +15,3 @@ Name | Type | Description | Notes
 **conteudo** | **String** | {{{template_notificacao_detalhe_response_conteudo_value}}} | [optional] 
 
 
-

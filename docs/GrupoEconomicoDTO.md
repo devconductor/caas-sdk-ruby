@@ -30,4 +30,3 @@ Name | Type | Description | Notes
 **limite_rav** | **Float** | {{{grupo_economico_d_t_o_limite_r_a_v_value}}} | [optional] 
 
 
-

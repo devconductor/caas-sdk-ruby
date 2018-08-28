@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **descricao_terminal** | **String** | {{{tipo_terminal_response_descricao_terminal_value}}} | [optional] 
 
 
-

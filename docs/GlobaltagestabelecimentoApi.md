@@ -16,13 +16,13 @@ Method | HTTP request | Description
 [**cadastrar_using_post4**](GlobaltagestabelecimentoApi.md#cadastrar_using_post4) | **POST** /api/grupos-economicos | {{{grupo_economico_resource_cadastrar}}}
 [**consulta_operacao_using_get**](GlobaltagestabelecimentoApi.md#consulta_operacao_using_get) | **GET** /api/tipos-operacoes-estabelecimentos/{id} | {{{operacao_resource_consulta_operacao}}}
 [**consultar_origem_comercial_using_get**](GlobaltagestabelecimentoApi.md#consultar_origem_comercial_using_get) | **GET** /api/origens-comerciais/{id} | {{{origem_comercial_resource_consultar_origem_comercial}}}
-[**consultar_using_get20**](GlobaltagestabelecimentoApi.md#consultar_using_get20) | **GET** /api/estabelecimentos/{id} | {{{estabelecimento_resource_consultar}}}
-[**consultar_using_get22**](GlobaltagestabelecimentoApi.md#consultar_using_get22) | **GET** /api/grupos-economicos/{id} | {{{grupo_economico_resource_consultar}}}
-[**consultar_using_get24**](GlobaltagestabelecimentoApi.md#consultar_using_get24) | **GET** /api/maquinetas/{id} | {{{maquineta_resource_consultar}}}
-[**consultar_using_get25**](GlobaltagestabelecimentoApi.md#consultar_using_get25) | **GET** /api/regras-operacoes-estabelecimentos/{id} | {{{operacao_credor_resource_consultar}}}
-[**consultar_using_get38**](GlobaltagestabelecimentoApi.md#consultar_using_get38) | **GET** /api/telefones-estabelecimentos/{id} | {{{telefone_estabelecimento_resource_consultar}}}
-[**consultar_using_get40**](GlobaltagestabelecimentoApi.md#consultar_using_get40) | **GET** /api/terminais/{id} | {{{terminal_resource_consultar}}}
-[**consultar_using_get52**](GlobaltagestabelecimentoApi.md#consultar_using_get52) | **GET** /api/adquirentes-estabelecimento/{id} | {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
+[**consultar_using_get22**](GlobaltagestabelecimentoApi.md#consultar_using_get22) | **GET** /api/estabelecimentos/{id} | {{{estabelecimento_resource_consultar}}}
+[**consultar_using_get24**](GlobaltagestabelecimentoApi.md#consultar_using_get24) | **GET** /api/grupos-economicos/{id} | {{{grupo_economico_resource_consultar}}}
+[**consultar_using_get26**](GlobaltagestabelecimentoApi.md#consultar_using_get26) | **GET** /api/maquinetas/{id} | {{{maquineta_resource_consultar}}}
+[**consultar_using_get27**](GlobaltagestabelecimentoApi.md#consultar_using_get27) | **GET** /api/regras-operacoes-estabelecimentos/{id} | {{{operacao_credor_resource_consultar}}}
+[**consultar_using_get40**](GlobaltagestabelecimentoApi.md#consultar_using_get40) | **GET** /api/telefones-estabelecimentos/{id} | {{{telefone_estabelecimento_resource_consultar}}}
+[**consultar_using_get42**](GlobaltagestabelecimentoApi.md#consultar_using_get42) | **GET** /api/terminais/{id} | {{{terminal_resource_consultar}}}
+[**consultar_using_get54**](GlobaltagestabelecimentoApi.md#consultar_using_get54) | **GET** /api/adquirentes-estabelecimento/{id} | {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
 [**desabilitar_vinculo_using_post**](GlobaltagestabelecimentoApi.md#desabilitar_vinculo_using_post) | **POST** /api/adquirentes-estabelecimento/{id}/desabilitar | {{{vinculo_estabelecimento_adquirente_resource_desabilitar_vinculo}}}
 [**desabilitar_vinculo_using_post1**](GlobaltagestabelecimentoApi.md#desabilitar_vinculo_using_post1) | **POST** /api/estabelecimentos/{id}/desabilitar-operacao | {{{vinculo_operacao_resource_desabilitar_vinculo}}}
 [**habilitar_vinculo_using_post**](GlobaltagestabelecimentoApi.md#habilitar_vinculo_using_post) | **POST** /api/adquirentes-estabelecimento/{id}/habilitar | {{{vinculo_estabelecimento_adquirente_resource_habilitar_vinculo}}}
@@ -35,23 +35,21 @@ Method | HTTP request | Description
 [**listar_tipos_maquinetas_using_get**](GlobaltagestabelecimentoApi.md#listar_tipos_maquinetas_using_get) | **GET** /api/tipos-maquinetas | {{{maquineta_resource_listar_tipos_maquinetas}}}
 [**listar_tipos_origens_comerciais_using_get**](GlobaltagestabelecimentoApi.md#listar_tipos_origens_comerciais_using_get) | **GET** /api/tipos-origens-comerciais | {{{tipo_origem_comercial_resource_listar_tipos_origens_comerciais}}}
 [**listar_tipos_terminais_using_get1**](GlobaltagestabelecimentoApi.md#listar_tipos_terminais_using_get1) | **GET** /api/tipos-terminais-estabelecimento | {{{terminal_resource_listar_tipos_terminais}}}
-[**listar_using_get25**](GlobaltagestabelecimentoApi.md#listar_using_get25) | **GET** /api/estabelecimentos | {{{estabelecimento_resource_listar}}}
-[**listar_using_get28**](GlobaltagestabelecimentoApi.md#listar_using_get28) | **GET** /api/grupos-economicos | {{{grupo_economico_resource_listar}}}
-[**listar_using_get29**](GlobaltagestabelecimentoApi.md#listar_using_get29) | **GET** /api/grupos-origens-comerciais | {{{grupo_origem_comercial_resource_listar}}}
-[**listar_using_get32**](GlobaltagestabelecimentoApi.md#listar_using_get32) | **GET** /api/maquinetas | {{{maquineta_resource_listar}}}
-[**listar_using_get33**](GlobaltagestabelecimentoApi.md#listar_using_get33) | **GET** /api/tipos-moedas | {{{moeda_resource_listar}}}
-[**listar_using_get34**](GlobaltagestabelecimentoApi.md#listar_using_get34) | **GET** /api/regras-operacoes-estabelecimentos | {{{operacao_credor_resource_listar}}}
-[**listar_using_get49**](GlobaltagestabelecimentoApi.md#listar_using_get49) | **GET** /api/telefones-estabelecimentos | {{{telefone_estabelecimento_resource_listar}}}
-[**listar_using_get51**](GlobaltagestabelecimentoApi.md#listar_using_get51) | **GET** /api/terminais | {{{terminal_resource_listar}}}
-[**listar_using_get64**](GlobaltagestabelecimentoApi.md#listar_using_get64) | **GET** /api/adquirentes-estabelecimento | {{{vinculo_estabelecimento_adquirente_resource_listar}}}
-[**listar_using_get65**](GlobaltagestabelecimentoApi.md#listar_using_get65) | **GET** /api/estabelecimentos/{id}/operacoes | {{{vinculo_operacao_resource_listar}}}
-[**salvar_using_post19**](GlobaltagestabelecimentoApi.md#salvar_using_post19) | **POST** /api/maquinetas | {{{maquineta_resource_salvar}}}
-[**salvar_using_post20**](GlobaltagestabelecimentoApi.md#salvar_using_post20) | **POST** /api/regras-operacoes-estabelecimentos | {{{operacao_credor_resource_salvar}}}
-[**salvar_using_post27**](GlobaltagestabelecimentoApi.md#salvar_using_post27) | **POST** /api/telefones-estabelecimentos | {{{telefone_estabelecimento_resource_salvar}}}
-[**salvar_using_post29**](GlobaltagestabelecimentoApi.md#salvar_using_post29) | **POST** /api/terminais | {{{terminal_resource_salvar}}}
-[**salvar_using_post34**](GlobaltagestabelecimentoApi.md#salvar_using_post34) | **POST** /api/adquirentes-estabelecimento | {{{vinculo_estabelecimento_adquirente_resource_salvar}}}
-
-
+[**listar_using_get26**](GlobaltagestabelecimentoApi.md#listar_using_get26) | **GET** /api/estabelecimentos | {{{estabelecimento_resource_listar}}}
+[**listar_using_get29**](GlobaltagestabelecimentoApi.md#listar_using_get29) | **GET** /api/grupos-economicos | {{{grupo_economico_resource_listar}}}
+[**listar_using_get30**](GlobaltagestabelecimentoApi.md#listar_using_get30) | **GET** /api/grupos-origens-comerciais | {{{grupo_origem_comercial_resource_listar}}}
+[**listar_using_get33**](GlobaltagestabelecimentoApi.md#listar_using_get33) | **GET** /api/maquinetas | {{{maquineta_resource_listar}}}
+[**listar_using_get34**](GlobaltagestabelecimentoApi.md#listar_using_get34) | **GET** /api/tipos-moedas | {{{moeda_resource_listar}}}
+[**listar_using_get35**](GlobaltagestabelecimentoApi.md#listar_using_get35) | **GET** /api/regras-operacoes-estabelecimentos | {{{operacao_credor_resource_listar}}}
+[**listar_using_get52**](GlobaltagestabelecimentoApi.md#listar_using_get52) | **GET** /api/telefones-estabelecimentos | {{{telefone_estabelecimento_resource_listar}}}
+[**listar_using_get54**](GlobaltagestabelecimentoApi.md#listar_using_get54) | **GET** /api/terminais | {{{terminal_resource_listar}}}
+[**listar_using_get67**](GlobaltagestabelecimentoApi.md#listar_using_get67) | **GET** /api/adquirentes-estabelecimento | {{{vinculo_estabelecimento_adquirente_resource_listar}}}
+[**listar_using_get68**](GlobaltagestabelecimentoApi.md#listar_using_get68) | **GET** /api/estabelecimentos/{id}/operacoes | {{{vinculo_operacao_resource_listar}}}
+[**salvar_using_post20**](GlobaltagestabelecimentoApi.md#salvar_using_post20) | **POST** /api/maquinetas | {{{maquineta_resource_salvar}}}
+[**salvar_using_post21**](GlobaltagestabelecimentoApi.md#salvar_using_post21) | **POST** /api/regras-operacoes-estabelecimentos | {{{operacao_credor_resource_salvar}}}
+[**salvar_using_post28**](GlobaltagestabelecimentoApi.md#salvar_using_post28) | **POST** /api/telefones-estabelecimentos | {{{telefone_estabelecimento_resource_salvar}}}
+[**salvar_using_post30**](GlobaltagestabelecimentoApi.md#salvar_using_post30) | **POST** /api/terminais | {{{terminal_resource_salvar}}}
+[**salvar_using_post35**](GlobaltagestabelecimentoApi.md#salvar_using_post35) | **POST** /api/adquirentes-estabelecimento | {{{vinculo_estabelecimento_adquirente_resource_salvar}}}
 
 
 # **alterar_origem_comercial_using_put**
@@ -65,7 +63,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -90,7 +87,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{origem_comercial_resource_alterar_origem_comercial_param_id}}} | 
  **origem_comercial_update** | [**OrigemComercialUpdate**](OrigemComercialUpdate.md)| origemComercialUpdate | 
 
-
 ### Return type
 
 [**OrigemComercialResponse**](OrigemComercialResponse.md)
@@ -106,7 +102,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put10**
 > MaquinetaResponse alterar_using_put10(id, maquineta_update)
 
@@ -118,7 +113,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -143,7 +137,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{maquineta_resource_alterar_param_id}}} | 
  **maquineta_update** | [**MaquinetaUpdate**](MaquinetaUpdate.md)| maquinetaUpdate | 
 
-
 ### Return type
 
 [**MaquinetaResponse**](MaquinetaResponse.md)
@@ -159,7 +152,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put11**
 > OperacaoCredorResponse alterar_using_put11(id, operacao_credor_update)
 
@@ -171,7 +163,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -196,7 +187,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{operacao_credor_resource_alterar_param_id}}} | 
  **operacao_credor_update** | [**OperacaoCredorUpdate**](OperacaoCredorUpdate.md)| operacaoCredorUpdate | 
 
-
 ### Return type
 
 [**OperacaoCredorResponse**](OperacaoCredorResponse.md)
@@ -212,7 +202,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put17**
 > TelefoneEstabelecimentoResponse alterar_using_put17(id, telefone_estabelecimento_update)
 
@@ -224,7 +213,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -249,7 +237,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{telefone_estabelecimento_resource_alterar_param_id}}} | 
  **telefone_estabelecimento_update** | [**TelefoneEstabelecimentoUpdate**](TelefoneEstabelecimentoUpdate.md)| telefoneEstabelecimentoUpdate | 
 
-
 ### Return type
 
 [**TelefoneEstabelecimentoResponse**](TelefoneEstabelecimentoResponse.md)
@@ -265,7 +252,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put19**
 > TerminalResponse alterar_using_put19(id, terminal_update)
 
@@ -277,7 +263,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -302,7 +287,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{terminal_resource_alterar_param_id}}} | 
  **terminal_update** | [**TerminalUpdateValue**](TerminalUpdateValue.md)| terminalUpdate | 
 
-
 ### Return type
 
 [**TerminalResponse**](TerminalResponse.md)
@@ -318,7 +302,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put6**
 > EstabelecimentoResponse alterar_using_put6(id, update)
 
@@ -330,7 +313,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -355,7 +337,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{estabelecimento_resource_alterar_param_id_estabelecimento}}} | 
  **update** | [**EstabelecimentoUpdate**](EstabelecimentoUpdate.md)| update | 
 
-
 ### Return type
 
 [**EstabelecimentoResponse**](EstabelecimentoResponse.md)
@@ -371,7 +352,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put8**
 > GrupoEconomicoResponse alterar_using_put8(id, grupo_economico_dto)
 
@@ -383,7 +363,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -408,7 +387,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{grupo_economico_resource_alterar_param_id}}} | 
  **grupo_economico_dto** | [**GrupoEconomicoDTO**](GrupoEconomicoDTO.md)| grupoEconomicoDTO | 
 
-
 ### Return type
 
 [**GrupoEconomicoResponse**](GrupoEconomicoResponse.md)
@@ -424,7 +402,6 @@ No authorization required
 
 
 
-
 # **cadastrar_origem_comercial_using_post**
 > OrigemComercialResponse cadastrar_origem_comercial_using_post(origem_comercial_persist)
 
@@ -436,7 +413,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -458,7 +434,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **origem_comercial_persist** | [**OrigemComercialPersist**](OrigemComercialPersist.md)| origemComercialPersist | 
 
-
 ### Return type
 
 [**OrigemComercialResponse**](OrigemComercialResponse.md)
@@ -474,7 +449,6 @@ No authorization required
 
 
 
-
 # **cadastrar_using_post3**
 > EstabelecimentoResponse cadastrar_using_post3(persist)
 
@@ -486,7 +460,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -508,7 +481,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**EstabelecimentoPersist**](EstabelecimentoPersist.md)| persist | 
 
-
 ### Return type
 
 [**EstabelecimentoResponse**](EstabelecimentoResponse.md)
@@ -524,7 +496,6 @@ No authorization required
 
 
 
-
 # **cadastrar_using_post4**
 > GrupoEconomicoResponse cadastrar_using_post4(grupo_economico_dto)
 
@@ -536,7 +507,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -558,7 +528,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **grupo_economico_dto** | [**GrupoEconomicoDTO**](GrupoEconomicoDTO.md)| GrupoEconomicoDTO | 
 
-
 ### Return type
 
 [**GrupoEconomicoResponse**](GrupoEconomicoResponse.md)
@@ -574,7 +543,6 @@ No authorization required
 
 
 
-
 # **consulta_operacao_using_get**
 > DetalheOperacaoResponse consulta_operacao_using_get(id)
 
@@ -586,7 +554,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -608,7 +575,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{operacao_resource_consulta_operacao_param_id_operacao}}} | 
 
-
 ### Return type
 
 [**DetalheOperacaoResponse**](DetalheOperacaoResponse.md)
@@ -624,7 +590,6 @@ No authorization required
 
 
 
-
 # **consultar_origem_comercial_using_get**
 > OrigemComercialResponse consultar_origem_comercial_using_get(id)
 
@@ -636,7 +601,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -658,7 +622,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{origem_comercial_resource_consultar_origem_comercial_param_id}}} | 
 
-
 ### Return type
 
 [**OrigemComercialResponse**](OrigemComercialResponse.md)
@@ -674,9 +637,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get20**
-> EstabelecimentoResponse consultar_using_get20(id)
+# **consultar_using_get22**
+> EstabelecimentoResponse consultar_using_get22(id)
 
 {{{estabelecimento_resource_consultar}}}
 
@@ -687,7 +649,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
 id = 789 # Integer | {{{estabelecimento_resource_consultar_param_id_estabelecimento}}}
@@ -695,10 +656,10 @@ id = 789 # Integer | {{{estabelecimento_resource_consultar_param_id_estabelecime
 
 begin
   #{{{estabelecimento_resource_consultar}}}
-  result = api_instance.consultar_using_get20(id)
+  result = api_instance.consultar_using_get22(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get20: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get22: #{e}"
 end
 ```
 
@@ -707,7 +668,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{estabelecimento_resource_consultar_param_id_estabelecimento}}} | 
-
 
 ### Return type
 
@@ -724,9 +684,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get22**
-> GrupoEconomicoResponse consultar_using_get22(id)
+# **consultar_using_get24**
+> GrupoEconomicoResponse consultar_using_get24(id)
 
 {{{grupo_economico_resource_consultar}}}
 
@@ -737,7 +696,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
 id = 789 # Integer | {{{grupo_economico_resource_consultar_param_id}}}
@@ -745,10 +703,10 @@ id = 789 # Integer | {{{grupo_economico_resource_consultar_param_id}}}
 
 begin
   #{{{grupo_economico_resource_consultar}}}
-  result = api_instance.consultar_using_get22(id)
+  result = api_instance.consultar_using_get24(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get22: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get24: #{e}"
 end
 ```
 
@@ -757,7 +715,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{grupo_economico_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -774,9 +731,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get24**
-> MaquinetaResponse consultar_using_get24(id)
+# **consultar_using_get26**
+> MaquinetaResponse consultar_using_get26(id)
 
 {{{maquineta_resource_consultar}}}
 
@@ -787,7 +743,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
 id = 789 # Integer | {{{maquineta_resource_consultar_param_id}}}
@@ -795,10 +750,10 @@ id = 789 # Integer | {{{maquineta_resource_consultar_param_id}}}
 
 begin
   #{{{maquineta_resource_consultar}}}
-  result = api_instance.consultar_using_get24(id)
+  result = api_instance.consultar_using_get26(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get24: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get26: #{e}"
 end
 ```
 
@@ -807,7 +762,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{maquineta_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -824,9 +778,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get25**
-> OperacaoCredorResponse consultar_using_get25(id)
+# **consultar_using_get27**
+> OperacaoCredorResponse consultar_using_get27(id)
 
 {{{operacao_credor_resource_consultar}}}
 
@@ -837,7 +790,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
 id = 789 # Integer | {{{operacao_credor_resource_consultar_param_id}}}
@@ -845,10 +797,10 @@ id = 789 # Integer | {{{operacao_credor_resource_consultar_param_id}}}
 
 begin
   #{{{operacao_credor_resource_consultar}}}
-  result = api_instance.consultar_using_get25(id)
+  result = api_instance.consultar_using_get27(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get25: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get27: #{e}"
 end
 ```
 
@@ -857,7 +809,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{operacao_credor_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -874,9 +825,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get38**
-> TelefoneEstabelecimentoResponse consultar_using_get38(id)
+# **consultar_using_get40**
+> TelefoneEstabelecimentoResponse consultar_using_get40(id)
 
 {{{telefone_estabelecimento_resource_consultar}}}
 
@@ -887,7 +837,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
 id = 789 # Integer | {{{telefone_estabelecimento_resource_consultar_param_id}}}
@@ -895,10 +844,10 @@ id = 789 # Integer | {{{telefone_estabelecimento_resource_consultar_param_id}}}
 
 begin
   #{{{telefone_estabelecimento_resource_consultar}}}
-  result = api_instance.consultar_using_get38(id)
+  result = api_instance.consultar_using_get40(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get38: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get40: #{e}"
 end
 ```
 
@@ -907,7 +856,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{telefone_estabelecimento_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -924,9 +872,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get40**
-> TerminalResponse consultar_using_get40(id)
+# **consultar_using_get42**
+> TerminalResponse consultar_using_get42(id)
 
 {{{terminal_resource_consultar}}}
 
@@ -937,7 +884,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
 id = 789 # Integer | {{{terminal_resource_consultar_param_id}}}
@@ -945,10 +891,10 @@ id = 789 # Integer | {{{terminal_resource_consultar_param_id}}}
 
 begin
   #{{{terminal_resource_consultar}}}
-  result = api_instance.consultar_using_get40(id)
+  result = api_instance.consultar_using_get42(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get40: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get42: #{e}"
 end
 ```
 
@@ -957,7 +903,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{terminal_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -974,9 +919,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get52**
-> VinculoEstabelecimentoAdquirenteResponse consultar_using_get52(id)
+# **consultar_using_get54**
+> VinculoEstabelecimentoAdquirenteResponse consultar_using_get54(id)
 
 {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
 
@@ -987,7 +931,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
 id = 789 # Integer | {{{vinculo_estabelecimento_adquirente_resource_consultar_param_id}}}
@@ -995,10 +938,10 @@ id = 789 # Integer | {{{vinculo_estabelecimento_adquirente_resource_consultar_pa
 
 begin
   #{{{vinculo_estabelecimento_adquirente_resource_consultar}}}
-  result = api_instance.consultar_using_get52(id)
+  result = api_instance.consultar_using_get54(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get52: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->consultar_using_get54: #{e}"
 end
 ```
 
@@ -1007,7 +950,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{vinculo_estabelecimento_adquirente_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -1024,7 +966,6 @@ No authorization required
 
 
 
-
 # **desabilitar_vinculo_using_post**
 > Object desabilitar_vinculo_using_post(id)
 
@@ -1036,7 +977,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -1058,7 +998,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{vinculo_estabelecimento_adquirente_resource_desabilitar_vinculo_param_id}}} | 
 
-
 ### Return type
 
 **Object**
@@ -1074,7 +1013,6 @@ No authorization required
 
 
 
-
 # **desabilitar_vinculo_using_post1**
 > Object desabilitar_vinculo_using_post1(id, vinculo_operacao_persist)
 
@@ -1086,7 +1024,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -1111,7 +1048,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{vinculo_operacao_resource_desabilitar_vinculo_param_id}}} | 
  **vinculo_operacao_persist** | [**VinculoOperacaoPersist**](VinculoOperacaoPersist.md)| vinculoOperacaoPersist | 
 
-
 ### Return type
 
 **Object**
@@ -1127,7 +1063,6 @@ No authorization required
 
 
 
-
 # **habilitar_vinculo_using_post**
 > Object habilitar_vinculo_using_post(id)
 
@@ -1139,7 +1074,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -1161,7 +1095,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{vinculo_estabelecimento_adquirente_resource_habilitar_vinculo_param_id}}} | 
 
-
 ### Return type
 
 **Object**
@@ -1177,7 +1110,6 @@ No authorization required
 
 
 
-
 # **habilitar_vinculo_using_post1**
 > Object habilitar_vinculo_using_post1(id, vinculo_operacao_persist)
 
@@ -1189,7 +1121,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -1214,7 +1145,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{vinculo_operacao_resource_habilitar_vinculo_param_id}}} | 
  **vinculo_operacao_persist** | [**VinculoOperacaoPersist**](VinculoOperacaoPersist.md)| vinculoOperacaoPersist | 
 
-
 ### Return type
 
 **Object**
@@ -1230,7 +1160,6 @@ No authorization required
 
 
 
-
 # **lista_operacao_using_get**
 > PageOperacaoResponse lista_operacao_using_get(opts)
 
@@ -1242,7 +1171,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -1273,7 +1201,6 @@ Name | Type | Description  | Notes
  **id_operacao** | **Integer**| {{{operacao_request_id_operacao_value}}} | [optional] 
  **codigo_processamento** | **String**| {{{operacao_request_codigo_processamento_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageOperacaoResponse**](PageOperacaoResponse.md)
@@ -1289,7 +1216,6 @@ No authorization required
 
 
 
-
 # **listar_mcc_using_get**
 > PageMCCResponse listar_mcc_using_get(opts)
 
@@ -1301,7 +1227,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -1328,7 +1253,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
-
 ### Return type
 
 [**PageMCCResponse**](PageMCCResponse.md)
@@ -1344,7 +1268,6 @@ No authorization required
 
 
 
-
 # **listar_origens_comerciais_using_get**
 > PageOrigemComercialResponse listar_origens_comerciais_using_get(opts)
 
@@ -1356,7 +1279,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -1431,7 +1353,6 @@ Name | Type | Description  | Notes
  **flag_consulta_previa** | **BOOLEAN**| {{{origem_comercial_request_flag_consulta_previa_value}}} | [optional] 
  **tipo_pessoa** | **String**| {{{origem_comercial_request_tipo_pessoa_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageOrigemComercialResponse**](PageOrigemComercialResponse.md)
@@ -1447,7 +1368,6 @@ No authorization required
 
 
 
-
 # **listar_tipos_adquirentes_using_get**
 > PageEntidadeResponse listar_tipos_adquirentes_using_get(opts)
 
@@ -1459,7 +1379,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -1486,7 +1405,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
-
 ### Return type
 
 [**PageEntidadeResponse**](PageEntidadeResponse.md)
@@ -1502,7 +1420,6 @@ No authorization required
 
 
 
-
 # **listar_tipos_estabelecimentos_using_get**
 > PageTipoEstabelecimentoResponse listar_tipos_estabelecimentos_using_get(opts)
 
@@ -1514,7 +1431,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -1543,7 +1459,6 @@ Name | Type | Description  | Notes
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
  **descricao** | **String**| {{{tipo_estabelecimento_request_descricao_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageTipoEstabelecimentoResponse**](PageTipoEstabelecimentoResponse.md)
@@ -1559,7 +1474,6 @@ No authorization required
 
 
 
-
 # **listar_tipos_maquinetas_using_get**
 > PageCampoCodificadoDescricaoResponse listar_tipos_maquinetas_using_get(opts)
 
@@ -1571,7 +1485,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -1598,7 +1511,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
-
 ### Return type
 
 [**PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
@@ -1614,7 +1526,6 @@ No authorization required
 
 
 
-
 # **listar_tipos_origens_comerciais_using_get**
 > PageTipoOrigemComercialResponse listar_tipos_origens_comerciais_using_get(opts)
 
@@ -1626,7 +1537,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -1655,7 +1565,6 @@ Name | Type | Description  | Notes
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
  **nome** | **String**| {{{tipo_origem_comercial_request_nome_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageTipoOrigemComercialResponse**](PageTipoOrigemComercialResponse.md)
@@ -1671,7 +1580,6 @@ No authorization required
 
 
 
-
 # **listar_tipos_terminais_using_get1**
 > PageTipoTerminalResponse listar_tipos_terminais_using_get1(opts)
 
@@ -1683,7 +1591,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -1710,7 +1617,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
-
 ### Return type
 
 [**PageTipoTerminalResponse**](PageTipoTerminalResponse.md)
@@ -1726,9 +1632,8 @@ No authorization required
 
 
 
-
-# **listar_using_get25**
-> PageEstabelecimentoResponse listar_using_get25(opts)
+# **listar_using_get26**
+> PageEstabelecimentoResponse listar_using_get26(opts)
 
 {{{estabelecimento_resource_listar}}}
 
@@ -1738,7 +1643,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -1785,10 +1689,10 @@ opts = {
 
 begin
   #{{{estabelecimento_resource_listar}}}
-  result = api_instance.listar_using_get25(opts)
+  result = api_instance.listar_using_get26(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->listar_using_get25: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->listar_using_get26: #{e}"
 end
 ```
 
@@ -1835,7 +1739,6 @@ Name | Type | Description  | Notes
  **uf2** | **String**| {{{estabelecimento_request_uf2_value}}} | [optional] 
  **flag_matriz** | **Integer**| {{{estabelecimento_request_flag_matriz_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageEstabelecimentoResponse**](PageEstabelecimentoResponse.md)
@@ -1851,9 +1754,8 @@ No authorization required
 
 
 
-
-# **listar_using_get28**
-> PageGrupoEconomicoResponse listar_using_get28(opts)
+# **listar_using_get29**
+> PageGrupoEconomicoResponse listar_using_get29(opts)
 
 {{{grupo_economico_resource_listar}}}
 
@@ -1863,7 +1765,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -1900,10 +1801,10 @@ opts = {
 
 begin
   #{{{grupo_economico_resource_listar}}}
-  result = api_instance.listar_using_get28(opts)
+  result = api_instance.listar_using_get29(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->listar_using_get28: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->listar_using_get29: #{e}"
 end
 ```
 
@@ -1940,7 +1841,6 @@ Name | Type | Description  | Notes
  **limite_rav** | [**Float**](.md)| {{{grupo_economico_request_limite_r_a_v_value}}} | [optional] 
  **id_credor_rav** | **Integer**| {{{grupo_economico_request_id_credor_r_a_v_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageGrupoEconomicoResponse**](PageGrupoEconomicoResponse.md)
@@ -1956,9 +1856,8 @@ No authorization required
 
 
 
-
-# **listar_using_get29**
-> PageGrupoOrigemComercialResponse listar_using_get29(opts)
+# **listar_using_get30**
+> PageGrupoOrigemComercialResponse listar_using_get30(opts)
 
 {{{grupo_origem_comercial_resource_listar}}}
 
@@ -1968,7 +1867,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -1981,10 +1879,10 @@ opts = {
 
 begin
   #{{{grupo_origem_comercial_resource_listar}}}
-  result = api_instance.listar_using_get29(opts)
+  result = api_instance.listar_using_get30(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->listar_using_get29: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->listar_using_get30: #{e}"
 end
 ```
 
@@ -1996,7 +1894,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
  **nome** | **String**| {{{grupo_origem_comercial_request_nome_value}}} | [optional] 
-
 
 ### Return type
 
@@ -2013,9 +1910,8 @@ No authorization required
 
 
 
-
-# **listar_using_get32**
-> PageMaquinetaResponse listar_using_get32(opts)
+# **listar_using_get33**
+> PageMaquinetaResponse listar_using_get33(opts)
 
 {{{maquineta_resource_listar}}}
 
@@ -2025,7 +1921,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -2038,10 +1933,10 @@ opts = {
 
 begin
   #{{{maquineta_resource_listar}}}
-  result = api_instance.listar_using_get32(opts)
+  result = api_instance.listar_using_get33(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->listar_using_get32: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->listar_using_get33: #{e}"
 end
 ```
 
@@ -2053,7 +1948,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
  **id_estabelecimento** | **Integer**| {{{maquineta_request_id_estabelecimento_value}}} | [optional] 
-
 
 ### Return type
 
@@ -2070,9 +1964,8 @@ No authorization required
 
 
 
-
-# **listar_using_get33**
-> PageMoedaResponse listar_using_get33(opts)
+# **listar_using_get34**
+> PageMoedaResponse listar_using_get34(opts)
 
 {{{moeda_resource_listar}}}
 
@@ -2082,7 +1975,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -2097,10 +1989,10 @@ opts = {
 
 begin
   #{{{moeda_resource_listar}}}
-  result = api_instance.listar_using_get33(opts)
+  result = api_instance.listar_using_get34(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->listar_using_get33: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->listar_using_get34: #{e}"
 end
 ```
 
@@ -2114,7 +2006,6 @@ Name | Type | Description  | Notes
  **codigo_moeda** | **String**| {{{moeda_request_codigo_moeda_value}}} | [optional] 
  **simbolo** | **String**| {{{moeda_request_simbolo_value}}} | [optional] 
  **descricao** | **String**| {{{moeda_request_descricao_value}}} | [optional] 
-
 
 ### Return type
 
@@ -2131,9 +2022,8 @@ No authorization required
 
 
 
-
-# **listar_using_get34**
-> PageOperacaoCredorResponse listar_using_get34(opts)
+# **listar_using_get35**
+> PageOperacaoCredorResponse listar_using_get35(opts)
 
 {{{operacao_credor_resource_listar}}}
 
@@ -2143,7 +2033,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -2158,10 +2047,10 @@ opts = {
 
 begin
   #{{{operacao_credor_resource_listar}}}
-  result = api_instance.listar_using_get34(opts)
+  result = api_instance.listar_using_get35(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->listar_using_get34: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->listar_using_get35: #{e}"
 end
 ```
 
@@ -2175,7 +2064,6 @@ Name | Type | Description  | Notes
  **id_operacao** | **Integer**| {{{operacao_credor_request_id_operacao_value}}} | [optional] 
  **id_credor** | **Integer**| {{{operacao_credor_request_id_credor_value}}} | [optional] 
  **id_produto** | **Integer**| {{{operacao_credor_request_id_produto_value}}} | [optional] 
-
 
 ### Return type
 
@@ -2192,9 +2080,8 @@ No authorization required
 
 
 
-
-# **listar_using_get49**
-> PageTelefoneEstabelecimentoResponse listar_using_get49(opts)
+# **listar_using_get52**
+> PageTelefoneEstabelecimentoResponse listar_using_get52(opts)
 
 {{{telefone_estabelecimento_resource_listar}}}
 
@@ -2204,7 +2091,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -2217,10 +2103,10 @@ opts = {
 
 begin
   #{{{telefone_estabelecimento_resource_listar}}}
-  result = api_instance.listar_using_get49(opts)
+  result = api_instance.listar_using_get52(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->listar_using_get49: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->listar_using_get52: #{e}"
 end
 ```
 
@@ -2232,7 +2118,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
  **id_estabelecimento** | **Integer**| {{{telefone_estabelecimento_request_id_estabelecimento_value}}} | [optional] 
-
 
 ### Return type
 
@@ -2249,9 +2134,8 @@ No authorization required
 
 
 
-
-# **listar_using_get51**
-> PageTerminalResponse listar_using_get51(opts)
+# **listar_using_get54**
+> PageTerminalResponse listar_using_get54(opts)
 
 {{{terminal_resource_listar}}}
 
@@ -2261,7 +2145,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -2277,10 +2160,10 @@ opts = {
 
 begin
   #{{{terminal_resource_listar}}}
-  result = api_instance.listar_using_get51(opts)
+  result = api_instance.listar_using_get54(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->listar_using_get51: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->listar_using_get54: #{e}"
 end
 ```
 
@@ -2295,7 +2178,6 @@ Name | Type | Description  | Notes
  **terminal** | **String**| {{{terminal_request_terminal_value}}} | [optional] 
  **numero_estabelecimento** | **Integer**| {{{terminal_request_numero_estabelecimento_value}}} | [optional] 
  **id_estabelecimento** | **Integer**| {{{terminal_request_id_estabelecimento_value}}} | [optional] 
-
 
 ### Return type
 
@@ -2312,9 +2194,8 @@ No authorization required
 
 
 
-
-# **listar_using_get64**
-> PageVinculoEstabelecimentoAdquirenteResponse listar_using_get64(opts)
+# **listar_using_get67**
+> PageVinculoEstabelecimentoAdquirenteResponse listar_using_get67(opts)
 
 {{{vinculo_estabelecimento_adquirente_resource_listar}}}
 
@@ -2324,7 +2205,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -2339,10 +2219,10 @@ opts = {
 
 begin
   #{{{vinculo_estabelecimento_adquirente_resource_listar}}}
-  result = api_instance.listar_using_get64(opts)
+  result = api_instance.listar_using_get67(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->listar_using_get64: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->listar_using_get67: #{e}"
 end
 ```
 
@@ -2356,7 +2236,6 @@ Name | Type | Description  | Notes
  **id_adquirente** | **Integer**| {{{vinculo_estabelecimento_adquirente_request_id_adquirente_value}}} | [optional] 
  **id_estabelecimento** | **Integer**| {{{vinculo_estabelecimento_adquirente_request_id_estabelecimento_value}}} | [optional] 
  **codigo_estabelecimento_adquirente** | **String**| {{{vinculo_estabelecimento_adquirente_request_codigo_estabelecimento_adquirente_value}}} | [optional] 
-
 
 ### Return type
 
@@ -2373,9 +2252,8 @@ No authorization required
 
 
 
-
-# **listar_using_get65**
-> PageVinculoOperacaoResponse listar_using_get65(id, opts)
+# **listar_using_get68**
+> PageVinculoOperacaoResponse listar_using_get68(id, opts)
 
 {{{vinculo_operacao_resource_listar}}}
 
@@ -2385,7 +2263,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
@@ -2402,10 +2279,10 @@ opts = {
 
 begin
   #{{{vinculo_operacao_resource_listar}}}
-  result = api_instance.listar_using_get65(id, opts)
+  result = api_instance.listar_using_get68(id, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->listar_using_get65: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->listar_using_get68: #{e}"
 end
 ```
 
@@ -2420,7 +2297,6 @@ Name | Type | Description  | Notes
  **id_produto** | **Integer**| {{{vinculo_operacao_request_id_produto_value}}} | [optional] 
  **id_operacao** | **Integer**| {{{vinculo_operacao_request_id_operacao_value}}} | [optional] 
  **codigo_mcc** | **Integer**| {{{vinculo_operacao_request_codigo_m_c_c_value}}} | [optional] 
-
 
 ### Return type
 
@@ -2437,9 +2313,8 @@ No authorization required
 
 
 
-
-# **salvar_using_post19**
-> MaquinetaResponse salvar_using_post19(maquineta_persist)
+# **salvar_using_post20**
+> MaquinetaResponse salvar_using_post20(maquineta_persist)
 
 {{{maquineta_resource_salvar}}}
 
@@ -2450,7 +2325,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
 maquineta_persist = Pier::MaquinetaPersist.new # MaquinetaPersist | maquinetaPersist
@@ -2458,10 +2332,10 @@ maquineta_persist = Pier::MaquinetaPersist.new # MaquinetaPersist | maquinetaPer
 
 begin
   #{{{maquineta_resource_salvar}}}
-  result = api_instance.salvar_using_post19(maquineta_persist)
+  result = api_instance.salvar_using_post20(maquineta_persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->salvar_using_post19: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->salvar_using_post20: #{e}"
 end
 ```
 
@@ -2470,7 +2344,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **maquineta_persist** | [**MaquinetaPersist**](MaquinetaPersist.md)| maquinetaPersist | 
-
 
 ### Return type
 
@@ -2487,9 +2360,8 @@ No authorization required
 
 
 
-
-# **salvar_using_post20**
-> OperacaoCredorResponse salvar_using_post20(operacao_credor_persist)
+# **salvar_using_post21**
+> OperacaoCredorResponse salvar_using_post21(operacao_credor_persist)
 
 {{{operacao_credor_resource_salvar}}}
 
@@ -2500,7 +2372,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
 operacao_credor_persist = Pier::OperacaoCredorPersist.new # OperacaoCredorPersist | operacaoCredorPersist
@@ -2508,10 +2379,10 @@ operacao_credor_persist = Pier::OperacaoCredorPersist.new # OperacaoCredorPersis
 
 begin
   #{{{operacao_credor_resource_salvar}}}
-  result = api_instance.salvar_using_post20(operacao_credor_persist)
+  result = api_instance.salvar_using_post21(operacao_credor_persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->salvar_using_post20: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->salvar_using_post21: #{e}"
 end
 ```
 
@@ -2520,7 +2391,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **operacao_credor_persist** | [**OperacaoCredorPersist**](OperacaoCredorPersist.md)| operacaoCredorPersist | 
-
 
 ### Return type
 
@@ -2537,9 +2407,8 @@ No authorization required
 
 
 
-
-# **salvar_using_post27**
-> TelefoneEstabelecimentoResponse salvar_using_post27(telefone_estabelecimento_persist)
+# **salvar_using_post28**
+> TelefoneEstabelecimentoResponse salvar_using_post28(telefone_estabelecimento_persist)
 
 {{{telefone_estabelecimento_resource_salvar}}}
 
@@ -2550,7 +2419,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
 telefone_estabelecimento_persist = Pier::TelefoneEstabelecimentoPersist.new # TelefoneEstabelecimentoPersist | telefoneEstabelecimentoPersist
@@ -2558,10 +2426,10 @@ telefone_estabelecimento_persist = Pier::TelefoneEstabelecimentoPersist.new # Te
 
 begin
   #{{{telefone_estabelecimento_resource_salvar}}}
-  result = api_instance.salvar_using_post27(telefone_estabelecimento_persist)
+  result = api_instance.salvar_using_post28(telefone_estabelecimento_persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->salvar_using_post27: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->salvar_using_post28: #{e}"
 end
 ```
 
@@ -2570,7 +2438,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **telefone_estabelecimento_persist** | [**TelefoneEstabelecimentoPersist**](TelefoneEstabelecimentoPersist.md)| telefoneEstabelecimentoPersist | 
-
 
 ### Return type
 
@@ -2587,9 +2454,8 @@ No authorization required
 
 
 
-
-# **salvar_using_post29**
-> TerminalResponse salvar_using_post29(terminal_persist)
+# **salvar_using_post30**
+> TerminalResponse salvar_using_post30(terminal_persist)
 
 {{{terminal_resource_salvar}}}
 
@@ -2600,7 +2466,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
 terminal_persist = Pier::TerminalPersist.new # TerminalPersist | terminalPersist
@@ -2608,10 +2473,10 @@ terminal_persist = Pier::TerminalPersist.new # TerminalPersist | terminalPersist
 
 begin
   #{{{terminal_resource_salvar}}}
-  result = api_instance.salvar_using_post29(terminal_persist)
+  result = api_instance.salvar_using_post30(terminal_persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->salvar_using_post29: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->salvar_using_post30: #{e}"
 end
 ```
 
@@ -2620,7 +2485,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **terminal_persist** | [**TerminalPersist**](TerminalPersist.md)| terminalPersist | 
-
 
 ### Return type
 
@@ -2637,9 +2501,8 @@ No authorization required
 
 
 
-
-# **salvar_using_post34**
-> VinculoEstabelecimentoAdquirenteResponse salvar_using_post34(vinculo_estabelecimento_adquirente_persist)
+# **salvar_using_post35**
+> VinculoEstabelecimentoAdquirenteResponse salvar_using_post35(vinculo_estabelecimento_adquirente_persist)
 
 {{{vinculo_estabelecimento_adquirente_resource_salvar}}}
 
@@ -2650,7 +2513,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagestabelecimentoApi.new
 
 vinculo_estabelecimento_adquirente_persist = Pier::VinculoEstabelecimentoAdquirentePersist.new # VinculoEstabelecimentoAdquirentePersist | vinculoEstabelecimentoAdquirentePersist
@@ -2658,10 +2520,10 @@ vinculo_estabelecimento_adquirente_persist = Pier::VinculoEstabelecimentoAdquire
 
 begin
   #{{{vinculo_estabelecimento_adquirente_resource_salvar}}}
-  result = api_instance.salvar_using_post34(vinculo_estabelecimento_adquirente_persist)
+  result = api_instance.salvar_using_post35(vinculo_estabelecimento_adquirente_persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagestabelecimentoApi->salvar_using_post34: #{e}"
+  puts "Exception when calling GlobaltagestabelecimentoApi->salvar_using_post35: #{e}"
 end
 ```
 
@@ -2670,7 +2532,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **vinculo_estabelecimento_adquirente_persist** | [**VinculoEstabelecimentoAdquirentePersist**](VinculoEstabelecimentoAdquirentePersist.md)| vinculoEstabelecimentoAdquirentePersist | 
-
 
 ### Return type
 
@@ -2684,8 +2545,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

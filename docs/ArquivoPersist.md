@@ -11,4 +11,3 @@ Name | Type | Description | Notes
 **detalhes** | [**Array&lt;ArquivoDetalhesPersist&gt;**](ArquivoDetalhesPersist.md) | {{{arquivo_persist_detalhes_value}}} | 
 
 
-

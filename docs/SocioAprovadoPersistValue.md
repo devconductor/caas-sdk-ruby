@@ -18,4 +18,3 @@ Name | Type | Description | Notes
 **telefones** | [**Array&lt;TelefonePessoaAprovadaPersistValue&gt;**](TelefonePessoaAprovadaPersistValue.md) | {{{socio_aprovado_persist_telefones_value}}} | [optional] 
 
 
-

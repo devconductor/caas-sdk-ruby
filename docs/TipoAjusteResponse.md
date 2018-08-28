@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **transacoes** | [**Array&lt;TipoTransacaoAjusteResponse&gt;**](TipoTransacaoAjusteResponse.md) | {{{tipo_ajuste_response_transacoes_value}}} | [optional] 
 
 
-

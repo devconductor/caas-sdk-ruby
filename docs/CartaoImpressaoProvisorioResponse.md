@@ -12,4 +12,3 @@ Name | Type | Description | Notes
 **data_validade** | **String** | {{{cartao_impressao_provisorio_response_data_validade_value}}} | [optional] 
 
 
-

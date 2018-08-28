@@ -4,17 +4,15 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_using_get35**](GlobaltagriscofraudeApi.md#consultar_using_get35) | **GET** /api/riscos-fraudes/{id} | {{{risco_fraude_resource_consultar}}}
+[**consultar_using_get37**](GlobaltagriscofraudeApi.md#consultar_using_get37) | **GET** /api/riscos-fraudes/{id} | {{{risco_fraude_resource_consultar}}}
 [**listar_tipos_resolucao_using_get**](GlobaltagriscofraudeApi.md#listar_tipos_resolucao_using_get) | **GET** /api/tipos-resolucao | {{{risco_fraude_resource_listar_tipos_resolucao}}}
 [**negar_using_post**](GlobaltagriscofraudeApi.md#negar_using_post) | **POST** /api/riscos-fraudes/{id}/negar | {{{risco_fraude_resource_negar}}}
 [**reconhecer_using_post**](GlobaltagriscofraudeApi.md#reconhecer_using_post) | **POST** /api/riscos-fraudes/{id}/reconhecer | {{{risco_fraude_resource_reconhecer}}}
 [**validar_dados_portador_using_post**](GlobaltagriscofraudeApi.md#validar_dados_portador_using_post) | **POST** /api/riscos-fraudes/validar-dados-portador | {{{risco_fraude_resource_validar_dados_portador}}}
 
 
-
-
-# **consultar_using_get35**
-> RiscoFraudeDetalhadoResponse consultar_using_get35(id)
+# **consultar_using_get37**
+> RiscoFraudeDetalhadoResponse consultar_using_get37(id)
 
 {{{risco_fraude_resource_consultar}}}
 
@@ -25,7 +23,6 @@ Method | HTTP request | Description
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagriscofraudeApi.new
 
 id = 789 # Integer | {{{risco_fraude_resource_consultar_param_id_risco_fraude}}}
@@ -33,10 +30,10 @@ id = 789 # Integer | {{{risco_fraude_resource_consultar_param_id_risco_fraude}}}
 
 begin
   #{{{risco_fraude_resource_consultar}}}
-  result = api_instance.consultar_using_get35(id)
+  result = api_instance.consultar_using_get37(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagriscofraudeApi->consultar_using_get35: #{e}"
+  puts "Exception when calling GlobaltagriscofraudeApi->consultar_using_get37: #{e}"
 end
 ```
 
@@ -45,7 +42,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{risco_fraude_resource_consultar_param_id_risco_fraude}}} | 
-
 
 ### Return type
 
@@ -62,7 +58,6 @@ No authorization required
 
 
 
-
 # **listar_tipos_resolucao_using_get**
 > TipoResolucaoResponse listar_tipos_resolucao_using_get(opts)
 
@@ -74,7 +69,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagriscofraudeApi.new
 
@@ -99,7 +93,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**TipoResolucaoResponse**](TipoResolucaoResponse.md)
@@ -115,7 +108,6 @@ No authorization required
 
 
 
-
 # **negar_using_post**
 > Object negar_using_post(id)
 
@@ -127,7 +119,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagriscofraudeApi.new
 
@@ -149,7 +140,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{risco_fraude_resource_negar_param_id_risco_fraude}}} | 
 
-
 ### Return type
 
 **Object**
@@ -165,7 +155,6 @@ No authorization required
 
 
 
-
 # **reconhecer_using_post**
 > Object reconhecer_using_post(id)
 
@@ -177,7 +166,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagriscofraudeApi.new
 
@@ -199,7 +187,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{risco_fraude_resource_reconhecer_param_id_risco_fraude}}} | 
 
-
 ### Return type
 
 **Object**
@@ -215,7 +202,6 @@ No authorization required
 
 
 
-
 # **validar_dados_portador_using_post**
 > Object validar_dados_portador_using_post(request)
 
@@ -227,7 +213,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagriscofraudeApi.new
 
@@ -249,7 +234,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**DadosPortadorRequest**](DadosPortadorRequest.md)| request | 
 
-
 ### Return type
 
 **Object**
@@ -262,8 +246,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

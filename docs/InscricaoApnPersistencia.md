@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **id_cartoes** | **Array&lt;Integer&gt;** | {{{inscricao_apn_persistencia_id_cartoes_descricao}}} | [optional] 
 
 
-

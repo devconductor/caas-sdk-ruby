@@ -11,8 +11,6 @@ Method | HTTP request | Description
 [**visualizar_documento_using_get**](GlobaltagfaturaApi.md#visualizar_documento_using_get) | **GET** /api/contas/{id}/faturas/{dataVencimento}/arquivo.pdf | {{{fatura_conta_resource_visualizar_documento}}}
 
 
-
-
 # **consultar_fatura_using_get1**
 > FaturaDetalheResponse consultar_fatura_using_get1(data_vencimento, id_conta)
 
@@ -24,7 +22,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagfaturaApi.new
 
@@ -49,7 +46,6 @@ Name | Type | Description  | Notes
  **data_vencimento** | **String**| {{{fatura_resource_consultar_fatura_param_data_vencimento}}} | 
  **id_conta** | **Integer**| {{{fatura_resource_consultar_fatura_param_id_conta}}} | 
 
-
 ### Return type
 
 [**FaturaDetalheResponse**](FaturaDetalheResponse.md)
@@ -65,7 +61,6 @@ No authorization required
 
 
 
-
 # **consultar_lancamentos_futuros_fatura_using_get1**
 > PagePlanoParcelamentoResponse consultar_lancamentos_futuros_fatura_using_get1(id, data_vencimento_padrao, opts)
 
@@ -77,7 +72,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagfaturaApi.new
 
@@ -110,7 +104,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
-
 ### Return type
 
 [**PagePlanoParcelamentoResponse**](PagePlanoParcelamentoResponse.md)
@@ -126,7 +119,6 @@ No authorization required
 
 
 
-
 # **enviar_fatura_email_using_post**
 > Object enviar_fatura_email_using_post(id, data_vencimento, opts)
 
@@ -138,7 +130,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagfaturaApi.new
 
@@ -167,7 +158,6 @@ Name | Type | Description  | Notes
  **data_vencimento** | **String**| {{{fatura_conta_resource_enviar_fatura_email_param_data_vencimento}}} | 
  **email** | **String**| {{{fatura_conta_resource_enviar_fatura_email_param_email}}} | [optional] 
 
-
 ### Return type
 
 **Object**
@@ -183,7 +173,6 @@ No authorization required
 
 
 
-
 # **listar_faturas_using_get1**
 > PageFaturaResponse listar_faturas_using_get1(id_conta, opts)
 
@@ -195,7 +184,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagfaturaApi.new
 
@@ -227,7 +215,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
-
 ### Return type
 
 [**PageFaturaResponse**](PageFaturaResponse.md)
@@ -243,7 +230,6 @@ No authorization required
 
 
 
-
 # **visualizar_documento_using_get**
 > Object visualizar_documento_using_get(id, data_vencimento, opts)
 
@@ -255,7 +241,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagfaturaApi.new
 
@@ -286,7 +271,6 @@ Name | Type | Description  | Notes
  **flag_apenas_demostrativo** | **BOOLEAN**| {{{fatura_conta_resource_enviar_fatura_email_param_flag_apenas_demostrativo}}} | [optional] 
  **flag_registra_boleto** | **BOOLEAN**| {{{fatura_conta_resource_enviar_fatura_email_param_flag_registra_boleto}}} | [optional] 
 
-
 ### Return type
 
 **Object**
@@ -299,8 +283,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/pdf
-
-
 
 
 

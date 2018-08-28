@@ -1,4 +1,4 @@
-# Pier::NotificacaoPushResponseValue
+# Pier::NotificacaoPushResponse
 
 ## Properties
 Name | Type | Description | Notes
@@ -14,6 +14,5 @@ Name | Type | Description | Notes
 **conteudo** | **String** | {{{notificacao_push_response_conteudo_value}}} | 
 **plataforma** | **String** | {{{notificacao_push_response_plataforma_value}}} | [optional] 
 **protocolo** | **String** | {{{notificacao_push_response_protocolo_value}}} | [optional] 
-
 
 

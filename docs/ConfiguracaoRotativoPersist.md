@@ -20,4 +20,3 @@ Name | Type | Description | Notes
 **usuario** | **String** | {{{configuracao_rotativo_persist_usuario_value}}} | [optional] 
 
 
-

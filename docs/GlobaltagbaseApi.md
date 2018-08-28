@@ -7,8 +7,6 @@ Method | HTTP request | Description
 [**limpar_using_post**](GlobaltagbaseApi.md#limpar_using_post) | **POST** /api/bases/limpar | {{{base_resource_limpar}}}
 
 
-
-
 # **limpar_using_post**
 > BodyAccessToken limpar_using_post
 
@@ -20,7 +18,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagbaseApi.new
 
@@ -36,7 +33,6 @@ end
 ### Parameters
 This endpoint does not need any parameter.
 
-
 ### Return type
 
 [**BodyAccessToken**](BodyAccessToken.md)
@@ -49,8 +45,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

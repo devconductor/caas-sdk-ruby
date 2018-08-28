@@ -5,23 +5,21 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizar_taxas_juros_contas_using_put**](GlobaltagtransferenciabancariaApi.md#atualizar_taxas_juros_contas_using_put) | **PUT** /api/contas/{id}/taxas-transferencias | {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas}}}
-[**atualizar_using_put1**](GlobaltagtransferenciabancariaApi.md#atualizar_using_put1) | **PUT** /api/contas-bancarias-portador/{id} | {{{conta_bancaria_resource_atualizar}}}
+[**atualizar_using_put2**](GlobaltagtransferenciabancariaApi.md#atualizar_using_put2) | **PUT** /api/contas-bancarias-portador/{id} | {{{conta_bancaria_resource_atualizar}}}
 [**cancelar_transferencia_credito_conta_bancaria_using_post**](GlobaltagtransferenciabancariaApi.md#cancelar_transferencia_credito_conta_bancaria_using_post) | **POST** /api/transferencias-creditos-contas-bancarias/{idTransferencia}/cancelar | {{{transferencia_bancaria_resource_cancelar_transferencia_credito_conta_bancaria}}}
 [**confirmar_transferencia_credito_conta_bancaria_using_post**](GlobaltagtransferenciabancariaApi.md#confirmar_transferencia_credito_conta_bancaria_using_post) | **POST** /api/transferencias-creditos-contas-bancarias/{idTransferencia}/confirmar | {{{transferencia_bancaria_resource_confirmar_transferencia_credito_conta_bancaria}}}
 [**consultar_taxas_juros_contas_using_get**](GlobaltagtransferenciabancariaApi.md#consultar_taxas_juros_contas_using_get) | **GET** /api/contas/{id}/taxas-transferencias | {{{transferencia_bancaria_resource_consultar_taxas_juros_contas}}}
 [**consultar_transferencia_bancaria_using_get**](GlobaltagtransferenciabancariaApi.md#consultar_transferencia_bancaria_using_get) | **GET** /api/transferencias-creditos-contas-bancarias/{idTransferencia} | {{{transferencia_bancaria_resource_consultar_transferencia_bancaria}}}
-[**consultar_using_get13**](GlobaltagtransferenciabancariaApi.md#consultar_using_get13) | **GET** /api/contas-bancarias-portador/{id} | {{{conta_bancaria_resource_consultar}}}
-[**consultar_using_get48**](GlobaltagtransferenciabancariaApi.md#consultar_using_get48) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | {{{transferencia_bancaria_resource_consultar}}}
+[**consultar_using_get15**](GlobaltagtransferenciabancariaApi.md#consultar_using_get15) | **GET** /api/contas-bancarias-portador/{id} | {{{conta_bancaria_resource_consultar}}}
+[**consultar_using_get50**](GlobaltagtransferenciabancariaApi.md#consultar_using_get50) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | {{{transferencia_bancaria_resource_consultar}}}
 [**listar_transferencia_bancaria_using_get**](GlobaltagtransferenciabancariaApi.md#listar_transferencia_bancaria_using_get) | **GET** /api/transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_listar_transferencia_bancaria}}}
-[**listar_using_get16**](GlobaltagtransferenciabancariaApi.md#listar_using_get16) | **GET** /api/contas-bancarias-portador | {{{conta_bancaria_resource_listar}}}
-[**listar_using_get59**](GlobaltagtransferenciabancariaApi.md#listar_using_get59) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_listar}}}
+[**listar_using_get17**](GlobaltagtransferenciabancariaApi.md#listar_using_get17) | **GET** /api/contas-bancarias-portador | {{{conta_bancaria_resource_listar}}}
+[**listar_using_get62**](GlobaltagtransferenciabancariaApi.md#listar_using_get62) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_listar}}}
 [**salvar_taxas_juros_contas_using_post**](GlobaltagtransferenciabancariaApi.md#salvar_taxas_juros_contas_using_post) | **POST** /api/contas/{id}/taxas-transferencias | {{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}}
-[**salvar_using_post7**](GlobaltagtransferenciabancariaApi.md#salvar_using_post7) | **POST** /api/contas-bancarias-portador | {{{conta_bancaria_resource_salvar}}}
+[**salvar_using_post8**](GlobaltagtransferenciabancariaApi.md#salvar_using_post8) | **POST** /api/contas-bancarias-portador | {{{conta_bancaria_resource_salvar}}}
 [**simular_transferencia_bancaria_using_post**](GlobaltagtransferenciabancariaApi.md#simular_transferencia_bancaria_using_post) | **POST** /api/simular-transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_simular_transferencia_bancaria}}}
 [**transferencia_credito_conta_bancaria_using_post**](GlobaltagtransferenciabancariaApi.md#transferencia_credito_conta_bancaria_using_post) | **POST** /api/transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_transferencia_credito_conta_bancaria}}}
 [**transferir_using_post**](GlobaltagtransferenciabancariaApi.md#transferir_using_post) | **POST** /api/contas/{id}/transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_transferir}}}
-
-
 
 
 # **atualizar_taxas_juros_contas_using_put**
@@ -35,7 +33,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagtransferenciabancariaApi.new
 
@@ -60,7 +57,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}} | 
  **update** | [**TaxaJurosContaPersistValue**](TaxaJurosContaPersistValue.md)| update | 
 
-
 ### Return type
 
 [**TaxaJurosContaResponse**](TaxaJurosContaResponse.md)
@@ -76,9 +72,8 @@ No authorization required
 
 
 
-
-# **atualizar_using_put1**
-> ContaBancariaPortadorResponse atualizar_using_put1(id, update)
+# **atualizar_using_put2**
+> ContaBancariaPortadorResponse atualizar_using_put2(id, update)
 
 {{{conta_bancaria_resource_atualizar}}}
 
@@ -89,7 +84,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagtransferenciabancariaApi.new
 
 id = 789 # Integer | {{{conta_bancaria_resource_atualizar_param_id}}}
@@ -99,10 +93,10 @@ update = Pier::ContaBancariaPortadorUpdateValue.new # ContaBancariaPortadorUpdat
 
 begin
   #{{{conta_bancaria_resource_atualizar}}}
-  result = api_instance.atualizar_using_put1(id, update)
+  result = api_instance.atualizar_using_put2(id, update)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagtransferenciabancariaApi->atualizar_using_put1: #{e}"
+  puts "Exception when calling GlobaltagtransferenciabancariaApi->atualizar_using_put2: #{e}"
 end
 ```
 
@@ -112,7 +106,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_bancaria_resource_atualizar_param_id}}} | 
  **update** | [**ContaBancariaPortadorUpdateValue**](ContaBancariaPortadorUpdateValue.md)| update | 
-
 
 ### Return type
 
@@ -129,7 +122,6 @@ No authorization required
 
 
 
-
 # **cancelar_transferencia_credito_conta_bancaria_using_post**
 > String cancelar_transferencia_credito_conta_bancaria_using_post(id_transferencia)
 
@@ -141,7 +133,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagtransferenciabancariaApi.new
 
@@ -163,7 +154,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_transferencia** | **Integer**| {{{transferencia_bancaria_resource_cancelar_transferencia_credito_conta_bancaria_param_id_transferencia}}} | 
 
-
 ### Return type
 
 **String**
@@ -179,7 +169,6 @@ No authorization required
 
 
 
-
 # **confirmar_transferencia_credito_conta_bancaria_using_post**
 > String confirmar_transferencia_credito_conta_bancaria_using_post(id_transferencia)
 
@@ -191,7 +180,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagtransferenciabancariaApi.new
 
@@ -213,7 +201,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_transferencia** | **Integer**| {{{transferencia_bancaria_resource_confirmar_transferencia_credito_conta_bancaria_param_id_transferencia}}} | 
 
-
 ### Return type
 
 **String**
@@ -229,7 +216,6 @@ No authorization required
 
 
 
-
 # **consultar_taxas_juros_contas_using_get**
 > TaxaJurosContaResponse consultar_taxas_juros_contas_using_get(id, numero_meses_carencia)
 
@@ -241,7 +227,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagtransferenciabancariaApi.new
 
@@ -266,7 +251,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}} | 
  **numero_meses_carencia** | **Integer**| numeroMesesCarencia | 
 
-
 ### Return type
 
 [**TaxaJurosContaResponse**](TaxaJurosContaResponse.md)
@@ -282,7 +266,6 @@ No authorization required
 
 
 
-
 # **consultar_transferencia_bancaria_using_get**
 > TransferenciaCreditoContaBancariaResponse consultar_transferencia_bancaria_using_get(id_transferencia)
 
@@ -294,7 +277,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagtransferenciabancariaApi.new
 
@@ -316,7 +298,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_transferencia** | **Integer**| {{{transferencia_bancaria_resource_consultar_transferencia_bancaria_param_id_transferencia}}} | 
 
-
 ### Return type
 
 [**TransferenciaCreditoContaBancariaResponse**](TransferenciaCreditoContaBancariaResponse.md)
@@ -332,9 +313,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get13**
-> ContaBancariaPortadorResponse consultar_using_get13(id)
+# **consultar_using_get15**
+> ContaBancariaPortadorResponse consultar_using_get15(id)
 
 {{{conta_bancaria_resource_consultar}}}
 
@@ -345,7 +325,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagtransferenciabancariaApi.new
 
 id = 789 # Integer | {{{conta_bancaria_resource_consultar_param_id}}}
@@ -353,10 +332,10 @@ id = 789 # Integer | {{{conta_bancaria_resource_consultar_param_id}}}
 
 begin
   #{{{conta_bancaria_resource_consultar}}}
-  result = api_instance.consultar_using_get13(id)
+  result = api_instance.consultar_using_get15(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagtransferenciabancariaApi->consultar_using_get13: #{e}"
+  puts "Exception when calling GlobaltagtransferenciabancariaApi->consultar_using_get15: #{e}"
 end
 ```
 
@@ -365,7 +344,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_bancaria_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -382,9 +360,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get48**
-> TransferenciaBancariaResponse consultar_using_get48(id, id_transferencia, opts)
+# **consultar_using_get50**
+> TransferenciaBancariaResponse consultar_using_get50(id, id_transferencia, opts)
 
 {{{transferencia_bancaria_resource_consultar}}}
 
@@ -394,7 +371,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagtransferenciabancariaApi.new
 
@@ -408,10 +384,10 @@ opts = {
 
 begin
   #{{{transferencia_bancaria_resource_consultar}}}
-  result = api_instance.consultar_using_get48(id, id_transferencia, opts)
+  result = api_instance.consultar_using_get50(id, id_transferencia, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagtransferenciabancariaApi->consultar_using_get48: #{e}"
+  puts "Exception when calling GlobaltagtransferenciabancariaApi->consultar_using_get50: #{e}"
 end
 ```
 
@@ -422,7 +398,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{transferencia_bancaria_resource_consultar_param_id}}} | 
  **id_transferencia** | **Integer**| {{{transferencia_bancaria_resource_consultar_param_id_evento}}} | 
  **id_conta_bancaria_destino** | **Integer**| {{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}} | [optional] 
-
 
 ### Return type
 
@@ -439,7 +414,6 @@ No authorization required
 
 
 
-
 # **listar_transferencia_bancaria_using_get**
 > PageTransferenciaCreditoContaBancariaResponse listar_transferencia_bancaria_using_get(opts)
 
@@ -451,7 +425,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagtransferenciabancariaApi.new
 
@@ -486,7 +459,6 @@ Name | Type | Description  | Notes
  **data_solicitacao_final** | **String**| {{{transferencia_credito_conta_bancaria_request_data_solicitacao_final_value}}} | [optional] 
  **status** | **Integer**| {{{transferencia_credito_conta_bancaria_request_status_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageTransferenciaCreditoContaBancariaResponse**](PageTransferenciaCreditoContaBancariaResponse.md)
@@ -502,9 +474,8 @@ No authorization required
 
 
 
-
-# **listar_using_get16**
-> PageContaBancariaPortadorResponse listar_using_get16(opts)
+# **listar_using_get17**
+> PageContaBancariaPortadorResponse listar_using_get17(opts)
 
 {{{conta_bancaria_resource_listar}}}
 
@@ -514,7 +485,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagtransferenciabancariaApi.new
 
@@ -536,10 +506,10 @@ opts = {
 
 begin
   #{{{conta_bancaria_resource_listar}}}
-  result = api_instance.listar_using_get16(opts)
+  result = api_instance.listar_using_get17(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagtransferenciabancariaApi->listar_using_get16: #{e}"
+  puts "Exception when calling GlobaltagtransferenciabancariaApi->listar_using_get17: #{e}"
 end
 ```
 
@@ -561,7 +531,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
-
 ### Return type
 
 [**PageContaBancariaPortadorResponse**](PageContaBancariaPortadorResponse.md)
@@ -577,9 +546,8 @@ No authorization required
 
 
 
-
-# **listar_using_get59**
-> PageTransferenciaBancariaResponse listar_using_get59(id, opts)
+# **listar_using_get62**
+> PageTransferenciaBancariaResponse listar_using_get62(id, opts)
 
 {{{transferencia_bancaria_resource_listar}}}
 
@@ -589,7 +557,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagtransferenciabancariaApi.new
 
@@ -604,10 +571,10 @@ opts = {
 
 begin
   #{{{transferencia_bancaria_resource_listar}}}
-  result = api_instance.listar_using_get59(id, opts)
+  result = api_instance.listar_using_get62(id, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagtransferenciabancariaApi->listar_using_get59: #{e}"
+  puts "Exception when calling GlobaltagtransferenciabancariaApi->listar_using_get62: #{e}"
 end
 ```
 
@@ -620,7 +587,6 @@ Name | Type | Description  | Notes
  **sort** | [**Array&lt;String&gt;**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
-
 
 ### Return type
 
@@ -637,7 +603,6 @@ No authorization required
 
 
 
-
 # **salvar_taxas_juros_contas_using_post**
 > TaxaJurosContaResponse salvar_taxas_juros_contas_using_post(id, persist)
 
@@ -649,7 +614,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagtransferenciabancariaApi.new
 
@@ -674,7 +638,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}} | 
  **persist** | [**TaxaJurosContaPersistValue**](TaxaJurosContaPersistValue.md)| persist | 
 
-
 ### Return type
 
 [**TaxaJurosContaResponse**](TaxaJurosContaResponse.md)
@@ -690,9 +653,8 @@ No authorization required
 
 
 
-
-# **salvar_using_post7**
-> ContaBancariaPortadorResponse salvar_using_post7(persist)
+# **salvar_using_post8**
+> ContaBancariaPortadorResponse salvar_using_post8(persist)
 
 {{{conta_bancaria_resource_salvar}}}
 
@@ -703,7 +665,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagtransferenciabancariaApi.new
 
 persist = Pier::ContaBancariaPortadorPersistValue.new # ContaBancariaPortadorPersistValue | persist
@@ -711,10 +672,10 @@ persist = Pier::ContaBancariaPortadorPersistValue.new # ContaBancariaPortadorPer
 
 begin
   #{{{conta_bancaria_resource_salvar}}}
-  result = api_instance.salvar_using_post7(persist)
+  result = api_instance.salvar_using_post8(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagtransferenciabancariaApi->salvar_using_post7: #{e}"
+  puts "Exception when calling GlobaltagtransferenciabancariaApi->salvar_using_post8: #{e}"
 end
 ```
 
@@ -723,7 +684,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**ContaBancariaPortadorPersistValue**](ContaBancariaPortadorPersistValue.md)| persist | 
-
 
 ### Return type
 
@@ -740,7 +700,6 @@ No authorization required
 
 
 
-
 # **simular_transferencia_bancaria_using_post**
 > PlanoParcelamentoTransferenciaCreditoContaBancariaResponse simular_transferencia_bancaria_using_post(request)
 
@@ -752,7 +711,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagtransferenciabancariaApi.new
 
@@ -774,7 +732,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**PlanoParcelamentoTransferenciaCreditoContaBancariaRequest**](PlanoParcelamentoTransferenciaCreditoContaBancariaRequest.md)| request | 
 
-
 ### Return type
 
 [**PlanoParcelamentoTransferenciaCreditoContaBancariaResponse**](PlanoParcelamentoTransferenciaCreditoContaBancariaResponse.md)
@@ -790,7 +747,6 @@ No authorization required
 
 
 
-
 # **transferencia_credito_conta_bancaria_using_post**
 > TransferenciaCreditoContaBancariaResponse transferencia_credito_conta_bancaria_using_post(persist)
 
@@ -802,7 +758,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagtransferenciabancariaApi.new
 
@@ -824,7 +779,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**TransferenciaCreditoContaBancariaPersistValue**](TransferenciaCreditoContaBancariaPersistValue.md)| persist | 
 
-
 ### Return type
 
 [**TransferenciaCreditoContaBancariaResponse**](TransferenciaCreditoContaBancariaResponse.md)
@@ -840,7 +794,6 @@ No authorization required
 
 
 
-
 # **transferir_using_post**
 > TransferenciaBancariaResponse transferir_using_post(id, transferencia_bancaria_persist)
 
@@ -852,7 +805,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagtransferenciabancariaApi.new
 
@@ -877,7 +829,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{transferencia_bancaria_resource_transferir_param_id}}} | 
  **transferencia_bancaria_persist** | [**TransferenciaBancariaPersistValue**](TransferenciaBancariaPersistValue.md)| transferenciaBancariaPersist | 
 
-
 ### Return type
 
 [**TransferenciaBancariaResponse**](TransferenciaBancariaResponse.md)
@@ -890,8 +841,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

@@ -17,4 +17,3 @@ Name | Type | Description | Notes
 **titularidade** | **Integer** | {{{conta_bancaria_portador_update_titularidade_value}}} | [optional] 
 
 
-

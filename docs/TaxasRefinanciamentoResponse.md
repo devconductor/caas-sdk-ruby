@@ -27,4 +27,3 @@ Name | Type | Description | Notes
 **plano_taxa_default** | **Integer** | {{{taxas_refinanciamento_response_plano_taxa_default_value}}} | [optional] 
 
 
-

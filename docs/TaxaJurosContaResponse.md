@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **taxas_juros** | [**Array&lt;TaxaJurosContaListaResponse&gt;**](TaxaJurosContaListaResponse.md) | {{{taxa_juros_conta_response_taxas_juros_value}}} | [optional] 
 
 
-

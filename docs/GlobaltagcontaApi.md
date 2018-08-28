@@ -18,8 +18,9 @@ Method | HTTP request | Description
 [**consultar_divida_atualizada_cliente_using_get**](GlobaltagcontaApi.md#consultar_divida_atualizada_cliente_using_get) | **GET** /api/contas/{id}/recuperar-divida-atualizada | {{{conta_resource_consultar_divida_atualizada_cliente}}}
 [**consultar_taxas_tarifas_using_get**](GlobaltagcontaApi.md#consultar_taxas_tarifas_using_get) | **GET** /api/contas/{id}/consultar-taxas-tarifas | {{{conta_resource_consultar_taxas_tarifas}}}
 [**consultar_using_get1**](GlobaltagcontaApi.md#consultar_using_get1) | **GET** /api/adesoes-pagamentos-sabados | {{{aderir_pagamento_sabado_recurso_consultar}}}
-[**consultar_using_get14**](GlobaltagcontaApi.md#consultar_using_get14) | **GET** /api/contas/{id} | {{{conta_resource_consultar}}}
-[**consultar_using_get49**](GlobaltagcontaApi.md#consultar_using_get49) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | {{{transferencia_resource_consultar}}}
+[**consultar_using_get16**](GlobaltagcontaApi.md#consultar_using_get16) | **GET** /api/contas/{id} | {{{conta_resource_consultar}}}
+[**consultar_using_get51**](GlobaltagcontaApi.md#consultar_using_get51) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | {{{transferencia_resource_consultar}}}
+[**criar_contas_multi_app_using_post**](GlobaltagcontaApi.md#criar_contas_multi_app_using_post) | **POST** /api/contas/cadastrar-conta-multiapp | {{{conta_resource_cadastrar_conta_multiapp}}}
 [**desativar_envio_fatura_email_using_post**](GlobaltagcontaApi.md#desativar_envio_fatura_email_using_post) | **POST** /api/contas/{id}/desativar-fatura-email | {{{conta_resource_desativar_envio_fatura_email}}}
 [**gerar_boleto_recarga_using_post**](GlobaltagcontaApi.md#gerar_boleto_recarga_using_post) | **POST** /api/contas/{id}/gerar-boleto-recarga | {{{conta_resource_gerar_boleto_recarga}}}
 [**gerar_cartao_embossing_using_post**](GlobaltagcontaApi.md#gerar_cartao_embossing_using_post) | **POST** /api/contas/{id}/gerar-cartao-grafica | {{{conta_resource_gerar_cartao_embossing}}}
@@ -31,16 +32,14 @@ Method | HTTP request | Description
 [**listar_historico_atrasos_faturas_using_get**](GlobaltagcontaApi.md#listar_historico_atrasos_faturas_using_get) | **GET** /api/contas/{id}/historicos-faturas-atrasos | {{{conta_resource_listar_historico_atrasos_faturas}}}
 [**listar_nao_processadas_using_get**](GlobaltagcontaApi.md#listar_nao_processadas_using_get) | **GET** /api/contas/{id}/transacoes/listar-nao-processadas | {{{transacoes_correntes_resource_listar_nao_processadas}}}
 [**listar_processadas_using_get**](GlobaltagcontaApi.md#listar_processadas_using_get) | **GET** /api/contas/{id}/transacoes/listar-processadas | {{{transacoes_correntes_resource_listar_processadas}}}
-[**listar_using_get18**](GlobaltagcontaApi.md#listar_using_get18) | **GET** /api/contas | {{{conta_resource_listar}}}
-[**listar_using_get58**](GlobaltagcontaApi.md#listar_using_get58) | **GET** /api/contas/{id}/transacoes | {{{transacoes_correntes_resource_listar_nao_processadas_e_processadas}}}
-[**listar_using_get60**](GlobaltagcontaApi.md#listar_using_get60) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | {{{transferencia_resource_listar}}}
+[**listar_using_get19**](GlobaltagcontaApi.md#listar_using_get19) | **GET** /api/contas | {{{conta_resource_listar}}}
+[**listar_using_get61**](GlobaltagcontaApi.md#listar_using_get61) | **GET** /api/contas/{id}/transacoes | {{{transacoes_correntes_resource_listar_nao_processadas_e_processadas}}}
+[**listar_using_get63**](GlobaltagcontaApi.md#listar_using_get63) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | {{{transferencia_resource_listar}}}
 [**reativar_using_post1**](GlobaltagcontaApi.md#reativar_using_post1) | **POST** /api/contas/{id}/reativar | {{{conta_resource_reativar}}}
-[**salvar_using_post8**](GlobaltagcontaApi.md#salvar_using_post8) | **POST** /api/contas | {{{conta_resource_salvar}}}
+[**salvar_using_post9**](GlobaltagcontaApi.md#salvar_using_post9) | **POST** /api/contas | {{{conta_resource_salvar}}}
 [**simular_emprestimo_financiamento_using_post**](GlobaltagcontaApi.md#simular_emprestimo_financiamento_using_post) | **POST** /api/contas/{id}/simular-emprestimos-financiamentos | {{{financiamento_resource_simular_emprestimo_financiamento}}}
 [**transacoes_using_get**](GlobaltagcontaApi.md#transacoes_using_get) | **GET** /api/contas/{id}/timeline | {{{conta_resource_transacoes}}}
 [**transferir_using_post1**](GlobaltagcontaApi.md#transferir_using_post1) | **POST** /api/contas/{id}/transferencias-creditos-cartoes | {{{transferencia_resource_transferir}}}
-
-
 
 
 # **ajustar_conta_using_post1**
@@ -55,7 +54,6 @@ Method | HTTP request | Description
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 id = 789 # Integer | {{{conta_resource_ajustar_conta_param_id}}}
@@ -67,7 +65,6 @@ data_ajuste = "data_ajuste_example" # String | {{{ajuste_persist_data_ajuste_val
 valor_ajuste = 3.4 # Float | {{{ajuste_persist_valor_ajuste_value}}}
 
 opts = { 
-  authorization: "authorization_example", # String | Authorization
   identificador_externo: "identificador_externo_example", # String | {{{ajuste_persist_identificador_externo_value}}}
   id_transacao_original: 789 # Integer | {{{ajuste_persist_id_transacao_original}}}
 }
@@ -89,10 +86,8 @@ Name | Type | Description  | Notes
  **id_tipo_ajuste** | **Integer**| {{{ajuste_persist_id_tipo_ajuste_value}}} | 
  **data_ajuste** | **String**| {{{ajuste_persist_data_ajuste_value}}} | 
  **valor_ajuste** | [**Float**](.md)| {{{ajuste_persist_valor_ajuste_value}}} | 
- **authorization** | **String**| Authorization | [optional] 
  **identificador_externo** | **String**| {{{ajuste_persist_identificador_externo_value}}} | [optional] 
  **id_transacao_original** | **Integer**| {{{ajuste_persist_id_transacao_original}}} | [optional] 
-
 
 ### Return type
 
@@ -109,9 +104,8 @@ No authorization required
 
 
 
-
 # **alterar_produto_using_post**
-> String alterar_produto_using_post(id, request, opts)
+> String alterar_produto_using_post(id, request)
 
 {{{conta_resource_alterar_produto}}}
 
@@ -122,20 +116,16 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 id = 789 # Integer | {{{conta_resource_alterar_produto_param_id}}}
 
 request = Pier::AlterarProdutoRequest.new # AlterarProdutoRequest | request
 
-opts = { 
-  authorization: "authorization_example" # String | Authorization
-}
 
 begin
   #{{{conta_resource_alterar_produto}}}
-  result = api_instance.alterar_produto_using_post(id, request, opts)
+  result = api_instance.alterar_produto_using_post(id, request)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling GlobaltagcontaApi->alterar_produto_using_post: #{e}"
@@ -148,8 +138,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_alterar_produto_param_id}}} | 
  **request** | [**AlterarProdutoRequest**](AlterarProdutoRequest.md)| request | 
- **authorization** | **String**| Authorization | [optional] 
-
 
 ### Return type
 
@@ -166,9 +154,8 @@ No authorization required
 
 
 
-
 # **alterar_titular_using_post**
-> ContaResponse alterar_titular_using_post(id, id_pessoa, opts)
+> ContaResponse alterar_titular_using_post(id, id_pessoa)
 
 {{{conta_resource_alterar_titular}}}
 
@@ -179,20 +166,16 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 id = 789 # Integer | {{{conta_resource_alterar_titular_param_id_conta}}}
 
 id_pessoa = 789 # Integer | {{{conta_resource_alterar_titular_param_id_pessoa}}}
 
-opts = { 
-  authorization: "authorization_example" # String | Authorization
-}
 
 begin
   #{{{conta_resource_alterar_titular}}}
-  result = api_instance.alterar_titular_using_post(id, id_pessoa, opts)
+  result = api_instance.alterar_titular_using_post(id, id_pessoa)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling GlobaltagcontaApi->alterar_titular_using_post: #{e}"
@@ -205,8 +188,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_alterar_titular_param_id_conta}}} | 
  **id_pessoa** | **Integer**| {{{conta_resource_alterar_titular_param_id_pessoa}}} | 
- **authorization** | **String**| Authorization | [optional] 
-
 
 ### Return type
 
@@ -223,9 +204,8 @@ No authorization required
 
 
 
-
 # **alterar_vencimento_using_put**
-> ContaResponse alterar_vencimento_using_put(id, novo_dia_vencimento, opts)
+> ContaResponse alterar_vencimento_using_put(id, novo_dia_vencimento)
 
 {{{conta_resource_alterar_vencimento}}}
 
@@ -236,20 +216,16 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 id = 789 # Integer | {{{conta_resource_alterar_vencimento_param_id}}}
 
 novo_dia_vencimento = 56 # Integer | {{{conta_resource_alterar_vencimento_param_novo_dia_vencimento}}}
 
-opts = { 
-  authorization: "authorization_example" # String | Authorization
-}
 
 begin
   #{{{conta_resource_alterar_vencimento}}}
-  result = api_instance.alterar_vencimento_using_put(id, novo_dia_vencimento, opts)
+  result = api_instance.alterar_vencimento_using_put(id, novo_dia_vencimento)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling GlobaltagcontaApi->alterar_vencimento_using_put: #{e}"
@@ -262,8 +238,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_alterar_vencimento_param_id}}} | 
  **novo_dia_vencimento** | **Integer**| {{{conta_resource_alterar_vencimento_param_novo_dia_vencimento}}} | 
- **authorization** | **String**| Authorization | [optional] 
-
 
 ### Return type
 
@@ -277,7 +251,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
 
 
 
@@ -293,7 +266,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 id = 789 # Integer | {{{conta_resource_ativar_anuidade_param_id}}}
@@ -301,7 +273,6 @@ id = 789 # Integer | {{{conta_resource_ativar_anuidade_param_id}}}
 id_anuidade = 789 # Integer | {{{anuidade_request_id_anuidade_value}}}
 
 opts = { 
-  authorization: "authorization_example", # String | Authorization
   sort: ["sort_example"], # Array<String> | {{{global_menssagem_sort_sort}}}
   page: 56, # Integer | {{{global_menssagem_sort_page_value}}}
   limit: 56, # Integer | {{{global_menssagem_sort_limit}}}
@@ -326,7 +297,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_ativar_anuidade_param_id}}} | 
  **id_anuidade** | **Integer**| {{{anuidade_request_id_anuidade_value}}} | 
- **authorization** | **String**| Authorization | [optional] 
  **sort** | [**Array&lt;String&gt;**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
@@ -334,7 +304,6 @@ Name | Type | Description  | Notes
  **celular** | **String**| {{{anuidade_request_celular_value}}} | [optional] 
  **id_operadora** | **Integer**| {{{anuidade_request_id_operadora_value}}} | [optional] 
  **id_origem_comercial** | **Integer**| {{{anuidade_request_id_origem_comercial_value}}} | [optional] 
-
 
 ### Return type
 
@@ -351,9 +320,8 @@ No authorization required
 
 
 
-
 # **ativar_envio_fatura_email_using_post**
-> Object ativar_envio_fatura_email_using_post(id, opts)
+> Object ativar_envio_fatura_email_using_post(id)
 
 {{{conta_resource_ativar_envio_fatura_email}}}
 
@@ -364,18 +332,14 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 id = 789 # Integer | {{{conta_resource_ativar_envio_fatura_email_param_id}}}
 
-opts = { 
-  authorization: "authorization_example" # String | Authorization
-}
 
 begin
   #{{{conta_resource_ativar_envio_fatura_email}}}
-  result = api_instance.ativar_envio_fatura_email_using_post(id, opts)
+  result = api_instance.ativar_envio_fatura_email_using_post(id)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling GlobaltagcontaApi->ativar_envio_fatura_email_using_post: #{e}"
@@ -387,8 +351,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_ativar_envio_fatura_email_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
-
 
 ### Return type
 
@@ -405,9 +367,8 @@ No authorization required
 
 
 
-
 # **bloquear_using_post1**
-> ContaResponse bloquear_using_post1(id, id_status, opts)
+> ContaResponse bloquear_using_post1(id, id_status)
 
 {{{conta_resource_bloquear}}}
 
@@ -418,20 +379,16 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 id = 789 # Integer | {{{conta_resource_bloquear_param_id}}}
 
 id_status = 789 # Integer | {{{conta_resource_bloquear_param_id_status}}}
 
-opts = { 
-  authorization: "authorization_example" # String | Authorization
-}
 
 begin
   #{{{conta_resource_bloquear}}}
-  result = api_instance.bloquear_using_post1(id, id_status, opts)
+  result = api_instance.bloquear_using_post1(id, id_status)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling GlobaltagcontaApi->bloquear_using_post1: #{e}"
@@ -444,8 +401,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_bloquear_param_id}}} | 
  **id_status** | **Integer**| {{{conta_resource_bloquear_param_id_status}}} | 
- **authorization** | **String**| Authorization | [optional] 
-
 
 ### Return type
 
@@ -462,7 +417,6 @@ No authorization required
 
 
 
-
 # **cadastrar_using_post**
 > AdesaoPagamentoSabadoResponse cadastrar_using_post(id)
 
@@ -474,7 +428,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcontaApi.new
 
@@ -496,7 +449,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{aderir_pagamento_sabado_recurso_cadastrar_param_id}}} | 
 
-
 ### Return type
 
 [**AdesaoPagamentoSabadoResponse**](AdesaoPagamentoSabadoResponse.md)
@@ -512,9 +464,8 @@ No authorization required
 
 
 
-
 # **cancelar_using_post1**
-> ContaResponse cancelar_using_post1(id, id_status, opts)
+> ContaResponse cancelar_using_post1(id, id_status)
 
 {{{conta_resource_cancelar}}}
 
@@ -525,20 +476,16 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 id = 789 # Integer | {{{conta_resource_cancelar_param_id}}}
 
 id_status = 789 # Integer | {{{conta_resource_cancelar_param_id_status}}}
 
-opts = { 
-  authorization: "authorization_example" # String | Authorization
-}
 
 begin
   #{{{conta_resource_cancelar}}}
-  result = api_instance.cancelar_using_post1(id, id_status, opts)
+  result = api_instance.cancelar_using_post1(id, id_status)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling GlobaltagcontaApi->cancelar_using_post1: #{e}"
@@ -551,8 +498,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_cancelar_param_id}}} | 
  **id_status** | **Integer**| {{{conta_resource_cancelar_param_id_status}}} | 
- **authorization** | **String**| Authorization | [optional] 
-
 
 ### Return type
 
@@ -569,9 +514,8 @@ No authorization required
 
 
 
-
 # **consultar_beneficio_pagamento_atraso_using_get**
-> BeneficioPagamentoAtrasoResponse consultar_beneficio_pagamento_atraso_using_get(id, opts)
+> BeneficioPagamentoAtrasoResponse consultar_beneficio_pagamento_atraso_using_get(id)
 
 {{{conta_resource_consultar_beneficio_pagamento_atraso}}}
 
@@ -582,18 +526,14 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 id = 789 # Integer | {{{conta_resource_consultar_beneficio_pagamento_atraso_param_id}}}
 
-opts = { 
-  authorization: "authorization_example" # String | Authorization
-}
 
 begin
   #{{{conta_resource_consultar_beneficio_pagamento_atraso}}}
-  result = api_instance.consultar_beneficio_pagamento_atraso_using_get(id, opts)
+  result = api_instance.consultar_beneficio_pagamento_atraso_using_get(id)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling GlobaltagcontaApi->consultar_beneficio_pagamento_atraso_using_get: #{e}"
@@ -605,8 +545,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_consultar_beneficio_pagamento_atraso_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
-
 
 ### Return type
 
@@ -623,9 +561,8 @@ No authorization required
 
 
 
-
 # **consultar_boleto_emitido_using_get**
-> BoletoResponse consultar_boleto_emitido_using_get(id, opts)
+> BoletoResponse consultar_boleto_emitido_using_get(id)
 
 {{{conta_resource_consultar_boleto_emitido}}}
 
@@ -636,18 +573,14 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 id = 789 # Integer | {{{conta_resource_consultar_boleto_emitido_param_id}}}
 
-opts = { 
-  authorization: "authorization_example" # String | Authorization
-}
 
 begin
   #{{{conta_resource_consultar_boleto_emitido}}}
-  result = api_instance.consultar_boleto_emitido_using_get(id, opts)
+  result = api_instance.consultar_boleto_emitido_using_get(id)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling GlobaltagcontaApi->consultar_boleto_emitido_using_get: #{e}"
@@ -659,8 +592,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_consultar_boleto_emitido_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
-
 
 ### Return type
 
@@ -677,7 +608,6 @@ No authorization required
 
 
 
-
 # **consultar_divida_atualizada_cliente_using_get**
 > DividaClienteResponse consultar_divida_atualizada_cliente_using_get(id, opts)
 
@@ -690,13 +620,11 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 id = 789 # Integer | {{{conta_resource_consultar_divida_atualizada_cliente_param_id}}}
 
 opts = { 
-  authorization: "authorization_example", # String | Authorization
   sort: ["sort_example"], # Array<String> | {{{global_menssagem_sort_sort}}}
   page: 56, # Integer | {{{global_menssagem_sort_page_value}}}
   limit: 56, # Integer | {{{global_menssagem_sort_limit}}}
@@ -718,13 +646,11 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_consultar_divida_atualizada_cliente_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
  **sort** | [**Array&lt;String&gt;**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
  **data_vencimento** | **String**| {{{divida_cliente_request_data_vencimento_value}}} | [optional] 
  **id_escritorio_cobranca** | **Integer**| {{{divida_cliente_request_id_escritorio_cobranca_value}}} | [optional] 
-
 
 ### Return type
 
@@ -741,7 +667,6 @@ No authorization required
 
 
 
-
 # **consultar_taxas_tarifas_using_get**
 > PageTaxasRefinanciamentoResponse consultar_taxas_tarifas_using_get(id, opts)
 
@@ -754,13 +679,11 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 id = 789 # Integer | {{{conta_resource_consultar_taxas_tarifas_param_id_conta}}}
 
 opts = { 
-  authorization: "authorization_example", # String | Authorization
   sort: ["sort_example"], # Array<String> | {{{global_menssagem_sort_sort}}}
   page: 56, # Integer | {{{global_menssagem_sort_page_value}}}
   limit: 56 # Integer | {{{global_menssagem_sort_limit}}}
@@ -780,11 +703,9 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_consultar_taxas_tarifas_param_id_conta}}} | 
- **authorization** | **String**| Authorization | [optional] 
  **sort** | [**Array&lt;String&gt;**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
-
 
 ### Return type
 
@@ -801,7 +722,6 @@ No authorization required
 
 
 
-
 # **consultar_using_get1**
 > AdesaoPagamentoSabadoResponse consultar_using_get1(id, data_vencimento)
 
@@ -813,7 +733,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcontaApi.new
 
@@ -838,7 +757,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{aderir_pagamento_sabado_recurso_consultar_param_id}}} | 
  **data_vencimento** | **String**| {{{aderir_pagamento_sabado_recurso_consultar_param_data_vencimento}}} | 
 
-
 ### Return type
 
 [**AdesaoPagamentoSabadoResponse**](AdesaoPagamentoSabadoResponse.md)
@@ -854,9 +772,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get14**
-> ContaDetalheResponse consultar_using_get14(id, opts)
+# **consultar_using_get16**
+> ContaDetalheResponse consultar_using_get16(id)
 
 {{{conta_resource_consultar}}}
 
@@ -867,21 +784,17 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 id = 789 # Integer | {{{conta_resource_consultar_param_id}}}
 
-opts = { 
-  authorization: "authorization_example" # String | Authorization
-}
 
 begin
   #{{{conta_resource_consultar}}}
-  result = api_instance.consultar_using_get14(id, opts)
+  result = api_instance.consultar_using_get16(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcontaApi->consultar_using_get14: #{e}"
+  puts "Exception when calling GlobaltagcontaApi->consultar_using_get16: #{e}"
 end
 ```
 
@@ -890,8 +803,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_consultar_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
-
 
 ### Return type
 
@@ -908,9 +819,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get49**
-> TransferenciaDetalheResponse consultar_using_get49(id, id_transferencia)
+# **consultar_using_get51**
+> TransferenciaDetalheResponse consultar_using_get51(id, id_transferencia)
 
 {{{transferencia_resource_consultar}}}
 
@@ -921,7 +831,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 id = 789 # Integer | {{{transferencia_resource_consultar_param_id_conta}}}
@@ -931,10 +840,10 @@ id_transferencia = 789 # Integer | {{{transferencia_resource_consultar_param_id_
 
 begin
   #{{{transferencia_resource_consultar}}}
-  result = api_instance.consultar_using_get49(id, id_transferencia)
+  result = api_instance.consultar_using_get51(id, id_transferencia)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcontaApi->consultar_using_get49: #{e}"
+  puts "Exception when calling GlobaltagcontaApi->consultar_using_get51: #{e}"
 end
 ```
 
@@ -944,7 +853,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{transferencia_resource_consultar_param_id_conta}}} | 
  **id_transferencia** | **Integer**| {{{transferencia_resource_consultar_param_id_transferencia}}} | 
-
 
 ### Return type
 
@@ -961,9 +869,55 @@ No authorization required
 
 
 
+# **criar_contas_multi_app_using_post**
+> ContaMultiAppResponse criar_contas_multi_app_using_post(conta_multi_app_persist)
+
+{{{conta_resource_cadastrar_conta_multiapp}}}
+
+{{{conta_resource_cadastrar_conta_multiapp_notes}}}
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+api_instance = Pier::GlobaltagcontaApi.new
+
+conta_multi_app_persist = Pier::ContaMultiAppPersistValue.new # ContaMultiAppPersistValue | contaMultiAppPersist
+
+
+begin
+  #{{{conta_resource_cadastrar_conta_multiapp}}}
+  result = api_instance.criar_contas_multi_app_using_post(conta_multi_app_persist)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling GlobaltagcontaApi->criar_contas_multi_app_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conta_multi_app_persist** | [**ContaMultiAppPersistValue**](ContaMultiAppPersistValue.md)| contaMultiAppPersist | 
+
+### Return type
+
+[**ContaMultiAppResponse**](ContaMultiAppResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
 
 # **desativar_envio_fatura_email_using_post**
-> Object desativar_envio_fatura_email_using_post(id, opts)
+> Object desativar_envio_fatura_email_using_post(id)
 
 {{{conta_resource_desativar_envio_fatura_email}}}
 
@@ -974,18 +928,14 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 id = 789 # Integer | {{{conta_resource_desativar_envio_fatura_email_param_id}}}
 
-opts = { 
-  authorization: "authorization_example" # String | Authorization
-}
 
 begin
   #{{{conta_resource_desativar_envio_fatura_email}}}
-  result = api_instance.desativar_envio_fatura_email_using_post(id, opts)
+  result = api_instance.desativar_envio_fatura_email_using_post(id)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling GlobaltagcontaApi->desativar_envio_fatura_email_using_post: #{e}"
@@ -997,8 +947,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_desativar_envio_fatura_email_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
-
 
 ### Return type
 
@@ -1015,9 +963,8 @@ No authorization required
 
 
 
-
 # **gerar_boleto_recarga_using_post**
-> BoletoResponse gerar_boleto_recarga_using_post(id, valor, data_vencimento, opts)
+> BoletoResponse gerar_boleto_recarga_using_post(id, valor, data_vencimento)
 
 {{{conta_resource_gerar_boleto_recarga}}}
 
@@ -1028,7 +975,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 id = 789 # Integer | {{{conta_resource_gerar_boleto_recarga_param_id}}}
@@ -1037,13 +983,10 @@ valor = 3.4 # Float | {{{boleto_recarga_request_valor_value}}}
 
 data_vencimento = "data_vencimento_example" # String | {{{boleto_recarga_request_data_vencimento_value}}}
 
-opts = { 
-  authorization: "authorization_example" # String | Authorization
-}
 
 begin
   #{{{conta_resource_gerar_boleto_recarga}}}
-  result = api_instance.gerar_boleto_recarga_using_post(id, valor, data_vencimento, opts)
+  result = api_instance.gerar_boleto_recarga_using_post(id, valor, data_vencimento)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling GlobaltagcontaApi->gerar_boleto_recarga_using_post: #{e}"
@@ -1057,8 +1000,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{conta_resource_gerar_boleto_recarga_param_id}}} | 
  **valor** | [**Float**](.md)| {{{boleto_recarga_request_valor_value}}} | 
  **data_vencimento** | **String**| {{{boleto_recarga_request_data_vencimento_value}}} | 
- **authorization** | **String**| Authorization | [optional] 
-
 
 ### Return type
 
@@ -1075,9 +1016,8 @@ No authorization required
 
 
 
-
 # **gerar_cartao_embossing_using_post**
-> CartaoEmbossingResponse gerar_cartao_embossing_using_post(id, cartao_embossing_request, opts)
+> CartaoEmbossingResponse gerar_cartao_embossing_using_post(id, cartao_embossing_request)
 
 {{{conta_resource_gerar_cartao_embossing}}}
 
@@ -1088,20 +1028,16 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 id = 789 # Integer | {{{conta_resource_gerar_cartao_embossing_param_id}}}
 
 cartao_embossing_request = Pier::CartaoEmbossingRequest.new # CartaoEmbossingRequest | cartaoEmbossingRequest
 
-opts = { 
-  authorization: "authorization_example" # String | Authorization
-}
 
 begin
   #{{{conta_resource_gerar_cartao_embossing}}}
-  result = api_instance.gerar_cartao_embossing_using_post(id, cartao_embossing_request, opts)
+  result = api_instance.gerar_cartao_embossing_using_post(id, cartao_embossing_request)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling GlobaltagcontaApi->gerar_cartao_embossing_using_post: #{e}"
@@ -1114,8 +1050,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_gerar_cartao_embossing_param_id}}} | 
  **cartao_embossing_request** | [**CartaoEmbossingRequest**](CartaoEmbossingRequest.md)| cartaoEmbossingRequest | 
- **authorization** | **String**| Authorization | [optional] 
-
 
 ### Return type
 
@@ -1132,9 +1066,8 @@ No authorization required
 
 
 
-
 # **gerar_cartao_provisorio_using_post**
-> CartaoImpressaoProvisorioResponse gerar_cartao_provisorio_using_post(id, opts)
+> CartaoImpressaoProvisorioResponse gerar_cartao_provisorio_using_post(id)
 
 {{{conta_resource_gerar_cartao_provisorio}}}
 
@@ -1145,18 +1078,14 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 id = 789 # Integer | {{{conta_resource_gerar_cartao_provisorio_param_id_conta}}}
 
-opts = { 
-  authorization: "authorization_example" # String | Authorization
-}
 
 begin
   #{{{conta_resource_gerar_cartao_provisorio}}}
-  result = api_instance.gerar_cartao_provisorio_using_post(id, opts)
+  result = api_instance.gerar_cartao_provisorio_using_post(id)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling GlobaltagcontaApi->gerar_cartao_provisorio_using_post: #{e}"
@@ -1168,8 +1097,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_gerar_cartao_provisorio_param_id_conta}}} | 
- **authorization** | **String**| Authorization | [optional] 
-
 
 ### Return type
 
@@ -1186,7 +1113,6 @@ No authorization required
 
 
 
-
 # **gerar_cartao_using_post**
 > CartaoImpressaoResponse gerar_cartao_using_post(id, id_pessoa, opts)
 
@@ -1199,7 +1125,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 id = 789 # Integer | {{{conta_resource_gerar_cartao_param_id}}}
@@ -1207,7 +1132,6 @@ id = 789 # Integer | {{{conta_resource_gerar_cartao_param_id}}}
 id_pessoa = 789 # Integer | {{{conta_resource_gerar_cartao_param_id_pessoa}}}
 
 opts = { 
-  authorization: "authorization_example", # String | Authorization
   id_tipo_plastico: 789 # Integer | {{{conta_resource_gerar_cartao_param_id_tipo_plastico}}}
 }
 
@@ -1226,9 +1150,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_gerar_cartao_param_id}}} | 
  **id_pessoa** | **Integer**| {{{conta_resource_gerar_cartao_param_id_pessoa}}} | 
- **authorization** | **String**| Authorization | [optional] 
  **id_tipo_plastico** | **Integer**| {{{conta_resource_gerar_cartao_param_id_tipo_plastico}}} | [optional] 
-
 
 ### Return type
 
@@ -1245,9 +1167,8 @@ No authorization required
 
 
 
-
 # **gerar_cartao_virtual_using_post**
-> CartaoImpressaoResponse gerar_cartao_virtual_using_post(id, data_validade, opts)
+> CartaoImpressaoResponse gerar_cartao_virtual_using_post(id, data_validade)
 
 {{{conta_resource_gerar_cartao_virtual}}}
 
@@ -1258,20 +1179,16 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 id = 789 # Integer | {{{conta_resource_gerar_cartao_virtual_param_id}}}
 
 data_validade = "data_validade_example" # String | {{{conta_resource_gerar_cartao_virtual_param_data_validade}}}
 
-opts = { 
-  authorization: "authorization_example" # String | Authorization
-}
 
 begin
   #{{{conta_resource_gerar_cartao_virtual}}}
-  result = api_instance.gerar_cartao_virtual_using_post(id, data_validade, opts)
+  result = api_instance.gerar_cartao_virtual_using_post(id, data_validade)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling GlobaltagcontaApi->gerar_cartao_virtual_using_post: #{e}"
@@ -1284,8 +1201,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_gerar_cartao_virtual_param_id}}} | 
  **data_validade** | **String**| {{{conta_resource_gerar_cartao_virtual_param_data_validade}}} | 
- **authorization** | **String**| Authorization | [optional] 
-
 
 ### Return type
 
@@ -1299,7 +1214,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
 
 
 
@@ -1315,13 +1229,11 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 id = 789 # Integer | {{{conta_resource_listar_historico_alteracoes_limites_param_id}}}
 
 opts = { 
-  authorization: "authorization_example", # String | Authorization
   sort: ["sort_example"], # Array<String> | {{{global_menssagem_sort_sort}}}
   page: 56, # Integer | {{{global_menssagem_sort_page_value}}}
   limit: 56 # Integer | {{{global_menssagem_sort_limit}}}
@@ -1341,11 +1253,9 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_listar_historico_alteracoes_limites_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
  **sort** | [**Array&lt;String&gt;**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
-
 
 ### Return type
 
@@ -1362,7 +1272,6 @@ No authorization required
 
 
 
-
 # **listar_historico_assessoria_using_get**
 > PageHistoricoAssessoriaResponse listar_historico_assessoria_using_get(id, opts)
 
@@ -1375,13 +1284,11 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 id = 789 # Integer | {{{conta_resource_listar_historico_assessoria_param_id}}}
 
 opts = { 
-  authorization: "authorization_example", # String | Authorization
   sort: ["sort_example"], # Array<String> | {{{global_menssagem_sort_sort}}}
   page: 56, # Integer | {{{global_menssagem_sort_page_value}}}
   limit: 56 # Integer | {{{global_menssagem_sort_limit}}}
@@ -1401,11 +1308,9 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_listar_historico_assessoria_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
  **sort** | [**Array&lt;String&gt;**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
-
 
 ### Return type
 
@@ -1422,7 +1327,6 @@ No authorization required
 
 
 
-
 # **listar_historico_atrasos_faturas_using_get**
 > PageHistoricoAtrasoFaturaResponse listar_historico_atrasos_faturas_using_get(id, opts)
 
@@ -1435,13 +1339,11 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 id = 789 # Integer | {{{conta_resource_listar_historico_atrasos_faturas_param_id}}}
 
 opts = { 
-  authorization: "authorization_example", # String | Authorization
   sort: ["sort_example"], # Array<String> | {{{global_menssagem_sort_sort}}}
   page: 56, # Integer | {{{global_menssagem_sort_page_value}}}
   limit: 56 # Integer | {{{global_menssagem_sort_limit}}}
@@ -1461,11 +1363,9 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_listar_historico_atrasos_faturas_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
  **sort** | [**Array&lt;String&gt;**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
-
 
 ### Return type
 
@@ -1482,7 +1382,6 @@ No authorization required
 
 
 
-
 # **listar_nao_processadas_using_get**
 > PageTransacaoNaoProcessadaResponse listar_nao_processadas_using_get(id, opts)
 
@@ -1494,7 +1393,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcontaApi.new
 
@@ -1528,7 +1426,6 @@ Name | Type | Description  | Notes
  **data_inicio** | **String**| {{{transacoes_nao_processadas_request_data_inicio_value}}} | [optional] 
  **data_fim** | **String**| {{{transacoes_nao_processadas_request_data_fim_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageTransacaoNaoProcessadaResponse**](PageTransacaoNaoProcessadaResponse.md)
@@ -1544,7 +1441,6 @@ No authorization required
 
 
 
-
 # **listar_processadas_using_get**
 > PageTransacoesCorrentesResponse listar_processadas_using_get(id, opts)
 
@@ -1556,7 +1452,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcontaApi.new
 
@@ -1596,7 +1491,6 @@ Name | Type | Description  | Notes
  **id_tipo_transacao** | **Integer**| {{{transacoes_processadas_request_tipo_transacao}}} | [optional] 
  **recupera_encargos** | **Integer**| {{{transacoes_processadas_request_recupera_encargos}}} | [optional] 
 
-
 ### Return type
 
 [**PageTransacoesCorrentesResponse**](PageTransacoesCorrentesResponse.md)
@@ -1612,9 +1506,8 @@ No authorization required
 
 
 
-
-# **listar_using_get18**
-> PageContaResponse listar_using_get18(opts)
+# **listar_using_get19**
+> PageContaResponse listar_using_get19(opts)
 
 {{{conta_resource_listar}}}
 
@@ -1625,11 +1518,9 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 opts = { 
-  authorization: "authorization_example", # String | Authorization
   sort: ["sort_example"], # Array<String> | {{{global_menssagem_sort_sort}}}
   page: 56, # Integer | {{{global_menssagem_sort_page_value}}}
   limit: 56, # Integer | {{{global_menssagem_sort_limit}}}
@@ -1646,10 +1537,10 @@ opts = {
 
 begin
   #{{{conta_resource_listar}}}
-  result = api_instance.listar_using_get18(opts)
+  result = api_instance.listar_using_get19(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcontaApi->listar_using_get18: #{e}"
+  puts "Exception when calling GlobaltagcontaApi->listar_using_get19: #{e}"
 end
 ```
 
@@ -1657,7 +1548,6 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **String**| Authorization | [optional] 
  **sort** | [**Array&lt;String&gt;**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
@@ -1670,7 +1560,6 @@ Name | Type | Description  | Notes
  **data_status_conta** | **String**| {{{conta_request_data_status_conta_value}}} | [optional] 
  **data_cadastro** | **String**| {{{conta_request_data_cadastro_value}}} | [optional] 
  **data_ultima_alteracao_vencimento** | **String**| {{{conta_request_data_ultima_alteracao_vencimento_value}}} | [optional] 
-
 
 ### Return type
 
@@ -1687,9 +1576,8 @@ No authorization required
 
 
 
-
-# **listar_using_get58**
-> PageTransacaoProcessadaNaoProcessadaResponse listar_using_get58(id, opts)
+# **listar_using_get61**
+> PageTransacaoProcessadaNaoProcessadaResponse listar_using_get61(id, opts)
 
 {{{transacoes_correntes_resource_listar_nao_processadas_e_processadas}}}
 
@@ -1699,7 +1587,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcontaApi.new
 
@@ -1717,10 +1604,10 @@ opts = {
 
 begin
   #{{{transacoes_correntes_resource_listar_nao_processadas_e_processadas}}}
-  result = api_instance.listar_using_get58(id, opts)
+  result = api_instance.listar_using_get61(id, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcontaApi->listar_using_get58: #{e}"
+  puts "Exception when calling GlobaltagcontaApi->listar_using_get61: #{e}"
 end
 ```
 
@@ -1737,7 +1624,6 @@ Name | Type | Description  | Notes
  **data_fim** | **String**| {{{transacoes_processadas_request_data_fim_value}}} | [optional] 
  **id_tipo_transacao** | **Integer**| {{{transacoes_processadas_request_tipo_transacao}}} | [optional] 
 
-
 ### Return type
 
 [**PageTransacaoProcessadaNaoProcessadaResponse**](PageTransacaoProcessadaNaoProcessadaResponse.md)
@@ -1753,9 +1639,8 @@ No authorization required
 
 
 
-
-# **listar_using_get60**
-> PageTransferenciaResponse listar_using_get60(id, opts)
+# **listar_using_get63**
+> PageTransferenciaResponse listar_using_get63(id, opts)
 
 {{{transferencia_resource_listar}}}
 
@@ -1765,7 +1650,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcontaApi.new
 
@@ -1784,10 +1668,10 @@ opts = {
 
 begin
   #{{{transferencia_resource_listar}}}
-  result = api_instance.listar_using_get60(id, opts)
+  result = api_instance.listar_using_get63(id, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcontaApi->listar_using_get60: #{e}"
+  puts "Exception when calling GlobaltagcontaApi->listar_using_get63: #{e}"
 end
 ```
 
@@ -1805,7 +1689,6 @@ Name | Type | Description  | Notes
  **valor_transferencia** | [**Float**](.md)| {{{transferencia_request_valor_transferencia_value}}} | [optional] 
  **data_transferencia** | **String**| {{{transferencia_request_data_transferencia_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageTransferenciaResponse**](PageTransferenciaResponse.md)
@@ -1821,9 +1704,8 @@ No authorization required
 
 
 
-
 # **reativar_using_post1**
-> Object reativar_using_post1(id, opts)
+> Object reativar_using_post1(id)
 
 {{{conta_resource_reativar}}}
 
@@ -1834,18 +1716,14 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 id = 789 # Integer | {{{conta_resource_reativar_param_id}}}
 
-opts = { 
-  authorization: "authorization_example" # String | Authorization
-}
 
 begin
   #{{{conta_resource_reativar}}}
-  result = api_instance.reativar_using_post1(id, opts)
+  result = api_instance.reativar_using_post1(id)
   p result
 rescue Pier::ApiError => e
   puts "Exception when calling GlobaltagcontaApi->reativar_using_post1: #{e}"
@@ -1857,8 +1735,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_reativar_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
-
 
 ### Return type
 
@@ -1875,9 +1751,8 @@ No authorization required
 
 
 
-
-# **salvar_using_post8**
-> ContaResponse salvar_using_post8(conta_persist, opts)
+# **salvar_using_post9**
+> ContaResponse salvar_using_post9(conta_persist)
 
 {{{conta_resource_salvar}}}
 
@@ -1888,21 +1763,17 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 conta_persist = Pier::ContaPersistValue.new # ContaPersistValue | contaPersist
 
-opts = { 
-  authorization: "authorization_example" # String | Authorization
-}
 
 begin
   #{{{conta_resource_salvar}}}
-  result = api_instance.salvar_using_post8(conta_persist, opts)
+  result = api_instance.salvar_using_post9(conta_persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcontaApi->salvar_using_post8: #{e}"
+  puts "Exception when calling GlobaltagcontaApi->salvar_using_post9: #{e}"
 end
 ```
 
@@ -1911,8 +1782,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conta_persist** | [**ContaPersistValue**](ContaPersistValue.md)| contaPersist | 
- **authorization** | **String**| Authorization | [optional] 
-
 
 ### Return type
 
@@ -1929,7 +1798,6 @@ No authorization required
 
 
 
-
 # **simular_emprestimo_financiamento_using_post**
 > EmprestimoPessoalResponse simular_emprestimo_financiamento_using_post(id, request)
 
@@ -1941,7 +1809,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcontaApi.new
 
@@ -1966,7 +1833,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{financiamento_resource_simular_emprestimo_financiamento_param_id_conta}}} | 
  **request** | [**EmprestimoPessoalRequest**](EmprestimoPessoalRequest.md)| request | 
 
-
 ### Return type
 
 [**EmprestimoPessoalResponse**](EmprestimoPessoalResponse.md)
@@ -1982,7 +1848,6 @@ No authorization required
 
 
 
-
 # **transacoes_using_get**
 > PageTransacaoResponse transacoes_using_get(id, opts)
 
@@ -1995,13 +1860,11 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcontaApi.new
 
 id = 789 # Integer | {{{conta_resource_transacoes_param_id}}}
 
 opts = { 
-  authorization: "authorization_example", # String | Authorization
   sort: ["sort_example"], # Array<String> | {{{global_menssagem_sort_sort}}}
   page: 56, # Integer | {{{global_menssagem_sort_page_value}}}
   limit: 56 # Integer | {{{global_menssagem_sort_limit}}}
@@ -2021,11 +1884,9 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_transacoes_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
  **sort** | [**Array&lt;String&gt;**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
-
 
 ### Return type
 
@@ -2042,7 +1903,6 @@ No authorization required
 
 
 
-
 # **transferir_using_post1**
 > TransferenciaDetalheResponse transferir_using_post1(id, id_conta_destino, valor_transferencia)
 
@@ -2054,7 +1914,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcontaApi.new
 
@@ -2082,7 +1941,6 @@ Name | Type | Description  | Notes
  **id_conta_destino** | **Integer**| {{{transferencia_resource_transferir_param_id_conta_destino}}} | 
  **valor_transferencia** | [**Float**](.md)| {{{transferencia_resource_transferir_param_valor_transferencia}}} | 
 
-
 ### Return type
 
 [**TransferenciaDetalheResponse**](TransferenciaDetalheResponse.md)
@@ -2095,8 +1953,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

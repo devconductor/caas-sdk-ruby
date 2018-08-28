@@ -24,4 +24,3 @@ Name | Type | Description | Notes
 **tipo_transacao** | **Integer** | {{{transacao_corrente_response_tipo_transacao_value}}} | [optional] 
 
 
-

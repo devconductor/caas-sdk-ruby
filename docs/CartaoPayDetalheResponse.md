@@ -14,4 +14,3 @@ Name | Type | Description | Notes
 **data_validade_chave_criptograma** | **String** | {{{cartao_pay_detalhe_response_data_validade_chave_criptograma_value}}} | [optional] 
 
 
-

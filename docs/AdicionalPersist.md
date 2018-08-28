@@ -20,4 +20,3 @@ Name | Type | Description | Notes
 **telefones** | [**Array&lt;TelefoneAdicionalPersist&gt;**](TelefoneAdicionalPersist.md) | {{{adicional_persist_telefones_value}}} | [optional] 
 
 
-

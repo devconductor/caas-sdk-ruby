@@ -6,10 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ativar_using_post**](GlobaltagdispositivoApi.md#ativar_using_post) | **POST** /api/dispositivos/{id}/ativar-dispositivo | {{{dispositivo_resource_ativar}}}
 [**desativar_using_post**](GlobaltagdispositivoApi.md#desativar_using_post) | **POST** /api/dispositivos/{id}/desativar-dispositivo | {{{dispositivo_resource_desativar}}}
-[**listar_using_get20**](GlobaltagdispositivoApi.md#listar_using_get20) | **GET** /api/dispositivos | {{{dispositivo_resource_listar}}}
-[**salvar_using_post10**](GlobaltagdispositivoApi.md#salvar_using_post10) | **POST** /api/dispositivos | {{{dispositivo_resource_salvar}}}
-
-
+[**listar_using_get21**](GlobaltagdispositivoApi.md#listar_using_get21) | **GET** /api/dispositivos | {{{dispositivo_resource_listar}}}
+[**salvar_using_post11**](GlobaltagdispositivoApi.md#salvar_using_post11) | **POST** /api/dispositivos | {{{dispositivo_resource_salvar}}}
 
 
 # **ativar_using_post**
@@ -23,7 +21,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagdispositivoApi.new
 
@@ -45,7 +42,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{dispositivo_resource_ativar_param_id}}} | 
 
-
 ### Return type
 
 [**DispositivoResponse**](DispositivoResponse.md)
@@ -61,7 +57,6 @@ No authorization required
 
 
 
-
 # **desativar_using_post**
 > DispositivoResponse desativar_using_post(id)
 
@@ -73,7 +68,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagdispositivoApi.new
 
@@ -95,7 +89,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{dispositivo_resource_desativar_param_id}}} | 
 
-
 ### Return type
 
 [**DispositivoResponse**](DispositivoResponse.md)
@@ -111,9 +104,8 @@ No authorization required
 
 
 
-
-# **listar_using_get20**
-> PageDispositivoResponse listar_using_get20(opts)
+# **listar_using_get21**
+> PageDispositivoResponse listar_using_get21(opts)
 
 {{{dispositivo_resource_listar}}}
 
@@ -123,7 +115,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagdispositivoApi.new
 
@@ -140,10 +131,10 @@ opts = {
 
 begin
   #{{{dispositivo_resource_listar}}}
-  result = api_instance.listar_using_get20(opts)
+  result = api_instance.listar_using_get21(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagdispositivoApi->listar_using_get20: #{e}"
+  puts "Exception when calling GlobaltagdispositivoApi->listar_using_get21: #{e}"
 end
 ```
 
@@ -160,7 +151,6 @@ Name | Type | Description  | Notes
  **data_criacao** | **String**| {{{dispositivo_request_data_criacao_value}}} | [optional] 
  **data_desativacao** | **String**| {{{dispositivo_request_data_desativacao_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageDispositivoResponse**](PageDispositivoResponse.md)
@@ -176,9 +166,8 @@ No authorization required
 
 
 
-
-# **salvar_using_post10**
-> DispositivoResponse salvar_using_post10(persist)
+# **salvar_using_post11**
+> DispositivoResponse salvar_using_post11(persist)
 
 {{{dispositivo_resource_salvar}}}
 
@@ -189,7 +178,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagdispositivoApi.new
 
 persist = Pier::DispositivoPersistValue.new # DispositivoPersistValue | persist
@@ -197,10 +185,10 @@ persist = Pier::DispositivoPersistValue.new # DispositivoPersistValue | persist
 
 begin
   #{{{dispositivo_resource_salvar}}}
-  result = api_instance.salvar_using_post10(persist)
+  result = api_instance.salvar_using_post11(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagdispositivoApi->salvar_using_post10: #{e}"
+  puts "Exception when calling GlobaltagdispositivoApi->salvar_using_post11: #{e}"
 end
 ```
 
@@ -209,7 +197,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**DispositivoPersistValue**](DispositivoPersistValue.md)| persist | 
-
 
 ### Return type
 
@@ -223,8 +210,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

@@ -16,4 +16,3 @@ Name | Type | Description | Notes
 **bloquear_acesso** | **BOOLEAN** | {{{usuario_response_bloquear_acesso_descricao}}} | [optional] 
 
 
-

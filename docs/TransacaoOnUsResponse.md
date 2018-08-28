@@ -12,4 +12,3 @@ Name | Type | Description | Notes
 **terminal_requisitante** | **String** | {{{transacao_on_us_response_terminal_requisitante_value}}} | 
 
 
-

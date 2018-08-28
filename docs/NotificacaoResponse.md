@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **mensagem** | **String** | {{{notificacao_response_mensagem_value}}} | [optional] 
 
 
-

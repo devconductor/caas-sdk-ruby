@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **conteudo** | **String** | {{{detalhe_oportunidade_response_conteudo_value}}} | [optional] 
 
 
-

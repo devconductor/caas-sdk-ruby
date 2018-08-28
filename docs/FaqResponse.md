@@ -12,4 +12,3 @@ Name | Type | Description | Notes
 **status** | **String** | {{{faq_response_status_value}}} | [optional] 
 
 
-

@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **flag_ativo** | **BOOLEAN** | {{{entidade_response_flag_ativo_value}}} | [optional] 
 
 
-

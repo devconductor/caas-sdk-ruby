@@ -18,4 +18,3 @@ Name | Type | Description | Notes
 **rev** | **Integer** | {{{oportunidade_a_u_d_response_rev_value}}} | [optional] 
 
 
-

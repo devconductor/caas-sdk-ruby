@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **conteudo** | **String** | {{{detalhe_oportunidade_persist_conteudo_value}}} | 
 
 
-

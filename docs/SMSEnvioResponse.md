@@ -13,4 +13,3 @@ Name | Type | Description | Notes
 **cpf** | **String** | {{{sms_envio_response_cpf_value}}} | [optional] 
 
 
-

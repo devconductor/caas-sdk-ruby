@@ -30,4 +30,3 @@ Name | Type | Description | Notes
 **nome_fantasia_estabelecimento** | **String** | {{{antecipacao_response_nome_fantasia_estabelecimento_value}}} | [optional] 
 
 
-

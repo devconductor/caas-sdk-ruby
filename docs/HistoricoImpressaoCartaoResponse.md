@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **data_historico** | **String** | {{{historico_impressao_cartao_response_data_historico_value}}} | [optional] 
 
 
-

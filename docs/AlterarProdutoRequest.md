@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **id_promotor** | **Integer** | {{{alterar_produto_request_id_promotor_value}}} | [optional] 
 
 
-

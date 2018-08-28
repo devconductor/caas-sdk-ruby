@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **valor_parametro** | **String** | {{{parametro_emissor_resposta_valor_parametro_descricao}}} | [optional] 
 
 
-

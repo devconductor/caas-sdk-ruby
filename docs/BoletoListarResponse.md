@@ -11,4 +11,3 @@ Name | Type | Description | Notes
 **id_tipo_boleto** | **Integer** | {{{boleto_response_id_tipo_boleto_value}}} | [optional] 
 
 
-

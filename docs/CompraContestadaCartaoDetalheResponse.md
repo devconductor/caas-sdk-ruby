@@ -11,4 +11,3 @@ Name | Type | Description | Notes
 **status_cartao_descricao** | **String** | {{{compra_contestada_cartao_detalhe_response_status_cartao_descricao_value}}} | [optional] 
 
 
-

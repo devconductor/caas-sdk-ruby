@@ -44,4 +44,3 @@ Name | Type | Description | Notes
 **flag_consulta_extrato** | **BOOLEAN** | {{{estabelecimento_persist_flag_consulta_extrato_value}}} | 
 
 
-

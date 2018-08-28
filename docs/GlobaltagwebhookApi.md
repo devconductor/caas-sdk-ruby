@@ -5,11 +5,9 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_using_put24**](GlobaltagwebhookApi.md#alterar_using_put24) | **PUT** /api/webhooks/{id} | {{{web_hook_resource_alterar}}}
-[**consultar_using_get53**](GlobaltagwebhookApi.md#consultar_using_get53) | **GET** /api/webhooks/{id} | {{{web_hook_resource_consultar}}}
-[**listar_using_get66**](GlobaltagwebhookApi.md#listar_using_get66) | **GET** /api/webhooks | {{{web_hook_resource_listar}}}
-[**salvar_using_post35**](GlobaltagwebhookApi.md#salvar_using_post35) | **POST** /api/webhooks | {{{web_hook_resource_salvar}}}
-
-
+[**consultar_using_get55**](GlobaltagwebhookApi.md#consultar_using_get55) | **GET** /api/webhooks/{id} | {{{web_hook_resource_consultar}}}
+[**listar_using_get69**](GlobaltagwebhookApi.md#listar_using_get69) | **GET** /api/webhooks | {{{web_hook_resource_listar}}}
+[**salvar_using_post36**](GlobaltagwebhookApi.md#salvar_using_post36) | **POST** /api/webhooks | {{{web_hook_resource_salvar}}}
 
 
 # **alterar_using_put24**
@@ -23,7 +21,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagwebhookApi.new
 
@@ -52,7 +49,6 @@ Name | Type | Description  | Notes
  **webhook** | [**WebHookPersistValue**](WebHookPersistValue.md)| webhook | 
  **status** | **String**| {{{web_hook_resource_alterar_param_status}}} | [optional] 
 
-
 ### Return type
 
 [**WebHookResponse**](WebHookResponse.md)
@@ -68,9 +64,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get53**
-> WebHookResponse consultar_using_get53(id)
+# **consultar_using_get55**
+> WebHookResponse consultar_using_get55(id)
 
 {{{web_hook_resource_consultar}}}
 
@@ -81,7 +76,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagwebhookApi.new
 
 id = 789 # Integer | {{{web_hook_resource_consultar_param_id}}}
@@ -89,10 +83,10 @@ id = 789 # Integer | {{{web_hook_resource_consultar_param_id}}}
 
 begin
   #{{{web_hook_resource_consultar}}}
-  result = api_instance.consultar_using_get53(id)
+  result = api_instance.consultar_using_get55(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagwebhookApi->consultar_using_get53: #{e}"
+  puts "Exception when calling GlobaltagwebhookApi->consultar_using_get55: #{e}"
 end
 ```
 
@@ -101,7 +95,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{web_hook_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -118,9 +111,8 @@ No authorization required
 
 
 
-
-# **listar_using_get66**
-> PageWebHookResponse listar_using_get66(opts)
+# **listar_using_get69**
+> PageWebHookResponse listar_using_get69(opts)
 
 {{{web_hook_resource_listar}}}
 
@@ -130,7 +122,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagwebhookApi.new
 
@@ -146,10 +137,10 @@ opts = {
 
 begin
   #{{{web_hook_resource_listar}}}
-  result = api_instance.listar_using_get66(opts)
+  result = api_instance.listar_using_get69(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagwebhookApi->listar_using_get66: #{e}"
+  puts "Exception when calling GlobaltagwebhookApi->listar_using_get69: #{e}"
 end
 ```
 
@@ -164,7 +155,6 @@ Name | Type | Description  | Notes
  **tipo_evento** | **String**| {{{web_hook_request_tipo_evento_value}}} | [optional] 
  **metodo** | **String**| {{{web_hook_request_metodo_value}}} | [optional] 
  **url** | **String**| {{{web_hook_request_url_value}}} | [optional] 
-
 
 ### Return type
 
@@ -181,9 +171,8 @@ No authorization required
 
 
 
-
-# **salvar_using_post35**
-> WebHookResponse salvar_using_post35(webhook)
+# **salvar_using_post36**
+> WebHookResponse salvar_using_post36(webhook)
 
 {{{web_hook_resource_salvar}}}
 
@@ -194,7 +183,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagwebhookApi.new
 
 webhook = Pier::WebHookPersistValue.new # WebHookPersistValue | webhook
@@ -202,10 +190,10 @@ webhook = Pier::WebHookPersistValue.new # WebHookPersistValue | webhook
 
 begin
   #{{{web_hook_resource_salvar}}}
-  result = api_instance.salvar_using_post35(webhook)
+  result = api_instance.salvar_using_post36(webhook)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagwebhookApi->salvar_using_post35: #{e}"
+  puts "Exception when calling GlobaltagwebhookApi->salvar_using_post36: #{e}"
 end
 ```
 
@@ -214,7 +202,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webhook** | [**WebHookPersistValue**](WebHookPersistValue.md)| webhook | 
-
 
 ### Return type
 
@@ -228,8 +215,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **flag_anuidade_bonificada** | **BOOLEAN** | {{{anuidade_response_flag_anuidade_bonificada_value}}} | [optional] 
 
 
-

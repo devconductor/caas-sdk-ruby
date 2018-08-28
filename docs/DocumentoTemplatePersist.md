@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **integracoes** | [**Array&lt;ReferenciaIdPersist&gt;**](ReferenciaIdPersist.md) | {{{documento_template_persist_integracoes_value}}} | [optional] 
 
 
-

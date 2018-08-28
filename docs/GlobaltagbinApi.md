@@ -7,8 +7,6 @@ Method | HTTP request | Description
 [**listar_bin_using_get**](GlobaltagbinApi.md#listar_bin_using_get) | **GET** /api/bins | {{{Bin_resource_listar_bins}}}
 
 
-
-
 # **listar_bin_using_get**
 > PageBinResponse listar_bin_using_get(opts)
 
@@ -20,7 +18,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagbinApi.new
 
@@ -57,7 +54,6 @@ Name | Type | Description  | Notes
  **flag_provisorio** | **Integer**| {{{bin_request_flagprovisorio_value}}} | [optional] 
  **service_code** | **Integer**| {{{bin_request_servicecode_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageBinResponse**](PageBinResponse.md)
@@ -70,8 +66,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

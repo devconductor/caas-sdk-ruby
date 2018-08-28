@@ -5,6 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_convenio_using_put**](GlobaltagcadastrogeralApi.md#alterar_convenio_using_put) | **PUT** /api/convenios/{id} | Altera os dados banc\u00E1rios de um determinado conv\u00EAnio
+[**alterar_corte_using_put**](GlobaltagcadastrogeralApi.md#alterar_corte_using_put) | **PUT** /api/vencimentos/{dataVencimento} | {{{vencimento_resource_alterar}}}
 [**alterar_using_put1**](GlobaltagcadastrogeralApi.md#alterar_using_put1) | **PUT** /api/campanhas/{id} | {{{campanha_resource_alterar}}}
 [**alterar_using_put2**](GlobaltagcadastrogeralApi.md#alterar_using_put2) | **PUT** /api/configuracoes-registro-cobranca/{id} | {{{configuracao_registro_cobranca_resource_alterar}}}
 [**alterar_using_put3**](GlobaltagcadastrogeralApi.md#alterar_using_put3) | **PUT** /api/configuracoes-rotativos/{id} | {{{configuracao_rotativo_resource_alterar}}}
@@ -14,16 +15,16 @@ Method | HTTP request | Description
 [**consultar_campanha_using_get**](GlobaltagcadastrogeralApi.md#consultar_campanha_using_get) | **GET** /api/campanhas/{id} | {{{campanha_resource_consultar_campanha}}}
 [**consultar_convenio_using_get**](GlobaltagcadastrogeralApi.md#consultar_convenio_using_get) | **GET** /api/convenios/{id} | Consultar dados banc\u00E1rios pelo id do conv\u00EAnio
 [**consultar_taxa_antecipacao_using_get**](GlobaltagcadastrogeralApi.md#consultar_taxa_antecipacao_using_get) | **GET** /api/produtos/{id}/consultar-taxa-antecipacao | {{{produto_resource_consultar_taxa_antecipacao}}}
-[**consultar_using_get11**](GlobaltagcadastrogeralApi.md#consultar_using_get11) | **GET** /api/configuracoes-registro-cobranca/{id} | {{{configuracao_registro_cobranca_resource_consultar}}}
-[**consultar_using_get12**](GlobaltagcadastrogeralApi.md#consultar_using_get12) | **GET** /api/configuracoes-rotativos/{id} | {{{configuracao_rotativo_resource_consultar}}}
-[**consultar_using_get32**](GlobaltagcadastrogeralApi.md#consultar_using_get32) | **GET** /api/produtos/{id} | {{{produto_resource_consultar}}}
-[**consultar_using_get41**](GlobaltagcadastrogeralApi.md#consultar_using_get41) | **GET** /api/tipos-ajustes/{id} | {{{tipo_transacoes_ajuste_resource_consultar}}}
-[**consultar_using_get42**](GlobaltagcadastrogeralApi.md#consultar_using_get42) | **GET** /api/tipos-boletos | {{{tipo_boleto_resource_consultar}}}
-[**consultar_using_get43**](GlobaltagcadastrogeralApi.md#consultar_using_get43) | **GET** /api/tipos-enderecos/{id} | {{{tipo_endereco_resource_consultar}}}
-[**consultar_using_get44**](GlobaltagcadastrogeralApi.md#consultar_using_get44) | **GET** /api/tipos-operacoes | {{{tipo_operacao_resource_consultar}}}
-[**consultar_using_get46**](GlobaltagcadastrogeralApi.md#consultar_using_get46) | **GET** /api/tipos-telefones/{id} | {{{tipo_telefone_resource_consultar}}}
-[**consultar_using_get6**](GlobaltagcadastrogeralApi.md#consultar_using_get6) | **GET** /api/atendimento-clientes/{id} | {{{atendimento_cliente_resource_consultar}}}
-[**consultar_using_get8**](GlobaltagcadastrogeralApi.md#consultar_using_get8) | **GET** /api/bancos/{id} | {{{banco_resource_consultar}}}
+[**consultar_using_get13**](GlobaltagcadastrogeralApi.md#consultar_using_get13) | **GET** /api/configuracoes-registro-cobranca/{id} | {{{configuracao_registro_cobranca_resource_consultar}}}
+[**consultar_using_get14**](GlobaltagcadastrogeralApi.md#consultar_using_get14) | **GET** /api/configuracoes-rotativos/{id} | {{{configuracao_rotativo_resource_consultar}}}
+[**consultar_using_get34**](GlobaltagcadastrogeralApi.md#consultar_using_get34) | **GET** /api/produtos/{id} | {{{produto_resource_consultar}}}
+[**consultar_using_get43**](GlobaltagcadastrogeralApi.md#consultar_using_get43) | **GET** /api/tipos-ajustes/{id} | {{{tipo_transacoes_ajuste_resource_consultar}}}
+[**consultar_using_get44**](GlobaltagcadastrogeralApi.md#consultar_using_get44) | **GET** /api/tipos-boletos | {{{tipo_boleto_resource_consultar}}}
+[**consultar_using_get45**](GlobaltagcadastrogeralApi.md#consultar_using_get45) | **GET** /api/tipos-enderecos/{id} | {{{tipo_endereco_resource_consultar}}}
+[**consultar_using_get46**](GlobaltagcadastrogeralApi.md#consultar_using_get46) | **GET** /api/tipos-operacoes | {{{tipo_operacao_resource_consultar}}}
+[**consultar_using_get48**](GlobaltagcadastrogeralApi.md#consultar_using_get48) | **GET** /api/tipos-telefones/{id} | {{{tipo_telefone_resource_consultar}}}
+[**consultar_using_get7**](GlobaltagcadastrogeralApi.md#consultar_using_get7) | **GET** /api/atendimento-clientes/{id} | {{{atendimento_cliente_resource_consultar}}}
+[**consultar_using_get9**](GlobaltagcadastrogeralApi.md#consultar_using_get9) | **GET** /api/bancos/{id} | {{{banco_resource_consultar}}}
 [**listar_campanhas_using_get**](GlobaltagcadastrogeralApi.md#listar_campanhas_using_get) | **GET** /api/campanhas | {{{campanha_resource_listar_campanhas}}}
 [**listar_contas_por_pessoa_using_get**](GlobaltagcadastrogeralApi.md#listar_contas_por_pessoa_using_get) | **GET** /api/pessoas/listar-contas | {{{pessoa_resource_listar_contas_por_pessoa}}}
 [**listar_convenios_using_get**](GlobaltagcadastrogeralApi.md#listar_convenios_using_get) | **GET** /api/convenios | Lista os dados banc\u00E1rios dos conv\u00EAnios existentes
@@ -35,22 +36,20 @@ Method | HTTP request | Description
 [**listar_parentescos_using_get**](GlobaltagcadastrogeralApi.md#listar_parentescos_using_get) | **GET** /api/parentescos | {{{campo_codificado_resource_listar_parentescos}}}
 [**listar_profissoes_using_get**](GlobaltagcadastrogeralApi.md#listar_profissoes_using_get) | **GET** /api/profissoes | {{{campo_codificado_resource_listar_profissoes}}}
 [**listar_tipos_campanhas_using_get**](GlobaltagcadastrogeralApi.md#listar_tipos_campanhas_using_get) | **GET** /api/tipos-campanhas | {{{tipo_campanha_resource_listar_tipos_campanhas}}}
-[**listar_using_get14**](GlobaltagcadastrogeralApi.md#listar_using_get14) | **GET** /api/configuracoes-registro-cobranca | {{{configuracao_registro_cobranca_resource_listar}}}
-[**listar_using_get15**](GlobaltagcadastrogeralApi.md#listar_using_get15) | **GET** /api/configuracoes-rotativos | {{{configuracao_rotativo_resource_listar}}}
-[**listar_using_get41**](GlobaltagcadastrogeralApi.md#listar_using_get41) | **GET** /api/portadores | {{{portador_resource_listar}}}
-[**listar_using_get42**](GlobaltagcadastrogeralApi.md#listar_using_get42) | **GET** /api/produtos | {{{produto_resource_listar}}}
-[**listar_using_get43**](GlobaltagcadastrogeralApi.md#listar_using_get43) | **GET** /api/promotores | {{{promotor_resource_listar}}}
-[**listar_using_get52**](GlobaltagcadastrogeralApi.md#listar_using_get52) | **GET** /api/tipos-ajustes | {{{tipo_ajuste_resource_consultar}}}
-[**listar_using_get54**](GlobaltagcadastrogeralApi.md#listar_using_get54) | **GET** /api/tipos-enderecos | {{{tipo_endereco_resource_listar}}}
-[**listar_using_get56**](GlobaltagcadastrogeralApi.md#listar_using_get56) | **GET** /api/tipos-telefones | {{{tipo_telefone_resource_listar}}}
-[**listar_using_get63**](GlobaltagcadastrogeralApi.md#listar_using_get63) | **GET** /api/vencimentos | {{{vencimento_resource_listar}}}
-[**listar_using_get7**](GlobaltagcadastrogeralApi.md#listar_using_get7) | **GET** /api/atendimento-clientes | {{{atendimento_cliente_resource_listar}}}
-[**listar_using_get9**](GlobaltagcadastrogeralApi.md#listar_using_get9) | **GET** /api/bancos | {{{banco_resource_listar}}}
+[**listar_using_get10**](GlobaltagcadastrogeralApi.md#listar_using_get10) | **GET** /api/bancos | {{{banco_resource_listar}}}
+[**listar_using_get15**](GlobaltagcadastrogeralApi.md#listar_using_get15) | **GET** /api/configuracoes-registro-cobranca | {{{configuracao_registro_cobranca_resource_listar}}}
+[**listar_using_get16**](GlobaltagcadastrogeralApi.md#listar_using_get16) | **GET** /api/configuracoes-rotativos | {{{configuracao_rotativo_resource_listar}}}
+[**listar_using_get43**](GlobaltagcadastrogeralApi.md#listar_using_get43) | **GET** /api/portadores | {{{portador_resource_listar}}}
+[**listar_using_get44**](GlobaltagcadastrogeralApi.md#listar_using_get44) | **GET** /api/produtos | {{{produto_resource_listar}}}
+[**listar_using_get45**](GlobaltagcadastrogeralApi.md#listar_using_get45) | **GET** /api/promotores | {{{promotor_resource_listar}}}
+[**listar_using_get55**](GlobaltagcadastrogeralApi.md#listar_using_get55) | **GET** /api/tipos-ajustes | {{{tipo_ajuste_resource_consultar}}}
+[**listar_using_get57**](GlobaltagcadastrogeralApi.md#listar_using_get57) | **GET** /api/tipos-enderecos | {{{tipo_endereco_resource_listar}}}
+[**listar_using_get59**](GlobaltagcadastrogeralApi.md#listar_using_get59) | **GET** /api/tipos-telefones | {{{tipo_telefone_resource_listar}}}
+[**listar_using_get66**](GlobaltagcadastrogeralApi.md#listar_using_get66) | **GET** /api/vencimentos | {{{vencimento_resource_listar}}}
+[**listar_using_get8**](GlobaltagcadastrogeralApi.md#listar_using_get8) | **GET** /api/atendimento-clientes | {{{atendimento_cliente_resource_listar}}}
 [**salvar_using_post2**](GlobaltagcadastrogeralApi.md#salvar_using_post2) | **POST** /api/atendimento-clientes | {{{atendimento_cliente_resource_salvar}}}
-[**salvar_using_post4**](GlobaltagcadastrogeralApi.md#salvar_using_post4) | **POST** /api/campanhas | {{{campanha_resource_salvar}}}
-[**salvar_using_post6**](GlobaltagcadastrogeralApi.md#salvar_using_post6) | **POST** /api/configuracoes-rotativos | {{{configuracao_rotativo_resource_salvar}}}
-
-
+[**salvar_using_post5**](GlobaltagcadastrogeralApi.md#salvar_using_post5) | **POST** /api/campanhas | {{{campanha_resource_salvar}}}
+[**salvar_using_post7**](GlobaltagcadastrogeralApi.md#salvar_using_post7) | **POST** /api/configuracoes-rotativos | {{{configuracao_rotativo_resource_salvar}}}
 
 
 # **alterar_convenio_using_put**
@@ -64,7 +63,6 @@ Altera os dados banc\u00E1rios de um determinado conv\u00EAnio
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -89,7 +87,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| Id | 
  **convenio_persist** | [**ConvenioPersist**](ConvenioPersist.md)| convenioPersist | 
 
-
 ### Return type
 
 [**ConvenioResponse**](ConvenioResponse.md)
@@ -105,6 +102,55 @@ No authorization required
 
 
 
+# **alterar_corte_using_put**
+> ControleVencimentoResponse alterar_corte_using_put(data_vencimento, update)
+
+{{{vencimento_resource_alterar}}}
+
+{{{vencimento_resource_alterar_notes}}}
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+api_instance = Pier::GlobaltagcadastrogeralApi.new
+
+data_vencimento = "data_vencimento_example" # String | {{{fatura_resource_consultar_fatura_param_data_vencimento}}}
+
+update = Pier::VencimentoUpdate.new # VencimentoUpdate | update
+
+
+begin
+  #{{{vencimento_resource_alterar}}}
+  result = api_instance.alterar_corte_using_put(data_vencimento, update)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling GlobaltagcadastrogeralApi->alterar_corte_using_put: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **data_vencimento** | **String**| {{{fatura_resource_consultar_fatura_param_data_vencimento}}} | 
+ **update** | [**VencimentoUpdate**](VencimentoUpdate.md)| update | 
+
+### Return type
+
+[**ControleVencimentoResponse**](ControleVencimentoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
 
 # **alterar_using_put1**
 > CampanhaResponse alterar_using_put1(id, update)
@@ -117,7 +163,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -142,7 +187,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{campanha_resource_alterar_param_id}}} | 
  **update** | [**CampanhaUpdateValue**](CampanhaUpdateValue.md)| update | 
 
-
 ### Return type
 
 [**CampanhaResponse**](CampanhaResponse.md)
@@ -158,7 +202,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put2**
 > ConfiguracaoRegistroCobrancaResponse alterar_using_put2(id, configuracao_persist)
 
@@ -170,7 +213,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -195,7 +237,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{configuracao_registro_cobranca_resource_alterar_param_id}}} | 
  **configuracao_persist** | [**ConfiguracaoRegistroCobrancaPersist**](ConfiguracaoRegistroCobrancaPersist.md)| configuracaoPersist | 
 
-
 ### Return type
 
 [**ConfiguracaoRegistroCobrancaResponse**](ConfiguracaoRegistroCobrancaResponse.md)
@@ -211,7 +252,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put3**
 > ConfiguracaoRotativoDetalheResponse alterar_using_put3(id, configuracao_rotativo_persist)
 
@@ -223,7 +263,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -248,7 +287,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{configuracao_rotativo_resource_alterar_param_id}}} | 
  **configuracao_rotativo_persist** | [**ConfiguracaoRotativoPersist**](ConfiguracaoRotativoPersist.md)| configuracaoRotativoPersist | 
 
-
 ### Return type
 
 [**ConfiguracaoRotativoDetalheResponse**](ConfiguracaoRotativoDetalheResponse.md)
@@ -264,7 +302,6 @@ No authorization required
 
 
 
-
 # **cadastrar_convenio_using_post**
 > ConvenioResponse cadastrar_convenio_using_post(convenio_persist)
 
@@ -276,7 +313,6 @@ Adiciona novo conv\u00EAnio para o emissor
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -298,7 +334,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **convenio_persist** | [**ConvenioPersist**](ConvenioPersist.md)| convenioPersist | 
 
-
 ### Return type
 
 [**ConvenioResponse**](ConvenioResponse.md)
@@ -314,7 +349,6 @@ No authorization required
 
 
 
-
 # **cadastrar_using_post2**
 > ConfiguracaoRegistroCobrancaResponse cadastrar_using_post2(configuracao_persist)
 
@@ -326,7 +360,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -348,7 +381,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **configuracao_persist** | [**ConfiguracaoRegistroCobrancaPersist**](ConfiguracaoRegistroCobrancaPersist.md)| configuracaoPersist | 
 
-
 ### Return type
 
 [**ConfiguracaoRegistroCobrancaResponse**](ConfiguracaoRegistroCobrancaResponse.md)
@@ -364,7 +396,6 @@ No authorization required
 
 
 
-
 # **configurar_taxa_antecipacao_using_post**
 > ParametroProdutoResponse configurar_taxa_antecipacao_using_post(id, taxa_antecipacao_request)
 
@@ -376,7 +407,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -401,7 +431,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{produto_resource_configurar_taxa_antecipacao_param_id}}} | 
  **taxa_antecipacao_request** | [**TaxaAntecipacaoRequest**](TaxaAntecipacaoRequest.md)| taxaAntecipacaoRequest | 
 
-
 ### Return type
 
 [**ParametroProdutoResponse**](ParametroProdutoResponse.md)
@@ -417,7 +446,6 @@ No authorization required
 
 
 
-
 # **consultar_campanha_using_get**
 > CampanhaResponse consultar_campanha_using_get(id)
 
@@ -429,7 +457,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -451,7 +478,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{campanha_resource_consultar_campanha_param_id_campanha}}} | 
 
-
 ### Return type
 
 [**CampanhaResponse**](CampanhaResponse.md)
@@ -467,7 +493,6 @@ No authorization required
 
 
 
-
 # **consultar_convenio_using_get**
 > ConvenioResponse consultar_convenio_using_get(id)
 
@@ -479,7 +504,6 @@ Consultar dados banc\u00E1rios de um determinado conv\u00EAnio
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -501,7 +525,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| Id | 
 
-
 ### Return type
 
 [**ConvenioResponse**](ConvenioResponse.md)
@@ -517,7 +540,6 @@ No authorization required
 
 
 
-
 # **consultar_taxa_antecipacao_using_get**
 > ParametroProdutoResponse consultar_taxa_antecipacao_using_get(id, tipo_transacao)
 
@@ -529,7 +551,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -554,7 +575,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{produto_resource_consultar_taxa_antecipacao_param_id}}} | 
  **tipo_transacao** | **String**| {{{produto_resource_consultar_taxa_antecipacao_param_tipo_transacao}}} | 
 
-
 ### Return type
 
 [**ParametroProdutoResponse**](ParametroProdutoResponse.md)
@@ -570,9 +590,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get11**
-> ConfiguracaoRegistroCobrancaResponse consultar_using_get11(id)
+# **consultar_using_get13**
+> ConfiguracaoRegistroCobrancaResponse consultar_using_get13(id)
 
 {{{configuracao_registro_cobranca_resource_consultar}}}
 
@@ -583,7 +602,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
 id = 789 # Integer | {{{configuracao_registro_cobranca_resource_consultar_param_id}}}
@@ -591,10 +609,10 @@ id = 789 # Integer | {{{configuracao_registro_cobranca_resource_consultar_param_
 
 begin
   #{{{configuracao_registro_cobranca_resource_consultar}}}
-  result = api_instance.consultar_using_get11(id)
+  result = api_instance.consultar_using_get13(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get11: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get13: #{e}"
 end
 ```
 
@@ -603,7 +621,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{configuracao_registro_cobranca_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -620,9 +637,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get12**
-> ConfiguracaoRotativoDetalheResponse consultar_using_get12(id)
+# **consultar_using_get14**
+> ConfiguracaoRotativoDetalheResponse consultar_using_get14(id)
 
 {{{configuracao_rotativo_resource_consultar}}}
 
@@ -633,7 +649,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
 id = 789 # Integer | {{{configuracao_rotativo_resource_consultar_param_id}}}
@@ -641,10 +656,10 @@ id = 789 # Integer | {{{configuracao_rotativo_resource_consultar_param_id}}}
 
 begin
   #{{{configuracao_rotativo_resource_consultar}}}
-  result = api_instance.consultar_using_get12(id)
+  result = api_instance.consultar_using_get14(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get12: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get14: #{e}"
 end
 ```
 
@@ -653,7 +668,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{configuracao_rotativo_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -670,9 +684,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get32**
-> ProdutoDetalhesResponse consultar_using_get32(id)
+# **consultar_using_get34**
+> ProdutoDetalhesResponse consultar_using_get34(id)
 
 {{{produto_resource_consultar}}}
 
@@ -683,7 +696,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
 id = 789 # Integer | {{{produto_resource_consultar_param_id}}}
@@ -691,10 +703,10 @@ id = 789 # Integer | {{{produto_resource_consultar_param_id}}}
 
 begin
   #{{{produto_resource_consultar}}}
-  result = api_instance.consultar_using_get32(id)
+  result = api_instance.consultar_using_get34(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get32: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get34: #{e}"
 end
 ```
 
@@ -703,7 +715,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{produto_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -720,9 +731,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get41**
-> TipoAjusteResponse consultar_using_get41(id)
+# **consultar_using_get43**
+> TipoAjusteResponse consultar_using_get43(id)
 
 {{{tipo_transacoes_ajuste_resource_consultar}}}
 
@@ -733,7 +743,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
 id = 789 # Integer | {{{tipo_transacoes_ajuste_resource_consultar_param_id}}}
@@ -741,10 +750,10 @@ id = 789 # Integer | {{{tipo_transacoes_ajuste_resource_consultar_param_id}}}
 
 begin
   #{{{tipo_transacoes_ajuste_resource_consultar}}}
-  result = api_instance.consultar_using_get41(id)
+  result = api_instance.consultar_using_get43(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get41: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get43: #{e}"
 end
 ```
 
@@ -753,7 +762,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{tipo_transacoes_ajuste_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -770,9 +778,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get42**
-> PageTipoBoletoResponse consultar_using_get42(opts)
+# **consultar_using_get44**
+> PageTipoBoletoResponse consultar_using_get44(opts)
 
 {{{tipo_boleto_resource_consultar}}}
 
@@ -782,7 +789,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -797,10 +803,10 @@ opts = {
 
 begin
   #{{{tipo_boleto_resource_consultar}}}
-  result = api_instance.consultar_using_get42(opts)
+  result = api_instance.consultar_using_get44(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get42: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get44: #{e}"
 end
 ```
 
@@ -814,7 +820,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{tipo_boleto_request_id_value}}} | [optional] 
  **descricao** | **String**| {{{tipo_boleto_request_descricao_value}}} | [optional] 
  **banco** | **Integer**| {{{tipo_boleto_request_banco_value}}} | [optional] 
-
 
 ### Return type
 
@@ -831,9 +836,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get43**
-> TipoEnderecoResponse consultar_using_get43(id)
+# **consultar_using_get45**
+> TipoEnderecoResponse consultar_using_get45(id)
 
 {{{tipo_endereco_resource_consultar}}}
 
@@ -844,7 +848,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
 id = 789 # Integer | {{{tipo_endereco_resource_consultar_param_id}}}
@@ -852,10 +855,10 @@ id = 789 # Integer | {{{tipo_endereco_resource_consultar_param_id}}}
 
 begin
   #{{{tipo_endereco_resource_consultar}}}
-  result = api_instance.consultar_using_get43(id)
+  result = api_instance.consultar_using_get45(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get43: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get45: #{e}"
 end
 ```
 
@@ -864,7 +867,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{tipo_endereco_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -881,9 +883,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get44**
-> TipoOperacaoResponse consultar_using_get44(id_cartao, id_estabelecimento, codigo_processamento)
+# **consultar_using_get46**
+> TipoOperacaoResponse consultar_using_get46(id_cartao, id_estabelecimento, codigo_processamento)
 
 {{{tipo_operacao_resource_consultar}}}
 
@@ -893,7 +894,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -906,10 +906,10 @@ codigo_processamento = "codigo_processamento_example" # String | {{{tipo_operaca
 
 begin
   #{{{tipo_operacao_resource_consultar}}}
-  result = api_instance.consultar_using_get44(id_cartao, id_estabelecimento, codigo_processamento)
+  result = api_instance.consultar_using_get46(id_cartao, id_estabelecimento, codigo_processamento)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get44: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get46: #{e}"
 end
 ```
 
@@ -920,7 +920,6 @@ Name | Type | Description  | Notes
  **id_cartao** | **Integer**| {{{tipo_operacao_resource_consultar_param_id_cartao}}} | 
  **id_estabelecimento** | **Integer**| {{{tipo_operacao_resource_consultar_param_id_estabelecimento}}} | 
  **codigo_processamento** | **String**| {{{tipo_operacao_resource_consultar_param_codigo_processamento}}} | 
-
 
 ### Return type
 
@@ -937,9 +936,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get46**
-> TipoTelefoneResponse consultar_using_get46(id)
+# **consultar_using_get48**
+> TipoTelefoneResponse consultar_using_get48(id)
 
 {{{tipo_telefone_resource_consultar}}}
 
@@ -950,7 +948,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
 id = 789 # Integer | {{{tipo_telefone_resource_consultar_param_id}}}
@@ -958,10 +955,10 @@ id = 789 # Integer | {{{tipo_telefone_resource_consultar_param_id}}}
 
 begin
   #{{{tipo_telefone_resource_consultar}}}
-  result = api_instance.consultar_using_get46(id)
+  result = api_instance.consultar_using_get48(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get46: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get48: #{e}"
 end
 ```
 
@@ -970,7 +967,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{tipo_telefone_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -987,9 +983,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get6**
-> AtendimentoClienteResponse consultar_using_get6(id)
+# **consultar_using_get7**
+> AtendimentoClienteResponse consultar_using_get7(id)
 
 {{{atendimento_cliente_resource_consultar}}}
 
@@ -1000,7 +995,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
 id = 789 # Integer | {{{atendimento_cliente_resource_consultar_param_id_atendimento}}}
@@ -1008,10 +1002,10 @@ id = 789 # Integer | {{{atendimento_cliente_resource_consultar_param_id_atendime
 
 begin
   #{{{atendimento_cliente_resource_consultar}}}
-  result = api_instance.consultar_using_get6(id)
+  result = api_instance.consultar_using_get7(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get6: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get7: #{e}"
 end
 ```
 
@@ -1020,7 +1014,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{atendimento_cliente_resource_consultar_param_id_atendimento}}} | 
-
 
 ### Return type
 
@@ -1037,9 +1030,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get8**
-> BancoResponse consultar_using_get8(id)
+# **consultar_using_get9**
+> BancoResponse consultar_using_get9(id)
 
 {{{banco_resource_consultar}}}
 
@@ -1050,7 +1042,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
 id = 789 # Integer | {{{banco_resource_consultar_param_id}}}
@@ -1058,10 +1049,10 @@ id = 789 # Integer | {{{banco_resource_consultar_param_id}}}
 
 begin
   #{{{banco_resource_consultar}}}
-  result = api_instance.consultar_using_get8(id)
+  result = api_instance.consultar_using_get9(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get8: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->consultar_using_get9: #{e}"
 end
 ```
 
@@ -1070,7 +1061,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{banco_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -1087,7 +1077,6 @@ No authorization required
 
 
 
-
 # **listar_campanhas_using_get**
 > PageCampanhaResponse listar_campanhas_using_get(opts)
 
@@ -1099,7 +1088,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -1128,7 +1116,6 @@ Name | Type | Description  | Notes
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
  **id_tipo_campanha** | **Integer**| {{{campanha_request_id_tipo_campanha_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageCampanhaResponse**](PageCampanhaResponse.md)
@@ -1144,7 +1131,6 @@ No authorization required
 
 
 
-
 # **listar_contas_por_pessoa_using_get**
 > PageContaDetalheResponse listar_contas_por_pessoa_using_get(numero_receita_federal, opts)
 
@@ -1156,7 +1142,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -1186,7 +1171,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
-
 ### Return type
 
 [**PageContaDetalheResponse**](PageContaDetalheResponse.md)
@@ -1202,7 +1186,6 @@ No authorization required
 
 
 
-
 # **listar_convenios_using_get**
 > PageConvenioResponse listar_convenios_using_get(opts)
 
@@ -1214,7 +1197,6 @@ Lista os dados banc\u00E1rios dos conv\u00EAnios existentes
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -1249,7 +1231,6 @@ Name | Type | Description  | Notes
  **conta_corrente** | **String**| Conta corrente. | [optional] 
  **numero_convenio** | [**Float**](.md)| C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio. | [optional] 
 
-
 ### Return type
 
 [**PageConvenioResponse**](PageConvenioResponse.md)
@@ -1265,7 +1246,6 @@ No authorization required
 
 
 
-
 # **listar_estados_civis_using_get**
 > PageCampoCodificadoDescricaoResponse listar_estados_civis_using_get(opts)
 
@@ -1277,7 +1257,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -1304,7 +1283,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
-
 ### Return type
 
 [**PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
@@ -1320,7 +1298,6 @@ No authorization required
 
 
 
-
 # **listar_fantasias_basicas_using_get**
 > PageFantasiaBasicaResponse listar_fantasias_basicas_using_get(opts)
 
@@ -1332,7 +1309,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -1359,7 +1335,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
-
 ### Return type
 
 [**PageFantasiaBasicaResponse**](PageFantasiaBasicaResponse.md)
@@ -1375,7 +1350,6 @@ No authorization required
 
 
 
-
 # **listar_historico_telefones_using_get**
 > HistoricoTelefoneResponse listar_historico_telefones_using_get(id)
 
@@ -1387,7 +1361,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -1409,7 +1382,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{pessoa_resource_listar_historico_telefones_param_id_pessoa}}} | 
 
-
 ### Return type
 
 [**HistoricoTelefoneResponse**](HistoricoTelefoneResponse.md)
@@ -1425,7 +1397,6 @@ No authorization required
 
 
 
-
 # **listar_nacionalidades_using_get**
 > PageCampoCodificadoDescricaoResponse listar_nacionalidades_using_get(opts)
 
@@ -1437,7 +1408,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -1464,7 +1434,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
-
 ### Return type
 
 [**PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
@@ -1480,7 +1449,6 @@ No authorization required
 
 
 
-
 # **listar_naturezas_ocupacoes_using_get**
 > PageCampoCodificadoDescricaoResponse listar_naturezas_ocupacoes_using_get(opts)
 
@@ -1492,7 +1460,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -1519,7 +1486,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
-
 ### Return type
 
 [**PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
@@ -1535,7 +1501,6 @@ No authorization required
 
 
 
-
 # **listar_parentescos_using_get**
 > PageCampoCodificadoDescricaoResponse listar_parentescos_using_get(opts)
 
@@ -1547,7 +1512,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -1574,7 +1538,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
-
 ### Return type
 
 [**PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
@@ -1590,7 +1553,6 @@ No authorization required
 
 
 
-
 # **listar_profissoes_using_get**
 > PageCampoCodificadoDescricaoResponse listar_profissoes_using_get(opts)
 
@@ -1602,7 +1564,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -1629,7 +1590,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
-
 ### Return type
 
 [**PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
@@ -1645,7 +1605,6 @@ No authorization required
 
 
 
-
 # **listar_tipos_campanhas_using_get**
 > PageTipoCampanhaResponse listar_tipos_campanhas_using_get(opts)
 
@@ -1657,7 +1616,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -1684,7 +1642,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
-
 ### Return type
 
 [**PageTipoCampanhaResponse**](PageTipoCampanhaResponse.md)
@@ -1700,19 +1657,17 @@ No authorization required
 
 
 
+# **listar_using_get10**
+> PageBancoResponse listar_using_get10(opts)
 
-# **listar_using_get14**
-> ConfiguracaoRegistroCobrancaResponse listar_using_get14(opts)
+{{{banco_resource_listar}}}
 
-{{{configuracao_registro_cobranca_resource_listar}}}
-
-{{{configuracao_registro_cobranca_resource_listar_notes}}}
+{{{banco_resource_listar_notes}}}
 
 ### Example
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -1723,11 +1678,11 @@ opts = {
 }
 
 begin
-  #{{{configuracao_registro_cobranca_resource_listar}}}
-  result = api_instance.listar_using_get14(opts)
+  #{{{banco_resource_listar}}}
+  result = api_instance.listar_using_get10(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->listar_using_get14: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->listar_using_get10: #{e}"
 end
 ```
 
@@ -1739,6 +1694,57 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
+### Return type
+
+[**PageBancoResponse**](PageBancoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **listar_using_get15**
+> ConfiguracaoRegistroCobrancaResponse listar_using_get15(opts)
+
+{{{configuracao_registro_cobranca_resource_listar}}}
+
+{{{configuracao_registro_cobranca_resource_listar_notes}}}
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+api_instance = Pier::GlobaltagcadastrogeralApi.new
+
+opts = { 
+  sort: ["sort_example"], # Array<String> | {{{global_menssagem_sort_sort}}}
+  page: 56, # Integer | {{{global_menssagem_sort_page_value}}}
+  limit: 56 # Integer | {{{global_menssagem_sort_limit}}}
+}
+
+begin
+  #{{{configuracao_registro_cobranca_resource_listar}}}
+  result = api_instance.listar_using_get15(opts)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling GlobaltagcadastrogeralApi->listar_using_get15: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**Array&lt;String&gt;**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
+ **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
+ **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
 ### Return type
 
@@ -1755,9 +1761,8 @@ No authorization required
 
 
 
-
-# **listar_using_get15**
-> PageConfiguracaoRotativoResponse listar_using_get15(opts)
+# **listar_using_get16**
+> PageConfiguracaoRotativoResponse listar_using_get16(opts)
 
 {{{configuracao_rotativo_resource_listar}}}
 
@@ -1767,7 +1772,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -1780,10 +1784,10 @@ opts = {
 
 begin
   #{{{configuracao_rotativo_resource_listar}}}
-  result = api_instance.listar_using_get15(opts)
+  result = api_instance.listar_using_get16(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->listar_using_get15: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->listar_using_get16: #{e}"
 end
 ```
 
@@ -1795,7 +1799,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
  **id_produto** | **Integer**| {{{configuracao_rotativo_request_id_produto_value}}} | [optional] 
-
 
 ### Return type
 
@@ -1812,9 +1815,8 @@ No authorization required
 
 
 
-
-# **listar_using_get41**
-> PagePortadorResponse listar_using_get41(opts)
+# **listar_using_get43**
+> PagePortadorResponse listar_using_get43(opts)
 
 {{{portador_resource_listar}}}
 
@@ -1824,7 +1826,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -1846,10 +1847,10 @@ opts = {
 
 begin
   #{{{portador_resource_listar}}}
-  result = api_instance.listar_using_get41(opts)
+  result = api_instance.listar_using_get43(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->listar_using_get41: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->listar_using_get43: #{e}"
 end
 ```
 
@@ -1871,7 +1872,6 @@ Name | Type | Description  | Notes
  **data_cadastro_portador** | **String**| {{{portador_request_data_cadastro_portador_value}}} | [optional] 
  **data_cancelamento_portador** | **String**| {{{portador_request_data_cancelamento_portador_value}}} | [optional] 
 
-
 ### Return type
 
 [**PagePortadorResponse**](PagePortadorResponse.md)
@@ -1887,9 +1887,8 @@ No authorization required
 
 
 
-
-# **listar_using_get42**
-> PageProdutoResponse listar_using_get42(opts)
+# **listar_using_get44**
+> PageProdutoResponse listar_using_get44(opts)
 
 {{{produto_resource_listar}}}
 
@@ -1899,7 +1898,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -1914,10 +1912,10 @@ opts = {
 
 begin
   #{{{produto_resource_listar}}}
-  result = api_instance.listar_using_get42(opts)
+  result = api_instance.listar_using_get44(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->listar_using_get42: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->listar_using_get44: #{e}"
 end
 ```
 
@@ -1931,7 +1929,6 @@ Name | Type | Description  | Notes
  **nome** | **String**| {{{produto_request_nome_value}}} | [optional] 
  **status** | **Integer**| {{{produto_request_status_value}}} | [optional] 
  **id_fantasia_basica** | **Integer**| {{{produto_request_id_fantasia_basica_value}}} | [optional] 
-
 
 ### Return type
 
@@ -1948,9 +1945,8 @@ No authorization required
 
 
 
-
-# **listar_using_get43**
-> PagePromotorResponse listar_using_get43(opts)
+# **listar_using_get45**
+> PagePromotorResponse listar_using_get45(opts)
 
 {{{promotor_resource_listar}}}
 
@@ -1960,7 +1956,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -1977,10 +1972,10 @@ opts = {
 
 begin
   #{{{promotor_resource_listar}}}
-  result = api_instance.listar_using_get43(opts)
+  result = api_instance.listar_using_get45(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->listar_using_get43: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->listar_using_get45: #{e}"
 end
 ```
 
@@ -1997,7 +1992,6 @@ Name | Type | Description  | Notes
  **id_estabelecimento** | **Integer**| {{{promotor_request_id_estabelecimento_value}}} | [optional] 
  **id_usuario** | **Integer**| {{{promotor_request_id_usuario_value}}} | [optional] 
 
-
 ### Return type
 
 [**PagePromotorResponse**](PagePromotorResponse.md)
@@ -2013,9 +2007,8 @@ No authorization required
 
 
 
-
-# **listar_using_get52**
-> PageTipoAjusteResponse listar_using_get52(opts)
+# **listar_using_get55**
+> PageTipoAjusteResponse listar_using_get55(opts)
 
 {{{tipo_ajuste_resource_consultar}}}
 
@@ -2025,7 +2018,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -2039,10 +2031,10 @@ opts = {
 
 begin
   #{{{tipo_ajuste_resource_consultar}}}
-  result = api_instance.listar_using_get52(opts)
+  result = api_instance.listar_using_get55(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->listar_using_get52: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->listar_using_get55: #{e}"
 end
 ```
 
@@ -2055,7 +2047,6 @@ Name | Type | Description  | Notes
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
  **id** | **Integer**| {{{tipo_ajuste_request_id_value}}} | [optional] 
  **descricao** | **String**| {{{tipo_ajuste_request_descricao_value}}} | [optional] 
-
 
 ### Return type
 
@@ -2072,9 +2063,8 @@ No authorization required
 
 
 
-
-# **listar_using_get54**
-> PageTipoEnderecoResponse listar_using_get54(opts)
+# **listar_using_get57**
+> PageTipoEnderecoResponse listar_using_get57(opts)
 
 {{{tipo_endereco_resource_listar}}}
 
@@ -2084,7 +2074,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -2098,10 +2087,10 @@ opts = {
 
 begin
   #{{{tipo_endereco_resource_listar}}}
-  result = api_instance.listar_using_get54(opts)
+  result = api_instance.listar_using_get57(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->listar_using_get54: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->listar_using_get57: #{e}"
 end
 ```
 
@@ -2114,7 +2103,6 @@ Name | Type | Description  | Notes
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
  **id** | **Integer**| {{{tipo_endereco_request_id_value}}} | [optional] 
  **nome** | **String**| {{{tipo_endereco_request_nome_value}}} | [optional] 
-
 
 ### Return type
 
@@ -2131,9 +2119,8 @@ No authorization required
 
 
 
-
-# **listar_using_get56**
-> PageTipoTelefoneResponse listar_using_get56(opts)
+# **listar_using_get59**
+> PageTipoTelefoneResponse listar_using_get59(opts)
 
 {{{tipo_telefone_resource_listar}}}
 
@@ -2143,7 +2130,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -2157,10 +2143,10 @@ opts = {
 
 begin
   #{{{tipo_telefone_resource_listar}}}
-  result = api_instance.listar_using_get56(opts)
+  result = api_instance.listar_using_get59(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->listar_using_get56: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->listar_using_get59: #{e}"
 end
 ```
 
@@ -2173,7 +2159,6 @@ Name | Type | Description  | Notes
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
  **id** | **Integer**| {{{tipo_telefone_request_id_value}}} | [optional] 
  **nome** | **String**| {{{tipo_telefone_request_nome_value}}} | [optional] 
-
 
 ### Return type
 
@@ -2190,9 +2175,8 @@ No authorization required
 
 
 
-
-# **listar_using_get63**
-> PageControleVencimentoResponse listar_using_get63(opts)
+# **listar_using_get66**
+> PageControleVencimentoResponse listar_using_get66(opts)
 
 {{{vencimento_resource_listar}}}
 
@@ -2203,22 +2187,22 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
 opts = { 
   sort: ["sort_example"], # Array<String> | {{{global_menssagem_sort_sort}}}
   page: 56, # Integer | {{{global_menssagem_sort_page_value}}}
   limit: 56, # Integer | {{{global_menssagem_sort_limit}}}
-  data_vencimento: "data_vencimento_example" # String | {{{controle_vencimento_request_data_vencimento_value}}}
+  data_vencimento: "data_vencimento_example", # String | {{{controle_vencimento_request_data_vencimento_value}}}
+  data_vencimento_fim: "data_vencimento_fim_example" # String | {{{calendario_fatura_request_data_fim_value}}}
 }
 
 begin
   #{{{vencimento_resource_listar}}}
-  result = api_instance.listar_using_get63(opts)
+  result = api_instance.listar_using_get66(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->listar_using_get63: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->listar_using_get66: #{e}"
 end
 ```
 
@@ -2230,7 +2214,7 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
  **data_vencimento** | **String**| {{{controle_vencimento_request_data_vencimento_value}}} | [optional] 
-
+ **data_vencimento_fim** | **String**| {{{calendario_fatura_request_data_fim_value}}} | [optional] 
 
 ### Return type
 
@@ -2247,9 +2231,8 @@ No authorization required
 
 
 
-
-# **listar_using_get7**
-> PageAtendimentoClienteResponse listar_using_get7(opts)
+# **listar_using_get8**
+> PageAtendimentoClienteResponse listar_using_get8(opts)
 
 {{{atendimento_cliente_resource_listar}}}
 
@@ -2259,7 +2242,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -2275,10 +2257,10 @@ opts = {
 
 begin
   #{{{atendimento_cliente_resource_listar}}}
-  result = api_instance.listar_using_get7(opts)
+  result = api_instance.listar_using_get8(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->listar_using_get7: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->listar_using_get8: #{e}"
 end
 ```
 
@@ -2293,7 +2275,6 @@ Name | Type | Description  | Notes
  **id_conta** | **Integer**| {{{atendimento_cliente_request_id_conta_value}}} | [optional] 
  **nome_atendente** | **String**| {{{atendimento_cliente_request_nome_atendente_value}}} | [optional] 
  **data_atendimento** | **String**| {{{atendimento_cliente_request_data_atendimento_value}}} | [optional] 
-
 
 ### Return type
 
@@ -2310,62 +2291,6 @@ No authorization required
 
 
 
-
-# **listar_using_get9**
-> PageBancoResponse listar_using_get9(opts)
-
-{{{banco_resource_listar}}}
-
-{{{banco_resource_listar_notes}}}
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::GlobaltagcadastrogeralApi.new
-
-opts = { 
-  sort: ["sort_example"], # Array<String> | {{{global_menssagem_sort_sort}}}
-  page: 56, # Integer | {{{global_menssagem_sort_page_value}}}
-  limit: 56 # Integer | {{{global_menssagem_sort_limit}}}
-}
-
-begin
-  #{{{banco_resource_listar}}}
-  result = api_instance.listar_using_get9(opts)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->listar_using_get9: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sort** | [**Array&lt;String&gt;**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
- **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
- **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
-
-
-### Return type
-
-[**PageBancoResponse**](PageBancoResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
 # **salvar_using_post2**
 > AtendimentoClienteResponse salvar_using_post2(opts)
 
@@ -2377,7 +2302,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
@@ -2416,7 +2340,6 @@ Name | Type | Description  | Notes
  **data_hora_fim_atendimento** | **String**| {{{atendimento_cliente_persist_data_hora_fim_atendimento_value}}} | [optional] 
  **flag_fila_fraude** | **Integer**| {{{atendimento_cliente_persist_flag_fila_fraude_value}}} | [optional] 
 
-
 ### Return type
 
 [**AtendimentoClienteResponse**](AtendimentoClienteResponse.md)
@@ -2432,9 +2355,8 @@ No authorization required
 
 
 
-
-# **salvar_using_post4**
-> CampanhaResponse salvar_using_post4(campanha_persist)
+# **salvar_using_post5**
+> CampanhaResponse salvar_using_post5(campanha_persist)
 
 {{{campanha_resource_salvar}}}
 
@@ -2445,7 +2367,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
 campanha_persist = Pier::CampanhaPersist.new # CampanhaPersist | campanhaPersist
@@ -2453,10 +2374,10 @@ campanha_persist = Pier::CampanhaPersist.new # CampanhaPersist | campanhaPersist
 
 begin
   #{{{campanha_resource_salvar}}}
-  result = api_instance.salvar_using_post4(campanha_persist)
+  result = api_instance.salvar_using_post5(campanha_persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->salvar_using_post4: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->salvar_using_post5: #{e}"
 end
 ```
 
@@ -2465,7 +2386,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **campanha_persist** | [**CampanhaPersist**](CampanhaPersist.md)| campanhaPersist | 
-
 
 ### Return type
 
@@ -2482,9 +2402,8 @@ No authorization required
 
 
 
-
-# **salvar_using_post6**
-> ConfiguracaoRotativoDetalheResponse salvar_using_post6(configuracao_rotativo_persist)
+# **salvar_using_post7**
+> ConfiguracaoRotativoDetalheResponse salvar_using_post7(configuracao_rotativo_persist)
 
 {{{configuracao_rotativo_resource_salvar}}}
 
@@ -2495,7 +2414,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcadastrogeralApi.new
 
 configuracao_rotativo_persist = Pier::ConfiguracaoRotativoPersist.new # ConfiguracaoRotativoPersist | configuracaoRotativoPersist
@@ -2503,10 +2421,10 @@ configuracao_rotativo_persist = Pier::ConfiguracaoRotativoPersist.new # Configur
 
 begin
   #{{{configuracao_rotativo_resource_salvar}}}
-  result = api_instance.salvar_using_post6(configuracao_rotativo_persist)
+  result = api_instance.salvar_using_post7(configuracao_rotativo_persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastrogeralApi->salvar_using_post6: #{e}"
+  puts "Exception when calling GlobaltagcadastrogeralApi->salvar_using_post7: #{e}"
 end
 ```
 
@@ -2515,7 +2433,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **configuracao_rotativo_persist** | [**ConfiguracaoRotativoPersist**](ConfiguracaoRotativoPersist.md)| configuracaoRotativoPersist | 
-
 
 ### Return type
 
@@ -2529,8 +2446,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

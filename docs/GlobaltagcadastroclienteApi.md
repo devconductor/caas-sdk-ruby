@@ -12,28 +12,27 @@ Method | HTTP request | Description
 [**atribuir_assinatura_cliente_using_post**](GlobaltagcadastroclienteApi.md#atribuir_assinatura_cliente_using_post) | **POST** /api/contas/{id}/atribuir-assinatura-cliente | {{{conta_pessoa_resource_atribuir_assinatura_cliente}}}
 [**atualizar_endereco_de_correspondencia_using_put**](GlobaltagcadastroclienteApi.md#atualizar_endereco_de_correspondencia_using_put) | **PUT** /api/enderecos/{id}/alterar-endereco-correspondencia | {{{endereco_resource_atualizar_correspondencia}}}
 [**atualizar_using_post**](GlobaltagcadastroclienteApi.md#atualizar_using_post) | **POST** /api/contas/{id}/atualizar-registro-integracao | {{{integracao_emissor_resource_atualizar}}}
+[**cadastrar_adicional_using_post**](GlobaltagcadastroclienteApi.md#cadastrar_adicional_using_post) | **POST** /api/contas/{id}/adicionais | {{{adicional_resource_cadastrar_adicional}}}
 [**cadastrar_using_post1**](GlobaltagcadastroclienteApi.md#cadastrar_using_post1) | **POST** /api/contas/{id}/cadastrar-adicional | {{{adicional_resource_cadastrar}}}
-[**consultar_using_get19**](GlobaltagcadastroclienteApi.md#consultar_using_get19) | **GET** /api/enderecos/{id} | {{{endereco_resource_consultar}}}
 [**consultar_using_get2**](GlobaltagcadastroclienteApi.md#consultar_using_get2) | **GET** /api/contas/{id}/adicionais/{idPessoa} | {{{adicional_resource_consultar}}}
-[**consultar_using_get30**](GlobaltagcadastroclienteApi.md#consultar_using_get30) | **GET** /api/pessoas-detalhes/{id} | {{{pessoa_detalhe_resource_consultar}}}
-[**consultar_using_get31**](GlobaltagcadastroclienteApi.md#consultar_using_get31) | **GET** /api/pessoas/{id} | {{{pessoa_resource_consultar}}}
-[**consultar_using_get39**](GlobaltagcadastroclienteApi.md#consultar_using_get39) | **GET** /api/telefones/{id} | {{{telefone_resource_consultar}}}
+[**consultar_using_get21**](GlobaltagcadastroclienteApi.md#consultar_using_get21) | **GET** /api/enderecos/{id} | {{{endereco_resource_consultar}}}
+[**consultar_using_get32**](GlobaltagcadastroclienteApi.md#consultar_using_get32) | **GET** /api/pessoas-detalhes/{id} | {{{pessoa_detalhe_resource_consultar}}}
+[**consultar_using_get33**](GlobaltagcadastroclienteApi.md#consultar_using_get33) | **GET** /api/pessoas/{id} | {{{pessoa_resource_consultar}}}
+[**consultar_using_get41**](GlobaltagcadastroclienteApi.md#consultar_using_get41) | **GET** /api/telefones/{id} | {{{telefone_resource_consultar}}}
 [**inativar_using_post**](GlobaltagcadastroclienteApi.md#inativar_using_post) | **POST** /api/contas/{id}/adicionais/{idPessoa}/inativar | {{{adicional_resource_inativar}}}
 [**listar_socios_using_get**](GlobaltagcadastroclienteApi.md#listar_socios_using_get) | **GET** /api/clientes-pessoas-juridicas/{id}/socios | {{{conta_pessoa_resource_listar_socios}}}
 [**listar_using_get1**](GlobaltagcadastroclienteApi.md#listar_using_get1) | **GET** /api/contas/{id}/adicionais | {{{adicional_resource_listar}}}
-[**listar_using_get24**](GlobaltagcadastroclienteApi.md#listar_using_get24) | **GET** /api/enderecos | {{{endereco_resource_listar}}}
-[**listar_using_get38**](GlobaltagcadastroclienteApi.md#listar_using_get38) | **GET** /api/pessoas-detalhes | {{{pessoa_detalhe_resource_listar}}}
-[**listar_using_get39**](GlobaltagcadastroclienteApi.md#listar_using_get39) | **GET** /api/pessoas | {{{pessoa_resource_listar}}}
-[**listar_using_get50**](GlobaltagcadastroclienteApi.md#listar_using_get50) | **GET** /api/telefones | {{{telefone_resource_listar}}}
+[**listar_using_get25**](GlobaltagcadastroclienteApi.md#listar_using_get25) | **GET** /api/enderecos | {{{endereco_resource_listar}}}
+[**listar_using_get40**](GlobaltagcadastroclienteApi.md#listar_using_get40) | **GET** /api/pessoas-detalhes | {{{pessoa_detalhe_resource_listar}}}
+[**listar_using_get41**](GlobaltagcadastroclienteApi.md#listar_using_get41) | **GET** /api/pessoas | {{{pessoa_resource_listar}}}
+[**listar_using_get53**](GlobaltagcadastroclienteApi.md#listar_using_get53) | **GET** /api/telefones | {{{telefone_resource_listar}}}
 [**salvar_pessoa_fisica_aprovada_using_post**](GlobaltagcadastroclienteApi.md#salvar_pessoa_fisica_aprovada_using_post) | **POST** /api/clientes-pessoas-fisicas | {{{conta_pessoa_resource_salvar_pessoa_fisica_aprovada}}}
 [**salvar_pessoa_juridica_aprovada_using_post**](GlobaltagcadastroclienteApi.md#salvar_pessoa_juridica_aprovada_using_post) | **POST** /api/clientes-pessoas-juridicas | {{{conta_pessoa_resource_salvar_pessoa_juridica_aprovada}}}
-[**salvar_using_post13**](GlobaltagcadastroclienteApi.md#salvar_using_post13) | **POST** /api/enderecos | {{{endereco_resource_salvar}}}
-[**salvar_using_post16**](GlobaltagcadastroclienteApi.md#salvar_using_post16) | **POST** /api/contas/{id}/incluir-registro-integracao | {{{integracao_emissor_resource_salvar}}}
-[**salvar_using_post24**](GlobaltagcadastroclienteApi.md#salvar_using_post24) | **POST** /api/pessoas-detalhes | {{{pessoa_detalhe_resource_salvar}}}
-[**salvar_using_post25**](GlobaltagcadastroclienteApi.md#salvar_using_post25) | **POST** /api/pessoas | {{{pessoa_resource_salvar}}}
-[**salvar_using_post28**](GlobaltagcadastroclienteApi.md#salvar_using_post28) | **POST** /api/telefones | {{{telefone_resource_salvar}}}
-
-
+[**salvar_using_post14**](GlobaltagcadastroclienteApi.md#salvar_using_post14) | **POST** /api/enderecos | {{{endereco_resource_salvar}}}
+[**salvar_using_post17**](GlobaltagcadastroclienteApi.md#salvar_using_post17) | **POST** /api/contas/{id}/incluir-registro-integracao | {{{integracao_emissor_resource_salvar}}}
+[**salvar_using_post25**](GlobaltagcadastroclienteApi.md#salvar_using_post25) | **POST** /api/pessoas-detalhes | {{{pessoa_detalhe_resource_salvar}}}
+[**salvar_using_post26**](GlobaltagcadastroclienteApi.md#salvar_using_post26) | **POST** /api/pessoas | {{{pessoa_resource_salvar}}}
+[**salvar_using_post29**](GlobaltagcadastroclienteApi.md#salvar_using_post29) | **POST** /api/telefones | {{{telefone_resource_salvar}}}
 
 
 # **alterar_using_put**
@@ -47,7 +46,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
@@ -75,7 +73,6 @@ Name | Type | Description  | Notes
  **id_pessoa** | **Integer**| {{{adicional_resource_alterar_param_id_pessoa}}} | 
  **adicional_update** | [**AdicionalUpdate**](AdicionalUpdate.md)| adicionalUpdate | 
 
-
 ### Return type
 
 [**AdicionalDetalheResponse**](AdicionalDetalheResponse.md)
@@ -91,7 +88,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put15**
 > PessoaDetalheResponse alterar_using_put15(id, opts)
 
@@ -103,7 +99,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
@@ -147,7 +142,6 @@ Name | Type | Description  | Notes
  **email** | **String**| {{{pessoa_detalhe_update_email_value}}} | [optional] 
  **nome_empresa** | **String**| {{{pessoa_detalhe_update_nome_empresa_value}}} | [optional] 
 
-
 ### Return type
 
 [**PessoaDetalheResponse**](PessoaDetalheResponse.md)
@@ -163,7 +157,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put16**
 > PessoaResponse alterar_using_put16(id, nome, tipo, data_nascimento, opts)
 
@@ -175,7 +168,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
@@ -222,7 +214,6 @@ Name | Type | Description  | Notes
  **unidade_federativa_identidade** | **String**| {{{pessoa_persist_unidade_federativa_identidade_value}}} | [optional] 
  **data_emissao_identidade** | **String**| {{{pessoa_persist_data_emissao_identidade_value}}} | [optional] 
 
-
 ### Return type
 
 [**PessoaResponse**](PessoaResponse.md)
@@ -238,7 +229,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put18**
 > TelefoneResponse alterar_using_put18(id, opts)
 
@@ -250,7 +240,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
@@ -282,7 +271,6 @@ Name | Type | Description  | Notes
  **telefone** | **String**| {{{telefone_alterar_persist_telefone_value}}} | [optional] 
  **ramal** | **String**| {{{telefone_alterar_persist_ramal_value}}} | [optional] 
 
-
 ### Return type
 
 [**TelefoneResponse**](TelefoneResponse.md)
@@ -298,7 +286,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put5**
 > EnderecoResponse alterar_using_put5(id, opts)
 
@@ -310,7 +297,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
@@ -356,7 +342,6 @@ Name | Type | Description  | Notes
  **uf** | **String**| {{{endereco_persist_uf_value}}} | [optional] 
  **pais** | **String**| {{{endereco_persist_pais_value}}} | [optional] 
 
-
 ### Return type
 
 [**EnderecoResponse**](EnderecoResponse.md)
@@ -372,7 +357,6 @@ No authorization required
 
 
 
-
 # **atribuir_assinatura_cliente_using_post**
 > Object atribuir_assinatura_cliente_using_post(id, body)
 
@@ -384,7 +368,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
@@ -409,7 +392,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{conta_pessoa_resource_atribuir_assinatura_cliente_param_id}}} | 
  **body** | [**AtribuirAssinaturaClientePersist**](AtribuirAssinaturaClientePersist.md)| {{{conta_pessoa_resource_atribuir_assinatura_cliente_param_body}}} | 
 
-
 ### Return type
 
 **Object**
@@ -425,7 +407,6 @@ No authorization required
 
 
 
-
 # **atualizar_endereco_de_correspondencia_using_put**
 > EnderecoResponse atualizar_endereco_de_correspondencia_using_put(id, id_conta)
 
@@ -437,7 +418,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
@@ -462,7 +442,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{endereco_resource_atualizar_correspondencia_param_id}}} | 
  **id_conta** | **Integer**| {{{endereco_resource_atualizar_correspondencia_param_idConta}}} | 
 
-
 ### Return type
 
 [**EnderecoResponse**](EnderecoResponse.md)
@@ -478,7 +457,6 @@ No authorization required
 
 
 
-
 # **atualizar_using_post**
 > IntegracaoEmissorResponse atualizar_using_post(id, opts)
 
@@ -490,7 +468,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
@@ -516,7 +493,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{integracao_emissor_resource_atualizar_param_id_conta}}} | 
  **body** | [**IntegracaoEmissorPersist**](IntegracaoEmissorPersist.md)| {{{integracao_emissor_resource_atualizar_param_body}}} | [optional] 
 
-
 ### Return type
 
 [**IntegracaoEmissorResponse**](IntegracaoEmissorResponse.md)
@@ -532,6 +508,55 @@ No authorization required
 
 
 
+# **cadastrar_adicional_using_post**
+> AdicionalContaResponse cadastrar_adicional_using_post(id, adicional_conta_persist)
+
+{{{adicional_resource_cadastrar_adicional}}}
+
+{{{adicional_resource_cadastrar_adicional_notes}}}
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+api_instance = Pier::GlobaltagcadastroclienteApi.new
+
+id = 789 # Integer | {{{adicional_resource_cadastrar_adicional_param_id_conta}}}
+
+adicional_conta_persist = Pier::AdicionalContaPersist.new # AdicionalContaPersist | adicionalContaPersist
+
+
+begin
+  #{{{adicional_resource_cadastrar_adicional}}}
+  result = api_instance.cadastrar_adicional_using_post(id, adicional_conta_persist)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling GlobaltagcadastroclienteApi->cadastrar_adicional_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| {{{adicional_resource_cadastrar_adicional_param_id_conta}}} | 
+ **adicional_conta_persist** | [**AdicionalContaPersist**](AdicionalContaPersist.md)| adicionalContaPersist | 
+
+### Return type
+
+[**AdicionalContaResponse**](AdicionalContaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
 
 # **cadastrar_using_post1**
 > AdicionalDetalheResponse cadastrar_using_post1(id, persist)
@@ -544,7 +569,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
@@ -569,7 +593,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{adicional_resource_cadastrar_param_id_conta}}} | 
  **persist** | [**AdicionalPersist**](AdicionalPersist.md)| persist | 
 
-
 ### Return type
 
 [**AdicionalDetalheResponse**](AdicionalDetalheResponse.md)
@@ -585,57 +608,6 @@ No authorization required
 
 
 
-
-# **consultar_using_get19**
-> EnderecoResponse consultar_using_get19(id)
-
-{{{endereco_resource_consultar}}}
-
-{{{endereco_resource_consultar_notes}}}
-
-### Example
-```ruby
-# load the gem
-require 'pier-sdk-ruby'
-
-
-api_instance = Pier::GlobaltagcadastroclienteApi.new
-
-id = 789 # Integer | {{{endereco_resource_consultar_param_id}}}
-
-
-begin
-  #{{{endereco_resource_consultar}}}
-  result = api_instance.consultar_using_get19(id)
-  p result
-rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastroclienteApi->consultar_using_get19: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| {{{endereco_resource_consultar_param_id}}} | 
-
-
-### Return type
-
-[**EnderecoResponse**](EnderecoResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-
 # **consultar_using_get2**
 > AdicionalDetalheResponse consultar_using_get2(id, id_pessoa)
 
@@ -647,7 +619,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
@@ -672,7 +643,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{adicional_resource_consultar_param_id_conta}}} | 
  **id_pessoa** | **Integer**| {{{adicional_resource_consultar_param_id_pessoa}}} | 
 
-
 ### Return type
 
 [**AdicionalDetalheResponse**](AdicionalDetalheResponse.md)
@@ -688,9 +658,55 @@ No authorization required
 
 
 
+# **consultar_using_get21**
+> EnderecoResponse consultar_using_get21(id)
 
-# **consultar_using_get30**
-> PessoaDetalheResponse consultar_using_get30(id)
+{{{endereco_resource_consultar}}}
+
+{{{endereco_resource_consultar_notes}}}
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+api_instance = Pier::GlobaltagcadastroclienteApi.new
+
+id = 789 # Integer | {{{endereco_resource_consultar_param_id}}}
+
+
+begin
+  #{{{endereco_resource_consultar}}}
+  result = api_instance.consultar_using_get21(id)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling GlobaltagcadastroclienteApi->consultar_using_get21: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| {{{endereco_resource_consultar_param_id}}} | 
+
+### Return type
+
+[**EnderecoResponse**](EnderecoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **consultar_using_get32**
+> PessoaDetalheResponse consultar_using_get32(id)
 
 {{{pessoa_detalhe_resource_consultar}}}
 
@@ -701,7 +717,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
 id = 789 # Integer | {{{pessoa_detalhe_resource_consultar_param_id}}}
@@ -709,10 +724,10 @@ id = 789 # Integer | {{{pessoa_detalhe_resource_consultar_param_id}}}
 
 begin
   #{{{pessoa_detalhe_resource_consultar}}}
-  result = api_instance.consultar_using_get30(id)
+  result = api_instance.consultar_using_get32(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastroclienteApi->consultar_using_get30: #{e}"
+  puts "Exception when calling GlobaltagcadastroclienteApi->consultar_using_get32: #{e}"
 end
 ```
 
@@ -721,7 +736,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{pessoa_detalhe_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -738,9 +752,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get31**
-> PessoaResponse consultar_using_get31(id)
+# **consultar_using_get33**
+> PessoaResponse consultar_using_get33(id)
 
 {{{pessoa_resource_consultar}}}
 
@@ -751,7 +764,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
 id = 789 # Integer | {{{pessoa_resource_consultar_param_id}}}
@@ -759,10 +771,10 @@ id = 789 # Integer | {{{pessoa_resource_consultar_param_id}}}
 
 begin
   #{{{pessoa_resource_consultar}}}
-  result = api_instance.consultar_using_get31(id)
+  result = api_instance.consultar_using_get33(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastroclienteApi->consultar_using_get31: #{e}"
+  puts "Exception when calling GlobaltagcadastroclienteApi->consultar_using_get33: #{e}"
 end
 ```
 
@@ -771,7 +783,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{pessoa_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -788,9 +799,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get39**
-> TelefoneResponse consultar_using_get39(id)
+# **consultar_using_get41**
+> TelefoneResponse consultar_using_get41(id)
 
 {{{telefone_resource_consultar}}}
 
@@ -801,7 +811,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
 id = 789 # Integer | {{{telefone_resource_consultar_param_id}}}
@@ -809,10 +818,10 @@ id = 789 # Integer | {{{telefone_resource_consultar_param_id}}}
 
 begin
   #{{{telefone_resource_consultar}}}
-  result = api_instance.consultar_using_get39(id)
+  result = api_instance.consultar_using_get41(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastroclienteApi->consultar_using_get39: #{e}"
+  puts "Exception when calling GlobaltagcadastroclienteApi->consultar_using_get41: #{e}"
 end
 ```
 
@@ -821,7 +830,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{telefone_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -838,7 +846,6 @@ No authorization required
 
 
 
-
 # **inativar_using_post**
 > String inativar_using_post(id, id_pessoa)
 
@@ -850,7 +857,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
@@ -875,7 +881,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{adicional_resource_inativar_param_id_conta}}} | 
  **id_pessoa** | **Integer**| {{{adicional_resource_inativar_param_id_pessoa}}} | 
 
-
 ### Return type
 
 **String**
@@ -891,7 +896,6 @@ No authorization required
 
 
 
-
 # **listar_socios_using_get**
 > PagePessoaResponse listar_socios_using_get(id, opts)
 
@@ -903,7 +907,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
@@ -933,7 +936,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
-
 ### Return type
 
 [**PagePessoaResponse**](PagePessoaResponse.md)
@@ -949,7 +951,6 @@ No authorization required
 
 
 
-
 # **listar_using_get1**
 > AdicionalResponse listar_using_get1(id, opts)
 
@@ -961,7 +962,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
@@ -991,7 +991,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
-
 ### Return type
 
 [**AdicionalResponse**](AdicionalResponse.md)
@@ -1007,9 +1006,8 @@ No authorization required
 
 
 
-
-# **listar_using_get24**
-> PageEnderecoResponse listar_using_get24(opts)
+# **listar_using_get25**
+> PageEnderecoResponse listar_using_get25(opts)
 
 {{{endereco_resource_listar}}}
 
@@ -1019,7 +1017,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
@@ -1045,10 +1042,10 @@ opts = {
 
 begin
   #{{{endereco_resource_listar}}}
-  result = api_instance.listar_using_get24(opts)
+  result = api_instance.listar_using_get25(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastroclienteApi->listar_using_get24: #{e}"
+  puts "Exception when calling GlobaltagcadastroclienteApi->listar_using_get25: #{e}"
 end
 ```
 
@@ -1074,7 +1071,6 @@ Name | Type | Description  | Notes
  **data_inclusao** | **String**| {{{endereco_request_data_inclusao_value}}} | [optional] 
  **data_ultima_atualizacao** | **String**| {{{endereco_request_data_ultima_atualizacao_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageEnderecoResponse**](PageEnderecoResponse.md)
@@ -1090,9 +1086,8 @@ No authorization required
 
 
 
-
-# **listar_using_get38**
-> PagePessoaDetalheResponse listar_using_get38(opts)
+# **listar_using_get40**
+> PagePessoaDetalheResponse listar_using_get40(opts)
 
 {{{pessoa_detalhe_resource_listar}}}
 
@@ -1102,7 +1097,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
@@ -1125,10 +1119,10 @@ opts = {
 
 begin
   #{{{pessoa_detalhe_resource_listar}}}
-  result = api_instance.listar_using_get38(opts)
+  result = api_instance.listar_using_get40(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastroclienteApi->listar_using_get38: #{e}"
+  puts "Exception when calling GlobaltagcadastroclienteApi->listar_using_get40: #{e}"
 end
 ```
 
@@ -1151,7 +1145,6 @@ Name | Type | Description  | Notes
  **email** | **String**| {{{pessoa_detalhe_request_email_value}}} | [optional] 
  **nome_empresa** | **String**| {{{pessoa_detalhe_request_nome_empresa_value}}} | [optional] 
 
-
 ### Return type
 
 [**PagePessoaDetalheResponse**](PagePessoaDetalheResponse.md)
@@ -1167,9 +1160,8 @@ No authorization required
 
 
 
-
-# **listar_using_get39**
-> PagePessoaResponse listar_using_get39(opts)
+# **listar_using_get41**
+> PagePessoaResponse listar_using_get41(opts)
 
 {{{pessoa_resource_listar}}}
 
@@ -1179,7 +1171,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
@@ -1202,10 +1193,10 @@ opts = {
 
 begin
   #{{{pessoa_resource_listar}}}
-  result = api_instance.listar_using_get39(opts)
+  result = api_instance.listar_using_get41(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastroclienteApi->listar_using_get39: #{e}"
+  puts "Exception when calling GlobaltagcadastroclienteApi->listar_using_get41: #{e}"
 end
 ```
 
@@ -1228,7 +1219,6 @@ Name | Type | Description  | Notes
  **unidade_federativa_identidade** | **String**| {{{pessoa_request_unidade_federativa_identidade_value}}} | [optional] 
  **data_emissao_identidade** | **String**| {{{pessoa_request_data_emissao_identidade_value}}} | [optional] 
 
-
 ### Return type
 
 [**PagePessoaResponse**](PagePessoaResponse.md)
@@ -1244,9 +1234,8 @@ No authorization required
 
 
 
-
-# **listar_using_get50**
-> PageTelefoneResponse listar_using_get50(opts)
+# **listar_using_get53**
+> PageTelefoneResponse listar_using_get53(opts)
 
 {{{telefone_resource_listar}}}
 
@@ -1256,7 +1245,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
@@ -1275,10 +1263,10 @@ opts = {
 
 begin
   #{{{telefone_resource_listar}}}
-  result = api_instance.listar_using_get50(opts)
+  result = api_instance.listar_using_get53(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastroclienteApi->listar_using_get50: #{e}"
+  puts "Exception when calling GlobaltagcadastroclienteApi->listar_using_get53: #{e}"
 end
 ```
 
@@ -1297,7 +1285,6 @@ Name | Type | Description  | Notes
  **ramal** | **String**| {{{telefone_request_ramal_value}}} | [optional] 
  **status** | **Integer**| {{{telefone_request_status_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageTelefoneResponse**](PageTelefoneResponse.md)
@@ -1313,7 +1300,6 @@ No authorization required
 
 
 
-
 # **salvar_pessoa_fisica_aprovada_using_post**
 > PessoaFisicaAprovadaResponse salvar_pessoa_fisica_aprovada_using_post(pessoa_persist)
 
@@ -1325,7 +1311,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
@@ -1347,7 +1332,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pessoa_persist** | [**PessoaFisicaAprovadaPersistValue**](PessoaFisicaAprovadaPersistValue.md)| pessoaPersist | 
 
-
 ### Return type
 
 [**PessoaFisicaAprovadaResponse**](PessoaFisicaAprovadaResponse.md)
@@ -1363,7 +1347,6 @@ No authorization required
 
 
 
-
 # **salvar_pessoa_juridica_aprovada_using_post**
 > PessoaJuridicaAprovadaResponse salvar_pessoa_juridica_aprovada_using_post(pessoa_persist)
 
@@ -1375,7 +1358,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
@@ -1397,7 +1379,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pessoa_persist** | [**PessoaJuridicaAprovadaPersist**](PessoaJuridicaAprovadaPersist.md)| pessoaPersist | 
 
-
 ### Return type
 
 [**PessoaJuridicaAprovadaResponse**](PessoaJuridicaAprovadaResponse.md)
@@ -1413,9 +1394,8 @@ No authorization required
 
 
 
-
-# **salvar_using_post13**
-> EnderecoResponse salvar_using_post13(opts)
+# **salvar_using_post14**
+> EnderecoResponse salvar_using_post14(opts)
 
 {{{endereco_resource_salvar}}}
 
@@ -1425,7 +1405,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
@@ -1445,10 +1424,10 @@ opts = {
 
 begin
   #{{{endereco_resource_salvar}}}
-  result = api_instance.salvar_using_post13(opts)
+  result = api_instance.salvar_using_post14(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastroclienteApi->salvar_using_post13: #{e}"
+  puts "Exception when calling GlobaltagcadastroclienteApi->salvar_using_post14: #{e}"
 end
 ```
 
@@ -1468,7 +1447,6 @@ Name | Type | Description  | Notes
  **uf** | **String**| {{{endereco_persist_uf_value}}} | [optional] 
  **pais** | **String**| {{{endereco_persist_pais_value}}} | [optional] 
 
-
 ### Return type
 
 [**EnderecoResponse**](EnderecoResponse.md)
@@ -1484,9 +1462,8 @@ No authorization required
 
 
 
-
-# **salvar_using_post16**
-> IntegracaoEmissorResponse salvar_using_post16(id, opts)
+# **salvar_using_post17**
+> IntegracaoEmissorResponse salvar_using_post17(id, opts)
 
 {{{integracao_emissor_resource_salvar}}}
 
@@ -1496,7 +1473,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
@@ -1508,10 +1484,10 @@ opts = {
 
 begin
   #{{{integracao_emissor_resource_salvar}}}
-  result = api_instance.salvar_using_post16(id, opts)
+  result = api_instance.salvar_using_post17(id, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastroclienteApi->salvar_using_post16: #{e}"
+  puts "Exception when calling GlobaltagcadastroclienteApi->salvar_using_post17: #{e}"
 end
 ```
 
@@ -1521,7 +1497,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{integracao_emissor_resource_salvar_param_id_conta}}} | 
  **body** | [**IntegracaoEmissorPersist**](IntegracaoEmissorPersist.md)| {{{integracao_emissor_resource_salvar_param_body}}} | [optional] 
-
 
 ### Return type
 
@@ -1538,9 +1513,8 @@ No authorization required
 
 
 
-
-# **salvar_using_post24**
-> PessoaDetalheResponse salvar_using_post24(id_pessoa, opts)
+# **salvar_using_post25**
+> PessoaDetalheResponse salvar_using_post25(id_pessoa, opts)
 
 {{{pessoa_detalhe_resource_salvar}}}
 
@@ -1550,7 +1524,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
@@ -1571,10 +1544,10 @@ opts = {
 
 begin
   #{{{pessoa_detalhe_resource_salvar}}}
-  result = api_instance.salvar_using_post24(id_pessoa, opts)
+  result = api_instance.salvar_using_post25(id_pessoa, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastroclienteApi->salvar_using_post24: #{e}"
+  puts "Exception when calling GlobaltagcadastroclienteApi->salvar_using_post25: #{e}"
 end
 ```
 
@@ -1594,7 +1567,6 @@ Name | Type | Description  | Notes
  **email** | **String**| {{{pessoa_detalhe_persist_email_value}}} | [optional] 
  **nome_empresa** | **String**| {{{pessoa_detalhe_persist_nome_empresa_value}}} | [optional] 
 
-
 ### Return type
 
 [**PessoaDetalheResponse**](PessoaDetalheResponse.md)
@@ -1610,9 +1582,8 @@ No authorization required
 
 
 
-
-# **salvar_using_post25**
-> PessoaResponse salvar_using_post25(nome, tipo, data_nascimento, opts)
+# **salvar_using_post26**
+> PessoaResponse salvar_using_post26(nome, tipo, data_nascimento, opts)
 
 {{{pessoa_resource_salvar}}}
 
@@ -1622,7 +1593,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
@@ -1644,10 +1614,10 @@ opts = {
 
 begin
   #{{{pessoa_resource_salvar}}}
-  result = api_instance.salvar_using_post25(nome, tipo, data_nascimento, opts)
+  result = api_instance.salvar_using_post26(nome, tipo, data_nascimento, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastroclienteApi->salvar_using_post25: #{e}"
+  puts "Exception when calling GlobaltagcadastroclienteApi->salvar_using_post26: #{e}"
 end
 ```
 
@@ -1666,7 +1636,6 @@ Name | Type | Description  | Notes
  **unidade_federativa_identidade** | **String**| {{{pessoa_persist_unidade_federativa_identidade_value}}} | [optional] 
  **data_emissao_identidade** | **String**| {{{pessoa_persist_data_emissao_identidade_value}}} | [optional] 
 
-
 ### Return type
 
 [**PessoaResponse**](PessoaResponse.md)
@@ -1682,9 +1651,8 @@ No authorization required
 
 
 
-
-# **salvar_using_post28**
-> TelefoneResponse salvar_using_post28(opts)
+# **salvar_using_post29**
+> TelefoneResponse salvar_using_post29(opts)
 
 {{{telefone_resource_salvar}}}
 
@@ -1694,7 +1662,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagcadastroclienteApi.new
 
@@ -1708,10 +1675,10 @@ opts = {
 
 begin
   #{{{telefone_resource_salvar}}}
-  result = api_instance.salvar_using_post28(opts)
+  result = api_instance.salvar_using_post29(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagcadastroclienteApi->salvar_using_post28: #{e}"
+  puts "Exception when calling GlobaltagcadastroclienteApi->salvar_using_post29: #{e}"
 end
 ```
 
@@ -1725,7 +1692,6 @@ Name | Type | Description  | Notes
  **telefone** | **String**| {{{telefone_persist_telefone_value}}} | [optional] 
  **ramal** | **String**| {{{telefone_persist_ramal_value}}} | [optional] 
 
-
 ### Return type
 
 [**TelefoneResponse**](TelefoneResponse.md)
@@ -1738,8 +1704,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

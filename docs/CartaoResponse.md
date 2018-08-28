@@ -27,4 +27,3 @@ Name | Type | Description | Notes
 **codigo_desbloqueio** | **String** | {{{cartao_response_codigo_desbloqueio_value}}} | [optional] 
 
 
-

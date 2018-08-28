@@ -9,8 +9,6 @@ Method | HTTP request | Description
 [**listar_paises_using_get**](GlobaltagpermissaopaisApi.md#listar_paises_using_get) | **GET** /api/paises | {{{permissao_pais_resource_listar_paises}}}
 
 
-
-
 # **consultar_pais_using_get**
 > PaisResponse consultar_pais_using_get(id)
 
@@ -22,7 +20,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagpermissaopaisApi.new
 
@@ -44,7 +41,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{permissao_pais_resource_consultar_pais_param_id}}} | 
 
-
 ### Return type
 
 [**PaisResponse**](PaisResponse.md)
@@ -60,7 +56,6 @@ No authorization required
 
 
 
-
 # **listar_continentes_using_get**
 > Array&lt;Object&gt; listar_continentes_using_get
 
@@ -72,7 +67,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagpermissaopaisApi.new
 
@@ -87,7 +81,6 @@ end
 
 ### Parameters
 This endpoint does not need any parameter.
-
 
 ### Return type
 
@@ -104,7 +97,6 @@ No authorization required
 
 
 
-
 # **listar_paises_using_get**
 > PagePaisResponse listar_paises_using_get(opts)
 
@@ -116,7 +108,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagpermissaopaisApi.new
 
@@ -153,7 +144,6 @@ Name | Type | Description  | Notes
  **continente** | **String**| {{{pais_request_continente_value}}} | [optional] 
  **flag_ativo** | **BOOLEAN**| {{{pais_request_flag_ativo_value}}} | [optional] 
 
-
 ### Return type
 
 [**PagePaisResponse**](PagePaisResponse.md)
@@ -166,8 +156,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

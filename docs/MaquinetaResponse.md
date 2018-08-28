@@ -13,4 +13,3 @@ Name | Type | Description | Notes
 **usuario_apl** | **String** | {{{maquineta_response_usuario_apl_value}}} | [optional] 
 
 
-

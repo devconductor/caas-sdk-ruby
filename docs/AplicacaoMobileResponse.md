@@ -13,4 +13,3 @@ Name | Type | Description | Notes
 **senha** | **String** | {{{aplicacao_mobile_response_senha_value}}} | [optional] 
 
 
-

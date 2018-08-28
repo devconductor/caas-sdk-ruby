@@ -14,4 +14,3 @@ Name | Type | Description | Notes
 **validade** | **String** | {{{usuario_token_resposta_validade_descricao}}} | [optional] 
 
 
-

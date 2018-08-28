@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **parcelas** | [**Array&lt;ParcelamentoTransferenciaResponse&gt;**](ParcelamentoTransferenciaResponse.md) | {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_parcelas_value}}} | [optional] 
 
 
-

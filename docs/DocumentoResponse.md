@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **extensao** | **String** | {{{documento_response_extensao_value}}} | [optional] 
 
 
-

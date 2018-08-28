@@ -4,18 +4,16 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_using_get34**](GlobaltagboletoApi.md#consultar_using_get34) | **GET** /api/boletos/{id} | {{{boleto_resource_consultar}}}
+[**consultar_using_get36**](GlobaltagboletoApi.md#consultar_using_get36) | **GET** /api/boletos/{id} | {{{boleto_resource_consultar}}}
 [**enviar_boleto_email_using_post**](GlobaltagboletoApi.md#enviar_boleto_email_using_post) | **POST** /api/boletos/{id}/enviar-email | {{{boleto_resource_enviar_boleto_email}}}
 [**gerar_boleto_using_post**](GlobaltagboletoApi.md#gerar_boleto_using_post) | **POST** /api/boletos | {{{boleto_resource_gerar_boleto}}}
-[**listar_using_get45**](GlobaltagboletoApi.md#listar_using_get45) | **GET** /api/boletos | {{{boleto_resource_listar}}}
+[**listar_using_get47**](GlobaltagboletoApi.md#listar_using_get47) | **GET** /api/boletos | {{{boleto_resource_listar}}}
 [**registrar_boleto_using_post**](GlobaltagboletoApi.md#registrar_boleto_using_post) | **POST** /api/boletos/{id}/registrar | {{{registro_cobranca_resource_registrar_boleto}}}
 [**visualizar_boleto_using_get**](GlobaltagboletoApi.md#visualizar_boleto_using_get) | **GET** /api/boletos/{id}/arquivo.pdf | {{{boleto_resource_visualizar_boleto}}}
 
 
-
-
-# **consultar_using_get34**
-> BoletoResponse consultar_using_get34(id)
+# **consultar_using_get36**
+> BoletoResponse consultar_using_get36(id, opts)
 
 {{{boleto_resource_consultar}}}
 
@@ -26,18 +24,20 @@ Method | HTTP request | Description
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagboletoApi.new
 
 id = 789 # Integer | {{{boleto_resource_consultar_param_id}}}
 
+opts = { 
+  zera_valor_codigo_barras: true # BOOLEAN | {{{boleto_resource_consultar_param_zera_valor_codigo_barras}}}
+}
 
 begin
   #{{{boleto_resource_consultar}}}
-  result = api_instance.consultar_using_get34(id)
+  result = api_instance.consultar_using_get36(id, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagboletoApi->consultar_using_get34: #{e}"
+  puts "Exception when calling GlobaltagboletoApi->consultar_using_get36: #{e}"
 end
 ```
 
@@ -46,7 +46,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{boleto_resource_consultar_param_id}}} | 
-
+ **zera_valor_codigo_barras** | **BOOLEAN**| {{{boleto_resource_consultar_param_zera_valor_codigo_barras}}} | [optional] 
 
 ### Return type
 
@@ -63,7 +63,6 @@ No authorization required
 
 
 
-
 # **enviar_boleto_email_using_post**
 > Object enviar_boleto_email_using_post(id, request)
 
@@ -75,7 +74,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagboletoApi.new
 
@@ -100,7 +98,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{boleto_resource_enviar_boleto_param_id}}} | 
  **request** | [**BoletoEmailRequest**](BoletoEmailRequest.md)| request | 
 
-
 ### Return type
 
 **Object**
@@ -116,7 +113,6 @@ No authorization required
 
 
 
-
 # **gerar_boleto_using_post**
 > BoletoResponse gerar_boleto_using_post(boleto_request)
 
@@ -128,7 +124,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagboletoApi.new
 
@@ -150,7 +145,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **boleto_request** | [**BoletoRequest**](BoletoRequest.md)| boletoRequest | 
 
-
 ### Return type
 
 [**BoletoResponse**](BoletoResponse.md)
@@ -166,9 +160,8 @@ No authorization required
 
 
 
-
-# **listar_using_get45**
-> PageBoletoListarResponse listar_using_get45(opts)
+# **listar_using_get47**
+> PageBoletoListarResponse listar_using_get47(opts)
 
 {{{boleto_resource_listar}}}
 
@@ -178,7 +171,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagboletoApi.new
 
@@ -194,10 +186,10 @@ opts = {
 
 begin
   #{{{boleto_resource_listar}}}
-  result = api_instance.listar_using_get45(opts)
+  result = api_instance.listar_using_get47(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagboletoApi->listar_using_get45: #{e}"
+  puts "Exception when calling GlobaltagboletoApi->listar_using_get47: #{e}"
 end
 ```
 
@@ -212,7 +204,6 @@ Name | Type | Description  | Notes
  **data_vencimento** | **String**| {{{boleto_listar_request_data_vencimento_value}}} | [optional] 
  **valor_boleto** | [**Float**](.md)| {{{boleto_listar_request_valor_value}}} | [optional] 
  **id_tipo_boleto** | **Integer**| {{{boleto_listar_request_id_tipo_boleto_value}}} | [optional] 
-
 
 ### Return type
 
@@ -229,7 +220,6 @@ No authorization required
 
 
 
-
 # **registrar_boleto_using_post**
 > BoletoResponse registrar_boleto_using_post(id)
 
@@ -241,7 +231,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagboletoApi.new
 
@@ -263,7 +252,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{registro_cobranca_resource_registrar_boleto_param_id_boleto}}} | 
 
-
 ### Return type
 
 [**BoletoResponse**](BoletoResponse.md)
@@ -279,7 +267,6 @@ No authorization required
 
 
 
-
 # **visualizar_boleto_using_get**
 > Object visualizar_boleto_using_get(id)
 
@@ -291,7 +278,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagboletoApi.new
 
@@ -313,7 +299,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{boleto_resource_visualizar_boleto_param_id}}} | 
 
-
 ### Return type
 
 **Object**
@@ -326,8 +311,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/pdf
-
-
 
 
 

@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**consultar_por_email_using_get**](GlobaltagnotificacaoApi.md#consultar_por_email_using_get) | **GET** /api/codigos-seguranca-email/{id} | {{{codigo_seguranca_resource_consultar_por_email}}}
 [**consultar_por_sms_using_get**](GlobaltagnotificacaoApi.md#consultar_por_sms_using_get) | **GET** /api/codigos-seguranca-sms/{id} | {{{codigo_seguranca_resource_consultar_por_s_m_s}}}
 [**consultar_template_notificacao_using_get**](GlobaltagnotificacaoApi.md#consultar_template_notificacao_using_get) | **GET** /api/templates-notificacoes/{id} | {{{notificacao_resource_consultar_template_notificacao}}}
+[**enviar_otp_using_post**](GlobaltagnotificacaoApi.md#enviar_otp_using_post) | **POST** /api/notificacoes/3d-secure | {{{notificacao_resource_3d_secure}}}
 [**gerar_token_email_using_post**](GlobaltagnotificacaoApi.md#gerar_token_email_using_post) | **POST** /api/notificacoes-email/gerar-codigo-seguranca | {{{codigo_seguranca_resource_gerar_token_e_m_a_i_l}}}
 [**gerar_token_sms_using_post**](GlobaltagnotificacaoApi.md#gerar_token_sms_using_post) | **POST** /api/notificacoes-sms/gerar-codigo-seguranca | {{{codigo_seguranca_resource_gerar_token_s_m_s}}}
 [**listar_configuracao_using_get**](GlobaltagnotificacaoApi.md#listar_configuracao_using_get) | **GET** /api/configuracoes-email | {{{email_resource_listar_configuracao}}}
@@ -33,8 +34,6 @@ Method | HTTP request | Description
 [**validar_token_sms_using_post**](GlobaltagnotificacaoApi.md#validar_token_sms_using_post) | **POST** /api/notificacoes-sms/validar-codigo-seguranca | {{{codigo_seguranca_resource_validar_token_s_m_s}}}
 
 
-
-
 # **alterar_configuracao_using_put**
 > ConfiguracaoEmailResponse alterar_configuracao_using_put(id, persist)
 
@@ -46,7 +45,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -71,7 +69,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{email_resource_alterar_configuracao_param_id}}} | 
  **persist** | [**ConfiguracaoEmailPersist**](ConfiguracaoEmailPersist.md)| persist | 
 
-
 ### Return type
 
 [**ConfiguracaoEmailResponse**](ConfiguracaoEmailResponse.md)
@@ -87,7 +84,6 @@ No authorization required
 
 
 
-
 # **alterar_template_notificacao_using_put**
 > TemplateNotificacaoDetalheResponse alterar_template_notificacao_using_put(id, conteudo, opts)
 
@@ -99,7 +95,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -138,7 +133,6 @@ Name | Type | Description  | Notes
  **assunto** | **String**| {{{template_notificacao_persist_assunto_value}}} | [optional] 
  **template_padrao** | **BOOLEAN**| {{{template_notificacao_persist_template_padrao_value}}} | [optional] 
 
-
 ### Return type
 
 [**TemplateNotificacaoDetalheResponse**](TemplateNotificacaoDetalheResponse.md)
@@ -154,7 +148,6 @@ No authorization required
 
 
 
-
 # **atualizar_sms_using_post**
 > NotificacaoSMSResponse atualizar_sms_using_post(opts)
 
@@ -166,7 +159,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -197,7 +189,6 @@ Name | Type | Description  | Notes
  **texto_status** | **String**| {{{notificacao_resource_atualizar_s_m_s_param_texto_status}}} | [optional] 
  **operadora** | **String**| {{{notificacao_resource_atualizar_s_m_s_param_operadora}}} | [optional] 
 
-
 ### Return type
 
 [**NotificacaoSMSResponse**](NotificacaoSMSResponse.md)
@@ -213,7 +204,6 @@ No authorization required
 
 
 
-
 # **consultar_configuracao_using_get**
 > ConfiguracaoEmailResponse consultar_configuracao_using_get(id)
 
@@ -225,7 +215,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -247,7 +236,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{email_resource_consultar_configuracao_param_id}}} | 
 
-
 ### Return type
 
 [**ConfiguracaoEmailResponse**](ConfiguracaoEmailResponse.md)
@@ -263,7 +251,6 @@ No authorization required
 
 
 
-
 # **consultar_por_email_using_get**
 > CodigoSegurancaResponse consultar_por_email_using_get(id)
 
@@ -275,7 +262,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -297,7 +283,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{codigo_seguranca_resource_consultar_por_email_param_id}}} | 
 
-
 ### Return type
 
 [**CodigoSegurancaResponse**](CodigoSegurancaResponse.md)
@@ -313,7 +298,6 @@ No authorization required
 
 
 
-
 # **consultar_por_sms_using_get**
 > CodigoSegurancaResponse consultar_por_sms_using_get(id)
 
@@ -325,7 +309,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -347,7 +330,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{codigo_seguranca_resource_consultar_por_s_m_s_param_id}}} | 
 
-
 ### Return type
 
 [**CodigoSegurancaResponse**](CodigoSegurancaResponse.md)
@@ -363,7 +345,6 @@ No authorization required
 
 
 
-
 # **consultar_template_notificacao_using_get**
 > TemplateNotificacaoDetalheResponse consultar_template_notificacao_using_get(id)
 
@@ -375,7 +356,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -397,7 +377,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{notificacao_resource_consultar_template_notificacao_param_id}}} | 
 
-
 ### Return type
 
 [**TemplateNotificacaoDetalheResponse**](TemplateNotificacaoDetalheResponse.md)
@@ -413,6 +392,52 @@ No authorization required
 
 
 
+# **enviar_otp_using_post**
+> Object enviar_otp_using_post(secure3d_request)
+
+{{{notificacao_resource_3d_secure}}}
+
+{{{notificacao_resource_3d_secure_notes}}}
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+api_instance = Pier::GlobaltagnotificacaoApi.new
+
+secure3d_request = Pier::Secure3dRequest.new # Secure3dRequest | secure3dRequest
+
+
+begin
+  #{{{notificacao_resource_3d_secure}}}
+  result = api_instance.enviar_otp_using_post(secure3d_request)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling GlobaltagnotificacaoApi->enviar_otp_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **secure3d_request** | [**Secure3dRequest**](Secure3dRequest.md)| secure3dRequest | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
 
 # **gerar_token_email_using_post**
 > String gerar_token_email_using_post(email)
@@ -425,7 +450,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -447,7 +471,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **email** | **String**| email | 
 
-
 ### Return type
 
 **String**
@@ -463,7 +486,6 @@ No authorization required
 
 
 
-
 # **gerar_token_sms_using_post**
 > String gerar_token_sms_using_post(persist)
 
@@ -475,7 +497,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -497,7 +518,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**CodigoSegurancaSMSPersist**](CodigoSegurancaSMSPersist.md)| persist | 
 
-
 ### Return type
 
 **String**
@@ -513,7 +533,6 @@ No authorization required
 
 
 
-
 # **listar_configuracao_using_get**
 > PageConfiguracaoEmailResponse listar_configuracao_using_get(opts)
 
@@ -525,7 +544,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -552,7 +570,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
-
 ### Return type
 
 [**PageConfiguracaoEmailResponse**](PageConfiguracaoEmailResponse.md)
@@ -568,7 +585,6 @@ No authorization required
 
 
 
-
 # **listar_por_email_using_get**
 > PageCodigoSegurancaResponse listar_por_email_using_get(opts)
 
@@ -580,7 +596,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -607,7 +622,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
-
 ### Return type
 
 [**PageCodigoSegurancaResponse**](PageCodigoSegurancaResponse.md)
@@ -623,7 +637,6 @@ No authorization required
 
 
 
-
 # **listar_por_sms_using_get**
 > PageCodigoSegurancaResponse listar_por_sms_using_get(opts)
 
@@ -635,7 +648,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -662,7 +674,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
-
 ### Return type
 
 [**PageCodigoSegurancaResponse**](PageCodigoSegurancaResponse.md)
@@ -678,7 +689,6 @@ No authorization required
 
 
 
-
 # **listar_push_using_get**
 > PagePushResponse listar_push_using_get(opts)
 
@@ -690,7 +700,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -727,7 +736,6 @@ Name | Type | Description  | Notes
  **plataforma** | **String**| {{{notificacao_push_request_plataforma_value}}} | [optional] 
  **protocolo** | **String**| {{{notificacao_push_request_protocolo_value}}} | [optional] 
 
-
 ### Return type
 
 [**PagePushResponse**](PagePushResponse.md)
@@ -743,7 +751,6 @@ No authorization required
 
 
 
-
 # **listar_sms_using_get**
 > PageSMSResponse listar_sms_using_get(opts)
 
@@ -755,7 +762,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -794,7 +800,6 @@ Name | Type | Description  | Notes
  **protocolo** | **String**| {{{notificacao_s_m_s_request_protocolo_value}}} | [optional] 
  **nsu** | **Integer**| {{{notificacao_s_m_s_request_nsu_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageSMSResponse**](PageSMSResponse.md)
@@ -810,7 +815,6 @@ No authorization required
 
 
 
-
 # **listar_template_notificacao_using_get**
 > PageTemplateNotificacaoResponse listar_template_notificacao_using_get(opts)
 
@@ -822,7 +826,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -849,7 +852,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
 
-
 ### Return type
 
 [**PageTemplateNotificacaoResponse**](PageTemplateNotificacaoResponse.md)
@@ -865,7 +867,6 @@ No authorization required
 
 
 
-
 # **listar_tipos_layouts_using_get**
 > Array&lt;Object&gt; listar_tipos_layouts_using_get
 
@@ -877,7 +878,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -892,7 +892,6 @@ end
 
 ### Parameters
 This endpoint does not need any parameter.
-
 
 ### Return type
 
@@ -909,7 +908,6 @@ No authorization required
 
 
 
-
 # **notificacao_email_using_post**
 > Object notificacao_email_using_post(request)
 
@@ -921,7 +919,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -943,7 +940,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**NotificacaoEmailRequest**](NotificacaoEmailRequest.md)| request | 
 
-
 ### Return type
 
 **Object**
@@ -959,7 +955,6 @@ No authorization required
 
 
 
-
 # **reenviar_token_sms_using_post**
 > String reenviar_token_sms_using_post(persist)
 
@@ -971,7 +966,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -993,7 +987,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**CodigoSegurancaSMSPersist**](CodigoSegurancaSMSPersist.md)| persist | 
 
-
 ### Return type
 
 **String**
@@ -1009,7 +1002,6 @@ No authorization required
 
 
 
-
 # **responder_sms_get_using_get**
 > NotificacaoSMSResponse responder_sms_get_using_get(opts)
 
@@ -1021,7 +1013,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -1048,7 +1039,6 @@ Name | Type | Description  | Notes
  **data** | **String**| {{{notificacao_resource_responder_s_m_s_get_param_data}}} | [optional] 
  **resposta** | **String**| {{{notificacao_resource_responder_s_m_s_get_param_resposta}}} | [optional] 
 
-
 ### Return type
 
 [**NotificacaoSMSResponse**](NotificacaoSMSResponse.md)
@@ -1064,7 +1054,6 @@ No authorization required
 
 
 
-
 # **salvar_configuracao_using_post**
 > ConfiguracaoEmailResponse salvar_configuracao_using_post(persist)
 
@@ -1076,7 +1065,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -1098,7 +1086,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**ConfiguracaoEmailPersist**](ConfiguracaoEmailPersist.md)| persist | 
 
-
 ### Return type
 
 [**ConfiguracaoEmailResponse**](ConfiguracaoEmailResponse.md)
@@ -1114,7 +1101,6 @@ No authorization required
 
 
 
-
 # **salvar_push_fcm_using_post**
 > NotificacaoResponse salvar_push_fcm_using_post(push_persists)
 
@@ -1126,7 +1112,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -1148,7 +1133,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **push_persists** | [**Array&lt;PushFCMGCMPersistValue&gt;**](PushFCMGCMPersistValue.md)| pushPersists | 
 
-
 ### Return type
 
 [**NotificacaoResponse**](NotificacaoResponse.md)
@@ -1164,7 +1148,6 @@ No authorization required
 
 
 
-
 # **salvar_push_gcm_using_post**
 > NotificacaoResponse salvar_push_gcm_using_post(push_persists)
 
@@ -1176,7 +1159,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -1198,7 +1180,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **push_persists** | [**Array&lt;PushFCMGCMPersistValue&gt;**](PushFCMGCMPersistValue.md)| pushPersists | 
 
-
 ### Return type
 
 [**NotificacaoResponse**](NotificacaoResponse.md)
@@ -1214,7 +1195,6 @@ No authorization required
 
 
 
-
 # **salvar_push_using_post**
 > NotificacaoResponse salvar_push_using_post(push_persists)
 
@@ -1226,7 +1206,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -1248,7 +1227,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **push_persists** | [**Array&lt;PushAPNSPersistValue&gt;**](PushAPNSPersistValue.md)| pushPersists | 
 
-
 ### Return type
 
 [**NotificacaoResponse**](NotificacaoResponse.md)
@@ -1264,7 +1242,6 @@ No authorization required
 
 
 
-
 # **salvar_sms_using_post**
 > NotificacaoResponse salvar_sms_using_post(lista_sms)
 
@@ -1276,7 +1253,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -1298,7 +1274,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **lista_sms** | [**Array&lt;SMSPersistValue&gt;**](SMSPersistValue.md)| listaSMS | 
 
-
 ### Return type
 
 [**NotificacaoResponse**](NotificacaoResponse.md)
@@ -1314,7 +1289,6 @@ No authorization required
 
 
 
-
 # **salvar_template_notificacao_using_post**
 > TemplateNotificacaoDetalheResponse salvar_template_notificacao_using_post(conteudo, opts)
 
@@ -1326,7 +1300,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -1362,7 +1335,6 @@ Name | Type | Description  | Notes
  **assunto** | **String**| {{{template_notificacao_persist_assunto_value}}} | [optional] 
  **template_padrao** | **BOOLEAN**| {{{template_notificacao_persist_template_padrao_value}}} | [optional] 
 
-
 ### Return type
 
 [**TemplateNotificacaoDetalheResponse**](TemplateNotificacaoDetalheResponse.md)
@@ -1378,7 +1350,6 @@ No authorization required
 
 
 
-
 # **validar_token_email_using_post**
 > String validar_token_email_using_post(request)
 
@@ -1390,7 +1361,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -1412,7 +1382,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**CodigoSegurancaEMAILPersist**](CodigoSegurancaEMAILPersist.md)| request | 
 
-
 ### Return type
 
 **String**
@@ -1428,7 +1397,6 @@ No authorization required
 
 
 
-
 # **validar_token_sms_using_post**
 > String validar_token_sms_using_post(request)
 
@@ -1440,7 +1408,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagnotificacaoApi.new
 
@@ -1462,7 +1429,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**CodigoSegurancaSMSRequest**](CodigoSegurancaSMSRequest.md)| request | 
 
-
 ### Return type
 
 **String**
@@ -1475,8 +1441,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

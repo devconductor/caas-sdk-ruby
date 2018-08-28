@@ -14,4 +14,3 @@ Name | Type | Description | Notes
 **nsu** | **Integer** | {{{usuario_token_persistencia_nsu_descricao}}} | [optional] 
 
 
-

@@ -13,4 +13,3 @@ Name | Type | Description | Notes
 **ultimo_nosso_numero** | **Float** | {{{tipo_boleto_response_ultimo_nosso_numero_value}}} | [optional] 
 
 
-

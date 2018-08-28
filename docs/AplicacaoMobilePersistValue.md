@@ -12,4 +12,3 @@ Name | Type | Description | Notes
 **senha** | **String** | {{{aplicacao_mobile_persist_senha_value}}} | [optional] 
 
 
-

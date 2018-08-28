@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **parametros_conteudo** | [**Array&lt;PropriedadeDocumentoRequest&gt;**](PropriedadeDocumentoRequest.md) | {{{documento_parametros_request_parametros_conteudo_value}}} | [optional] 
 
 
-

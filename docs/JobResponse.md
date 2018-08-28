@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **status** | **String** | {{{job_response_status_value}}} | [optional] 
 
 
-

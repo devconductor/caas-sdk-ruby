@@ -15,4 +15,3 @@ Name | Type | Description | Notes
 **numero_parcelas** | **Integer** | {{{transacao_on_us_por_id_cartao_request_numero_parcelas_value}}} | 
 
 
-

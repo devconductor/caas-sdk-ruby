@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **telefone** | **String** | {{{codigo_seguranca_s_m_s_persist_telefone_value}}} | [optional] 
 
 
-

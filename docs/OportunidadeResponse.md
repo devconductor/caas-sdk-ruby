@@ -15,4 +15,3 @@ Name | Type | Description | Notes
 **detalhes** | [**Array&lt;DetalheOportunidadeResponse&gt;**](DetalheOportunidadeResponse.md) | {{{oportunidade_response_detalhes_value}}} | [optional] 
 
 
-

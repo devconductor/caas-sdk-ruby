@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **data_contestacao** | **DateTime** |  | [optional] 
 **data_envio_cb** | **String** |  | [optional] 
 **data_transacao** | **DateTime** |  | [optional] 
+**historico** | **String** |  | [optional] 
 **id_compra_contestada** | **Integer** |  | [optional] 
 **internacional** | **Integer** |  | [optional] 
 **mcc** | **String** |  | [optional] 
@@ -35,6 +36,5 @@ Name | Type | Description | Notes
 **valor_compra** | **Float** |  | [optional] 
 **valor_contrato** | **Float** |  | [optional] 
 **valor_destino** | **Float** |  | [optional] 
-
 
 

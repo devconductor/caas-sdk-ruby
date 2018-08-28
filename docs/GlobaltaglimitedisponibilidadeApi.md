@@ -5,9 +5,8 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterar_using_put9**](GlobaltaglimitedisponibilidadeApi.md#alterar_using_put9) | **PUT** /api/limites-disponibilidades | {{{limite_disponibilidade_resource_alterar}}}
-[**consultar_using_get23**](GlobaltaglimitedisponibilidadeApi.md#consultar_using_get23) | **GET** /api/limites-disponibilidades | {{{limite_disponibilidade_resource_consultar}}}
-
-
+[**consultar_using_get25**](GlobaltaglimitedisponibilidadeApi.md#consultar_using_get25) | **GET** /api/limites-disponibilidades | {{{limite_disponibilidade_resource_consultar}}}
+[**sensibilizar_saldo_disponivel_global_using_post**](GlobaltaglimitedisponibilidadeApi.md#sensibilizar_saldo_disponivel_global_using_post) | **POST** /api/contas/{id}/limites-disponibilidades/sensibilizar-saldo-disponivel-global | {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel}}}
 
 
 # **alterar_using_put9**
@@ -21,7 +20,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltaglimitedisponibilidadeApi.new
 
@@ -71,7 +69,6 @@ Name | Type | Description  | Notes
  **limite_internacional_saque_periodo** | [**Float**](.md)| {{{limite_disponibilidade_persist_limite_internacional_saque_periodo_value}}} | [optional] 
  **limite_maximo** | [**Float**](.md)| {{{limite_disponibilidade_persist_limite_maximo_value}}} | [optional] 
 
-
 ### Return type
 
 [**LimiteDisponibilidadeResponse**](LimiteDisponibilidadeResponse.md)
@@ -87,9 +84,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get23**
-> LimiteDisponibilidadeResponse consultar_using_get23(id_conta)
+# **consultar_using_get25**
+> LimiteDisponibilidadeResponse consultar_using_get25(id_conta)
 
 {{{limite_disponibilidade_resource_consultar}}}
 
@@ -100,7 +96,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltaglimitedisponibilidadeApi.new
 
 id_conta = 789 # Integer | {{{limite_disponibilidade_resource_consultar_param_id_conta}}}
@@ -108,10 +103,10 @@ id_conta = 789 # Integer | {{{limite_disponibilidade_resource_consultar_param_id
 
 begin
   #{{{limite_disponibilidade_resource_consultar}}}
-  result = api_instance.consultar_using_get23(id_conta)
+  result = api_instance.consultar_using_get25(id_conta)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltaglimitedisponibilidadeApi->consultar_using_get23: #{e}"
+  puts "Exception when calling GlobaltaglimitedisponibilidadeApi->consultar_using_get25: #{e}"
 end
 ```
 
@@ -120,7 +115,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_conta** | **Integer**| {{{limite_disponibilidade_resource_consultar_param_id_conta}}} | 
-
 
 ### Return type
 
@@ -136,6 +130,54 @@ No authorization required
  - **Accept**: application/json
 
 
+
+# **sensibilizar_saldo_disponivel_global_using_post**
+> LimiteDisponibilidadeResponse sensibilizar_saldo_disponivel_global_using_post(id, sensibilizar_saldo_global)
+
+{{{limite_disponibilidade_resource_sensibilizar_credito_disponivel}}}
+
+{{{limite_disponibilidade_resource_sensibilizar_credito_disponivel_notes}}}
+
+### Example
+```ruby
+# load the gem
+require 'pier-sdk-ruby'
+
+api_instance = Pier::GlobaltaglimitedisponibilidadeApi.new
+
+id = 789 # Integer | {{{sensibilizar_saldo_global_param_id}}}
+
+sensibilizar_saldo_global = Pier::SensibilizarSaldoGlobalUpdateValue.new # SensibilizarSaldoGlobalUpdateValue | sensibilizarSaldoGlobal
+
+
+begin
+  #{{{limite_disponibilidade_resource_sensibilizar_credito_disponivel}}}
+  result = api_instance.sensibilizar_saldo_disponivel_global_using_post(id, sensibilizar_saldo_global)
+  p result
+rescue Pier::ApiError => e
+  puts "Exception when calling GlobaltaglimitedisponibilidadeApi->sensibilizar_saldo_disponivel_global_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| {{{sensibilizar_saldo_global_param_id}}} | 
+ **sensibilizar_saldo_global** | [**SensibilizarSaldoGlobalUpdateValue**](SensibilizarSaldoGlobalUpdateValue.md)| sensibilizarSaldoGlobal | 
+
+### Return type
+
+[**LimiteDisponibilidadeResponse**](LimiteDisponibilidadeResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 

@@ -20,4 +20,3 @@ Name | Type | Description | Notes
 **flag_correspondencia** | **BOOLEAN** | {{{endereco_response_flag_correspondencia_value}}} | [optional] 
 
 
-

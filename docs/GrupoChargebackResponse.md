@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **descricao** | **String** | {{{grupo_chargeback_response_descricao_value}}} | [optional] 
 
 
-

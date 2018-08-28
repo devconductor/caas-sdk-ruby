@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **nome** | **String** | {{{plataforma_mobile_response_nome_value}}} | [optional] 
 
 
-

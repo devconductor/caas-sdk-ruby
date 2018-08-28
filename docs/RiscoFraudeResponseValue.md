@@ -15,4 +15,3 @@ Name | Type | Description | Notes
 **nome_estabelecimento** | **String** | {{{risco_fraude_response_nome_estabelecimento_value}}} | [optional] 
 
 
-

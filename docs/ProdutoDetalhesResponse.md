@@ -11,4 +11,3 @@ Name | Type | Description | Notes
 **uso_exterior** | **BOOLEAN** | {{{produto_detalhes_response_uso_exterior_value}}} | [optional] 
 
 
-

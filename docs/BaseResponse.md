@@ -17,4 +17,3 @@ Name | Type | Description | Notes
 **flag_cluster** | **BOOLEAN** | {{{base_dto_flag_cluster_value}}} | [optional] 
 
 
-

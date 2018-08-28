@@ -31,4 +31,3 @@ Name | Type | Description | Notes
 **tipo_pessoa** | **String** | {{{origem_comercial_response_tipo_pessoa_value}}} | [optional] 
 
 
-

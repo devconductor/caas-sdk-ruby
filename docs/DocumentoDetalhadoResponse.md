@@ -11,4 +11,3 @@ Name | Type | Description | Notes
 **documento_detalhes** | [**Array&lt;DocumentoDetalheResponse&gt;**](DocumentoDetalheResponse.md) | {{{documento_detalhado_response_documento_detalhes_value}}} | [optional] 
 
 
-

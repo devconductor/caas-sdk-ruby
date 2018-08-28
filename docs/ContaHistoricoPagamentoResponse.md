@@ -13,4 +13,3 @@ Name | Type | Description | Notes
 **status** | **Integer** | {{{conta_historico_pagamento_response_status_value}}} | [optional] 
 
 
-

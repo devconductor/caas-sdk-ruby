@@ -33,4 +33,3 @@ Name | Type | Description | Notes
 **id_ajuste** | **Integer** | {{{tipo_debito_recorrente_response_id_ajuste_value}}} | [optional] 
 
 
-

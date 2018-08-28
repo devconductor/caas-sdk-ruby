@@ -4,20 +4,18 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultar_using_get5**](GlobaltagarquivoApi.md#consultar_using_get5) | **GET** /api/arquivos/{id} | {{{arquivo_resource_consultar}}}
+[**consultar_using_get6**](GlobaltagarquivoApi.md#consultar_using_get6) | **GET** /api/arquivos/{id} | {{{arquivo_resource_consultar}}}
 [**integrar_using_post**](GlobaltagarquivoApi.md#integrar_using_post) | **POST** /api/arquivos/integrar | {{{arquivo_resource_integrar}}}
 [**listar_por_numero_receita_federal_using_get**](GlobaltagarquivoApi.md#listar_por_numero_receita_federal_using_get) | **GET** /api/arquivos-auditorias | {{{arquivo_a_u_d_resource_listar_por_numero_receita_federal}}}
 [**listar_status_arquivos_using_get**](GlobaltagarquivoApi.md#listar_status_arquivos_using_get) | **GET** /api/status-arquivos | {{{arquivo_resource_listar_status_arquivos}}}
 [**listar_tipos_arquivos_using_get**](GlobaltagarquivoApi.md#listar_tipos_arquivos_using_get) | **GET** /api/tipos-arquivos | {{{arquivo_resource_listar_tipos_arquivos}}}
-[**listar_using_get5**](GlobaltagarquivoApi.md#listar_using_get5) | **GET** /api/arquivos/{id}/auditorias | {{{arquivo_a_u_d_resource_listar}}}
-[**listar_using_get6**](GlobaltagarquivoApi.md#listar_using_get6) | **GET** /api/arquivos | {{{arquivo_resource_listar}}}
+[**listar_using_get6**](GlobaltagarquivoApi.md#listar_using_get6) | **GET** /api/arquivos/{id}/auditorias | {{{arquivo_a_u_d_resource_listar}}}
+[**listar_using_get7**](GlobaltagarquivoApi.md#listar_using_get7) | **GET** /api/arquivos | {{{arquivo_resource_listar}}}
 [**salvar_using_post1**](GlobaltagarquivoApi.md#salvar_using_post1) | **POST** /api/arquivos | {{{arquivo_resource_salvar}}}
 
 
-
-
-# **consultar_using_get5**
-> ArquivoDetalheResponse consultar_using_get5(id)
+# **consultar_using_get6**
+> ArquivoDetalheResponse consultar_using_get6(id)
 
 {{{arquivo_resource_consultar}}}
 
@@ -28,7 +26,6 @@ Method | HTTP request | Description
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagarquivoApi.new
 
 id = 789 # Integer | {{{arquivo_resource_consultar_param_id}}}
@@ -36,10 +33,10 @@ id = 789 # Integer | {{{arquivo_resource_consultar_param_id}}}
 
 begin
   #{{{arquivo_resource_consultar}}}
-  result = api_instance.consultar_using_get5(id)
+  result = api_instance.consultar_using_get6(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagarquivoApi->consultar_using_get5: #{e}"
+  puts "Exception when calling GlobaltagarquivoApi->consultar_using_get6: #{e}"
 end
 ```
 
@@ -48,7 +45,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{arquivo_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -65,7 +61,6 @@ No authorization required
 
 
 
-
 # **integrar_using_post**
 > Object integrar_using_post(integrar_arquivo_request)
 
@@ -77,7 +72,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagarquivoApi.new
 
@@ -99,7 +93,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **integrar_arquivo_request** | [**IntegrarArquivoRequest**](IntegrarArquivoRequest.md)| integrarArquivoRequest | 
 
-
 ### Return type
 
 **Object**
@@ -115,7 +108,6 @@ No authorization required
 
 
 
-
 # **listar_por_numero_receita_federal_using_get**
 > PageArquivoAUDResponse listar_por_numero_receita_federal_using_get(numero_receita_federal, opts)
 
@@ -127,7 +119,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagarquivoApi.new
 
@@ -155,7 +146,6 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
-
 ### Return type
 
 [**PageArquivoAUDResponse**](PageArquivoAUDResponse.md)
@@ -171,7 +161,6 @@ No authorization required
 
 
 
-
 # **listar_status_arquivos_using_get**
 > PageStatusArquivoResponse listar_status_arquivos_using_get(opts)
 
@@ -183,7 +172,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagarquivoApi.new
 
@@ -214,7 +202,6 @@ Name | Type | Description  | Notes
  **nome** | **String**| {{{status_arquivo_request_nome_value}}} | [optional] 
  **descricao** | **String**| {{{status_arquivo_request_descricao_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageStatusArquivoResponse**](PageStatusArquivoResponse.md)
@@ -230,7 +217,6 @@ No authorization required
 
 
 
-
 # **listar_tipos_arquivos_using_get**
 > PageTipoArquivoResponse listar_tipos_arquivos_using_get(opts)
 
@@ -242,7 +228,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagarquivoApi.new
 
@@ -273,7 +258,6 @@ Name | Type | Description  | Notes
  **nome** | **String**| {{{tipo_arquivo_request_nome_value}}} | [optional] 
  **descricao** | **String**| {{{tipo_arquivo_request_descricao_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageTipoArquivoResponse**](PageTipoArquivoResponse.md)
@@ -289,9 +273,8 @@ No authorization required
 
 
 
-
-# **listar_using_get5**
-> PageArquivoAUDResponse listar_using_get5(id, opts)
+# **listar_using_get6**
+> PageArquivoAUDResponse listar_using_get6(id, opts)
 
 {{{arquivo_a_u_d_resource_listar}}}
 
@@ -301,7 +284,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagarquivoApi.new
 
@@ -314,10 +296,10 @@ opts = {
 
 begin
   #{{{arquivo_a_u_d_resource_listar}}}
-  result = api_instance.listar_using_get5(id, opts)
+  result = api_instance.listar_using_get6(id, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagarquivoApi->listar_using_get5: #{e}"
+  puts "Exception when calling GlobaltagarquivoApi->listar_using_get6: #{e}"
 end
 ```
 
@@ -328,7 +310,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{arquivo_a_u_d_resource_listar_param_id}}} | 
  **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
-
 
 ### Return type
 
@@ -345,9 +326,8 @@ No authorization required
 
 
 
-
-# **listar_using_get6**
-> PageArquivoResponse listar_using_get6(opts)
+# **listar_using_get7**
+> PageArquivoResponse listar_using_get7(opts)
 
 {{{arquivo_resource_listar}}}
 
@@ -357,7 +337,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagarquivoApi.new
 
@@ -373,10 +352,10 @@ opts = {
 
 begin
   #{{{arquivo_resource_listar}}}
-  result = api_instance.listar_using_get6(opts)
+  result = api_instance.listar_using_get7(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagarquivoApi->listar_using_get6: #{e}"
+  puts "Exception when calling GlobaltagarquivoApi->listar_using_get7: #{e}"
 end
 ```
 
@@ -391,7 +370,6 @@ Name | Type | Description  | Notes
  **id_tipo_arquivo** | **Integer**| {{{arquivo_request_id_tipo_arquivo_value}}} | [optional] 
  **id_status_arquivo** | **Integer**| {{{arquivo_request_id_status_arquivo_value}}} | [optional] 
  **extensao** | **String**| {{{arquivo_request_extensao_value}}} | [optional] 
-
 
 ### Return type
 
@@ -408,7 +386,6 @@ No authorization required
 
 
 
-
 # **salvar_using_post1**
 > ArquivoDetalheResponse salvar_using_post1(arquivo_persist)
 
@@ -420,7 +397,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagarquivoApi.new
 
@@ -442,7 +418,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **arquivo_persist** | [**ArquivoPersist**](ArquivoPersist.md)| arquivoPersist | 
 
-
 ### Return type
 
 [**ArquivoDetalheResponse**](ArquivoDetalheResponse.md)
@@ -455,8 +430,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

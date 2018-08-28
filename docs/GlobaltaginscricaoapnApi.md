@@ -5,10 +5,8 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**desativar_using_put**](GlobaltaginscricaoapnApi.md#desativar_using_put) | **PUT** /api/inscricoes-apn/{id}/desativar | {{{inscricao_apn_recurso_desativar}}}
-[**listar_using_get30**](GlobaltaginscricaoapnApi.md#listar_using_get30) | **GET** /api/inscricoes-apn | {{{inscricao_apn_recurso_listar}}}
-[**salvar_using_post14**](GlobaltaginscricaoapnApi.md#salvar_using_post14) | **POST** /api/inscricoes-apn | {{{inscricao_apn_recurso_salvar}}}
-
-
+[**listar_using_get31**](GlobaltaginscricaoapnApi.md#listar_using_get31) | **GET** /api/inscricoes-apn | {{{inscricao_apn_recurso_listar}}}
+[**salvar_using_post15**](GlobaltaginscricaoapnApi.md#salvar_using_post15) | **POST** /api/inscricoes-apn | {{{inscricao_apn_recurso_salvar}}}
 
 
 # **desativar_using_put**
@@ -22,7 +20,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltaginscricaoapnApi.new
 
@@ -44,7 +41,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| id | 
 
-
 ### Return type
 
 [**InscricaoAPNResponse**](InscricaoAPNResponse.md)
@@ -60,9 +56,8 @@ No authorization required
 
 
 
-
-# **listar_using_get30**
-> PageInscricaoAPNResponse listar_using_get30(opts)
+# **listar_using_get31**
+> PageInscricaoAPNResponse listar_using_get31(opts)
 
 {{{inscricao_apn_recurso_listar}}}
 
@@ -72,7 +67,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltaginscricaoapnApi.new
 
@@ -90,10 +84,10 @@ opts = {
 
 begin
   #{{{inscricao_apn_recurso_listar}}}
-  result = api_instance.listar_using_get30(opts)
+  result = api_instance.listar_using_get31(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltaginscricaoapnApi->listar_using_get30: #{e}"
+  puts "Exception when calling GlobaltaginscricaoapnApi->listar_using_get31: #{e}"
 end
 ```
 
@@ -111,7 +105,6 @@ Name | Type | Description  | Notes
  **ativo** | **BOOLEAN**| {{{inscricao_apn_requisicao_ativo_descricao}}} | [optional] 
  **id_aplicacao_mobile** | **Integer**| {{{inscricao_apn_requisicao_id_aplicacao_mobile_descricao}}} | [optional] 
 
-
 ### Return type
 
 [**PageInscricaoAPNResponse**](PageInscricaoAPNResponse.md)
@@ -127,9 +120,8 @@ No authorization required
 
 
 
-
-# **salvar_using_post14**
-> Array&lt;InscricaoAPNResponse&gt; salvar_using_post14(inscricao_persist)
+# **salvar_using_post15**
+> Array&lt;InscricaoAPNResponse&gt; salvar_using_post15(inscricao_persist)
 
 {{{inscricao_apn_recurso_salvar}}}
 
@@ -140,7 +132,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltaginscricaoapnApi.new
 
 inscricao_persist = Pier::InscricaoApnPersistencia.new # InscricaoApnPersistencia | inscricaoPersist
@@ -148,10 +139,10 @@ inscricao_persist = Pier::InscricaoApnPersistencia.new # InscricaoApnPersistenci
 
 begin
   #{{{inscricao_apn_recurso_salvar}}}
-  result = api_instance.salvar_using_post14(inscricao_persist)
+  result = api_instance.salvar_using_post15(inscricao_persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltaginscricaoapnApi->salvar_using_post14: #{e}"
+  puts "Exception when calling GlobaltaginscricaoapnApi->salvar_using_post15: #{e}"
 end
 ```
 
@@ -160,7 +151,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inscricao_persist** | [**InscricaoApnPersistencia**](InscricaoApnPersistencia.md)| inscricaoPersist | 
-
 
 ### Return type
 
@@ -174,8 +164,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

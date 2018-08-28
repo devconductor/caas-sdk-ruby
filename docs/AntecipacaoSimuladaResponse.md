@@ -30,4 +30,3 @@ Name | Type | Description | Notes
 **detalhes** | [**Array&lt;AntecipacaoSimuladaDetalhesResponse&gt;**](AntecipacaoSimuladaDetalhesResponse.md) | {{{antecipacao_simulada_response_detalhes_value}}} | [optional] 
 
 
-

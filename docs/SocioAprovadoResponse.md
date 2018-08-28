@@ -19,4 +19,3 @@ Name | Type | Description | Notes
 **telefones** | [**Array&lt;TelefonePessoaAprovadaResponse&gt;**](TelefonePessoaAprovadaResponse.md) | {{{socio_aprovado_response_telefones_value}}} | [optional] 
 
 
-

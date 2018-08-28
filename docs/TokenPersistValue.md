@@ -7,6 +7,6 @@ Name | Type | Description | Notes
 **base** | **Integer** | {{{token_dto_base_value}}} | 
 **owner** | **String** | {{{token_dto_owner_value}}} | 
 **criado_por** | **String** | {{{token_dto_criado_por_value}}} | 
-
+**id_aplicacao** | **Integer** | {{{token_dto_id_application_value}}} | [optional] 
 
 

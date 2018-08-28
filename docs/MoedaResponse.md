@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **descricao** | **String** | {{{moeda_response_descricao_value}}} | [optional] 
 
 
-

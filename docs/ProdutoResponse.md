@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **id_fantasia_basica** | **Integer** | {{{produto_response_id_fantasia_basica_value}}} | [optional] 
 
 
-

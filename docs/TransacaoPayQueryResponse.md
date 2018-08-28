@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **descricao** | **String** | {{{transacao_pay_query_response_descricao_value}}} | [optional] 
 
 
-

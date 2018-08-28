@@ -11,4 +11,3 @@ Name | Type | Description | Notes
 **flag_ativo** | **BOOLEAN** | {{{pais_response_flag_ativo_value}}} | [optional] 
 
 
-

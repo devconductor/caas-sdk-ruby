@@ -17,4 +17,3 @@ Name | Type | Description | Notes
 **plano_maximo** | **Integer** | {{{operacao_credor_persist_plano_maximo_value}}} | 
 
 
-

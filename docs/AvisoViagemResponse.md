@@ -11,4 +11,3 @@ Name | Type | Description | Notes
 **flag_ativo** | **Integer** | {{{aviso_viagem_response_flag_ativo_value}}} | [optional] 
 
 
-

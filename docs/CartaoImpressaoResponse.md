@@ -29,4 +29,3 @@ Name | Type | Description | Notes
 **numero_cartao_hash** | **Integer** | {{{cartao_impressao_response_numero_cartao_hash_value}}} | [optional] 
 
 
-

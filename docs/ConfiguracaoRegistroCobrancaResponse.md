@@ -22,4 +22,3 @@ Name | Type | Description | Notes
 **client_id** | **String** | {{{configuracao_registro_cobranca_persist_client_id_value}}} | 
 
 
-

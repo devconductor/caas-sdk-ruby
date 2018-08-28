@@ -21,4 +21,3 @@ Name | Type | Description | Notes
 **cnpj_beneficiario** | **String** | CNPJ do benefici\u00E1rio/cedente da cobran\u00E7a. | [optional] 
 
 
-

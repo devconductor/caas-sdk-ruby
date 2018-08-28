@@ -8,11 +8,9 @@ Method | HTTP request | Description
 [**consultar_taxa_antecipacao_using_get**](GlobaltagantecipacaoApi.md#consultar_taxa_antecipacao_using_get) | **GET** /api/produtos/{id}/consultar-taxa-antecipacao | {{{produto_resource_consultar_taxa_antecipacao}}}
 [**efetivar_antecipacao_using_post**](GlobaltagantecipacaoApi.md#efetivar_antecipacao_using_post) | **POST** /api/compras-antecipaveis/{id}/efetivar-antecipacao | {{{compra_antecipavel_resource_efetivar_antecipacao}}}
 [**efetivar_antecipacoes_using_post**](GlobaltagantecipacaoApi.md#efetivar_antecipacoes_using_post) | **POST** /api/compras-antecipaveis/efetivar-antecipacao | {{{compra_antecipavel_resource_efetivar_antecipacoes}}}
-[**listar_using_get13**](GlobaltagantecipacaoApi.md#listar_using_get13) | **GET** /api/compras-antecipaveis | {{{compra_antecipavel_resource_listar}}}
+[**listar_using_get14**](GlobaltagantecipacaoApi.md#listar_using_get14) | **GET** /api/compras-antecipaveis | {{{compra_antecipavel_resource_listar}}}
 [**simular_antecipacao_using_get**](GlobaltagantecipacaoApi.md#simular_antecipacao_using_get) | **GET** /api/compras-antecipaveis/{id}/simular-antecipacao | {{{compra_antecipavel_resource_simular_antecipacao}}}
 [**simular_antecipacoes_using_get**](GlobaltagantecipacaoApi.md#simular_antecipacoes_using_get) | **GET** /api/compras-antecipaveis/simular-antecipacao | {{{compra_antecipavel_resource_simular_antecipacoes}}}
-
-
 
 
 # **configurar_taxa_antecipacao_using_post**
@@ -26,7 +24,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagantecipacaoApi.new
 
@@ -51,7 +48,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{produto_resource_configurar_taxa_antecipacao_param_id}}} | 
  **taxa_antecipacao_request** | [**TaxaAntecipacaoRequest**](TaxaAntecipacaoRequest.md)| taxaAntecipacaoRequest | 
 
-
 ### Return type
 
 [**ParametroProdutoResponse**](ParametroProdutoResponse.md)
@@ -67,7 +63,6 @@ No authorization required
 
 
 
-
 # **consultar_taxa_antecipacao_using_get**
 > ParametroProdutoResponse consultar_taxa_antecipacao_using_get(id, tipo_transacao)
 
@@ -79,7 +74,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagantecipacaoApi.new
 
@@ -104,7 +98,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{produto_resource_consultar_taxa_antecipacao_param_id}}} | 
  **tipo_transacao** | **String**| {{{produto_resource_consultar_taxa_antecipacao_param_tipo_transacao}}} | 
 
-
 ### Return type
 
 [**ParametroProdutoResponse**](ParametroProdutoResponse.md)
@@ -120,7 +113,6 @@ No authorization required
 
 
 
-
 # **efetivar_antecipacao_using_post**
 > AntecipacaoResponse efetivar_antecipacao_using_post(id_conta, id, quantidade_parcelas, opts)
 
@@ -132,7 +124,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagantecipacaoApi.new
 
@@ -164,7 +155,6 @@ Name | Type | Description  | Notes
  **quantidade_parcelas** | **Integer**| {{{compra_antecipavel_resource_efetivar_antecipacao_param_quantidade_parcelas}}} | 
  **complemento** | **String**| {{{compra_antecipavel_resource_efetivar_antecipacao_param_complemento}}} | [optional] 
 
-
 ### Return type
 
 [**AntecipacaoResponse**](AntecipacaoResponse.md)
@@ -180,7 +170,6 @@ No authorization required
 
 
 
-
 # **efetivar_antecipacoes_using_post**
 > AntecipacaoResponse efetivar_antecipacoes_using_post(id_conta, opts)
 
@@ -192,7 +181,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagantecipacaoApi.new
 
@@ -218,7 +206,6 @@ Name | Type | Description  | Notes
  **id_conta** | **Integer**| {{{compra_antecipavel_resource_efetivar_antecipacoes_param_id_conta}}} | 
  **complemento** | **String**| {{{compra_antecipavel_resource_efetivar_antecipacoes_param_complemento}}} | [optional] 
 
-
 ### Return type
 
 [**AntecipacaoResponse**](AntecipacaoResponse.md)
@@ -234,9 +221,8 @@ No authorization required
 
 
 
-
-# **listar_using_get13**
-> PageCompraResponse listar_using_get13(id_conta, opts)
+# **listar_using_get14**
+> PageCompraResponse listar_using_get14(id_conta, opts)
 
 {{{compra_antecipavel_resource_listar}}}
 
@@ -246,7 +232,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagantecipacaoApi.new
 
@@ -264,10 +249,10 @@ opts = {
 
 begin
   #{{{compra_antecipavel_resource_listar}}}
-  result = api_instance.listar_using_get13(id_conta, opts)
+  result = api_instance.listar_using_get14(id_conta, opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagantecipacaoApi->listar_using_get13: #{e}"
+  puts "Exception when calling GlobaltagantecipacaoApi->listar_using_get14: #{e}"
 end
 ```
 
@@ -284,7 +269,6 @@ Name | Type | Description  | Notes
  **juros** | **BOOLEAN**| {{{compra_d_t_o_juros_value}}} | [optional] 
  **tipo_origem_transacao** | **String**| {{{compra_d_t_o_tipo_origem_transacao_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageCompraResponse**](PageCompraResponse.md)
@@ -300,7 +284,6 @@ No authorization required
 
 
 
-
 # **simular_antecipacao_using_get**
 > AntecipacaoSimuladaResponse simular_antecipacao_using_get(id_conta, id, opts)
 
@@ -312,7 +295,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagantecipacaoApi.new
 
@@ -341,7 +323,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{compra_antecipavel_resource_simular_antecipacao_param_id_evento}}} | 
  **complemento** | **String**| {{{compra_antecipavel_resource_simular_antecipacao_param_complemento}}} | [optional] 
 
-
 ### Return type
 
 [**AntecipacaoSimuladaResponse**](AntecipacaoSimuladaResponse.md)
@@ -357,7 +338,6 @@ No authorization required
 
 
 
-
 # **simular_antecipacoes_using_get**
 > AntecipacaoSimuladaLoteResponse simular_antecipacoes_using_get(id_conta, opts)
 
@@ -369,7 +349,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagantecipacaoApi.new
 
@@ -395,7 +374,6 @@ Name | Type | Description  | Notes
  **id_conta** | **Integer**| {{{compra_antecipavel_resource_simular_antecipacoes_param_id_conta}}} | 
  **complemento** | **String**| {{{compra_antecipavel_resource_simular_antecipacoes_param_complemento}}} | [optional] 
 
-
 ### Return type
 
 [**AntecipacaoSimuladaLoteResponse**](AntecipacaoSimuladaLoteResponse.md)
@@ -408,8 +386,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

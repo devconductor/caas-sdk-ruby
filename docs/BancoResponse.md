@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **digito_banco** | **String** | {{{banco_response_digito_banco_value}}} | [optional] 
 
 
-

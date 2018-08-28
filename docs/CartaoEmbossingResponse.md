@@ -15,4 +15,3 @@ Name | Type | Description | Notes
 **cpf** | **String** | {{{cartao_embossing_response_cpf_value}}} | [optional] 
 
 
-

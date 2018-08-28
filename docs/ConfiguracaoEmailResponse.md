@@ -18,4 +18,3 @@ Name | Type | Description | Notes
 **data_alteracao** | **String** | {{{configuracao_email_response_data_alteracao_value}}} | [optional] 
 
 
-

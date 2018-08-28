@@ -16,4 +16,3 @@ Name | Type | Description | Notes
 **permite_atribuir_como_cancelamento** | **Integer** | {{{status_conta_response_permite_atribuir_como_cancelamento_value}}} | [optional] 
 
 
-

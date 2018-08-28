@@ -8,19 +8,17 @@ Method | HTTP request | Description
 [**alterar_using_put12**](GlobaltagoportunidadeApi.md#alterar_using_put12) | **PUT** /api/oportunidades/{id} | {{{oportunidade_resource_alterar}}}
 [**alterar_using_put20**](GlobaltagoportunidadeApi.md#alterar_using_put20) | **PUT** /api/tipos-oportunidades/{id} | {{{tipo_oportunidade_resource_alterar}}}
 [**consultar_status_using_get**](GlobaltagoportunidadeApi.md#consultar_status_using_get) | **GET** /api/tipos-oportunidades/{id}/status/{idStatus} | {{{tipo_oportunidade_resource_consultar_status}}}
-[**consultar_using_get26**](GlobaltagoportunidadeApi.md#consultar_using_get26) | **GET** /api/oportunidades/{id} | {{{oportunidade_resource_consultar}}}
-[**consultar_using_get45**](GlobaltagoportunidadeApi.md#consultar_using_get45) | **GET** /api/tipos-oportunidades/{id} | {{{tipo_oportunidade_resource_consultar}}}
+[**consultar_using_get28**](GlobaltagoportunidadeApi.md#consultar_using_get28) | **GET** /api/oportunidades/{id} | {{{oportunidade_resource_consultar}}}
+[**consultar_using_get47**](GlobaltagoportunidadeApi.md#consultar_using_get47) | **GET** /api/tipos-oportunidades/{id} | {{{tipo_oportunidade_resource_consultar}}}
 [**listar_auditorias_status_using_get**](GlobaltagoportunidadeApi.md#listar_auditorias_status_using_get) | **GET** /api/auditorias-status-oportunidades | {{{tipo_oportunidade_resource_listar_auditorias_status}}}
 [**listar_auditorias_using_get**](GlobaltagoportunidadeApi.md#listar_auditorias_using_get) | **GET** /api/auditorias-oportunidades | {{{oportunidade_resource_listar_auditorias}}}
 [**listar_auditorias_using_get1**](GlobaltagoportunidadeApi.md#listar_auditorias_using_get1) | **GET** /api/auditorias-tipos-oportunidades | {{{tipo_oportunidade_resource_listar_auditorias}}}
 [**listar_status_using_get**](GlobaltagoportunidadeApi.md#listar_status_using_get) | **GET** /api/tipos-oportunidades/{id}/status | {{{tipo_oportunidade_resource_listar_status}}}
-[**listar_using_get35**](GlobaltagoportunidadeApi.md#listar_using_get35) | **GET** /api/oportunidades | {{{oportunidade_resource_listar}}}
-[**listar_using_get55**](GlobaltagoportunidadeApi.md#listar_using_get55) | **GET** /api/tipos-oportunidades | {{{tipo_oportunidade_resource_listar}}}
+[**listar_using_get36**](GlobaltagoportunidadeApi.md#listar_using_get36) | **GET** /api/oportunidades | {{{oportunidade_resource_listar}}}
+[**listar_using_get58**](GlobaltagoportunidadeApi.md#listar_using_get58) | **GET** /api/tipos-oportunidades | {{{tipo_oportunidade_resource_listar}}}
 [**salvar_status_using_post**](GlobaltagoportunidadeApi.md#salvar_status_using_post) | **POST** /api/tipos-oportunidades/{id}/status | {{{tipo_oportunidade_resource_salvar_status}}}
-[**salvar_using_post21**](GlobaltagoportunidadeApi.md#salvar_using_post21) | **POST** /api/oportunidades | {{{oportunidade_resource_salvar}}}
-[**salvar_using_post30**](GlobaltagoportunidadeApi.md#salvar_using_post30) | **POST** /api/tipos-oportunidades | {{{tipo_oportunidade_resource_salvar}}}
-
-
+[**salvar_using_post22**](GlobaltagoportunidadeApi.md#salvar_using_post22) | **POST** /api/oportunidades | {{{oportunidade_resource_salvar}}}
+[**salvar_using_post31**](GlobaltagoportunidadeApi.md#salvar_using_post31) | **POST** /api/tipos-oportunidades | {{{tipo_oportunidade_resource_salvar}}}
 
 
 # **alterar_status_using_put**
@@ -34,7 +32,6 @@ Method | HTTP request | Description
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagoportunidadeApi.new
 
@@ -62,7 +59,6 @@ Name | Type | Description  | Notes
  **id_status** | **Integer**| {{{tipo_oportunidade_resource_alterar_status_param_id_status}}} | 
  **persist** | [**StatusOportunidadePersistValue**](StatusOportunidadePersistValue.md)| persist | 
 
-
 ### Return type
 
 [**StatusOportunidadeResponse**](StatusOportunidadeResponse.md)
@@ -78,7 +74,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put12**
 > OportunidadeResponse alterar_using_put12(id, update)
 
@@ -90,7 +85,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagoportunidadeApi.new
 
@@ -115,7 +109,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{oportunidade_resource_alterar_param_id}}} | 
  **update** | [**OportunidadeUpdateValue**](OportunidadeUpdateValue.md)| update | 
 
-
 ### Return type
 
 [**OportunidadeResponse**](OportunidadeResponse.md)
@@ -131,7 +124,6 @@ No authorization required
 
 
 
-
 # **alterar_using_put20**
 > TipoOportunidadeResponse alterar_using_put20(id, persist)
 
@@ -143,7 +135,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagoportunidadeApi.new
 
@@ -168,7 +159,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{tipo_oportunidade_resource_alterar_param_id}}} | 
  **persist** | [**TipoOportunidadePersistValue**](TipoOportunidadePersistValue.md)| persist | 
 
-
 ### Return type
 
 [**TipoOportunidadeResponse**](TipoOportunidadeResponse.md)
@@ -184,7 +174,6 @@ No authorization required
 
 
 
-
 # **consultar_status_using_get**
 > StatusOportunidadeResponse consultar_status_using_get(id, id_status)
 
@@ -196,7 +185,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagoportunidadeApi.new
 
@@ -221,7 +209,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{tipo_oportunidade_resource_consultar_status_param_id}}} | 
  **id_status** | **Integer**| {{{tipo_oportunidade_resource_consultar_status_param_id_status}}} | 
 
-
 ### Return type
 
 [**StatusOportunidadeResponse**](StatusOportunidadeResponse.md)
@@ -237,9 +224,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get26**
-> OportunidadeResponse consultar_using_get26(id)
+# **consultar_using_get28**
+> OportunidadeResponse consultar_using_get28(id)
 
 {{{oportunidade_resource_consultar}}}
 
@@ -250,7 +236,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagoportunidadeApi.new
 
 id = 789 # Integer | {{{oportunidade_resource_consultar_param_id}}}
@@ -258,10 +243,10 @@ id = 789 # Integer | {{{oportunidade_resource_consultar_param_id}}}
 
 begin
   #{{{oportunidade_resource_consultar}}}
-  result = api_instance.consultar_using_get26(id)
+  result = api_instance.consultar_using_get28(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagoportunidadeApi->consultar_using_get26: #{e}"
+  puts "Exception when calling GlobaltagoportunidadeApi->consultar_using_get28: #{e}"
 end
 ```
 
@@ -270,7 +255,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{oportunidade_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -287,9 +271,8 @@ No authorization required
 
 
 
-
-# **consultar_using_get45**
-> TipoOportunidadeResponse consultar_using_get45(id)
+# **consultar_using_get47**
+> TipoOportunidadeResponse consultar_using_get47(id)
 
 {{{tipo_oportunidade_resource_consultar}}}
 
@@ -300,7 +283,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagoportunidadeApi.new
 
 id = 789 # Integer | {{{tipo_oportunidade_resource_consultar_param_id}}}
@@ -308,10 +290,10 @@ id = 789 # Integer | {{{tipo_oportunidade_resource_consultar_param_id}}}
 
 begin
   #{{{tipo_oportunidade_resource_consultar}}}
-  result = api_instance.consultar_using_get45(id)
+  result = api_instance.consultar_using_get47(id)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagoportunidadeApi->consultar_using_get45: #{e}"
+  puts "Exception when calling GlobaltagoportunidadeApi->consultar_using_get47: #{e}"
 end
 ```
 
@@ -320,7 +302,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{tipo_oportunidade_resource_consultar_param_id}}} | 
-
 
 ### Return type
 
@@ -337,7 +318,6 @@ No authorization required
 
 
 
-
 # **listar_auditorias_status_using_get**
 > PageStatusOportunidadeAUDResponse listar_auditorias_status_using_get(opts)
 
@@ -349,7 +329,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagoportunidadeApi.new
 
@@ -392,7 +371,6 @@ Name | Type | Description  | Notes
  **flag_ativo** | **BOOLEAN**| {{{status_oportunidade_a_u_d_request_flag_ativo_value}}} | [optional] 
  **rev_user** | **String**| {{{status_oportunidade_a_u_d_request_rev_user_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageStatusOportunidadeAUDResponse**](PageStatusOportunidadeAUDResponse.md)
@@ -408,7 +386,6 @@ No authorization required
 
 
 
-
 # **listar_auditorias_using_get**
 > PageOportunidadeAUDResponse listar_auditorias_using_get(opts)
 
@@ -420,7 +397,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagoportunidadeApi.new
 
@@ -467,7 +443,6 @@ Name | Type | Description  | Notes
  **rev_type** | **String**| {{{oportunidade_a_u_d_request_rev_type_value}}} | [optional] 
  **rev_user** | **String**| {{{oportunidade_a_u_d_request_rev_user_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageOportunidadeAUDResponse**](PageOportunidadeAUDResponse.md)
@@ -483,7 +458,6 @@ No authorization required
 
 
 
-
 # **listar_auditorias_using_get1**
 > PageTipoOportunidadeAUDResponse listar_auditorias_using_get1(opts)
 
@@ -495,7 +469,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagoportunidadeApi.new
 
@@ -534,7 +507,6 @@ Name | Type | Description  | Notes
  **flag_ativo** | **BOOLEAN**| {{{tipo_oportunidade_a_u_d_request_flag_ativo_value}}} | [optional] 
  **rev_user** | **String**| {{{tipo_oportunidade_a_u_d_request_rev_user_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageTipoOportunidadeAUDResponse**](PageTipoOportunidadeAUDResponse.md)
@@ -550,7 +522,6 @@ No authorization required
 
 
 
-
 # **listar_status_using_get**
 > PageStatusOportunidadeResponse listar_status_using_get(id, opts)
 
@@ -562,7 +533,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagoportunidadeApi.new
 
@@ -598,7 +568,6 @@ Name | Type | Description  | Notes
  **descricao** | **String**| {{{status_oportunidade_request_descricao_value}}} | [optional] 
  **flag_ativo** | **BOOLEAN**| {{{status_oportunidade_request_flag_ativo_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageStatusOportunidadeResponse**](PageStatusOportunidadeResponse.md)
@@ -614,9 +583,8 @@ No authorization required
 
 
 
-
-# **listar_using_get35**
-> PageOportunidadeResponse listar_using_get35(opts)
+# **listar_using_get36**
+> PageOportunidadeResponse listar_using_get36(opts)
 
 {{{oportunidade_resource_listar}}}
 
@@ -626,7 +594,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagoportunidadeApi.new
 
@@ -645,10 +612,10 @@ opts = {
 
 begin
   #{{{oportunidade_resource_listar}}}
-  result = api_instance.listar_using_get35(opts)
+  result = api_instance.listar_using_get36(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagoportunidadeApi->listar_using_get35: #{e}"
+  puts "Exception when calling GlobaltagoportunidadeApi->listar_using_get36: #{e}"
 end
 ```
 
@@ -667,7 +634,6 @@ Name | Type | Description  | Notes
  **data_fim_vigencia** | **String**| {{{oportunidade_request_data_fim_vigencia_value}}} | [optional] 
  **flag_ativo** | **BOOLEAN**| {{{oportunidade_request_flag_ativo_value}}} | [optional] 
 
-
 ### Return type
 
 [**PageOportunidadeResponse**](PageOportunidadeResponse.md)
@@ -683,9 +649,8 @@ No authorization required
 
 
 
-
-# **listar_using_get55**
-> PageTipoOportunidadeResponse listar_using_get55(opts)
+# **listar_using_get58**
+> PageTipoOportunidadeResponse listar_using_get58(opts)
 
 {{{tipo_oportunidade_resource_listar}}}
 
@@ -695,7 +660,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagoportunidadeApi.new
 
@@ -709,10 +673,10 @@ opts = {
 
 begin
   #{{{tipo_oportunidade_resource_listar}}}
-  result = api_instance.listar_using_get55(opts)
+  result = api_instance.listar_using_get58(opts)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagoportunidadeApi->listar_using_get55: #{e}"
+  puts "Exception when calling GlobaltagoportunidadeApi->listar_using_get58: #{e}"
 end
 ```
 
@@ -725,7 +689,6 @@ Name | Type | Description  | Notes
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
  **descricao** | **String**| {{{tipo_oportunidade_request_descricao_value}}} | [optional] 
  **flag_ativo** | **BOOLEAN**| {{{tipo_oportunidade_request_flag_ativo_value}}} | [optional] 
-
 
 ### Return type
 
@@ -742,7 +705,6 @@ No authorization required
 
 
 
-
 # **salvar_status_using_post**
 > StatusOportunidadeResponse salvar_status_using_post(id, persist)
 
@@ -754,7 +716,6 @@ No authorization required
 ```ruby
 # load the gem
 require 'pier-sdk-ruby'
-
 
 api_instance = Pier::GlobaltagoportunidadeApi.new
 
@@ -779,7 +740,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{tipo_oportunidade_resource_salvar_status_param_id}}} | 
  **persist** | [**StatusOportunidadePersistValue**](StatusOportunidadePersistValue.md)| persist | 
 
-
 ### Return type
 
 [**StatusOportunidadeResponse**](StatusOportunidadeResponse.md)
@@ -795,9 +755,8 @@ No authorization required
 
 
 
-
-# **salvar_using_post21**
-> OportunidadeResponse salvar_using_post21(persist)
+# **salvar_using_post22**
+> OportunidadeResponse salvar_using_post22(persist)
 
 {{{oportunidade_resource_salvar}}}
 
@@ -808,7 +767,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagoportunidadeApi.new
 
 persist = Pier::OportunidadePersistValue.new # OportunidadePersistValue | persist
@@ -816,10 +774,10 @@ persist = Pier::OportunidadePersistValue.new # OportunidadePersistValue | persis
 
 begin
   #{{{oportunidade_resource_salvar}}}
-  result = api_instance.salvar_using_post21(persist)
+  result = api_instance.salvar_using_post22(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagoportunidadeApi->salvar_using_post21: #{e}"
+  puts "Exception when calling GlobaltagoportunidadeApi->salvar_using_post22: #{e}"
 end
 ```
 
@@ -828,7 +786,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**OportunidadePersistValue**](OportunidadePersistValue.md)| persist | 
-
 
 ### Return type
 
@@ -845,9 +802,8 @@ No authorization required
 
 
 
-
-# **salvar_using_post30**
-> TipoOportunidadeResponse salvar_using_post30(persist)
+# **salvar_using_post31**
+> TipoOportunidadeResponse salvar_using_post31(persist)
 
 {{{tipo_oportunidade_resource_salvar}}}
 
@@ -858,7 +814,6 @@ No authorization required
 # load the gem
 require 'pier-sdk-ruby'
 
-
 api_instance = Pier::GlobaltagoportunidadeApi.new
 
 persist = Pier::TipoOportunidadePersistValue.new # TipoOportunidadePersistValue | persist
@@ -866,10 +821,10 @@ persist = Pier::TipoOportunidadePersistValue.new # TipoOportunidadePersistValue 
 
 begin
   #{{{tipo_oportunidade_resource_salvar}}}
-  result = api_instance.salvar_using_post30(persist)
+  result = api_instance.salvar_using_post31(persist)
   p result
 rescue Pier::ApiError => e
-  puts "Exception when calling GlobaltagoportunidadeApi->salvar_using_post30: #{e}"
+  puts "Exception when calling GlobaltagoportunidadeApi->salvar_using_post31: #{e}"
 end
 ```
 
@@ -878,7 +833,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **persist** | [**TipoOportunidadePersistValue**](TipoOportunidadePersistValue.md)| persist | 
-
 
 ### Return type
 
@@ -892,8 +846,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-
 
 
 

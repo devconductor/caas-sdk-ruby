@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **nome** | **String** | {{{estagio_cartao_response_nome_value}}} | 
 
 
-

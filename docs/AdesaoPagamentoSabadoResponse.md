@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **id_conta** | **Integer** | {{{adesao_pagamento_sabado_resposta_id_conta_descricao}}} | [optional] 
 
 
-

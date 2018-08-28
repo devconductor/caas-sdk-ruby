@@ -18,4 +18,3 @@ Name | Type | Description | Notes
 **flag_cluster** | **BOOLEAN** | {{{base_partial_update_flag_cluster_value}}} | 
 
 
-

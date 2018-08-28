@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **tema** | **String** | {{{emissor_response_tema_value}}} | [optional] 
 
 
-

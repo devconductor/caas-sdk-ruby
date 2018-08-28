@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **nome_assessoria** | **String** | {{{historico_assessoria_response_nome_assessoria_value}}} | [optional] 
 
 
-

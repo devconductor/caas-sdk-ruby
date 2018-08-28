@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **id_usuario** | **Integer** | {{{promotor_response_id_usuario_value}}} | [optional] 
 
 
-

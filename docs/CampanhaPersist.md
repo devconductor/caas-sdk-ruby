@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **planos_campanhas** | [**Array&lt;PlanoCampanhaPersist&gt;**](PlanoCampanhaPersist.md) | {{{campanha_persist_planos_campanhas_value}}} | [optional] 
 
 
-

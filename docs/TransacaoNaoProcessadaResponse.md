@@ -40,4 +40,3 @@ Name | Type | Description | Notes
 **valor_usd** | **Float** | {{{transacao_nao_processada_response_valor_usd_value}}} | [optional] 
 
 
-

@@ -13,4 +13,3 @@ Name | Type | Description | Notes
 **status_processamento** | **String** | {{{transferencia_credito_conta_bancaria_lista_response_status_processamento_value}}} | [optional] 
 
 
-

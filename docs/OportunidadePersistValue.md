@@ -12,4 +12,3 @@ Name | Type | Description | Notes
 **detalhes** | [**Array&lt;DetalheOportunidadePersistValue&gt;**](DetalheOportunidadePersistValue.md) | {{{oportunidade_persist_detalhes_value}}} | 
 
 
-

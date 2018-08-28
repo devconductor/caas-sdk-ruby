@@ -28,4 +28,3 @@ Name | Type | Description | Notes
 **limite_parcelas** | **Float** | {{{pessoa_juridica_aprovada_persist_limite_parcelas_value}}} | 
 
 
-

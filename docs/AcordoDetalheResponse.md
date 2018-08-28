@@ -22,4 +22,3 @@ Name | Type | Description | Notes
 **vencimento_parcela_pedida** | **String** | {{{acordo_detalhe_response_vencimento_parcela_pedida_value}}} | [optional] 
 
 
-

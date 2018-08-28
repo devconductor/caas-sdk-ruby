@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **propriedades** | [**Array&lt;PropriedadeDocumentoRequest&gt;**](PropriedadeDocumentoRequest.md) | {{{integrar_documento_request_propriedades_value}}} | [optional] 
 
 
-

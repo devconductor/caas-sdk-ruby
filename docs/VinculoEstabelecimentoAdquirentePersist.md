@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **codigo_estabelecimento_adquirente** | **String** | {{{vinculo_estabelecimento_adquirente_persist_codigo_estabelecimento_adquirente_value}}} | 
 
 
-
